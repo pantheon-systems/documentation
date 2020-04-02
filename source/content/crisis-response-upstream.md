@@ -21,44 +21,54 @@ This distribution features a minimal set of plugins for easy maintenance. You ca
 
 These plugins were selected to improve the performance of the site, and better utilize tools built into Pantheon.
 
-**[Autoptimize](https://wordpress.org/plugins/autoptimize/)** - Makes your site faster by optimizing CSS, JS, Images, Google fonts and more.
-Native PHP Sessions for WordPress: Offload PHP’s native sessions to your database for multi-server compatibility.
+- **[Autoptimize](https://wordpress.org/plugins/autoptimize/)** - Makes your site faster by optimizing CSS, JS, Images, Google fonts and more.
 
-**[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)** - A heads-up display into your Pantheon environment, giving you information about the current environment.
+- **[Native PHP Sessions for WordPress](https://wordpress.org/plugins/wp-native-php-sessions/)**: Offload PHP’s native sessions to your database for multi-server compatibility.
 
-**[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)** - Automatically clear related pages from Pantheon’s Edge when you update content. High TTL. Fresh content. Visitors never wait.
+- **[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)** - A heads-up display into your Pantheon environment, giving you information about the current environment.
 
-**[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using Redis. Requires the [PhpRedis extension](https://github.com/phpredis/phpredis).
+- **[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)** - Automatically clear related pages from Pantheon’s Edge when you update content. High TTL. Fresh content. Visitors never wait.
+
+- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using Redis. Requires the [PhpRedis extension](https://github.com/phpredis/phpredis).
 
 ### Content Features Plugins
 
 These plugins were selected to improve the content creation and moderation process, in addition to improving SEO for visibility.
 
-**[Disable Comments](https://wordpress.org/plugins/disable-comments/)** - Allows administrators to globally disable comments on their site. Comments can be disabled according to post type.
+- **[Disable Comments](https://wordpress.org/plugins/disable-comments/)** - Allows administrators to globally disable comments on their site. Comments can be disabled according to post type.
 
-**[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)** - The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more. **Note:** Use the "PHP" redirect method with this plugin. See [Plugins With Known Issues](/plugins-known-issues#yoast-seo) for more information.
+- **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)** - The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.
 
-**[Elementor](https://wordpress.org/plugins/elementor/)** - The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design.
+  **Note:** Use the "PHP" redirect method with this plugin. See [Plugins With Known Issues](/plugins-known-issues#yoast-seo) for more information.
 
-**[WP RSS Aggregator](https://wordpress.org/plugins/wp-rss-aggregator/)** - Imports and aggregates multiple RSS Feeds.
+- **[Elementor](https://wordpress.org/plugins/elementor/)** - The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design.
 
-**[Ocean Extra](https://wordpress.org/plugins/ocean-extra/)** - Add extra features like widgets, metaboxes, import/export and a panel to activate the premium extensions.This was part of the theme to enhance the theme and create widgets for page building.
+- **[WP RSS Aggregator](https://wordpress.org/plugins/wp-rss-aggregator/)** - Imports and aggregates multiple RSS Feeds.
+
+- **[Ocean Extra](https://wordpress.org/plugins/ocean-extra/)** - Add extra features like widgets, meta boxes, import/export and a panel to activate the premium extensions. This plugin is a companion to the [OceanWP](https://oceanwp.org/) theme, to enhance it and create widgets for page building.
 
 ## How to Install
 
-First, [contact Sales](https://pantheon.io/contact-us) to sign up for access to this distribution. We will work with you to get an appropriate site plan and organization set up free of charge.
+1. [contact Sales](https://pantheon.io/contact-us) to sign up with access to this distribution. We will work with you to get an appropriate site plan and organization set up free of charge.
 
-Once you are set up on the platform, go to the **Upstreams** tab of your [Pantheon Dashboard](https://dashboard.pantheon.io/), and click **Create Site from Upstream** next to **Crisis Response WP**.
+1. Once you are set up on the platform, go to the **Upstreams** tab of your [Organization Dashboard](/organization-dashboard), and click **Create Site from Upstream** next to **Crisis Response WP**.
 
-![Create site from Crisis Response WP custom upstream](../images/dashboard/upstream-crisis-response.png)
+    ![Create site from Crisis Response WP custom upstream](../images/dashboard/upstream-crisis-response.png)
 
-1. The installation script will pre-populate generic content into the site.
+  The installation script will pre-populate generic content into the site.
+
 1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your site.  You will eventually need to do this for all environments: Dev, Test, and Live.
-1. For each environment, use your email for the username and use the WordPress 'forgot password' functionality to receive an email with a one-time login link.
-1. Change the password to something strong.
-1. If you update your WordPress code or add a new plugin you can use the Pantheon WebOps workflow: on your site's Pantheon dashboard, once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to the Test environment.
-1. After testing your changes in the Test environment you can deploy them to the Live environment. Deploying code from Test to Live will immediately update your live website. See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
+
+1. For each environment, use your email for the username and use the WordPress 'forgot password' functionality to receive an email with a one-time login link. Change the password to something strong.
+
+1. If you update your site code or add a new plugin, you can use the [Pantheon WebOps workflow](/pantheon-workflow). On your site's Pantheon dashboard, once changes are [committed](/sftp#committing-sftp-changes), the Deploys panel in the Test environment will prompt you to deploy the changes to the Test environment.
+
+1. After testing your changes in the Test environment you can deploy them to the Live environment. Deploying code from Test to Live will immediately update your live website.
+
+    See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
+
 1. Login to your live site and update your content.
+
 1. Associate a [domain name](/guides/launch/domains) with your Live site.
 
 ## Next Steps
@@ -66,7 +76,7 @@ Once you are set up on the platform, go to the **Upstreams** tab of your [Panthe
 Visit the [Launch Checks](/guides/launch/launch-check) guide to review key checks to perform before going live.
 
 ## Support
- 
+
  As part of our [free COVID-19 offer](https://pantheon.io/blog/supporting-orgs-on-covid-19-front-line), you will have access to Pantheon's [Platinum support](/support#support-features-and-response-times) package, enabling support via chat or ticket. Our Support team will work with you to answer any support-related question relating to this custom upstream.
 
 ## See Also
