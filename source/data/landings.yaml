@@ -551,7 +551,7 @@
     subtitle: 'Learn how to use Quicksilver to automate your WebOps workflow'
     url: '/quicksilver'
   cta_alt:
-    title: 'Live Workshop: Integrate and Automate with Quicksilver'
+    title: 'Live Workshop: Automate and Integrate with Quicksilver'
     subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
     url: 'https://pantheon.io/live-workshops/integrate-and-automate-quicksilver?docs'
   topics-groups:
