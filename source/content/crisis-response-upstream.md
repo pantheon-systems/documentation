@@ -57,9 +57,9 @@ These plugins were selected to improve the content creation and moderation proce
 
   The installation script will pre-populate generic content into the site.
 
-1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your site.  You will eventually need to do this for all environments: Dev, Test, and Live.
+1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your site.
 
-1. For each environment, use your email for the username and use the WordPress 'forgot password' functionality to receive an email with a one-time login link. Change the password to something strong.
+1. Once the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/guides/quickstart/create-test-live), copying your code and the initial database to each.
 
 1. If you update your site code or add a new plugin, you can use the [Pantheon WebOps workflow](/pantheon-workflow). On your site's Pantheon dashboard, once changes are [committed](/sftp#committing-sftp-changes), the Deploys panel in the Test environment will prompt you to deploy the changes to the Test environment.
 
