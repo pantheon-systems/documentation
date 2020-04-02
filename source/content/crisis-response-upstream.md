@@ -24,7 +24,7 @@ These plugins were selected to improve the performance of the site, and better u
 
 <dl>
 
-<dt> Autoptimize</dt>
+<dt>[Autoptimize](https://wordpress.org/plugins/autoptimize/)</dt>
 
 <dd>
 
@@ -33,7 +33,7 @@ Native PHP Sessions for WordPress: Offload PHP’s native sessions to your datab
 
 </dd>
 
-<dt>Pantheon HUD</dt>
+<dt>[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)</dt>
 
 <dd>
 
@@ -41,7 +41,7 @@ A heads-up display into your Pantheon environment, giving you information about 
 
 </dd>
 
-<dt>Pantheon Advanced Page Cache</dt>
+<dt>[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)</dt>
 
 <dd>
 
@@ -49,11 +49,11 @@ Automatically clear related pages from Pantheon’s Edge when you update content
 
 </dd>
 
-<dt>WP Redis</dt>
+<dt>[WP Redis](https://wordpress.org/plugins/wp-redis/)</dt>
 
 <dd>
 
-WordPress Object Cache using Redis. Requires the PhpRedis extension (https://github.com/phpredis/phpredis).
+WordPress Object Cache using Redis. Requires the **PhpRedis** extension (https://github.com/phpredis/phpredis).
 
 </dd>
 
@@ -63,17 +63,69 @@ WordPress Object Cache using Redis. Requires the PhpRedis extension (https://git
 
 These plugins were selected to improve the content creation and moderation process, in addition to improving SEO for visibility.
 
-Disable Comments: Allows administrators to globally disable comments on their site. Comments can be disabled according to post type.
+<dl>
 
-Yoast SEO: The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.
+<dt>[Disable Comments](https://wordpress.org/plugins/disable-comments/)</dt>
 
-Elementor: The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design.
+<dd>
 
-WP RSS Aggregator: Imports and aggregates multiple RSS Feeds.
+Allows administrators to globally disable comments on their site. Comments can be disabled according to post type.
 
-Ocean Extra: Add extra features like widgets, metaboxes, import/export and a panel to activate the premium extensions.This was part of the theme to enhance the theme and create widgets for page building.
+</dd>
 
+<dt>[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)</dt>
 
+<dd>
+
+The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.
+
+</dd>
+
+<dt>[Elementor](https://wordpress.org/plugins/elementor/)</dt>
+
+<dd>
+
+The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design.
+
+</dd>
+
+<dt>[WP RSS Aggregator](https://wordpress.org/plugins/wp-rss-aggregator/)</dt>
+
+<dd>
+
+Imports and aggregates multiple RSS Feeds.
+
+</dd>
+
+<dt>[Ocean Extra](https://wordpress.org/plugins/ocean-extra/)</dt>
+
+<dd>
+
+Add extra features like widgets, metaboxes, import/export and a panel to activate the premium extensions.This was part of the theme to enhance the theme and create widgets for page building.
+
+</dd>
+
+</dl>
+
+## How to Install
+
+First, [contact Sales]() to sign up for access to this distribution. We will work with you to get an appropriate site plan and organization setup free of charge.
+
+Once you are set up on the platform:
+
+1. Create a site from the **Crisis Response Site** upstream, available on the **Upstreams** tab of your Pantheon Dashboard.
+1. The installation script will pre-populate generic content into the site.
+1. Change your `dev` environment to `SFTP mode` so that the `settings` file can be written on first login.
+1. Check your email for the username and password to use to login to your site.
+1. Login to the `dev` environment’s site with your username and password. 
+1. Update the password to something you will remember.
+1. Deploy to the `test` and `live` environments.
+1. Switch to the `live` environment, login to the site and update your content.
+1. Associate a primary domain name with your production site.
+
+## Support
+ 
+ As part of our [free COVID-19 offer]https://pantheon.io/blog/supporting-orgs-on-covid-19-front-line), you will have access to Pantheon's Platinum support package, enabling support via chat or ticket. Our Support team will work with you to answer any support-related question relating to this custom upstream.
 
 ## See Also
 
