@@ -75,10 +75,6 @@ These plugins were selected to improve the content creation and moderation proce
 
 Visit the [Launch Checks](/guides/launch/launch-check) guide to review key checks to perform before going live.
 
-## Support
-
- As part of our [free COVID-19 offer](https://pantheon.io/blog/supporting-orgs-on-covid-19-front-line), you will have access to Pantheon's [Platinum support](/support#support-features-and-response-times) package, enabling support via chat or ticket. Our Support team will work with you to answer any support-related question relating to this custom upstream.
-
 ## See Also
 
 - [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams
