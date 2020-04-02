@@ -50,7 +50,7 @@ Ultimately, it doesn't matter what tool(s) you use as long as you test your site
 3. Determine how much load to apply.
 
   * **Performance Tests**: Smaller loads should suffice, as you should be able to see transactional bottlenecks with 10-20 concurrent users.
-  * **Load Tests**: Determine how many concurrent users the site is expected to serve based on historical analytics for the site. Identify the peak hourly sessions and average session duration, then do some math: `hourly_sessions / (60 / average_duration) = Concurrent Users`
+  * **Load Tests**: Determine how many concurrent users per second the site is expected to serve based on historical analytics for the site. Identify the peak hourly sessions and average session duration, then do some math: `Concurrent Users = ( hourly_sessions x average_duration ) / 3600`
 
 
 ## Running the Tests
