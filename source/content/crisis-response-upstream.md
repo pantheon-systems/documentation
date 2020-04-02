@@ -57,7 +57,7 @@ These plugins were selected to improve the content creation and moderation proce
 
   The installation script will pre-populate generic content into the site.
 
-1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your site.
+1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your development site. Use your email address for the username and click on **Forgot Password**. The site will send you an email to reset the password. Be sure to set a strong password.
 
 1. Once the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/guides/quickstart/create-test-live), copying your code and the initial database to each.
 
