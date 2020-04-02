@@ -126,7 +126,7 @@ Once you are set up on the platform:
 
 ## Support
  
- As part of our [free COVID-19 offer]https://pantheon.io/blog/supporting-orgs-on-covid-19-front-line), you will have access to Pantheon's Platinum support package, enabling support via chat or ticket. Our Support team will work with you to answer any support-related question relating to this custom upstream.
+ As part of our [free COVID-19 offer](https://pantheon.io/blog/supporting-orgs-on-covid-19-front-line), you will have access to Pantheon's [Platinum support](/support#support-features-and-response-times) package, enabling support via chat or ticket. Our Support team will work with you to answer any support-related question relating to this custom upstream.
 
 ## See Also
 
