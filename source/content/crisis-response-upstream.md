@@ -109,19 +109,20 @@ Add extra features like widgets, metaboxes, import/export and a panel to activat
 
 ## How to Install
 
-First, [contact Sales]() to sign up for access to this distribution. We will work with you to get an appropriate site plan and organization setup free of charge.
+First, [contact Sales](https://pantheon.io/contact-us) to sign up for access to this distribution. We will work with you to get an appropriate site plan and organization set up free of charge.
 
 Once you are set up on the platform:
 
-1. Create a site from the **Crisis Response Site** upstream, available on the **Upstreams** tab of your Pantheon Dashboard.
+1. Create a site from the **Crisis Response WP** upstream, available on the **Upstreams** tab of your Pantheon Dashboard.
 1. The installation script will pre-populate generic content into the site.
-1. Change your `dev` environment to `SFTP mode` so that the `settings` file can be written on first login.
+1. On the Dev environment tab, Change **Development Mode** to `SFTP` so the `settings` file can be written on first login.
 1. Check your email for the username and password to use to login to your site.
-1. Login to the `dev` environment’s site with your username and password. 
+1. Click the **Site Admin** button and login with your username and password. 
 1. Update the password to something you will remember.
-1. Deploy to the `test` and `live` environments.
-1. Switch to the `live` environment, login to the site and update your content.
-1. Associate a primary domain name with your production site.
+1. On your site's Pantheon dashboard, once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test.
+1. After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website. For more information, see the [Pantheon Workflow](/pantheon-workflow) documentation.
+1. On the Live environment, login to the site and update your content.
+1. Associate a [domain name](/guides/launch/domains) with your production site.
 
 ## Support
  
@@ -129,5 +130,5 @@ Once you are set up on the platform:
 
 ## See Also
 
-- [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
+- [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
 - [Professional Services](/professional-services) - Learn all the great services our expert team can provide.
