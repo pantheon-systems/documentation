@@ -53,11 +53,10 @@ Once you are set up on the platform, go to the **Upstreams** tab of your [Panthe
 ![Create site from Crisis Response WP custom upstream](../images/dashboard/upstream-crisis-response.png)
 
 1. The installation script will pre-populate generic content into the site.
-1. On the Dev environment tab, Change **Development Mode** to `SFTP` so the `settings` file can be written on first login.
-1. Check your email for the username and password to use to login to your site.
-1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your site, and login with your username and password. 
+1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your site.  You will eventually need to do this for all environments: Dev, Test, and Live.
+1. For each environment, use your email for the username and use the WordPress 'forgot password' functionality to receive an email with a one-time login link.
 1. Change the password to something strong.
-1. On your site's Pantheon dashboard, once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to the Test environment.
+1. If you update your WordPress code or add a new plugin you can use the Pantheon WebOps workflow: on your site's Pantheon dashboard, once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to the Test environment.
 1. After testing your changes in the Test environment you can deploy them to the Live environment. Deploying code from Test to Live will immediately update your live website. See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
 1. Login to your live site and update your content.
 1. Associate a [domain name](/guides/launch/domains) with your Live site.
