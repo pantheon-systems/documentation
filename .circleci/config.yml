@@ -78,13 +78,13 @@ jobs:
       - save_cache:
           key: npm-v2.8.4-{{ checksum "gatsby/package-lock.json" }}
           paths:
-            - ~/build/gatsby/package-lock.json
-            - ~/build/gatsby/node_modules
+            - ~/build/package-lock.json
+            - ~/build/node_modules
       - save_cache:
           key: v2.5.7-always-{{ epoch }}
           paths:
-            - ~/build/gatsby/public
-            - ~/build/gatsby/.cache
+            - ~/build/public
+            - ~/build/.cache
 
   preview:
     docker:

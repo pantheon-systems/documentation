@@ -12,7 +12,7 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 import './src/styles/codeBlocks.css'
 
 // Previous version scripts and styles
-// require("../source/docs/assets/js/main.js")
+// require("/source/docs/assets/js/main.js")
 
 // // TOC generator
 import "tocbot/dist/tocbot.css"
