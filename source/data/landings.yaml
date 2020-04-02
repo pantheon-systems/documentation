@@ -400,6 +400,8 @@
           url: '/site-owner-faq'
         - text: 'Manage Plans in the Site Dashboard'
           url: '/site-plan'
+        - text: 'Request Tax Exempt Status'
+          url: '/tax-exempt-status'
         - text: 'Traffic Limits and Overages'
           url: '/traffic-limits'
   subtopics:
@@ -847,6 +849,8 @@
           url: '/site-owner-faq'
         - text: 'Manage Plans in the Site Dashboard'
           url: '/site-plan'
+        - text: 'Request Tax Exempt Status'
+          url: '/tax-exempt-status'
         - text: 'Traffic Limits and Overages'
           url: '/traffic-limits'
 - title: 'Troubleshoot'
