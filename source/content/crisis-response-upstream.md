@@ -49,7 +49,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 ## How to Install
 
-1. [contact Sales](https://pantheon.io/contact-us) to sign up with access to this distribution. We will work with you to get an appropriate site plan and organization set up free of charge.
+1. [Contact Sales](https://pantheon.io/contact-us) to sign up with access to this distribution. We will work with you to get an appropriate site plan and organization set up free of charge.
 
 1. Once you are set up on the platform, go to the **Upstreams** tab of your [Organization Dashboard](/organization-dashboard), and click **Create Site from Upstream** next to **Crisis Response WP**.
 
