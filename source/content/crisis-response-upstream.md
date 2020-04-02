@@ -43,7 +43,7 @@ These plugins were selected to improve the content creation and moderation proce
 Allows administrators to globally disable comments on their site. Comments can be disabled according to post type.
 
 **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)**
-The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.
+The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more. **Note:** Use the "PHP" redirect method with this plugin. See [Plugins With Known Issues](/plugins-known-issues#yoast-seo) for more information.
 
 **[Elementor](https://wordpress.org/plugins/elementor/)**
 The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design.
