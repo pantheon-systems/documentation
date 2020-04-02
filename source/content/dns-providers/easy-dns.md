@@ -4,7 +4,6 @@ provider: Easy DNS
 dnsprovider: true
 description: Learn how to point your Easy DNS domain to a Pantheon site.
 tags: [providers]
-draft: true
 permalink: docs/:basename/
 editpath: dns-providers/easy-dns.md/
 ---

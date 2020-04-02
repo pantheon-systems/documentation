@@ -4,7 +4,6 @@ provider: Microsoft
 dnsprovider: true
 description: Learn how to point your Microsoft domain to a Pantheon site.
 tags: [providers]
-draft: true
 permalink: docs/:basename/
 editpath: dns-providers/microsoft.md/
 ---

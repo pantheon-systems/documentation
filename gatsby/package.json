@@ -22,6 +22,7 @@
     "gatsby-plugin-google-tagmanager": "^2.1.27",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-mdx": "^1.0.83",
+    "gatsby-plugin-page-creator": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-sass": "^2.1.31",
     "gatsby-plugin-segment-js": "^3.1.0",
