@@ -52,10 +52,10 @@ class ReviewReport extends React.Component {
         render={data => {
           const [search, setSearch] = useState("")
           const pages = data.allDocs.edges
-          const pagesExcludeMultipage = data.allDocs.edges.filter(page => {
-            return page.node.fields.slug.match(/\/guides\/*\/*/)
+          const tertiaryPages = data.allDocs.edges.filter(page => {
+            return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
           })
-          console.log("Badly named array: ",pagesExcludeMultipage)
+          //console.log("Tertiary Pages: ", tertiaryPages) //Debugging
           const oldPages = data.staleDocs.edges
           return (
             <Layout>
@@ -72,7 +72,7 @@ class ReviewReport extends React.Component {
                     className="form-control"
                     placeholder="Filter by Title"
                     onChange={e => setSearch(e.target.value)}
-                    value={search.toLowerCase()}
+                    value={search}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
@@ -91,13 +91,13 @@ class ReviewReport extends React.Component {
                 <table className="table table-commands table-bordered table-striped">
                   <thead>
                   <th> Total Count </th>
-                  <th> Excluding Multipage Tertiaries </th>
+                  <th> Excluding Tertiary Pages </th>
                   </thead>
                   <tr>
                   <td>{pages.length}</td>
-                  <td>{pagesExcludeMultipage.length}</td>
+                  <td>{pages.length - tertiaryPages.length}</td>
                   </tr>                  
-                  <tr><hr /></tr>
+                  <br />
                   <thead>
                     <tr>
                       <th width="40%">Title</th>
@@ -109,7 +109,7 @@ class ReviewReport extends React.Component {
 
                     {pages
                     .filter(page => {
-                      return page.node.frontmatter.title.toLowerCase().indexOf(search) >= 0
+                      return page.node.frontmatter.title.toLowerCase().indexOf(search.toLowerCase()) >= 0
                     })
                     .map((page, i) => {
                       return (
@@ -140,7 +140,7 @@ class ReviewReport extends React.Component {
                   <tbody>
                     {oldPages
                     .filter(page => {
-                      return page.node.frontmatter.title.toLowerCase().indexOf(search) >= 0
+                      return page.node.frontmatter.title.toLowerCase().indexOf(search.toLowerCase()) >= 0
                     })
                     .map((page, i) => {
                       return (
