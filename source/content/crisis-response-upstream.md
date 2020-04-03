@@ -61,7 +61,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your development site. During the site deployment process, you should receive a password reset notice to the email address associated with your Pantheon account. 
 
-	If not, use your email address for the username and click on **Forgot Password**. Be sure to set a strong password.
+  If not, use your email address for the username and click on **Forgot Password**. Be sure to set a strong password.
 
 1. Once the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/guides/quickstart/create-test-live), copying your code and the initial database to each.
 
@@ -69,7 +69,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 1. After testing your changes in the Test environment you can deploy them to the Live environment. Deploying code from Test to Live will immediately update your live website.
 
-    See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
+  See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
 
 1. Login to your live site and update your content.
 
