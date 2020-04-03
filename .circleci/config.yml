@@ -24,7 +24,6 @@ jobs:
       - run:
           name: Install Gatsby
           command: |
-            cd gatsby
             npm ci
       - run:
           name: Import Gatsby Tokens
@@ -36,12 +35,11 @@ jobs:
       - run:
           name: Gatsby Build
           command: |
-            cd gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
       - run:
           name: Remove empty directories
           command: |
-            find ~/build/gatsby/public -type d -empty -delete
+            find ~/build/public -type d -empty -delete
       - run:
           name: Check for merge conflicts
           command: .circleci/scripts/merge_conflicts.sh
@@ -65,7 +63,6 @@ jobs:
       - run:
           name: Serve Gatsby
           command: |
-            cd gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby serve --prefix-paths
           background: true
       - run:
@@ -128,7 +125,7 @@ jobs:
           name: Lighthouse Audit
           command: .circleci/tests/lighthouse/run
       - store_artifacts:
-          path: gatsby/lighthouse_data/
+          path: lighthouse_data/
           destination: lighthouse_data/
 
   deploy:
