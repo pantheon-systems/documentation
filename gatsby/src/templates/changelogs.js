@@ -112,12 +112,7 @@ class ChangelogsTemplate extends React.Component {
                 ))}
               </div>
             </div>
-            <div
-              className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-              role="complementary"
-            >
-              <TOC title="Contents" />
-            </div>
+            <TOC title="Contents" />
           </div>
           <NavButtons
             prev={this.props.pageContext.previous}
