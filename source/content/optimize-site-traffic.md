@@ -2,13 +2,13 @@
 title: Investigate and Remedy Traffic Events
 description: Determine the cause of unexpected traffic and implement a remedy
 tags: [billing, logs]
-categories: [manage]
+categories: [troubleshoot]
 contributors: [edwardangert]
 searchboost: 150
 reviewed: "2020-03-03"
 ---
 
-The [Traffic Limits and Overages](/traffic-limits) doc explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help determine the cause of traffic incidents, to find out if they're intentional, and to help remedy them if they're not.
+[Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
 
 ## Review the nginx Access Log
 
@@ -18,7 +18,10 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
 
-In addition to your other WordPress security practices, help thwart brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site in the process. Create a separate administrator account with a strong password, then remove the `admin` account, and use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
+In addition to your other WordPress security practices, help thwart **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site in the process. 
+1. Create a separate administrator account with a strong password, then remove the `admin` account.
+1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
+1. Consider adding a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
 
 ## Configure favicon.ico to Serve a Static Image
 
@@ -58,7 +61,7 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ## DDoS Mitigation
 
-Pantheon doesn't count DDoS towards site traffic and our [Customer Success](https://pantheon.io/docs/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
+Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic and our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
 
 ### Block IPs in Drupal or WordPress
 
