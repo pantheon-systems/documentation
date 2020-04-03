@@ -85,7 +85,7 @@ class ReviewReport extends React.Component {
               return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
             }
           )
-          console.log("Unreviewed Tertiary Pages: ", unreviewedTertiaryPages) // For debugging
+          //console.log("Unreviewed Tertiary Pages: ", unreviewedTertiaryPages) // For debugging
           return (
             <Layout>
               <h1>Reports</h1>
