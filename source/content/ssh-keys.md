@@ -86,7 +86,7 @@ ControlPath too long fatal: Could not read from remote repository.
 
 Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like this:
 
-```conf:title=ssh_config
+```none:title=ssh_config
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/control-%l.%r@%h:%p
@@ -94,7 +94,7 @@ ControlPath ~/.ssh/control-%l.%r@%h:%p
 
 There are two ways to fix this. First, try adjusting the `Controlpath` line as shown below:
 
-```conf:title=ssh_config
+```none:title=ssh_config
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/control-%r
@@ -102,7 +102,7 @@ ControlPath ~/.ssh/control-%r
 
 If this doesn't fix the issue, try creating an entry in your SSH configuration for your site specifically by its hostname. Don't use the `ControlMaster` option, instead use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
 
-```conf:title=ssh_config
+```none:title=ssh_config
 Host *.SITE_UUID.drush.in
 ControlPath ~/.ssh/control-%r
 ```

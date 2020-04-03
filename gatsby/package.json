@@ -83,6 +83,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lighthouse-run": "node ./tests/lighthouse/lighthouse.run.js",
+    "lighthouse-run-local": "node ./tests/lighthouse/lighthouse.run.local.js",
     "lighthouse-test": "jest ./tests/lighthouse/lighthouse.test.js",
     "lighthouse-pr-comment": "node ./tests/lighthouse/createPullRequestComment.js"
   }

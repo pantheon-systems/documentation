@@ -26,7 +26,7 @@ Be aware that this disables a security feature and trusts your DNS system to alw
 
 Open `~/.ssh/config` (or create a new file if one does not exist) and add the following lines:
 
-```confg:title=~/.ssh/config
+```none:title=~/.ssh/config
 Host *.drush.in
     StrictHostKeyChecking no
 ```
