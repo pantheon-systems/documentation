@@ -3,7 +3,7 @@ title: Crisis Response Upstream
 description: About the Pantheon COVID-19 Response WordPress Upstream
 categories: [develop]
 tags: [WordPress, COVID-19, crisis, upstreams]
-contributors: [carolynshannon]
+contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
 ---
 
@@ -20,8 +20,6 @@ This distribution features a minimal set of plugins for easy maintenance. You ca
 ### Site Optimization Plugins
 
 These plugins were selected to improve the performance of the site, and better utilize tools built into Pantheon.
-
-- **[Autoptimize](https://wordpress.org/plugins/autoptimize/)** - Makes your site faster by optimizing CSS, JS, Images, Google fonts and more.
 
 - **[Native PHP Sessions for WordPress](https://wordpress.org/plugins/wp-native-php-sessions/)**: Offload PHP’s native sessions to your database for multi-server compatibility.
 
@@ -43,6 +41,10 @@ These plugins were selected to improve the content creation and moderation proce
 
 - **[Elementor](https://wordpress.org/plugins/elementor/)** - The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design.
 
+- **[Essential Addons for Elementor](https://wordpress.org/plugins/essential-addons-for-elementor-lite)** - Enhances the Elementor page building experience with 65+ creative elements and extensions. 
+
+- **[Contact Form 7](https://wordpress.org/plugins/contact-form-7/)** - Simple, but flexible contact form builder for WordPress.
+
 - **[WP RSS Aggregator](https://wordpress.org/plugins/wp-rss-aggregator/)** - Imports and aggregates multiple RSS Feeds.
 
 - **[Ocean Extra](https://wordpress.org/plugins/ocean-extra/)** - Add extra features like widgets, meta boxes, import/export and a panel to activate the premium extensions. This plugin is a companion to the [OceanWP](https://oceanwp.org/) theme, to enhance it and create widgets for page building.
@@ -57,7 +59,9 @@ These plugins were selected to improve the content creation and moderation proce
 
   The installation script will pre-populate generic content into the site.
 
-1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your development site. Use your email address for the username and click on **Forgot Password**. The site will send you an email to reset the password. Be sure to set a strong password.
+1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your development site. During the site deployment process, you should receive a password reset notice to the email address associated with your Pantheon account. 
+
+  If not, use your email address for the username and click on **Forgot Password**. Be sure to set a strong password.
 
 1. Once the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/guides/quickstart/create-test-live), copying your code and the initial database to each.
 
@@ -65,7 +69,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 1. After testing your changes in the Test environment you can deploy them to the Live environment. Deploying code from Test to Live will immediately update your live website.
 
-    See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
+  See the [Pantheon Workflow](/pantheon-workflow) documentation to learn more about the Pantheon WebOps workflow.
 
 1. Login to your live site and update your content.
 
