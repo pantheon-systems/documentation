@@ -8,7 +8,8 @@ const ResourceSelector = ({ search }) => {
   const searchValues = Object.values(search)
   const isThere = (path) => {
     try {
-      return require(`../../../source/partials/additionalResources/${path}.md`)
+      fetch(`../../../source/partials/additionalResources/${path}.md`)
+      return true
     } catch (err) {
       return null;
     }
