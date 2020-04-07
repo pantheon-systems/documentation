@@ -1,4 +1,4 @@
-## Congratulations on completing Integrate and Automate with Quicksilver! 🎉
+## Congratulations on completing Automate and Integrate with Quicksilver! 🎉
 
 If you thought that was interesting you shoudld sign up for workshop #3: [Website Performance with Varnish, Redis, and New Relic](https://pantheon.io/live-workshops/website-performance-varnish-redis-and-new-relic). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
