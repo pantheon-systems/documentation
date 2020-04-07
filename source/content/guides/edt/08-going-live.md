@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/f8gM5l7dJr8`
+<Youtube src="f8gM5l7dJr8" title="REPLACEME" />
 
 <br />
 

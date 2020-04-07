@@ -10,7 +10,7 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
 
 <Accordion title="Watch: Configuration Management in Drupal" id="d8-config-video" icon="facetime-video">
 
-`youtube: https://youtu.be/D-4gu1zPCMg`
+<Youtube src="D-4gu1zPCMg" title="REPLACEME" />
 
 </Accordion>
 

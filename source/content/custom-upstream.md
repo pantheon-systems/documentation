@@ -5,7 +5,7 @@ tags: [tools, workflow, upstreams]
 categories: [platform,manage,develop]
 ---
 
-`youtube: https://youtu.be/b1lNrZL0xxM`
+<Youtube src="b1lNrZL0xxM" title="VIDEO: Pantheon Custom Upstreams" />
 
 If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 

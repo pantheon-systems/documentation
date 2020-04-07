@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-`youtube: https://youtu.be/wAL4LQwy8Ow`
+<Youtube src="wAL4LQwy8Ow" title="REPLACEME" />
 
 <Partial file="deprecate-kalabox.md" />
 
