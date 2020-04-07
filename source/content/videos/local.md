@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-<Youtube src="z01vIuB3kRg" title="REPLACEME" />
+<Youtube src="z01vIuB3kRg" title="Local Development" />
 
 <Partial file="deprecate-kalabox.md" />
 

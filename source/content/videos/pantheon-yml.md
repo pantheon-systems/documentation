@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-<Youtube src="SM3QlNGgyBo" title="REPLACEME" />
+<Youtube src="SM3QlNGgyBo" title="Pantheon.yml" />
 
 The [pantheon.yml](/pantheon-yml) file provides a way to configure platform options for any project. This file is version controlled and can be configured differently for each environment.
 

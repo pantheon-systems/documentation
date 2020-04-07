@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-<Youtube src="gdpGZpxdXDo" title="REPLACEME" />
+<Youtube src="gdpGZpxdXDo" title="Essential Developer Training - Performance" />
 
 <br />
 

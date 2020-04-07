@@ -20,7 +20,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-<Youtube src="IQ837g3DLA0" title="REPLACEME" />
+<Youtube src="IQ837g3DLA0" title="Essential Developer Training - Architecture" />
 
 <br />
 

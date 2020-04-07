@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-<Youtube src="2KphdFOaOeM" title="REPLACEME" />
+<Youtube src="2KphdFOaOeM" title="WP-CLI" />
 
 <Partial file="deprecate-kalabox.md" />
 

@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-<Youtube src="oaIS6LgzTKU" title="REPLACEME" />
+<Youtube src="oaIS6LgzTKU" title="Essential Developer Training - Multidev" />
 
 <br />
 

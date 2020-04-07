@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-<Youtube src="ecjZhtu41hs" title="REPLACEME" />
+<Youtube src="ecjZhtu41hs" title="Caching" />
 
 Caching is an important technique to utilize when developing a CMS application. Let’s look at what the platform offers in terms of front end and back end caching.
 

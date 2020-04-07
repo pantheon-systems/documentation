@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-<Youtube src="4BRX12bFO4Q" title="REPLACEME" />
+<Youtube src="4BRX12bFO4Q" title="Essential Developer Training - External Integrations" />
 
 <br />
 

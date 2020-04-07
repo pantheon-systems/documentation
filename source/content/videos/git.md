@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-<Youtube src="LG7_wWQHtS4" title="REPLACEME" />
+<Youtube src="LG7_wWQHtS4" title="Git" />
 
 Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 

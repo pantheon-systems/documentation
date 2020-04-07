@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-<Youtube src="zh-grS2YqdE" title="REPLACEME" />
+<Youtube src="zh-grS2YqdE" title="Essential Developer Training - Command Line Interface" />
 
 <br />
 

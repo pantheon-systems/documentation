@@ -23,7 +23,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 <Accordion title="Watch: Guided WordPress Migrations" id="wp-video" icon="facetime-video">
 
-<Youtube src="ksg1XkH1da8" title="REPLACEME" />
+<Youtube src="ksg1XkH1da8" title="Guided WordPress Migrations" />
 
 </Accordion>
 
