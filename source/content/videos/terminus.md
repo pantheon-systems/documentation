@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-`youtube: https://youtu.be/njN2-z2pDFI`
+<Youtube src="njN2-z2pDFI" title="Command Line Interface" />
 
 You can interact with Pantheon using our command line interface—[Terminus](/terminus). In doing so, you can work faster and more efficiently, automate repetitive tasks, and access additional functionality.
 

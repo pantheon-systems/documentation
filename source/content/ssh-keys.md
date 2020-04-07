@@ -10,7 +10,7 @@ To take full advantage of Pantheon, you should load your public SSH key into you
 
 <Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
 
-`youtube: https://youtu.be/U8sfuvrjroY`
+<Youtube src="U8sfuvrjroY" title="Generate a SSH Key and Add it to Your Dashboard" />
 
 </Accordion>
 

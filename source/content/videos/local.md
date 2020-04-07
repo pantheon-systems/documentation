@@ -9,7 +9,7 @@ layout: video
 searchboost: 50
 ---
 
-`youtube: https://youtu.be/z01vIuB3kRg`
+<Youtube src="z01vIuB3kRg" title="Local Development" />
 
 <Partial file="deprecate-kalabox.md" />
 

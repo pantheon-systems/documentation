@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/gdpGZpxdXDo`
+<Youtube src="gdpGZpxdXDo" title="Essential Developer Training - Performance" />
 
 <br />
 

@@ -29,6 +29,7 @@ import Example from "../components/styleExample"
 import LocaldevChangelog from "../components/localdevChangelog"
 import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
+import Youtube from "../components/youtube"
 
 const shortcodes = {
   Callout,
@@ -51,6 +52,7 @@ const shortcodes = {
   LocaldevChangelog,
   DrushChangelog,
   ReviewDate,
+  Youtube,
 }
 
 class DocTemplate extends React.Component {

@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/zh-grS2YqdE`
+<Youtube src="zh-grS2YqdE" title="Essential Developer Training - Command Line Interface" />
 
 <br />
 
