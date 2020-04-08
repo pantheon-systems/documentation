@@ -33,6 +33,7 @@ import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
+import ResourceSelector from "../components/resourceSelector"
 
 const shortcodes = {
   Callout,
@@ -57,6 +58,7 @@ const shortcodes = {
   Image,
   ReviewDate,
   Youtube,
+  ResourceSelector,
 }
 
 class GuideTemplate extends React.Component {

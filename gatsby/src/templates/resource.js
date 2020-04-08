@@ -29,7 +29,6 @@ import Example from "../components/styleExample"
 import LocaldevChangelog from "../components/localdevChangelog"
 import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
-import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 
 const shortcodes = {
@@ -53,11 +52,10 @@ const shortcodes = {
   LocaldevChangelog,
   DrushChangelog,
   ReviewDate,
-  Youtube,
   ResourceSelector,
 }
 
-class DocTemplate extends React.Component {
+class ResourceTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
       trigger: "click",
@@ -86,7 +84,7 @@ class DocTemplate extends React.Component {
   }
 
   render() {
-    const node = this.props.data.doc
+    const node = this.props.data.page
     const isoDate = this.props.data.date
 
     return (
@@ -100,9 +98,9 @@ class DocTemplate extends React.Component {
           tags={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
         />
-        <main id="doc">
+        <div className="">
           <div className="container doc-content-well">
-            <article className="doc article col-md-9 md-70">
+            <div id="doc" className="doc article col-md-9 md-70">
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}
@@ -119,24 +117,20 @@ class DocTemplate extends React.Component {
                   <MDXRenderer>{node.body}</MDXRenderer>
                 </MDXProvider>
               </div>
-            </article>
-            <TOC title="Contents" />
-            <GetFeedback
-              formId="tfYOGoE7"
-              page={"/" + node.fields.slug}
-            />
+            </div>
+            {/* <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} /> */}
           </div>
-        </main>
+        </div>
       </Layout>
     )
   }
 }
 
-export default DocTemplate
+export default ResourceTemplate
 
 export const pageQuery = graphql`
-  query DocBySlug($slug: String!) {
-    doc: mdx(fields: { slug: { eq: $slug } }) {
+  query PageBySlug($slug: String!) {
+    page: mdx(fields: { slug: { eq: $slug } }) {
       id
       body
       fields {

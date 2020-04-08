@@ -111,7 +111,7 @@ async function deleteCommentOnPullRequest(commentID) {
 
   //console.log("lighthouseComments: ", lighthouseComments[0].id) //debugging
 
-  lighthouseComments ?
+  lighthouseComments[0] ?
 
   await octokit.issues.updateComment({
     owner: process.env.CI_PROJECT_USERNAME,
