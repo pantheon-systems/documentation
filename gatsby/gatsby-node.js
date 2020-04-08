@@ -412,7 +412,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.onPreBootstrap = () => {
-  const scriptsCopyFrom = `${__dirname}//source/scripts`
+  const scriptsCopyFrom = `${__dirname}/../source/scripts`
   const scriptsCopyTo = `${__dirname}/public/scripts`
 
   fs.copySync(scriptsCopyFrom, scriptsCopyTo)

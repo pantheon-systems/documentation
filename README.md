@@ -45,7 +45,7 @@ git@github.com:pantheon-systems/documentation.git
 ### Install
 
 ```
-cd documentation/
+cd documentation/gatsby
 npm ci
 ```
 #### GitHub Token
@@ -55,7 +55,7 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 1. Click Generate new token
 1. Give it a name and click the public_repo checkbox, then the Generate Token button at the bottom
 1. Copy the token to your clipboard.
-1. Create or edit `.env.development`, and add (replacing $TOKENHASH ):
+1. Create or edit `gatsby/.env.development`, and add (replacing $TOKENHASH ):
 
    ```
    GITHUB_API=$TOKENHASH
@@ -64,7 +64,7 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 ### Run
 
 ```
-cd documentation/
+cd documentation/gatsby
 gatsby develop
 ```
 

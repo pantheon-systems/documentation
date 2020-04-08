@@ -16,6 +16,8 @@ if [[ $ENV == "live" && $SITE_UUID == "72e163bd-0054-4332-8bf8-219c50b78581" ]];
 else
   echo Deploying to the $ENV environment on the $SITE_NAME site...
 
+  # Move to the Gatsby directory
+  cd gatsby
 
   # Ask user if they want to regenerate Gatsby output
   read -p "Would you like to rebuild the Docs site? (Yy/Nn)" -n 1 -r

@@ -24,6 +24,7 @@ jobs:
       - run:
           name: Install Gatsby
           command: |
+            cd gatsby
             npm ci
       - run:
           name: Import Gatsby Tokens
@@ -35,11 +36,12 @@ jobs:
       - run:
           name: Gatsby Build
           command: |
+            cd gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
       - run:
           name: Remove empty directories
           command: |
-            find ~/build/public -type d -empty -delete
+            find ~/build/gatsby/public -type d -empty -delete
       - run:
           name: Check for merge conflicts
           command: .circleci/scripts/merge_conflicts.sh
@@ -63,6 +65,7 @@ jobs:
       - run:
           name: Serve Gatsby
           command: |
+            cd gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby serve --prefix-paths
           background: true
       - run:
@@ -75,13 +78,13 @@ jobs:
       - save_cache:
           key: npm-v2.8.4-{{ checksum "gatsby/package-lock.json" }}
           paths:
-            - ~/build/package-lock.json
-            - ~/build/node_modules
+            - ~/build/gatsby/package-lock.json
+            - ~/build/gatsby/node_modules
       - save_cache:
           key: v2.5.7-always-{{ epoch }}
           paths:
-            - ~/build/public
-            - ~/build/.cache
+            - ~/build/gatsby/public
+            - ~/build/gatsby/.cache
 
   preview:
     docker:
@@ -125,7 +128,7 @@ jobs:
           name: Lighthouse Audit
           command: .circleci/tests/lighthouse/run
       - store_artifacts:
-          path: lighthouse_data/
+          path: gatsby/lighthouse_data/
           destination: lighthouse_data/
 
   deploy:
