@@ -54,14 +54,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/partials`,
+        path: `${__dirname}/source/partials`,
         name: `partials`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/data`,
+        path: `${__dirname}/source/data`,
         name: `data`,
       },
     },
@@ -77,27 +77,27 @@ module.exports = {
           },
         ],
       },
-        path: `${__dirname}/../source/scripts`,
+        path: `${__dirname}/source/scripts`,
         name: `scripts`,
       },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/images`,
+        path: `${__dirname}/source/images`,
         name: `images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/changelogs`,
+        path: `${__dirname}/source/changelogs`,
         name: `changelogs`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/content`,
+        path: `${__dirname}/source/content`,
         name: `content`,
         plugins: [
           {
