@@ -18,12 +18,15 @@ function CallToAction(props) {
 			<a href={url}>
 			<div
 				className={`call-to-action ${dark && 'call-to-action--dark'}`}
-				style={{ padding: '25px !important', display: 'block' }}
+				style={{ padding: '1em !important', display: 'block' }}
 			>
-				<h1 className="call-to-action__title">
+					<h3 className="call-to-action__type">
+						Live Workshop
+					</h3>
+				<h2 className="call-to-action__title">
 					{title}
 					<i className="fa fa-angle-right" style={{ color: '#EFD01B' }} />
-				</h1>
+				</h2>
 				<p className="call-to-action__subtitle">{subTitle}</p>
 			</div>
 			</a>
@@ -34,12 +37,15 @@ function CallToAction(props) {
 			<Link to={url}>
 				<div
 					className={`call-to-action ${dark && 'call-to-action--dark'}`}
-					style={{ padding: '25px !important', display: 'block' }}
+					style={{ padding: '1em !important', display: 'block' }}
 				>
-					<h1 className="call-to-action__title">
+					<h3 className="call-to-action__type">
+						Live Workshop
+					</h3>
+					<h2 className="call-to-action__title">
 						{title}
 						<i className="fa fa-angle-right" style={{ color: '#EFD01B' }} />
-					</h1>
+					</h2>
 					<p className="call-to-action__subtitle">{subTitle}</p>
 				</div>
 			</Link>

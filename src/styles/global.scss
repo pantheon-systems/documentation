@@ -67,24 +67,21 @@ pre code {
 	outline-offset: 0;
 }
 .pantheon-docs h1 {
-	margin-top: 35px;
-	font-family: "TabletGothic";
-	color: #313945;
-	font-size: 50px;
+	font-family: Tablet Gothic, Frutiger, Frutiger Linotype, Univers,HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+	color: #000;
+	font-size: 3em;
 	font-weight: 700;
 }
 
 .pantheon-docs h2 {
 	margin-top: 30px;
-	font-family: "TabletGothic";
-	color: #050505;
-	font-size: 32px;
-	font-weight: bold;
+	font-family: Tablet Gothic,Frutiger,Frutiger Linotype,Univers,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+	color: #2c3539;
+	font-size: 2em;
 }
 
 .pantheon-docs h3 {
-	margin-top: 30px;
-	font-family: "TabletGothic";
+	font-family: Tablet Gothic,Frutiger,Frutiger Linotype,Univers,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
 	color: #424749;
 	font-size: 25px;
 	font-weight: bold;
@@ -540,8 +537,7 @@ h2 > .glyphicons {
 /*  */
 
 .row {
-	margin-left: 0px;
-	margin-right: 0px;
+	padding-bottom: 1em;
 }
 .container {
 	padding-left: 0px;

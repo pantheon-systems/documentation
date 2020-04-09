@@ -86,7 +86,7 @@
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
     url: '/terminus'
   cta_alt:
-    title: 'Live Workshop: Command Line Interface with Terminus'
+    title: 'Command Line Interface with Terminus'
     subtitle: "An introduction to Terminus: Pantheon's command line interface."
     url: 'https://pantheon.io/live-workshops/command-line-interface-terminus?docs'
   subtopics:

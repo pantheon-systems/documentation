@@ -3,9 +3,9 @@
   border: 1px solid #a4bbc1;
 }
 .subtopic-groups {
-  background-image: linear-gradient(0deg, #dbe4e6 0%, #ffffff 100%);
   padding-left: 15px;
   padding-bottom: 10px;
+  border-bottom: 1px solid #a4bbc1;
 }
 .subtopic-groups > h3 {
   font-family: "Open Sans", sans-serif;

@@ -19,14 +19,9 @@ class LandingTemplate extends Component {
     return !topic ? null : (
       <Layout>
         <SEO title={topic.title} />
-        <div style={{ marginTop: "-20px" }} className="container">
           <div className="container doc-content-well">
-            <div className="row">
               <h1 className="title">{topic.title}</h1>
-            </div>
-            <div className="row" style={{ marginBottom: "15px" }}>
-              <div className="">
-                <div className="row call-to-action-section">
+              <section className="row">
                   {topic.video_id && (
                     <div className="col-md-6 hero-video__video">
                       <YoutubeVideo videoId={topic.video_id} />
@@ -52,9 +47,7 @@ class LandingTemplate extends Component {
                       )}
                     </div>
                   )}
-                </div>
-              </div>
-            </div>
+                </section>
             {topic.guides &&
               topic.guides.map(guide => (
                 <React.Fragment>
@@ -104,7 +97,6 @@ class LandingTemplate extends Component {
                 ))}
             </div>
           </div>
-        </div>
       </Layout>
     )
   }

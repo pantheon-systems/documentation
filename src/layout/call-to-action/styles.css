@@ -20,17 +20,26 @@
 }
 .call-to-action .call-to-action__title {
   font-family: "Open Sans", sans-serif;
-  font-size: 32px;
-  line-height: 43px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  color: #0093c9;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: .5em;
+  margin-top: .5em;
+  color: #fff;
 }
 .call-to-action .call-to-action__subtitle {
   font-family: "TabletGothic-SemiBold";
   line-height: 20px;
   margin-bottom: 0px;
 }
+.call-to-action .call-to-action__type {
+	font-family: Tablet Gothic, Frutiger, Frutiger Linotype, Univers,HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+}
+
 .call-to-action i{
   margin-left: 1rem;
 }
