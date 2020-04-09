@@ -65,6 +65,17 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
 
+## Restrict access for bots based on UA string
+
+To block a particular user agent, add the following to `settings.php` or `wp-config.php`. Remember to replace the example user agent (`UglyBot`):
+
+```php:title=wp-config.php%20or%20settings.php
+if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
+  header('HTTP/1.0 403 Forbidden');
+  exit;
+}
+```
+
 ## DDoS Mitigation
 
 Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DDoS attack, our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
