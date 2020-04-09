@@ -1,12 +1,13 @@
 
 .call-to-action {
-  padding: 30px;
   display: flex;
   padding: 0px;
   border: 1px solid #b5c0c3;
   border-radius: 4px;
   color: #333;
-  padding: 25px !important;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
   display: block;
   background-color: #0093c9;
 }
@@ -44,14 +45,11 @@
   margin-left: 1rem;
 }
 .call-to-action--dark{
-  padding: 30px;
+  margin-top: 8px;
   display: flex;
-  padding: 0px;
   border: 1px solid #B5C0C3;
   border-radius: 4px;
   color: #FFFFFF;
-  padding: 25px!important;
   display: block;
   background-color: #000000;
-  vertical-align: bottom;
 }

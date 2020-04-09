@@ -18,7 +18,6 @@ function CallToAction(props) {
 			<a href={url}>
 			<div
 				className={`call-to-action ${dark && 'call-to-action--dark'}`}
-				style={{ padding: '1em !important', display: 'block' }}
 			>
 					<h3 className="call-to-action__type">
 						{type}
@@ -37,7 +36,6 @@ function CallToAction(props) {
 			<Link to={url}>
 				<div
 					className={`call-to-action ${dark && 'call-to-action--dark'}`}
-					style={{ padding: '1em !important', display: 'block' }}
 				>
 					<h3 className="call-to-action__type">
 						{type}

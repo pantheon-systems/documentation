@@ -28,7 +28,7 @@ class LandingTemplate extends Component {
                     </div>
                   )}
                   {(topic.cta || topic.cta_alt) && (
-                    <div className="col-md-6 ">
+                    <div className="col-md-6">
                       {topic.cta && (
                         <CallToAction
                           title={topic.cta.title}
@@ -37,7 +37,7 @@ class LandingTemplate extends Component {
                           url={topic.cta.url}
                         />
                       )}{" "}
-                      <br />
+
                       {topic.cta_alt && (
                         <CallToAction
                           title={topic.cta_alt.title}
