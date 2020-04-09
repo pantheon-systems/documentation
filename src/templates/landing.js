@@ -5,7 +5,7 @@ import Layout from "../layout/layout"
 import CallToAction from "../layout/call-to-action"
 import TopicGroup from "../layout/topic-group"
 import SubTopicGroup from "../layout/subtopic-group"
-import YoutubeVideo from "../layout/youtube-video"
+import Youtube from "../components/youtube"
 import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
@@ -24,7 +24,7 @@ class LandingTemplate extends Component {
               <section className="row">
                   {topic.video_id && (
                     <div className="col-md-6 hero-video__video">
-                      <YoutubeVideo videoId={topic.video_id} />
+                      <Youtube src={topic.video_id} title={topic.title}/>
                     </div>
                   )}
                   {(topic.cta || topic.cta_alt) && (
