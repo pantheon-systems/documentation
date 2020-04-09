@@ -2,10 +2,12 @@
   path: 'get-started'
   video_id: 'qHHWonKfGsQ'
   cta:
-    title: 'Quick Start Guide'
+    type: 'Guide'
+    title: 'Quick Start'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
   cta_alt:
+    type: 'Demo'
     title: 'Live Demo'
     subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
     url: 'https://pantheon.io/live-demo?docs'
@@ -83,9 +85,11 @@
   video_id: 'v7qe2_OZ95k'
   cta:
     title: 'Terminus Manual'
+    type: 'reference'
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
     url: '/terminus'
   cta_alt:
+    type: 'Live Workshop'
     title: 'Command Line Interface with Terminus'
     subtitle: "An introduction to Terminus: Pantheon's command line interface."
     url: 'https://pantheon.io/live-workshops/command-line-interface-terminus?docs'
@@ -364,11 +368,13 @@
   path: 'go-live'
   video_id: 'nZvf2CrLh9o'
   cta:
-    title: 'Launch Essentials Guide'
+    title: 'Launch Essentials'
+    type: 'guide'
     subtitle: "Ready to launch like a pro? Check out our step-by-step guide to see how it's done."
     url: '/guides/launch'
   cta_alt:
-    title: 'Live Workshop: Going Live Best Practices'
+    title: 'Going Live Best Practices'
+    type: 'Live Workshop'
     subtitle: 'How do you take a website live on Pantheon?'
     url: 'https://pantheon.io/live-workshops/going-live-best-practices?docs'
   topics-groups:
@@ -446,7 +452,8 @@
   path: 'platform'
   video_id: 'qWyMHOCU79M'
   cta:
-    title: 'Quick Start Guide '
+    title: 'Quick Start'
+    type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
   topics-groups:
@@ -548,10 +555,12 @@
   video_id: 'mdc8o19wfTI'
   cta:
     title: 'Automate and Integrate with Quicksilver'
+    type: 'reference'
     subtitle: 'Learn how to use Quicksilver to automate your WebOps workflow'
     url: '/quicksilver'
   cta_alt:
-    title: 'Live Workshop: Automate and Integrate with Quicksilver'
+    title: 'Automate and Integrate with Quicksilver'
+    type: 'Live Workshop'
     subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
     url: 'https://pantheon.io/live-workshops/integrate-and-automate-quicksilver?docs'
   topics-groups:
@@ -698,11 +707,13 @@
   path: 'performance'
   video_id: 'BAbJyb-uznY'
   cta:
-    title: 'Front End Performance Guide'
+    title: 'Front End Performance'
+    type: 'guide'
     subtitle: "Ready to dive into Pantheon's Global CDN? Check out this guide to learn how to ace an online speed test."
     url: '/guides/frontend-performance'
   cta_alt:
-    title: 'Live Workshop: Website Performance'
+    title: 'Website Performance'
+    type: 'Live Workshop'
     subtitle: 'How does Pantheon help your website run faster than other platforms?'
     url: 'https://pantheon.io/live-workshops/website-performance-varnish-redis-and-new-relic?docs'
   topics-groups:
@@ -791,7 +802,8 @@
   path: 'manage'
   video_id: '8bsPxcnffYM'
   cta:
-    title: 'Quick Start Guide '
+    title: 'Quick Start'
+    type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
   topics-groups:
@@ -873,7 +885,8 @@
   path: 'troubleshoot'
   video_id: 'V7RvZwl5Sw8'
   cta:
-    title: 'Quick Start Guide '
+    title: 'Quick Start'
+    type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
   topics-groups:

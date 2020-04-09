@@ -11,7 +11,7 @@ const propTypes = {
 };
 
 function CallToAction(props) {
-	const { url, title, subTitle, dark } = props;
+	const { url, title, type, subTitle, dark } = props;
 	if (/https?/.test(url)) {
 		return (
 			<>
@@ -21,7 +21,7 @@ function CallToAction(props) {
 				style={{ padding: '1em !important', display: 'block' }}
 			>
 					<h3 className="call-to-action__type">
-						Live Workshop
+						{type}
 					</h3>
 				<h2 className="call-to-action__title">
 					{title}
@@ -40,7 +40,7 @@ function CallToAction(props) {
 					style={{ padding: '1em !important', display: 'block' }}
 				>
 					<h3 className="call-to-action__type">
-						Live Workshop
+						{type}
 					</h3>
 					<h2 className="call-to-action__title">
 						{title}

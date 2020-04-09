@@ -32,6 +32,7 @@ class LandingTemplate extends Component {
                       {topic.cta && (
                         <CallToAction
                           title={topic.cta.title}
+                          type={topic.cta.type}
                           subTitle={topic.cta.subtitle}
                           url={topic.cta.url}
                         />
@@ -40,6 +41,7 @@ class LandingTemplate extends Component {
                       {topic.cta_alt && (
                         <CallToAction
                           title={topic.cta_alt.title}
+                          type={topic.cta_alt.type}
                           subTitle={topic.cta_alt.subtitle}
                           url={topic.cta_alt.url}
                           dark
@@ -114,11 +116,13 @@ export const pageQuery = graphql`
       video_id
       path
       cta {
+        type
         title
         subtitle
         url
       }
       cta_alt {
+        type
         title
         subtitle
         url
