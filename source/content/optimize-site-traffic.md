@@ -18,14 +18,15 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
 
-In addition to your other WordPress security practices, help thwart **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site in the process. 
+In addition to your other WordPress security practices, take steps to thwart **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
+
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
 1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
 1. Consider adding a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
 
 ## Configure favicon.ico to Serve a Static Image
 
-The CMS tries to serve the favicon file, but if it can’t find one in the defined path, it will attempt to generate one through PHP. While Pantheon does not count static assets against your traffic limit, generating an asset on each request the way favicon is in this case, does. In addition, since Pantheon locks down all directories except the file upload directories (`wp-contents/upload` on WordPress, or `sites/default/files` on Drupal), the CMS can’t save the file back to the path it’s generating.
+Pantheon does not count static assets against your traffic limit. However, if the CMS cannot find a favicon in the defined path, it will attempt to generate one through PHP on each request. Asset generation requests such as these are counted as traffic. In addition, since Pantheon locks down all directories except the file upload directories (`wp-contents/upload` on WordPress, or `sites/default/files` on Drupal), the CMS can’t save the file back to the path it’s generating.
 
 This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal (specifically Drupal 8), it shows up as a system path.
 
@@ -34,13 +35,19 @@ This issue affects both WordPress and Drupal sites, but the request path will va
 | WordPress | `/favicon.ico`              |
 | Drupal    | `/system/files/favicon.ico` |
 
-**Solution**: Add and commit a static `favicon.ico` into the path that is being requested. Usually the culprit is adding a custom favicon through the active theme for the site through some kind of upload form, and then the icon is deleted or unavailable, which causes the CMS to look for an alternative favicon.
+**Cause**: Usually the issue originates when adding a custom favicon through the active theme for the site through some kind of upload form, and then the icon is deleted or unavailable, which causes the CMS to look for an alternative favicon.
+
+**Solution**: Add and commit a static `favicon.ico` into the path that is being requested. 
 
 ## WordPress: admin-ajax.php Generates Pages Served
 
 Plugins can utilize an Ajax API to make calls to custom functions and filters in the backend.
 
-There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include: fetching the stored counts for when content is shared on social networks; checking if a page or post is currently being worked on (locked); even adding media to a post during the editing process such as using Gutenberg widgets.
+There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include: 
+
+- fetching the stored counts for when content is shared on social networks; 
+- checking if a page or post is currently being worked on (locked); 
+- adding media to a post during the editing process, such as when using Gutenberg widgets.
 
 Investigate calls to `admin-ajax.php` by looking at what script is calling the path, and what the payload is through browser developer tools. Access developer tools, filter for `admin-ajax`, then refresh the page:
 
@@ -51,7 +58,7 @@ In this first image, in the *Initiator* column, we see that these calls are bein
 
 ![Chrome Developer Tools shows results filtered for admin-ajax.php](../images/browser-dev-tools/devtools-network-admin-ajax.png)
 
-Return to the **Network** tab and click `admin-ajax.php` to see *Headers*, including the payload of what was sent to `admin-ajax`, such as the post data and the action or hook to be run in the WordPress backend:
+Return to the **Network** tab and click `admin-ajax.php` to see *Headers*. These will include the payload of what was sent to `admin-ajax`, such as the post data and the action or hook to be run in the WordPress backend:
 
 ![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-headers-admin-ajax.png)
 
@@ -61,7 +68,7 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ## DDoS Mitigation
 
-Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic and our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
+Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DDoS attack, our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
 
 ### Block IPs in Drupal or WordPress
 
@@ -157,5 +164,5 @@ Install and use one of the following WordPress plugins:
 
 </TabList>
 
-## Advanced Global CDN
+## Advanced Protection and Performance With Advanced Global CDN
 [Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
