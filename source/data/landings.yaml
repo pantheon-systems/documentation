@@ -384,7 +384,9 @@
         - text: 'Converting MySQL Tables From MyISAM to InnoDB'
           url: '/myisam-to-innodb'
         - text: 'Launch Check - WordPress Performance and Configuration Analysis'
-          url: '/wordpress-launch-check'
+          url: '/wordpress-launch-check/'
+        - text: 'Investigate and Remedy Traffic Events'
+          url: '/optimize-site-traffic/'
     - title: 'Billing'
       subtitle: 'Learn about common billing and administrative tasks.'
       links:
@@ -723,7 +725,9 @@
         - text: 'Converting MySQL Tables From MyISAM to InnoDB'
           url: '/myisam-to-innodb'
         - text: 'Launch Check - WordPress Performance and Configuration Analysis'
-          url: '/wordpress-launch-check'
+          url: '/wordpress-launch-check/'
+        - text: 'Investigate and Remedy Traffic Events'
+          url: '/optimize-site-traffic/'
   subtopics:
     - title: 'Cache'
       subtitle: 'Understand frontend and backend caching on our platform.'
