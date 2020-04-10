@@ -12,11 +12,10 @@ const propTypes = {
 function SubtopicGroup(props) {
 	const { title, subTitle, topics } = props;
 	return (
-		<div className="subtopic-container mb-70">
-			<div className="subtopic-groups">
+		<section className="subtopic-container row">
 				<h3>{title}</h3>
 				{subTitle && <p className="topic-info__description">{subTitle}</p>}
-			</div>
+
 			<div className="row">
 				<div className="col-md-12">
 					{topics &&
@@ -37,7 +36,7 @@ function SubtopicGroup(props) {
 						))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

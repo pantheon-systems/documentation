@@ -101,7 +101,7 @@
           links:
             - text: 'Introduction to Terminus'
               url: '/videos/terminus'
-              icons: 'fa fa-video-camera'
+              icon: 'fa fa-video-camera'
             - text: 'Create a Drupal 8 Site From the Command Line Using Terminus and Drush'
               url: '/guides/drupal8-commandline'
               icon: 'fa fa-book'

@@ -73,7 +73,7 @@ class LandingTemplate extends Component {
                   </div>
                 </React.Fragment>
               ))}
-            <div className="row mt-70">
+            
               {topic.subtopics &&
                 topic.subtopics.map(subtopic => (
                   <SubTopicGroup
@@ -83,8 +83,7 @@ class LandingTemplate extends Component {
                     topics={subtopic.subtopic_lists}
                   />
                 ))}
-            </div>
-            <div className="row topic-groups">
+
               {topic.topics_groups &&
                 topic.topics_groups.map((group, key) => (
                   <React.Fragment>
@@ -97,7 +96,7 @@ class LandingTemplate extends Component {
                     {(key + 1) % 2 === 0 ? <hr /> : null}
                   </React.Fragment>
                 ))}
-            </div>
+
           </div>
       </Layout>
     )
