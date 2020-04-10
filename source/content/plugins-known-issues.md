@@ -791,7 +791,13 @@ ___
 
 ![The Configure WMPL Button](../images/wpml-configure.png)
 
-You can also add the registration keys via `wp-config.php` as `define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );`. More details in the [WPML Guide](https://wpml.org/faq/install-wpml/#registration-using-php).
+You can also add the registration keys to `wp-config.php`:
+
+```php:title=wp-config.php
+define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
+```
+
+Learn more in the [WPML Guide](https://wpml.org/faq/install-wpml/#registration-using-php).
 
 ___
 
