@@ -2,7 +2,7 @@
 title: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
 tags: [tools, workflow]
-categories: [manage,develop]
+categories: [develop]
 ---
 For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev).
 
@@ -10,7 +10,7 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 <Alert title="Note" type="info" >
 
-In light of the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through July 1, 2020. See the [blogpost for more information](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor).
+To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through July 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information.
 
 </Alert>
 
