@@ -13,7 +13,7 @@ module.exports = {
 
     getDevURL: () => {
         let devURL;
-        devURL = process.env.MULTIDEV_SITE_URL.replace(/\/$/, "");
+        devURL = "https://" +  process.env.TERMINUS_ENV + "--" + process.env.TERMINUS_SITE + ".my.pantheonfrontend.website/docs";
         return devURL;
     },
 

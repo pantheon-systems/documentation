@@ -1,135 +1,112 @@
 version: 2.1
+
 orbs:
+  pfe: pantheon-systems/front-end@dev:master
   queue: eddiewebb/queue@1.5.0
+
+workflows:
+  build-preview-test-deploy:
+    jobs:
+      - pfe/gatsby-build-and-deploy:
+          filters:
+            branches:
+              ignore: master
+          use-yarn: false
+          deployment-path: docs
+          incremental-build: true
+          gcp-bucket: "static.pantheonfrontend.website"
+          gatsby-cache-version: "v1.2"
+          pre-steps:
+            - checkout
+            - run:
+                name: Import Functions and Variables
+                command: .circleci/scripts/set-env.sh && source $BASH_ENV
+            - run:
+                name: Install PHP
+                command: sudo apt-get install -y php-cli php-xml
+            - run:
+                name: Install Terminus
+                command: |
+                  php .circleci/scripts/terminus-installer.php
+            - run:
+                name: Import Tokens
+                command: gatsby-tokens
+            - run:
+                name: Import External Data
+                command: .circleci/scripts/import-external-data.sh
+            - persist_to_workspace:
+                root: .
+                paths:
+                  - ./
+      - test-links:
+          requires:
+            - pfe/gatsby-build-and-deploy
+      - lighthouse:
+          requires:
+            - pfe/gatsby-build-and-deploy
+          filters:
+            branches:
+              ignore: master
+      - deploy:
+          requires:
+            - test-links
+          filters:
+            branches:
+              only: master
+
 jobs:
-  build:
+  test-links:
     docker:
-      - image: circleci/php:7.2-cli-node
+      - image: circleci/php:7.2-cli-node-browsers
         environment:
-          BUILD_PATH: /home/circleci/build
-    working_directory: ~/build
+          BUILD_PATH: /home/circleci/project
+    working_directory: ~/project
     steps:
+      - pfe/set-terminus-env
       - checkout
       - run:
           name: Import Functions and Variables
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
-      - restore_cache:
-          keys:
-            - v2.5.9-always-
-      - restore_cache:
-          keys:
-            - npm-v2.8.4-
       - run:
-          name: Install Terminus
-          command: |
-            php .circleci/scripts/terminus-installer.php
-      - run:
-          name: Install Gatsby
-          command: |
-            npm install -E
-      - run:
-          name: Import Gatsby Tokens
-          command: gatsby-tokens
-      - run:
-          name: Update external data files
-          command: |
-            bash .circleci/scripts/import-external-data.sh
-      - run:
-          name: Gatsby Build
-          command: |
-            npm run-script build
-      - run:
-          name: Remove empty directories
-          command: |
-            find ~/build/public -type d -empty -delete
+          name: Install Broken Link Checker
+          command: sudo npm install -g alexlouden/broken-link-checker
       - run:
           name: Check for merge conflicts
           command: .circleci/scripts/merge_conflicts.sh
-      - persist_to_workspace:
-          root: .
-          paths:
-            - ./
-
-  test:
-    docker:
-      - image: circleci/php:7.2-cli-node-browsers
-        environment:
-          BUILD_PATH: /home/circleci/build
-    working_directory: ~/build
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Import Functions and Variables
-          command: .circleci/scripts/set-env.sh && source $BASH_ENV
-      - run:
-          name: Serve Gatsby
-          command: |
-            ./node_modules/gatsby/node_modules/.bin/gatsby serve --prefix-paths
-          background: true
-      - run:
-          name: Wait...
-          command: |
-            dockerize -wait tcp://localhost:9000
       - run:
           name: Test links
-          command: .circleci/tests/link-checker.sh
+          command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
       - save_cache:
           key: npm-v2.8.4-{{ checksum "package-lock.json" }}
           paths:
             - ~/build/node_modules
 
-  preview:
-    docker:
-      - image: circleci/php:7.2-cli-node
-        environment:
-          BUILD_PATH: /home/circleci/build
-    working_directory: ~/build
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Import Functions and Variables
-          command: .circleci/scripts/set-env.sh && source $BASH_ENV
-      - run:
-          name: Install rsync
-          command: sudo apt-get update && sudo apt-get install -y rsync
-      - run:
-          name: Install Terminus
-          command: php .circleci/scripts/terminus-installer.php
-      - run:
-         name: Deploy Multidev environment
-         command: bash .circleci/scripts/deploy-multidev.sh
-         no_output_timeout: 15m
-      - store_artifacts:
-         path: multidev-log.txt
-         destination: multidev-log.txt
-
   lighthouse:
     docker:
       - image: circleci/php:7.2-cli-node-browsers
         environment:
-          BUILD_PATH: /home/circleci/build
-    working_directory: ~/build/
+          BUILD_PATH: /home/circleci/project
+    working_directory: ~/project
     steps:
       - attach_workspace:
           at: .
+      - pfe/set-terminus-env
       - run:
           name: Import Functions and Variables
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - run:
           name: Lighthouse Audit
-          command: .circleci/tests/lighthouse/run
+          command: npm ci && .circleci/tests/lighthouse/run
       - store_artifacts:
           path: lighthouse_data/
           destination: lighthouse_data/
 
   deploy:
     docker:
-      - image: circleci/php:7.2-cli-node
+      - image: circleci/php:7.2-cli
         environment:
-          BUILD_PATH: /home/circleci/build
-    working_directory: ~/build
+          BUILD_PATH: /home/circleci/project
+    working_directory: ~/project
     steps:
       - queue/until_front_of_line:
           time: '15'
@@ -152,45 +129,6 @@ jobs:
               .circleci/scripts/deploy-live.sh
             fi
           no_output_timeout: 15m
-      - save_cache:
-          key: v2.5.9-always-{{ epoch }}
-          paths:
-            - ~/build/public
-            - ~/build/.cache
       - store_artifacts:
-         path: deployment-log.txt
-         destination: deployment-log.txt
-
-workflows:
-  version: 2.1
-  build-test-preview-and-deploy:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
-      - preview:
-          filters:
-            branches:
-              ignore: master
-          requires:
-            - build
-      - lighthouse:
-          filters:
-            branches:
-              ignore: master
-          requires:
-            - preview
-      - deploy:
-          filters:
-            branches:
-              only: master
-          requires:
-            - test
-
-# Below is CircleCI 1.0 Config Syntax that is still supported on CircleCI 2.0
-experimental:
-  notify:
-    branches:
-      only:
-        - master
+          path: deployment-log.txt
+          destination: deployment-log.txt
