@@ -18,6 +18,7 @@ const Youtube = ({ title, src }) => {
             src={`https://www.youtube.com/embed/${src}?rel=0"`}
             className="embedVideo-iframe"
             allowfullscreen=""
+            frameborder="0"
             style={{
               border: "0px",
               position: "absolute",
@@ -29,7 +30,6 @@ const Youtube = ({ title, src }) => {
           />
         </div>
       </div>
-      <br />
     </>
   )
 }

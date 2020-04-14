@@ -5,7 +5,7 @@ import Layout from "../layout/layout"
 import CallToAction from "../layout/call-to-action"
 import TopicGroup from "../layout/topic-group"
 import SubTopicGroup from "../layout/subtopic-group"
-import YoutubeVideo from "../layout/youtube-video"
+import Youtube from "../components/youtube"
 import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
@@ -19,32 +19,29 @@ class LandingTemplate extends Component {
     return !topic ? null : (
       <Layout>
         <SEO title={topic.title} />
-        <div style={{ marginTop: "-20px" }} className="container">
           <div className="container doc-content-well">
-            <div className="row">
               <h1 className="title">{topic.title}</h1>
-            </div>
-            <div className="row" style={{ marginBottom: "15px" }}>
-              <div className="">
-                <div className="row call-to-action-section">
+              <section className="row">
                   {topic.video_id && (
                     <div className="col-md-6 hero-video__video">
-                      <YoutubeVideo videoId={topic.video_id} />
+                      <Youtube src={topic.video_id} title={topic.title}/>
                     </div>
                   )}
                   {(topic.cta || topic.cta_alt) && (
-                    <div className="col-md-6 ">
+                    <div className="col-md-6">
                       {topic.cta && (
                         <CallToAction
                           title={topic.cta.title}
+                          type={topic.cta.type}
                           subTitle={topic.cta.subtitle}
                           url={topic.cta.url}
                         />
                       )}{" "}
-                      <br />
+
                       {topic.cta_alt && (
                         <CallToAction
                           title={topic.cta_alt.title}
+                          type={topic.cta_alt.type}
                           subTitle={topic.cta_alt.subtitle}
                           url={topic.cta_alt.url}
                           dark
@@ -52,9 +49,7 @@ class LandingTemplate extends Component {
                       )}
                     </div>
                   )}
-                </div>
-              </div>
-            </div>
+                </section>
             {topic.guides &&
               topic.guides.map(guide => (
                 <React.Fragment>
@@ -78,7 +73,7 @@ class LandingTemplate extends Component {
                   </div>
                 </React.Fragment>
               ))}
-            <div className="row mt-70">
+            
               {topic.subtopics &&
                 topic.subtopics.map(subtopic => (
                   <SubTopicGroup
@@ -88,8 +83,7 @@ class LandingTemplate extends Component {
                     topics={subtopic.subtopic_lists}
                   />
                 ))}
-            </div>
-            <div className="row topic-groups">
+
               {topic.topics_groups &&
                 topic.topics_groups.map((group, key) => (
                   <React.Fragment>
@@ -102,9 +96,8 @@ class LandingTemplate extends Component {
                     {(key + 1) % 2 === 0 ? <hr /> : null}
                   </React.Fragment>
                 ))}
-            </div>
+
           </div>
-        </div>
       </Layout>
     )
   }
@@ -122,11 +115,13 @@ export const pageQuery = graphql`
       video_id
       path
       cta {
+        type
         title
         subtitle
         url
       }
       cta_alt {
+        type
         title
         subtitle
         url

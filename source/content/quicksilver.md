@@ -1,5 +1,5 @@
 ---
-title: Automating and Integrating your Pantheon WebOps Workflow with Quicksilver Platform Hooks
+title: Automate and Integrate your WebOps Workflow with Quicksilver
 description: Learn how to use Quicksilver to automate your WebOps workflow.
 tags: [pantheonyml, infrastructure]
 categories: [automate,platform]

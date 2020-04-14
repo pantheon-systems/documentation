@@ -12,7 +12,7 @@ const propTypes = {
 function TopicGroup(props) {
 	const { title, subTitle, docs } = props;
 	return (
-		<div className="col-md-6 topic-groups">
+		<section className="col-md-6 topic-groups">
 			<h3>{title}</h3>
 			<p className="topic-info__description">{subTitle}</p>
 			<ul className="topic-docs">
@@ -25,7 +25,7 @@ function TopicGroup(props) {
 						</li>
 					))}
 			</ul>
-		</div>
+		</section>
 	);
 }
 
