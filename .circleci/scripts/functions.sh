@@ -31,9 +31,9 @@ protected-branches() {
 
 gatsby-tokens() {
 # Set GitHub API token
-    touch $BUILD_PATH/.env.production
-    echo "GITHUB_API=$GITHUB_TOKEN" > $BUILD_PATH/.env.production
-    echo "SEGMENT_KEY=$SEGMENT_KEY" >> $BUILD_PATH/.env.production
+    touch .env.production
+    echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
+    echo "SEGMENT_KEY=$SEGMENT_KEY" >> .env.production
     echo "GTM_ID=$GTM_ID" >> .env.production
 }
 
