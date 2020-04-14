@@ -1,8 +1,8 @@
 ---
 title: Best Practices for Maintaining Custom Upstreams
 description: Detailed information on how to maintain Custom Upstreams and distribute updates downstream.
-tags: [tools, workflow]
-categories: [manage,develop]
+tags: [upstreams, workflow]
+categories: [develop]
 ---
 Maintainers of [Custom Upstreams](/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
 
@@ -305,7 +305,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
   </Tab>
 
-  <Tab title="Drupal 7" id="d7-xtheirs">
+  <Tab title="Drupal 8" id="d8-2conflict">
 
   ```git
   git fetch pantheon-drops-8
