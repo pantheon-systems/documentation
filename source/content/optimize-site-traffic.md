@@ -173,8 +173,6 @@ The `stripos` function implements a case-insenstive match which can be helpful w
 Remember to replace the example user agent (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
-<?php
-
 if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
   header('HTTP/1.0 403 Forbidden');
   exit;
