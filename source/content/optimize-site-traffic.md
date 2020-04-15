@@ -65,16 +65,55 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
 
-## Restrict access for bots based on UA string
+## Restrict access based on User Agent or IP Address
 
-To block a particular user agent, add the following to `settings.php` or `wp-config.php`. Remember to replace the example user agent (`UglyBot`):
+For Drupal and WordPress, there are some modules or plugins that can be utilized to block bad actors, such as the [Ban module](https://www.drupal.org/docs/8/core/modules/ban/overview) for Drupal or the [WordFence plugin](https://www.wordfence.com/help/blocking/#ip-address) for WordPress. While these provide a user-friendly interface for adding rules to block requests, there is also a performance consideration as the application needs to fully bootstrap, load the plugin, then apply the logic.
+
+Alternatively, using a simple PHP snippet in `settings.php` for Drupal or `wp-config.php` for WordPress. Because these files are first to be loaded, we're able to improve the performance by rejecting the request and killing the process without fully loading Drupal or WordPress.
+
+To block a particular user agent or IP address, use the following recipes to update your `settings.php` or `wp-config.php` with blocking rules.
+
+<TabList>
+
+<Tab title="User Agent" id="block-by-user-agent" active={true}>
+
+The `stripos` function implements a case-insenstive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`. 
+
+Remember to replace the example user agent (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
+<?php
+
 if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
   header('HTTP/1.0 403 Forbidden');
   exit;
 }
 ```
+
+</Tab>
+
+<Tab title="IP Address" id="block-by-ip-address">
+
+When blocking IP addresses, we may want to block multiple IPs at once, so we can create an array of IP addresses that can be used as a lookup.
+
+```php:title=wp-config.php%20or%20settings.php
+<?php
+
+$blocked_IPs = array(
+  '93.160.60.22',
+  '188.213.49.139'
+);
+
+if (in_array($_SERVER['REMOTE_ADDR'], $blocked_IPs)) {
+  header('HTTP/1.0 403 Forbidden');
+  exit;
+}
+```
+
+</Tab>
+
+</TabList>
+
 
 ## DDoS Mitigation
 
