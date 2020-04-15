@@ -17,25 +17,25 @@ If you are a government, medical, or educational institution with a crisis commu
 
 ## Features
 
-This distribution features a minimal set of plugins for easy maintenance that can be tailored to your organization’s specific needs and capabilities. A few assumptions have been made to simplify the site building process for any organization utilizing this upstream, which is detailed in the plugin list below:
+This distribution features a minimal set of plugins for easy maintenance that can be tailored to your organization’s specific needs and capabilities. A few assumptions have been made to simplify the site building process for any organization utilizing this upstream, which are detailed in the plugin list below:
 
 ### Site Optimization Plugins
 
 These plugins were selected to improve the performance of the site, and better utilize tools built into Pantheon.
 
-- **[Native PHP Sessions for WordPress](https://wordpress.org/plugins/wp-native-php-sessions/)**: Offload PHP’s native sessions to your database for multi-server compatibility. Utilizing this plugin is a best practices recommendation for sites running multiple application containers that may require session persistence across those resources.
+- **[Native PHP Sessions for WordPress](https://wordpress.org/plugins/wp-native-php-sessions/)**: Offload PHP’s native sessions to your database for multi-server compatibility. This plugin is a best practices recommendation for sites running [multiple application containers](/application-containers#multiple-application-containers) that may require session persistence across containers.
 
 - **[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)** - A heads-up display into your Pantheon environment, giving you information about the current environment.
 
 - **[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)** - Automatically clear related pages from Pantheon’s Edge when you update content.
 
-- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using Redis for high visibility websites, and backing it with a high-performance, persistent object cache can have a huge impact.
+- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using [Redis](/redis). For high visibility websites, a high-performance persistent object cache can have a huge impact.
 
 ### Content Features Plugins
 
 These plugins were selected to improve the content creation and moderation process, in addition to improving SEO for visibility.
 
-- **[Disable Comments](https://wordpress.org/plugins/disable-comments/)** - Allows administrators to globally disable comments on their site, or disabled according to post type. As the focus of this upstream is to distribute information, disabling core WordPress comments by default will reduce the moderation overhead, but can be re-enabled at any point in time.
+- **[Disable Comments](https://wordpress.org/plugins/disable-comments/)** - Allows administrators to globally disable comments on their site, or disable them according to post type. As the focus of this upstream is to distribute information, disabling core WordPress comments by default will reduce the moderation overhead, but can be re-enabled at any point.
 
 - **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)** - The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more. Yoast provides insight on how to improve your SEO, empowering your content editors to write organic, impactful content for your target audiences to find.
 
@@ -53,9 +53,13 @@ These plugins were selected to improve the content creation and moderation proce
 
 ## How to Install
 
-1. Create a new site from this upstream by either using [this link](https://dashboard.pantheon.io/sites/create?upstream_id=46fb2d82-3a81-4592-9afc-81ec57d9cf82) or using Terminus to [create a new site from a public upstream](/guides/terminus-drupal-site-management).
+1. Create a new site from this upstream from the [Pantheon Dashboard](https://dashboard.pantheon.io/sites/create?upstream_id=46fb2d82-3a81-4592-9afc-81ec57d9cf82), or using Terminus (replace `site-machine-name` and `Site Name`):
 
-	The installation script will pre-populate generic content into the site.
+    ```bash{promptUser: user}
+    terminus site:create site-machine-name "Site Name"  crisis-response-wp
+    ```
+
+    The installation script will pre-populate generic content into the site.
 
 1. [Contact Sales](https://pantheon.io/contact-us) and we will work with you to get an appropriate site plan and organization set up free of charge.
 
@@ -75,29 +79,29 @@ These plugins were selected to improve the content creation and moderation proce
 
 1. Associate a [domain name](/guides/launch/domains) with your Live site.
 
-## How to Use
+## Configuration
 
-While this upstream will provide you with a simplified foundation for building an information portal, you will want to review a few dashboard links for additional customization:
+While this upstream provides you with a simplified foundation for building an information portal, you should review a few dashboard links for additional customization:
 
 1. **General Settings** (Sidebar -> Settings -> General)
 
-	Update the site name, tagline, administrative email address, and any other base site settings you wish.
+    Update the site name, tagline, administrative email address, and any other base site settings you wish.
 
 1. **Theme Panel** (Sidebar -> Theme Panel)
 
-	OceanWP provides a lot of flexible regions and components that can be customized in your theme. Review the theme panel to become familiar with all of the components being utilized, and update as you see fit.
-	
-	The **Getting Started** section will also provide direct links to update information in the WordPress Theme Customizer interface.
+    OceanWP provides a lot of flexible regions and components that can be customized in your theme. Review the theme panel to become familiar with all of the components being utilized, and update as you see fit.
+
+    The **Getting Started** section will also provide direct links to update information in the WordPress Theme Customizer interface.
 
 1. **Appearance Customizer** (Sidebar -> Appearance -> Customize)
 
-	This is where you can configure and update all aspects of the OceanWP theme settings, such as site logo, color palettes, fonts, widgets, etc. We have made a few minor assumptions, but this dashboard gives you total control over the look and feel of the theme without writing any additional code.
+    This is where you can configure and update all aspects of the OceanWP theme settings, such as site logo, color palettes, fonts, widgets, etc. We have made a few minor assumptions, but this dashboard gives you total control over the look and feel of the theme without writing any additional code.
 
 1. **Contact Forms** (Sidebar -> Contact)
 
-	Contact Form 7 stores all forms in this interface, so you can update the existing form (such as recipient email for submissions) or create any additional forms you might need.
+    Contact Form 7 stores all forms in this interface, so you can update elements in the existing form (such as recipient email for submissions) or create any additional forms you might need.
 
-From here, you can update the existing demo content, or delete them and create new pages using Elementor or the default WordPress editor. After creating new content, you may need to update the menu links located under the Appearance tab.
+From here, you can update the existing demo content, or delete it and create new pages using Elementor or the default WordPress editor. After creating new content, you may need to update the menu links located under the Appearance tab.
 
 ## Next Steps
 
