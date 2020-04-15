@@ -23,7 +23,7 @@ This distribution features a minimal set of plugins for easy maintenance that ca
 
 These plugins were selected to improve the performance of the site, and better utilize tools built into Pantheon.
 
-- **[Native PHP Sessions for WordPress](https://wordpress.org/plugins/wp-native-php-sessions/)**: Offload PHP’s native sessions to your database for multi-server compatibility. Utilizing this plugin is a best practices recommendation for sites running multiple application containers that may require session persistance across those resources.
+- **[Native PHP Sessions for WordPress](https://wordpress.org/plugins/wp-native-php-sessions/)**: Offload PHP’s native sessions to your database for multi-server compatibility. Utilizing this plugin is a best practices recommendation for sites running multiple application containers that may require session persistence across those resources.
 
 - **[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)** - A heads-up display into your Pantheon environment, giving you information about the current environment.
 
@@ -91,7 +91,7 @@ While this upstream will provide you with a simplified foundation for building a
 
 1. **Appearance Customizer** (Sidebar -> Appearance -> Customize)
 
-	This is where you can configure and update all aspects of the OceanWP theme settings, such as site logo, color palletes, fonts, widgets, etc. We have made a few minor assumptions, but this dashboard gives you total control over the look and feel of the theme without writing any additional code.
+	This is where you can configure and update all aspects of the OceanWP theme settings, such as site logo, color palettes, fonts, widgets, etc. We have made a few minor assumptions, but this dashboard gives you total control over the look and feel of the theme without writing any additional code.
 
 1. **Contact Forms** (Sidebar -> Contact)
 
