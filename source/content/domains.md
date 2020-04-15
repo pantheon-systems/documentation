@@ -7,7 +7,8 @@ searchboost: 150
 use:
     - docs_tags
 ---
-A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like 127.0.0.1. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
+
+A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like `127.0.0.1`. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs" campaign="docs-webops">
 
@@ -26,7 +27,7 @@ Pantheon issues platform domains for all environments. Each environment (Dev, Te
 All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a good best practice to ensure you are ready to go live with HTTPS. See [Redirect to HTTPS](/redirects/#redirect-to-https) for more information.
 
 ### robots.txt
-Pantheon serves a default robots.txt that disallows crawlers on platform domains (`/*.pantheonsite.io`, `/*.pantheon.io`, `/*.gotpantheon.com`, and `/*.sites.my-agency.com`). Crawlers are allowed on the Live environment for requests served with a custom domain (e.g., `www.example.com`). If you attempt to access your Live environment with a platform domain, even if you have a domain associated with the environment, the default robots.txt will be served.
+Pantheon serves a default `robots.txt` that disallows crawlers on platform domains (`/*.pantheonsite.io`, `/*.pantheon.io`, `/*.gotpantheon.com`, and `/*.sites.my-agency.com`). Crawlers are allowed on the Live environment for requests served with a custom domain (e.g., `www.example.com`). If you attempt to access your Live environment with a platform domain, even if you have a domain associated with the environment, the default `robots.txt` will be served.
 
 Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding a custom domain to an environment other than Live will not permit crawlers to that environment.
 
@@ -37,7 +38,7 @@ If you don't already own a domain name, register one with a third-party provider
 
  - [1&1 Domain Configuration](/1-and-1)
  - [Cloudflare Domain Configuration](/cloudflare)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy)
+ - [DNS Made Easy Domain Configuration](/dns-made-easy)
  - [DreamHost Domain Configuration](/dreamhost)
  - [Dyn Domain Configuration](/dyn)
  - [eNom Domain Configuration](/enom)
@@ -134,7 +135,6 @@ All redirect logic should include the `php_sapi_name() != "cli"` conditional sta
 [error]
 ```
 
-
 ### Infinite Redirect Loops
 #### HTTP_X_FORWARDED_PROTO
 Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file.
@@ -153,13 +153,10 @@ When troubleshooting a redirect loop, you may want to deactivate any module or p
 ### Mixed-mode Browser Warnings
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
 
-<Partial file="cname-workaround.md" />
-
 ### Test Domain Names Before DNS
 You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.
 
 <Partial file="_hosts-file.md" />
-
 
 ## See Also
 - [Configure Redirects](/redirects)
