@@ -373,6 +373,39 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   width: 400px;
   top: 87px;
 }
+.navbar-nav .dropdown:focus-within .dropdown-menu {
+  display: block;
+  top: auto;
+  width: 400px;
+  top: 87px;
+}
+.navbar-nav .dropdown:focus-within .dropdown-menu li > a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0px;
+  line-height: 16px;
+  text-transform: initial;
+  display: inline-block;
+}
+.navbar-nav .dropdown:focus-within .dropdown-menu li {
+  margin-bottom: 15px;
+  text-transform: initial;
+}
+.navbar-nav .dropdown:focus-within .dropdown-menu li:last-child {
+  margin-bottom: 0px;
+}
+/*
+.navbar-nav .dropdown:focus-within .dropdown-menu {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0px;
+  line-height: 16px;
+  text-transform: initial;
+  display: inline-block;
+}
+*/
 .navbar-nav .dropdown:hover .dropdown-menu li > a {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
