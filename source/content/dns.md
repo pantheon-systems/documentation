@@ -163,6 +163,8 @@ No, Pantheon is neither a domain registrar nor a DNS manager. Many platforms and
 
 Some DNS providers provide a default `CNAME` record for `www` pointing to `@` (the bare domain). Remove these records and replace them with the records suggested by the Pantheon Site Dashboard.
 
+Note that if the Platform detects a CNAME record, the DNS **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
+
 ### What are `AAAA` records, and do I need them?
 
 **AAAA** or "quad-A" records are used to assign [IPv6](https://en.wikipedia.org/wiki/IPv6) addresses to domain names. While most of the internet still uses IPv4, the address pool has been exhausted and IPv6 became the standard as of July 14th, 2017.
@@ -184,25 +186,6 @@ An `A` record points a domain name to an IPv4 address. A `CNAME` record points a
 Pantheon provides `A` and `AAAA` values:
 
 ![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
-
-If your DNS provider doesn't allow `CNAME` records, you can use `nslookup` to determine the IP address for the domain value, and then supply that as an `A` record:
-
-```bash{outputLines:2-12}
-nslookup live-anita-drupal.pantheonsite.io
-Server:         192.168.1.1
-Address:        192.168.1.1#53
-
-Non-authoritative answer:
-live-anita-drupal.pantheonsite.io       canonical name = fe1.edge.pantheon.io.
-Name:   fe1.edge.pantheon.io
-Address: 23.185.0.1
-Name:   fe1.edge.pantheon.io
-Address: 2620:12a:8001::1
-Name:   fe1.edge.pantheon.io
-Address: 2620:12a:8000::1
-```
-
-In the example above, we can create an `A` record for `www` set to `23.185.0.1` to substitute the `CNAME` record.
 
 ### Can I override DNS locally?
 Yes! You can modify your local `hosts` file, which takes precedence over DNS:
