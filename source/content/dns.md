@@ -189,9 +189,11 @@ Pantheon provides `A` and `AAAA` values:
 
 ### Why does my domain say "Setup Recommended?"
 
-If the Platform detects a CNAME record pointed to Pantheon, the **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyphicons-alert text-warning"></span> **Setup Recommended**. Click **Details** to find the value detected for the CNAME on the line with `Remove this detected record` in the status.
+The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyphicons-alert text-warning"></span> **Setup Recommended** when the Platform detects a CNAME record pointed to Pantheon, or when A/AAAA records are not detected.
 
-Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
+Click **Details** to find the values required for A and AAAA records to add, or to find the CNAME detected on the line with `Remove this detected record` in the status.
+
+Log in to your DNS provider to make the recommended changes.
 
 ### Can I override DNS locally?
 Yes! You can modify your local `hosts` file, which takes precedence over DNS:
