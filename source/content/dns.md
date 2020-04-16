@@ -23,7 +23,7 @@ We offer DNS provider-specific instructions for several common DNS hosts:
  - [DNS Made Easy Domain Configurationi](/dns-made-easy)
  - [DreamHost Domain Configuration](/dreamhost)
  - [Dyn Domain Configuration](/dyn)
- - [Enom Domain Configuration](/Enom)
+ - [Enom Domain Configuration](/enom)
  - [Gandi Domain Configuration](/gandi)
  - [GoDaddy Domain Configuration](/godaddy)
  - [Google Domain Configuration](/google)

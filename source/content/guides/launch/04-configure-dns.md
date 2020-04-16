@@ -42,7 +42,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
  - [DNS Made Easy Domain Configuration](/dns-made-easy)
  - [DreamHost Domain Configuration](/dreamhost)
  - [Dyn Domain Configuration](/dyn)
- - [Enom Domain Configuration](/Enom)
+ - [Enom Domain Configuration](/enom)
  - [Gandi Domain Configuration](/gandi)
  - [GoDaddy Domain Configuration](/godaddy)
  - [Google Domain Configuration](/google)
