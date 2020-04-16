@@ -1,7 +1,7 @@
 ---
 title: Professional Services
 description: Pantheon Professional Services include consulting, migrations, load testing, training, and dedicated Customer Success Managers.
-tags: []
+tags: [services, migration, SSO]
 categories: [develop]
 ---
 
