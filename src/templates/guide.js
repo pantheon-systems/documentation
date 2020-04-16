@@ -34,6 +34,7 @@ import ChecklistItem from "../components/checklistItem"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
+import DNSProviderDocs from "../components/dns-provider-docs.js"
 
 const shortcodes = {
   Callout,
@@ -59,6 +60,7 @@ const shortcodes = {
   ReviewDate,
   Youtube,
   ResourceSelector,
+  DNSProviderDocs,
 }
 
 class GuideTemplate extends React.Component {
