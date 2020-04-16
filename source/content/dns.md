@@ -15,7 +15,11 @@ While Pantheon does not offer DNS management services, we can help you to unders
 
 ## DNS Provider Instructions
 
+<Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
+
 <DNSProviderDocs />
+
+</Accordion>
 
 ## DNS Terminology
 

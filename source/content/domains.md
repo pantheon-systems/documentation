@@ -34,7 +34,11 @@ Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding 
 ## Custom Domains
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
+<Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
+
 <DNSProviderDocs />
+
+</Accordion>
 
 Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/https).
 
@@ -72,7 +76,7 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 
 1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns).
 
-  - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
+   - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
 
 1. You will also see an option to choose a primary domain:
 
