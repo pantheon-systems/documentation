@@ -179,7 +179,7 @@ The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyph
 
 Click **Details** to find the values required for A and AAAA records to add, or to find the CNAME detected on the line with `Remove this detected record` in the status.
 
-[Log in to your DNS provider](/dns-providers) to make the recommended changes.
+Log in to your DNS provider to make the recommended changes. We have instructions for [many popular DNS providers](/dns-providers) to help make the required adjustment.
 
 ### Can I override DNS locally?
 Yes! You can modify your local `hosts` file, which takes precedence over DNS:
