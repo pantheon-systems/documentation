@@ -1,19 +1,15 @@
 version: 2.1
 orbs:
-  pfe: stevector/pantheon-frontend@dev:discrete-steps
+  pfe: stevector/pantheon-frontend@dev:scaffold-discrete-commands
 workflows:
-  version: 2
   build_deploy_test:
     jobs:
-      - pfe/gatsby_build:
+      - pfe/gatsby-build-and-deploy:
           pre-steps:
             - checkout
             - run:
                 name: Import Functions and Variables
                 command: .circleci/scripts/set-env.sh && source $BASH_ENV
-            - restore_cache:
-                keys:
-                  - v3.0-always-
             - run:
                 name: Install PHP
                 command: sudo apt-get install -y php-cli php-xml
@@ -22,9 +18,6 @@ workflows:
                 command: |
                   php .circleci/scripts/terminus-installer.php
             - run:
-                name: Import Functions and Variables
-                command: .circleci/scripts/set-env.sh && source $BASH_ENV
-            - run:
                 name: Import Tokens
                 command: gatsby-tokens
             - run:
@@ -32,39 +25,12 @@ workflows:
                 command: .circleci/scripts/import-external-data.sh
           post-steps:
             - run:
-                name: Remove empty directories
-                command: |
-                  find ./public -type d -empty -delete
-            - run:
                 name: Check for merge conflicts
                 command: .circleci/scripts/merge_conflicts.sh
-            - save_cache:
-                key: v3.0-always-{{ epoch }}
-                paths:
-                  - public/
-                  - .cache/
-            - persist_to_workspace:
-                root: .
-                paths:
-                  - ./public
-                  - ./.cache
-
-      - pfe/gatsby_deploy:
-          requires:
-            - pfe/gatsby_build
-          pre-steps:
-            - attach_workspace:
-                at: .
-          post-steps:
             - run:
                 name: post deployment completion status
                 command: |
-                 curl "http://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/statuses/$CIRCLE_SHA1" -H "Authorization: token $GITHUB_TOKEN" -X POST -d '{"state": "success", "context": "pantheon/deployment", "description": "Deployment complete", "target_url": "http://'${TERMINUS_ENV}'--'${TERMINUS_SITE}'.my.pantheonfrontend.website/"}'
-            - run:
-                name: Check for merge conflicts
-                command: .circleci/scripts/merge_conflicts.sh
-            - persist_to_workspace:
-                root: .
-                paths:
-                  - ./
-      # @todo, add back testing, lighthouse, master deployment etc.
+                  curl "http://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/statuses/$CIRCLE_SHA1" -H "Authorization: token $GITHUB_TOKEN" -X POST -d '{"state": "success", "context": "pantheon/deployment", "description": "Deployment complete", "target_url": "http://'${TERMINUS_ENV}'--'${TERMINUS_SITE}'.my.pantheonfrontend.website/"}'
+
+
+            # @todo, add back testing, lighthouse, master deployment etc.
