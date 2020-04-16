@@ -35,18 +35,7 @@ If you don't already own a domain name, register one with a third-party provider
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/1-and-1)
- - [Cloudflare Domain Configuration](/cloudflare)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy)
- - [DreamHost Domain Configuration](/dreamhost)
- - [Dyn Domain Configuration](/dyn)
- - [eNom Domain Configuration](/enom)
- - [Gandi Domain Configuration](/gandi)
- - [GoDaddy Domain Configuration](/godaddy)
- - [Google Domain Configuration](/google)
- - [Namecheap Domain Configuration](/namecheap)
- - [Network Solutions Domain Configuration](/network-solutions)
- - [Amazon Route 53 Domain Configuration](/route53)
+<DNSProviderDocs />
 
 </Accordion>
 
