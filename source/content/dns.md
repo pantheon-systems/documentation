@@ -15,8 +15,7 @@ While Pantheon does not offer DNS management services, we can help you to unders
 
 ## DNS Provider Instructions
 
-We offer DNS provider-specific instructions for several common DNS hosts:
-
+We offer [DNS provider-specific instructions](/dns-providers) for several common DNS hosts:
 
  - [1&1 Domain Configuration](/1-and-1)
  - [Cloudflare Domain Configuration](/cloudflare)
@@ -193,7 +192,7 @@ The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyph
 
 Click **Details** to find the values required for A and AAAA records to add, or to find the CNAME detected on the line with `Remove this detected record` in the status.
 
-Log in to your DNS provider to make the recommended changes.
+[Log in to your DNS provider](/dns-providers) to make the recommended changes.
 
 ### Can I override DNS locally?
 Yes! You can modify your local `hosts` file, which takes precedence over DNS:
