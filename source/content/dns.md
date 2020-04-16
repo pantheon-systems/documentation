@@ -186,7 +186,7 @@ Pantheon provides `A` and `AAAA` values:
 
 ![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
 
-### Why does my domain say "Setup Recommended?"
+### Status Alerts in Domains / HTTPS
 
 The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyphicons-alert text-warning"></span> **Setup Recommended** when the Platform detects a CNAME record pointed to Pantheon, or when A/AAAA records are not detected.
 
