@@ -40,7 +40,7 @@ If you don't already own a domain name, register one with a third-party provider
  - [DNS Made Easy Domain Configurationi](/dns-made-easy)
  - [DreamHost Domain Configuration](/dreamhost)
  - [Dyn Domain Configuration](/dyn)
- - [eNom Domain Configuration](/enom)
+ - [Enom Domain Configuration](/Enom)
  - [Gandi Domain Configuration](/gandi)
  - [GoDaddy Domain Configuration](/godaddy)
  - [Google Domain Configuration](/google)
