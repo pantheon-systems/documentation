@@ -268,7 +268,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 </Tab>
 
-<Tab title="Gitlab" id="gitlab-auth">
+<Tab title="GitLab" id="gitlab-auth">
 
   Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
 
