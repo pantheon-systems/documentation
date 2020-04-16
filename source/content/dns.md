@@ -15,20 +15,7 @@ While Pantheon does not offer DNS management services, we can help you to unders
 
 ## DNS Provider Instructions
 
-We offer [DNS provider-specific instructions](/dns-providers) for several common DNS hosts:
-
- - [1&1 Domain Configuration](/1-and-1)
- - [Cloudflare Domain Configuration](/cloudflare)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy)
- - [DreamHost Domain Configuration](/dreamhost)
- - [Dyn Domain Configuration](/dyn)
- - [eNom Domain Configuration](/enom)
- - [Gandi Domain Configuration](/gandi)
- - [GoDaddy Domain Configuration](/godaddy)
- - [Google Domain Configuration](/google)
- - [Namecheap Domain Configuration](/namecheap)
- - [Network Solutions Domain Configuration](/network-solutions)
- - [Amazon Route 53 Domain Configuration](/route53)
+<DNSProviderDocs />
 
 ## DNS Terminology
 

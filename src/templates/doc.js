@@ -31,6 +31,7 @@ import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
+import DNSProviderDocs from "../components/dns-provider-docs.js"
 
 const shortcodes = {
   Callout,
@@ -55,6 +56,7 @@ const shortcodes = {
   ReviewDate,
   Youtube,
   ResourceSelector,
+  DNSProviderDocs,
 }
 
 class DocTemplate extends React.Component {
