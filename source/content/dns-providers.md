@@ -1,8 +1,8 @@
 ---
 title: Registrar-specific DNS Instructions
 description: A list of docs to help you connect your Pantheon site to your domain
-categories: [manage]
-tags: [dns]
+categories: [go-live]
+tags: [dns, domains]
 reviewed: "2020-04-16"
 ---
 
