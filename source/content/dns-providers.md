@@ -3,7 +3,6 @@ title: Registrar-specific DNS Instructions
 description: A list of docs to help you connect your Pantheon site to your domain
 categories: [manage]
 tags: [dns]
-contributors: [alexfornuto]
 reviewed: "2020-04-16"
 ---
 
