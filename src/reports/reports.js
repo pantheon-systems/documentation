@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
 import Accordion from "../components/accordion"
 
@@ -66,10 +66,32 @@ class ReviewReport extends React.Component {
                 }
               }
             }
+          	categorizedDocs: allMdx(
+              filter: {
+                frontmatter: {categories: {glob: "*" }, title: {ne: "" }}
+              })
+            {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    title
+                    categories
+                    reviewed
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
           }
         `}
         render={data => {
-          const [search, setSearch] = useState("")
+          const [searchTitle, setSearch] = useState("")
+          //console.log("SearchTitle: ", searchTitle) // For Debugging
+          const [searchCategory, setSearchCat] = useState("")
+          //console.log("searchCategory: ", searchCategory) // For Debugging
           const reviewedPages = data.allReviewedDocs.edges
           const reviewedTertiaryPages = data.allReviewedDocs.edges.filter(
             page => {
@@ -86,6 +108,9 @@ class ReviewReport extends React.Component {
             }
           )
           //console.log("Unreviewed Tertiary Pages: ", unreviewedTertiaryPages) // For debugging
+          const categorizedPages = data.categorizedDocs.edges
+          //console.log("categorizedPages: ", categorizedPages) // For Debugging
+
           return (
             <Layout>
               <h1>Reports</h1>
@@ -97,11 +122,11 @@ class ReviewReport extends React.Component {
                   </div>
                   <input
                     type="text"
-                    id="command-search"
+                    id="command-search-title"
                     className="form-control"
                     placeholder="Filter by Title"
                     onChange={e => setSearch(e.target.value)}
-                    value={search}
+                    value={searchTitle}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
@@ -114,20 +139,45 @@ class ReviewReport extends React.Component {
                 </div>
               </div>
 
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-addon">
+                    <i className="fa fa-search" />
+                  </div>
+                  <input
+                    type="text"
+                    id="command-search-category"
+                    className="form-control"
+                    placeholder="Filter by Category"
+                    onChange={f => setSearchCat(f.target.value)}
+                    value={searchCategory}
+                  />
+                  <div
+                    style={{ background: "#fff; cursor:pointer" }}
+                    className="input-group-addon"
+                    id="clear-filter"
+                    onClick={e => setSearchCat("")}
+                  >
+                    <span className="fa fa-times" />
+                  </div>
+                </div>
+              </div>
+
               <Accordion title="Review Dates" id="reviewed">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
-                    <thead>
+                    <thead><tr>
                       <th> Total Count </th>
                       <th> Excluding Tertiary Pages </th>
-                    </thead>
+                    </tr></thead>
+                    <tbody>
                     <tr>
                       <td>{reviewedPages.length}</td>
                       <td>
                         {reviewedPages.length - reviewedTertiaryPages.length}
                       </td>
                     </tr>
-                    <br />
+                    </tbody>
                     <thead>
                       <tr>
                         <th width="40%">Title</th>
@@ -141,7 +191,7 @@ class ReviewReport extends React.Component {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
-                              .indexOf(search.toLowerCase()) >= 0
+                              .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
                         .map((page, i) => {
@@ -174,7 +224,7 @@ class ReviewReport extends React.Component {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
-                              .indexOf(search.toLowerCase()) >= 0
+                              .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
                         .map((page, i) => {
@@ -194,10 +244,11 @@ class ReviewReport extends React.Component {
               <Accordion title="Unreviewed Docs" id="unreviewed">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
-                    <thead>
+                    <thead><tr>
                       <th> Total Count </th>
                       <th> Excluding Tertiary Pages </th>
-                    </thead>
+                    </tr></thead>
+                    <tbody>
                     <tr>
                       <td>{unreviewedPages.length}</td>
                       <td>
@@ -205,7 +256,7 @@ class ReviewReport extends React.Component {
                           unreviewedTertiaryPages.length}
                       </td>
                     </tr>
-                    <br />
+                    </tbody>
                     <thead>
                       <tr>
                         <th width="40%">Title</th>
@@ -218,7 +269,7 @@ class ReviewReport extends React.Component {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
-                              .indexOf(search.toLowerCase()) >= 0
+                              .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
                         .map((page, i) => {
@@ -226,6 +277,64 @@ class ReviewReport extends React.Component {
                             <tr key={i}>
                               <td>{page.node.frontmatter.title}</td>
                               <td>{page.node.fields.slug}</td>
+                            </tr>
+                          )
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              </Accordion>
+              <Accordion title="Categorized Docs" id="categorized">
+                <div className="table-responsive">
+                  <table className="table table-commands table-bordered table-striped">
+                    <thead><tr>
+                      <th> Total Count </th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                      <td>{categorizedPages.length}</td>
+                    </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                        <th width="40%">Title</th>
+                        <th width="20%">Review Date</th>
+                        <th> Categories </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {categorizedPages
+                        .filter(page => {
+                          return (
+                            page.node.frontmatter.title
+                              .toLowerCase()
+                              .indexOf(searchTitle.toLowerCase()) >= 0
+                          )
+                        })
+                        .filter((page) => {
+                          return page.node.frontmatter.categories.filter(
+                            (category) => category.indexOf(searchCategory) > -1
+                          ).length;
+                        })
+                        .map((page, i) => {
+                          return (
+                            <tr key={i}>
+                              <td>
+                                <a
+                                  href={`/${page.node.fields.slug}`}
+                                >
+                                  {page.node.frontmatter.title}
+                                </a>
+                              </td>
+                              <td>{page.node.frontmatter.reviewed}</td>
+                              <td>{page.node.frontmatter.categories.map((category, i) => {
+                                    return(
+                                      <>
+                                      <span key={i}>{ (i ? ', ' : '') + category }</span>
+                                      </>
+                                    )})
+                                  }
+                              </td>
                             </tr>
                           )
                         })}
