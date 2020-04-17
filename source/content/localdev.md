@@ -125,10 +125,6 @@ The steps in this section should only be used as a last resort. This resets Loca
 1. **Reset to defaults**
 1. **Proceed with reset**
 
-## Limitations
-
-Localdev does not allow direct database access.
-
 ## Changelog
 
 <LocaldevChangelog />
