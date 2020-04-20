@@ -194,7 +194,7 @@ class ReviewReport extends React.Component {
               </div>
 
               {/* Table of Reviewed Docs */}
-              <Accordion title="Review Dates" id="reviewed">
+              <Accordion title="Review Dates (filters on Title)" id="reviewed">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -242,7 +242,7 @@ class ReviewReport extends React.Component {
               </Accordion>
 
               {/* Table of Docs with Outdated Reviews */}
-              <Accordion title="Outdated Reviews (Before 2020)" id="outdated">
+              <Accordion title="Outdated Reviews (Before 2020, filters on Title)" id="outdated">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -276,7 +276,7 @@ class ReviewReport extends React.Component {
               </Accordion>
 
               {/* Table of Unreviewed Docs */}
-              <Accordion title="Unreviewed Docs" id="unreviewed">
+              <Accordion title="Unreviewed Docs (filters on Title)" id="unreviewed">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -323,17 +323,26 @@ class ReviewReport extends React.Component {
               </Accordion>
 
               {/* Table of Categorized / Tagged Docs */}
-              <Accordion title="Categorized Docs" id="categorized">
+              <Accordion title="Categorized Docs (filters on Title, Category, Tag)" id="categorized">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th> Total Count </th>
+                        <th> Total Count of Categorized Pages</th>
+                        <th> Categorized and Tagged Pages</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>{categorizedPages.length}</td>
+                        <td>
+                          {categorizedPages.filter(page => {
+                            return(
+                              page.node.frontmatter.tags
+                            )
+                            }
+                          ).length}
+                          </td>
                       </tr>
                     </tbody>
                     <thead>
