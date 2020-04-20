@@ -66,11 +66,11 @@ class ReviewReport extends React.Component {
                 }
               }
             }
-          	categorizedDocs: allMdx(
+            categorizedDocs: allMdx(
               filter: {
-                frontmatter: {categories: {glob: "*" }, title: {ne: "" }}
-              })
-            {
+                frontmatter: { categories: { glob: "*" }, title: { ne: "" } }
+              }
+            ) {
               edges {
                 node {
                   id
@@ -78,6 +78,7 @@ class ReviewReport extends React.Component {
                     title
                     categories
                     reviewed
+                    tags
                   }
                   fields {
                     slug
@@ -92,6 +93,8 @@ class ReviewReport extends React.Component {
           //console.log("SearchTitle: ", searchTitle) // For Debugging
           const [searchCategory, setSearchCat] = useState("")
           //console.log("searchCategory: ", searchCategory) // For Debugging
+          const [searchTags, setSearchTags] = useState("")
+          //console.log("searchTags: ", searchTags) // For Debugging
           const reviewedPages = data.allReviewedDocs.edges
           const reviewedTertiaryPages = data.allReviewedDocs.edges.filter(
             page => {
@@ -115,6 +118,7 @@ class ReviewReport extends React.Component {
             <Layout>
               <h1>Reports</h1>
 
+              {/*Input form for Title */}
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-addon">
@@ -139,6 +143,7 @@ class ReviewReport extends React.Component {
                 </div>
               </div>
 
+              {/*Input form for Category */}
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-addon">
@@ -163,20 +168,48 @@ class ReviewReport extends React.Component {
                 </div>
               </div>
 
+              {/*Input form for Tag */}
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-addon">
+                    <i className="fa fa-search" />
+                  </div>
+                  <input
+                    type="text"
+                    id="command-search-tag"
+                    className="form-control"
+                    placeholder="Filter by Tag"
+                    onChange={g => setSearchTags(g.target.value)}
+                    value={searchTags}
+                  />
+                  <div
+                    style={{ background: "#fff; cursor:pointer" }}
+                    className="input-group-addon"
+                    id="clear-filter"
+                    onClick={e => setSearchTags("")}
+                  >
+                    <span className="fa fa-times" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Table of Reviewed Docs */}
               <Accordion title="Review Dates" id="reviewed">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
-                    <thead><tr>
-                      <th> Total Count </th>
-                      <th> Excluding Tertiary Pages </th>
-                    </tr></thead>
+                    <thead>
+                      <tr>
+                        <th> Total Count </th>
+                        <th> Excluding Tertiary Pages </th>
+                      </tr>
+                    </thead>
                     <tbody>
-                    <tr>
-                      <td>{reviewedPages.length}</td>
-                      <td>
-                        {reviewedPages.length - reviewedTertiaryPages.length}
-                      </td>
-                    </tr>
+                      <tr>
+                        <td>{reviewedPages.length}</td>
+                        <td>
+                          {reviewedPages.length - reviewedTertiaryPages.length}
+                        </td>
+                      </tr>
                     </tbody>
                     <thead>
                       <tr>
@@ -208,6 +241,7 @@ class ReviewReport extends React.Component {
                 </div>
               </Accordion>
 
+              {/* Table of Docs with Outdated Reviews */}
               <Accordion title="Outdated Reviews (Before 2020)" id="outdated">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
@@ -241,21 +275,24 @@ class ReviewReport extends React.Component {
                 </div>
               </Accordion>
 
+              {/* Table of Unreviewed Docs */}
               <Accordion title="Unreviewed Docs" id="unreviewed">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
-                    <thead><tr>
-                      <th> Total Count </th>
-                      <th> Excluding Tertiary Pages </th>
-                    </tr></thead>
+                    <thead>
+                      <tr>
+                        <th> Total Count </th>
+                        <th> Excluding Tertiary Pages </th>
+                      </tr>
+                    </thead>
                     <tbody>
-                    <tr>
-                      <td>{unreviewedPages.length}</td>
-                      <td>
-                        {unreviewedPages.length -
-                          unreviewedTertiaryPages.length}
-                      </td>
-                    </tr>
+                      <tr>
+                        <td>{unreviewedPages.length}</td>
+                        <td>
+                          {unreviewedPages.length -
+                            unreviewedTertiaryPages.length}
+                        </td>
+                      </tr>
                     </tbody>
                     <thead>
                       <tr>
@@ -284,22 +321,27 @@ class ReviewReport extends React.Component {
                   </table>
                 </div>
               </Accordion>
+
+              {/* Table of Categorized / Tagged Docs */}
               <Accordion title="Categorized Docs" id="categorized">
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
-                    <thead><tr>
-                      <th> Total Count </th>
-                    </tr></thead>
+                    <thead>
+                      <tr>
+                        <th> Total Count </th>
+                      </tr>
+                    </thead>
                     <tbody>
-                    <tr>
-                      <td>{categorizedPages.length}</td>
-                    </tr>
+                      <tr>
+                        <td>{categorizedPages.length}</td>
+                      </tr>
                     </tbody>
                     <thead>
                       <tr>
-                        <th width="40%">Title</th>
-                        <th width="20%">Review Date</th>
-                        <th> Categories </th>
+                        <th width="20%">Title</th>
+                        <th width="10%">Review Date</th>
+                        <th with="20%">Categories</th>
+                        <th>Tags</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -311,29 +353,53 @@ class ReviewReport extends React.Component {
                               .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
-                        .filter((page) => {
+                        .filter(page => {
                           return page.node.frontmatter.categories.filter(
-                            (category) => category.indexOf(searchCategory) > -1
-                          ).length;
+                            category => category.indexOf(searchCategory) > -1
+                          ).length
+                        })
+                        .filter(page => {
+                          return(
+                            page.node.frontmatter.tags ?
+                            page.node.frontmatter.tags.filter(
+                              tag => tag.indexOf(searchTags) > -1
+                            ).length
+                            :
+                            page
+                          )
                         })
                         .map((page, i) => {
                           return (
                             <tr key={i}>
                               <td>
-                                <a
-                                  href={`/${page.node.fields.slug}`}
-                                >
+                                <a href={`/${page.node.fields.slug}`}>
                                   {page.node.frontmatter.title}
                                 </a>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.categories.map((category, i) => {
-                                    return(
+                              <td>
+                                {page.node.frontmatter.categories.map(
+                                  (category, i) => {
+                                    return (
                                       <>
-                                      <span key={i}>{ (i ? ', ' : '') + category }</span>
+                                        <span key={i}>
+                                          {(i ? ", " : "") + category}
+                                        </span>
                                       </>
-                                    )})
+                                    )
                                   }
+                                )}
+                              </td>
+                              <td>
+                                {page.node.frontmatter.tags
+                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + tag}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
                               </td>
                             </tr>
                           )
