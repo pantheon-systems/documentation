@@ -3,6 +3,7 @@ import { useStaticQuery } from "gatsby"
 import Partial from "./partial"
 import propTypes from "prop-types"
 import withLocation from "./withLocation"
+import { graphql } from "gatsby"
 
 const ResourceSelector = ({ search }) => {
   //console.log("Search = ", search) //DEBUGGING
