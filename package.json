@@ -78,7 +78,6 @@
   },
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "preview": "gatsby build --prefix-paths && mv public docs && mkdir public && mv docs public/",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
