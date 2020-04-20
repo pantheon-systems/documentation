@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
 import Accordion from "../components/accordion"
+import newGitHubIssueUrl from "new-github-issue-url"
 
 class ReviewReport extends React.Component {
   render() {
@@ -89,12 +90,15 @@ class ReviewReport extends React.Component {
           }
         `}
         render={data => {
+          /* Construct the constants for our filter terms */
           const [searchTitle, setSearch] = useState("")
           //console.log("SearchTitle: ", searchTitle) // For Debugging
           const [searchCategory, setSearchCat] = useState("")
           //console.log("searchCategory: ", searchCategory) // For Debugging
           const [searchTags, setSearchTags] = useState("")
           //console.log("searchTags: ", searchTags) // For Debugging
+
+          /* Construct the constants for each of our Graphql Queries */
           const reviewedPages = data.allReviewedDocs.edges
           const reviewedTertiaryPages = data.allReviewedDocs.edges.filter(
             page => {
@@ -113,6 +117,22 @@ class ReviewReport extends React.Component {
           //console.log("Unreviewed Tertiary Pages: ", unreviewedTertiaryPages) // For debugging
           const categorizedPages = data.categorizedDocs.edges
           //console.log("categorizedPages: ", categorizedPages) // For Debugging
+
+          /* Construct the GitHub Issue Body */
+          const makeNewIssue = page => {
+            return newGitHubIssueUrl({
+              user: "pantheon-systems",
+              repo: "documentation",
+              title: "Review " + page.node.frontmatter.title,
+              body:
+                "[" +
+                page.node.frontmatter.title +
+                "](https://pantheon.io/docs/" +
+                page.node.fields.slug +
+                ") " +
+                " has been flagged as needing a new review.",
+            })
+          }
 
           return (
             <Layout>
@@ -242,7 +262,10 @@ class ReviewReport extends React.Component {
               </Accordion>
 
               {/* Table of Docs with Outdated Reviews */}
-              <Accordion title="Outdated Reviews (Before 2020, filters on Title)" id="outdated">
+              <Accordion
+                title="Outdated Reviews (Before 2020, filters on Title)"
+                id="outdated"
+              >
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -276,7 +299,10 @@ class ReviewReport extends React.Component {
               </Accordion>
 
               {/* Table of Unreviewed Docs */}
-              <Accordion title="Unreviewed Docs (filters on Title)" id="unreviewed">
+              <Accordion
+                title="Unreviewed Docs (filters on Title)"
+                id="unreviewed"
+              >
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -323,7 +349,10 @@ class ReviewReport extends React.Component {
               </Accordion>
 
               {/* Table of Categorized / Tagged Docs */}
-              <Accordion title="Categorized Docs (filters on Title, Category, Tag)" id="categorized">
+              <Accordion
+                title="Categorized Docs (filters on Title, Category, Tag)"
+                id="categorized"
+              >
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -336,17 +365,17 @@ class ReviewReport extends React.Component {
                       <tr>
                         <td>{categorizedPages.length}</td>
                         <td>
-                          {categorizedPages.filter(page => {
-                            return(
-                              page.node.frontmatter.tags
-                            )
-                            }
-                          ).length}
-                          </td>
+                          {
+                            categorizedPages.filter(page => {
+                              return page.node.frontmatter.tags
+                            }).length
+                          }
+                        </td>
                       </tr>
                     </tbody>
                     <thead>
                       <tr>
+                        <th width="5%">Create an Issue</th>
                         <th width="20%">Title</th>
                         <th width="10%">Review Date</th>
                         <th with="20%">Categories</th>
@@ -368,18 +397,20 @@ class ReviewReport extends React.Component {
                           ).length
                         })
                         .filter(page => {
-                          return(
-                            page.node.frontmatter.tags ?
-                            page.node.frontmatter.tags.filter(
-                              tag => tag.indexOf(searchTags) > -1
-                            ).length
-                            :
-                            page
-                          )
+                          return page.node.frontmatter.tags
+                            ? page.node.frontmatter.tags.filter(
+                                tag => tag.indexOf(searchTags) > -1
+                              ).length
+                            : page
                         })
                         .map((page, i) => {
                           return (
                             <tr key={i}>
+                              <td>
+                                <a href={makeNewIssue(page)} target="blank">
+                                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                </a>
+                              </td>
                               <td>
                                 <a href={`/${page.node.fields.slug}`}>
                                   {page.node.frontmatter.title}
