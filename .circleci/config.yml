@@ -5,7 +5,7 @@ workflows:
   build_deploy_test:
     jobs:
       - pfe/gatsby-build-and-deploy:
-          build_command: yarn preview
+          build_command: npm run preview
           pre-steps:
             - checkout
             - run:
