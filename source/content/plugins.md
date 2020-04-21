@@ -1,8 +1,10 @@
 ---
 title: Pantheon Plugins
 description: Details on specific WordPress plugins developed and maintained for the Pantheon Website Management Platform workflow.
-tags: [siteintegrations, infrastructure, cacheedge]
-categories: [performance, integrate,platform]
+tags: [WordPress, plugins, must-use, cache, SAML, Redis, Solr]
+categories: [integrate]
+reviewed: "2020-04-21"
+
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/).
 
@@ -11,6 +13,7 @@ Pantheon maintains multiple plugins to facilitate its workflow within WordPress.
 Drupal users, see [Pantheon Modules](/modules) for details on Drupal modules developed and maintained for the Pantheon workflow.
 
 </Alert>
+
 
 ## [Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon)
 This must-use plugin is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
@@ -31,7 +34,6 @@ The **Clear Cache** option will clear the cache for the entire site, but it does
 
 We recommend setting **Default Time to Live (TTL)** to 600 seconds.
 
-
 ## [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 Automatically clear related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
 
@@ -48,5 +50,9 @@ Resolve errors with code (themes, modules or plugins) that relies on PHP's defau
 ## [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/)
 Provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/). For an example use case, see [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso)
 
+
 ## [WP Redis](https://wordpress.org/plugins/wp-redis)
 Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on Drupal or WordPress](/redis).
+
+## [WP Solr](https://wordpress.org/plugins/solr-power/)
+Enable the Apache Solr search engine for your WordPress website. For more information, see [Enabling Solr for WordPress](/wordpress-solr).
