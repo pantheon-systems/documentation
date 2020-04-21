@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/CedEqwSbF6g`
+<Youtube src="CedEqwSbF6g" title="Essential Developer Training - Developer Workflow" />
 
 <br />
 

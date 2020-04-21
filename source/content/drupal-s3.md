@@ -1,6 +1,6 @@
 ---
 title: AWS S3 Setup for Drupal
-description: Add the ability to integrate with AWS S3 to a Drupal 7 site on Pantheon
+description: Add the ability to integrate AWS S3 with a Drupal site on Pantheon
 tags: [siteintegrations]
 categories: [drupal7, integrate]
 contributors: [peter-pantheon, alexfornuto]

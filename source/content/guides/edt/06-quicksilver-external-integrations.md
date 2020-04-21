@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/4BRX12bFO4Q`
+<Youtube src="4BRX12bFO4Q" title="Essential Developer Training - External Integrations" />
 
 <br />
 

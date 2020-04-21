@@ -28,18 +28,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/1-and-1)
- - [Cloudflare Domain Configuration](/cloudflare)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy)
- - [DreamHost Domain Configuration](/dreamhost)
- - [Dyn Domain Configuration](/dyn)
- - [eNom Domain Configuration](/enom)
- - [Gandi Domain Configuration](/gandi)
- - [GoDaddy Domain Configuration](/godaddy)
- - [Google Domain Configuration](/google)
- - [Namecheap Domain Configuration](/namecheap)
- - [Network Solutions Domain Configuration](/network-solutions)
- - [Amazon Route 53 Domain Configuration](/route53)
+<DNSProviderDocs />
 
 </Accordion>
 
@@ -147,8 +136,6 @@ If you encounter rate limits, we recommend the following approaches:
 
 - [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform).
 - Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/) as a workaround.
-
-<Partial file="cname-workaround.md" />
 
 ## Glossary
 

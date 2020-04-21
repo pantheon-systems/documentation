@@ -20,13 +20,10 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/IQ837g3DLA0`
+<Youtube src="IQ837g3DLA0" title="Essential Developer Training - Architecture" />
 
 <br />
 
 **Resource Links From Video**
 
 [Explore Platform Architecture](https://pantheon.io/docs/platform/)
-
-
-

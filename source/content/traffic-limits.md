@@ -3,8 +3,9 @@ title: Traffic Limits and Overages
 description: Information on how Pantheon measures site traffic
 tags: [billing]
 categories: [manage,go-live]
+reviewed: "2020-02-26"
 ---
-Pantheon defines plan levels based on traffic to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform from the CMS.
+Pantheon defines plan levels based on traffic to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform. Our [Metrics in the Site Dashboard](/metrics) outlines available traffic metrics, where to find them in the Dashboard, and why they [rarely match other analytics](#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) like Google Analytics.
 
 ## Overage Protection
 All Performance plans include **Overage Protection** to prevent one-time traffic spikes from causing billing issues. If the change to traffic behavior is sustained, the site will eventually be moved to the appropriate Performance plan. This provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
@@ -16,6 +17,8 @@ Basic plan sites do not have this protective feature and would see a change to t
 <Partial file="traffic-dl.md" />
 
 For details, see [Metrics in the Site Dashboard](/metrics).
+
+Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
 
 ### Traffic Spikes
 A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
@@ -49,27 +52,27 @@ You will receive a communication that you are over on month one, and again on mo
 ### What if my site's metrics exceed the limit of the Performance Extra Large Plan?
 The Performance Extra Large Plan allows for 300,000 monthly visits and 1.5 million monthly page views. High traffic sites should be moved to an Elite plan. To learn about moving to an Elite Plan, please [contact us](https://pantheon.io/contact-us?docs).
 
-If you need time or are unable to commit to an annual contract, sites that exceed the Performance Extra Large limits will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via our dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
+If you need time or are unable to commit to an annual contract, sites that exceed the Performance Extra Large limits will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
 
 | Payment Type      | Price            |
 |:----------------- |:---------------- |
 | List Monthly      |  $2,000          |
 | List Annual       |  $22,000         |
 
-Note that the annual plan prices are list as annual cost.
+Note that the annual plan prices are listed as annual cost.
 
 ### How can I change my Performance size plan if I need to scale up to handle more traffic?
 You can upgrade your plan in your dashboard at any time. You may not be able to downgrade to a smaller performance size plan based on your traffic history.
 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
-Analytics suites (e.g. Google Analytics) are measuring fundamentally different things vs Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
+Analytics suites (like Google Analytics) are measuring fundamentally different things when compared to Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
 
 We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippet is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
 
 For example, the following traffic will be collected in our logs, but will not be present in most analytics:
 
 - API requests (e.g. XML-RPC, which can be [disabled in WordPress](/wordpress-best-practices#avoid-xml-rpc-attacks) and was removed from Drupal 8 core) and AJAX requests.
-- Browsers/users that block cookies or javascript, including adblockers or private mode.
+- Users with adblocking or with browsers features that block cookies or javascript (like Private or Incognito modes)
 - Users that close the browser before the tracking script loads.
 - A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
 - Automated traffic from bots or load testing.
@@ -82,7 +85,7 @@ Content pre-fetching increasingly plays a role in driving up traffic metrics wit
 ### What about load tests or penetration tests?
 We encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
-However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. 
+However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform.
 
 If you identify a platform issue, please let us know. If an issue is identified with your codebase, we can recommend a Partner or connect you with our Professional Services team to help you with remediation.
 

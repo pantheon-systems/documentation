@@ -19,7 +19,7 @@ echo -e "\nProcessing pull request #$CIRCLE_PR_NUMBER"
 
 # Lighthouse audits
 echo -e "\nRunning lighthouse audits..."
-cd $BUILD_PATH/gatsby
+cd $BUILD_PATH/
 npm run lighthouse-run
 
 # Create the artifacts directory if needed

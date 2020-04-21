@@ -15,7 +15,7 @@ The Pantheon architecture comprises highly available [application containers](/a
 
 Valhalla creates a symbolic link (**symlink**), to the `files` directory in the appropriate location of your docroot (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal).
 
-It is important to note that the `files` directory in your site root is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root. Any non-standard file locations should be symbolically linked to `/files` or moved manually.
+It is important to note that this directory is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root.  Any non-standard file locations should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
 

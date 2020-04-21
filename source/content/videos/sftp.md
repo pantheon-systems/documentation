@@ -9,7 +9,7 @@ searchboost: 50
 layout: video
 ---
 
-`youtube: https://youtu.be/ktesh9SiHfc`
+<Youtube src="ktesh9SiHfc" title="On Server Development" />
 
 Pantheon allows you to quickly and easily write code or add modules and plugins directly on the platform using on-server development.
 

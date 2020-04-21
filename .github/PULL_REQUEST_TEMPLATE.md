@@ -4,7 +4,7 @@ Closes: #
 
 ## Summary
 
-**[Doc Title](https://pantheon.io/docs/doc-title)** - A one sentence summation of the the pertinent changes (including not-yet-completed work) provided by this PR.
+**[Doc Title](https://pantheon.io/docs/doc-title)** - A one sentence summation of the pertinent changes (including not-yet-completed work) provided by this PR.
 
 ## Effect
 

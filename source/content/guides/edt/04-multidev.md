@@ -24,7 +24,7 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/oaIS6LgzTKU`
+<Youtube src="oaIS6LgzTKU" title="Essential Developer Training - Multidev" />
 
 <br />
 
