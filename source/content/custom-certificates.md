@@ -126,7 +126,7 @@ CAA records are required  to [prohibit Let's Encrypt from issuing certificates](
 ## Caveats / Known Issues
 
 ### Let's Encrypt Certificate Served Instead of Custom Certificate
-If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let's Encrypt from issuing certificates, then it will take 10 days for Pantheon to automatically remove the domain from the Let's Encrypt certificate.
+If a Let’s Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let’s Encrypt from issuing certificates, then contact Pantheon support to assist in options to ensure the Custom Certificate is being served.  Please allow at least 3 business days for Pantheon to process your request.
 
 ### CA limitations
 Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to simply use another CA.
