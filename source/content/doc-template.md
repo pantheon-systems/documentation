@@ -1,7 +1,6 @@
 ---
 title: Pantheon Documentation Template.
 description: A short description of the doc.
-draft: true
 contributors: [alexfornuto]
 ---
 
