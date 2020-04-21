@@ -3,6 +3,8 @@ title: Pantheon Plugins
 description: Details on specific WordPress plugins developed and maintained for the Pantheon Website Management Platform workflow.
 tags: [WordPress, plugins, must-use, cache, SAML, Redis, Solr]
 categories: [integrate]
+reviewed: "2020-04-21"
+
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/).
 
@@ -37,6 +39,8 @@ Automatically clear related pages from Pantheon's Edge when you update content. 
 
 ## [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud)
 Provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
+
+![Pantheon HUD](../images/pantheon-hud.png)
 
 For installation details, see [Configuring Environment Indicators](/environment-indicator).
 
