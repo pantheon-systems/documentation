@@ -77,7 +77,7 @@
     "url": "git+https://github.com/pantheon-systems/documentation.git"
   },
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
