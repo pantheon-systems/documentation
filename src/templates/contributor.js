@@ -111,7 +111,10 @@ export const pageQuery = graphql`
     allDocs: allMdx(
       filter: {
         fileAbsolutePath: { ne: null }
-        frontmatter: { contributors: { elemMatch: { id: { eq: $id } } } }
+        frontmatter: {
+          contributors: { elemMatch: { id: { eq: $id } } }
+          draft: {ne: true}
+        }
       }
     ) {
       edges {

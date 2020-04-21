@@ -12,7 +12,10 @@ class ReviewReport extends React.Component {
           query {
             allReviewedDocs: allMdx(
               filter: {
-                frontmatter: { reviewed: { ne: null } }
+                frontmatter: { 
+                    reviewed: { ne: null }
+                    draft: {ne: true}
+                  }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {
@@ -31,7 +34,10 @@ class ReviewReport extends React.Component {
             }
             staleDocs: allMdx(
               filter: {
-                frontmatter: { reviewed: { lt: "2020-01-01" } }
+                frontmatter: { 
+                  reviewed: { lt: "2020-01-01" }
+                  draft: {ne: true}
+                }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {
@@ -50,7 +56,11 @@ class ReviewReport extends React.Component {
             }
             unreviewedDocs: allMdx(
               filter: {
-                frontmatter: { reviewed: { eq: null }, title: { ne: "" } }
+                frontmatter: { 
+                  reviewed: { eq: null }
+                  title: { ne: "" }
+                  draft: {ne: true}
+                }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {

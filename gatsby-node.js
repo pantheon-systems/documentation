@@ -76,10 +76,29 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions, schema }) => {
+
+  actions.createFieldExtension({
+    name: `defaultFalse`,
+    extend() {
+      return {
+        resolve(source, args, context, info) {
+          if (source[info.fieldName] == null ) {
+            return false
+          }
+          return source[info.fieldName]
+        },
+      }
+    },
+  })
+
   actions.createTypes(`
     type Mdx implements Node {
-      fileInfo: File @link(from: "parent")
+      fileInfo: File @link(from: "parent"),
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      draft: Boolean @defaultFalse
     }
   `)
 }
@@ -95,6 +114,7 @@ exports.createPages = ({ graphql, actions }) => {
             slug: {regex: "/^((?!guides|changelog|partials).)*$/"}
           },
           fileAbsolutePath: { regex: "/content/"}
+          frontmatter: { draft: {ne: true}}
         }
       ) {
         edges {
@@ -104,6 +124,7 @@ exports.createPages = ({ graphql, actions }) => {
               title
               layout
               permalink
+              draft
             }
             fields {
               slug
@@ -115,6 +136,7 @@ exports.createPages = ({ graphql, actions }) => {
       allGuides: allMdx(
         filter: {
           fileAbsolutePath: { regex: "/guides/"}
+          frontmatter: { draft: {ne: true}}
         }
         sort: { fields: [fileAbsolutePath], order: ASC }
       ) {
@@ -130,6 +152,7 @@ exports.createPages = ({ graphql, actions }) => {
               title
               layout
               permalink
+              draft
             }
             fields {
               slug
@@ -148,6 +171,7 @@ exports.createPages = ({ graphql, actions }) => {
       allChangelogs: allMdx(
         filter: {
           fileAbsolutePath: { regex: "/changelogs/"}
+          frontmatter: { draft: {ne: true}}
         },
         sort: { fields: [fileAbsolutePath], order: DESC }
       ) {

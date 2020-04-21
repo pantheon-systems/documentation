@@ -3,7 +3,7 @@ title: Reducing Large Repositories
 description: Learn how to reduce the size of large Drupal or WordPress site repositories for optimized performance and reliability on Pantheon.
 tags: [git]
 categories: [develop]
-contributors: [curmudgeon]
+contributors: [alexfornuto]
 ---
 
 <Alert type="danger" title="Caution">

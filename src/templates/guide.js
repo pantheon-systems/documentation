@@ -211,6 +211,7 @@ export const pageQuery = graphql`
       filter: {
         fileAbsolutePath: { ne: null }
         fields: { guide_directory: { eq: $guide_directory } }
+        frontmatter: { draft: {ne: true}}
       }
       sort: { fields: [fileAbsolutePath], order: ASC }
     ) {

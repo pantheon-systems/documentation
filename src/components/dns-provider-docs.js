@@ -6,7 +6,10 @@ const DNSProviderDocs = () => {
     graphql`
       {
         allMdx(
-          filter: { fileInfo: { absolutePath: { regex: "/.dns-providers/./" } } }
+          filter: { 
+            fileInfo: { absolutePath: { regex: "/.dns-providers/./" } }
+            frontmatter: { draft: {ne: true}}
+          }
           sort: { fields: frontmatter___title, order: ASC }
         ) {
           nodes {
