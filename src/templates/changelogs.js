@@ -131,7 +131,10 @@ export default ChangelogsTemplate
 export const pageQuery = graphql`
   query Changelogs($skip: Int!, $limit: Int!) {
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/changelogs/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/changelogs/" }
+        frontmatter: { draft: {ne: true}}
+      }
       sort: { fields: [fileAbsolutePath], order: DESC }
       skip: $skip
       limit: $limit
