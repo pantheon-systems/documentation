@@ -6,7 +6,7 @@ categories: [develop]
 earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are still in production. Pantheon Support for Localdev may be limited.
 contributors: [edwardangert]
-reviewed: "2020-01-13"
+reviewed: "2020-04-21"
 ---
 
 Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow).
@@ -33,7 +33,7 @@ Once Localdev is installed, a list of your sites is displayed in a column on the
 ## Download and Test Beta Versions
 Download Edge versions to get the latest features, bug fixes, instructions, and help test Localdev.
 
-1. From within your Localdev installation, select Settings on left menu.
+1. From within your Localdev installation, select Settings in left menu.
 1. In the Current Version section, click on `switch to edge`:
 
   ![Switch to edge version](../images/localdev/localdev-switch-to-edge.png)
@@ -48,11 +48,11 @@ Help improve Localdev by sharing bug reports and feedback on the [Localdev Slack
 
 Select a site and click **Pull for local development** to clone the site locally and boot the local environment.
 
+Each site is cloned to its own directory within `~/Localdev/` by default.
+
 ![Localdev clones the site code](../images/localdev/localdev-cloning-site.png)
 
 Since this is the first time you are cloning the entire site code, this will take several minutes. Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once per site.
-
-Each site is cloned to its own directory within `~/Localdev/`.
 
 If there are any errors, Localdev will revert all changes and return you to the "Clone your development site" screen. Try the process again, then consult the [Troubleshooting section](#faq-troubleshooting-and-support) below for how to contact Support.
 
@@ -87,10 +87,10 @@ In **Pull** tab, check the **Pull code** option to copy the site's code from the
 
 After you make changes to your site:
 
-1.  Navigate to the **Push** tab
-1.  Select the information you want pushed to the Pantheon Development environment
-1.  Enter a **Git commit message** that describes the changes made in this particular push
-1.  Click **Push**
+1. Navigate to the **Push** tab
+1. Select the information you want pushed to the Pantheon Development environment
+1. Enter a **Git commit message** that describes the changes made in this particular push
+1. Click **Push**
 
 ## Advanced Steps
 
@@ -108,26 +108,22 @@ Note that if there are services specified in `.lando`, Localdev will return an e
 
 While Localdev is in beta, [support request best practices](/support/#best-practices) are especially important for our team to help you resolve the issue, or to report any potential issues in Localdev itself.
 
-1.  Navigate to the **Settings** tab and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
-    - Application reports are collected and stored locally in `~/.pantheonlocaldev`.
+1. Navigate to the **Settings** tab and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
+   - Application reports are collected and stored locally in `~/.pantheonlocaldev`.
 
-1.  Reproduce the error and note the steps taken.
-    - If the error is inconsistent, make note of this as well. Multiple reports of an inconsistent error help our team troubleshoot.
+1. Reproduce the error and note the steps taken.
+   - If the error is inconsistent, make note of this as well. Multiple reports of an inconsistent error help our team troubleshoot.
 
-1.  Report the error:
-    - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/support/#real-time-chat-support) and include the steps you took to reproduce the error.
+1. Report the error:
+   - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/support/#real-time-chat-support) and include the steps you took to reproduce the error.
 
 ### Log out and Reset to Defaults
 
 The steps in this section should only be used as a last resort. This resets Localdev and will remove the machine token and all local copies of your connected sites.
 
-1.  Click **Settings**
-1.  **Reset to defaults**
-1.  **Proceed with reset**
-
-## Limitations
-
-Localdev does not connect to [Multidev](/multidev) environments or allow direct database access.
+1. Click **Settings**
+1. **Reset to defaults**
+1. **Proceed with reset**
 
 ## Changelog
 
