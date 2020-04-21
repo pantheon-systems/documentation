@@ -3,6 +3,7 @@ title: Akamai Domain Configuration
 provider: Akamai
 dnsprovider: true
 description: Learn how to point your Akamai domain to a Pantheon site.
+draft: true
 tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/akamai.md/
