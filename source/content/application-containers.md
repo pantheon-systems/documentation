@@ -41,7 +41,7 @@ terminus env:wake <site>.<env>
   - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](/timeouts).
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.
   - Maximum max\_file\_uploads is 20. This cannot be changed.
-  - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP).
+  - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php).
   - Each PHP process can have either 256MB or 512MB of memory ([depends on the plan](https://www.pantheon.io/pricing)).
 - For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
