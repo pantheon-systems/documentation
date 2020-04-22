@@ -12,7 +12,7 @@ fi
 
 echo "Checking for broken links on ${1} .."
 
-if ./node_modules/broken-link-checker/bin/blc -q -r -e -o http://$1
+if ./node_modules/broken-link-checker/bin/blc -q -r -e -o $1
 then
   echo "No broken internal links!"
 else
