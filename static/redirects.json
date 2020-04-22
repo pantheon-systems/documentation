@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/docs/sample-redirect-to-guides",
+      "destination": "/docs/guides",
+      "status": 301
+    },
+    
+  ]
+}
