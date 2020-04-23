@@ -101,7 +101,7 @@ As above, in cases where these events are regular or sustained, we reserve the r
 
 ## See Also
 
-- [New Site Plans FAQs](/new-plans-faq)
+- [Site Plans FAQs](/site-plans-faq)
 - [Manage Plans in the Site Dashboard](/site-plan)
 - [Billing in the Site Dashboard](/site-billing)
 - [Metrics in the Site Dashboard](/metrics)
