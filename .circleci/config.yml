@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Install Gatsby
           command: |
-            npm ci
+            npm install -E
       - run:
           name: Import Gatsby Tokens
           command: gatsby-tokens
@@ -35,7 +35,7 @@ jobs:
       - run:
           name: Gatsby Build
           command: |
-            ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
+            npm run-script build
       - run:
           name: Remove empty directories
           command: |
