@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 import AddSearch from "../../components/addSearch"
 
-const Header = ({ data }) => (
+const Header = ({ data, page }) => (
   <>
     <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
     <div id="skiptocontent"><a href="#doc">skip to main content</a></div>
@@ -167,7 +167,10 @@ const Header = ({ data }) => (
                   placeholder="Search Pantheon Documentation"
                   aria-label="Search through documentation"
                 />
-                <AddSearch />
+                { page == "default" ?
+                  <AddSearch />
+                  : null
+                }
               </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
@@ -183,6 +186,7 @@ const Header = ({ data }) => (
 )
 
 export default props => (
+
   <StaticQuery
     query={graphql`
       query {
