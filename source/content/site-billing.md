@@ -113,4 +113,4 @@ If you are the billing contact for an online site plan, check your spam folder, 
 - [Account Billing in the User Dashboard](/account-billing)
 - [Manage Plans in the Site Dashboard](/site-plan)
 - [Traffic Limits and Overages](/traffic-limits)
-- [New Site Plans FAQs](/site-plans-faq)
+- [Site Plans FAQs](/site-plans-faq)
