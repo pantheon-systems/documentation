@@ -111,7 +111,7 @@ ini_set('ioncube.loader.encoded_paths', '/');
 
 ### Can I increase the memory limit of my Wordpress site?
 By default, Wordpress installations have a core PHP memory limit of 40MB for single sites and 64MB for site networks.
-You may [increase this limit](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php) up to the limit of memory allocated for your plan.
+You can [increase this limit](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php) up to the limit of memory allocated for your plan.
 
 Example for Elite sites:
 ```php:title=wp-config.php
