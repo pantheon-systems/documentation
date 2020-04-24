@@ -8,13 +8,6 @@ import SVG404 from "../../source/images/404_dark.svg"
 
 class NotFoundPage extends React.Component {
   componentDidMount() {
-    const { pathname } = this.props.location
-    var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
-    var searchPath = searchPath.replace("docs", "")
-    window.location.href.toString().includes("addsearch")
-      ? null
-      : (window.location = ` 404?addsearch=${searchPath}`)
-
     window.addsearch_settings = {
       display_url: true,
       display_resultscount: false,
