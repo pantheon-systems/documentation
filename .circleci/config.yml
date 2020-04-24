@@ -16,7 +16,7 @@ jobs:
       - restore_cache:
           keys:
             - v2.5.8-always-
-            - npm-v2.8.4-{{ checksum "gatsby/package-lock.json" }}
+            - npm-v2.8.4-
       - run:
           name: Install Terminus
           command: |
@@ -73,9 +73,8 @@ jobs:
           name: Test links
           command: .circleci/tests/link-checker.sh
       - save_cache:
-          key: npm-v2.8.4-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.8.4-{{ checksum "package-lock.json" }}
           paths:
-            - ~/build/package-lock.json
             - ~/build/node_modules
       - save_cache:
           key: v2.5.8-always-{{ epoch }}
