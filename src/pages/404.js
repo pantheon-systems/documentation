@@ -38,7 +38,7 @@ class NotFoundPage extends React.Component {
                   <div id="addsearch-results"></div>
                 </div>
                 <div className="col" style={{ width: "45%", float: "right" }}>
-                  <h2>{homeYaml.fourohfourlinks.title}</h2>
+                  <h2 className="subtitle">{homeYaml.fourohfourlinks.title}</h2>
                   <br />
                   <ul
                     style={{
