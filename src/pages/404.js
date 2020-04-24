@@ -7,6 +7,35 @@ import SEO from "../layout/seo"
 import SVG404 from "../../source/images/404_dark.svg"
 
 class NotFoundPage extends React.Component {
+
+componentDidMount() {
+
+    const { pathname } = this.props.location
+    var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
+    var searchPath = searchPath.replace("docs", "")
+    window.location.href.toString().includes("addsearch")
+      ? null
+      : (window.location = ` 404?addsearch=${searchPath}`)
+
+    window.addsearch_settings = {
+      display_url: true,
+      display_resultscount: false,
+      display_sortby: false,
+      display_category: true,
+      automatic_match_all_query: false,
+      number_of_results: 4,
+    }
+
+    const script = document.createElement("script")
+    script.setAttribute(
+      "src",
+      `https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage`
+    )
+    script.setAttribute("defer", true)
+
+    document.body.appendChild(script)
+  }
+
   render() {
     const { pathname } = this.props.location
     const {
@@ -70,34 +99,6 @@ class NotFoundPage extends React.Component {
         </div>
       </Layout>
     )
-  }
-
-  componentDidMount() {
-
-    const { pathname } = this.props.location
-    var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
-    var searchPath = searchPath.replace("docs", "")
-    window.location.href.toString().includes("addsearch")
-      ? null
-      : (window.location = ` 404?addsearch=${searchPath}`)
-
-    window.addsearch_settings = {
-      display_url: true,
-      display_resultscount: false,
-      display_sortby: false,
-      display_category: true,
-      automatic_match_all_query: false,
-      number_of_results: 4,
-    }
-
-    const script = document.createElement("script")
-    script.setAttribute(
-      "src",
-      `https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage`
-    )
-    script.setAttribute("defer", true)
-
-    document.body.appendChild(script)
   }
 }
 
