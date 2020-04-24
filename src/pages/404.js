@@ -29,8 +29,10 @@ class NotFoundPage extends React.Component {
 
   render() {
     const { pathname } = this.props.location
-    var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
-    searchPath = searchPath.replace("docs", "")
+    const searchPath = pathname
+      .replace(/\//g, "")
+      .replace(/-/g, " ")
+      .replace("docs", "")
     pathname.includes("/404") ? null : navigate("/404/?addsearch=" + searchPath)
     const {
       data: { homeYaml },
