@@ -109,6 +109,15 @@ ini_set('ioncube.loader.encoded_paths', '/');
 
 *(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
+### Can I increase the memory limit of my Wordpress site?
+By default, Wordpress installations have a core PHP memory limit of 40MB for single sites and 64MB for site networks.
+You can [increase this limit](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php) up to the limit of memory allocated for your [site plan](/site-plans-faq#plan-resources).
+
+Example for Elite sites:
+```php:title=wp-config.php
+define( 'WP_MEMORY_LIMIT', '512M' );
+```
+
 ## Troubleshooting
 
 ### Request to a Remote API Does Not Return Expected Response
