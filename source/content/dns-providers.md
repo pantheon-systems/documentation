@@ -6,9 +6,9 @@ tags: [dns, domains]
 reviewed: "2020-04-16"
 ---
 
-Pantheon provides registrar-specific instructions on how to connect your domain from your DNS provider to Pantheon.
+Pantheon provides DNS host-specific instructions on how to connect your domain from your DNS provider to Pantheon.
 
-If your registrar is not on the list below, consult the [Configure DNS](/guides/launch/configure-dns) section of our Launch Essentials guide for general instructions on how to connect your domain.
+If your DNS provider is not on the list below, consult the [Configure DNS](/guides/launch/configure-dns) section of our Launch Essentials guide for general instructions on how to connect your domain.
 
 ## DNS Provider-specific Documentation
 
