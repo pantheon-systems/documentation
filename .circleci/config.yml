@@ -16,6 +16,8 @@ jobs:
       - restore_cache:
           keys:
             - v2.5.8-always-
+      - restore_cache:
+          keys:
             - npm-v2.8.4-
       - run:
           name: Install Terminus
