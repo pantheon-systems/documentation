@@ -57,17 +57,7 @@ cd $BUILD_PATH
 # Export preview build to the multidev environment.
 printf "Copying docs to $docs_url \n"
 touch ./multidev-log.txt
-while true
-do
-    if ! rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$DOCS_PREVIEW_UUID@appserver.$MULTIDEV_NAME.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee multidev-log.txt;
-    then
-        echo "Failed, retrying..."
-        sleep 5
-    else
-        echo "Success: Deployed to $url"
-        break
-    fi
-done
+try3 rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$DOCS_PREVIEW_UUID@appserver.$MULTIDEV_NAME.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee multidev-log.txt;
 
 
 printf "\n Commenting on GitHub... \n"

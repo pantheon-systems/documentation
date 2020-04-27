@@ -64,3 +64,19 @@ skip-preview() {
         return 1
     fi
 }
+
+try3 () {
+  for ((n=1;n<4;n++)); do
+    if ! $@
+      then
+        echo "failed $n times..."
+        if [[ $n = 3 ]]
+          then exit 1
+        fi
+        sleep 1
+      else
+        echo "Completed after $n tries"
+        break
+      fi
+  done
+}
