@@ -137,7 +137,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab title=" Drupal 7" id="d71">
+    <Tab title="Drupal 7" id="d71">
 
     ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -173,7 +173,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab title=" Drupal 7" id="d71">
+    <Tab title="Drupal 7" id="d71">
 
     ```bash
     git checkout master

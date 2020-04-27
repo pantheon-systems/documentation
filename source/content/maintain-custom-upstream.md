@@ -212,7 +212,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
   </Tab>
 
-  <Tab title=" Drupal 7" id="d72">
+  <Tab title="Drupal 7" id="d72">
 
   ```bash
   git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -282,7 +282,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
   </Tab>
 
-  <Tab title=" Drupal 7" id="d72">
+  <Tab title="Drupal 7" id="d72">
 
   ```bash
   git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
