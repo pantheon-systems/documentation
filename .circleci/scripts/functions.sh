@@ -67,7 +67,8 @@ skip-preview() {
 
 try3 () {
   for ((n=1;n<4;n++)); do
-    if ! $@
+    echo "$@"
+    if ! "$@"
       then
         echo "failed $n times..."
         if [[ $n = 3 ]]
