@@ -4,16 +4,8 @@ subtitle: Add a New Module
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
 buildtools: true
 anchorid: extend
-generator: pagination
-layout: guide
 type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/extend/
-nexturl: guides/build-tools/tests/
-previousurl: guides/build-tools/configure/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---

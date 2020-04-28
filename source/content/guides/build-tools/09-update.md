@@ -4,18 +4,9 @@ subtitle: Update Your Project
 description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
 buildtools: true
 anchorid: update
-generator: pagination
 categories: [develop]
-survey: true
-layout: guide
 type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/update/
-previousurl: guides/build-tools/custom-theme/
-editpath: build-tools/09-update.md
 image: buildToolsGuide-thumb
 getfeedbackform: default
 ---

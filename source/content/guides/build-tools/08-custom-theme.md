@@ -5,16 +5,8 @@ description: In step eight of the Build Tools guide, learn how to create a custo
 buildtools: true
 anchorid: custom-theme
 categories: [develop]
-generator: pagination
-layout: guide
 type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/custom-theme/
-nexturl: guides/build-tools/update/
-previousurl: guides/build-tools/merge/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
 ---

@@ -3,17 +3,8 @@ title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
 anchorid: create-project
-layout: guide
 type: guide
-buildtools: true
-generator: pagination
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/create-project/
-nexturl: guides/build-tools/pr-workflow/
-previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---

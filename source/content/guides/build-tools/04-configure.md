@@ -3,10 +3,8 @@ title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
 anchorid: configure
-layout: guide
+type: guide
 permalink: docs/guides/build-tools/configure/
-nexturl: guides/build-tools/extend/
-previousurl: guides/build-tools/pr-workflow/
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
 contributors: [szipfel]
