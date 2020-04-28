@@ -11,12 +11,6 @@ editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
 ---
 
-<Alert type="danger" title="Warning">
-
-We are working on a new 2.x version of the Terminus Build Tools plugin with Terminus 2 support. In the meantime, you can test the beta release following the instructions below. If you have an issue with the plugin, review the [issue queue](https://github.com/pantheon-systems/terminus-build-tools-plugin/issues). If you need to update to the latest version, see [updating plugin docs](https://pantheon.io/docs/terminus/plugins#update-plugins).
-
-</Alert>
-
 ## What Is Build Tools?
 
 Build Tools is a project encompassing multiple Pantheon maintained repositories that work together to connect the tools and automation necessary for an advanced [WebOps workflow](https://pantheon.io/webops) to Pantheon. The main goals of the Build Tools project are:
