@@ -57,10 +57,6 @@ In this workflow, only files unique to the project are tracked as part of the ex
 
 This is quite different than working with the Pantheon-hosted Git repository for each site, where all code must be comitted.
 
-<BuildToolsStackSelectToolbar />
-
-<BuildToolsWorkflowDiagram />
-
 ## Is Build Tools The Right Tool?
 It is easy to create a Build Tools project but you must also understand what all of the components are doing and how they work together. This is not a "set it and forget it workflow", but rather an entry point for projects requiring automated workflows.
 
