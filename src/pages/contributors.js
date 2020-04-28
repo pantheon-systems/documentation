@@ -90,7 +90,7 @@ export default Contributors
 
 export const pageQuery = graphql`
   {
-    allContributorYaml {
+    allContributorYaml(sort: {fields: name, order: ASC}) {
       edges {
         node {
           id
