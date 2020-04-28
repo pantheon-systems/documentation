@@ -48,6 +48,46 @@ contributors: [alexfornuto, rachelwhitton]
 
 </Example>
 
+<Accordion title="All Frontmatter Values" id="frontmatter-values" icon="list-alt">
+
+<dl>
+
+<dt><code>title</code></dt>
+<dd>The title of the content piece.</dd>
+
+<dt><code>description</code></dt>
+<dd>A brief description displayed under the title.</dd>
+
+<dt><code>contributors</code></dt>
+<dd>
+
+An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/master/source/data/contributor.yaml).
+
+</dd>
+
+<dt><code>reviewed</code></dt>
+<dd>The last date when the content was updated or reviewed for accuracy.</dd>
+
+<dt><code>tags</code></dt>
+<dd>An array of tags used by our search engine to quickly identify the content found in the content.</dd>
+
+<dt><code>category</code></dt>
+<dd>An array of values corresponding to a content's position in the site architecture and corresponding category landing page.</dd>
+
+<dt><code>type</code></dt>
+<dd>
+
+Defaults to `doc`, overwritten for other content types like `guide`, `video`, or `resource`.
+
+</dd>
+
+<dt><code>subtitle</code></dt>
+<dd>Used in multipage guides to define a title for that page of the guide.</dd>
+
+</dl>
+
+</Accordion>
+
 ## Before You Begin
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
