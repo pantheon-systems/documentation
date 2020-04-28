@@ -4,20 +4,11 @@ subtitle: Introduction
 description: Describes the Build Tools project, its purpose, and workflow
 tags: [build-tools, automate, composer]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton]
-layout: guide
 type: guide
 anchorid: build-tools
-buildtools: true
-generator: pagination
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/
-nexturl: guides/build-tools/create-project/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
-multidev: true
 ---
 
 <Alert type="danger" title="Warning">
