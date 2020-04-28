@@ -9,27 +9,43 @@ editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
 
-In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a <GitProvider /> repository, <CIProvider />, and a Pantheon site.
+In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a *Git Provider* repository, *CI Provider*, and a Pantheon site.
+
+## Prerequisites
 
 Before beginning, make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. If you need help installing either, expand the installation instructions below.
 
-<InstallBuildTools />
+1. Install <a href="https://getcomposer.org">Composer</a>. You can verify your installation by running `composer --version`. 
+
+2. Install the most recent release of <a href="/docs/terminus/">Terminus</a>. You can verify installation and your current version by running `terminus --version`. 
+
+3. <a href="/docs/ssh-keys/">Add an SSH key</a> within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+
+4. <a href="https://dashboard.pantheon.io/machine-token/create">Generate a Pantheon machine token</a>, then authenticate Terminus.
+
+Create the `$HOME/.terminus/plugin` directory if it does not already exist. 
+
+5. Install the <a href="https://github.com/pantheon-systems/terminus-build-tools-plugin">Terminus Build Tools Plugin</a>
+
+```
+
+mkdir -p ~/.terminus/plugins
+composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta17
+
+```
 
 ## Create a Build Tools Project
 
-Use the options below to configure your project, then run the generated `terminus build:project:create` command.
+1. Create a new project using the command below and passing in your *Git Provider* of choice (github, bitbucket, gitlab)
+
+Starting a new Github Project
+```
+terminus build:project:create --git={yourGitProviderHere} --team='My Agency Name' wp my-site
+```
+
+After your run this, the script will ask for additional information, such as tokens/credentials for **Git Provider** and **CI Provider**. For more information on the different providers, see </a href="/docs/guides/build-tools/03-considerations">consideration.</a>. 
 
 **Note:** For all available command options, see [the Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
-
-<BuildProjectCreateCommandGenerator />
-
-1. Create a new project using the command generated above
-
-  Provide additional information as prompted, such as tokens/credentials for <GitProvider /> and <CIProvider />:
-
-  ![Create Project Prompts](../../../images/pr-workflow/build-env-create-project-prompts.png)
-
-  This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/ssh-keys) manually to fix the build process.
 
   <Accordion title="Troubleshooting" id="troubleshoot-install" icon="wrench">
 
@@ -85,8 +101,6 @@ Use the options below to configure your project, then run the generated `terminu
 
   </Accordion>
 
-2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on <GitProvider />:
+2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on the **Git Provider**:
 
   ![Initial Project Page](../../../images/pr-workflow/initial-project-page.png)
-
-3. Congratulations! You now have a new <GitProvider /> repository and a new Pantheon site connected together with <CIProvider />. Read on to learn more about the Build Tools workflow in practice.

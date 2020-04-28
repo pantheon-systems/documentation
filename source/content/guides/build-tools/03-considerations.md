@@ -5,8 +5,11 @@ description: In step three of the Build Tools guide, learn about considerations 
 type: guide
 anchorid: build-tools
 permalink: docs/guides/build-tools/
-editpath: build-tools/03- considerations.md
+editpath: build-tools/03-considerations.md
 image: buildToolsGuide-thumb
 ---
 
-# Considerations
+# WIP
+
+ - Differences between providers (GitHub/CircleCI, GitLab, BitBucket)
+ -  Differences between CMS (WordPress/Drupal 8)
