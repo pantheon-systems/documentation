@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Describes the Build Tools project, its purpose, and workflow
 tags: [build-tools, automate, composer]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton]
-layout: guide-build-tools
+layout: guide
 type: guide
 anchorid: build-tools
 buildtools: true
