@@ -2,16 +2,20 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [alexfornuto, rachelwhitton]
+reviewed: "2020-04-28"
 ---
+<!-- markdownlint-disable -->
 
 All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's Documentation.
 
 You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
 ## Content Types
+
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
 
 ## Voice, Style, and Flow
+
 Some General Rules:
 
 - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
@@ -19,6 +23,7 @@ Some General Rules:
 - Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
 
 ## Frontmatter
+
 Meta data for a doc or guide is created in a section referred to as frontmatter. It lives at the very top of the file and is wrapped in three dashes.
 
 <Example>
@@ -227,9 +232,11 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 </Example>
 
 ### Hyperlinks
+
 Do not specify a target tab or window for external, or any other links, leaving the viewer the option to open in a new tab.
 
 #### Internal Links
+
 Use relative paths when linking to other pages of the docs site.
 
 <Example>
@@ -261,6 +268,7 @@ Use relative paths when linking to other pages of the docs site.
 ## Code
 
 ### Inline
+
 Used for file names, variables, commands, and output, inline within paragraphs:
 
 <Example>
@@ -305,6 +313,7 @@ require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
 </Example>
 
 #### Shell Prompts
+
 You can also define a single line code block as a command:
 
 <Example>
@@ -406,7 +415,6 @@ Vary: Accept-Encoding, Cookie
 ```
 ````
 
-
 </Example>
 
 ## File Excerpts
@@ -477,6 +485,7 @@ export env=dev
 </Example>
 
 ## Callouts
+
 There are two types of callouts used in our docs, notes and warnings:
 
 ### Notes
@@ -524,6 +533,7 @@ Warnings cover information critical to the reader and highlight potential danger
 </Example>
 
 ### Success
+
 Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
 
 <Example>
@@ -560,6 +570,7 @@ Success callouts are used infrequently, usually in guides with specific end resu
 </Example>
 
 ## Tabs
+
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
 <Example>
@@ -666,11 +677,12 @@ Some code.
 
 </Example>
 
-
 ## Screenshots
+
 Submit screenshots without additional markup. Don't use Skitch to add an arrow, for example.
 
 ### GUI
+
 Screenshots are used to reference GUI instructions:
 
 <Example>
@@ -686,6 +698,7 @@ Screenshots are used to reference GUI instructions:
 </Example>
 
 ### Terminal
+
 Terminal screenshots should only be used to demonstrate intended output:
 
 <Example>
@@ -701,14 +714,16 @@ Terminal screenshots should only be used to demonstrate intended output:
 </Example>
 
 ## Error Messages
+
 Document error messages verbatim as H3s within a **Troubleshooting** section. Using the exact copy of the error message helps to improve SEO, and making the header an H3 allows the section to be linkable within the table of contents for easy sharing.
 
 <Example>
 
 ### RedisException: Redis server went away
+
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
-```
+```none
 RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
 ```
 
@@ -716,21 +731,21 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 
 <hr className="source-code" /> <br/>
 
-```markdown
+````markdown
 ### RedisException: Redis server went away
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
- ```
+ ```none
  RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
  ```
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
-```
+````
 
 </Example>
 
-
 ## Panels
+
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
 <Example>
@@ -758,11 +773,13 @@ This Panel contains additional context, or advanced instructions.
 </Example>
 
 ## Tables
+
 You can use markdown tables to describe availability based on service levels before providing instructions on how to enable or use a given feature. For example:
 
 <Example>
 
 ## Enable Redis 
+
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
@@ -776,6 +793,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
 ```markdown
 ## Enable Redis
+
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
@@ -885,6 +903,7 @@ This is the optimal place to provide links to external resources on the subject,
 
 ```markdown
 ## See Also
+
 - [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
 ```
