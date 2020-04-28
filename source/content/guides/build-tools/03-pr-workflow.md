@@ -5,7 +5,7 @@ description: In step three of the Build Tools guide, learn how to use pull reque
 buildtools: true
 anchorid: pr-workflow
 generator: pagination
-layout: guide-build-tools
+layout: guide
 type: guide
 pagination:
     provider: data.buildtoolspages
