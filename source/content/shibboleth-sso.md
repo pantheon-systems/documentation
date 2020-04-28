@@ -70,14 +70,14 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
  ```bash{promptUser: user}
- ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+ ln -s ./vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
  ```
 
 3. Create your site-specific config file:
 
  ```bash{promptUser: user}
  mkdir private
- cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesaml-config.php
+ cp ./vendor/simplesamlphp/simplesamlphp/config-templates/config.php ./private/simplesaml-config.php
  ```
 
 4. Follow the directions above to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
@@ -85,7 +85,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
  ```bash{promptUser: user}
- ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
+ ln -s ./private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
  ```
 
 6. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
@@ -93,14 +93,29 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ```json:title=composer.json
    "scripts": {
        "post-install-cmd": [
-           "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+           "ln -sf ./private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
        ]
    },
  ```
 
 7. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
-8. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
+8. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `./vendor/simplesamlphp/simplesamlphp/cert`.
+
+By the end of these steps, you should have a docroot structure similar to the output below:
+
+```bash
+.
+├── private
+│   └── simplesaml-config.php
+├── vendor
+│   └── simplesamlphp
+│       └── simplesamlphp
+│           └── config
+│               └── config.php -> ./private/simplesaml-config.php
+└── web
+    └── simplesaml -> ./vendor/simplesamlphp/simplesamlphp/www
+```
 
 </Tab>
 
