@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Pull Request Workflow
-description: In step three of the Build Tools guide, learn how to use pull requests as part of your workflow.
+description: In step four of the Build Tools guide, learn how to use pull requests as part of your workflow.
 buildtools: true
 anchorid: pr-workflow
 type: guide
