@@ -90,3 +90,9 @@ If you need to replace a token, navigate to your [project settings page in Circl
 <BuildToolsChangelog />
 
 </Accordion>
+
+<Alert title="Note" type="info">
+
+We just released Build Tools 2.0. If you need help troubleshooting issues or getting setup, please reach out via  the [Build Tools issue queue](https://github.com/pantheon-systems/terminus-build-tools-plugin/pull/331) and the maintainers would be happy to help you.
+
+</Alert>
