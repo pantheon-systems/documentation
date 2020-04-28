@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Add a New Module
-description: In step six of the Build Tools guide, learn how to add new modules to your site.
+description: In step sixs of the Build Tools guide, learn how to add new modules to your site.
 buildtools: true
 anchorid: extend
 type: guide
