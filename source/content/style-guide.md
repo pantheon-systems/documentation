@@ -53,12 +53,12 @@ contributors: [alexfornuto, rachelwhitton]
 
 </Example>
 
-<Accordion title="All Frontmatter Values" id="frontmatter-values" icon="list-alt">
+<Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
 
 <dl>
 
 <dt><code>title</code></dt>
-<dd>The title of the content piece.</dd>
+<dd>The title of the content.</dd>
 
 <dt><code>description</code></dt>
 <dd>A brief description displayed under the title.</dd>
@@ -74,15 +74,15 @@ An array of IDs for contributors to the content. The ID must correspond to an en
 <dd>The last date when the content was updated or reviewed for accuracy.</dd>
 
 <dt><code>tags</code></dt>
-<dd>An array of tags used by our search engine to quickly identify the content found in the content.</dd>
+<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
 
 <dt><code>category</code></dt>
-<dd>An array of values corresponding to a content's position in the site architecture and corresponding category landing page.</dd>
+<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
 
 <dt><code>type</code></dt>
 <dd>
 
-Defaults to `doc`, overwritten for other content types like `guide`, `video`, or `resource`.
+The content type for this content. Defaults to `doc`, overwritten for other content types like `guide`, `video`, or `resource`.
 
 </dd>
 
