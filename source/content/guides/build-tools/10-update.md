@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Update Your Project
-description: In step tengst of the Build Tools guide, learn how to update your site as part of the continuous integration process.
+description: In step ten of the Build Tools guide, learn how to update your site as part of the continuous integration process.
 buildtools: true
 anchorid: update
 categories: [develop]

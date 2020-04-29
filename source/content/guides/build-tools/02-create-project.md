@@ -38,7 +38,8 @@ composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminu
 
 1. Create a new project using the command below and passing in your *Git Provider* of choice (github, bitbucket, gitlab)
 
-Starting a new Github Project
+Starting a new build tools project
+
 ```
 terminus build:project:create --git={yourGitProviderHere} --team='My Agency Name' wp my-site
 ```
