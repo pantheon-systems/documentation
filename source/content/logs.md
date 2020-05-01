@@ -140,8 +140,10 @@ do
 done
 
 # Include MySQL logs
-db_server=`dig dbserver.$ENV.$SITE_UUID.drush.in +short`
-rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@dbserver.$ENV.$SITE_UUID.drush.in:logs db_server_$db_server
+for db_server in `dig +short dbserver.$ENV.$SITE_UUID.drush.in`;
+do
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$db_server:logs/* db_server_$db_server
+done
 ```
 
 <Alert title="Note" type="info">
