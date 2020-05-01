@@ -89,3 +89,7 @@ If you need help configuring external systems, consider joining the [Community F
 We just released Build Tools 2.0. If you need help troubleshooting issues or getting setup, please reach out via  the [Build Tools issue queue](https://github.com/pantheon-systems/terminus-build-tools-plugin/pull/331) and the maintainers would be happy to help you.
 
 </Alert>
+
+## Considerations
+
+As Terminus does not support Windows, Build Tools does not either.  You can install Terminus Build Tools on macOS or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
