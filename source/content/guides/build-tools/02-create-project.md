@@ -2,6 +2,7 @@
 title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
+buildtools: true
 anchorid: create-project
 type: guide
 permalink: docs/guides/build-tools/create-project/
@@ -9,42 +10,59 @@ editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
 
-In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a *Git Provider* repository, *CI Provider*, and a Pantheon site.
+In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a *Git Provider* repository, *CI Service*, and a Pantheon site.
+
+<Alert title="Note" type="info">
+
+These instructions are written with **Github** as the *Git Provider* repository, **CircleCI** as the *CI Service*, and a Pantheon site. 
+
+Please note that you can substitute the *Git Provider* and *CI Service* in these instructions with the options of your choice. See <a href="docs/guides/build-tools/">Introduction</a> for the supported combinations.
+
+
+</Alert>
 
 ## Prerequisites
 
 Before beginning, make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. If you need help installing either, expand the installation instructions below.
 
-1. Install <a href="https://getcomposer.org">Composer</a>. You can verify your installation by running `composer --version`. 
+1. Install <a href="https://getcomposer.org">Composer</a>. 
+You can verify your installation by running `composer --version`. 
 
-2. Install the most recent release of <a href="/docs/terminus/">Terminus</a>. You can verify installation and your current version by running `terminus --version`. 
+2. Install the most recent release of <a href="/docs/terminus/">Terminus</a>. 
+You can verify installation and your current version by running `terminus --version`. 
 
 3. <a href="/docs/ssh-keys/">Add an SSH key</a> within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 4. <a href="https://dashboard.pantheon.io/machine-token/create">Generate a Pantheon machine token</a>, then authenticate Terminus.
 
-Create the `$HOME/.terminus/plugin` directory if it does not already exist. 
+4. Create the `$HOME/.terminus/plugin` directory if it does not already exist. 
 
 5. Install the <a href="https://github.com/pantheon-systems/terminus-build-tools-plugin">Terminus Build Tools Plugin</a>
 
 ```
 
 mkdir -p ~/.terminus/plugins
-composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta17
+composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0
 
 ```
 
 ## Create a Build Tools Project
 
-1. Create a new project using the command below and passing in your *Git Provider* of choice (github, bitbucket, gitlab)
+1. Create a new project using the command below and passing in your *Git Provider* of choice (For this example, we are using Github)
 
-Starting a new build tools project
+Starting a Github project with Wordpress
 
 ```
-terminus build:project:create --git={yourGitProviderHere} --team='My Agency Name' wp my-site
+terminus build:project:create --git=github --team='My Agency Name' wp my-site
 ```
 
-After your run this, the script will ask for additional information, such as tokens/credentials for **Git Provider** and **CI Provider**. For more information on the different providers, see </a href="/docs/guides/build-tools/03-considerations">consideration.</a>. 
+Starting a Github project with Drupal 8
+
+```
+terminus build:project:create --git=github --team='My Agency Name' d8 my-site
+```
+
+After your run this, the script will ask for additional information, such as tokens/credentials for Github and the associated *CI Service*, CircleCI.
 
 **Note:** For all available command options, see [the Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
 
@@ -52,7 +70,7 @@ After your run this, the script will ask for additional information, such as tok
 
   <Alert title="Note" type="info">
 
-  As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
+  As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manualsly alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
   As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
 
@@ -102,6 +120,6 @@ After your run this, the script will ask for additional information, such as tok
 
   </Accordion>
 
-2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on the **Git Provider**:
+2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on Github:
 
   ![Initial Project Page](../../../images/pr-workflow/initial-project-page.png)
