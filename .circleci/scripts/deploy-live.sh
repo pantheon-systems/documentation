@@ -21,7 +21,8 @@ else
 fi
 
 # Update Dev on Docs Preview site
-try3 rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ dev.$DOCS_PREVIEW_UUID@appserver.dev.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee multidev-log.txt;
+touch ./dev-deployment-log.txt
+try3 rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ dev.$DOCS_PREVIEW_UUID@appserver.dev.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee dev-deployment-log.txt;
 
 #=====================================================#
 # Delete Multidev environment from static-docs site   #
