@@ -44,6 +44,12 @@ The supported Git provider and Continuous Integration service combinations are:
 
 3. [Add an SSH key](/ssh-keys) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
+### Component Overview
+    
+  ![Build Tools diagram](../../../images/pr-workflow/build-tools-diagram-overview.png)
+
+  This is an overview of how Build Tools works while using Github and Circle CI.
+
 <Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
 Master Composer, automated testing, and other advanced workflow concepts with help from our experts. Pantheon delivers custom workshops to help teams master our platform and improve their [WebOps](https://pantheon.io/webops) workflow.
