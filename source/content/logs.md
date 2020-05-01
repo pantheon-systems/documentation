@@ -136,7 +136,7 @@ SITE_UUID=xxxxxxxxxxx
 ENV=live
 for app_server in `dig +short appserver.$ENV.$SITE_UUID.drush.in`;
 do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:logs/* app_server_$app_server
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$app_server:logs/* app_server_$app_server
 done
 
 # Include MySQL logs
