@@ -13,7 +13,7 @@ image: buildToolsGuide-thumb
 ## Pull Request/Merge Request Introduction
 This section demonstrates the Build Tools project workflow by making a code change on a Git feature branch and opening a Pull Request/Merge Request to accept that change into the `master` branch.
 
-As a reminder, you will be working with the code repository hosted on *Git Provider*. *CI Provider* will then build the full site artifact and deploy it to the project's Pantheon site.
+As a reminder, you will be working with the code repository hosted on Github. CircleCI will then build the full site artifact and deploy it to the project's Pantheon site.
 
 Branches with an associated pull request are built and deployed to a [Pantheon multidev environment](https://pantheon.io/docs/multidev), with the pull request number being used to construct the multidev name. For example, pull request `12` will be deployed to a Pantheon multidev named `pr-12`.
 
@@ -21,11 +21,11 @@ The `master` branch is automatically built and deployed to the Pantheon `dev` en
 
 ![Continuous delivery diagram](../../../images/pr-workflow/github-circle-pantheon.png)
 
-Deployments to the `test` and `live` environments on Pantheon must still be done manually, either in the dashboard or via Terminus. For this reason, Continuous Delivery <Popover title="Continuous Delivery" content="Continuous Delivery (CD) is the practice of automatically deploying code all the way to production, without human intervention. This requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress." /> is not enabled.
+Deployments to the `test` and `live` environments on Pantheon must still be done manually, either in the dashboard or via Terminus. For this reason, Continuous Delivery <Popover title="Continuous Delisvery" content="Continuous Delivery (CD) is the practice of automatically deploying code all the way to production, without human intervention. This requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress." /> is not enabled.
 
 ## Create a Pull Request/Merge Request
 
-1. From your *Git Provider* project page, click on the `config` directory. Select the file named `system.site.yml` and click <span class="glyphicon glyphicon-pencil"></span> to open an editor:
+1. From your Github project page, click on the `config` directory. Select the file named `system.site.yml` and click <span class="glyphicon glyphicon-pencil"></span> to open an editor:
 
   ![system.site.yml Configuration](../../../images/pr-workflow/system-site-config.png)
 
@@ -44,21 +44,30 @@ Deployments to the `test` and `live` environments on Pantheon must still be done
 
   <Accordion title="Builds" id="understand-builds" icon="watch">
 
-  As soon as you commit changes to a feature branch, *CI Provider* builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `pr-1-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
+  As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `pr-1-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
   ![Passed Pull Request](../../../images/pr-workflow/slogan-pr-starting.png)
 
   ### Automated Tests
-  It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, *Git Provider* will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
+  It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, Github will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
 
   </Accordion>
 
-5. Wait for the build on *CI Provider* to leave a comment, then click on the **Visit Site** button to access the Multidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
+5. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Multidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
 
     ![Site initial login](../../../images/pr-workflow/pr-slogan-site.png)
 
-    This Multidev environment will persist for as long as the Pull Request remains open in *Git Provider*.
+    This Multidev environment will persist for as long as the Pull Request remains open in Github.
 
 6. Click **Log in** and to access the admin account for this site using the password you provided to the `build-env:create-project` command:
 
   ![Site admin log in](../../../images/pr-workflow/admin-log-in.png)
+
+
+<Alert title="Note" type="info">
+
+These instructions are written with **Github** as the *Git Provider* repository, **CircleCI** as the *CI Service*, and a Pantheon site. 
+
+Please note that you can substitute the *Git Provider* and *CI Service* in these instructions with the options of your choice. See <a href="docs/guides/build-tools/">Introduction</a> for the supported combinations.
+
+</Alert>
