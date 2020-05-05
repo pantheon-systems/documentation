@@ -93,7 +93,15 @@ For more information, see [configuring wp-config.php](/wp-config-php).
 
 Some sites are on a newer version of the Pantheon infrastructure and will display the following banner at the top of the Site Dashboard:
 
-![Alert on Site Dashboards that are on new infrastructure explains that the site's home directory is now the root directory.](../images/dashboard/directory-structure-changed.png)
+<Alert type="info" icon="info-sign" title="The directory structure for this site has changed.">
+
+For enhanced security and a more intuitive experience:
+   - The site's home directory is now the root directory.
+   - Logs are now written to logs/php/ and logs/nginx/ for each respective service.
+  
+For an updated example log collection script see [Documentation](#)
+
+</Alert>
 
 For these sites, and as a general best-practice, the home directory should be referenced through the `$_ENV` variable:
 
