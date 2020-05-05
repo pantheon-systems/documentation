@@ -75,7 +75,7 @@ MySQL stored procedures are not supported. Due to the nature of the platform, th
 
 ## Drupal 7 and Ampersands
 
-A Drupal 7 site given a URL with an ampersand (&) in it will return a 404, regardless of the presence of a matching path.
+A Drupal 7 site given a URL with an ampersand (&) in it, excluding query parameter separation, will return a 404, regardless of the presence of a matching path.
 
 Be sure to encode URLs that use ampersands with `%26` in place of `&`.
 
