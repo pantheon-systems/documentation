@@ -51,6 +51,19 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 - **Launch**: PS will provide you with the information you will need to launch or re-launch your site on Advanced Global CDN.
 - **Post-Launch**: PS provides up to 4 hours per quarter to address requests and changes to the Advanced Global CDN service throughout the lifetime of the contract.
 
+## Pantheon Secure Integration
+Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about Secure Integration](/secure-integration) or [contact us](https://pantheon.io/professional-services) for details.
+
+## SSO/SAML
+Single Sign-on to the Pantheon Dashboard. [Learn more about SSO for Organizations](/sso-organizations) or [contact us](https://pantheon.io/professional-services) for details.
+
+## Pre-launch Load Testing
+Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
+
+Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services) for details.
+
+## Custom Application Services
+Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services) for details.
 
 ## Additional Services
 
@@ -65,4 +78,4 @@ Agile website operations teams iterate constantly to move in lockstep with organ
 Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
 
 ### Expert Training
-We provide highly customized, one-on-one training from Pantheon experts to help your development team apply custom workflows to active Pantheon projects. Tailored WebOps training for your entire team is also available. We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, on-site or online for multiple offices. [Contact us](https://pantheon.io/agencies/learn-pantheon) for details.
+We provide highly customized, one-on-one training from Pantheon's DevRel (Developer Relations) experts to help your development team apply custom workflows to active Pantheon projects. Tailored WebOps training for your entire team is also available. We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, on-site or online for multiple offices. [Contact us](https://pantheon.io/agencies/learn-pantheon) for details.
