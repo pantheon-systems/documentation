@@ -163,5 +163,21 @@ Install and use one of the following WordPress plugins:
 
 </TabList>
 
+### Block User Agents in Drupal or WordPress
+
+Similar to the IP blocking methods listed above, you can also target specific unwanted user agents that you may want to block.
+
+The `stripos` function implements a case-insenstive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`. 
+
+Remember to replace the example user agent (`UglyBot`):
+
+```php:title=wp-config.php%20or%20settings.php
+if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
+  header('HTTP/1.0 403 Forbidden');
+  exit;
+}
+```
+
 ## Advanced Protection and Performance With Advanced Global CDN
+
 [Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
