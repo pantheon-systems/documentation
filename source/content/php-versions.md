@@ -24,7 +24,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 </Alert>
 
-### Available PHP Versions
+### Recommended PHP Versions
 
 The recommended PHP versions available on Pantheon are:
 
@@ -34,13 +34,38 @@ The recommended PHP versions available on Pantheon are:
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
-### EOL PHP Versions
+### All PHP Versions
 
-Pantheon also makes PHP [7.1](https://v71-php-info.pantheonsite.io/), PHP [7.0](https://v70-php-info.pantheonsite.io/), [5.6](https://v56-php-info.pantheonsite.io/), and [5.5](https://v55-php-info.pantheonsite.io/) available on the platform, although these are end-of-life (**EOL**), and should not be used unless absolutely necessary. 
+| Version                                      | Recommended | Status |
+| --------------------------------------------:| ----------- | ------ |
+| [7.3](https://v73-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | Active |
+| [7.2](https://v72-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | Active |
+| [7.1](https://v71-php-info.pantheonsite.io/) | ❌           | EOL     |
+| [7.0](https://v70-php-info.pantheonsite.io/) | ❌           | EOL     |
+| [5.6](https://v56-php-info.pantheonsite.io/) | ❌           | EOL     |
+| [5.5](https://v55-php-info.pantheonsite.io/) | ❌           | EOL     |
+| [5.3](https://v53-php-info.pantheonsite.io/) | ❌           | Retired |
 
-### PHP Versions Being Retired
+<dl>
 
-PHP [5.3](https://v53-php-info.pantheonsite.io/) is being retired from the platform. Sites using PHP 5.3 will continue to serve pages, but new development cannot be done. To resume development on a site using a retired version of PHP, first upgrade the PHP version on the development site.
+<dt>EOL</dt>
+
+<dd>
+
+End-of-life (**EOL**) versions are available on the platform but no longer under active development, and should not be used unless absolutely necessary.
+
+</dd>
+
+<dt>Retired</dt>
+
+<dd>
+
+Sites using retired versions of PHP will continue to serve pages, but new development cannot be done. To resume development on a site using a retired version of PHP, first upgrade the PHP version on the development site.
+
+</dd>
+
+</dl>
+
 
 <Alert title="Note" type="info">
 
