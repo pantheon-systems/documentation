@@ -242,7 +242,7 @@ ___
 
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 
-<ReviewDate date="2020-02-10" />
+<ReviewDate date="2020-05-05" />
 
 **Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
@@ -266,6 +266,11 @@ if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') 
   $conf['recaptcha_site_key'] = NULL;
 }
 ```
+
+___
+
+**Issue 3:** reCAPTCHA relies on `$_SERVER['SERVER_NAME']` which is ephemeral on horizontally-scaled platforms like Pantheon. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) for details and workarounds.
+
 ___
 
 ## [S3 File System](https://www.drupal.org/project/s3fs)
