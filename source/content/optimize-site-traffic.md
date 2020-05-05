@@ -65,7 +65,6 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
 
-
 ## DDoS Mitigation
 
 Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DDoS attack, our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
