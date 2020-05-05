@@ -40,6 +40,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 
 ## Known Plugins/Modules Using SERVER_NAME
+
+- [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 - [Simple Share Buttons](https://simplesharebuttons.com/plus/)
 - [WP Super Cache](https://wordpress.org/support/plugin/wp-super-cache)
 - [Give](https://wordpress.org/plugins/give/)
