@@ -1,12 +1,13 @@
 ---
 title: What is APC and what is it used for?
-description: Understand Alternative PHP Cache and its uses within the Pantheon Website Management Platform workflow.
-tags: [cacheapp]
-categories: [performance]
+description: Understand Alternative PHP Cache and its uses within the Pantheon WebOps workflow.
+tags: [APC,caching,PHP,Redis]
+categories: [platform]
+reviewed: "2020-05-05"
 ---
 APC stands for the [Alternative PHP Cache](https://secure.php.net/manual/en/book.apc.php "Alternative PHP Cache manual on php.net"). PHP is a dynamic language that is compiled on-demand into bytecode at execution time. To improve performance, APC stores this bytecode so that it can be reused instead of having to be recompiled each time.
 
-Pantheon provides APC by default across all plans, but the size of the APC memory cache ([apc.shm\_size](https://secure.php.net/manual/en/apc.configuration.php#ini.apc.shm-size "apc.shm\_size reference")) varies depending on the service level.
+Pantheon provides APC by default across all plans, but the size of the APC memory cache ([apc.shm\_size](https://secure.php.net/manual/en/apc.configuration.php#ini.apc.shm-size "apc.shm\_size reference")) varies depending on the service level. See the [Application Containers overview](/application-containers) to learn more about APC on Pantheon's container architecture.
 
 ## Frequently Asked Questions
 
@@ -22,7 +23,7 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 ```php
 Warning: require_once(): Unable to allocate memory for pool.
 ```
-In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. To learn more about how much memory your site is using, visit the site's [New Relic dashboard](/new-relic).
+In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/plans/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. To learn more about how much memory your site is using, visit the site's [New Relic dashboard](/new-relic).
 
 #### How can I determine what my current APC settings are?
 
@@ -33,7 +34,7 @@ See [Securely Working with phpinfo](/phpinfo).
 
 ## Can the shm_size be configured manually?
 
-No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.pantheon.io/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
+No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.pantheon.io/plans/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
 
 ## Troubleshooting
 
@@ -74,7 +75,7 @@ Then browse to `https://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear t
 
 #### Dashboard
 
-Clearing the cache via the Dashboard will also clear the APC cache along with the Global CDN cache.
+[Clearing the cache](/clear-caches) via the Dashboard will also clear the APC cache along with the Global CDN cache.
 
 ### APC related errors are happening on Dev, but not in Test or Live. Why?
 
@@ -83,3 +84,9 @@ APC shared memory is separate and distinct for each environment. A corruption in
 ### The site has been online a while, what would trigger the error now?
 
 When the cache is cleared from the Dashboard, the APC cache is also flushed. As a result, the Drupal page load will repopulate the cache, which may in turn exceed the available shared memory. This circumstance is rare, but is possible.
+
+## See Also
+- [Application Containers overview](/application-containers)
+- [Clearing the cache](/clear-caches)
+- [Redis](/redis)
+- [Securely Working with phpinfo](/phpinfo)
