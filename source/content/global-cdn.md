@@ -34,19 +34,11 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Frequently Asked Questions
 
-### I already have a CDN - should I switch?
+### I already have a CDN, should I keep it when migrating to Pantheon?
 
-Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
+If you want to retain your existing CDN because of specific features they provide, you will need to set up a "stacked CDN" configuration. While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
-1. It includes [free and automatic HTTPS service](/https)
-
-1. It is heavily optimized for website performance
-
-1. It is configured, maintained, and supported by Pantheon
-
-1. It is available at no additional cost
-
-Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
+If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/advanced-global-cdn) service.
 
 ### Is the www-redirector service still available?
 
