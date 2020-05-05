@@ -18,7 +18,7 @@ If none of the above apply to your project, use the [standard migration procedur
 
 <Alert title="Note" type="info" >
 
-Site migrations are one of the services offered by our [Professional Services](/professional-services/#site-migrations) team.
+The steps outlined below do not work for Composer-based sites. If you have need help migrating a Composer-based site (or any site, for that matter), site migrations are one of the services offered by our [Professional Services](/professional-services/#site-migrations) team.
 
 </Alert>
 
