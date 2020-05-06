@@ -97,6 +97,27 @@ class ReviewReport extends React.Component {
                 }
               }
             }
+            uncategorizedDocs: allMdx(
+              filter: {
+                frontmatter: { categories: { eq: null }, title: { ne: "" } }
+                fields: { slug: { regex: "/^((?!changelog).)*$/"}}
+              }
+            ) {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    title
+                    categories
+                    reviewed
+                    tags
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
           }
         `}
         render={data => {
@@ -126,6 +147,7 @@ class ReviewReport extends React.Component {
           )
           //console.log("Unreviewed Tertiary Pages: ", unreviewedTertiaryPages) // For debugging
           const categorizedPages = data.categorizedDocs.edges
+          const uncategorizedPages = data.uncategorizedDocs.edges
           //console.log("categorizedPages: ", categorizedPages) // For Debugging
 
           /* Construct the GitHub Issue Body */
@@ -422,9 +444,9 @@ class ReviewReport extends React.Component {
                                 </a>
                               </td>
                               <td>
-                                <a href={`/${page.node.fields.slug}`}>
+                                <Link to={`/${page.node.fields.slug}`}>
                                   {page.node.frontmatter.title}
-                                </a>
+                                </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
                               <td>
@@ -440,6 +462,87 @@ class ReviewReport extends React.Component {
                                   }
                                 )}
                               </td>
+                              <td>
+                                {page.node.frontmatter.tags
+                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + tag}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              </Accordion>
+              {/* Table of Un-Categorized / Tagged Docs */}
+              <Accordion
+                title="Un-Categorized Docs (filters on Title, Category, Tag)"
+                id="uncategorized"
+              >
+                <div className="table-responsive">
+                  <table className="table table-commands table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th> Total Count of Un-Categorized Pages</th>
+                        <th> Un-Categorized but Tagged Pages</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{uncategorizedPages.length}</td>
+                        <td>
+                          {
+                            uncategorizedPages.filter(page => {
+                              return page.node.frontmatter.tags
+                            }).length
+                          }
+                        </td>
+                      </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                        <th width="5%">Create an Issue</th>
+                        <th width="20%">Title</th>
+                        <th width="10%">Review Date</th>
+                        <th>Tags</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {uncategorizedPages
+                        .filter(page => {
+                          return (
+                            page.node.frontmatter.title
+                              .toLowerCase()
+                              .indexOf(searchTitle.toLowerCase()) >= 0
+                          )
+                        })
+                        .filter(page => {
+                          return page.node.frontmatter.tags
+                            ? page.node.frontmatter.tags.filter(
+                                tag => tag.indexOf(searchTags) > -1
+                              ).length
+                            : page
+                        })
+                        .map((page, i) => {
+                          return (
+                            <tr key={i}>
+                              <td>
+                                <a href={makeNewIssue(page)} target="blank">
+                                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                </a>
+                              </td>
+                              <td>
+                                <Link to={`/${page.node.fields.slug}`}>
+                                  {page.node.frontmatter.title}
+                                </Link>
+                              </td>
+                              <td>{page.node.frontmatter.reviewed}</td>
                               <td>
                                 {page.node.frontmatter.tags
                                   ? page.node.frontmatter.tags.map((tag, i) => {
