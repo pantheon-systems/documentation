@@ -59,6 +59,8 @@ If you need to replace a token, navigate to your [project settings page in Circl
 
 ## Create a Build Tools Project
 
+Scaffold a new project from a template repository and perform a one-time setup needed to connect an external Git provider and Continuous Integration service with Pantheon, such as configuring SSH keys and environment variables. To use your own template repository see [Customization](#customization).
+
 1. Create a new project using the command below and passing in your *Git Provider* of choice (For this example, we are using Github)
 
 Starting a Github project with Wordpress
