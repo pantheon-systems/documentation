@@ -6,13 +6,13 @@ categories: [get-started]
 ---
 Manually migrate your site to Pantheon when any of the following apply:
 
-* **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
-* **Large WordPress Site**: WordPress site exceeds 500MB.
-* **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
-* **[WordPress Site Networks](/guides/multisite)**
-* **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
-* **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
-* **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
+- **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
+- **Large WordPress Site**: WordPress site exceeds 500MB.
+- **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
+- **[WordPress Site Networks](/guides/multisite)**
+- **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+- **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
+- **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
 If none of the above apply to your project, use the [standard migration procedure](/migrate).
 
@@ -23,15 +23,17 @@ Site migrations are one of the services offered by our [Professional Services](/
 </Alert>
 
 ## Before You Begin
+
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
 - Read [Platform Considerations](/platform-considerations)
+- Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
-- Upgrade to the latest version of WordPress or Drupal core
 - Clear all caches
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
+- Make sure to read [Platform Considerations](/platform-considerations) and plan to mitigate any conflicts with the site needs or architecture.
 
 <Accordion title="Advanced Tips for Successful Migration" id="advanced-before-you-begin" icon="lightbulb">
 
