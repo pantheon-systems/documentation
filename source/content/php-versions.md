@@ -60,7 +60,7 @@ End-of-life (**EOL**) versions are available on the platform but no longer under
 
 <dd>
 
-Sites using retired versions of PHP will continue to serve pages, but new development cannot be done. To resume development on a site using a retired version of PHP, first upgrade the PHP version on the development site.
+Sites using retired versions of PHP will continue to serve pages, but new development cannot be done. To resume development on a site using a retired version of PHP, first upgrade the PHP version on the development environment.
 
 </dd>
 
