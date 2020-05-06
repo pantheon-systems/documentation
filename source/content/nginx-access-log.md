@@ -4,7 +4,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess to gathe
 tags: [logs, nginx, goacess]
 categories: [performance]
 contributors: [albertcausing, sarahg]
-reviewed: "2020-01-09"
+reviewed: "2020-05-06"
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
@@ -36,9 +36,9 @@ The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goacces
 Add the following lines to the `goaccess.conf` file:
 
 ```none:title=goaccess.conf
-time-format %T
+time-format %H:%M:%S
 date-format %d/%b/%Y
-log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
+log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
 ```
 
 ## Create a report
