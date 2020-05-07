@@ -7,6 +7,7 @@ tags: [local]
 categories: [develop]
 layout: video
 searchboost: 50
+type: video
 ---
 
 <Youtube src="z01vIuB3kRg" title="Local Development" />

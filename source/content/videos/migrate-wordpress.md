@@ -6,6 +6,7 @@ permalink:  docs/videos/:basename/
 tags: [migrateguided]
 categories: [get-started,develop, cli]
 layout: video
+type: video
 searchboost: 50
 ---
 

@@ -6,6 +6,7 @@ permalink:  docs/videos/:basename/
 categories: [develop,workflow]
 tags: [devterminus]
 layout: video
+type: video
 searchboost: 50
 ---
 
