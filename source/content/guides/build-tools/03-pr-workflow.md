@@ -60,6 +60,6 @@ Deployments to the `test` and `live` environments on Pantheon must still be done
 
     This Multidev environment will persist for as long as the pull request remains open in GitHub.
 
-1. Enter the `admin` username and password you created in the `build-env:create-project` command. Click **Log in** to access the admin panel:
+1. Enter the `admin` username and password you created in the `build-env:create-project` command. Click **Log in** to access the admin interface:
 
   ![Site admin log in](../../../images/pr-workflow/admin-log-in.png)
