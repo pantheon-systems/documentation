@@ -88,8 +88,10 @@ class ReviewReport extends React.Component {
                   frontmatter {
                     title
                     categories
+                    cms
                     reviewed
                     tags
+                    type
                   }
                   fields {
                     slug
@@ -109,8 +111,10 @@ class ReviewReport extends React.Component {
                   frontmatter {
                     title
                     categories
+                    cms
                     reviewed
                     tags
+                    type
                   }
                   fields {
                     slug
@@ -409,9 +413,11 @@ class ReviewReport extends React.Component {
                       <tr>
                         <th width="5%">Create an Issue</th>
                         <th width="20%">Title</th>
-                        <th width="10%">Review Date</th>
-                        <th with="20%">Categories</th>
-                        <th>Tags</th>
+                        <th width="6%">Review Date</th>
+                        <th width="10%">CMS</th>
+                        <th with="10%">Categories</th>
+                        <th width="40%">Tags</th>
+                        <th>Type</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -449,6 +455,7 @@ class ReviewReport extends React.Component {
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
+                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
                               <td>
                                 {page.node.frontmatter.categories.map(
                                   (category, i) => {
@@ -473,6 +480,7 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
+                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
                             </tr>
                           )
                         })}
@@ -510,7 +518,9 @@ class ReviewReport extends React.Component {
                         <th width="5%">Create an Issue</th>
                         <th width="20%">Title</th>
                         <th width="10%">Review Date</th>
+                        <th width="10%">CMS</th>
                         <th>Tags</th>
+                        <th>Type</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -543,6 +553,7 @@ class ReviewReport extends React.Component {
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
+                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
                               <td>
                                 {page.node.frontmatter.tags
                                   ? page.node.frontmatter.tags.map((tag, i) => {
@@ -554,6 +565,7 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
+                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
                             </tr>
                           )
                         })}
