@@ -12,7 +12,7 @@ This guide will help you get up and running with [Lando](https://lando.dev/), an
 
 <Alert type="info" title="Note">
 
-Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
+Please note that [Pantheon's Support Team](/support) doesn't provide support for Lando. Consider trying [Localdev](/localdev), which is built using Lando, made specifically for Pantheon.
 
 </Alert>
 
@@ -24,7 +24,7 @@ Be sure that you have:
 - Having a working knowledge of local server environments is helpful but not entirely necessary.
 - While you’re at it be sure to check out [Lando getting started guide](https://docs.devwithlando.io/dev/started.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
 
-Installing Lando is straight forward. Be sure to check its [system requirements](https://docs.devwithlando.io/installation/system-requirements.html) to ensure you can proceed.
+Installing Lando is straight forward. Be sure to check its [system requirements](https://docs.devwithlando.io/installation/system-requirements.html) to ensure you can proceed. Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 
 ## Download and Install Lando
 
