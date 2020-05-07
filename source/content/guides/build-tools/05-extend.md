@@ -9,7 +9,7 @@ permalink: docs/guides/build-tools/extend/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/new-pr).
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request).
 
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.

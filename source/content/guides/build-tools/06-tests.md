@@ -16,7 +16,7 @@ The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-c
 There are also visual regression tests using [Backstopjs](https://github.com/garris/BackstopJS ) that run when `composer.lock` has changed, but `composer.json` has not. The scripts are a part of the template repositories: [example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer) and [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer)
 
 ## Extending the Example Test Suite
-The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/new-pr) has been applied to the associated Multidev environment:
+The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request) has been applied to the associated Multidev environment:
 
 1. Pull down commits added to the `slogan` branch from the previous lesson:
 
