@@ -56,7 +56,7 @@ Master Composer, automated testing, and other advanced workflow concepts with he
 
 ## Build Tools Workflow
 
-Build Tools projects extend the [Pantheon workflow](https://pantheon.io/docs/pantheon-workflow) by adding an external Git provider and a CI service.
+Build Tools projects extend the [Pantheon workflow](/pantheon-workflow) by adding an external Git provider and a CI service.
 
 In this workflow, only files unique to the project are tracked as part of the external Git repository. The CI then builds a production artifact, deploys the fully built site to Pantheon, and runs a suite of automated tests.
 
