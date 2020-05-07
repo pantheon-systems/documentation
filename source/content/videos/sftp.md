@@ -7,6 +7,7 @@ tags: [admin, sftpfiles]
 categories: [develop]
 searchboost: 50
 layout: video
+type: video
 ---
 
 <Youtube src="ktesh9SiHfc" title="On Server Development" />

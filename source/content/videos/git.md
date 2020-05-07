@@ -7,6 +7,7 @@ tags: [git]
 categories: [develop, cli,develop]
 layout: video
 searchboost: 50
+type: video
 ---
 
 <Youtube src="LG7_wWQHtS4" title="Git" />

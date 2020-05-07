@@ -7,6 +7,7 @@ tags: [devdrush]
 categories: [develop,drupal,workflow]
 layout: video
 searchboost: 50
+type: video
 ---
 
 <Youtube src="wAL4LQwy8Ow" title="Drush" />

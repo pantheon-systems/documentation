@@ -7,6 +7,7 @@ tags: [devwpcli]
 categories: [wordpress,workflow]
 layout: video
 searchboost: 50
+type: video
 ---
 
 <Youtube src="2KphdFOaOeM" title="WP-CLI" />

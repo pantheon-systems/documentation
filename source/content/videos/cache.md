@@ -7,6 +7,7 @@ tags: [cacheedge]
 categories: [develop, cli,performance]
 layout: video
 searchboost: 50
+type: video
 ---
 
 <Youtube src="ecjZhtu41hs" title="Caching" />

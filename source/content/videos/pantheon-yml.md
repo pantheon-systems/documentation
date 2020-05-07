@@ -6,6 +6,7 @@ permalink:  docs/videos/:basename/
 tags: [pantheonyml]
 categories: [develop, cli, workflow,platform]
 layout: video
+type: video
 searchboost: 50
 ---
 
