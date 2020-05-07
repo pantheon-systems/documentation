@@ -12,7 +12,7 @@ This guide will help you get up and running with [Lando](https://lando.dev/), an
 
 <Alert type="info" title="Note">
 
-Please note that [Pantheon's Support Team](/support) doesn't provide support for Lando. Consider trying [Localdev](/localdev), which is built using Lando specifically for Pantheon.
+Please note that [Pantheon's Support Team](/support) doesn't provide support for Lando. Consider trying [Localdev](/localdev), which is built using Lando, made specifically for Pantheon.
 
 </Alert>
 
