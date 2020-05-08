@@ -47,6 +47,18 @@ For installation details, see [Configuring Environment Indicators](/environment-
 ## [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)
 Resolve errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
 
+### Troubleshooting WP Native PHP Sessions
+
+If you see an error similar to the following in the error logs:
+
+```none
+Fatal error: session_start(): Failed to initialize storage module: user (path: ) in …/code/wp-content/plugins/plugin-that-uses-sessions/example.php on line 2
+```
+
+The cause is likely a plugin in the [mu-plugins](/mu-plugin) directory that is instantiating a session prior to this plugin loading. To fix, deactivate the WP Native PHP Sessions plugin and instead load it via an mu-plugin that loads first.
+
+For example, create an mu-plugin called `00.php` and add a line in it to include the `wp-native-php-sessions/pantheon-sessions.php` file.
+
 ## [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/)
 Provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/). For an example use case, see [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso)
 
