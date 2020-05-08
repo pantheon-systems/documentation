@@ -51,7 +51,7 @@ Resolve errors with code (themes, modules or plugins) that relies on PHP's defau
 
 If you see an error similar to the following in the error logs:
 
-```
+```none
 Fatal error: session_start(): Failed to initialize storage module: user (path: ) in …/code/wp-content/plugins/plugin-that-uses-sessions/example.php on line 2
 ```
 
