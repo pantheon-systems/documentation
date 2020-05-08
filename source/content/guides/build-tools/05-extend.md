@@ -2,23 +2,16 @@
 title: Build Tools
 subtitle: Add a New Module
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
+categories: [workflow]
+tags: [build-tools, drupal, composer]
 buildtools: true
 anchorid: extend
-categories: [develop]
-generator: pagination
-layout: guide
 type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/extend/
-nexturl: guides/build-tools/tests/
-previousurl: guides/build-tools/configure/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/new-pr).
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request).
 
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.

@@ -1,29 +1,24 @@
 ---
 title: Build Tools
 subtitle: Write a New Test
-description: In step six of the Build Tools guide, learn how to use the pre-conifgured site tests, or customize your own.
+description: In step six of the Build Tools guide, learn how to use the pre-configured site tests, or customize your own.
+categories: [workflow]
+tags: [build-tools, automate]
 buildtools: true
 anchorid: behat
-categories: [develop]
-generator: pagination
-layout: guide
 type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/tests/
-previousurl: guides/build-tools/extend/
-nexturl: guides/build-tools/merge/
 editpath: build-tools/06-tests.md
 image: buildToolsGuide-thumb
 ---
-The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses  [Behat](http://behat.org/en/latest/) and the WordPress example uses [WordHat](https://wordhat.info/).
+The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses [Behat](http://behat.org/en/latest/) and the WordPress example uses [WordHat](https://wordhat.info/).
 
 The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml) file sets the path for a project's collection of Behat tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 
+There are also visual regression tests using [Backstopjs](https://github.com/garris/BackstopJS ) that run when `composer.lock` has changed, but `composer.json` has not. The scripts are a part of the template repositories: [example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer) and [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer)
+
 ## Extending the Example Test Suite
-The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/new-pr) has been applied to the associated Multidev environment:
+The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request) has been applied to the associated Multidev environment:
 
 1. Pull down commits added to the `slogan` branch from the previous lesson:
 
