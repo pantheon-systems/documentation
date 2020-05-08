@@ -5,12 +5,16 @@ tags: [migrateguided]
 categories: [get-started]
 ---
 ## Before You Begin
+
 To ensure a successful migration, complete the following tasks on the source site first:
 
+- Read [Platform Considerations](/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
+- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
+- Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
 - Clear all caches
 - Remove unneeded code, database tables, and files
-- Make sure to read [Platform Considerations](/platform-considerations) and plan to mitigate any conflicts with the site needs or architecture.
+- [Configure SSH keys](/ssh-keys)
 
 ## Migrate Existing Sites
 Pantheon provides a guided path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
