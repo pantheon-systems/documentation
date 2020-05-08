@@ -48,9 +48,12 @@ For installation details, see [Configuring Environment Indicators](/environment-
 Resolve errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
 
 ### Troubleshooting WP Native PHP Sessions
-If you see an error similar to:
 
-> Fatal error: session_start(): Failed to initialize storage module: user (path: ) in …/code/wp-content/plugins/plugin-that-uses-sessions/example.php on line 2
+If you see an error similar to the following in the error logs:
+
+```
+Fatal error: session_start(): Failed to initialize storage module: user (path: ) in …/code/wp-content/plugins/plugin-that-uses-sessions/example.php on line 2
+```
 
 The cause is likely a plugin in the [mu-plugins](/mu-plugin) directory that is instantiating a session prior to this plugin loading. To fix, deactivate the WP Native PHP Sessions plugin and instead load it via an mu-plugin that loads first.
 
