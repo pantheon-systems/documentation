@@ -115,3 +115,7 @@ This method has the advantage of being toggleable without deploying code, by act
   ```
 
 1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
+
+### Secure wp-admin and wp-includes folder
+
+These are the common places where hackers try to probe your site for finding clues and disclosing your server paths, as best practice outlined here https://wordpress.org/support/article/hardening-wordpress/#securing-wp-admin, you can add `wp-admin` and `wp-includes` as a protected path in your pantheon.yml file as outlined [here](https://pantheon.io/docs/pantheon-yml#protected-web-paths).
