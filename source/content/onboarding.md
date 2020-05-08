@@ -30,6 +30,9 @@ The following services are not fulfilled by the Onboarding Manager but are addit
 ### Professional Services
 Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations,  [Advanced Global CDN](/advanced-global-cdn) implementation, and [Managed Updates](/professional-services#managed-updates) services. See our [Professional Services](/professional-services) overview, or [contact us](https://pantheon.io/professional-services) for details.
 
+### Custom Application Services
+Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services) for details.
+
 ### Customer Success Management
 Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals.
 
