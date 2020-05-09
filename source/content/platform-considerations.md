@@ -73,6 +73,12 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 
 MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
+## Drupal 7 and Ampersands
+
+A Drupal 7 site given a URL with an ampersand (&) in it, excluding query parameter separation, will return a 404, regardless of the presence of a matching path.
+
+Be sure to encode URLs that use ampersands with `%26` in place of `&`.
+
 ## Email and Deliverability
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
