@@ -80,7 +80,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  cp ./vendor/simplesamlphp/simplesamlphp/config-templates/config.php ./private/simplesaml-config.php
  ```
 
-4. Follow the directions above to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
+4. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
 
 5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
