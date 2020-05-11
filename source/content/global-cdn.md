@@ -34,7 +34,7 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Frequently Asked Questions
 
-### I already have a CDN, should I keep it when migrating to Pantheon?
+### I already have a CDN. Should I keep it when migrating to Pantheon?
 
 If you want to retain your existing CDN because of specific features they provide, you will need to set up a "stacked CDN" configuration. While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
