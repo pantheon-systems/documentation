@@ -70,7 +70,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
  ```bash{promptUser: user}
- ln -s ./vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+ ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
  ```
 
 3. Create your site-specific config file:
@@ -85,7 +85,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
  ```bash{promptUser: user}
- ln -s ./private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
+ ln -s ../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
  ```
 
 6. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
@@ -93,7 +93,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ```json:title=composer.json
    "scripts": {
        "post-install-cmd": [
-           "ln -sf ./private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+           "ln -sf ../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
        ]
    },
  ```
@@ -112,9 +112,9 @@ By the end of these steps, you should have a docroot structure similar to the ou
 │   └── simplesamlphp
 │       └── simplesamlphp
 │           └── config
-│               └── config.php -> ./private/simplesaml-config.php
+│               └── config.php -> ../private/simplesaml-config.php
 └── web
-    └── simplesaml -> ./vendor/simplesamlphp/simplesamlphp/www
+    └── simplesaml -> ../vendor/simplesamlphp/simplesamlphp/www
 ```
 
 </Tab>
