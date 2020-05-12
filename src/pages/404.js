@@ -4,18 +4,37 @@ import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import SVG404 from "../../source/images/404_dark.svg"
-import Search, {searchResults} from "../components/nativeAddsearch"
+import AddSearchClient from 'addsearch-js-client'
+import AddSearchUI from 'addsearch-search-ui'
+import SearchField from '../components/searchField'
+import SearchResults from "../components/nativeSearchResults"
 
 class NotFoundPage extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.addSearchClient = new AddSearchClient("a7b957b7a8f57f4cc544c54f289611c6")
+    var addSearchConf = {
+      debug: true,
+//      display_url: true,
+//      display_resultscount: false,
+//      display_sortby: false,
+//      display_category: true,
+//      automatic_match_all_query: false,
+//      number_of_results: 4,
+    }
+    this.addSearchUI = new AddSearchUI(this.addSearchClient, addSearchConf)
+  }
+
   componentDidMount() {
     const { pathname } = this.props.location
     var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
     var searchPath = searchPath.replace("docs", "")
-    window.location.href.toString().includes("addsearch")
+    window.location.href.toString().includes("search")
       ? null
-      : (window.location = ` 404?addsearch=${searchPath}`)
+      : (window.location = ` 404?search=${searchPath}`)
 
-    /*window.addsearch_settings = {
+    var addSearchConf = {
       display_url: true,
       display_resultscount: false,
       display_sortby: false,
@@ -23,15 +42,17 @@ class NotFoundPage extends React.Component {
       automatic_match_all_query: false,
       number_of_results: 4,
     }
+    
+    function searchCallback(res) {
+    //console.log("res: ", res) // For Debugging
+    res.hits.map(hit => {
+      searchResults.push(hit)
+    })}
 
-    const script = document.createElement("script")
-    script.setAttribute(
-      "src",
-      `https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage`
-    )
-    script.setAttribute("defer", true)
-
-    document.body.appendChild(script)*/
+   // console.log("searchResults: ", searchResults) // For Debugging
+    this.addSearchUI.start();
+    this.addSearchClient.search("test wordpres")
+    
   }
 
 
@@ -42,13 +63,11 @@ class NotFoundPage extends React.Component {
       data: { homeYaml },
     } = this.props
     
-    
+
+
 
     return (
       <>
-
-
-    
       <Layout type="404">
         <SEO
           title="404"
@@ -70,7 +89,17 @@ class NotFoundPage extends React.Component {
                   style={{ width: "45%", float: "left" }}
                 >
                   <h2 className="subtitle">Similar Pages</h2>
-                  <Search query="wordpres" /> 
+                  {/*<ul>
+                    {searchResults.map(hit => {
+                      return (
+
+                        <li key={hit.id}>
+                        {hit.title}
+                        </li>
+                      )
+                    })}
+                  </ul>*/}
+                  <SearchResults ui={this.addSearchUI} />
                 </div>
                 <div className="col" style={{ width: "45%", float: "right" }}>
                   <h2 className="subtitle">{homeYaml.fourohfourlinks.title}</h2>
