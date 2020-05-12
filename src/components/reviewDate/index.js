@@ -2,7 +2,8 @@ import React from "react"
 import './style.css';
 
 const reviewDate = ({ date }) => {
-  var formattedDate = new Date(`${date} 08:00:00`)
+  var formattedDate = new Date(`${date}`)
+  formattedDate.setMinutes(formattedDate.getMinutes() + formattedDate.getTimezoneOffset() )
   return (
     <>
       <h4 className="review-date toc-ignore" >
