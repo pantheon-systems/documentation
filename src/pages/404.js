@@ -11,13 +11,13 @@ export default class NotFoundPage extends React.Component {
     const { pathname } = this.props.location
     var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
     var searchPath = searchPath.replace("docs", "")
-    window.location.href.toString().includes("search")
+    window.location.href.toString().includes("addsearch")
       ? null
-      : (window.location = ` 404?search=${searchPath}`)
+      : (window.location = ` 404?addsearch=${searchPath}`)
   }
   render() {
     const urlParams = new URLSearchParams(this.props.location.search)
-    var searchTerm = urlParams.get("search")
+    var searchTerm = urlParams.get("addsearch")
     const {
       data: { homeYaml },
     } = this.props
