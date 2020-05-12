@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",
+    "addsearch-js-client": "^0.4.3",
     "bootstrap": "^3.4.1",
     "broken-link-checker": "github:alexlouden/broken-link-checker",
     "date-fns": "^1.30.1",

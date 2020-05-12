@@ -1,15 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import SearchResults from "../components/searchResults"
 import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import SVG404 from "../../source/images/404_dark.svg"
+import Search, {searchResults} from "../components/nativeAddsearch"
 
 class NotFoundPage extends React.Component {
-
-componentDidMount() {
-
+  componentDidMount() {
     const { pathname } = this.props.location
     var searchPath = pathname.replace(/\//g, "").replace(/-/g, " ")
     var searchPath = searchPath.replace("docs", "")
@@ -17,7 +15,7 @@ componentDidMount() {
       ? null
       : (window.location = ` 404?addsearch=${searchPath}`)
 
-    window.addsearch_settings = {
+    /*window.addsearch_settings = {
       display_url: true,
       display_resultscount: false,
       display_sortby: false,
@@ -33,16 +31,24 @@ componentDidMount() {
     )
     script.setAttribute("defer", true)
 
-    document.body.appendChild(script)
+    document.body.appendChild(script)*/
   }
+
+
 
   render() {
     const { pathname } = this.props.location
     const {
       data: { homeYaml },
     } = this.props
+    
+    
 
     return (
+      <>
+
+
+    
       <Layout type="404">
         <SEO
           title="404"
@@ -58,13 +64,13 @@ componentDidMount() {
                 You can try one of the links below, or go{" "}
                 <Link to="/"> back to all docs</Link>?
               </h3>
-              <div class="row">
+              <div className="row">
                 <div
                   className="col addsearch-container"
                   style={{ width: "45%", float: "left" }}
                 >
                   <h2 className="subtitle">Similar Pages</h2>
-                  <div id="addsearch-results"></div>
+                  <Search query="wordpres" /> 
                 </div>
                 <div className="col" style={{ width: "45%", float: "right" }}>
                   <h2 className="subtitle">{homeYaml.fourohfourlinks.title}</h2>
@@ -98,6 +104,7 @@ componentDidMount() {
           </div>
         </div>
       </Layout>
+      </>
     )
   }
 }
