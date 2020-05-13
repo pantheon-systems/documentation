@@ -144,6 +144,7 @@ class TerminusTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={ifCommandsISO}   
+          type={node.frontmatter.type}
         />
         <div className="">
           <div className="container-fluid">
@@ -220,6 +221,7 @@ export const pageQuery = graphql`
           twitter
         }
         reviewed(formatString: "MMMM DD, YYYY")
+        type
       }
       fileAbsolutePath
     }
