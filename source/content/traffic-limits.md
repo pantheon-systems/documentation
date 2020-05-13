@@ -67,6 +67,7 @@ Note that the annual plan prices are listed as annual cost.
 You can upgrade your plan in your dashboard at any time. You may not be able to downgrade to a smaller performance size plan based on your traffic history.
 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
+
 Analytics suites (like Google Analytics) are measuring fundamentally different things when compared to Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
 
 We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippet is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
@@ -79,6 +80,10 @@ For example, the following traffic will be collected in our logs, but will not b
 - A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
 - Automated traffic from bots or load testing.
 - Content pre-fetching by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
+
+This table helps show why traffic in the Dashboard may differ from your analytics suite:
+
+<Partial file="traffic-analytics-table.md" />
 
 Analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only".
 
