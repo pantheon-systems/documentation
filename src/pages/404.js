@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import SVG404 from "../../source/images/404_dark.svg"
-import Search from "../components/nativeAddsearch"
+import Search from "../components/nativeAddSearch"
 
 export default class NotFoundPage extends React.Component {
   componentDidMount() {

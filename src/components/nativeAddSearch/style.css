@@ -1,0 +1,20 @@
+.resultList {
+    list-style-type: none;
+    margin-top: 20px;
+    max-width: 95%;
+}
+
+.resultItem {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a4bbc1;
+}
+
+.resultTitle {
+    margin-bottom: 5px;
+}
+
+main {
+    font-size: 16px;
+}
