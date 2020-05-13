@@ -96,9 +96,10 @@ Some sites are on a newer version of the Pantheon infrastructure and will displa
 <Alert type="info" icon="info-sign" title="The directory structure for this site has changed.">
 
 For enhanced security and a more intuitive experience:
-   - The site's home directory is now the root directory.
-   - Logs are now written to logs/php/ and logs/nginx/ for each respective service.
-  
+
+- The site's home directory is now the root directory.
+- Logs are now written to logs/php/ and logs/nginx/ for each respective service.
+
 For an updated example log collection script see [Documentation](/logs#automate-downloading-logs)
 
 </Alert>

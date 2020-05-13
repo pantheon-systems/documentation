@@ -3,7 +3,6 @@ title: Platform Considerations
 description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
 tags: [infrastructure]
 categories: [platform]
-reviewed: "2020-05-15"
 ---
 
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
@@ -45,6 +44,72 @@ A non-batched export of a dataset small enough to complete within the set timeou
 Running the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
 
 Most often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
+
+## Compute Optimized Environments (COE)
+
+<ReviewDate date="2020-05-15" />
+
+Compute Optimized Environments (COE) improves CPU performance over the previous infrastructure by up to 40%. COE includes changes to the runtime operating system, file structure, and binary content of Pantheon’s Site Environments. While these changes are transparent to most sites on the platform, there is the potential for custom code to interact with these components in a way that may need to be adjusted or optimized.
+
+### Is my site on COE?
+
+Sites on COE display the following banner at the top of the Site Dashboard:
+
+<Alert type="info" icon="info-sign" title="The directory structure for this site has changed.">
+
+For enhanced security and a more intuitive experience:
+
+- The site's home directory is now the root directory.
+- Logs are now written to logs/php/ and logs/nginx/ for each respective service.
+
+For an updated example log collection script see [Documentation](/logs#automate-downloading-logs)
+
+</Alert>
+
+### Home Directory
+
+The site environment home directory has changed from `/srv/bindings/[UUID]` to root `/`.
+
+Pantheon has provided backward compatibility for site code that references the prior home directory, by adding a symlink `/srv/bindings/[UUID]` to `/`.
+
+External scripts that reference `/srv/bindings/[UUID]` should check that the path exists. If the prior home directory does not exist, then your scripts should write to the new home directory location.
+
+Note that within the home directory, only `/code`, `/files`, and `/tmp` are writable. See ((link to docs)) for more details. The environment variable `[HOME]` (`$_ENV[‘HOME’]`) remains the recommended way to target this location within your code. See [Hard-coded Directory References and $_ENV['HOME']
+](/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
+
+### Logs Directory
+
+Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/nginx`.
+
+External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
+
+### wkhtmltopdf
+
+[wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
+
+Drupal module X and WordPress plugin Y have been verified to be stable with this version. We have patched Z to prevent issue N.
+
+Customers doing ABC should validate their functionality.
+
+See https://wkhtmltopdf.org/downloads.html for a full list of changes.
+
+### ImageMagick
+
+[ImageMagick](/external-libraries#imagemagick) has been updated from 6.8.8 to 6.9.10.
+
+Drupal module X and WordPress plugin Y have been verified stable with this version. We have patched Z to prevent issue N.
+
+Customers doing ABC should validate their functionality.
+
+### OpenSSL
+
+OpenSSL has been updated from 1.0.2 to 1.1.1.
+
+Drupal module X and WordPress plugin Y have been verified stable with this version. We have patched Z to prevent issue N.
+
+Customers doing ABC should validate their functionality.
+
+See https://www.openssl.org/news/changelog.html for a full list of changes.
 
 ## CORS
 
