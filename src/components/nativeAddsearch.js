@@ -17,6 +17,8 @@ const Search = props => {
     // Function to map the results of the search to the searchResults array,
     searchClient.search(props.query, searchCallback)
   }, [])
+  const resultCount = props.count ? props.count : 10
+
   return (
     <>
       <ul
@@ -26,7 +28,7 @@ const Search = props => {
           maxWidth: "75%",
         }}
       >
-        {searchResults.slice(0, props.count).map(hit => {
+        {searchResults.slice(0, resultCount).map(hit => {
           //console.log("inside mapping: ", searchResults) //For Debugging
           return (
             <li
