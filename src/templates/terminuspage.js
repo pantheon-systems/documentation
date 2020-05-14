@@ -25,6 +25,7 @@ import TerminusVersion from "../components/terminusVersion"
 import Download from "../components/download"
 import Commands from "../components/commands"
 import ReviewDate from "../components/reviewDate"
+import Check from "../components/check.js"
 
 const shortcodes = {
   Callout,
@@ -41,7 +42,8 @@ const shortcodes = {
   TerminusVersion,
   Download,
   Commands,
-  ReviewDate
+  ReviewDate,
+  Check,
 }
 
 // @TODO relocate this list
