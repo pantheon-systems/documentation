@@ -110,6 +110,7 @@ class GuideTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
+          type={node.frontmatter.type}
         />
           <div className="container">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
@@ -199,6 +200,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         getfeedbackform
+        type
       }
       fileAbsolutePath
     }
