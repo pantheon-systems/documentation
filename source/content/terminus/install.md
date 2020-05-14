@@ -38,20 +38,18 @@ There are several ways to install Terminus, depending on your use case:
 
 ### Standalone Terminus
 
-1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/.bin/` and renaming the file to `terminus`:
+The following commands will:
+- create a terminus folder under your home folder
+- get the latest release tag of terminus
+- download and save the release as `terminus`
+- make the file executeable
+- add a symlink to your local bin for the terminus executable
 
   ```bash{promptUser: user}
-  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O $HOME/bin/
-  ```
-
-  Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
-
-  Your installation directory must be in or added to your `$PATH` environment variable in order to call `terminus` from any working directory.
-
-1. Make the Terminus file executable. The example below assumes the same installation path as above:
-
-  ```bash{promptUser: user}
-  chmod +x ~/bin/terminus
+  mkdir ~/terminus && cd ~/terminus
+  curl https://github.com/pantheon-systems/terminus/releases/download/$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')/terminus.phar --output terminus
+  chmod +x terminus
+  sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
 
 <Alert type="info" title="Note">
