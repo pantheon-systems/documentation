@@ -83,6 +83,8 @@ Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs
 
 External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
 
+See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
+
 ### wkhtmltopdf
 
 [wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
