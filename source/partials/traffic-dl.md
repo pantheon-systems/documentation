@@ -25,3 +25,5 @@ The number of Pages Served allowed for each Site Plan is five times the maximum 
 </dl>
 
 For both metrics, we count based on the total volume of requests, which includes visitors receiving pages (or other CMS-generated resources) which are served from our Global CDN cache.
+
+![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../images/platform-traffic-counted.png)
