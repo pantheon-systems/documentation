@@ -70,11 +70,11 @@ For an updated example log collection script see [Documentation](/logs#automate-
 
 The site environment home directory has changed from `/srv/bindings/[UUID]` to root `/`.
 
-Pantheon has provided backward compatibility for site code that references the prior home directory, by adding a symlink `/srv/bindings/[UUID]` to `/`.
+Pantheon has provided backward compatibility for site code that references the previous home directory, by adding a symlink `/srv/bindings/[UUID]` to `/`.
 
 External scripts that reference `/srv/bindings/[UUID]` should check that the path exists. If the prior home directory does not exist, then your scripts should write to the new home directory location.
 
-Note that within the home directory, only `/code`, `/files`, and `/tmp` are writable. See ((link to docs)) for more details. The environment variable `[HOME]` (`$_ENV[‘HOME’]`) remains the recommended way to target this location within your code. See [Hard-coded Directory References and $_ENV['HOME']
+Note that within the home directory, only `/code`, `/files`, and `/tmp` are writable. The environment variable `[HOME]` (`$_ENV[‘HOME’]`) remains the recommended way to target this location within your code. See [Hard-coded Directory References and $_ENV['HOME']
 ](/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
 
 ### Logs Directory
@@ -91,10 +91,6 @@ See [Automate Downloading Logs](/logs#automate-downloading-logs) for more inform
 
 [ImageMagick](/external-libraries#imagemagick) has been updated from 6.8.8 to 6.9.10.
 
-Drupal module X and WordPress plugin Y have been verified stable with this version. We have patched Z to prevent issue N.
-
-Customers doing ABC should validate their functionality.
-
 #### OpenSSL
 
 OpenSSL has been updated from 1.0.2 to 1.1.1.
@@ -105,19 +101,11 @@ If you see the following error, update the TLS version used for SSO:
 Error when validating ticket: Error with request to validate ticket: cURL error 35: error:141A318A:SSL routines:tls_process_ske_dhe:dh key too small (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
 ```
 
-Drupal module X and WordPress plugin Y have been verified stable with this version. We have patched Z to prevent issue N.
-
-Customers doing ABC should validate their functionality.
-
 See https://www.openssl.org/news/changelog.html for a full list of changes.
 
 #### wkhtmltopdf
 
 [wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
-
-Drupal module X and WordPress plugin Y have been verified to be stable with this version. We have patched Z to prevent issue N.
-
-Customers doing ABC should validate their functionality.
 
 See https://wkhtmltopdf.org/downloads.html for a full list of changes.
 
