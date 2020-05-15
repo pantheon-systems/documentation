@@ -85,7 +85,7 @@ function SEO({
           content: addSearchType,
         },
         {
-          name: `addsearch-custom-category`,
+          name: `addsearch-category`,
           content: addSearchCategories,
         },
         {
