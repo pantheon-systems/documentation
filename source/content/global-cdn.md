@@ -34,19 +34,15 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Frequently Asked Questions
 
-### I already have a CDN - should I switch?
+### I already have a CDN. Can I use it with the Pantheon Global CDN?
 
-Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
+Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address.
 
-1. It includes [free and automatic HTTPS service](/https)
+To retain your existing CDN, set up a "stacked CDN" configuration. Ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
-1. It is heavily optimized for website performance
+While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
-1. It is configured, maintained, and supported by Pantheon
-
-1. It is available at no additional cost
-
-Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
+If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/advanced-global-cdn) service.
 
 ### Is the www-redirector service still available?
 
@@ -67,10 +63,6 @@ No, we pre-configured the CDN so you don’t have to hassle with configuration, 
 ### Do I get access to hit rates or other statistics?
 
 Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics).
-
-### Can I use other CDNs with the Pantheon Global CDN?
-
-Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
 
