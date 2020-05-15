@@ -99,6 +99,12 @@ Customers doing ABC should validate their functionality.
 
 OpenSSL has been updated from 1.0.2 to 1.1.1.
 
+If you see the following error, update the TLS version used for SSO:
+
+```none
+Error when validating ticket: Error with request to validate ticket: cURL error 35: error:141A318A:SSL routines:tls_process_ske_dhe:dh key too small (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+```
+
 Drupal module X and WordPress plugin Y have been verified stable with this version. We have patched Z to prevent issue N.
 
 Customers doing ABC should validate their functionality.

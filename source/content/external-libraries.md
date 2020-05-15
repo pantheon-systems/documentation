@@ -135,7 +135,7 @@ Sites that are using an old version of Tika should be upgraded to the supported 
 
 [ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php), [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
 
-Pantheon runs ImageMagick 6.9.10.
+Pantheon runs ImageMagick 6.9.10-86 Q16 x86_64 2020-01-13.
 
 ### Drupal ImageMagick Configuration
 

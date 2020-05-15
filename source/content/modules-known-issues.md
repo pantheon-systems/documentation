@@ -82,9 +82,11 @@ ___
 
 ## [CiviCRM](https://www.drupal.org/project/civicrm)
 
+<ReviewDate date="2020-05-15" />
+
 **Issue**: The `sites/default/civicrm.settings.php` file has a number of lines that tell CiviCRM how to access the database, file uploads, and temporary files. The file is using `$env['conf']['pantheon_binding']` and other undocumented ways instead of the `$_ENV['HOME']` [variable](/read-environment-config#hard-coded-directory-references-and-_envhome), which may cause issues loading some resources on CiviCRM-generated pages.
 
-**Solution**: A member of Pantheon's Support team has filed a [PR that would fix this issue](https://github.com/herbdool/civicrm-starterkit-drops-7/pull/17) with the starter kit's maintainer. Until that PR is merged, you can copy the [relevant changes}(https://github.com/herbdool/civicrm-starterkit-drops-7/pull/17/commits/1d194772d79e2d3ec186d370c78fcfede784c6dd) into your site's `sites/default/default.civicrm.settings.php`.
+**Solution**: A member of Pantheon's Support team has filed a [PR that would fix this issue](https://github.com/herbdool/civicrm-starterkit-drops-7/pull/17) with the starter kit's maintainer. Until that PR is merged, you can copy the [relevant changes](https://github.com/herbdool/civicrm-starterkit-drops-7/pull/17/commits/1d194772d79e2d3ec186d370c78fcfede784c6dd) into your site's `sites/default/default.civicrm.settings.php`.
 
 ___
 
