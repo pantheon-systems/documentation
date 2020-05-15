@@ -34,9 +34,13 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Frequently Asked Questions
 
-### I already have a CDN. Should I keep it when migrating to Pantheon?
+### I already have a CDN. Can I use it with the Pantheon Global CDN?
 
-If you want to retain your existing CDN because of specific features they provide, you will need to set up a "stacked CDN" configuration. While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
+Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address.
+
+To retain your existing CDN, set up a "stacked CDN" configuration. Ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
+
+While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
 If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/advanced-global-cdn) service.
 
@@ -59,10 +63,6 @@ No, we pre-configured the CDN so you don’t have to hassle with configuration, 
 ### Do I get access to hit rates or other statistics?
 
 Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics).
-
-### Can I use other CDNs with the Pantheon Global CDN?
-
-Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
 
