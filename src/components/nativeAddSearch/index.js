@@ -47,9 +47,9 @@ const Search = props => {
               </header>
               <main>{hit.meta_description}</main>
               <small>
-                {hit.custom_fields.type ? hit.custom_fields.type[0].toUpperCase() : "DOC"}
+                {hit.custom_fields.type ? hit.custom_fields.type.toUpperCase() : "DOC"}
                 &nbsp; | &nbsp;
-                {Array.isArray(hit.meta_categories) ? hit.meta_categories[0].toUpperCase() : hit.meta_categories.toUpperCase()}
+                {Array.isArray(hit.meta_categories) ? hit.meta_categories[0].charAt(0).toUpperCase() +  hit.meta_categories[0].slice(1 ): hit.meta_categories}
                 </small>
             </article>
           )}

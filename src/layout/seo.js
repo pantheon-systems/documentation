@@ -45,13 +45,8 @@ function SEO({
   const authorList = authors ? Array.from(authors) : []
   const addSearchCategories = categories
     ? categories.join("/")
-<<<<<<< HEAD
     : `other`
   const addSearchType = type ? `type=${type}` : "type=doc"
-=======
-    : `category=other`
-  const addSearchType = type ? type : "doc"
->>>>>>> update addsearch tagging
   const titleProps = title
     ? {
         title: `${title}`,
@@ -90,11 +85,7 @@ function SEO({
           content: addSearchType,
         },
         {
-<<<<<<< HEAD
           name: `addsearch-category`,
-=======
-          name: `addsearch-custom-category`,
->>>>>>> update addsearch tagging
           content: addSearchCategories,
         },
         {
