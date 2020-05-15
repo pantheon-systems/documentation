@@ -80,13 +80,21 @@ ___
 
 ___
 
+## [CiviCRM](https://www.drupal.org/project/civicrm)
+
+**Issue**: The `sites/default/civicrm.settings.php` file has a number of lines that tell CiviCRM how to access the database, file uploads, and temporary files. The file is using `$env['conf']['pantheon_binding']` and other undocumented ways instead of the `$_ENV['HOME']` [variable](/read-environment-config#hard-coded-directory-references-and-_envhome), which may cause issues loading some resources on CiviCRM-generated pages.
+
+**Solution**: A member of Pantheon's Support team has filed a [PR that would fix this issue](https://github.com/herbdool/civicrm-starterkit-drops-7/pull/17) with the starter kit's maintainer. Until that PR is merged, you can copy the [relevant changes}(https://github.com/herbdool/civicrm-starterkit-drops-7/pull/17/commits/1d194772d79e2d3ec186d370c78fcfede784c6dd) into your site's `sites/default/default.civicrm.settings.php`.
+
+___
+
 ## [Composer Manager](https://www.drupal.org/project/composer_manager)
 
 <ReviewDate date="2020-02-10" />
 
 This module has been deprecated by its authors for Drupal 8 and above. The suggestions made below are for Drupal 7 users, and are not guaranteed to be successful in all use cases.
 
-If you're creating a new site that needs Composer-managed libraries, we strongly reccomend using Drupal 8.1 or newer.
+If you're creating a new site that needs Composer-managed libraries, we strongly recommend using Drupal 8.1 or newer.
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 

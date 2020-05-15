@@ -85,17 +85,9 @@ External scripts that access your PHP or nginx logs should check that the path e
 
 See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
 
-### wkhtmltopdf
+### Updated Plugins
 
-[wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
-
-Drupal module X and WordPress plugin Y have been verified to be stable with this version. We have patched Z to prevent issue N.
-
-Customers doing ABC should validate their functionality.
-
-See https://wkhtmltopdf.org/downloads.html for a full list of changes.
-
-### ImageMagick
+#### ImageMagick
 
 [ImageMagick](/external-libraries#imagemagick) has been updated from 6.8.8 to 6.9.10.
 
@@ -103,7 +95,7 @@ Drupal module X and WordPress plugin Y have been verified stable with this versi
 
 Customers doing ABC should validate their functionality.
 
-### OpenSSL
+#### OpenSSL
 
 OpenSSL has been updated from 1.0.2 to 1.1.1.
 
@@ -113,9 +105,19 @@ Customers doing ABC should validate their functionality.
 
 See https://www.openssl.org/news/changelog.html for a full list of changes.
 
+#### wkhtmltopdf
+
+[wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
+
+Drupal module X and WordPress plugin Y have been verified to be stable with this version. We have patched Z to prevent issue N.
+
+Customers doing ABC should validate their functionality.
+
+See https://wkhtmltopdf.org/downloads.html for a full list of changes.
+
 ## CORS
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
