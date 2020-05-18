@@ -3,7 +3,7 @@ title: Managed Updates
 description: Descriptions of the Managed Updates products and requirements for Drupal 8 compatibility
 reviewed: "2020-05-14"
 categories: [platform]
-tags: [managed updates, platform, professional services]
+tags: [updates, professional services]
 ---
 
 Managed Updates is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important.
@@ -14,31 +14,28 @@ With Pantheon Managed Updates, you get.
 - Module / plugin updates
 - Visual Regression Testing (**VRT**)
 
-To make Managed Updates available to customers of all sizes and with all needs, Pantheon offers several versions of Managed Updates, including Lite, Premium and Portfolio Upstreams.
+To make Managed Updates available to customers of all sizes and needs, Pantheon offers three versions: Lite, Premium, and Portfolio Upstreams.
 
 ### Lite
 
-This service is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continous integration processes.(see below for details).
+Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continous integration processes.(see below for details).
 
 ### Premium
 
 This more specialized service can handle sites with custom workflows, testing, and CI processes. It also offers personalized update issue remediation, and email notifications when updates are scheduled.
 
-
 - Patched code
-- Standalone Sites
+- Standalone sites
 
 ### Portfolio Upstreams
 
-Provide managed updates to all your client sites using your [Custom Upstreams](/custom-upstream). Currently supports Drupal 7 and WordPress
-
+Managed Updates for Portfolio Upstreams provides managed updates to all your client sites using your [Custom Upstreams](/custom-upstream).
 
 - Uses Pantheon’s update workflow
   - Codebase changes are pushed to client's remote repo and then applied to each of the sites
-  - Build step does not reply on 3rd party sources
+  - Build step does not rely on 3rd party sources
   - No other special deployment instructions
-- Requires Drupal 7 or WordPress 5.4 or above.
-
+- Currently supports Drupal 7 or WordPress 5.4 or above.
 
 ## Product Comparison Table
 
@@ -46,17 +43,18 @@ Provide managed updates to all your client sites using your [Custom Upstreams](/
 |------------------------------                |--------------------- |------------------------ |------------------------------------ |----------------------------------------------------------------------------------- |
 |Core, Plugin and Module Updates               | <Check/>             | <Check/>                | <Check/>                            | Code updates from publicly accessible repositories and sources are included.       |
 |Regular Update Detection                      | <Check/>             | <Check/>                | <Check/>                            | Daily scans of official repositories to detect when updates are available.         |
-|Visual Regression Testing                     | <Check/>             | <Check/>                | <Check/>                            | Visual regression testing for every environment changes are deployed through.      |
-|Custom Deployment Scheduling                  | <Check/>             | <Check/>                | ❌                                   | For use with individual sites, as opposed to Custom Upstreams or WP Site Networks. |
+|Visual Regression Testing                     | <Check/>             | <Check/>                | <Check/>                            | Visual regression testing for every environment through which changes are deployed.      |
+|Custom Deployment Scheduling                  | <Check/>             | <Check/>                | ❌                                   | For use with individual sites (no Custom Upstreams or WP Site Networks). |
 |Standalone Sites                              | <Check/>             | <Check/>                | ❌                                   |                                                                                    |
-|Workflow Customization                        | ❌                    | <Check/>                | ❌                                   | Lite & Portfolio include standard workflows that cannot be customized              |
-|Remote Pull Requests to external repositories | ❌                    | <Check/>                | ❌                                   | For Managed Updates Premium, Pantheon can initiate pull requests to external repositories based on successful updates, that customers can accept at their own convenience.|
-|Personalized Update Issue Remediation         | ❌                    | <Check/>                | ❌                                   | Customers who require additional assistance with remediating identified issues     |
+|Workflow Customization                        | ❌                    | <Check/>                | ❌                                   | Lite & Portfolio workflows cannot be customized.              |
+|Remote Pull Requests to external repositories | ❌                    | <Check/>                | ❌                                   | Premium only: Pantheon can initiate pull requests to external repositories based on successful updates, that customers can accept at their own convenience.|
+|Personalized Update Issue Remediation         | ❌                    | <Check/>                | ❌                                   | Supports customers who require additional assistance remediating identified issues.     |
 |Headless Site Support                         | ❌                    | <Check/>                | ❌                                   | Headless sites may require additional front ends on the customer side to test against. |
-|Composer Compatibility Support (For Drupal 8) | ❌                    | <Check/>                | N/A                                 | Composer built sites require Premium                                               |
-|Custom build/CI process                       | ❌                    | <Check/>                | ❌                                   | Customers who have existing CI or build processes that they want to integrate with MU will require Premium |
+|Composer Compatibility Support (For Drupal 8) | ❌                    | <Check/>                | N/A                                 | Use Premium for Composer built sites.                                               |
+|Custom build/CI process                       | ❌                    | <Check/>                | ❌                                   | Use Premium to integrate Managed Updates with existing CI or build processes. |
 |Patched Code Support                          | Excluded (Drupal 7)  | <Check/>                | Test and Deploy Only                |                                                                                    |
-|Custom Visual Regression Testing              | ❌                    | <Check/>                | ❌                                   | Standard VRT does not include authenticated pages or custom DOM elements           |
+|Custom Visual Regression Testing              | ❌                    | <Check/>                | ❌                                   | VRT for authenticated pages or custom DOM elements.           |
+
 
 ## Requirements and Steps for Drupal 8 compatibility
 
