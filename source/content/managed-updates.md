@@ -18,7 +18,7 @@ To make Managed Updates available to customers of all sizes and needs, Pantheon 
 
 ### Lite
 
-Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continous integration processes.(see below for details).
+Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continous integration processes.(see below for details).
 
 ### Premium
 
