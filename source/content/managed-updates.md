@@ -55,7 +55,7 @@ Provide managed updates to all your client sites using your [Custom Upstreams](/
 |Headless Site Support                         | ❌                    | <Check/>                | ❌                                   | Headless sites may require additional front ends on the customer side to test against. |
 |Composer Compatibility Support (For Drupal 8) | ❌                    | <Check/>                | N/A                                 | Composer built sites require Premium                                               |
 |Custom build/CI process                       | ❌                    | <Check/>                | ❌                                   | Customers who have existing CI or build processes that they want to integrate with MU will require Premium |
-|Patched Code Support                          | ❌                    | <Check/>                | Test and Deploy Only                |- Portfolio: Customer has to apply patch to upstream for Pantheon to test and deploy to all sites. <br /> - Lite: we'll test D7 for having been patched/modified code and exclude updates to such code. <br /> - Premium: We have humans that can evaluate and potentially apply patches.|
+|Patched Code Support                          | Excluded (Drupal 7)  | <Check/>                | Test and Deploy Only                |                                                                                    |
 |Custom Visual Regression Testing              | ❌                    | <Check/>                | ❌                                   | Standard VRT does not include authenticated pages or custom DOM elements           |
 
 ## Requirements and Steps for Drupal 8 compatibility
