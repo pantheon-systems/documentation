@@ -171,3 +171,14 @@ On a subsystem with Ubuntu 18.04, since Curl is already installed, the commands 
 sudo apt update && sudo apt upgrade -y
 sudo apt install php7.2-cli
 ```
+#### POSIX support required
+
+POSIX extension support is required to run Terminus. To verify that you have the POSIX extensions available in your PHP, try:
+
+```bash{promptUser:user}
+php -r 'var_export(function_exists("posix_isatty"));'
+```
+
+If this returns false, try installing the [POSIX extensions](https://www.php.net/manual/en/posix.installation.php). 
+
+Windows' lack of POSIX extension support causes errors, including no response to remote Drush commands. Some have found  [installing `php73-process.x86_64`](https://github.com/pantheon-systems/terminus/issues/1924#issuecomment-629440151) provides the needed POSIX support. 
