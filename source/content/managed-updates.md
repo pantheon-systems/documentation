@@ -11,19 +11,18 @@ Managed Updates is a service offered by our [Professional Services](/professiona
 With Pantheon Managed Updates, you get.
 
 - CMS core updates
-- Module / plugin update
+- Module / plugin updates
 - Visual Regression Testing (**VRT**)
 
-To make Managed Updates available to customers of all sizes and with all needs, Pantheon offers several versions of Managed Updates, including Lite, Premium and Custom Portfolio.
+To make Managed Updates available to customers of all sizes and with all needs, Pantheon offers several versions of Managed Updates, including Lite, Premium and Portfolio Upstreams.
 
 ### Lite
 
-This service is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a custom schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](pantheon-workflow), or Drupal 8 sites using a Composer-build workflow (see below foe details).
+This service is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continous integration processes.(see below for details).
 
 ### Premium
 
 This more specialized service can handle sites with custom workflows, testing, and CI processes. It also offers personalized update issue remediation, and email notifications when updates are scheduled.
-
 
 
 - Patched code
