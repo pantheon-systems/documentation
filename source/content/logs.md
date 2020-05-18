@@ -72,7 +72,7 @@ You now have a local copy of the logs directory, which contains the following:
         └──nginx-error.log
 ```
 
-You may still see log files in this structure as well:
+You may still see log files in this structure if your site is still on the heirloom system:
 
 ```none
 ├── logs
