@@ -1,8 +1,8 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
-tags: [debugcode, siteintegrations]
-categories: [troubleshoot, integrate]
+tags: [plugins,themes,debug]
+categories: [troubleshoot]
 contributors: [aleksandrkorolyov]
 ---
 
@@ -709,9 +709,10 @@ ___
 
 ## [WP-Rocket](https://wp-rocket.me/)
 
-<ReviewDate date="2020-03-20" />
+<ReviewDate date="2020-05-18" />
 
-**Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
+**Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP-Rocket will auto-create
+the `advanced-cache.php` file.
 
 **Solution:**
 
