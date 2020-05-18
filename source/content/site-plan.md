@@ -34,7 +34,7 @@ Site plan downgrades will change your site's resources and access to features im
 If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
 
 ### Downgrade to Sandbox
-[Custom domains](/domains/#custom-domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
+To downgrade to Sandbox, see [Cancel Current Plan](/site-plan#cancel-current-plan). Note: [Custom domains](/domains/#custom-domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
 Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/backups).
 
