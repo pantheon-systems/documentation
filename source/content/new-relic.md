@@ -223,6 +223,8 @@ Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring y
 * Your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding)
 * Your New Relic [Account ID](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id#finding)
 
+**Note:** Pantheon SSO cannot be used to sign in to New relic for sites using their own license.
+
 ### Why are servers listed in New Relic with no data?
 
 Because Pantheon's runtime matrix runs your application across many containers simultaneously, it's common to see old containers with no reporting data as your application shifts around. This is not a cause for concern.
