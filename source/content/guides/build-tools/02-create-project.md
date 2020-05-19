@@ -69,7 +69,7 @@ If you need to replace a token, navigate to your [project settings page in Circl
 
 ## Create a Build Tools Project
 
-Scaffold a new project from a template repository and perform a one-time setup to connect an external Git provider and CI service with Pantheon. This setup also configures SSH keys and environment variables. To use your own template repository see [Customization](#customization).
+Scaffold a new project from a template repository and perform a one-time setup to connect an external Git provider and CI service with Pantheon. This setup also configures SSH keys and environment variables. To use your own template repository see [Customization](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#customization) in the Build Tools Plugin documentation.
 
 Modify the commands in the following examples to match your project's needs.
 
