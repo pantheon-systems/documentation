@@ -10,7 +10,9 @@ The Pantheon Professional Services (**PS**) team works closely with partners to 
 
 ## Site Migrations
 
-The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably.
+Moving large sites with complex architecture or complex customizations may require an expert in adapting legacy code to a modern web stack. The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably.
+
+Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts provide white-glove, managed migrations. We do all the heavy lifting and let you focus on your WebOps workflow. Need to get a jump start on getting your sites migrated? Ask about priority migrations.
 
 **What does a site migration entail?**
 
@@ -25,21 +27,11 @@ The Site Migration service lowers the barrier to entry by leveraging our PS team
 
 ## Managed Updates
 
-Pantheon's [Managed Updates](/managed-updates) service keeps your site up to date with minimal interruption to end users. Allow Pantheon’s PS team to apply core and contributed plugin/module updates.
+Pantheon's Managed Updates service keeps your site up to date with minimal interruption to end users. Allow Pantheon’s PS team to apply core and contributed plugin/module updates.
 
 Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
-**Managed updates process overview:**
-
-- Updates are detected per client-provided specifications.
-- A Multidev environment is spun up, cloning DB/files from Live.
-- Updates are applied to the Multidev environment and Visual Regression Tests (**VRT**) are run.
-- Manual testing if required.
-- If VRT passes, we merge the Multidev branch into Master and run VRT again.
-- Repeat same process on Test.
-- Back up Live environment and deploy updates to Live.
-
-[Contact us](https://pantheon.io/professional-services) for details.
+Visit our [Managed Updates](/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services) for details.
 
 ## Advanced Global CDN
 
@@ -83,4 +75,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Onboarding
 
-Pantheon Onboarding Managers (**OM**) are your website operations (WebOps) experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team stays with you for up to 90 days to make sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services) for more details.
+Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team stays with you for up to 90 days to make sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services) for more details.
