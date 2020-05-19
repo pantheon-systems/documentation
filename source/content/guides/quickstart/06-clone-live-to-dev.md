@@ -24,7 +24,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=UZY0RiKRq7Q`
+<Youtube src="UZY0RiKRq7Q" title="Clone Your Live Environment to Dev" />
 
 **Try it yourself:**
 

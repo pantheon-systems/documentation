@@ -24,7 +24,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=NBL2Ejh8TI4`
+<Youtube src="NBL2Ejh8TI4" title="Create New Site" />
 
 **Create your site:**
 

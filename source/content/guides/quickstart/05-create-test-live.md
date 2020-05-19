@@ -24,7 +24,7 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=7mu76KTKHf0`
+<Youtube src="7mu76KTKHf0" title="Create Test & Live Environments" />
 
 **Try it yourself:**
 
