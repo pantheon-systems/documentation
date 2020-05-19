@@ -6,7 +6,7 @@ categories: [develop]
 reviewed: "2020-05-19"
 ---
 
-The Pantheon Professional Services (**PS**) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. [Contact us](https://pantheon.io/professional-services) for details.
+The Pantheon Professional Services (**PS**) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. [Contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Site Migrations
 
@@ -23,7 +23,7 @@ Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts pr
 - **Launch Planning**: We work with your team to coordinate launch planning, including content resyncs, load testing, SSL certificate pre-provisioning, and more.
 - **Launch**: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
 
-[Contact our migrations team](https://pantheon.io/migrations) for details.
+[Contact our migrations team](https://pantheon.io/migrations?docs) for details.
 
 ## Managed Updates
 
@@ -31,7 +31,7 @@ Pantheon's Managed Updates service keeps your site up to date with minimal inter
 
 Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
-Visit our [Managed Updates](/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services) for details.
+Visit our [Managed Updates](/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/managed-updates?docs) for details.
 
 ## Advanced Global CDN
 
@@ -45,17 +45,17 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 - **Launch**: We provide you with the information you will need to launch or re-launch your site on Advanced Global CDN.
 - **Post-Launch**: PS provides up to four hours per quarter to address requests and changes to the Advanced Global CDN service throughout the lifetime of the contract.
 
-[Contact us](https://pantheon.io/professional-services) for details.
+[Contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Pre-launch Load Testing
 
 Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team, we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
 
-Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services) for details.
+Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Custom Application Services
 
-Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services) for details.
+Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Additional Services
 
@@ -71,8 +71,8 @@ Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping
 
 Highly customized, one-on-one training from Pantheon's Developer Relations (DevRel) experts to help your development team apply custom workflows to active Pantheon projects. Tailored WebOps training for your entire team is also available.
 
-We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, on-site, or online for multiple offices. [Contact us](https://pantheon.io/agencies/learn-pantheon) for details.
+We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, on-site, or online for multiple offices. [Contact us](https://pantheon.io/agencies/learn-pantheon?docs) for details.
 
 ### Onboarding
 
-Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team stays with you for up to 90 days to make sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services) for more details.
+Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team stays with you for up to 90 days to make sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.

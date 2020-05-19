@@ -6,7 +6,7 @@ categories: [platform]
 tags: [updates, professional services]
 ---
 
-Managed Updates is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important.
+[Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)
 
 With Pantheon Managed Updates, you get.
 
