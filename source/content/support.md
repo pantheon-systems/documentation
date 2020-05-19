@@ -100,7 +100,7 @@ Once a ticket is submitted, you can view details for your support requests. If a
 
 ## Pantheon On-Call
 
-Diamond and Platinum support customers can directly access Pantheon's operations response team, either via the Pantheon Dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum support customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
@@ -172,7 +172,7 @@ Yes. For more details, talk to your Customer Success Manager or [contact sales](
 
 ### Is there a support number we can call? If so, is this service available for every package?
 
-Diamond and Platinum customers can access Pantheon On-Call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
+Diamond and Platinum customers have access to Pantheon On-Call, which has an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
 
 ### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 
