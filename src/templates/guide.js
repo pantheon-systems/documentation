@@ -35,6 +35,7 @@ import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
+import Check from "../components/check.js"
 
 const shortcodes = {
   Callout,
@@ -61,6 +62,7 @@ const shortcodes = {
   Youtube,
   ResourceSelector,
   DNSProviderDocs,
+  Check,
 }
 
 class GuideTemplate extends React.Component {
@@ -110,6 +112,7 @@ class GuideTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
+          type={node.frontmatter.type}
         />
           <div className="container">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
@@ -199,6 +202,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         getfeedbackform
+        type
       }
       fileAbsolutePath
     }

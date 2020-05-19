@@ -89,7 +89,28 @@ Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superg
 
 For more information, see [configuring wp-config.php](/wp-config-php).
 
-## Using $_SERVER
+## Hard-coded Directory References and $_ENV\['HOME']
+
+Some sites are on a newer version of the Pantheon infrastructure and will display the following banner at the top of the Site Dashboard:
+
+<Alert type="info" icon="info-sign" title="The directory structure for this site has changed.">
+
+For enhanced security and a more intuitive experience:
+
+- The site's home directory is now the root directory.
+- Logs are now written to logs/php/ and logs/nginx/ for each respective service.
+
+For an updated example log collection script see [Documentation](/logs#automate-downloading-logs)
+
+</Alert>
+
+For these sites, and as a general best-practice, the home directory should be referenced through the `$_ENV` variable:
+
+```php
+$_ENV['HOME']/
+```
+
+### Using $_SERVER
 
 When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains/#primary-domain).
 
@@ -97,7 +118,7 @@ For debugging modules or plugins, it may be beneficial to review the values with
 
 <Alert title="Note" type="info">
 
-The `$_SERVER` variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of `phpinfo();` displayed on a site, don't leave this open to public viewing. 
+The `$_SERVER` variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of `phpinfo();` displayed on a site, don't leave this open to public viewing.
 
 </Alert>
 

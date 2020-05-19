@@ -21,6 +21,7 @@ function SEO({
   categories,
   tags,
   reviewed,
+  type,
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -43,9 +44,9 @@ function SEO({
   const metaImage = image || "/assets/images/default-thumb-doc.png"
   const authorList = authors ? Array.from(authors) : []
   const addSearchCategories = categories
-    ? categories.map(value => `category=${value}`).join(";")
-    : `category=other`
-
+    ? categories.join("/")
+    : `other`
+  const addSearchType = type ? `type=${type}` : "type=doc"
   const titleProps = title
     ? {
         title: `${title}`,
@@ -81,6 +82,10 @@ function SEO({
         { ...tagValues },
         {
           name: `addsearch-custom-field`,
+          content: addSearchType,
+        },
+        {
+          name: `addsearch-category`,
           content: addSearchCategories,
         },
         {

@@ -47,11 +47,11 @@ The Site Migration service lowers the barrier to entry by leveraging our PS team
 
 [Contact our migrations team](https://pantheon.io/migrations) for details.
 
-### Managed Updates
+## Managed Updates
 
-Keep your site up to date with minimal interruption to end users. Allow Pantheon’s PS team to apply core and contributed plugins/module updates.
+Pantheon's [Managed Updates](/managed-updates) service keeps your site up to date with minimal interruption to end users. Allow Pantheon’s PS team to apply core and contributed plugin/module updates.
 
-Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly, minimizing interference with your day-to-day operations.
+Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
 **Managed updates process overview:**
 

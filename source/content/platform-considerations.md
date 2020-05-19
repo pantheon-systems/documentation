@@ -4,11 +4,13 @@ description: A list of the Pantheon platform considerations for your Drupal or W
 tags: [infrastructure]
 categories: [platform]
 ---
+
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
 
 <Partial file="auth.md" />
 
 ## Browser Support for Pantheon's Dashboard
+
 In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
 +------------------------+--------+---------+-------+------+---------------------+
@@ -43,9 +45,73 @@ Running the export from the command line using tools like [Terminus](/terminus),
 
 Most often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
+## Compute Optimized Environments (COE)
+
+<ReviewDate date="2020-05-15" />
+
+Compute Optimized Environments (COE) improves CPU performance over the previous infrastructure by up to 40%. COE includes changes to the runtime operating system, file structure, and binary content of Pantheon’s Site Environments. While these changes are transparent to most sites on the platform, there is the potential for custom code to interact with these components in a way that may need to be adjusted or optimized.
+
+### Is my site on COE?
+
+Sites on COE display the following banner at the top of the Site Dashboard:
+
+<Alert type="info" icon="info-sign" title="The directory structure for this site has changed.">
+
+For enhanced security and a more intuitive experience:
+
+- The site's home directory is now the root directory.
+- Logs are now written to logs/php/ and logs/nginx/ for each respective service.
+
+For an updated example log collection script see [Documentation](/logs#automate-downloading-logs)
+
+</Alert>
+
+### Home Directory
+
+The site environment home directory has changed from `/srv/bindings/[UUID]` to root `/`.
+
+Pantheon has provided backward compatibility for site code that references the previous home directory, by adding a symlink `/srv/bindings/[UUID]` to `/`.
+
+External scripts that reference `/srv/bindings/[UUID]` should check that the path exists. If the prior home directory does not exist, then your scripts should write to the new home directory location.
+
+Note that within the home directory, only `/code`, `/files`, and `/tmp` are writable. The environment variable `[HOME]` (`$_ENV[‘HOME’]`) remains the recommended way to target this location within your code. See [Hard-coded Directory References and $_ENV['HOME']
+](/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
+
+### Logs Directory
+
+Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/nginx`.
+
+External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
+
+See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
+
+### Updated Plugins
+
+#### ImageMagick
+
+[ImageMagick](/external-libraries#imagemagick) has been updated from 6.8.8 to 6.9.10.
+
+#### OpenSSL
+
+OpenSSL has been updated from 1.0.2 to 1.1.1.
+
+If you see the following error, update the TLS version used for SSO:
+
+```none
+Error when validating ticket: Error with request to validate ticket: cURL error 35: error:141A318A:SSL routines:tls_process_ske_dhe:dh key too small (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+```
+
+See https://www.openssl.org/news/changelog.html for a full list of changes.
+
+#### wkhtmltopdf
+
+[wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
+
+See https://wkhtmltopdf.org/downloads.html for a full list of changes.
+
 ## CORS
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
@@ -67,6 +133,7 @@ $urls[] = array( 'https://www.example.com', 'http://www.example.com', 'https://e
 ```
 
 ## CSS Preprocessors
+
 Pantheon does not currently support LESS or Sass/Compass CSS preprocessor languages. LESS and Sass will need to be pre-compiled to make traditional CSS stylesheets before being pushed to the platform.
 
 ## Database Stored Procedures
@@ -111,9 +178,11 @@ terminus drush <site>.<env> -- utf8mb4-convert-databases
 This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
 
 ## General PHP Framework Support
+
 Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or WordPress and no others. Although PHP will run, we can not assist you in getting the non-approved frameworks running in any way.
 
 ## Highly Populated Directories
+
 If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files in a single directory, and performance drops off suddenly at over 100,000 files.
 
 Drupal itself is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
@@ -121,6 +190,7 @@ Drupal itself is capable of managing uploaded content into different directories
 Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories.
 
 ## .htaccess
+
 Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
 For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
@@ -128,14 +198,17 @@ For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ### Drupal False Positive
-Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
+
+Drupal 7 and 8 checks for arbitrary code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
 ## Image Optimization Tools
+
 Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
 
 Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/professional-services#advanced-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Inactive Site Freezing
+
 Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
 You can easily reactivate a site by visiting your Pantheon User Dashboard, select the frozen site there, then click **Unfreeze site**. Within a few minutes, the site will be ready for development again.
@@ -150,11 +223,13 @@ For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn) can provide IP-based whitelist/blacklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Large Code Repository
+
 When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs. 
 
 If your repository has grown over 2GB and is causing problems (such as errors when cloning), consider [pruning and optimizing the repo](/reducing-large-repos).
 
 ## Large Files
+
 Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
 | File Size       | Platform Compatibility          | Notes                               |
@@ -165,25 +240,29 @@ Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file s
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
- - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs).
- - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
+- Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs).
+- WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
 Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html)).
 
 See our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
+
 Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
 ## Large (>100GB) File Backups
+
 Large backups take longer, use more resources, and have a higher likelihood of failing. Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone. For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal). Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
 ## Maintenance Mode
+
 Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 
 ## Modules and Plugins with Known Issues
+
 See [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for information about [Drupal modules](/modules-known-issues) and [WordPress plugins](/plugins-known-issues) that are not supported and/or require workarounds.
 
 ## Multisite
@@ -194,13 +273,14 @@ We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-dru
 
 ## nginx.conf
 
-Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.  All of the containers run a standard profile, and we have opted to keep this configuration to keep the nginx.conf lean.
+Pantheon does not currently support modifying the `nginx.conf` per site, as we run a highly tuned universal configuration file. All of the containers run a standard profile, and we have opted to keep this configuration to keep the `nginx.conf` lean.
 
 If your site uses `nginx.conf` rules for redirects, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
 If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Node.js
+
 Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or WordPress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
 
 ## One Application per Site
@@ -208,40 +288,50 @@ Node.js is not available in the platform. If running node.js services is a hard 
 Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
 
 ### Domain Masking or URL Forwarding
+
 Domain masking allows you to serve two entirely different and separate sites over a single common domain. For example, using one system as a front end for marketing efforts and another for blog content:
 
-* Main Site: `https://www.example-site.com/`
-* Blog: `https://www.example-site.com/blog/`
+- Main Site: `https://www.example-site.com/`
+- Blog: `https://www.example-site.com/blog/`
 
 Domain masking is available to contract customers as [an add-on](/professional-services#advanced-cdn). If you require domain masking, ask your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs). Customers may also set up domain masking using a third-party CDN service, but please note that third-party services are outside [Pantheon's scope of support](/support/#scope-of-support).
 
 ### Additional Databases
+
 While you are able to import an additional database to an environment, only the Pantheon database will be preserved when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
 
 ## Oracle Database Drivers
+
 Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Secure Integration](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
 
 ## PHP Configuration
+
 `php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/phpinfo) for more information on PHP configuration.
 
 ## PHP/Java Bridge
+
 Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
 
 ## PHP Short Tags
+
 PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](https://secure.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
 
 ## Rename/Move Files or Directories
 
 ### Files
+
 Like file directories, files on Pantheon cannot be renamed or moved. Our SFTP mode doesn’t support the `mv` command, which is what most apps use when renaming or moving files. The workaround is to delete the old file and upload the new file.
 
 ### Directories
+
 File directories on Pantheon's file serving infrastructure cannot be moved or renamed. The workaround is to create a new directory, move all the files from inside the old directory into the new one, and delete the old directory.
 
 ## Server Side Includes (SSI)
+
 Pantheon does not and will not support Server Side Includes. We recommend converting those to use PHP includes.
 
 ## Streaming Media
+
 Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform.
 
 However, you can run a great streaming media website. To do so, Pantheon recommends that you find a service to handle the transcoding and streaming, whether that's [YouTube](https://www.youtube.com/), [Brightcove](https://www.brightcove.com/), [Vimeo](https://vimeo.com/), [Soundcloud](https://soundcloud.com/), or another provider. These services provide all the necessary components for great streaming media.
@@ -249,11 +339,13 @@ However, you can run a great streaming media website. To do so, Pantheon recomme
 It is also possible to deliver smaller media files from Pantheon using [progressive download](https://en.wikipedia.org/wiki/Progressive_download), but the media will not automatically adapt to the bandwidth and capabilities of the device browsing the site, nor does Pantheon support "seeking" to arbitrary playback positions based on time. The actual media formats (encodings, containers, file name extensions) are unrestricted.
 
 ## Terminus Support
+
 [Terminus](/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) shells, this is not officially supported.
 
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/) to run a virtualized 'nix-type environment for tools like Terminus.
 
 ## Write Access on Environments
+
 For Dev environments in SFTP mode, the entire codebase is writable. However the platform is designed to keep only the codebase under version control.  This means that the only writable paths are `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
 
 Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).

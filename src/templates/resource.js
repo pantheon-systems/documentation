@@ -97,6 +97,7 @@ class ResourceTemplate extends React.Component {
           categories={node.frontmatter.categories}
           tags={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
+          type={node.frontmatter.type}
         />
         <div className="">
           <div className="container doc-content-well">
@@ -153,6 +154,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         tags
+        type
       }
       fileAbsolutePath
     }

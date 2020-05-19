@@ -32,6 +32,7 @@ import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
+import Check from "../components/check.js"
 
 const shortcodes = {
   Callout,
@@ -57,6 +58,7 @@ const shortcodes = {
   Youtube,
   ResourceSelector,
   DNSProviderDocs,
+  Check,
 }
 
 class DocTemplate extends React.Component {
@@ -101,6 +103,7 @@ class DocTemplate extends React.Component {
           categories={node.frontmatter.categories}
           tags={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
+          type={node.frontmatter.type}
         />
         <main id="doc">
           <div className="container doc-content-well">
@@ -161,6 +164,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         tags
+        type
       }
       fileAbsolutePath
     }
