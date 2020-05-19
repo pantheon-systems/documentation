@@ -24,7 +24,7 @@ Four regions are available when creating a new site:
 
 ### Data Residency
 
-Pantheon sites have all site resources in the region in which it was created. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
+A Pantheon site has all site resources located in the region in which it was created. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
 
 Automated and manual backups of all site components (code, database, and files) are stored in the site's region and created by job workers also running in the site's region. Additionally, any database or file clones between site environments are run by job workers in the site's region.
 
