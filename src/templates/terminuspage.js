@@ -25,6 +25,7 @@ import TerminusVersion from "../components/terminusVersion"
 import Download from "../components/download"
 import Commands from "../components/commands"
 import ReviewDate from "../components/reviewDate"
+import Check from "../components/check.js"
 
 const shortcodes = {
   Callout,
@@ -41,7 +42,8 @@ const shortcodes = {
   TerminusVersion,
   Download,
   Commands,
-  ReviewDate
+  ReviewDate,
+  Check,
 }
 
 // @TODO relocate this list
@@ -144,6 +146,7 @@ class TerminusTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={ifCommandsISO}   
+          type={node.frontmatter.type}
         />
         <div className="">
           <div className="container-fluid">
@@ -220,6 +223,7 @@ export const pageQuery = graphql`
           twitter
         }
         reviewed(formatString: "MMMM DD, YYYY")
+        type
       }
       fileAbsolutePath
     }

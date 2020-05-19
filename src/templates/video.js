@@ -86,6 +86,7 @@ class VideoTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
+          type={node.frontmatter.type}
         />
         <div className="">
           <div className="container doc-content-well">
@@ -149,6 +150,7 @@ export const pageQuery = graphql`
           url
         }
         featuredcontributor
+        type
       }
       fileAbsolutePath
     }

@@ -23,7 +23,8 @@
       "Span",
       "Tab",
       "TabList",
-      "DNSProviderDocs"
+      "DNSProviderDocs",
+      "Check"
     ]
   }
 }
