@@ -20,7 +20,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=U7iaX-vwPrc`
+<Youtube src="U7iaX-vwPrc" title="User Dashboard Overview" />
 
 <Accordion title="User Dashboard Glossary (Optional)" id="user-dashboard-tour" icon="lightbulb">
 

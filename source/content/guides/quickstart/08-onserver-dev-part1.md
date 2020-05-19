@@ -24,7 +24,7 @@ In this lesson, we’re going to work directly on the server. We’ll make chang
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=FtY8CgEiPCM`
+<Youtube src="FtY8CgEiPCM" title="Develop via the User Interface UI" />
 
 **Try it yourself:**
 
