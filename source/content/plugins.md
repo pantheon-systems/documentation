@@ -1,8 +1,9 @@
 ---
-title: Pantheon Plugins
-description: Details on specific WordPress plugins developed and maintained for the Pantheon Website Management Platform workflow.
-tags: [WordPress, plugins, must-use, cache, SAML, Redis, Solr]
+title: Pantheon Plugins for WordPress
+description: WordPress plugins developed and maintained for the Pantheon WebOps Platform workflow.
+tags: [plugins, cache, saml, redis, solr]
 categories: [integrate]
+cms: [WordPress]
 reviewed: "2020-04-21"
 
 ---
