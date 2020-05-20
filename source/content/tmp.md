@@ -3,6 +3,7 @@ title: Temporary File Management
 description: Understand Pantheon's default temporary path and learn how to debug .tmp file errors.
 tags: [debugcode, infrastructure]
 categories: [troubleshoot,platform]
+reviewed: "2020-05-20"
 ---
 
 <Alert title="Exports" type="export">
@@ -18,15 +19,26 @@ export env=dev
 ## Default Temporary Path
 Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/4.9.6/wp-config.php#L83-L86) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.3/sites/default/settings.pantheon.php#L146-L154). Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
 
-```php
+```php:title=settings.php
 /**
  * Drupal 7
  * Define appropriate location for tmp directory
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['file_temporary_path'] = $_SERVER['HOME'] .'/tmp';
+
+  // Pressflow will override whatever we set here unless we override Pressflow first.
+
+  $pressflow = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
+
+  $pressflow['conf']['file_temporary_path'] = $pressflow['conf']['file_directory_temp'] = '/tmp';
+
+  $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow);
+
 }
 ```
+
+Change `sites/default/files/private/tmp` to your desired temporary file path.
+
 ## Fix Unsupported Temporary Path
 Errors caused by an unsupported temporary path typically surface as permission errors for `.tmp` files and can be replicated on any environment.
 
@@ -175,7 +187,15 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 * Replace some_tmp_setting
 */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['some_tmp_setting'] = 'sites/default/files/private/tmp';
+
+  // Pressflow will override whatever we set here unless we override Pressflow first.
+
+  $pressflow = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
+
+  $pressflow['conf']['file_temporary_path'] = $pressflow['conf']['file_directory_temp'] = 'sites/default/files/private/tmp';
+
+  $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow);
+
 }
 ```
 The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
