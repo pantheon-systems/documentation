@@ -20,7 +20,7 @@ This is Early Access to a Pantheon feature release in active development, and is
 
 Choose one of the following methods to get started with a new Drupal 9 site, to test your existing site's [compatibility with an upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility), or to [test run your Pantheon Drupal 8 site on Drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
 
-## Drupal 9 and Integrated Composer - Create a New Drupal 9 Site
+## Create a New Drupal 9 Site with Integrated Composer
 
 Join our early access program to test out both Drupal 9 and Pantheon native Composer support.
 
