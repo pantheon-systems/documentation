@@ -16,9 +16,8 @@ Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts pr
 
 **What does a site migration entail?**
 
-- **Qualification**: We get access to the servers or site archives we'll need to undertake the migration and identify business critical functionality that require special attention and testing.
-- **Initial migration**: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon.
-- **Test and patch**: We fine-tune the migration routine to ensure that everything is working as expected, supported by Visual Regression tools, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
+- **Qualification**: We get access to the servers or site archives we'll need to undertake the migration, and we identify business-critical functionality that requires special attention and testing.
+- **Initial migration**: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon. We fine-tune the migration routine to ensure that everything is working as expected, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
 - **User Acceptance Testing (UAT)**: You test the site yourself. We have mechanisms in place to report any issues that are found and we work to resolve those issues.
 - **Launch Planning**: We work with your team to coordinate launch planning, including content resyncs, load testing, SSL certificate pre-provisioning, and more.
 - **Launch**: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
