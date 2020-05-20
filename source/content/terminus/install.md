@@ -39,11 +39,12 @@ There are several ways to install Terminus, depending on your use case:
 ### Standalone Terminus
 
 The following commands will:
-- create a terminus folder under your home folder
-- get the latest release tag of terminus
-- download and save the release as `terminus`
-- make the file executeable
-- add a symlink to your local bin for the terminus executable
+
+- create a `terminus` folder in your home directory (`~/`),
+- get the latest release tag of Terminus,
+- download and save the release as `~/terminus/terminus`,
+- make the file executable,
+- add a symlink to your local `bin` directory for the Terminus executable.
 
   ```bash{promptUser: user}
   mkdir ~/terminus && cd ~/terminus
