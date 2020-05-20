@@ -20,7 +20,7 @@ Currently, Drupal 9 is only available on Pantheon as a Early Access feature rele
 
 Choose one of the following methods to get started with a new D9 site, to test your existing site's [compatibility with an upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility), or to [test run your Pantheon Drupal 8 site on D9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
 
-## D9 and Integrated Composer - Create a New D9 Site
+## Create a New D9 Site with Integrated Composer
 
 Join our early access program to test out both D9 and Pantheon native Composer support.
 
