@@ -14,7 +14,13 @@ Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://s
 
 <Alert title="Warning" type="danger">
 
-Currently, Drupal 9 is only available on Pantheon as a Early Access feature release. This means the feature is currently in active development and is intended for testing and evaluation purposes only. **Sites may be deleted without notice**.
+**Do not use this, or any, Early Access release for your live site.**
+
+Currently, Drupal 9 is only available on Pantheon as an Early Access feature release. This means the feature is currently in active development and is intended for testing and evaluation purposes only.
+
+Pantheon engineers are rolling out changes often, and easy updates from Drupal 9 Early Access are not guaranteed.
+
+**Sites may be deleted without notice**.
 
 </Alert>
 
@@ -22,7 +28,7 @@ Choose one of the following methods to get started with a new Drupal 9 site, to 
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-Join our early access program to test out both Drupal 9 and Pantheon native Composer support.
+Join our Early Access program to test out both Drupal 9 and Pantheon-native Composer support.
 
 1. [Fill out this form](https://docs.google.com/forms/d/1lahWKMT2VHXfr9hg15VIQY2Kn6z_j77o7Te6hZqsNgw) to get access to our “Drupal 9 Early Access” group. Once you are added, you will access to a new "Drupal 9 Early Access" site creation option.
 
@@ -30,53 +36,18 @@ Join our early access program to test out both Drupal 9 and Pantheon native Comp
 
 ## Create a Drupal 9 Site with Continuous Integration via Build Tools
 
-Want to regularly develop with continuous integration (CI) and automated tests? Leverage Pantheon’s [Build Tools](/guides/build-tools) to get up and running quickly with a CI workflow (CircleCI, BitBucket, GitLab), to build, test, and deploy Drupal 9.
+Want to regularly develop with continuous integration (CI) and automated tests? Leverage Pantheon’s [Build Tools](/guides/build-tools) to get up and running quickly with a CI workflow to build, test, and deploy Drupal 9. These steps use GitHub and CircleCI:
 
 1. Install the [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin).
    - This will require generating a Pantheon machine token, a CircleCI API token, and a GitHub API credential.
 1. Enable support for custom CircleCI Orbs in your Organizational settings. In CircleCI, click **Settings**, then **Security**, and click **Yes** to allow uncertified orbs:
+
    ![Allow Uncertified Orbs in CircleCI](../images/circleci/circleci-allow-uncertified-orbs.png)
-1. Use Terminus to create a new Drupal 9 site, complete with a customizable CI workflow. Remember to replace `<NEW-SITE-NAME>` in this example with your new site name:
+
+1. Use Terminus to create a new Drupal 9 site, complete with a customizable CI workflow. Remember to replace `<NEW-SITE-NAME>` in this example with a name for your new site, and `optional-pantheon-organization-name` with your choice (if any):
 
   ```bash{promptUser: user}
-  terminus build:project:create stevector/drupal-9-with-pantheon-orb <NEW-SITE-NAME> --stability=dev
-  ```
-
-1. Clone your Drupal 8 [site’s codebase to your computer](https://pantheon.io/docs/local-development#get-the-code). You can create a new Drupal 8 site or use an existing Drupal 8 site:
-
-  ```bash{promptUser: user}
-  git clone <url-for-site-repo>
-  ```
-
-1. Use Terminus to create a [Multidev](/multidev) environment called `update-9.0.0-beta3` on your Drupal 8 site for testing:
-
-  ```bash{promptUser: user}
-  terminus multidev:create <site>.<env> update-9.0.0-beta3
-  ```
-
-1. Create and switch to a new testing branch in the Drupal 8 codebase:
-
-  ```bash{promptUser: user}
-  git checkout -b update-9.0.0-beta3
-  ```
-
-1. Pull the `update-9.0.0-beta3` branch into your codebase:
-
-  ```bash{promptUser: user}
-  git pull https://github.com/pantheon-systems/drops-8.git update-9.0.0-beta3
-  ```
-
-1. Modify the `pantheon.yml` file to specify PHP 7.4 and Drush 8:
-
-  ```yaml:title=pantheon.yml
-  php_version: 7.4
-  drush_version: 8
-  ```
-
-1. Run `update.php` on your new Drupal 9 site:
-
-  ```bash{promptUser: user}
-  terminus drush <site>.<env> updatedb
+  terminus build:project:create "pantheon-systems/drupal-9-with-circleci-orb:dev-master" <NEW-SITE-MACHINE-NAME> --stability=dev --team='optional-pantheon-organization-name'
   ```
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
@@ -128,10 +99,10 @@ Already running a Pantheon site using our [Drupal 8 upstream](https://github.com
   git checkout -b d9-beta
   ```
 
-1. Pull the `drupal9-beta3-early-access-not-for-production-use` branch into your codebase:
+1. Pull the `drupal9-beta3--from-8.8.6--early-access-not-for-production-use` branch into your codebase:
 
   ```bash{promptUser: user}
-  git pull https://github.com/pantheon-systems/drops-8.git drupal9-beta3-early-access-not-for-production-use
+  git pull https://github.com/pantheon-systems/drops-8.git drupal9-beta3--from-8.8.6--early-access-not-for-production-use
   ```
 
 1. Modify the `pantheon.yml` file to specify PHP 7.4 and Drush 8:
