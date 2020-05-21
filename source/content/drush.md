@@ -71,7 +71,7 @@ Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sit
   host: appserver.${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1.drush.in
   paths:
     files: files
-    drush-script: drush9
+    drush-script: drush
   uri: ${env-name}-example.pantheonsite.io
   user: ${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1
   ssh:
