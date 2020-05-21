@@ -32,7 +32,7 @@ Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 * If the site owner is a **user**, the site owner's name and email address is used to create the New Relic account.
 * If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic is used to create the New Relic account.
 
-In both cases, there is not a 1:1 mapping between Pantheon users and New Relic users. When logging into New Relic from Pantheon, everyone is logged in as that single New Relic user who was first associated with the New Relic account.
+In both cases, there is not a 1:1 mapping between Pantheon users and New Relic users. Every Pantheon user selecting "Go to New Relic" from the Pantheon dashboard is logged in as the same New Relic user.
 
 ### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
 
