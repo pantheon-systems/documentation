@@ -107,7 +107,7 @@ For an updated example log collection script see [Documentation](/logs#automate-
 For these sites, and as a general best-practice, the home directory should be referenced through the `$_ENV` variable:
 
 ```php
-$_ENV['HOME']/
+$_ENV['HOME']
 ```
 
 ### Using $_SERVER
