@@ -48,12 +48,13 @@ It is important to note that each of your site environments have a `robots.txt` 
 User-agent: *
 Disallow: /
 
+User-agent: dotbot
+User-agent: PetalBot
+User-agent: PowerMapper
 User-agent: RavenCrawler
 User-agent: rogerbot
-User-agent: dotbot
 User-agent: SemrushBot
 User-agent: SemrushBot-SA
-User-agent: PowerMapper
 User-agent: Swiftbot
 Allow: /
 ```
