@@ -62,7 +62,7 @@ For enhanced security and a more intuitive experience:
 - The site's home directory is now the root directory.
 - Logs are now written to logs/php/ and logs/nginx/ for each respective service.
 
-For an updated example log collection script see [Documentation](/logs#automate-downloading-logs)
+For more information and an updated list of changes see the [Platform Considerations documentation](#compute-optimized-environments-coe)
 
 </Alert>
 
