@@ -83,7 +83,14 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer managed wor
   composer require drupal/sendgrid_integration
   ```
 
-1. Commit, push, and enable the new module.
+1. Commit, push, and enable the new module. Replace `$SITE` and `$ENV` with the site and environment name:
+
+  ```bash{promptUser: user}
+  git add .
+  git commit -m "Install sendgrid_integration"
+  git push origin master #Or Multidev name
+  terminus drush $SITE.$ENV -- en sendgrid_integration -y
+  ```
 
 1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Configuration**.
 
