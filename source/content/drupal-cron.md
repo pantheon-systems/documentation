@@ -103,6 +103,10 @@ The most common causes are:
 - [Invalid redirection logic in settings.php](/domains/#redirect-to-https-and-the-primary-domain)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
+### How to trigger the cron externally on a locked site?
+
+You will need add the url encoded basic authentication for the external call, eg: https://username:password@dev-example.pantheonsite.iocron.php?cron_key=KEY_HERE
+
 ### What is the maximum execution time of cron?
 
 The maximum execution time of cron is 180 seconds (3 minutes).
