@@ -10,7 +10,7 @@ The Pantheon Professional Services (**PS**) team works closely with partners to 
 
 ## Site Migrations
 
-Moving large sites with complex architecture or complex customizations may require an expert in adapting legacy code to a modern web stack. The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably.
+Moving large sites with complex architecture or customizations may require an expert in adapting legacy code to a modern web stack. The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you're moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably.
 
 Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts provide white-glove, managed migrations. We do all the heavy lifting and let you focus on your WebOps workflow. Need to get a jump start on getting your sites migrated? Ask about priority migrations.
 
@@ -18,7 +18,7 @@ Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts pr
 
 - **Qualification**: We get access to the servers or site archives we'll need to undertake the migration, and we identify business-critical functionality that requires special attention and testing.
 - **Initial migration**: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon. We fine-tune the migration routine to ensure that everything is working as expected, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
-- **User Acceptance Testing (UAT)**: You test the site yourself. We have mechanisms in place to report any issues that are found and we work to resolve those issues.
+- **User Acceptance Testing (UAT)**: You test the site yourself. We have mechanisms in place to report any issues you find, and work to resolve those issues.
 - **Launch Planning**: We work with your team to coordinate launch planning, including content resyncs, load testing, SSL certificate pre-provisioning, and more.
 - **Launch**: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
 
