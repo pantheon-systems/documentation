@@ -24,7 +24,7 @@ Pantheon engineers are rolling out changes often, and easy updates from Drupal 9
 
 </Alert>
 
-Choose one of the following methods to get started with a new Drupal 9 site, to test your existing site's [compatibility with an upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility), or to [test run your Pantheon Drupal 8 site on Drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
+Choose one of the following methods to get started with a new Drupal 9 site to [create a new Drupal 9 site with integrated Composer](#create-a-new-drupal-9-site-with-integrated-composer) or to test your existing site's [compatibility with an upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility).
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
@@ -77,47 +77,6 @@ $node = Node::load(1);
 
 Since most of these changes are relatively minor, there are a number of [deprecation checking and correction tools](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/deprecation-checking-and-correction-tools) available.
 
-## Test Upgrade an Existing Pantheon Drupal 8 Site to Drupal 9
-
-Already running a Pantheon site using our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8)? Want to spin up one real quick to test it out? Leverage the amazing power of our Multidev tooling to test Drupal 9 in a git branch.
-
-1. Clone your Drupal 8 [site’s codebase to your computer](https://pantheon.io/docs/local-development#get-the-code). You can create a new Drupal 8 site or use an existing Drupal 8 site:
-
-  ```bash{promptUser: user}
-  git clone <url for site repo>
-  ```
-
-1. Use Terminus to create a [Multidev](/multidev) environment called `d9-beta` on your Drupal 8 site for testing:
-
-  ```bash{promptUser: user}
-  terminus multidev:create <site>.<env> d9-beta
-  ```
-
-1. Create and switch to a new testing branch in the Drupal 8 codebase:
-
-  ```bash{promptUser: user}
-  git checkout -b d9-beta
-  ```
-
-1. Pull the `drupal9-beta3--from-8.8.6--early-access-not-for-production-use` branch into your codebase:
-
-  ```bash{promptUser: user}
-  git pull https://github.com/pantheon-systems/drops-8.git drupal9-beta3--from-8.8.6--early-access-not-for-production-use
-  ```
-
-1. Modify the `pantheon.yml` file to specify PHP 7.4 and Drush 8:
-
-  ```yaml:title=pantheon.yml
-  php_version: 7.4
-  drush_version: 8
-  ```
-
-1. Run `update.php` on your new Drupal 9 site:
-
-  ```bash{promptUser: user}
-  terminus drush <site>.<env> updatedb
-  ```
-
 ## FAQ
 
 ### Pantheon Drupal 8 Modules Being Upgraded to Drupal 9
@@ -129,4 +88,4 @@ Already running a Pantheon site using our [Drupal 8 upstream](https://github.com
 
 ## Where can I report an issue?
 
-Drupal 9 issues can be reported on GitHub about the [Drupal 9 via Build Tools](https://github.com/stevector/drupal-9-with-pantheon-orb/issues) or [Drupal 9 via Integrated Composer](https://github.com/stevector/drupal-9-project/issues).
+Drupal 9 issues can be reported on GitHub about the [Drupal 9 via Build Tools](https://github.com/pantheon-systems/drupal-9-with-circleci-orb/issues) or [Drupal 9 via Integrated Composer](https://github.com/stevector/drupal-9-project/issues).
