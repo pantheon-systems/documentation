@@ -48,7 +48,7 @@ Install and activate the latest release through the WordPress dashboard or place
 1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
 1. Provide the API Key from the previous section.
 1. Enter the email address to send from and provide a reply email address if you prefer replies to go to another address (optional).
-!. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
+1. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 ![WP Settings example](../../images/guides/sendgrid/sendgrid-wpconfig.png)
 
@@ -104,7 +104,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/multidev):
+This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/multidev):
 
 ```bash{promptUser: user}
 export SITE=yoursitename
