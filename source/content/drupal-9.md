@@ -1,34 +1,42 @@
 ---
 title: Drupal 9 Early Access
-description: Test the latest Drupal on the Pantheon Website Management Platform.
+description: Test the latest Drupal on the Pantheon WebOps Platform.
 categories: [get-started]
 tags: [site]
 earlyaccess: true
 contributors: [populist, edwardangert]
-reviewed: "2020-05-21"
+reviewed: "2020-05-27"
 ---
 
 Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding-drupal/drupal-9-resources), "a cleaned-up version of Drupal 8... \[with] deprecated code removed and third-party dependencies updated."
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 & beyond.
 
-<Alert title="Warning" type="danger">
+<Alert title="Early Access Only - Not for Production Use" type="danger">
 
-**Do not use this, or any, Early Access release for your live site.**
+**Do not use this Early Access release for your live site.**
 
 Currently, Drupal 9 is only available on Pantheon as an Early Access feature release. This means the feature is currently in active development and is intended for testing and evaluation purposes only.
 
 Pantheon engineers are rolling out changes often, and easy updates from Drupal 9 Early Access are not guaranteed.
 
-**Sites may be deleted without notice**.
+Sites may be deleted without notice.
 
 </Alert>
 
-Choose one of the following methods to get started with a new Drupal 9 site to [create a new Drupal 9 site with integrated Composer](#create-a-new-drupal-9-site-with-integrated-composer) or to test your existing site's [compatibility with an upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility).
+Test Drupal 9 with a fresh installation using either our Integrated Composer Early Access program or Build Tools:
+
+- [Create a new Drupal 9 site with integrated Composer](#create-a-new-drupal-9-site-with-integrated-composer).
+   - If you simply want to test the browser experience of Drupal 9 and get access to forthcoming Pantheon support for Composer in the Dashboard.
+
+- [Create a new Drupal 9 Site with Continuous Integration and Build Tools](#create-a-drupal-9-site-with-continuous-integration-via-build-tools).
+   - To create a new site with a continuous integration (**CI**) workflow using GitHub.
+
+If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility).
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-Join our Early Access program to test out both Drupal 9 and Pantheon-native Composer support.
+Join our Early Access program to test out both Drupal 9 and Pantheon Integrated Composer support.
 
 1. [Fill out this form](https://docs.google.com/forms/d/1lahWKMT2VHXfr9hg15VIQY2Kn6z_j77o7Te6hZqsNgw) to get access to our “Drupal 9 Early Access” group. Once you are added, you will access to a new "Drupal 9 Early Access" site creation option.
 
@@ -86,6 +94,10 @@ Since most of these changes are relatively minor, there are a number of [depreca
 | [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) |     Yes     |     Yes     |
 | [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |   Not yet   |
 
-## Where can I report an issue?
+### Does Pantheon have plans to upgrade MariaDB?
+
+Yes, Pantheon has plans to upgrade MariaDB platform-wide before September 30, 2020.
+
+### Where can I report an issue?
 
 Drupal 9 issues can be reported on GitHub about the [Drupal 9 via Build Tools](https://github.com/pantheon-systems/drupal-9-with-circleci-orb/issues) or [Drupal 9 via Integrated Composer](https://github.com/stevector/drupal-9-project/issues).
