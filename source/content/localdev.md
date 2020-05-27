@@ -106,7 +106,7 @@ Note that if there are services specified in `.lando`, Localdev will return an e
 
 ### Can WordPress Site Networks be developed through Localdev?
 
-At this time, WordPress Site Networks (also known as WordPress Multisite) development is not supported through Localdev.
+At this time, WordPress Site Network (also known as WordPress Multisite) development is not supported through Localdev.
 
 ### Contact Support / File an Issue
 
