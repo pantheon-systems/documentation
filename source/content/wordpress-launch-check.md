@@ -25,7 +25,11 @@ WP Launch Check is a site audit extension for WP-CLI designed for Pantheon custo
 
 ## Run Launch Check Manually
 
-To manually perform a site audit using WP Launch Check from the command line, run: `wp launchcheck <subcommand>`.
+To manually perform a site audit using WP Launch Check from the command line (using [Terminus](/terminus)), run:
+
+```bash{promptUser: user}
+terminus wp <site>.<env> -- launchcheck <subcommand>
+```
 
 For more information about WP-CLI, visit their [GitHub page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [GitHub repo](https://github.com/pantheon-systems/wp_launch_check/).
 
