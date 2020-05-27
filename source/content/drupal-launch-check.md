@@ -1,8 +1,10 @@
 ---
 title: Launch Check - Drupal Performance and Configuration Analysis
-description: Detailed information on Launch Check, Drupal Performance and Configuration Analysis.
-tags: [status]
-categories: [drupal7,performance,go-live]
+description: Detailed information on Launch Check, Pantheon's automated checks for Drupal performance and configuration
+tags: [performance, modules]
+categories: [go-live]
+cms: Drupal
+
 ---
 Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
@@ -34,9 +36,18 @@ In short, you get a fast, repeatable report that can help detect common problems
 
 To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of Drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
 
+## Run Site Audit Manually
+
+You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
+
+```bash
+terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
+```
+
 ## Frequently Asked Questions
 
 ### Deprecated Configuration for the Temporary Files Path Warning on Drupal 8.8.0
+
 The release of Drupal 8.8.0 introduced a change in the temporary files path, which prompts the following warning:
 
 ```
@@ -46,21 +57,15 @@ You are using deprecated configuration for the temporary files path. Remove the 
 You can safely ignore this warning.
 
 ### Trusted Host Setting for Drupal 8
+
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
 
 ### Why does site audit have more reports than what's shown in the Dashboard?
 
 The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
-### How can I manually run site audit on my site?
-
-You can also execute a full report encoded in JSON format to your terminal:
-
-```bash
-terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
-```
-
 ### Are there plans to support Drupal 6 sites?
+
 At this time, there are no plans to support Drupal 6 with this tool.
 
 ### Can I opt out of a specific recommendation?
