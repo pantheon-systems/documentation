@@ -167,7 +167,9 @@ Install and use one of the following WordPress plugins:
 
 Similar to the IP blocking methods listed above, you can also target specific unwanted user agents that you may want to block.
 
-The `stripos` function implements a case-insenstive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`. 
+You can do this by [adding the User Agents to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
+
+The `stripos` function implements a case-insensitive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`.
 
 Remember to replace the example user agent (`UglyBot`):
 
