@@ -1,11 +1,12 @@
 ---
----
 title: Launch Check - WordPress Performance and Configuration Analysis
 description: Learn more about the checks we automatically run on your Pantheon WordPress site.
 tags: [performance, wp-cli, plugins]
 categories: [go-live]
 cms: WordPress
+reviewed: "2020-05-27"
 ---
+
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
 
 ![status tab on live environment](../images/dashboard/status-tab.png)
@@ -28,12 +29,13 @@ To manually perform a site audit using WP Launch Check from the command line, ru
 
 For more information about WP-CLI, visit their [GitHub page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [GitHub repo](https://github.com/pantheon-systems/wp_launch_check/).
 
-
 ## What Does Launch Check Evaluate?
 
 ### Cron
 
-This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following message: "Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php."
+This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following message:
+
+> Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php.
 
 ### Database
 
@@ -42,7 +44,7 @@ This displays database stats such as the number of rows in the options table, op
 #### What issues will I experience if I don't use InnoDB?
 
 InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
-To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
+To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
 
 ### Probable Exploits
 
@@ -54,10 +56,9 @@ This tells you if Object Caching and Redis are enabled.
 
 If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on Drupal or WordPress](/redis).
 
-```
-Cannot redeclare class WP_Object_Cache in
+> Cannot redeclare class WP_Object_Cache in
 /srv/bindings/0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php
-```
+
 ### Plugins
 
 This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.
