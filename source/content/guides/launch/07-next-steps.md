@@ -52,6 +52,10 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 <ChecklistItem title="Configure DNS" link="/guides/launch/domains/" />
 
-<ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />  **OR** <ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
+<ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
+
+**OR**
+
+<ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
 
 <ChecklistItem title="Review Status Report" link="/guides/launch/launch-check/" />
