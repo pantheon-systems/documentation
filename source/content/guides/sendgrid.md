@@ -47,6 +47,13 @@ Install and activate the latest release through the WordPress dashboard or place
 
 1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
 1. Provide the API Key from the previous section.
+
+  <Alert type="info" title="Note">
+
+  There is a [known issue](https://github.com/sendgrid/wordpress/issues/40) with the SendGrid plugin for WordPress where it attempts to reload your API Key whenever there is input, which can conflict with your browser's autofill settings. You can use the **Stop** function of your browser to cancel reloading while you enter your API Key. Note that the API Key must be saved before configuring additional settings.
+
+  </Alert>
+
 1. Enter the email address to send from and provide a reply email address if you prefer replies to go to another address (optional).
 1. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
