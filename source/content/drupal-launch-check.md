@@ -1,8 +1,10 @@
 ---
 title: Launch Check - Drupal Performance and Configuration Analysis
-description: Detailed information on Launch Check, Drupal Performance and Configuration Analysis.
-tags: [status]
-categories: [drupal7,performance,go-live]
+description: Detailed information on Launch Check, Pantheon's automated checks for Drupal performance and configuration
+tags: [performance, modules]
+categories: [go-live]
+cms: Drupal
+reviewed: "2020-05-27"
 ---
 Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
@@ -34,33 +36,34 @@ In short, you get a fast, repeatable report that can help detect common problems
 
 To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of Drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
 
+## Run Site Audit Manually
+
+You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
+
+```bash{promptUser: user}
+terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
+```
+
 ## Frequently Asked Questions
 
 ### Deprecated Configuration for the Temporary Files Path Warning on Drupal 8.8.0
+
 The release of Drupal 8.8.0 introduced a change in the temporary files path, which prompts the following warning:
 
-```
-You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
-```
+> You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
 
 You can safely ignore this warning.
 
 ### Trusted Host Setting for Drupal 8
+
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
 
 ### Why does site audit have more reports than what's shown in the Dashboard?
 
 The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
-### How can I manually run site audit on my site?
-
-You can also execute a full report encoded in JSON format to your terminal:
-
-```bash
-terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
-```
-
 ### Are there plans to support Drupal 6 sites?
+
 At this time, there are no plans to support Drupal 6 with this tool.
 
 ### Can I opt out of a specific recommendation?
@@ -68,15 +71,16 @@ At this time, there are no plans to support Drupal 6 with this tool.
 If you want to permanently opt out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7 and `$config` in Drupal 8.
 
 #### Examples
+
 Drupal 7 — permanently opt out of the PageCompression check in the Cache report:
 
-```php
+```php:title=settings.php
 $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
 ```
 
 Drupal 8 — permanently opt out of the check for Development modules:
 
-```php
+```php:title=settings.php
 $config['site_audit']['opt_out']['ExtensionsDev'] = TRUE;
 ```
 
@@ -94,11 +98,12 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/terminus) command to execute Site Audit directly on your Pantheon site:
 
-```bash
+```bash{promptUser: user}
 terminus drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon --strict=0
 ```
 
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.
 
 ## See Also
+
 If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check).
