@@ -2,8 +2,10 @@
 title: New Relic APM Pro
 description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site on Pantheon.
 tags: [New Relic, performance, analytics]
-categories: [performance,go-live,develop]
+categories: [performance]
+reviewed: "2020-05-27"
 ---
+
 [New Relic APM Pro](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
 ## Supported Site Plans
@@ -32,7 +34,7 @@ Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 * If the site owner is a **user**, the site owner's name and email address is used to create the New Relic account.
 * If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic is used to create the New Relic account.
 
-In both cases, there is not a 1:1 mapping between Pantheon users and New Relic users. Every Pantheon user selecting "Go to New Relic" from the Pantheon dashboard is logged in as the same New Relic user.
+In both cases, there is not a one-to-one mapping between Pantheon users and New Relic users. Every Pantheon user selecting **Go to New Relic** from the Pantheon dashboard is logged in as the same New Relic user.
 
 ### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
 
