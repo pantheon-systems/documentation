@@ -1,8 +1,10 @@
 ---
 title: Cron for Drupal
 description: Understanding how Pantheon cron execution and cron management works on your Drupal site.
-tags: [services]
-categories: [drupal,platform]
+tags: [services, cron]
+categories: [platform]
+cms: "Drupal"
+reviewed: "2020-05-28"
 ---
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
@@ -17,11 +19,12 @@ Containers on Pantheon are automatically spun down following a period of inactiv
 </Alert>
 
 ## Pantheon Cron Execution
+
 Pantheon executes cron once an hour on every environment to allow Drupal to perform scheduled tasks. This generally occurs within 5 to 10 minutes of half past each hour: 4:30pm, 5:30pm, 6:30pm, etc.
 
 Typically cron is triggered via a browser/page request or crontab. However, Pantheon uses the following to automatically trigger cron on the platform:
 
-```bash
+```bash{promptUser: user}
 drush pantheon_cron 3600
 ```
 
@@ -31,7 +34,7 @@ Technically, the command bootstraps your site and invokes [drupal\_cron\_run](ht
 
 You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
-1.  There are a couple of ways to interact with cron on Pantheon.
+1. There are a couple of ways to interact with cron on Pantheon.
 
     - One way is to execute cron manually from the Drupal admin interface:
 
@@ -47,7 +50,7 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
       terminus drush <site>.<env> -- cron
       ```
 
-2.  To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at **Reports** > **Recent log messages**.
+1. To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at **Reports** > **Recent log messages**.
 
  ![Reports--->Recent Log Messages](../images/recent-log-reports.png)
 
@@ -63,16 +66,15 @@ If the site has not been accessed through the web by a visitor for at least two 
 
 There are several workarounds. Most work by keeping the site awake, then using a different mechanism for executing cron tasks.
 
- - To keep the site active, some users have used [Pingdom](https://www.pingdom.com/) to automate access to their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both a user interface and API.
+- To keep the site active, some users have used [Pingdom](https://www.pingdom.com/) to automate access to their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both a user interface and API.
 
    By having Pingdom visit the site once a minute like a visitor, the site stays active and Elysia Cron has an opportunity to act every minute (if it needs to). This combination is not officially supported by Pantheon, but has worked for some of our customers.
 
- - A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron) to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
+- A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron) to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
 
- - If you have anything that is executing cron tasks on your own server, you can invoke Drush commands remotely using [Terminus](/terminus), including Drush cron, to trigger scheduled operations.
+- If you have anything that is executing cron tasks on your own server, you can invoke Drush commands remotely using [Terminus](/terminus), including Drush cron, to trigger scheduled operations.
 
- - Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron Module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`.
-
+- Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron Module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`.
 
 ## Disable Cron
 
@@ -81,8 +83,8 @@ This configuration disables cron execution in Drupal, but it does not affect Pan
 To disable Drupal's standard cron:
 
 1. Navigate to **Configuration** > **System** > **Cron** within the admin interface.
-2. Select **Never** from the "Run cron every" drop-down menu.
-3. Click **Save configuration**:
+1. Select **Never** from the "Run cron every" drop-down menu.
+1. Click **Save configuration**:
 
   ![Stop cron from running](../images/run-cron-config.png)
 
@@ -103,9 +105,9 @@ The most common causes are:
 - [Invalid redirection logic in settings.php](/domains/#redirect-to-https-and-the-primary-domain)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
-### How to trigger the cron externally on a locked site?
+### Can I trigger  cron externally on a locked site?
 
-You will need add the url encoded basic authentication for the external call, eg: https://username:password@dev-example.pantheonsite.iocron.php?cron_key=KEY_HERE
+Yes. You must add the url encoded basic authentication for the external call, eg: `https://username:password@dev-example.pantheonsite.io/cron.php?cron_key=KEY_HERE`
 
 ### What is the maximum execution time of cron?
 
@@ -117,7 +119,7 @@ You can check the log messages through the Drupal Admin interface.
 
 You can also use [Terminus](/terminus) to see when cron was last run with the following command:
 
-```bash
+```bash{promptUser: user
 terminus drush <site>.<env> -- wd-show --type='cron'
 ```
 
