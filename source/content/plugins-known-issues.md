@@ -68,6 +68,7 @@ Plugins and Themes with issues resolved by this include:
 - [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 - [Event Espresso](https://eventespresso.com/)
 - [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
+- [Thrive Theme Builder](https://thrivethemes.com/themebuilder/)
 - [Visual Composer: Website Builder](https://visualcomposer.io/)
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
