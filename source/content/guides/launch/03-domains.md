@@ -34,7 +34,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 ## Existing Sites
 
 ### Avoid HTTPS Interruption
-Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
+Sites can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
 To pre-provision HTTPS, CAA records must either:
 
