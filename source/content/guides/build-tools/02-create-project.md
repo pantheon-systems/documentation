@@ -47,12 +47,15 @@ Make sure you have the latest versions of Terminus and the Terminus Build Tools 
 
 1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus.
 
-1. Create the `$HOME/.terminus/plugin` directory if it does not already exist.
+1. Create the `$HOME/.terminus/plugin` directory if it does not already exist:
 
-1. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin).
+  ```bash{promptUser: user}
+  mkdir -p ~/.terminus/plugins
+  ```
+
+1. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
    ```bash{promptUser: user}
-   mkdir -p ~/.terminus/plugins
    composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0
    ```
 
