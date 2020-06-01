@@ -1,8 +1,8 @@
 import React from "react"
 import './style.css';
 
-const Accordion = ({ id, icon, title, children, isCollapsed }) => {
-  const classCollapsed = isCollapsed ? "collapse" : "collapse in"
+const Accordion = ({ id, icon, title, children, isCollapsed, active }) => {
+  const classCollapsed = active ? "collapse in" : "collapse collapsed"
 
   return (
     <>
@@ -10,10 +10,8 @@ const Accordion = ({ id, icon, title, children, isCollapsed }) => {
         <div className="panel-heading panel-drop-heading">
           <span
             style={{ cursor: "pointer" }}
-            className={`accordion-toggle panel-drop-title ${
-              isCollapsed ? "collapsed" : ""
-            }`}
-            data-toggle={classCollapsed}
+            className={`accordion-toggle panel-drop-title ${classCollapsed}`}
+            data-toggle="collapse"
             data-parent="#accordion"
             data-proofer-ignore=""
             data-target={`#${id}`}
@@ -35,6 +33,7 @@ const Accordion = ({ id, icon, title, children, isCollapsed }) => {
 
 Accordion.defaultProps = {
   isCollapsed: true,
+  active: false,
 }
 
 export default Accordion
