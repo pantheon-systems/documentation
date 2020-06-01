@@ -15,7 +15,7 @@ jobs:
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - restore_cache:
           keys:
-            - v2.5.8-always-
+            - v2.5.9-always-
       - restore_cache:
           keys:
             - npm-v2.8.4-
@@ -153,7 +153,7 @@ jobs:
             fi
           no_output_timeout: 15m
       - save_cache:
-          key: v2.5.8-always-{{ epoch }}
+          key: v2.5.9-always-{{ epoch }}
           paths:
             - ~/build/public
             - ~/build/.cache
