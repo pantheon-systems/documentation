@@ -38,7 +38,7 @@ Test Drupal 9 with a fresh installation using either our Integrated Composer Ear
 | [**Integrated Composer**](#create-a-new-drupal-9-site-with-integrated-composer)        | • Composer automatically runs on Pantheon <br /> • Lean repository (vendor dir not in git) <br /> • Integrated 1-click Pantheon updates & Custom Upstreams | • Early Access only <br /> • Requires a unique site-name prefix                                                            |
 | [**Build Tools**](#create-a-drupal-9-site-with-continuous-integration-via-build-tools) | • Composer automatically runs via CI <br /> • Pull request-based workflow <br /> • Supports automated testing                                              | • Requires 3rd-party CI <br /> • Terminus required <br /> • Composer updates happen outside the 1-click Pantheon Dashboard |
 
-If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility).
+If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). Once you're ready, [test upgrade an existing pantheon drupal 8 site to drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
@@ -94,6 +94,47 @@ $node = Node::load(1);
 ```
 
 Since most of these changes are relatively minor, there are a number of [deprecation checking and correction tools](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/deprecation-checking-and-correction-tools) available.
+
+## Test Upgrade an Existing Pantheon Drupal 8 Site to Drupal 9
+
+Already running a Pantheon site using our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8)? Leverage the amazing power of our Multidev tooling to test Drupal 9 in a Git branch.
+
+1. Clone your Drupal 8 [site’s codebase to your computer](https://pantheon.io/docs/local-development#get-the-code). You can create a new Drupal 8 site or use an existing Drupal 8 site:
+
+  ```bash{promptUser: user}
+  git clone <url for site repo>
+  ```
+
+1. Use Terminus to create a [Multidev](/multidev) environment called `d9-beta` on your Drupal 8 site for testing:
+
+  ```bash{promptUser: user}
+  terminus multidev:create <site>.<env> d9-beta
+  ```
+
+1. Create and switch to a new testing branch in the Drupal 8 codebase:
+
+  ```bash{promptUser: user}
+  git checkout -b d9-beta
+  ```
+
+1. Pull the `drupal9-beta3--from-8.8.6--early-access-not-for-production-use` branch into your codebase:
+
+  ```bash{promptUser: user}
+  git pull https://github.com/pantheon-systems/drops-8.git drupal9-beta3--from-8.8.6--early-access-not-for-production-use
+  ```
+
+1. Modify the `pantheon.yml` file to specify PHP 7.4 and Drush 8:
+
+  ```yaml:title=pantheon.yml
+  php_version: 7.4
+  drush_version: 8
+  ```
+
+1. Run `update.php` on your new Drupal 9 site:
+
+  ```bash{promptUser: user}
+  terminus drush <site>.<env> updatedb
+  ```
 
 ## FAQ
 
