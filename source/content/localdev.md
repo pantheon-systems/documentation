@@ -74,6 +74,7 @@ There are a number of IDEs that have built-in Git tools or plugins available for
 - [Sublime Text](https://www.sublimetext.com/)
 - [TextMate](https://macromates.com/)
 - [Visual Studio Code](https://code.visualstudio.com)
+- [PhpStorm](https://www.jetbrains.com/phpstorm)
 
 See your editor's documentation for specific steps on how to commit and push changes from inside the editor.
 
