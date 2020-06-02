@@ -246,7 +246,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
 
-First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
+First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email address. Enter the address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
 ![SendGrid email search options](../../images/sendgrid-search-options.png)​
 
