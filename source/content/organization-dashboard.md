@@ -41,7 +41,7 @@ Removing site team members follows the same process.
 
 At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters.
 
-### Service Level
+### Site Plan
 This lets you filter sites by their [site plan](/site-plan).
 
 ### Tags

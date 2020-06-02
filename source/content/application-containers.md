@@ -74,4 +74,4 @@ Requests can be served from any of the available containers on Live. As a result
 
 ### Failover Application Containers
 
-All paid service levels have failover application containers which are **not** used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.
+All paid site plans have failover application containers which are **not** used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.
