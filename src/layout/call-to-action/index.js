@@ -52,4 +52,6 @@ function CallToAction(props) {
 
 CallToAction.propTypes = propTypes;
 
+CallToAction.defaultProps = {type: "doc"}
+
 export default CallToAction;
