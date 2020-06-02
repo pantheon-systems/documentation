@@ -7,7 +7,8 @@ const propTypes = {
 	dark: PropTypes.bool,
 	url: PropTypes.string,
 	title: PropTypes.string,
-	subTitle: PropTypes.string
+	subTitle: PropTypes.string,
+	type: PropTypes.string
 };
 
 function CallToAction(props) {

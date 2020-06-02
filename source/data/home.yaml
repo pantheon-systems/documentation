@@ -4,6 +4,7 @@
     title: 'Quick Start Guide'
     sub-title: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart/'
+    type: 'guide'
   topics: 
     - title: 'Get Started'
       summary: 'Migrate existing sites or spin up a new site, then learn how to manage your projects on Pantheon.'

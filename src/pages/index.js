@@ -31,6 +31,7 @@ class Index extends React.Component {
                   title={homeYaml.call_to_action.title}
                   subTitle={homeYaml.call_to_action.sub_title}
                   url={homeYaml.call_to_action.url}
+                  type={homeYaml.call_to_action.type}
                 />
               </div>
             </div>
@@ -71,6 +72,7 @@ export const pageQuery = graphql`
         title
         sub_title
         url
+        type
       }
       topics {
         title
