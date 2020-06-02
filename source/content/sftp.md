@@ -126,7 +126,7 @@ We recommend [adding an SSH Key](/ssh-keys), which allows more security than a s
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please see [Using the Pantheon Workflow](/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
+This is part of the [Pantheon WebOps workflow](/pantheon-workflow) that keeps code and content safe. Please see [Using the Pantheon Workflow](/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn more about why.
 
 ### SFTP changes do not show up in the Site Dashboard.
 
