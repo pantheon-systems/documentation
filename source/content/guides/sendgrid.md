@@ -21,15 +21,15 @@ One of the most common reasons that email gets blocked is because it originates 
 
 1. Get started by [signing up](https://sendgrid.com/partners/pantheon) for an account and selecting a plan that meets your business needs. After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login).
 
-2. From within the **Settings** menu, click **API Keys**:
+1. From within the **Settings** menu, click **API Keys**:
 
   ![SendGrid Multiple User setup](../../images/guides/sendgrid/sendgrid-api-keys.png)
 
-3. Click **Create API Key** to define the name and permissions for the API key your site will use. Click **Create & View** to complete the process.
+1. Click **Create API Key** to define the name and permissions for the API key your site will use. Click **Create & View** to complete the process.
 
-4. The API key will only be displayed once. Copy the key and save it somewhere secure until you can apply it to the site.
+1. The API key will only be displayed once. Copy the key and save it somewhere secure until you can apply it to the site.
 
-5. From the **Settings Menu** click **Sender Authentication**. SendGrid now requires users to identify their sender identity through either **Domain Authentication** or **Single Sender Verification**. A more detailed explanation of these options can be found in the [SendGrid Documentation](https://sendgrid.com/docs/for-developers/sending-email/sender-identity/)
+1. From the **Settings Menu** click **Sender Authentication**. SendGrid requires accounts created after April 6th 2020 to identify their sender identity through either **Domain Authentication** or **Single Sender Verification**. A more detailed explanation of these options can be found in the [SendGrid Documentation](https://sendgrid.com/docs/for-developers/sending-email/sender-identity/).
 
 ## Integrating Sendgrid With Drupal and WordPress
 
