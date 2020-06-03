@@ -1,6 +1,135 @@
 releases:
+  - version: 0.10.0
+    date: 2020-04-07
+    requiresShutdown: true
+    changelog: !markdown |
+      ### Upstream changes
+        * Updated to Composer `1.10.1`
+        * Updated to Docker Desktop `2.3.0.3`
+        * Updated Drush 8 to `8.3.2`
+        * Updated to nginx `1.16`
+        * Updated to Lando `3.0.4`
+        * Updated to PhpMyAdmin `5.0`
+        * Updated to Terminus `2.3.0`
+        * Updated to Traefik `2.2`
+      ### New features
+        * Added new log and activity viewer
+        * Added MailHog
+        * Added legacy `SIMPLETEST_` envvars
+        * Added Docker Desktop compatibility check [#57](https://github.com/pantheon-systems/localdev-issues/issues/57)
+        * Can now see more than `200` Pantheon sites in your account [#11](https://github.com/pantheon-systems/localdev-issues/issues/11)
+        * `drush_version` in `pantheon.yml` will now set Drush, falls back to latest Drush 8
+        * `proxy` will now auto recreate on new versions
+      ### Improvements
+        * Improved CPU usage during idle time
+        * Improved updating of apps built on older versions of Localdev
+        * Improved UX prompting user to rebuild on a start error
+        * Improved feedback when errors occur during pull and push [#53](https://github.com/pantheon-systems/localdev-issues/issues/53)
+        * Improved app tab navigation
+      ### Bug fixes
+        * Fixed bug causing `nginx` to periodically crash silently
+        * Fixed bug causing app state to become detached while syncing
+        * Fixed bug causing proxy ports to unexpectedly change
+        * Fixed bug causing logs to grow indefinitely
+        * Fixed bug causing app start to fail if proxy was unable to locate suitable ports
+        * Fixed bug causing Localdev to push to unexpected environments
+        * Fixed bug causing Localdev pull and push to fail when checked out to branch that wasnt also a multidev env
+        * Fixed bug causing rebuilds to fail if run directly after another failing command
+        * Fixed bug causing silent error when trying to pull code from `test` or `live`
+        * Fixed bug causing code push to fail if `git` `user.name` and `user.email` were not set [#39](https://github.com/pantheon-systems/localdev-issues/issues/39) [#47](https://github.com/pantheon-systems/localdev-issues/issues/47)
+        * Fixed bug causing `terminus` to update the incorrect version
+        * Fixed bug causing `simple_saml` to fail due to an unset `PATH_INFO`
+  - version: 0.9.3
+    date: 2020-03-22
+    requiresShutdown: true
+    changelog: !markdown |
+      ## UPDATE IMMEDIATELY!!!
+        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+      ### Critical fixes
+        * Fixed `CRITICAL` breaking changes in upstream images
+      ### New features
+        * Added force remove option to all apps
+        * Added support for Docker Desktop `2.2.0.4`
+        * Added support for multidev environments
+        * Added ability to configure where you clone projects
+        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+      ### Improvements
+        * Improved user experience
+        * Improved handling of installing to non-empty directories
+        * Stopped removing local codebase on environment destruction
+  - version: 0.9.2
+    date: 2020-03-22
+    requiresShutdown: true
+    changelog: !markdown |
+      ## UPDATE IMMEDIATELY!!!
+        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+      ### Critical fixes
+        * Fixed `CRITICAL` breaking changes in upstream images
+      ### New features
+        * Added force remove option to all apps
+        * Added support for Docker Desktop `2.2.0.4`
+        * Added support for multidev environments
+        * Added ability to configure where you clone projects
+        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+      ### Improvements
+        * Improved user experience
+        * Improved handling of installing to non-empty directories
+        * Stopped removing local codebase on environment destruction
+  - version: 0.9.1
+    date: 2020-03-22
+    requiresShutdown: true
+    changelog: !markdown |
+      ## UPDATE IMMEDIATELY!!!
+        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+      ### Critical fixes
+        * Fixed `CRITICAL` breaking changes in upstream images
+      ### New features
+        * Added force remove option to all apps
+        * Added support for Docker Desktop `2.2.0.4`
+        * Added support for multidev environments
+        * Added ability to configure where you clone projects
+        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+      ### Improvements
+        * Improved user experience
+        * Improved handling of installing to non-empty directories
+        * Stopped removing local codebase on environment destruction
+  - version: 0.9.0
+    date: 2020-03-22
+    requiresShutdown: true
+    changelog: !markdown |
+      ## UPDATE IMMEDIATELY!!!
+        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+      ### Critical fixes
+        * Fixed `CRITICAL` breaking changes in upstream images
+      ### New features
+        * Added force remove option to all apps
+        * Added support for Docker Desktop `2.2.0.4`
+        * Added support for multidev environments
+        * Added ability to configure where you clone projects
+        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+      ### Improvements
+        * Improved user experience
+        * Improved handling of installing to non-empty directories
+        * Stopped removing local codebase on environment destruction
+  - version: 0.8.0
+    date: 2020-03-20
+    requiresShutdown: true
+    changelog: !markdown |
+      ## UPDATE IMMEDIATELY!!!
+        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+      ### Critical fixes
+        * Fixed `CRITICAL` breaking changes in upstream images
+      ### New features
+        * Added support for Docker Desktop `2.2.0.4`
+        * Added support for multidev environments
+        * Added ability to configure where you clone projects
+        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+      ### Improvements
+        * Improved user experience
+        * Improved handling of installing to non-empty directories
+        * Stopped removing local codebase on environment destruction
   - version: 0.7.0
-    date: 2019-01-14
+    date: 2020-01-14
     requiresShutdown: true
     changelog: !markdown |
       ### New features
