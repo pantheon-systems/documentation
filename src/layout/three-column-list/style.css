@@ -41,7 +41,7 @@
   border-bottom: 1px solid #a4bbc1;
   font-family: "Open Sans", sans-serif;
   font-size: 17px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 22px;
 }
 .top-docs li a:hover {

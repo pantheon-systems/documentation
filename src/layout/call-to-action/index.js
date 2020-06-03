@@ -7,7 +7,8 @@ const propTypes = {
 	dark: PropTypes.bool,
 	url: PropTypes.string,
 	title: PropTypes.string,
-	subTitle: PropTypes.string
+	subTitle: PropTypes.string,
+	type: PropTypes.string
 };
 
 function CallToAction(props) {
@@ -51,5 +52,7 @@ function CallToAction(props) {
 }
 
 CallToAction.propTypes = propTypes;
+
+CallToAction.defaultProps = {type: "doc"}
 
 export default CallToAction;

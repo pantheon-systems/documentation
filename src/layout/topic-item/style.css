@@ -43,7 +43,7 @@
 .topic-item .topic-info__title {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 25px;
   text-align: left;
   margin-top: 0;
@@ -56,7 +56,7 @@
   line-height: 43px;
   margin-bottom: 5px;
   margin-top: 15px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   text-transform: uppercase;
   font-weight: 500;
 }

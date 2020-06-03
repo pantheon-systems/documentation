@@ -35,7 +35,7 @@ p, h2, h3, h4, h5, h6, a, ol, ul {
   text-decoration: none !important;
 }
 .enablement h4 {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   font-size: 22px;
 }
 h4.info > a.external[href]::after {
@@ -44,7 +44,7 @@ h4.info > a.external[href]::after {
 }
 .enablement h4:hover{
   opacity: 0.65;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   text-decoration: none;
 }
 .enablement {
@@ -54,28 +54,28 @@ h4.info > a.external[href]::after {
   margin-bottom: 20px;
 }
 .article a {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
 .changelog-sidebar a {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   text-decoration: none;
 
 }
 .changelog-wrapper a {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
 .changelog-sidebar a:hover{
   opacity: 0.65;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
 .changelog-wrapper a:hover {
   opacity: 0.65;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 
 }
 .article a:hover {
   opacity: 0.65;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
 .article a.helpful__button:hover {
   opacity: 1;
@@ -290,10 +290,10 @@ header {
 }
 .pio-breadcrumb li {
   display:inline;
-  color:#0093c9;
+  color:rgb(18, 124, 187);
 }
 .pio-breadcrumb a{
-  color:#0093c9;
+  color:rgb(18, 124, 187);
 }
 .pio-breadcrumb a:hover{
   text-decoration: none;
@@ -335,7 +335,7 @@ a.not-allowed:hover {
 .related li a{
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 18px;
 }
 .related li a:hover{
@@ -353,7 +353,7 @@ a.not-allowed:hover {
   padding: 20px;
   display: inline-block;
   float: none;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   border: #EEF2F3 solid 2px;
 }
 .pio-category-container {
@@ -370,12 +370,12 @@ a.not-allowed:hover {
   padding: 20px;
   display: inline-block;
   float: none;
-  border: #0093c9 solid 2px;
+  border: rgb(18, 124, 187) solid 2px;
 
 }
 
 .pio-action-container-inner:hover {
-  border: #0093c9 solid 2px;
+  border: rgb(18, 124, 187) solid 2px;
   transition: 200ms all;
 }
 .pio-cat-container-inner:hover {
@@ -1469,7 +1469,7 @@ margin-bottom: 40px !important;  }
   color: #333;
 }
 .pio-docs-featurette-img:hover {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   text-decoration: none;
 }
 .pio-docs-featurette-img img {
@@ -1944,7 +1944,7 @@ h1[id] {
 
 }
 .color-swatches .brand-primary {
-  background-color: #0093c9;
+  background-color: rgb(18, 124, 187);
 }
 .color-swatches .brand-success {
   background-color: #5cb85c;
@@ -3589,7 +3589,7 @@ p.depbar>a:hover{
   margin-left: 4px;
 }
 .label-info {
-  background-color: #0093c9;
+  background-color: rgb(18, 124, 187);
 }
 
 
@@ -4686,7 +4686,7 @@ a.topic-info-link {
 .topic-info__title {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 25px;
   text-align: left;
   margin-top: 0;
@@ -4697,7 +4697,7 @@ a.topic-info-link {
 .main-topic-info__title {
   font-family: 'Open Sans', sans-serif;
   font-size: 32px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 32px;
   margin-top: 30px;
   text-align:center;
@@ -4865,7 +4865,7 @@ a:focus {
   color:#333;
   padding:25px!important;
   display:block;
-  background-color: #0093c9;
+  background-color: rgb(18, 124, 187);
 }
 .guide-cta-landing>h1, .guide-cta-landing>p {
   color:#fff!important;
@@ -4909,7 +4909,7 @@ a:focus {
   line-height: 43px;
   margin-bottom: 5px;
   margin-top: 15px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -4919,7 +4919,7 @@ a:focus {
   line-height: 43px;
   margin-bottom: 5px;
   margin-top: 5px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 
 }
 .hero-video__guide-cta-subtitle {
@@ -5003,7 +5003,7 @@ a:focus {
   border-bottom:1px solid #A4BBC1;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 22px;
 }
 .topic-docs li a:hover{
@@ -5046,7 +5046,7 @@ a:focus {
   border-bottom:1px solid #A4BBC1;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   line-height: 22px;
 }
 .top-docs li a:hover{
@@ -5321,7 +5321,7 @@ div.navsearch-container {
 .upstream-overview-outter {
   padding: 25px;
   border-radius: 5px;
-  border: solid #0093C9 2px;
+  border: solid rgb(18, 124, 187) 2px;
   display: inline-flex;
 }
 

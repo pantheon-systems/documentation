@@ -135,7 +135,7 @@ const Header = ({ data, page }) => (
                   </li>
                   <li>
                     <Link id="getting-started-guide" to="/guides/">
-                      Guides <span className="label label-info">NEW</span>
+                      Guides
                     </Link>
                   </li>
                   <li>
