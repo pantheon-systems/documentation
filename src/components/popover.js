@@ -10,7 +10,7 @@ const Popover = ({ icon, title, content }) => {
         data-html="true"
         data-title={title}
         data-content={content}
-        style={{ color: "#0093c9" }}
+        style={{ color: "rgb(18, 124, 187)" }}
       >
         <em className={`fa fa-info-circle`} />
       </span>

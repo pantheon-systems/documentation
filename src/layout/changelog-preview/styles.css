@@ -6,17 +6,17 @@
 }
 
 .changelog-sidebar a {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
   text-decoration: none;
 }
 .changelog-wrapper a {
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
 .changelog-sidebar a:hover {
   opacity: 0.65;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
 .changelog-wrapper a:hover {
   opacity: 0.65;
-  color: #0093c9;
+  color: rgb(18, 124, 187);
 }
