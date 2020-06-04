@@ -236,7 +236,7 @@ const Footer = ({ data }) => {
                             <a
                               className="blog-link"
                               href="https://pantheon.io/blog"
-                              title="Pantheon Blog"
+                              title="visit the Pantheon Blog"
                             >
                               Pantheon Blog
                               <i className="fa fa-angle-right" />
