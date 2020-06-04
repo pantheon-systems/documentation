@@ -19,7 +19,7 @@ class LandingTemplate extends Component {
     return !topic ? null : (
       <Layout>
         <SEO title={topic.title} />
-          <div className="container doc-content-well">
+          <main className="container doc-content-well" id="doc">
               <h1 className="title">{topic.title}</h1>
               <section className="row">
                   {topic.video_id && (
@@ -97,7 +97,7 @@ class LandingTemplate extends Component {
                   </React.Fragment>
                 ))}
 
-          </div>
+          </main>
       </Layout>
     )
   }
