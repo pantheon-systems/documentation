@@ -11,7 +11,7 @@ Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding
 
 > "...a cleaned-up version of Drupal 8... \[with] deprecated code removed and third-party dependencies updated."
 
-Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 & beyond.
+Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
 <Alert title="Early Access Only - Not for Production Use" type="danger">
 
@@ -117,10 +117,10 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   git checkout -b d9-beta
   ```
 
-1. Pull the `drupal9-beta3--from-8.8.6--early-access-not-for-production-use` branch into your codebase:
+1. Pull the `drupal9.0.0` tag into your codebase:
 
   ```bash{promptUser: user}
-  git pull https://github.com/pantheon-systems/drops-8.git drupal9-beta3--from-8.8.6--early-access-not-for-production-use
+  git pull https://github.com/pantheon-systems/drops-8.git drupal9.0.0--from-8.9.0--early-access-not-for-production-use
   ```
 
 1. Modify the `pantheon.yml` file to specify PHP 7.4 and Drush 8:
