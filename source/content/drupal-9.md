@@ -46,7 +46,7 @@ Join our Early Access program to test out both Drupal 9 and Pantheon Integrated 
 
 1. [Fill out this form](https://docs.google.com/forms/d/1lahWKMT2VHXfr9hg15VIQY2Kn6z_j77o7Te6hZqsNgw) to get access to our “Drupal 9 Early Access” group. Once you are added, you'll have access to a new "Drupal 9 Early Access" site creation option from your Pantheon Dashboard.
 
-1. Spin up a new "Drupal 9 Early Access" site with `ic-demo-2020-` as a site name prefix (i.e., `ic-demo-2020-beta3-d9-test`). This will give you the [Drupal 9 starter codebase](https://github.com/stevector/drupal-9-project) and will automatically trigger a Composer install and `git commit` on site creation.
+1. Spin up a new "Drupal 9 Early Access" site with `ic-demo-2020-` as a site name prefix (i.e., `ic-demo-2020-d9-preview`). This will give you the [Drupal 9 starter codebase](https://github.com/stevector/drupal-9-project) and will automatically trigger a Composer install and `git commit` on site creation.
 
 ## Create a Drupal 9 Site with Continuous Integration via Build Tools
 
@@ -105,30 +105,32 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   git clone <url for site repo>
   ```
 
-1. Use Terminus to create a [Multidev](/multidev) environment called `d9-beta` on your Drupal 8 site for testing:
+1. Use Terminus to create a [Multidev](/multidev) environment called `d9-preview` on your Drupal 8 site for testing:
 
   ```bash{promptUser: user}
-  terminus multidev:create <site>.<env> d9-beta
+  terminus multidev:create <site>.<env> d9-preview
   ```
 
 1. Create and switch to a new testing branch in the Drupal 8 codebase:
 
   ```bash{promptUser: user}
-  git checkout -b d9-beta
+  git checkout -b d9-preview
   ```
 
-1. Pull the `drupal9.0.0` tag into your codebase:
+1. Pull the `9.0.0` tag into your codebase:
 
   ```bash{promptUser: user}
-  git pull https://github.com/pantheon-systems/drops-8.git drupal9.0.0--from-8.9.0--early-access-not-for-production-use
+  git pull https://github.com/pantheon-systems/drops-8.git 9.0.0
   ```
 
-1. Modify the `pantheon.yml` file to specify PHP 7.4 and Drush 8:
+1. Modify the `pantheon.yml` file to specify PHP 7.3 or newer and Drush 8:
 
   ```yaml:title=pantheon.yml
   php_version: 7.4
   drush_version: 8
   ```
+
+Note that Drupal 9 is not yet compatible with the pre-installed Drush 10.
 
 1. Run `update.php` on your new Drupal 9 site:
 
