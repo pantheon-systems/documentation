@@ -98,13 +98,13 @@ class ChangelogTemplate extends React.Component {
             </div>
           </article>
           <TOC title="Contents" />
+          <NavButtons
+            prev={`/${this.props.pageContext.previous}`}
+            next={`/${this.props.pageContext.next}`}
+            prevTitle="Older"
+            nextTitle="Newer"
+          />
         </div>
-        <NavButtons
-          prev={this.props.pageContext.previous}
-          next={this.props.pageContext.next}
-          prevTitle="Older"
-          nextTitle="Newer"
-        />
       </Layout>
     )
   }
