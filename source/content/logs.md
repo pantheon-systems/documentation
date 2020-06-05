@@ -129,28 +129,62 @@ cd $HOME/site-logs
 
 Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the following:
 
-```bash:title=collect-logs.sh
-#!/bin/bash
-# Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-SITE_UUID=xxxxxxxxxxx
-ENV=live
-for app_server in `dig +short -4 appserver.$ENV.$SITE_UUID.drush.in`;
-do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$app_server:logs/* app_server_$app_server
-done
+  <TabList>
 
-# Include MySQL logs
-for db_server in `dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in`;
-do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$db_server:logs/* db_server_$db_server
-done
-```
+  <Tab title="Rsync version" id="rsync-ver" active={true}>
 
-<Alert title="Note" type="info">
+  ```bash:title=collect-logs.sh
+  #!/bin/bash
+  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxxxxxx
+  ENV=live
+  for app_server in `dig +short -4 appserver.$ENV.$SITE_UUID.drush.in`;
+  do
+    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$app_server:logs/* app_server_$app_server
+  done
 
-For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.
+  # Include MySQL logs
+  for db_server in `dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in`;
+  do
+    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$db_server:logs/* db_server_$db_server
+  done
+  ```
 
-</Alert>
+  <Alert title="Note" type="info">
+
+  For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.
+
+  </Alert>
+
+  </Tab>
+
+  <Tab title="SFTP version" id="sftp-ver">
+
+  ```bash:title=collect-logs.sh
+  #!/bin/bash
+  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxxxxxx
+  ENV=live
+  for app_server in `dig +short -4 appserver.$ENV.$SITE_UUID.drush.in`;
+  do
+  mkdir $app_server
+  sftp -o Port=2222 $ENV.$SITE_UUID@$app_server << !
+    cd logs
+    lcd $app_server
+    mget *.log
+  !
+  done
+  ```
+
+  <Alert title="Note" type="info">
+
+  Adjust to `mget *` to include archived log files.
+
+  </Alert>
+
+  </Tab>
+
+  </TabList>
 
 ### Collect Logs
 Download logs by executing the script from within the `site-logs` directory:
@@ -159,7 +193,7 @@ Download logs by executing the script from within the `site-logs` directory:
 bash collect-logs.sh
 ```
 
-You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
+You can now access the logs from within the `site-logs` directory. More than one directory is generated for sites that use multiple application containers.
 
 ## Frequently Asked Questions
 
@@ -227,23 +261,7 @@ We do not recommend disabling dblog. Best practice is to find and resolve the pr
 
 ### How do I access logs in environments with multiple containers?
 
-Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the following shell script:
-
-```bash
-# Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-SITE_UUID=UUID
-for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
-do
-mkdir $app_server
-sftp -o Port=2222 live.$SITE_UUID@$app_server << !
-  cd logs
-  lcd $app_server
-  mget *.log
-!
-done
-```
-- Adjust to `appserver.test.$SITE_UUID.drush.in` to pull logs from Test.
-- Adjust to `mget *` to include archived log files.
+Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the following shell [script](#automate-downloading-logs).
 
 ### Can I `tail` server logs?
 
