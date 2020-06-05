@@ -100,7 +100,7 @@ class ChangelogsTemplate extends React.Component {
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 {changelogs.map(changelog => (
                   <React.Fragment key={changelog.id}>
-                    <Link to={changelog.node.fields.slug}>
+                    <Link to={`/${changelog.node.fields.slug}`}>
                       <h2 id={changelog.node.fields.slug}>
                         {changelog.node.frontmatter.title}
                       </h2>
@@ -113,13 +113,13 @@ class ChangelogsTemplate extends React.Component {
               </div>
             </div>
             <TOC title="Contents" />
+            <NavButtons
+              prev={this.props.pageContext.previous}
+              next={this.props.pageContext.next}
+              prevTitle="Older"
+              nextTitle="Newer"
+            />
           </div>
-          <NavButtons
-            prev={this.props.pageContext.previous}
-            next={this.props.pageContext.next}
-            prevTitle="Older"
-            nextTitle="Newer"
-          />
         </div>
       </Layout>
     )
@@ -133,7 +133,7 @@ export const pageQuery = graphql`
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/changelogs/" }
-        frontmatter: { draft: {ne: true}}
+        frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: DESC }
       skip: $skip
