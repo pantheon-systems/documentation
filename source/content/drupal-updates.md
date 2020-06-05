@@ -1,8 +1,9 @@
 ---
 title: Major Version Drupal Upgrades
 description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
-tags: [migratemanual]
-categories: [get-started,drupal]
+cms: "Drupal"
+categories: [get-started]
+tags: [migrate]
 ---
 To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 6 site that you want to upgrade to Drupal 7, create a new Drupal 7 site and add content, files and modules into the new site. If you are upgrading from Drupal 6 or Drupal 7 to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site there.
 
