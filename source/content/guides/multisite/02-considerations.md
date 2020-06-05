@@ -5,6 +5,7 @@ description: Overview of WordPress multisite support on the Pantheon Platform.
 anchorid: considerations
 layout: guide
 type: guide
+cms: "WordPress"
 multisite: true
 generator: pagination
 pagination:

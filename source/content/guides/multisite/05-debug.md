@@ -7,6 +7,7 @@ anchorid: debug
 generator: pagination
 layout: guide
 type: guide
+cms: "WordPress"
 pagination:
     provider: data.multisitepages
 use:
