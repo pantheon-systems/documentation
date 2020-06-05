@@ -150,16 +150,6 @@ export const pageQuery = graphql`
             slug
           }
         }
-        next {
-          fields {
-            slug
-          }
-        }
-        previous {
-          fields {
-            slug
-          }
-        }
       }
     }
   }
