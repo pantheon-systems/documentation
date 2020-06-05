@@ -1,8 +1,9 @@
 ---
 title: Setting Up CloudFront CDN with Drupal
 description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
-tags: [siteintegrations, cacheedge]
-categories: [drupal,performance,integrate]
+cms: "Drupal"
+categories: [integrate]
+tags: [cdn, caching]
 searchboost: 50
 ---
 
