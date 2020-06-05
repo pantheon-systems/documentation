@@ -1,8 +1,9 @@
 ---
 title: Creating a services.yml File for Drupal 8
 description: Learn how to add a services.yml file for your Drupal 8 site.
+cms: "Drupal 8"
+categories: [develop]
 tags: [workflow]
-categories: [drupal8,develop]
 ---
 Drupal 8 allows users to easily define core services and environment-specific settings within the `sites/default/services.yml` configuration file, eliminating the need for hacks to swap functionality. Creating or modifying this file is not required when installing a new Drupal 8 site.
 
