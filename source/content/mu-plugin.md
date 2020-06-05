@@ -2,8 +2,9 @@
 title: Create a WordPress MU Plugin for Actions and Filters
 description: Learn to make a boilerplate MU Plugin for actions and filters.
 contributors: [alexfornuto, eabquina, carlalberto]
-categories: [wordpress]
-tags: [develop]
+cms: "WordPress"
+categories: [develop]
+tags: [plugins]
 ---
 
 For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins).
