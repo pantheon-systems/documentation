@@ -1,8 +1,9 @@
 ---
 title: Caching in Drupal Views
 description: Configure your Drupal site's performance and caching settings to make significant improvements.
-tags: [drupal, views, performance, caching]
+cms: "Drupal"
 categories: [develop]
+tags: [views, performance, caching]
 ---
 While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Redis as a Drupal caching backend](/redis) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 

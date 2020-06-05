@@ -1,7 +1,9 @@
 ---
 title: Drupal Security Patches
 description: How to manually patch Drupal 7 and 8 with security patches, ahead of the upstream updates.
-categories: [drupal]
+cms: "Drupal"
+categories: [develop]
+tags: [security]
 contributors: [alexfornuto, ari]
 ---
 
