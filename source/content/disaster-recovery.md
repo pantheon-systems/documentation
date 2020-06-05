@@ -63,11 +63,11 @@ If your site requires Solr, do not use Pantheon's Solr service. If you require a
 
 ### Using Pantheon Solr Service on Sites With Disaster Recovery
 
-Pantheon Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Pantheon Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index. In that case, 
+Pantheon Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Pantheon Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index. In that case:
 
-1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, file a support ticket requesting  that the support engineers re-provision Solr for you. 
+1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, file a support ticket requesting that the support engineers re-provision Solr for you.
 
-1. Once Solr has been re-provisioned you will be notified via this support ticket and you will then need to manually re-index Solr after failover. 
+1. Once Solr has been re-provisioned you will be notified via this support ticket and you will then need to manually re-index Solr after failover.
 
 The reindexing process is application-side, and depending on your site the process may be different.
 
