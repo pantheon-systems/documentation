@@ -31,6 +31,7 @@ workflows:
             - run:
                 name: Import External Data
                 command: .circleci/scripts/import-external-data.sh
+          post-steps:
             - persist_to_workspace:
                 root: .
                 paths:
