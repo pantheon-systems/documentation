@@ -75,7 +75,7 @@ class ContributorTemplate extends React.Component {
                     {docs.map(({ node }) => {
                       return (
                         <li key={node.id}>
-                          <Link to={node.fields.slug}>
+                          <Link to={`/${node.fields.slug}`}>
                             {node.frontmatter.title}
                           </Link>
                         </li>

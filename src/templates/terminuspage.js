@@ -135,8 +135,14 @@ class TerminusTemplate extends React.Component {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
-    const ifCommandsDate = node.fields.slug == "/terminus/commands" ? this.props.data.terminusReleasesJson.published_at : node.frontmatter.reviewed
-    const ifCommandsISO = node.fields.slug == "/terminus/commands" ? this.props.data.jsonISO.published_at : isoDate.frontmatter.reviewed
+    const ifCommandsDate =
+      node.fields.slug == "/terminus/commands"
+        ? this.props.data.terminusReleasesJson.published_at
+        : node.frontmatter.reviewed
+    const ifCommandsISO =
+      node.fields.slug == "/terminus/commands"
+        ? this.props.data.jsonISO.published_at
+        : isoDate.frontmatter.reviewed
 
     return (
       <Layout>
@@ -145,7 +151,7 @@ class TerminusTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
-          reviewed={ifCommandsISO}   
+          reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
         <div className="">
@@ -186,8 +192,16 @@ class TerminusTemplate extends React.Component {
                   )}
                 </div>
                 <NavButtons
-                  prev={node.frontmatter.previousurl}
-                  next={node.frontmatter.nexturl}
+                  prev={
+                    node.frontmatter.previousurl
+                      ? `/${node.frontmatter.previousurl}`
+                      : null
+                  }
+                  next={
+                    node.frontmatter.nexturl
+                      ? `/${node.frontmatter.nexturl}`
+                      : null
+                  }
                 />
               </div>
             </div>

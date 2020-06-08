@@ -57,7 +57,7 @@ const scoresToReport = [
 let pullRequestMessage = `
 Lighthouse Audit Results:
 
-| Description | Live | pr-${process.env.PR_NUMBER} | Difference |
+| Description | [Live](https://pantheon.io/docs) | [pr-${process.env.PR_NUMBER}](${lighthouseConstants.getDevURL()}) | Difference |
 | --- | --- | --- | --- |`;
 
 scoresToReport.map(scoreObj => {
@@ -71,6 +71,11 @@ Lighthouse Audit Reports:
 
 - [\`pr-${process.env.PR_NUMBER}\` HTML Report](${devReportURL})
 - [\`Pantheon Docs\` HTML Report](${liveReportURL})
+`;
+
+pullRequestMessage += `
+
+[Preview Environment](${lighthouseConstants.getDevURL()})
 `;
 
 async function getPullRequestLighthouseComments() {
