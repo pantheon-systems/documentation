@@ -8,9 +8,6 @@ workflows:
   build-preview-test-deploy:
     jobs:
       - pfe/gatsby-build-and-deploy:
-          filters:
-            branches:
-              ignore: master
           use-yarn: false
           deployment-path: docs
           incremental-build: true
