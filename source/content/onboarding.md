@@ -24,9 +24,11 @@ If a Custom SSL Certificate is mission critical to your web property, you can br
 
 ## Pre-launch Load Testing
 
-Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the Onboarding team we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
+Load tests provide critical insight into how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings.
 
-Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services?docs) for details.
+Using proprietary tools developed by the Onboarding team, we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
+
+[Contact us](https://pantheon.io/professional-services?docs) for more information.
 
 ## Additional Services
 
