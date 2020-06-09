@@ -22,7 +22,7 @@ Recovery Time Objective (**RTO**) is the target amount of time within which a bu
 
 ## Access
 
-Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us?docs).
+Site Disaster Recovery is available for purchase as an add-on to all Elite site plans. For more information, please [contact Sales](https://pantheon.io/contact-us?docs).
 
 ![Chart showing Pantheon's zone-based disaster recovery architecture](../images/site-dr-diagram.png)
 
