@@ -6,6 +6,8 @@ anchorid: considerations
 layout: guide
 type: guide
 cms: "WordPress"
+categories: [develop]
+tags: [multisite]
 multisite: true
 generator: pagination
 pagination:

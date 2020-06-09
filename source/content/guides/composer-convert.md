@@ -5,7 +5,7 @@ type: guide
 permalink: docs/guides/:basename/
 cms: "Drupal 8"
 categories: [develop]
-tags: [composer]
+tags: [composer, site, workflow]
 contributors: [dustinleblanc]
 ---
 

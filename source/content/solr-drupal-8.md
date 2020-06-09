@@ -3,7 +3,7 @@ title: Enabling Solr on Drupal 8
 description: Detailed information on using Apache Solr with Drupal 8.
 cms: "Drupal 8"
 categories: [integrate]
-tags: [solr, search]
+tags: [solr, modules]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
 [Apache Solr](/solr) is a system for indexing and searching site content.

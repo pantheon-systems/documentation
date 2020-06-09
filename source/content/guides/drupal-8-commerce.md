@@ -4,7 +4,7 @@ description: Use Composer to Install Drupal Commerce with Drupal 8, on Pantheon
 contributors: [alexfornuto, stevector]
 cms: "Drupal 8"
 categories: [integrate]
-tags: [upstreams]
+tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename/
 multidev: true

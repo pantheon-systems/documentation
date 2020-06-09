@@ -8,6 +8,8 @@ generator: pagination
 layout: guide
 type: guide
 cms: "WordPress"
+categories: [troubleshoot]
+tags: [multisite]
 pagination:
     provider: data.multisitepages
 use:

@@ -3,7 +3,7 @@ title: Launch Check - WordPress Performance and Configuration Analysis
 description: Learn more about the checks we automatically run on your Pantheon WordPress site.
 cms: "WordPress"
 categories: [go-live]
-tags: [performance]
+tags: [webops, launch]
 reviewed: "2020-05-27"
 ---
 
