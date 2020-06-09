@@ -48,9 +48,7 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 
 ## Pre-launch Load Testing
 
-Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team, we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
-
-Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services?docs) for details.
+Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/onboarding#pre-launch-load-testing) for details.
 
 ## Custom Application Services
 
