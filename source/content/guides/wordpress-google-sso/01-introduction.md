@@ -3,8 +3,9 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Introduction
 description: WP SAML Auth makes it possible to sign in to your WordPress site using Google Apps
 contributors: [alexfornuto, danielbachhuber]
-tags: [SSO, SAML, WordPress, Google, plugins]
+cms: "WordPress"
 categories: [integrate]
+tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/
@@ -14,7 +15,7 @@ editpath: wordpress-google-sso/01-introduction.md
 
 If your organization uses Google's G Suite, [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your **Identity Provider** for **Single Sign-On** (SSO) and have WordPress defer to Google when determining who should have access and who shouldn’t.
 
-This guide will help you install the WP SAML Auth plugin, create a SAML App within the Google Admin dashboard, and map the attributes required for succesfull login.
+This guide will help you install the WP SAML Auth plugin, create a SAML App within the Google Admin dashboard, and map the attributes required for successful login.
 
 ## Before You Begin
 
@@ -35,7 +36,7 @@ You’ll see these in reference documentation, so it’s important to keep them 
 
 <Alert title="Environment Variables" type="export">
 
-This guide provides intructions using both the WordPress admin dashboard and [Terminus](/terminus). In order to make the Terminus instructions easier to use, you can set local environment variables to match those used in our code snippets.
+This guide provides instructions using both the WordPress admin dashboard and [Terminus](/terminus). In order to make the Terminus instructions easier to use, you can set local environment variables to match those used in our code snippets.
 
 To begin, let's set the `$site` variable to match your Pantheon Site name:
 

@@ -3,7 +3,9 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Going Live
 description: Merge your new SAML configuration to your live environment, and update the appropriate values
 contributors: [alexfornuto, danielbachhuber]
-categories: [integrate,develop]
+cms: "WordPress"
+categories: [integrate]
+tags: [sso, saml, users, security, launch]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/going-live

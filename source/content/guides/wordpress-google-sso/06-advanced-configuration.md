@@ -1,9 +1,11 @@
 ---
 title: Using WP SAML Auth with Google Apps
 subtitle: Advanced Configuration
-description: Additional filtering can be acheived in your Theme or a must-use plugin
+description: Additional filtering can be achieved in your theme or a must-use plugin
 contributors: [alexfornuto, danielbachhuber]
-categories: [integrate,develop]
+cms: "WordPress"
+categories: [integrate]
+tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/advanced-configuration
@@ -11,7 +13,7 @@ anchorid: wordpress-google-sso/advanced-configuration
 editpath: wordpress-google-sso/06-advanced-configuration.md
 ---
 
-This guide uses only the functions and settings provided by the WP SAML Auth plugin by default. Advanced configuration can be acheived by filtering `wp_saml_auth_option` in your theme, or a [must-use plugin](/mu-plugin). Pantheon reccomends an MU-Plugin over modifications to your theme.
+This guide uses only the functions and settings provided by the WP SAML Auth plugin by default. Advanced configuration can be achieved by filtering `wp_saml_auth_option` in your theme, or a [must-use plugin](/mu-plugin). Pantheon recommends an MU-Plugin over modifications to your theme.
 
 For example, you can filter your `entityID`, `assertionConsumerService`, and `baseurl` values using environment variables, to always match the working environment. This is useful if you need Google authentication on all newly created Multidev environments, though additional SAML apps in the Google Admin may be required.
 
