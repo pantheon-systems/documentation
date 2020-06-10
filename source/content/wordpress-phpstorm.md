@@ -1,8 +1,9 @@
 ---
 title: Configuring PhpStorm to create WordPress Plugins on Pantheon
 description: Configure a local environment for building a WordPress plugin or theme using JetBrains PhpStorm.
-tags: [local]
-categories: [wordpress,develop]
+cms: "WordPress"
+categories: [develop]
+tags: [plugins]
 ---
 ## Overview
 

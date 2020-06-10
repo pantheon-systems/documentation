@@ -1,8 +1,9 @@
 ---
 title: Environment-Specific Configurations for Drupal 8
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal 8's configuration override system.
-tags: [variables, workflow]
-categories: [drupal8,develop]
+cms: "Drupal 8"
+categories: [develop]
+tags: [workflow]
 contributors: [peter-pantheon, rachelwhitton]
 ---
 The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev & Multidevs). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).

@@ -1,10 +1,11 @@
 ---
 title: Using WP SAML Auth with Google Apps
 subtitle: Install WP SAML Auth
-description: Install the WP Saml Auth plugin
+description: Install the WP SAML Auth plugin
 contributors: [alexfornuto, danielbachhuber]
-tags: [siteintegrations, security]
-categories: [integrate,develop]
+cms: "WordPress"
+categories: [integrate]
+tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/install/

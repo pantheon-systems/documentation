@@ -1,8 +1,9 @@
 ---
 title: Crisis Response Upstream
 description: About the Pantheon COVID-19 Response WordPress Upstream
+cms: "WordPress"
 categories: [develop]
-tags: [WordPress, COVID-19, crisis, upstreams]
+tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
 ---

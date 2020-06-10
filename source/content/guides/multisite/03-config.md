@@ -7,6 +7,9 @@ anchorid: config
 generator: pagination
 layout: guide
 type: guide
+cms: "WordPress"
+categories: [develop]
+tags: [multisite]
 pagination:
     provider: data.multisitepages
 use:

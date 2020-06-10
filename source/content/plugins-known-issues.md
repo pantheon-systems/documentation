@@ -1,8 +1,9 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
-tags: [plugins,themes,debug]
+cms: "WordPress"
 categories: [troubleshoot]
+tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov]
 ---
 
@@ -329,7 +330,7 @@ ___
 
 **Issue:** Site suddenly shows a white screen of death.
 
-**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/redis/#clear-cache).
+**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/redis#clear-cache).
 
 ___
 
@@ -339,7 +340,7 @@ ___
 
 **Issue:** This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
-**Solution:** See [Set SERVER_PORT Correctly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
+**Solution:** See [Set SERVER_PORT Correctly](/server_name-and-server_port#set-server_port-correctly).
 
 ___
 

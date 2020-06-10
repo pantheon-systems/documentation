@@ -3,7 +3,8 @@ title: Google Domain Configuration
 provider: Google
 dnsprovider: true
 description: Learn how to point your Google domain to a Pantheon site.
-tags: [providers]
+categories: [go-live]
+tags: [dns]
 permalink: docs/:basename/
 editpath: dns-providers/google.md/
 ---

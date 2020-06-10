@@ -1,8 +1,9 @@
 ---
 title: Enabling Solr for WordPress
 description: Detailed information on using Apache Solr with WordPress.
-tags: [integration]
-categories: [wordpress, solr,develop]
+cms: "WordPress"
+categories: [integrate]
+tags: [solr, plugins]
 contributors: [cityofoaksdesign]
 ---
 

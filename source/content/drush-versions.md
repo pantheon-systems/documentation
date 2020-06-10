@@ -1,8 +1,9 @@
 ---
 title: Managing Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
-tags: [devdrush, services, pantheonyml]
-categories: [drupal,workflow,platform,develop]
+cms: "Drupal"
+categories: [develop]
+tags: [drush, updates]
 reviewed: "2020-02-06"
 ---
 

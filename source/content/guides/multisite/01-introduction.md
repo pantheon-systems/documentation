@@ -4,6 +4,7 @@ subtitle: Introduction
 description: Deploy a WordPress multisite on the Pantheon Platform.
 layout: guide
 type: guide
+cms: "WordPress"
 categories: [develop]
 tags: [multisite]
 contributors: [danielbachhuber]

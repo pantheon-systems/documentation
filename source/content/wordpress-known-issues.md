@@ -1,9 +1,9 @@
 ---
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
-tags: [debugcode]
-categories: [wordpress,troubleshoot]
-cms: WordPress
+cms: "WordPress"
+categories: [troubleshoot]
+tags: [code]
 ---
 This page tracks known issues and the recommended solution (if any) for running WordPress on the Pantheon website platform. Most sites work fine, but there are some common gotchas we are tracking and working to address.
 
