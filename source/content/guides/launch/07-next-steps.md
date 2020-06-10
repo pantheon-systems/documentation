@@ -30,7 +30,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 <ChecklistItem title="Enable and Schedule Weekly Backups" link="/guides/launch/launch-check/" />
 
-<ChecklistItem title="Enable Redis" link="/redis/#enable-redis" />
+<ChecklistItem title="Enable Redis" link="/redis#enable-redis" />
 
 <ChecklistItem title="Configure Caching" link="/global-cdn-caching/" />
 
