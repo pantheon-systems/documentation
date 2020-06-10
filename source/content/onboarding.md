@@ -12,7 +12,7 @@ Pantheon Onboarding Managers are your website operations (**WebOps**) experts, t
 
 ## Pantheon Secure Integration
 
-Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about Secure Integration](/secure-integration) or [contact us](https://pantheon.io/professional-services?docs) for details.
+Provides a static outgoing IP address for use in IP safelisting connections to external services. [Learn more about Secure Integration](/secure-integration) or [contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## SSO/SAML
 
