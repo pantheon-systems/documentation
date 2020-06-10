@@ -220,11 +220,11 @@ IP-based security is not recommended on Pantheon - or any cloud platform because
 
 For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
-If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn) can provide IP-based whitelist/blacklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn) can provide IP-based includelist/blocklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Large Code Repository
 
-When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs. 
+When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
 
 If your repository has grown over 2GB and is causing problems (such as errors when cloning), consider [pruning and optimizing the repo](/reducing-large-repos).
 
