@@ -34,6 +34,8 @@ protected_web_paths:
   - /example_directory
 ```
 
+The `pantheon.upstream.yml` file provided by your upstream might define protected web paths. If it does, all of the paths listed in the upstream and all of the paths listed in your `pantheon.yml` file will be protected. If you wish to remove protection from any path listed in the upstream, set the [protected_web_paths_override property](#protected-web-paths-override).
+
 #### Considerations
 
 * Specify the exact path; no regex or wildcards allowed
@@ -41,12 +43,10 @@ protected_web_paths:
 * Limited to 24 protected paths
 * You may not be able to protect files or paths with special characters
 * Wait a few seconds for changes to take effect
-* The `pantheon.upstream.yml` file provided by your upstream might define protected web paths. If it does, then all of the paths listed in the upstream and all of the paths listed in your `pantheon.yml` file will be protected.
-* If you wish to remove protection from any path listed in the upstream, set the [protected_web_paths_override property](#protected-web-paths-override), as described below.
 
 ### Protected Web Paths Override
 
-The `protected_web_paths_override` property may be set to `true` to disable all of the protected web paths defined by your site's upstream, and all protected paths implicitly defined by the Pantheon platform.
+To disable all of the protected web paths defined by your site's upstream and all protected paths defined by the Pantheon platform, set the `protected_web_paths_override` property to `true`:
 
 ```yaml
 protected_web_paths_override: true
@@ -54,8 +54,13 @@ protected_web_paths_override: true
 
 #### Considerations
 
-* The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
-* For a list of standard protected paths, see the pantheon.upstream.yml for [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml), [Drupal 7]https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml and [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml).
+The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
+
+For a list of standard protected paths, see the `pantheon.upstream.yml` for:
+
+* [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
+* [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+* [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 ### Enforce HTTPS + HSTS
 
