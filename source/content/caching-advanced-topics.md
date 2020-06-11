@@ -115,7 +115,7 @@ A full list of the devices and their support for HTML5 is available on [https://
 
 ### Using STYXKEY
 
-The Global CDN only passes through a safelisted set of cookies. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
+The Global CDN only passes through an allowlisted set of cookies. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
 For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
 
