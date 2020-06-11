@@ -49,7 +49,7 @@ terminus env:wake <site>.<env>
 - For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common sense libraries available globally.
-- Your containers can access a safelisted set of [binary tools](/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
+- Your containers can access an allowlisted set of [binary tools](/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
 
 ## Performance and Scalability
 
