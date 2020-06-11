@@ -429,7 +429,7 @@ ___
 
 > Site could not be added - Bad HTTP response (403 Forbidden)
 
-This error sometimes leads users to believe that ManageWP's IP addresses need to be safelisted on the platform.
+This error sometimes leads users to believe that ManageWP's IP addresses need to be allowlisted on the platform.
 
 **Solution:** Pantheon does not block any IPs, and there is nothing that would require a safelist. Most likely there is a security plugin that temporary blocks the connection, or a conflicting plugin like those listed [here](https://managewp.com/user-guide/known-issues). Temporary disable all other plugins, or the security plugins, then try adding your site again. For full troubleshooting, consult the [ManageWP troubleshooting page](https://managewp.com/troubleshooting/site-connection/why-cant-i-add-some-of-my-sites).
 
