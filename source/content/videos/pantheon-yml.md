@@ -3,8 +3,8 @@ title: The Pantheon.yml Configuration File
 description: Configure our platform for your needs.
 contributors:  [davidneedham]
 permalink:  docs/videos/:basename/
-tags: [pantheonyml]
-categories: [develop, cli, workflow,platform]
+categories: [develop]
+tags: [site, code]
 layout: video
 type: video
 searchboost: 50

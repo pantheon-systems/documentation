@@ -3,8 +3,8 @@ title: Git
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
-tags: [git]
-categories: [develop, cli,develop]
+categories: [develop]
+tags: [git, cli, workflow]
 layout: video
 searchboost: 50
 type: video

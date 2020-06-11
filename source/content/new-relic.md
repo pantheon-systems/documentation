@@ -1,8 +1,8 @@
 ---
 title: New Relic APM Pro
 description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site on Pantheon.
-tags: [New Relic, performance, analytics]
 categories: [performance]
+tags: [logs, measure, newrelic]
 reviewed: "2020-05-27"
 ---
 

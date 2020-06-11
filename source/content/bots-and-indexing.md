@@ -1,8 +1,8 @@
 ---
 title: Bots and Indexing on Pantheon
 description: Information on managing bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
-tags: [infrastructure]
 categories: [platform]
+tags: [measure, traffic]
 ---
 Bots are part of every public-facing website's lifecycle. We wouldn't be able to find a thing on the internet without them! Bots perform the hard work taken for granted when browsing the multitudes of indexed search results from any given search engine. In the wrong hands, bots can become nagging nuisances slowing down or even taking down your site.
 

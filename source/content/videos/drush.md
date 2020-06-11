@@ -3,9 +3,10 @@ title: Drush
 description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
-tags: [devdrush]
-categories: [develop,drupal,workflow]
 layout: video
+cms: "Drupal"
+categories: [develop]
+tags: [drush, cli]
 searchboost: 50
 type: video
 ---

@@ -1,8 +1,8 @@
 ---
 title: Site Team Management
 description: Working with the Pantheon Website Management Platform deployment tools in a team driven environment.
-tags: [manage]
 categories: [manage]
+tags: [billing, agencies, organizations, users]
 ---
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy.
 

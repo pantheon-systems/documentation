@@ -1,8 +1,8 @@
 ---
 title: New Site Owner FAQs
 description: Learn about common billing and administrative tasks performed by a Pantheon Drupal or WordPress site owner.
-tags: [manage, billing]
-categories: [manage,go-live]
+categories: [manage]
+tags: [teams, billing, agencies, users]
 ---
 When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
 

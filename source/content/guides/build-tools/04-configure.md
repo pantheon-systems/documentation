@@ -2,8 +2,8 @@
 title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
-categories: [workflow]
-tags: [build-tools, drupal, manage]
+categories: [develop]
+tags: [workflow, composer, continuous-integration, webops, terminus]
 anchorid: configure
 type: guide
 permalink: docs/guides/build-tools/configure/

@@ -3,8 +3,8 @@ title: Caching
 description: Understand frontend and backend caching on our platform.
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
-tags: [cacheedge]
-categories: [develop, cli,performance]
+categories: [performance]
+tags: [cache]
 layout: video
 searchboost: 50
 type: video

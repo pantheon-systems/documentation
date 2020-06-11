@@ -1,8 +1,8 @@
 ---
 title: Getting the Client IP Address
 description: Getting the client IP address to set up geolocation capabilities on your Pantheon site.
-tags: [Drupal, geolocation]
-categories: [develop]
+categories: [manage]
+tags: [billing]
 reviewed: "2020-03-09"
 ---
 
