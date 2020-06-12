@@ -8,10 +8,10 @@ source $BASH_ENV
 # exit when any command fails
 set -e
 
-# Check if we are NOT on the master branch and this is a PR
-if [[ ${CIRCLE_BRANCH} != "master" && -z ${CI_PULL_REQUEST} ]];
+# Check if we are NOT on the main branch and this is a PR
+if [[ ${CIRCLE_BRANCH} != "main" && -z ${CI_PULL_REQUEST} ]];
 then
-  echo -e "\nLighthouse audits will only run if we are not on the master branch and making a pull request"
+  echo -e "\nLighthouse audits will only run if we are not on the main branch and making a pull request"
   exit 0;
 fi
 
@@ -52,8 +52,8 @@ REFERENCE_HTML_REPORT_URL="$ARTIFACTS_DIR_URL/lighthouse_data/lighthouse-audit-r
 PR_MESSAGE="Lighthouse audit results:\n- [Dev HTML Report]($DEV_HTML_REPORT_URL)\n- [Reference HTML Report]($REFERENCE_HTML_REPORT_URL)"
 
 # Post the results back to the pull request on GitHub
-# if not on the master branch
-if [[ ${CI_BRANCH} != "master" ]];
+# if not on the main branch
+if [[ ${CI_BRANCH} != "main" ]];
 then
   npm run lighthouse-pr-comment
 fi

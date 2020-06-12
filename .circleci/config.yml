@@ -45,13 +45,13 @@ workflows:
             - pfe/gatsby-build-and-deploy
           filters:
             branches:
-              ignore: master
+              ignore: main
       - deploy:
           requires:
             - test-links
           filters:
             branches:
-              only: master
+              only: main
 
 jobs:
   test-links:
@@ -109,7 +109,7 @@ jobs:
     steps:
       - queue/until_front_of_line:
           time: '15'
-      - run: echo "Waiting for other deployments to master to complete"
+      - run: echo "Waiting for other deployments to main to complete"
       - checkout
       - attach_workspace:
           at: .
@@ -124,7 +124,7 @@ jobs:
           command: php .circleci/scripts/terminus-installer.php
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "main" ]; then
               .circleci/scripts/deploy-live.sh
             fi
           no_output_timeout: 15m

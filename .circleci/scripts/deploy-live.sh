@@ -39,14 +39,14 @@ getExistingTerminusEnvs "env_list.txt"
 echo "running `git remote update origin --prune`" #DEBUG
 git remote update origin --prune
 
-# Identify merged remote branches, ignoring Pantheon defaults and master
+# Identify merged remote branches, ignoring Pantheon defaults and main
 echo "Identifying merged branches" #DEBUG
-git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
+git branch -r --merged main | awk -F'/' '/^ *origin/{if(!match($0, /(>|main)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
 
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 
-# Create an array of remote branches merged into master
+# Create an array of remote branches merged into main
 echo "running function getMergedBranchMultidevName" #DEBUG
 getMergedBranchMultidevName "merged-branches-clean.txt"
 

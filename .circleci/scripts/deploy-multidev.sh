@@ -12,7 +12,7 @@ then
     exit 0
 fi
 
-# Deploy any branch except master, dev, test, or live
+# Deploy any branch except main, dev, test, or live
 protected-branches
 
 # Authenticate with Terminus

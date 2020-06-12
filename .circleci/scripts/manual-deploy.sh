@@ -1,6 +1,6 @@
 #!/bin/bash
 # Manual deploys
-# This script must be run from the project root, and requires a local Gatsby setup. See https://github.com/pantheon-systems/documentation/blob/master/README.md
+# This script must be run from the project root, and requires a local Gatsby setup. See https://github.com/pantheon-systems/documentation/blob/main/README.md
 # User defines ENV, SITE_NAME, and SITE_UUID
 
 echo Provide the target environment for manual deploy, then press [ENTER]:
@@ -12,7 +12,7 @@ read SITE_NAME
 
 # Checks to ensure that we don't manually deploy to live
 if [[ $ENV == "live" && $SITE_UUID == "72e163bd-0054-4332-8bf8-219c50b78581" ]]; then
-  echo Deploys to the live site should only be done by an internal team member via CircleCI upon committing to master. For questions, ping @alexfornuto
+  echo Deploys to the live site should only be done by an internal team member via CircleCI upon committing to main. For questions, ping @alexfornuto
 else
   echo Deploying to the $ENV environment on the $SITE_NAME site...
 

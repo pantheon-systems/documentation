@@ -18,9 +18,9 @@ auth-terminus() {
 }
 
 protected-branches() {
-    # Deploy any branch except master, dev, test, or live
+    # Deploy any branch except main, dev, test, or live
     printf "Checking $CIRCLE_BRANCH_SLUG against protected names... \n"
-    if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]
+    if [ "$CIRCLE_BRANCH_SLUG" != "main" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]
     then
         echo "Not a protected branch. \n"
     else

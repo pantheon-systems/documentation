@@ -43,8 +43,8 @@ Trying to edit or create a file in this repository will create your fork automat
 
 ## Keep your Local Updated with Master
 From your local repo, run the following commands in order:
-1. `git checkout master`
-2. `git pull --rebase upstream master`
+1. `git checkout main`
+2. `git pull --rebase upstream main`
 
 ## Add a New Doc
 
@@ -84,7 +84,7 @@ Some things to follow to help increase the chance that your pull request will be
 
 * Follow our [style guide][style].
 * Write a [good commit message][commit].
-* Build and test locally to make sure everything looks good. Refer to [README](https://github.com/pantheon-systems/documentation/blob/master/README.md) for detailed instructions.
+* Build and test locally to make sure everything looks good. Refer to [README](https://github.com/pantheon-systems/documentation/blob/main/README.md) for detailed instructions.
 
 
 ## Moderator Expectations
