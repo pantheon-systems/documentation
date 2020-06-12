@@ -2,7 +2,7 @@
 title: Composer Fundamentals and WebOps Workflows
 description: Start with Composer basics then explore suggested WebOps workflows for WordPress and Drupal sites on Pantheon.
 categories: [develop]
-tags: [composer, workflow, updates]
+tags: [composer, workflow, updates, webops]
 searchboost: 150
 ---
 Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site. At its primary level, Composer needs:
