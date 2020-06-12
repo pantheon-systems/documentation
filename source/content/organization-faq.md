@@ -2,7 +2,7 @@
 title: Pantheon Organizations FAQs
 description: Commonly asked questions and answers about Agency Partner Organizations using the Pantheon Platform.
 categories: [manage]
-tags: [organizations]
+tags: [organizations, agencies, multidev]
 ---
 ## Multidev
 
