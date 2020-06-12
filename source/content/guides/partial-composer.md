@@ -2,8 +2,8 @@
 title: Manage Some Dependencies with Composer
 description: Get your feet wet with Composer on WordPress or Drupal 7 before going all in.
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
-tags: [automation, workflow, moreguides, composer]
 categories: [develop]
+tags: [composer, workflow, updates]
 type: guide
 permalink: docs/guides/:basename/
 ---

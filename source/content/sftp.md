@@ -1,8 +1,8 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Detailed information on how to use SFTP Mode to directly develop your Drupal or WordPress site on Pantheon.
-tags: [admin]
 categories: [develop]
+tags: [files, sftp, code]
 reviewed: "2020-02-18"
 ---
 

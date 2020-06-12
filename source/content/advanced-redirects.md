@@ -1,8 +1,8 @@
 ---
 title: Advanced Redirects and Restrictions
 description: Configure custom redirect logic for specific scenarios
-tags: [redirects, variables, dns, domains]
-categories: [go-live,develop]
+categories: [go-live]
+tags: [redirects, https, dns, launch]
 reviewed: "2020-02-12"
 ---
 

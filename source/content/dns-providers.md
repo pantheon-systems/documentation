@@ -2,7 +2,7 @@
 title: DNS Host-specific DNS Instructions
 description: A list of docs to help you connect your Pantheon site to your domain
 categories: [go-live]
-tags: [dns, domains]
+tags: [dns]
 reviewed: "2020-04-16"
 ---
 

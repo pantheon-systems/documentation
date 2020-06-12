@@ -1,8 +1,8 @@
 ---
 title: Dynamic Outgoing IP Addresses
 description: Understand how outgoing requests are made for WordPress and Drupal sites on Pantheon.
-tags: [infrastructure]
 categories: [platform]
+tags: [email, sso, saml]
 ---
 Outgoing requests sent by Drupal and WordPress applications facilitate tasks between your site and external services, such as authentication and payment gateways.
 

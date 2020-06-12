@@ -1,8 +1,8 @@
 ---
 title: Access Management for Site Owners and Administrators
 description: Learn how to remove a team member or outside resource from a Pantheon site.
-tags: [manage]
 categories: [manage]
+tags: [users, security, organizations, agencies]
 ---
 
 When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.

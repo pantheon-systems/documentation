@@ -1,8 +1,8 @@
 ---
 title: Bypassing Cache with HTTP Headers
 description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
-tags: [cacheedge]
 categories: [performance]
+tags: [cache, cdn, cookies]
 ---
 ## Exclude Specific Pages from Caching
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.

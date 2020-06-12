@@ -1,8 +1,8 @@
 ---
 title: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
-tags: [tools, workflow]
 categories: [develop]
+tags: [collaborate, workflow, webops, multidev]
 ---
 For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev).
 

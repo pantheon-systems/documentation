@@ -1,8 +1,8 @@
 ---
 title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
-tags: [create]
 categories: [get-started]
+tags: [upstreams, site]
 ---
 The site's framework is selected during the creation process. Pantheon Upstreams provide default installations of WordPress, Drupal 8 and Drupal 7. [Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
 

@@ -1,8 +1,8 @@
 ---
 title: Traffic Limits and Overages
 description: Information on how Pantheon measures site traffic
-tags: [billing]
-categories: [manage,go-live]
+categories: [performance]
+tags: [billing, measure, traffic]
 reviewed: "2020-02-26"
 ---
 Pantheon defines plan levels based on traffic to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform. Our [Metrics in the Site Dashboard](/metrics) outlines available traffic metrics, where to find them in the Dashboard, and why they [rarely match other analytics](#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) like Google Analytics.
