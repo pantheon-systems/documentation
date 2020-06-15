@@ -13,6 +13,7 @@ workflows:
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
           gatsby-cache-version: "v1.3"
+          default-branch: "main"
           pre-steps:
             - checkout
             - run:
