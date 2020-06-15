@@ -2288,6 +2288,21 @@ p.depbar > a:hover {
 .label-info {
 	background-color: rgb(18, 124, 187);
 }
+.inline-select input {
+	margin-right: 3px;
+  }
+.inline-select label {
+	margin-right: .5em;
+	font-weight: normal;
+}  
+.inline-select p {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 1em;
+}
+#cms-selector {
+	padding-left: 1.5em;
+}
 
 /* Footer from Pantheon.io */
 

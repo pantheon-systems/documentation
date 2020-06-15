@@ -182,6 +182,19 @@ const Header = ({ data, page }) => (
         </div>
       </div>
     </nav>
+    <div class="inline-select" id="cms-selector">
+      <p>Select your CMS:</p>
+      <input name="cms-select" type="radio"  id="radio-all" value="all" />
+      <label for="radio-all">(view all)</label>
+      <input name="cms-select" type="radio"  id="radio-wordpress" value="WordPress" />
+      <label for="radio-wordpress">WordPress</label>
+      <input name="cms-select"  type="radio" class="cms-select" id="radio-drupal" value="Drupal" />
+      <label for="radio-drupal">Drupal (all)</label>
+      <input name="cms-select"  type="radio" id="radio-drupal9" value="Drupal 9" />
+      <label for="radio-drupal9">Drupal 9</label>
+      <input name="cms-select"  type="radio" id="radio-drupal8" value="Drupal 8" /><label for="radio-drupal8">Drupal 8</label>
+      <input name="cms-select"  type="radio" id="radio-drupal7" value="Drupal 7" /><label for="radio-drupal7">Drupal 7</label>
+    </div>
   </>
 )
 
