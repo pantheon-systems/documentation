@@ -4,6 +4,8 @@ subtitle: Performance
 anchorid: performance
 edt: true
 layout: guide
+categories: [performance]
+tags: [cache, cdn]
 type: guide
 generator: pagination
 pagination:

@@ -6,6 +6,9 @@ woocommerce: true
 anchorid: commit
 generator: pagination
 layout: guide
+cms: "WordPress"
+categories: [get-started]
+tags: [plugins, sftp, site]
 type: guide
 pagination:
     provider: data.woocommercepages

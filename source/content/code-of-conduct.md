@@ -3,6 +3,8 @@ title: Pantheon Community Code of Conduct
 description: Pantheon is dedicated to a positive and harassment-free community experience for everyone.
 contributors: [joshkoenig, rachelwhitton]
 date: 9/27/2016
+categories: [get-started]
+tags: [collaborate]
 ---
 
 ## Our Pledge

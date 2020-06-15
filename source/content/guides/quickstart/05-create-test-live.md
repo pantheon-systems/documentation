@@ -6,6 +6,8 @@ quickstart: true
 anchorid: create-test-live
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, iterate, launch, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

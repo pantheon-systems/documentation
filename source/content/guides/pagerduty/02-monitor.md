@@ -3,6 +3,8 @@ title: Incident Management
 subtitle: New Relic Ping Monitors
 description: Page two of our guide on Pagerduty integration with New Relic for incident management.
 layout: guide
+categories: [performance]
+tags: [logs, measure, newrelic, teams, webops]
 type: guide
 anchorid: monitor
 pagerduty: true

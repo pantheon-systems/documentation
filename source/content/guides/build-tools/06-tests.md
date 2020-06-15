@@ -2,8 +2,8 @@
 title: Build Tools
 subtitle: Write a New Test
 description: In step six of the Build Tools guide, learn how to use the pre-configured site tests, or customize your own.
-categories: [workflow]
-tags: [build-tools, automate]
+categories: [develop]
+tags: [continuous-integration, iterate, webops, workflow]
 buildtools: true
 anchorid: behat
 type: guide
@@ -15,7 +15,7 @@ The Pantheon example projects include some basic tests to validate basic capabil
 
 The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml) file sets the path for a project's collection of Behat tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 
-There are also visual regression tests using [Backstopjs](https://github.com/garris/BackstopJS ) that run when `composer.lock` has changed, but `composer.json` has not. The scripts are a part of the template repositories: [example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer) and [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer)
+There are also visual regression tests using [Backstopjs](https://github.com/garris/BackstopJS) that run when `composer.lock` has changed, but `composer.json` has not. The scripts are a part of the template repositories: [example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer) and [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer)
 
 ## Extending the Example Test Suite
 The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request) has been applied to the associated Multidev environment:

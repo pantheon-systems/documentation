@@ -7,6 +7,8 @@ terminuscreate: true
 showtoc: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, plugins, terminus, workflow]
 nexturl: terminus/configuration/
 previousurl: terminus/plugins/directory/
 permalink: docs/terminus/plugins/:basename/

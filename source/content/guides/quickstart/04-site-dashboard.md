@@ -6,6 +6,8 @@ quickstart: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, site, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

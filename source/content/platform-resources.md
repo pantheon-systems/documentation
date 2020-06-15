@@ -1,8 +1,8 @@
 ---
 title: Platform Resources for Legacy Plans
 description: Get detailed information about platform resources for your Drupal or WordPress site.
-tags: [services]
 categories: [platform]
+tags: [billing]
 ---
 
 This page reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to [Site Plans FAQs](/site-plans-faq/) for current information.

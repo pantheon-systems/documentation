@@ -6,6 +6,9 @@ woocommerce: true
 anchorid: initalize-prod
 generator: pagination
 layout: guide
+cms: "WordPress"
+categories: [get-started]
+tags: [launch, plugins, site]
 type: guide
 pagination:
     provider: data.woocommercepages

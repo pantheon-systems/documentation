@@ -4,6 +4,8 @@ subtitle: External Integrations
 anchorid: external-integrations
 edt: true
 layout: guide
+categories: [integrate]
+tags: [collaborate, continuous-integration, quicksilver, webops, workflow]
 type: guide
 generator: pagination
 pagination:

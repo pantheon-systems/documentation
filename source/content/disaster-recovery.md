@@ -1,8 +1,8 @@
 ---
 title: Site Disaster Recovery
 description: Learn how mission-critical websites can stay online in the event of a total zone failure
-tags: [services,disaster recovery]
 categories: [platform]
+tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
 ---
 

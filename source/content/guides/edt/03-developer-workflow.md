@@ -4,6 +4,8 @@ subtitle: Developer Workflow
 anchorid: developer-workflow
 edt: true
 layout: guide
+categories: [develop]
+tags: [dashboard, git, sftp, webops, workflow]
 type: guide
 generator: pagination
 pagination:

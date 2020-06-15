@@ -6,6 +6,8 @@ quickstart: true
 anchorid: clone-live-to-dev
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, iterate, launch, webops, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

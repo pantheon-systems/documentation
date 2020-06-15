@@ -4,6 +4,8 @@ subtitle: User Dashboard
 description: In part two of our Quick Start guide, learn about the Pantheon User Dashboard
 anchorid: user-dashboard
 layout: guide
+categories: [get-started]
+tags: [dashboard]
 type: guide
 quickstart: true
 generator: pagination

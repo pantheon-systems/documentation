@@ -7,6 +7,8 @@ survey: true
 anchorid: launch-check
 generator: pagination
 layout: guide
+categories: [go-live]
+tags: [launch, webops]
 type: guide
 pagination:
     provider: data.launchpages

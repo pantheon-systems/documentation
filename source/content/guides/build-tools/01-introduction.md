@@ -2,8 +2,8 @@
 title: Build Tools
 subtitle: Introduction
 description: Describes the Build Tools project and how it works with Composer, Git, and Continuous Integration as part of an advanced WebOps workflow.
-categories: [workflow]
-tags: [build-tools, automate, composer]
+categories: [develop]
+tags: [collaborate, composer, continuous-integration, webops, workflow]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask]
 type: guide
 anchorid: build-tools

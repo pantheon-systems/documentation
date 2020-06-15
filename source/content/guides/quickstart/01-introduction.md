@@ -2,8 +2,9 @@
 title: Quick Start
 subtitle: Introduction
 description: The Quick Start guide is designed to get you started on Pantheon.
-tags: [getstarted, drupal, wordpress]
 layout: guide
+categories: [get-started]
+tags: [launch, sandbox, site, webops, workflow]
 type: guide
 anchorid: quickstart
 generator: pagination

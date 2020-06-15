@@ -5,6 +5,8 @@ description: Use plugins to extend what you can do with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, plugins, terminus, workflow]
 nexturl: terminus/plugins/directory/
 previousurl: terminus/scripting/
 permalink: docs/terminus/:basename/

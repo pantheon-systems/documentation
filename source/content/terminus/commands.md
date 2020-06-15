@@ -5,6 +5,8 @@ description: Look up Terminus commands.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, terminus, workflow]
 nexturl: terminus/scripting/
 previousurl: terminus/examples/
 permalink: docs/terminus/:basename/
