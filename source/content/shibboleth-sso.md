@@ -73,6 +73,8 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ```bash{promptUser: user}
  mkdir -p private/simplesamlphp
  mv vendor/simplesamlphp/simplesamlphp/config private/simplesamlphp/config
+ cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesamlphp/config/
+ cp vendor/simplesamlphp/simplesamlphp/config-templates/authsources.php private/simplesamlphp/config/
  ```
 
 1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesamlphp/config.php`).
