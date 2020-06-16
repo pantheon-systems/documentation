@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  pfe: pantheon-systems/front-end@dev:main-instead-of-master
+  pfe: pantheon-systems/front-end@dev:conditional-redirects-fix
   queue: eddiewebb/queue@1.5.0
 
 workflows:
