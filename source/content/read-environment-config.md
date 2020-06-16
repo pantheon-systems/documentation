@@ -93,14 +93,15 @@ For more information, see [configuring wp-config.php](/wp-config-php).
 
 Some sites are on a newer version of the Pantheon infrastructure and will display the following banner at the top of the Site Dashboard:
 
-<Alert type="info" icon="info-sign" title="The directory structure for this site has changed.">
+<Alert type="info" icon="info-sign" title="This environment is now Compute Optimized!">
 
 For enhanced security and a more intuitive experience:
 
-- The site's home directory is now the root directory.
-- Logs are now written to logs/php/ and logs/nginx/ for each respective service.
+- Up to 40% improved PHP performance
+- OCI standard containers with enhanced security and new directory structure
+- Updated components including wkhtmltopdf, imagemagick, and OpenSSL
 
-For more information and an updated list of changes see the [Platform Considerations documentation](/platform-considerations#compute-optimized-environments-coe)
+See [Platform Considerations](/platform-considerations#compute-optimized-environments-coe) to review a full list of considerations related to custom code or config.
 
 </Alert>
 
