@@ -33,6 +33,19 @@ workflows:
                 name: Import External Data
                 command: .circleci/scripts/import-external-data.sh
           post-steps:
+            - run:
+                name: 404 redirects
+                command: |
+                  if [[ -f ./public/404.html ]]; then
+                    gsutil cp ./public/404.html gs://static.pantheonfrontend.website/${TERMINUS_SITE}/${TERMINUS_ENV}/
+                    gsutil setmeta -h "Cache-Control:public, s-maxage=10, stale-while-revalidate=600" gs://static.pantheonfrontend.website/${TERMINUS_SITE}/${TERMINUS_ENV}/404.html
+                  fi
+
+                  if [[ -f ./public/redirects.json ]]; then
+                    gsutil cp ./public/redirects.json gs://static.pantheonfrontend.website/${TERMINUS_SITE}/${TERMINUS_ENV}/
+                    gsutil setmeta -h "Cache-Control:public, s-maxage=10, stale-while-revalidate=600" gs://static.pantheonfrontend.website/${TERMINUS_SITE}/${TERMINUS_ENV}/redirects.json
+                  fi
+
             - persist_to_workspace:
                 root: .
                 paths:
