@@ -62,7 +62,8 @@ jobs:
           BUILD_PATH: /home/circleci/project
     working_directory: ~/project
     steps:
-      - pfe/set-terminus-env
+      - pfe/set-terminus-env:
+          default-branch: "main"
       - checkout
       - run:
           name: Import Functions and Variables
