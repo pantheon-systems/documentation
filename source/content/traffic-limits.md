@@ -37,7 +37,7 @@ Pantheon only counts pages returned, considered [`200` level](https://en.wikiped
 ### Bots and Crawlers
 Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
 
-Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible. If you've encountered a bot or crawler that we should consider blocking Platform-wide, please [contact support](/support).
+Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible. If you've encountered a bot or crawler that we should consider blocking platform-wide, please [contact support](/support).
 
 To block specific bots and crawlers from your site, [add them to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or [use PHP to block specific User Agents](/optimize-site-traffic#block-user-agents-in-drupal-or-wordpress).
 
