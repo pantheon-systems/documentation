@@ -97,15 +97,16 @@ Since most of these changes are relatively minor, there are a number of [depreca
 
 ## Test-upgrade an Existing Pantheon Drupal 8 Site to Drupal 9
 
-Are you already running a Pantheon site using our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8)? Leverage the amazing power of our Multidev tooling to test Drupal 9 in a Git branch.
+Are you already running a Pantheon site using our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8)? Use our [Multidev](/multidev) feature to test Drupal 9 in a new branch.
 
-1. Clone your Drupal 8 [site’s codebase to your computer](/local-development#get-the-code). You can create a new Drupal 8 site or use an existing Drupal 8 site:
+1. Clone your Drupal 8 site’s codebase [to your computer](/local-development#get-the-code) and change directory to it. You can create a new Drupal 8 site or use an existing Drupal 8 site:
 
   ```bash{promptUser: user}
   git clone <url for site repo>
+  cd <site-name>
   ```
 
-1. Use Terminus to create a [Multidev](/multidev) environment called `d9-preview` on your Drupal 8 site for testing:
+1. Use Terminus to create a Multidev environment called `d9-preview` on your Drupal 8 site for testing:
 
   ```bash{promptUser: user}
   terminus multidev:create <site>.<env> d9-preview
@@ -130,7 +131,14 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   drush_version: 8
   ```
 
-Note that Drupal 9 is not yet compatible with the pre-installed Drush 10.
+  Note that Drupal 9 is not yet compatible with the pre-installed Drush 10.
+
+1. Commit and push your changes:
+
+  ```bash{promptUser: user}
+  git commit -am "test upgrade to Drupal 9"
+  git push origin d9-preview
+  ```
 
 1. Run `update.php` on your new Drupal 9 site:
 
