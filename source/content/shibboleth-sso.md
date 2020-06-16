@@ -62,7 +62,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  composer require simplesamlphp/simplesamlphp
  ```
 
-1. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
+2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
  ```bash{promptUser: user}
  ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
@@ -71,16 +71,16 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 3. Create your site-specific config file:
 
  ```bash{promptUser: user}
- mkdir private
- cp ./vendor/simplesamlphp/simplesamlphp/config-templates/config.php ./private/simplesaml-config.php
+ mkdir -p private/simplesamlphp
+ mv vendor/simplesamlphp/simplesamlphp/config private/simplesamlphp/config
  ```
 
-1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
+1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesamlphp/config.php`).
 
 1. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
  ```bash{promptUser: user}
- ln -s ../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
+ ln -s ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
  ```
 
 1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
@@ -88,7 +88,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ```json:title=composer.json
    "scripts": {
        "post-install-cmd": [
-           "ln -sf ../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+           "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
        ]
    },
  ```
@@ -102,12 +102,14 @@ By the end of these steps, you should have a docroot structure similar to the ou
 ```bash
 .
 ├── private
-│   └── simplesaml-config.php
+│   └── simplesamlphp
+|       └── config 
+│           ├── authsources.php
+|           └── config.php
 ├── vendor
 │   └── simplesamlphp
 │       └── simplesamlphp
-│           └── config
-│               └── config.php -> ../private/simplesaml-config.php
+│           └── config -> ../../../private/simplesamlphp/config
 └── web
     └── simplesaml -> ../vendor/simplesamlphp/simplesamlphp/www
 ```
