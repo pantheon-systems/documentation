@@ -1,8 +1,8 @@
 ---
 title: Collaborative Development Using GitHub and Pantheon
 description: Use GitHub to collaborate with the team members on your Pantheon site.
-tags: [workflow, tools, moreguides]
-categories: [manage,develop]
+categories: [develop]
+tags: [collaborate, git, local, webops, workflow]
 type: guide
 permalink: docs/guides/:basename/
 contributors: [bmackinney, jessifischer, mrfelton]

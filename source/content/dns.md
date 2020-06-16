@@ -1,9 +1,9 @@
 ---
 title: Introduction to the Domain Name System
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
-tags: [dns]
 use: [docs_tags]
 categories: [go-live]
+tags: [dns]
 contributors: [alexfornuto]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Pantheon Secure Integration
 description: Configuring your Drupal or WordPress site to use Secure Integration as a defense-in-depth solution to access systems behind firewalls.
-tags: [infrastructure, security]
-categories: [platform,develop]
+categories: [platform]
+tags: [database, professional-services, redis, security]
 ---
 [Pantheon Secure Integration](https://pantheon.io/features/secure-integration), formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is available for customers with an annual contract. [Contact us](https://pantheon.io/contact-us) for more information.
 

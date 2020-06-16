@@ -2,8 +2,8 @@
 title: Managed Updates
 description: Descriptions of the Managed Updates products and requirements for Drupal 8 compatibility
 reviewed: "2020-05-14"
-categories: [platform]
-tags: [updates, professional services]
+categories: [manage]
+tags: [composer, professional-services, updates, workflow]
 ---
 
 [Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)

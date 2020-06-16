@@ -3,6 +3,7 @@ title: Install and Configure Lando
 description: Install and Configure Lando for local development of WordPress sites.
 contributors: [digisavvy]
 categories: [develop]
+tags: [code, iterate, lando, local, webops]
 featuredcontributor: true
 type: guide
 permalink: docs/guides/:basename/
