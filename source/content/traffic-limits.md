@@ -1,8 +1,8 @@
 ---
 title: Traffic Limits and Overages
 description: Information on how Pantheon measures site traffic
-categories: [performance]
-tags: [billing, measure, traffic]
+tags: [billing]
+categories: [manage,go-live]
 reviewed: "2020-02-26"
 ---
 Pantheon defines plan levels based on traffic to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform. Our [Metrics in the Site Dashboard](/metrics) outlines available traffic metrics, where to find them in the Dashboard, and why they [rarely match other analytics](#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) like Google Analytics.
@@ -37,7 +37,7 @@ Pantheon only counts pages returned, considered [`200` level](https://en.wikiped
 ### Bots and Crawlers
 Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
 
-Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible. If you've encountered a bot or crawler that we should consider blocking platform-wide, please [contact support](/support).
+Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible. If you've encountered a bot or crawler that we should consider blocking Platform-wide, please [contact support](/support).
 
 To block specific bots and crawlers from your site, [add them to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or [use PHP to block specific User Agents](/optimize-site-traffic#block-user-agents-in-drupal-or-wordpress).
 
@@ -67,6 +67,7 @@ Note that the annual plan prices are listed as annual cost.
 You can upgrade your plan in your dashboard at any time. You may not be able to downgrade to a smaller performance size plan based on your traffic history.
 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
+
 Analytics suites (like Google Analytics) are measuring fundamentally different things when compared to Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
 
 We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippet is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
@@ -79,6 +80,10 @@ For example, the following traffic will be collected in our logs, but will not b
 - A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
 - Automated traffic from bots or load testing.
 - Content pre-fetching by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
+
+This table helps show why traffic in the Dashboard may differ from your analytics suite:
+
+<Partial file="traffic-analytics-table.md" />
 
 Analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only".
 

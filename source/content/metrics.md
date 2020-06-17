@@ -36,7 +36,12 @@ Data is retained for the following amounts of time:
 Raw data is not currently available.
 
 ### Why doesn't Pantheon's traffic match my analytics?
+
 There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. For details, see [Traffic Limits and Overages](/traffic-limits/#why-doesnt-pantheons-traffic-match-my-analytics).
+
+This table shows some of the reasons why traffic in the Dashboard may differ from your analytics suite:
+
+<Partial file="traffic-analytics-table.md" />
 
 ### How does Pantheon handle overages?
 All non-Basic plans come with free overage protection. Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see [Traffic Limits and Overages](/traffic-limits).
