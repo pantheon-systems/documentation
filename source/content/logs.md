@@ -60,7 +60,7 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 
 You now have a local copy of the logs directory.
 
-For sites on [Compute Optimized Environments (COE)](platform-considerations#compute-optimized-environments-coe), the directory structure will resemble:
+For sites on [Compute Optimized Environments (COE)](/platform-considerations#compute-optimized-environments-coe), the directory structure will resemble:
 
 ```none
 ├── logs
