@@ -58,7 +58,9 @@ In the Connection Information section of the dashboard, we can see a pattern abo
    get -r logs
    ```
 
-You now have a local copy of the logs directory, which contains the following:
+You now have a local copy of the logs directory.
+
+For sites on [Compute Optimized Environments (COE)](/platform-considerations#compute-optimized-environments-coe), the directory structure will resemble:
 
 ```none
 ├── logs
@@ -72,7 +74,7 @@ You now have a local copy of the logs directory, which contains the following:
         └──nginx-error.log
 ```
 
-You may still see log files in this structure as well:
+For sites not on COE, the directory structure will be more like this:
 
 ```none
 ├── logs
