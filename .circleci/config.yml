@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  pfe: pantheon-systems/front-end@dev:main-instead-of-master
+  pfe: pantheon-systems/front-end@dev:main-or-master
   queue: eddiewebb/queue@1.5.0
 
 workflows:
@@ -13,7 +13,6 @@ workflows:
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
           gatsby-cache-version: "v1.4"
-          default-branch: "main"
           pre-steps:
             - checkout
             - run:
@@ -63,7 +62,6 @@ jobs:
     working_directory: ~/project
     steps:
       - pfe/set-terminus-env:
-          default-branch: "main"
       - checkout
       - run:
           name: Import Functions and Variables
