@@ -5,6 +5,8 @@ description: Automate your workflow with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [automate]
+tags: [cli, local, terminus, workflow]
 nexturl: terminus/plugins/
 previousurl: terminus/commands/
 permalink: docs/terminus/:basename/

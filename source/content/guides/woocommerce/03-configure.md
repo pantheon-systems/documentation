@@ -6,6 +6,9 @@ woocommerce: true
 anchorid: configure
 generator: pagination
 layout: guide
+cms: "WordPress"
+categories: [get-started]
+tags: [plugins, site]
 type: guide
 pagination:
     provider: data.woocommercepages

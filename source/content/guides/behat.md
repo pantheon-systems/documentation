@@ -2,7 +2,8 @@
 title: Automate Testing with Behat
 description: Learn how to install Behat and write simple tests.
 type: guide
-tags: [moreguides]
+categories: [automate]
+tags: [continuous-integration, iterate, site, webops]
 permalink: docs/guides/:basename/
 contributors: [ataylorme]
 ---

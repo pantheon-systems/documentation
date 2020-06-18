@@ -4,6 +4,8 @@ subtitle: Multidev
 anchorid: multidev
 edt: true
 layout: guide
+categories: [develop]
+tags: [git, iterate, multidev, webops, workflow]
 type: guide
 generator: pagination
 pagination:

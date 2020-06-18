@@ -3,6 +3,8 @@ title: Essential Developer Training
 subtitle: Architecture
 anchorid: architecture
 layout: guide
+categories: [platform]
+tags: [cdn, workflow]
 edt: true
 type: guide
 generator: pagination

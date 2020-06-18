@@ -6,6 +6,8 @@ quickstart: true
 anchorid: onserver-dev-part1
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, iterate, site, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

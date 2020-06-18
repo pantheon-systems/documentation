@@ -5,6 +5,8 @@ description: Learn how to configure your local Terminus configuration file.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, terminus, workflow]
 nexturl: terminus/updates/
 previousurl: terminus/plugins/create/
 permalink: docs/terminus/:basename/

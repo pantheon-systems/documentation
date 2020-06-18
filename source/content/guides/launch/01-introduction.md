@@ -2,7 +2,8 @@
 title: Launch Essentials
 subtitle: Introduction
 description: Tips and tricks for launching sites on Pantheon like you're in a 55-foot tall jungle-walking robot exoskeleton, killin it.
-tags: [golive]
+categories: [go-live]
+tags: [collaborate, launch, site, webops, workflow]
 layout: guide
 type: guide
 anchorid: introduction

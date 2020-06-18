@@ -1,8 +1,8 @@
 ---
 title: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
-tags: [debugfiles]
 categories: [troubleshoot]
+tags: [backup, dashboard, git, webops, workflow]
 ---
 
 Each site environment's backups are located on the Backups tab for that environment in the Pantheon Dashboard.

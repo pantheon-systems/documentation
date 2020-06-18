@@ -6,6 +6,8 @@ launch: true
 anchorid: redirects
 generator: pagination
 layout: guide
+categories: [go-live]
+tags: [dns, https, launch, webops]
 type: guide
 pagination:
     provider: data.launchpages

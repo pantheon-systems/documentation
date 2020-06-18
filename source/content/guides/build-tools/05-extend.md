@@ -2,8 +2,9 @@
 title: Build Tools
 subtitle: Add a New Module
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
-categories: [workflow]
-tags: [build-tools, drupal, composer]
+cms: "Drupal"
+categories: [develop]
+tags: [composer, local, modules, site, terminus]
 buildtools: true
 anchorid: extend
 type: guide

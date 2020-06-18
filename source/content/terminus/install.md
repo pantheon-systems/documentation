@@ -7,6 +7,8 @@ terminuspage: true
 showtoc: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, terminus, workflow]
 permalink: docs/terminus/:basename/
 nexturl: terminus/examples/
 previousurl: terminus/

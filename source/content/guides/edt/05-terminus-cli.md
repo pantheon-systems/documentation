@@ -4,6 +4,8 @@ subtitle: Command Line Interface
 anchorid: command-line-interface
 edt: true
 layout: guide
+categories: [develop]
+tags: [cli, drush, terminus, wp-cli, workflow]
 type: guide
 generator: pagination
 pagination:

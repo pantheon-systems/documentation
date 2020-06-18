@@ -4,6 +4,8 @@ subtitle: Going Live
 anchorid: going-live
 edt: true
 layout: guide
+categories: [go-live]
+tags: [dns, launch]
 type: guide
 survey: true
 generator: pagination

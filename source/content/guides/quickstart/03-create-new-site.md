@@ -6,6 +6,8 @@ quickstart: true
 anchorid: create-new-site
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, users, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

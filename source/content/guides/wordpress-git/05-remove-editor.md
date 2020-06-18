@@ -4,6 +4,9 @@ subtitle: Edit Site Configuration
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: remove-editor
 layout: guide
+cms: "WordPress"
+categories: [develop]
+tags: [git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/remove-editor/
 editpath: wordpress-git/05-remove-editor.md

@@ -6,6 +6,8 @@ terminuslegacy: true
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, terminus, workflow]
 permalink: docs/terminus/get-started/:basename/
 image: terminus-thumbLarge
 searchboost: 50

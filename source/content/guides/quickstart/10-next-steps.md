@@ -7,6 +7,8 @@ anchorid: next-steps
 generator: pagination
 survey: true
 layout: guide
+categories: [get-started]
+tags: [launch, webops, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

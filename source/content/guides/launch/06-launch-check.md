@@ -6,6 +6,8 @@ launch: true
 anchorid: launch-check
 generator: pagination
 layout: guide
+categories: [go-live]
+tags: [backup, launch, webops]
 type: guide
 pagination:
     provider: data.launchpages
