@@ -12,7 +12,7 @@ Yes. Thousands of live production sites run on Pantheon.
 
 ### What versions of Drupal does Pantheon support?
 
-Pantheon supports Drupal 6, 7, and 8 sites. As of February 2016, the Drupal community [no longer supports Drupal 6](https://www.drupal.org/drupal-6-eol). Drupal 6 sites will continue to run on Pantheon, but there will no longer be any updates to fix bugs or security issues.
+Pantheon supports Drupal 7, 8, and 9 sites. As of February 2016, the Drupal community [no longer supports Drupal 6](https://www.drupal.org/drupal-6-eol). Drupal 6 sites will continue to run on Pantheon, but there will no longer be any updates to fix bugs or security issues.
 
 ### What versions of WordPress does Pantheon support?
 
@@ -21,9 +21,8 @@ Pantheon supports the most recent release of WordPress via our [upstream](https:
 ### How much does Pantheon cost?
 You can develop new sites for free on Pantheon. Billing starts when you're ready to go live and direct traffic to a site. See available plans on our [pricing page](https://pantheon.io/pricing).
 
-
 ### Where are the Pantheon servers located?
-In addition to the United States data center, [new sites can be created](/regions) in Australia, Canada, and the European Union (EU). Pantheon's [Global CDN](/global-cdn) serves content from 40+ POPs (points of presence) distributed around the world.
+In addition to the United States data center, [new sites can be created](/regions) in Australia, Canada, and the European Union (EU). Pantheon's [Global CDN](/global-cdn) serves content from 70+ POPs (points of presence) distributed around the world.
 
 ### Can I run other applications on Pantheon?
 
@@ -34,7 +33,6 @@ Only WordPress and Drupal applications are officially supported, but the PHP run
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
 Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/terminus), [drush](/drush), [WP-CLI](/faq#does-pantheon-support-wp-cli%3F)), and SFTP files.
-
 
 ### How does Pantheon work with DNS?
 
@@ -47,7 +45,6 @@ Pantheon can handle any domain name you point at it, however DNS configuration i
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application containers for high availability and high performance.
 
 To learn more, see [Using the Pantheon Workflow](/pantheon-workflow).
-
 
 ## Developing Sites
 
@@ -67,7 +64,7 @@ Yes. While your Pantheon site will only run from code in your Pantheon Git repos
 
 ### Does Pantheon support Drupal Multisite?
 
-No. Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites. The codebase also becomes a single point of failure.
+No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Custom Upstreams](/custom-upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multiside setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
@@ -108,7 +105,7 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 
 ### Do you support Xdebug?
 
-No. Xdebug is not available on the platform.
+No. Xdebug is not available on the platform. Local development tools such as [Lando](/guides/lando) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic Pro](/new-relic).
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
@@ -145,28 +142,26 @@ Warning: session_start(): user session functions not defined
 You'll need the plugin. [More information on sessions](/wordpress-sessions).
 
 ### Can I install a new Panopoly distribution?
-Yes. See [Public Distributions](/start-state/#public-distributions) for details.
 
+Yes. See [Public Distributions](/start-state/#public-distributions) for details.
 
 ## Caching and Performance
 
 ### Can I use other CDNs with Pantheon?
-Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
+
+Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS. Pantheon also provides advanced caching addons for WordPress & Drupal.
 
 ### What version of Apache Solr does Pantheon run?
-
 
 <Partial file="solr-version.md" />
 
 See our documentation for details about configuring Solr for [WordPress](/wordpress-solr), [Drupal 7](/solr-drupal-7) and [Drupal 8](/solr-drupal-8).
-
 
 ## Support
 
 ### What support is available for Pantheon?
 
 See [Getting Support](/support) and explore our [support features](https://pantheon.io/support).
-
 
 ## Security
 
