@@ -6,7 +6,7 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 categories: [develop]
-tags: [cli, local, plugins, terminus, workflow]
+tags: [cli, local, plugins, terminus, reference]
 nexturl: terminus/plugins/directory/
 previousurl: terminus/scripting/
 permalink: docs/terminus/:basename/
