@@ -18,7 +18,7 @@ Creating a Multidev environment creates an application container with a database
 
 <Alert title="Note" type="info" >
 
-To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through July 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information.
+To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through September 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information (note: this offer has been extended since the post was published).
 
 </Alert>
 
@@ -53,7 +53,7 @@ As a workaround, we recommend following development best practice workflows by [
 
 <Alert title="Note" type="info" >
 
-To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through July 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information.
+To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through September 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information (note: this offer has been extended since the post was published).
 
 </Alert>
 
