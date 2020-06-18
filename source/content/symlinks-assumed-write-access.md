@@ -43,10 +43,10 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 1. Move the directory you want to replace with a symlink. This serves to both back up any data that may otherwise be lost, and to prevent the symlink from being nested inside the existing directory:
 
     ```bash{promptUser: user}
-    mv ./wp-content/path/plugin-expects-write-to ~/backups/
+    mv ./wp-content/path/plugin-expects-write-to $_ENV['HOME']/tmp/backups
     ```
 
-    The command above moves the directory to a folder named `backups` in your home directory, `~/`. Replace this with your preferred backup location.
+    The command above moves the directory to the environment's home directory `/tmp/backups`. Replace this with your preferred backup location. Keep in mind that due to Pantheon's [container infrastructure](/application-containers), bindings may change and the only persistent directories that can be writen to are `/files` and `/code`.
 
 1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
 
@@ -80,7 +80,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     ```
 
  Your commit can be seen in the Dev environment's commit history. Once this commit is synced to all environments, the plugin will successfully write files within any environment, even when the Dev environment's connection mode is set to Git.
- 
+
  You should not see the newly created files in the Dashboard as "ready to commit," as files are not version controlled. Only the symlink to the new path is in the codebase.
 
   <Alert title="Note" type="info">
