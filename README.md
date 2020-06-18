@@ -79,3 +79,4 @@ We include several tools to test that new content doesn't break the documentatio
 
 To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
 
+### Other section
