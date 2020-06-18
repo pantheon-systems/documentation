@@ -10,17 +10,17 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 <Alert title="Note" type="info" >
 
-To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through July 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information.
+To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through September 1, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1stfor) for more information (note: the offer has been extended since the post was published).
 
 </Alert>
 
-Multidev is available to all accounts ~~with [Gold support](/support/#support-features-and-response-times) and above~~ until July 1, 2020. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
+Multidev is available to all accounts ~~with [Gold support](/support/#support-features-and-response-times) and above~~ until September 1, 2020. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
 ### Should I have access to Multidev?
 
-Yes! Multidev is available until July 1, 2020.
+Yes! Multidev is available to all users until September 1, 2020.
 
 After that, users will have access to Multidev if they:
 
