@@ -339,7 +339,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
 
- GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
   [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
@@ -347,7 +347,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal 8" id="d8-2conflict-merge">
 
-  GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+  GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
  [View on GitHub](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
 
@@ -355,7 +355,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal 7" id="d7-2conflict-merge">
 
- GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+ GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
   [View on GitHub](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 

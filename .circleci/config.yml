@@ -12,7 +12,7 @@ workflows:
           deployment-path: docs
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
-          gatsby-cache-version: "v1.4"
+          gatsby-cache-version: "v1.4.1"
           default-branch: "main"
           pre-steps:
             - checkout
@@ -77,10 +77,6 @@ jobs:
       - run:
           name: Test links
           command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
-      - save_cache:
-          key: npm-v2.8.4-{{ checksum "package-lock.json" }}
-          paths:
-            - ~/build/node_modules
 
   lighthouse:
     docker:

@@ -288,6 +288,6 @@ If you see this error, you need to update your [trusted host patterns](#trusted-
 
 By default, Pantheon's environment is configured to not allow any non-trusted hosts. Trusted hosts are added via the `PANTHEON_ENVIRONMENT` variable in `settings.php` [here](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L184):
 
-GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php php 184-190 GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php php 184-190 GITHUB-EMBED
 
 

@@ -66,7 +66,7 @@ contributors: [alexfornuto, rachelwhitton]
 <dt><code>contributors</code></dt>
 <dd>
 
-An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/master/source/data/contributor.yaml).
+An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
 
 </dd>
 
