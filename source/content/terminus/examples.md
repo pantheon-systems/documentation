@@ -269,7 +269,7 @@ Then automate the procedure for resetting Dev to Live by downloading the followi
 
 <Download file="reset-dev-to-live.sh" />
 
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/master/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
 
 Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
 
