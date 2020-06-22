@@ -44,7 +44,7 @@ The visit counts if it:
 
 - Is valid
 - Is not a known bot
-- Reurns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response
+- Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response
   - That originates from PHP
 
 Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
