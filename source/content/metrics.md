@@ -45,25 +45,21 @@ Raw data is not currently available.
 
 There are some inherent limitations with using an analytics suite (e.g., Google Analytics) when measuring site traffic. For details, see [Traffic Limits and Overages](/traffic-limits/#why-doesnt-pantheons-traffic-match-my-analytics).
 
-This table shows some of the reasons why traffic in the Dashboard may differ from your analytics suite:
-
-<Partial file="traffic-analytics-table.md" />
-
 ### How does Pantheon handle overages?
 
 All non-Basic plans come with free overage protection. Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see [Traffic Limits and Overages](/traffic-limits).
 
 ### What about bots?
 
-Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
+Pantheon-identified bots are excluded from the Visits and Pages Served Metrics. See [Traffic Limits](/traffic-limits#traffic-metrics) for more information.
 
 ### What about redirects?
 
-Only requests with a 2xx status count as pages served, so 301 redirects will not be included in metrics.
+Only requests with a 200-level status count as pages served, so 301 redirects will not be included in metrics. See [Traffic Limits](/traffic-limits#traffic-metrics) for more information.
 
 ### Are multiple user agents on the same originating IP address counted separately?
 
-Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor.
+Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor. See [Traffic Limits](/traffic-limits#traffic-metrics) for more information.
 
 ### Can I check metrics from the command line with Terminus?
 

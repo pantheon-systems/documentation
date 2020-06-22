@@ -28,7 +28,7 @@ Think of this as something that gets delivered to the visitor: Pages served is t
 
 The number of Pages Served allowed for each Site Plan is five times the maximum monthly Site Visits.
 
-<dd>
+</dd>
 
 </dl>
 
