@@ -37,9 +37,11 @@ To ensure a successful migration, complete the following tasks on the source sit
 <Accordion title="Advanced Tips for Successful Migration" id="advanced-before-you-begin" icon="lightbulb">
 
 #### .gitignore
+
 Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
 
 #### Local Drupal configurations
+
 To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore` so that it will be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
 
 ```bash
@@ -67,7 +69,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
 
-4.  Click the link to manually migrate your site then select **Yes** to confirm:
+4. Click the link to manually migrate your site then select **Yes** to confirm:
 
   <TabList>
 
@@ -92,6 +94,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 
 ## Import Your Code
+
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
 
   <Partial file="code.md" />
@@ -103,6 +106,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
   </Alert>
 
 ### Using an SFTP Client
+
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
 1. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
@@ -153,6 +157,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 1. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
 
 ### From the Command Line with Git
+
 1. Navigate to your existing site's code directory in a local terminal. If your existing code is _not_ already version controlled with Git, create a repository and add an initial commit:
 
     ```bash
@@ -248,6 +253,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 10. Go to the **<span class="glyphicons glyphicons-embed-close"></span> Code** tab of your **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Site Dashboard. You should see your site's pre-existing commit history and the most recent commit adding Pantheon's core files.
 
 ## Add Your Database
+
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
 1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
@@ -261,7 +267,6 @@ The **Database** import requires a single `.sql` dump that contains the site's c
    - Replace `PASSWORD` with the MySQL user's password. You can also move `-p` to the end of the command and leave it blank, to be prompted for your password. This prevents your MySQL password from being visible on your terminal.
    - Replace `DATABASE` with the name of your site database within MySQL.
    - `~/db.sql` defines the output target to a file named `db.sql` in your user's home directory. Adjust to match your desired location.
-
 
   The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
 
@@ -281,7 +286,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    2. Select your local archive file, then press **Import**.
 
-     ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+   ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+
+  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
   </Tab>
 
@@ -303,15 +310,15 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
 
-      ```
-      mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
-      ```
+    ```sql
+    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
+    ```
 
    2. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with: `< database.sql`. Your command will look like:
 
-      ```
-      mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
-      ```
+    ```sql
+    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
+    ```
 
     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
 
@@ -322,6 +329,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
   </TabList>
 
 ## Upload Your Files
+
 **Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
@@ -358,7 +366,6 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 1. Click **Import** and add your archive accordingly (based on file size):
 
-
   <TabList>
 
   <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
@@ -369,7 +376,6 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
    1. Select your local archive file, then press **Import**.
 
-
   </Tab>
 
   <Tab title="Up to 500MBs" id="500mbsfiles">
@@ -379,7 +385,6 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
    1. In the **Archive of site files** field, click **URL**.
 
    1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
-
 
   </Tab>
 
@@ -396,7 +401,6 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   ```
 
   When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
-
 
   ```bash
   ENV='dev'
@@ -428,24 +432,26 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
 
 ![Finish Manual Migration](../images/successfully-migrated.png)
+
 ## Troubleshooting
 
 ### fatal: Not possible to fast-forward, aborting.
+
 This error may occur when trying to merge Pantheon's codebase into your existing repository as described earlier on this page in (step 5 of [importing your code from the commandline](#from-the-command-line-with-git):
 
-```
+```bash
 Not possible to fast-forward, aborting.
 ```
 
 Depending on your Git version, you may see the following error instead:
 
-```
+```bash
 fatal: refusing to merge unrelated histories
 ```
 
 If you see this, it is possible your local Git configuration is disallowing non-fastforward merges:
 
-```
+```conf
 [pull]
 rebase = TRUE
 ff = only
@@ -454,4 +460,5 @@ ff = only
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
 ## See Also
+
 Check our standard migration procedure for related [Frequently Asked Questions](/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/migrate#troubleshooting) tips.
