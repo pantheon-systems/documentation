@@ -1,4 +1,10 @@
 releases:
+  - version: 0.10.1
+    date: 2020-06-17
+    requiresShutdown: true
+    changelog: !markdown |
+      ### Bug fixes
+        * Fixed bug causing Localdev to not `terminus auth` correctly when it starts up an application. [#63](https://github.com/pantheon-systems/localdev-issues/issues/63)
   - version: 0.10.0
     date: 2020-04-07
     requiresShutdown: true
