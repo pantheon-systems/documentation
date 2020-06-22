@@ -27,7 +27,7 @@ fi
 
 
 # Export Variables
-echo "export BUILD_PATH='/home/circleci/project"
+echo "export BUILD_PATH='/home/circleci/project'" >> $BASH_ENV
 echo "export MULTIDEV_NAME=$MULTIDEV_NAME" >> $BASH_ENV
 echo "export MULTIDEV_SITE_URL='https://${MULTIDEV_NAME}-docs-preview.pantheonsite.io/docs/'" >> $BASH_ENV
 echo "export CI_BUILD_URL='${CIRCLE_BUILD_URL}'" >> $BASH_ENV

@@ -24,7 +24,7 @@ The recent 2.x releases of Terminus signify a major version upgrade, which may n
 
 Navigate to the directory where Terminus was originally installed, then run:
 
-```bash
+```bash{promptUser: user}
 curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
 ```
 
@@ -42,10 +42,10 @@ releases.
 
 If the update command above returns output indicating that no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the install command:
 
-```bash
-    rm -rf $HOME/terminus mkdir $HOME/terminus cd $HOME/terminus curl -O
-    https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-    && php installer.phar install
+```bash{promptUser: user}
+rm -rf $HOME/terminus mkdir $HOME/terminus cd $HOME/terminus curl -O
+https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+php installer.phar install
 ```
 
 ## EOL Timeline
@@ -56,7 +56,8 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version           | EOL Date  |
 | ----------------- | --------- |
-| 2.3.0             | TBD       |
+| 2.4.0             | TBD       |
+| 2.3.0             | 6/20/2021 |
 | 2.2.0             | 1/11/2021 |
 | 2.1.0             | 9/26/2020 |
 | 2.0.0             | 9/03/2020 |

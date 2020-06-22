@@ -2,15 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 function TerminusVersion({ text }) {
-  const { site } = useStaticQuery(
+  const { terminusReleasesJson } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            terminus {
-              version
-            }
-          }
+        terminusReleasesJson {
+          tag_name
         }
       }
     `
@@ -18,7 +14,7 @@ function TerminusVersion({ text }) {
 
   return (
     <h2>
-      {text} {site.siteMetadata.terminus.version}
+      {text} {terminusReleasesJson.tag_name}
     </h2>
   )
 }
