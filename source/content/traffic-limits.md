@@ -6,15 +6,15 @@ tags: [billing, measure, traffic]
 reviewed: "2020-06-22"
 ---
 
-Pantheon’s customers generate the most value from WebOps, and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of pricing plan, and we deploy backend resources to support your continued success.
+Pantheon’s customers generate the most value from [WebOps](https://pantheon.io/webops?docs), and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs), and we deploy [backend resources](/platform-resources#platform-resources) to support your continued success.
 
-The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. Our [Metrics in the Site Dashboard](/metrics) doc outlines available traffic metrics, where to find them in the Dashboard, and why they [rarely match other analytics](#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) like Google Analytics.
+The number of unique visits displayed in [Pantheon’s Site Dashboard](/metrics) determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
 
 ## Site Traffic Measurement Model
 
-Pantheon helps ensure your sites are performing at their best by provisioning server-side resources designed to support the traffic associated with your selected pricing plan. When the traffic to sites consistently exceeds the limits of your plan, Pantheon may automatically adjust you to a pricing plan to better maintain your site performance.
+Pantheon helps ensure your sites are performing at their best by provisioning server-side resources designed to support the traffic associated with your selected pricing plan. When the site traffic consistently exceeds the limits of your plan, Pantheon may automatically adjust you to a pricing plan to better maintain your site performance.
 
-Site traffic consists of two components: Site Visits and Pages Served. The Site Dashboard gives you immediate access to these metrics that are refreshed daily. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using Pantheon's Site Dashboard.
+Site traffic consists of two components: **Site Visits** and **Pages Served**. The Site Dashboard gives you immediate access to these metrics, which are refreshed daily. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using Pantheon's Site Dashboard.
 
 ## Traffic Metrics
 
@@ -22,7 +22,7 @@ Site traffic consists of two components: Site Visits and Pages Served. The Site 
 
 ## How does traffic affect performance?
 
-Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](https://pantheon.io/docs/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences or if you expect a heavier load of traffic, you will need to increase the plan size so that you can continue to expect a site that runs smoothly.
+Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences or if you expect a heavier load of traffic, you will need to increase the plan size so that you can continue to expect a site that runs smoothly.
 
 ## Measurement of Traffic
 
@@ -30,7 +30,7 @@ Each site is provisioned for optimal performance based on the traffic load it is
 
 **Measurement**. Pantheon defines “visits” in the Site Dashboard as set out above under “Site Visits.”
 
-**Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback and requests for Pantheon to consider additional exclusions by [contacting support](/support) if they experience issues with their site for any of the following:
+**Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback. [Contact support](/support) to request that Pantheon consider additional exclusions if you experience issues with your site and any of the following:
 
 - **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard. Under regular CMS use cases, these supporting requests to render HTML pages for users with browsers are not a concern.
 - **Excessive Bandwidth Usage**: Individual sites consuming excessive bandwidth may be contacted separately by Pantheon for monitoring and actions required to address any plan abuse.
@@ -40,9 +40,9 @@ Each site is provisioned for optimal performance based on the traffic load it is
   - Some bots and crawlers present themselves as end-user browsers. This makes their behavior difficult to distinguish from human end users. Some bots exhibiting this behavior, while they claim to be regular browsers, remain distinctive enough to exclude from billing.
   - To block specific bots and crawlers from your site, [add them to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or [use PHP to block specific User Agents](/optimize-site-traffic#block-user-agents-in-drupal-or-wordpress).
 
-If there are specific cases that create traffic spikes or events for your site, we encourage you to contact Pantheon support for more tailored tools to support those issues unique to your site.
-
 Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
+
+If there are specific cases that create traffic spikes or events for your site, we encourage you to [contact Pantheon support](/support) for more tailored tools to support those issues unique to your site.
 
 ## Traffic Limits and Overages
 

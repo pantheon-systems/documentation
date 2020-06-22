@@ -40,13 +40,13 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 How do you know if a visit counts?
 
-If the visit:
+The visit counts if it:
 
 - Is valid
 - Is not a known bot
 - Reurns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response
   - That originates from PHP
 
-It counts as a visit. Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
+Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
 
 ![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../images/platform-traffic-counted.png)
