@@ -1,76 +1,67 @@
 ---
 title: Traffic Limits and Overages
-description: Information on how Pantheon measures site traffic
+description: Information on how Pantheon measures site traffic in visits and pages served.
 categories: [performance]
 tags: [billing, measure, traffic]
-reviewed: "2020-02-26"
+reviewed: "2020-06-22"
 ---
-Pantheon defines plan levels based on traffic to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform. Our [Metrics in the Site Dashboard](/metrics) outlines available traffic metrics, where to find them in the Dashboard, and why they [rarely match other analytics](#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) like Google Analytics.
 
-## Overage Protection
-All Performance plans include **Overage Protection** to prevent one-time traffic spikes from causing billing issues. If the change to traffic behavior is sustained, the site will eventually be moved to the appropriate Performance plan. This provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
+Pantheon’s customers generate the most value from WebOps, and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of pricing plan, and we deploy backend resources to support your continued success.
 
-Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period. The overage charge is $2.50 per 1,000 visits (no proration).
+The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. Our [Metrics in the Site Dashboard](/metrics) doc outlines available traffic metrics, where to find them in the Dashboard, and why they [rarely match other analytics](#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) like Google Analytics.
+
+## Site Traffic Measurement Model
+
+Pantheon helps ensure your sites are performing at their best by provisioning server-side resources designed to support the traffic associated with your selected pricing plan. When the traffic to sites consistently exceeds the limits of your plan, Pantheon may automatically adjust you to a pricing plan to better maintain your site performance.
+
+Site traffic consists of two components: Site Visits and Pages Served. The Site Dashboard gives you immediate access to these metrics that are refreshed daily. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using Pantheon's Site Dashboard.
 
 ## Traffic Metrics
 
 <Partial file="traffic-dl.md" />
 
-For details, see [Metrics in the Site Dashboard](/metrics).
+## How does traffic affect performance?
+
+Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and many other features are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences or if you expect a heavier load of traffic, you will need to increase the plan size so that you can continue to expect a site that runs smoothly.
+
+## Measurement of Traffic
+
+### Traffic Metrics
+
+**Measurement**. Pantheon defines “visits” in the Site Dashboard as set out above under “Site Visits.”
+
+**Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback and requests for Pantheon to consider additional exclusions by [contacting support](/support) if they experience issues with their site for any of the following:
+
+- **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard. Under regular CMS use cases, these supporting requests to render HTML pages for users with browsers are not a concern.
+- **Excessive Bandwidth Usage**: Individual sites consuming excessive bandwidth may be contacted separately by Pantheon for monitoring and actions required to address any plan abuse.
+- **404 and Other Client Errors**: Pantheon only counts pages returned with [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) HTTP response codes in traffic metrics. The platform does not count "redirects" which are returned as [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) responses, and "client errors," which are returned as [400-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors) responses, as part of plan traffic limits.
+- **Bots and Crawlers*:
+  - A high-performance response to crawlers supports SEO, which is one of the reasons Pantheon is a platform of choice for our customers. Although it places load on the platform, Pantheon excludes select automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. See above definition of Visits regarding the combination of datasets to determine traffic metrics. Pantheon excludes certain activity on your Site Dashboard (e.g., Google bot user agent).
+  - Some bots and crawlers present themselves as end-user browsers. This makes their behavior difficult to distinguish from human end users. Some bots exhibiting this behavior, while they claim to be regular browsers, remain distinctive enough to exclude from billing.
+
+If there are specific cases that create traffic spikes or events for your site, we encourage you to contact Pantheon support for more tailored tools to support those issues unique to your site.
 
 Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
 
-### Traffic Spikes
-A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
-
-### Sustained Traffic
-Sustained traffic is two consecutive months of being over the site plan limit.
-
-### Static Assets
-Static requests (images PDFs, CSS, JS, etc) are not included in our normal traffic metrics. Under regular CMS use-cases, these supporting requests to render HTML pages for users with browsers are not a concern.
-
-However we do reserve the right to review individual sites that are excessive bandwidth consumers. If sites are serving static assets at an excessive rate, this can be considered plan abuse.
-
-### 404s and Other Client Errors
-Pantheon only counts pages returned, considered [`200` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success), in traffic metrics. The Platform does not count "redirects" which are returned as [`300` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) and "client errors," which are returned as [`400` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors), as part of plan traffic limits.
-
-### Bots and Crawlers
-Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
-
-Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible. If you've encountered a bot or crawler that we should consider blocking Platform-wide, please [contact support](/support).
-
-To block specific bots and crawlers from your site, [add them to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or [use PHP to block specific User Agents](/optimize-site-traffic#block-user-agents-in-drupal-or-wordpress).
-
 ## Frequently Asked Questions
 
-### How will Pantheon reach out to me if my site has an overage?
-For sites on the Basic plan, overages are charged at the end of the month.
+### Where can I manage my plan along with my site traffic?
 
-For sites on Performance plans, we will notify you if your site exceeds the limit for the plan. If this happens on the following month, your site will be bumped to the appropriate plan. Overage protection keeps you from being charged in the first month of sustained traffic.
+Your [Pantheon Site Dashboard](/metrics) includes site traffic, measured against your plan, and information on pages served and unique visits specifically. You can [upgrade your plan](/site-plan) from the Site Dashboard at any time.
 
-### How will Pantheon let me know my site will automatically be bumped to the next level?
-You will receive a communication that you are over on month one, and again on month two when the plan level is changed.
+### How can I change my Performance plan if I need to scale up to handle more traffic?
 
-### What if my site's metrics exceed the limit of the Performance Extra Large Plan?
-The Performance Extra Large Plan allows for 300,000 monthly visits and 1.5 million monthly page views. High traffic sites should be moved to an Elite plan. To learn about moving to an Elite Plan, please [contact us](https://pantheon.io/contact-us?docs).
-
-If you need time or are unable to commit to an annual contract, sites that exceed the Performance Extra Large limits will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
-
-| Payment Type      | Price            |
-|:----------------- |:---------------- |
-| List Monthly      |  $2,000          |
-| List Annual       |  $22,000         |
-
-Note that the annual plan prices are listed as annual cost.
-
-### How can I change my Performance size plan if I need to scale up to handle more traffic?
-You can upgrade your plan in your dashboard at any time. You may not be able to downgrade to a smaller performance size plan based on your traffic history.
+You can [upgrade your plan](/site-plan) in the Site Dashboard at any time. Pantheon understands usage levels may vary for some of our customers, but if you're experiencing sustained traffic that's higher than your plan limit, you can update your plan yourself.
 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
 
-Analytics suites (like Google Analytics) are measuring fundamentally different things when compared to Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
+Website traffic is an important indicator of a successful website. Analytics suites (e.g. Google Analytics, Similarweb, Mixpanel) each serve a different purpose from Pantheon’s Site Dashboard.
 
-We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippet is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
+Pantheon tracks every single request to the platform. In contrast, analytics tools will typically only track complete "pageviews" on an HTML page containing a tracking snippet that can fire off a subsequent request to the analytics platform.
+
+This table shows some of the reasons why traffic in the Dashboard may differ from your analytics suite:
+
+<Partial file="traffic-analytics-table.md" />
 
 For example, the following traffic will be collected in our logs, but will not be present in most analytics:
 
@@ -81,30 +72,25 @@ For example, the following traffic will be collected in our logs, but will not b
 - Automated traffic from bots or load testing.
 - Content pre-fetching by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
 
-This table helps show why traffic in the Dashboard may differ from your analytics suite:
-
-<Partial file="traffic-analytics-table.md" />
-
 Analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only".
 
 Content pre-fetching increasingly plays a role in driving up traffic metrics without having the same impact on visitor-centric analytics. Speculatively loading pages in the background is a common tactic to improve the user experience on the web, which we support people using. However, this does generate more overall traffic from the perspective of the platform.
 
+### What traffic is excluded from Pantheon's metrics?
+
+Certain activities are generally excluded from the calculation of visits and pages served on a case-by-case basis at Pantheon’s discretion, and subject to Pantheon’s [Acceptable Usage Policy](https://legal.pantheon.io) (AUP). Customers may request that Pantheon consider excluding traffic sources by [contacting support](/support) if they experience particular issues with configuring their site for any of the following: Static Assets; 404 and other Client Errors; Bots and Crawlers.
+
 ### What about load tests or penetration tests?
-We encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
-However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform.
+Load tests and other performance reviews of the Pantheon platform are generally prohibited by our AUP. Although it may result in significant traffic spikes, Pantheon fully supports customers choosing to load test their site (excluding the platform). Contact Pantheon Support prior to performing such tests to make them aware there will be an extraordinary event. You should contact Pantheon support prior to performing such tests to make us aware there will be an extraordinary event to be sure we consider this for overages.
 
-If you identify a platform issue, please let us know. If an issue is identified with your codebase, we can recommend a Partner or connect you with our Professional Services team to help you with remediation.
-
-### What about legitimate traffic spikes?
-We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine under this circumstance, and it's one of the main reasons people choose us to run their sites.
-
-Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the site's plan in relation to the load it puts on the platform.
+If you identify an underlying issue that may affect the platform, please let us know. If an issue is identified with your codebase, Pantheon is here to help. We can recommend a Partner or connect you with our [Professional Services](/professional-services) team to help you with remediation.
 
 ### What about Denial of Service and other attacks?
-We are well aware that malicious actors can create a ton of traffic out of nowhere and that this is not a fair measure of what a customer should pay for. We are more than willing to investigate discrepancies between our traffic measurements and other site analytics on a case by case basis.
 
-As above, in cases where these events are regular or sustained, we reserve the right to right-size a site plan. If a site's real load on the platform is consistently higher than what appears in end-user analytics, fairness demands that the site plan fit its usage.
+Malicious actors can create unplanned events in traffic, and this is not a fair measure of value a customer receives from our platform. We ask that customers help us identify and support the investigation of these issues. On a case by case basis, Pantheon may choose to waive overages in its judgment weighing factors such as how many clients are affected, to what degree could this have been addressed by customers, and how uniquely Pantheon is positioned to help our customers resolve these issues.
+
+Malicious actors are different from unwanted traffic, which may be unique to a customer’s preferences for the targeted audience of their site. From a traffic measurement perspective, Pantheon is focused on omitting traffic that is objectively malicious.
 
 ## See Also
 
