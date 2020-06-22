@@ -1,6 +1,6 @@
-The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served. Traffic information is refreshed daily.
+The number of unique visits displayed in Pantheon’s Site Dashboard represents the traffic measurement Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes the number of pages served, to help evaluate trends, and project future traffic. Traffic information is refreshed daily.
 
-The data comes directly from our Global CDN, which tracks _all_ requests for resources on Pantheon. However, known bots and crawlers do not count towards site traffic limits, nor do we meter requests for static assets (images, PDFs, CSS, JS, etc.).
+The data comes directly from our Global CDN, which tracks _all_ requests for resources on Pantheon. However, many known bots and crawlers do not count towards site traffic limits, nor do we meter requests for static assets (images, PDFs, CSS, JS, etc.).
 
 <dl>
 
@@ -34,6 +34,19 @@ The number of Pages Served allowed for each Site Plan is five times the maximum 
 
 For both metrics, the platform counts based on the total volume of requests, which includes visitors receiving pages (or other CMS-generated resources) which are served from our Global CDN cache.
 
+![Diagram demonstrating how pages served and visits are tracked](../images/dashboard/metrics-diagram.png)
+
 As shown here, visits and visitors have different meanings. If two visitors go to the site, and one opens another page but the other leaves, that would be tracked as two visitors; three pages served. If one of those visitors returns again the next day, it would be counted as two visitors, three visits, and four pages served.
+
+How do you know if a visit counts?
+
+If the visit:
+
+- Is valid
+- Is not a known bot
+- Reurns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response
+  - That originates from PHP
+
+It counts as a visit. Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
 
 ![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../images/platform-traffic-counted.png)
