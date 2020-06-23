@@ -32,7 +32,8 @@ Each site is provisioned for optimal performance based on the traffic load it is
 
 **Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback. [Contact support](/support) to request that Pantheon consider additional exclusions if you experience issues with your site and any of the following:
 
-- **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard. Under regular CMS use cases, these requests supporting requests to render HTML pages for users with browsers do not count as additional visits.
+- **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard.
+  - Under regular CMS use cases, these requests to render HTML pages for users with browsers do not count as additional visits.
 - **Excessive Bandwidth Usage**: Individual sites consuming excessive bandwidth may be contacted separately by Pantheon for monitoring and actions required to address any plan abuse.
 - **404 and Other Client Errors**: Pantheon only counts pages returned with [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) HTTP response codes in traffic metrics. The platform does not count "redirects" which are returned as [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) responses, and "client errors," which are returned as [400-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors) responses, as part of plan traffic limits.
 - **Bots and Crawlers**:
