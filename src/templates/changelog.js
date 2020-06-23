@@ -112,7 +112,7 @@ class ChangelogTemplate extends React.Component {
             prevTitle="Older"
             nextTitle="Newer"
           />
-        </div>
+        </main>
       </Layout>
     )
   }
