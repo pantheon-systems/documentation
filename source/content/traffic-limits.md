@@ -22,7 +22,7 @@ Site traffic consists of two components: **Site Visits** and **Pages Served**. T
 
 ## How does traffic affect performance?
 
-Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences or if you expect a heavier load of traffic, you will need to increase the plan size so that you can continue to expect a site that runs smoothly.
+Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to increase the plan size so that you can continue to expect a site that runs smoothly.
 
 ## Measurement of Traffic
 
@@ -32,7 +32,7 @@ Each site is provisioned for optimal performance based on the traffic load it is
 
 **Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback. [Contact support](/support) to request that Pantheon consider additional exclusions if you experience issues with your site and any of the following:
 
-- **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard. Under regular CMS use cases, these supporting requests to render HTML pages for users with browsers are not a concern.
+- **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard. Under regular CMS use cases, these requests supporting requests to render HTML pages for users with browsers do not count as additional visits.
 - **Excessive Bandwidth Usage**: Individual sites consuming excessive bandwidth may be contacted separately by Pantheon for monitoring and actions required to address any plan abuse.
 - **404 and Other Client Errors**: Pantheon only counts pages returned with [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) HTTP response codes in traffic metrics. The platform does not count "redirects" which are returned as [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) responses, and "client errors," which are returned as [400-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors) responses, as part of plan traffic limits.
 - **Bots and Crawlers**:
@@ -54,7 +54,7 @@ Pantheon monitors your site traffic as part of our evaluation of overall site he
 
 ### Overage Protection
 
-Pantheon designed Overage Protection to prevent one-time traffic spikes causing billing issues. All Performance plans and higher include Overage Protection, which provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
+Pantheon designed Overage Protection to prevent one-time traffic spikes from causing billing issues. All Performance plans and higher include Overage Protection, which provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
 
 If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change ahead of time.
 

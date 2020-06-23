@@ -8,7 +8,11 @@ reviewed: "2020-06-22"
 
 Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/quickstart/create-test-live). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
 
-To access metrics for another environment, use the [Terminus](/terminus) `metrics` command.
+To access metrics for another environment, use the [Terminus](/terminus) `metrics` command:
+
+```bash{promptUser: user}
+terminus metrics <site>.<env>
+```
 
 ## Access Metrics
 
@@ -43,7 +47,7 @@ Raw data is not currently available.
 
 ### Why doesn't Pantheon's traffic match my analytics?
 
-There are some inherent limitations with using an analytics suite (e.g., Google Analytics) when measuring site traffic. For details, see [Traffic Limits and Overages](/traffic-limits/#why-doesnt-pantheons-traffic-match-my-analytics).
+There are some inherent limitations with using an analytics suite (e.g., Google Analytics) when measuring site traffic. For details, see [Traffic Limits and Overages](/traffic-limits#why-doesnt-pantheons-traffic-match-my-analytics).
 
 ### How does Pantheon handle overages?
 
