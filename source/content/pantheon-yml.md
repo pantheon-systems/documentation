@@ -38,7 +38,8 @@ The `pantheon.upstream.yml` file provided by your upstream might define protecte
 
 #### Considerations
 
-* Specify the exact path; no regex or wildcards allowed
+* Specify the exact path; path is case-sensitive
+* No regex or wildcards allowed
 * Paths begin with a leading `/` and are relative to your docroot
 * Limited to 24 protected paths
 * You may not be able to protect files or paths with special characters
