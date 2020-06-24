@@ -57,7 +57,7 @@ Yes, you can; your Git repository is not restricted. If you do not use Multidev,
 Yes. Push a new branch from your local (e.g., `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
 
 ## Is there a limit on the number of branches or environments?
-There is no limit on the number of branches you can have in your Git repository. The limit on forked environments is 10 per site.
+There is no limit on the number of branches you can have in your Git repository. The limit on Multidev environments is 10 per site.
 
 ## Can I associate a domain with a branch environment?
 
@@ -77,7 +77,7 @@ No, but developers can use [Quicksilver hooks](/quicksilver/#hooks) to integrate
 
 ## Can I backup and restore a branch environment?
 
-Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
+Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage Multidev environments.
 
 ## Will I lose access to Multidevs if the organization downgrades the plan?
 
