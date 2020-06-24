@@ -44,21 +44,7 @@ Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) 
 
 If there are specific cases that create traffic spikes or events for your site, we encourage you to [contact Pantheon support](/support) for more tailored tools to support those issues unique to your site.
 
-## Traffic Limits and Overages
-
-Pantheon optimizes the resources and performance of your site based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs). Your pricing plan determines the backend resources Pantheon deploys to support site performance and to serve the corresponding traffic levels for each plan. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using [Pantheon's Site Dashboard](/metrics).
-
-As your site grows on Pantheon, you are able to modify your plan based on the metrics you find in the Site Dashboard. If your traffic is continually over your plan limit, we may automatically adjust you to a pricing plan that better aligns with your traffic growth. This is important to ensure the continued performance of all sites on Pantheon, and to avoid any negative impact to your site as traffic levels change.
-
-Pantheon monitors your site traffic as part of our evaluation of overall site health. To understand the limits associated with your pricing plan, visit the [pricing comparison page](https://pantheon.io/pricing-comparison?docs) for additional information.
-
-### Overage Protection
-
-Pantheon designed Overage Protection to prevent one-time traffic spikes from causing billing issues. All Performance plans and higher include Overage Protection, which provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
-
-If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change ahead of time.
-
-Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period. The overage charge is $2.50 per 1,000 visits (no proration).
+<Partial file="traffic-limits-overages.md" />
 
 ## Frequently Asked Questions
 
@@ -89,40 +75,14 @@ Content pre-fetching increasingly plays a role in driving up traffic metrics wit
 
 Certain activities are generally excluded from the calculation of visits and pages served on a case-by-case basis at Pantheon’s discretion, and subject to Pantheon’s [Acceptable Usage Policy](https://legal.pantheon.io) (AUP). Customers may request that Pantheon consider excluding traffic sources by [contacting support](/support) if they experience particular issues with configuring their site for any of the following: Static Assets; 404 and other Client Errors; Bots and Crawlers.
 
-### What about load tests or penetration tests?
-
-Load tests and other performance reviews of the Pantheon platform are generally prohibited by our [AUP](https://legal.pantheon.io). Although it may result in significant traffic spikes, Pantheon fully supports customers choosing to load test their site (excluding the platform). Contact Pantheon Support prior to performing such tests to make them aware there will be an extraordinary event. You should contact Pantheon support prior to performing such tests to make us aware there will be an extraordinary event to be sure we consider this for overages.
-
-If you identify an underlying issue that may affect the platform, please let us know. If an issue is identified with your codebase, Pantheon is here to help. We can recommend a Partner or connect you with our [Professional Services](/professional-services) team to help you with remediation.
-
-### What about Denial of Service and other attacks?
-
-Malicious actors can create unplanned events in traffic, and this is not a fair measure of value a customer receives from our platform. We ask that customers help us identify and support the investigation of these issues. On a case by case basis, Pantheon may choose to waive overages in its judgment weighing factors such as how many clients are affected, to what degree could this have been addressed by customers, and how uniquely Pantheon is positioned to help our customers resolve these issues.
-
-Malicious actors are different from unwanted traffic, which may be unique to a customer’s preferences for the targeted audience of their site. From a traffic measurement perspective, Pantheon is focused on omitting traffic that is objectively malicious.
-
-### What about legitimate traffic spikes?
-
-The internet can make any website famous overnight, and this may not be under your control. Pantheon's platform is designed to support such events, and it's one of the main reasons people choose us to run their sites. Luckily, traffic spikes are easily discernible and we take this into account when monitoring overages. Sustained traffic overages will continue to require an adjustment to your pricing plan as set out above.
-
-### Will Pantheon warn me if my site has an overage?
-
-Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. These adjustments will be communicated via email.
-
-### Where can I manage my plan along with my site traffic?
-
-Your [Pantheon Site Dashboard](/metrics) includes site traffic, measured against your plan, and information on pages served and unique visits specifically. You can [upgrade your plan](/site-plan) from the Site Dashboard at any time.
-
-### How can I change my Performance plan if I need to scale up to handle more traffic?
-
-You can [upgrade your plan](/site-plan) in the Site Dashboard at any time. Pantheon understands traffic levels may vary by season or event for some of our customers, but if you're experiencing sustained traffic that's higher than your plan limit, you can update your plan yourself.
-
-We encourage all customers to take advantage of [Overage Protection](#overage-protection), which prevents one-time traffic spikes causing billing issues.
+<Partial file="traffic-overages-faq.md" />
 
 ## See Also
 
-- [Site Plans FAQs](/site-plans-faq)
-- [Manage Plans in the Site Dashboard](/site-plan)
 - [Billing in the Site Dashboard](/site-billing)
+- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
+- [Manage Plans in the Site Dashboard](/site-plan)
 - [Metrics in the Site Dashboard](/metrics)
+- [Site Plans FAQs](/site-plans-faq)
+- [Traffic Overages and the Site Plan](/overages-site-plan)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site
