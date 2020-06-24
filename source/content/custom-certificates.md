@@ -20,7 +20,7 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 
 1. Please [contact sales](https://pantheon.io/contact-us) if you are not a contract customer.
 
-1. After a closed contract, Pantheon Professional Services will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
+1. After a closed contract, Pantheon Onboarding Team will provide you with the CSR file, to pass on to your **Certificate Authority** (CA).   See [CA Limitations](#ca-limitations) below for more information. You must use a Pantheon-generated CSR.  This is a hard requirement.  If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
 
 1. Once you have a set of certificates from the CA, send us:
 
