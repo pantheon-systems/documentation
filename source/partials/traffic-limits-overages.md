@@ -12,4 +12,4 @@ Pantheon designed Overage Protection to prevent one-time traffic spikes from cau
 
 If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change ahead of time.
 
-Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period. The overage charge is $2.50 per 1,000 visits (no proration).
+Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period.
