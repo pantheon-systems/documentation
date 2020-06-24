@@ -49,7 +49,7 @@ componentDidMount() {
           description="Zoinks! You've hit a URl that doesn't exist. Let's try a search:"
         />
         <div style={{ marginTop: "-20px" }} className="container">
-          <div className=" doc-content-well">
+          <main className=" doc-content-well" id="doc">
             <div className="mb-70">
               <img className="notfound" src={SVG404} />
 
@@ -95,7 +95,7 @@ componentDidMount() {
                 </div>
               </div>
             </div>
-          </div>
+          </main>
         </div>
       </Layout>
     )
