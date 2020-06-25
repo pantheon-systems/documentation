@@ -100,7 +100,7 @@ You can pre-provision HTTPS via DNS records, or the Let's Encrypt ACME challenge
  - You cannot host the provided verification file on the current site.
  - Your current server doesn't support files without extension names (like IIS with .NET)
 
-Verifying with the provided DNS record is the preffered method for customers who can make new DNS records for their domain(s).
+Verifying with the provided DNS record is the preferred method for customers who can make new DNS records for their domain(s).
 
 If you do not already have HTTPS, you don't need to pre-provision, but doing so will allow you to launch your Pantheon site with HTTPS already enabled, and is recommended.
 
