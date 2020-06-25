@@ -16,9 +16,7 @@ A visitor is a person or device who/that receives information from the site. The
 
 <dd>
 
-We consider a Site Visit as a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response code (and some [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection)*) in response to a visitor, and we identify unique consumers as a combination of user agent (device/browser) and IP address (network source), as shown in the diagram below.
-
-*300-level response codes that count as traffic: 303, 304, 305.
+We consider a Site Visit as a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) (and some [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection)<Popover content="300-level response codes that count as traffic: 303, 304, 305." />) response code in response to a visitor, and we identify unique consumers as a combination of user agent (device/browser) and IP address (network source), as shown in the diagram below.
 
 </dd>
 
