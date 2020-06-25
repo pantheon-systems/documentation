@@ -85,6 +85,12 @@ export SITE=yoursitename
 
 1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/multidev) environment set to [SFTP mode](#sftp-mode).
 
+  <Alert title="Note" type="info">
+
+  If the plugin being removed required symlinks to bypass assumed write access to the code base, be sure to [remove](/symlinks-assumed-write-access#removing-a-symlink) them as well.
+
+  </Alert>
+
 1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/multidev#merge-code) the change to Dev at this point.
 
 1. Use [WP-CLI](/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
