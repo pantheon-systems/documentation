@@ -69,6 +69,34 @@ Prompts asking for connection information will occur in the WordPress Dashboard 
 
 You should *never* have to enter credentials into the WordPress Dashboard. Visit the Site Dashboard and set the environment's connection mode to **SFTP**, then try again.
 
+### Uninstall Plugins
+
+Unused plugins should be removed from the live environment. Deactivated and un-updated plugins can pose a security concern, as well as contributing to code bloat. Because plugins are a mix of files in the code base and configuration in the database, removing plugins requires several steps:
+
+<Alert title="Exports" type="export">
+
+This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+
+```bash{promptUser: user}
+export SITE=yoursitename
+```
+
+</Alert>
+
+1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/multidev) environment set to [SFTP mode](#sftp-mode).
+
+1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/multidev#merge-code) the change to Dev at this point.
+
+1. Use [WP-CLI](/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
+
+  ```bash{promptUser: user}
+  terminus wp $SITE.live -- plugin uninstall <plugin-name> --skip-delete
+  ```
+
+1. In the Test environment, [combine](/pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) the code changes from Dev and the Content (database) changes from Live to test and validate that your change is valid.
+
+1. Once you've confirmed in the Test environment that the plugin is removed and nothing has broken, [deploy the code change to the Live environment](/pantheon-workflow#deploy-code-to-live).
+
 ## Drupal Admin Interface
 
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface).
