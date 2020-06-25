@@ -91,16 +91,18 @@ Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to
 
 Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
 
-Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
+Existing sites that are not already hosted on Pantheon can [pre-provision HTTPS](/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
 <Alert title="Note" type="info">
 
-You cannot pre-provision HTTPS if:
+You can pre-provision HTTPS via DNS records, or the Let's Encrypt ACME challenge file. You cannot use the challenge file if:
 
  - You cannot host the provided verification file on the current site.
  - Your current server doesn't support files without extension names (like IIS with .NET)
 
-If you do not already have HTTPS, there's _no need_ to pre-provision.
+Verifying with the provided DNS record is the preferred method for customers who can make new DNS records for their domain(s).
+
+If you do not already have HTTPS, you don't need to pre-provision, but doing so will allow you to launch your Pantheon site with HTTPS already enabled, and is recommended.
 
 </Alert>
 
