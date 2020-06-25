@@ -16,7 +16,7 @@ A visitor is a person or device who/that receives information from the site. The
 
 <dd>
 
-We consider a Site Visit as a 200-level response code in response to a visitor, and we identify unique consumers as a combination of user agent (device/browser) and IP address (network source), as shown in the diagram below.
+We consider a Site Visit as a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) (and some [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection)<Popover content="300-level response codes that count as traffic: 303, 304, 305." />) response code in response to a visitor, and we identify unique consumers as a combination of user agent (device/browser) and IP address (network source), as shown in the diagram below.
 
 </dd>
 
@@ -44,7 +44,8 @@ The visit counts if it:
 
 - Is valid
 - Is not a known bot
-- Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP
+- Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP;
+  - Or returns a [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) of 303, 304, or 305.
 
 Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
 
