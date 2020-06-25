@@ -26,6 +26,8 @@ The plugin disables automatic updates of all plugins, themes, and WordPress core
 
 The Test and Live environment codebases also cannot be written to, preventing automatic updates from downloading files from WordPress.org. Any plugin or theme updates must be performed in a development environment then committed and deployed to the Test and Live environments. WordPress core updates must be applied to a development environment via our Git-based [upstream core updates feature](/core-updates).
 
+Check out the WordPress Dashboard section of [Working in the WordPress Dashboard and Drupal Admin Interface](cms-admin#wordpress-dashboard) for more information on managing plugins and themes across multiple environments.
+
 ### [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/master/wp-content/mu-plugins/pantheon/pantheon-page-cache.php)
 Facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
 
