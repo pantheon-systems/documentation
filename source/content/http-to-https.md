@@ -147,30 +147,3 @@ If your site configuration prevents you from setting the primary domain from the
 </Accordion>
 
 Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains/#-see-more-redirect-scenarios).
-
-## Spot-check new and existing redirects
-
-Consider your site's existing redirect logic and minimize the number of redirects whenever possible.
-
-The bare domain should resolve to the preferred URL in a single redirect, like this:
-
-* http://example.com => https://www.example.com
-
-Not like this:
-
-* http://example.com => https://example.com => https://www.example.com
-
-cURL the bare domain with HTTP and review the output, checking for a single redirect like:
-
-```bash{outputLines:2-4}
-curl -LI http://example.com/
-HTTP/1.1 301 Moved Permanently
-Content-Type: text/html; charset=UTF-8
-Location: https://www.example.com/
-```
-
-You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/) to investigate redirect behaviors as an alternative to cURL:
-
-![Varvy Redirects example.com](../images/varvy-redirect-mapper.png)
-
-Check all configured services when looking for redirects to remove, like page rules on some external CDN.
