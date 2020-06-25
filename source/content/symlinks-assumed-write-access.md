@@ -46,7 +46,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     mv ./wp-content/path/plugin-expects-write-to $_ENV['HOME']/tmp/backups
     ```
 
-    The command above moves the directory to the environment's home directory `/tmp/backups`. Replace this with your preferred backup location. Keep in mind that due to Pantheon's [container infrastructure](/application-containers), bindings may change and the only persistent directories that can be writen to are `/files` and `/code`.
+    The command above moves the directory to the environment's home directory `/tmp/backups`. Replace this with your preferred backup location. Keep in mind that due to Pantheon's [container infrastructure](/application-containers), bindings may change and the only persistent directories that can be written to on the platform are `/files` and `/code`.
 
 1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
 
