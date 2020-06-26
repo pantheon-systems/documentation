@@ -71,7 +71,7 @@ You should *never* have to enter credentials into the WordPress Dashboard. Visit
 
 ### Uninstall Plugins
 
-Unused plugins should be removed from the live environment. Deactivated and un-updated plugins can pose a security concern, as well as contributing to code bloat. Because plugins are a mix of files in the code base and configuration in the database, removing plugins requires several steps:
+Unused plugins should be removed from the Live environment. Deactivated and un-updated plugins can pose a security concern and they contribute to code bloat. Because plugins are a mix of files in the codebase and configuration in the database, removing plugins requires several steps:
 
 <Alert title="Exports" type="export">
 
@@ -87,7 +87,7 @@ export SITE=yoursitename
 
   <Alert title="Note" type="info">
 
-  If the plugin being removed required symlinks to bypass assumed write access to the code base, be sure to [remove](/symlinks-assumed-write-access#removing-a-symlink) them as well.
+  If the plugin being removed required symlinks to bypass assumed write access to the codebase, be sure to [remove](/symlinks-assumed-write-access#removing-a-symlink) them as well.
 
   </Alert>
 
@@ -109,7 +109,7 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 <Alert title="Warning" type="danger">
 
-Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/support/#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
+Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/support#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
 
 </Alert>
 
