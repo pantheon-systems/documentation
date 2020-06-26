@@ -44,7 +44,7 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
   Take action on the edge based on the physical location of the user (eg. blocking or redirecting based on country) or send back location information to your application for more custom control.
 - **Device detection and edge control**
-- **Persistent presence for continual uptime**
+- **Persistent Uptime**
 
   Adjusts the serve stale content setting.
 - **Full CDN edge logs**
