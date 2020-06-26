@@ -52,7 +52,7 @@ rsync is available, but it is a more advanced tool that requires experience with
 
 <Alert title="Note" type="info">
 
-You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+Either the source or the destination must be a local file or directory; both cannot be remote. You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
 
 </Alert>
 
