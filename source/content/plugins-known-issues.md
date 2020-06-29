@@ -681,10 +681,110 @@ ___
 
 ## [Wordfence](https://wordpress.org/plugins/wordfence/)
 
+**Issue:** Wordfence assumes write access to several files in the code base to store configuation and log files.
 
-**Issue 1:** The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform. This has been [reported as an issue](https://wordpress.org/support/topic/write-logs-to-the-standard-file-path/) within the plugin support forum.
+**Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
-**Issue 2:** The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/) within the plugin support forum.
+<Alert title="Exports" type="export">
+
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/multidev)) environment:
+
+```bash{promptUser: user}
+export SITE=yoursitename
+export ENV=dev
+```
+
+</Alert>
+
+1. Set your Dev (or [Multidev](/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
+
+  ```bash{promptUser: user}
+  terminus connection:set $SITE.$ENV git
+  ```
+
+1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/git#clone-your-site-codebase):
+
+  ```bash{promptUser: user}
+  git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
+  ```
+
+1. From the codebase directory, create the following symlinks:
+
+  ```bash{promptUser: user}
+  ln -s ../../files/private/wflogs ./wp-content/wflogs
+  ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
+  ln -s ../files/private/.user.ini ./.user.ini
+  ```
+
+1. Open `pantheon.yml` and add a protected web path for `.user.ini`:
+
+  ```yml:title=pantheon.yml
+  protected_web_paths:
+    - /.user.ini
+  ```
+
+1. [Set the `FS_METHOD` to `direct` in `wp-config.php`](#define-fs_method).
+
+1. Commit and push the changes to the platform:
+
+  ```bash{promptUser: user}
+  git add .
+  git commit -m "Prepare environment for Wordfence"
+  git push origin master #Or Multidev branch name
+  ```
+
+1. Create the empty files `wordfence-waf.php` and `.user.ini` to push to the site. In this example, we're using [`touch`](https://man7.org/linux/man-pages/man1/touch.1.html) to create them in the `/tmp` directory:
+
+  ```bash{promptUser: user}
+  touch /tmp/wordfence-waf.php
+  touch /tmp/.user.ini
+  ```
+
+1. Connect to your environment over SFTP, create the required directories, and push the new files. You can get the SFTP path from the Site Dashboard under **Connection Info**:
+
+  ```bash{promptUser: user}
+  sftp -o Port=2222 waf5.615e6ebd-1cfa-4fef-9e9f-42cc828d47c6@appserver.waf5.615e6ebd-1cfa-4fef-9e9f-42cc828d47c6.drush.in
+  ```
+
+  ```bash{promptUser: sftp}{outputLines: 4-5,7-8}
+  mkdir files/private
+  mkdir files/private/wflogs
+  put /tmp/wordfence-waf.php /files/private
+  Uploading /tmp/wordfence-waf.php to /files/private/wordfence-waf.php
+  /tmp/wordfence-waf.php                           100%    0     0.0KB/s   00:00    
+  put /tmp/.user.ini /files/private/
+  Uploading /tmp/.user.ini to /files/private/.user.ini
+  /tmp/.user.ini                                   100%    0     0.0KB/s   00:00    
+  exit
+  ```
+
+1. Set the environment connection mode to SFTP, then installand activate Wordfence. You can do both with Terminus:
+
+  ```bash{outputLines: 2,4-25}
+  terminus connection:set wordpress-docs-testbed.waf5 sftp
+  [notice] Enabled on-server development via SFTP for "waf5"
+  terminus wp wordpress-docs-testbed.waf5 -- plugin install --activate wordfence
+  Installing Wordfence Security – Firewall & Malware Scan (7.4.8)
+  Warning: Failed to create directory '/.wp-cli/cache/': mkdir(): Read-only file system.
+  Downloading installation package from https://downloads.wordpress.org/plugin/wordfence.7.4.8.zip...
+  Unpacking the package...
+  Installing the plugin...
+  Plugin installed successfully.
+  Activating 'wordfence'...
+  Warning: fopen(/code/wp-content/wflogs/rules.php): failed to open stream: No such file or directory in /code/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php on line 325
+  Warning: flock() expects parameter 1 to be resource, bool given in /code/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php on line 326
+  Warning: include(/code/wp-content/wflogs/rules.php): failed to open stream: No such file or directory in /code/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php on line 328
+  Warning: include(): Failed opening '/code/wp-content/wflogs/rules.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /code/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php on line 328
+  Warning: flock() expects parameter 1 to be resource, bool given in /code/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php on line 329
+  Warning: fclose() expects parameter 1 to be resource, bool given in /code/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php on line 330
+  Plugin 'wordfence' activated.
+  Success: Installed 1 of 1 plugins.
+  [notice] Command: wordpress-docs-testbed.waf5 -- wp plugin install [Exit: 0]
+  ```
+
+  You can safely ignore the warning messages.
+
+1. After clicking on **CLICK HERE TO CONFIGURE**, the plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete after downloading.
 
 ___
 
