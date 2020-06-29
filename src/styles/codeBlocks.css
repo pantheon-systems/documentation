@@ -33,6 +33,11 @@
   letter-spacing: -2px;
 }
 
+.command-line-prompt > span[data-user="sftp"]::before {
+  content: "sftp> ";
+  letter-spacing: -2px;
+}
+
 .command-line-prompt > span[data-prompt]:before {
 	content: attr(data-prompt);
 }
