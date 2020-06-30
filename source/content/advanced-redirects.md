@@ -277,21 +277,21 @@ function is_from_trusted_ip() {
     return ip_in_list($trusted_ips);
 }
  
-if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') !is_from_trusted_ip()) {
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') && !is_from_trusted_ip()) {
     // Check if the path should be locked down
     $to_lockdown = false;
    
-    $admin_disallow_uri = array(
+    $disallow_uri = array(
         '/wp-login.php',
         '/wp-admin/',
     );
    
-    $admin_allow_uri = array(
+    $allow_uri = array(
         '/wp-admin/admin-ajax.php',
         '/wp-admin/admin-post.php',
     );
    
-    foreach ($admin_disallow_uri as $prefix) {
+    foreach ($disallow_uri as $prefix) {
         if (stripos($_SERVER['REQUEST_URI'], $prefix) === 0) {
             $to_lockdown = true;
             
@@ -299,7 +299,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') !is_f
         }
     }
    
-    foreach ($admin_allow_uri as $prefix) {
+    foreach ($allow_uri as $prefix) {
         if (stripos($_SERVER['REQUEST_URI'], $prefix) === 0) {
            $to_lockdown = false;
            
