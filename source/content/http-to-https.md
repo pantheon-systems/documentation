@@ -5,6 +5,7 @@ tags: [security]
 categories: [develop]
 reviewed: "2020-02-12"
 ---
+
 All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`.
 
 When you upgrade to a paid plan you can connect a custom domain. For more information on HTTPS provisioning for custom domains see [HTTPS on Pantheon's Global CDN](/https).
@@ -104,7 +105,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
   </Alert>
 
-2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
+1. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
 
     ![Cloning the Test database to Live, while converting URLs](../images/dashboard/clone-test-to-live.png)
 
@@ -112,7 +113,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
 <Tab title="Drupal" id="tab-2-id">
 
-  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/drush/#add-custom-drush-commands).
+  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/drush/#add-custom-drush-commands).
 
   Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
 
@@ -146,4 +147,4 @@ If your site configuration prevents you from setting the primary domain from the
 
 </Accordion>
 
-Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains/#-see-more-redirect-scenarios).
+Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains#-see-more-redirect-scenarios).
