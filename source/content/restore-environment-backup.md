@@ -112,10 +112,10 @@ Using [Terminus](/terminus), you can restore all or part of a site from the comm
 
 <Alert title ="Variables" type="export">
 
-The commands below assume environment variables for `SITE` which is equal to your Site Name, and `ENV` for the environment you're working with. Replace instances of `$SITE` and `$ENV` with your site name and environment, or define environment variables:
+The commands below assume environment variables for `SITE` which is equal to your Site ID, and `ENV` for the environment you're working with. Replace instances of `$SITE` and `$ENV` with your Site ID and environment, or define environment variables:
 
 ```bash{promptUser:user}
-export SITE=yourSiteName
+export SITE=11111-1111-1111111-1111111
 export ENV=dev # or different environment name
 ```
 
