@@ -119,6 +119,7 @@ export SITE=11111-1111-1111111-1111111
 export ENV=dev # or different environment name
 ```
 
+You can determine your site's Site ID with the `terminus site:info` command.
 </Alert>
 
 1. Download the **Files** backups using the link provided in the Site Dasboard <span class="glyphicons glyphicons-download-alt"></span> **Backups** Tab:
