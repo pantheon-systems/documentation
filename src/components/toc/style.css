@@ -12,8 +12,6 @@
   #terminus h3::before {
     display: block;
     content: "";
-    height: 160px;
-    margin-top: -160px;
     visibility: hidden;
   }
 }
