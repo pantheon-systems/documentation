@@ -50,6 +50,10 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+h3.topic-info__title::before {
+  height: auto !important;
+  margin-top: auto !important;
+  }
 .topic-item .hero-video__guide-main-topic-title {
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
