@@ -68,7 +68,7 @@ const Header = ({ data, page }) => (
           </li>
           <li className="dropdown">
             <a
-              href="#"
+              href="/docs"
               className="dropdown-toggle active-trail"
               role="button"
               aria-haspopup="true"
