@@ -51,7 +51,9 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
     ```php:title="object-cache.php"
     <?php
     # This is a Windows-friendly symlink
-    require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+    if (!empty($_ENV['CACHE_HOST'])) {
+      require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+    }
     ```
 
     This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using SFTP or Git, commit the new file to the Dev environment.
