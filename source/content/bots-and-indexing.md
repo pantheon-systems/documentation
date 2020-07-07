@@ -4,6 +4,7 @@ description: Information on managing bots and indexing while avoiding performanc
 categories: [platform]
 tags: [measure, traffic]
 ---
+
 Bots are part of every public-facing website's lifecycle. We wouldn't be able to find a thing on the internet without them! Bots perform the hard work taken for granted when browsing the multitudes of indexed search results from any given search engine. In the wrong hands, bots can become nagging nuisances slowing down or even taking down your site.
 
 ## Bots in My Logs: Real World Scenarios and Identifiers
@@ -39,7 +40,8 @@ unix: - - [26/Jul/2013:15:26:37 +0000] "GET /index.php?q=gush/content/name-pimp-
 ```
 
 ## Indexing Your Pantheon Site
-It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains/#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
+
+It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```none:title=robots.txt
 # Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
@@ -56,7 +58,7 @@ User-agent: Swiftbot
 Allow: /
 ```
 
-Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
+Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/search/reference/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
 
 ### Indexing Before You Launch
 
@@ -71,7 +73,7 @@ To support pre-launch SEO and site search testing, we allow the following bots a
 - [PowerMapper](https://www.powermapper.com/products/mapper/){external}
 - [Swiftbot](https://swiftype.com/swiftbot) by Swiftype
 
-Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/support/#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
+Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/support#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
 If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon:
 
@@ -81,15 +83,8 @@ You can index your site under your production domain once it's added to the Live
 
 ## Troubleshooting
 
-### Google Results for My Site Link to HTTPS using Pantheon's Shared Certificate
-
-Google's search engine now [crawls the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
-
-- Create a sitemap that contains only HTTP links.
-- Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
-- Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests. Note that this will not fix existing indexed results from Google, and is a preventative solution rather than a reactionary, for users who don't want to serve over HTTPS.
-
 ### Sitemaps Produce a White Screen of Death (WSOD)
+
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
 
 For example, if you have a Drupal site using the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/terminus):
@@ -101,6 +96,7 @@ terminus env:clear-cache
 Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](https://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
 
 ### Legacy Sitemap Submissions Generating 404s
+
 Sitemaps can (and should) be submitted directly to Google Webmaster Tools. However, if there are legacy submissions out there generating 404s, you'll need to redirect via PHP within `wp-config.php` or `settings.php`. For example, WordPress sites running the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin can use the following:
 
 ```php
