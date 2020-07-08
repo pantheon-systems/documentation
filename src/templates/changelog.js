@@ -78,7 +78,7 @@ class ChangelogTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
         />
-        <main className="container doc-content-well" id="doc">
+        <main className="container doc-content-well" id="docs-main">
           <article className="doc article col-md-9 md-70">
             <div id="doc" className="doc article col-md-9 md-70">
               <h1 className="toc-ignore">Pantheon Changelog</h1>

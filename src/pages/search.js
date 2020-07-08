@@ -9,7 +9,7 @@ class Search extends React.Component {
       <Layout>
         <SEO image={"/assets/images/default-thumb-doc.png"} title="Search" />
         <div style={{ marginTop: "-20px" }} className="container">
-          <main className=" doc-content-well">
+          <main className=" doc-content-well" id="docs-main">
             <div className="">
               <h1 className="title">Search Results</h1>
             </div>
