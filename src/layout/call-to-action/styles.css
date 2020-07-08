@@ -40,7 +40,11 @@
   margin: 0;
   font-weight: 400;
 }
-
+.call-to-action__title::before,
+.call-to-action__type::before {
+  height: auto !important;
+  margin-top: auto !important;
+}
 .call-to-action i{
   margin-left: 1rem;
 }

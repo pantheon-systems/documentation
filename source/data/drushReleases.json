@@ -1,5 +1,46 @@
 [
   {
+    "url": "https://api.github.com/repos/drush-ops/drush/releases/28085162",
+    "assets_url": "https://api.github.com/repos/drush-ops/drush/releases/28085162/assets",
+    "upload_url": "https://uploads.github.com/repos/drush-ops/drush/releases/28085162/assets{?name,label}",
+    "html_url": "https://github.com/drush-ops/drush/releases/tag/10.3.1",
+    "id": 28085162,
+    "node_id": "MDc6UmVsZWFzZTI4MDg1MTYy",
+    "tag_name": "10.3.1",
+    "target_commitish": "master",
+    "name": "10.3.1",
+    "draft": false,
+    "author": {
+      "login": "weitzman",
+      "id": 7740,
+      "node_id": "MDQ6VXNlcjc3NDA=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7740?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/weitzman",
+      "html_url": "https://github.com/weitzman",
+      "followers_url": "https://api.github.com/users/weitzman/followers",
+      "following_url": "https://api.github.com/users/weitzman/following{/other_user}",
+      "gists_url": "https://api.github.com/users/weitzman/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/weitzman/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/weitzman/subscriptions",
+      "organizations_url": "https://api.github.com/users/weitzman/orgs",
+      "repos_url": "https://api.github.com/users/weitzman/repos",
+      "events_url": "https://api.github.com/users/weitzman/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/weitzman/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "prerelease": false,
+    "created_at": "2020-06-30T19:43:45Z",
+    "published_at": "2020-06-30T19:45:26Z",
+    "assets": [
+
+    ],
+    "tarball_url": "https://api.github.com/repos/drush-ops/drush/tarball/10.3.1",
+    "zipball_url": "https://api.github.com/repos/drush-ops/drush/zipball/10.3.1",
+    "body": "-  Handle semver contrib releases in pm:security ([#4449](https://github.com/drush-ops/drush/issues/4449))\r\n- Success log message when checking php security updates ([#4446](https://github.com/drush-ops/drush/issues/4446)) "
+  },
+  {
     "url": "https://api.github.com/repos/drush-ops/drush/releases/27765193",
     "assets_url": "https://api.github.com/repos/drush-ops/drush/releases/27765193/assets",
     "upload_url": "https://uploads.github.com/repos/drush-ops/drush/releases/27765193/assets{?name,label}",
@@ -104,7 +145,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4996227,
-        "download_count": 1473,
+        "download_count": 3865,
         "created_at": "2020-05-30T02:20:28Z",
         "updated_at": "2020-05-30T02:20:29Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.5/drush.phar"
@@ -178,7 +219,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4995568,
-        "download_count": 151,
+        "download_count": 184,
         "created_at": "2020-05-29T04:06:02Z",
         "updated_at": "2020-05-29T04:06:02Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.4/drush.phar"
@@ -252,7 +293,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5028695,
-        "download_count": 1663,
+        "download_count": 2421,
         "created_at": "2020-05-16T22:13:23Z",
         "updated_at": "2020-05-16T22:13:24Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.3/drush.phar"
@@ -572,7 +613,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4890093,
-        "download_count": 51164,
+        "download_count": 59343,
         "created_at": "2019-11-26T23:01:59Z",
         "updated_at": "2019-11-26T23:01:59Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.2/drush.phar"
@@ -851,7 +892,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4797229,
-        "download_count": 3582,
+        "download_count": 3615,
         "created_at": "2019-10-24T23:40:53Z",
         "updated_at": "2019-10-24T23:40:54Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.1/drush.phar"
@@ -1130,7 +1171,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4789623,
-        "download_count": 33596,
+        "download_count": 33844,
         "created_at": "2019-07-09T22:16:46Z",
         "updated_at": "2019-07-09T22:16:46Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.0/drush.phar"
@@ -1327,7 +1368,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4785800,
-        "download_count": 214166,
+        "download_count": 216198,
         "created_at": "2019-04-03T04:45:20Z",
         "updated_at": "2019-04-03T04:45:20Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.2.3/drush.phar"
@@ -1401,7 +1442,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4785800,
-        "download_count": 3290,
+        "download_count": 3321,
         "created_at": "2019-03-26T16:29:33Z",
         "updated_at": "2019-03-26T16:29:33Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.2.2/drush.phar"
@@ -1451,46 +1492,5 @@
     "tarball_url": "https://api.github.com/repos/drush-ops/drush/tarball/9.6.1",
     "zipball_url": "https://api.github.com/repos/drush-ops/drush/zipball/9.6.1",
     "body": "A few nice enhancements in this patch release. See below. Also see the release notes for 9.6.0 for much more new goodies. \r\n\r\n- Fixes [#3997](https://github.com/drush-ops/drush/issues/3997): Pass --db-su through to sql methods ([#3998](https://github.com/drush-ops/drush/issues/3998))\r\n- Let site:install work with just PDO and no shell commands. ([#3999](https://github.com/drush-ops/drush/issues/3999))\r\n- Add Drush Test Traits ([#4003](https://github.com/drush-ops/drush/issues/4003)) and Auto set user agent for contrib modules using DrushTT. ([#4013](https://github.com/drush-ops/drush/issues/4013))\r\n- sql:sync shouldn't crash due to leftover files. ([#4011](https://github.com/drush-ops/drush/issues/4011))\r\n- Fix [#4015](https://github.com/drush-ops/drush/issues/4015). Drush 9.6 runserver TTY mode requires /dev/tty to be read/writable\r\n- Remove usage of deprecated method defaultQuestions ([#4001](https://github.com/drush-ops/drush/issues/4001))"
-  },
-  {
-    "url": "https://api.github.com/repos/drush-ops/drush/releases/16117530",
-    "assets_url": "https://api.github.com/repos/drush-ops/drush/releases/16117530/assets",
-    "upload_url": "https://uploads.github.com/repos/drush-ops/drush/releases/16117530/assets{?name,label}",
-    "html_url": "https://github.com/drush-ops/drush/releases/tag/9.6.0",
-    "id": 16117530,
-    "node_id": "MDc6UmVsZWFzZTE2MTE3NTMw",
-    "tag_name": "9.6.0",
-    "target_commitish": "master",
-    "name": "9.6.0",
-    "draft": false,
-    "author": {
-      "login": "weitzman",
-      "id": 7740,
-      "node_id": "MDQ6VXNlcjc3NDA=",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/7740?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/weitzman",
-      "html_url": "https://github.com/weitzman",
-      "followers_url": "https://api.github.com/users/weitzman/followers",
-      "following_url": "https://api.github.com/users/weitzman/following{/other_user}",
-      "gists_url": "https://api.github.com/users/weitzman/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/weitzman/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/weitzman/subscriptions",
-      "organizations_url": "https://api.github.com/users/weitzman/orgs",
-      "repos_url": "https://api.github.com/users/weitzman/repos",
-      "events_url": "https://api.github.com/users/weitzman/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/weitzman/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "prerelease": false,
-    "created_at": "2019-03-14T15:01:25Z",
-    "published_at": "2019-03-14T15:08:42Z",
-    "assets": [
-
-    ],
-    "tarball_url": "https://api.github.com/repos/drush-ops/drush/tarball/9.6.0",
-    "zipball_url": "https://api.github.com/repos/drush-ops/drush/zipball/9.6.0",
-    "body": "This release features significant new features and a major refactor of our site alias remote communication. If Drush had a marketing department, they would have insisted on the number 10.0. We don't, so 9.6 it is. We did our very best to preserve existing APIs - please report any breakage.\r\n\r\nHighlights\r\n============\r\n- Deprecate drush_invoke_process(), backend.inc and context.inc. These are no longer used by Drush core and commandfiles are encouraged to use their replacements like Drush::drush(). These APIs will be removed in Drush 10. This is a HUGE win for the maintainability of Drush. [#3758](https://github.com/drush-ops/drush/issues/3758)\r\n- Site aliases may now point into a Docker container [#3835](https://github.com/drush-ops/drush/issues/3835)\r\n- Now 100% ✅  on Windows. All PRs tested for regressions (via Appveyor).\r\n- Now 100% ✅ for sqlite and postgres databases. Mysql has always been ✅. Our test bots run these tests every night.\r\n- Add --filter to many commands ([#3718](https://github.com/drush-ops/drush/issues/3718)). You may now filter output from any tabular commands. An example: `drush pm:list --filter=ctools`. [See docs for details and general info about output formats](http://docs.drush.org/en/master/output-formats-filters/).\r\n- Unish, our test framework, can now run integration tests without a heavy setUp(). Tests are being ported over.\r\n- Use Drupal DB during bootstrap instead of CLI ([#3800](https://github.com/drush-ops/drush/issues/3800)). This enables you to run all but the sql:* commands without the mysql client. Useful for minimalist Docker environments.\r\n\r\n\r\nOther Noteable Changes\r\n=======================\r\n- Fix significant bug where pm:security misses required security updates. ([#3766](https://github.com/drush-ops/drush/issues/3766))\r\n- Allow Symfony Console commands to be used in php:cli. ([#3770](https://github.com/drush-ops/drush/issues/3770)). Did you know that Drush can discover and run standard Symfony Console commands?\r\n- Document how to deal with dynamic usernames in a site.yml file. [9fb7658](https://github.com/drush-ops/drush/commit/9fb7658)\r\n- Obsolete the unused and unmaintained core:execute command. Use site:ssh instead. ([#3803](https://github.com/drush-ops/drush/issues/3803))\r\n- Add ssh.pipefail config and use it in sql:dump --gzip ([#3818](https://github.com/drush-ops/drush/issues/3818))\r\n- PGPASSFILE passed via Process not on commandline ([#3833](https://github.com/drush-ops/drush/issues/3833))\r\n- Use --uri from commandline over uri in an alias ([#3966](https://github.com/drush-ops/drush/issues/3966))"
   }
 ]

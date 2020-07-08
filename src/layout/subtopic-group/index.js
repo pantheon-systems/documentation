@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 function SubtopicGroup(props) {
-	const { title, subTitle, topics } = props;
+	const { title, subTitle, topics, pages } = props;
 	return (
 		<section className="subtopic-container row">
 				<h3>{title}</h3>
@@ -23,11 +23,11 @@ function SubtopicGroup(props) {
 							<div key={topic.title} className="subtopic-lists col-md-6">
 								{topic.title && <h4>{topic.title}</h4>}
 								<ul className="topic-docs">
-									{topic.links &&
-										topic.links.map((link) => (
-											<li key={link.url}>
-												<Link to={link.url}>
-													{link.icon && <i className={link.icon} />} {link.text}
+									{pages &&
+										pages.nodes.map((page) => (
+											<li key={page.fields.slug}>
+												<Link to={page.fields.slug}>
+													{link.icon && <i className={link.icon} />} {page.frontmatter.title}
 												</Link>
 											</li>
 										))}

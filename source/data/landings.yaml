@@ -14,6 +14,7 @@
   topics-groups:
     - title: 'Create Sandbox Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
+      id: sandbox
       links:
         - text: 'Create a Drupal 8 Site From the Command Line Using Terminus and Drush'
           url: '/guides/drupal8-commandline'
@@ -56,8 +57,10 @@
   subtopics:
     - title: 'Migrate your Sites to Pantheon'
       subtitle: 'Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.'
+      id: migrate
       subtopic-lists:
         - title: 'Guided Migrations'
+          id: migrateguided
           links:
             - text: 'Guided WordPress Migrations'
               url: '/videos/migrate-wordpress'
