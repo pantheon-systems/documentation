@@ -156,6 +156,12 @@ When troubleshooting a redirect loop, you may want to deactivate any module or p
 
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
 
+### Mixed Case DNS Is Not Supported
+
+The Pantheon Dashboard standardizes mixed case domain entries to be completely lowercase. If you have your name server configured to use a mixed case domain, users might not be able to access your site.
+
+Configure your DNS to accept an entirely lowercase domain to avoid this issue.
+
 ### Test Domain Names Before DNS
 
 You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.
