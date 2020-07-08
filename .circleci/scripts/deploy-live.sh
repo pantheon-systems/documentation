@@ -37,9 +37,17 @@ git branch -r --merged main | awk -F'/' '/^ *origin/{if(!match($0, /(>|main)/) &
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 
+getMergedBranch() {
+    merged_branch_array=() # Clear array
+    while read -r branch # Read a line
+    do
+        # Save the first 11 chars, then remove -'s to follow multidev naming strategy
+        merged_branch_array+=( "$branch" ) # Append to the array
+    done < "$1"
+}
+getMergedBranch "merged-branches-clean.txt"
+
 # Delete merged branches from GH Repo
-  for branch in ${merged_branch_array[@]}; do
-    if [ "$branch" != "sculpin" ] ; then
-    git push origin --delete "$branch"
-    fi
-  done
+while IFS= read -r line; do
+  git push origin --delete "$branch"
+done < merged-branches-clean.txt
