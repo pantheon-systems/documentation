@@ -110,6 +110,14 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 ___
 
+## [DropzoneJS](https://www.drupal.org/project/dropzonejs)
+
+<ReviewDate date="2020-06-30" />
+
+**Issue:** Uploads using the "Media Entity DropzoneJS" widget do not reliably work on Pantheon. The widget relies on a temporary path that is not shared between application containers. See [this issue](https://www.drupal.org/project/dropzonejs/issues/2916330) for more information.
+
+___
+
 ## [Fast 404](https://www.drupal.org/project/fast_404)
 
 <ReviewDate date="2018-06-22" />
