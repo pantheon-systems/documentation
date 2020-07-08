@@ -6,9 +6,9 @@ const DNSProviderDocs = () => {
     graphql`
       {
         allMdx(
-          filter: { 
+          filter: {
             fileInfo: { absolutePath: { regex: "/.dns-providers/./" } }
-            frontmatter: { draft: {ne: true}}
+            frontmatter: { draft: { ne: true } }
           }
           sort: { fields: frontmatter___title, order: ASC }
         ) {
@@ -30,11 +30,11 @@ const DNSProviderDocs = () => {
       <ul>
         {pages.allMdx.nodes.map((page, i) => {
           return (
-              <li key={i}>
-                <Link to={page.fields.slug} title={page.frontmatter.provider}>
-                  {page.frontmatter.provider}
-                </Link>
-              </li>
+            <li key={i}>
+              <Link to={page.fields.slug} title={page.frontmatter.provider}>
+                {page.frontmatter.provider}
+              </Link>
+            </li>
           )
         })}
       </ul>
