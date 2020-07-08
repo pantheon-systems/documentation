@@ -63,7 +63,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4719529,
-        "download_count": 637,
+        "download_count": 52,
         "created_at": "2020-06-19T20:01:34Z",
         "updated_at": "2020-06-19T20:01:34Z",
         "browser_download_url": "https://github.com/pantheon-systems/terminus/releases/download/2.4.0/terminus.phar"
@@ -137,7 +137,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 6832941,
-        "download_count": 6297,
+        "download_count": 5961,
         "created_at": "2020-01-10T19:38:18Z",
         "updated_at": "2020-01-10T19:38:28Z",
         "browser_download_url": "https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar"
@@ -359,7 +359,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 11918653,
-        "download_count": 556,
+        "download_count": 541,
         "created_at": "2019-04-29T02:08:59Z",
         "updated_at": "2019-04-29T02:12:22Z",
         "browser_download_url": "https://github.com/pantheon-systems/terminus/releases/download/2.0.1/terminus.phar"
