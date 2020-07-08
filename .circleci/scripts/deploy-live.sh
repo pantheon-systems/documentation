@@ -20,20 +20,11 @@ else
     exit 1
 fi
 
-# Update Dev on Docs Preview site
-touch ./dev-deployment-log.txt
-try3 rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ dev.$DOCS_PREVIEW_UUID@appserver.dev.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee dev-deployment-log.txt;
+
 
 #=====================================================#
-# Delete Multidev environment from static-docs site   #
+# Delete merged branches on GitHub                    #
 #=====================================================#
-
-# Identify existing environments for the static-docs site
-terminus env:list --format list --field=ID docs-preview > ./env_list.txt
-echo "Existing environments:" && cat env_list.txt
-
-# Create array of existing environments on Static Docs
-getExistingTerminusEnvs "env_list.txt"
 
 # Update vm with current remote branches
 echo "running `git remote update origin --prune`" #DEBUG
@@ -45,21 +36,6 @@ git branch -r --merged main | awk -F'/' '/^ *origin/{if(!match($0, /(>|main)/) &
 
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
-
-# Create an array of remote branches merged into main
-echo "running function getMergedBranchMultidevName" #DEBUG
-getMergedBranchMultidevName "merged-branches-clean.txt"
-
-# Compare existing environments and merged branches, delete only if the environment exists
-merged_branch=" ${merged_branch_multidev_names[*]} "
-for env in ${existing_terminus_envs[@]}; do
-  if [[ $merged_branch =~ " $env " ]] && [ "$env" != "sculpin" ] ; then
-    echo "deleting Multidev environment $env" #DEBUG
-    terminus multidev:delete docs-preview.$env --delete-branch --yes
-  fi
-done
-
-getMergedBranchMultidevName "merged-branches-clean.txt"
 
 # Delete merged branches from GH Repo
   for branch in ${merged_branch_array[@]}; do
