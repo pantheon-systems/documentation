@@ -22,7 +22,7 @@ class Contributors extends React.Component {
         <SEO title="Contributors" />
         <Layout>
           <div style={{ marginTop: "-20px" }} className="container">
-            <main className="container doc-content-well" id="doc">
+            <main className="container doc-content-well" id="docs-main">
               <div className="row">
                 <h1 className="title">Contributors</h1>
               </div>

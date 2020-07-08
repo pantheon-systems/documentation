@@ -19,7 +19,7 @@ class LandingTemplate extends Component {
     return !topic ? null : (
       <Layout>
         <SEO title={topic.title} />
-          <main className="container doc-content-well" id="doc">
+          <main className="container doc-content-well" id="docs-main">
               <h1 className="title">{topic.title}</h1>
               <section className="row">
                   {topic.video_id && (

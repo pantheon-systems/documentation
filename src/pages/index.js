@@ -20,7 +20,7 @@ class Index extends React.Component {
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
           image={"/assets/images/default-thumb-doc.png"}
         />
-          <main className="container doc-content-well" id="doc">
+          <main className="container doc-content-well" id="docs-main">
             <div className="row">
               <h1 className="title col-sm-12">{homeYaml.title}</h1>
             </div>

@@ -121,7 +121,7 @@ class GuideTemplate extends React.Component {
                 activePage={node.fields.slug}
                 items={items}
               />
-              <main id="doc" className="col-md-9 guide-doc-body">
+              <main id="docs-main" className="col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <article
                     className={`col-xs-${contentCols} col-md-${contentCols}`}

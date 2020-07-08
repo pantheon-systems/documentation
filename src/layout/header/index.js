@@ -6,7 +6,7 @@ import AddSearch from "../../components/addSearch"
 const Header = ({ data, page }) => (
   <>
     <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
-    <div id="skiptocontent"><a href="#doc">skip to main content</a></div>
+    <div id="skiptocontent"><a href="#docs-main">skip to main content</a></div>
       <div className="navbar-header">
         <button
           type="button"
