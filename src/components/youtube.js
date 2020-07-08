@@ -9,7 +9,7 @@ const Youtube = ({ title, src }) => {
           paddingBottom: "56.5%",
           position: "relative",
           height: "0px",
-          overflow: "hidden"
+          overflow: "hidden",
         }}
       >
         <div class="embedVideo-container">

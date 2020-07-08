@@ -14,13 +14,9 @@ const LocaldevChangelog = ({ data }) => (
             <div
               className="toc-ignore"
               dangerouslySetInnerHTML={{
-                __html: localdev.changelog.replace(
-                  /h3/g,
-                  'h3 class="toc-ignore"'
-                ).replace(
-                  /h2/g,
-                  'h2 class="toc-ignore"'
-                ),
+                __html: localdev.changelog
+                  .replace(/h3/g, 'h3 class="toc-ignore"')
+                  .replace(/h2/g, 'h2 class="toc-ignore"'),
               }}
             />
           </MDXProvider>

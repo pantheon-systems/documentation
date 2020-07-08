@@ -3,7 +3,7 @@ import React from "react"
 const Check = () => {
   return (
     <>
-      <span style={{color: "green"}}>✔</span>
+      <span style={{ color: "green" }}>✔</span>
     </>
   )
 }

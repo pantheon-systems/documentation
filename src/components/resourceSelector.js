@@ -11,7 +11,9 @@ const ResourceSelector = ({ search }) => {
   const resources = useStaticQuery(
     graphql`
       query ResourcePartials {
-        allMdx(filter: {fileAbsolutePath: {regex: "/.additionalResources./"}}) {
+        allMdx(
+          filter: { fileAbsolutePath: { regex: "/.additionalResources./" } }
+        ) {
           edges {
             node {
               id
@@ -21,14 +23,18 @@ const ResourceSelector = ({ search }) => {
             }
           }
         }
-      }`
+      }
+    `
   )
   //console.log("Array from GraphQL: ", resources) //DEBUGGING
   //console.log("Mapping: ", resources.allMdx.edges.filter( entry => { return (entry.node.fields.slug.includes(searchValues[0]))})) //DEBUGGING
 
   return (
     <>
-      {searchValues.length && resources.allMdx.edges.filter( entry => { return (entry.node.fields.slug.includes(searchValues[0]))}).length ? (
+      {searchValues.length &&
+      resources.allMdx.edges.filter(entry => {
+        return entry.node.fields.slug.includes(searchValues[0])
+      }).length ? (
         searchValues.map((value, key) => {
           return <Partial key={key} file={`additionalResources/${value}.md`} />
         })
