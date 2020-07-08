@@ -162,6 +162,41 @@ ___
 
 ___
 
+## [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
+
+**Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
+
+**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
+
+1. [Enable Redis](/redis/), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable Redis.)
+2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
+
+ ```php:title=imce.page.inc
+ $cache_key = 'imce-' . $file;
+ $cache = cache_get($cache_key);
+ if ($cache) {
+  return $cache->data;
+ }
+ if
+ (is_file($file) && ($dot = strrpos($file, '.')) &&
+ in_array(strtolower(substr($file, $dot+1)), array('jpg', 'jpeg',
+ 'gif','png')) && ($info = @getimagesize($file)) &&
+ in_array($info[2], array(IMAGETYPE_JPEG, IMAGETYPE_GIF, IMAGETYPE_PNG)) )
+ {
+   $result = array('width' => $info[0], 'height' => $info[1], 'type' => $info[2], 'mime' => $info['mime']);
+   cache_set($cache_key, $result);
+   return $result;
+ }
+ return FALSE;
+ }
+ ```
+
+3. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
+
+You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
+
+___
+
 ## [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)
 
 <ReviewDate date="2019-10-17" />
