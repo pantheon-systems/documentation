@@ -49,5 +49,7 @@ getMergedBranch "merged-branches-clean.txt"
 
 # Delete merged branches from GH Repo
 while IFS= read -r line; do
-  git push origin --delete "$branch"
+  #git push origin --delete "$line"
+  echo "Deleteing branch $line"
+  curl -X DELETE -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/git/refs/heads/$line
 done < merged-branches-clean.txt
