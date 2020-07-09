@@ -4,7 +4,7 @@ subtitle: Going Live
 anchorid: going-live
 edt: true
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [dns, launch]
 type: guide
 survey: true
@@ -13,7 +13,7 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/edt/going-live/
+permalink: docs/guides/edt/going-live
 previousurl: guides/edt/performance/
 previouspage: Performance
 editpath: edt/08-going-live.md

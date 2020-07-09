@@ -3,12 +3,12 @@ title: Build Tools
 subtitle: Add a New Module
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
 cms: "Drupal"
-categories: [develop]
+category: [develop]
 tags: [composer, local, modules, site, terminus]
 buildtools: true
 anchorid: extend
 type: guide
-permalink: docs/guides/build-tools/extend/
+permalink: docs/guides/build-tools/extend
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---

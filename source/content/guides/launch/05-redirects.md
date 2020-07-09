@@ -6,14 +6,14 @@ launch: true
 anchorid: redirects
 generator: pagination
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
 pagination:
     provider: data.launchpages
 use:
     - launchpages
-permalink: docs/guides/launch/redirects/
+permalink: docs/guides/launch/redirects
 editpath: launch/05-redirects.md
 image: getting-started-Largethumb
 ---

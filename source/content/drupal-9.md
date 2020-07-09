@@ -1,7 +1,7 @@
 ---
 title: Drupal 9 Early Access
 description: Test the latest Drupal on the Pantheon WebOps Platform.
-categories: [get-started]
+category: [get-started]
 tags: [site]
 contributors: [populist, edwardangert]
 reviewed: "2020-05-27"

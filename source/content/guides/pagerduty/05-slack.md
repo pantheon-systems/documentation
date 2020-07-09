@@ -6,14 +6,14 @@ pagerduty: true
 anchorid: slack
 generator: pagination
 layout: guide
-categories: [performance]
+category: [performance]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagination:
     provider: data.pagerdutypages
 use:
     - pagerdutypages
-permalink: docs/guides/pagerduty/slack/
+permalink: docs/guides/pagerduty/slack
 previousurl: guides/pagerduty/notify/
 nexturl: guides/pagerduty/next-steps/
 editpath: pagerduty/05-slack.md

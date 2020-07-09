@@ -2,7 +2,7 @@
 title: Configure Redirects
 description: Review considerations and recommendations on how to handle redirect logic via Primary Domains or PHP.
 tags: [redirects, variables, dns]
-categories: [go-live,develop]
+category: [go-live,develop]
 reviewed: "2020-02-12"
 ---
 

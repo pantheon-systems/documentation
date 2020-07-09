@@ -8,13 +8,13 @@ generator: pagination
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+category: [develop]
 tags: [multisite]
 pagination:
     provider: data.multisitepages
 use:
     - multisitepages
-permalink: docs/guides/multisite/config/
+permalink: docs/guides/multisite/config
 nexturl: guides/multisite/workflows/
 previousurl: guides/multisite/considerations/
 editpath: multisite/03-config.md

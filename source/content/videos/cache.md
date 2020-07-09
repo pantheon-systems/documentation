@@ -2,8 +2,8 @@
 title: Caching
 description: Understand frontend and backend caching on our platform.
 contributors:  [dwayne]
-permalink:  docs/videos/:basename/
-categories: [performance]
+permalink:  docs/videos/:basename
+category: [performance]
 tags: [cache]
 layout: video
 searchboost: 50

@@ -2,7 +2,7 @@
 title: Pantheon Plugins for WordPress
 description: WordPress plugins developed and maintained for the Pantheon WebOps Platform.
 cms: "WordPress"
-categories: [integrate]
+category: [integrate]
 tags: [plugins, cache, saml, redis, solr]
 reviewed: "2020-04-21"
 

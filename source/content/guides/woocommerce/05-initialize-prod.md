@@ -7,14 +7,14 @@ anchorid: initalize-prod
 generator: pagination
 layout: guide
 cms: "WordPress"
-categories: [get-started]
+category: [get-started]
 tags: [launch, plugins, site]
 type: guide
 pagination:
     provider: data.woocommercepages
 use:
     - woocommercepages
-permalink: docs/guides/woocommerce/initialize-prod/
+permalink: docs/guides/woocommerce/initialize-prod
 nexturl: guides/woocommerce/develop/
 nextpage: Continue Development
 previousurl: guides/woocommerce/commit/

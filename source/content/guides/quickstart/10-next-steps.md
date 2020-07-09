@@ -7,14 +7,14 @@ anchorid: next-steps
 generator: pagination
 survey: true
 layout: guide
-categories: [get-started]
+category: [get-started]
 tags: [launch, webops, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
 use:
   - quickstartpages
-permalink: docs/guides/quickstart/next-steps/
+permalink: docs/guides/quickstart/next-steps
 previousurl: guides/quickstart/onserver-dev-part2
 previouspage: On-Server Dev, Part 2
 editpath: quickstart/10-next-steps.md

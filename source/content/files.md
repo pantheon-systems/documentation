@@ -1,7 +1,7 @@
 ---
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
-categories: [platform]
+category: [platform]
 tags: [code, files]
 ---
 

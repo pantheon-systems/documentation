@@ -2,7 +2,7 @@
 title: WordPress Best Practices
 description: A list of suggestions for developing WordPress sites on Pantheon.
 cms: "WordPress"
-categories: [develop]
+category: [develop]
 tags: [workflow, security, composer]
 reviewed: "2019-11-21"
 ---

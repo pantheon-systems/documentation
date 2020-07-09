@@ -2,10 +2,10 @@
 title: Manage Some Dependencies with Composer
 description: Get your feet wet with Composer on WordPress or Drupal 7 before going all in.
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
-categories: [develop]
+category: [develop]
 tags: [composer, workflow, updates]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 ---
 In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal 7 so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
 

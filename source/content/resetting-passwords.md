@@ -1,7 +1,7 @@
 ---
 title: Resetting Passwords
 description: Learn how to reset passwords for WordPress, Drupal, and the Pantheon Dashboard. 
-categories: [troubleshoot]
+category: [troubleshoot]
 tags: [dashboard, teams, users, security]
 ---
 ## Pantheon Dashboard Login

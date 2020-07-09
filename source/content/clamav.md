@@ -2,7 +2,7 @@
 title: Enabling ClamAV for Drupal
 description: Learn how to protect your site against malicious files with malware and other potential threats using ClamAV, an open source antivirus engine.
 cms: "Drupal"
-categories: [develop]
+category: [develop]
 tags: [modules, security, files]
 ---
 

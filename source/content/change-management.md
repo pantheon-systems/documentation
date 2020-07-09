@@ -1,7 +1,7 @@
 ---
 title: Role-Based Permissions & Change Management
 description: Features and benefits of role-based permissions for Pantheon Drupal and WordPress sites.
-categories: [manage]
+category: [manage]
 tags: [agencies, organizations, users]
 ---
 Change Management is an [Organization](/organizations) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.

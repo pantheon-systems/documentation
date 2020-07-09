@@ -6,7 +6,7 @@ launch: true
 anchorid: domains
 generator: pagination
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
 pagination:
@@ -14,7 +14,7 @@ pagination:
 use:
     - launchpages
     - docs_tags
-permalink: docs/guides/launch/domains/
+permalink: docs/guides/launch/domains
 nexturl: guides/launch/configure-dns/
 nextpage: Configure DNS and HTTPS
 previousurl: guides/launch/plans/

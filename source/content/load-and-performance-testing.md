@@ -1,7 +1,7 @@
 ---
 title: Load and Performance Testing
 description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
-categories: [performance]
+category: [performance]
 tags: [measure, newrelic, professional-services]
 reviewed: "2020-04-02"
 ---

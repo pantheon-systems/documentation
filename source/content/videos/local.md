@@ -2,9 +2,9 @@
 title: Local Development
 description: Sync your code, database, and files for local development.
 contributors:  [dwayne]
-permalink:  docs/videos/:basename/
+permalink:  docs/videos/:basename
 tags: [local]
-categories: [develop]
+category: [develop]
 layout: video
 searchboost: 50
 type: video

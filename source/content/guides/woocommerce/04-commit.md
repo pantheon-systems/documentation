@@ -7,14 +7,14 @@ anchorid: commit
 generator: pagination
 layout: guide
 cms: "WordPress"
-categories: [get-started]
+category: [get-started]
 tags: [plugins, sftp, site]
 type: guide
 pagination:
     provider: data.woocommercepages
 use:
     - woocommercepages
-permalink: docs/guides/woocommerce/commit/
+permalink: docs/guides/woocommerce/commit
 nexturl: guides/woocommerce/initialize-prod/
 nextpage: Initialize Production
 previousurl: guides/woocommerce/configure/

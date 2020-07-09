@@ -1,7 +1,7 @@
 ---
 title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
-categories: [develop]
+category: [develop]
 tags: [upstreams, workflow, webops]
 ---
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once an Organization Administrator creates a Custom Upstream, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.

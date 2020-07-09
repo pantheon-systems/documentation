@@ -1,7 +1,7 @@
 ---
 title: Platform Considerations
 description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
-categories: [platform]
+category: [platform]
 tags: [files, libraries, security, webops]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: What is APC and what is it used for?
 description: Understand Alternative PHP Cache and its uses within the Pantheon WebOps workflow.
-categories: [platform]
+category: [platform]
 tags: [cache, workflow]
 reviewed: "2020-05-05"
 ---

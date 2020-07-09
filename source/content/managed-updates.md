@@ -2,7 +2,7 @@
 title: Managed Updates
 description: Descriptions of the Managed Updates products and requirements for Drupal 8 compatibility
 reviewed: "2020-05-14"
-categories: [platform]
+category: [platform]
 tags: [updates, professional services]
 ---
 

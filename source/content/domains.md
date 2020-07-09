@@ -2,7 +2,7 @@
 title: Platform and Custom Domains
 description: Work with platform domains or connect custom domains in the Site Dashboard, then redirect requests via PHP to standardize traffic on HTTPS and a primary domain.
 tags: [redirects, variables, dns]
-categories: [go-live,develop]
+category: [go-live,develop]
 searchboost: 150
 use:
     - docs_tags

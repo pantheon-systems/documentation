@@ -7,14 +7,14 @@ anchorid: launch
 generator: pagination
 layout: guide
 cms: "WordPress"
-categories: [get-started]
+category: [get-started]
 tags: [launch, site]
 type: guide
 pagination:
     provider: data.woocommercepages
 use:
     - woocommercepages
-permalink: docs/guides/woocommerce/launch/
+permalink: docs/guides/woocommerce/launch
 previousurl: guides/woocommerce/develop/
 previouspage: Continue Development
 editpath: woocommerce/07-launch.md

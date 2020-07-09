@@ -2,7 +2,7 @@
 title: Modify the Local Hosts File
 description: How to find and modify a local hosts file.
 tags: [local, dns]
-categories: [go-live,develop]
+category: [go-live,develop]
 contributors: [alexfornuto]
 ---
 

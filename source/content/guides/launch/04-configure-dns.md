@@ -6,7 +6,7 @@ launch: true
 anchorid: dns
 generator: pagination
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
 pagination:
@@ -14,7 +14,7 @@ pagination:
 use:
     - launchpages
     - docs_tags
-permalink: docs/guides/launch/configure-dns/
+permalink: docs/guides/launch/configure-dns
 nexturl: guides/launch/redirects/
 nextpage: Redirect to a Primary Domain
 previousurl: guides/launch/domains/

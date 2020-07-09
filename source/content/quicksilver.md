@@ -1,7 +1,7 @@
 ---
 title: Automate and Integrate your WebOps Workflow with Quicksilver
 description: Learn how to use Quicksilver to automate your WebOps workflow.
-categories: [automate]
+category: [automate]
 tags: [quicksilver, webops, workflow]
 reviewed: "2020-03-10"
 ---

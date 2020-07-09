@@ -1,7 +1,7 @@
 ---
 title: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
-categories: [troubleshoot]
+category: [troubleshoot]
 tags: [backup, dashboard, git, webops, workflow]
 ---
 

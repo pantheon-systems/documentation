@@ -1,7 +1,7 @@
 ---
 title: Get Support
 description: Learn how to access Pantheon's expert team and what your support package includes.
-categories: [platform]
+category: [platform]
 tags: [dashboard, support]
 reviewed: "2020-02-11"
 ---

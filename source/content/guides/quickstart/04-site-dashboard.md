@@ -6,14 +6,14 @@ quickstart: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
-categories: [get-started]
+category: [get-started]
 tags: [dashboard, site, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
 use:
   - quickstartpages
-permalink: docs/guides/quickstart/site-dashboard/
+permalink: docs/guides/quickstart/site-dashboard
 nexturl: guides/quickstart/create-test-live/
 nextpage: Create Test & Live
 previousurl: guides/quickstart/create-new-site/

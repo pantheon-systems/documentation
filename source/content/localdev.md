@@ -1,7 +1,7 @@
 ---
 title: Use Pantheon Localdev to Develop Sites Locally
 description: Localdev makes it easy to develop your sites locally with the Pantheon workflow.
-categories: [develop]
+category: [develop]
 tags: [localdev, local, workflow]
 earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are still in production. Pantheon Support for Localdev may be limited.

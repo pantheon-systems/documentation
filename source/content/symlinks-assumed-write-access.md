@@ -2,7 +2,7 @@
 title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 tags: [debugfiles]
-categories: [troubleshoot]
+category: [troubleshoot]
 reviewed: "2020-03-13"
 ---
 

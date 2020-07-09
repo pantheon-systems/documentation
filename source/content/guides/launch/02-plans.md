@@ -3,7 +3,7 @@ title: Launch Essentials
 subtitle: Upgrade Site Plan
 description: Part two of our Launch Essentials guide covers upgrading your site to the proper plan to cover your needs.
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [agencies, billing, launch, webops]
 anchorid: plans
 launch: true
@@ -13,7 +13,7 @@ pagination:
     provider: data.launchpages
 use:
     - launchpages
-permalink: docs/guides/launch/plans/
+permalink: docs/guides/launch/plans
 nexturl: guides/launch/domains/
 nextpage: Domains & HTTPS
 previousurl: guides/launch/

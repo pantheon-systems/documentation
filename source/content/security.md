@@ -2,7 +2,7 @@
 title: Lock Environments with the Dashboard Security Tool
 description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
 tags: [security]
-categories: [develop]
+category: [develop]
 ---
 
 There are occasions while you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.

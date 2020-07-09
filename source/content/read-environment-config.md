@@ -1,7 +1,7 @@
 ---
 title: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
-categories: [platform]
+category: [platform]
 tags: [code, database, files, redis]
 ---
 

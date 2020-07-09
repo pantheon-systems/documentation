@@ -2,7 +2,7 @@
 title: Install Cygwin on Windows
 description: Learn how to install and configure Cygwin on Windows computers for Pantheon sites.
 tags: [local]
-categories: [develop]
+category: [develop]
 reviewed: "2020-02-05"
 ---
 

@@ -2,7 +2,7 @@
 title: Temporary File Management
 description: Understand Pantheon's default temporary path and learn how to debug .tmp file errors.
 tags: [debugcode, infrastructure]
-categories: [troubleshoot,platform]
+category: [troubleshoot,platform]
 ---
 
 <Alert title="Exports" type="export">

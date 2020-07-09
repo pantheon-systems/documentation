@@ -2,9 +2,9 @@
 title: Automatically Label Code Changes in New Relic using Quicksilver Hooks
 description: A guide to integrating Pantheon and New Relic for deployment labeling.
 tags: [siteintegrations]
-categories: [workflow]
+category: [workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 5/1/2017
 contributors: [scottmassey]
 ---

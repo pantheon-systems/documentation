@@ -1,7 +1,7 @@
 ---
 title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
-categories: [platform]
+category: [platform]
 tags: [logs, newrelic, workflow]
 reviewed: "2020-01-13"
 ---

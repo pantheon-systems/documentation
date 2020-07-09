@@ -2,11 +2,11 @@
 title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
-categories: [develop]
+category: [develop]
 tags: [workflow, composer, continuous-integration, webops, terminus]
 anchorid: configure
 type: guide
-permalink: docs/guides/build-tools/configure/
+permalink: docs/guides/build-tools/configure
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
 contributors: [szipfel]

@@ -6,7 +6,7 @@ anchorid: considerations
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+category: [develop]
 tags: [multisite]
 multisite: true
 generator: pagination
@@ -14,7 +14,7 @@ pagination:
     provider: data.multisitepages
 use:
     - multisitepages
-permalink: docs/guides/multisite/considerations/
+permalink: docs/guides/multisite/considerations
 nexturl: guides/multisite/config/
 previousurl: guides/multisite/
 editpath: multisite/02-considerations.md

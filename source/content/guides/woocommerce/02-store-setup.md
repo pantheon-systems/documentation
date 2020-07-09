@@ -7,14 +7,14 @@ anchorid: store-setup
 generator: pagination
 layout: guide
 cms: "WordPress"
-categories: [get-started]
+category: [get-started]
 tags: [plugins, site]
 type: guide
 pagination:
     provider: data.woocommercepages
 use:
     - woocommercepages
-permalink: docs/guides/woocommerce/store-setup/
+permalink: docs/guides/woocommerce/store-setup
 nexturl: guides/woocommerce/configure/
 nextpage: Configure
 previousurl: guides/woocommerce/

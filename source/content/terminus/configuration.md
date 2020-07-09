@@ -5,11 +5,11 @@ description: Learn how to configure your local Terminus configuration file.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
+category: [develop]
 tags: [cli, local, terminus, workflow]
 nexturl: terminus/updates/
 previousurl: terminus/plugins/create/
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---

@@ -1,7 +1,7 @@
 ---
 title: The Site Dashboard
 description: Learn how to use the Pantheon Site Dashboard to build and manage your Drupal or WordPress sites.
-categories: [platform]
+category: [platform]
 tags: [dashboard]
 reviewed: "2020-02-07"
 ---

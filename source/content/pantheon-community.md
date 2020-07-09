@@ -2,7 +2,7 @@
 title: The Pantheon Community
 description: Share best practices with other experienced and active users of Pantheon's platform.
 contributors: [tessak22]
-categories: [get-started]
+category: [get-started]
 tags: [collaborate, support]
 ---
 Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our community, through several channels:

@@ -2,7 +2,7 @@
 title: Importing Drush Site Archives with Terminus
 description: Import a Drupal Drush site archive using the Terminus, the Pantheon CLI tool.
 cms: "Drupal"
-categories: [get-started]
+category: [get-started]
 tags: [migrate, terminus, drush]
 ---
 One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](https://drushcommands.com/drush-8x/core/archive-dump/) using our [Terminus command-line interface](/terminus). This automates the packaging of the existing installation, improving the chances of success.

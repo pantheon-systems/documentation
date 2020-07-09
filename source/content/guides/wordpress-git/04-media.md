@@ -5,10 +5,10 @@ description: Beginners guide on how to use the WordPress Dashboard, an SFTP clie
 anchorid: media
 layout: guide
 cms: "WordPress"
-categories: [develop]
+category: [develop]
 tags: [files, git, sftp]
 type: guide
-permalink: docs/guides/wordpress-git/media/
+permalink: docs/guides/wordpress-git/media
 editpath: wordpress-git/04-media.md
 image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"

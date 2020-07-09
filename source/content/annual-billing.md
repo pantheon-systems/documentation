@@ -2,7 +2,7 @@
 title: Pantheon Annual Billing
 description: Learn how you can save money by switching to annual billing.
 tags: [dashboard]
-categories: [get-started]
+category: [get-started]
 searchboost: 70
 ---
 

@@ -2,7 +2,7 @@
 title: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 tags: [infrastructure, security]
-categories: [platform,develop]
+category: [platform,develop]
 ---
 The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 

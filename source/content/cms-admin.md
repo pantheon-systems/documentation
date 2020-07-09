@@ -2,7 +2,7 @@
 title: Working in the WordPress Dashboard and Drupal Admin Interface
 description: Learn how to build sites using the WordPress and Drupal admin interfaces in SFTP mode on Pantheon.
 searchboost: 150
-categories: [develop]
+category: [develop]
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
 ---

@@ -6,14 +6,14 @@ quickstart: true
 anchorid: onserver-dev-part1
 generator: pagination
 layout: guide
-categories: [get-started]
+category: [get-started]
 tags: [dashboard, iterate, site, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
 use:
   - quickstartpages
-permalink: docs/guides/quickstart/onserver-dev-part1/
+permalink: docs/guides/quickstart/onserver-dev-part1
 nexturl: guides/quickstart/onserver-dev-part2/
 nextpage: On-Server Dev, Part 2
 previousurl: guides/quickstart/connection-modes/

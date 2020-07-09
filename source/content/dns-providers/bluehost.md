@@ -4,9 +4,9 @@ provider: Bluehost
 dnsprovider: true
 draft: true
 description: Learn how to point your Bluehost domain to a Pantheon site.
-categories: [go-live]
+category: [go-live]
 tags: [dns]
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/bluehost.md/
 ---
 ## Before You Begin

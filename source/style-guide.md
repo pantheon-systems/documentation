@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [alexfornuto, rachelwhitton]
-categories: [get-started]
+category: [get-started]
 tags: [git, sftp]
 ---
 

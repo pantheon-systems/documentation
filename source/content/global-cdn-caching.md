@@ -2,7 +2,7 @@
 title: Global CDN Caching for High Performance with Drupal and WordPress
 description: Configure and verify edge caching is working on your WordPress or Drupal sites.
 tags: [cacheedge]
-categories: [performance]
+category: [performance]
 ---
 Pantheon's Global CDN supports caching to accelerate both static content and anonymous pages for sites on the platform. By serving data from cache servers all over the world, website visitors receive a response without waiting to access the application container. Clusters of these cache servers in each region are called **points of presence** or **POPs** for short. When a website uses these POPs effectively, the site can free up its PHP workers and database to process more dynamic requests. Each POP can handle hundreds of thousands of requests per second, much more than a site's own PHP and database containers.
 

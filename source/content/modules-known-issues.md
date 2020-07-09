@@ -2,7 +2,7 @@
 title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
 cms: "Drupal"
-categories: [troubleshoot]
+category: [troubleshoot]
 tags: [modules]
 ---
 

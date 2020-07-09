@@ -7,14 +7,14 @@ anchorid: develop
 generator: pagination
 layout: guide
 cms: "WordPress"
-categories: [get-started]
+category: [get-started]
 tags: [iterate, plugins, site, themes, webops]
 type: guide
 pagination:
     provider: data.woocommercepages
 use:
     - woocommercepages
-permalink: docs/guides/woocommerce/develop/
+permalink: docs/guides/woocommerce/develop
 nexturl: guides/woocommerce/launch/
 nextpage: Launch Your Store
 previousurl: guides/woocommerce/initialize-prod/

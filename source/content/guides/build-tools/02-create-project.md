@@ -2,12 +2,12 @@
 title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
-categories: [develop]
+category: [develop]
 tags: [composer, terminus, webops, workflow]
 buildtools: true
 anchorid: create-project
 type: guide
-permalink: docs/guides/build-tools/create-project/
+permalink: docs/guides/build-tools/create-project
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 reviewed: "2020-05-08"

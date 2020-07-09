@@ -2,7 +2,7 @@
 title: Git FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
-categories: [develop]
+category: [develop]
 contributors: [mrfelton, alexfornuto]
 reviewed: "2020-03-16"
 ---

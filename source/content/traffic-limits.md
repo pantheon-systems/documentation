@@ -1,7 +1,7 @@
 ---
 title: Traffic Limits and Overages
 description: Information on how Pantheon measures site traffic in visits and pages served.
-categories: [performance]
+category: [performance]
 tags: [billing, measure, traffic]
 reviewed: "2020-06-22"
 ---

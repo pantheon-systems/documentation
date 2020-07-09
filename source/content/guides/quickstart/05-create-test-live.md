@@ -6,14 +6,14 @@ quickstart: true
 anchorid: create-test-live
 generator: pagination
 layout: guide
-categories: [get-started]
+category: [get-started]
 tags: [dashboard, iterate, launch, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
 use:
   - quickstartpages
-permalink: docs/guides/quickstart/create-test-live/
+permalink: docs/guides/quickstart/create-test-live
 nexturl: guides/quickstart/clone-live-to-dev/
 nextpage: Clone Live to Dev
 previousurl: guides/quickstart/site-dashboard/

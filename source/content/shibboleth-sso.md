@@ -1,7 +1,7 @@
 ---
 title: Using SimpleSAMLphp with Shibboleth SSO
 description: Using SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
-categories: [integrate]
+category: [integrate]
 tags: [security, sso, users]
 contributors: [kyletaylored]
 ---

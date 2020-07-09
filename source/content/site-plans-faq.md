@@ -1,7 +1,7 @@
 ---
 title: Site Plans FAQs
 description: Find answers to common questions related to Pantheon's site plans.
-categories: [manage]
+category: [manage]
 tags: [billing]
 searchboost: 70
 reviewed: "2020-04-23"

@@ -1,7 +1,7 @@
 ---
 title: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
-categories: [develop]
+category: [develop]
 tags: [collaborate, dns, agencies]
 ---
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).

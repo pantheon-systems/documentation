@@ -1,7 +1,7 @@
 ---
 title: Running WordPress and Drupal as a Backend API
 description: Learn about headless development models for decoupled architecture on Pantheon.
-categories: [develop]
+category: [develop]
 tags: [modules, plugins]
 contributors: [eabquina, rachelwhitton]
 ---

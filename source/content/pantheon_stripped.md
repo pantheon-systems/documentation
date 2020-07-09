@@ -1,7 +1,7 @@
 ---
 title: Considerations for Google Analytics and PANTHEON_STRIPPED
 description: Information on why PANTHEON_STRIPPED is placed in the utm_source URL parameter.
-categories: [troubleshoot]
+category: [troubleshoot]
 tags: [cache, cdn, measure]
 ---
 Typically, Pantheon's edge cache uses the entire request URL, including query string parameters, as the content cache key. In some cases, the query parameters do not affect the content returned in the response and we can optimize your site's performance by safely ignoring these parameters from a cache perspective. For example, specific Google Analytics query parameters are used solely by JavaScript to track different AdWords campaigns running for the same page on your site.

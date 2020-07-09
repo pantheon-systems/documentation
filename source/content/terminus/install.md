@@ -7,9 +7,9 @@ terminuspage: true
 showtoc: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
+category: [develop]
 tags: [cli, local, terminus, workflow]
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 nexturl: terminus/examples/
 previousurl: terminus/
 image: terminus-thumbLarge

@@ -2,7 +2,7 @@
 title: Cron for Drupal
 description: Understanding how Pantheon cron execution and cron management works on your Drupal site.
 cms: "Drupal"
-categories: [automate]
+category: [automate]
 tags: [cron]
 reviewed: "2020-05-28"
 ---

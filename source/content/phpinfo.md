@@ -2,7 +2,7 @@
 title: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon Drupal site.
 cms: "Drupal"
-categories: [develop]
+category: [develop]
 tags: [code, database]
 ---
 We serve our customers by provisioning isolated Linux containers with an optimized PHP stack. The php.ini is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/php-versions). If you'd like to see a comprehensive list of what's installed with the version of PHP in use by a particular environment, you may use [phpinfo](https://secure.php.net/manual/en/function.phpinfo.php). We also have [example PHP info](/php-versions/#available-php-versions) for each version of PHP on the platform.

@@ -1,7 +1,7 @@
 ---
 title: Metrics in the Site Dashboard
 description: Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
-categories: [platform]
+category: [platform]
 tags: [billing, dashboard, measure, traffic]
 reviewed: "2020-06-22"
 ---

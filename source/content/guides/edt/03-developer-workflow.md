@@ -4,7 +4,7 @@ subtitle: Developer Workflow
 anchorid: developer-workflow
 edt: true
 layout: guide
-categories: [develop]
+category: [develop]
 tags: [dashboard, git, sftp, webops, workflow]
 type: guide
 generator: pagination
@@ -12,7 +12,7 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/edt/developer-workflow/
+permalink: docs/guides/edt/developer-workflow
 nexturl: guides/edt/multidev/
 nextpage: Multidev
 previousurl: guides/edt/introduction-and-architecture/

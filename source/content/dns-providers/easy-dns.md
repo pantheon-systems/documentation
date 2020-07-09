@@ -3,10 +3,10 @@ title: Easy DNS Domain Configuration
 provider: Easy DNS
 dnsprovider: true
 description: Learn how to point your Easy DNS domain to a Pantheon site.
-categories: [go-live]
+category: [go-live]
 tags: [dns]
 draft: true
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/easy-dns.md/
 ---
 ## Before You Begin

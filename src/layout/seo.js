@@ -18,7 +18,7 @@ function SEO({
   title,
   authors,
   image,
-  categories,
+  category,
   tags,
   reviewed,
   type,
@@ -43,8 +43,8 @@ function SEO({
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || "/assets/images/default-thumb-doc.png"
   const authorList = authors ? Array.from(authors) : []
-  const addSearchCategories = categories
-    ? categories.join("/")
+  const addSearchCategories = category
+    ? category.join("/")
     : `other`
   const addSearchType = type ? `type=${type}` : "type=doc"
   const titleProps = title
@@ -126,7 +126,7 @@ function SEO({
         },
         {
           property: `og:article:section`,
-          content: `${categories}`,
+          content: `${category}`,
         },
         { ...reviewtag },
         {

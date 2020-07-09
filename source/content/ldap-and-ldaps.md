@@ -2,7 +2,7 @@
 title: LDAP and LDAPS
 description: Detailed information on how to configure LDAP and LDAPS on your Pantheon Drupal or WordPress website.
 tags: [siteintegrations, secure-integration, ldap, ldaps]
-categories: [integrate]
+category: [integrate]
 ---
 [Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Secure Integration](https://pantheon.io/features/secure-integration).
 

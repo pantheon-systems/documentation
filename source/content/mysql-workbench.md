@@ -1,7 +1,7 @@
 ---
 title: Using MySQL Workbench to Access a Database
 description: Detailed information on using MySQL Workbench for creating, executing, and optimizing SQL queries.
-categories: [manage]
+category: [manage]
 tags: [database, local]
 ---
 [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides DBAs and developers an integrated tools environment for: database design & modeling; SQL development; database administration; and support for Windows, Mac OS X, and Linux.

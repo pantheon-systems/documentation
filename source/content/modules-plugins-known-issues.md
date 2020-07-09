@@ -2,7 +2,7 @@
 title: Modules and Plugins with Known Issues
 description: A list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
 tags: [debugcode, siteintegrations]
-categories: [troubleshoot, integrate]
+category: [troubleshoot, integrate]
 contributors: [alexfornuto]
 reviewed: "2020-01-08"
 ---

@@ -1,7 +1,7 @@
 ---
 title: Clearing Caches for Drupal and WordPress
 description: Learn how to clear cache for Drupal and WordPress sites on Pantheon's Global CDN.
-categories: [performance]
+category: [performance]
 tags: [cache, cdn]
 ---
 Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/global-cdn) service.

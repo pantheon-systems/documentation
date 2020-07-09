@@ -1,7 +1,7 @@
 ---
 title: Deleting a Site on Pantheon
 description: Information on removing a Drupal or WordPress site from Pantheon.
-categories: [manage]
+category: [manage]
 tags: [billing, site, sandbox]
 ---
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.

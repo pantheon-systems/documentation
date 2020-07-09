@@ -2,7 +2,7 @@
 title: Request Tax Exempt Status
 description: Provide this information to file your qualified tax exempt status with Pantheon.
 tags: [billing]
-categories: [manage]
+category: [manage]
 contributors: [edwardangert]
 searchboost: 150
 reviewed: "2020-03-24"

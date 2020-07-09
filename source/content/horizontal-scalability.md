@@ -1,7 +1,7 @@
 ---
 title: Horizontal Scalability
 description: Learn about scaling web applications and architecture of every Pantheon environment.
-categories: [platform]
+category: [platform]
 tags: [billing, launch]
 ---
 Pantheon's distributed infrastructure facilitates horizontal scalability through the automated process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pages served to hundreds of millions without downtime.

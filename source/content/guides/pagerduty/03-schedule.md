@@ -6,7 +6,7 @@ pagerduty: true
 anchorid: schedule
 generator: pagination
 layout: guide
-categories: [performance]
+category: [performance]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagination:
@@ -14,7 +14,7 @@ pagination:
 use:
     - pagerdutypages
     - docs_tags
-permalink: docs/guides/pagerduty/schedule/
+permalink: docs/guides/pagerduty/schedule
 nexturl: guides/pagerduty/notify/
 previousurl: guides/pagerduty/monitor/
 editpath: pagerduty/03-schedule.md

@@ -2,7 +2,7 @@
 title: Errors and Server Responses
 description: Detailed information on your Pantheon site's server responses and error messages.
 tags: [services]
-categories: [platform]
+category: [platform]
 ---
 Error messages in the cloud are served when Pantheon is unable to fulfill a request. Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.
 

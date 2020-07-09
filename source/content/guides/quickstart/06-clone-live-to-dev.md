@@ -6,14 +6,14 @@ quickstart: true
 anchorid: clone-live-to-dev
 generator: pagination
 layout: guide
-categories: [get-started]
+category: [get-started]
 tags: [dashboard, iterate, launch, webops, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
 use:
   - quickstartpages
-permalink: docs/guides/quickstart/clone-live-to-dev/
+permalink: docs/guides/quickstart/clone-live-to-dev
 nexturl: guides/quickstart/connection-modes/
 nextpage: Connection Modes
 previousurl: guides/quickstart/create-test-live/

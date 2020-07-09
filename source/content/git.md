@@ -1,7 +1,7 @@
 ---
 title: Starting With Git
 description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
-categories: [develop]
+category: [develop]
 tags: [git,webops]
 reviewed: "2020-02-07"
 ---

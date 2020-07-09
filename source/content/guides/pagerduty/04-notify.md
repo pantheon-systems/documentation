@@ -6,14 +6,14 @@ pagerduty: true
 anchorid: notify
 generator: pagination
 layout: guide
-categories: [performance]
+category: [performance]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagination:
     provider: data.pagerdutypages
 use:
     - pagerdutypages
-permalink: docs/guides/pagerduty/notify/
+permalink: docs/guides/pagerduty/notify
 nexturl: guides/pagerduty/slack/
 previousurl: guides/pagerduty/schedule/
 editpath: pagerduty/04-notify.md

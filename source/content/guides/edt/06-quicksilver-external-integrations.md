@@ -4,7 +4,7 @@ subtitle: External Integrations
 anchorid: external-integrations
 edt: true
 layout: guide
-categories: [integrate]
+category: [integrate]
 tags: [collaborate, continuous-integration, quicksilver, webops, workflow]
 type: guide
 generator: pagination
@@ -12,7 +12,7 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/edt/external-integrations/
+permalink: docs/guides/edt/external-integrations
 nexturl: guides/edt/performance/
 nextpage: Performance
 previousurl: guides/edt/terminus-cli/

@@ -5,9 +5,9 @@ terminuspage: true
 description: Manual for the Terminus command line interface for advanced interaction with the Pantheon platform.
 type: terminuspage
 layout: terminuspage
-categories: [develop]
+category: [develop]
 tags: [cli, drush, terminus, workflow, wp-cli]
-permalink: docs/:basename/
+permalink: docs/:basename
 nexturl: terminus/install/
 image: terminus-thumbLarge
 reviewed: "2020-02-05"

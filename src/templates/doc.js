@@ -100,7 +100,7 @@ class DocTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
-          categories={node.frontmatter.categories}
+          category={node.frontmatter.category}
           tags={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
@@ -152,7 +152,7 @@ export const pageQuery = graphql`
         title
         description
         getfeedbackform
-        categories
+        category
         contributors {
           id
           name

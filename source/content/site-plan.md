@@ -1,7 +1,7 @@
 ---
 title: Manage Plans in the Site Dashboard
 description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
-categories: [platform]
+category: [platform]
 tags: [billing, dashboard, site]
 contributors: [cityofoaksdesign]
 ---

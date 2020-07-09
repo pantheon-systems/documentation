@@ -1,7 +1,7 @@
 ---
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
-categories: [platform]
+category: [platform]
 tags: [https, launch, code, workflow]
 ---
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.

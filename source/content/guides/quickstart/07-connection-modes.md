@@ -6,14 +6,14 @@ quickstart: true
 anchorid: connection-modes
 generator: pagination
 layout: guide
-categories: [get-started]
+category: [get-started]
 tags: [code, dashboard, git, sftp, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
 use:
   - quickstartpages
-permalink: docs/guides/quickstart/connection-modes/
+permalink: docs/guides/quickstart/connection-modes
 nexturl: guides/quickstart/onserver-dev-part1/
 nextpage: On-Server Dev, Part 1
 previousurl: guides/quickstart/clone-live-to-dev/

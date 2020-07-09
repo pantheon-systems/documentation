@@ -1,7 +1,7 @@
 ---
 title: Use the Pantheon WebOps Workflow
 description: Understand the Pantheon WebOps workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
-categories: [get-started]
+category: [get-started]
 tags: [workflow, dashboard, webops]
 ---
 

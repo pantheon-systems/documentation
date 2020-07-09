@@ -1,7 +1,7 @@
 ---
 title: Platform Resources for Legacy Plans
 description: Get detailed information about platform resources for your Drupal or WordPress site.
-categories: [platform]
+category: [platform]
 tags: [billing]
 ---
 

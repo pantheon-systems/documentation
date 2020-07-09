@@ -3,10 +3,10 @@ title: Fasthosts Domain Configuration
 provider: Fasthosts
 dnsprovider: true
 description: Learn how to point your Fasthosts domain to a Pantheon site.
-categories: [go-live]
+category: [go-live]
 tags: [dns]
 draft: true
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/fasthosts.md/
 ---
 ## Before You Begin

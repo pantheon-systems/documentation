@@ -1,7 +1,7 @@
 ---
 title: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
-categories: [develop]
+category: [develop]
 tags: [database, cli]
 reviewed: "2020-03-16"
 ---

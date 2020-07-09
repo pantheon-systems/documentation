@@ -6,7 +6,7 @@ contributors: [BFTrick]
 featuredcontributor: true
 layout: guide
 cms: "WordPress"
-categories: [get-started]
+category: [get-started]
 tags: [plugins, site]
 type: guide
 anchorid: woocommerce
@@ -16,7 +16,7 @@ pagination:
     provider: data.woocommercepages
 use:
     - woocommercepages
-permalink: docs/guides/woocommerce/
+permalink: docs/guides/woocommerce
 nexturl: guides/woocommerce/store-setup/
 nextpage: Store Setup
 editpath: woocommerce/01-introduction.md

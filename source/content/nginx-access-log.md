@@ -1,7 +1,7 @@
 ---
 title: Parsing Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
-categories: [performance]
+category: [performance]
 tags: [logs, measure]
 contributors: [albertcausing, sarahg]
 reviewed: "2020-05-06"

@@ -6,14 +6,14 @@ launch: true
 anchorid: launch-check
 generator: pagination
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [backup, launch, webops]
 type: guide
 pagination:
     provider: data.launchpages
 use:
     - launchpages
-permalink: docs/guides/launch/launch-check/
+permalink: docs/guides/launch/launch-check
 previousurl: guides/launch/redirects/
 previouspage: Redirect to a Primary Domain
 nexturl: guides/launch/next-steps/

@@ -1,7 +1,7 @@
 ---
 title: Organizations
 description: Detailed information on Pantheon organization types and the features available to them.
-categories: [manage]
+category: [manage]
 tags: [organizations]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Traffic Overages and the Site Plan
 description: How Pantheon applies site traffic measurements as plan overages.
-categories: [platform]
+category: [platform]
 tags: [billing, launch, measure, traffic]
 reviewed: "2020-06-23"
 ---

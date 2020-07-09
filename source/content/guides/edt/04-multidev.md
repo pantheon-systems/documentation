@@ -4,7 +4,7 @@ subtitle: Multidev
 anchorid: multidev
 edt: true
 layout: guide
-categories: [develop]
+category: [develop]
 tags: [git, iterate, multidev, webops, workflow]
 type: guide
 generator: pagination
@@ -12,7 +12,7 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/edt/multidev/
+permalink: docs/guides/edt/multidev
 nexturl: guides/edt/terminus-cli/
 nextpage: Command Line Interface
 previousurl: guides/edt/developer-workflow/

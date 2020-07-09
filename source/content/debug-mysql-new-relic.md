@@ -2,7 +2,7 @@
 title: MySQL Troubleshooting with New Relic Pro
 description: Use integrated reporting services with New Relic Pro to isolate MySQL performance issues on your Drupal or WordPress sites.
 tags: [newrelic, debugdb]
-categories: [troubleshoot,performance,go-live]
+category: [troubleshoot,performance,go-live]
 ---
 While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use [New Relic Pro](/new-relic). This article explains how you can troubleshoot MySQL databases with New Relic Pro. 
 

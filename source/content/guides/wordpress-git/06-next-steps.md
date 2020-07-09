@@ -5,10 +5,10 @@ description: Beginners guide on how to use the WordPress Dashboard, an SFTP clie
 anchorid: next-steps
 layout: guide
 cms: "WordPress"
-categories: [develop]
+category: [develop]
 tags: [git, sftp]
 type: guide
-permalink: docs/guides/wordpress-git/next-steps/
+permalink: docs/guides/wordpress-git/next-steps
 editpath: wordpress-git/06-next-steps.md
 image: git-sftp-wp-docs-guide
 getfeedbackform: default

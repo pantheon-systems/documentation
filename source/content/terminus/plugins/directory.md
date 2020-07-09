@@ -5,11 +5,11 @@ description: A non-exclusive directory of plugins to extend the features of Term
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
+category: [develop]
 tags: [cli, local, plugins, terminus, workflow]
 nexturl: terminus/plugins/create/
 previousurl: terminus/plugins/
-permalink: docs/terminus/plugins/:basename/
+permalink: docs/terminus/plugins/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---

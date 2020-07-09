@@ -3,12 +3,12 @@ title: Essential Developer Training
 subtitle: Architecture
 anchorid: architecture
 layout: guide
-categories: [platform]
+category: [platform]
 tags: [cdn, workflow]
 edt: true
 type: guide
 generator: pagination
-permalink: docs/guides/edt/introduction-and-architecture/
+permalink: docs/guides/edt/introduction-and-architecture
 nexturl: guides/edt/developer-workflow/
 nextpage: Developer Workflow
 previousurl: guides/edt/

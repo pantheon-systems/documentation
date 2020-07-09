@@ -2,7 +2,7 @@
 title: Onboarding Services
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
 tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
-categories: [get-started]
+category: [get-started]
 reviewed: "2020-05-26"
 ---
 

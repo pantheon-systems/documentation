@@ -7,14 +7,14 @@ survey: true
 anchorid: launch-check
 generator: pagination
 layout: guide
-categories: [go-live]
+category: [go-live]
 tags: [launch, webops]
 type: guide
 pagination:
     provider: data.launchpages
 use:
     - launchpages
-permalink: docs/guides/launch/next-steps/
+permalink: docs/guides/launch/next-steps
 previousurl: guides/launch/launch-check/
 previouspage: Final Launch Check
 editpath: launch/07-next-steps.md

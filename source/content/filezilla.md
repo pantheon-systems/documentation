@@ -1,7 +1,7 @@
 ---
 title: FileZilla on Pantheon
 description: Information about using the FileZilla FTP client for your Pantheon Drupal or WordPress site.
-categories: [develop]
+category: [develop]
 tags: [sftp, files]
 ---
 

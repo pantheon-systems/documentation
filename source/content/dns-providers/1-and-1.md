@@ -3,9 +3,9 @@ title: 1&1 Domain Configuration
 provider: 1&1
 dnsprovider: true
 description: Learn how to point your 1&1 domain to a Pantheon site.
-categories: [go-live]
+category: [go-live]
 tags: [dns]
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
 ---
 <Alert title="Warning" type="danger">

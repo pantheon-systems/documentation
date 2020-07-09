@@ -2,11 +2,11 @@
 title: Frontend Performance
 description: Learn how to ace an online speed test with Pantheon's Global CDN.
 tags: [siteintegrations]
-categories: [automate]
+category: [automate]
 type: guide
 layout: doc
 image: CDN-speedTest-docs-guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [tessak22, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham]
 ---
 Slow websites are **bad**. Many studies have looked at this and the facts are in. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/). In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.

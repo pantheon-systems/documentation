@@ -4,7 +4,7 @@ subtitle: Performance
 anchorid: performance
 edt: true
 layout: guide
-categories: [performance]
+category: [performance]
 tags: [cache, cdn]
 type: guide
 generator: pagination
@@ -12,7 +12,7 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/edt/performance/
+permalink: docs/guides/edt/performance
 nexturl: guides/edt/going-live/
 nextpage: Going Live
 previousurl: guides/edt/external-integrations/
