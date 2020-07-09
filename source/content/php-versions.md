@@ -24,6 +24,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 ### Available PHP Versions
 The recommended PHP versions available on Pantheon are:
 
+- [7.4](https://v74-php-info.pantheonsite.io/) is available for sites on [COE](/platform-considerations#compute-optimized-environments-coe). Other users may experience errors uploading images.
 - [7.3](https://v73-php-info.pantheonsite.io/)
 - [7.2](https://v72-php-info.pantheonsite.io/)
 

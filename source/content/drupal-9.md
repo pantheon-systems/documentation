@@ -127,7 +127,7 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
 1. Modify the `pantheon.yml` file to specify PHP 7.3 or newer and Drush 8:
 
   ```yaml:title=pantheon.yml
-  php_version: 7.3
+  php_version: 7.4
   drush_version: 8
   ```
 
