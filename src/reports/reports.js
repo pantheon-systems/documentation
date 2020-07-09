@@ -1,10 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
 import Accordion from "../components/accordion"
 import newGitHubIssueUrl from "new-github-issue-url"
 
 class ReviewReport extends React.Component {
+  //state = {checked: false}
+  //handleCheckboxChange = () => this.setState(state => ({ checked: !state.checked}))
   render() {
     return (
       <StaticQuery
@@ -12,10 +14,7 @@ class ReviewReport extends React.Component {
           query {
             allReviewedDocs: allMdx(
               filter: {
-                frontmatter: { 
-                    reviewed: { ne: null }
-                    draft: {ne: true}
-                  }
+                frontmatter: { reviewed: { ne: null }, draft: { ne: true } }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {
@@ -25,6 +24,7 @@ class ReviewReport extends React.Component {
                   frontmatter {
                     title
                     reviewed
+                    permalink
                   }
                   fields {
                     slug
@@ -34,9 +34,9 @@ class ReviewReport extends React.Component {
             }
             staleDocs: allMdx(
               filter: {
-                frontmatter: { 
+                frontmatter: {
                   reviewed: { lt: "2020-01-01" }
-                  draft: {ne: true}
+                  draft: { ne: true }
                 }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
@@ -47,6 +47,7 @@ class ReviewReport extends React.Component {
                   frontmatter {
                     title
                     reviewed
+                    permalink
                   }
                   fields {
                     slug
@@ -56,10 +57,10 @@ class ReviewReport extends React.Component {
             }
             unreviewedDocs: allMdx(
               filter: {
-                frontmatter: { 
+                frontmatter: {
                   reviewed: { eq: null }
                   title: { ne: "" }
-                  draft: {ne: true}
+                  draft: { ne: true }
                 }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
@@ -70,6 +71,7 @@ class ReviewReport extends React.Component {
                   frontmatter {
                     title
                     reviewed
+                    permalink
                   }
                   fields {
                     slug
@@ -79,7 +81,7 @@ class ReviewReport extends React.Component {
             }
             categorizedDocs: allMdx(
               filter: {
-                frontmatter: { categories: { glob: "*" }, title: { ne: "" } }
+                frontmatter: { category: { glob: "*" }, title: { ne: "" } }
               }
             ) {
               edges {
@@ -87,11 +89,12 @@ class ReviewReport extends React.Component {
                   id
                   frontmatter {
                     title
-                    categories
+                    category
                     cms
                     reviewed
                     tags
                     type
+                    permalink
                   }
                   fields {
                     slug
@@ -101,8 +104,8 @@ class ReviewReport extends React.Component {
             }
             uncategorizedDocs: allMdx(
               filter: {
-                frontmatter: { categories: { eq: null }, title: { ne: "" } }
-                fields: { slug: { regex: "/^((?!changelog).)*$/"}}
+                frontmatter: { category: { eq: null }, title: { ne: "" } }
+                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {
               edges {
@@ -110,11 +113,12 @@ class ReviewReport extends React.Component {
                   id
                   frontmatter {
                     title
-                    categories
+                    category
                     cms
                     reviewed
                     tags
                     type
+                    permalink
                   }
                   fields {
                     slug
@@ -132,7 +136,14 @@ class ReviewReport extends React.Component {
           //console.log("searchCategory: ", searchCategory) // For Debugging
           const [searchTags, setSearchTags] = useState("")
           //console.log("searchTags: ", searchTags) // For Debugging
-
+          const [searchCMS, setSearchCMS] = useState("")
+          const [checked, setChecked] = useState(false)
+          useEffect(() => {
+            console.log("checked:", checked)
+          }, [checked])
+          //const [filterSubpage, setFilterSubpage] = useState(false)
+          //const handleClick = () => setFilterSubpage(!filterSubpage)
+          //console.log("Value of filterSubpage: ", filterSubpage) //For debugging
           /* Construct the constants for each of our Graphql Queries */
           const reviewedPages = data.allReviewedDocs.edges
           const reviewedTertiaryPages = data.allReviewedDocs.edges.filter(
@@ -153,6 +164,8 @@ class ReviewReport extends React.Component {
           const categorizedPages = data.categorizedDocs.edges
           const uncategorizedPages = data.uncategorizedDocs.edges
           //console.log("categorizedPages: ", categorizedPages) // For Debugging
+
+          const subPageRegex = new RegExp(".*/.*/.*/.*")
 
           /* Construct the GitHub Issue Body */
           const makeNewIssue = page => {
@@ -246,6 +259,53 @@ class ReviewReport extends React.Component {
                   >
                     <span className="fa fa-times" />
                   </div>
+                </div>
+              </div>
+
+              {/*Input form for CMS */}
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-addon">
+                    <i className="fa fa-search" />
+                  </div>
+                  <input
+                    type="text"
+                    id="command-search-cms"
+                    className="form-control"
+                    placeholder="Filter by CMS"
+                    onChange={h => setSearchCMS(h.target.value)}
+                    value={searchCMS}
+                  />
+                  <div
+                    style={{ background: "#fff; cursor:pointer" }}
+                    className="input-group-addon"
+                    id="clear-filter"
+                    onClick={e => setSearchCMS("")}
+                  >
+                    <span className="fa fa-times" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Filter out multipage guide tertiary pages */}
+              <div className="form-group">
+                <div className="input-group">
+                  <input
+                    type="checkbox"
+                    id="command-filter-tertiary"
+                    name="subpageFilter"
+                    checked={checked}
+                    onChange={() => setChecked(!checked)}
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      display: "inline-block",
+                      verticalAlign: "middle",
+                    }}
+                  />
+                  <label htmlFor="command-filter-tertiary">
+                    &nbsp;Exclude Multiguide Subpages
+                  </label>
                 </div>
               </div>
 
@@ -386,7 +446,7 @@ class ReviewReport extends React.Component {
 
               {/* Table of Categorized / Tagged Docs */}
               <Accordion
-                title="Categorized Docs (filters on Title, Category, Tag)"
+                title="Categorized Docs (filters on Title, Category, Tag, CMS, and excludes Subpages on checkbox)"
                 id="categorized"
               >
                 <div className="table-responsive">
@@ -430,7 +490,7 @@ class ReviewReport extends React.Component {
                           )
                         })
                         .filter(page => {
-                          return page.node.frontmatter.categories.filter(
+                          return page.node.frontmatter.category.filter(
                             category => category.indexOf(searchCategory) > -1
                           ).length
                         })
@@ -441,23 +501,50 @@ class ReviewReport extends React.Component {
                               ).length
                             : page
                         })
+                        .filter(page => {
+                          return page.node.frontmatter.cms
+                            ? page.node.frontmatter.cms
+                                .toLowerCase()
+                                .indexOf(searchCMS.toLowerCase()) >= 0
+                            : searchCMS.length
+                            ? null
+                            : page
+                        })
+                        .filter(page => {
+                          return checked
+                            ? !subPageRegex.test(
+                                page.node.frontmatter.permalink
+                              )
+                            : page
+                        })
                         .map((page, i) => {
                           return (
                             <tr key={i}>
                               <td>
                                 <a href={makeNewIssue(page)} target="blank">
-                                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                  <span className="glyphicon glyphicon-exclamation-sign"></span>
                                 </a>
                               </td>
                               <td>
-                                <Link to={`/${page.node.fields.slug}`}>
+                                <Link
+                                  to={
+                                    page.node.fields.slug.includes("guides")
+                                      ? page.node.fields.slug
+                                      : `/${page.node.fields.slug}`
+                                  }
+                                >
                                   {page.node.frontmatter.title}
+                                  {console.log("page", page)}
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
                               <td>
-                                {page.node.frontmatter.categories.map(
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms
+                                  : null}
+                              </td>
+                              <td>
+                                {page.node.frontmatter.category.map(
                                   (category, i) => {
                                     return (
                                       <>
@@ -480,7 +567,11 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
+                              <td>
+                                {page.node.frontmatter.type
+                                  ? page.node.frontmatter.type
+                                  : "doc"}
+                              </td>
                             </tr>
                           )
                         })}
@@ -544,7 +635,7 @@ class ReviewReport extends React.Component {
                             <tr key={i}>
                               <td>
                                 <a href={makeNewIssue(page)} target="blank">
-                                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                  <span className="glyphicon glyphicon-exclamation-sign"></span>
                                 </a>
                               </td>
                               <td>
@@ -553,7 +644,11 @@ class ReviewReport extends React.Component {
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms
+                                  : null}
+                              </td>
                               <td>
                                 {page.node.frontmatter.tags
                                   ? page.node.frontmatter.tags.map((tag, i) => {
@@ -565,7 +660,11 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
+                              <td>
+                                {page.node.frontmatter.type
+                                  ? page.node.frontmatter.type
+                                  : "doc"}
+                              </td>
                             </tr>
                           )
                         })}
