@@ -13,7 +13,7 @@ auth-terminus() {
         echo "Authentiction with Terminus failed \n"
         exit 1
     else
-        echo "Authenticated \n"
+        printf "Authenticated \n"
     fi
 }
 
