@@ -34,7 +34,6 @@ All links from the video are provided below.
 
  - [Pricing Comparison](https://pantheon.io/plans/pricing-comparison)
  - [Performance and load testing](/load-and-performance-testing)
- - [Varnish Checker](https://varnishcheck.pantheon.io/)
  - [Performance guide](/guides/frontend-performance)
  - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/)
  - [Webpagetest.org](https://www.webpagetest.org)
