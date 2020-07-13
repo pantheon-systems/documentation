@@ -32,7 +32,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 </Alert>
 
-1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/git/#install-git) and [clone the code](/git/#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/git#install-git) and [clone the code](/git#clone-your-site-codebase) locally if you have not done so already.
 
 1. From your terminal, `cd` to the site code repository:
 
@@ -43,12 +43,12 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 1. Move the directory you want to replace with a symlink. This serves to both back up any data that may otherwise be lost, and to prevent the symlink from being nested inside the existing directory:
 
     ```bash{promptUser: user}
-    mv ./wp-content/path/plugin-expects-write-to ~/backups/
+    mv ./wp-content/path/plugin-expects-write-to ~/backups
     ```
 
-    The command above moves the directory to a folder named `backups` in your home directory, `~/`. Replace this with your preferred backup location.
+    The command above moves the directory to a local `backups` directory in your home folder. Replace this with your preferred backup location. Note that this backup is now outside and separate from your site's codebase, and is only a safety measure to prevent data loss. Once you've confirmed that the symlink works across all environments and no data has been lost, you can remove this backup.
 
-1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
+1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
 
    ```bash{promptUser: user}
    cd wp-content/path/
@@ -61,7 +61,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     ln -s ../uploads/new-directory #The last nested directory should mirror the directory name the plugin expects to write to
     ```
 
-1. Stage your changes
+1. Stage your changes:
 
     ```bash{promptUser: user}
     git add .
@@ -80,7 +80,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     ```
 
  Your commit can be seen in the Dev environment's commit history. Once this commit is synced to all environments, the plugin will successfully write files within any environment, even when the Dev environment's connection mode is set to Git.
- 
+
  You should not see the newly created files in the Dashboard as "ready to commit," as files are not version controlled. Only the symlink to the new path is in the codebase.
 
   <Alert title="Note" type="info">
