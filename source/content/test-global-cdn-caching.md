@@ -11,59 +11,48 @@ tags: [cache, cdn]
 1. Enter the following command with your full Pantheon domain URL.
     - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
     - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
+    - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
 
-  ```bash{outputLines:2-20}
-  curl -I -H "accept-encoding: gzip, deflate, br" https://scalewp.io
+  ```bash{outputLines: 2-7}
+  curl -I -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0 14801    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
   HTTP/2 200
   cache-control: public, max-age=86400
-  content-encoding: gzip
-  content-type: text/html; charset=UTF-8
-  link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
-  link: <https://scalewp.io/>; rel=shortlink
-  server: nginx
-  x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
-  x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
-  via: 1.1 varnish
-  accept-ranges: bytes
-  date: Mon, 16 Apr 2018 16:30:18 GMT
-  via: 1.1 varnish
-  age: 44742 //highlight-line
-  x-served-by: cache-mdw17344-MDW, cache-jfk8146-JFK
-  x-cache: HIT, HIT
-  x-cache-hits: 1, 1
-  x-timer: S1523896219.500596,VS0,VE1
-  vary: Accept-Encoding, Cookie, Cookie
-  content-length: 41369
+  age: 65772
   ```
 
   To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
 
-  ```bash{outputLines:2-21}
-  curl -Is -H "accept-encoding: gzip, deflate, br" -H "Pantheon-Debug:1" https://scalewp.io
+  ```bash{outputLines: 2-5}
+  curl -Is -H "accept-encoding: gzip, deflate, br" -H "Pantheon-Debug:1" https://scalewp.io | egrep '(HTTP|cache-control|age:|surrogate-key-raw)'
   HTTP/2 200
   cache-control: public, max-age=86400
-  content-encoding: gzip
-  content-type: text/html; charset=UTF-8
-  link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
-  link: <https://scalewp.io/>; rel=shortlink
-  server: nginx
-  surrogate-key-raw: front post-7 post-user-6 single //highlight-line
-  x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
-  x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
-  via: 1.1 varnish
-  accept-ranges: bytes
-  date: Mon, 16 Apr 2018 16:30:24 GMT
-  via: 1.1 varnish
-  age: 44747
-  x-served-by: cache-mdw17344-MDW, cache-jfk8132-JFK
-  x-cache: HIT, HIT
-  x-cache-hits: 1, 2
-  x-timer: S1523896225.507911,VS0,VE0
-  vary: Accept-Encoding, Cookie, Cookie
-  content-length: 41369
+  surrogate-key-raw: front post-7 post-user-6 single
+  age: 71611
   ```
 
 ## Test Global CDN with Browser Headers
+
+### View HTTPS Headers with Chrome
+
+1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools) and click on the **Network** tab.
+1. Load a page on your site.
+1. Click on the URL of the request, under the **Name** column of the Requests table.
+1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
+
+### View HTTPS Headers with Firefox
+
+1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor).
+1. Load a page on your site.
+1. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
+1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
+
+### View HTTPS Headers with Internet Explorer
+
+1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
+1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
 
 ### How to Read HTTP Headers
 
@@ -100,25 +89,6 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
   - Via is used by proxies to indicate the intermediate protocol and recipient; the request went through Varnish (which is part of the technology behind Global CDN). This header will always be shown, regardless of whether the CDN served cached content.
 
 Two of the headers listed above are Drupal-specific. By default, WordPress does not send any additional HTTP headers. However, it is possible for plugins and themes to send them.
-
-### View HTTPS Headers with Chrome
-
-1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools) and click on the **Network** tab.
-1. Load a page on your site.
-1. Click on the URL of the request, under the **Name** column of the Requests table.
-1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
-
-### View HTTPS Headers with Firefox
-
-1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor).
-1. Load a page on your site.
-1. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
-1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
-
-### View HTTPS Headers with Internet Explorer
-
-1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
-1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
 
 ## See Also
 
