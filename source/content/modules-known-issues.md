@@ -169,7 +169,7 @@ ___
 **Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
 
 1. [Enable Redis](/redis/), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable Redis.)
-2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
+1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```php:title=imce.page.inc
  $cache_key = 'imce-' . $file;
@@ -191,7 +191,7 @@ ___
  }
  ```
 
-3. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
+1. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
 
 You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
 
