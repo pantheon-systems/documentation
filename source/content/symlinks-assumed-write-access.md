@@ -43,10 +43,10 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 1. Move the directory you want to replace with a symlink. This serves to both back up any data that may otherwise be lost, and to prevent the symlink from being nested inside the existing directory:
 
     ```bash{promptUser: user}
-    mv ./wp-content/path/plugin-expects-write-to ./tmp/backups
+    mv ./wp-content/path/plugin-expects-write-to ~/backups
     ```
 
-    The command above moves the directory to a `tmp/backups` subdirectory. Replace this with your preferred backup location. Keep in mind that due to Pantheon's [container infrastructure](/application-containers), after these changes are pushed to the platform, bindings may change and the only persistent directories that can be written to on the platform are `/files` and `/code`.
+    The command above moves the directory to a `backups` directory in your home holder. Replace this with your preferred backup location. Note that this backup is now outside and separate from your site's codebase, and is only a safety measure to prevent data loss. Once you've confirmed that the symlink works across all environments and no data has been lost, you can remove this backup.
 
 1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
 
