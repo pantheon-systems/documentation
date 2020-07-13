@@ -19,48 +19,22 @@ class LandingTemplate extends Component {
     return !topic ? null : (
       <Layout>
         <SEO title={topic.title} />
-        <main className="container doc-content-well" id="docs-main">
-          <h1 className="title">{topic.title}</h1>
-          <section className="row">
-            {topic.video_id && (
-              <article className="col-md-6 hero-video__video">
-                <Youtube src={topic.video_id} title={topic.title} />
-              </article>
-            )}
-            {(topic.cta || topic.cta_alt) && (
-              <div className="col-md-6">
-                {topic.cta && (
-                  <CallToAction
-                    title={topic.cta.title}
-                    type={topic.cta.type}
-                    subTitle={topic.cta.subtitle}
-                    url={topic.cta.url}
-                  />
-                )}{" "}
-                {topic.cta_alt && (
-                  <CallToAction
-                    title={topic.cta_alt.title}
-                    type={topic.cta_alt.type}
-                    subTitle={topic.cta_alt.subtitle}
-                    url={topic.cta_alt.url}
-                    dark
-                  />
-                )}
-              </div>
-            )}
-          </section>
-          {topic.guides &&
-            topic.guides.map(guide => (
-              <React.Fragment>
-                {guide.title && <h2>{guide.title}</h2>}
-                <div className="flex-panel-group">
-                  {guide.links &&
-                    guide.links.map(link =>
-                      guide.type === "normal" ? (
-                        <GuideItem
-                          url={link.url}
-                          image={link.image}
-                          text={link.text}
+          <main className="container doc-content-well" id="docs-main">
+              <h1 className="title">{topic.title}</h1>
+              <section className="row">
+                  {topic.video_id && (
+                    <article className="col-md-6 hero-video__video">
+                      <Youtube src={topic.video_id} title={topic.title}/>
+                    </article>
+                  )}
+                  {(topic.cta || topic.cta_alt) && (
+                    <div className="col-md-6">
+                      {topic.cta && (
+                        <CallToAction
+                          title={topic.cta.title}
+                          type={topic.cta.type}
+                          subTitle={topic.cta.subtitle}
+                          url={topic.cta.url}
                         />
                       )}{" "}
 
