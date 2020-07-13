@@ -1,8 +1,8 @@
 ---
 title: Resolve Git Merge Conflicts
 description: Learn how to resolve conflicts in your site code base. 
-tags: [git]
-categories: [develop]
+categories: [troubleshoot]
+tags: [git, local, webops]
 contributors: [alexfornuto]
 reviewed: "2020-02-11"
 ---

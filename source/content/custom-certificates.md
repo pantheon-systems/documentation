@@ -2,6 +2,8 @@
 title: 'Custom Certificates on The Pantheon Global CDN'
 description: For contract customers who require dedicated, custom TLS certificates
 reviewed: "2020-04-22"
+categories: [go-live]
+tags: [cdn, https, professional-services]
 ---
 
 ## Access

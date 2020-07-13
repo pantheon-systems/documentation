@@ -1,8 +1,8 @@
 ---
 title: Debugging Slow Performance
 description: Identify common problems with Drupal or WordPress performance speeds and deploy solutions.
-tags: [logs, debugcode]
-categories: [troubleshoot,performance]
+categories: [performance]
+tags: [cache, code, logs, measure]
 ---
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.
 
@@ -20,7 +20,7 @@ Each loop executed user\_load(1, TRUE), then triggered the error. Times are rou
 |:------------- |:------ |:-------- |:-------- |:--------- |:----------- |:-------------|
 | **none**      | 0.00s  | 0.08s    | 0.17s    | 0.30s     | 3.04s       | 32.81s       |
 | **E_NOTICE**  | 0.01s  | 0.16s    | 0.34s    | 0.71s     | 7.10s       | 79.52s       |
-| **E_WARNING** | 0.01s  | 0.16s    | 0.33s    | 0.70s     | 7.67s       | 134.68	    	|
+| **E_WARNING** | 0.01s  | 0.16s    | 0.33s    | 0.70s     | 7.67s       | 134.68       |
 
 Turning off error reporting suppresses the symptom, not the problem, and **PHP execution will still be slow as long as there are errors**.
 

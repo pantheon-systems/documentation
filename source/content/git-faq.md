@@ -1,8 +1,8 @@
 ---
 title: Git FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
-tags: [git]
 categories: [develop]
+tags: [git, iterate, local, workflow]
 contributors: [mrfelton, alexfornuto]
 reviewed: "2020-03-16"
 ---

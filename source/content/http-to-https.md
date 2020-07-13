@@ -1,8 +1,8 @@
 ---
 title: Switching Sites from HTTP to HTTPS
 description: Best-practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
-tags: [security]
-categories: [develop]
+categories: [go-live]
+tags: [https, launch, redirects, security]
 reviewed: "2020-02-12"
 ---
 

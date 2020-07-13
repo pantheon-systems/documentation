@@ -1,8 +1,8 @@
 ---
 title: Frontend Performance
 description: Learn how to ace an online speed test with Pantheon's Global CDN.
-tags: [siteintegrations]
-categories: [automate]
+categories: [performance]
+tags: [cache, cdn, measure, traffic]
 type: guide
 layout: doc
 image: CDN-speedTest-docs-guide

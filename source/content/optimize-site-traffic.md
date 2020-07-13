@@ -1,8 +1,8 @@
 ---
 title: Investigate and Remedy Traffic Events
 description: Determine and address the causes of unexpected traffic
-tags: [billing, logs]
 categories: [troubleshoot]
+tags: [billing, logs, measure, traffic]
 contributors: [edwardangert]
 reviewed: "2020-03-03"
 ---

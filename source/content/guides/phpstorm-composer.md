@@ -3,8 +3,9 @@ title: PhpStorm for Composer Managed Drupal 8 Sites
 description: Learn how to configure JetBrains PhpStorm for Pantheon sites managed with Composer using a GitHub Pull Request workflow.
 type: guide
 permalink: docs/guides/:basename/
-tags: [siteintegrations]
+cms: "Drupal 8"
 categories: [integrate]
+tags: [code, composer, iterate, local]
 contributors: [LukasRos, rachelwhitton]
 multidev: true
 ---

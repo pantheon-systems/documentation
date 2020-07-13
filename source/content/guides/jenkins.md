@@ -1,8 +1,8 @@
 ---
 title: Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server
 description: Configure an existing Jenkins server to automatically test and deploy code changes to Pantheon when pushed to GitHub.
-tags: [siteintegrations]
-categories: [workflow]
+categories: [automate]
+tags: [collaborate, continuous-integration, git, iterate]
 type: guide
 permalink: docs/guides/:basename/
 date: 6/20/2017

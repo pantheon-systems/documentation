@@ -1,8 +1,8 @@
 ---
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
-tags: [code,libraries,plugins,modules]
 categories: [platform]
+tags: [code, libraries, modules, plugins]
 reviewed: "2020-05-18"
 ---
 

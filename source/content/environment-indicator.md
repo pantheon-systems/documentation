@@ -1,8 +1,8 @@
 ---
 title: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
-tags: [workflow]
 categories: [develop]
+tags: [site, terminus, workflow, webops]
 ---
 Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/multidev).
 

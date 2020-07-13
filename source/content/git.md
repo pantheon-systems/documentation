@@ -2,7 +2,7 @@
 title: Starting With Git
 description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
 categories: [develop]
-tags: [git,webops]
+tags: [code, git, local, webops, workflow]
 reviewed: "2020-02-07"
 ---
 Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. If you like to [develop locally](/local-development), it's a good way to streamline your website operations: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
