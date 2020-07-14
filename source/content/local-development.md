@@ -221,7 +221,7 @@ This file is ignored by the `.gitignore` file  in [WordPress](https://github.com
 
 #### Example `wp-config-local.php` File
 
-The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location as your `wp-config.php` file. You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key$)).
+The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location as your `wp-config.php` file. You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/)).
 
 ```php:title=wp-config-local.php
 <?php
