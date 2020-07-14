@@ -174,9 +174,18 @@ The `stripos` function implements a case-insensitive match which can be helpful 
 Remember to replace the example user agent (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
+// Either check a single bot.
 if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
   header('HTTP/1.0 403 Forbidden');
-  exit;
+}
+
+// Or check against a list of bots.
+$bots = ['UglyBot', 'PetalBot'];
+foreach ($bots as $bot) {
+  if (stripos($_SERVER['HTTP_USER_AGENT'], $bot) !== FALSE) {
+    header('HTTP/1.0 403 Forbidden');
+    exit;
+  }
 }
 ```
 

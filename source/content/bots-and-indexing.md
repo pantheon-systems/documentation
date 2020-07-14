@@ -48,12 +48,13 @@ It is important to note that each of your site environments have a `robots.txt` 
 User-agent: *
 Disallow: /
 
+User-agent: dotbot
+User-agent: PetalBot
+User-agent: PowerMapper
 User-agent: RavenCrawler
 User-agent: rogerbot
-User-agent: dotbot
 User-agent: SemrushBot
 User-agent: SemrushBot-SA
-User-agent: PowerMapper
 User-agent: Swiftbot
 Allow: /
 ```
@@ -70,7 +71,7 @@ To support pre-launch SEO and site search testing, we allow the following bots a
 - [SEMrush](https://www.semrush.com/bot/)
 - [RogerBot](https://moz.com/help/guides/moz-procedures/what-is-rogerbot) by Moz
 - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot) by Moz
-- [PowerMapper](https://www.powermapper.com/products/mapper/){external}
+- [PowerMapper](https://www.powermapper.com/products/mapper/)
 - [Swiftbot](https://swiftype.com/swiftbot) by Swiftype
 
 Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/support#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
