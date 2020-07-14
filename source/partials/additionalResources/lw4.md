@@ -4,11 +4,10 @@ Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practic
 
 ### Your Feedback Helps
 
-We sincerely want this training to be useful. Please help us improve by [sharing your feedback](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495040). It only takes you a moment but it makes a big difference for us. 
+We sincerely want this training to be useful. Please help us improve by [sharing your feedback](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495040). It only takes you a moment but it makes a big difference for us.
 
 ### Resources from this Workshop
 
-- [Is Varnish working on my Pantheon Site?](https://varnishcheck.pantheon.io/)
 - Drupal Module: [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)

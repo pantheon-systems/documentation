@@ -4,17 +4,65 @@ description: Detailed information on how to determine if CDN caching is working 
 categories: [performance]
 tags: [cache, cdn]
 ---
-## Verify the Global CDN is Working on Your Pantheon Site
 
-Use the [web utility](https://varnishcheck.pantheon.io/) to check to see if caching is working on your Pantheon-hosted website. This tool performs up to two web requests to your site and will check the headers to determine if the CDN can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utility does not check for cookies that are set in your frontend code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/support).
+## Test CDN Caching with curl
 
-## Test If Global CDN Caching Is Working by Reading HTTP Headers
+1. Open a terminal.
+1. Enter the following command with your full Pantheon domain URL.
+    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
+    - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
+
+  ```bash{outputLines: 2-7}
+  curl -I -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0 14801    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  HTTP/2 200
+  cache-control: public, max-age=86400
+  age: 65772
+  ```
+
+  To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
+
+  ```bash{outputLines: 2-5}
+  curl -Is -H "accept-encoding: gzip, deflate, br" -H "Pantheon-Debug:1" https://scalewp.io | egrep '(HTTP|cache-control|age:|surrogate-key-raw)'
+  HTTP/2 200
+  cache-control: public, max-age=86400
+  surrogate-key-raw: front post-7 post-user-6 single
+  age: 71611
+  ```
+
+To see all headers, remove the pipe (`|`) and everything following it from these commands.
+
+## Test Global CDN with Browser Headers
+
+### View HTTPS Headers with Chrome
+
+1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools) and click on the **Network** tab.
+1. Load a page on your site.
+1. Click on the URL of the request, under the **Name** column of the Requests table.
+1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
+
+### View HTTPS Headers with Firefox
+
+1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor).
+1. Load a page on your site.
+1. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
+1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
+
+### View HTTPS Headers with Internet Explorer
+
+1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
+1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
+
+## How to Read HTTP Headers
 
 Every HTTP response served by Pantheon is accompanied by a number of headers. These are the same headers that the CDN uses when determining if and for how long to cache content.
 
 - **Cache-Control: public, max-age=900**
   - Set from Drupal's performance settings.
-  - max-age is the number of seconds that content can remain in cache; if set to 0, content will not be cached.
+  - max-age is the number of seconds that content can remain in cache; if set to 0, content willmlv.asasdasdasdasd not be cached.
   - If "no-cache, must-revalidate, post-check=0, pre-check=0"; this is Drupal's default header and typically indicates that there is a conflict.
   - **All static assets** (images, etc) on production environments (Test and Live) are set with a max-age of 366 days; we recommend using new file names or appending a changable query string if content needs to change earlier. Development environments (Dev and Multidevs) intentionally do not cache static assets.
 
@@ -25,7 +73,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
   - A Pantheon webserver generated the original page content. This will always be shown, even if a page is served from the a Global CDN cache.
 
 - **X-Drupal-Cache: HIT**
-  - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information.  **Drupal Only**
+  - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information. **Drupal Only**
 
 - **X-Generator: Drupal 7 (https://www.drupal.org/)**
   - Drupal built the page. **Drupal Only**
@@ -44,84 +92,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
 Two of the headers listed above are Drupal-specific. By default, WordPress does not send any additional HTTP headers. However, it is possible for plugins and themes to send them.
 
-### Test CDN Caching with curl
-
-1. Open a terminal.
-1. Enter the following command with your full Pantheon domain URL.
-    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
-    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
-
-  ```bash{outputLines:2-20}
-  curl -I -H "accept-encoding: gzip, deflate, br" https://scalewp.io
-  HTTP/2 200
-  cache-control: public, max-age=86400
-  content-encoding: gzip
-  content-type: text/html; charset=UTF-8
-  link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
-  link: <https://scalewp.io/>; rel=shortlink
-  server: nginx
-  x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
-  x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
-  via: 1.1 varnish
-  accept-ranges: bytes
-  date: Mon, 16 Apr 2018 16:30:18 GMT
-  via: 1.1 varnish
-  age: 44742 //highlight-line
-  x-served-by: cache-mdw17344-MDW, cache-jfk8146-JFK
-  x-cache: HIT, HIT
-  x-cache-hits: 1, 1
-  x-timer: S1523896219.500596,VS0,VE1
-  vary: Accept-Encoding, Cookie, Cookie
-  content-length: 41369
-  ```
-
-  To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
-
-  ```bash{outputLines:2-21}
-  curl -Is -H "accept-encoding: gzip, deflate, br" -H "Pantheon-Debug:1" https://scalewp.io
-  HTTP/2 200
-  cache-control: public, max-age=86400
-  content-encoding: gzip
-  content-type: text/html; charset=UTF-8
-  link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
-  link: <https://scalewp.io/>; rel=shortlink
-  server: nginx
-  surrogate-key-raw: front post-7 post-user-6 single //highlight-line
-  x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
-  x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
-  via: 1.1 varnish
-  accept-ranges: bytes
-  date: Mon, 16 Apr 2018 16:30:24 GMT
-  via: 1.1 varnish
-  age: 44747
-  x-served-by: cache-mdw17344-MDW, cache-jfk8132-JFK
-  x-cache: HIT, HIT
-  x-cache-hits: 1, 2
-  x-timer: S1523896225.507911,VS0,VE0
-  vary: Accept-Encoding, Cookie, Cookie
-  content-length: 41369
-  ```
-
-### Test Global CDN with Chrome
-
-1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools) and click on the **Network** tab.
-1. Load a page on your site.
-1. Click on the URL of the request, under the **Name** column of the Requests table.
-1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
-
-### Test Global CDN with Firefox
-
-1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor).
-1. Load a page on your site.
-1. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
-1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
-
-### Test Global CDN with Internet Explorer
-
-1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
-1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
-
-
 ## See Also
+
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
