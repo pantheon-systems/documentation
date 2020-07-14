@@ -33,6 +33,8 @@ tags: [cache, cdn]
   age: 71611
   ```
 
+To see all headers, remove the pipe (`|`) and everything following it from these commands.
+
 ## Test Global CDN with Browser Headers
 
 ### View HTTPS Headers with Chrome
@@ -54,7 +56,7 @@ tags: [cache, cdn]
 1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
 1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
 
-### How to Read HTTP Headers
+## How to Read HTTP Headers
 
 Every HTTP response served by Pantheon is accompanied by a number of headers. These are the same headers that the CDN uses when determining if and for how long to cache content.
 
