@@ -3,7 +3,7 @@ title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
 categories: [platform]
 tags: [logs, newrelic, workflow]
-reviewed: "2020-01-13"
+reviewed: "2020-07-14"
 ---
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
@@ -32,11 +32,12 @@ When appservers are migrated as a regular part of platform maintenance, log file
 </Alert>
 
 ## Access Logs Via SFTP
+
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 In the Connection Information section of the dashboard, we can see a pattern about the hostnames:
 
-```none
+```bash{promptUser: user}
 <env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in
 ```
 
@@ -87,25 +88,26 @@ For sites not on COE, the directory structure will be more like this:
 ```
 
 ### Database Log Files
+
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
-2. Click **Connection Info** and copy the **SFTP Command Line** command.
-3. Edit and execute the command by replacing `appserver` with `dbserver`:
+1. Click **Connection Info** and copy the **SFTP Command Line** command.
+1. Edit and execute the command by replacing `appserver` with `dbserver`:
 
  From:
 
- ```bash
+ ```bash{promptUser: user}
  sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
  ```
 
  To:
 
- ```bash
+ ```bash{promptUser: user}
  sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
  ```
 
 4. Run the following SFTP command in terminal:
 
- ```bash
+ ```
  get -r logs
  ```
 
@@ -122,9 +124,10 @@ You now have a local copy of the logs directory, which contains the following:
 You can automate the process of accessing and maintaining these logs with a simple script.
 
 ### Create a Script
+
 Open your local terminal to create and access a new local directory:
 
-```bash
+```bash{promptUser: user}
 mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
@@ -189,6 +192,7 @@ Using your favorite text editor, create a file within the `site-logs` directory 
   </TabList>
 
 ### Collect Logs
+
 Download logs by executing the script from within the `site-logs` directory:
 
 ```bash{promptUser:user}
@@ -204,6 +208,7 @@ You can now access the logs from within the `site-logs` directory. More than one
 See [Parsing nginx Access Logs with GoAccess](/nginx-access-log) for details.
 
 ### What is the first line in nginx-access.log?
+
 The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
 
 The client IP for the following example is `122.248.101.126`:
@@ -244,16 +249,16 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 
 By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
-* Visit `/admin/reports/dblog` once you've logged in as administrator.
-* Using [Terminus](/terminus):
+- Visit `/admin/reports/dblog` once you've logged in as administrator.
+- Using [Terminus](/terminus):
 
- ```bash
+ ```bash{promptUser: user}
  terminus drush <site>.<env> -- watchdog-show
  ```
 
-* Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
+- Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
- ```bash
+ ```bash{promptUser: user}
  terminus drush <site>.<env> -- watchdog-show --tail
  ```
 
@@ -263,7 +268,7 @@ We do not recommend disabling dblog. Best practice is to find and resolve the pr
 
 ### How do I access logs in environments with multiple containers?
 
-Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the following shell [script](#automate-downloading-logs).
+Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the [shell script](#automate-downloading-logs) above.
 
 ### Can I `tail` server logs?
 
@@ -277,7 +282,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. In your project's `logs` directory, create `logwatcher.sh`:
 
-  ```bash
+  ```bash:title=logwatcher.sh
   #!/bin/bash
   TERMINUS_HIDE_UPDATE_MESSAGE=1
 
@@ -300,13 +305,13 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. Make the script executable:
 
-   ```bash
+   ```bash{promptUser: user}
    chmod +x ~/projects/mysite/logs/logwatcher.sh
    ```
 
 1. Now you can use `watch` (available on macOS via Homebrew), to keep an updated view of the logs:
 
-   ```bash
+   ```bash{promptUser: user}
    watch -n2 ~/projects/mysite/logs/logwatcher.sh
    ```
 
