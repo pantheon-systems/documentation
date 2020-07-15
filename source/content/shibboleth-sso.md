@@ -62,13 +62,13 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  composer require simplesamlphp/simplesamlphp
  ```
 
-2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
+1. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
  ```bash{promptUser: user}
  ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
  ```
 
-3. Create your site-specific config file:
+1. Create your site-specific config file:
 
  ```bash{promptUser: user}
  mkdir -p private/simplesamlphp
