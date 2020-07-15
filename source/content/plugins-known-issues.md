@@ -681,6 +681,8 @@ ___
 
 ## [Wordfence](https://wordpress.org/plugins/wordfence/)
 
+<ReviewDate date="2020-07-15" />
+
 **Issue:** Wordfence assumes write access to several files in the code base to store configuation and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
@@ -765,7 +767,7 @@ export ENV=dev
   terminus wp $SITE.$ENV -- plugin install --activate wordfence
   Installing Wordfence Security – Firewall & Malware Scan (7.4.9)
   Warning: Failed to create directory '/.wp-cli/cache/': mkdir(): Read-only file system.
-  Downloading installation package from https://downloads.wordpress.org/plugin/wordfence.7.4.8.zip...
+  Downloading installation package from https://downloads.wordpress.org/plugin/wordfence.7.4.9.zip...
   Unpacking the package...
   Installing the plugin...
   Plugin installed successfully.
