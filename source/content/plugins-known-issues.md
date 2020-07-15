@@ -716,7 +716,7 @@ export ENV=dev
   ln -s ../files/private/.user.ini ./.user.ini
   ```
 
-1. Open `pantheon.yml` and add a protected web path for `.user.ini`:
+1. Open `pantheon.yml` and add a [protected web path](/private-paths) for `.user.ini`:
 
   ```yml:title=pantheon.yml
   protected_web_paths:
@@ -736,8 +736,7 @@ export ENV=dev
 1. Create the empty files `wordfence-waf.php` and `.user.ini` to push to the site. In this example, we're using [`touch`](https://man7.org/linux/man-pages/man1/touch.1.html) to create them in the `/tmp` directory:
 
   ```bash{promptUser: user}
-  touch /tmp/wordfence-waf.php
-  touch /tmp/.user.ini
+  touch /tmp/wordfence-waf.php /tmp/.user.ini
   ```
 
 1. Connect to your environment over SFTP, create the required directories, and push the new files. You can get the SFTP path from the Site Dashboard under **Connection Info**:
@@ -758,13 +757,13 @@ export ENV=dev
   exit
   ```
 
-1. Set the environment connection mode to SFTP, then installand activate Wordfence. You can do both with Terminus:
+1. Set the environment connection mode to SFTP, then install and activate Wordfence. You can do both with Terminus:
 
   ```bash{outputLines: 2,4-25}
-  terminus connection:set wordpress-docs-testbed.waf5 sftp
-  [notice] Enabled on-server development via SFTP for "waf5"
-  terminus wp wordpress-docs-testbed.waf5 -- plugin install --activate wordfence
-  Installing Wordfence Security – Firewall & Malware Scan (7.4.8)
+  terminus connection:set $SITE.$ENV sftp
+  [notice] Enabled on-server development via SFTP for "env"
+  terminus wp $SITE.$ENV -- plugin install --activate wordfence
+  Installing Wordfence Security – Firewall & Malware Scan (7.4.9)
   Warning: Failed to create directory '/.wp-cli/cache/': mkdir(): Read-only file system.
   Downloading installation package from https://downloads.wordpress.org/plugin/wordfence.7.4.8.zip...
   Unpacking the package...
@@ -784,7 +783,7 @@ export ENV=dev
 
   You can safely ignore the warning messages.
 
-1. After clicking on **CLICK HERE TO CONFIGURE**, the plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete after downloading.
+1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
 ___
 
