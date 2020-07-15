@@ -125,6 +125,7 @@ class GuideTemplate extends React.Component {
                 <div className="row guide-content-well">
                   <article
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
+                    id="doc"
                   >
                     <HeaderBody
                       title={node.frontmatter.title}

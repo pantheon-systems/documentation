@@ -162,10 +162,11 @@ class TerminusTemplate extends React.Component {
                 items={items}
                 activePage={node.fields.slug}
               />
-              <div id="doc" className="terminus col-md-9 guide-doc-body">
+              <main id="docs-main" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
-                  <div
+                  <article
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
+                    id="doc"
                   >
                     <HeaderBody
                       title={node.frontmatter.title}
@@ -181,7 +182,7 @@ class TerminusTemplate extends React.Component {
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.body}</MDXRenderer>
                     </MDXProvider>
-                  </div>
+                  </article>
                   {node.frontmatter.showtoc && (
                     <div
                       className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
@@ -203,7 +204,7 @@ class TerminusTemplate extends React.Component {
                       : null
                   }
                 />
-              </div>
+              </main>
             </div>
           </div>
         </div>
