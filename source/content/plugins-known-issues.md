@@ -290,13 +290,17 @@ ___
 
 <ReviewDate date="2018-11-15" />
 
-**Issue:** Event Espresso shows the error:
+**Issue 1:** Event Espresso shows the error:
 
 ```none
 PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.
 ```
 
 **Solution:** [Define `FS_METHOD`](#define-fs_method).
+
+**Issue 2:** Enabling Event Espresso sends a session cookie which conflicts with platform-level page caching.
+
+**Solution:** Session autostart can be disabled conditionally using `FHEE_load_EE_Session` [filter](https://developer.wordpress.org/plugins/hooks/filters/#add-filter).
 
 ___
 
