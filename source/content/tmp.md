@@ -147,7 +147,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 * Replace SOME_TMP_SETTING
 */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  define('SOME_TMP_SETTING', 'wp-content/uploads/private/tmp');
+  define('SOME_TMP_SETTING', '/wp-content/uploads/private/tmp');
 }
 ```
 The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
