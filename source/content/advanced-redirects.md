@@ -261,32 +261,60 @@ function ip_in_list($ips) {
           }
         }
     }
+
     return false;
-  }
+}
+  
 function is_from_trusted_ip() {
-   //Replace the IPs in this array with those you want to restrict access to
-   $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
-   return ip_in_list($trusted_ips);
- }
- if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
-   // Check if the path should be locked down
-   $to_lockdown = false;
-   $clean_request_uri = rtrim(mb_strtolower(strtok($_SERVER["REQUEST_URI"],'?')), '/');
-   $slashes_removed_uri = str_replace( array('/', '%2f'), '', $clean_request_uri );
- if ( substr($slashes_removed_uri, 0, 12) == 'wp-login.php' ) {
-     // user login page
-     $to_lockdown = true;
-   } elseif ( substr($slashes_removed_uri, 0, 8) == 'wp-admin' ) {
-     // admin pages
-     $to_lockdown = true;
-   }
-   if($to_lockdown && (php_sapi_name() != "cli")){
-     header('HTTP/1.0 403 Forbidden');
-     echo 'Access denied.';
-   exit();
-   }
- }
- ```
+    //Replace the IPs in this array with those you want to restrict access to
+    $trusted_ips = array(
+        '192.0.2.38',
+        '198.51.100.12',
+        '208.0.113.159',
+        '2001:DB8:1C93',
+    );
+
+    return ip_in_list($trusted_ips);
+}
+
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') && !is_from_trusted_ip()) {
+    // Check if the path should be locked down
+    $to_lockdown = false;
+
+    $disallow_uri = array(
+        '/wp-login.php',
+        '/wp-admin/',
+    );
+
+    $allow_uri = array(
+        '/wp-admin/admin-ajax.php',
+        '/wp-admin/admin-post.php',
+    );
+
+    foreach ($disallow_uri as $prefix) {
+        if (stripos($_SERVER['REQUEST_URI'], $prefix) === 0) {
+            $to_lockdown = true;
+
+            break;
+        }
+    }
+
+    foreach ($allow_uri as $prefix) {
+        if (stripos($_SERVER['REQUEST_URI'], $prefix) === 0) {
+           $to_lockdown = false;
+
+           break;
+        }
+    }
+
+    if ($to_lockdown) {
+        header('HTTP/1.0 403 Forbidden');
+        echo 'Access denied.';
+
+        exit();
+    }
+}
+```
 
 </Tab>
 
