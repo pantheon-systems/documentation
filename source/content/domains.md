@@ -158,7 +158,7 @@ Replace `http://` in the site's database and configure your CMS to assume users 
 
 ### Mixed Case DNS Is Not Supported
 
-The Pantheon Dashboard standardizes mixed case domain entries to be completely lowercase. If you have your name server configured to use a mixed case domain, users might not be able to access your site.
+If you have your name server configured to use a mixed case domain, visitors might not be able to access your site.
 
 Configure your DNS to accept an entirely lowercase domain to avoid this issue.
 
