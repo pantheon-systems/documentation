@@ -261,7 +261,7 @@ function ip_in_list($ips) {
           }
         }
     }
-    
+
     return false;
 }
   
@@ -273,44 +273,44 @@ function is_from_trusted_ip() {
         '208.0.113.159',
         '2001:DB8:1C93',
     );
-    
+
     return ip_in_list($trusted_ips);
 }
- 
+
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') && !is_from_trusted_ip()) {
     // Check if the path should be locked down
     $to_lockdown = false;
-   
+
     $disallow_uri = array(
         '/wp-login.php',
         '/wp-admin/',
     );
-   
+
     $allow_uri = array(
         '/wp-admin/admin-ajax.php',
         '/wp-admin/admin-post.php',
     );
-   
+
     foreach ($disallow_uri as $prefix) {
         if (stripos($_SERVER['REQUEST_URI'], $prefix) === 0) {
             $to_lockdown = true;
-            
+
             break;
         }
     }
-   
+
     foreach ($allow_uri as $prefix) {
         if (stripos($_SERVER['REQUEST_URI'], $prefix) === 0) {
            $to_lockdown = false;
-           
+
            break;
         }
     }
-   
+
     if ($to_lockdown) {
         header('HTTP/1.0 403 Forbidden');
         echo 'Access denied.';
-        
+
         exit();
     }
 }
