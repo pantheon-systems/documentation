@@ -4,7 +4,7 @@ description: Learn about Pantheon's default Drush version and how to implement s
 cms: "Drupal"
 categories: [develop]
 tags: [drush, updates]
-reviewed: "2020-02-06"
+reviewed: "2020-07-17"
 ---
 
 By default, Pantheon runs Drush 8 on newly created Drupal sites.
@@ -94,6 +94,16 @@ In general, you will usually be better off not including a site-local Drush in y
 Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0`.
 
 For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush).
+
+### Drush 5 on Older Sites
+
+Drupal sites created on Pantheon in late 2015 or earlier that do not have `drush_version` defined in `pantheon.yml` may default to Drush 5. In this case, you may see the following error:
+
+```none
+{{Uncaught Error: Call to undefined function mysql_connect() in /etc/drush/drush-5-extensions/pantheon.drush.inc:127
+```
+
+Configure a newer version of Drush as [documented above](#configure-drush-version) to resolve.
 
 ## See Also
 
