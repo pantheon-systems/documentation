@@ -8,7 +8,7 @@ tags: [migrate, workflow]
 
 <Alert title="A note about Drupal 9" type="info">
 
-[Drupal 9.0.0](https://www.drupal.org/about/9) was released on [drupal.org](drupal.org) in June of 2020.
+[Drupal 9.0.0](https://www.drupal.org/about/9) was released on [drupal.org](https://www.drupal.org/) in June of 2020.
 
 Pantheon support for live Drupal 9 sites is currently in development. See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
 
