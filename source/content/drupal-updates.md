@@ -9,7 +9,7 @@ tags: [migrate, workflow]
 
 Drupal 9.0.0 was released on drupal.org in June of 2020 but Pantheon does not yet support Drupal 9 for live sites.
 See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
-Since Drupal 9 current has the same end-user features as Drupal 8.9 and because many contrib modules are not yet compatible with Drupal 9, we recommend most sites upgrade from Drupal 6 or 7 first go to Drupal 8.
+Since Drupal 9 currently has the same end-user features as Drupal 8.9, and because many contrib modules are not yet compatible with Drupal 9, we recommend most sites upgrade from Drupal 6 or 7 first go to Drupal 8.
 </Alert>
 
 
