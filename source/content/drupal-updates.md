@@ -5,13 +5,15 @@ cms: "Drupal"
 categories: [get-started]
 tags: [migrate, workflow]
 ---
-<Alert title="Note" type="info">
 
-Drupal 9.0.0 was released on drupal.org in June of 2020 but Pantheon does not yet support Drupal 9 for live sites.
-See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
-Since Drupal 9 currently has the same end-user features as Drupal 8.9, and because many contrib modules are not yet compatible with Drupal 9, we recommend most sites upgrade from Drupal 6 or 7 first go to Drupal 8.
+<Alert title="A note about Drupal 9" type="info">
+
+[Drupal 9.0.0](https://www.drupal.org/about/9) was released on [drupal.org](drupal.org) in June of 2020.
+
+Pantheon support for live Drupal 9 sites is currently in development. See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
+
+Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 6 or 7 sites to Drupal 8 first.
 </Alert>
-
 
 To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 6 site that you want to upgrade to Drupal 7, create a new Drupal 7 site and add content, files and modules into the new site. If you are upgrading from Drupal 6 or Drupal 7 to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site there.
 
