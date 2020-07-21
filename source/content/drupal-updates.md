@@ -4,18 +4,12 @@ description: Instructions on how to upgrade your Pantheon site to the next major
 cms: "Drupal"
 categories: [get-started]
 tags: [migrate, workflow]
+reviewed: "2020-07-21"
 ---
 
-<Alert title="A note about Drupal 9" type="info">
+## Overview
 
-[Drupal 9.0.0](https://www.drupal.org/about/9) was released on [drupal.org](https://www.drupal.org/) in June of 2020.
-
-Pantheon support for live Drupal 9 sites is currently in development. See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
-
-Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 6 or 7 sites to Drupal 8 first.
-</Alert>
-
-To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 6 site that you want to upgrade to Drupal 7, create a new Drupal 7 site and add content, files and modules into the new site. If you are upgrading from Drupal 6 or Drupal 7 to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site there.
+To upgrade Drupal to a new major version (e.g. version 7 to version 8) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
@@ -23,19 +17,11 @@ Migrating to a new site on the platform will provide you with the QA and deploym
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
 </Alert>
 
-## Upgrade from Drupal 6 to Drupal 7
+## About Drupal 9
 
-1. Start a new site using Drupal 7 as the start state.
-2. Add the 7.x version of your contrib modules.
-3. Import your existing database from Drupal 6 to the Drupal 7 site.
-4. Run the core upgrade process.
-4. Debug, QA, release.
+[Drupal 9.0.0](https://www.drupal.org/about/9) was released in June of 2020. Pantheon support for live Drupal 9 sites is currently in development. See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
 
-### Content and Configuration
-
-While you can try to get Drupal to handle all the data architecture changes between major revisions (importing the old database and running update.php), this is often not a complete solution. Depending on the specific module stack and configuration of your current site, it may be faster and more direct to plan and execute a content migration to the new site rather than trying to use the built-in update tools.
-
-If you are not having much luck with update.php, consider setting up the new site and using tools like the [migrate module](https://www.drupal.org/project/migrate) to import your existing content. While this might initially seem like more work, it can often lead to a cleaner result more quickly, especially if your new site includes major architectural changes, features, or a redesign.
+Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 6 or 7 sites to Drupal 8 first.
 
 ## Upgrade to Drupal 8
 
@@ -53,7 +39,6 @@ Drupal 8 migrations automatically create the needed content types and establish 
 ### Customizing migrations
 
 If needed, you can customize your migration using hooks and plugins. See the [drupal.org developer documentation](https://www.drupal.org/node/2127611) for more details.
-
 
 ### Scripting migrations
 
@@ -77,6 +62,20 @@ The following command runs the migration configured via `drush migrate-upgrade -
 ```
 terminus drush my-drupal-8-site.dev -- migrate-import --all
 ```
+
+## Upgrade from Drupal 6 to Drupal 7
+
+1. Start a new site using Drupal 7 as the start state.
+2. Add the 7.x version of your contrib modules.
+3. Import your existing database from Drupal 6 to the Drupal 7 site.
+4. Run the core upgrade process.
+4. Debug, QA, release.
+
+### Content and Configuration
+
+While you can try to get Drupal to handle all the data architecture changes between major revisions (importing the old database and running update.php), this is often not a complete solution. Depending on the specific module stack and configuration of your current site, it may be faster and more direct to plan and execute a content migration to the new site rather than trying to use the built-in update tools.
+
+If you are not having much luck with update.php, consider setting up the new site and using tools like the [migrate module](https://www.drupal.org/project/migrate) to import your existing content. While this might initially seem like more work, it can often lead to a cleaner result more quickly, especially if your new site includes major architectural changes, features, or a redesign.
 
 ## Updating DNS
 
