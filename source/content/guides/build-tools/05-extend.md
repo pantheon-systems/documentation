@@ -19,7 +19,7 @@ This section will be performed from the command line, to prepare your local syst
 
 1. Navigate to the **Code** tab of the GitHub repository, then click **<span class="glyphicons glyphicons-save"></span> Code <span class="glyphicons glyphicons-set-down"></span>** and copy the repository URL:
 
-  ![Clone repository](../../../images/pr-workflow/clone.png)
+  ![Click Code and copy the repository URL](../../images/terminus-plugin-install-git.png "GitHub clone URL")
 
 2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
