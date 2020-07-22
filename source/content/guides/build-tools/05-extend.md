@@ -17,7 +17,7 @@ Next, we'll add a module to our existing `slogan` branch using Composer. You sho
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.
 
-1. Navigate to the **Code** tab of the GitHub repository, then click **Clone or download** and copy the repository URL:
+1. Navigate to the **Code** tab of the GitHub repository, then click **<span class="glyphicons glyphicons-save"></span> Code <span class="glyphicons glyphicons-set-down"></span>** and copy the repository URL:
 
   ![Clone repository](../../../images/pr-workflow/clone.png)
 
