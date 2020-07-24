@@ -12,7 +12,9 @@ At some point, you may need or want to delete one of your sites on Pantheon. The
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/site-plan) for more information.
+**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/site-plan) for more information.
+
+**After you delete a site that had a live domain or subdomain**: Update the DNS records so that they don't continue to point to the deleted site.
 
 </Alert>
 
