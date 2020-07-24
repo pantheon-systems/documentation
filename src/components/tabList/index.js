@@ -4,17 +4,27 @@ import './style.css';
 
 const TabList = ({ children }) => {
   const [activeTab, setActiveTab] = useState(null)
-  const [initialized, setInitialized] = useState(null)
 
-  useEffect(() => {
-    if (!initialized) {
-      // determine which tab is initially active
-      const initialActiveTab = children.find(tab => tab.props.active === true)
-      initialActiveTab && setActiveTab(initialActiveTab.props.id)
+  const handleHashChange = () => {
+    const selected = children.find(tab => [`#${tab.props.id}-id`, `#${tab.props.id}-tab`].indexOf(window.location.hash) > -1 );
 
-      setInitialized(true)
+    if (selected) {
+      setActiveTab(selected.props.id);
     }
-  })
+  }
+  
+  useEffect(() => {
+    const selected = children.find(tab => tab.props.active === true)
+
+    if (selected) {
+      setActiveTab(selected.props.id);
+    }
+
+    handleHashChange()
+    window.addEventListener('hashchange', handleHashChange)
+
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
 
   const renderTab = tab => {
     let elementId = tab.props.id
@@ -56,6 +66,7 @@ const TabList = ({ children }) => {
     return (
       <Tab
         key={`tab-content-${elementId}`}
+        id={`${elementId}-tab`}
         title={tab.props.title}
         active={elementId === activeTab}
       >
