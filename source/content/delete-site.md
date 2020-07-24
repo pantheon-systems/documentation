@@ -3,7 +3,9 @@ title: Deleting a Site on Pantheon
 description: Information on removing a Drupal or WordPress site from Pantheon.
 categories: [manage]
 tags: [billing, site, sandbox]
+reviewed: "2020-07-24"
 ---
+
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
 <Alert title="Warning" type="danger">
@@ -15,33 +17,34 @@ Before deleting a site, you must downgrade the site plan to Sandbox level. See [
 </Alert>
 
 ## Delete a Site Using the Pantheon Site Dashboard
+
 1. Select **Settings** > **Delete Site**.
-2. Click the **Delete Site** button.
+1. Click the **Delete Site** button.
 
   ![Site Dashboard Operations Delete Site](../images/dashboard/delete-site.png)
 
-3. Enter the site title; this ensures you're aware of the site you're deleting.
-4. Click **Delete**.
+1. Enter the site title; this ensures you're aware of the site you're deleting.
+1. Click **Delete**.
 
   ![Site Dashboard Operations Delete Site Confirm](../images/dashboard/delete-site-confirm.png)
 
 ## Delete a Site From the Organization Dashboard
 
 1. Select the checkbox next to the site you want to delete.
-2. Click **Operations**, and select **Delete Site**.
+1. Click **Operations**, and select **Delete Site**.
 
   ![Organization Dashboard Operations Delete Site](../images/dashboard/org-delete-site.png)
 
-3. Type **Delete**.
-4. Click **Delete Site(s)**.
+1. Type **Delete**.
+1. Click **Delete Site(s)**.
 
   ![Organization Dashboard Operations Delete Site Confirm](../images/dashboard/org-delete-site-confirm.png)
 
-
 ## Delete a Site with Terminus
+
 Run the following [Terminus](/terminus) command:
 
-```bash
+```bash{promptUser: user}
 terminus site:delete <site>
 ```
 
@@ -54,4 +57,5 @@ Replace `<site>` with your site name. You can see a list of all your sites by ru
   ![Delete Site via Terminus](../images/delete-site-terminus.png)
 
 ## Delete a Multidev Environment
+
 Refer to the [Delete a Branch Environment](/multidev#delete-a-branch-environment) section of our Multidev guide for more information.
