@@ -17,6 +17,7 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
         <h1
           style={{ marginBottom: "10px", marginTop: "0px" }}
           className="pio-docs-title"
+          id="docs-main"
         >
           {title}
         </h1>}

@@ -105,7 +105,7 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <main id="docs-main">
+        <main id="doc">
           <div className="container doc-content-well">
             <article className="doc article col-md-9 md-70">
               <HeaderBody
