@@ -46,7 +46,7 @@ Join our Early Access program to test out both Drupal 9 and Pantheon Integrated 
 
 1. [Fill out this form](https://docs.google.com/forms/d/1lahWKMT2VHXfr9hg15VIQY2Kn6z_j77o7Te6hZqsNgw) to get access to our “Drupal 9 Early Access” group. Once you are added, you'll have access to a new "Drupal 9 Early Access" site creation option from your Pantheon Dashboard.
 
-1. Spin up a new "Drupal 9 Early Access" site with `ic-demo-2020-` as a site name prefix (i.e., `ic-demo-2020-d9-preview`). This will give you the [Drupal 9 starter codebase](https://github.com/stevector/drupal-9-project) and will automatically trigger a Composer install and `git commit` on site creation.
+1. Spin up a new "Drupal 9 Early Access" site! This will give you the [Drupal 9 starter codebase](https://github.com/stevector/drupal-9-project) and will automatically trigger a Composer install and `git commit` on site creation.
 
 ## Create a Drupal 9 Site with Continuous Integration via Build Tools
 
