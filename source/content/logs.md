@@ -20,6 +20,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 | **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/php-slow-log) |
 | **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
 | **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
+| **mysql-bin.0001**        |                       | MySQL [binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html). Located in the database's `data/` directory. |
 
 Rotated log files are archived within the `/logs` directory on application containers and database servers.
 
