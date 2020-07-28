@@ -123,6 +123,10 @@ Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'
 
 Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the `logs` subdirectory.
 
+## How can I access MySQL binary logs?
+
+To access MySQL [binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"), connect to the database server as described above for the slow query logs. Binlogs are stored in the `data` subdirectory. These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
+
 ### Are table prefixes supported?
 
 Table prefixes are not supported or recommended by Pantheon. While the server will not prevent their creation or use, managing and supporting tables with prefixes is the developer's responsibility.
