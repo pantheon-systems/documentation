@@ -145,21 +145,23 @@ Set up your SimpleSAMLphp `config.php` as follows:
   );
   ```
 
-1. With the basic variables defined, set up base config:
+1. With the basic variables defined, set up the base config:
 
   ```php:title=config.php
-  $config = array (
+  $config = [
        'baseurlpath' => 'https://'. $host .':443/simplesaml/', // SAML should always connect via 443
        'certdir' => 'cert/',
        'logging.handler' => 'errorlog',
        'datadir' => 'data/',
        'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
-       //Your $config array continues for a while...
-       //until we get to the "store.type" value, where we put in DB config...
+
+       // Your $config array continues for a while...
+       // until we get to the "store.type" value, where we put in DB config...
        'store.type' => 'sql',
        'store.sql.dsn' => 'mysql:host='. $db['host'] .';port='. $db['port'] .';dbname='. $db['database'],
        'store.sql.username' => $db['username'],
        'store.sql.password' => $db['password'],
+  ]
   ```
 
   For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required.
