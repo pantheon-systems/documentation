@@ -40,7 +40,7 @@ Download Edge versions to get the latest features, bug fixes, instructions, and 
 
 <Alert type="info" title="Note">
 
-Help improve Localdev by sharing bug reports and feedback on the [Localdev Slack channel](https://pantheon-community.slack.com/messages/CB2H8065D) or [GitHub issue queue](https://github.com/pantheon-systems/localdev-issues).
+Help improve Localdev by sharing bug reports and feedback in the [GitHub issue queue](https://github.com/pantheon-systems/localdev-issues), or join the [Pantheon Community](/pantheon-community) to post in the [Localdev Slack channel](https://pantheon-community.slack.com/messages/CB2H8065D). Get your [Slack invite here](https://slackin.pantheon.io/).
 
 </Alert>
 
