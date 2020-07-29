@@ -97,7 +97,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
-1. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `./vendor/simplesamlphp/simplesamlphp/cert`.
+1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
 By the end of these steps, you should have a docroot structure similar to the output below:
 
