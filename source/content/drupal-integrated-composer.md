@@ -22,7 +22,7 @@ Contact [Support](/support). If you are not part of an organization already, you
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
 1. Create a new Drupal 8 or WordPress site from the upstream to confirm that it’s working.
    - Do not customize the upstream yet.
-1. In the Dev environment, click <Icon icon="new-window-alt" text="Visit Development Site"/> and follow the prompts to complete the CMS installation.
+1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
 ## Upstream and Site Structure
