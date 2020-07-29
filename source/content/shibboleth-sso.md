@@ -41,7 +41,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 1. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp/www`:
 
   ```bash{promptUser: user}
-  ln -s ./private/simplesamlphp/www ./simplesaml
+  ln -s private/simplesamlphp/www simplesaml
   git add simplesaml
   git commit -am "Adding SimpleSAML symlink"
   ```
@@ -65,7 +65,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 1. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
  ```bash{promptUser: user}
- ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+ ln -s ../vendor/simplesamlphp/simplesamlphp/www web/simplesaml
  ```
 
 1. Create your site-specific config file:
@@ -82,7 +82,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 1. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
  ```bash{promptUser: user}
- ln -s ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
+ ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
  ```
 
 1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
