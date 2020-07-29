@@ -82,6 +82,8 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 1. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
  ```bash{promptUser: user}
+ # Remove existing config directory before adding symlink.
+ rm -rf vendor/simplesamlphp/simplesamlphp/config
  ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
  ```
 
@@ -90,7 +92,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ```json:title=composer.json
    "scripts": {
        "post-install-cmd": [
-           "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+           "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
        ]
    },
  ```
