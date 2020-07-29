@@ -132,15 +132,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
   }
   ```
 
-1. Load necessary environmental data. For a Drupal site, you can access `$_SERVER['PRESSFLOW_SETTINGS']`:
-
-  ```php:title=config.php
-  $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-  $host = $_SERVER['HTTP_HOST'];
-  $db = $ps['databases']['default']['default'];
-  ```
-
-  For a WordPress site, you can access the Pantheon environment variables:
+1. Load necessary environmental data.
 
   ```php:title=config.php
   $host = $_SERVER['HTTP_HOST'];
