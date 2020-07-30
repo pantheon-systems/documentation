@@ -3,6 +3,7 @@ title: Accessing MySQL Databases
 description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 categories: [develop]
 tags: [database, local, ssh]
+reviewed: "2020-07-30"
 ---
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
 
@@ -122,6 +123,10 @@ Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'
 ### How can I access my MySQL slow query logs?
 
 Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the `logs` subdirectory.
+
+### How can I access MySQL binary logs?
+
+To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"), connect to the database server as described above for the slow query logs. Binlogs are stored in the `data` subdirectory. These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
 
 ### Are table prefixes supported?
 
