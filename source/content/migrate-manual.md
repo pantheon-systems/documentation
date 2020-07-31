@@ -312,13 +312,13 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
 
-    ```sql
+    ```sql{promptUser: sql}
     mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
     ```
 
    1. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with: `< database.sql`. Your command will look like:
 
-    ```sql
+    ```sql{promptUser: sql}
     mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
     ```
 
