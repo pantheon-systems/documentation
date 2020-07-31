@@ -154,7 +154,6 @@ class TerminusTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-        <div className="">
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
               <Navbar
@@ -162,11 +161,10 @@ class TerminusTemplate extends React.Component {
                 items={items}
                 activePage={node.fields.slug}
               />
-              <main id="docs-main" className="terminus col-md-9 guide-doc-body">
+              <main id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <article
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
-                    id="doc"
                   >
                     <HeaderBody
                       title={node.frontmatter.title}
@@ -207,7 +205,6 @@ class TerminusTemplate extends React.Component {
               </main>
             </div>
           </div>
-        </div>
         <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
       </Layout>
     )
