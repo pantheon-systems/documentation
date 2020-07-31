@@ -20,7 +20,7 @@ Pantheon [encourages on-server development](/support#local-development). However
 
 Let’s explore how to sync your code, database, and files back-and-forth between Pantheon and a local environment.
 
-To sync code from Pantheon to your local environment, we suggest [Git](git) for speed and simplicity. Just clone the codebase using the command provided in your site dashboard. By default, this sets Pantheon as the origin remote destination, which makes it easier to push changes.
+To sync code from Pantheon to your local environment, we suggest [Git](/git) for speed and simplicity. Just clone the codebase using the command provided in your site dashboard. By default, this sets Pantheon as the origin remote destination, which makes it easier to push changes.
 
 Now we still need the files and database. On your site dashboard, select Database/Files, then Export. Alternatively, you can download a recent backup. Or you can use Terminus, our command line interface, to automate both this download and the subsequent import to your local environment. Just follow the directions of your preferred method. That’s it. Now you’re ready to start developing locally.
 
