@@ -20,7 +20,9 @@ Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's WebOp
 
 </Enablement>
 
-Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev) instead of local development.
+Pantheon cannot troubleshoot or [support local development](/support#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev) instead of local development.
+
+If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
 
 ## Before You Begin
 
