@@ -97,6 +97,8 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
    },
  ```
 
+1. You may also need to repeat the steps for a Metadata folder, depending on your requirements.
+
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
 1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
@@ -107,9 +109,12 @@ By the end of these steps, you should have a docroot structure similar to the ou
 .
 ├── private
 │   └── simplesamlphp
-|       └── config 
-│           ├── authsources.php
-|           └── config.php
+|       ├── config 
+│       │   ├── authsources.php
+|       |   └── config.php
+|       └── metadata (optional)
+│           ├── saml20-idp-remote.php
+|           └── saml20-sp-remote.php
 ├── vendor
 │   └── simplesamlphp
 │       └── simplesamlphp
@@ -226,6 +231,12 @@ $this->provider->login( $redirect_to );
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
+
+### SimpleSAMLphp Error: can't find metadata
+
+Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_2).
+
+If using composer, these will need to be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, similar to the config setup using Composer.
 
 ## Alternatives
 
