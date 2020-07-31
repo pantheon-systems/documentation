@@ -14,8 +14,7 @@ type: video
 
 <Partial file="deprecate-kalabox.md" />
 
-Pantheon encourages on-server development. However, many developers prefer the speed and convenience of [local development](/local-development) where sites run in virtual machines and don’t require Internet access.
-
+Pantheon [encourages on-server development](/support#local-development). However, many developers prefer the speed and convenience of [local development](/local-development) where sites run in virtual machines and don’t require Internet access.
 
 Sync from Pantheon to local
 
@@ -25,13 +24,6 @@ To sync code from Pantheon to your local, we suggest Git for speed and simplicit
 
 Now we still need the files and database. On your site dashboard, select Database/Files, then Export. Alternatively, you can download a recent backup. Or you can use Terminus, our command line interface, to automate both this download and the subsequent import to your local environment. Just follow the directions of your preferred method. That’s it. Now you’re ready to start developing locally.
 
-
 Sync from local to Pantheon
 
 Use Git to add, commit, and push code changes up to Pantheon from your local development environment. Remember, you also need to sync the changes made to your database and media files. Since this can be tricky, we recommend using a configuration management solution, such as WP-CFM for WordPress or the Features module for Drupal 7. These tools help you push configuration separately, as part of your code base, without disturbing database content.
-
-Kalabox
-
-One application we highly recommend for local development is Kalabox from Tandem. It’s pre-configured for Pantheon, and it automates many of the tasks we just covered.
-
-This was a quick introduction to local development and Pantheon. Check out Kalabox, and try it yourself.
