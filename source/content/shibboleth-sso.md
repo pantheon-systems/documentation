@@ -77,7 +77,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  cp vendor/simplesamlphp/simplesamlphp/config-templates/authsources.php private/simplesamlphp/config/
  ```
 
-1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesamlphp/config.php`).
+1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesamlphp/config/config.php`).
 
 1. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
