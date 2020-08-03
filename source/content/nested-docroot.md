@@ -201,4 +201,4 @@ The directory name is not configurable, but you can [create a symlink](/symlinks
 
 #### Can I use Localdev for local development of nested docroot sites?
 
-Yes, Pantheon's [Localdev](/localdev) pulls configuration information from your site's `pantheon.yml` file.
+Yes, Pantheon's [Localdev](/localdev) pulls configuration information from your site's [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) and [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) files.
