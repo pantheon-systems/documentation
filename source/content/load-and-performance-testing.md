@@ -10,7 +10,7 @@ Load and performance tests are critical steps in going live procedures, as they 
 
 <Alert title="Note" type="info">
 
-Load testing is one of the services offered by our [Professional Services](/professional-services/#pre-launch-load-testing) team.
+Load testing is one of the services offered by our [Onboarding](/onboarding#pre-launch-load-testing) team.
 
 </Alert>
 
