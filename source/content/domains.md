@@ -78,7 +78,7 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 
     - Ensure that there's no "parking page" or redirect configured in your DNS.
     - The TXT record's Host value doesn't have a trailing `.`.
-    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/). This may take up to 30 minutes.
+    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
 1. After you add your domain, you'll be automatically taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 

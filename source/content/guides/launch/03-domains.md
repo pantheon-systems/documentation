@@ -32,7 +32,16 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
-1. Select **Connect Domain** and enter the `www` domain (e.g., `www.example.com`) then click **Connect Domain**.
+1. Enter the `www` domain (e.g., `www.example.com`) then click **Connect Domain**. We'll enter the bare domain (without the `www`) in Step 7.
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
+
+  It might take up to 30 minutes for DNS records to propagate. If you encounter issues after 30 minutes, check some of the following:
+
+    - Ensure that there's no "parking page" or redirect configured in your DNS.
+    - The TXT record's Host value doesn't have a trailing `.`.
+    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
+
+1. In a new tab or browser window, copy the **Required Values** to your [DNS](/dns) provider.
 1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
 1. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
 
