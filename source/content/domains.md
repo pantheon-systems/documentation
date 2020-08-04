@@ -4,8 +4,7 @@ description: Work with platform domains or connect custom domains in the Site Da
 categories: [go-live]
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
-use:
-    - docs_tags
+reviewed: "2020-08-03"
 ---
 
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like `127.0.0.1`. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
@@ -61,7 +60,7 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 
 1. From the Site Dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
-1. If no domains have been added yet, click **Connect Live Domain**:
+1. If no domains have been added yet, enter a domain and click **Connect Domain**:
 
   ![Adding a first domain to the Site Dashboard](../images/dashboard/add-first-domain.png)
 
@@ -69,27 +68,39 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 
   ![Adding an additional domain to the Site Dashboard](../images/dashboard/add-additional-domains.png)
 
-1. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**:
 
-  ![Adding a domain to the Site Dashboard](../images/dashboard/connect-custom-domain.png)
+  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../images/dashboard/verify-domain-ownership.png)
 
-1. After adding your domain, you'll be automatically taken to the domain's "Details" page where you will see both the current DNS records detected (the "Detected Values"), as well as the values to be added at your DNS host ("Required Values"):
+  It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
+
+    - Ensure that there's no "parking page" or redirect configured in your DNS.
+    - The TXT record's Host value doesn't have a trailing `.`.
+    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
+
+1. After you add your domain, you'll be automatically taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
    ![Custom domain Details page](../images/dashboard/details-page.png)
+
+  If you instead see:
+
+  > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
+
+  Wait a minute, then refresh the page.
 
 1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns).
 
    - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
-
-1. You will also see an option to choose a primary domain:
-
-  ![Set the primary domain in the Site Dashboard](../images/dashboard/choose-primary-domain.png)
 
 ## Choose Primary Domain
 
 Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other custom domain connected to the environment) all get redirected to `www.example.com`. This assumes that you have added **both** `example.com` and `www.example.com` to the Site Dashboard.
 
 Redirecting all traffic to a primary domain is a best practice for SEO since it avoids duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time, and it can make it easier to measure and monitor website traffic.
+
+Choose a primary domain from the dropdown at the bottom of **Domains / HTTPS**:
+
+![Set the primary domain in the Site Dashboard](../images/dashboard/choose-primary-domain.png)
 
 <Alert title="Note" type="info">
 
