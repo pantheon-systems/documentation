@@ -4,8 +4,6 @@ description: Work with platform domains or connect custom domains in the Site Da
 categories: [go-live]
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
-use:
-    - docs_tags
 reviewed: "2020-08-03"
 ---
 
@@ -74,7 +72,7 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 
   ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../images/dashboard/verify-domain-ownership.png)
 
-  It might take up to 30 minutes for DNS records to propagate. If you encounter issues after 30 minutes, check some of the following:
+  It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 
     - Ensure that there's no "parking page" or redirect configured in your DNS.
     - The TXT record's Host value doesn't have a trailing `.`.
@@ -83,6 +81,12 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 1. After you add your domain, you'll be automatically taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
    ![Custom domain Details page](../images/dashboard/details-page.png)
+
+  If you instead see:
+
+  > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
+
+  Wait a minute, then refresh the page.
 
 1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns).
 
