@@ -123,11 +123,13 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="WordPress" id="wp-code" active={true}>
 
-  Copy the following directories from your existing site to a matching directory in your new site's `wp-content` directory:
+  Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
 
-   - `wp-content/themes`
-   - `wp-content/plugins`
-   - Any other folders under `wp-content` that are *not* `wp-content/uploads`.
+   - `mu-plugins`
+   - `plugins`
+   - `themes`
+
+  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
@@ -135,12 +137,12 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
 
-   - `/libraries`
-   - `/modules`
-   - `/profile`
-   - `/themes`
-   - `/vendor`
-   - `/sites`, excluding `sites/default/files`.
+   - `libraries`
+   - `modules`
+   - `profile`
+   - `themes`
+   - `vendor`
+   - `sites`, excluding `sites/default/files`.
 
   Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
 
@@ -150,12 +152,12 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
 
-   - `/libraries`
-   - `/modules`
-   - `/profile`
-   - `/themes`
-   - `/vendor`
-   - `/sites`, excluding `sites/default/files`.
+   - `libraries`
+   - `modules`
+   - `profile`
+   - `themes`
+   - `vendor`
+   - `sites`, excluding `sites/default/files`.
 
   Refer to the "Base-Level Directories" section of [Drupal 8 Directory Structure](https://www.drupal.org/docs/8/understanding-drupal-8/directory-structure) for more details.
 
