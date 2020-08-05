@@ -109,21 +109,21 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ### Using an SFTP Client
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm that Development Mode is set to **SFTP**.
 
-1. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
-1. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
+1. Click **Open SFTP client** to open your default local SFTP client, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to [this documentation](/sftp#sftp-connection-information).
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
 
-1. Upload your existing site's plugins, modules, and themes to the `code` directory. Do not overwrite WordPress or Drupal core files on your Pantheon site.
+1. Do not overwrite WordPress or Drupal core files on your Pantheon site. Upload your existing site's themes as well as plugins or modules to their locations within the root directory (`code` or `wp-content`, as shown below).
 
   <TabList>
 
   <Tab title="WordPress" id="wp-code" active={true}>
 
-  Copy the following directories:
+  Copy the following directories from your existing site to a matching directory in your new site's `wp-content` directory:
 
    - `wp-content/themes`
    - `wp-content/plugins`
@@ -133,7 +133,14 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `/sites` folder, *except* `/sites/default/files`.
+  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+
+   - `/libraries`
+   - `/modules`
+   - `/profile`
+   - `/themes`
+   - `/vendor`
+   - `/sites`, excluding `sites/default/files`.
 
   Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
 
@@ -141,7 +148,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="Drupal 8" id="d8-code">
 
-  Copy the following directories:
+  Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
 
    - `/libraries`
    - `/modules`
@@ -168,7 +175,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
     git commit -m "initial commit"
     ```
 
-1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's connection mode to Git:
+1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
   ![Git connection mode](../images/dashboard/connection-mode-git.png)
 
