@@ -70,7 +70,9 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 1. Root Path: Click the **Autodetect** button and the Root Path should be automatically populated:
 
     ![Add web server PhpStorm](../images/phpstorm-deployment-connection-tab.png)
-    <Alert tile="Warning" type="danger">
+
+    <Alert title="Warning" type="danger">
+
     PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you will need to update the root path any time the binding path changes for your Dev environment.
     </Alert>
 

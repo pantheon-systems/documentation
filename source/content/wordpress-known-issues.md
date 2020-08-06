@@ -14,7 +14,7 @@ If you are importing a site and the database has custom prefixes for your DB tab
  - Update the `$table_prefix` variable in the `wp-config.php` file,
  - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
-<Alert tile="Note" type="info">
+<Alert title="Note" type="info">
 Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
 </Alert>
 
