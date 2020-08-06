@@ -111,7 +111,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
 
-1. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
+1. Click **Open in your default SFTP Client**, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
