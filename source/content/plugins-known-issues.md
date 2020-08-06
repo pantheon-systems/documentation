@@ -64,7 +64,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-Plugins and Themes with issues resolved by this include:
+Plugins and Themes with issues resolved (at least partially) by this include:
 
 - [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 - [Event Espresso](https://eventespresso.com/)
@@ -72,6 +72,7 @@ Plugins and Themes with issues resolved by this include:
 - [Thrive Theme Builder](https://thrivethemes.com/themebuilder/)
 - [Visual Composer: Website Builder](https://visualcomposer.io/)
 - [WPBakery: Page Builder](https://wpbakery.com/)
+- [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 
 ## [AMP for WP – Accelerated Mobile Pages](https://wordpress.org/plugins/accelerated-mobile-pages/)
