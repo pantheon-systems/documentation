@@ -188,13 +188,17 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 After using one of these commands, verify the new file locations with `git status` before committing and pushing.
 
-## Troubleshooting
+## FAQ and Troubleshooting
 
-#### Quicksilver Script Location
+### Quicksilver Script Location
 If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the `web` docroot and not the project root.
 
 For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php`, the file needs to be located at `web/private/scripts/my_quicksilver_script.php`. This is because `webphp` scripts are run with Nginx, which is serving from the nested docroot.
 
-#### Can I specify a subdirectory other than web?
+### Can I specify a subdirectory other than web?
 
 The directory name is not configurable, but you can [create a symlink](/symlinks-assumed-write-access#create-a-symbolic-link) from some other directory to `web`.
+
+### Can I use Localdev for local development of nested docroot sites?
+
+Yes, Pantheon's [Localdev](/localdev) pulls configuration information from your site's [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) and [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) files.

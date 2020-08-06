@@ -24,7 +24,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
 1. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/)).
 
-  Click **SFTP Connection Info** then select the link to **Open in your default SFTP client**:
+  Click **Connect with SFTP** then select the link to **Open SFTP Client**:
 
   ![Open in your default SFTP client](../../../images/guides/git-wordpress/sftp-connection-mode.png)
 
@@ -36,7 +36,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
    ### Manually Connect via SFTP
 
-   If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **SFTP Connection Info** to open a connection.
+   If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **Connect with SFTP** to open a connection.
 
    1. The default window when opening the Transmit application provides a dialog titled **Quick Connect** where you can **Connect via SFTP**:
 

@@ -113,7 +113,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
-1. Click **Open SFTP client** to open your default local SFTP client, and enter your User Dashboard password when prompted.
+1. Click **Open SFTP Client** to open your default local SFTP client, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
 

@@ -48,7 +48,7 @@ Help improve Localdev by sharing bug reports and feedback in the [GitHub issue q
 
 Select a site and click **Pull for local development** to clone the site locally and boot the local environment.
 
-Each site is cloned to its own directory within `~/Localdev/` by default.
+Each site is cloned to its own directory within `~/Localdev/` by default. If your site specifies `web_docroot: true` in its [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) or [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file (a nested docroot) the site's code will be located in the `web` subdirectory.
 
 ![Localdev clones the site code](../images/localdev/localdev-cloning-site.png)
 
