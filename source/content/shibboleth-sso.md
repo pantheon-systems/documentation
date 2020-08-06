@@ -41,7 +41,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 1. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp/www`:
 
   ```bash{promptUser: user}
-  ln -s ./private/simplesamlphp/www ./simplesaml
+  ln -s private/simplesamlphp/www simplesaml
   git add simplesaml
   git commit -am "Adding SimpleSAML symlink"
   ```
@@ -65,22 +65,26 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 1. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
  ```bash{promptUser: user}
- ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+ ln -s ../vendor/simplesamlphp/simplesamlphp/www web/simplesaml
  ```
 
-3. Create your site-specific config file:
+1. Create your site-specific config file:
 
  ```bash{promptUser: user}
- mkdir private
- cp ./vendor/simplesamlphp/simplesamlphp/config-templates/config.php ./private/simplesaml-config.php
+ mkdir -p private/simplesamlphp
+ mv vendor/simplesamlphp/simplesamlphp/config private/simplesamlphp/config
+ cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesamlphp/config/
+ cp vendor/simplesamlphp/simplesamlphp/config-templates/authsources.php private/simplesamlphp/config/
  ```
 
-1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
+1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesamlphp/config/config.php`).
 
 1. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
  ```bash{promptUser: user}
- ln -s ../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
+ # Remove existing config directory before adding symlink.
+ rm -rf vendor/simplesamlphp/simplesamlphp/config
+ ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
  ```
 
 1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
@@ -88,26 +92,33 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ```json:title=composer.json
    "scripts": {
        "post-install-cmd": [
-           "ln -sf ../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+           "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
        ]
    },
  ```
 
+1. You may also need to repeat the steps for a Metadata folder, depending on your requirements.
+
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
-1. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `./vendor/simplesamlphp/simplesamlphp/cert`.
+1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
 By the end of these steps, you should have a docroot structure similar to the output below:
 
 ```bash
 .
 ├── private
-│   └── simplesaml-config.php
+│   └── simplesamlphp
+|       ├── config 
+│       │   ├── authsources.php
+|       |   └── config.php
+|       └── metadata (optional)
+│           ├── saml20-idp-remote.php
+|           └── saml20-sp-remote.php
 ├── vendor
 │   └── simplesamlphp
 │       └── simplesamlphp
-│           └── config
-│               └── config.php -> ../private/simplesaml-config.php
+│           └── config -> ../../../private/simplesamlphp/config
 └── web
     └── simplesaml -> ../vendor/simplesamlphp/simplesamlphp/www
 ```
@@ -128,15 +139,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
   }
   ```
 
-1. Load necessary environmental data. For a Drupal site, you can access `$_SERVER['PRESSFLOW_SETTINGS']`:
-
-  ```php:title=config.php
-  $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-  $host = $_SERVER['HTTP_HOST'];
-  $db = $ps['databases']['default']['default'];
-  ```
-
-  For a WordPress site, you can access the Pantheon environment variables:
+1. Load necessary environmental data.
 
   ```php:title=config.php
   $host = $_SERVER['HTTP_HOST'];
@@ -149,21 +152,23 @@ Set up your SimpleSAMLphp `config.php` as follows:
   );
   ```
 
-1. With the basic variables defined, set up base config:
+1. With the basic variables defined, set up the base config:
 
   ```php:title=config.php
-  $config = array (
+  $config = [
        'baseurlpath' => 'https://'. $host .':443/simplesaml/', // SAML should always connect via 443
        'certdir' => 'cert/',
        'logging.handler' => 'errorlog',
        'datadir' => 'data/',
        'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
-       //Your $config array continues for a while...
-       //until we get to the "store.type" value, where we put in DB config...
+
+       // Your $config array continues for a while...
+       // until we get to the "store.type" value, where we put in DB config...
        'store.type' => 'sql',
        'store.sql.dsn' => 'mysql:host='. $db['host'] .';port='. $db['port'] .';dbname='. $db['database'],
        'store.sql.username' => $db['username'],
        'store.sql.password' => $db['password'],
+  ]
   ```
 
   For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required.
@@ -185,23 +190,29 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 ## Drupal Configuration
 
-If using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+If using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in their [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
 
-For Drupal 7 sites:
+For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+
+<TabList>
+
+<Tab title="Drupal 7" id="drupal-7-settings">
 
 ```php:title=settings.php
 # Provide universal absolute path to the installation.
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
+</Tab>
 
-For Drupal 8 (non-Composer) sites:
+<Tab title="Drupal 8" id="drupal-8-settings" active={true}>
 
 ```php:title=settings.php
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
+</Tab>
 
-You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
+</TabList>
 
 ## WordPress Multisite Issues
 
@@ -220,6 +231,12 @@ $this->provider->login( $redirect_to );
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
+
+### SimpleSAMLphp Error: can't find metadata
+
+Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_2).
+
+If using Composer, these will need to be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, similar to the config setup using Composer.
 
 ## Alternatives
 
