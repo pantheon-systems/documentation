@@ -37,9 +37,13 @@ Add the following after the previous snippet to have it automatically log the de
 
 ## WebOps Workflow and Stage
 
-Specify the workflows you want to [hook](#hooks) into (e.g., `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to the root of your site's docroot.
+Specify the workflows you want to [hook](#hooks) into (e.g., `deploy` or `sync_code`) the workflow stage (`before` or `after`) and the location of the script relative to the root of your site's docroot.
 
-If you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy containing those adjustments to `pantheon.yml` will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
+### Quicksilver and the Deploy Hook
+
+Before using a Quicksilver hook for a deploy workflow, deploy your `pantheon.yml` file into an environment.
+
+Quicksilver scripts that trigger on the deploy hook operate on the state of the code at the time of the deploy, not the state of the code after the deploy. This means that new or updated code is not available until the deployment finishes even though the deploy hook is triggered at the start of the deploy.
 
 ## Script Type and Location
 
