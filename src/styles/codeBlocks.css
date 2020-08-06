@@ -35,6 +35,10 @@
 
 .command-line-prompt > span[data-user="sql"]:before {
   content: ">";
+}
+
+.command-line-prompt > span[data-user="sftp"]::before {
+  content: "sftp> ";
   letter-spacing: -2px;
 }
 
