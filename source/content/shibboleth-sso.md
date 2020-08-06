@@ -236,7 +236,7 @@ The current version of the SimpleSAMLphp Authentication module attempts to load 
 
 Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_2).
 
-If using composer, these will need to be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, similar to the config setup using Composer.
+If using Composer, these will need to be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, similar to the config setup using Composer.
 
 ## Alternatives
 
