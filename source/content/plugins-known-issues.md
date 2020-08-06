@@ -741,10 +741,10 @@ export ENV=dev
   touch /tmp/wordfence-waf.php /tmp/.user.ini
   ```
 
-1. Connect to your environment over SFTP, create the required directories, and push the new files. You can get the SFTP path from the Site Dashboard under **Connection Info**:
+1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**:
 
   ```bash{promptUser: user}
-  sftp -o Port=2222 waf5.615e6ebd-1cfa-4fef-9e9f-42cc828d47c6@appserver.waf5.615e6ebd-1cfa-4fef-9e9f-42cc828d47c6.drush.in
+  sftp -o Port=2222 env.UUID@appserver.env.UUID.drush.in
   ```
 
   ```bash{promptUser: sftp}{outputLines: 4-5,7-8}
