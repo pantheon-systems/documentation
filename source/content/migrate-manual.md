@@ -199,7 +199,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <TabList>
 
-  <Tab title="Git 2.8 and Below" id="28-step6" active={true}>
+  <Tab title="Git 2.8 and Below" id="28-step6">
 
   ```bash{promptUser: user}
   git pull --no-rebase --squash -Xtheirs pantheon master
@@ -207,7 +207,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   </Tab>
 
-  <Tab title="Git 2.9 and Above" id="29-step6">
+  <Tab title="Git 2.9 and Above" id="29-step6"  active={true}>
 
   ```bash{promptUser: user}
   git pull --no-rebase --squash -Xtheirs pantheon master --allow-unrelated-histories
@@ -237,7 +237,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <TabList>
 
-  <Tab title="Git 2.8 and Below" id="28-step8" active={true}>
+  <Tab title="Git 2.8 and Below" id="28-step8">
 
   ```bash{promptUser: user}
   git pull pantheon master --no-rebase
@@ -245,7 +245,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   </Tab>
 
-  <Tab title="Git 2.9 and Above" id="29-step8">
+  <Tab title="Git 2.9 and Above" id="29-step8" active={true}>
 
   ```bash{promptUser: user}
   git pull pantheon master --no-rebase --allow-unrelated-histories
