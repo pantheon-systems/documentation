@@ -26,7 +26,8 @@ Store data that should be version controlled, such as [Quicksilver](/quicksilver
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. You can integrate this service using the [Lockr plugin](https://wordpress.org/plugins/lockr/) for WordPress and the [Lockr module](https://www.drupal.org/project/lockr) for Drupal. For more details, see this [related blog post](https://pantheon.io/blog/key-drupal-security).
 
 Alternatively, you can store sensitive data in a JSON or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
-```
+
+```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
   $stripe_data = json_decode($json_text, TRUE);
@@ -37,6 +38,7 @@ else {
   $conf['stripe_key'] = 'foo';
 }
 ```
+
 This Drupal example reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
 
 ### Plugins That Manage Private Paths

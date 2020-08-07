@@ -39,7 +39,7 @@ As an alternative to setting a `NO_CACHE` cookie within the response, you can [m
 
 ## Disable Caching On The Dev Environment
 
-You may decide to disable caching on the Dev environment as you make changes to cachable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
+You may decide to disable caching on the Dev environment as you make changes to cacheable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
 
 To bypass caching on the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
