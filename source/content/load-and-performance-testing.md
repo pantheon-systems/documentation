@@ -43,7 +43,7 @@ The procedure for executing a load test and a performance test are similar:
 
    * SaaS Solutions
      * [Blazemeter](https://www.blazemeter.com)
-     * [Load Impact](https://loadimpact.com)
+     * [K6.io](https://k6.io)
    * Open Source tools
      * [Jmeter](https://jmeter.apache.org/)
      * [Locust](http://locust.io/)
