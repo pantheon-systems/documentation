@@ -29,7 +29,7 @@ The Test and Live environment codebases also cannot be written to, preventing au
 
 Check out the WordPress Dashboard section of [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin#wordpress-dashboard) for more information on managing plugins and themes across multiple environments.
 
-### [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/master/wp-content/mu-plugins/pantheon/pantheon-page-cache.php)
+### [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon/pantheon-page-cache.php)
 
 Facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
 

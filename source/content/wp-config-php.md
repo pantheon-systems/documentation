@@ -40,9 +40,9 @@ To make local development easier, when WordPress detects `wp-config-local.php`, 
 
 <Accordion title="View Pantheon's WordPress Configuration" id="pantheon-wp-config-php" icon="wrench">
 
-You can also find this file on [GitHub](https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php).
+You can also find this file on [GitHub](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php).
 
-GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php php GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php php GITHUB-EMBED
 
 </Accordion>
 
@@ -56,21 +56,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 ### Use the WP_ENVIRONMENT_TYPE Function to Perform Actions Based on Environment
 
-WordPress 5.5 [introduced the `wp_get_environment_type` function](https://make.wordpress.org/core/2020/07/24/new-wp_get_environment_type-function-in-wordpress-5-5/).
-
-`wp_get_environment_type` allows you to define a constant within `wp-config.php`:
-
-```php:title=wp-config.php
-define( 'WP_ENVIRONMENT_TYPE', 'development' );
-```
-
-Note that the environment variables used by WordPress differ from the names used on Pantheon:
-
-| Pantheon Environment | `wp_get_environment_type` |
-|----------------------|---------------------------|
-| dev / Multidev       | development               |
-| test                 | staging                   |
-| live                 | production                |
+<Partial file="wp_get_environment_type.md" />
 
 ### Write Logic Based on the Pantheon Server Environment
 
@@ -138,7 +124,7 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 ### Where can I get a copy of a default wp-config.php for Pantheon?
 
-- [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php)
+- [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php)
 - [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
 ### How do I enable IonCube Decoder support?

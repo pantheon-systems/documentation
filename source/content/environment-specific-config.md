@@ -4,13 +4,20 @@ description: Learn how to turn WordPress site plugins on and off based on the en
 cms: "WordPress"
 categories: [develop]
 tags: [workflow]
+reviewed: "2020-08-07"
 ---
-You may sometimes use settings and plugins in your Development environment that you do not use on Live, in order to improve the development and debugging processes. This article shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config).
-To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
-## Customizations to wp-config.php
+In order to improve the development and debugging processes, you might use settings and plugins in your Development environment that you do not use on Live.
 
-Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L88-L91):
+This doc shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
+
+## Use the WP_ENVIRONMENT_TYPE Function to Perform Actions Based on Environment
+
+<Partial file="wp_get_environment_type.md" />
+
+### Configure DISALLOW_FILE_MODS and WP_DEBUG in wp-config.php
+
+Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L88-L91):
 
 ```php
 if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
@@ -18,7 +25,7 @@ if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! def
 endif;
 ```
 
-In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables WP_DEBUG for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
+In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables `WP_DEBUG` for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
 
 ```php
 /**
@@ -38,7 +45,7 @@ if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <Alert title="Warning" type="danger">
 
-PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L147) defining it.
+PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L75) defining it.
 
 </Alert>
 

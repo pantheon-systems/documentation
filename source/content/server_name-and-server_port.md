@@ -17,7 +17,7 @@ Adding the following code will pass the correct value when `'SERVER_NAME'` is us
 $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
 ```
 
-While this fix does correct symptoms such as undesirable URLs, we recommended replacing all instances of `'SERVER_NAME'` with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L69-L71) for WordPress).
+While this fix does correct symptoms such as undesirable URLs, we recommended replacing all instances of `'SERVER_NAME'` with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L69-L71) for WordPress).
 
 <Alert title="Note" type="info">
 

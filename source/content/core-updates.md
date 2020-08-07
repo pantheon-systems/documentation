@@ -338,7 +338,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
 
- GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
   [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
