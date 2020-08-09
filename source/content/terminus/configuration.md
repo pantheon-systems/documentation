@@ -28,20 +28,31 @@ You can see all the available options for a given command (e.g., available `--fi
 
 The `$HOME/.terminus/config.yml` file uses YAML formatting, which relies on indentation in the form of two spaces per indent:
 
-```yml
+```yml:title=config.yml
 command:
   auth:
     login:
       options:
         email: anita@example.com
+
+TERMINUS_HIDE_GIT_MODE_WARNING: 1
+
   site:
     pancakes:
       options:
         app: sequelpro
 ```
 
-The example above does two things:
+The example above does three things:
 
 - When the command `terminus auth:login` is run, it will automatically provide the correct email address. This is useful if you find yourself logging in to multiple accounts frequently, and want to use your regular account by default.
+
+- Terminus will warn you when running commands in an environment set to Git mode, unaware if the command affects the codebase or not:
+
+  ```none
+  [warning] This environment is in read-only Git mode. If you want to make changes to the codebase of this site (e.g. updating modules or plugins), you will need to toggle into read/write SFTP mode first.
+  ```
+
+  Defining `TERMINUS_HIDE_GIT_MODE_WARNING` disables that message, which is useful for those using Terminus for frequent changes to files, not code. <Popover content="See <a href='/pantheon-workflow'>Use the Pantheon WebOps Workflow</a> for more infomation on Code versus Content."/>
 
 - The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin) lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time, this configuration will always use Sequel Pro, unless otherwise specified.
