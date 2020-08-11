@@ -35,11 +35,13 @@ if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-<Alert title="Warning" type="danger">
+PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, change the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L72-L74) defining it:
 
-PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L74) defining it.
-
-</Alert>
+```php:title=wp-config.php
+if ( ! defined( 'WP_DEBUG' ) ) {
+    define('WP_DEBUG', (wp_get_environment_type() == "development"));
+}
+```
 
 For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.
 
