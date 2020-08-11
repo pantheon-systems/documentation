@@ -215,43 +215,19 @@ You'll need to configure database credentials matching your local database to de
 
 Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
-### Drupal 8 and WordPress
+Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
-Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L11-L20) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
+This file is ignored by the `.gitignore` file in [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
 
-This file is ignored by the `.gitignore` file  in [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
+### WordPress wp-config-local.php
 
-#### Example `wp-config-local.php` File
+Pantheon sites that install WordPress 5.5 include a `wp-config-local-sample.php` file. Older sites can a copy of the [wp-config-local-sample.php file on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php) in the same directory as the site's `wp-config.php`, or create one in that location as shown here.
 
-The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location as your `wp-config.php` file. You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/)).
+The following can be used as a starting point for `wp-config-local.php`. Replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/)).
 
-```php:title=wp-config-local.php
-<?php
-define('DB_NAME',     'database_name_here');
-define('DB_USER',     'username_here');
-define('DB_PASSWORD', 'password_here');
-define('DB_HOST',     'localhost');
-define('DB_CHARSET',  'utf8');
-define('DB_COLLATE',  '');
+<Download file="wp-config-local.php" />
 
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
-
-define('WP_DEBUG',         true);
-define('WP_DEBUG_LOG',     true);
-define('WP_DEBUG_DISPLAY', true);
-
-define('WP_AUTO_UPDATE_CORE', false);
-
-define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
-```
+GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php php GITHUB-EMBED
 
 ### Drupal 7
 
