@@ -14,7 +14,7 @@ WordPress configuration is set in `wp-config.php`, located within your WordPress
 
 Most users do not need to customize this file. However, you are welcome to customize `wp-config.php` with any customizations you may need for plugins, themes, and caching.
 
-Two additional config files are referenced in `wp-config.php`: `wp-config-local.php` for local development settings, and `wp-config-pantheon.php` for dynamically-supplied platform configuration settings (such as database credentials). 
+Two additional config files are referenced in `wp-config.php`: an optional `wp-config-local.php` for local development settings, based on the example `wp-config-local-sample.php` found in your WordPress site root, and `wp-config-pantheon.php` for dynamically-supplied platform configuration settings (such as database credentials). 
 
 <Alert title="Warning" type="danger">
 
