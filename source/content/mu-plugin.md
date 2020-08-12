@@ -119,26 +119,6 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
 
 Listed below are different plugins, themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
-### Redirects
-
-In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
-
-```php
-// 301 Redirect from /old to /new
-// Check if Drupal or WordPress is running via command line
-if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
-
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
-  if (extension_loaded('newrelic')) {
-    newrelic_name_transaction("redirect");
-  }
-
-  exit();
-}
-```
-
 ### Cache Control
 
 Set `Cache-Control: max-age=0` by hooking into `send_headers`. This will override `max-age` configured within the Pantheon Cache plugin for all matching requests:
@@ -173,31 +153,36 @@ function add_header_nocache() {
 }
 ```
 
-### WP REST API (`wp-json`) Endpoints Cache
+### Custom Cookies
 
-For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
+Setting custom cookies can also be done from an MU-plugin like in the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
 
 ```php
-/* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
 
-// wp-json paths or any custom endpoints
-
-$regex_json_path_patterns = array(
-    '#^/wp-json/wp/v2/users?#',
-    '#^/wp-json/?#'
-);
-
-foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
-  if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
-    // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
-    add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-    // Re-define the send_header value with any custom Cache-Control header
-    function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-      $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-      return $response;
-    }
-    break;
+  $foo = $_COOKIE['STYXKEY_gorp'];
+  // Generate varied content based on cookie value
+  // Do NOT set cookies here. Set-Cookie headers do not allow the response to be cached
+  if ($foo == 'ca') {
+    str_replace('football', 'hockey');
   }
+
+}
+else{
+  /**
+  * Set local vars passed to setcookie()
+  * Example:
+  * @code
+  * $name = 'STYXKEY_gorp';
+  * $value = 'bar';
+  * $expire = time()+600;
+  * $path = '/foo';
+  * $domain =  $_SERVER['HTTP_HOST'];
+  * $secure = true;
+  * $httponly = true;
+  * @endcode
+  **/
+  setcookie( $name, $value, $expire, $path, $domain, $secure, $httponly );
 }
 ```
 
@@ -241,35 +226,51 @@ To verify, you can use the [Redis CLI](/redis#use-the-redis-command-line-client)
 
 For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor).
 
-### Setting Custom Cookies
-Setting custom cookies can also be done from an MU-plugin like in the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
+### Redirects
+
+In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
-if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
+// 301 Redirect from /old to /new
+// Check if Drupal or WordPress is running via command line
+if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
 
-  $foo = $_COOKIE['STYXKEY_gorp'];
-  // Generate varied content based on cookie value
-  // Do NOT set cookies here. Set-Cookie headers do not allow the response to be cached
-  if ($foo == 'ca') {
-    str_replace('football', 'hockey');
+  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  if (extension_loaded('newrelic')) {
+    newrelic_name_transaction("redirect");
   }
 
+  exit();
 }
-else{ 
-  /**
-  * Set local vars passed to setcookie()
-  * Example:
-  * @code
-  * $name = 'STYXKEY_gorp';
-  * $value = 'bar';
-  * $expire = time()+600;
-  * $path = '/foo';
-  * $domain =  $_SERVER['HTTP_HOST'];
-  * $secure = true;
-  * $httponly = true;
-  * @endcode
-  **/
-  setcookie( $name, $value, $expire, $path, $domain, $secure, $httponly );
+```
+
+### WP REST API (`wp-json`) Endpoints Cache
+
+For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
+
+```php
+/* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+
+// wp-json paths or any custom endpoints
+
+$regex_json_path_patterns = array(
+    '#^/wp-json/wp/v2/users?#',
+    '#^/wp-json/?#'
+);
+
+foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
+  if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
+    // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
+    add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+    // Re-define the send_header value with any custom Cache-Control header
+    function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+      $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+      return $response;
+    }
+    break;
+  }
 }
 ```
 
