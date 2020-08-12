@@ -40,20 +40,11 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 </Alert>
 
-## Local Database Development Configuration in wp-config-local.php
-
-The Pantheon WordPress upstream includes a sample configuration file for [local development](/local-development).
-
-If you are developing locally and need to configure WordPress for your desktop environment, make a copy of `wp-config-local-sample.php` called `wp-config-local.php`. This file is listed in the `.gitignore` file and will not be tracked by version control by default.
-
-To make local development easier, when WordPress detects `wp-config-local.php`, WordPress uses the configuration in that file instead of the settings in `wp-config.php`.
-
 ## Pantheon Platform Settings in wp-config-pantheon.php
 
 In order to get the latest WordPress upstream updates while avoiding merge conflicts, Pantheon includes `wp-config-pantheon.php`.
 
 Do not edit `wp-config-pantheon.php`. It includes database and environment configuration settings that the platform uses and that Pantheon maintains.
-
 
 ## Environment-specific Configuration
 
@@ -88,6 +79,14 @@ In addition to `wp_get_environment_type`, you can still use the PHP methods show
       }
  }
  ```
+
+### Local Database Development Configuration in wp-config-local.php
+
+The Pantheon WordPress upstream includes a sample configuration file for [local development](/local-development).
+
+If you are developing locally and need to configure WordPress for your desktop environment, make a copy of `wp-config-local-sample.php` called `wp-config-local.php`. This file is listed in the `.gitignore` file and will not be tracked by version control by default.
+
+To make local development easier, when WordPress detects `wp-config-local.php`, WordPress uses the configuration in that file instead of the settings in `wp-config.php`.
 
 ## Frequently Asked Questions
 
