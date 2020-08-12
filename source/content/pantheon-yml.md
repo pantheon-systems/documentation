@@ -136,7 +136,7 @@ filemount: /files
 
 Complete the following before deploying `filemount` (**required**):
 
-1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder) to use the new path
+1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://wordpress.org/support/article/editing-wp-config-php/#moving-uploads-folder) to use the new path
 
 1. Add path to the `.gitignore` file
 

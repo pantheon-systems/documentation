@@ -9,7 +9,7 @@ Files are large pieces of static content not stored in your database, usually im
 
 - [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
-- [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
+- [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore)
 
 The Pantheon architecture comprises highly available [application containers](/application-containers) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 

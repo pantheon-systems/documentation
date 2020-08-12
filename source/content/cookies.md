@@ -37,11 +37,11 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass cache on Pantheon.
 
-## Disable Caching On The Dev Environment
+## Disable Caching in The Dev Environment
 
-You may decide to disable caching on the Dev environment as you make changes to cachable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
+You may decide to disable caching in the Dev environment as you make changes to cacheable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
 
-To bypass caching on the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+To bypass caching in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
 ```
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
@@ -100,11 +100,11 @@ else{
 }
 ```
 
-## Setting Cookies on Platform Domains
-Setting cookies on the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies on platform domains (e.g. `dev-site-name.pantheonsite.io`) and custom domains (e.g. `example.com`, `xyz.example.com`).
+## Setting Cookies for Platform Domains
+Setting cookies for the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies for platform domains (e.g. `dev-site-name.pantheonsite.io`) and custom domains (e.g. `example.com`, `xyz.example.com`).
 
 ## Cookie Size Limit
-The Pantheon Edge size limit for Cookies is 10K. Any larger cookies are dropped, and the request will be processed as if there was no cookie sent. The header `X-Cookies-Dropped: 1` will be added to the request and response, indicating that they have been truncated.
+The Pantheon Edge size limit for Cookies is 10K. Any larger cookies are dropped, and the request is processed as if there was no cookie sent. The header `X-Cookies-Dropped: 1` is added to the request and response, indicating that they have been truncated.
 
 Knowing this, you can choose to configure your code to listen for this header and respond, with a custom error page for example.
 

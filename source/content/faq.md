@@ -16,7 +16,7 @@ Pantheon supports Drupal 7, 8, and 9 sites. As of February 2016, the Drupal comm
 
 ### What versions of WordPress does Pantheon support?
 
-Pantheon supports the most recent release of WordPress via our [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured wp-config.php.
+Pantheon supports the most recent release of WordPress via our [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured `wp-config.php`.
 
 ### How much does Pantheon cost?
 You can develop new sites for free on Pantheon. Billing starts when you're ready to go live and direct traffic to a site. See available plans on our [pricing page](https://pantheon.io/pricing).

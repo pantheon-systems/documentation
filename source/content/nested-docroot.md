@@ -153,15 +153,18 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   mkdir web
   git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') wp-includes wp-content wp-admin ./*.php web
   ```
+
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
   Your directory structure should look like this afterwards:
 
-  ```
+  ```none
   ├── web
     ├── index.php
     ├── wp-activate.php
     ├── wp-config.php
+    ├── wp-config-local-sample.php
+    ├── wp-config-pantheon.php
     ├── wp-comments-post.php
     ├── wp-blog-header.php
     ├── wp-admin

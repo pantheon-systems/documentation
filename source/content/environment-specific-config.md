@@ -4,54 +4,38 @@ description: Learn how to turn WordPress site plugins on and off based on the en
 cms: "WordPress"
 categories: [develop]
 tags: [workflow]
+reviewed: "2020-08-11"
 ---
-You may sometimes use settings and plugins in your Development environment that you do not use on Live, in order to improve the development and debugging processes. This article shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config).
-To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
-## Customizations to wp-config.php
+In order to improve the development and debugging processes, you might use settings and plugins in your Development environment that you do not use on Live.
 
-Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L88-L91):
+This doc shows how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
-```php
-if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
-    define( 'DISALLOW_FILE_MODS', true );
-endif;
-```
+## Use the WP_ENVIRONMENT_TYPE Function to Perform Actions Based on Environment
 
-In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables WP_DEBUG for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
+<Partial file="wp_get_environment_type.md" />
 
-```php
-/**
- * WordPress debugging mode.
- *
- * Sets WP_DEBUG to true on if on a development environment.
- *
- */
-if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    if(in_array( $_ENV['PANTHEON_ENVIRONMENT'], array('test', 'live'))) {
-      define('WP_DEBUG', false);
-    } else {
-      define( 'WP_DEBUG', true );
-    }
+### Configure WP_DEBUG in wp-config.php
+
+To conditionally set `WP_DEBUG` based on the given Pantheon environment, change the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L72-L74) defining it:
+
+```php:title=wp-config.php
+if ( ! defined( 'WP_DEBUG' ) ) {
+    define('WP_DEBUG', (wp_get_environment_type() == "development"));
 }
 ```
 
-<Alert title="Warning" type="danger">
-
-PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L147) defining it.
-
-</Alert>
-
-For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.
+For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://wordpress.org/support/article/editing-wp-config-php/#configure-error-logging) in the WordPress documentation.
 
 ## Configuration in an mu-plugin
+
 Filters or functions running in an mu-plugin can enable development plugins that should be active in Dev and/or Test, but disable them in Live, present extra work to reactivate them after a database clone from the Live environment. To achieve this goal, we can use an mu-plugin that checks which environment we're on, and then activates or deactivates plugins that were deactivated or activated when the database clone completed.
 
 ### Create the Plugin
 
 Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accordingly.
 
-```php
+ ```php:title=site-config.php
 <?php
 /*
   Plugin Name: Site Config
@@ -71,9 +55,10 @@ endif;
 ```
 
 ### Add Configuration
+
 Create a new directory, `wp-content/mu-plugins/site-config/`, and add a `live-specific-configs.php` file. This example activates the `wp-reroute-email` and `debug-bar` plugins, and sets the Jetpack plugin's development mode on all environments except for Live. It also adds the converse filters and deactivates the plugins on Live. You can expand this file to account for all of your environment-specific configurations, or add similar files for Dev-specific and Test and Live-specific configurations.
 
-```php
+ ```php:title=live-specific-configs.php
 <?php
 
 # List Development Plugins

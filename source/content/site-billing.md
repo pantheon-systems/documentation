@@ -28,7 +28,7 @@ Changing your site billing is typically done at launch time. For a comprehensive
 
 The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
-<Alert tile="Note" type="info">
+<Alert title="Note" type="info">
 
 If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).
 
