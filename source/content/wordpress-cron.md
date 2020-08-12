@@ -102,7 +102,6 @@ Once you have disabled WP-Cron, you will need a service that calls a URL at regu
 
 - [EasyCron](https://www.easycron.com/)
 - [Set Cron Job](https://www.setcronjob.com/)
-- [My Cron](https://www.mywebcron.com/)
 - [cron-job](https://cron-job.org/en/)
 
 Any of the above services will get the job done. By disabling WP-Cron, you have turned off the automatic checking and calling of the `wp-cron.php` script. You will now have to call that URL yourself using one of the services above. With most of them, it is as easy as this:
