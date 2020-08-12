@@ -93,7 +93,7 @@ In addition to `wp_get_environment_type`, you can still use the PHP methods show
 
 ### How do I enable debugging?
 
-The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php):
+The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Advanced Options for wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/#advanced-options):
 
 <Partial file="wp-debugging.md" />
 

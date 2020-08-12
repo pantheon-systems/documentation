@@ -25,7 +25,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 }
 ```
 
-For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.
+For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://wordpress.org/support/article/editing-wp-config-php/#configure-error-logging) in the WordPress documentation.
 
 ## Configuration in an mu-plugin
 
