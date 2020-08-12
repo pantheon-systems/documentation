@@ -5,6 +5,7 @@ contributors: [alexfornuto, eabquina, carlalberto]
 cms: "WordPress"
 categories: [develop]
 tags: [plugins]
+reviewed: "2020-08-12"
 ---
 
 For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins).
@@ -14,6 +15,7 @@ MU-Plugins are activated by default by adding a PHP file to the `wp-content/mu-p
 MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added in an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU Plugins?
+
 While you can add code in the `wp-config.php` file for site-wide behavior, actions and filters shouldn't be added here.
 
 If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the `add_action()` and `add_filter()` functions won't be defined yet.
@@ -21,7 +23,9 @@ If they are added above the `require_once ABSPATH . 'wp-settings.php';` statemen
 If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would be applied last.
 
 ## Create Your MU Plugin
+
 1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
+
 1. Provide the plugin details for its name, description, etc.:
 
   ```php
@@ -112,9 +116,11 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
   ```
 
 ## Example Code Snippets
+
 Listed below are different plugins, themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
 ### Redirects
+
 In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
@@ -134,9 +140,10 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 ```
 
 ### Cache Control
+
 Set `Cache-Control: max-age=0` by hooking into `send_headers`. This will override `max-age` configured within the Pantheon Cache plugin for all matching requests:
 
-```
+```php
 /*
  * Set $regex_path_patterns accordingly.
  *
@@ -167,6 +174,7 @@ function add_header_nocache() {
 ```
 
 ### WP REST API (`wp-json`) Endpoints Cache
+
 For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
 
 ```php
@@ -194,6 +202,7 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 ```
 
 ### Exclude Plugins from Redis Cache
+
 A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group.
 
 For example, let's say you have a custom plugin that sets the cache with:
@@ -217,7 +226,7 @@ wp_cache_add_non_persistent_groups( array( 'my_plugin_group', 'woocommerce' ) );
 
 To verify, you can use the [Redis CLI](/redis#use-the-redis-command-line-client) to flush all keys and see that the related objects are no longer added to the cache:
 
-```
+```sql
 > KEYS *woocommerce:*
 1) "woocommerce:size-gallery_thumbnail"
 2) "woocommerce:size-woocommerce_thumbnail"
@@ -265,8 +274,9 @@ else{
 ```
 
 ## See Also
+
 This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 
- - [Configuring wp-config.php](/wp-config-php)
- - [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
- - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [Configuring wp-config.php](/wp-config-php)
+- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
