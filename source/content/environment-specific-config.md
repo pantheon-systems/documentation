@@ -4,12 +4,12 @@ description: Learn how to turn WordPress site plugins on and off based on the en
 cms: "WordPress"
 categories: [develop]
 tags: [workflow]
-reviewed: "2020-08-07"
+reviewed: "2020-08-11"
 ---
 
 In order to improve the development and debugging processes, you might use settings and plugins in your Development environment that you do not use on Live.
 
-This doc shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
+This doc shows how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
 ## Use the WP_ENVIRONMENT_TYPE Function to Perform Actions Based on Environment
 
@@ -17,25 +17,7 @@ This doc shows you how to use the same codebase with different settings for each
 
 ### Configure WP_DEBUG in wp-config.php
 
-In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables `WP_DEBUG` for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
-
-```php:title=wp-config.php
-/**
- * WordPress debugging mode.
- *
- * Sets WP_DEBUG to true on if on a development environment.
- *
- */
-if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    if(in_array( $_ENV['PANTHEON_ENVIRONMENT'], array('test', 'live'))) {
-      define('WP_DEBUG', false);
-    } else {
-      define( 'WP_DEBUG', true );
-    }
-}
-```
-
-PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, change the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L72-L74) defining it:
+To conditionally set `WP_DEBUG` based on the given Pantheon environment, change the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L72-L74) defining it:
 
 ```php:title=wp-config.php
 if ( ! defined( 'WP_DEBUG' ) ) {
