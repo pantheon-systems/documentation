@@ -6,7 +6,7 @@ tags: [git, local, webops]
 contributors: [alexfornuto]
 reviewed: "2020-02-11"
 ---
-[Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+[Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
