@@ -31,7 +31,7 @@ There's a wide array of MySQL clients that can be used, including [MySQL Workben
 Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Pro via [Terminus](/terminus) and [Drush](/drush):
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 
 # exit on any errors:
 set -e
