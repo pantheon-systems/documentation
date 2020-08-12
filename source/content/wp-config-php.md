@@ -8,11 +8,13 @@ contributors: [masonjames]
 reviewed: "2020-08-07"
 ---
 
-## Configure WordPress With wp-config.php
+## Overview
 
-WordPress configuration is set in `wp-config.php`, located within your WordPress site root. When you install a WordPress site, Pantheon automatically includes this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
+WordPress configuration is set in `wp-config.php`, located within your WordPress site root. When you install a WordPress site, Pantheon automatically includes this file for you with all you need to get started. 
 
-Pantheon uses environment variables to automatically supply configuration settings (e.g., Database credentials) dynamically to `wp-config-pantheon.php` - no editing required. However, you are welcome to customize `wp-config.php` with any customizations you may need for plugins, themes, and caching.
+Most users do not need to customize this file. However, you are welcome to customize `wp-config.php` with any customizations you may need for plugins, themes, and caching.
+
+Two additional config files are referenced in `wp-config.php`: `wp-config-local.php` for local development settings, and `wp-config-pantheon.php` for dynamically-supplied platform configuration settings (such as database credentials). 
 
 <Alert title="Warning" type="danger">
 
@@ -21,20 +23,6 @@ Never put the database connection information for a Pantheon database within you
 If you experience connection errors, ensure that you are running the latest version of WordPress core and have the correct `wp-config.php` file for Pantheon.
 
 </Alert>
-
-### Pantheon Platform Settings in wp-config-pantheon.php
-
-In order to get the latest WordPress upstream updates while at the same time avoiding merge conflicts, Pantheon includes `wp-config-pantheon.php`.
-
-Do not edit `wp-config-pantheon.php`. It includes database and environment configuration that the platform uses and that Pantheon maintains.
-
-## wp-config-local for Local Database Development Configuration
-
-The Pantheon WordPress upstream includes a sample configuration file for [local development](/local-development).
-
-If you are developing locally and need to configure WordPress for your desktop environment, make a copy of `wp-config-local-sample.php` called `wp-config-local.php`. This file is listed in the `.gitignore` file and will not be tracked by version control by default.
-
-To make local development easier, when WordPress detects `wp-config-local.php`, WordPress uses the configuration in that file instead of the settings in `wp-config.php`.
 
 ## Pantheon's WordPress Config
 
@@ -51,6 +39,21 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 `$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
 </Alert>
+
+## Local Database Development Configuration in wp-config-local.php
+
+The Pantheon WordPress upstream includes a sample configuration file for [local development](/local-development).
+
+If you are developing locally and need to configure WordPress for your desktop environment, make a copy of `wp-config-local-sample.php` called `wp-config-local.php`. This file is listed in the `.gitignore` file and will not be tracked by version control by default.
+
+To make local development easier, when WordPress detects `wp-config-local.php`, WordPress uses the configuration in that file instead of the settings in `wp-config.php`.
+
+## Pantheon Platform Settings in wp-config-pantheon.php
+
+In order to get the latest WordPress upstream updates while avoiding merge conflicts, Pantheon includes `wp-config-pantheon.php`.
+
+Do not edit `wp-config-pantheon.php`. It includes database and environment configuration settings that the platform uses and that Pantheon maintains.
+
 
 ## Environment-specific Configuration
 
@@ -94,7 +97,7 @@ The following example shows how to hard-code your WordPress debug configuration 
 
 <Partial file="wp-debugging.md" />
 
-### How can I read the Pantheon environmental configuration, like database credentials?
+### How can I read the Pantheon environment configuration, like database credentials?
 
 See [Reading the Pantheon Environment Configuration](/read-environment-config).
 
