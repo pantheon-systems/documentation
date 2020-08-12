@@ -23,7 +23,7 @@ For more information, see [SSO and Identity Federation on Pantheon](/sso/#ip-bas
 ## IP Address Ranges
 We do not provide IP ranges for outgoing requests for application containers and other platform services. A limitation of cloud-based infrastructure is that the range of IP addresses can change at any time as new servers and systems are provisioned. This can happen at any time for security patches, upgrades, updates, and release of new features, which is a large part of the flexibility provided by containers and allows for zero downtime deployment of server resources.
 
-Instead, we suggest that you use an alternate form of verification like API keys or similar, if possible. We also offer an Elite level product called a Secure Integration that will provide variables to each of your environments in order to establish a direct route to your sites.
+Instead, we suggest that you use an alternate form of verification like API keys or similar, if possible. We also offer an Enterprise level product called a Secure Integration that will provide variables to each of your environments in order to establish a direct route to your sites.
 
 For more information, see [Secure Integration](/secure-integration).
 
