@@ -186,6 +186,16 @@ else{
 }
 ```
 
+### Custom Login Message
+
+To customize the text provided on `/wp-login.php`, add the following filter:
+
+```php
+add_filter( 'pantheon_wp_login_text', function() {
+  return 'This is my custom login message';
+});
+```
+
 ### Exclude Plugins from Redis Cache
 
 A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group.
