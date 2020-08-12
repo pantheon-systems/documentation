@@ -19,11 +19,11 @@ Sites managing core with Composer are not compatible with Pantheon's One-click u
 
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
 
-  ![Sreenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button.](../images/dashboard/updates-available.png)
+  ![Sreenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
 1. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
 
-1. From the **Update Options** menu, you can select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
+1. From the **Update Options** menu, you can select whether or not you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied:
 
   ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
 
