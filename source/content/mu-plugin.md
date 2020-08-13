@@ -188,13 +188,27 @@ else{
 
 ### Custom Login Message
 
-To customize the text provided on `/wp-login.php`, add the following filter:
+To customize the text provided on `/wp-login.php` (when accessing the site from a Platform Domain), add the following filter:
 
 ```php
 add_filter( 'pantheon_wp_login_text', function() {
   return 'This is my custom login message';
 });
 ```
+
+You can also disable the **Return to Pantheon** button on platform domain login pages, and overwrite the default login text:
+
+```php
+if ( ! defined( 'RETURN_TO_PANTHEON_BUTTON' ) ) {
+  define( 'RETURN_TO_PANTHEON_BUTTON', false );
+}
+
+add_filter( 'login_message', function() {
+  return "This is the default login message being overwritten.";
+});
+```
+
+Please note that overwritting `login_message` changes the text displayed on all login pages, regardless of domain used to access it.
 
 ### Exclude Plugins from Redis Cache
 
