@@ -9,7 +9,7 @@ tags: [plugins]
 
 For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins).
 
-MU-Plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
+MU-plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
 MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added in an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
@@ -19,6 +19,12 @@ While you can add code in the `wp-config.php` file for site-wide behavior, actio
 If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the `add_action()` and `add_filter()` functions won't be defined yet.
 
 If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would be applied last.
+
+### Use wp_get_environment_type for Environment-specific Actions
+
+<Partial file="wp_get_environment_type.md" />
+
+An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to pass the environment to the plugin.
 
 ## Create Your MU Plugin
 1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
