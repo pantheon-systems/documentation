@@ -35,7 +35,11 @@ For more options when editing `wp-config.php` for debugging, see [Configure Erro
 
 ## Configuration in an mu-plugin
 
-Filters or functions running in an mu-plugin can enable development plugins that should be active in Dev and/or Test, but disable them in Live, present extra work to reactivate them after a database clone from the Live environment. To achieve this goal, we can use an mu-plugin that checks which environment we're on, and then activates or deactivates plugins that were deactivated or activated when the database clone completed.
+Filters or functions running in an mu-plugin can enable development plugins that should be active in Dev and/or Test, but disabled in Live. To achieve this, use an mu-plugin that checks which environment you're on, and then activates or deactivates plugins that were deactivated or activated when the database clone completed.
+
+### Use the WP_ENVIRONMENT_TYPE Function to Define the Environment for a Plugin
+
+<Partial file="wp_get_environment_type.md" />
 
 ### Create the Plugin
 
