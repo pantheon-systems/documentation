@@ -48,13 +48,9 @@ Do not edit `wp-config-pantheon.php`. It includes database and environment confi
 
 ## Environment-specific Configuration
 
-### Use the WP_ENVIRONMENT_TYPE Function to Perform Actions Based on Environment
-
-<Partial file="wp_get_environment_type.md" />
-
 ### Write Logic Based on the Pantheon Server Environment
 
-In addition to `wp_get_environment_type`, you can still use the PHP methods shown here. Depending on your use case, there are two possibilities:
+Depending on your use case, there are two possibilities:
 
 - For web only actions, like [redirects](/domains#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
 
