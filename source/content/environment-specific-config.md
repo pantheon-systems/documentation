@@ -22,12 +22,9 @@ To conditionally set `WP_DEBUG` based on the given Pantheon environment, change 
  * Sets WP_DEBUG to true on if on a development environment.
  *
  */
+
 if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    if(in_array( $_ENV['PANTHEON_ENVIRONMENT'], array('test', 'live'))) {
-      define('WP_DEBUG', false);
-    } else {
-      define( 'WP_DEBUG', true );
-    }
+    define( 'WP_DEBUG', !in_array( $_ENV['PANTHEON_ENVIRONMENT'], ['test', 'live']) );
 }
 ```
 

@@ -24,7 +24,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
 
 <Partial file="wp_get_environment_type.md" />
 
-An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to pass the environment to the plugin.
+An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
 
 ## Create Your MU Plugin
 1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
