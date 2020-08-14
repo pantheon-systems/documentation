@@ -47,7 +47,7 @@ Quicksilver scripts that trigger on the deploy hook operate on the state of the 
 
 ## Script Type and Location
 
-Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types.
+Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types. The commands will be run in order, and only execute the next when the previous has finished or timed out.
 
 We recommend setting up a dedicated directory in the docroot (e.g., `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the `web` subdirectory of your site's code repository (e.g., `web/private/scripts`).
 
