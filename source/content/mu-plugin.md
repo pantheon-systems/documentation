@@ -20,12 +20,6 @@ If they are added above the `require_once ABSPATH . 'wp-settings.php';` statemen
 
 If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would be applied last.
 
-### Use wp_get_environment_type for Environment-specific Actions
-
-<Partial file="wp_get_environment_type.md" />
-
-An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
-
 ## Create Your MU Plugin
 1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
 1. Provide the plugin details for its name, description, etc.:
@@ -116,6 +110,12 @@ An MU-plugin can be instructed to run or perform environment-specific actions. U
   }
   // End of File
   ```
+
+### Use wp_get_environment_type for Environment-specific Actions
+
+<Partial file="wp_get_environment_type.md" />
+
+An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
 
 ## Example Code Snippets
 Listed below are different plugins, themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
