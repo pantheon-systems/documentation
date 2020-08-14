@@ -11,17 +11,20 @@ In order to improve the development and debugging processes, you might use setti
 
 This doc shows how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
-## Use the WP_ENVIRONMENT_TYPE Function to Perform Actions Based on Environment
+## Define WP_DEBUG to Perform Actions Based on Environment
 
-<Partial file="wp_get_environment_type.md" />
-
-### Configure WP_DEBUG in wp-config.php
-
-To conditionally set `WP_DEBUG` based on the given Pantheon environment, change the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L72-L74) defining it:
+To conditionally set `WP_DEBUG` based on the given Pantheon environment, change the [existing code block](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L72-L74) defining it. This example configuration enables `WP_DEBUG` for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
 
 ```php:title=wp-config.php
-if ( ! defined( 'WP_DEBUG' ) ) {
-    define('WP_DEBUG', (wp_get_environment_type() == "development"));
+/**
+ * WordPress debugging mode.
+ *
+ * Sets WP_DEBUG to true on if on a development environment.
+ *
+ */
+
+if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define( 'WP_DEBUG', !in_array( $_ENV['PANTHEON_ENVIRONMENT'], ['test', 'live']) );
 }
 ```
 
@@ -29,7 +32,11 @@ For more options when editing `wp-config.php` for debugging, see [Configure Erro
 
 ## Configuration in an mu-plugin
 
-Filters or functions running in an mu-plugin can enable development plugins that should be active in Dev and/or Test, but disable them in Live, present extra work to reactivate them after a database clone from the Live environment. To achieve this goal, we can use an mu-plugin that checks which environment we're on, and then activates or deactivates plugins that were deactivated or activated when the database clone completed.
+Filters or functions running in an mu-plugin can enable development plugins that should be active in Dev and/or Test, but disabled in Live. To achieve this, use an mu-plugin that checks which environment you're on, and then activates or deactivates plugins that were deactivated or activated when the database clone completed.
+
+### Use the WP_ENVIRONMENT_TYPE Function to Define the Environment for a Plugin
+
+<Partial file="wp_get_environment_type.md" />
 
 ### Create the Plugin
 
