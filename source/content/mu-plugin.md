@@ -155,7 +155,7 @@ function add_header_nocache() {
 
 ### Custom Cookies
 
-Setting custom cookies can also be done from an MU-plugin like in the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
+Setting custom cookies can also be done from an MU-plugin like in the example below. Find more cookie manipulation examples at [Working with Cookies on Pantheon](/cookies).
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
