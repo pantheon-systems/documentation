@@ -609,8 +609,8 @@ ___
 
 Page builder:
 
-- `wp-content/plugins/framework/extensions/shortcodes/.gitignore`
-- `wp-content/plugins/framework/extensions/shortcodes/extensions/page-builder/.gitignore`
+- `wp-content/plugins/unyson/framework/extensions/shortcodes/.gitignore`
+- `wp-content/plugins/unyson/framework/extensions/shortcodes/extensions/page-builder/.gitignore`
 
 WordPress Shortcodes:
 
