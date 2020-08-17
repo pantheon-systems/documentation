@@ -3,31 +3,38 @@ title: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 tags: [infrastructure, security]
 categories: [platform,develop]
+reviewed: "2020-08-17"
 ---
 The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 
 Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
 
-**Private Path for Files (Not Version Controlled)**
+#### Private Path for Files (Not Version Controlled)
+
 Drupal: `sites/default/files/private`
 WordPress: `wp-content/uploads/private`
 
-**Private Path for Code (Version Controlled)**
+#### Private Path for Code (Version Controlled)
+
 Drupal and WordPress: `private`
 
 <Alert title="Note" type="info">
+
 If you have not already created these directories, you will need to do that first. Create the folders in Dev via SFTP or Git, and push the changes to your Test and Live environments.
+
 </Alert>
 
 ## Private Path for Code
+
 Store data that should be version controlled, such as [Quicksilver](/quicksilver) scripts, within the `private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `private`. If you're connecting via Git, use the `private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
 
 ## Private Path for Files
+
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. You can integrate this service using the [Lockr plugin](https://wordpress.org/plugins/lockr/) for WordPress and the [Lockr module](https://www.drupal.org/project/lockr) for Drupal. For more details, see this [related blog post](https://pantheon.io/blog/key-drupal-security).
 
 Alternatively, you can store sensitive data in a JSON or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
 
-```php
+```php:title=settings.php%20or%20wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
   $stripe_data = json_decode($json_text, TRUE);
@@ -53,7 +60,6 @@ These files will be web-accessible based on the access control rules that you se
 
 To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**.
 
-
 ## Troubleshooting
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
@@ -64,11 +70,13 @@ If you receive the error above, make sure that the private path for code or file
 
 If you have a private code library that needs to have a specific sub-directory exposed (e.g. using SimpleSamlPHP), you can do this with symlinks:
 
-    # from within a git checkout
-    ln -s private/simplesamlphp/www ./simplesaml
-    git add simplesaml
-    git commit simplesaml -m "adding simplesaml symlink"
-    git push origin master
+  ```bash
+  # from within a git checkout
+  ln -s private/simplesamlphp/www ./simplesaml
+  git add simplesaml
+  git commit simplesaml -m "adding simplesaml symlink"
+  git push origin master
+  ```
 
 The result will be a web-accessible URL at `https://dev.yoursite.pantheonsite.io/simplesaml` which will point to the code in `/private/simplesamlphp/www`.
 
@@ -86,17 +94,19 @@ You can either set the path in the Drupal admin interface, or with Terminus and 
 
    `<my_private_path>` can be set to either of these non-web accessible private directories:
 
-    - `'sites/default/files/private'` (preferred)
-    - `'private'` (version controlled)
+   - `'sites/default/files/private'` (preferred)
+   - `'private'` (version controlled)
 
 2. Create the private directory you have chosen and upload the key.
 
-    * Optionally, verify that `uc_credit_encryption_path` is set correctly:
+   - Optionally, verify that `uc_credit_encryption_path` is set correctly:
 
      ```bash
      terminus drush <site>.<env> -- vget uc_credit_encryption_path
      ```
 
 <Alert title="Note" type="info">
+
 We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
+
 </Alert>
