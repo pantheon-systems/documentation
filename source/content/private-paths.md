@@ -35,7 +35,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 Alternatively, you can store sensitive data in a JSON or ini-style text file within the following directories:
 
 - `wp-content/uploads/private` (WordPress)
-- `/wp-content/uploads/private/sites/blog_id/` (WordPress Multisite)
+- `/wp-content/uploads/private/sites/<blog_id>/` (WordPress Multisite)
 - `sites/default/files/private` (Drupal)
 
 These directories are symbolically linked to Valhalla and can also be accessed from the `files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
