@@ -856,29 +856,31 @@ ___
 **Solution:** To avoid hitting a timeout, you can try:
 
 - Clean up temporary files
-- Lower the chunk size to less than 100 records:
+- Lower the chunk size to fewer than 100 records:
 
   ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
 
-- Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 seconds platform PHP timeout.
+- Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 second platform PHP timeout.
 
 - Set the plugin to only process 1 record at a time:
 
   ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
 
-  This depends on how many post_meta's and custom functions are associated with each post imported, you can adjust it to a higher number that is optimal in your site if it will be a recurring import in order to speed it up but be reminded that it is a trial and error process which you need to experiment on works best from your end.
+The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported. 
 
-- Instead of importing one large file, it is best to set it up as reoccurring cron import as outlined in WP All Import's [documentation](https://www.wpallimport.com/documentation/recurring/cron/).
+- Instead of importing one large file, it is best to set it up as recurring cron import as outlined in WP All Import's [documentation](https://www.wpallimport.com/documentation/recurring/cron/).
+
+- If this will be a recurring import, increasing this number may help speed the completion of the task.
 
 - For busy sites while doing recurring cron, you can add cron sleep of at least 10 seconds to free up some php workers on recurring cron imports.
 
 **Issue 2:** Getting invalid file paths when importing / exporting on environments with multiple appservers like test and live.
 
-**Solution:** You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
+**Solution:** Upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option.
 
 **Issue 3:** Upload count does not match the import file.
 
-**Solution:** Under WP All Import Settings, you can:
+**Solution:** Under WP All Import Settings:
 
 - Check the Enable Stream Reader
 - Cron Processing Time Limit should be set not more than 50 seconds
