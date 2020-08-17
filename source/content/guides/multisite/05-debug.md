@@ -38,6 +38,14 @@ Use `wp super-admin list` to list current super admins, and `wp super-admin add`
 
 ## Troubleshooting
 
+### Error: Cookies are blocked or not supported by your browser.
+
+You must enable cookies for WordPress multisite users to log in to their admin interface. Users may need to add this in their `wp-config.php` file:
+
+```php:title=wp-config.php
+define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
+```
+
 ### Error: "Error establishing a database connection"
 
 You may see this error when moving a WordPress Site Network database between environments. The most common cause is either using `wp search-replace` incorrectly (or having forgotten to use it at all).
