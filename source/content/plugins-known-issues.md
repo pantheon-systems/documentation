@@ -858,13 +858,13 @@ ___
 - Clean up temporary files
 - Lower the chunk size to less than 100 records:
 
-  ![A screenshot showing the "Chunk Size" ssetting in WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
+  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
 
 - Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 seconds platform PHP timeout.
 
 - Set the plugin to only process 1 record at a time:
 
-  ![A screenshot of the "Iterative, Piece-by-Piece processing" option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
+  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
 
   This depends on how many post_meta's and custom functions are associated with each post imported, you can adjust it to a higher number that is optimal in your site if it will be a recurring import in order to speed it up but be reminded that it is a trial and error process which you need to experiment on works best from your end.
 
