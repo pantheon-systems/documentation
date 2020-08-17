@@ -829,6 +829,7 @@ the `advanced-cache.php` file.
    ```php:title=wp-config.php
    define('WP_CACHE', false);
    ```
+
 1. **Optional on writable environments:** The WP-Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this plugin [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
 
 **Issue 2:** WP-rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
@@ -849,26 +850,43 @@ ___
 
 ## [WP All Import / Export](http://www.wpallimport.com/)
 
-<ReviewDate date="2018-10-30" />
+<ReviewDate date="2020-06-15" />
 
 **Issue 1:** Large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/timeouts) for more information.
 
 **Solution:** To avoid hitting a timeout, you can try:
 
-- Splitting the import or export into smaller parts
-- Set the plugin to only process 1 or 2 records per iteration
+- Clean up temporary files
+- Lower the chunk size to fewer than 100 records:
 
-**Issue 2:** Uploading large import files hits the 59 second [timeout](/timeouts), or you're getting invalid file paths.
+  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
 
-**Solution:** You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
+- Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 second platform PHP timeout.
+
+- Set the plugin to only process 1 record at a time:
+
+  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
+
+The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported. 
+
+- Instead of importing one large file, it is best to set it up as recurring cron import as outlined in WP All Import's [documentation](https://www.wpallimport.com/documentation/recurring/cron/).
+
+- If this will be a recurring import, increasing this number may help speed the completion of the task.
+
+- For busy sites while doing recurring cron, you can add cron sleep of at least 10 seconds to free up some php workers on recurring cron imports.
+
+**Issue 2:** Getting invalid file paths when importing / exporting on environments with multiple appservers like test and live.
+
+**Solution:** Upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option.
 
 **Issue 3:** Upload count does not match the import file.
 
-**Solution:** Under WP All Import Settings, you can:
+**Solution:** Under WP All Import Settings:
 
-- Clean up temporary files
-- Lower the chunk size to less than 1000
 - Check the Enable Stream Reader
+- Cron Processing Time Limit should be set not more than 50 seconds
+- Clean up temporary files
+- Lower the chunk size to less than 100
 
 ___
 
