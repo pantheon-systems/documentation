@@ -113,7 +113,7 @@ This error occurs when a user is attempting to make a direct connection to Panth
 
 ### Authentication Prompts
 
-Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. Verify by listing the SSH fingerprints already loaded in your device's ssh-agent using the command below:
+Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. Verify by listing the SSH fingerprints already loaded in your device's ssh-agent:
 
 ```bash{promptUser: user}
 ssh-add -L | ssh-keygen -l -E md5 -f - | awk '{print substr($2,5)}'
