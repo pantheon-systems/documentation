@@ -148,9 +148,8 @@ h3 {
 h4 {
   margin-top: 25px;
   font-family: 'Open Sans', sans-serif;
-  color: #8f9192;
+  color: #747676;
   font-size: 22px;
-  font-weight: bold;
 }
 h3.changelog {
   font-family: 'Open Sans', sans-serif;
@@ -210,7 +209,7 @@ hr {
 .article-subhead {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
-  color: #8f9192;
+  color: #747676;
   line-height: 24px;
   letter-spacing: -0.2px;
   line-height: 1.5em;
