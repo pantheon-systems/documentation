@@ -62,7 +62,6 @@ Pantheon offers [annual billing plans at lower rates](/annual-billing), giving u
 | New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                         | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 | Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                           | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 | Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                             | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 <Alert title="Note" type="info">
 
