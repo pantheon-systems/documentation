@@ -51,18 +51,17 @@ Pantheon offers [annual billing plans at lower rates](/annual-billing), giving u
 
 ## Plan Resources
 
-|                        | Basic        | Performance Small |  Performance Medium  | Performance Large |
-| ---------------------- | ------------ | ----------------- | -------------------- | ----------------- |
-| Application Containers |      1       | 1                 |       2              | 3                 |
-| PHP Workers            |      4       | 8                 |       16             | 24                |
-| PHP Memory Limit       |    256MB     | 256MB             |       512MB          | 512MB             |
-| Storage                |     20GB     | 30GB              |       50GB           | 100GB             |
-| Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." />   | 5 | 10 | 15 | 35 |
-| Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." />                   | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                         | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                           | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                             | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | ❌ | ❌ | ❌ | ❌ |
+|                        | Basic        | Performance Small |  Performance Medium  | Performance Large | Performance Extra Large |
+| ---------------------- | ------------ | ----------------- | -------------------- | ----------------- | ----------------------- |
+| Application Containers |      1       | 1                 |       2              | 3                 | 4                       |
+| PHP Workers            |      4       | 8                 |       16             | 24                | 32                      |
+| PHP Memory Limit       |    256MB     | 256MB             |       512MB          | 512MB             | 512MB                   |
+| Storage                |     20GB     | 30GB              |       50GB           | 100GB             | 200GB                   |
+| Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." />   | 5 | 10 | 15 | 35 | 70 |
+| Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." />                   | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                         | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                           | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                             | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 
 <Alert title="Note" type="info">
 
