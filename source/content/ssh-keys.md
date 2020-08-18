@@ -113,7 +113,15 @@ This error occurs when a user is attempting to make a direct connection to Panth
 
 ### Authentication Prompts
 
-Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. To resolve, add your SSH key to the ssh-agent using the following command, replacing `id_rsa` with the name of your private key, if different:
+Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. Verify by listing the SSH fingerprints already loaded in your device's ssh-agent:
+
+```bash{promptUser: user}
+ssh-add -L | ssh-keygen -l -E md5 -f - | awk '{print substr($2,5)}'
+```
+
+The resulting string should match one of the keys [listed in your User Dashboard](https://dashboard.pantheon.io/users/#account/ssh-keys).
+
+To resolve, add your SSH key to the ssh-agent using the following command, replacing `id_rsa` with the name of your private key, if different:
 
 ```bash{promptUser: user}
 ssh-add ~/.ssh/id_rsa
