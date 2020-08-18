@@ -35,7 +35,7 @@ command:
       options:
         email: anita@example.com
 
-TERMINUS_HIDE_GIT_MODE_WARNING: 1
+hide_git_mode_warning: 1
 
   site:
     pancakes:
