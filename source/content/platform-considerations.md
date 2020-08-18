@@ -202,6 +202,16 @@ If your site contains rules in `.htaccess` that cannot be migrated to PHP, Panth
 
 Drupal 7 and 8 checks for arbitrary code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
+## HTTP Range Requests
+
+[HTTP range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) enable sending only a portion of an HTTP message from server to client, and are typically used to speed viewing of large media like PDFs, video background images, or streaming content like [podcasts](https://itunespartner.apple.com/podcasts/articles/creating-your-show_requirements) and videos with pause and resume functions.
+
+Byte-range request header parameters are not supported on Pantheon. Modules and plugins that require specified byte-ranges will not work.
+
+### PDF Viewer Workaround
+
+For PDF viewer plugins that rely on Mozilla's [PDF.js](https://github.com/mozilla/pdf.js) viewer code, it is possible to work around the issue by modifying `PDF.js` to enable the [DisableRange](https://github.com/mozilla/pdf.js/blob/master/src/display/api.js#L169-L171) option.
+
 ## Image Optimization Tools
 
 Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
