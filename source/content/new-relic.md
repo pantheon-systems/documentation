@@ -3,7 +3,7 @@ title: New Relic APM Pro
 description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site on Pantheon.
 categories: [performance]
 tags: [logs, measure, newrelic]
-reviewed: "2020-05-27"
+reviewed: "2020-08-18"
 ---
 
 [New Relic APM Pro](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
@@ -21,13 +21,29 @@ All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro i
 
 ## Activate New Relic APM Pro
 
-Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
+Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**:
+
+  ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../images/integrations/newrelic/activate-new-relic.png)
+
+Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 New Relic is automatically enabled for all application containers added to the site, including Multidev environments.
 
 ## New Relic Access
 
-Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
+1. Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**:
+
+  ![Screenshot showing the newly activated New Relic.](../images/integrations/newrelic/new-relic-activated.png)
+
+1. Ignore the **Get started**, button, and select **APM** from the menu at the top:
+
+  ![Screenshot showing the New Relic landing page.](../images/integrations/newrelic/new-relic-get-started.png)
+
+1. After agreeing to the New Relic terms of service, you can access the data for your site:
+
+  ![Screenshot of the New Relic APM dashboard.](../images/integrations/newrelic/new-relic-apm-dash.png)
+
+  ![SCreenshot of the New Relic APM data for a Pantheon site.](../images/integrations/newrelic/new-relic-summary.png)
 
 ### Who is the New Relic account associated with?
 
