@@ -5,7 +5,7 @@ categories: [automate]
 tags: [code, newrelic, quicksilver, workflow]
 type: guide
 permalink: docs/guides/:basename/
-reviewdate: "2020-08-18"
+reviewed: "2020-08-18"
 contributors: [scottmassey]
 ---
 New Relic is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic Pro within the Site Dashboard on all sites for free.
