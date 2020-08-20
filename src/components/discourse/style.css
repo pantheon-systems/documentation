@@ -1,0 +1,27 @@
+
+.btn-discourse {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff !important;
+}
+
+
+.btn-discourse {
+  height: 25px;
+  color: #fff !important;
+  float: left;
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 0px 8px 0px 0px;
+  margin-right: 5px;
+  padding: 2px 5px 25px 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-discourse:active,
+.btn-discourse:focus,
+.btn-discourse:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+  color: #fff !important;
+}
