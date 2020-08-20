@@ -16,3 +16,10 @@
   padding: 2px 5px 25px 5px;
   font-family: "Open Sans", sans-serif;
 }
+
+.btn-discourse:active,
+.btn-discourse:focus,
+.btn-discourse:hover {
+  background-image: linear-gradient(#44525E, #000, #000, #44525E);
+  opacity: .9 !important;
+}
