@@ -20,6 +20,7 @@
 .btn-discourse:active,
 .btn-discourse:focus,
 .btn-discourse:hover {
-  background-image: linear-gradient(#44525E, #000, #000, #44525E);
-  opacity: .9 !important;
+  opacity: 1 !important;
+  color: #efd01b!important;
+  font-weight: bold;
 }

@@ -20,5 +20,6 @@
 .btn-slack:active,
 .btn-slack:focus,
 .btn-slack:hover {
-  opacity: .7 !important;
+  opacity: 1 !important;
+  font-weight: bold;
 }
