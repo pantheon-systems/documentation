@@ -23,5 +23,4 @@
 .btn-slack:focus,
 .btn-slack:hover {
   background-image: linear-gradient(#fcfcfc, #eee);
-  color: #fff !important;
 }
