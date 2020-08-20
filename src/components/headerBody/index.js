@@ -8,7 +8,7 @@ import Discourse from "../discourse"
 import ContributorGuest from "../contributorGuest"
 import './style.css';
 
-const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate, isoDate }) => {
+const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate, isoDate, cms }) => {
   const contributor = contributors ? contributors[0] : null;
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null;
   return (
@@ -35,8 +35,9 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
         <Discourse
           pageTitle={title}
           path={slug}
+          cms={cms}
         />
-        <Slack />
+        <Slack/>
         {featured && <ContributorGuest contributor={contributor} />}
         <br/><br/>
         <Github

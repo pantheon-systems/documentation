@@ -118,6 +118,7 @@ class DocTemplate extends React.Component {
                 editPath={node.fields.editPath}
                 reviewDate={node.frontmatter.reviewed}
                 isoDate={isoDate.frontmatter.reviewed}
+                cms={node.frontmatter.cms}
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
@@ -153,6 +154,7 @@ export const pageQuery = graphql`
         description
         getfeedbackform
         categories
+        cms
         contributors {
           id
           name
