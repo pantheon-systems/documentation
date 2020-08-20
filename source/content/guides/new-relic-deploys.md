@@ -10,7 +10,7 @@ contributors: [scottmassey]
 ---
 New Relic is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic Pro within the Site Dashboard on all sites for free.
 
-In this guide, we'll automatically label code changes to your site in New Relic's Deployment page using Pantheon's Quicksilver hooks. This creates a traceable connection between performance changes and code deployments, allowing developers to see if a code change positively or negatively impacted performance.
+In this guide, we'll automatically label code changes to your site in New Relic's Deployment page using Pantheon's [Quicksilver](/quicksilver) hooks and [Terminus](/terminus). This creates a traceable connection between performance changes and code deployments, allowing developers to see if a code change positively or negatively impacted performance.
 
 ## Activate New Relic Pro
 
