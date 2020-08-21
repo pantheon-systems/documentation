@@ -24,7 +24,8 @@
       "Tab",
       "TabList",
       "DNSProviderDocs",
-      "Check"
+      "Check",
+      "abbr"
     ]
   }
 }
