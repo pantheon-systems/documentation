@@ -104,6 +104,10 @@ body.row.main {
 	/* For scrollspy */
 }
 
+abbr {
+	font-weight: bold;
+}
+
 header {
 	margin-bottom: 20px;
 }
