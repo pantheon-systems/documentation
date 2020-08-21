@@ -21,17 +21,17 @@ All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro i
 
 ## Activate New Relic APM Pro
 
-Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**:
+Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**:
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../images/integrations/newrelic/activate-new-relic.png)
 
-Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
+Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic tab on your Dashboard, and click **Go to New Relic**.
 
 New Relic is automatically enabled for all application containers added to the site, including Multidev environments.
 
 ## New Relic Access
 
-1. Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**:
+1. Go to the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**:
 
   ![Screenshot showing the newly activated New Relic.](../images/integrations/newrelic/new-relic-activated.png)
 
