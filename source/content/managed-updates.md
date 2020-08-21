@@ -8,11 +8,11 @@ tags: [composer, professional-services, updates, workflow]
 
 [Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)
 
-With Pantheon Managed Updates (<abbr title="Pantheon Managed Updates">PMU</abbr>), you get:
+With Pantheon Managed Updates (**PMU**), you get:
 
 - <abbr title="Content Management System">CMS</abbr> core updates
 - Module / plugin updates
-- Visual Regression Testing (**<abbr title="Visual Regression Testing">VRT</abbr>**)
+- Visual Regression Testing (**VRT**)
 
 To make Managed Updates available to customers of all sizes and needs, Pantheon offers three versions: Premium, Lite, and Portfolio Upstreams.
 
@@ -42,17 +42,17 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 |--- |--- |--- |--- |--- |
 |Core, plugin, and module updates|Full code updates from publicly accessible repositories and sources.|<Check/> |<Check/> |<Check/> |
 |Regular update detection|Daily scans of official repositories to detect when updates are available.|<Check/> |<Check/> |<Check/> |
-|Visual Regression Testing (<abbr title="Visual Regression Testing">VRT</abbr>)|VRT for every environment through which changes are deployed.|<Check/> |<Check/> |<Check/> |
+|Visual Regression Testing|VRT for every environment through which changes are deployed.|<Check/> |<Check/> |<Check/> |
 |Custom deployment scheduling|Adjustable scheduling for the deployment of core, plugin, and module updates.|❌|<Check/> |<Check/> |
 |Standalone sites|Maintenance of logically distinct and/or customized sites.|❌|<Check/> |<Check/> |
 |Workflow customization|Support for bespoke site update workflows.|❌|❌|<Check/> |
 |Remote pull requests to external repositories|Receive pull requests for successful updates that can be accepted at your convenience.|❌|❌|<Check/> |
 |Personalized update issue remediation|Expert support for remediating update and deployment issues.|❌|❌|<Check/> |
 |Headless site support|Updates for headless and decoupled sites.|❌|❌|<Check/> |
-|Composer compatibility support (*Drupal 8)|Updates for Composer-built Drupal sites.|N/A|❌|<Check/> |
+|Composer compatibility support (Drupal 8)|Updates for Composer-built Drupal sites.|N/A|❌|<Check/> |
 |Custom build/CI process|Updates for sites using custom CI or build processes.|❌|❌|<Check/> |
 |Patched code support|Preserves patched code in applied updates.|Test and Deploy Only|Drupal 7 sites excluded|<Check/> |
-|Custom Visual Regression Testing (VRT)|VRT for authenticated pages or custom DOM elements.|❌|❌|<Check/> |
+|Custom <abbr title="Visual Regression Testing">VRT</abbr>|VRT for authenticated pages or custom DOM elements.|❌|❌|<Check/> |
 
 
 ## Requirements and Steps for Drupal 8 compatibility
@@ -72,12 +72,19 @@ A Drupal 8 site using Managed Updates must:
   <Accordion title="Convert your D8 site to the example Composer Drops-8 structure">
 
   1. Clone or download [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) locally. This will be your initial project folder.
+
   1. Remove the `.git` file (if present).
-  1. Review the top-level `.gitignore` file. Make sure package installation paths **are not ignored** (`vendors`, `web/modules/contrib/`, `web/themes/contrib`, `web/core`). Make sure paths to user files **are ignored** (`web/sites/default/files`, `docroot/sites/default/files`).
+
+  1. Review the top-level `.gitignore` file. Make sure package installation paths *are not ignored* (`vendors`, `web/modules/contrib/`, `web/themes/contrib`, `web/core`). Make sure paths to user files *are ignored* (`web/sites/default/files`, `docroot/sites/default/files`).
+
   1. Rename the project in the top-level `composer.json` file to something matching the site name, for example: “client-org-name/site-name”.
+
   1. Clone the existing Pantheon site repo to the separate folder.
+
   1. Copy all of the existing site’s custom modules to `web/modules/custom/`.
+
   1. Copy all of the existing site’s custom themes to `web/themes/custom/`.
+
   1. Finally, take the `composer.json` file from the site’s codebase and add all packages from "require" and "require-dev" sections to the new project’s `composer.json`. If there are duplicates, prefer versions from the example project, rather than from site.
 
   </Accordion>
