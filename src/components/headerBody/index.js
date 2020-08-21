@@ -4,10 +4,11 @@ import Contributors from "../contributors"
 import Github from "../github"
 import Twitter from "../twitter"
 import Slack from "../slack"
+import Discourse from "../discourse"
 import ContributorGuest from "../contributorGuest"
 import './style.css';
 
-const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate, isoDate }) => {
+const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate, isoDate, cms }) => {
   const contributor = contributors ? contributors[0] : null;
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null;
   return (
@@ -31,19 +32,19 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
           <time dateTime={isoDate} pubdate="pubdate">{lastReviewed}</time>
         </p>
         {!featured && <Contributors contributors={contributors} />}
-
+        <Discourse
+          pageTitle={title}
+          path={slug}
+          cms={cms}
+        />
+        <Slack/>
+        {featured && <ContributorGuest contributor={contributor} />}
+        <br/><br/>
         <Github
           pageTitle={title}
           path={slug}
           editPath={editPath}
         />
-        <Twitter
-          pageTitle={title}
-          path={slug}
-        />
-        <Slack />
-
-        {featured && <ContributorGuest contributor={contributor} />}
       </header>
     </>
   )

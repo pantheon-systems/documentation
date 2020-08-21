@@ -8,6 +8,11 @@
     "url": "https://github.com/pantheon-systems/documentation/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",
     "bootstrap": "^3.4.1",
@@ -18,6 +23,7 @@
     "gatsby": "^2.23.0",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-feed": "^2.4.3",
+    "gatsby-plugin-fontawesome-css": "^1.0.0",
     "gatsby-plugin-google-tagmanager": "^2.2.3",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-mdx": "^1.1.9",
