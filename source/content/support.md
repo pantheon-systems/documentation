@@ -71,6 +71,10 @@ To receive the highest level of support available to your site or organization, 
    - Error messages received, if applicable.
    - Links to screenshots or screencasts of the behavior, if necessary.
 
+You can download a transcript of your chat with the <em class="fa fa-arrow-to-bottom"></em> button:
+
+![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../images/chat-log-download.png)
+
 <Alert title="Note" type="info">
 
 Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
