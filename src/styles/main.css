@@ -106,6 +106,7 @@ body.row.main {
 
 abbr {
 	font-weight: bold;
+	cursor: zoom-in !important;
 }
 
 header {
