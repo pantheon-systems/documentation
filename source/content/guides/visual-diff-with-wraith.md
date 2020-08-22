@@ -5,11 +5,11 @@ categories: [automate]
 tags: [iterate, launch, site, testing]
 type: guide
 permalink: docs/guides/:basename/
-contributors: [kate]
-date: 5/29/2015
+contributors: [kate,logichub]
+date: 8/22/2020
 ---
 
-Theme changes, particularly CSS changes, can have unexpected consequences that make visual mistakes hard to spot. Visual regression testing uses screenshot comparisons to automatically detect changes and report them back to you. This guide will show you how to use [Wraith](https://github.com/BBC-News/wraith/) to test CSS, layout, graphical and other visual changes on your Pantheon websites using visual regression.
+Theme changes, particularly CSS changes, can have unexpected consequences that make visual mistakes hard to spot. Visual regression testing uses screenshot comparisons to automatically detect changes and report them back to you. This guide will show you how to use [Wraith](https://github.com/bbc/wraith/) to test CSS, layout, graphical and other visual changes on your Pantheon websites using visual regression.
 
 Wraith works by crawling two websites, taking screenshots of both, and then comparing them pixel by pixel with an image comparison tool. This process produces sets of composite images, also known as visual diffs, that illustrate changes.
 
@@ -76,7 +76,7 @@ $ wraith
 
 ### Install Wraith on Windows
 
-See Wraith's [installation guide](https://bbc-news.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
+See Wraith's [installation guide](https://bbc.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
 
 ## Configure and Run Wraith
 
@@ -258,6 +258,6 @@ Wraith's output can be hooked into your continuous integration setup and/or buil
 
 ## Additional Options
 
-More browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under [configs](https://github.com/BBC-News/wraith/tree/master/templates/configs) and [javascript](https://github.com/BBC-News/wraith/tree/master/templates/javascript).
+More browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under [configs](https://github.com/bbc/wraith/tree/master/templates/configs) and [javascript](https://github.com/bbc/wraith/tree/master/templates/javascript).
 
-Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the [Wraith GitHub repository](https://github.com/BBC-News/wraith).
+Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the [Wraith GitHub repository](https://github.com/bbc/wraith).
