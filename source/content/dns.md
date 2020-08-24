@@ -177,6 +177,14 @@ Pantheon provides `A` and `AAAA` values:
 
 ![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
 
+<Accordion title="Learn More" id="example-panel" icon="education">
+
+In the past, Pantheon used a mix of  `A`/`AAAA` and `CNAME` records. We've since standardized to only `A`/`AAAA`, which reduces complexity and confusion. `CNAME` records introduce an additional point of failure, by requiring an additional lookup from `CNAME` to `A` before getting an IP address.
+
+Additionally, the use of an `MX` or `TXT` record prevents the use of a `CNAME`, and vice versa.
+
+</Accordion>
+
 ### Why does my domain say "Update Recommended?"
 
 The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyphicons-alert text-warning"></span> **Update Recommended** when the Platform detects a CNAME record pointed to Pantheon, or when A/AAAA records are not detected.
