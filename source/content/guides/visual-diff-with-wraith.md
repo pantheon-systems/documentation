@@ -6,17 +6,16 @@ tags: [iterate, launch, site, testing]
 type: guide
 permalink: docs/guides/:basename/
 contributors: [kate]
-date: 5/29/2015
+reviewed: "2015-05-29"
 ---
 
-Theme changes, particularly CSS changes, can have unexpected consequences that make visual mistakes hard to spot. Visual regression testing uses screenshot comparisons to automatically detect changes and report them back to you. This guide will show you how to use [Wraith](https://github.com/BBC-News/wraith/) to test CSS, layout, graphical and other visual changes on your Pantheon websites using visual regression.
+Theme changes, particularly CSS changes, can have unexpected consequences that make visual mistakes hard to spot. Visual regression testing uses screenshot comparisons to automatically detect changes and report them back to you. This guide will show you how to use [Wraith](https://github.com/bbc/wraith/) to test CSS, layout, graphical and other visual changes on your Pantheon websites using visual regression.
 
 Wraith works by crawling two websites, taking screenshots of both, and then comparing them pixel by pixel with an image comparison tool. This process produces sets of composite images, also known as visual diffs, that illustrate changes.
 
 In the following example, the accidental removal of the date field on the lower right caused spacing and other changes. These changes were automatically detected and highlighted in red.
 
 ![Visual Regression Date Change](../../images/visual-date-diff.png)
-
 
 ## Installation
 
@@ -28,7 +27,7 @@ Wraith needs the ImageMagick library to do image comparisons. Additionally, Wrai
 
 Install via [Homebrew](https://brew.sh/):
 
-```
+```bash{promptUser: user}
 brew install phantomjs198
 brew install imagemagick
 brew install casperjs --devel
@@ -38,23 +37,24 @@ brew install casperjs --devel
 
 On Ubuntu:
 
-```
+```bash{promptUser: user}
 sudo apt-get install phantomjs
 sudo apt-get install imagemagick
 npm install -g casperjs
 ```
-<hr />
+
+___
 
 Wraith runs on the command line and installs as a Ruby gem. If you're running Wraith on Linux, you may need to install Ruby first. To install Wraith, run the following command:
 
-```
+```bash{promptUser: user}
 gem install wraith
 ```
 
 Wraith should now be accessible from the command line.
 
-```
-$ wraith
+```bash{outputLines:2-18}
+wraith
 
   Commands:
     wraith capture [config_name]              # A full Wraith job
@@ -76,26 +76,26 @@ $ wraith
 
 ### Install Wraith on Windows
 
-See Wraith's [installation guide](https://bbc-news.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
+See Wraith's [installation guide](https://bbc.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
 
 ## Configure and Run Wraith
 
 Wraith stores its configuration within a self-generated YAML file. To set this up, we'll first have to create a directory to store your Wraith configuration files:
 
-```
+```bash{promptUser: user}
 mkdir wraith
 cd wraith
 ```
 
 Next, use the `wraith setup` command to generate a Wraith YAML configuration file and browser navigation script:
 
-```
+```bash{promptUser: user}
 wraith setup
 ```
 
 You should see the following output:
 
-```
+```bash{outputLines: 1-13}
 create  configs
 create  configs/capture.yaml
 create  configs/history.yaml
@@ -115,7 +115,7 @@ Notice that Wraith also created the JavaScript file `javascript/wait--phantom.js
 
 Open the `javascript/wait--phantom.js` file in an editor, scroll to the end, and replace the number 2000 with 10000.
 
-```javascript
+```javascript:title=wait--phantom.js
 // ######################################################
 // This is an example module provided by Wraith.
 // Feel free to amend for your own requirements.
@@ -130,7 +130,7 @@ Next, the `configs/capture.yaml` file will need to be modified to crawl and capt
 
 Open `configs/capture.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
 
-```yaml
+```yaml:title=capture.yaml
 domains:
   dev: "https://dev-panopoly-dreams.pantheon.io"
   test: "https://test-panopoly-dreams.pantheon.io"
@@ -138,7 +138,7 @@ domains:
 
 You also need to add navigation paths in `configs/capture.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `about` and `contact` items and added some additional pages for Wraith to compare.
 
-```yaml
+```yaml:title=capture.yaml
 paths:
   home: "/"
   login: "/user/login"
@@ -148,7 +148,7 @@ paths:
 
 Next, update the global `before_capture:` hook and replace its value with the `javascript/wait--phantom.js` script you updated.
 
-```yaml
+```yaml:title=capture.yaml
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 #before_capture: 'javascript/disable_javascript--phantom.js'
 before_capture: 'javascript/wait--phantom.js'
@@ -162,13 +162,13 @@ YAML is space sensitive. Domain and Path entries in the code snippets above shou
 
 Finally, execute Wraith:
 
-```
+```bash{promptUser: user}
 wraith capture capture
 ```
 
 Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
 
-```
+```bash{promptUser: user}
 open shots/gallery.html
 ```
 
@@ -186,14 +186,14 @@ The latest development version of CasperJS is required to use CSS selectors with
 
 First, edit `configs/capture.yaml` to change the `browser:` setting to `casperjs`.
 
-```yaml
+```yaml:title=capture.yaml
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "casperjs"
 ```
 
 Edit the new configuration file, `configs/capture.yaml`, to add selectors to the paths.  Note the path format has changed to support URL components with selectors.
 
-```yaml
+```yaml:title=capture.yaml
 domains:
   dev: "https://dev-panopoly-dreams.pantheon.io"
   test: "https://test-panopoly-dreams.pantheon.io"
@@ -208,7 +208,7 @@ paths:
 
 To increase the reliability of the screenshot captures, tweak the capture time in `javascript/wait--casper.js`. Change the timeout from 2000 to 10000.
 
-```javascript
+```javascript:title=wait--casper.js
 // ######################################################
 // This is an example module provided by Wraith.
 // Feel free to amend for your own requirements.
@@ -221,25 +221,24 @@ module.exports = function (phantom, ready) {
 
 Finally, tweak the `before_capture:` line in `configs/capture.yaml` to use the CasperJS wait script.
 
-```yaml
+```yaml:title=capture.yaml
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--casper.js'
 ```
 
 Run Wraith to produce a new gallery from the selectors. To execute this Wraith test, run the following command:
 
-```
+```bash{promptUser: user}
 wraith capture capture
 ```
 
 ![Headers Diff Example](../../images/headers-diff.png)
 
-
 ## History Mode
 
 Wraith supports capturing and comparing a single website against previous revisions of itself with a history mode. To set it up, edit the YAML configuration file to remove one of the domains and add a `history_dir` folder.
 
-```yaml
+```yaml:title=capture.yaml
 domains:
   dev: "https://dev-panopoly-dreams.pantheon.io"
 
@@ -258,6 +257,6 @@ Wraith's output can be hooked into your continuous integration setup and/or buil
 
 ## Additional Options
 
-More browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under [configs](https://github.com/BBC-News/wraith/tree/master/templates/configs) and [javascript](https://github.com/BBC-News/wraith/tree/master/templates/javascript).
+More browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under [configs](https://github.com/bbc/wraith/tree/master/templates/configs) and [javascript](https://github.com/bbc/wraith/tree/master/templates/javascript).
 
-Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the [Wraith GitHub repository](https://github.com/BBC-News/wraith).
+Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the [Wraith GitHub repository](https://github.com/bbc/wraith).
