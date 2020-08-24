@@ -97,13 +97,13 @@ For sites not on COE, the directory structure will be more like this:
  From:
 
  ```bash{promptUser: user}
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
  To:
 
  ```bash{promptUser: user}
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
 4. Run the following SFTP command in terminal:
@@ -144,23 +144,17 @@ Using your favorite text editor, create a file within the `site-logs` directory 
   # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxxxxxx
   ENV=live
-  for app_server in `dig +short -4 appserver.$ENV.$SITE_UUID.drush.in`;
+  for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
   do
-    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$app_server:logs/* app_server_$app_server
+    rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$app_server:logs" "app_server_$app_server"
   done
 
   # Include MySQL logs
-  for db_server in `dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in`;
+  for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
   do
-    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@$db_server:logs/* db_server_$db_server
+    rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$db_server:logs" "db_server_$db_server"
   done
   ```
-
-  <Alert title="Note" type="info">
-
-  For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.
-
-  </Alert>
 
   </Tab>
 
@@ -171,22 +165,17 @@ Using your favorite text editor, create a file within the `site-logs` directory 
   # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxxxxxx
   ENV=live
-  for app_server in `dig +short -4 appserver.$ENV.$SITE_UUID.drush.in`;
+  for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
   do
-  mkdir $app_server
-  sftp -o Port=2222 $ENV.$SITE_UUID@$app_server << !
-    cd logs
-    lcd $app_server
-    mget *.log
-  !
+    echo "get -R logs \"app_server_$app_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$app_server"
+  done
+
+  # Include MySQL logs
+  for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
+  do
+    echo "get -R logs \"db_server_$db_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$db_server"
   done
   ```
-
-  <Alert title="Note" type="info">
-
-  Adjust to `mget *` to include archived log files.
-
-  </Alert>
 
   </Tab>
 
@@ -285,15 +274,15 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
   ```bash:title=logwatcher.sh
   #!/bin/bash
-  TERMINUS_HIDE_UPDATE_MESSAGE=1
+  export TERMINUS_HIDE_UPDATE_MESSAGE=1
 
-  LOGPATH=~/projects/mysite/logs
+  LOGPATH=~/projects/mysite/logs/
   LOGFILE=php-error.log
   SITE=sitename
   ENV=environment
 
   touch $LOGPATH/$LOGFILE
-  terminus rsync $SITE.$ENV:logs/$LOGFILE $LOGPATH
+  terminus rsync $SITE.$ENV:logs/php/$LOGFILE $LOGPATH
 
   tail $LOGPATH/$LOGFILE
   ```
