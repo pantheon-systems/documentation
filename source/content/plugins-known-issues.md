@@ -843,6 +843,18 @@ the `advanced-cache.php` file.
 
 **Solution:** [Create symlinks](#assumed-write-access) as noted above.
 
+After symlinking, make sure to manually create these folders in *ALL* environments.
+
+```files/cache/wp-rocket
+files/cache/busting
+```
+
+or
+
+```code/wp-content/uploads/cache/wp-rocket
+code/wp-content/uploads/cache/busting
+```
+
 ___
 
 ## [WPBakery: Page Builder](https://wpbakery.com/)
