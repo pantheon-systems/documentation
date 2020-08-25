@@ -643,6 +643,13 @@ ___
 
 ___
 
+## [WebP Express](https://wordpress.org/plugins/webp-express/)
+
+<ReviewDate date="2019-08-25" />
+
+**Issue:** WebP Express assumes write access to paths in the code base that are write-only in non-dev environments. Because the plugin uses `is_dir` to check for the path, a symlink to `files/` does not resolve the issue.
+___
+
 ## [Weather Station](https://wordpress.org/plugins/live-weather-station/)
 
 **Issue:** This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
