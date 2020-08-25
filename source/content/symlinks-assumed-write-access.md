@@ -61,6 +61,14 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     ln -s ../uploads/new-directory #The last nested directory should mirror the directory name the plugin expects to write to
     ```
 
+    <Accordion title="About ln Arguments" id="example-panel" icon="education">
+
+    The most common usage of `ln` is the form `ln -s path/to/source.file path/to/destination.file`. The `-s` flag creates a **symbolic** link, which is more like a redirect to the source, whereas a **hard link** is a new file sharing the same inode<Popover title="inode" content="An inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory." /> in the file system.
+
+    By default, `ln` creates a file in the current working directory with the same name as the source. In the example above, we don't provide a destination file name as an argument. This simplifies the command when the link doesn't need a different name.
+
+    </Accordion>
+
 1. Stage your changes:
 
     ```bash{promptUser: user}
