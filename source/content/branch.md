@@ -48,9 +48,9 @@ Before you trigger your first deployment, you need to define your deployment pip
    Branch offers 3 different ways to deploy to Pantheon:
      - rsync
      - Git push
-     - Terminus MultiDev
+     - MultiDev
 
-   Pick the one that suits your Pantheon workflow best. If you are unsure about this, the rsync or Git push recipes are simplest to use. Using the Terminus MultiDev recipe require that you have MultiDev enabled for your Pantheon account. It will automatically create new MultiDev environments on Pantheon whenever you open a pull request on GitHub.
+   Pick the one that suits your Pantheon workflow best. If you are unsure about this, the **Pantheon (rsync)** or **Pantheon (Git)** recipes are simplest to use. Using the **Pantheon (MultiDev)** recipe require that you have MultiDev enabled for your Pantheon account. It will automatically create new MultiDev environments on Pantheon whenever you open a pull request on GitHub.
 
    **Important:** If you only want to deploy when committing to a specific branch (like `main`), make sure to specify the Git branch name in the **Environment** section of the recipe.
 4. Once you have added a deploy step, you can consider adding a test or Q/A step as well. Branch has recipes for checking PHP syntax errors, running Lighthouse page speed, accesibility and SEO checks and so on.
