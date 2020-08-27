@@ -10,7 +10,12 @@ class VideoReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            docsWithVideo: allMdx(filter: {frontmatter: {changelog: {ne: true}, title: {ne: ""}}, fileInfo: {childMdx: {rawBody: {regex: "/Youtube/"}}}}) {
+            docsWithVideo: allMdx(
+              filter: {
+                frontmatter: { changelog: { ne: true }, title: { ne: "" } }
+                fileInfo: { childMdx: { rawBody: { regex: "/Youtube/" } } }
+              }
+            ) {
               edges {
                 node {
                   frontmatter {
@@ -30,7 +35,7 @@ class VideoReport extends React.Component {
                 }
               }
             }
-            landingPages: allLandingsYaml(filter: {video_id: {ne: null}}) {
+            landingPages: allLandingsYaml(filter: { video_id: { ne: null } }) {
               edges {
                 node {
                   path
@@ -59,19 +64,6 @@ class VideoReport extends React.Component {
           )
           const landings = data.landingPages.edges
           const videoLinkRegex = /src=\\\"(.+?)\\\"/
-          //console.log("Tertiary Pages: ", tertiaryPages) // For debugging
-//          const oldPages = data.staleDocs.edges
-//          const unreviewedPages = data.unreviewedDocs.edges
-//          //console.log("Unreviewed Docs Array: ", unreviewedPages) // For debugging
-//          const unreviewedTertiaryPages = data.unreviewedDocs.edges.filter(
-//            page => {
-//              return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
-//            }
-//          )
-//          //console.log("Unreviewed Tertiary Pages: ", unreviewedTertiaryPages) // For debugging
-//          const categorizedPages = data.categorizedDocs.edges
-//          const uncategorizedPages = data.uncategorizedDocs.edges
-//          //console.log("categorizedPages: ", categorizedPages) // For Debugging
 
           /* Construct the GitHub Issue Body */
           const makeNewIssue = page => {
@@ -169,7 +161,10 @@ class VideoReport extends React.Component {
               </div>
 
               {/* Table of Docs with Videos */}
-              <Accordion title="Docs with Videos (filters on Title)" id="docsWithVideoTable">
+              <Accordion
+                title="Docs with Videos (filters on Title)"
+                id="docsWithVideoTable"
+              >
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -181,9 +176,7 @@ class VideoReport extends React.Component {
                     <tbody>
                       <tr>
                         <td>{docs.length}</td>
-                        <td>
-                          {docs.length - reviewedTertiaryPages.length}
-                        </td>
+                        <td>{docs.length - reviewedTertiaryPages.length}</td>
                       </tr>
                     </tbody>
                     <thead>
@@ -207,11 +200,27 @@ class VideoReport extends React.Component {
                         .map((page, i) => {
                           return (
                             <tr key={i}>
-                              <td>{page.node.frontmatter.title} {page.node.frontmatter.subtitle ? ` - ${page.node.frontmatter.subtitle}` : null}</td>
+                              <td>
+                                {page.node.frontmatter.title}{" "}
+                                {page.node.frontmatter.subtitle
+                                  ? ` - ${page.node.frontmatter.subtitle}`
+                                  : null}
+                              </td>
                               <td>{page.node.fields.slug}</td>
                               <td>{page.node.frontmatter.cms}</td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td><a href={`https://www.youtube.com/watch?v=${page.node.fileInfo.childMdx.rawBody.match(/Youtube\ src=\"(.+?)\"/)[1]}`} target="_blank">Video</a></td>
+                              <td>
+                                <a
+                                  href={`https://www.youtube.com/watch?v=${
+                                    page.node.fileInfo.childMdx.rawBody.match(
+                                      /Youtube\ src=\"(.+?)\"/
+                                    )[1]
+                                  }`}
+                                  target="_blank"
+                                >
+                                  Video
+                                </a>
+                              </td>
                             </tr>
                           )
                         })}
@@ -219,9 +228,11 @@ class VideoReport extends React.Component {
                   </table>
                 </div>
               </Accordion>
-                {/*.replace(/Youtube\ src=\"/, '') */}
               {/* Table of Landing Pages with Videos */}
-              <Accordion title="Landing Pages with Videos" id="landingsWithVideo">
+              <Accordion
+                title="Landing Pages with Videos"
+                id="landingsWithVideo"
+              >
                 <div className="table-responsive">
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
@@ -255,7 +266,14 @@ class VideoReport extends React.Component {
                             <tr key={i}>
                               <td>{landing.node.title}</td>
                               <td>{landing.node.path}</td>
-                              <td><a href={`https://www.youtube.com/watch?v=${landing.node.video_id}`} target="_blank">Video</a></td>
+                              <td>
+                                <a
+                                  href={`https://www.youtube.com/watch?v=${landing.node.video_id}`}
+                                  target="_blank"
+                                >
+                                  Video
+                                </a>
+                              </td>
                             </tr>
                           )
                         })}
@@ -263,7 +281,6 @@ class VideoReport extends React.Component {
                   </table>
                 </div>
               </Accordion>
-              
             </Layout>
           )
         }}
@@ -273,7 +290,3 @@ class VideoReport extends React.Component {
 }
 
 export default VideoReport
-
-/* .filter(doc => {
-                return doc.title.indexOf(search) >= 0
-              })*/
