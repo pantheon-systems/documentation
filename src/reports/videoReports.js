@@ -238,6 +238,7 @@ class VideoReport extends React.Component {
                       <tr>
                         <th width="30%">Title</th>
                         <th width="20%">Path</th>
+                        <th width="10%">Video Link</th>
                       </tr>
                     </thead>
                     <tbody>
