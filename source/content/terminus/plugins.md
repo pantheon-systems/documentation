@@ -9,7 +9,7 @@ categories: [develop]
 tags: [cli, local, plugins, terminus, reference]
 nexturl: terminus/plugins/directory/
 previousurl: terminus/scripting/
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---

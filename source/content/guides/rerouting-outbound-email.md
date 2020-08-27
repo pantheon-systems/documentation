@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [develop]
 tags: [workflow, email]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [ari]
 date: 2/25/2015
 ---

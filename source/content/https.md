@@ -4,7 +4,7 @@ description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powere
 categories: [go-live]
 tags: [cdn, dns, https, security]
 layout: doc
-permalink: docs/:basename/
+permalink: docs/:basename
 searchboost: 200
 ---
 

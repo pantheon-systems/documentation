@@ -4,7 +4,7 @@ description: Learn how to use Views Cache Tags module along with custom code to 
 tags: [moreguides]
 categories: []
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
 ---
 

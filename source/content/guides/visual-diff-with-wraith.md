@@ -4,7 +4,7 @@ description: Learn how to use Wraith for visual regression testing with composit
 categories: [automate]
 tags: [iterate, launch, site, testing]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [kate]
 reviewed: "2015-05-29"
 ---

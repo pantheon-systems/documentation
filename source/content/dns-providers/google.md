@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Google domain to a Pantheon site.
 categories: [go-live]
 tags: [dns]
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/google.md/
 ---
 ## Before You Begin

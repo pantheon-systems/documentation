@@ -6,7 +6,7 @@ description: Learn how to point your Name.com domain to a Pantheon site.
 categories: [go-live]
 tags: [dns]
 draft: true
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/name-com.md/
 ---
 ## Before You Begin

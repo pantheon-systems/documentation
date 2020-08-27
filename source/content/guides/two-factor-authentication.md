@@ -4,7 +4,7 @@ description: Set up two-factor authentication on your Pantheon Drupal or WordPre
 categories: [integrate]
 tags: [security, saml, users]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [populist]
 date: 4/13/2015
 ---

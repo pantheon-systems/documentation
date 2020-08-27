@@ -2,7 +2,7 @@
 title: The Pantheon.yml Configuration File
 description: Configure our platform for your needs.
 contributors:  [davidneedham]
-permalink:  docs/videos/:basename/
+permalink:  docs/videos/:basename
 categories: [develop]
 tags: [site, code]
 layout: video
