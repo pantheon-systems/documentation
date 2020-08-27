@@ -92,6 +92,15 @@ class ReviewReport extends React.Component {
                     reviewed
                     tags
                     type
+                    permalink
+                    subtitle
+                  }
+                  fileInfo {
+                    childMdx {
+                      fileInfo {
+                        name
+                      }
+                    }
                   }
                   fields {
                     slug
@@ -412,11 +421,11 @@ class ReviewReport extends React.Component {
                     <thead>
                       <tr>
                         <th width="5%">Create an Issue</th>
-                        <th width="20%">Title</th>
+                        <th width="30%">Title</th>
                         <th width="6%">Review Date</th>
-                        <th width="10%">CMS</th>
-                        <th with="10%">Categories</th>
-                        <th width="40%">Tags</th>
+                        <th width="5%">CMS</th>
+                        <th with="5%">Categories</th>
+                        <th width="30%">Tags</th>
                         <th>Type</th>
                       </tr>
                     </thead>
@@ -446,12 +455,15 @@ class ReviewReport extends React.Component {
                             <tr key={i}>
                               <td>
                                 <a href={makeNewIssue(page)} target="blank">
-                                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                  <span className="glyphicon glyphicon-exclamation-sign"></span>
                                 </a>
                               </td>
                               <td>
-                                <Link to={`/${page.node.fields.slug}`}>
-                                  {page.node.frontmatter.title}
+                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
+                                {page.node.frontmatter.title}{" "}
+                                {page.node.frontmatter.subtitle
+                                  ? ` - ${page.node.frontmatter.subtitle}`
+                                  : null}
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
@@ -544,7 +556,7 @@ class ReviewReport extends React.Component {
                             <tr key={i}>
                               <td>
                                 <a href={makeNewIssue(page)} target="blank">
-                                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                  <span className="glyphicon glyphicon-exclamation-sign"></span>
                                 </a>
                               </td>
                               <td>

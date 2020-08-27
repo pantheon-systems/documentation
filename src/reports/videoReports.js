@@ -23,6 +23,7 @@ class VideoReport extends React.Component {
                     subtitle
                     cms
                     reviewed
+                    permalink
                   }
                   fields {
                     slug
@@ -30,6 +31,9 @@ class VideoReport extends React.Component {
                   fileInfo {
                     childMdx {
                       rawBody
+                      fileInfo {
+                        name
+                      }
                     }
                   }
                 }
@@ -201,10 +205,12 @@ class VideoReport extends React.Component {
                           return (
                             <tr key={i}>
                               <td>
+                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
                                 {page.node.frontmatter.title}{" "}
                                 {page.node.frontmatter.subtitle
                                   ? ` - ${page.node.frontmatter.subtitle}`
                                   : null}
+                                </Link>
                               </td>
                               <td>{page.node.fields.slug}</td>
                               <td>{page.node.frontmatter.cms}</td>
