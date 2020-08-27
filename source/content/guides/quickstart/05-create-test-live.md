@@ -2,22 +2,12 @@
 title: Quick Start
 subtitle: Create Test & Live
 description: In part five of our Quick Start guide, learn how to create your Test and Live environments.
-quickstart: true
 anchorid: create-test-live
-generator: pagination
 layout: guide
 categories: [get-started]
 tags: [dashboard, iterate, launch, workflow]
 type: guide
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/create-test-live/
-nexturl: guides/quickstart/clone-live-to-dev/
-nextpage: Clone Live to Dev
-previousurl: guides/quickstart/site-dashboard/
-previouspage: Site Dashboard
 editpath: quickstart/05-create-test-live.md
 image: launchGuide-twitterLarge
 ---
