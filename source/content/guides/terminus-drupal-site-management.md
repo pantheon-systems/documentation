@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [get-started]
 tags: [terminus, drush]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [erikmathy]
 date: 2/25/2015
 ---

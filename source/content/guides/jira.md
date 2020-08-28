@@ -4,7 +4,7 @@ description: Learn how to integrate Atlassian's issue tracking service, Jira, wi
 layout: doc
 categories: [integrate]
 tags: [collaborate, quicksilver, webops, workflow]
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 5/4/2017
 contributors: [scottmassey]
 ---

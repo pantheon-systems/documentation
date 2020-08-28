@@ -6,7 +6,7 @@ description: Learn how to point your HostGator domain to a Pantheon site.
 draft: true
 categories: [go-live]
 tags: [dns]
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/hostgator.md/
 ---
 ## Before You Begin

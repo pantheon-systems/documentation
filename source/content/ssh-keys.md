@@ -80,7 +80,7 @@ If you have active sites and no keys remaining, you can still access the sites. 
 
 You may receive the following error:
 
-```bash
+```none
 ControlPath too long fatal: Could not read from remote repository.
 ```
 

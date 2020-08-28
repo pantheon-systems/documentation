@@ -4,7 +4,7 @@ description: How to create and configure a Pingdom Uptime check on a Pantheon si
 categories: [integrate]
 tags: [measure, site, traffic]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 5/14/2017
 contributors: [scottmassey]
 ---

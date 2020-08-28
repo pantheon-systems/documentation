@@ -4,7 +4,7 @@ description: Learn how to integrate Asana project management application with th
 categories: [integrate]
 tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 5/4/2017
 contributors: [scottmassey]
 ---

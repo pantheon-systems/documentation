@@ -4,7 +4,7 @@ description: Using Pivotal Tracker to track application development progress, us
 categories: [integrate]
 tags: [code, collaborate, webops, workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 6/20/2017
 ---
 

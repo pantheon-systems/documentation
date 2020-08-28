@@ -6,7 +6,7 @@ description: Learn how to point your Akamai domain to a Pantheon site.
 draft: true
 categories: [go-live]
 tags: [dns]
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/akamai.md/
 ---
 ## Before You Begin

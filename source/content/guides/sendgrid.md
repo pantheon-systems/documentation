@@ -4,7 +4,7 @@ description: Detailed information on using SendGrid to deliver email through you
 categories: [integrate]
 tags: [code, email, modules, plugins]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois]
 date: 9/8/2015
 reviewed: "2020-05-27"

@@ -5,7 +5,7 @@ description: Learn how to install Terminus to your local computer.
 layout: terminuspage
 categories: [develop]
 tags: [cli, local, terminus, workflow]
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 reviewed: "2020-08-14"
 searchboost: 100

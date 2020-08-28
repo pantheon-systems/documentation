@@ -6,7 +6,7 @@ description: Learn how to point your Register.com domain to a Pantheon site.
 categories: [go-live]
 tags: [dns]
 draft: true
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/register-com.md/
 ---
 ## Before You Begin

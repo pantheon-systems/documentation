@@ -2,7 +2,7 @@
 title: WP-CLI
 description: Interact with WordPress from a command line interface.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename/
+permalink:  docs/videos/:basename
 cms: "WordPress"
 categories: [develop]
 tags: [wp-cli, cli]

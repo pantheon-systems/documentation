@@ -2,7 +2,7 @@
 title: Using Pantheon as a Training Platform for WordPress and Drupal
 description: Best practices for training a group of students using Pantheon
 layout: doc
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 categories: [platform]
 tags: [collaborate, sandbox, upstreams, webops]
 contributors: [stevector, dwayne, davidneedham, tessak22]

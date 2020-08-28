@@ -26,6 +26,7 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 ## Benefits
 
 ### Standardize Design and Functionality Across Many Sites
+
 Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
@@ -33,6 +34,7 @@ Instead of repeating the same technical work on each individual site, you can bu
 > Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
 
 ### Efficient Update Strategy
+
 Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updates across massive site portfolios.
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
@@ -42,11 +44,13 @@ New features and functionality can be continuously developed in the Custom Upstr
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
 ### Scale Client Services
+
 Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
 
 > Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
 
 ## Workflow Overview
+
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
 
 <div class="upstream-overview-outter-clear">
@@ -55,9 +59,8 @@ There are three levels of repositories in play here, and updates flow "downstrea
 
 ![Parent upstream level](../images/levelone-icon.png)
 
-<ul class="upstream" style="margin-right:40px;display:inline-flex;">
-<li>Core Updates</li>
-</ul>
+- Core Updates
+
 </div>
 <div class="upstream-content-inner-content">
 <h3>Level 1: Pantheon's Core Upstream</h3>
@@ -73,10 +76,9 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 
 ![Custom upstream level](../images/leveltwo-icon.png)
 
-<ul class="upstream">
-<li>Parent Theme</li>
-<li>Common plugins / Contrib modules</li>
-</ul>
+- Parent Theme
+- Common plugins / Contrib modules
+
 </div>
 <div class="upstream-content-inner-content">
 <h3>Level 2: Your Custom Upstream</h3>
@@ -108,17 +110,23 @@ The site repository allows separation between common code across all sites, trac
 </div>
 </div>
 
-
 ## Terminology
+
 Here are definitions for commonly used terms:
 
-* **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
-* **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
-* **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-* **Repository**: A collection of files packaged in a single directory under version control.
-* **Remote Repository**: A central version control location, e.g. residing on GitHub or Bitbucket.
-* **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-* **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
+- **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
+
+- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
+
+- **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
+
+- **Repository**: A collection of files packaged in a single directory under version control.
+
+- **Remote Repository**: A central version control location, e.g. residing on GitHub or Bitbucket.
+
+- **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
+
+- **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
 ## Next Steps
 

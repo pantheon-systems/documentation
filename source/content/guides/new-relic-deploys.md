@@ -4,7 +4,7 @@ description: A guide to integrating Pantheon and New Relic for deployment labeli
 categories: [automate]
 tags: [code, newrelic, quicksilver, workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 reviewed: "2020-08-18"
 contributors: [scottmassey]
 ---

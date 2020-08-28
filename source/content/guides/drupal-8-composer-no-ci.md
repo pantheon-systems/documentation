@@ -5,7 +5,7 @@ cms: "Drupal 8"
 categories: [develop]
 tags: [composer, continuous-integration, workflow, webops]
 layout: doc
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [ataylorme, dwayne, davidneedham]
 ---
 

@@ -6,7 +6,7 @@ description: Learn how to point your Microsoft domain to a Pantheon site.
 categories: [go-live]
 tags: [dns]
 draft: true
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/microsoft.md/
 ---
 ## Before You Begin

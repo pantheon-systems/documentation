@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Network Solutions domain to a Pantheon site.
 categories: [go-live]
 tags: [dns]
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/network-solutions.md/
 ---
 

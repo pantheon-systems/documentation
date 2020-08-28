@@ -9,7 +9,6 @@ const calculateSlug = (node, getNode) => {
     return node.frontmatter.permalink
       .replace(":basename", fileName)
       .replace("docs", "")
-      .replace(/.$/, "")
   }
 
   if (fileName === undefined) {

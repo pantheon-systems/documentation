@@ -6,7 +6,7 @@ cms: "Drupal 8"
 categories: [integrate]
 tags: [upstreams, site]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 multidev: true
 ---
 
