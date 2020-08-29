@@ -4,7 +4,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess to gathe
 categories: [performance]
 tags: [logs, measure]
 contributors: [albertcausing, sarahg]
-reviewed: "2020-05-06"
+reviewed: "2020-08-29"
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
@@ -25,7 +25,7 @@ Be sure that you have:
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
   
-This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.3 ([release notes](https://goaccess.io/release-notes#release-1.3)).
+This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.4 ([release notes](https://goaccess.io/release-notes)).
 
 ## Edit GoAccess Configuration
 
@@ -71,21 +71,8 @@ log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
   ```
 
 ### Troubleshooting "goaccess.conf Not Found"
-In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found by the binary. To resolve:
+In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess versions 1.3 and earlier, `goaccess.conf` is not found by the binary. To resolve, [update your GoAccess package](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages).
 
-1. Display the default config path:
-
-  ```bash{promptUser: user}
-  goaccess --dcf
-  ```
-
-1. Move `goaccess.conf` from `/usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess` to `/usr/local/Cellar/goaccess/[VERSION]/conf/etc`:
-
-  ```bash{promptUser: user}
-  mv /usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess /usr/local/Cellar/goaccess/[VERSION]/conf/etc
-  ```
-
-An [issue has been filed](https://github.com/allinurl/goaccess/issues/1640) on the GoAccess repo.
 
 ## Automate GoAccess Reports
 
