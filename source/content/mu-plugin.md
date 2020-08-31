@@ -276,6 +276,23 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 }
 ```
 
+### WP CFM Compatibility
+
+WP CFM works on multidev but a Must Use plugin needs to be setuped with this sample code.
+
+```php
+add_filter( 'wpcfm_multi_env', function( $pantheon_envs ) {
+	if ( !( in_array( PANTHEON_ENVIRONMENT, $pantheon_envs ) ) ) {
+		$pantheon_envs[] = PANTHEON_ENVIRONMENT;
+	}
+return $pantheon_envs;
+} );
+
+add_filter( 'wpcfm_current_env', function( $pantheon_env ) {
+    return PANTHEON_ENVIRONMENT;
+} );
+```
+
 ### WP REST API (`wp-json`) Endpoints Cache
 
 For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
