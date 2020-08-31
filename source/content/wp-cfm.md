@@ -146,6 +146,9 @@ You can review values on the [All Settings Screen](https://codex.wordpress.org/O
 
 If you want to track configurations in more tables, you must do so using the `wpcfm_configuration_items` hook. For details, see [WP-CFM documentation](https://forumone.github.io/wp-cfm/).
 
+### Will this work in multidev?
+Yes, for the multidev to appear as the choices, you will need hook into the plugin's `wpcfm_current_env` and set it up as a Must Use Plugin like the examples here setup [MU Plugin Bar](/mu-plugin/#example-code-snippets).
+
 ### What's not tracked?
 
 Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/wp-config-php/#frequently-asked-questions).
