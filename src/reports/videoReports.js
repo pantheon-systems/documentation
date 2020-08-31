@@ -61,6 +61,8 @@ class VideoReport extends React.Component {
 
           /* Construct the constants for each of our Graphql Queries */
           const docs = data.docsWithVideo.edges
+          //console.log("Docs: ", docs) // For Debugging
+
           const reviewedTertiaryPages = data.docsWithVideo.edges.filter(
             page => {
               return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
