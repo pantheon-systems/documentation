@@ -218,6 +218,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
 
+      dataJson {
+        commands {
+          description
+          help
+          name
+          usage
+        }
+      }
+
     }
   `).then(result => {
     if (result.errors) {
@@ -280,6 +289,18 @@ exports.createPages = ({ graphql, actions }) => {
           next: previous,
           previous: next
         },
+      })
+    })
+
+    // Create Terminus Command pages
+    const terminusCommands = result.data.dataJson.commands
+    terminusCommands.forEach(command => {
+      createPage({
+        path: `terminus/commands/${command.name}`,
+        component: path.resolve(`./src/templates/terminusCommand.js`),
+        context: {
+          slug: command.name
+        }
       })
     })
 
