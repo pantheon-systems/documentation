@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 
 const Commands = ({ data }) => {
@@ -47,7 +47,7 @@ const Commands = ({ data }) => {
                 return (
                   <tr key={i}>
                     <td>
-                      <strong className="command-name">{command.name}</strong>
+                      <strong className="command-name"><Link to={`/terminus/commands/${command.name}`}>{command.name}</Link></strong>
                       <br />
                       <small>{command.description}</small>
                     </td>
