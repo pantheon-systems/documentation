@@ -1,6 +1,6 @@
 ---
 title: Advanced Global CDN
-description: Advanced Global CDN Professional Services can help you uniquely optimize our Global CDN
+description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 categories: [performance]
 tags: [cdn, security, professional-services]
 reviewed: "2020-08-31"
@@ -18,9 +18,9 @@ reviewed: "2020-08-31"
 
  Advanced Global CDN provides <abbr title="Distributed Denial of Service">DDoS</abbr> protection and mitigation at the network (layer 3) and transport (layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
 
-### SOC 2 compliance
+### SOC 2 Type 2 compliance
 
- SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
+ SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> Type 2 compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
 ### IP Allowlisting & Blocklisting
 
