@@ -266,7 +266,7 @@ ini_set('ioncube.loader.encoded_paths', '/');
 
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
-If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `settings.php`:
+If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.output value by adding the following line to `settings.php`:
 
 ```php
 ini_set('arg_separator.output', '&');

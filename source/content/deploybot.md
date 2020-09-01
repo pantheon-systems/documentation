@@ -114,7 +114,7 @@ Let's say I use [Composer](/composer) to manage my WordPress site's plugin and t
 
 ### Deploy to Pantheon
 1. DeployBot will automatically deploy to Pantheon after pushing to GitHub if you setup automatic deployments. Otherwise, use the **Deploy** button to manually trigger a build.
-2. Access the Dev environment of your Site Dashboard and review the uncomitted SFTP changes:
+2. Access the Dev environment of your Site Dashboard and review the uncommitted SFTP changes:
 
 3. Commit, then deploy changes up to the Test and Live environments using the [standard Pantheon workflow](/pantheon-workflow).
 

@@ -29,10 +29,10 @@ The values under **Service Provider Settings** will change for each environment 
 
 <Alert type="danger" title="Warning">
 
-We do *not* reccomend transferring the `wp_saml_auth_settings` database values between environments with tools like WP-CFM, as this can overwrite environment-specific values.
+We do *not* recommend transferring the `wp_saml_auth_settings` database values between environments with tools like WP-CFM, as this can overwrite environment-specific values.
 
 </Alert>
 
-Once you've merged and tested your changes in the Live environment, you're done! Congratulations on successfully configuring SAML authenitcation from your Google organization on your WordPress site.
+Once you've merged and tested your changes in the Live environment, you're done! Congratulations on successfully configuring SAML authentication from your Google organization on your WordPress site.
 
-You can stop here, or go on to Advanced Configutation Options to learn how to further customize your authentication gateway.
+You can stop here, or go on to Advanced Configuration Options to learn how to further customize your authentication gateway.

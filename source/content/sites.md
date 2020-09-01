@@ -66,7 +66,7 @@ Here you can find the [SSH clone URL](/git), [Database Connection Information](/
 The core of the Pantheon Workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
-- **Content** includes files not under Git version control, like images and pdfs, and the database.
+- **Content** includes files not under Git version control, like images and PDFs, and the database.
 
 The [Code tool](/code) on Dev/Multidev environments includes a Connection Mode toggle to switch between SFTP and Git. The Code tool on the Test and Live environments displays a Commit Log that displays all the commits that are on the environment.
 

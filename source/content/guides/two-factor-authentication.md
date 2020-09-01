@@ -94,7 +94,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 
 1. Sign up and create a [OneLogin account](https://www.onelogin.com/) for your organization.
 
-2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard (You need administrator priviledges to install apps). This needs to be done for each WordPress site that is being managed by OneLogin.
+2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard (You need administrator privileges to install apps). This needs to be done for each WordPress site that is being managed by OneLogin.
 
 3. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
 

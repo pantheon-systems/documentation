@@ -19,7 +19,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - Guide: [Pantheon Launch Essentials](/going-live)
 - Doc: [Platform and Custom Domains](/domains)
 - Doc: [Manage Plans in the Site Dashboard](/select-plan)
-- Doc: [Pantheon Gloal CDN](/global-cdn)
+- Doc: [Pantheon Global CDN](/global-cdn)
 - Doc: [HTTPS on Pantheon's Global CDN](/free-https)
 - Doc: [Configure Redirects](/redirects)
 - Doc: [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)

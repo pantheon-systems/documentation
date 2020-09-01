@@ -49,7 +49,7 @@ You can add custom tags by selecting the checkbox next to the site, and clicking
 
 <Alert title="Note" type="info">
 
-Tags are case-sensitve.
+Tags are case-sensitive.
 
 </Alert>
 

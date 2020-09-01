@@ -65,7 +65,7 @@ Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt yo
 
  - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
- - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for databse changes.
+ - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
 
    On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
