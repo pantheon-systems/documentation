@@ -14,33 +14,33 @@ reviewed: "2020-08-31"
 
   Unlike CDNs that only handle images and other static assets, the Advanced Global CDN architecture enables you to cache entire pages and assets at the edge, for more efficient traffic handling.
 
-### [OSI](https://en.wikipedia.org/wiki/OSI_model) Layer 3 & 4 DDoS protection & mitigation
+### OSI Layer 3 & 4 DDoS protection & mitigation
 
- Advanced Global CDN provides Distributed Denial of Service (DDoS) protection and mitigation at the network (layer 3) and transport (layer 4) layers of the OSI model.
+ Advanced Global CDN provides <abbr title="Distributed Denial of Service">DDoS</abbr> protection and mitigation at the network (layer 3) and transport (layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
 
 ### SOC 2 compliance
 
  SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
-### IP allowlisting & blocklisting
+### IP Allowlisting & Blocklisting
 
 - Blocklist - prevent users with specific IPs or in IP ranges from accessing your site.
 
 - Allowlist - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
 
-### Token authentication / JWT (JSON Web Token)
+### Token Authentication / JWT (JSON Web Token)
 
   Use the AGCDN Edge to generate JSON Web Tokens<Popover title="JSON Web Tokens" content="A JSON Web Tokens is an Internet standard for creating compact, encrypted JSON-based access tokens that assert some number of claims, such as 'logged in as admin'." /> to help build your custom API.
 
-### Custom error & maintenance page rules
+### Custom Error & Maintenance Page Rules
 
  Response code messages enable you to create custom error pages (e.g. 404 and 503 errors) for a tailored end-user experience.
 
-### Geolocation-based actions
+### Geolocation-based Actions
 
   Enable actions based on the physical location of your user (eg. blocking or redirecting based on country) or send location information to your application for more custom control.
 
-### Device detection and edge control
+### Device Detection and Edge Control
 
  [Device detection](https://docs.fastly.com/en/guides/delivering-different-content-to-different-devices) can drive differentiated delivery strategies at the edge of the network, to address issues that impact mobile user experience.
 
@@ -48,11 +48,11 @@ reviewed: "2020-08-31"
 
   Adjusts the "serve stale content" setting to make content available from the edge even if the site is unavailable.
 
-### Full CDN edge logs
+### Full CDN Edge Logs
 
   See every request to your website, whether or not the content was cached. Full CDN edge logs combine the server logs with logs from the edge to provide a complete picture of your traffic.
 
-### Modify headers at the edge
+### Modify Headers at the Edge
 
   Change request and response headers before your application starts up to create, add, delete, or update parts of your request.
 
@@ -67,25 +67,25 @@ reviewed: "2020-08-31"
 
 ### Enterprise blue/green deployment support
 
-- Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment and/or always ready disaster recovery.
+Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment and/or always ready disaster recovery.
 
 ### Additional Features from WAF/IO
 
-- Efficient image optimization (<abbr title="image optimization">IO</abbr>) at the edge
+- Efficient <abbr title="Image Optimization">IO</abbr> at the edge
   
- With image optimization images render quickly from the edge, offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
+ With **Image Optimization** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
 
 - Layer 7/Enterprise DDoS protection & mitigation
 
- Application-layer (OSI layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency. 
+ Application-layer (OSI layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
 - OWASP & WAF rules for Drupal/WordPress
 
-  Support for Open Web Application Security Project (**OWASP**) WordPress and Drupal rules helps you monitor and address the most commonly seen application risks for these popular CMSes. Examples include SQL injection and cross-site scripting (XSS) vulnerabilities.
+  Support for <abbr title="Open Web Application Security Project">OWASP</abbr> WordPress and Drupal rules helps you monitor and address the most commonly seen application risks for these popular CMSes. Examples include SQL injection and <abbr title="Cross-Site Scripting">XSS</abbr> vulnerabilities.
 
 - Custom/Comprehensive WAF services
 
-  Our Web Application Firewall (WAF) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
+  Our Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
 
 - Advanced bot detection & mitigation (Available as an add-on)
 
