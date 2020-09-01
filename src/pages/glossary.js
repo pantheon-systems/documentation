@@ -22,12 +22,11 @@ const Glossary = ({data: {bodies}}) => {
 
   let allDefs = [];
 
-
   bodies.edges.map(({node}) => {
     //const allDefs = node.fileInfo.childMdx.rawBody.match(/(<dt>.+?<\/dt>)\n\n(<dd>.+?<\/dd>)/gim)
     const matches = node.fileInfo.childMdx.rawBody.match(/<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim)
-    console.log("Match Title: ", node.frontmatter.title)
-    console.log("match: ", matches)
+    //console.log("Match Title: ", node.frontmatter.title) // For Debugging
+    //console.log("match: ", matches) // For Debugging
     if (matches && matches.length) {
       matches.forEach(term => {
         allDefs.push({
@@ -39,7 +38,9 @@ const Glossary = ({data: {bodies}}) => {
       })
     }
   })
-  
+
+  console.log("allDefs:", allDefs) // For Debugging
+
   return (
     <>
       <Layout>
@@ -56,24 +57,22 @@ const Glossary = ({data: {bodies}}) => {
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                   {allDefs.map(({from, slug, title, definition}) => 
-
                     <>
-
-                    <p id={title}>
-
-                      <dt><h2>{title}</h2></dt>
-
-                      <dd>
+                    <div key={title}>
+                      <dt key={`${title}-term`}><h2>{title}</h2></dt>
+                      <dd key={`${title}-definition`}>
                       <ReactMarkdown source={definition} />
                       </dd>
-
                       <br />
 
-                      Excerpt from: <Link to={slug}>{from}</Link>
+                      {from.length > 0 ? (
+                      <>Excerpt from: <Link key={`${title}-reference`} to={slug}>{from}</Link></>
+                      ): null
+                      }
 
                     <br />
-
-                    </p>
+                    <hr />
+                    </div>
                     </>
                     )}
               </div>
@@ -91,7 +90,7 @@ export default Glossary
 
 export const pageQuery = graphql`
   {
-    bodies: allMdx(filter: {frontmatter: {changelog: {ne: true}, title: {ne: ""}}, fileInfo: {childMdx: {rawBody: {regex: "/<dt>/"}}}}) {
+    bodies: allMdx(filter: {frontmatter: {changelog: {ne: true}, title: {ne: "Style Guide"}}, fileInfo: {childMdx: {rawBody: {regex: "/<dt>/"}}}}) {
       edges {
         node {
           fields {
