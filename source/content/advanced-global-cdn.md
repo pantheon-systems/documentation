@@ -23,8 +23,10 @@ reviewed: "2020-08-31"
  SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
 ### IP allowlisting & blocklisting
-  - Blocklist - prevent users with specific IPs or in IP ranges from accessing your site.
-  - Allowlist - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
+
+- Blocklist - prevent users with specific IPs or in IP ranges from accessing your site.
+
+- Allowlist - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
 
 ### Token authentication / JWT (JSON Web Token)
 
@@ -59,11 +61,13 @@ reviewed: "2020-08-31"
   Reduce requests on your CMS by moving page redirects to the edge.
 
 ### Domain masking and reverse Proxy
-  - Domain masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths
-  - [Reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy): serve content from another service (eg. S3) seamlessly from your application.
+
+- Domain masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths
+- [Reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy): serve content from another service (eg. S3) seamlessly from your application.
 
 ### Enterprise blue/green deployment support
-  - Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment and/or always ready disaster recovery.
+
+- Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment and/or always ready disaster recovery.
 
 ### Additional Features from WAF/IO
 
@@ -112,7 +116,6 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 ### How do I get Advanced Global CDN?
 
 [Contact us](https://pantheon.io/contact?docs) to learn how Advanced Global CDN can help your organization. Our Professional Services team will talk through your needs and help determine the best configuration for you.
-
 
 ## See Also
 
