@@ -54,7 +54,6 @@ Human readable, such as "Your Awesome Site", entered during site creation and di
 
 </dd>
 
-
 <dt>Site Name</dt>
 
 <dd>
@@ -63,7 +62,6 @@ Machine readable, such as "your-awesome-site", either derived automatically by t
 
 </dd>
 
-
 <dt>Environment Name</dt>
 
 <dd>
@@ -71,7 +69,6 @@ Machine readable, such as "your-awesome-site", either derived automatically by t
 Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.
 
 </dd>
-
 
 </dl>
 

@@ -27,8 +27,10 @@ This guide will help you install the WP SAML Auth plugin, create a SAML App with
 
   <dl title="SAML Providers">
   <dt>Identity Provider</dt>
+
   <dd>Where user information is housed (e.g. Google Apps).</dd>
   <dt>Service Provider</dt>
+
   <dd>Application depending on user information provided by the Identity Provider (e.g. WordPress).</dd>
   </dl>
 

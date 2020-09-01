@@ -57,37 +57,29 @@ contributors: [alexfornuto, rachelwhitton]
 
 <dl>
 
-<dt><code>title</code></dt>
-<dd>The title of the content.</dd>
+<dt><code>title</code></dt><dd>The title of the content.</dd>
 
-<dt><code>description</code></dt>
-<dd>A brief description displayed under the title.</dd>
+<dt><code>description</code></dt><dd>A brief description displayed under the title.</dd>
 
-<dt><code>contributors</code></dt>
-<dd>
+<dt><code>contributors</code></dt><dd>
 
 An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
 
 </dd>
 
-<dt><code>reviewed</code></dt>
-<dd>The last date when the content was updated or reviewed for accuracy.</dd>
+<dt><code>reviewed</code></dt><dd>The last date when the content was updated or reviewed for accuracy.</dd>
 
-<dt><code>tags</code></dt>
-<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
+<dt><code>tags</code></dt><dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
 
-<dt><code>category</code></dt>
-<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
+<dt><code>category</code></dt><dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
 
-<dt><code>type</code></dt>
-<dd>
+<dt><code>type</code></dt><dd>
 
 The content type for this content. Defaults to `doc`, overwritten for other content types like `guide`, `video`, or `resource`.
 
 </dd>
 
-<dt><code>subtitle</code></dt>
-<dd>Used in multipage guides to define a title for that page of the guide.</dd>
+<dt><code>subtitle</code></dt><dd>Used in multipage guides to define a title for that page of the guide.</dd>
 
 </dl>
 
@@ -207,10 +199,8 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 <Example>
 
 <dl>
-<dt>Term</dt>
-<dd>Definition.</dd>
-<dt>Another Term</dt>
-<dd>Description of the new term.</dd>
+<dt>Term</dt><dd>Definition.</dd>
+<dt>Another Term</dt><dd>Description of the new term.</dd>
 </dl>
 
 <hr className="source-code" /> <br/>
