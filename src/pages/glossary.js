@@ -1,10 +1,12 @@
-import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
-import ReactMarkdown from "react-markdown"
-import TOC from "../components/toc"
+
 import HeaderBody from "../components/headerBody"
+import Layout from "../layout/layout"
+import Popover from "../components/popover"
+import React from "react"
+import ReactMarkdown from "react-markdown"
+import SEO from "../layout/seo"
+import TOC from "../components/toc"
 
 {
   /* @TODO Convert to a React Component */
@@ -82,14 +84,14 @@ const Glossary = ({ data: { bodies } }) => {
                             {title}
                           </dt></h3>
                           <dd key={`${title}-definition`}>
-                            <ReactMarkdown source={definition} />
+                            <ReactMarkdown skipHtml="true" source={definition} />
                           </dd>
 
                           {from.length > 0 ? (
                             <>
                               <br />
                               Excerpt from:{" "}
-                              <Link key={`${title}-reference`} to={slug}>
+                              <Link key={`${title}-reference`} to={`/${slug}`}>
                                 {from}
                               </Link>
                             </>
