@@ -17,8 +17,12 @@ const previewFlexPanelItem = {
   color: "#333",
 }
 
-const Glossary = ({ data: { bodies } }) => {
+class Glossary  extends React.Component {
+
+  render () {
   let allDefs = []
+
+  const bodies = this.props.data.bodies
 
   bodies.edges.map(({ node }) => {
     //const allDefs = node.fileInfo.childMdx.rawBody.match(/(<dt>.+?<\/dt>)\n\n(<dd>.+?<\/dd>)/gim)
@@ -103,9 +107,6 @@ const Glossary = ({ data: { bodies } }) => {
                   ))}
                   </>
                 ))}
-
-
-
               </div>
             </article>
             <TOC title="Contents" />
@@ -114,7 +115,7 @@ const Glossary = ({ data: { bodies } }) => {
       </Layout>
     </>
   )
-}
+}}
 
 export default Glossary
 
