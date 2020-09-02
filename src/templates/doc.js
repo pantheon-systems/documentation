@@ -1,64 +1,62 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-
-import Layout from "../layout/layout"
-import HeaderBody from "../components/headerBody"
-
-import Callout from "../components/callout"
-import Alert from "../components/alert"
 import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
-import GetFeedback from "../components/getFeedback"
+import Alert from "../components/alert"
+import Callout from "../components/callout"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
-import SEO from "../layout/seo"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
-import Partial from "../components/partial"
-import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
-import Example from "../components/styleExample"
-import LocaldevChangelog from "../components/localdevChangelog"
-import DrushChangelog from "../components/drushChangelog"
-import ReviewDate from "../components/reviewDate"
-import Youtube from "../components/youtube"
-import ResourceSelector from "../components/resourceSelector"
-import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
+import ChecklistItem from "../components/checklistItem"
+import Color from "../components/color.js"
+import DNSProviderDocs from "../components/dns-provider-docs.js"
+import Download from "../components/download"
+import DrushChangelog from "../components/drushChangelog"
+import Enablement from "../components/enablement"
+import Example from "../components/styleExample"
+import ExternalLink from "../components/externalLink"
+import GetFeedback from "../components/getFeedback"
+import HeaderBody from "../components/headerBody"
+import Icon from "../components/icon"
+import Image from "../layout/image"
+import Layout from "../layout/layout"
+import LocaldevChangelog from "../components/localdevChangelog"
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import Partial from "../components/partial"
+import Popover from "../components/popover"
+import React from "react"
+import ResourceSelector from "../components/resourceSelector"
+import ReviewDate from "../components/reviewDate"
+import SEO from "../layout/seo"
+import TOC from "../components/toc"
+import Tab from "../components/tab"
+import TabList from "../components/tabList"
+import Youtube from "../components/youtube"
+import { graphql } from "gatsby"
 
 const shortcodes = {
-  Callout,
-  Alert,
   Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
+  Alert,
+  Callout,
   Card,
   CardGroup,
-  Enablement,
-  Color,
-  Download,
-  Partial,
-  ChecklistItem,
-  Image,
-  Example,
-  LocaldevChangelog,
-  DrushChangelog,
-  ReviewDate,
-  Youtube,
-  ResourceSelector,
-  DNSProviderDocs,
   Check,
+  ChecklistItem,
+  Color,
+  DNSProviderDocs,
+  Download,
+  DrushChangelog,
+  Enablement,
+  Example,
+  ExternalLink,
+  Icon,
+  Image,
+  LocaldevChangelog,
+  Partial,
+  Popover,
+  ResourceSelector,
+  ReviewDate,
+  Tab,
+  TabList,
+  Youtube,
 }
 
 class DocTemplate extends React.Component {
