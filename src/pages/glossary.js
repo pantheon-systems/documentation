@@ -15,16 +15,14 @@ const previewFlexPanelItem = {
   color: "#333",
 }
 
+const Glossary = ({ data: { bodies } }) => {
+  let allDefs = []
 
-
-
-const Glossary = ({data: {bodies}}) => {
-
-  let allDefs = [];
-
-  bodies.edges.map(({node}) => {
+  bodies.edges.map(({ node }) => {
     //const allDefs = node.fileInfo.childMdx.rawBody.match(/(<dt>.+?<\/dt>)\n\n(<dd>.+?<\/dd>)/gim)
-    const matches = node.fileInfo.childMdx.rawBody.match(/<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim)
+    const matches = node.fileInfo.childMdx.rawBody.match(
+      /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
+    )
     //console.log("Match Title: ", node.frontmatter.title) // For Debugging
     //console.log("match: ", matches) // For Debugging
     if (matches && matches.length) {
@@ -34,12 +32,18 @@ const Glossary = ({data: {bodies}}) => {
           slug: node.fields.slug,
           title: term.match(/<dt>(.*?)<\/dt>/)[1],
           definition: term.match(/<dd>\n\n(.*?)\n\n<\/dd>/)[1],
-        });
+          letter: term.match(/<dt>(.*?)<\/dt>/)[1][0].toUpperCase()
+        })
       })
     }
   })
 
-  console.log("allDefs:", allDefs) // For Debugging
+  allDefs.sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase()) ? 1 : -1)
+  allDefs.sort(function(a, b) {
+    return a.title[0].localeCompare(b.title[0]);
+  });
+
+  const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
   return (
     <>
@@ -56,25 +60,50 @@ const Glossary = ({data: {bodies}}) => {
                 description="A collection of terms and definitions through Pantheon's Documentation"
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                  {allDefs.map(({from, slug, title, definition}) => 
-                    <>
-                    <div key={title}>
-                      <dt key={`${title}-term`}><h2>{title}</h2></dt>
-                      <dd key={`${title}-definition`}>
-                      <ReactMarkdown source={definition} />
-                      </dd>
-                      <br />
+                This page dynamically displays all defined terms in the Pantheon Documentation project.
 
-                      {from.length > 0 ? (
-                      <>Excerpt from: <Link key={`${title}-reference`} to={slug}>{from}</Link></>
-                      ): null
-                      }
+                {letters.map( index =>(
+                  <>
+                  <h2 key={index}>
+                    {index}
+                  </h2>
 
-                    <br />
-                    <hr />
-                    </div>
-                    </>
-                    )}
+                  {allDefs
+                    .filter(def => {
+                      return (
+                        def.letter.toUpperCase() === index.toUpperCase()
+                      )
+                    })
+                    .map(({ from, slug, title, definition}) => (                 
+                      <>
+                        <section key={title}>
+                          <hr />
+                          <h3><dt key={`${title}-term`}>
+                            {title}
+                          </dt></h3>
+                          <dd key={`${title}-definition`}>
+                            <ReactMarkdown source={definition} />
+                          </dd>
+
+                          {from.length > 0 ? (
+                            <>
+                              <br />
+                              Excerpt from:{" "}
+                              <Link key={`${title}-reference`} to={slug}>
+                                {from}
+                              </Link>
+                            </>
+                          ) : null}
+
+                          <br />
+                        </section>
+                      </>
+                  ))}
+                  </>
+                ))}
+
+
+
               </div>
             </article>
             <TOC title="Contents" />
@@ -82,15 +111,19 @@ const Glossary = ({data: {bodies}}) => {
         </main>
       </Layout>
     </>
-  );
-};
-
+  )
+}
 
 export default Glossary
 
 export const pageQuery = graphql`
   {
-    bodies: allMdx(filter: {frontmatter: {changelog: {ne: true}, title: {ne: "Style Guide"}}, fileInfo: {childMdx: {rawBody: {regex: "/<dt>/"}}}}) {
+    bodies: allMdx(
+      filter: {
+        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        fileInfo: { childMdx: { rawBody: { regex: "/<dt>/" } } }
+      }
+    ) {
       edges {
         node {
           fields {
