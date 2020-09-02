@@ -6,7 +6,11 @@ tags: [cdn, security, professional-services]
 reviewed: "2020-08-31"
 ---
 
-[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn) takes our <abbr title="Content delivery network">CDN</abbr> offering a step forward for customers that have unique optimizations required for digital delivery at scale. It includes a wide range of benefits including letting teams individually manage their own sites, drive growth through site iteration, calibrate control over branding, and extend enterprise-grade security.
+[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale. 
+
+Each AGCDN service configuration is offered as an annual contract subscription. Customers can include multiple sites to the configuration, or conditionally apply specific rules.
+
+It includes a wide range of benefits that let teams individually manage their own sites, drive growth through site iteration, calibrate control over branding, and extend enterprise-grade security.
 
 ## Features
 
@@ -14,15 +18,17 @@ reviewed: "2020-08-31"
 
   Unlike CDNs that only handle images and other static assets, the Advanced Global CDN architecture enables you to cache entire pages and assets at the edge, for more efficient traffic handling.
 
-### OSI Layer 3 & 4 DDoS protection & mitigation
+### OSI Layer 3 & 4 DDoS Protection & Mitigation
 
- Advanced Global CDN provides <abbr title="Distributed Denial of Service">DDoS</abbr> protection and mitigation at the network (layer 3) and transport (layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
+ Advanced Global CDN provides <abbr title="Distributed Denial of Service">DDoS</abbr> protection and mitigation at the network (Layer 3) and transport (Layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
 
-### SOC 2 Type 2 compliance
+### SOC 2 Type 2 Compliance
 
  SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> Type 2 compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
 ### IP Allowlisting & Blocklisting
+
+ Granular access control down to the IP address level helps protect intellectual property and secure development environments.
 
 - Blocklist - prevent users with specific IPs or in IP ranges from accessing your site.
 
@@ -52,32 +58,32 @@ reviewed: "2020-08-31"
 
   See every request to your website, whether or not the content was cached. Full CDN edge logs combine the server logs with logs from the edge to provide a complete picture of your traffic.
 
-### Modify Headers at the Edge
+### Modify and Filter Headers at the Edge
 
-  Change request and response headers before your application starts up to create, add, delete, or update parts of your request.
+  Change or filter request and response headers before your application starts up to create, add, delete, or update parts of your request and apply custom rules.
 
 ### Edge Redirects
 
-  Reduce requests on your CMS by moving page redirects to the edge.
+  Reduce requests to your CMS by moving page redirects to the edge.
 
-### Domain masking and reverse Proxy
+### Domain Masking and Reverse Proxy
 
-- Domain masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths
-- [Reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy): serve content from another service (eg. S3) seamlessly from your application.
+- Domain masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths. 
+- Reverse proxy: serve content from another service (eg. S3) seamlessly from your application.
 
-### Enterprise blue/green deployment support
+### Enterprise Blue/Green Deployment Support
 
-Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment and/or always ready disaster recovery.
+Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment workflows and always ready disaster recovery.
 
 ### Additional Features from WAF/IO
 
 - Efficient <abbr title="Image Optimization">IO</abbr> at the edge
   
- With **Image Optimization** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
+ With **Image Optimization (IO)** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
 
 - Layer 7/Enterprise DDoS protection & mitigation
 
- Application-layer (OSI layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
+ Application-layer (OSI Layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
 - OWASP & WAF rules for Drupal/WordPress
 
@@ -89,7 +95,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
 - Advanced bot detection & mitigation (Available as an add-on)
 
-  The following third-party plugins are supported:
+  The following third-party plugins are available:
   
   - [Shape Log Analysis](https://devcentral.f5.com/s/articles/How-to-Setup-Shape-Log-Analysis-in-Fastly?page=1)
   - [DataDome](https://docs.datadome.co/docs/module-fastly)
