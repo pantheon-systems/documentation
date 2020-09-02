@@ -70,7 +70,7 @@ class Glossary  extends React.Component {
 
                 {letters.map( index =>(
                   <>
-                  <h2 key={index}>
+                  <h2 key={index} className="tocify-item" id={index.toLowerCase()}>
                     {index}
                   </h2>
 
@@ -84,7 +84,7 @@ class Glossary  extends React.Component {
                       <>
                         <section key={title}>
                           <hr />
-                          <h3><dt key={`${title}-term`}>
+                          <h3 id={title.replaceAll(" ", "-").toLowerCase()}><dt key={`${title}-term`}>
                             {title}
                           </dt></h3>
                           <dd key={`${title}-definition`}>
