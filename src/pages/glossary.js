@@ -85,7 +85,7 @@ class Glossary  extends React.Component {
                         <section key={title}>
                           <hr />
                           <h3 id={title.replaceAll(" ", "-").toLowerCase()}><dt key={`${title}-term`}>
-                            {title}
+                            {title.charAt(0).toUpperCase() + title.slice(1)}
                           </dt></h3>
                           <dd key={`${title}-definition`}>
                             <ReactMarkdown skipHtml="true" source={definition} />
