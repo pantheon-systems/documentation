@@ -26,12 +26,23 @@ This guide will help you install the WP SAML Auth plugin, create a SAML App with
 - As you work through this process, there are two key SAML authentication terms to keep in mind:
 
   <dl title="SAML Providers">
+
   <dt>Identity Provider</dt>
 
-  <dd>Where user information is housed (e.g. Google Apps).</dd>
+  <dd>
+
+  In SAML architecture, the <abbr title="Identity Provider">IP</abbr> is where user information is housed (e.g. Google Apps).
+
+  </dd>
+
   <dt>Service Provider</dt>
 
-  <dd>Application depending on user information provided by the Identity Provider (e.g. WordPress).</dd>
+  <dd>
+
+  Application depending on user information provided by the Identity Provider (e.g. WordPress).
+
+  </dd>
+
   </dl>
 
 You’ll see these in reference documentation, so it’s important to keep them straight so you know what configuration goes where.
