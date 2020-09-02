@@ -909,6 +909,3 @@ This is the optimal place to provide links to external resources on the subject,
 ```
 
 </Example>
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3MjEzMTA5XX0=
--->
