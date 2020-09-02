@@ -17,7 +17,7 @@ const previewFlexPanelItem = {
   color: "#333",
 }
 
-class Glossary  extends React.Component {
+class Glossary extends React.Component {
 
   render () {
   let allDefs = []
@@ -25,7 +25,7 @@ class Glossary  extends React.Component {
   const bodies = this.props.data.bodies
 
   bodies.edges.map(({ node }) => {
-    //const allDefs = node.fileInfo.childMdx.rawBody.match(/(<dt>.+?<\/dt>)\n\n(<dd>.+?<\/dd>)/gim)
+  
     const matches = node.fileInfo.childMdx.rawBody.match(
       /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
     )
@@ -48,7 +48,7 @@ class Glossary  extends React.Component {
   allDefs.sort(function(a, b) {
     return a.title[0].localeCompare(b.title[0]);
   });
-
+  console.log("AllDefs: ", allDefs)
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
   return (
@@ -88,7 +88,7 @@ class Glossary  extends React.Component {
                             {title.charAt(0).toUpperCase() + title.slice(1)}
                           </dt></h3>
                           <dd key={`${title}-definition`}>
-                            <ReactMarkdown skipHtml="true" source={definition} />
+                            {definition}
                           </dd>
 
                           {from.length > 0 ? (
