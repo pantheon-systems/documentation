@@ -48,7 +48,7 @@ class Glossary extends React.Component {
   allDefs.sort(function(a, b) {
     return a.title[0].localeCompare(b.title[0]);
   });
-  console.log("AllDefs: ", allDefs)
+  console.log("AllDefs: ", JSON.stringify(allDefs, null, 2))
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
   return (
@@ -88,7 +88,7 @@ class Glossary extends React.Component {
                             {title.charAt(0).toUpperCase() + title.slice(1)}
                           </dt></h3>
                           <dd key={`${title}-definition`}>
-                            {definition}
+                            <ReactMarkdown skipHtml={true} source={definition} />
                           </dd>
 
                           {from.length > 0 ? (
