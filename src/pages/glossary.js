@@ -24,6 +24,8 @@ class Glossary extends React.Component {
 
   const bodies = this.props.data.bodies
 
+  console.log("Bodies: ", bodies) // For Debugging
+
   bodies.edges.map(({ node }) => {
   
     const matches = node.fileInfo.childMdx.rawBody.match(
@@ -48,7 +50,9 @@ class Glossary extends React.Component {
   allDefs.sort(function(a, b) {
     return a.title[0].localeCompare(b.title[0]);
   });
-  console.log("AllDefs: ", JSON.stringify(allDefs, null, 2))
+
+  console.log("AllDefs: ", allDefs) // For debugging
+
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
   return (
