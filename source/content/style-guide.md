@@ -97,7 +97,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus).
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus). 
 
 <Example>
 
@@ -910,5 +910,5 @@ This is the optimal place to provide links to external resources on the subject,
 
 </Example>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTg2NjM5MV19
+eyJoaXN0b3J5IjpbNDM3MjEzMTA5XX0=
 -->
