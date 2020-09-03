@@ -689,7 +689,7 @@ ___
 
 <ReviewDate date="2020-07-15" />
 
-**Issue:** Wordfence assumes write access to several files in the code base to store configuation and log files.
+**Issue:** Wordfence assumes write access to several files in the code base to store configuration and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 

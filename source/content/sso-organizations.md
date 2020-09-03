@@ -78,4 +78,3 @@ There are 3 types of certificate that you can generate:
  - `token-signing`
 
 Use a `token-signing` certificate, otherwise you will get a thumbprint error.
-

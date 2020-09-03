@@ -30,7 +30,7 @@ Before starting this guide, you should:
 
 ## Set up a new Drupal site
 
-First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache module.
+First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache module.
 
 1. Start by making a new Drupal 8 site from your local command line environment using Terminus:
 

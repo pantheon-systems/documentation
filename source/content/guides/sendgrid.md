@@ -61,7 +61,7 @@ Install and activate the latest release through the WordPress dashboard or place
 
 ![WP Settings example](../../images/guides/sendgrid/sendgrid-wpconfig.png)
 
-When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
+When you're done, click **Update Settings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
 </Tab>
 

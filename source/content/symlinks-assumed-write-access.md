@@ -290,7 +290,7 @@ Some modules and plugins verify that the target directory exists using `is_dir()
 
 ### Incorrect Symlink Paths
 
-If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
+If a symlinked folder doesn't show the proper contents, double-check that the path is correct. In Bash, `ls -l` will show symlinks paths:
 
 ```bash{outputLines:2-3}
 ls -l
@@ -298,7 +298,7 @@ ls -l
 lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/
 ```
 
-Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the currect directory.
+Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the current directory.
 
 ## See Also
 For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).

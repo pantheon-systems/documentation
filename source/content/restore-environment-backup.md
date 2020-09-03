@@ -123,7 +123,7 @@ export ENV=dev # or different environment name
 
 </Alert>
 
-1. Download the **Files** backups using the link provided in the Site Dasboard <span class="glyphicons glyphicons-download-alt"></span> **Backups** Tab:
+1. Download the **Files** backups using the link provided in the Site Dashboard <span class="glyphicons glyphicons-download-alt"></span> **Backups** Tab:
 
   ```bash{promptUser:user}
   wget https://storage.googleapis.com/gcs-pantheon-backups/... -O file-backup.tar.gz

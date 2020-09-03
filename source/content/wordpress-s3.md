@@ -113,7 +113,7 @@ terminus wp $site.dev -- s3-uploads migrate-attachments
 
 Optionally, add the `--delete-local` flag to remove the local copies of the media files.
 
-Upon succesful migration, this command will also provide a search/replace command for your database to update references to the newly-migrated files. Note that you will need to run this on all Pantheon environments (dev/test/live).
+Upon successful migration, this command will also provide a search/replace command for your database to update references to the newly-migrated files. Note that you will need to run this on all Pantheon environments (dev/test/live).
 
 #### Multisite compatibility
 

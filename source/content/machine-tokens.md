@@ -9,10 +9,10 @@ Machine tokens are used to uniquely identify your machine and securely authentic
 
 Machine tokens:  
 
-* Provide the same access as your username and password  
-* Do not expire   
-* Can only be viewed when you’re creating it  
-* Should be revoked when no longer used to help keep your account safe  
+* Provide the same access as your username and password
+* Do not expire
+* Can only be viewed when you’re creating it
+* Should be revoked when no longer used to help keep your account safe
 
 ## Create a Machine Token
 
@@ -39,7 +39,7 @@ Log in to another account by running: `terminus auth:login --email <email@exampl
 
 ## Revoke a Machine Token
 
-For security purposes, we recommend removing tokens from your account when they are no longer used.   
+For security purposes, we recommend removing tokens from your account when they are no longer used.
 
 1. From your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
 2. Locate the token you want to delete, and click **Revoke Token**.
