@@ -70,7 +70,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
     If everything worked correctly, you will see Git fetching the data:
 
-    ```bash
+    ```none
     Cloning into 'anita-wordpress'...
     The authenticity of host '[codeserver.dev.....drush.in]:2222 ([173.255.119.72]:2222)' can't be established.
     RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
