@@ -53,7 +53,7 @@
     "gatsby-transformer-yaml-full": "^0.2.0",
     "gatsby-yaml-full-markdown": "^0.2.1",
     "highlight.js": "^9.18.3",
-    "jest": "^24.9.0",
+    "jest": "^26.4.2",
     "new-github-issue-url": "^0.2.1",
     "node-font-awesome": "^1.0.2",
     "node-sass": "^4.14.1",
@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@octokit/rest": "^16.43.2",
-    "lighthouse": "^5.6.0",
+    "lighthouse": "^6.3.0",
     "prettier": "^1.19.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
