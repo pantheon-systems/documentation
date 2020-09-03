@@ -14,10 +14,6 @@ It includes a wide range of benefits that let teams individually manage their ow
 
 ## Features
 
-### Full-page & asset caching
-
-  Unlike CDNs that only handle images and other static assets, the Advanced Global CDN architecture enables you to cache entire pages and assets at the edge, for more efficient traffic handling.
-
 ### OSI Layer 3 & 4 DDoS Protection & Mitigation
 
  Advanced Global CDN provides <abbr title="Distributed Denial of Service">DDoS</abbr> protection and mitigation at the network (Layer 3) and transport (Layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
@@ -44,7 +40,7 @@ It includes a wide range of benefits that let teams individually manage their ow
 
 ### Geolocation-based Actions
 
-  Enable actions based on the physical location of your user (eg. blocking or redirecting based on country) or send location information to your application for more custom control.
+  Sending location info to your application is much faster than fetching it from a third-party API. AGCDN enables actions based on the physical location of your user (eg. blocking or redirecting based on country), and can send location information to your application for performant, custom control.
 
 ### Device Detection and Edge Control
 
@@ -54,9 +50,9 @@ It includes a wide range of benefits that let teams individually manage their ow
 
   Adjusts the "serve stale content" setting to make content available from the edge even if the site is unavailable.
 
-### Full CDN Edge Logs
+### Complete CDN Edge Logs
 
-  See every request to your website, whether or not the content was cached. Full CDN edge logs combine the server logs with logs from the edge to provide a complete picture of your traffic.
+  See every request to your website, whether or not the content was cached. Server logs can only record requests that couldn't be fulfilled from a CDN's cache. Full CDN edge logs replace these with logs from the edge, to provide a complete picture of your traffic.
 
 ### Modify and Filter Headers at the Edge
 
