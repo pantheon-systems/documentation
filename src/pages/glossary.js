@@ -22,20 +22,18 @@ class Glossary extends React.Component {
   render () {
 
     const {
-      data: { homeYaml, bodies },
+      data: { allMdx },
     } = this.props
 
-    console.log("homeYaml: ", homeYaml)
-
-    console.log("bodies: ", bodies)
+    console.log("allMdx: ", allMdx)
 
     let allDefs = []
 
-    //const bodies = this.props.data.bodies
+    //const allMdx = this.props.data.allMdx
 
-    //console.log("Bodies: ", bodies) // For Debugging
+    //console.log("Bodies: ", allMdx) // For Debugging
 
-    bodies.edges.map(({ node }) => {
+    allMdx.edges.map(({ node }) => {
 
       const matches = node.fileInfo.childMdx.rawBody.match(
         /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
@@ -135,7 +133,7 @@ export default Glossary
 
 export const pageQuery = graphql`
   {
-    bodies: allMdx(
+    allMdx(
       filter: {
         frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
         fileInfo: { childMdx: { rawBody: { regex: "/<dt>/" } } }
