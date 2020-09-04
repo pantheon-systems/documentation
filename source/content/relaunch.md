@@ -81,7 +81,8 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
   Once you make this change, traffic will be routed to the new site. However, if you do not complete the rest of the steps as outlined here, you may run into cases where the new site has an invalid HTTPS certificate.
 
   </Alert>
-
+  
+1. On the live environment of the Dashboard, click the "Clear Caches" button. Do this for first the old site and then the new site.
 1. Wait for HTTPS to provision for the newly connected domains:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
