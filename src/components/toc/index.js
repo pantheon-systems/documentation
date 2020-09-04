@@ -30,7 +30,7 @@ const TOC = ({ title }) => {
 
   return (
     <nav aria-labelledby="toc-nav" className="pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-    <div key={title} id="toc" className="tocbot">
+    <div id="toc" className="tocbot">
       <h4 id="toc-nav">{title || "Table of Contents"}</h4>
       <div className="toc-placeholder" />
     </div>
