@@ -6,19 +6,15 @@
   "MD029": false,
   "MD033": {
     "allowed_elements": [
-      "abbr",
-      "Accordion",
       "Alert",
-      "Check",
+      "Accordion",
       "dd",
       "dl",
-      "DNSProviderDocs",
       "Download",
       "DrushChangelog",
       "dt",
       "Enablement",
       "ExternalLink",
-      "Icon",
       "LocaldevChangelog",
       "Partial",
       "Partial",
@@ -27,7 +23,11 @@
       "Span",
       "Tab",
       "TabList",
-      "Youtube"
+      "DNSProviderDocs",
+      "Check",
+      "abbr",
+      "Youtube",
+      "Icon"
     ]
   }
 }

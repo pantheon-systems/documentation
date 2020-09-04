@@ -89,20 +89,9 @@ The Dev environment provides [one-click updates](/core-updates) for your site's 
 
   <dl>
   <dt>Upstream</dt>
-
-  <dd>
-  
-  A code repository that serves as a common package for your web application.
-  
-  </dd>
-  
+  <dd>A code repository that serves as a common package for your web application.</dd>
   <dt>Repository</dt>
-
-  <dd>
-  
-  Centralized location of code intended for distribution.
-  </dd>
-  
+  <dd>Centralized location of code intended for distribution.</dd>
   </dl>
 
 <Alert title="Note" type="info">
