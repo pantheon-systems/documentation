@@ -27,6 +27,8 @@ class Glossary extends React.Component {
 
     console.log("homeYaml: ", homeYaml)
 
+    console.log("bodies: ", bodies)
+
     let allDefs = []
 
     //const bodies = this.props.data.bodies
