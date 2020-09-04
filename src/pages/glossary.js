@@ -24,17 +24,11 @@ class Glossary extends React.Component {
     const {
       data: { allMdx },
     } = this.props
-
-    console.log("allMdx: ", allMdx)
+    //console.log("allMdx: ", allMdx) //For Debugging
 
     let allDefs = []
 
-    //const allMdx = this.props.data.allMdx
-
-    //console.log("Bodies: ", allMdx) // For Debugging
-
     allMdx.edges.map(({ node }) => {
-
       const matches = node.fileInfo.childMdx.rawBody.match(
         /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
       )
@@ -57,8 +51,7 @@ class Glossary extends React.Component {
     allDefs.sort(function(a, b) {
       return a.title[0].localeCompare(b.title[0]);
     });
-
-    console.log("AllDefs: ", allDefs) // For debugging
+    //console.log("AllDefs: ", allDefs) // For debugging
 
     const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -152,15 +145,6 @@ export const pageQuery = graphql`
               rawBody
             }
           }
-        }
-      }
-    }
-    homeYaml {
-      fourohfourlinks {
-        title
-        links {
-          text
-          url
         }
       }
     }
