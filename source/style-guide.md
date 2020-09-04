@@ -140,18 +140,18 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 ### Definition List
 <div class="style-example" >
 <dl>
-<dt>Term</dt>
-<dd>Definition.</dd>
-<dt>Another Term</dt>
-<dd>Description of the new term.</dd>
+<dt>Term</dt><dd>Definition.</dd>
+<dt>Another Term</dt><dd>Description of the new term.</dd>
 </dl>
 <hr class="source-code">
 ```html
 <dl>
   <dt>Term</dt>
-    <dd>Definition.</dd>
+
+  <dd>Definition.</dd>
   <dt>Another Term</dt>
-    <dd>Description of the new term.</dd>
+
+  <dd>Description of the new term.</dd>
 </dl>
 ```
 </div>
