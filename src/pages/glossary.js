@@ -74,10 +74,17 @@ class Glossary extends React.Component {
 
                   {letters.map( index =>(
                     <>
-                    <h2 key={index} className="tocify-item" id={index.toLowerCase()}>
-                      {index}
-                    </h2>
-
+                    {allDefs
+                      .filter(def => {
+                        return (
+                          JSON.stringify(def.letter).match(index)
+                        )
+                      }).length > 0 ?
+                        <h2 key={index} className="tocify-item" id={index.toLowerCase()}>
+                          {index}
+                        </h2>
+                      : null
+                    }
                     {allDefs
                       .filter(def => {
                         return (
