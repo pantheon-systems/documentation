@@ -22,14 +22,14 @@ class Glossary extends React.Component {
   render () {
 
     const {
-      data: { homeYaml },
+      data: { homeYaml, bodies },
     } = this.props
 
     console.log("homeYaml: ", homeYaml)
 
     let allDefs = []
 
-    const bodies = this.props.data.bodies
+    //const bodies = this.props.data.bodies
 
     //console.log("Bodies: ", bodies) // For Debugging
 
