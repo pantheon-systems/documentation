@@ -88,7 +88,9 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   </Alert>
   
-1. On the live environment of the Dashboard, click the "Clear Caches" button. Do this for first the old site and then the new site.
+1. On the Live environment tab of the Site Dashboard for the old site, click the "Clear Caches" button.
+
+1. Repeat on the Live environment of the new site.
 
 1. Wait for HTTPS to provision for the newly connected domains:
 
