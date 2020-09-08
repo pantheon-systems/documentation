@@ -128,8 +128,7 @@ class DocTemplate extends React.Component {
             </article>
             <TOC title="Contents" />
             <GetFeedback
-              formId="tfYOGoE7"
-              page={"/" + node.fields.slug}
+                page={"/" + node.fields.slug}
             />
           </div>
         </main>
