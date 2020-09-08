@@ -149,7 +149,7 @@ Pantheon runs ImageMagick 6.9.10-86 Q16 x86_64 2020-01-13.
 
 ### Drupal ImageMagick Configuration
 
-Once you have downloaded and enabled the ImageMagick module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
+Once you have downloaded and enabled the [ImageMagick module](https://www.drupal.org/project/imagemagick), you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
 
 When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives) conf variable to your `settings.php` file.
 
