@@ -52,7 +52,6 @@
     "gatsby-transformer-yaml": "^2.3.3",
     "gatsby-transformer-yaml-full": "^0.2.0",
     "gatsby-yaml-full-markdown": "^0.2.1",
-    "global": "^4.4.0",
     "highlight.js": "^9.18.1",
     "jest": "^24.9.0",
     "new-github-issue-url": "^0.2.1",

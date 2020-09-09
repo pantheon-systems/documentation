@@ -1,9 +1,6 @@
 import React from "react"
-import window from "global/window"
-import document from "global/document"
 
 const GetFeedBack = ({ formId, page, topic }) => {
-
   return (
     <>
     <script dangerouslySetInnerHTML={{
@@ -18,7 +15,7 @@ const GetFeedBack = ({ formId, page, topic }) => {
 
     <script dangerouslySetInnerHTML={{
       __html:`
-        (gf('setParameters', {'PAGE': ${page}, 'TOPIC': ${topic}}))
+        gf('setParameters', {'PAGE': ${page}, 'TOPIC': ${topic}})
       `
     }}
     />
