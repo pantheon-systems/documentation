@@ -129,7 +129,7 @@ class DocTemplate extends React.Component {
             <TOC title="Contents" />
             <GetFeedback
               formId="tfYOGoE7"
-              page={"/" + node.fields.slug}
+              page={node.frontmatter.title}
               topic={node.frontmatter.categories ? node.frontmatter.categories.toString() : null}
             />
           </div>

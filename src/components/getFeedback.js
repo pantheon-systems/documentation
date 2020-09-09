@@ -15,7 +15,7 @@ const GetFeedBack = ({ formId, page, topic }) => {
 
     <script dangerouslySetInnerHTML={{
       __html:`
-        gf('setParameters', {'PAGE': ${page}, 'TOPIC': ${topic}})
+        gf('setParameters', {'page': ${page}, 'topic': ${topic}})
       `
     }}
     />
