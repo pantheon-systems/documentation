@@ -152,7 +152,13 @@ class GuideTemplate extends React.Component {
                 </div>
                 {node.frontmatter.getfeedbackform && (
                   <GetFeedback
+                    formId={
+                      node.frontmatter.getfeedbackform === "default"
+                        ? "tfYOGoE7"
+                        : node.frontmatter.getfeedbackform
+                    }
                     page={"/" + node.fields.slug}
+                    topic="addons"
                   />
                 )}
                 <NavButtons

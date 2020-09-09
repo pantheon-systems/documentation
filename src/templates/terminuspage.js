@@ -207,7 +207,7 @@ class TerminusTemplate extends React.Component {
             </div>
           </div>
         </div>
-        <GetFeedback page={"/" + node.fields.slug} />
+        <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
       </Layout>
     )
   }
