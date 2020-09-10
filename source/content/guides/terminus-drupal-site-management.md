@@ -57,7 +57,7 @@ Now let's create a new site.
  21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                                                                  vanilla      core          drupal
  ```
 
-- If the the output you see is shorter than 36 characters (including hyphens), enlarge your terminal window and run the command again. Otherwise, you might encounter the following error:
+- If the output you see is shorter than 36 characters (including hyphens), enlarge your terminal window and run the command again. Otherwise, you might encounter the following error:
 
    ```bash
    Could not find an upstream identified by 21e1fada-199c-492b.
