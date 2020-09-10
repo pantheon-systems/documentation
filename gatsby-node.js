@@ -295,11 +295,14 @@ exports.createPages = ({ graphql, actions }) => {
     // Create Terminus Command pages
     const terminusCommands = result.data.dataJson.commands
     terminusCommands.forEach(command => {
+      const slugRegExp = /:/g
+      const slug = command.name.replace(slugRegExp, "-")
       createPage({
-        path: `terminus/commands/${command.name}`,
+        path: `terminus/commands/${slug}`,
         component: path.resolve(`./src/templates/terminusCommand.js`),
         context: {
-          slug: command.name
+          slug: slug,
+          name: command.name
         }
       })
     })

@@ -3,6 +3,7 @@ import "./style.css"
 
 const Github = ({ pageTitle, path, editPath }) => {
   return (
+    editPath ?
     <div>
       <a
         href={`https://github.com/pantheon-systems/documentation/edit/main/${editPath}`}
@@ -18,6 +19,7 @@ const Github = ({ pageTitle, path, editPath }) => {
         <i className="fa fa-github" /> Report an issue with this doc
       </a>
     </div>
+    : null
   )
 }
 

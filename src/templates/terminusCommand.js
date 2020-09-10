@@ -136,12 +136,15 @@ class CommandsTemplate extends React.Component {
   render() {
     const contentCols = 12
     const slug = this.props.pageContext.slug
+    console.log("slug: ", slug) // For Debugging
+    const name = this.props.pageContext.name
+    //console.log("name: ", name) //For Debugging
     const commands = this.props.data.dataJson.commands
+    //console.log("commands: ", commands) //For Debugging
     const getCommandBySlug = slug => commands.find(({name}) => name === slug)
-    const command = getCommandBySlug(slug)
+    const command = getCommandBySlug(name)
     //console.log("command: ", command) //For Debugging
-    //console.log("usage 1 pre cap: ", command.usage[1].replace(/[A-Z].+/, '')) //For Debugging
-    //console.log("usage 1 post cap: ", command.usage[1].replace(/[^A-Z]+/, '')) //For Debugging
+
     return (
       <Layout>
         <SEO
@@ -180,11 +183,12 @@ class CommandsTemplate extends React.Component {
                         <>
                         <p key={i}>
                         <code key={`${i}-pre`}>{usage.replace(/\[|\]/g, "").replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, '')}</code> {usage.replace(/\[|\]/g, "").match(/(?!^)\b[A-Z][a-z]*\b.+/)}
-                        <hr />
                         </p>
+                        <hr />
                         </>
                       )
                     })}
+                    <Partial file={`terminus/${slug}.md`} />
                     <Link to="/terminus/commands">Back to all commands</Link>
                   </div>
                 </div>

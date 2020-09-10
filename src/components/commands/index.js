@@ -4,7 +4,7 @@ import './style.css';
 
 const Commands = ({ data }) => {
   const [search, setSearch] = useState("")
-
+  const slugRegExp = /:/g
   return (
     <div className="container col-md-12">
       <div className="form-group">
@@ -47,7 +47,7 @@ const Commands = ({ data }) => {
                 return (
                   <tr key={i}>
                     <td>
-                      <strong className="command-name"><Link to={`/terminus/commands/${command.name}`}>{command.name}</Link></strong>
+                      <strong className="command-name"><Link to={`/terminus/commands/${command.name.replace(slugRegExp, "-")}`}>{command.name}</Link></strong>
                       <br />
                       <small>{command.description}</small>
                     </td>
