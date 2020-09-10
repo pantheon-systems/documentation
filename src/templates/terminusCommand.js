@@ -136,7 +136,7 @@ class CommandsTemplate extends React.Component {
   render() {
     const contentCols = 12
     const slug = this.props.pageContext.slug
-    console.log("slug: ", slug) // For Debugging
+    //console.log("slug: ", slug) // For Debugging
     const name = this.props.pageContext.name
     //console.log("name: ", name) //For Debugging
     const commands = this.props.data.dataJson.commands
