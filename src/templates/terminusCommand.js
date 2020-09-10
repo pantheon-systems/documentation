@@ -148,7 +148,7 @@ class CommandsTemplate extends React.Component {
     return (
       <Layout>
         <SEO
-          title={command.name + " | " + "Pantheon Docs"}
+          title={"terminus " + command.name + " | " + "Pantheon Docs"}
           description="Terminus Command Documentation"
           image={"/assets/images/terminus-thumbLarge.png"}
         />
