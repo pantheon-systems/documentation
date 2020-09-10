@@ -157,7 +157,7 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
 
 ### Does Pantheon have plans to upgrade MariaDB?
 
-Yes, Pantheon has plans to upgrade MariaDB platform-wide before September 30, 2020.
+Yes, Pantheon has plans to upgrade MariaDB platform-wide with the official platform release of Drupal 9.
 
 ### When will Drupal 9 be officially supported for production sites on Pantheon?
 
