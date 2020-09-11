@@ -125,17 +125,17 @@ You don't have to! Pantheon automatically injects database credentials into the
 - [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php)
 - [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
-### How do I enable IonCube Decoder support?
+### How do I enable ionCube Decoder support?
 
-1. If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions). Please note later PHP versions do not currently support ionCube.
+1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/php-versions). Please note later PHP versions do not currently support ionCube.
 
-1. Enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
+1. Enable ionCube Decoder support site-wide by adding this line to `wp-config.php`:
 
 ```php:title=wp-config.php
 ini_set('ioncube.loader.encoded_paths', '/');
 ```
 
-*(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
+*(More information can be found in our [PHP 7.1 & ionCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ### Can I increase the memory limit of my WordPress site?
 
