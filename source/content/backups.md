@@ -81,11 +81,13 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 ### Via the Command Line
 
-If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`Wget`](https://www.gnu.org/software/wget/):
 
 ```bash
 wget https://storage.googleapis.com/gcs-pantheon-backups/...
 ```
+
+Please note, when using Wget in the Windows Powershell, you must wrap the URL in double quotes (`"`). The shell doesn't return any output until the download completes.
 
 You can also use [Terminus](/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
 
