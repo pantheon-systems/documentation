@@ -27,6 +27,7 @@ import Commands from "../components/commands"
 import Partial from "../components/partial"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
+let commandsJson = require('../../source/data/commands.json')
 
 const shortcodes = {
   Callout,
@@ -135,15 +136,38 @@ class CommandsTemplate extends React.Component {
 
   render() {
     const contentCols = 12
+
     const slug = this.props.pageContext.slug
     //console.log("slug: ", slug) // For Debugging
+
     const name = this.props.pageContext.name
     //console.log("name: ", name) //For Debugging
+
     const commands = this.props.data.dataJson.commands
     //console.log("commands: ", commands) //For Debugging
+
     const getCommandBySlug = slug => commands.find(({name}) => name === slug)
+    const getCommandJSONBySlug = slug => commandsJson.commands.find(({name}) => name === slug)
+
     const command = getCommandBySlug(name)
     //console.log("command: ", command) //For Debugging
+
+    const thisCommandJson = getCommandJSONBySlug(name)
+    //console.log("thisCommandJson: ", thisCommandJson) //For Debugging
+
+    var options = Object.keys(thisCommandJson.definition.options).map(function (key) {
+      return [String(key), thisCommandJson.definition.options[key]]
+    })
+    options.forEach(option => {
+      option.shift()
+    })
+
+    options.sort((a, b) => (a[0].name > b[0].name) ? 1 : -1)
+    options.sort(function(a, b) {
+      return a[0].name.localeCompare(b[0].name);
+    })
+    //console.log("Options: ", options) //For Debugging
+
 
     return (
       <Layout>
@@ -179,15 +203,38 @@ class CommandsTemplate extends React.Component {
                     <pre className="language-bash"><code className="language=bash">terminus {command.usage[0].replace(/\[|\]/g, "")}</code></pre>
                     <br />
                     {command.usage.map( (usage, i) => {
-                      return (
+                      if (i  !== 0) { return (
                         <>
                         <p key={i}>
                         <code key={`${i}-pre`}>{usage.replace(/\[|\]/g, "").replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, '')}</code> {usage.replace(/\[|\]/g, "").match(/(?!^)\b[A-Z][a-z]*\b.+/)}
                         </p>
                         <hr />
                         </>
+                      )}
+                    })}
+
+                    <h2>Options</h2>
+                    <table>
+                    <thead>
+                      <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {options.map(( option ) => {
+                      return (
+                        <>
+                        <tr key={option}>
+                          <td key={`${option}-name`}>{option[0].name}</td>
+                          <td key={`${option}-desc`}>{option[0].description}</td>
+                        </tr>
+                        </>
                       )
                     })}
+                    </tbody>
+                    </table>
+
                     <Partial file={`terminus/${slug}.md`} />
                     <Link to="/terminus/commands">Back to all commands</Link>
                   </div>
