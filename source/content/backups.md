@@ -83,8 +83,8 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
 
-```
-wget "wget https://storage.googleapis.com/gcs-pantheon-backups/..."
+```bash
+wget https://storage.googleapis.com/gcs-pantheon-backups/...
 ```
 
 You can also use [Terminus](/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
