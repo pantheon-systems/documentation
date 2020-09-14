@@ -36,7 +36,14 @@ Symptoms of this issue shows when the header is inspected, you will see that the
 Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; HttpOnly
 ```
 
-The best way to determine which plugin or theme is not allowing caching is to inspect the headers using `curl -sI example.com` after each of the following steps, until you determine which component is breaking the cache:
+The best way to determine which plugin or theme is not allowing caching is to search your site's plugin and theme code for the `session_start()` PHP function:
+
+```
+cd wp-content
+grep -rnw . -e 'session_start'
+```
+
+Alternatively, you can inspect the headers using `curl -sI example.com` after each of the following steps, until you determine which component is breaking the cache:
 
 1. To check your theme, use your default theme (twentynineteen for example), and check for the cookie.
 
