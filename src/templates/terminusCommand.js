@@ -208,7 +208,7 @@ class CommandsTemplate extends React.Component {
                         <p key={i}>
                         <code key={`${i}-pre`}>{usage.replace(/\[|\]/g, "").replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, '')}</code> {usage.replace(/\[|\]/g, "").match(/(?!^)\b[A-Z][a-z]*\b.+/)}
                         </p>
-                        <hr />
+                        <hr className="commandHr"/>
                         </>
                       )}
                     })}
