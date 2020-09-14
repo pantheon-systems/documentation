@@ -22,3 +22,7 @@ li.terminus-usage {
     white-space: normal !important;
   }
 }
+
+.command-name {
+  font-weight: bold;
+}
