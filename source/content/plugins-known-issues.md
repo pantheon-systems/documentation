@@ -288,6 +288,16 @@ ___
 
 ___
 
+## [Elementor](https://wordpress.org/plugins/elementor/)
+
+**Issue:** Incorrect urls used for the style assets.
+
+> Elementor uses the current url to link the style assets when developing with Elementor, And cannot be changed using WP-CLI search-replace via terminus, Or Any search replace plugins.
+
+**Solution:** Use the built in search-replace feature by Elementor in sitename.com/wp-admin/admin.php?page=elementor-tools#tab-replace_url
+
+___
+
 ## [Event Espresso](https://eventespresso.com/)
 
 <ReviewDate date="2018-11-15" />
