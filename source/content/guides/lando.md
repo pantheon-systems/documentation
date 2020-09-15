@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, iterate, lando, local, webops]
 featuredcontributor: true
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 ---
 
 This guide will help you get up and running with [Lando](https://lando.dev/), an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.

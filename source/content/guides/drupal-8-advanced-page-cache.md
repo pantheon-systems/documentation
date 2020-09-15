@@ -4,7 +4,7 @@ description: Learn how to use Views Cache Tags module along with custom code to 
 tags: [moreguides]
 categories: []
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
 ---
 
@@ -30,7 +30,7 @@ Before starting this guide, you should:
 
 ## Set up a new Drupal site
 
-First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache module.
+First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache module.
 
 1. Start by making a new Drupal 8 site from your local command line environment using Terminus:
 

@@ -9,7 +9,7 @@ tags: [sftp, files]
 
 ## Getting Started
 
-Make sure you have your [Pantheon SFTP credentials](/sftp#sftp-connection-information) on hand; you will need this later to connect to Pantheon using FileZilla. 
+Make sure you have your [Pantheon SFTP credentials](/sftp#sftp-connection-information) on hand; you will need this later to connect to Pantheon using FileZilla.
 
 ## Download FileZilla
 

@@ -6,7 +6,7 @@ cms: "Drupal 8"
 categories: [integrate]
 tags: [upstreams, site]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 multidev: true
 ---
 
@@ -113,7 +113,7 @@ In addition to Pantheon, you will need accounts at:
    ```
 
 
-2. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a succefull install:
+2. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a successful install:
 
     ![Drupal Commerce in the Toolbar](../../images/guides/drupal-8-commerce/commerce-button.png)
 

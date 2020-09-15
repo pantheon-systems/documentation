@@ -9,7 +9,7 @@ categories: [develop]
 tags: [cli, local, plugins, terminus, workflow]
 nexturl: terminus/plugins/create/
 previousurl: terminus/plugins/
-permalink: docs/terminus/plugins/:basename/
+permalink: docs/terminus/plugins/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---

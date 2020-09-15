@@ -39,7 +39,7 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
    drush config:import -y
    ```
 
-1.  Profit.
+1. Profit.
 
 Using Terminus, you can complete the above process from the command line.
 
@@ -47,51 +47,64 @@ Using Terminus, you can complete the above process from the command line.
 
 In the commands below, replace `site` with your site name and the correct environment:
 
-1.  `terminus drush <site>.dev -- config:export -y`
+```bash{outputLines: 2,4,6,8,10,12,14}
+terminus drush <site>.dev -- config:export -y
 
-1.  `terminus env:commit <site>.dev --message="Export configuration to code"`
+terminus env:commit <site>.dev --message="Export configuration to code"
 
-1.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
+terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"
 
-1.  `terminus drush <site>.test -- config:import -y`
+terminus drush <site>.test -- config:import -y
 
-1.  `open https://test-mysite.pantheonsite.io`
+open https://test-mysite.pantheonsite.io
 
-1.  `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
+terminus env:deploy <site>.live --cc --note="Deploy configuration to live"
 
-1.  `terminus drush <site>.live -- config:import -y`
+terminus drush <site>.live -- config:import -y
 
-1.  `open https://live-mysite.pantheonsite.io`
+open https://live-mysite.pantheonsite.io
+```
 
 ## Configuration Tools for Drupal 8
+
 With [Drupal 8](https://pantheon.io/drupal-8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
 
 ## Config Direct Save Module
+
 If you prefer to use a GUI to manage configuration management, try the Config Direct Save Module, available on [Drupal.org](https://www.drupal.org/project/config_direct_save). Activating this module creates a new **Update** menu option under your configuration menu. This module can make backups of configurations (when you check the backup check box) and override the sync (all files with old configuration) by the new configurations (replace all configurations files).
 
 ## Drush Config Workflow
+
 Even with tools, a project needs to make a plan to manage the configuration workflow. To help projects get started, Pantheon has set up a public repository called [Drush Config Workflow](https://github.com/pantheon-systems/drush-config-workflow). This repository contains documentation on a couple of different configuration workflows that can be used during different phases of a project.
 
 ### Git Configuration
+
 The [Git configuration workflow](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/git_workflow.md) describes how to use `config-merge` to export your configuration changes, commit them to Git, push them to the central repository, pull the changes locally, and then merge them with your local development site’s configuration. All of this is done in a single command.
 
 ### rsync Configuration
+
 The [rsync configuration workflow](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/rsync_workflow.md) allows you to use a similar workflow in situations where you cannot make commits on the remote Drupal site. In these instances, `config-merge` will export changes to a temporary directory and then rsync them to the local system, where they are committed to a temporary branch in Git and then merged with the local configuration changes.
 
 ### Three-way Merge
+
 Additionally, the [three-way merge page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/three_way_merge.md) in this repository describes what to do when the `config-merge` tool encounters a conflict, and brings up a three-way merge tool such as [kdiff3](http://kdiff3.sourceforge.net/). This tool can considerably reduce the time needed to comprehend and resolve merge conflicts.
 
 ![MySQL Credentials](../images/kdiff3-user-field-conflicts.png)
 
 ### Installation Script
+
 If you would like to try out any of the example scenarios presented in the repository, there is also a handy installation script that will quickly set up a local environment for you to use. It can be used to either clone a Pantheon site locally, or it can create both sites locally. Instructions on how to use the script are detailed on the [installation page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/INSTALL.md).
 
 ## Relocated Configuration Directory
+
 Configuration files can contain sensitive information. Drupal takes some measures to protect the default configuration directory, but the conventional way to secure these files is to locate them outside of the document root so they are not web accessible. Following this convention may help make site configuration easier to manage.
+
 ### Before you Begin
+
 - Refer to [Serving Sites from the Web Subdirectory](/nested-docroot) to enable nested docroot on a new or existing Drupal 8 site.
 
 ### Configure and Relocate
+
 After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`<Popover title="Syntax note" content="As of <a class='external' href='https://www.drupal.org/docs/8/configuration-management/changing-the-storage-location-of-the-sync-directory#s-syntax-changes-in-drupal-880'>Drupal 8.8.0</a> the sync directory is defined in $settings and not $config_directories. " />:
 
 ```php:title=settings.php
@@ -109,7 +122,7 @@ Care should be taken to ensure that this code is added after the `settings.panth
 
 Relocate the configuration directory for the default location using `git mv`:
 
-```bash
+```bash{promptUser: user}
 git mv web/sites/default/files/config .
 ```
 

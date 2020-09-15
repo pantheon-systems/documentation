@@ -4,7 +4,7 @@ description: Use GitHub to collaborate with the team members on your Pantheon si
 categories: [develop]
 tags: [collaborate, git, local, webops, workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [bmackinney, jessifischer, mrfelton]
 date: 4/3/2015
 ---

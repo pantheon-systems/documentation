@@ -2,22 +2,13 @@
 title: Quick Start
 subtitle: Create New Site
 description: In part three of our Quick Start guide, learn how to create your new Pantheon site.
-quickstart: true
 anchorid: create-new-site
 generator: pagination
 layout: guide
 categories: [get-started]
 tags: [dashboard, users, workflow]
 type: guide
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/create-new-site/
-nexturl: guides/quickstart/site-dashboard/
-nextpage: Site Dashboard
-previousurl: guides/quickstart/user-dashboard/
-previouspage: User Dashboard
 editpath: quickstart/03-create-new-site.md
 image: launchGuide-twitterLarge
 ---

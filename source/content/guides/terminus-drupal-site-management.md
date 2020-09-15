@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [get-started]
 tags: [terminus, drush]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [erikmathy]
 date: 2/25/2015
 ---
@@ -48,29 +48,40 @@ terminus site:list
 
 ### Create a Brand New Site
 
-Now let's create a new site:
+Now let's create a new site.
 
-```bash{outputLines:2}
-terminus upstream:list | grep "Drupal 7" | grep "core"
-21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                                                                  vanilla      core          drupal
-```
+1. List the available Upstreams:
 
-```bash{outputLines:2-4}
-terminus site:create terminus-cli-create "Terminus CLI Create" 21e1fada-199c-492b-97bd-0b36b53a9da0
-[notice] Creating a new site...
-```
+ ```bash{outputLines:2}
+ terminus upstream:list | grep "Drupal 7" | grep "core"
+ 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                               drupal7                                         core     drupal
+ ```
 
-```bash{outputLines:1-8}
-terminus site:list
-+--------------------------+-----------+---------------+--------------------------+
-| Site                     | Framework | Service Level | UUID                     |
-+--------------------------+-----------+---------------+--------------------------+
-| terminus-cli-create      | drupal    | free          | terminus-cli-create      |
-| terminus-create          | drupal8   | free          | terminus-create          |
-| git-import-example       | drupal    | free          | git-import-example       |
-+--------------------------+-----------+---------------+--------------------------+
+   - If the Upstream ID in the output you receive is shorter than 36 characters (including hyphens), enlarge your terminal window and run the command again. Otherwise, you might encounter an error similar to:
 
-```
+  ```bash
+  Could not find an upstream identified by 21e1fada-199c-492b.
+  ```
+
+1. Create a site using the Upstream:
+
+ ```bash{outputLines:2}
+ terminus site:create terminus-cli-create "Terminus CLI Create" 21e1fada-199c-492b-97bd-0b36b53a9da0
+ [notice] Creating a new site...
+ ```
+
+1. View the new site list:
+
+ ```bash{outputLines:2-8}
+ terminus site:list
+ +--------------------------+-----------+---------------+--------------------------+
+ | Site                     | Framework | Service Level | UUID                     |
+ +--------------------------+-----------+---------------+--------------------------+
+ | terminus-cli-create      | drupal    | free          | terminus-cli-create      |
+ | terminus-create          | drupal8   | free          | terminus-create          |
+ | git-import-example       | drupal    | free          | git-import-example       |
+ +--------------------------+-----------+---------------+--------------------------+
+ ```
 
 ### Update the Code
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready  for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.

@@ -97,7 +97,7 @@ For details, see the [Optimize command](https://solarium.readthedocs.io/en/stabl
 
 <Alert title="Note" type="info">
 
-Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment separately.
 
 </Alert>
 

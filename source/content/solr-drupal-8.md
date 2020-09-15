@@ -10,7 +10,7 @@ contributors: [peter-pantheon, cityofoaksdesign]
 
 <Alert title="Important Note" type="info">
 
-**Pantheon Search** derives from Solr and can perform full-text content searching in a single language. 
+**Pantheon Search** derives from Solr and can perform full-text content searching in a single language.
 
 <Partial file="solr-version.md" />
 

@@ -5,7 +5,7 @@ cms: "WordPress"
 categories: [get-started]
 tags: [terminus, wp-cli]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [bmackinney, calevans, stevector, tessak22, davidneedham]
 date: 3/7/2017
 ---

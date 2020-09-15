@@ -7,7 +7,7 @@ type: terminuspage
 layout: terminuspage
 categories: [develop]
 tags: [cli, drush, terminus, workflow, wp-cli]
-permalink: docs/:basename/
+permalink: docs/:basename
 nexturl: terminus/install/
 image: terminus-thumbLarge
 reviewed: "2020-02-05"

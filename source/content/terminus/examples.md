@@ -11,7 +11,7 @@ categories: [develop]
 tags: [cli, local, terminus, updates, workflow]
 nexturl: terminus/commands/
 previousurl: terminus/install/
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---

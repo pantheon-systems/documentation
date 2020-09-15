@@ -158,7 +158,7 @@ Since the `rm -r` command is not available over SFTP on Pantheon, an alternative
 On your local machine, you must first create an empty folder with `mkdir empty_folder`. The folder can be named anything, as long as it's empty.
 
 ```bash
-export ENV=env # Replace with the site envornment, usually dev, test, or live
+export ENV=env # Replace with the site environment, usually dev, test, or live
 export SITE=uuid # Replace with the site UUID, which you can find from the Site Dashboard URL or terminus site:info $sitename --field=id
 
 rsync -rLvz --size-only --checksum --ipv4 --progress -a --delete -e 'ssh -p 2222' empty_folder/ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/remote_folder_to_empty

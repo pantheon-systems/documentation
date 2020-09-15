@@ -60,7 +60,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 2. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
 
-    ![Copy Past Git Clone](../images/dashboard/git-string.png)<br />
+    ![Copy and Paste Git Clone](../images/dashboard/git-string.png)<br />
 
 3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
@@ -70,7 +70,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
     If everything worked correctly, you will see Git fetching the data:
 
-    ```bash
+    ```none
     Cloning into 'anita-wordpress'...
     The authenticity of host '[codeserver.dev.....drush.in]:2222 ([173.255.119.72]:2222)' can't be established.
     RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.

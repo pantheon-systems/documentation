@@ -194,7 +194,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations)** tab within the Pantheon Dashboard and select your organization:
 
-  ![Organization Dashobard](../images/dashboard/organizations.png)
+  ![Organization Dashboard](../images/dashboard/organizations.png)
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
@@ -234,7 +234,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations)** tab within the Pantheon Dashboard and select your organization:
 
-  ![Organization Dashobard](../images/dashboard/organizations.png)
+  ![Organization Dashboard](../images/dashboard/organizations.png)
 
 2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
