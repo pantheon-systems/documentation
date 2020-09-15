@@ -13,7 +13,7 @@ Pantheon offers a number of [ways to connect to your site](/guides/quickstart/co
 
 Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview, even when you don't have an internet connection.
 
-Localdev is in active development, with new features and updates coming soon.
+Localdev is in active development, with new features and updates coming soon. Please submit feedback and feature requests through the [Pantheon Localdev Customer Feedback](https://docs.google.com/forms/d/e/1FAIpQLSdy2WU7H3bSd94YmEuTvGhzmmT_xP3LlCgORXOkTt-M8UIAXw/viewform) form.
 
 ## Install and Connect Localdev
 
@@ -121,6 +121,10 @@ While Localdev is in beta, [support request best practices](/support/#best-pract
 
 1. Report the error:
    - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/support/#real-time-chat-support) and include the steps you took to reproduce the error.
+
+### Provide Feedback or Feature Requests
+
+Please submit feedback and feature requests through the [Pantheon Localdev Customer Feedback](https://docs.google.com/forms/d/e/1FAIpQLSdy2WU7H3bSd94YmEuTvGhzmmT_xP3LlCgORXOkTt-M8UIAXw/viewform) form.
 
 ### Log out and Reset to Defaults
 
