@@ -138,14 +138,14 @@ No, Pantheon is neither a domain registrar nor a DNS manager. Many platforms and
 
 <Accordion title="Learn More" id="nameservers-drop" icon="lightbulb">
 
-  Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
+Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
 
-  * **Large organizations and institutions with Information Technology departments that operate or configure DNS.** If Pantheon required use of particular DNS servers, it would interfere with the ability to use Pantheon for the organization's websites.
-  * **Digitally signing DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions).** While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
-  * **Uncommon record types.** If Pantheon required use of specific nameservers, it's unlikely that all of the desired record types would be available, particularly legacy ones.
-  * **Programmatic updates.** Such use cases include domain control validation for obtaining certificates and automated responses to security events. Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
+* **Large organizations and institutions with Information Technology departments that operate or configure DNS.** If Pantheon required use of particular DNS servers, it would interfere with the ability to use Pantheon for the organization's websites.
+* **Digitally signing DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions).** While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
+* **Uncommon record types.** If Pantheon required use of specific nameservers, it's unlikely that all of the desired record types would be available, particularly legacy ones.
+* **Programmatic updates.** Such use cases include domain control validation for obtaining certificates and automated responses to security events. Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
 
-  If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/), [Google Cloud DNS](https://cloud.google.com/dns/), or [Cloudflare](https://woorkup.com/cloudflare-dns/).
+If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/), [Google Cloud DNS](https://cloud.google.com/dns/), or [Cloudflare](https://woorkup.com/cloudflare-dns/).
 
 </Accordion>
 
@@ -177,6 +177,14 @@ Pantheon provides `A` and `AAAA` values:
 
 ![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
 
+<Accordion title="Learn More" id="example-panel" icon="education">
+
+In the past, Pantheon used a mix of  `A`/`AAAA` and `CNAME` records. We've since standardized to only `A`/`AAAA`, which reduces complexity and confusion. `CNAME` records introduce an additional point of failure by requiring an additional lookup from `CNAME` to `A` before getting an IP address.
+
+Additionally, the use of an `MX` or `TXT` record prevents the use of a `CNAME`, and vice versa.
+
+</Accordion>
+
 ### Why does my domain say "Update Recommended?"
 
 The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyphicons-alert text-warning"></span> **Update Recommended** when the Platform detects a CNAME record pointed to Pantheon, or when A/AAAA records are not detected.
@@ -186,6 +194,7 @@ Click **Details** to find the values required for A and AAAA records to add, or 
 Log in to your DNS provider to make the recommended changes. We have instructions for [many popular DNS providers](/dns-providers) to help make the required adjustment.
 
 ### Can I override DNS locally?
+
 Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 <Partial file="_hosts-file.md" />
