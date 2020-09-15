@@ -17,7 +17,7 @@ If your work is already updated but still listed here, let us know so we can rem
 
 ### Assumed Write Access
 
-Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the code base in Test and Live environments.
+Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
 See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
@@ -222,7 +222,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 
 **Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/), the plugin code fails for upload directories that are symlinks.
 
-**Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the code base in `wp-content` or another subdirectory thereof.
+**Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the codebase in `wp-content` or another subdirectory thereof.
 
 ___
 
@@ -643,6 +643,13 @@ ___
 
 ___
 
+## [WebP Express](https://wordpress.org/plugins/webp-express/)
+
+<ReviewDate date="2019-08-25" />
+
+**Issue:** WebP Express assumes write access to paths in the codebase that are write-only in non-dev environments. Because the plugin uses `is_dir` to check for the path, a symlink to `files/` does not resolve the issue.
+___
+
 ## [Weather Station](https://wordpress.org/plugins/live-weather-station/)
 
 **Issue:** This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
@@ -689,7 +696,7 @@ ___
 
 <ReviewDate date="2020-07-15" />
 
-**Issue:** Wordfence assumes write access to several files in the code base to store configuration and log files.
+**Issue:** Wordfence assumes write access to several files in the codebase to store configuation and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
