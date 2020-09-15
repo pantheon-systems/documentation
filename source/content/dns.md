@@ -179,7 +179,7 @@ Pantheon provides `A` and `AAAA` values:
 
 <Accordion title="Learn More" id="example-panel" icon="education">
 
-In the past, Pantheon used a mix of  `A`/`AAAA` and `CNAME` records. We've since standardized to only `A`/`AAAA`, which reduces complexity and confusion. `CNAME` records introduce an additional point of failure, by requiring an additional lookup from `CNAME` to `A` before getting an IP address.
+In the past, Pantheon used a mix of  `A`/`AAAA` and `CNAME` records. We've since standardized to only `A`/`AAAA`, which reduces complexity and confusion. `CNAME` records introduce an additional point of failure by requiring an additional lookup from `CNAME` to `A` before getting an IP address.
 
 Additionally, the use of an `MX` or `TXT` record prevents the use of a `CNAME`, and vice versa.
 
