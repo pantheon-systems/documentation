@@ -51,11 +51,13 @@ ___
 
 ___
 
-## [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
+## [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth)
 
-**Issue**: This contrib module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
+<ReviewDate date="2020-08-25" />
 
-**Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/security/#troubleshoot).
+**Issue**: This module conflicts with [Pantheon's Dashboard Security Tool](/security#password-protect-your-sites-environments) when both are enabled on Drupal sites, resulting in 403 errors.
+
+**Solution**:  We suggest using Pantheon's Dashboard Security Tool if you want to set up HTTP authentication. Additionally, see [Advanced Redirects and Restrictions](/advanced-redirects) for more options to control and restrict access to some or all of your site.
 
 ___
 
