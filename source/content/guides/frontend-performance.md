@@ -7,18 +7,26 @@ type: guide
 layout: doc
 image: CDN-speedTest-docs-guide
 permalink: docs/guides/:basename
-contributors: [tessak22, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham]
+contributors: [tessak22, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham,carolyn-shannon]
 ---
+Slow websites are **bad**. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/). In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.
 
-Slow websites are **bad**. Many studies have looked at this and the facts are in. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/). In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.
+There are many different ways to measure page speed and performance. This guide will help you tune your site for the metrics in [Google's Core Web Vitals](https://web.dev/vitals/#core-web-vitals), which focus on three aspects of the user experience—loading, interactivity, and visual stability. 
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
+These metrics include:
 
-Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
+## Loading Performance
+**LCP (Largest Contentful Paint)** measures loading performance. Ideally, LCP should occur no more than 2.5 seconds after the page starts loading.
 
-</Enablement>
+The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds.
 
-There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth by [Google's mobile speed test](https://testmysite.thinkwithgoogle.com/):
+## Interactivity Delay
+**FID (First Input Delay)** measures how long it takes before interaction with the page is possible. A FID of less than 100 milliseconds provides optimal user experience.
+
+## Visual Stability
+**CLS (Cumulative Layout Shift)** measures visual stability, and helps quantify how often users experience unexpected layout shifts. Pages should maintain a CLS of less than 0.1. 
+
+To tune your site for these metrics, focus on these key areas:
 
 - Reduce Server Response Time
 - Compress Images
