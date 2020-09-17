@@ -1855,6 +1855,10 @@ pre code .hljs,
 .pio-dropzone hr {
 	width: 100px;
 }
+hr.commandHr {
+	border-top: 1px solid #DDE5E7;
+	margin: 1em;
+}
 .pio-dropzone .lead {
 	margin-bottom: 10px;
 	font-weight: normal;

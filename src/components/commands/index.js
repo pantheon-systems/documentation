@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 
 const Commands = ({ data }) => {
   const [search, setSearch] = useState("")
-
+  const slugRegExp = /:/g
   return (
     <div className="container col-md-12">
       <div className="form-group">
@@ -47,7 +47,7 @@ const Commands = ({ data }) => {
                 return (
                   <tr key={i}>
                     <td>
-                      <strong className="command-name">{command.name}</strong>
+                      <Link className="command-name" to={`/terminus/commands/${command.name.replace(slugRegExp, "-")}`}>{command.name}</Link>
                       <br />
                       <small>{command.description}</small>
                     </td>
