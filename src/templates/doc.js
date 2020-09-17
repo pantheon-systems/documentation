@@ -107,7 +107,7 @@ class DocTemplate extends React.Component {
         />
         <main id="doc">
           <div className="container doc-content-well">
-            <article className="doc article col-md-9 md-70">
+            <article className="doc article col-md-9 md-70" id="doc">
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}

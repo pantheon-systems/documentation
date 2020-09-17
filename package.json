@@ -34,6 +34,7 @@
     "gatsby-plugin-sharp": "^2.5.6",
     "gatsby-plugin-sitemap": "^2.3.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-autolink-headers": "^2.3.11",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.2.3",
     "gatsby-remark-embed-markdown": "0.0.4",

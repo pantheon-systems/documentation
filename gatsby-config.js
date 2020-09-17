@@ -175,6 +175,7 @@ module.exports = {
             },
           },
           `gatsby-remark-static-images`,
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
