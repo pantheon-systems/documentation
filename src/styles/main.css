@@ -972,6 +972,7 @@ span#changelog-rsaquo {
 }
 .guide-content-well {
 	/*border-bottom: .1em solid #eef2f3;*/
+        padding-top: 20px;
 }
 .doc-content-well {
 	padding-bottom: 50px;
