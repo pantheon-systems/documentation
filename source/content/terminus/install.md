@@ -8,7 +8,6 @@ tags: [cli, local, terminus, workflow]
 permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 reviewed: "2020-08-14"
-searchboost: 100
 ---
 
 Terminus is available for macOS and Linux.
@@ -28,7 +27,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 There are several ways to install Terminus, depending on your use case:
 
-- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus).
+- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
 - For a Composer-managed version of Terminus that is _not_ part of your other Composer-managed project(s) and doesn't utilize global Composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
 
