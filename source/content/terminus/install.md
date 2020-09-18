@@ -29,10 +29,10 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 There are several ways to install Terminus, depending on your use case:
 
 - For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus).
-- For a composer-managed version of Terminus that is _not_ part of your other composer-managed project(s) and doesn't utilize global composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
+- For a Composer-managed version of Terminus that is _not_ part of your other Composer-managed project(s) and doesn't utilize global Composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
 
-### Standalone Terminus
+### Standalone Terminus PHAR
 
 The following commands will:
 
@@ -57,7 +57,7 @@ There is an unofficial third-party installer script which will download `terminu
 
 ### Terminus Installer PHAR
 
-Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
+The Terminus `installer.phar` can be used to install a Composer-managed version of Terminus that is not part of your other Composer-managed project(s) and doesn't utilize global Composer installations. Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
 
 ```bash{promptUser: user}
 mkdir ~/terminus && cd ~/terminus
