@@ -11,7 +11,6 @@ tags: [cli, local, plugins, terminus, updates, workflow]
 permalink: docs/terminus/:basename
 previousurl: terminus/configuration/
 image: terminus-thumbLarge
-searchboost: 100
 ---
 
 <Alert title="Warning" type="danger">
@@ -22,7 +21,19 @@ The recent 2.x releases of Terminus signify a major version upgrade, which may n
 
 <TerminusVersion text="Update to the Current Release" />
 
-Navigate to the directory where Terminus was originally installed, then run:
+## Update Standalone Terminus
+
+If you used the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation, you can update to newer versions with:
+
+```bash{promptUser: user}
+terminus self:update
+```
+
+Note that the `self:update` command is only available for the standalone Terminus installation.
+
+## Update Terminus Installer PHAR
+
+To update the Composer-managed version of Terminus that was installed with the [Terminus Installer PHAR](/terminus/install#terminus-installer-phar), navigate to the directory where Terminus was originally installed, then run:
 
 ```bash{promptUser: user}
 curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
@@ -40,13 +51,17 @@ releases.
 
 ### Nothing to install or update
 
-If the update command above returns output indicating that no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the install command:
+For Composer-managed Terminus installations, if the update command above returns output indicating that no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the install command:
 
 ```bash{promptUser: user}
 rm -rf $HOME/terminus mkdir $HOME/terminus cd $HOME/terminus curl -O
 https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
 php installer.phar install
 ```
+
+### Self:update not defined
+
+The `self:update` command is only available for standalone Terminus installed using the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar). If `self:update` returns a not defined error, use the [Terminus Installer PHAR](#update-terminus-installer-phar) update instructions above.
 
 ## EOL Timeline
 

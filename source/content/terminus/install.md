@@ -87,14 +87,6 @@ terminus auth:login --email=dev@example.com
 
 Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
-## Update Terminus
-
-If you used the [installer PHAR](#terminus-installer-phar) or are using a [standalone Terminus](#standalone-terminus) installation, you can update to newer versions with:
-
-```bash{promptUser: user}
-terminus self:update
-```
-
 ## Troubleshooting
 
 ### Permission Denied
