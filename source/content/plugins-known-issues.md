@@ -117,9 +117,9 @@ function is_mobile() {
 
 ___
 
-## [Autoptimize](https://wordpress.org/plugins/autoptimize/)
+## Autoptimize
 
-<ReviewDate date="2020-02-10" />
+<ReviewDate date="2020-02-10" link="https://wordpress.org/plugins/autoptimize/"/>
 
 **Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
