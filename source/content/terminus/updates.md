@@ -23,7 +23,7 @@ The recent 2.x releases of Terminus signify a major version upgrade, which may n
 
 ## Update Standalone Terminus
 
-If you used the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation, you can update to newer versions with:
+If you used the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation, update to the newest version with:
 
 ```bash{promptUser: user}
 terminus self:update
