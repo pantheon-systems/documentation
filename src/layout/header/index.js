@@ -1,7 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
-import AddSearch from "../../components/addSearch"
+//import AddSearch from "../../components/addSearch"
+import Search from "../../components/search"
+const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 const Header = ({ data, page }) => (
   <>
@@ -153,30 +155,7 @@ const Header = ({ data, page }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
-              <form
-                id="searchform"
-                action="/docs/search"
-                role="search"
-                acceptCharset="UTF-8"
-                encType="application/x-www-form-urlencoded"
-                title="Search Pantheon Documentation form"
-              >
-                <input
-                  type="search"
-                  className="addsearch"
-                  placeholder="Search Pantheon Documentation"
-                  aria-label="Search through documentation"
-                />
-                { page == "default" ?
-                  <AddSearch />
-                  : null
-                }
-              </form>
-              <span
-                className="glyphicon glyphicon-search form-control-feedback"
-                aria-hidden="true"
-              />
-              <span className="sr-only">(search)</span>
+              <Search indices={searchIndices} />
             </div>
           </div>
         </div>
