@@ -1,5 +1,5 @@
 ---
-title: Basic Troubleshooting 
+title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
 categories: [wordpress, drupal]
 contributors: [alexfornuto, eabquina, carlalberto]
@@ -9,6 +9,67 @@ reviewed: "2020-08-26"
 This page is a collection of common troubleshooting tactics, curated from our Customer Success Engineers and the Pantheon community. These procedures can help you solve issues your site may have, or at the very least rule out potential causes.
 
 Like all pages in this project, this is a living document. Please feel free to [add](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md) your expertise to the page to help others.
+
+## Reproduce the issue
+
+If you're fielding a bug report from an end-user, you'll likely need to be able to reproduce the issue yourself in order to find the cause. For example, if a user reports that they’re unable to sign up for an account, try signing up for an account yourself to get a better idea of what exactly occurs.
+
+## Check your logs for errors and warnings
+
+Live sites do not show errors by default, but you can spot them by reviewing your PHP error log, or in Drupal, checking your watchdog log if the core dblog module is enabled.
+
+In some cases, you may also run into the notorious “White screen of death” (WSOD), in which nothing prints to the screen at all. Similarly, in Drupal, you may see the cryptic “This website has encountered an unexpected error” message. If this happens, check your logs.
+
+If you’re not sure if what you see in the log is coming from the problem at hand, you can try to reproduce the problem, then check your logs again.
+
+If you’re handling a report of a problem from someone else and can’t reproduce it yourself, ask them what time the problem occurred so that you can compare that report to timestamps in the error log. Keep in mind that you may have to convert timezones depending on where your users are.
+
+### Search online for errors
+
+PHP errors coming from Drupal or WordPress code tend to not be specific to Pantheon, so a good first step on these if you’re not clear what the error means is to just search for it in your favorite search engine.
+
+Odds are, someone else has run into the same problem and reported it in forums on wordpress.org or the issue queues on Drupal.org, and it’s possible that someone has posted a solution or workaround.
+
+## Update the problem theme, module or plugin
+
+If you’ve narrowed the problem down to a specific module or plugin and you’re running an outdated version, try updating it first. The new release may include a fix for the issue, but even if it doesn’t, you’ll need to be running the newest version to report an issue.
+
+## Clear caches
+
+Sometimes your CMS may encounter issues due to cached data that ends up in an odd state.
+
+Clear your site cache using the Pantheon Dashboard, or with Terminus.
+
+Clear Redis using the Redis CLI.
+
+## Investigate recent changes
+
+Site problems may feel random, but they’re all triggered by _something_. Was there a recent code change? A plugin update? A configuration edit? Rolling things back can be a good first step to troubleshoot, even if it seems unlikely to be related.
+
+We recommend rolling back either the code or database versus a full restore in most cases. You can do this using Terminus.
+
+If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your nginx access logs.
+
+## Narrow down the cause
+
+Some issues don’t give you clear errors or a trace back to the exact place things go wrong. In that case, you may want to try the “process of elimination” style of debugging on your Dev or multidev environment:
+
+- Disable modules/plugins one by one
+- Switch the theme to a Twenty\* (WordPress) or Bartik (Drupal)
+
+Continue doing this until the problem no longer comes up.
+
+## Check status.pantheon.io
+
+If Pantheon is experiencing a platform issue that impacts sites, we post updates on our status page. You can subscribe to status updates on that page if you’d like, or follow @PantheonStatus on Twitter.
+
+## Use advanced debugging tools
+
+More complex issues with code may necessitate using debugging tools beyond your server or application logs.
+
+- Recreate the issue locally.
+- For WordPress, enable WP_DEBUG & WP_DEBUG_LOG in wp-config.php. Then use the debug.log file to find warnings and errors.
+- Use Xdebug to set application breakpoints and dig into stack traces.
 
 ## Pantheon Dashboard
 
