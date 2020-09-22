@@ -71,8 +71,14 @@ log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
   ```
 
 ### Troubleshooting "goaccess.conf Not Found"
-In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess versions 1.3 and earlier, `goaccess.conf` is not found by the binary. To resolve, [update your GoAccess package](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages).
 
+In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess versions 1.3 and earlier, `goaccess.conf` is not found by the binary.
+
+To resolve, [update your local packages](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages), or to update the GoAccess package specifically:
+
+```bash{promptUser: user}
+brew upgrade goaccess
+```
 
 ## Automate GoAccess Reports
 
