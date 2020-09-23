@@ -5,7 +5,7 @@ import './style.css';
 import Search from "../../components/search"
 const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
-const Header = ({ data, page }) => (
+const Header = ({ data, page, search }) => (
   <>
     <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
     <div id="skiptocontent"><a href="#docs-main">skip to main content</a></div>
@@ -155,7 +155,7 @@ const Header = ({ data, page }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
-              <Search indices={searchIndices} />
+              <Search indices={searchIndices} searchQuery={search}/>
             </div>
           </div>
         </div>

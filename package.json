@@ -63,6 +63,7 @@
     "node-font-awesome": "^1.0.2",
     "node-sass": "^4.14.1",
     "prismjs": "^1.20.0",
+    "query-string": "^6.13.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",

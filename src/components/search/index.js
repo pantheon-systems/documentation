@@ -11,9 +11,11 @@ const theme = {
   background: "white",
   faded: "#888",
 }
-export default function Search({ indices }) {
+export default function Search({ indices, searchQuery }) {
+  //console.log("searchQuery in search component: ", searchQuery) //For Debugging
   const rootRef = createRef()
-  const [query, setQuery] = useState()
+  const [query, setQuery] = useState(searchQuery)
+  //console.log("Query: ", query) //For Debugging
   const [hasFocus, setFocus] = useState(false)
   const searchClient = algoliasearch(
     process.env.GATSBY_ALGOLIA_APP_ID,
