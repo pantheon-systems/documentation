@@ -12,7 +12,6 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use an SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
 
-
 ### REST API Providers
 
 Here are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration method:
@@ -27,6 +26,7 @@ Here are some popular email services you can use on the platform and their corre
 [SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/guides/sendgrid).
 
 ### SMTP Providers & Configurations
+
 Customers have successfully used [SendGrid](/guides/sendgrid), Gmail, Amazon SES, Mandrill, and other externally hosted SMTP based email providers.
 
 Pantheon strongly encourages using ports other than `25`, `465` or `587` to send email because those ports are often blocked by service providers as an anti-spam measure. Here’s a list of popular email providers and the alternate ports which Pantheon recommends:
@@ -72,14 +72,18 @@ Once you have chosen your SMTP provider, install and configure WordPress's [WP M
 This is a common error with the SMTP Authentication Support module. It can be fixed in a few steps:
 
 1. Copy the file from `.../files/mailsystem/filename.inc`
-2. Place in a custom module's includes dir and .info file using `files[] = includes/filename.inc`.
-3. Remove the original file from the `{registry}` table:
+1. Place in a custom module's includes dir and .info file using `files[] = includes/filename.inc`.
+1. Remove the original file from the `{registry}` table:
 
-        DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
+  ```sql
+  DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
+  ```
 
-4. [Clear the cache](https://github.com/pantheon-systems/cli):
+1. [Clear the cache](https://github.com/pantheon-systems/cli):
 
-        terminus drush <site>.<env> -- cc all
+  ```bash{promptUser: user}
+  terminus drush <site>.<env> -- cc all
+  ```
 
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
@@ -90,26 +94,30 @@ SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you
 ## Frequently Asked Questions
 
 ### Can I use Pantheon's local MTA (postfix)?
+
 We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
 ### Can I access the mail logs for my site?
+
 No, mail logs are not available for download and we do not recommend using the local MTA (postfix).
 
 ### What ports are recommended by Pantheon?
+
 Pantheon strongly encourages using ports other than `25`, `465` or `587` to send email because those ports are often blocked by service providers as an anti-spam measure.  Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
 
 ### Are there SPF records for Pantheon's local MTA (postfix)?
+
 If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
 
-```
+```none
 v=spf1 include:spf.example.com include:spf.pantheon.io ~all
 ```
 
 Adjust the above example record as needed for your domain:
 
- - Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
- - If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
- - To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
+- Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
+- If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
+- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 

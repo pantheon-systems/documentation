@@ -28,9 +28,9 @@ Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://
 The details of executing an upgrade/migration to Drupal 8 have continued to shift since Drupal 8.0.0 was released. As such, this documentation will focus on the Pantheon-specific aspects. Read the [drupal.org documentation the migration process](https://www.drupal.org/docs/8/upgrade/brief-overview-and-history-of-automated-upgrading-to-drupal-8) before starting on your own migration on Pantheon. The basic steps you will follow to migrate to a Drupal 8 site on Pantheon are:
 
 1. Create a new Drupal 8 site on Pantheon from your User Dashboard.
-2. Add the 8.x version of your contrib modules. Some of these modules will have built-in migrating functionality that will help move their data from Drupal 7 to Drupal 8.
-3. Use the [Migrate](https://www.drupal.org/project/migrate) module to move over data and configuration from Drupal 6 or 7.
-4. Depending on the complexity of your site, you will likely want to review, revise, and rerun your migration.
+1. Add the 8.x version of your contrib modules. Some of these modules will have built-in migrating functionality that will help move their data from Drupal 7 to Drupal 8.
+1. Use the [Migrate](https://www.drupal.org/project/migrate) module to move over data and configuration from Drupal 6 or 7.
+1. Depending on the complexity of your site, you will likely want to review, revise, and rerun your migration.
 
 ### Content and configuration
 
@@ -47,29 +47,31 @@ We have [an example repository](https://github.com/stevector/migrate_pantheon) t
 
 The critical commands are:
 
-
-```
+```bash{promptUser: user}
 terminus drush my-drupal-8-site.dev -- migrate-upgrade --legacy-db-key=drupal_7 --configure-only --legacy-root=https://drupal7.example.com
 ```
+
 This command configures (but does not run) the migrations from Drupal 6 or 7 to Drupal 8. In this example, the Drupal 8 site is named `my-drupal-8-site` and the command is running on the `dev` environment. The `--legacy-db-key` parameter indicates how to get the login credentials to the source Drupal 6 or 7 database. In our example, we use the [Terminus secrets](https://github.com/pantheon-systems/terminus-secrets-plugin) plugin to supply the connection info. [See our blog post for more information on how this flag is used](https://pantheon.io/blog/running-drupal-8-data-migrations-pantheon-through-drush). The `--legacy-root` flag lets Drupal 8 know from where it can grab images and other uploaded media assets.
 
 The following command generates a report on how many items have been imported by each migration:
-```
+
+```bash{promptUser: user}
 terminus drush my-drupal-8-site.dev -- migrate-status
 ```
 
 The following command runs the migration configured via `drush migrate-upgrade --configure-only`:
-```
+
+```bash{promptUser: user}
 terminus drush my-drupal-8-site.dev -- migrate-import --all
 ```
 
 ## Upgrade from Drupal 6 to Drupal 7
 
 1. Start a new site using Drupal 7 as the start state.
-2. Add the 7.x version of your contrib modules.
-3. Import your existing database from Drupal 6 to the Drupal 7 site.
-4. Run the core upgrade process.
-4. Debug, QA, release.
+1. Add the 7.x version of your contrib modules.
+1. Import your existing database from Drupal 6 to the Drupal 7 site.
+1. Run the core upgrade process.
+1. Debug, QA, release.
 
 ### Content and Configuration
 
@@ -81,15 +83,15 @@ If you are not having much luck with update.php, consider setting up the new sit
 
 If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Relaunch Existing Pantheon Site](/relaunch). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/guides/launch/domains).
 
-
 ## Troubleshooting
 
 ### Timeouts or Max Memory Errors
+
 Migrations of particularly large sites to updated Drupal versions can sometimes hit the limits of memory allocated to sites on Pantheon. When possible, large site upgrade migrations should be performed locally, where the full system resources can be allocated to the task.
 
 ## See Also
-View the following [Drupal.org](https://drupal.org) resources for more information:
 
+View the following [Drupal.org](https://drupal.org) resources for more information:
 
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Executing a Drupal 6/7 to Drupal 8 upgrade](https://www.drupal.org/node/2257723)

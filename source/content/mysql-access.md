@@ -28,9 +28,10 @@ As each database server is in the cloud, the credentials will occasionally be up
 There's a wide array of MySQL clients that can be used, including [MySQL Workbench](https://dev.mysql.com/downloads/workbench/), [Sequel Pro](https://www.sequelpro.com/download), [Navicat](https://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
 
 ### Open Sequel Pro Database Connection
+
 Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Pro via [Terminus](/terminus) and [Drush](/drush):
 
-```bash
+```bash:title=establish-db-connection.sh
 #!/bin/bash
 
 # exit on any errors:
@@ -97,26 +98,31 @@ Developers can use SSH tunnels to add additional layers of encryption to remote 
 ## Troubleshooting MySQL Connections
 
 ### Lost Connection to MySQL Server
-```
+
+```sql
 ERROR 2013 (HY000): Lost connection to MySQL server at 'reading initial communication packet', system error: 0
 ```
+
 Or
-```
+
+```sql
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.$ENV.$SITE.drush.in' (111)
 ```
 
 This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 seconds of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
 
-```bash
+```bash{promptUser: user}
 terminus env:wake <site>.<env>
 ```
+
 ### Can't Connect to Local MySQL Server Through Socket
+
 See [Database Connection Errors](/database-connection-errors) to troubleshoot
- connection errors like the following:<br />
-```sql
+ connection errors like the following:
+
+```bash
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
-
 
 ## Frequently Asked Questions
 
