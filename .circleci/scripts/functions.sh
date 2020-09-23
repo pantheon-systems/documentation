@@ -35,6 +35,9 @@ gatsby-tokens() {
     echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
     echo "SEGMENT_KEY=$SEGMENT_KEY" >> .env.production
     echo "GTM_ID=$GTM_ID" >> .env.production
+    echo "GATSBY_ALGOLIA_APP_ID=$ALGOLIA_APP_ID" >> .env.production
+    echo "GATSBY_ALGOLIA_SEARCH_KEY=$ALGOLIA_SEARCH_KEY" >> .env.production
+    echo "ALGOLIA_ADMIN_KEY=$ALGOLIA_ADMIN_KEY" >> .env.production
 }
 
 getExistingTerminusEnvs() {
