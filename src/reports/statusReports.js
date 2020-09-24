@@ -57,13 +57,22 @@ const StatusReport = () => {
     
   }, [])
 
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+
   var thisDate = new Date()
 
-  var renderDate = (thisDate.getMonth()+1) + "/" + thisDate.getDate() + "/" + thisDate.getFullYear()
+  var renderDate = weekday[thisDate.getDay()] + ", " + (thisDate.getMonth()+1) + "/" + thisDate.getDate() + "/" + thisDate.getFullYear()
 
   var twoWeeksAgo = new Date()
   twoWeeksAgo.setDate(thisDate.getDate() - 14)
-  var renderTwoWeeksAgo = (twoWeeksAgo.getMonth()+1) + "/" + twoWeeksAgo.getDate() + "/" + twoWeeksAgo.getFullYear()
+  var renderTwoWeeksAgo = weekday[twoWeeksAgo.getDay()] + ", " + (twoWeeksAgo.getMonth()+1) + "/" + twoWeeksAgo.getDate() + "/" + twoWeeksAgo.getFullYear()
 
   const summRegex = /(?<=Summary\s*)[\s\S]*?(?=\s*##)/g
   //console.log("summRegex: ", summRegex)
