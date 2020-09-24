@@ -80,25 +80,27 @@ const StatusReport = () => {
           //console.log("Body:", item.body)//For Debugging
           return (
             <>
-              {item.body.match(summRegex) ? 
-                <>
-                <div id={item.id} dangerouslySetInnerHTML={{
-                  __html: converter.makeHtml(item.body.match(summRegex).toString() + ` <a href=${item._links.html.href}>PR ${item.number}</a>`)
-                }}/>
+              {
+                (item.body.match(summRegex) && item.merged_at) ?
+                  <>
+                  <div id={item.id} dangerouslySetInnerHTML={{
+                    __html: converter.makeHtml(item.body.match(summRegex).toString() + ` <a href=${item._links.html.href}>PR ${item.number}</a>`)
+                  }}/>
+                  </>
+                : (item.merged_at) ?
+                  <>
+                  <div id={item.id} dangerouslySetInnerHTML={{
+                    __html: converter.makeHtml(item.body.toString() + ` <a href=${item._links.html.href}>PR ${item.number}</a>`)
+                  }} />
                 </>
-                : 
-                <>
-                <div id={item.id} dangerouslySetInnerHTML={{
-                  __html: converter.makeHtml(item.body.toString() + ` <a href=${item._links.html.href}>PR ${item.number}</a>`)
-                }} />
-                </>
-                }
-
-            <p key={`${item.id}-date`} style={{userSelect: "none"}}>
-              Merged on {mergeDate.getMonth() + 1}/{mergeDate.getDate()}/{mergeDate.getFullYear()}
-            </p>
-            <hr key={`${item.id}-hr`}/>
-            <br key={`${item.id}-postBreak`}/>
+                : null
+              }
+              { item.merged_at ?
+                <p key={`${item.id}-date`} style={{userSelect: "none"}}>
+                  Merged on {mergeDate.getMonth() + 1}/{mergeDate.getDate()}/{mergeDate.getFullYear()}
+                </p>
+                : null
+              }
             </>
           )
         })}
