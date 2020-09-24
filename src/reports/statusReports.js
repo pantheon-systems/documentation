@@ -58,7 +58,12 @@ const StatusReport = () => {
   }, [])
 
   var thisDate = new Date()
-  //console.log("Today is: ", thisDate) //For Debugging
+
+  var renderDate = (thisDate.getMonth()+1) + "/" + thisDate.getDate() + "/" + thisDate.getFullYear()
+
+  var twoWeeksAgo = new Date()
+  twoWeeksAgo.setDate(thisDate.getDate() - 14)
+  var renderTwoWeeksAgo = (twoWeeksAgo.getMonth()+1) + "/" + twoWeeksAgo.getDate() + "/" + twoWeeksAgo.getFullYear()
 
   const summRegex = /(?<=Summary\s*)[\s\S]*?(?=\s*##)/g
   //console.log("summRegex: ", summRegex)
@@ -68,7 +73,8 @@ const StatusReport = () => {
     <Layout>
     <div>
       <h1>Recently Merged PRs</h1>
-      <h2> Today is {thisDate.toString()} </h2>
+      <h2> Today is {renderDate.toString()} </h2>
+      <h3> Two weeks ago was {renderTwoWeeksAgo.toString()}</h3>
       <br />
       <div id="summaries" style={{paddingLeft: "3em"}}>
 
