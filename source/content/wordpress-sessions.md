@@ -32,7 +32,7 @@ Due to how caching and sessions work, sessions need to be uncached to work prope
 
 Symptoms of this issue shows when the header is inspected, you will see that the session cookie is always set on every page load:
 
-```
+```http
 Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; HttpOnly
 ```
 

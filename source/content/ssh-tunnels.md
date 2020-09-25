@@ -28,7 +28,7 @@ Later versions of the MySQL client support the `--ssl` option.  Using this comma
 
 Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/terminus):
 
-```
+```bash
 terminus-sql-cli() {
   SITE=$1
   if [ x$SITE = x ]; then
@@ -59,6 +59,7 @@ Open a mysql connection to a site.
 }
 alias tsqlc=terminus-sql-cli
 ```
+
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
 From the Site Dashboard, access the environment you want to connect with, and click **Connection Info**. This will give you the required environment specific values for the command example below.
@@ -66,19 +67,26 @@ From the Site Dashboard, access the environment you want to connect with, and cl
 ![Connection info](../images/dashboard/connection-info.png)
 
 Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
-```
+
+```bash{promptUser: user}
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
+
 Replace `PORT` with the database port specified in the **Connection Info** tab. Do the same for `PASSWORD`, then execute the following:
-```bash
+
+```bash{promptUser: user}
 mysql -u pantheon -h 127.0.0.1 -P PORT pantheon -pPASSWORD
 ```
+
 <Alert title="Note" type="info">
+
 Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.
+
 </Alert>
 
 You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
-```bash
+
+```bash{promptUser: user}
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
 
@@ -89,29 +97,38 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ## Manually Create an SSH Tunnel to a Redis Cache Server
 
 From the site environment, get the one-line connection string. It will be in the following format:
-```bash
+
+```bash{promptUser: user}
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
+
 Use the port value from the above one-line connection string, the desired environment (Dev, Test, or Live), and the [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
-```bash
+
+```bash{promptUser: user}
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
 ```
+
 `PORT` is the database port specified in the **Connection Info** tab. Using the password and port found in the one-line connection string, run the following command:
-```bash
+
+```bash{promptUser: user}
 redis-cli -h 127.0.0.1 -p PORT -a PASSWORD
 ```
 
 You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
-```bash
+
+```bash{promptUser: user}
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
 
 ## Troubleshooting
+
 To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/mysql-access/#troubleshooting-mysql-connections).
 
 If port 2222 is blocked on your network you will see an error similar to the following:
-```
+
+```none
 SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
 Fatal: Could not read from remote repository.
 ```
+
 See [Port 2222 Blocked Workaround](/port-2222) for more information.

@@ -15,7 +15,6 @@ Pantheon provides APC by default across all plans, but the size of the APC memor
 
 Yes, APC can be used as a cache backend or a "key-value store"; however, this is not recommended. APC lacks the ability to span multiple server environments. Instead, Pantheon provides [Redis](/redis) as a caching backend for Drupal and WordPress, which has better performance.
 
-
 #### What happens if the APC memory cache is too small?
 
 If the size of the scripts loaded exceed the size of the APC cache, the cache will be flushed and rebuilt, resulting in slow execution time. Symptoms of this will include the following message in dev environments and in watchdog logs:
@@ -23,6 +22,7 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 ```php
 Warning: require_once(): Unable to allocate memory for pool.
 ```
+
 In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/plans/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. To learn more about how much memory your site is using, visit the site's [New Relic dashboard](/new-relic).
 
 #### How can I determine what my current APC settings are?
@@ -30,7 +30,6 @@ In these circumstances, either increasing the SHM size by [upgrading your accoun
 Search for `shm_size` in phpinfo.
 
 See [Securely Working with phpinfo](/phpinfo).
-
 
 ## Can the shm_size be configured manually?
 
@@ -51,12 +50,12 @@ If this happens often, a workaround would be to place the following at the top o
 ```php
 if (!class_exists('NAMEOFCLASSBEINGREDECLARED')) {
 ```
+
 then closing the condition with the corresponding bracket at the bottom:
 
-```
+```php
 }
 ```
-
 
 ### How do I clear the APC opcode cache?
 
@@ -86,6 +85,7 @@ APC shared memory is separate and distinct for each environment. A corruption in
 When the cache is cleared from the Dashboard, the APC cache is also flushed. As a result, the Drupal page load will repopulate the cache, which may in turn exceed the available shared memory. This circumstance is rare, but is possible.
 
 ## See Also
+
 - [Application Containers overview](/application-containers)
 - [Clearing the cache](/clear-caches)
 - [Redis](/redis)

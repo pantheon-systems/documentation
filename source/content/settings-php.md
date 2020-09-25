@@ -57,17 +57,18 @@ The `HASH_SALT` value should also be set within `settings.local.php`. See Drush 
 
 To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/terminus):
 
-```
+```bash{promptUser: user}
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
 Drupal 8 will not run locally without a hash salt, but it need not be the same one set on the Pantheon platform; any sufficiently long random string will do. Make sure to set one in `settings.local.php` :
 
-```
+```php:title=settings.local.php
 $settings['hash_salt'] = '$HASH_SALT';
 ```
 
 #### Trusted Host Setting
+
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 
 <Alert title="Note" type="info">
@@ -89,7 +90,6 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   }
 }
 ```
-
 
 ### Drupal 7
 
@@ -123,13 +123,14 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 ## Frequently Asked Questions
 
 ### Can I delete the default.settings.php file?
+
 Yes, but only if at least one other file (e.g. `settings.php`) is present within the `sites/default` directory. Otherwise, the existing symlink to `sites/default/files` will be invalid.
 
 ### How can I write logic based on the Pantheon server environment?
 
 Depending on your use case, there are three possibilities:
 
- - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). See our [redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
+- For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). See our [redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
   <Alert title="Note" type="info">
   
@@ -137,9 +138,9 @@ Depending on your use case, there are three possibilities:
   
   </Alert>
 
- - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis) guide for examples.
+- For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis) guide for examples.
 
- - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Redis](/redis) guide for examples.
+- For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Redis](/redis) guide for examples.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472).
 
@@ -213,7 +214,6 @@ Pantheon automatically injects database credentials into the site environment; i
 
 There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
 
-
 ```php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -233,6 +233,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 - Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
 
 ### Where can I find examples of Pantheon settings.php?
+
 You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
 ### Are table prefixes supported?
@@ -248,6 +249,7 @@ Drupal 7 doesn't ship with a `settings.php` in place; as the error suggests, you
 Drupal 7 sites that plan to use [Drush](/drush) should have a `settings.php` file.
 
 ### Can I edit settings.pantheon.php?
+
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
 ### How do I enable IonCube Decoder support?
@@ -289,5 +291,3 @@ If you see this error, you need to update your [trusted host patterns](#trusted-
 By default, Pantheon's environment is configured to not allow any non-trusted hosts. Trusted hosts are added via the `PANTHEON_ENVIRONMENT` variable in `settings.php` [here](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L184):
 
 GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php php 184-190 GITHUB-EMBED
-
-

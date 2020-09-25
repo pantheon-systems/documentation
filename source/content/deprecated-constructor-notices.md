@@ -9,7 +9,8 @@ contributors: [greg-1-anderson]
 PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
 
 An example notice might look like this:
-```
+
+```none
 Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; views_display has a deprecated constructor in /srv/bindings/46027a30ca4c4980a7188036eb2fcea5/code/sites/all/modules/views/includes/view.inc on line 2553
 Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in /srv/bindings/46027a30ca4c4980a7188036eb2fcea5/code/sites/all/modules/views/includes/handlers.inc on line 753
 ```
@@ -28,6 +29,7 @@ To fix these errors, convert your class constructor to `__construct()`. See [dep
 ## Finding PHP Files Containing Parse-Time Notices
 
 To make it easier to find and debug intermittent notices, **temporarily** disable the opcache in your settings.php file:
+
 ```php
 if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != 'live'))
 {
@@ -42,18 +44,22 @@ Disabling opcache has a sever impact on performance, so care should be taken not
 </Alert>
 
 You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/local-development); then, run:
-```
-$ php -l sites/all/modules/views/includes/handlers.inc
+
+```bash{outputLines: 2-7}
+php -l sites/all/modules/views/includes/handlers.inc
 PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753
 
 Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753
 
 No syntax errors detected in sites/all/modules/views/includes/handlers.inc
 ```
+
 Replace the path to the file you would like to check. To check every .php, .inc and .module file in a Drupal site, run:
-```
+
+```bash{promptUser: user}
 find -E . -iregex ".*\.(inc|php|module)$" -exec php -l {} \; | grep -v 'No syntax errors'
 ```
+
 Adjust the regular expression as needed to scan other file extensions that may contain php code.
 
 ## Explanation

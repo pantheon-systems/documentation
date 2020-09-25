@@ -7,6 +7,7 @@ tags: [upstreams, site]
 The site's framework is selected during the creation process. Pantheon Upstreams provide default installations of WordPress, Drupal 8 and Drupal 7. [Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
 
 ## Pantheon Upstreams
+
 We base our Drupal 7 repository on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
@@ -14,6 +15,7 @@ We base our Drupal 7 repository on the canonical source from drupal.org, and the
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ## Public Distributions
+
 We include a growing number of "Drupal products" as available upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
 
 <Alert title="Note" type="info">
@@ -38,23 +40,24 @@ Use the following direct links to create a new site on Pantheon from a public di
 - [RedHen Raiser](https://dashboard.pantheon.io/sites/create?upstream_id=10d6937e-1dd2-4490-9950-11867ba43597) [<i class="ml-5 fa fa-github"></i>](https://github.com/thinkshout/redhenraiser-drops-7)
 
 ## Product UUID
+
 There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/terminus) command:
 
-```
-$ terminus upstream:list --all
+```bash{promptUser: user}
+terminus upstream:list --all
 ```
 
 ## Create Sites with Terminus
+
 Create new sites with [Terminus, the Pantheon CLI](/terminus). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream, like so:
 
-```
-$ terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"
+```bash{outputLines: 2-4}
+terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"
  [notice] Creating a new site...
  [notice] Deploying CMS...
  [notice] Deployed CMS
-$ terminus dashboard:view my-new-panopoly-site
+terminus dashboard:view my-new-panopoly-site
 ```
-
 
 ## Importing an Existing Site
 

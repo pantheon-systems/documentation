@@ -24,12 +24,15 @@ When creating an AWS account, you will have to enter credit card information. Th
 </Alert>
 
 ## Configure S3 within the AWS Console
+
 Before integrating S3 with Drupal, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com).
 
 ### Create a New AWS S3 Bucket
+
 If you do not have an existing bucket for your Drupal site, create one:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **S3**.
+
 1. Click **Create Bucket**.
 
    - Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3.
@@ -41,30 +44,45 @@ If you do not have an existing bucket for your Drupal site, create one:
     </Alert>
 
 1. Select a region and click **Create**.
+
 1. Select **Permissions** within the bucket properties and click **Add more permissions**.
+
 1. Choose a user and tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
 
 ### Create an Identity and Access Management Policy
+
 [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
 
 1. From your [AWS Console](https://console.aws.amazon.com), click the **IAM** link.
+
 1. Go to **Policies** and click **Create Policy**.
+
 1. Select **Create your Own Policy**.
+
 1. Give it a name and use the code example code provided in Amazon's [Policy Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
+
 1. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket, and click **Next Step**.
+
 1. Edit the policy name and description (optional).
+
 1. Click **Create Policy**.
 
 For details, see [Example Policies for Administering AWS Resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
 
 ### Create an Identity and Access Management Group
+
 We recommend that you do not access an S3 bucket using your AWS root user credentials. Instead, create an IAM group and user:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
+
 1. Click **Groups**, then **Create New Group**.
+
 1. Enter a descriptive group name and click **Next Step**.
+
 1. Filter policies by **Customer Managed Policies** and select your recently created policy.
+
 1. Click **Next Step**, then **Create Group**.
+
 1. Go to **Users** and click **Create New Users**.
 
     - Provide a user name and click **Create**, then view the new user security credentials by clicking **Show User Security Credentials**.
@@ -76,10 +94,13 @@ We recommend that you do not access an S3 bucket using your AWS root user creden
      </Alert>
 
 1. Click **Download Credentials**. Make sure you save the credentials in a secure location before leaving this page.
+
 1. Go to the group created in step 5 and select **Add Users to Group**.
+
 1. Select your newly created user and click **Add Users**.
 
 ## Integrate S3 with Drupal
+
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
 <TabList>
@@ -92,11 +113,11 @@ These steps require Drush 8, which is run by default on Pantheon for newly creat
 
 Before you begin:
 
- - [Set your site’s Drush version](/drush-versions/#configure-drush-version) to Drush 8 if needed.
- - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
- - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/terminus):
+- [Set your site’s Drush version](/drush-versions/#configure-drush-version) to Drush 8 if needed.
+- Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
+- Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/terminus):
 
- ```
+ ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
  ```
 
@@ -106,12 +127,13 @@ Before you begin:
 
 Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
 
-```
+```bash{promptUser: user}
 terminus drush <site>.<env> -- en libraries s3fs -y
 ```
+
 Get the [AWS SDK Library 2.x](https://github.com/aws/aws-sdk-php/releases):
 
-```
+```bash{outputLines: 2-3}
 terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make code/
   //or if you have a contrib subfolder for modules use:
   //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make code/
@@ -120,11 +142,12 @@ terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make c
 The above command will add the AWS SDK version 2.x library into the `sites/all/libraries/awssdk2` directory.
 
 #### S3 File System CORS
+
 Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
 
 Install s3fs_cors module using Drush:
 
-```
+```bash{promptUser: user}
 terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 ```
 
@@ -134,13 +157,14 @@ terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 
 Before you begin:
 
- - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) locally.
- - Set the site's connection mode to Git within the site Dashboard or via [Terminus](/terminus):
-  ```bash
- terminus connection:set <site>.<env> git
- ```
+- Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) locally.
+- Set the site's connection mode to Git within the site Dashboard or via [Terminus](/terminus):
 
- - Create a local clone of your site code, and navigate to it in your terminal.
+    ```bash{promptUser: user}
+    terminus connection:set <site>.<env> git
+    ```
+
+- Create a local clone of your site code, and navigate to it in your terminal.
 
 ### Install Required and Recommended Modules
 
@@ -150,15 +174,15 @@ Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS
 
 1. Ensure that the Composer for your site will first look to Drupal's preferred package source to find modules:
 
-    ```
-    composer config repositories.drupal composer https://packages.drupal.org/8
-    ```
+  ```bash{promptUser: user}
+  composer config repositories.drupal composer https://packages.drupal.org/8
+  ```
 
 2. Install s3fs module from the preferred package source:
 
-    ```
-    composer require drupal/s3fs --prefer-dist
-    ```
+  ```bash{promptUser: user}
+  composer require drupal/s3fs --prefer-dist
+  ```
 
 #### S3 File System CORS
 
@@ -166,7 +190,7 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
 
 Install s3fs_cors module using Composer:
 
-```
+```bash{promptUser: user}
 composer require drupal/s3fs_cors --prefer-dist
 ```
 
@@ -177,6 +201,7 @@ composer require drupal/s3fs_cors --prefer-dist
 ## Drupal Module Configuration
 
 ### S3 File System User Credentials
+
 You can configure the settings for the S3 File System module via the Drupal admin after the installation (`admin/config/media/s3fs/settings`).
 
 Enter credentials created for the user in the [previous section](#create-an-identity-and-access-management-group) and your bucket name.
@@ -184,26 +209,26 @@ Enter credentials created for the user in the [previous section](#create-an-iden
 You can optionally use a CNAME to serve files from a custom domain if desired. However, you will need to create a corresponding CNAME record with your DNS host.
 
 ### Configure Download and Upload Destinations
-Go to `admin/config/media/file-system` and set **Default download method** to **Amazon Simple Storage Service**. You can set the **Upload destination** to **S3 File System** within the **Field Settings** tab.
 
+Go to `admin/config/media/file-system` and set **Default download method** to **Amazon Simple Storage Service**. You can set the **Upload destination** to **S3 File System** within the **Field Settings** tab.
 
 ### S3 File System CORS Upload (s3fs_cors)
 
 From `/admin/config/media/s3fs/cors`, set **CORS Origin** to your domain. There's an individual max file path length of 250 characters.
 
 ## Synchronizing the S3 Bucket and Drupal Files
+
 Periodically, you'll need to run Actions provided by the S3 File System module either via the admin or Terminus to sync Drupal with your S3 bucket.
 
 ### If you have files on S3 already that are not known to Drupal, refresh the files metadata cache:
 
-```
+```bash{promptUser: user}
 terminus drush <site>.<env> -- s3fs-refresh-cache
 ```
 
-
 ### If you have files in Drupal that need inclusion with S3 run:
 
-```
+```bash{promptUser: user}
 terminus drush <site>.<env> -- s3fs-copy-local
 ```
 

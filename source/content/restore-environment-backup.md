@@ -18,6 +18,7 @@ If you need to restore your site to before the latest deployment, we recommend [
 If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp).
 
 ## Before you Begin the Restore Process
+
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/support).
@@ -36,8 +37,8 @@ For development environments (e.g., Dev and Multidevs), the **Restore** button i
 
 ![Backups and Restore Button](../images/dashboard/restore-button.png)
 
-
 ## Restore an Environment From Another Environment's Backup
+
 From within the source environment, find the backup you want to restore and click the download link for Database and Files:
 
 ![Temporary backup link](../images/dashboard/direct-download-archive.png)
@@ -46,49 +47,60 @@ This provides a temporary private link directly from Google Cloud Storage, the e
 
 If you want to download a backup using wget, put the provided temporary link in double quotes (`"`) and include the `-O` option to specify the output file and extension based on which backup you are downloading. In the following example, replace both the temporary link and `output-file`:
 
-```
+```bash{promptUser: user}
 wget "https://storage.googleapis.com/gcs-pantheon-backups/..." -O output-file
 ```
 
 ### Restore Database and Files
+
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
 ![Workflow Tab](../images/dashboard/workflow-tab.png)
 
 ### Restore Code
+
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment. However, if you would like to rewind an environment's codebase to a previous state we recommend using `git revert` or `git reset` instead of a code archive.
 
 #### Revert Commits and Preserve History
+
 This method is recommended for distributed teams working collaboratively. To undo commits while preserving the site's Git history:
 
 1. Identify the commit you want to undo using the commit history provided in the Site Dashboard or by reviewing `git log` locally.
-2. Copy the commit ID:
+
+1. Copy the commit ID:
 
  ![commit ID](../images/dashboard/commit-id.png)
 
-3. Replace **ID** with the commit ID and run: `git revert ID --no-edit`
-4. Push the reverted codebase to Pantheon: `git push origin master`
-5. Deploy the change from Dev up to Test and Live.
+1. Replace **ID** with the commit ID and run: `git revert ID --no-edit`
+
+1. Push the reverted codebase to Pantheon: `git push origin master`
+
+1. Deploy the change from Dev up to Test and Live.
 
 For more information, see [git-revert](https://git-scm.com/docs/git-revert).
 
 #### Reset Commits and Overwrite History
+
 This is a destructive process. If you're not comfortable with this technique, use `git revert` instead. To reset the codebase and overwrite history:
 
 1. Identify the last commit you want included using the commit history provided within the Site Dashboard or by reviewing `git log` locally.
-2. Copy the commit ID:
+
+1. Copy the commit ID:
 
  ![commit ID](../images/dashboard/commit-id.png)
 
-3. Replace **ID** with the commit ID you want to reset and run: `git reset ID --hard`
-4. Push the reset codebase to Pantheon: `git push origin master --force`
+1. Replace **ID** with the commit ID you want to reset and run: `git reset ID --hard`
+
+1. Push the reset codebase to Pantheon: `git push origin master --force`
  The `--force` option should be used sparingly, especially in distributed team environments. For more information, see [git push](https://git-scm.com/docs/git-push).
-5. Deploy the change from Dev up to Test and Live.
+
+1. Deploy the change from Dev up to Test and Live.
 
 For more information, see [git reset](https://git-scm.com/docs/git-reset).
 
 ## Restore the Live Environment
+
 As mentioned at the top of this page, we do _not_ recommend restoring  backups directly to the Live environment. This method increases the chance and possible duration of downtime to your public-facing site.
 
 The restore process removes any recent content or changes applied to your site since the date the backup was created. Restoring directly to Live means you will lose code or content updates _forever_ with no way to recover.
@@ -102,6 +114,7 @@ If you still want to restore a backup to the Live environment, we recommend the 
 These steps allow you to recreate any new content manually after the process is complete. It also restricts access while the restore process is still running, which is a good practice to avoid conflicts or data corruption.
 
 ## Restoring Large Sites
+
 Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend the same steps as [restoring to the Live environment](#restore-the-live-environment) for a safer process.
 
 Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/rsync-and-sftp), as documented below:
@@ -154,14 +167,15 @@ See [rsync and SFTP](/rsync-and-sftp/#rsync) for more information on constructin
 ## Frequently Asked Questions
 
 ### How long does the restore process take?
+
 When the Restore button is pressed, three (3) separate workflow process are triggered in the dashboard. One each for code, database, and assets (media files like images or other attachments). One workflow may complete ahead of the others.
 
 There is no way to determine specifically how long any one restore job will take, as it varies per site. The usual factor that extends the restore process is the *count*, or number of files in the codebase or files backup. We've seen sites take more than one (1) hour to restore when they have 10,000 files or above, though this is not a strict ratio as individual file sizes also affect the time.
 
 One way to estimate time to restore is to check the last backup duration. The Terminus `workflow:list` command will show workflow durations in the **Time Elapsed** field, in seconds.
 
-```
- $ terminus workflow:list yoursite-name --fields id,env,workflow,time --format table
+```bash{outputLines: 2-9}
+terminus workflow:list yoursite-name --fields id,env,workflow,time --format table
  -------------------------------------- ------------- --------------------------------------------- --------------
   Workflow ID                            Environment   Workflow                                      Time Elapsed
  -------------------------------------- ------------- --------------------------------------------- --------------
