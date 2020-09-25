@@ -168,12 +168,11 @@ class CommandsTemplate extends React.Component {
     })
     //console.log("Options: ", options) //For Debugging
 
-
     return (
       <Layout>
         <SEO
-          title={"terminus " + command.name + " | " + "Pantheon Docs"}
-          description="Terminus Command Documentation"
+          title={command.name + " | Terminus Commands"}
+          description={command.description}
           image={"/assets/images/terminus-thumbLarge.png"}
         />
         <div className="">
