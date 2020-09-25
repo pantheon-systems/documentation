@@ -68,7 +68,7 @@ These steps use GitHub and CircleCI:
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
-1. Review the [How to Prepare Your Drupal 7 or Drupal 8 Site for Drupal 9](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9) guide on Drupal.org.
+1. Review the [How to Prepare Your Drupal 7 or Drupal 8 Site for Drupal 9](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9) guide on Drupal.org. Note that although Drupal supports upgrading to version 9 from version 8.8, you should ensure that your site is on the latest Drupal 8.9 release before trying Drupal 9 on Pantheon.
 
 1. Use the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal 8/9 module to generate a full report of your site’s compatibility.
 
@@ -106,22 +106,16 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   cd <site-name>
   ```
 
-1. Use Terminus to create a Multidev environment called `d9-preview` on your Drupal 8 site for testing:
+1. Install the [Terminus D9 Preview plugin](https://github.com/pantheon-systems/terminus-d9-preview) to create a Multidev environment called `preview-d9` on your Drupal 8 site for testing:
 
   ```bash{promptUser: user}
-  terminus multidev:create <site>.<env> d9-preview
+  composer create-project -d ~/.terminus/plugins pantheon-systems/terminus-d9-preview:^0.1
   ```
 
-1. Create and switch to a new testing branch in the Drupal 8 codebase:
+1. Create and switch to a new testing multidev:
 
   ```bash{promptUser: user}
-  git checkout -b d9-preview
-  ```
-
-1. Pull the `9.0.0` tag into your codebase:
-
-  ```bash{promptUser: user}
-  git pull https://github.com/pantheon-systems/drops-8.git 9.0.0
+  terminus preview:d9
   ```
 
 1. Modify the `pantheon.yml` file to specify PHP 7.3 or newer and Drush 8:
@@ -131,20 +125,16 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   drush_version: 8
   ```
 
-  Note that Drupal 9 is not yet compatible with the pre-installed Drush 10.
+  Note that Drupal 9 is not yet compatible with the pre-installed Drush 10 on Pantheon.
 
 1. Commit and push your changes:
 
   ```bash{promptUser: user}
   git commit -am "test upgrade to Drupal 9"
-  git push origin d9-preview
+  git push origin preview-d9
   ```
 
-1. Run `update.php` on your new Drupal 9 site:
-
-  ```bash{promptUser: user}
-  terminus drush <site>.<env> updatedb
-  ```
+You should not attempt to merge your preview multidev back into the dev environment until Drupal 9 is supported on Pantheon. If you make changes to your dev environment after you create the preview-d9 multidev, you may run the `terminus preview:d9` command again to update the existing multidev. Note that this command destroys the code, database and files on the existing preview-d9 multidev and re-creates it from the latest dev environment, so be sure to save any changes you made before refreshing the environment.
 
 ## FAQ
 
