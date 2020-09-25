@@ -1,4 +1,20 @@
 releases:
+  - version: 0.11.0
+    date: 2020-07-16
+    requiresShutdown: true
+    changelog: !markdown |
+      ### Upstream changes
+        * Updated Drush 8 to `8.3.5`
+        * Updated to Lando `3.0.8`
+        * Updated to Terminus `2.4.0`
+      ### New features
+        * Added opt-in and experimental support for fast `mutagen` syncing, this can increase site performance considerably
+        * Added symlink from `/code -> /app` for better COE support
+      ### Improvements
+        * Improved database pull speed
+        * Various UX improvements
+      ### Bug fixes
+        * Fixed bug causing database pull to fail with a foreign key constraint
   - version: 0.10.1
     date: 2020-06-17
     requiresShutdown: true
