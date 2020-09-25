@@ -462,7 +462,7 @@ fatal: refusing to merge unrelated histories
 
 If you see this, it is possible your local Git configuration is disallowing non-fast-forward merges:
 
-```conf
+```ini
 [pull]
 rebase = TRUE
 ff = only

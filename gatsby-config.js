@@ -102,6 +102,7 @@ module.exports = {
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
+              noInlineHighlight: true,
               aliases: {},
               prompt: {
                 user: "user",
@@ -181,6 +182,7 @@ module.exports = {
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
+              noInlineHighlight: true,
               aliases: {},
               prompt: {
                 user: "user",
