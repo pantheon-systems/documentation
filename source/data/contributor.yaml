@@ -75,7 +75,7 @@
   github: //github.com/ataylorme
   twitter: https://twitter.com/ataylorme
   url: //www.ataylor.me/
-  bio: Developer Programs Engineer
+  bio: Community contributor
 - id: sarahg
   name: Sarah German
   twitter: https://twitter.com/hey_germano
@@ -115,13 +115,13 @@
   github: //github.com/JessiFischer
   drupal: //www.drupal.org/u/jayelebun
   linkedin: //www.linkedin.com/in/jessifischer
-  bio: Enterprise Onboarding Manager
+  bio: Community contributor
 - id: erikmathy
   name: Erik Mathy
   avatar: //www.gravatar.com/avatar/0e9285db4e5bdbb3356306ddb55483d8.png
   twitter: https://twitter.com/1gearnobrains
   linkedin: //www.linkedin.com/pub/erik-mathy/28/b51/627/en
-  bio: Enterprise Onboarding Manager
+  bio: Community contributor
 - id: kate
   name: Kate Kligman
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Kate_Kligman.jpg
@@ -256,7 +256,7 @@
   linkedin: https://www.linkedin.com/in/dwaynemcdaniel
   drupal: https://www.drupal.org/u/mcdwayne
   wordpress: https://profiles.wordpress.org/mcdwayne
-  bio: Developer Advocate
+  bio: Community contributor
 - id: albertcausing
   name: Albert Causing
   bio: Customer Success Engineer
@@ -265,7 +265,7 @@
   drupal: https://www.drupal.org/u/acausing
 - id: tessak22
   name: Tessa Kriesel
-  bio: Developer Advocate
+  bio: Community contributor
   twitter: https://twitter.com/tessak22
   drupal: https://www.drupal.org/u/tessak22
   url: https://tessakriesel.com/
@@ -309,7 +309,7 @@
 - id: dustinleblanc
   name: Dustin LeBlanc
   twitter: https://twitter.com/DustinLeblanc
-  bio: Customer Success Engineer
+  bio: Community contributor
   avatar: //avatars.githubusercontent.com/u/3948808
   github: //github.com/dustinleblanc
   linkedin: https://www.linkedin.com/in/dustinleblanc
