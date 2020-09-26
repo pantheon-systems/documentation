@@ -67,7 +67,7 @@ Begin by creating a local copy of your [codebase](/code#pantheon-git-repository 
 
   You should see Git fetching the data:
 
-  ```bash
+  ```git
   Cloning into 'anita-wordpress'...
   The authenticity of host '[codeserver.dev.....drush.in]:2222 ([173.255.119.72]:2222)' can't be established.
   RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
@@ -79,7 +79,7 @@ Begin by creating a local copy of your [codebase](/code#pantheon-git-repository 
   Receiving objects: 100% (20503/20503), 46.65 MiB | 15.16 MiB/s, done.
   Resolving deltas: 100% (12802/12802), done.
   ```
-  
+
   If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, confirm that you have a current version of Git.
 
 ## Make Changes

@@ -34,10 +34,12 @@ Learn more about the [Pantheon Workflow](/pantheon-workflow).
 <Partial file="search-replace-domains.md" />
 
 ### Base table or view not found
+
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.
 
 However, Drupal 7 sites using the configuration override system to enable CSS aggregation and compression (`$conf['preprocess_css'] = 1;`) will see the following error after wiping an environment:
-```
+
+```sql
 Additional uncaught exception thrown while handling exception.
 
 Original
@@ -63,7 +65,7 @@ Sites with large databases may encounter a timeout when trying to run `terminus 
 
 You can avoid this by configuring your local machine to send an SSH keepalive packet every 60 seconds. Add this to your `$HOME/.ssh/ssh_config` file:
 
-```
+```ini
 Host *.drush.in
   ServerAliveInterval 60
 ```

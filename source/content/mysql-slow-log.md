@@ -16,8 +16,8 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 To download the environment's MySQL slow log, use the [method outlined here](/logs/#database-log-files).
 
-```
-$ sftp -o Port=2222 live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in
+```bash{outputLines: 2-11}
+sftp -o Port=2222 live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in
 Connected to live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in.
 sftp> cd logs
 sftp> ls -l
@@ -45,11 +45,14 @@ There are several different tools you can use to analyze a MySQL slow log:
 These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. 
 
 ### Percona Toolkit's pt-query-digest
+
 In the example below, we generate a report using `pt-query-digest` from a MySQL slow log file. In this example, we have one query that meets the threshold for reporting as slow: a `SELECT COUNT` query on the node table that returns a total of results from a nested `SELECT` query on the node table. 
 
-```sql
-$ pt-query-digest mysqld-slow-query.log
+```bash{promptUser: user}
+pt-query-digest mysqld-slow-query.log
+```
 
+```sql
 # 530ms user time, 50ms system time, 41.72M rss, 147.91M vsz
 # Current date: Tue Apr 30 17:17:32 2019
 # Hostname: dbserver-9dcedaed.c.pantheon-dmz.internal

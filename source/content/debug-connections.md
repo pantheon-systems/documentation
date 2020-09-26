@@ -6,6 +6,7 @@ tags: [cli, ssh]
 ---
 
 ## Connectivity Error Message
+
 The following indicates that there was a networking error when attempting to connect:
 
 ```none
@@ -30,12 +31,14 @@ Some ISPs have issues resolving a `drush.in` hostname. Troubleshoot connection e
 ```bash{promptUser: user}
 dig codeserver.dev.<xxx>.drush.in +short
 ```
+
 If there is no IP provided in the output, the default DNS server used for the query (typically configured by your ISP) has failed to recognize the hostname. Run the query again with an alternate DNS server specified, such as one of [Google’s Public DNS IP Addresses](https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses):
 
 ```bash{outputLines: 2}
 dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
 192.317.200.218
 ```
+
 If an IP address is returned, [configure your network settings to use Google Public DNS](https://developers.google.com/speed/public-dns/docs/using#configure_your_network_settings_to_use_google_public_dns).
 
 ### Port 2222 or Other Blocked Ports
