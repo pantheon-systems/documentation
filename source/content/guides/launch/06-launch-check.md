@@ -31,6 +31,12 @@ For more information on this feature, see [Backups Tool](/backups).
 ## Enable and Test Email Plugin/Module (Optional)
 If your site will be sending outgoing email, we *strongly* recommend using a third-party email service provider. See [Email on Pantheon](/email) for more information.
 
+<Alert type="info" title="Note">
+
+Some email solution providers (like Sendgrid) may implement a waiting period before upgrading to a paid plan, to combat malicious email. If you're switching email providers as part of your launch, make sure to research plan for this if applicable.
+
+</Alert>
+
 ## Review Status Reports
 Launch with confidence by taking advantage of Pantheon's static site analysis service for Drupal and WordPress.
 
