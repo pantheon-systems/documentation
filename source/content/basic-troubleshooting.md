@@ -120,6 +120,14 @@ define('WP_HOME', 'https://example.com');
 define('WP_SITEURL', 'https://example.com');
 ```
 
+### Error: Cookies are blocked or not supported by your browser.
+
+You must enable cookies for WordPress users to log in to their admin interface. You may need to add this to your `wp-config.php` file:
+
+```php:title=wp-config.php
+define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
+```
+
 ## Drupal 7
 
 Are you a Drupal 7 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
@@ -144,7 +152,7 @@ Turn on debugging in twig.
 
 ### Displaying Error Messages
 
-```bash
+```php
 $config['system.logging']['error_level'] = 'verbose';
 ```
 
