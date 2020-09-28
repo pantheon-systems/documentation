@@ -85,15 +85,21 @@ When resolving issues with Pantheon's [HTTPS](/https/) certificates, a good firs
 
 ### Code Changes
 
-If changes to your code don't appear to be showing.
+If changes to your code don't appear to be showing:
 
-Check that there isn't a .gitignore that may be ignoring those files. (git check-ignore -v path/to/file)
-Check composer dependencies. When a composer package has a .gitignore in it or a .git/ folder the platform is going to ignore the files in that folder.
+- Check that there isn't a `.gitignore` that may be ignoring those files:
 
-Conflicts
+  ```bash{promptUser: user}
+  git check-ignore -v path/to/file)
+  ```
 
-Auto-resolve conflicts checkbox
-Deleted README.txt files can cause dashboard conflicts
+Check composer dependencies as well. When a composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
+
+### Conflicts
+
+See [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicst](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) in our [WordPress and Drupal Core Updates](/core-updates) page for more information on core update conflicts. Note, deleted `README.txt` files can cause dashboard conflicts.
+
+For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](git-resolve-merge-conflicts)
 
 ## WordPress
 
@@ -148,17 +154,12 @@ See the [UnmetDependenciesException when installing Drupal 8](https://www.drupal
 
 Are you a Drupal 8 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md)
 
-### Twig Debugging
-
-Turn on debugging in twig.
 
 ### Displaying Error Messages
 
 ```php
 $config['system.logging']['error_level'] = 'verbose';
 ```
-
-### Using Devel
 
 ### Debugging With Drush
 
