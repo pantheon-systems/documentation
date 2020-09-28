@@ -65,7 +65,7 @@ We use the filesystem private path in this section because we don't want to trac
   echo '{}' > secrets.json
   `terminus connection:info $SITE.dev --field=sftp_command`
   ```
-  
+
   If the `files/private` directory doesn't exist, create it:
 
   ```bash{promptUser: user}

@@ -28,6 +28,7 @@ If your default shell is something other than Bash (Zsh, for example), switch to
 </Alert>
 
 ## Determine Repository File Size
+
 You can output the size of your repository by running [`git count-objects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.
 
 ## Prune and Optimize Large Repositories
@@ -36,7 +37,7 @@ You can output the size of your repository by running [`git count-objects -vH`](
 
 1. Set the connection mode for each environment (excluding Test and Live) to git. You can do this with Terminus:
 
-  ```bash
+  ```bash{promptUser: user}
   for i in $(terminus env:list $SITENAME --format=list | grep -v 'test|live'); do terminus connection:set $SITENAME.$i git; done
   ```
 
@@ -72,9 +73,9 @@ You can output the size of your repository by running [`git count-objects -vH`](
 1. Review patterns that occur within `large_files.txt` and determine what should be excluded. Patterns may be a path to a single file, the path of a directory by name, or an expandable path.
 
   **Example Patterns**:
-   - Single file name: `myfile.txt`
-   - Directory. This will also match on all files under that directory: `my_directory`
-   - Expandable path pattern that matches all SQL files within `my_directory`: `my_directory\/*.sql`
+    - Single file name: `myfile.txt`
+    - Directory. This will also match on all files under that directory: `my_directory`
+    - Expandable path pattern that matches all SQL files within `my_directory`: `my_directory\/*.sql`
 
 1. Filter out files and directories according to problematic patterns. In the example below, replace `my_directory\/*.sql myfile.txt` with the patterns you want to filter for:
 
@@ -93,19 +94,19 @@ You can output the size of your repository by running [`git count-objects -vH`](
 
   In some scenarios, `git push origin --force --tags` may throw an error. Note that the following type of message is *not* an error:
 
-  ```
+  ```git
   remote: PANTHEON NOTICE:
-  remote: 
+  remote:
   remote: The creation of tag "pantheon_test_9" has triggered a deployment of code on test.
-  remote: 
+  remote:
   ```
 
   The current workaround is to delete the tags remotely using `git push origin :refs/tags/[tag]`
 
 1. Recover local disk space and optimize your local repository with the following:
- ```
- git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
- git reflog expire --expire=now --all
- git gc --prune=now
- ```
 
+  ```bash{promptUser: user}
+  git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
+  git reflog expire --expire=now --all
+  git gc --prune=now
+  ```

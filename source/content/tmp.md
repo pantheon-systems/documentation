@@ -49,9 +49,10 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
 }
 ```
+
 Verify the setting by using [Terminus](/terminus) to run `wp config get`:
 
-```bash
+```bash{promptUser: user}
 terminus wp $site.$env -- config get SOME_TMP_SETTING
 ```
 
@@ -75,6 +76,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
 }
 ```
+
 Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
 ```bash

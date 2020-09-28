@@ -81,31 +81,32 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 `example-drops-8-composer` was designed to run automated tests on a continuous integration server. Unless you plan on running automated tests it is safe to completely remove the automated testing functionality.
 
-1.  Delete the following directories and files:
-    - `scripts/github`
-    - `scripts/gitlab`
-    - `.circleci`
-    - `.ci`
-    - `tests`
-    - `bitbucket-pipelines.yml`
-    - `build-providers.json`
-    - `.gitlab-ci.yml`
+1. Delete the following directories and files:
 
-1.  Modify `composer.json`:
-    - Remove all dependencies in the `require-dev` section.
-    - Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
+   - `scripts/github`
+   - `scripts/gitlab`
+   - `.circleci`
+   - `.ci`
+   - `tests`
+   - `bitbucket-pipelines.yml`
+   - `build-providers.json`
+   - `.gitlab-ci.yml`
 
-1.  Remove the following section from `pantheon.yml`:
+1. Modify `composer.json`:
 
-    ```yml:title=pantheon.yml
-    workflows:
-      sync_code:
-        after:
-          - type: webphp
-            description: Push changes back to GitHub if needed
-            script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
-    ```
-        
+   - Remove all dependencies in the `require-dev` section.
+   - Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
+
+1. Remove the following section from `pantheon.yml`:
+
+  ```yml:title=pantheon.yml
+  workflows:
+    sync_code:
+      after:
+        - type: webphp
+          description: Push changes back to GitHub if needed
+          script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
+  ```
 
 ## Managing Drupal with Composer
 
@@ -180,7 +181,7 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
     ```bash{promptUser: user}
     terminus connection:set $PANTHEON_SITE_NAME.dev sftp
     ```
-  
+
 1. Use Terminus Drush to install Drupal:
 
    ```bash{promptUser: user}

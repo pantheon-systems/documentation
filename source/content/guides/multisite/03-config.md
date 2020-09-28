@@ -2,21 +2,12 @@
 title: WordPress Site Networks
 subtitle: Configure
 description: Overview of WordPress multisite support on the Pantheon Platform.
-multisite: true
-anchorid: config
-generator: pagination
 layout: guide
 type: guide
 cms: "WordPress"
 categories: [develop]
 tags: [multisite]
-pagination:
-    provider: data.multisitepages
-use:
-    - multisitepages
 permalink: docs/guides/multisite/config/
-nexturl: guides/multisite/workflows/
-previousurl: guides/multisite/considerations/
 editpath: multisite/03-config.md
 image: multisite
 ---
@@ -67,8 +58,8 @@ Using [Terminus](/terminus) is our recommended way to install a WordPress Site N
 
   When you install a new WordPress Site Network, you should see a success notice similar to this:
 
-  ```bash
-  $ terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
+  ```bash{outputLines: 2-6}
+  terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
   Admin password: abcdefgnotarealpassword
   Created single site database tables.
   Set up multisite database tables.
@@ -96,7 +87,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 1. Locate the configuration added by WP-CLI, and comment out the line that sets `DOMAIN_CURRENT_SITE`. For example:
 
-  ```php
+  ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false );
@@ -109,7 +100,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 1. Add the following code block to your `wp-config.php` file, under the lines mentioned in the previous step:
 
-  ```php
+  ```php:title=wp-config.php
   /**
    * Define DOMAIN_CURRENT_SITE conditionally.
    */

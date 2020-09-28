@@ -14,9 +14,9 @@ contributors: [ataylorme]
 
 This guide requires:
 
- - A local installation of [Composer](https://getcomposer.org/).
- - A locally running dev site or remote site URL to point tests to.
- - An empty project directory. In the commands below we assume the directory `~/projects/simple-behat-test`.
+- A local installation of [Composer](https://getcomposer.org/).
+- A locally running dev site or remote site URL to point tests to.
+- An empty project directory. In the commands below we assume the directory `~/projects/simple-behat-test`.
 
 <Alert title="Note" type="info">
 
@@ -30,19 +30,20 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 1. Behat and Mink are both written in PHP, so it makes sense that they are managed with Composer. That means installing them in a project is quick and easy:
 
-   ```bash
-   cd ~/projects/simple-behat-tests
-   composer require --dev behat/behat behat/mink-extension behat/mink-goutte-driver behat/mink-selenium2-driver
-   ```
+  ```bash{promptUser: user}
+  cd ~/projects/simple-behat-tests
+  composer require --dev behat/behat behat/mink-extension behat/mink-goutte-driver behat/mink-selenium2-driver
+  ```
 
 1. Now that we've downloaded Behat, Mink, and a browser driver, we need to initialize Behat:
 
-   ```bash
-   ./vendor/bin/behat --init
-   ```
+  ```bash{promptUser: user}
+  ./vendor/bin/behat --init
+  ```
 
-   The output should read:
-   ```
+  The output should read:
+
+   ```none
    +d features - place your *.feature files here
    +d features/bootstrap - place your context classes here
    +f features/bootstrap/FeatureContext.php - place your definitions, transformations and hooks here
@@ -52,7 +53,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 1. Behat is configured with the file `behat.yml`. If you haven't used [**YAML**](https://yaml.org/) before, there is a good [YAML quickstart guide](https://yaml.org/start.html). Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
 
-   ```yml
+   ```yml:title=behat.yml
    default:
      suites:
        default:
@@ -69,7 +70,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 1. Now, let's check out what step definitions are available to us:
 
-   ```bash
+   ```bash{promptUser: user}
    ./vendor/bin/behat -dl
    ```
 
@@ -81,7 +82,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
 1. Create a file named `visit-homepage.feature` inside the `features` directory, with the following contents:
 
-   ```bash
+   ```gherkin
    Feature: Visibility of the homepage
      In order to have confidence that my site is accessible
      As a site administrator
@@ -94,7 +95,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
 1. Now that we have things setup and created our first test, let's run Behat:
 
-   ```bash
+   ```bash{promptUser: user}
    ./vendor/bin/behat --strict --colors  --format-settings='{"paths": false}'.
    ```
 
@@ -114,10 +115,10 @@ Review the available step definitions again by running `./vendor/bin/behat -dl`,
 
 If you find you are repeating the same things over and over, such as logging into WordPress or Drupal, try framework extensions. Each one adds additional steps, specific to their corresponding framework:
 
- - [Behat WordPress Extension](https://wordhat.info/)
- - [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)
+- [Behat WordPress Extension](https://wordhat.info/)
+- [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)
 
 ## See Also
 
- - [Composer Fundamentals and Workflows](/composer)
- - [Behat.org](http://behat.org)
+- [Composer Fundamentals and Workflows](/composer)
+- [Behat.org](http://behat.org)

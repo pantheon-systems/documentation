@@ -202,6 +202,7 @@ For non-Composer implementations, you can add the following lines to `settings.p
 # Provide universal absolute path to the installation.
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
+
 </Tab>
 
 <Tab title="Drupal 8" id="drupal-8-settings" active={true}>
@@ -210,6 +211,7 @@ $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesam
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
+
 </Tab>
 
 </TabList>

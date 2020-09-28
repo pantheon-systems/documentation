@@ -20,11 +20,11 @@ To take finer grain control of how Drupal handles its cache data on both the Glo
 
 Before starting this guide, you should:
 
- - Install and authenticate [Terminus](/terminus)
- - Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 8 site. You could use a pre-existing Drupal 8 site, but some of the details would change.
- - So that you can easily copy and paste the example commands in this guide, define your site name with a local environment variable. Replace `cache-tags-demo` with a unique site name:
+- Install and authenticate [Terminus](/terminus)
+- Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 8 site. You could use a pre-existing Drupal 8 site, but some of the details would change.
+- So that you can easily copy and paste the example commands in this guide, define your site name with a local environment variable. Replace `cache-tags-demo` with a unique site name:
 
-    ```bash
+    ```bash{promptUser: user
     export TERMINUS_SITE=cache-tags-demo
     ```
 
@@ -34,7 +34,7 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
 
 1. Start by making a new Drupal 8 site from your local command line environment using Terminus:
 
-  ```bash
+  ```bash{promptUser: user
   terminus site:create $TERMINUS_SITE $TERMINUS_SITE "Drupal 8"
   ```
 
@@ -42,33 +42,32 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
 
 2. Install Drupal:
 
-  ```bash
+  ```bash{promptUser: user
   terminus drush $TERMINUS_SITE.dev -- site-install -y
   ```
 
-
 3. The command above modifies the `settings.php` file on the Dev environment. You could commit this change in the Pantheon Dashboard, but we’ll do it from the command line:
 
-  ```bash
+  ```bash{promptUser: user
   terminus env:commit $TERMINUS_SITE.dev --message="Installing Drupal"
   ```
 
 4. Add and enable the Pantheon Advanced Page Cache module, which is responsible for sending cache metadata to the Pantheon Global CDN:
 
-  ```bash
+  ```bash{promptUser: user
   terminus drush $TERMINUS_SITE.dev -- dl pantheon_advanced_page_cache
   terminus drush $TERMINUS_SITE.dev -- en pantheon_advanced_page_cache -y
   ```
 
 5. Commit the new code:
 
-  ```
+  ```bash{promptUser: user
   terminus env:commit $TERMINUS_SITE.dev --message="Adding Pantheon Advanced Page Cache."
   ```
 
 6. Log in to your newly created site. This command will give you a one-time log-in link for the admin user:
 
-  ```bash
+  ```bashbash{promptUser: user
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
@@ -79,7 +78,7 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
 
   You can also make those same changes using Drush via Terminus:
 
-  ```bash
+  ```bash{promptUser: user
   terminus drush $TERMINUS_SITE.dev -- cset system.performance cache.page.max_age 600 -y
   terminus drush $TERMINUS_SITE.dev -- cr
   ```
@@ -94,13 +93,13 @@ Now we'll look at HTTP Headers.
 
 2. Use `curl -IH` to view the headers returned from that page:
 
-    ```
+    ```bash{promptUser: user
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
     ```
 
     The first request you will see in the list is the initial HTML response. All of the subsequent requests for assets like CSS and images happen after this first HTML response kicks things off:
 
-    ```
+    ```http
     HTTP/2 200
     date: Thu, 11 Jan 2018 17:05:01 GMT
     cache-control: max-age=600, public
@@ -150,7 +149,7 @@ The `Surrogate-Key-Raw` header tell us all of the Drupal elements that comprise 
 
 The `Age` header tells us the number of seconds that the page has been cached. If you curl again you should see the age number go up.
 
-```bash
+```bash{outputLines:2-3}
 curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
 surrogate-key-raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous http_response node:1 node_view rendered taxonomy_term:1 user:0 user:1 user_view
 age: 40
@@ -162,7 +161,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 
    ![Drupal 8 taxonomy screen](../../images/guides/drupal-8-advanced-page-cache/img5-taxonomy-term-1.png)
 
-   ```bash
+   ```bash{outputLines:2-3}
    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
    Surrogate-Key-Raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.taxonomy_term http_response node:1 node_emit_list node_view rendered taxonomy_term:1 taxonomy_term_view user:1 user_view
    Age: 0
@@ -172,7 +171,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 
 2. Curl again and the age will go up:
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 15
   ```
@@ -183,7 +182,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 
 4. And look at its headers:
 
-    ```bash
+    ```bash{outputLines:2-3}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
     surrogate-key-raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous http_response node:2 node_view rendered user:0 user:1
     age: 0
@@ -191,7 +190,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 
 5. The age will go up if you curl again.
 
-    ```bash
+    ```bash{outputLines:2}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
     age: 18
     ```
@@ -202,34 +201,34 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 
 7. Check the age on our three pages:
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
   age: 267
   ```
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 256
   ```
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
   age: 165
   ```
 
 8. Now click the button to save node 1 in your browser. And then curl those three pages again:
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
   age: 0
   ```
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 0
   ```
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
   age: 246
   ```
@@ -246,7 +245,7 @@ What if we added a new node that used taxonomy term 1? We would want the listing
 
 2. And curl the taxonomy listing page.
 
-  ```bash
+  ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 60
   ```
@@ -265,7 +264,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 
 3. Create a new file named `custom_cache_tags.info.yml` and add the following:
 
-  ```yml
+  ```yml:title=custom_cache_tags.info.yml
   name: Custom Cache Tags
   type: module
   description: 'Customized cache tag clearing'
@@ -274,7 +273,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 
 4. Create a new file named `custom_cache_tags.module` and add the following:
 
-    ```php
+    ```php:title=custom_cache_tags.module
     <?php
     /**
     * @file
@@ -334,28 +333,28 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 
 5. Enable the new custom module and commit your code:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- en custom_cache_tags -y
     ```
 
-    ```bash
+    ```bash{promptUser: user}
     terminus env:commit $TERMINUS_SITE.dev --message="Add custom_cache_tags"
     ```
 
 6. Clear all caches so that the new hook you added is detected by Drupal:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- cr
     ```
 
 7. Now whenever you add content, the referenced taxonomy term pages are automatically cleared. To test, check on the age of your taxonomy listing again by curling a few times.
 
-  ```bash
+  ```bash{outputLines: 2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 0
   ```
 
-  ```bash
+  ```bash{outputLines: 2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 5
   ```
@@ -366,7 +365,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 
 9. Now curl again:
 
-  ```
+  ```bash{outputLines: 2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 0
   ```
@@ -379,17 +378,17 @@ The code we added clears all references to each taxonomy term every time a node 
 
 1. Download and enable the [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag) module:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- dl views_custom_cache_tag
     ```
 
-    ```bash
+    ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- en views_custom_cache_tag -y
     ```
 
 2. Commit your code changes:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus env:commit $TERMINUS_SITE.dev --message="adding views_custom_cache_tag"
     ```
 
@@ -403,17 +402,18 @@ The code we added clears all references to each taxonomy term every time a node 
 
 5. To see the change, you may need to clear all caches:
 
-    ```bash
+    ```bashbash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- cr
     ```
 
 6. Curl the listing page a few times again:
 
-    ```bash
+    ```bash{outputLines: 2-3}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
     Surrogate-Key-Raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.taxonomy_term http_response node:1 node:3 node:4 node:5 node:6 node_view rendered taxonomy-listing:1 taxonomy_term:1 taxonomy_term_view user:1 user_view
     Age: 8
     ```
+
 7. Alter the custom module so that our new tag, `taxonomy-listing:1` gets cleared when a new node is added that references term 1. Change the code in `custom_cache_tags.module` from:
 
     ```php
@@ -430,12 +430,12 @@ The code we added clears all references to each taxonomy term every time a node 
 
     ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img13-node-add-article-3.png)
 
-    ```bash
+    ```bash{outputLines: 2}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
     Age: 0
     ```
 
-## Additional Resources.
+## Additional Resources
 
- - Where you set and clear tags will vary greatly based on the needs of your site. See the [Drupal.org documentation for how you can set cache metadata directly on render arrays](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays).
- - You can also read this blog post from Aaron Wolfe of Capellic on [Pantheon Advanced Page Cache in Drupal 7](https://capellic.com/2017/11/28/using-pantheon-advanced-page-cache-in-drupal-7/).
+- Where you set and clear tags will vary greatly based on the needs of your site. See the [Drupal.org documentation for how you can set cache metadata directly on render arrays](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays).
+- You can also read this blog post from Aaron Wolfe of Capellic on [Pantheon Advanced Page Cache in Drupal 7](https://capellic.com/2017/11/28/using-pantheon-advanced-page-cache-in-drupal-7/).
