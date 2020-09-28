@@ -13,6 +13,12 @@ Email is a necessity when running a website, whether it's used with a simple con
 
 One of the most common reasons that email gets blocked is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
 
+<Alert type="info" title="Note">
+
+New Sendgrid account may need to wait 30 days before upgrading to a paid plan. If you're switching to Sendgrid from an existing email solution, make sure to plan for this.
+
+</Alert>
+
 ## Why SendGrid?
 
 [SendGrid](https://sendgrid.com) has a lot of things going for it, all of which do the hard work for you when it comes to how mail is managed on your site. It can handle massive email campaigns while providing highly detailed and flexible reporting, along with the ability to scale and increase deliverability.
