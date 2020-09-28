@@ -11,7 +11,7 @@ const BuildToolsChangelog = ({ data }) => (
       )
       return (
         <div key={i}>
-          <h3 className="toc-ignore">{buildtools.node.name}</h3>
+          <h3 className="toc-ignore">{buildtools.node.name ? buildtools.node.name : buildtools.node.tag_name}</h3>
           <MDXProvider>
             <MDXRenderer>
               {buildtools.node.fields.markdownBody.childMdx.body.replace(
