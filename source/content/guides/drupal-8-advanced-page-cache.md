@@ -2,7 +2,7 @@
 title: Setting and Clearing Custom Cache Tags in Drupal 8
 description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
 tags: [moreguides]
-categories: []
+categories: [caching]
 type: guide
 permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
@@ -67,7 +67,7 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
 
 6. Log in to your newly created site. This command will give you a one-time log-in link for the admin user:
 
-  ```bashbash{promptUser: user
+  ```bash{promptUser: user
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
@@ -402,7 +402,7 @@ The code we added clears all references to each taxonomy term every time a node 
 
 5. To see the change, you may need to clear all caches:
 
-    ```bashbash{promptUser: user}
+    ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- cr
     ```
 
