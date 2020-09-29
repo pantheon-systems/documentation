@@ -155,7 +155,10 @@ const Header = ({ data, page, search }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
-              <Search indices={searchIndices} searchQuery={search}/>
+            { page !== "search" ?
+              <Search indices={searchIndices} searchQuery={search} page={page}/>
+              : null
+            }
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ const Popover = css`
 
 export default styled(SearchResult)`
   display: ${props => (props.show ? `block` : `none`)};
-  ${Popover}
+  ${props => props.header ? Popover : null}
 
   .HitCount {
     display: flex;

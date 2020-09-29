@@ -37,6 +37,7 @@
     "gatsby-plugin-sharp": "^2.5.6",
     "gatsby-plugin-sitemap": "^2.3.5",
     "gatsby-plugin-styled-components": "^3.3.11",
+    "gatsby-plugin-use-query-params": "^1.0.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-autolink-headers": "^2.3.11",
     "gatsby-remark-code-titles": "^1.1.0",
@@ -73,7 +74,8 @@
     "remove": "^0.1.5",
     "showdown": "^1.9.1",
     "styled-components": "^5.2.0",
-    "tocbot": "^4.11.1"
+    "tocbot": "^4.11.1",
+    "use-query-params": "^1.1.8"
   },
   "devDependencies": {
     "@octokit/rest": "^16.43.1",

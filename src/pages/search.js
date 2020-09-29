@@ -1,36 +1,40 @@
 import React from "react"
-import SearchResults from "../components/searchResults"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
+import { useQueryParam, NumberParam, StringParam } from "use-query-params";
+import Search from "../components/search"
 
-class Search extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <SEO image={"/assets/images/default-thumb-doc.png"} title="Search" />
-        <div style={{ marginTop: "-20px" }} className="container">
-          <main className=" doc-content-well" id="docs-main">
+const searchIndices = [{ name: `Pages`, title: `Pages` }]
+
+const SearchPage = () => {
+  const [urlQuery, setUrlQuery] = useQueryParam("search", StringParam)
+  //console.log("urlQuery", urlQuery) //For Debugging
+  const defaultQuery = {query:urlQuery, page: "1"}
+  //console.log("defaultQuery: ", defaultQuery) //For Debugging
+  return (
+    <Layout type="search">
+      <SEO image={"/assets/images/default-thumb-doc.png"} title="Search" />
+      <div style={{ marginTop: "-20px" }} className="container">
+        <main className=" doc-content-well" id="docs-main">
+          <div className="">
+            <h1 className="title">Search Results</h1>
+          </div>
+          <div className="" style={{ marginBottom: "15px" }}></div>
+          <div className=" mb-70">
             <div className="">
-              <h1 className="title">Search Results</h1>
-            </div>
-            <div className="" style={{ marginBottom: "15px" }}></div>
-            <div className=" mb-70">
-              <div className="">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-md-8 search-results">
-                      <SearchResults />
-                      <script src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"></script>
-                    </div>
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-8 search-results">
+                  <Search indices={searchIndices} searchQuery={urlQuery} page="search"/>
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-        </div>
-      </Layout>
-    )
-  }
+          </div>
+        </main>
+      </div>
+    </Layout>
+  )
 }
 
-export default Search
+export default SearchPage

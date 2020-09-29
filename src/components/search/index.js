@@ -6,16 +6,20 @@ import StyledSearchBox from "./styled-search-box"
 import StyledSearchResult from "./styled-search-result"
 import StyledSearchRoot from "./styled-search-root"
 import useClickOutside from "./use-click-outside"
+
 const theme = {
   foreground: "#050505",
   background: "white",
   faded: "#888",
 }
-export default function Search({ indices, searchQuery }) {
+
+export default function Search({ indices, page, searchQuery}) {
   //console.log("searchQuery in search component: ", searchQuery) //For Debugging
   const rootRef = createRef()
-  const [query, setQuery] = useState(searchQuery)
-  //console.log("Query: ", query) //For Debugging
+  const [searchState, setSearchState] = useState({
+    query: searchQuery,
+    page: "1",
+  })
   const [hasFocus, setFocus] = useState(false)
   const searchClient = algoliasearch(
     process.env.GATSBY_ALGOLIA_APP_ID,
@@ -28,11 +32,17 @@ export default function Search({ indices, searchQuery }) {
         <InstantSearch
           searchClient={searchClient}
           indexName={indices[0].name}
-          onSearchStateChange={({ query }) => setQuery(query)}
+          searchState={searchState}
+          onSearchStateChange={setSearchState}
         >
-          <StyledSearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus} />
+          <StyledSearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus}/>
           <StyledSearchResult
-            show={query && query.length > 0 && hasFocus}
+            show={searchState.query && searchState.query.length > 0 && hasFocus && page !== "search"}
+            indices={indices}
+            header
+          />
+          <StyledSearchResult
+            show={page === "search"}
             indices={indices}
           />
         </InstantSearch>
