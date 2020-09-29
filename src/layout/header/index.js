@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 //import AddSearch from "../../components/addSearch"
 import Search from "../../components/search"
-const searchIndices = [{ name: `Pages`, title: `Pages` }]
+//const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 const Header = ({ data, page, search }) => (
   <>
@@ -156,7 +156,7 @@ const Header = ({ data, page, search }) => (
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
             { page !== "search" ?
-              <Search indices={searchIndices} searchQuery={search} page={page}/>
+              <Search  page={page}/>
               : null
             }
             </div>
