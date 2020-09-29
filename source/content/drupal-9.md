@@ -142,7 +142,7 @@ You should not attempt to merge your Drupal 9 preview multidev into the dev envi
 
 ### Refresh Existing preview-d9 Multidev With Latest Dev Environment
 
-This destroys the code, database and files on the existing `preview-d9` multidev and re-creates it from the latest dev environment. Save any changes you made before refreshing the environment.
+This destroys the code, database and files on the existing `preview-d9` multidev and re-creates it from the latest dev environment. Save any changes you made on this environment to your local computer before refreshing the environment.
 
 If you make changes to your dev environment that you want to test in Drupal 9, run `terminus preview:d9` again to update the existing multidev:
 
