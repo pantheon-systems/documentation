@@ -68,7 +68,11 @@ These steps use GitHub and CircleCI:
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
-1. Review the [How to Prepare Your Drupal 7 or Drupal 8 Site for Drupal 9](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9) guide on Drupal.org. Note that although Drupal supports upgrading to version 9 from version 8.8, you should ensure that your site is on the latest Drupal 8.9 release before trying Drupal 9 on Pantheon.
+1. Upgrade to the latest Drupal 8.9 release.
+
+   - Although Drupal supports upgrading to Drupal 9 from Drupal 8.8, ensure that your site is on the latest Drupal 8.9 release before trying Drupal 9 on Pantheon.
+
+1. Review the [How to Prepare Your Drupal 7 or Drupal 8 Site for Drupal 9](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9) guide on Drupal.org.
 
 1. Use the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal 8/9 module to generate a full report of your site’s compatibility.
 
@@ -134,7 +138,17 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   git push origin preview-d9
   ```
 
-You should not attempt to merge your preview multidev back into the dev environment until Drupal 9 is supported on Pantheon. If you make changes to your dev environment after you create the preview-d9 multidev, you may run the `terminus preview:d9` command again to update the existing multidev. Note that this command destroys the code, database and files on the existing preview-d9 multidev and re-creates it from the latest dev environment, so be sure to save any changes you made before refreshing the environment.
+You should not attempt to merge your Drupal 9 preview multidev into the dev environment until Drupal 9 is officially supported on Pantheon.
+
+### Refresh Existing preview-d9 Multidev With Latest Dev Environment
+
+This destroys the code, database and files on the existing `preview-d9` multidev and re-creates it from the latest dev environment. Save any changes you made before refreshing the environment.
+
+If you make changes to your dev environment that you want to test in Drupal 9, run `terminus preview:d9` again to update the existing multidev:
+
+```bash{promptUser: user}
+terminus preview:d9
+```
 
 ## FAQ
 
