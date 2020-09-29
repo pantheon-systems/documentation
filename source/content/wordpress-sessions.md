@@ -38,7 +38,7 @@ Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; Http
 
 The best way to determine which plugin or theme is not allowing caching is to search your site's plugin and theme code for the `session_start()` PHP function:
 
-```
+```bash{promptUser: user}
 cd wp-content
 grep -rnw . -e 'session_start'
 ```
