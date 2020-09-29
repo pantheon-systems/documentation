@@ -108,7 +108,7 @@ For sites not on COE, the directory structure will be more like this:
 
 4. Run the following SFTP command in terminal:
 
- ```
+ ```none
  get -r logs
  ```
 

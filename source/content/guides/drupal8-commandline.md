@@ -24,25 +24,26 @@ Be sure that you:
 - Have an [SSH key](/ssh-keys) generated, added to your Pantheon dashboard, and loaded into your local SSH agent.
 
 ## Install and Authenticate Terminus
+
 Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus).
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
-  ```bash
+  ```bash{promptUser: user}
   mkdir $HOME/terminus
   cd $HOME/terminus
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
-2. [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
+1. [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus auth:login --machine-token=‹machine-token›
   ```
 
-3. Once installed, verify your session:
+1. Once installed, verify your session:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus site:list
   ```
 
@@ -58,7 +59,7 @@ The next few sections of this guide use the example variables `steve-site-d8` an
 
 1. Create a new Drupal 8 site on Pantheon:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus site:create steve-site-d8 "My Site D8" "Drupal 8"
   ```
 
@@ -66,7 +67,7 @@ The next few sections of this guide use the example variables `steve-site-d8` an
 
 1. Open your new Site Dashboard in a browser:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus dashboard:view steve-site-d8
   ```
 
@@ -74,25 +75,25 @@ The next few sections of this guide use the example variables `steve-site-d8` an
 
 1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 8 on the Dev environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush steve-site-d8.dev -- site-install -y
   ```
 
   Use the password included in the output of that command to sign into the site with your browser, or use this command to get a one-time login link:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush  steve-site-d8.dev  -- user-login
   ```
 
 1. Create the Test environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:deploy steve-site-d8.test
   ```
 
 1. Create the Live environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:deploy steve-site-d8.live
   ```
 
@@ -102,7 +103,7 @@ At this point you are probably tired of replacing `steve-site-d8` in every comma
 
 1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 
-  ```bash
+  ```bash{promptUser: user}
   export TERMINUS_SITE=steve-site-d8
   ```
 
@@ -110,7 +111,7 @@ At this point you are probably tired of replacing `steve-site-d8` in every comma
 
 1. We can test this by echoing our variable:
 
-  ```
+  ```bash{promptUser: user}
   echo $TERMINUS_SITE
   ```
 
@@ -118,7 +119,7 @@ At this point you are probably tired of replacing `steve-site-d8` in every comma
 
 1. Let's see our new variable in action. Get the connection information for the Dev environment:
 
-  ```
+  ```bash{promptUser: user}
   terminus connection:info $TERMINUS_SITE.dev
   ```
 
@@ -136,25 +137,25 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 1. Download and install the latest stable release of the `devel` package from drupal.org:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- pm-download devel
   ```
 
 1. Review the file changes:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:diffstat $TERMINUS_SITE.dev
   ```
 
 1. Commit your changes to the Dev environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:commit  $TERMINUS_SITE.dev --message="Adding devel module"
   ```
 
 1. Enable the modules:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate kint webprofiler -y
   ```
 
@@ -162,7 +163,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 1. If you haven't done so yet, sign into your Dev environment, where you will see a footer of helpful development information provided by the `webprofiler` module we just installed:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
@@ -170,7 +171,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 1. Export the configuration in the Dev environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- config-export -y
   ```
 
@@ -178,13 +179,13 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 1. Commit the changes:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:commit  $TERMINUS_SITE.dev --message="export of config files"
   ```
 
 1. Deploy the changes to the Test environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"
   ```
 
@@ -196,19 +197,19 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 1. With the `yml` configuration files now present on the Test environment, they can be imported to the database there:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.test -- config-import -y
   ```
 
 1. Sign into Drupal in the Test environment to see the enabled modules:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.test -- user-login
   ```
 
 1. Sign into Drupal in the Live environment to see that the modules aren't there yet:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.live -- user-login
   ```
 
@@ -216,48 +217,49 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 1. Push your code changes to the Live environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying exported config to enable modules"
   ```
 
 1. Import the configuration on the Live environment:
 
-  ```
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.live -- config-import -y
   ```
 
   Once this command completes you will be able to refresh the Live environment in your browser and see the development footer.
 
 ## Managing Content, Configuration, and Code Across Environments
+
 In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment. That content needs to be brought down into the Test and Dev environments from time to time so you can build and test features with fresh material from Live.
 
 1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.live -- generate-content 25
   ```
 
 1. Copy the database and media files from Live into the Dev environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:clone-content $TERMINUS_SITE.live dev
   ```
 
 1. Make some configuration change on the Dev environment, such as enabling the [Views Glossary](https://www.drupal.org/project/views_glossary) module:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- views-enable glossary
   ```
 
 1. Export the configuration change so it can be managed in code:
 
-  ```
+  ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- config-export -y
   ```
 
 1. Commit your code changes to the Dev environment:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus env:commit $TERMINUS_SITE.dev --message="Enabling glossary View"
   ```
 
@@ -267,7 +269,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
 1. Deploy code and import configuration changes to Test:
 
-  ```bash
+  ```bash{outputLines: 2}
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploying glossary View"
 
   terminus drush $TERMINUS_SITE.test -- config-import -y
@@ -277,7 +279,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
 1. Deploy to the Live environment and import the changes:
 
-  ```bash
+  ```bash{outputLines: 2}
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploying glossary View"
 
   terminus drush $TERMINUS_SITE.live -- config-import -y
@@ -286,11 +288,12 @@ In the lifecycle of managing a site, you can expect content editors to add new m
   With the change to the glossary View deployed and imported on the Live environment you should be able to see the glossary page (`/glossary`).
 
 ## The Power of Terminus and Drush
+
 If you're a developer who lives in the command line, you now see the power of Terminus and Drush. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like Drush (and WP-CLI for WordPress) give you the power to manage the inner workings of your Drupal powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
 
-Here are some suggestions on where to go from here:
+## See Also
 
- - [Use the Pantheon Workflow](/pantheon-workflow)
- - [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management)
- - [The Terminus Manual](/terminus)
- - [Drupal Drush Command-Line Utility](/drush)
+- [Use the Pantheon Workflow](/pantheon-workflow)
+- [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management)
+- [The Terminus Manual](/terminus)
+- [Drupal Drush Command-Line Utility](/drush)

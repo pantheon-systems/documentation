@@ -52,18 +52,20 @@ terminus site:upstream:set <site> empty-wordpress
 </TabList>
 
 ## Enable Nested Docroot
+
 Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
 
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/terminus):
 
- ```
+ ```bash{promptUser: user}
  terminus connection:set <site>.<env> git
  ```
 
 2. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
 3. Create a `pantheon.yml` file if it doesn't already exist.
 4. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
-  ```
+
+  ```yml
     api_version: 1
 
     web_docroot: true
@@ -73,9 +75,11 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
 
 ### Create a New Site
+
 If your site utilizes a [Custom Upstream](/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site
+
 You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below.
 
 <TabList>
@@ -85,15 +89,16 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
-  ```bash
+  ```bash{promptUser: user}
   mkdir web
   git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
   ```
+
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
   Your directory structure should look like this afterwards:
 
-  ```
+  ```none
   ├── web
     ├── includes
     ├── index.php
@@ -118,15 +123,16 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
-  ```bash
+  ```bash{promptUser: user}
   mkdir web
   git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') core drush modules profiles sites themes vendor index.php web
   ```
+
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
   Your directory structure should look like this afterwards:
 
-  ```
+  ```none
   ├── web
     ├── core
     ├── drush
@@ -139,7 +145,6 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
     ├── vendor
     ├── index.php
   ```
-
 
 </Tab>
 

@@ -12,8 +12,8 @@ Be aware that support for Custom Upstreams is limited to verification that the e
 
 </Alert>
 
-
 ## Create and Host the Repository Remotely
+
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
 Choose your preferred Git host:
@@ -24,36 +24,35 @@ Choose your preferred Git host:
 
 1. [Sign up for a GitHub account](https://github.com/join) if you do not have one already.
 
-2. [Log in to GitHub](https://github.com/login/).
+1. [Log in to GitHub](https://github.com/login/).
 
-3. If this is your first time logging in to GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New**](https://github.com/new) from the Repositories sidebar on the left.
+1. If this is your first time logging in to GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New**](https://github.com/new) from the Repositories sidebar on the left.
 
-4. Name the repository.
+1. Name the repository.
 
-5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+1. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
 
    **Do not** select the options to create a `README`, `.gitignore`, or license file:
 
    ![GitHub Initialization options](../images/github-create-readme.png)
 
-6. Click **Create Repository**.
+1. Click **Create Repository**.
 
-7. Copy the repository URL (HTTPS), found in the Quick setup section:
+1. Copy the repository URL (HTTPS), found in the Quick setup section:
 
   ![GitHub Repo URL](../images/github-repo-url.png)
 
-8. Clone the repository to your local from the command line (replace the URL):
+1. Clone the repository to your local from the command line (replace the URL):
 
-  ```
+  ```bash{promptUser: user}
   git clone https://github.com/pantheondocs/agency-custom-upstream.git
   ```
 
-9. Navigate to the repository's root directory:
+1. Navigate to the repository's root directory:
 
-  ```
+  ```bash{promptUser: user}
   cd agency-custom-upstream
   ```
-
 
 </Tab>
 
@@ -61,29 +60,29 @@ Choose your preferred Git host:
 
 1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
 
-2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
+1. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
 
-3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
+1. Click [**Create a Repository**](https://bitbucket.org/repo/create).
 
-4. Name the repository.
+1. Name the repository.
 
-5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+1. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
 
-6. Click **Create Repository**.
+1. Click **Create Repository**.
 
-7. Copy the repository URL (HTTPS), found on the top right of the page:
+1. Copy the repository URL (HTTPS), found on the top right of the page:
 
   ![Bitbucket Repo URL](../images/bitbucket-repo-url.png)
 
-8. Clone the repository to your local from the command line (replace the URL):
+1. Clone the repository to your local from the command line (replace the URL):
 
-  ```
+  ```bash{promptUser: user}
   git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
   ```
 
-9. Navigate to the repository's root directory:
+1. Navigate to the repository's root directory:
 
-  ```
+  ```bash{promptUser: user}
   cd agency-custom-upstream
   ```
 
@@ -99,22 +98,22 @@ You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or
 
 3. Copy the repository URL (HTTPS), and clone the site locally:
 
-    ```bash
+    ```bash{promptUser: user}
     git clone https://gitlab.com/pantheondocs/agency-custom-upstream.git
     ```
 
 4. `cd` into the project directory:
 
-    ```bash
+    ```bash{promptUser: user}
     cd agency-custom-upstream
     ```
-
 
 </Tab>
 
 </TabList>
 
 ## Pull in Core from Pantheon's Upstream
+
 To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
 
 1. Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon upstream as a [remote](https://git-scm.com/docs/git-remote):
@@ -123,7 +122,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title="WordPress" id="wp1" active={true}>
 
-    ```bash
+    ```bash{promptUser: user}
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
     ```
 
@@ -131,7 +130,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title="Drupal 8" id="d81">
 
-    ```bash
+    ```bash{promptUser: user}
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
     ```
 
@@ -139,7 +138,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title=" Drupal 7" id="d71">
 
-    ```bash
+    ```bash{promptUser: user}
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
     ```
 
@@ -153,7 +152,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title="WordPress" id="wp1" active={true}>
 
-    ```bash
+    ```bash{promptUser: user}
     git checkout master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
@@ -164,7 +163,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title="Drupal 8" id="d81">
 
-    ```bash
+    ```bash{promptUser: user}
     git checkout master
     git fetch pantheon-drops-8
     git merge pantheon-drops-8/master
@@ -175,7 +174,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title=" Drupal 7" id="d71">
 
-    ```bash
+    ```bash{promptUser: user}
     git checkout master
     git fetch pantheon-drops-7
     git merge pantheon-drops-7/master

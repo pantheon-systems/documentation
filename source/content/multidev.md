@@ -140,15 +140,18 @@ Any changes you make to a branch you have checked out locally will be committed 
 5. Choose whether to execute update.php after cloning, and click **Clone the Database & the Files from `source` into `target` Environment**.
 
 ## Edit Code
+
 Edit your content locally via [Git](/git) or utilize on-server development via [SFTP](/sftp) mode.
 
 ### SFTP Mode
+
 1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
 2. Set the connection mode to **SFTP** if it is not already set.
 3. Use the WordPress or Drupal admin interfaces to develop, or connect via SFTP using your preferred client.
 4. Type in a commit message for edits made via SFTP and click the **Commit** button.
 
 ### Git Mode
+
 1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
 2. Set the connection mode to **Git** if it is not already set.
 3. Select **Clone with Git** and copy the provided command. Paste the command in a terminal window to clone a copy of your site's code repository to your local.
@@ -156,13 +159,13 @@ Edit your content locally via [Git](/git) or utilize on-server development via [
 
   If the target environment's branch is _not_ listed, update the list by running `git fetch origin`. Once your local clone of the repository shows to be tracking the expected remote branch on Pantheon (e.g., `example-br`), switch to that branch:
 
-  ```
+  ```bash{promptUser: user}
   git checkout example-br
   ```
 
 5. Make desired code changes, then stage, commit, and push to the Multidev environment. For example:
 
-  ```
+  ```bash{promptUser: user}
   git add .
   git commit -m "My code changes"
   git push origin example-br
@@ -178,6 +181,7 @@ Instructions for using the command-line to merge the changes into the target are
 ![Location of Multidev merge button](../images/dashboard/multidev-merge.png)
 
 ### Compare Multidev Environments Locally
+
 The Multidev Environments page provides a list of all existing environments for a site, along with a quick comparison between environments and master (Dev). The "ahead" count represents the number of commits existing on the Multidev environment that have not been merged into master (Dev), while the "behind" count represents commits in master that do not exist on the Multidev branch.
 
 Counts displayed on the Multidev Environments page are ordered by time of the commit, which can cause discrepancies in certain scenarios (e.g. if an existing commit was cherry-picked from one environment branch into another).
@@ -200,17 +204,18 @@ A branch with no environment associated with it can be deleted by going to Multi
 Branches can be deleted locally and the commit can be pushed to Pantheon, but this may have unintended consequences if an environment is associated with it; use the interface instead.
 
 ## Rename a Branch
+
 Branch names must be lowercase and no more than 11 characters. If you push a branch to Pantheon that exceeds the character limit or has uppercase letters, it cannot become a Multidev environment. The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
 
 From the command line, rename the branch:
 
-```bash
+```bash{promptUser: user}
 git branch -m old-branch-name new-name
 ```
 
 Next, push the renamed branch:
 
-```bash
+```bash{promptUser: user}
 git push origin new-name
 ```
 

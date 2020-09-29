@@ -13,26 +13,26 @@ Pantheon handles the inclusion of service configuration files for pre-production
 
 1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/git/#clone-your-site-codebase) or via [Terminus](/terminus):
 
- ```bash
- `terminus connection:info <site>.dev --fields='Git Command' --format=string`
+ ```bash{promptUser: user}
+ terminus connection:info <site>.dev --fields='Git Command' --format=string
  ```
 
 2. Navigate to the site's docroot and rename the existing default service file for pre-production environments:
 
- ```
+ ```bash{promptUser: user}
  mv sites/default/default.services.pantheon.preproduction.yml sites/default/services.pantheon.preproduction.yml
  ```
 
 3. Stage, commit, and push your changes to Pantheon:
 
- ```
+ ```bash{promptUser: user}
  git commit -am "Create pre-production service config file and enable Twig debug"
  git push -u origin master
  ```
 
 4. Clear caches on Dev within the Site Dashboard or via [Terminus](/terminus):
 
- ```
+ ```bash{promptUser: user}
  terminus env:clear-cache <site>.<env>
  ```
 
@@ -53,11 +53,10 @@ Pantheon handles the inclusion of service configuration files for pre-production
         <div class="section layout-container clearfix">
  ```
 
-
 For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/services-yml).
 
-
 ## Enable Cacheability Debugging on Dev & Multidevs
+
 1. Add the [`sites/default/services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) file to your project if you have not done so already.
 
  This service file is used to manage settings across Pantheon's development environments, like Dev and Multidevs. Settings in this file are not applied to production environments, like Test and Live.
@@ -71,7 +70,7 @@ For more information on Pantheon's service configuration files for Drupal, refer
 
 3. Stage, commit, and push your changes to Pantheon:
 
-  ```
+  ```bash{promptUser: user}
   git commit -am "Pre-production enable cacheability debug service"
   git push
   ```
@@ -86,8 +85,8 @@ For more information on Pantheon's service configuration files for Drupal, refer
 
 For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/services-yml).
 
-
 ### Troubleshoot 503 Response: Header Overflow
+
 Responses with HTTP headers that exceed 10k return 503 Header Overflow errors. If you get this error after enabling cacheability debugging, disable it in the appropriate service file (e.g. `sites/default/services.pantheon.preproduction.yml`):
 
 ```yaml
@@ -136,15 +135,14 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
 2. Stage, commit, and push your changes to Pantheon:
 
-    ```
+    ```bash{promptUser: user}
     git commit -am "Override system performance configurations per env"
     git push
     ```
 
-
 3. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/terminus):
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush <site>.<env> -- config-get system.performance --include-overridden
    terminus drush <site>.<env> -- config-get system.logging --include-overridden
    terminus drush <site>.<env> -- config-get views.settings --include-overridden
@@ -157,7 +155,6 @@ This issue can be caused by a number of scenarios related to cache tags, such as
    </Alert>
 
 4. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
-
 
 ## Inclusions and Loading Order of Settings and Services Files
 

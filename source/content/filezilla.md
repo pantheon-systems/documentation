@@ -66,9 +66,10 @@ Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/up
 ## Troubleshooting
 
 ### File transfer failed on production environments
+
 Starting at the Performance Medium service level up to Elite plans, the Test and Live environments are provisioned with multiple application containers. When transferring files over SFTP into production environments, you may experience the following error:
 
-```
+```none
 /srv/bindings/SITE-BINDING/files/somefile.ext: open for read: no such file or directory
 Error:            File transfer failed
 ```
@@ -90,6 +91,7 @@ Resolve instances of transfer failures by reconfiguring FileZilla to limit the n
 See also, [this FAQ on our related SFTP doc](/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
 #### Fallback Solution If File Transfer Fails
+
 If all else fails, you can connect directly to an application container via the IP address. Use Dig to find the IP address:
 
 ```bash{outputLines:2-3}
@@ -99,9 +101,11 @@ dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
 ```
 
 ### Uploading to the Files Directory
+
 FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files` (for Drupal 7) or `code/web/sites/default/files` (for Drupal 8), which are symlinks to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
 
 ### nodename nor servname provided, or not known
+
 The following error is caused by an invalid hostname, most often the result of a typo:
 
 ```bash
@@ -110,6 +114,7 @@ Error:            Could not connect to server
 ```
 
 ### Site Manager
+
 Features offered in the FileZilla Site Manager (like [Synchronized Browsing](https://wiki.filezilla-project.org/Using#Synchronized_Browsing)) are not supported because the Pantheon platform sometimes migrates sites across appservers without warning and the non-static binding string will change. This means that while you can set up your site in the Site Manager, you will need to reconfigure the login information and file paths whenever the dev environment site binding changes.
 
 The value for **Default remote directory** in the Site Manager can be copied from the **Remote site** field in the main window, and you can append `code` to the path to synchronize with your local codebase. Remember that the site binding is subject to change.
@@ -118,10 +123,9 @@ The value for **Default remote directory** in the Site Manager can be copied fro
 
 The following error is always thrown when using the Quickconnect option in FileZilla:
 
-
 ```bash
-Error:        	Cannot establish FTP connection to an SFTP server. Please select proper protocol.
-Error:        	Critical error: Could not connect to server
+Error:          Cannot establish FTP connection to an SFTP server. Please select proper protocol.
+Error:          Critical error: Could not connect to server
 ```
 
 Quickconnect does not give options for protocol selection. You need to manually add the protocol (`sftp://`) in the **Host** field.

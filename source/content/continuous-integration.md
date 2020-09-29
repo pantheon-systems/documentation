@@ -20,7 +20,6 @@ See our [Build Tools](/guides/build-tools) guide for a more detailed look at a w
 
 You can use Terminus for scripting many operations. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
 
-
 ## Drupal SimpleTest
 
 [SimpleTest](https://drupal.org/project/simpletest) is a testing framework based on the [SimpleTest PHP library](https://github.com/simpletest/simpletest) that is included with Drupal core. If you are creating a custom web application, you should consider including SimpleTests of your module functionality.
@@ -37,7 +36,7 @@ To run tests on Pantheon:
 
 1. Enable `site_test`:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
    ```
 
@@ -45,7 +44,7 @@ To run tests on Pantheon:
 
 1. Clear the cache immediately before running tests to avoid strange failures:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- cc all
    ```
 
@@ -53,7 +52,7 @@ To run tests on Pantheon:
 
 1. Get the absolute path before you can run the script:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT"
    ```
 
@@ -61,7 +60,7 @@ To run tests on Pantheon:
 
 The full command will look something like this:
 
-```bash
+```bash{promptUser: user}
 export TERMINUS_HIDE_UPDATE_MESSAGE=1
 terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
 ```
@@ -70,7 +69,7 @@ In the above command the `--url` option is required to be passed as multidevs do
 
 A full CircleCI command might look similar to this:
 
-```
+```yml
       - run:
           name: Test simpletest
           command: |

@@ -13,37 +13,37 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
- ```
+ ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
  ```
 
 2. Install and activate [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus wp <site>.<env> -- plugin install pantheon-hud --activate
  ```
 
 3. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Install Pantheon HUD plugin"
  ```
 
 4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus wp <site>.test -- plugin activate pantheon-hud
  ```
 
 5. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus env:deploy <site>.live --cc --note="Install Pantheon HUD plugin"
  ```
 
 6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus wp <site>.live -- plugin activate pantheon-hud
  ```
 
@@ -64,18 +64,18 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 ```
 
 ## Drupal: Environment Indicator
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 and Drupal 8 sites.
 
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 and Drupal 8 sites.
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
- ```
+ ```bash{promptUser: user}
  terminus connection:set <site>.dev sftp
  ```
 
 2. Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus drush <site>.dev -- en environment_indicator -y
  ```
 
@@ -165,16 +165,15 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   </TabList>
 
-
 4. Deploy the module to the Test environment within the Site Dashboard or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Install and configure Environment Indicator"
  ```
 
 5. Deploy the module to the Live environment within the Site Dashboard or with Terminus:
 
- ```
+ ```bash{promptUser: user}
  terminus env:deploy <site>.live --cc --updatedb --note="Install and configure Environment Indicator"
  ```
 

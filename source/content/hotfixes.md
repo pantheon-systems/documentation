@@ -22,7 +22,7 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
 1. From within your Git clone, get a quick list of the existing Git tags:
 
-   ```git
+   ```bash{outputLines: 2-7}
    git tag
    pantheon.initialize
    pantheon_live_1
@@ -34,27 +34,27 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
  To get only the highest `live` tag, use the following:
 
- ```
+ ```bash{promptUser: user}
  git tag | grep pantheon_live_ | sort -k1.15n | tail -1
  ```
 
 2. Select the highest `live` tag and check it out:
 
-   ```git
+   ```bash{outputLines: 2-16}
    git checkout pantheon_live_1
    Note: checking out 'pantheon_live_1'.
    
-   
+    
    You are in 'detached HEAD' state. You can make experimental
    changes and commit them, and you can discard any commits you make without impacting any branches by performing another checkout.
-   
-   
+    
+    
    If you want to create a new branch to retain commits you create, you can
    do so by using -b with the checkout command again. Example:
-   
-   
+    
+    
      git checkout -b new_branch_name
-   
+    
    
    HEAD is now at ....
    ```
@@ -63,9 +63,9 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
 3. Create new branch and start working:
 
-   ```git
+   ```bash{outputLines: 2}
    git checkout -b hotfix
-   
+
    git commit -a -m "Hotfix issue xyz"
    ```
 
@@ -73,21 +73,21 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
 1. Make your hotfixes and commit them locally. Once you're done, find the latest tag deployed to test:
 
- ```
- git tag | grep pantheon_test_ | sort -k1.15n | tail -1
- ```
- 
+   ```bash{promptUser: user}
+   git tag | grep pantheon_test_ | sort -k1.15n | tail -1
+   ```
+
 2. Tag and push them to test by creating a _new_ test tag with a higher number value:
 
-   ```git
+   ```bash{promptUser: user}
    git tag -a pantheon_test_5 -m "Preparing a hotfix"
    git push origin pantheon_test_5
-  ```
+   ```
 
    <Alert title="Note" type="info">
-   
+
    Your tag numbers will vary. We are showing 5 because in the list of tags above the highest number was 4. Be sure you have the right number before pushing. The commands above should tell you the appropriate tag number.
-   
+
    </Alert>
 
 ## Test and Deploy
@@ -100,8 +100,10 @@ Because we use caching on our Git logs, you may not see your hotfix commit liste
 
 If your tests pass, you will need to repeat the process to deploy your changes to the Live environment. Currently, the deploys interface does not enable hotfix tags on test to be deployed directly to live.
 
-    git tag -a pantheon_live_2 -m "Deploying my hotfix"
-    git push origin pantheon_live_2
+```bash{promptUser: user}
+git tag -a pantheon_live_2 -m "Deploying my hotfix"
+git push origin pantheon_live_2
+```
 
 ## Orphan Commits
 
@@ -111,7 +113,7 @@ Even when making hotfixes, your workflow should push those changes into the mast
 
 If you do want to preserve the orphan commits, follow these Git commands to make a clean merge:
 
-```git
+```bash{promptUser: user}
 git checkout master
 git checkout -b hotfix
 git cherry-pick 0f230b0ef9fdce5d794cb1a4b6cf26a8052ba92a
