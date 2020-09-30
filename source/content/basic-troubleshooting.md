@@ -171,3 +171,11 @@ $config['system.logging']['error_level'] = 'verbose';
 ```bash
 drush rr
 ```
+
+## Additional Resources
+
+- [Errors and Server Responses](/errors-and-server-responses)
+- [PHP Errors and Exceptions](/php-errors)
+- [Database Connection Errors](/database-connection-errors)
+- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
