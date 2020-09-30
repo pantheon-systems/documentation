@@ -4,7 +4,7 @@ description: Test the latest Drupal on the Pantheon WebOps Platform.
 categories: [get-started]
 tags: [site]
 contributors: [populist, edwardangert]
-reviewed: "2020-05-27"
+reviewed: "2020-09-29"
 ---
 
 Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding-drupal/drupal-9-resources):
