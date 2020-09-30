@@ -41,7 +41,7 @@ Use `wp super-admin list` to list current super admins, and `wp super-admin add`
 
 ### Error: Cookies are blocked or not supported by your browser
 
-See the eponymous section in [Basic Troubleshooting](/basic-troubleshooting#error-cookies-are-blocked-or-not-supported-by-your-browser) for more information.
+See the related section in [Basic Troubleshooting](/basic-troubleshooting#error-cookies-are-blocked-or-not-supported-by-your-browser) for more information.
 
 ### Error: "Error establishing a database connection"
 You may see this error when moving a WordPress Site Network database between environments. The most common cause is either using `wp search-replace` incorrectly (or having forgotten to use it at all).
