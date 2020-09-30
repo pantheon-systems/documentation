@@ -74,19 +74,19 @@ More complex issues with code may necessitate using debugging tools beyond your 
 
 - Recreate the issue locally.
 - For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
-- Use Xdebug to set application breakpoints and dig into stack traces.
+- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/lando) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
 
 ## Pantheon Dashboard
 
-In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. But note that doing so after executing a change may cause that process to be run twice (CONFIRM WITH PRODUCT). The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/support/)
+In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. But note that doing so after executing a change may cause that process to be run twice (CONFIRM WITH PRODUCT). The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/support/).
 
 ### Check status.pantheon.io
 
-If Pantheon is experiencing a platform issue that impacts sites, we post updates on our status page. You can subscribe to status updates on that page if you’d like, or follow @PantheonStatus on Twitter.
+If Pantheon is experiencing a platform issue that impacts sites, we post updates on our [status page](https://status.pantheon.io/). You can also subscribe to status updates on that page, or follow [@PantheonStatus](https://twitter.com/pantheonstatus) on Twitter.
 
 ### HTTPS Issues
 
-When resolving issues with Pantheon's [HTTPS](/https/) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
+When resolving issues with Pantheon's [HTTPS](/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
 
 ### Code Changes
 
@@ -98,19 +98,19 @@ If changes to your code don't appear to be showing:
   git check-ignore -v path/to/file)
   ```
 
-Check composer dependencies as well. When a composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
+Check [Composer](/composer) dependencies as well. When a Composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
 
 ### Conflicts
 
-See [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicst](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) in our [WordPress and Drupal Core Updates](/core-updates) page for more information on core update conflicts. Note, deleted `README.txt` files can cause dashboard conflicts.
+See [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) on our [WordPress and Drupal Core Updates](/core-updates) page for more information on core update conflicts. Note, deleted `README.txt` files can cause dashboard conflicts.
 
-For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](git-resolve-merge-conflicts)
+For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts).
+
+## White Screen of Death (WSOD)
+
+The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/php-errors) for more information on the type of errors you may find.
 
 ## WordPress
-
-### White Screen of Death (WSOD)
-
-The **WSOD** is a frustrating issue on WordPress sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs/). See [PHP Errors and Exceptions](https://pantheon.io/docs/php-errors) for more information on the type of errors you may find.
 
 ### Disable All Plugins
 
@@ -120,13 +120,13 @@ If your WordPress site exhibits unwanted behavior and you're not sure of the cau
 
 ### Switch Theme to Default Theme
 
-Some themes can cause potential conflicts with Wordpress core, especially after core or plugin updates. To rule out the issue being your theme, switch to a default theme such as Twenty Nineteen.
+Some themes can cause potential conflicts with WordPress core, especially after core or plugin updates. To rule out the issue being your theme, switch to a default theme such as Twenty Nineteen.
 
 ### Unexpected 404s
 
-There are times the permalink structure in Wordpress is not updated properly, leading to 404 errors. Go to **Settings** > **Permalinks** in your Wordpress Dashboard and click **Save Changes**.
+There are times the permalink structure in WordPress is not updated properly, leading to 404 errors. Go to **Settings** > **Permalinks** in your WordPress Dashboard and click **Save Changes**.
 
-Check that the Wordpress Address and Site Address are properly configured in your Wordpress Dashboard. These can also be overwritten in your wp-config.php file:
+Check that the WordPress Address and Site Address are properly configured in your WordPress Dashboard. These can also be overwritten in your `wp-config.php` file:
 
 ```bash
 define('WP_HOME', 'https://example.com');
