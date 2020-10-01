@@ -19,4 +19,4 @@ Drupal 8.9.3 is now available on the Pantheon platform. Detailed information on 
 
 ### WordPress 5.5
 
-WordPress 5.5 has been released on the Pantheon platform. This version of WordPress introduces a new method, `[wp_get_environment_type()](https://make.wordpress.org/core/2020/07/24/new-wp_get_environment_type-function-in-wordpress-5-5/)`, which returns whether your site is running on a live, test or development environment. Pantheon supports this method, so it will return the correct value on any site that has upgraded to WordPress 5.5.
+WordPress 5.5 has been released on the Pantheon platform. This version of WordPress introduces a new method, [`wp_get_environment_type()`](https://make.wordpress.org/core/2020/07/24/new-wp_get_environment_type-function-in-wordpress-5-5/), which returns whether your site is running on a live, test or development environment. Pantheon supports this method, so it will return the correct value on any site that has upgraded to WordPress 5.5.
