@@ -69,18 +69,19 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.com`), you should be aware of some security considerations:
 
-- The sites on the subdomains may be able to read cookies set on your primary site.
+- Sites on the subdomains may be able to read cookies set on your primary site.
 - If a site on the subdomain is reported as a malicious phishing/spam/malware site, it could prevent access to your main marketing site if Google/Norton/etc. block the site.
 - HTTPS is not provisioned for vanity domains. Only custom domains will have HTTPS provisioned.
+  - To provision HTTPS for vanity domains, contact [Sales](https://pantheon.io/contact-sales?docs) to learn how to host your custom certificate on Pantheon.
 
 ## Robots.txt with Custom Vanity Domains
 
-For SEO and to prevent duplicate content, the `robots.txt` file attached to the custom Vanity domain will contain the following by default:
+For SEO and to prevent duplicate content, the `robots.txt` file attached to the custom vanity domain will contain the following by default:
 
-```http
+```http:title=robots.txt
 # https://live-sitename.agencyname.com/robots.txt
 User-agent: *
 Disallow: /
 ```
 
-To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/guides/launch/domains) and the appropriate DNS record created.
+To present an alternate `robots.txt` file from within the source code, [add a custom domain](/guides/launch/domains) to the site's Dashboard and create the appropriate DNS record.
