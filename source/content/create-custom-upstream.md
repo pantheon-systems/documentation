@@ -28,6 +28,7 @@ Choose your preferred Git host:
 
 1. If this is your first time logging in to GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New**](https://github.com/new) from the Repositories sidebar on the left.
 
+
 1. Name the repository.
 
 1. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
@@ -35,6 +36,14 @@ Choose your preferred Git host:
    **Do not** select the options to create a `README`, `.gitignore`, or license file:
 
    ![GitHub Initialization options](../images/github-create-readme.png)
+
+  <Alert type="info" title="Note">
+
+  As of October 1st, 2020, all new repositories on GitHub are initialized with the default branch name `main`. Pantheon currently defaults to using the `master` branch name for custom upstreams.
+
+  By not initializing the repo on GitHub, it will be constructed when you clone the repository locally, using Git's default branch of `master`.
+
+  </Alert>
 
 1. Click **Create Repository**.
 
