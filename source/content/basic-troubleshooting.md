@@ -151,7 +151,7 @@ Sometimes when installing Drupal 8, users may see the following error:
 
 ![A screenshot of a common Drupal 8 installation error](../images/drupal-8-install-error.png)
 
-This is apparently cause bu a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
+This is apparently caused by a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
 
 See the [UnmetDependenciesException when installing Drupal 8](https://www.drupal.org/project/drupal/issues/2594351) issue for more information.
 
