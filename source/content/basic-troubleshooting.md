@@ -78,7 +78,7 @@ More complex issues with code may necessitate using debugging tools beyond your 
 
 ## Pantheon Dashboard
 
-In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. But note that doing so after executing a change may cause that process to be run twice (CONFIRM WITH PRODUCT). The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/support/).
+In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/support/).
 
 ### Check status.pantheon.io
 
@@ -112,11 +112,9 @@ The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it prov
 
 ## WordPress
 
-### Disable All Plugins
+### Disable Plugins
 
-If your WordPress site exhibits unwanted behavior and you're not sure of the cause, try disabling all your plugins. If the behavior stops, turn the plugins back on one by one, checking after each one to identify the culprit.
-
-### Disable Plugins Incrementally
+If your WordPress site exhibits unwanted behavior and you're not sure of the cause, try disabling all your plugins, or disable plugins incrementally. If the behavior stops, turn the plugins back on one by one, checking after each one to identify the culprit.
 
 ### Switch Theme to Default Theme
 
@@ -153,7 +151,7 @@ Sometimes when installing Drupal 8, users may see the following error:
 
 ![A screenshot of a common Drupal 8 installation error](../images/drupal-8-install-error.png)
 
-This is apparently cause bu a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
+This is apparently caused by a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
 
 See the [UnmetDependenciesException when installing Drupal 8](https://www.drupal.org/project/drupal/issues/2594351) issue for more information.
 
@@ -164,12 +162,6 @@ Are you a Drupal 8 wizard? [Help us expand this section](https://github.com/pant
 
 ```php
 $config['system.logging']['error_level'] = 'verbose';
-```
-
-### Debugging With Drush
-
-```bash
-drush rr
 ```
 
 ## Additional Resources
