@@ -164,12 +164,6 @@ Are you a Drupal 8 wizard? [Help us expand this section](https://github.com/pant
 $config['system.logging']['error_level'] = 'verbose';
 ```
 
-### Debugging With Drush
-
-```bash
-drush rr
-```
-
 ## Additional Resources
 
 - [Errors and Server Responses](/errors-and-server-responses)
