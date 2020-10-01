@@ -39,7 +39,9 @@ Choose your preferred Git host:
 
   <Alert type="info" title="Note">
 
-  As of October 1st, 2020, all new repositories on GitHub are initialized with the default branch name `main`. Pantheon currently defaults to using the `master` branch name for custom upstreams.
+  As of October 1st, 2020, all new repositories on GitHub are initialized with the default branch name `main`.
+
+  As a company, Pantheon is trying to use [more inclusive language in our repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs). While our team works to make Custom Upstreams less reliant on older naming conventions, new Custom Upstreams currently default to using the `master` branch name.
 
   By not initializing the repo on GitHub, it will be constructed when you clone the repository locally, using Git's default branch of `master`.
 
