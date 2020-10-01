@@ -35,7 +35,7 @@ Choose your preferred Git host:
 
    **Do not** select the options to create a `README`, `.gitignore`, or license file:
 
-   ![GitHub Initialization options](../images/github-create-readme.png)
+   ![GitHub Initialization options](../images/github-avoid-readme.png)
 
   <Alert type="info" title="Note">
 
