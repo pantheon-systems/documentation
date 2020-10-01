@@ -43,7 +43,7 @@ Choose your preferred Git host:
 
   As a company, Pantheon is trying to use [more inclusive language in our repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs). While our team works to make Custom Upstreams less reliant on older naming conventions, new Custom Upstreams currently default to using the `master` branch name.
 
-  By not initializing the repo on GitHub, it will be constructed when you clone the repository locally, using Git's default branch of `master`.
+  Git's default naming convention differs from GitHub's. If you don't initialize the repository on GitHub, Git will assign the default branch name as `master` when you clone the repository locally.
 
   </Alert>
 
