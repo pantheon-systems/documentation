@@ -98,6 +98,10 @@ body {
 }
 /*  */
 
+span.gf-Bobblehead-label {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body.row.main {
 	position: relative;
 	top: 50px;
