@@ -159,6 +159,21 @@ function add_header_nocache() {
 }
 ```
 
+### Cross-Origin Resource Sharing (CORS)
+
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), this sample code will add the proper header and enable request from assigned URLs.
+
+```
+function additional_securityheaders( $headers ) {
+	if ( ! is_admin() ) {
+		$headers['Access-Control-Allow-Origin'] = 'https://example.com';
+	}
+
+	return $headers;
+}
+add_filter( 'wp_headers', 'additional_securityheaders' );
+```
+
 ### Custom Cookies
 
 Setting custom cookies can also be done from an MU-plugin like in the example below. Find more cookie manipulation examples at [Working with Cookies on Pantheon](/cookies).
