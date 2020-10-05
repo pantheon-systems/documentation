@@ -17,23 +17,27 @@ reviewed: "2020-05-08"
 
 Build Tools connects Pantheon with your CI service and external Git provider. It also includes Composer support, Automated Testing, and best practice recommendations for your advanced [WebOps workflow](https://pantheon.io/webops). This is an extension of the [Pantheon WebOps workflow](/pantheon-workflow).
 
-![Build Tools Structure diagram ](../../../pr-workflow/build-tools-structure-diagram.png)
+![Build Tools Structure diagram ](../../../images/pr-workflow/build-tools-structure-diagram.png)
 
 Using Build Tools will make it easy to create new projects that:
 
 1. Allow customization with your choice of Git provider and Continuous Integration (CI) service.
-2. Provides extra Terminus commands and customization options for common workflow tasks and to customize your build
-3. Includes templates and best practices to help level up WebOps teams with automated testing, composer updates, and more
-4. Avoid the complexity of combining multiple Pantheon start-state repositories on your own 
+
+1. Provides extra Terminus commands and customization options for common workflow tasks and to customize your build.
+
+1. Includes templates and best practices to help level up WebOps teams with automated testing, composer updates, and more.
+
+1. Avoid the complexity of combining multiple Pantheon start-state repositories on your own.
 
 ### A Build Tools Project's Components
 
 Build Tools currently supports the following combinations of Git and CI services:
 
 1. [<em class="fa fa-github" /> GitHub](https://github.com) and [CircleCI](https://circleci.com/)
-2. [<em class="fa fa-gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
-3. [<em class="fa fa-bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/
-pipelines)
+
+1. [<em class="fa fa-gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
+
+1. [<em class="fa fa-bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
 
 ![Build Tools Providers Diagram](../../../images/pr-workflow/build-tools-provider-diagram.png)
 
@@ -42,12 +46,15 @@ pipelines)
 It's quick to get started with a Build Tools project, but it’s also helpful to understand the components and how they work together.
 
 In general, it's a good fit if your team is comfortable with:
-- command-line tools
-- creating a bash script with terminus commands
-- CI to automate the deployments
+
+- command-line tools,
+- creating a bash script with terminus commands,
+- CI to automate the deployments.
 
 <Enablement title="Developer Resources" link="https://pantheon.io/learn-pantheon">
+
 Pantheon's Developer Relations team holds trainings, Office Hours and monitors posts in our community forum. Join us to learn about Terminus, automations, advanced workflows like Build Tools, and more.
+
 </Enablement>
 
 <Accordion title="Build Tools Changelog" id="changelog" icon="newspaper">
