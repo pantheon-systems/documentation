@@ -26,9 +26,9 @@ class Glossary extends React.Component {
     } = this.props
     //console.log("allMdx: ", allMdx) //For Debugging
 
-    let allDefs = []
+    let defLists = []
 
-    allMdx.edges.map(({ node }) => {
+    this.props.data.DocsWithDefLists.edges.map(({ node }) => {
       const matches = node.fileInfo.childMdx.rawBody.match(
         /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
       )
@@ -36,7 +36,7 @@ class Glossary extends React.Component {
       //console.log("match: ", matches) // For Debugging
       if (matches && matches.length) {
         matches.forEach(term => {
-          allDefs.push({
+          defLists.push({
             from: node.frontmatter.title,
             slug: node.fields.slug,
             title: term.match(/<dt>(.*?)<\/dt>/)[1],
@@ -47,11 +47,32 @@ class Glossary extends React.Component {
       }
     })
 
-    allDefs.sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase()) ? 1 : -1)
-    allDefs.sort(function(a, b) {
+    defLists.sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase()) ? 1 : -1)
+    defLists.sort(function(a, b) {
       return a.title[0].localeCompare(b.title[0]);
     });
-    //console.log("AllDefs: ", allDefs) // For debugging
+    //console.log("defLists: ", defLists) // For debugging
+
+    const allDfns = []
+
+    this.props.data.DocsWithDFNs.edges.map(({ node }) => {
+      const isDfn = node.fileInfo.childMdx.rawBody.match(
+        /.*<dfn(?: id=".+?")*>\n*.*\n*<\/dfn>.*\n/gim
+      )
+      if (isDfn && isDfn.length) {
+        isDfn.forEach(def => {
+          allDfns.push({
+            from: node.frontmatter.title,
+            slug: node.fields.slug,
+            title: def.match(/<abbr title="(.+?)"/) ? def.match(/<abbr title="(.+?)"/)[1] : def.match(/<dfn(?: id=".+?")*>(.+?)<\/dfn>/)[1],
+            definition: def,
+            letter: def.match(/<abbr title="(.+?)"/) ? def.match(/<abbr title="(.+?)"/)[1][0] : def.match(/<dfn(?: id=".+?")*>(.+?)<\/dfn>/)[1][0],
+            id: def.match(/<dfn id=/) ? def.match(/<dfn id="(.+?)"/)[1] : null
+          })
+        })
+      }
+    })
+    console.log("allDfns: ", allDfns) //For Debugging
 
     const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -74,7 +95,7 @@ class Glossary extends React.Component {
 
                   {letters.map( index =>(
                     <>
-                    {allDefs
+                    {allDfns
                       .filter(def => {
                         return (
                           JSON.stringify(def.letter).match(index)
@@ -85,7 +106,7 @@ class Glossary extends React.Component {
                         </h2>
                       : null
                     }
-                    {allDefs
+                    {allDfns
                       .filter(def => {
                         return (
                           def.letter.toUpperCase() === index.toUpperCase()
@@ -95,16 +116,14 @@ class Glossary extends React.Component {
                         <>
                           <section key={title}>
                             <hr />
-                            <h3 id={title.toLowerCase()}><dt key={`${title}-term`}>
+                            <h3 key={`${title}-header`} id={title.toLowerCase()}>
                               {title.charAt(0).toUpperCase() + title.slice(1)}
-                            </dt></h3>
-                            <dd key={`${title}-definition`}>
+                            </h3>
+                            
                               <ReactMarkdown skipHtml={true} source={definition} />
-                            </dd>
 
                             {from.length > 0 ? (
                               <>
-                                <br />
                                 Excerpt from:{" "}
                                 <Link key={`${title}-reference`} to={`/${slug}`}>
                                   {from}
@@ -133,10 +152,32 @@ export default Glossary
 
 export const pageQuery = graphql`
   {
-    allMdx(
+    DocsWithDefLists: allMdx(
       filter: {
         frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
         fileInfo: { childMdx: { rawBody: { regex: "/<dt>/" } } }
+      }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+          fileInfo {
+            childMdx {
+              rawBody
+            }
+          }
+        }
+      }
+    }
+    DocsWithDFNs: allMdx(
+      filter: {
+        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        fileInfo: { childMdx: { rawBody: { regex: "/<dfn/" } } }
       }
     ) {
       edges {
