@@ -18,6 +18,7 @@ async function getWeeklyClosedPRBodies() {
     response = await octokit.pulls.list({
       owner: "pantheon-systems",
       repo: "documentation",
+      base: "main",
       state: "closed",
       sort: "updated",
       per_page: "30",
