@@ -148,7 +148,7 @@ If you want to track configurations in more tables, you must do so using the `wp
 
 ### Will WP-CFM work with Multidev?
 
-Yes. For the Multidev to appear as a config option, you will need hook into the plugin's [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) and [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) functions, in a Must Use Plugin like the examples here setup [MU Plugin Bar](/mu-plugin/#example-code-snippets).
+Yes. For the Multidev to appear as a config option, you will need hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/mu-plugin/#wp-cfm-compatibility).
 
 ### What's not tracked?
 
