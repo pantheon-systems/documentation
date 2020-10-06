@@ -24,7 +24,7 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
   github: //github.com/rachelwhitton
   twitter: https://twitter.com/rachwhitton
-  bio: Customer Success Manager
+  bio: Engagement Manager, Professional Services
 - id: populist
   name: Matt Cheney
   avatar: //avatars1.githubusercontent.com/u/520521
@@ -79,7 +79,7 @@
 - id: sarahg
   name: Sarah German
   twitter: https://twitter.com/hey_germano
-  bio: Support Manager
+  bio: Platform Reliability Manager
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
   github: //github.com/sarahg
   drupal: //www.drupal.org/user/562544
@@ -221,7 +221,7 @@
 - id: peter-pantheon
   name: Peter Sawczynec
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
-  bio: Senior Customer Success Engineer
+  bio: Customer Onboarding Manager
   github: //github.com/peter-pantheon
 - id: greg-1-anderson
   name: Greg Anderson
@@ -274,7 +274,7 @@
   linkedin: https://linkedin.com/in/tessak22
 - id: eabquina
   name: Eladio Abquina
-  bio: Customer Success Engineer
+  bio: Engagement Manager, Professional Services
   twitter: https://twitter.com/eabquina
   github: //github.com/eabquina
   avatar: //pbs.twimg.com/profile_images/1290706689/SAMPLE2_400x400.jpg
@@ -340,7 +340,7 @@
 - id: carlalberto
   name: Carl Alberto
   github: //github.com/carl-alberto
-  bio: Pantheon Customer Success Engineer
+  bio: Pantheon Senior Customer Success Engineer
   avatar: //avatars.githubusercontent.com/u/5098765
 - id: szipfel
   name: Steve Zipfel
