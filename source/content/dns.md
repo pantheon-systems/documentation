@@ -41,11 +41,11 @@ The last section of your website name before the [TLD](#tld), the <dfn>domain</d
 
 ### Subdomain
 
-Separates by periods (`.`), <dfn>subdomains</dfn> precede the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
+Separates by periods (`.`), <dfn id="subdomain">subdomains</dfn> precede the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
 
 ### Authoritative Name Server
 
-An <dfn>Authoritative Name Server</dfn> publishes your domain's DNS records
+An <dfn id="authoritative name server">Authoritative Name Server</dfn> publishes your domain's DNS records
 
 ## DNS Record Types
 

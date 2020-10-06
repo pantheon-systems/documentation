@@ -8,9 +8,6 @@ import ReactMarkdown from "react-markdown"
 import SEO from "../layout/seo"
 import TOC from "../components/toc"
 
-{
-  /* @TODO Convert to a React Component */
-}
 const previewFlexPanelItem = {
   flex: "1 46%",
   margin: "0px 0px 15px 15px",
@@ -66,7 +63,7 @@ class Glossary extends React.Component {
             slug: node.fields.slug,
             title: def.match(/<abbr title="(.+?)"/) ? def.match(/<abbr title="(.+?)"/)[1] : def.match(/<dfn(?: id=".+?")*>(.+?)<\/dfn>/)[1],
             definition: def,
-            letter: def.match(/<abbr title="(.+?)"/) ? def.match(/<abbr title="(.+?)"/)[1][0] : def.match(/<dfn(?: id=".+?")*>(.+?)<\/dfn>/)[1][0],
+            letter: def.match(/<abbr title="(.+?)"/) ? def.match(/<abbr title="(.+?)"/)[1][0] : def.match(/<dfn(?: id=".+?")*>(.+?)<\/dfn>/)[1][0].toUpperCase(),
             id: def.match(/<dfn id=/) ? def.match(/<dfn id="(.+?)"/)[1] : null
           })
         })
