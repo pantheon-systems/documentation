@@ -18,9 +18,9 @@ class Glossary extends React.Component {
 
   render () {
 
-    const {
-      data: { docsWithDefLists, docsWithDFNs },
-    } = this.props
+    const docsWithDefLists = this.props.data.docsWithDefLists
+    const docsWithDFNs = this.props.data.docsWithDFNs
+
     console.log("docsWithDFNS: ", docsWithDFNs) //For Debugging
     console.log("docsWithDefLists", docsWithDefLists)
 
