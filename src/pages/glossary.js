@@ -22,13 +22,13 @@ class Glossary extends React.Component {
   render () {
 
     const {
-      data: { allMdx },
+      data: { docsWithDefLists, docsWithDFNs },
     } = this.props
     //console.log("allMdx: ", allMdx) //For Debugging
 
     let defLists = []
 
-    this.props.data.DocsWithDefLists.edges.map(({ node }) => {
+    docsWithDefLists.edges.map(({ node }) => {
       const matches = node.fileInfo.childMdx.rawBody.match(
         /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
       )
@@ -55,7 +55,7 @@ class Glossary extends React.Component {
 
     const allDfns = []
 
-    this.props.data.DocsWithDFNs.edges.map(({ node }) => {
+    docsWithDFNs.edges.map(({ node }) => {
       const isDfn = node.fileInfo.childMdx.rawBody.match(
         /.*<dfn(?: id=".+?")*>\n*.*\n*<\/dfn>.*\n/gim
       )
@@ -119,7 +119,7 @@ class Glossary extends React.Component {
                             <h3 key={`${title}-header`} id={title.toLowerCase()}>
                               {title.charAt(0).toUpperCase() + title.slice(1)}
                             </h3>
-                            
+
                               <ReactMarkdown skipHtml={true} source={definition} />
 
                             {from.length > 0 ? (
@@ -151,8 +151,8 @@ class Glossary extends React.Component {
 export default Glossary
 
 export const pageQuery = graphql`
-  {
-    DocsWithDefLists: allMdx(
+  query definitionsInDocs {
+    docsWithDefLists: allMdx(
       filter: {
         frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
         fileInfo: { childMdx: { rawBody: { regex: "/<dt>/" } } }
@@ -174,7 +174,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    DocsWithDFNs: allMdx(
+    docsWithDFNs: allMdx(
       filter: {
         frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
         fileInfo: { childMdx: { rawBody: { regex: "/<dfn/" } } }
