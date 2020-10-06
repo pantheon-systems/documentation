@@ -69,6 +69,10 @@ class Glossary extends React.Component {
         })
       }
     })
+    allDfns.sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase()) ? 1 : -1)
+    allDfns.sort(function(a, b) {
+      return a.title[0].localeCompare(b.title[0]);
+    });
     console.log("allDfns: ", allDfns) //For Debugging
 
     const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
