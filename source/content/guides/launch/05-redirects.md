@@ -24,6 +24,16 @@ Choose one of the following options to configure the primary domain.
 
 <Partial file="primary-domain.md" />
 
+## (WordPress) Update Database URLs
+
+WordPress site admins must also ensure that all URLs in the site's database are updated. This update can be performed [during a database clone](/wordpress-broken-links#update-environment-urls-on-pantheon), or at any time [using a WordPress plugin](/wordpress-broken-links#theres-a-plugin-for-that) or through [Terminus](/terminus):
+
+```bash{promptUser: user}
+terminus wp <site>.live -- search-replace live-<site>.pantheonsite.io <custom-domain> --url=live-<site>.pantheonsite.io --dry-run
+```
+
+The example code above includes `--dry-run`, which executes the command but prevents permanent changes. Remove this flag once confident that the values are correct.
+
 ### Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to configure a long-duration HSTS header, or set up an availability monitoring service to watch over your site like an automated hawk.
 
