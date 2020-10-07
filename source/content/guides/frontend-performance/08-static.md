@@ -1,9 +1,8 @@
 ---
 title: Frontend Performance 
-subtitle: Redirects
-description: desc
+subtitle: Static Sites and Pages
+description: Static sites and static page generation, including AMP.
 anchorid: static
-layout: guide
 categories: [performance]
 tags: [measure, traffic]
 type: guide
