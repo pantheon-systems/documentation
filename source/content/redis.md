@@ -217,9 +217,6 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
     $conf['cache_default_class'] = 'Redis_CacheCompressed';
     $conf['cache_prefix'] = array('default' => 'pantheon-redis');
 
-    // Do not use Redis for cache_form (no performance difference).
-    $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-
     // Use Redis for Drupal locks (semaphore).
     $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
     // Or if you've installed the redis module in a contrib subdirectory, use:
