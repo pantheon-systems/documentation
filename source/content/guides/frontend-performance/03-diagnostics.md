@@ -1,13 +1,12 @@
 ---
 title: Frontend Performance 
 subtitle: Diagnostic Tools
-description: desc
+description: Tools for evaluating performance issues.
 anchorid: diagnostics
-layout: guide
 categories: [performance]
 tags: [measure, traffic]
 type: guide
-permalink: docs/guides/frontend-performance/redirects/
+permalink: docs/guides/frontend-performance/diagnostics
 editpath: frontend-performance/03-diagnostics.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"

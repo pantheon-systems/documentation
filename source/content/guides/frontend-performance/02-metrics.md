@@ -1,13 +1,12 @@
 ---
 title: Frontend Performance 
-subtitle: Choosing Performance Metrics
+subtitle: Performance Metrics
 description: Overview of how and what to measure when optimizing your site for performance.
 anchorid: metrics
-layout: guide
 categories: [performance]
 tags: [measure, traffic]
 type: guide
-permalink: docs/guides/frontend-performance/metrics/
+permalink: docs/guides/frontend-performance/metrics
 editpath: frontend-performance/02-metrics.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"

@@ -1,7 +1,7 @@
 ---
 title: Frontend Performance 
 subtitle: Caching
-description: desc
+description: Caching strategies for improved performance.
 anchorid: caching
 layout: guide
 categories: [performance]

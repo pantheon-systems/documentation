@@ -1,9 +1,8 @@
 ---
 title: Frontend Performance 
-subtitle: Query Caching and Database Optimization
-description: desc
+subtitle: Queries and Databases
+description: Optimizing queries and database optimization.
 anchorid: queries
-layout: guide
 categories: [performance]
 tags: [measure, traffic]
 type: guide
