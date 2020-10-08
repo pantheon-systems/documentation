@@ -288,13 +288,13 @@ ___
 
 ___
 
-## [Elementor](https://wordpress.org/plugins/elementor/)
+## Elementor
 
-**Issue:** Incorrect urls used for the style assets.
+<ReviewDate date="2020-10-08" />
 
-> Elementor uses the current url to link the style assets when developing with Elementor, And cannot be changed using WP-CLI search-replace via terminus, Or Any search replace plugins.
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) Uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. This path cannot be changed via the WP-CLI search-replace function, or any other search & replace plugin.
 
-**Solution:** Use the built in search-replace feature by Elementor in `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`
+**Solution:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
