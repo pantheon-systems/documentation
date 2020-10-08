@@ -822,7 +822,7 @@ ___
 
 ## [WP-Rocket](https://wp-rocket.me/)
 
-<ReviewDate date="2020-05-18" />
+<ReviewDate date="2020-10-08" />
 
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP-Rocket will auto-create
 the `advanced-cache.php` file.
@@ -845,13 +845,15 @@ the `advanced-cache.php` file.
 
 After symlinking, make sure to manually create these folders in *ALL* environments.
 
-```files/cache/wp-rocket
+```none
+files/cache/wp-rocket
 files/cache/busting
 ```
 
 or
 
-```code/wp-content/uploads/cache/wp-rocket
+```none
+code/wp-content/uploads/cache/wp-rocket
 code/wp-content/uploads/cache/busting
 ```
 
