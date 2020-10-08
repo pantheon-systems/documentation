@@ -288,6 +288,16 @@ ___
 
 ___
 
+## Elementor
+
+<ReviewDate date="2020-10-08" />
+
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) Uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. This path cannot be changed via the WP-CLI search-replace function, or any other search & replace plugin.
+
+**Solution:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+
+___
+
 ## [Event Espresso](https://eventespresso.com/)
 
 <ReviewDate date="2018-11-15" />
