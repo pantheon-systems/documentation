@@ -67,4 +67,4 @@ Now that the problem has been found, it can be addressed. In this case, simply a
 
 1. If the query result is poor, use the `EXPLAIN` and `EXPLAIN EXTENDED` MySQL command to get additional information. You can also examine the MySQL tables for structural issues using `DESCRIBE` and `ANALYZE` commands.
 
-1. Once identified, fix the issue. This can be within the MySQL server itself if that's where the problem is, or it can be within the application by redoing code or configurations that are creating the errant query.
+1. Once identified, fix the issue. The fix may be to adjust the SQL query itself, or it can be within the application by redoing code or configurations that are creating the errant query.
