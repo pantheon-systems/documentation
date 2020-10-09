@@ -11,7 +11,7 @@ reviewed: "2020-04-23"
 
 <dl>
 
-<dt>List Price</dt>
+<dt class="noglossary">List Price</dt>
 
 <dd>
 
@@ -19,7 +19,7 @@ Set price for new sites created after November 15, 2018 that aren’t purchased 
 
 </dd>
 
-<dt>Preferred Price</dt>
+<dt class="noglossary">Preferred Price</dt>
 
 <dd>
 
