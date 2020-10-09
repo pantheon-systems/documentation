@@ -4,9 +4,11 @@ import HeaderBody from "../components/headerBody"
 import Layout from "../layout/layout"
 import Popover from "../components/popover"
 import React from "react"
-import ReactMarkdown from "react-markdown"
 import SEO from "../layout/seo"
 import TOC from "../components/toc"
+import showdown from "showdown"
+
+const converter = new showdown.Converter()
 
 const previewFlexPanelItem = {
   flex: "1 46%",
@@ -161,12 +163,11 @@ class Glossary extends React.Component {
                               >
                                 {title.charAt(0).toUpperCase() + title.slice(1)}
                               </h3>
-
-                              <ReactMarkdown
-                                skipHtml={true}
-                                source={definition}
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: converter.makeHtml(definition)
+                                }}
                               />
-
                               {from.length > 0 ? (
                                 <>
                                   Excerpt from:{" "}
