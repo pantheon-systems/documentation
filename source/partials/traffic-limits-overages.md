@@ -8,8 +8,12 @@ Pantheon monitors your site traffic as part of our evaluation of overall site he
 
 ### Overage Protection
 
-Pantheon designed Overage Protection to prevent one-time traffic spikes from causing billing issues. All Performance plans and higher include Overage Protection, which provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
+Pantheon designed Overage Protection for Performance sites to prevent one-time traffic spikes from causing billing issues. All Performance plans and higher include Overage Protection, which provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
 
 If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change ahead of time.
 
-Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period.
+### Basic Plans
+
+Basic Sites do not have overage protection. If a Basic Site exceeds the 25,000 visit cap in any given month, the site plan will be automatically upgraded to the [Performance plan](https://pantheon.io/plans/performance-pricing) whose visit limit accommodates the site's traffic.
+
+For more information, see [Traffic Limits and Overages](/traffic-limits).

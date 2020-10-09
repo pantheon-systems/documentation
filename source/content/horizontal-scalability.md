@@ -42,12 +42,14 @@ When preparing for traffic spikes manually (not on Pantheon), you need to decide
 
 Pantheon customers don't need to worry about these systems, as the platform is build to scale as needed out of the box.
 
-### Performance Plans
-On Pantheon, all Performance plans include Overage Protection to prevent one-time traffic spikes from causing billing issues. If the change to traffic behavior is sustained, the site will eventually be moved to the appropriate Performance plan. This provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
+### Basic Plans
 
-Basic plan sites do not have this protective feature and are charged for traffic exceeding their allotment. The overage charge is $2.50 per 1,000 visits (no proration).
+Basic Sites do not have overage protection. If a Basic Site exceeds the 25,000 visit cap in any given month, the site plan will be automatically upgraded to the [Performance plan](https://pantheon.io/plans/performance-pricing) whose visit limit accommodates the site's traffic.
 
 For more information, see [Traffic Limits and Overages](/traffic-limits).
+
+### Performance Plans
+On Pantheon, all Performance plans include Overage Protection to prevent one-time traffic spikes from causing billing issues. If the change to traffic behavior is sustained, the site will eventually be moved to the appropriate Performance plan. This provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
 
 ### Elite or Contract Plans
 We allow an increase in application containers for campaigns or peak traffic. A request can be sent to Pantheon Support with the following information:
