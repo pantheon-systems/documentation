@@ -851,7 +851,20 @@ the `advanced-cache.php` file.
 
 **Issue 2:** WP-rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution:** [Create symlinks](#assumed-write-access) as noted above.
+**Solution 1:** [Specify a Custom Cache Folder and Config Path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder) by adding this in the wp-config.php:
+
+Only works with WP Rocket 3.2 and newer:
+```
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/new-path/cache/' ); 
+```
+
+Only works with WP Rocket 3.5 and newer:
+```
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/wp-rocket-config/' );
+```
+
+
+**Solution 2:** [Create symlinks](#assumed-write-access) as noted above.
 
 After symlinking, make sure to manually create these folders in *ALL* environments.
 
