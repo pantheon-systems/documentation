@@ -14,4 +14,6 @@ If the change to traffic behavior exceeds your plan limit for any two months of 
 
 ### Basic Plans
 
-Basic plan sites do not have this protective feature and are automatically upgraded to the appropriate [Performance plan](https://pantheon.io/plans/performance-pricing).
+Basic Sites do not have overage protection. If a Basic Site exceeds the 25,000 visit cap in any given month, the site plan will be automatically upgraded to the [Performance plan](https://pantheon.io/plans/performance-pricing) whose visit limit accommodates the site's traffic.
+
+For more information, see [Traffic Limits and Overages](/traffic-limits).
