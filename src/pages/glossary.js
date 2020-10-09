@@ -165,7 +165,7 @@ class Glossary extends React.Component {
                               </h3>
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: converter.makeHtml(definition)
+                                  __html: converter.makeHtml(definition).replace(/<a href="\/(.+?)">/g, "<a href=/docs/$1>")
                                 }}
                               />
                               {from.length > 0 ? (
