@@ -138,13 +138,15 @@ class Glossary extends React.Component {
                       {allDefs.filter(def => {
                         return JSON.stringify(def.letter).match(index)
                       }).length > 0 ? (
-                        <h2
-                          key={index}
-                          className="tocify-item"
-                          id={index.toLowerCase()}
-                        >
-                          {index}
-                        </h2>
+                        <Link to={`#${index.toLowerCase()}`}>
+                          <h2
+                            key={index}
+                            className="tocify-item"
+                            id={index.toLowerCase()}
+                          >
+                            {index}
+                          </h2>
+                        </Link>
                       ) : null}
                       {allDefs
                         .filter(def => {
@@ -156,13 +158,15 @@ class Glossary extends React.Component {
                           <>
                             <section key={title}>
                               <hr />
-                              <h3
-                                key={`${title}-header`}
-                                id={title.toLowerCase()}
-                                className="glossary-term"
-                              >
-                                {title.charAt(0).toUpperCase() + title.slice(1)}
-                              </h3>
+                              <Link to={`#${title.toLowerCase()}`}>
+                                <h3
+                                  key={`${title}-header`}
+                                  id={title.toLowerCase()}
+                                  className="glossary-term"
+                                >
+                                  {title.charAt(0).toUpperCase() + title.slice(1)}
+                                </h3>
+                              </Link>
                               <div
                                 dangerouslySetInnerHTML={{
                                   __html: converter.makeHtml(definition).replace(/<a href="\/(.+?)">/g, "<a href=/docs/$1>")
