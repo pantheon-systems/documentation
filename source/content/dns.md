@@ -23,26 +23,49 @@ While Pantheon does not offer DNS management services, we can help you to unders
 
 ## DNS Terminology
 
-### TLD
+<dl>
 
-The <dfn id="tld">TLD</dfn> (Top Level Domain) is the last piece of your website URL (`.com`, `.net`, `.org`, etc)
+<dt>TLD</dt>
 
+<dd>
 
-### Registrar
+Stands for **Top Level Domain**. This is the last piece of your website URL (`.com`, `.net`, `.org`, etc)
 
-A <dfn id="registrar">Registrar</dfn> is the service through which you purchase a domain name. Most registrars also offer DNS management services.
+</dd>
 
-### Domain
+<dt>Registrar</dt>
 
-The last section of your website name before the [TLD](#tld), the <dfn id="domain">domain</dfn> is what you purchase from the [Registrar](#registrar).
+<dd>
 
-### Subdomain
+The service through which you purchase a domain name. Most registrars also offer DNS management services.
 
-Separates by periods (`.`), <dfn id="subdomain">subdomains</dfn> precede the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
+</dd>
 
-### Authoritative Name Server
+<dt>Domain</dt>
 
-An <dfn id="authoritative name server">Authoritative Name Server</dfn> publishes your domain's DNS records
+<dd>
+
+The last section of your website name before the TLD, the domain is what you purchase from the Registrar.
+
+</dd>
+
+<dt>Subdomain</dt>
+
+<dd>
+
+Separate by periods (`.`), subdomains precede the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
+
+</dd>
+
+<dt>Authoritative Name Server</dt>
+
+<dd>
+
+The service that publishes your domain's DNS records
+
+</dd>
+
+</dl>
 
 ## DNS Record Types
 
