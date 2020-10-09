@@ -131,8 +131,6 @@ This header indicates which POP your response came from. Our primary infrastruct
 
 </dd>
 
-</dl>
-
 ![Chrome network headers](../../images/guides/front-end-performance/chrome-network-headers.png)
 
 <Accordion title="Google's Developer Tools" id="dev-tools" icon="lightbulb">
