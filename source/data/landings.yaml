@@ -458,6 +458,11 @@
     type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
+  cta_alt:
+    title: 'Glossary'
+    type: 'reference'
+    subtitle: 'Familiarize yourself with all the terms found in our docs.'
+    url: '/glossary'
   topics-groups:
     - title: 'Platform Services & Resources'
       subtitle: 'Learn about the services and resources provided to your website.'

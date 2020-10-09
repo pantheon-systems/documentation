@@ -134,8 +134,8 @@ const Header = ({ data, page }) => (
                     </Link>
                   </li>
                   <li>
-                    <Link id="getting-started-guide" to="/guides/">
-                      Guides
+                    <Link id="Glossary" to="/glossary">
+                      Glossary
                     </Link>
                   </li>
                   <li>
