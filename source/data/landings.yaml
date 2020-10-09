@@ -786,8 +786,8 @@
               url: '/test-global-cdn-caching'
         - title: 'Application Configurations'
           links:
-            - text: 'What is APC and what is it used for?'
-              url: '/alternative-php-cache'
+            - text: 'APCU Cache Basics'
+              url: '/apcu'
             - text: 'Clearing Caches for Drupal and WordPress'
               url: '/clear-caches'
             - text: 'Drupal 8 Performance and Varnish Caching Settings'
