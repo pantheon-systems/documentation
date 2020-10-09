@@ -12,6 +12,6 @@ Pantheon designed Overage Protection for Performance sites to prevent one-time t
 
 If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change ahead of time.
 
-### Basic Plan Sites
+### Basic Plans
 
 Basic plan sites do not have this protective feature and are automatically upgraded to the appropriate [Performance plan](https://pantheon.io/plans/performance-pricing).
