@@ -28,7 +28,7 @@ class Glossary extends React.Component {
 
     docsWithDefLists.edges.map(({ node }) => {
       const matches = node.rawBody.match(
-        /<dt>(.+?)<\/dt>\n\n<dd>\n\n(.+?)\n\n<\/dd>/gim
+        /<dt>(.+?)<\/dt>\n\n\s*<dd>\n\n(.+?)\n\n\s*<\/dd>/gim
       )
       //console.log("Match Title: ", node.frontmatter.title) // For Debugging
       //console.log("match: ", matches) // For Debugging
@@ -38,7 +38,7 @@ class Glossary extends React.Component {
             from: node.frontmatter.title,
             slug: node.fields.slug,
             title: term.match(/<dt>(.*?)<\/dt>/)[1],
-            definition: term.match(/<dd>\n\n(.*?)\n\n<\/dd>/)[1],
+            definition: term.match(/<dd>\n\n\s*(.*?)\n\n\s*<\/dd>/)[1],
             letter: term.match(/<dt>(.*?)<\/dt>/)[1][0].toUpperCase(),
           })
         })
