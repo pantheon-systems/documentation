@@ -72,7 +72,7 @@ How you resolve a merge conflict depends on what type of conflict you're faced w
 
 ### Resolve delete/modify Conflicts
 
-To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
+When one commit removes a file and another commit modifies that file, a merge conflict is created.  To resolve such a delete/modify merge conflict from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:
 
 ```git
