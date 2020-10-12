@@ -50,6 +50,8 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
+Cache lifetime of 1 year only applies to test and live environments. Dev and multidev environments are intended for development purposes only so static assets for these environments will not be cached.
+
 ## Using Your Own Session-Style Cookies
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
