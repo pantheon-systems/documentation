@@ -24,7 +24,7 @@ async function getWeeklyClosedPRBodies() {
       base: "main",
       state: "closed",
       sort: "updated",
-      per_page: "30",
+      per_page: "50",
       page: "0",
       direction: "desc",
     })
@@ -86,6 +86,7 @@ const StatusReport = () => {
         key: 'selection'
       }
     ]);
+    //console.log("Initial dateRange: ", dateRange[0])
 
   const summRegex = /(?<=Summary\s*)[\s\S]*?(?=\s*##)/g
   //console.log("summRegex: ", summRegex)
@@ -98,6 +99,7 @@ const StatusReport = () => {
       <h2> Today is {renderDate.toString()} </h2>
       <h3> Two weeks ago was {renderTwoWeeksAgo.toString()}</h3>
       <div>
+      <center>
         <DateRange
           editableDateInputs={true}
           onChange={item => setDateRange([item.selection])}
@@ -106,10 +108,20 @@ const StatusReport = () => {
           months={2}
           direction="horizontal"
         />
+        </center>
       </div>
+      <hr />
       <div id="summaries" style={{paddingLeft: "3em"}}>
 
-        {data.map((item) => {
+        {data.filter(item => {
+          var mergeDate = new Date(item.merged_at)
+          //console.log("dateRange[0].startDate: ", dateRange[0].startDate)
+          //console.log("mergeDate: ", mergeDate)
+          return (
+            dateRange[0].startDate < mergeDate &&
+            dateRange[0].endDate >= mergeDate
+          )
+        }).map((item) => {
           //var date = new Date(item.closed_at)
           var mergeDate = new Date(item.merged_at)
           var summary = summRegex.exec(item.body)
@@ -132,12 +144,7 @@ const StatusReport = () => {
                 </>
                 : null
               }
-              { item.merged_at ?
-                <p key={`${item.id}-date`} style={{userSelect: "none"}}>
-                  Merged on {mergeDate.getMonth() + 1}/{mergeDate.getDate()}/{mergeDate.getFullYear()}
-                </p>
-                : null
-              }
+              <br />
             </>
           )
         })}
