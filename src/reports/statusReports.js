@@ -5,6 +5,9 @@ import Octokit from "@octokit/rest"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import showdown from "showdown"
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRange } from 'react-date-range';
 
 const converter = new showdown.Converter()
 
@@ -38,6 +41,7 @@ async function getAllPulls() {
 
 
 const StatusReport = () => {
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -75,6 +79,14 @@ const StatusReport = () => {
   twoWeeksAgo.setDate(thisDate.getDate() - 14)
   var renderTwoWeeksAgo = weekday[twoWeeksAgo.getDay()] + ", " + (twoWeeksAgo.getMonth()+1) + "/" + twoWeeksAgo.getDate() + "/" + twoWeeksAgo.getFullYear()
 
+  const [dateRange, setDateRange] = useState([
+      {
+        startDate: twoWeeksAgo,
+        endDate: thisDate,
+        key: 'selection'
+      }
+    ]);
+
   const summRegex = /(?<=Summary\s*)[\s\S]*?(?=\s*##)/g
   //console.log("summRegex: ", summRegex)
 
@@ -85,7 +97,16 @@ const StatusReport = () => {
       <h1>Recently Merged PRs</h1>
       <h2> Today is {renderDate.toString()} </h2>
       <h3> Two weeks ago was {renderTwoWeeksAgo.toString()}</h3>
-      <br />
+      <div>
+        <DateRange
+          editableDateInputs={true}
+          onChange={item => setDateRange([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={dateRange}
+          months={2}
+          direction="horizontal"
+        />
+      </div>
       <div id="summaries" style={{paddingLeft: "3em"}}>
 
         {data.map((item) => {
