@@ -50,7 +50,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
-Cache lifetime of 1 year only applies to test and live environments. Dev and multidev environments are intended for development purposes only so static assets for these environments will not be cached.
+Cache lifetime of 1 year for static assets only applies to test and live environments. Dev and multidev environments are intended for development purposes only so static assets for these environments will not be cached.
 
 ## Using Your Own Session-Style Cookies
 
