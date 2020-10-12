@@ -36,11 +36,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 ## View a Recent Invoice from the Dashboard
 
-1. From the User Dashboard, click the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab and select **Billing** from the left side.
-
-1. Sites are listed below the card with which they are assigned. To view recent invoices, find the credit card the invoice was billed to and click **View Invoices**.
-
-1. Up to 100 of the most recent invoices are shown in the Invoice History. Click **View Invoice** to view a specific invoice.
+<Partial file="view-invoices.md" />
 
 ## Transfer Ownership and Billing for This Site
 

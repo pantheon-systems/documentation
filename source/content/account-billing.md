@@ -22,11 +22,8 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 </Alert>
 
 ## View Invoices
-1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
-2. Click **View Invoices** for the credit card profile in question.
-3. Select **View Invoice** next to the invoice in question.
 
-The credit card history will show the last 100 invoices.
+<Partial file="view-invoices.md" />
 
 ## View History
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
