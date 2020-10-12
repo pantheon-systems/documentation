@@ -537,6 +537,24 @@ See the [plugin documentation](https://polylang.pro/doc/php-constants/) for more
 
 ___
 
+## [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/)
+
+<ReviewDate date="2020-10-12" />
+
+**Issue:** This plugin sets an incompatible index value for meta_key when creating new database tables.
+
+**Solution:** You can apply [this patch](https://gist.github.com/rachelwhitton/a348b3aff2aabf867dccd8188bcddb12) to ensure new tables created by the plugin use the supported `meta_key(191)` index value. You can fix existing tables via the MySQL commandline, for example:
+
+```sql
+ALTER TABLE wp_18_p2pmeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+ALTER TABLE wp_29_p2pmeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+ALTER TABLE wp_30_p2pmeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+ALTER TABLE wp_31_p2pmeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+ALTER TABLE wp_33_p2pmeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+```
+
+___
+
 ## [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 
 **Issue:** Creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
