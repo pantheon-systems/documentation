@@ -6,7 +6,8 @@ tags: [agencies, billing, organizations]
 contributors: [edwardangert]
 searchboost: 150
 ---
-[Partner Agencies](https://pantheon.io/plans/partner-program?docs) on Pantheon receive additional levels of support and [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
+
+[Partner Agencies](https://pantheon.io/plans/partner-program?docs) on Pantheon receive additional levels of support and [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs) for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
 
 While many of these steps are followed through the normal course of an Agency-Client relationship. We've collected them here as a quick reference.
 
@@ -19,6 +20,7 @@ While many of these steps are followed through the normal course of an Agency-Cl
 <Partial file="transfer-ownership-billing-steps.md" />
 
 ## Send an Invitation to Pay to Share Preferred Pricing
+
 In order to share Preferred Pricing with a new client or to maintain Preferred Pricing through a plan change, the Agency should follow these steps:
 
 <Partial file="invite-to-pay.md" />
@@ -37,8 +39,10 @@ In order to share Preferred Pricing with a new client or to maintain Preferred P
 
    If you don't already have a Pantheon account, fill out the required fields and click **Continue**.
 
-   If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner, then **My dashboard** to log in to your account. Then go back to the email and click again on **Make Payment** to proceed under your existing account.
+   If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner, then **My Dashboard** to log in to your account. Then go back to the email and click on **Make Payment** to proceed under your existing account.
 
 1. If you have an account and are logged in, or created an account in the previous step, you'll be asked to use an existing card if one is on file or add a card to use as payment for the site:
 
    ![Add a card to your account](../images/dashboard/add-card.png)
+
+Once you've accepted the invitation, you will receive invoices at the end of the billing cycle.

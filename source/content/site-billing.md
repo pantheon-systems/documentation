@@ -112,7 +112,7 @@ No, payment for a site can only come from one card at a time.
 
 ### Why don't I get email notifications about upcoming billing?
 
-Billing emails are only sent to the billing contact email, set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment:
+When a billing cycle approaches, billing emails are only sent to the billing contact email. The billing contacts is set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment:
 
 ![Billing Contact](../images/dashboard/billing-contact.png)
 
