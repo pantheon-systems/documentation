@@ -65,12 +65,12 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 4. Click **Save Changes**.
 
 ### AAAA Records
-AAAA records can be set via the [Adding an IPv6 record](http://www.networksolutions.com/support/Adding-an-IPv6-record/) instructions on the Network Solutions docs and require an email to their support to complete.
+AAAA records can be set via the [Adding an IPv6 AAAA record](https://knowledge.web.com/subjects/article/KA-01100/en-us#NS) instructions on the Network Solutions docs and require an email to their support to complete.
 
 ## Network Solutions Docs
 
-* [Managing Advanced DNS Records](http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/)
-* [Adding an IPv6 record](http://www.networksolutions.com/support/Adding-an-IPv6-record/)
+* [Managing Advanced DNS Records](https://knowledge.web.com/subjects/article/KA-01111/en-us#Network%20Solutions)
+* [Adding an IPv6 AAAA record](https://knowledge.web.com/subjects/article/KA-01100/en-us#NS)
 
 ## Next Steps
 
