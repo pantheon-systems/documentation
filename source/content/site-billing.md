@@ -43,7 +43,11 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 <Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
 
-## Add New Credit Card
+## Your Credit Cards
+
+### Add a New Credit Card
+
+This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard.
 
 1. Go to the Site Dashboard and click the **Billing** tab.
 
@@ -59,9 +63,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 1. To add the card to the site, select the new card and click **Update Credit Card**.
     - Skip this step to store the card without adding it to the site.
 
-This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard. Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
-
-## Your Credit Cards
+Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
 
 ### Bill This Site to a New Card
 
@@ -85,6 +87,10 @@ After downgrading from a paid plan to Sandbox, remove the card as a payment meth
 1. Find your card under BILLING INFORMATION and click **Remove Card**.
 
  You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
+
+### Replace or Update an Old or Expired Credit Card
+
+<Partial file="replace-credit-card.md" />
 
 ## Frequently Asked Questions
 

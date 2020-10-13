@@ -37,13 +37,17 @@ The credit card history will show the last 100 transactions.
 
 ## Update Card
 
+Changes made here will apply across all sites associated with the credit card profile.
+
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
 1. Use the **Update Card** button when you would like to:
    * Update an existing card after it has expired
    * Switch billing to a new card for sites in bulk
    * Update billing address
 
-Changes made here will apply across all sites associated with the credit card profile.
+## Replace or Update an Old or Expired Credit Card
+
+<Partial file="replace-credit-card.md" />
 
 ## Delete Card
 
