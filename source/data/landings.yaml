@@ -786,7 +786,7 @@
               url: '/test-global-cdn-caching'
         - title: 'Application Configurations'
           links:
-            - text: 'APCU Cache Basics'
+            - text: 'APCu Cache Basics'
               url: '/apcu'
             - text: 'Clearing Caches for Drupal and WordPress'
               url: '/clear-caches'
