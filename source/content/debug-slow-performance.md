@@ -79,7 +79,7 @@ Cache misses are by nature slow - if something needs to be cached it's performed
 There are a large number of caches involved in every single request, including:
 
 - [Pantheon Global CDN](/global-cdn-caching) - Spread out across multiple servers, and the cache is not shared between servers.
-- [APC](/alternative-php-cache) - PHP has its own opcode cache, which is not shared between application containers.
+- [APCu](/apcu) - PHP has its own user-level cache, which is not shared between application containers.
 - [Drupal](https://drupal.org/node/326504) and [Redis](/redis) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
