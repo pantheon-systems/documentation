@@ -38,8 +38,9 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
           cms={cms}
         />
         <Slack/>
+        <br />
         {featured && <ContributorGuest contributor={contributor} />}
-        <br/><br/>
+        <br/>
         <Github
           pageTitle={title}
           path={slug}
