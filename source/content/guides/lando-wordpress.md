@@ -1,5 +1,5 @@
 ---
-title: Install and Configure Lando
+title: Install and Configure Lando for WordPress
 description: Install and Configure Lando for local development of WordPress sites.
 contributors: [digisavvy]
 categories: [develop]
@@ -8,6 +8,12 @@ featuredcontributor: true
 type: guide
 permalink: docs/guides/:basename
 ---
+
+<Enablement title="Try Localdev" link="https://pantheon.io/localdev?docs" campaign="webops-cache-control">
+
+Pantheon has been building our own local development tool! Localdev has a friendly GUI, and is great for WordPress and Drupal sites. Click above to try it out, or check out the [docs](/localdev).
+
+</Enablement>
 
 This guide will help you get up and running with [Lando](https://lando.dev/), an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
 
@@ -58,6 +64,8 @@ Create a separate folder to hold your Lando-powered installations rather than mi
 ## Install WordPress Locally
 
 Getting started with Lando can be disorienting at first. Fear not, mighty developer, that’s why this documentation exists! We’ll begin by installing and spinning up a fresh WordPress site locally, without Pantheon integration.
+
+Note that you can follow these same basic steps with an existing Pantheon Drupal site, just replace the starting recipe.
 
 1. Open your terminal and get to the directory where you plan to run your fancy Lando WP site:
 
