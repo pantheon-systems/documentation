@@ -49,7 +49,7 @@ For more details on the Sites tab, see
 ### People
 
 View all of your collaborators, filter them by role, manage their roles, and add new users to your organization.
-[Learn how to add users to the organization](/organization-dashboard/#add-users-to-your-organization).
+[Learn how to add users to the organization](/organization-dashboard/#add-users-to-your-organization) and [role-based permissions & change management](/change-management). 
 
 ### Upstreams
 
