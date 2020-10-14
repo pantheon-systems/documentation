@@ -6,7 +6,7 @@ tags: [cache, cdn, cookies]
 ---
 
 ## Before You Begin
-First, verify caching configuring to ensure anonymous caching is enabled. Then test to determine if CDN caching is working on your site:
+First, verify caching configuration to ensure anonymous caching is enabled. Then test to determine if CDN caching is working on your site:
 
 - Enable anonymous caching within Drupal, [details](/drupal-cache)
 - WordPress sites on Pantheon have anonymous caching enabled by default, [details](/wordpress-cache-plugin)
@@ -21,7 +21,7 @@ If you see `Age: 0` after multiple requests, your site is not caching properly.
  <dt>age</dt>
   <dd>How long the content has been stored in cache. If 0, the response was produced by WordPress or Drupal and not served from cache. </dd>
  <dt>set-cookie</dt>
-  <dd>Used to send cookies from the application to the user agent. The platform will not cache a response that contains the Set-Cookie: header.</dd>
+  <dd>Used to send cookies from the application to the user agent. The platform will not cache a response that contains the `set-cookie` header.</dd>
 </dl>
 
 ## Debug Caching Issues
@@ -52,7 +52,7 @@ via: 1.1 varnish
 
 If you see `Age: 0` after multiple requests, your site is not caching properly.
 
-This particular example is covered in [WordPress Plugins and Themes with Known Issues](plugins-known-issues#gdpr-cookie-consent).
+This particular example is covered in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues#gdpr-cookie-consent).
 
 ### Cookie Name Prefix
 Pantheon's platform will not cache a response that contains the `set-cookie` header.
@@ -74,6 +74,6 @@ Check `settings.php` files for configuration overrides. For example, maybe there
 Or the conflict could be coming from a contrib module. For example, if the Domain module is in use, check performance for that particular module (e.g., `/admin/structure/domain/view/1/config`), which overrides the site performance config (`/admin/config/development/performance`).
 
 ### WordPress Sessions
-Due to how caching and sessions work, sessions need to be uncached to work properly, and it is impossible use cached content when there are sessions in place. It would be best to use a cookie based solution to avoid a performance hit from uncached session pages.
+Due to how caching and sessions work, sessions need to be uncached to work properly, and it is impossible to use cached content when there are sessions in place. It would be best to use a cookie based solution to avoid a performance hit from uncached session pages.
 
 For details, see [WordPress and PHP Sessions](/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).
