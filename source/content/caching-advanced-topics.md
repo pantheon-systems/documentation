@@ -3,6 +3,7 @@ title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 categories: [performance]
 tags: [cache, cookies, security, webops]
+reviewed: "2020-10-15"
 ---
 ## Allow a User to Bypass the Cache
 
@@ -39,7 +40,7 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache:
+Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
 - Rename the file
 - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
@@ -50,7 +51,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
-Cache lifetime of 1 year for static assets only applies to test and live environments. Dev and multidev environments are intended for development purposes only so static assets for these environments will not be cached.
+Dev and Multidev environments do not cache static assets.
 
 ## Using Your Own Session-Style Cookies
 
