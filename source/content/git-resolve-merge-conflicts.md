@@ -4,7 +4,7 @@ description: Learn how to resolve conflicts in your site code base.
 categories: [troubleshoot]
 tags: [git, local, webops]
 contributors: [alexfornuto]
-reviewed: "2020-02-11"
+reviewed: "2020-10-15"
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
@@ -72,7 +72,8 @@ How you resolve a merge conflict depends on what type of conflict you're faced w
 
 ### Resolve delete/modify Conflicts
 
-To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
+A delete/modify conflict occurs when one commit deletes a file and another modifies it. To resolve such a conflict from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
+
 For example, the Git log may contain an entry similar to the following:
 
 ```git
@@ -117,9 +118,9 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
 ### Resolve Content Conflicts
 
-When two commits both modify the same line(s) of a file, without one having the other in its history, a merge conflict is created. For example:
+A content conflict occurs when two commits modify the same line(s) of a file non-sequentially (without one having the other in its history). For example:
 
-```none
+```git
 CONFLICT (content): Merge conflict in wp-admin/about.php
 Automatic merge failed; fix conflicts and then commit the result.
 ```
