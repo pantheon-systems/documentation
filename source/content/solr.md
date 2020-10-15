@@ -3,6 +3,7 @@ title: Apache Solr on Pantheon
 description: Detailed information on using Apache Solr on your Pantheon Drupal or WordPress site.
 categories: [integrate]
 tags: [solr]
+reviewed: "2020-10-15"
 ---
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Solr.
 
@@ -50,6 +51,8 @@ For installation instructions and additional details, see [Enabling Solr for Wor
 
 - Re-indexing may be required following any platform issue or event (server outage, service degradation). Check the [status page](https://status.pantheon.io) for current and past platform events.
 - Elite sites with the Pantheon Solr add-on cannot enable [Disaster Recovery](https://pantheon.io/docs/disaster-recovery) and will need to use an alternative.
+
+- Pantheon's Solr offering is limited to a single index.
 
 ## Alternatives to Pantheon's Solr Service
 
