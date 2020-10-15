@@ -4,7 +4,7 @@ description: A list of suggestions for developing WordPress sites on Pantheon.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow, security, composer]
-reviewed: "2019-11-21"
+reviewed: "2020-10-15"
 ---
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
@@ -55,6 +55,7 @@ This article provides suggestions, tips, and best practices for developing and m
 * Follow our [Frontend Performance](/guides/frontend-performance) guide to tune your WordPress site.
 
 ## Avoid XML-RPC Attacks
+
 The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords, for example. This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log), you might see something similar to the following:
 
 ```none
@@ -69,6 +70,8 @@ Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 
 Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via external services.
 
+Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 core release](/changelog/2020/07#wordpress-542). If your version of WordPress is older than this, you can block `xmlrpc.php` attacks by applying your [upstream updates](/core-updates).
+
 ### Disable XML-RPC via Pantheon.yml
 
 This method is more performant than disabling via a plugin since this won't involve bootstrapping WordPress. The result of this configuration is that requests to `/xmlrpc.php` will return a 403 status code.
@@ -79,7 +82,6 @@ Add the following configuration to your [`pantheon.yml`](/pantheon-yml) file:
   protected_web_paths:
     - /xmlrpc.php
   ```
-
 
 ### Disable XML-RPC via a Custom Plugin
 
