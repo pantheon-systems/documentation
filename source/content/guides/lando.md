@@ -23,7 +23,7 @@ Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
 - Having a working knowledge of local server environments is helpful but not entirely necessary.
-- While you’re at it be sure to check out [Lando getting started guide](https://docs.devwithlando.io/dev/started.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
+- While you’re at it be sure to check out [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
 
 Installing Lando is straight forward. Be sure to check its [system requirements](https://docs.devwithlando.io/installation/system-requirements.html) to ensure you can proceed. Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 

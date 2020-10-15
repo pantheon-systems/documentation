@@ -12,7 +12,7 @@ Drush commands require a `settings.php` file, and it's a best practice to have o
 
 ## Terminus Drush and Local Drush
 
-Refer to Drush's [install documentation](http://docs.drush.org/en/master/install/) for details on installing Drush locally.
+Refer to Drush's [install documentation](https://docs.drush.org/en/8.x/install/) for details on installing Drush locally.
 
 Drush-savvy developers should also install and utilize [Terminus](/terminus), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
