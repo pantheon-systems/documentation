@@ -11,7 +11,7 @@ editpath: dns-providers/network-solutions.md/
 
 <Alert type="danger" title="Warning">
 
-Network Solutions does not support AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports IPv6.
+Network Solutions does not host AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. They support glue records pointing to another authoritative name server. We recommend transferring DNS services to a provider that hosts IPv6 records directly.
 
 </Alert>
 
@@ -65,7 +65,8 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 4. Click **Save Changes**.
 
 ### AAAA Records
-AAAA records can be set via the [Adding an IPv6 AAAA record](https://knowledge.web.com/subjects/article/KA-01100/en-us#NS) instructions on the Network Solutions docs and require an email to their support to complete.
+
+Glue records to a name server that hosts AAAA records can be set via the [How Do I Modify IPv6 Records?](https://knowledge.web.com/subjects/article/KA-01100/en-us#NS) instructions on the Network Solutions docs, and require an email to their support to complete.
 
 ## Network Solutions Docs
 
