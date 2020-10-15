@@ -267,9 +267,9 @@ ___
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
  ___
 
-## [Plupload](https://www.drupal.org/project/plupload)
+## Plupload
 
-**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**: [Plupload](https://www.drupal.org/project/plupload) requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in `settings.php`. Example:
 
@@ -277,13 +277,6 @@ ___
 $conf['plupload_temporary_uri'] ='private://tmp';
 ```
 
-You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:
-
-```php:title=filefield_sources_plupload.module
-$temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filename);
-```
-
-This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
 ___
 
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
