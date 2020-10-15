@@ -184,7 +184,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <Alert title="Note" type="info">
 
-This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis plugin version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
+This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis module version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
 
 </Alert>
 
