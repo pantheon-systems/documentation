@@ -164,9 +164,6 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
      $settings['cache_prefix']['default'] = 'pantheon-redis';
-
-     // Set Redis to not get the cache_form (no performance difference).
-     $settings['cache']['bins']['form']      = 'cache.backend.database';
    }
    ```
 
@@ -362,8 +359,6 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
     $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
     $conf['cache_default_class'] = 'Redis_CacheCompressed';
     $conf['cache_prefix'] = array('default' => 'pantheon-redis');
-    // Do not use Redis for cache_form (no performance difference).
-    $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
     // Use Redis for Drupal locks (semaphore).
     $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
 }
