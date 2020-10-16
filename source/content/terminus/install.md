@@ -48,8 +48,6 @@ The following commands will:
   sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
 
-**Note:** If you're using ZSH and get `parse error near ')'`, ZSH is inserting escape characters (`\`) into the command on paste. consider [disabling magic functions](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template#L35-L36) if you don't want this behavior.
-
 <Alert type="info" title="Note">
 
 There is an unofficial third-party installer script which will download `terminus.phar` and attempt to update the appropriate `rc` files, available [on GitHub](https://github.com/alexfornuto/terminus-installer). Note that this script is *not* supported directly by Pantheon.
@@ -90,6 +88,10 @@ terminus auth:login --email=dev@example.com
 Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
 ## Troubleshooting
+
+### Terminus PHAR Installer: Parse error near ')'
+
+If you use ZSH and get `parse error near ')'`, ZSH is inserting escape characters (`\`) into the command on paste. You can [disable magic functions](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template#L35-L36) to eliminate this behavior.
 
 ### Permission Denied
 
