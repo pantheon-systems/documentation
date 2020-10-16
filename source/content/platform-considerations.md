@@ -196,7 +196,7 @@ Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ig
 
 For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
-If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers its [Advanced Global CDN](/advanced-global-cdn) as a managed service. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ### Drupal False Positive
 
@@ -231,7 +231,7 @@ IP-based security is not recommended on Pantheon - or any cloud platform because
 
 For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
-If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn) can provide IP-based safelist/blocklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+If you require IP address-level access control, [Advanced Global CDN](advanced-global-cdn#ip-allowlisting--blocklisting) can provide IP-based safelist/blocklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Large Code Repository
 
@@ -288,7 +288,7 @@ Pantheon does not currently support modifying the `nginx.conf` per site, as we r
 
 If your site uses `nginx.conf` rules for redirects, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
-If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers [Advanced Global CDN](/advanced-global-cdn) as a managed service. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Node.js
 
@@ -305,7 +305,7 @@ Domain masking allows you to serve two entirely different and separate sites ove
 - Main Site: `https://www.example-site.com/`
 - Blog: `https://www.example-site.com/blog/`
 
-Domain masking is available to contract customers as [an add-on](/professional-services#advanced-cdn). If you require domain masking, ask your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs). Customers may also set up domain masking using a third-party CDN service, but please note that third-party services are outside [Pantheon's scope of support](/support/#scope-of-support).
+Domain masking is available through Pantheon's [Advanced Global CDN](/advanced-global-cdn#domain-masking-and-reverse-proxy) managed service. If you require domain masking, ask your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs). Customers may also set up domain masking using a third-party CDN service, but please note that third-party services are outside [Pantheon's scope of support](/support/#scope-of-support).
 
 ### Additional Databases
 
