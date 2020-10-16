@@ -3,6 +3,7 @@ title: Platform Considerations
 description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
 categories: [platform]
 tags: [files, libraries, security, webops]
+reviewed: "2020-10-16"
 ---
 
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
@@ -37,7 +38,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 1. Have each request in the data export write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/tmp/#persistent-temporary-path-workaround) is in place.
 
-2. Do small batches and add enough time between each request in the batch process to allow the updated file to be synced between all application containers.
+1. Do small batches and add enough time between each request in the batch process to allow the updated file to be synced between all application containers.
 
 ### Alternative Approaches
 
@@ -118,7 +119,7 @@ Sites that consume services using CORS, such as Amazon S3 CORS, do work on Panth
 
 For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/), or add the following to the active theme's `function.php`:
 
-```php
+```php:title=function.php
 add_filter('allowed_http_origins', 'pantheon_allowed_origins');
 
 function pantheon_allowed_origins($urls) {
@@ -159,20 +160,20 @@ Emoji support is available out of the box on WordPress and Drupal 8. Drupal 7 si
 
 For new _or_ existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
 
-```php
+```php:title=sites/default/settings.php
 $databases['default']['default']['charset'] = 'utf8mb4';
 $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 ```
 
 Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/terminus):
 
-```bash
+```bash{promptUser: user}
 terminus drush <site>.<env> -- cc drush
 ```
 
 Start by making a [backup](/backups) of the site database, then place the site in maintenance mode and run the following:
 
-```bash
+```bash{promptUser: user}
 terminus drush <site>.<env> -- utf8mb4-convert-databases
 ```
 
@@ -227,6 +228,7 @@ You can easily reactivate a site by visiting your Pantheon User Dashboard, selec
 If you experience any issues, like missing static assets, a [backup](/restore-environment-backup#restore-an-environment-from-its-own-backup) of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
 
 ## IP-Address Based Security Schemes
+
 IP-based security is not recommended on Pantheon - or any cloud platform because the actual IP address where code executes from can change as application containers are migrated throughout the infrastructure.
 
 For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
