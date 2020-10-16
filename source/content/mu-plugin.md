@@ -161,15 +161,15 @@ function add_header_nocache() {
 
 ### Cross-Origin Resource Sharing (CORS)
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), this sample code will add the proper header and enable request from assigned URLs.
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), this sample code will add the proper header and enable requests from assigned URLs.
 
-```
+```php
 function additional_securityheaders( $headers ) {
-	if ( ! is_admin() ) {
-		$headers['Access-Control-Allow-Origin'] = 'https://example.com';
-	}
+  if ( ! is_admin() ) {
+    $headers['Access-Control-Allow-Origin'] = 'https://example.com';
+  }
 
-	return $headers;
+  return $headers;
 }
 add_filter( 'wp_headers', 'additional_securityheaders' );
 ```
