@@ -89,6 +89,10 @@ Commands that execute remote instructions to tools like Drush or WP-CLI require 
 
 ## Troubleshooting
 
+### Terminus PHAR Installer: Parse error near ')'
+
+If you use ZSH and get `parse error near ')'`, ZSH is inserting escape characters (`\`) into the command on paste. You can [disable magic functions](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template#L35-L36) to eliminate this behavior.
+
 ### Permission Denied
 
 If the installer throws an IOException at the end:
