@@ -231,7 +231,7 @@ IP-based security is not recommended on Pantheon - or any cloud platform because
 
 For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
-If you require IP address-level access control, [Advanced Global CDN](advanced-global-cdn#ip-allowlisting--blocklisting) can provide IP-based safelist/blocklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+If you require IP address-level access control, [Advanced Global CDN](/advanced-global-cdn#ip-allowlisting--blocklisting) can provide IP-based safelist/blocklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Large Code Repository
 
