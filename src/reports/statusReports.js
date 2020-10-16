@@ -5,6 +5,9 @@ import Octokit from "@octokit/rest"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import showdown from "showdown"
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRange } from 'react-date-range';
 
 const converter = new showdown.Converter()
 
@@ -21,7 +24,7 @@ async function getWeeklyClosedPRBodies() {
       base: "main",
       state: "closed",
       sort: "updated",
-      per_page: "30",
+      per_page: "50",
       page: "0",
       direction: "desc",
     })
@@ -38,6 +41,7 @@ async function getAllPulls() {
 
 
 const StatusReport = () => {
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -75,6 +79,15 @@ const StatusReport = () => {
   twoWeeksAgo.setDate(thisDate.getDate() - 14)
   var renderTwoWeeksAgo = weekday[twoWeeksAgo.getDay()] + ", " + (twoWeeksAgo.getMonth()+1) + "/" + twoWeeksAgo.getDate() + "/" + twoWeeksAgo.getFullYear()
 
+  const [dateRange, setDateRange] = useState([
+      {
+        startDate: twoWeeksAgo,
+        endDate: thisDate,
+        key: 'selection'
+      }
+    ]);
+    //console.log("Initial dateRange: ", dateRange[0])
+
   const summRegex = /(?<=Summary\s*)[\s\S]*?(?=\s*##)/g
   //console.log("summRegex: ", summRegex)
 
@@ -85,10 +98,30 @@ const StatusReport = () => {
       <h1>Recently Merged PRs</h1>
       <h2> Today is {renderDate.toString()} </h2>
       <h3> Two weeks ago was {renderTwoWeeksAgo.toString()}</h3>
-      <br />
+      <div>
+      <center>
+        <DateRange
+          editableDateInputs={true}
+          onChange={item => setDateRange([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={dateRange}
+          months={2}
+          direction="horizontal"
+        />
+        </center>
+      </div>
+      <hr />
       <div id="summaries" style={{paddingLeft: "3em"}}>
 
-        {data.map((item) => {
+        {data.filter(item => {
+          var mergeDate = new Date(item.merged_at)
+          //console.log("dateRange[0].startDate: ", dateRange[0].startDate)
+          //console.log("mergeDate: ", mergeDate)
+          return (
+            dateRange[0].startDate < mergeDate &&
+            dateRange[0].endDate >= mergeDate
+          )
+        }).map((item) => {
           //var date = new Date(item.closed_at)
           var mergeDate = new Date(item.merged_at)
           var summary = summRegex.exec(item.body)
@@ -111,12 +144,7 @@ const StatusReport = () => {
                 </>
                 : null
               }
-              { item.merged_at ?
-                <p key={`${item.id}-date`} style={{userSelect: "none"}}>
-                  Merged on {mergeDate.getMonth() + 1}/{mergeDate.getDate()}/{mergeDate.getFullYear()}
-                </p>
-                : null
-              }
+              <br />
             </>
           )
         })}
