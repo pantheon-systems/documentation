@@ -302,10 +302,10 @@ Whenever there's a new release of WordPress or Drupal core, updates will be avai
 
 ## Supress WordPress Admin Notice
 
-By default WordPress admin will test for new releases every 2 minutes from admin screens. You can disable this by setting the `PANTHEON_UPDATE_NOTICES` constant to `false` in your `wp-config.php` file. This only disabled the test and notice from the WordPress admin, you will still see updates in the Panntheon dashboard.
+By default WordPress admin will check for new upstream updates instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disabled the test and notice from the WordPress admin, you will still see updates in the Pantheon dashboard.
 
 ```
-define( 'PANTHEON_UPDATE_NOTICES', false );
+define( 'DISABLE_PANTHEON_UPDATE_NOTICES', true );
 ```
 
 
