@@ -143,7 +143,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
 <Alert type="info" title="Note">
 
-If you've configured your [primary domain at the platform level](/redirects#set-primary-domain-and-hsts-with-pantheonyml) and can [add these subdomains](/domains#custom-domains) to the same same environment, redirection will happen automatically.
+If you've configured your [primary domain at the platform level](/redirects#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same same environment, redirection will happen automatically.
 
 </Alert>
 
