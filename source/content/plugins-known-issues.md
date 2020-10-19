@@ -559,6 +559,26 @@ This workaround may potentially break again with the next plugin update, and you
 
 ___
 
+## Slider Revolution
+
+<ReviewDate date="2020-10-01" />
+
+**Issue:** [Slider Revolution](https://www.sliderrevolution.com/) video backgrounds will not auto-play when added to a layer, and throws this error in the Javascript console:
+
+```js
+Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://<env>-example.pantheonsite.io').
+```
+
+The plugin generates the site's URL using `$_SERVER['SERVER_NAME']` instead of `$_SERVER['HTTP_HOST']`. Due to the dynmic nature of Pantheon's cloud architecture, [`$_SERVER['HTTP_HOST']` is considered best practice.](/server_name-and-server_port#use-http_host-instead-of-server_name)
+
+**Solution:** Add the following line to `wp-config.php`:
+
+```php:title=wp-config.php
+$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+```
+
+___
+
 ## [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 
 <ReviewDate date="2018-10-17" />
