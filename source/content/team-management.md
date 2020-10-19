@@ -30,9 +30,11 @@ For Sites associated with an Organization, the Developers and Team-members from 
 </Alert>
 
 ## Manage Site Team Members
+
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
 ![Team Management Window](../images/dashboard/team-modal.png)
+
 ## Add a Team Member
 
 In the Team modal, enter the email address of the user and click **Add team member**.
@@ -56,20 +58,25 @@ In the Team modal in the Site Dashboard, click the X next to the user you want t
 When you delete a user from a site, they lose the ability to perform any operations on that site.
 
 ## Site Owner
+
 Site ownership is assigned to the person who creates the site or pays for the site. The site owner cannot be removed from the site team.
 
 ### Change the Site Owner
 
 #### Sandbox Sites
+
 <Partial file="transfer-ownership-billing-steps.md" />
 
 #### Paid Sites
+
 To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within the Settings page of the Site Dashboard. Enter the email address for the new site owner. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-![Invite a business owner to pay for this site](../images/dashboard/payment-form-invite.png)<br />
-Enterprise Organizations can use the same process to assume ownership of a site;  however, Agency Partners do not have the ability to own sites directly.
+![Invite a business owner to pay for this site](../images/dashboard/payment-form-invite.png)
+
+Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
 ### Pantheon Partners
+
 The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
 
 ## Add a Supporting Organization
