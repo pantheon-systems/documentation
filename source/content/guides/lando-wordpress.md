@@ -11,7 +11,7 @@ permalink: docs/guides/:basename
 
 This guide will help you get up and running with [Lando](https://lando.dev/), an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
 
-<Enablement title="Try Localdev" link="https://pantheon.io/localdev?docs" campaign="webops-cache-control">
+<Enablement title="Try Localdev" link="https://pantheon.io/localdev?docs">
 
 Pantheon has been building our own local development tool! Localdev is built using Lando, has a friendly GUI, and is great for WordPress and Drupal sites. Click above to try it out, or check out the [docs](/localdev).
 
