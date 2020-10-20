@@ -29,20 +29,20 @@ In order to share Preferred Pricing with a new client or to maintain Preferred P
 
 1. When a supporting organization is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:
 
-   ![Emailed invitation to pay](../images/dashboard/invitation-to-pay.png)
+  ![Emailed invitation to pay](../images/dashboard/invitation-to-pay.png)
 
 1. When you click on **Make Payment** you'll be brought to one of two pages:
 
-   If you're **not logged in**, you'll be prompted to create a new account:
+  If you're **not logged in**, you'll be prompted to create a new account:
 
-   ![Prompt to create an account](../images/dashboard/invitation-new-account.png)
+  ![Prompt to create an account](../images/dashboard/invitation-new-account.png)
 
-   If you don't already have a Pantheon account, fill out the required fields and click **Continue**.
+  If you don't already have a Pantheon account, fill out the required fields and click **Continue**.
 
-   If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner, then **My Dashboard** to log in to your account. Then go back to the email and click on **Make Payment** to proceed under your existing account.
+  If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner next to the empty avatar, then **My Dashboard** to log in to your account. Then go back to the email and click on **Make Payment** again to proceed under your existing account.
 
 1. If you have an account and are logged in, or created an account in the previous step, you'll be asked to use an existing card if one is on file or add a card to use as payment for the site:
 
-   ![Add a card to your account](../images/dashboard/add-card.png)
+  ![Add a card to your account](../images/dashboard/add-card.png)
 
-Once you've accepted the invitation, you will receive invoices at the end of the billing cycle.
+Once you've accepted the invitation, you will receive invoices at the end of each billing cycle.
