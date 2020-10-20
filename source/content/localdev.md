@@ -109,17 +109,17 @@ Note that if there are services specified in `.lando`, Localdev will return an e
 
 At this time, WordPress Site Network (also known as WordPress Multisite) development is not supported through Localdev.
 
-### How do you configure PHP versions for sites in the LocalDev environment? 
+### How do you configure PHP versions for sites in the LocalDev environment?
 
-LocalDev will [respect the changes made to your local `pantheon.yml`](https://pantheon.io/docs/php-versions#configure-php-version) file. 
+LocalDev will [respect the changes made to your local `pantheon.yml`](/php-versions#configure-php-version) file.
 
-A force rebuild is required for the changes to take effect:
+A force rebuild is required for changes in `pantheon.yml` to take effect:
 
-![Force Rebuild your app in LocalDev](https://i.imgur.com/xdFz6mZ.png) 
+![Force Rebuild your app in LocalDev](../images/localdev/localdev-rebuild.png)
 
-You can verify which version of PHP your site is using by clicking Launch Terminal, then running `php -v`: 
+You can verify which version of PHP your site is using by clicking **Launch Terminal**, then running `php -v`:
 
-![Verify your app's version of PHP](https://i.imgur.com/0Pmt3KH.jpg)
+![Verify your app's version of PHP](../images/localdev/localdev-php-version.png)
 
 ### Contact Support / File an Issue
 
