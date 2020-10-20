@@ -65,13 +65,14 @@ Site ownership is assigned to the person who creates the site or pays for the si
 
 #### Sandbox Sites
 
+<Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
 
 #### Paid Sites
 
-To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within the Settings page of the Site Dashboard. Enter the email address for the new site owner. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within the Settings page of the Site Dashboard. Enter the email address for the new site owner. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site and will receive future invoices.
 
-![Invite a business owner to pay for this site](../images/dashboard/payment-form-invite.png)
+![The new site owner adds their credit card information in order to accept payment responsibility.](../images/dashboard/payment-form-invite.png)
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 

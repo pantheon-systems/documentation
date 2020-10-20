@@ -63,7 +63,9 @@ See the steps in our [Site Access](/site-access) doc for recovery instructions.
 
 
 ### How do I change site service levels?
-From your Site Dashboard, click **Settings**. Select a plan, and click **Update Plan**. Next, enter the payment information or invite someone to pay for the site, and click **Purchase Plan**.
+From the Site Dashboard, click the button that shows the current plan or **Upgrade** next to the site's name. Select a plan, and follow the prompts to pay or transfer site ownership to invite another user to pay.
+
+For more information, see [Manage Plans in the Site Dashboard](/site-plan).
 
 ### Can I update or change the payment method?
 You can update the payment method in the **Settings** page. For detailed instructions, see [Account Billing in the User Dashboard](/account-billing).

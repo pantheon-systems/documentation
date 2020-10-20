@@ -47,7 +47,14 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 ### Add a New Credit Card
 
-If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all other plans, this process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard.
+If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all plans, use the steps in this section to add a new credit card profile in the **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard.
+
+1. If the site:
+    - Is currently in Sandbox mode:
+        1. Click **Add Card**.
+        1. Click **+ Add New Card**.
+    - Already has a card associated with it:
+        - Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
 
 1. Go to the Site Dashboard and click the **Billing** tab.
 
