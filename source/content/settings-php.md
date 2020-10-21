@@ -21,7 +21,6 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 
 For Drupal 7 and earlier, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
-
 ## Pantheon Articles on settings.php
 
 The following articles include techniques and configurations for `settings.php` on Pantheon:
@@ -43,6 +42,7 @@ You should never put the database connection information for a Pantheon database
 Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
 ### Drupal 8
+
 Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
 ```php
@@ -222,7 +222,7 @@ Pantheon automatically injects database credentials into the site environment; i
 
 There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
 
-```php
+```php:title=settings.php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
   // Set your custom hash salt value.
@@ -264,7 +264,7 @@ No; `settings.pantheon.php` is for Pantheon's use only and you should only modif
 
 If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
 
-```php
+```php:title=settings.php
 ini_set('ioncube.loader.encoded_paths', '/');
 ```
 
@@ -278,13 +278,13 @@ The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.output value by adding the following line to `settings.php`:
 
-```php
+```php:title=settings.php
 ini_set('arg_separator.output', '&');
 ```
 
 ### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
 
-```bash
+```none
 Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
 
@@ -298,4 +298,4 @@ If you see this error, you need to update your [trusted host patterns](#trusted-
 
 By default, Pantheon's environment is configured to not allow any non-trusted hosts. Trusted hosts are added via the `PANTHEON_ENVIRONMENT` variable in `settings.php` [here](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L184):
 
-GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php php 184-190 GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php php:title=settings.php 179-187 GITHUB-EMBED

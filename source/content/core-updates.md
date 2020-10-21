@@ -341,7 +341,9 @@ There are multiple reasons that 503 errors might occur when updating:
 This issue happens when you attempt to update very outdated core files from the Dashboard. Perform the following to resolve:
 
 1. Modify `.gitignore` and add a `#` at the beginning of the `pantheon.upstream.yml` line to comment it out
+
 1. Set the Site Connection Mode to SFTP
+
 1. Reupload the `pantheon.upstream.yml` file if missing:
 
  <TabList>
@@ -373,5 +375,7 @@ This issue happens when you attempt to update very outdated core files from the 
  </TabList>
 
 1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
+
 1. Set the Site Connection Mode to Git and reapply updates
+
 1. Modify `.gitignore` and remove the `#` before the `pantheon.upstream.yml` line to instruct Git to ignore the file again

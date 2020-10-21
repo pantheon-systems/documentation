@@ -22,23 +22,27 @@ You can export your configuration into that directory directly using Drush's `co
 
 1. With the Development environment in SFTP mode, export your configuration to code:
 
-   ```bash
+   ```bash{promptUser: user}
    drush config:export -y
    ```
 
 1. Return to the Dashboard and commit the configuration changes.
+
 1. Deploy the code to Test.
+
 1. Import the configuration from code into the test environment database:
 
-   ```bash
+   ```bash{promptUser: user}
    drush config:import -y
    ```
 
 1. Test the site.
+
 1. Deploy the code to Live.
+
 1. Import the configuration from code into the live environment database:
 
-   ```bash
+   ```bash{promptUser: user}
    drush config:import -y
    ```
 
