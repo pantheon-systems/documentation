@@ -37,39 +37,42 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 <Partial file="add-supporting-org.md" />
 
-### What add-ons are available for my site?
+## Add-ons Available for Pantheon Sites
 
  - [Apache Solr](/solr) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
  - [Redis](/redis) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 Pantheon also offers [New Relic Pro](/new-relic) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
-### How do I enable add-ons?
+### How to Enable Add-ons
 
-From your Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
+From the Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
 
 You can access New Relic Pro directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
 
-### Can I downgrade my site to a Basic plan?
+### Add-ons and the Basic Plan
 
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Manage Plans in the Site Dashboard](/site-plan/#basic-plan).
+Solr and Redis are available to Sandbox plans for testings, and to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
 
-## How do I recover an account after a site owner leaves?
-See the steps in our [Site Access](/site-access) doc for recovery instructions.
+For more information about the Basic plan, see [Manage Plans in the Site Dashboard](/site-plan/#basic-plan), or see our [Site Plan FAQ](/site-plans-faq#plan-resources) to learn more about plan resources.
 
 ## Billing Tasks
 
-### How do I change site service levels?
+## Recover an Account After a Site Owner Leaves
+
+See the steps in our [Site Access](/site-access) doc for recovery instructions.
+
+### Change Site Service Level
 
 From the Site Dashboard, click the tag that shows the current plan or **Upgrade** next to the site's name. Select a plan, and follow the prompts to pay or transfer site ownership to invite another user to pay.
 
 For more information, see [Manage Plans in the Site Dashboard](/site-plan).
 
-### Can I update or change the payment method?
+### Change or Update Payment Method
 
-You can update the payment method in the **Settings** page. For detailed instructions, see [Account Billing in the User Dashboard](/account-billing).
+<Partial file="replace-credit-card.md" />
 
-### Can I pay for my site on an annual or quarterly basis instead of monthly?
+### Change Site Billing Frequency from Monthly to Annual
 
 Self-serve sites are billable via recurring monthly or [annual](/annual-billing) billing. Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
 
