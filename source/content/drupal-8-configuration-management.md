@@ -4,10 +4,13 @@ description: Commit your Drupal configuration to version control.
 cms: "Drupal"
 categories: [develop]
 tags: [drush, workflow, webops]
+reviewed: "2020-10-21"
 ---
 Managing configuration is an extremely important part of any team website project, but in many cases, this area of the project does not receive as much attention as it deserves. The tools for Drupal 7 do not provide complete coverage of all configuration settings, leading to inconsistencies in configuration handling and inconvenient workarounds. This has led to configuration management becoming a real thorn in the side for many projects.
 
-Pantheon supports the [Drupal 8 Configuration Management system](https://www.drupal.org/documentation/administer/config) and defaults configuration into the `sites/default/config` directory for each Pantheon Drupal 8 site. You can export your configuration into that directory directly using Drush's config-export command or indirectly using Drupal's UI to download the configuration and then use SFTP/Git to place the configuration in `sites/default/config`. For more information on how this all works, check out Matt Cheney and David Strauss' presentation on [Drupal 8 CMI on Managed Workflow at Drupalcon Amsterdam](https://www.youtube.com/watch?v=eg2dtPFyGxs).
+Pantheon supports the [Drupal 8 Configuration Management system](https://www.drupal.org/documentation/administer/config) and defaults configuration into the `config` directory for each Pantheon Drupal 8.8+ site. Drupal versions before 8.8 store configurations in `sites/default/config`.
+
+You can export your configuration into that directory directly using Drush's `config-export` command or indirectly using Drupal's UI to download the configuration, and then use SFTP/Git to place the configuration in `config` or `sites/default/config`. For more information, check out the [Managing Content, Configuration, and Code Across Environments](/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments) section of [Create a Drupal 8 Site From the Command Line Using Terminus and Drush](/guides/drupal8-commandline).
 
 <Accordion title="Watch: Configuration Management in Drupal" id="d8-config-video" icon="facetime-video">
 
