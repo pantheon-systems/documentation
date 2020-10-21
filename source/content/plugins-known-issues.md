@@ -899,6 +899,42 @@ ___
 
 ___
 
+## WPFront Notification Bar
+
+<ReviewDate date="2020-10-20" />
+
+**Issue:** [WPFront Notification Bar](https://wordpress.org/plugins/wpfront-notification-bar/) sends a `set-cookie` header in each response, which breaks caching on Pantheon's Global CDN. For example:
+
+```bash{outputLines: 2-23}
+curl -I https://www.example.com
+HTTP/2 200
+cache-control: public, max-age=600
+content-type: text/html; charset=UTF-8
+link: <https://www.example.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.example.com/wp-json/wp/v2/pages/47>; rel="alternate"; type="application/json"
+link: <https://www.example.com/>; rel=shortlink
+server: nginx
+//highlight-start
+set-cookie: wpfront-notification-bar-landingpage=1
+//highlight-end
+strict-transport-security: max-age=300
+x-pantheon-styx-hostname: styx-fe1-a-789d66bff9-tztp6
+x-styx-req-id: 7f93c166-53fe-11ea-803e-b26d7703e33f
+date: Tue, 20 Oct 2020 21:16:09 GMT
+x-served-by: cache-mdw17356-MDW
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1603228567.134579,VS0,VE2847
+vary: Accept-Encoding, Cookie
+age: 0
+accept-ranges: bytes
+via: 1.1 varnish
+```
+
+**Solution:** You can apply [this patch](https://gist.github.com/rachelwhitton/ef0bb148e3942145fae759032bbed77e) to disable landing page tracking and fix caching.
+
+___
+
 ## [WP All Import / Export](http://www.wpallimport.com/)
 
 <ReviewDate date="2020-06-15" />
