@@ -175,6 +175,26 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 1. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
+<Accordion title="Database Cleanup (optional)" id="database-cleanup" icon="lightbulb">
+
+After enabling Redis via this method, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For some sites, this could be significant amounts of data in these tables and it may be worth running a few commands to remove this data to increase the speed of cloning, exporting and backing up the database.
+
+To do this, [connect directly to MySQL](https://pantheon.io/docs/mysql-access) and run this command:
+
+```sql
+SHOW TABLES LIKE 'cache%';
+```
+
+This returns a list of all the cache tables in the database. These are safe to empty and at some future point when Redis is not enabled, then Drupal will default to storing and reading cache data from these tables. To empty them, run this command on each table, replacing "<tablename>" with the name of the cache table:
+
+```sql
+TRUNCATE TABLE `<tablename>`;
+```
+
+Now your database wil no longer have that old, unused cache data while using Redis.
+
+</Accordion>
+
 </Tab>
 
 <Tab title="Drupal 7" id={"d7-install"}>
