@@ -899,11 +899,11 @@ ___
 
 ___
 
-## [WPFront Notification Bar](https://wordpress.org/plugins/wpfront-notification-bar/)
+## WPFront Notification Bar
 
 <ReviewDate date="2020-10-20" />
 
-**Issue:** This plugin sends a `set-cookie` header in each response, which breaks caching on Pantheon's Global CDN. For example:
+**Issue:** [WPFront Notification Bar](https://wordpress.org/plugins/wpfront-notification-bar/) sends a `set-cookie` header in each response, which breaks caching on Pantheon's Global CDN. For example:
 
 ```bash{outputLines: 2-23}
 curl -I https://www.example.com
