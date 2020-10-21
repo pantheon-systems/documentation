@@ -12,11 +12,11 @@ If you have a free Pantheon for EDU account and would like to upgrade to Pantheo
 
 ## Change the Site Plan
 
-1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click the **Upgrade** button:
+1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name:
 
  ![Upgrade plan button shown on Sandbox sites](../images/dashboard/eduplus-upgrade-plan.png)
 
- Otherwise, click the **current plan** next to the site name:
+ Otherwise, click the current plan tag next to the site's name:
 
  ![Screenshot of a site Dashboard on a Performance Medium plan](../images/dashboard/eduplus-change-plan.png)
 
