@@ -5,14 +5,22 @@ contributors: [mmenavas, andrewmallis]
 cms: "Drupal"
 categories: [develop]
 tags: [site, database]
+reviewed: "2020-10-21"
 ---
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
+## Drupal 8
+
 Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
 
-For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
+### Drupal 8.8
 
 <Partial file="drupal-8-8-warning.md" />
+
+## Drupal 7 and Earlier
+
+For Drupal 7 and earlier, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
+
 
 ## Pantheon Articles on settings.php
 
