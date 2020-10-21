@@ -185,10 +185,10 @@ To do this, [connect directly to MySQL](https://pantheon.io/docs/mysql-access) a
 SHOW TABLES LIKE 'cache%';
 ```
 
-This returns a list of all the cache tables in the database. These are safe to empty and at some future point when Redis is not enabled, then Drupal will default to storing and reading cache data from these tables. To empty them, run this command on each table, replacing "<tablename>" with the name of the cache table:
+This returns a list of all the cache tables in the database. These are safe to empty and at some future point when Redis is not enabled, then Drupal will default to storing and reading cache data from these tables. To empty them, run this command on each table, replacing `<tablename>` with the name of the cache table:
 
 ```sql
-TRUNCATE TABLE `<tablename>`;
+TRUNCATE TABLE '<tablename>';
 ```
 
 Now your database wil no longer have that old, unused cache data while using Redis.
