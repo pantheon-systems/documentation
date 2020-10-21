@@ -13,6 +13,7 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 ## Access Site Plan
 
 1. Go to the Site Dashboard.
+
 1. For Sandbox sites, click **Upgrade** next to the site's name:
   ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
 
@@ -128,11 +129,12 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 ### Select Plan
 
 1. Go to the Site Dashboard.
+
 1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
+
 1. Click **Select** to switch plans:
 
  ![Select a different plan](../images/dashboard/select-plan.png)
-
 
 ### Enter Billing Information
 
@@ -145,8 +147,11 @@ Site ownership is designated to the user account entering billing information.
 If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 
 1. Click the **<span class="glyphicon glyphicon-plus"></span> Add New Card** link.
+
 1. Enter the email address you would like invoices sent to.
+
 1. Enter your credit card information and click **Add Card**.
+
 1. Make sure the desired card is selected and click **Continue**.
 
 </Tab>
@@ -156,6 +161,7 @@ If this is your first time taking a site live on Pantheon, you'll likely need to
 To associate an existing card from your account as the payment method for this site:
 
 1. Select the desired card.
+
 1. Click **Continue**.
 
 </Tab>
@@ -172,7 +178,9 @@ To associate an existing card from your account as the payment method for this s
 ### Confirm Your Purchase
 
 1. Make sure the **Plan** details are correct.
+
 1. Verify the card shown in **Billing** details.
+
 1. Click the **Submit** button.
 
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
@@ -190,13 +198,21 @@ While all site plans downgrades will be effective immediately, no partial refund
 </Alert>
 
 1. Go to the Site Dashboard.
+
 1. Select the current plan:
+
  ![Change current plan for paid sites](../images/dashboard/change-plan.png)
+
 1. Click the **Downgrade to free** link to cancel the current plan:
+
  ![Downgrade to free by cancelling current plan](../images/dashboard/cancel-plan.png)
+
 1. Check **Yes, cancel my plan** then click **Continue**:
+
  ![Confirm plan cancellation](../images/dashboard/confirm-cancellation.png)
+
 1. Make sure the change details are correct, then click **Submit**.
+
 1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
 
 Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).

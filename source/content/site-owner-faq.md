@@ -31,9 +31,9 @@ When you delete a user from a site, they lose the ability to perform any operati
 
 For more information on managing teams, see the [Team Management article](/team-management).
 
-### How do I add a Supporting Agency?
+### How to Add a Supporting Agency to Your Site
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency]((https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
 <Partial file="add-supporting-org.md" />
 
