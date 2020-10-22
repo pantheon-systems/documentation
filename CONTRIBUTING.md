@@ -64,7 +64,7 @@ contributors: [mrfelton]
 Review our [Style Guide](https://pantheon.io/docs/style-guide/) for more detailed information on the Pantheon voice and style, and examples of the formatting we use for notes & warnings, code blocks, etc.
 
 ### Contributors
-Create a contributor profile within your **first** contribution. Fill out the information below and add it to the [`contributors.yaml`](/source/data/contributor.yaml) file. Commit this change alongside your new guide.
+Create a contributor profile within your **first** contribution. Fill out the information below and add it to the [`contributor.yaml`](/source/data/contributor.yaml) file. Commit this change alongside your new guide.
 
 ```
 - id: alexfornuto
