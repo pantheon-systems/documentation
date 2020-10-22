@@ -1,7 +1,7 @@
 ---
 title: Inclusive Language at Pantheon and in the Pantheon Community
 description: Elevate the way we communicate and support community and contributors in using more inclusive language.
-contributors: [sparklingrobots, carolynshannon, edwardangert]
+contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac]
 categories: [about]
 tags: [collaborate]
 ---
@@ -36,37 +36,37 @@ This applies to absolutely everything. Consider inclusive language in the produc
 
 ### What is ableist language?
 
-Ableist language is offensive to people with disability. It can also refer to language that is derogatory, abusive or negative about disability. (source) 
+Ableist language is offensive to people with disability. It can also refer to language that is derogatory, abusive or negative about disability. (source)
 
-#### Examples & Alternatives:
+#### Examples & Alternatives
 
 * Rather than "sanity check", try specifying what you need from the check. 
 * Avoid describing something as "crippled" or "crippling". Instead, try words like "broken" or "hindering".
 * Instead of something being "crazy" or "insane", try "baffling," "wild," "unexpected" or similar language.
 
-### What is violent language?
+### What is violent language
 
 Violent communication limits liberty, denies recognition of needs, diminishes the worth of a person, and/or blocks compassion. Violent communication is often the result of using manipulative or coercive language that induces fear, guilt, shame, praise, blame, duty, obligation, punishment, and/or reward. ([source](https://www.heartland.edu/documents/idc/What%20is%20violent%20comm%20and%20nvc%20(Winters).pdf))
 
-#### Examples & Alternatives:
+#### Examples & Alternatives
 
 Avoid the use of violent metaphors such as STONITH, rape, or murder when talking about technical topics. Most often, a more specific and literal term is more useful to the reader and more welcoming. 
 
-### What is gendered language? 
+### What is gendered language
 
 Gendered language is commonly understood as language that has a bias towards a particular sex or social gender. ([source](https://www.google.com/search?q=gendered+language&oq=gendered+language&aqs=chrome..69i57j0l4j46j0l2.1907j0j7&sourceid=chrome&ie=UTF-8)) (helpful resource [here](https://oxfordre.com/communication/view/10.1093/acrefore/9780190228613.001.0001/acrefore-9780190228613-e-470))
 
-#### Examples & Alternatives:
+#### Examples & Alternatives
 
 * In place of gendered nouns like “man” or “mankind”, use “person” or “people”. 
 * When speaking to a group, rather than “you guys”, use “all", "y'all", or other more inclusive terminology.  
 * Rather than describing a feature or tool as "so easy my mom/wife/grandma can use it," describe the skills or experience needed for the specific tool. ([source](https://geekfeminism.wikia.org/wiki/So_simple,_your_mother_could_do_it))
 
-### What is racial language? 
+### What is racial language?
 
 Racial language is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence. ([source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/), in part) 
 
-#### Examples & Alternatives:
+#### Examples & Alternatives
 
 * Avoid using "slave" in any context. Use a more accurate term, such as "worker," "replica", or "secondary," depending on your needs. 
 * Related, avoid the word "master". "Primary", "original" or "controller" are possible alternatives. 
@@ -82,27 +82,27 @@ Engineering work is ongoing to correct these naming conventions.
 
 ### What is classist language?
 
-Classist language denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker. 
+Classist language denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
 
 #### Examples & Alternatives
 
 * Avoid referring to people as "hobos," "poor" or "the unfortunate". Try "economically disadvantaged" or "experiencing poverty" as alternatives. ([Source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/)).
 
-#### Common Missteps:
+#### Common Missteps
 
 TODO: [Caity to enter definitions / alternatives]
 
-### Doing Better:
+### Doing Better
 
-#### First-Person Language:
-
-TODO: [Caity to include info from here]
-
-#### Identity-First Language:
+#### First-Person Language
 
 TODO: [Caity to include info from here]
 
-#### Considering Other Points of Reference:
+#### Identity-First Language
+
+TODO: [Caity to include info from here]
+
+#### Considering Other Points of Reference
 
 ## Inclusive Language and Our Community
 
