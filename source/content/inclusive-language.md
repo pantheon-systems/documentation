@@ -40,9 +40,9 @@ Ableist language is offensive to people with disability. It can also refer to la
 
 #### Examples & Alternatives
 
-* Rather than "sanity check", try specifying what you need from the check. 
-* Avoid describing something as "crippled" or "crippling". Instead, try words like "broken" or "hindering".
-* Instead of something being "crazy" or "insane", try "baffling," "wild," "unexpected" or similar language.
+- Rather than "sanity check", try specifying what you need from the check.
+- Avoid describing something as "crippled" or "crippling". Instead, try words like "broken" or "hindering".
+- Instead of something being "crazy" or "insane", try "baffling," "wild," "unexpected" or similar language.
 
 ### What is violent language
 
@@ -58,20 +58,20 @@ Gendered language is commonly understood as language that has a bias towards a p
 
 #### Examples & Alternatives
 
-* In place of gendered nouns like “man” or “mankind”, use “person” or “people”. 
-* When speaking to a group, rather than “you guys”, use “all", "y'all", or other more inclusive terminology.  
-* Rather than describing a feature or tool as "so easy my mom/wife/grandma can use it," describe the skills or experience needed for the specific tool. ([source](https://geekfeminism.wikia.org/wiki/So_simple,_your_mother_could_do_it))
+- In place of gendered nouns like “man” or “mankind”, use “person” or “people”.
+- When speaking to a group, rather than “you guys”, use “all", "y'all", or other more inclusive terminology.
+- Rather than describing a feature or tool as "so easy my mom/wife/grandma can use it," describe the skills or experience needed for the specific tool. ([source](https://geekfeminism.wikia.org/wiki/So_simple,_your_mother_could_do_it))
 
 ### What is racial language?
 
-Racial language is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence. ([source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/), in part) 
+Racial language is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence. ([source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/), in part)
 
 #### Examples & Alternatives
 
-* Avoid using "slave" in any context. Use a more accurate term, such as "worker," "replica", or "secondary," depending on your needs. 
-* Related, avoid the word "master". "Primary", "original" or "controller" are possible alternatives. 
-* "Grandfathered in" is a term rooted in [racist voter suppression](https://history.howstuffworks.com/american-civil-war/grandfathered-in.htm). Try "exempt from" or "legacy" instead.
-* Many terms appropriate and disrespect Native and Indigenous traditions. Rather than "have a pow-wow", try "have a quick chat." "Spirit animals" can be replaced with "mascot". "Hold down the fort," "on the warpath," and "circle the wagons" also have roots in the violent history of US colonization and should be avoided. ([Learn more](https://www.ictinc.ca/blog/culturally-offensive-phrases-you-should-use-at).)
+- Avoid using "slave" in any context. Use a more accurate term, such as "worker," "replica", or "secondary," depending on your needs.
+- Related, avoid the word "master". "Primary", "original" or "controller" are possible alternatives.
+- "Grandfathered in" is a term rooted in [racist voter suppression](https://history.howstuffworks.com/american-civil-war/grandfathered-in.htm). Try "exempt from" or "legacy" instead.
+- Many terms appropriate and disrespect Native and Indigenous traditions. Rather than "have a pow-wow", try "have a quick chat." "Spirit animals" can be replaced with "mascot". "Hold down the fort," "on the warpath," and "circle the wagons" also have roots in the violent history of US colonization and should be avoided. ([Learn more](https://www.ictinc.ca/blog/culturally-offensive-phrases-you-should-use-at).)
 
 At Pantheon, we have standardized on:
 
@@ -86,7 +86,7 @@ Classist language denigrates or erases the experience of those from other socio-
 
 #### Examples & Alternatives
 
-* Avoid referring to people as "hobos," "poor" or "the unfortunate". Try "economically disadvantaged" or "experiencing poverty" as alternatives. ([Source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/)).
+- Avoid referring to people as "hobos," "poor" or "the unfortunate". Try "economically disadvantaged" or "experiencing poverty" as alternatives. ([Source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/)).
 
 #### Common Missteps
 
@@ -106,7 +106,7 @@ TODO: [Caity to include info from here]
 
 ## Inclusive Language and Our Community
 
-With a global community of WordPressers and Drupalists, we are bound to have conflicts around how we speak to and write about one another. Rather than using a shifting and undocumented list of what's okay and what isn't, this list is intended to guide us toward respectful communication. 
+With a global community of WordPressers and Drupalists, we are bound to have conflicts around how we speak to and write about one another. Rather than using a shifting and undocumented list of what's okay and what isn't, this list is intended to guide us toward respectful communication.
 
 To that end, we strongly encourage any community member with questions or concerns about this list to [open an issue](https://pantheon.io/docs/contribute) or reach out to community@pantheon.io for further discussion.
 
@@ -114,7 +114,7 @@ To that end, we strongly encourage any community member with questions or concer
 
 Because language constantly evolves, we welcome and encourage additions and alterations to this document from Pantheon employees and community members.
 
-Our [guide on contributing to Pantheon documentation](https://pantheon.io/docs/contribute) can help you get started. 
+Our [guide on contributing to Pantheon documentation](https://pantheon.io/docs/contribute) can help you get started.
 
 ## See Also
 
