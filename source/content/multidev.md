@@ -98,19 +98,18 @@ Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
 
 ## Getting Started
 
-1. From your Site Dashboard, click the **Multidev** tab.
+This creates a new fork of the environment that you select, using the code from the Dev environment.
 
-1. Click **Create Multidev Environment**. This will create a new fork of the environment that you select, using the code from the Dev environment.
+1. From the Site Dashboard, click the **Multidev** tab.
 
-1. Specify the name for the environment; the URL will incorporate the environment name.
+1. Click **Create Multidev Environment**.
 
-   <Alert title="Warning" type="danger">
+1. In the **Create Multidev Environment** modal, specify the name for the Multidev:
 
-   Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.
+   - Multidev branch names must be all lowercase, less than 11 characters, and may contain a dash (`-`).
+   - Environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `multidev`, `debug`, `files`, `tags`, or `billing`.
 
-   </Alert>
-
-1. Choose an environment to clone the database and files from. Note that the code will still come from Dev. See [Components of a site](/pantheon-workflow#components-of-a-site) for a refresher on code vs content.
+1. Choose an environment to clone the database and files from. Note that the code will still come from the Dev environment. See [Components of a site](/pantheon-workflow#components-of-a-site) for a refresher on the distinction between code and content.
 
 1. Click **Create Environment**.
 
