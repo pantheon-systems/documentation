@@ -1,6 +1,6 @@
 ---
 title: Decoupled Sites
-description: Pantheon is working to bring you the latest tools to build responsive decouple sites.
+description: Pantheon is working to bring you the latest tools to build decoupled sites.
 contributors: [stevector, alexfornuto]
 categories: [get-started]
 tags: []
