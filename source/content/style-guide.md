@@ -540,13 +540,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
@@ -555,13 +555,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 ```html
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 

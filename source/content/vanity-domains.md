@@ -3,6 +3,7 @@ title: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
 categories: [develop]
 tags: [collaborate, dns, agencies]
+reviewed: "2020-10-08"
 ---
 
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).
@@ -51,17 +52,17 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 - **Environment URLs are permanent.** If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URLs after launch and disassociation of the site with the organization.
 
-- **Do not configure DNS for custom domains using Vanity domain values.** Even after configuring a vanity domain, your custom domain CNAME records should *always* point to the platform domain values, as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
+- **Do not configure DNS for custom domains using Vanity domain values.** Even after configuring a vanity domain, your custom domain records should *always* be `A`/`AAAA` records pointing to the platform IP addresses, as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
