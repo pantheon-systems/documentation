@@ -2822,6 +2822,12 @@ a:focus {
 	padding-bottom: 2rem;
 }
 
+article > div > dfn {
+	font-style: inherit;
+	font-size: 18px;
+	color: #44525e;
+}
+
 /* Was this helpful widget */
 /* .helpful {
 	margin: 60px 0;
