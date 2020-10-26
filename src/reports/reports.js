@@ -10,6 +10,22 @@ class ReviewReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
+            cmsDocs: allMdx(filter: {frontmatter: {draft: {ne: true}, cms: {ne: null}}, fields: {slug: {regex: "/^((?!changelog).)*$/"}}}) {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    title
+                    reviewed
+                    cms
+                    categories
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
             allReviewedDocs: allMdx(
               filter: {
                 frontmatter: { 
@@ -163,6 +179,11 @@ class ReviewReport extends React.Component {
           const uncategorizedPages = data.uncategorizedDocs.edges
           //console.log("categorizedPages: ", categorizedPages) // For Debugging
 
+          const cmsDocs = data.cmsDocs.edges
+          //console.log("cmsDocs: ", cmsDocs) //For Debugging
+          const [searchCms, setSearchCms] = useState("")
+
+
           /* Construct the GitHub Issue Body */
           const makeNewIssue = page => {
             return newGitHubIssueUrl({
@@ -252,6 +273,31 @@ class ReviewReport extends React.Component {
                     className="input-group-addon"
                     id="clear-filter"
                     onClick={e => setSearchTags("")}
+                  >
+                    <span className="fa fa-times" />
+                  </div>
+                </div>
+              </div>
+
+              {/*Input form for CMS */}
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-addon">
+                    <i className="fa fa-search" />
+                  </div>
+                  <input
+                    type="text"
+                    id="command-search-cms"
+                    className="form-control"
+                    placeholder="Filter by CMS"
+                    onChange={h => setSearchCms(h.target.value)}
+                    value={searchCms}
+                  />
+                  <div
+                    style={{ background: "#fff; cursor:pointer" }}
+                    className="input-group-addon"
+                    id="clear-filter"
+                    onClick={e => setSearchCms("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -500,6 +546,7 @@ class ReviewReport extends React.Component {
                   </table>
                 </div>
               </Accordion>
+
               {/* Table of Un-Categorized / Tagged Docs */}
               <Accordion
                 title="Un-Categorized Docs (filters on Title, Category, Tag)"
@@ -585,6 +632,116 @@ class ReviewReport extends React.Component {
                   </table>
                 </div>
               </Accordion>
+
+              {/* Table of CMS-Tagged Docs */}
+              <Accordion
+                title="CMS Docs (filters on Title, CMS, Category, Tag)"
+                id="cms"
+              >
+                <div className="table-responsive">
+                  <table className="table table-commands table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th> Total Count of CMS-Tagged Pages</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td>{cmsDocs.length}</td>
+                      </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                        <th width="5%">Create an Issue</th>
+                        <th width="30%">Title</th>
+                        <th width="6%">Review Date</th>
+                        <th width="5%">CMS</th>
+                        <th with="5%">Categories</th>
+                        <th width="30%">Tags</th>
+                        <th>Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {cmsDocs
+                        .filter(page => {
+                          return (
+                            page.node.frontmatter.cms
+                              .toLowerCase()
+                              .indexOf(searchCms.toLowerCase()) >= 0
+                          )
+                        })
+                        .filter(page => {
+                          return (
+                            page.node.frontmatter.title
+                              .toLowerCase()
+                              .indexOf(searchTitle.toLowerCase()) >= 0
+                          )
+                        })
+                        .filter(page => {
+                          return page.node.frontmatter.categories.filter(
+                            category => category.indexOf(searchCategory) > -1
+                          ).length
+                        })
+                        .filter(page => {
+                          return page.node.frontmatter.tags
+                            ? page.node.frontmatter.tags.filter(
+                                tag => tag.indexOf(searchTags) > -1
+                              ).length
+                            : page
+                        })
+                        .map((page, i) => {
+                          return (
+                            <tr key={i}>
+                              <td>
+                                <a href={makeNewIssue(page)} target="blank">
+                                  <span className="glyphicon glyphicon-exclamation-sign"></span>
+                                </a>
+                              </td>
+                              <td>
+                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
+                                {page.node.frontmatter.title}{" "}
+                                {page.node.frontmatter.subtitle
+                                  ? ` - ${page.node.frontmatter.subtitle}`
+                                  : null}
+                                </Link>
+                              </td>
+                              <td>{page.node.frontmatter.reviewed}</td>
+                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>
+                                {page.node.frontmatter.categories.map(
+                                  (category, i) => {
+                                    return (
+                                      <>
+                                        <span key={i}>
+                                          {(i ? ", " : "") + category}
+                                        </span>
+                                      </>
+                                    )
+                                  }
+                                )}
+                              </td>
+                              <td>
+                                {page.node.frontmatter.tags
+                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + tag}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
+                              </td>
+                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
+                            </tr>
+                          )
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              </Accordion>
+
             </Layout>
           )
         }}
