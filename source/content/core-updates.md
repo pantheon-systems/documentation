@@ -296,7 +296,11 @@ This process lets you manually resolve the conflict using the command line and a
 
 Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
 
+<Alert title="Warning" type="danger">
+
 <Partial file="drupal-8-8-warning.md" />
+
+</Alert>
 
 ## Troubleshooting
 
@@ -337,7 +341,9 @@ There are multiple reasons that 503 errors might occur when updating:
 This issue happens when you attempt to update very outdated core files from the Dashboard. Perform the following to resolve:
 
 1. Modify `.gitignore` and add a `#` at the beginning of the `pantheon.upstream.yml` line to comment it out
+
 1. Set the Site Connection Mode to SFTP
+
 1. Reupload the `pantheon.upstream.yml` file if missing:
 
  <TabList>
@@ -369,5 +375,7 @@ This issue happens when you attempt to update very outdated core files from the 
  </TabList>
 
 1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
+
 1. Set the Site Connection Mode to Git and reapply updates
+
 1. Modify `.gitignore` and remove the `#` before the `pantheon.upstream.yml` line to instruct Git to ignore the file again

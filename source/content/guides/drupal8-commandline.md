@@ -175,8 +175,6 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
   terminus drush $TERMINUS_SITE.dev -- config-export -y
   ```
 
-  [Configuration management is a complex topic with its own detailed recommendations](/drupal-8-configuration-management). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
-
 1. Commit the changes:
 
   ```bash{promptUser: user}
@@ -230,6 +228,8 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
   Once this command completes you will be able to refresh the Live environment in your browser and see the development footer.
 
 ## Managing Content, Configuration, and Code Across Environments
+
+[Configuration management is a complex topic with its own detailed recommendations](/drupal-8-configuration-management). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to Git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
 
 In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment. That content needs to be brought down into the Test and Dev environments from time to time so you can build and test features with fresh material from Live.
 
