@@ -2,23 +2,11 @@
 title: Launch Essentials
 subtitle: Configure DNS and Provision HTTPS
 description: Part four of our Launch Essentials guide covers DNS records and HTTPS provisioning.
-launch: true
 anchorid: dns
-generator: pagination
-layout: guide
 categories: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
-pagination:
-    provider: data.launchpages
-use:
-    - launchpages
-    - docs_tags
 permalink: docs/guides/launch/configure-dns/
-nexturl: guides/launch/redirects/
-nextpage: Redirect to a Primary Domain
-previousurl: guides/launch/domains/
-previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
