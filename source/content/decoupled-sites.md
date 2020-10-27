@@ -3,7 +3,7 @@ title: Decoupled Sites
 description: Pantheon is working to bring you the latest tools to build decoupled sites.
 contributors: [stevector, alexfornuto]
 categories: [get-started]
-tags: [site,webops, workflow]
+tags: [site, webops, workflow]
 reviewed: "2020-10-27"
 ---
 
@@ -17,11 +17,11 @@ This page refers to products and features which are currently in development or 
 
 ## Pantheon's Decoupled Architecture
 
-Pantheon is enabling developers and agencies to easily create and manage decoupled sites from a single platform, by providing two new features: Decoupled Bridge and Edge Sites.
+Pantheon is enabling developers and agencies to easily create and manage decoupled sites from a single platform, by providing two new products: Decoupled Bridge and Edge Sites.
 
 <Enablement link="https://pantheon.io/decoupled-cms?docs" title="Sign up for updates!">
 
-Sign up for Edge Sites updates, or talk to sales about early access for Decoupled Bridge. Click the link above to get started!
+Sign up for Edge Sites updates, or talk to Sales to participate in Early Access for Decoupled Bridge. Click the link above to get started!
 
 </Enablement>
 
@@ -32,19 +32,19 @@ It serves a use case where a domain's public traffic is delivered from a Server-
 
 ![A flow diagram of the Decoupled Bridge architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
-Decoupled Bridge is presently in an Early Access phase where we are engaging with a small set of customers via our [Professional Services](/professional-services) team.
+Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/professional-services) team.
 Each Decoupled Bridge site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
 
-We recommend, but do not require, that those repository be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
+We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
 The monorepo structure allows for easier synchronization of changes that affect the back-end and front-end sides together.
 
 ### Edge Sites
 
-**Edge Sites** is a forthcoming product for running websites built to run on a CDN.
-Edge Sites takes the result a Node.js static site generator process and deploys it to the edge of our Global CDN.
+**Edge Sites** is a forthcoming product for running websites built to run on a Content Delivery Network (CDN).
+Edge Sites takes the results of a Node.js static site generator process and deploys it to the edge of our [Global CDN](/global-cdn).
 
-Edge Sites will be optimized for popular SSG frameworks like Gatsby.
-A finalized list of supported frameworks will be developed by working with customer sites during Early Access, and Limited Availability phases.
+Edge Sites will be optimized for popular Static Site Generator (SSG) frameworks like Gatsby.
+A finalized list of supported frameworks will be developed by working with customer sites during Early Access and Limited Availability phases.
 
 [Sign up for email updates to hear the latest on Edge Sites development](https://pantheon.io/decoupled-cms?docs).
 
@@ -52,14 +52,14 @@ A finalized list of supported frameworks will be developed by working with custo
 
 ## FAQ
 
-### What Content Management Systems will Decoupled Bridge and Edge Sites support?
+### What Content Management Systems (CMS) will Decoupled Bridge and Edge Sites support?
 
 WordPress and Drupal are still the CMSs of choice at Pantheon, and are the only data source available for these products.
 
 ### What Git providers will Decoupled Bridge and Edge Sites support?
 
 Both products are being developed with GitHub as the location of source repositories.
-During Early Access and Limited Availability we will evaluate which other providers our customers need to integrate with.
+During Early Access and Limited Availability we will evaluate other providers with which our customers need to integrate.
 
 ## See Also
 
