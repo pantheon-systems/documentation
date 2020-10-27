@@ -22,5 +22,4 @@ To resolve (or avoid before upgrading), update the modified code as follows:
   $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
   ```
 
-**Note:** `example-drops-8-composer` (the starting template for all Composer-managed sites on Pantheon) includes this configuration in `settings.php`. Any site built from this example (e.g. using either the No CI workflow or the Build Tools workflow) will need to be updated.
-
+**Note:** `example-drops-8-composer` (the starting template for all Composer-managed sites on Pantheon) includes this configuration in `settings.php`. Any site built from this example (e.g., using either the No CI workflow or the Build Tools workflow) will need to be updated.

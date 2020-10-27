@@ -7,6 +7,7 @@ categories: [develop]
 tags: [site, database]
 reviewed: "2020-10-21"
 ---
+
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
 ## Drupal 8
