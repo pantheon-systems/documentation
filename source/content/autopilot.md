@@ -37,4 +37,4 @@ TODO: List/Detail features and options like:
 
 ## See Also
 
-- [Product Marketing Page](/https://pantheon.io/autopilot)
+- [Product Marketing Page](https://pantheon.io/autopilot?docs)
