@@ -25,7 +25,15 @@ Pantheon configures an appropriate temporary path for [WordPress](https://github
  * Define appropriate location for tmp directory
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  if (isset($_SERVER['PRESSFLOW_SETTINGS'])) { 
+    // It's necessary to unset the injected PRESSFLOW_SETTINGS to override the values.
+    $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE); 
+    unset($pressflow_settings['conf']['file_temporary_path']); 
+    unset($pressflow_settings['conf']['file_directory_temp']); 
+    $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings); 
+  } 
   $conf['file_temporary_path'] = $_SERVER['HOME'] .'/tmp';
+  $conf['file_directory_temp'] = $_SERVER['HOME'] .'/tmp';
 }
 ```
 
