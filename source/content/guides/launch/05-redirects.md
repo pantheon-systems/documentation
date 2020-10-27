@@ -17,7 +17,7 @@ Choose one of the following options to configure the primary domain.
 
 <Partial file="primary-domain.md" />
 
-WordPress site admins must also ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
+WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
 
 ### Ready to launch like the pros?
 
@@ -30,4 +30,3 @@ Prevent cookie hijacking and get an A+ rating from SSL Labs.
 #### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) (Optional)
 
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email if a response fails.
-
