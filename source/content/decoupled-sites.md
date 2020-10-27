@@ -3,7 +3,8 @@ title: Decoupled Sites
 description: Pantheon is working to bring you the latest tools to build decoupled sites.
 contributors: [stevector, alexfornuto]
 categories: [get-started]
-tags: []
+tags: [site,webops, workflow]
+reviewed: "2020-10-27"
 ---
 
 <p><dfn id="decoupled">Decoupled Architecture</dfn> is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks specialized to their areas of expertise; Front-end Developers can used modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic LAMP stack systems like WordPress and Drupal.</p>
