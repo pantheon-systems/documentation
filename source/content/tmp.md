@@ -37,6 +37,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
+**Note:** Changing the temporary settings path for Drupal 7 is not recommended. While the changes above would allow temporary files to be shared across application containers, it comes with a heavy performance penalty. 
+
 ## Fix Unsupported Temporary Path
 
 Errors caused by an unsupported temporary path typically surface as permission errors for `.tmp` files and can be replicated on any environment.
