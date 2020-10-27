@@ -288,7 +288,7 @@ ___
 
 **Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
 
-**Solution:**  When the `wp-content/uploads/et-cache` folder gets too populated, it tends to slow down. You can clear the cache from **Theme Options** > **Builder** > **Advanced** > **Static CSS File Generation**:
+**Solution:**  When the `wp-content/uploads/et-cache` directory gets too full, it tends to slow down. Clear the cache from **Theme Options** > **Builder** > **Advanced** > **Static CSS File Generation**:
 
   ![A screenshot highlighting the option to clear the Divi cache](../images/plugins-known-issues/divi-clear-cache.png)
 
