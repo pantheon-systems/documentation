@@ -269,9 +269,9 @@ ___
 
 ## [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 
-<ReviewDate date="2019-11-27" />
+<ReviewDate date="2020-10-09" />
 
-**Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
+**Issue 1:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
 
 ```php
 .../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
@@ -285,6 +285,12 @@ ___
 1. Create a [symlink](#assumed-write-access).
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
+**Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
+
+**Solution:**  When the `wp-content/uploads/et-cache` directory gets too full, it tends to slow down. Clear the cache from **Theme Options** > **Builder** > **Advanced** > **Static CSS File Generation**:
+
+  ![A screenshot highlighting the option to clear the Divi cache](../images/plugins-known-issues/divi-clear-cache.png)
 
 ___
 
