@@ -23,9 +23,15 @@ Sign-Up to learn about Early Access for Autopilot by clicking the link above.
 
 ## How Autopilot Works
 
-TODO: A couple sentences describing in broad strokes what autopilot does.
+![A gif showing Autopilot visual regression testing](../images/dashboard/vrt.gif)
 
-TODO: GIF of the tester in action
+Autopilot brings visual regression testing into the Pantheon Dashboard.
+
+TODO: List/Detail features and options like:
+
+- Exclusion / Behavior rules
+- Activity reports
+- ?
 
 ## FAQ
 
