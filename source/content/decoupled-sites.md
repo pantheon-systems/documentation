@@ -9,7 +9,7 @@ reviewed: "2020-10-27"
 
 <p><dfn id="decoupled">Decoupled Architecture</dfn> is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks specialized to their areas of expertise; Front-end Developers can used modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic LAMP stack systems like WordPress and Drupal.</p>
 
-<Alert title="Feature Preview" type="info">
+<Alert title="Feature Preview" type="info" icon="chemistry-alt">
 
 This page refers to products and features which are currently in development or early access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments.
 
