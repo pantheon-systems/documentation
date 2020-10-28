@@ -10,19 +10,26 @@ reviewed: "2020-07-21"
 
 Pantheon is testing a release of Drupal with integrated Composer and is opening the feature to users for Limited Availability testing. Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-## Get access to Integrated Composer
+## Get Access to Integrated Composer
 
-Contact [Support](/support). If you are not part of an organization already, your CSE will add you to a test organization from which you can deploy the upstream. If you are already part of an organization, the feature can be enabled organization-wide.
+Integrated Composer is currently limited to customers with a Pantheon [organization](/organizations). If you are not part of an organization already, contact [Support](/support) to request access and your CSE will add you to a test organization from which you can deploy the upstream. If you are already part of an organization, the feature can be enabled organization-wide.
 
 ## Create a Drupal or WordPress Site with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely):
+
    - **Drupal**: [https://github.com/pantheon-upstreams/drupal-project](https://github.com/pantheon-upstreams/drupal-project).
+
    - **WordPress**: [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
+
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
+
 1. Create a new Drupal 8 or WordPress site from the upstream to confirm that it’s working.
+
    - Do not customize the upstream yet.
+
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
+
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
 ## Upstream and Site Structure
@@ -51,8 +58,9 @@ Build artifacts are stored in a Git tag (`pantheon_build_artifacts_master`), not
 
 ## How to Add Dependencies to Your Upstream
 
-1. Start with the local clone of your upstream repository you created above.
-1. Change into the `upstream-config` directory.
+1. Start with the local clone of the upstream repository you created above.
+
+1. Change into the `upstream-config` directory:
 
   ```bash{promptUser: user}
   cd upstream-config
@@ -90,6 +98,7 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
 ## Add a Dependency to an Individual Site
 
 1. Clone the git repository from the Pantheon site's dashboard.
+
 1. Run `composer install`:
 
   ```bash{promptUser: user}
@@ -103,7 +112,9 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
   ```
 
 1. Commit `composer.json` and `composer.lock` and push.
+
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
+
 1. Remove dependencies:
 
   ```bash{promptUser: user}
