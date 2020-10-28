@@ -7,7 +7,7 @@ tags: [iterate, site, testing, webops]
 reviewed: "2020-10-28"
 ---
 
-Autopilot on Pantheon automatically detects, performs, and deploys updates for WordPress and Drupal CMS solutions.
+[Autopilot](https://pantheon.io/autopilot) on Pantheon automatically detects, performs, and deploys updates for WordPress and Drupal CMS solutions.
 
 <Alert title="Early Access" type="info" icon="leaf">
 
@@ -68,7 +68,7 @@ Autpilot requires Multidev, and is available to Pantheon accounts with [Gold sup
 
 ### Is Autopilot configurable per site?
 
-Yes. Access to Autopilot will be account-based and Individual sites in that account will be able to turn Autopilot on and off as desired.
+Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired.
 
 ### Does Autopilot work with Composer?
 
@@ -76,10 +76,10 @@ Yes, Autopilot is fully compatible with Pantheon's Integrated Composer feature.
 
 ### Does Autopilot automatically deploy changes to the Live environment?
 
-You can specify which environment Autopilot deploys to. When all tests pass, it can:
+You can specify the environment to which environment Autopilot deploys. When all tests pass, it can:
 
 - deploy to the Live environment,
-- deploy to the Test environment (a good choice for a high traffic site that needs an extra level of manual QA or automated CI)
+- deploy to the Test environment (a good choice for a high traffic site that needs an extra level of manual QA or automated CI),
 - deploy to the Dev environment (a good choice for a site under continual active development).
 
 ## See Also
