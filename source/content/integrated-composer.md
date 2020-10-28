@@ -1,6 +1,6 @@
 ---
 title: Integrated Composer
-description: Learn how to deploy a Drupal site with integrated Composer
+description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [drupal]
 contributors: [edwardangert]
@@ -8,7 +8,9 @@ searchboost: 150
 reviewed: "2020-07-21"
 ---
 
-Pantheon is testing a release of Drupal with integrated Composer and is opening the feature to users for Limited Availability testing. Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
+Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
+
+Pantheon is testing a release of Drupal with integrated Composer and is opening the feature to users for Limited Availability testing. 
 
 ## Get Access to Integrated Composer
 
