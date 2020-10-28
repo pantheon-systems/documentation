@@ -43,15 +43,15 @@ Copy the provided query in the output and run as instructed.
 
 ### Troubleshoot With New Relic
 
-To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic APM](/debug-mysql-new-relic). Using our integrated reporting services with New Relic Pro, you can isolate MySQL performance issues on your Drupal or WordPress sites. 
+To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic APM](/debug-mysql-new-relic). Using our integrated reporting services with New Relic Pro, you can isolate MySQL performance issues on your Drupal or WordPress sites.
 
 ### Review Slow Query Logs
 
 Use your site's [MySQL Slow Log](/mysql-slow-log) to troubleshoot MySQL and identify serious performance issues.
 
-### Enable Redis 
+### Enable Redis
 
-Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increase load-times.
+Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
 
 [Redis](/redis) provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
