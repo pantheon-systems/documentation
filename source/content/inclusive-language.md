@@ -10,7 +10,7 @@ This guide is intended to elevate the way we communicate at Pantheon, and to sup
 
 ## What is Inclusive Language?
 
-Inclusive language is [defined](https://www.collinsdictionary.com/us/dictionary/english/inclusive-language) as "language that avoids the use of certain expressions or words that might be considered to exclude particular groups of people."
+<dfn id="inclusive-lang">Inclusive language</dfn> is [defined](https://www.collinsdictionary.com/us/dictionary/english/inclusive-language) as "language that avoids the use of certain expressions or words that might be considered to exclude particular groups of people."
 
 When using inclusive language, you are "acknowledging diversity, conveying respect to all people, being sensitive to differences, and promoting equitable opportunities." - [University of Oregon](https://communications.uoregon.edu/inclusive-language)
 
@@ -36,7 +36,7 @@ This applies to absolutely everything. Consider inclusive language in the produc
 
 ### What is ableist language?
 
-Ableist language is offensive to people with disability. It can also refer to language that is derogatory, abusive or negative about disability. (source)
+<dfn id="ableist-lang">Ableist language</dfn> is offensive to people with disability. It can also refer to language that is derogatory, abusive or negative about disability. (source)
 
 #### Examples & Alternatives
 
@@ -54,7 +54,7 @@ Avoid the use of violent metaphors such as STONITH, rape, or murder when talking
 
 ### What is gendered language
 
-Gendered language is commonly understood as language that has a bias towards a particular sex or social gender. ([source](https://www.google.com/search?q=gendered+language&oq=gendered+language&aqs=chrome..69i57j0l4j46j0l2.1907j0j7&sourceid=chrome&ie=UTF-8)) (helpful resource [here](https://oxfordre.com/communication/view/10.1093/acrefore/9780190228613.001.0001/acrefore-9780190228613-e-470))
+<dfn id="gendered-lang">Gendered language</dfn> is commonly understood as language that has a bias towards a particular sex or social gender. ([source](https://www.google.com/search?q=gendered+language&oq=gendered+language&aqs=chrome..69i57j0l4j46j0l2.1907j0j7&sourceid=chrome&ie=UTF-8)) (helpful resource [here](https://oxfordre.com/communication/view/10.1093/acrefore/9780190228613.001.0001/acrefore-9780190228613-e-470))
 
 #### Examples & Alternatives
 
@@ -64,7 +64,7 @@ Gendered language is commonly understood as language that has a bias towards a p
 
 ### What is racial language?
 
-Racial language is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence. ([source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/), in part)
+<dfn id="racial-lang">Racial language</dfn> is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence. ([source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/), in part)
 
 #### Examples & Alternatives
 
