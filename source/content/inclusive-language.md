@@ -88,25 +88,36 @@ Classist language denigrates or erases the experience of those from other socio-
 
 - Avoid referring to people as "hobos," "poor" or "the unfortunate". Try "economically disadvantaged" or "experiencing poverty" as alternatives. ([Source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/)).
 
-#### Common Missteps
-
-TODO: [Caity to enter definitions / alternatives]
 
 ### Doing Better
 
-#### First-Person Language
+#### Put the Person First
 
-TODO: [Caity to include info from here]
+When referring to someone, it is best to put the person ahead of their identity, characteristics, or position.
 
-#### Identity-First Language
+For example, "a person who is deaf", "a woman who is a doctor", and "a person who has a traumatic brain injury" instead of "a deaf person", "a female doctor", and a "brain damaged person". When the individual's gender, race, age, sexual orientation, or ability is not relevant to the conversation, avoid mentioning it entirely. 
 
-TODO: [Caity to include info from here]
+#### Avoid Idioms and Jargon
 
-#### Considering Other Points of Reference
+Many of us habitually use language or phrases local to our community or industry that unintentionally exclude others. If you are in North America, for example, you might use phrases like "circle back" or "put a pin in it" and the meaning of these phrases will not be clear to a global audience. Similarly, communicating in acronyms assumes a level of knowledge and excludes those who might require an explanation or use different words to describe the same concept. 
+
+#### Use Empowering Language
+
+It's detrimental to suggest victimhood in talking about any group of people. Avoid phrases such as "victim of", "afflicted by", "suffers from", "confined to", and "challenged in" when referring to any person or group of people. 
+
+#### Be Aware of Unconscious Bias
+
+<dfn id="unc-bias">Unconscious biases</dfn> are underlying stereotypes, attitudes, or generalizations we hold toward a group of people that may not be immediately obvious, but affect how we treat others. 
+
+Unconscious biases influence how we communicate, make decisions, agree or disagree, hire people, and work with people. Awareness is the first step in avoiding unconscious biases, and there is training you can take to further your education. 
+
+#### Consider Other Points of Reference
+
+No matter who you're communicating with or the method of your communication, it's essential to remember — everyone interacting with your content is bringing their own perspective and has their own point of reference. Dismissing, diminishing, or rejecting another person's point of view creates harm to that person and their community, and significantly weakens your own message, too. 
 
 ## Inclusive Language and Our Community
 
-With a global community of WordPressers and Drupalists, we are bound to have conflicts around how we speak to and write about one another. Rather than using a shifting and undocumented list of what's okay and what isn't, this list is intended to guide us toward respectful communication.
+With a global community of WordPressers and Drupalistas, we are bound to have conflicts around how we speak to and write about one another. Rather than using a shifting and undocumented list of what's okay and what isn't, this list is intended to guide us toward respectful communication.
 
 To that end, we strongly encourage any community member with questions or concerns about this list to [open an issue](https://pantheon.io/docs/contribute) or reach out to community@pantheon.io for further discussion.
 
