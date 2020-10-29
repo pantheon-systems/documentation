@@ -54,7 +54,7 @@ Avoid the use of violent metaphors such as STONITH, rape, or murder when talking
 
 ### What is gendered language
 
-<dfn id="gendered-lang">Gendered language</dfn> is commonly understood as language that has a bias towards a particular sex or social gender. ([source](https://www.google.com/search?q=gendered+language&oq=gendered+language&aqs=chrome..69i57j0l4j46j0l2.1907j0j7&sourceid=chrome&ie=UTF-8)) (helpful resource [here](https://oxfordre.com/communication/view/10.1093/acrefore/9780190228613.001.0001/acrefore-9780190228613-e-470))
+<dfn id="gendered-lang">Gendered language</dfn> is commonly understood as language that has a bias towards a particular sex or social gender. ([source](https://www.google.com/search?q=gendered+language&oq=gendered+language&aqs=chrome..69i57j0l4j46j0l2.1907j0j7&sourceid=chrome&ie=UTF-8)) ([helpful resource](https://oxfordre.com/communication/view/10.1093/acrefore/9780190228613.001.0001/acrefore-9780190228613-e-470))
 
 #### Examples & Alternatives
 
@@ -82,7 +82,7 @@ Engineering work is ongoing to correct these naming conventions.
 
 ### What is classist language?
 
-Classist language denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
+<dfn id="classist-lang">Classist language</dfn> denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
 
 #### Examples & Alternatives
 
