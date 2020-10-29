@@ -113,7 +113,7 @@ ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
 As of WP version 5.1 and newer:
 
 ```php:title=wp-config.php
-define( 'WP_DEBUG_LOG', __DIR__ . '/wp-content/uploads/debug.log'
+define( 'WP_DEBUG_LOG', __DIR__ . '/wp-content/uploads/debug.log' );
 ```
 
 ### Where do I specify database credentials?
