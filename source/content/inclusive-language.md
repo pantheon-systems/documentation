@@ -22,7 +22,7 @@ We know inclusive language is essential in [building trust](https://www.forbes.c
 
 ## Who This Is For
 
-This guide is shared internally to help teams communicate with other teams, and externally to parties writing for our Docs pages, Blog, or on our forum.
+This guide is shared internally to help teams communicate with other teams, and externally to writers for our Docs pages, Blog, or on our forum.
 
 ### Who Benefits
 
@@ -30,19 +30,23 @@ This will help drive inclusivity in the way we communicate to everyone, includin
 
 ### Applicable Content
 
-This applies to absolutely everything. Consider inclusive language in the product, presentation decks, job ads, social media, documentation, blog posts, landing pages on our website, and the way we communicate in emails and in meetings.
+This applies to absolutely everything. Consider inclusive language in the product, presentation decks, job ads, social media, documentation, blog posts, websites, and the way we communicate in emails and meetings.
 
 ## Inclusive Language Guide
 
 ### What is ableist language?
 
-<dfn id="ableist-lang">Ableist language</dfn> is offensive to people with disability. It can also refer to language that is derogatory, abusive or negative about disability. (source)
+<dfn id="ableist-lang">Ableist language</dfn> is offensive to people with disability. It can also refer to language that is derogatory, abusive, or negative about disability. (source)
 
 #### Examples & Alternatives
 
 - Rather than "sanity check", try specifying what you need from the check.
-- Avoid describing something as "crippled" or "crippling". Instead, try words like "broken" or "hindering".
+- Avoid describing something as "crippled", "crippling", or "lame". Instead, try words like "broken" or "hindering".
 - Instead of something being "crazy" or "insane", try "baffling," "wild," "unexpected" or similar language.
+- Instead of “OCD”, use “meticulous” or “detail oriented”.
+- Instead of “mute”, use “non-verbal”. (source)
+- When referring to someone with a disability, do not use the words “high (or low) functioning”.
+“High functioning is not how an autistic person experiences being autistic, it’s how society experiences the autistic person.”
 
 ### What is violent language
 
@@ -59,6 +63,7 @@ Avoid the use of violent metaphors such as STONITH, rape, or murder when talking
 #### Examples & Alternatives
 
 - In place of gendered nouns like “man” or “mankind”, use “person” or “people”.
+- Use "they" as the default pronoun when speaking in third person or generic terms, in place “he or she”.
 - When speaking to a group, rather than “you guys”, use “all", "y'all", or other more inclusive terminology.
 - Rather than describing a feature or tool as "so easy my mom/wife/grandma can use it," describe the skills or experience needed for the specific tool. ([source](https://geekfeminism.wikia.org/wiki/So_simple,_your_mother_could_do_it))
 
@@ -87,6 +92,7 @@ Engineering work is ongoing to correct these naming conventions.
 #### Examples & Alternatives
 
 - Avoid referring to people as "hobos," "poor" or "the unfortunate". Try "economically disadvantaged" or "experiencing poverty" as alternatives. ([Source](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/)).
+- Avoid referring to countries as “third world” or “under-developed”.
 
 
 ### Doing Better
