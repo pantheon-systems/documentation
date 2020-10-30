@@ -94,7 +94,6 @@ Engineering work is ongoing to correct these naming conventions.
 - Avoid referring to people as "hobos," "poor" or "the unfortunate". Try "economically disadvantaged" or "experiencing poverty" as alternatives.
 - Avoid referring to countries as “third world” or “under-developed”.
 
-
 ### Doing Better
 
 #### Put the Person First
