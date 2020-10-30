@@ -30,7 +30,7 @@ This will help drive inclusivity in the way we communicate with everyone, includ
 
 ### Applicable Content
 
-This applies to absolutely everything. Consider inclusive language in the product, presentation decks, job ads, social media, documentation, blog posts, websites, and the ways we communicate with each other.
+This guide applies to everything. Consider inclusive language in the product, presentation decks, job ads, social media, documentation, blog posts, websites, and the ways we communicate with each other.
 
 ## Inclusive Language Guide
 
@@ -105,7 +105,9 @@ For example, "a person who is deaf", "a woman who is a doctor", and "a person wh
 
 #### Avoid Idioms and Jargon
 
-Many of us habitually use language or phrases local to our community or industry that unintentionally exclude others. If you are in North America, for example, you might use phrases like "circle back" or "put a pin in it" and the meaning of these phrases will not be clear to a global audience. Similarly, communicating in acronyms assumes a level of knowledge and excludes those who might require an explanation or use different words to describe the same concept. 
+Many of us habitually use language or phrases local to our community or industry that unintentionally exclude others. If you are in North America, for example, you might use phrases like "circle back" or "put a pin in it" and the meaning of these phrases will not be clear to a global audience. 
+
+Similarly, communicating in acronyms assumes a level of knowledge and excludes those who might require an explanation or use different words to describe the same concept. 
 
 #### Use Empowering Language
 
@@ -113,7 +115,7 @@ It's detrimental to suggest victimhood in talking about any group of people. Avo
 
 #### Be Aware of Unconscious Bias
 
-<dfn id="unc-bias">Unconscious biases</dfn> are underlying stereotypes, attitudes, or generalizations we hold toward a group of people that may not be immediately obvious, but affect how we treat others. 
+[<dfn id="unc-bias">Unconscious biases</dfn>](https://diversity.ucsf.edu/resources/unconscious-bias) are underlying stereotypes, attitudes, or generalizations we hold toward a group of people that may not be immediately obvious, but affect how we treat others.
 
 Unconscious biases influence how we communicate, make decisions, agree or disagree, hire people, and work with people. Awareness is the first step in avoiding unconscious biases, and there is training you can take to further your education. 
 
