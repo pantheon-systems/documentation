@@ -15,7 +15,7 @@ This guide will cover how to install and configure [WP Mail SMTP](https://wordpr
 
 <Alert title="Note" type="info">
 
-WP Mail SMTP is not the only plugin available to integrate WordPress with Sendgrid, nor is it officially endorded by Pantheon as the preferred method.
+WP Mail SMTP is not the only plugin available to integrate WordPress with Sendgrid, nor is it officially endorsed by Pantheon as the preferred method.
 
 </Alert>
 
@@ -23,20 +23,20 @@ WP Mail SMTP is not the only plugin available to integrate WordPress with Sendgr
 
 This guide assumes a pre-existing configuration of:
 
-- An configured WordPress site. See our [Quick Start](https://pantheon.io/docs/guides/quickstart) guide if you need to set up a new WordPress site on Pantheon.
-- A familiarity with the [WebOps workflow](https://pantheon.io/docs/pantheon-workflow), as we will be moving code and content between environments.
+- An configured WordPress site. See our [Quick Start](/guides/quickstart) guide if you need to set up a new WordPress site on Pantheon.
+- A familiarity with the [WebOps workflow](/pantheon-workflow), as we will be moving code and content between environments.
 - A SendGrid account and API key. See [Create a SendGrid Account](/guides/sendgrid/#create-a-sendgrid-account) for more information.
-- If your site has access to [Multidev](/multidev), we suggest creating a new multidev environment to work in. If so, substitute the multidev name for `dev` in the guide below, unless otherwise noted.
+- If your site has access to [Multidev](/multidev), we suggest creating a new Multidev environment to work in. If so, substitute the Multidev name for `dev` in the guide below, unless otherwise noted.
 
 ## Install the WP Mail SMTP Plugin
 
 There are several ways to install and manage WordPress plugins on Pantheon. This guide will cover installation from the WordPress Admin Dashboard, and from the command line using [Terminus](/terminus) and [WP-CLI](/wp-cli).
 
-Each method requires first setting your working environment (Dev or a multidev environment) to [SFTP mode](/sftp#sftp-mode).
+Each method requires first setting your working environment (Dev or a Multidev environment) to [SFTP mode](/sftp#sftp-mode).
 
 ### Install from the WordPress Admin Dashboard
 
-1. From the [Site Dashboard](/docs/sites), navigate to the Dev (or Multidev) environment, and click on the **Site Admin** button. Log in to your WordPress Admin Dashboard.
+1. From the [Site Dashboard](/sites), navigate to the Dev (or Multidev) environment, and click on the **Site Admin** button. Log in to your WordPress Admin Dashboard.
 
 1. Select **Plugins**, then **Add New**
 
