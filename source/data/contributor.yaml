@@ -374,3 +374,19 @@
   avatar: //avatars.githubusercontent.com/u/232096
   bio: Product Manager
   github: //github.com/tylerdigital
+- id: sparklingrobots
+  name: Tara King
+  avatar: //avatars.githubusercontent.com/u/2217845
+  github: //github.com/sparklingrobots
+  linkedin: //www.linkedin.com/in/kingtara
+  drupal: //www.drupal.org/u/sparklingrobots
+  bio: Developer Outreach Manager at Pantheon
+- id: caitybishop
+  name: Caity Bishop
+  bio: Senior Content Strategist
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/IMG_2047.jpg
+  linkedin: https://www.linkedin.com/in/caitlin-lee-bishop/
+- id: katiemac
+  name: Katie McGonigal
+  bio: Senior Director, People Experience, Diversity, and Inclusion
+  avatar: //s.gravatar.com/avatar/2129d34480346a41960310bf9482cabd?s=240
