@@ -105,11 +105,16 @@ else{
 Setting cookies for the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies for platform domains (e.g. `dev-site-name.pantheonsite.io`) and custom domains (e.g. `example.com`, `xyz.example.com`).
 
 ## Cookie Size Limit
+
 The Pantheon Edge size limit for Cookies is 10K. Any larger cookies are dropped, and the request is processed as if there was no cookie sent. The header `X-Cookies-Dropped: 1` is added to the request and response, indicating that they have been truncated.
 
 Knowing this, you can choose to configure your code to listen for this header and respond, with a custom error page for example.
 
 Note that too many `set-cookie` headers in the response can also create issues.
+
+## Static Files
+
+Pantheon strips cookies for files with common static file extensions. See [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) doc for more information.
 
 ## FAQ
 
