@@ -348,7 +348,7 @@ One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that t
 
 Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp) to define a size attribute appropriate for the given layout at a particular screen-size.
 
-```php
+```html
   <picture>
       <source srcset="small.jpg" media="(max-width: 768px)">
       <source srcset="normal.jpg">
