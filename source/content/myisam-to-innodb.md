@@ -230,7 +230,7 @@ This is your MySQL password for the user you specified in the line above.
 
 </dd>
 
-<dt>database</dt>
+<dt ignored>database</dt>
 
 <dd>
 
