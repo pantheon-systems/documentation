@@ -45,7 +45,7 @@ Follow the procedure outlined below for your CMS:
 
 <Tab title="WordPress" id="tab-1-anchor">
 
-The [official Sendgrid plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has not been updated for the latest several major releases of WordPress. You can still use it, or consider another plugin like [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp)
+The [official Sendgrid plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has not been updated for the latest several major releases of WordPress. You can still use it, or consider another plugin like [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp).
 
 <Accordion title="Install the SendGrid Plugin" id="sendgrip-wp-plugin" icon="warning-sign">
 
