@@ -4,6 +4,7 @@ description: Elevate the way we communicate and support community and contributo
 contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac]
 categories: [about]
 tags: [collaborate]
+reviewed: "2020-11-01"
 ---
 
 This guide is intended to elevate the way we communicate at Pantheon, and to support our community and contributors in using more inclusive language. It will help ensure everyone feels included and welcome by the language we use and the examples we share.
@@ -18,7 +19,7 @@ When using inclusive language, you are "acknowledging diversity, conveying respe
 
 It's how we show up. At Pantheon, everyone has a responsibility to communicate and behave inclusively. It's the way we lift others up, show up for others, speak in group settings, and consistently consider other perspectives and backgrounds.
 
-We know inclusive language is essential in [building trust](https://www.forbes.com/sites/forbestechcouncil/2020/04/03/why-inclusive-language-matters-in-tech/#336a80c96017), [attracting talent](https://medium.com/diversity-together/70-inclusive-language-principles-that-will-make-you-a-more-successful-recruiter-part-1-79b7342a0923), and [aiding productivity](https://www.mckinsey.com/business-functions/organization/our-insights/delivering-through-diversity). But most importantly, it will help us grow a diverse company where inclusivity is the very fabric of how we act, speak, feel, and think.
+We know inclusive language is essential in [building trust](https://www.forbes.com/sites/forbestechcouncil/2020/04/03/why-inclusive-language-matters-in-tech/#336a80c96017), [attracting talent](https://medium.com/diversity-together/70-inclusive-language-principles-that-will-make-you-a-more-successful-recruiter-part-1-79b7342a0923), and [aiding productivity](https://www.mckinsey.com/business-functions/organization/our-insights/delivering-through-diversity). But most importantly, it will help us grow a diverse company and community where inclusivity is the very fabric of how we act, speak, feel, and think.
 
 ## Who This Is For
 
@@ -46,7 +47,7 @@ This guide applies to everything. Consider inclusive language in the product, pr
 - Instead of “OCD”, use “meticulous” or “detail oriented”.
 - [Instead of](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) “mute”, use “non-verbal”.
 - When referring to someone with a disability, do not use the words “high (or low) functioning”.
-“High functioning is not how an autistic person experiences being autistic, it’s how society experiences the autistic person.”
+“High functioning is not how an autistic person experiences being autistic, it’s how society experiences the autistic person.” - [Kat Williams](https://www.ncmh.info/2019/04/04/fallacy-functioning-labels/)
 
 ### What is violent language
 
@@ -98,7 +99,7 @@ Engineering work is ongoing to correct these naming conventions.
 
 #### Put the Person First
 
-When referring to someone, it is best to put the person ahead of their identity, characteristics, or position.
+When referring to someone, put the person ahead of their identity, characteristics, or position.
 
 For example, "a person who is deaf", "a woman who is a doctor", and "a person who has a traumatic brain injury" instead of "a deaf person", "a female doctor", and a "brain damaged person". When the individual's gender, race, age, sexual orientation, or ability is not relevant to the conversation, avoid mentioning it entirely. 
 
