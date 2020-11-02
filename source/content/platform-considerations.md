@@ -48,31 +48,19 @@ Most often, the best solution is to implement data exports as a web service, inc
 
 ## Compute Optimized Environments (COE)
 
-<ReviewDate date="2020-05-15" />
+<ReviewDate date="2020-11-02" />
 
 Compute Optimized Environments (COE) improves CPU performance over the previous infrastructure by up to 40%. COE includes changes to the runtime operating system, file structure, and binary content of Pantheon’s Site Environments. While these changes are transparent to most sites on the platform, there is the potential for custom code to interact with these components in a way that may need to be adjusted or optimized.
 
 ### Is my site on COE?
 
-Sites on COE display the following banner at the top of the Site Dashboard:
-
-<Alert type="info" icon="info-sign" title="This environment is now Compute Optimized!">
-
-For enhanced security and a more intuitive experience:
-
-- Up to 40% improved PHP performance
-- OCI standard containers with enhanced security and new directory structure
-- Updated components including wkhtmltopdf, imagemagick, and OpenSSL
-
-See [Platform Considerations](#compute-optimized-environments-coe) to review a full list of considerations related to custom code or config.
-
-</Alert>
+Yes. All sites are on COE.
 
 ### Home Directory
 
-The site environment home directory has changed from `/srv/bindings/[UUID]` to root `/`.
+The site environment home directory is in the root `/`.
 
-Pantheon has provided backward compatibility for site code that references the previous home directory, by adding a symlink `/srv/bindings/[UUID]` to `/`.
+Pantheon has provided backward compatibility for site code that references the previous home directory by adding a symlink `/srv/bindings/[UUID]` to `/`.
 
 External scripts that reference `/srv/bindings/[UUID]` should check that the path exists. If the prior home directory does not exist, then your scripts should write to the new home directory location.
 

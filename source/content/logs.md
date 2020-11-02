@@ -5,6 +5,7 @@ categories: [platform]
 tags: [logs, newrelic, workflow]
 reviewed: "2020-07-14"
 ---
+
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
 The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
@@ -52,9 +53,12 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 ### Application Log Files
 
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
-2. Click **Connection Info** and copy the **SFTP Command Line** command.
-3. Open a terminal window and paste the SFTP connection command.
-4. Run the following SFTP command in terminal:
+
+1. Click **Connection Info** and copy the **SFTP Command Line** command.
+
+1. Open a terminal window and paste the SFTP connection command.
+
+1. Run the following SFTP command in terminal:
 
    ```none
    get -r logs
@@ -62,7 +66,7 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 
 You now have a local copy of the logs directory.
 
-For sites on [Compute Optimized Environments (COE)](/platform-considerations#compute-optimized-environments-coe), the directory structure will resemble:
+The directory structure will resemble:
 
 ```none
 ├── logs
@@ -76,22 +80,12 @@ For sites on [Compute Optimized Environments (COE)](/platform-considerations#com
         └──nginx-error.log
 ```
 
-For sites not on COE, the directory structure will be more like this:
-
-```none
-├── logs
-    └──newrelic.log
-    └──nginx-access.log
-    └──nginx-error.log
-    └──php-error.log
-    └──php-fpm-error.log
-    └──php-slow.log
-```
-
 ### Database Log Files
 
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
+
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
+
 1. Edit and execute the command by replacing `appserver` with `dbserver`:
 
  From:
@@ -106,7 +100,7 @@ For sites not on COE, the directory structure will be more like this:
  sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
-4. Run the following SFTP command in terminal:
+1. Run the following SFTP command in terminal:
 
  ```none
  get -r logs
@@ -199,7 +193,7 @@ See [Parsing nginx Access Logs with GoAccess](/nginx-access-log) for details.
 
 ### What is the first line in nginx-access.log?
 
-The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
+The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the load balancer IP address will be listed second, after the client IP.
 
 The client IP for the following example is `122.248.101.126`:
 
@@ -308,6 +302,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
    Stop the process with **CTRL-C**.
 
 ## See Also
+
 - [MySQL Slow Log](/mysql-slow-log)
 - [PHP Slow Log](/php-slow-log)
 - [PHP Errors and Exceptions](/php-errors)

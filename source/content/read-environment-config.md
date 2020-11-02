@@ -91,21 +91,7 @@ For more information, see [configuring wp-config.php](/wp-config-php).
 
 ## Hard-coded Directory References and $_ENV\['HOME']
 
-Some sites are on a newer version of the Pantheon infrastructure and will display the following banner at the top of the Site Dashboard:
-
-<Alert type="info" icon="info-sign" title="This environment is now Compute Optimized!">
-
-For enhanced security and a more intuitive experience:
-
-- Up to 40% improved PHP performance
-- OCI standard containers with enhanced security and new directory structure
-- Updated components including wkhtmltopdf, imagemagick, and OpenSSL
-
-See [Platform Considerations](/platform-considerations#compute-optimized-environments-coe) to review a full list of considerations related to custom code or config.
-
-</Alert>
-
-For these sites, and as a general best-practice, the home directory should be referenced through the `$_ENV` variable:
+As a general best-practice, the home directory should be referenced through the `$_ENV` variable:
 
 ```php
 $_ENV['HOME']
