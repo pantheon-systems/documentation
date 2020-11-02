@@ -28,11 +28,13 @@ There are many different ways to measure page speed and performance. This guide 
 ![Acing Google's speed test](../../images/guides/front-end-performance/ace-it.png)
 
 ## Reduce Server Response Time
+
 The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds.
 
 Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
 
 ### Pantheon's Global CDN
+
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN.
 
 <TabList>
@@ -94,19 +96,40 @@ Each POP caches all the resources (e.g., CSS and JavaScript) needed to render th
 Pantheon is designed to store cached copies of the full HTML pages coming out of Drupal and WordPress core by default. If non-logged in visitors to your site are not getting a near-instant delivery of HTML from the cache in our Global CDN, something is wrong. Full page cache depends on the HTTP Headers coming out of your site.
 
 ### Review Response Caching
+
 The following describes the expected cache behavior for sites running the Pantheon Advanced Page Cache [WordPress plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [Drupal module](https://www.drupal.org/project/pantheon_advanced_page_cache). If you find that your page is not served from cache with similar headers and values, examine the response using Google's Developer tools and consult the next section for common cache busters and potential culprits.
 
 <dt>age</dt>
-<dd >The number of seconds cache has been available to serve the request. Any number greater than zero indicates that this response was served to the browser from cache.</dd>
-<br />
+
+<dd>
+
+The number of seconds cache has been available to serve the request. Any number greater than zero indicates that this response was served to the browser from cache.
+
+</dd>
+
 <dt>cache-control</dt>
-<dd >This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.</dd>
-<br />
+
+<dd>
+
+This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.
+
+</dd>
+
 <dt>surrogate-key-raw</dt>
-<dd>Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again. This header is only present when you specifically add a debugging header (`Pantheon-Debug:1`) to your request. You can use a browser extension to add the debugging header (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header)).</dd>
-<br />
+
+<dd>
+
+Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again. This header is only present when you specifically add a debugging header (`Pantheon-Debug:1`) to your request. You can use a browser extension to add the debugging header (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header)).
+
+</dd>
+
 <dt>x-served-by</dt>
-<dd>This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
+
+<dd>
+
+This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.
+
+</dd>
 
 ![Chrome network headers](../../images/guides/front-end-performance/chrome-network-headers.png)
 
@@ -117,10 +140,14 @@ Examine the HTTP headers for the response using Chrome's Developer tools:
 ![Check headers in chrome](../../images/guides/front-end-performance/inspect-network.gif)
 
 1. Right click somewhere on the page.
-2. Select **Inspect**.
-3. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
-4. Select the first row, which is a request for the initial HTML file.
-5. Look for the **Age** header. Any number greater than zero indicates that this response was served to the browser from cache.
+
+1. Select **Inspect**.
+
+1. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
+
+1. Select the first row, which is a request for the initial HTML file.
+
+1. Look for the **Age** header. Any number greater than zero indicates that this response was served to the browser from cache.
 
 </Accordion>
 
@@ -207,10 +234,12 @@ Working across many environments presents opportunities for configuration change
 The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
-2. Review the Time to Live, which translates to `max-age`.
-3. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
-![Pantheon Cache Plugin](../../images/guides/front-end-performance/pantheon-page-cache.png)
+1. Review the Time to Live, which translates to `max-age`.
+
+1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
+
+  ![Pantheon Cache Plugin](../../images/guides/front-end-performance/pantheon-page-cache.png)
 
 </Tab>
 
@@ -219,9 +248,10 @@ The Pantheon Page Cache plugin is already included by our upstream as a Must-Use
 In Drupal it is very easy to turn off page caching and forget to turn it back on.
 
 1. Navigate to **Configuration** > **Development** > **Performance** within Drupal's Admin Interface.
-2. Review **Page cache maximum age**:
 
-![Drupal Performance settings](../../images/guides/front-end-performance/d8-cache.png)
+1. Review **Page cache maximum age**:
+
+  ![Drupal Performance settings](../../images/guides/front-end-performance/d8-cache.png)
 
 The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 
@@ -271,10 +301,12 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 ```
 
 1. Navigate to a development environment's site URL that has the plugin installed and enabled, with the above configuration in place.
-2. From the WordPress dashboard, click **Debug** towards the top right.
-3. Review the request and object cache data for potential red flags.
 
-![Debug Bar WordPress](../../images/guides/front-end-performance/debug-bar.png)
+1. From the WordPress dashboard, click **Debug** towards the top right.
+
+1. Review the request and object cache data for potential red flags.
+
+  ![Debug Bar WordPress](../../images/guides/front-end-performance/debug-bar.png)
 
 </Tab>
 
