@@ -5,7 +5,7 @@ contributors: [alexfornuto]
 categories: [integrate]
 tags: [email, plugins]
 cms: "WordPress"
-reviewed: "2020-10-29"
+reviewed: "2020-11-02"
 permalink: docs/guides/:basename
 ---
 
@@ -25,7 +25,7 @@ This guide assumes a pre-existing configuration of:
 
 - An configured WordPress site. See our [Quick Start](/guides/quickstart) guide if you need to set up a new WordPress site on Pantheon.
 - A familiarity with the [WebOps workflow](/pantheon-workflow), as we will be moving code and content between environments.
-- A SendGrid account and API key. See [Create a SendGrid Account](/guides/sendgrid/#create-a-sendgrid-account) for more information.
+- A SendGrid account and API key. Follow the steps in [Create a SendGrid Account](/guides/sendgrid/#create-a-sendgrid-account) to create and authenticate an account.
 - If your site has access to [Multidev](/multidev), we suggest creating a new Multidev environment to work in. If so, substitute the Multidev name for `dev` in the guide below, unless otherwise noted.
 
 ## Install the WP Mail SMTP Plugin
@@ -42,15 +42,15 @@ Each method requires first setting your working environment (Dev or a Multidev e
 
   ![The WordPress Admin Dashboard, highlighting the Plugins page and Add New button](../../images/guides/wp-mail-smtp/add-new-plugin.png)
 
-1. In the search box, type "wp mail smtp". Results will update automatically. Select **Install Now**:
+1. In the search box, type "wp mail smtp". Results will update automatically. Locate **WP Mail SMTP by WPForms** and click **Install Now**:
 
   ![The Add Plugins search view](../../images/guides/wp-mail-smtp/search-plugins-install.png)
 
-1. Once installed, the same button will change to say **Activate**. Select it again.
+1. Once installed, the same button will change to say **Activate**. Click it again.
 
-WP Mail SMTP is now installed! You can now jump to [Configure WP Mail SMTP for SendGrid](#configure-wp-mail-smtp-for-sendgrid)
+WP Mail SMTP is now installed! You can now continue to [Configure WP Mail SMTP for SendGrid](#configure-wp-mail-smtp-for-sendgrid).
 
-### Install with  Terminus
+### Install with Terminus
 
 <Alert title="Exports" type="export">
 
