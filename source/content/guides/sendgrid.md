@@ -43,7 +43,11 @@ Follow the procedure outlined below for your CMS:
 
 <TabList>
 
-<Tab title="WordPress" id="tab-1-anchor" active={true}>
+<Tab title="WordPress" id="tab-1-anchor">
+
+The [official Sendgrid plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has not been updated for the latest several major releases of WordPress. You can still use it, or consider another plugin like [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp).
+
+<Accordion title="Install the SendGrid Plugin" id="sendgrip-wp-plugin" icon="warning-sign">
 
 ### Download the WordPress SendGrid Plugin
 
@@ -69,9 +73,11 @@ Install and activate the latest release through the WordPress dashboard or place
 
 When you're done, click **Update Settings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
+</Accordion>
+
 </Tab>
 
-<Tab title="Drupal 8" id="tab-2-anchor">
+<Tab title="Drupal 8" id="tab-2-anchor" active={true}>
 
 When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module. While you can use the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module to send mail to SendGrid over SMTP, our testing (as of the last update) was hampered by a [known issue](https://www.drupal.org/project/smtp/issues/3135015) with the module recognizing the presence of a required PHP library.
 
