@@ -9,6 +9,7 @@ image: CDN-speedTest-docs-guide
 permalink: docs/guides/:basename
 contributors: [tessak22, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham]
 ---
+
 Slow websites are **bad**. Many studies have looked at this and the facts are in. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/). In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
@@ -16,7 +17,6 @@ Slow websites are **bad**. Many studies have looked at this and the facts are in
 Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
 
 </Enablement>
-
 
 There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth by [Google's mobile speed test](https://testmysite.thinkwithgoogle.com/):
 
@@ -282,6 +282,7 @@ If your site doesn't seem to be able to send uncached content fast enough, enabl
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
 
 <TabList>
+
 <Tab title="WordPress" id="wordpress-helpers" active={true}>
 
 The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful identifying advanced cache behaviors. This plugin requires that you enable debugging via `wp-config.php`:
@@ -428,6 +429,7 @@ define('AUTOPTIMIZE_CACHEFILE_PREFIX','aggregated_');
 The following blog post walks through how to use results from the [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/) with the Autoptimize plugin so that you have inline critical styles with a deferred stylesheet: [How to Use the Autoptimize “Inline and Defer CSS” Option](https://www.wpfaster.org/blog/how-to-use-autoptimize-inline-and-defer-css-option)
 
 </Tab>
+
 <Tab title="Drupal" id="drupal-requests">
 
 Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at `admin/config/development/performance`:
@@ -444,9 +446,11 @@ If you want to make the number of files as low as possible, try [Advanced Aggreg
 
 <Alert title="Note" type="info">
 
-The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
-The web community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than one big inline CSS statement that's been aggregated.)<br/><br/>
-In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.<br/><br/>
+The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.
+
+The web community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than one big inline CSS statement that's been aggregated.)
+
+In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.
 
 </Alert>
 
