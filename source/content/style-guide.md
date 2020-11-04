@@ -211,7 +211,7 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 <Example>
 
 A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
-New terms should only be defined once throughout the doc, and then cross-referenced.
+New terms should only be defined once throughout the docs, and then cross-referenced.
 Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
 
 <hr className="source-code" /> <br/>
