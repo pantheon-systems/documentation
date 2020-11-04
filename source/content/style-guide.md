@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [alexfornuto, rachelwhitton]
-reviewed: "2020-04-28"
+reviewed: "2020-11-04"
 ---
 <!-- markdownlint-disable -->
 
@@ -145,7 +145,11 @@ ___
 
 ## Typography
 
+All documentation uses MarkDown to render headings and typographic elements like bold and italic. Note that a newline is required between HTML elements and content, so the MarkDown renderer knows to format the content.
+
 ### Headings
+
+Give heading levels a meaningful hierarchy to ensure accessible navigation and structure.
 
 <Example>
 
@@ -208,14 +212,14 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 
 A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
 New terms should only be defined once throughout the doc, and then cross-referenced.
-Definitions and definition Lists also are automatically added to the [Glossary](/glossary).
+Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
 
 <hr className="source-code" /> <br/>
 
 ```html
 A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
 New terms should only be defined once throughout the doc, and then cross-referenced.
-Definitions and definition Lists also are automatically added to the [Glossary](/glossary).
+Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
 ```
 
 </Example>
@@ -256,8 +260,6 @@ Description of the new term.
 ```
 
 </Example>
-
-Note that a newline is required between HTML elements and content, so that the MarkDown renderer knows to format the content.
 
 ### Abbreviations
 
