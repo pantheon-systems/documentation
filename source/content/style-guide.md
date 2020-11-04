@@ -23,6 +23,7 @@ Some General Rules:
 - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
 - Avoid colloquialisms and personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
 - Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
+- Review our [Inclusive Language](https://pantheon.io/docs/inclusive-language) doc, and review your writing for inaccessible language.
 
 ___
 
