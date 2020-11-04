@@ -2828,6 +2828,11 @@ article > div > dfn {
 	color: #44525e;
 }
 
+dt {
+	font-weight: 700;
+	margin-top: .5em;
+}
+
 /* Was this helpful widget */
 /* .helpful {
 	margin: 60px 0;
