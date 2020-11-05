@@ -36,9 +36,9 @@ class Glossary extends React.Component {
         matches.forEach(term => {
           //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           defLists.push({
+            title: term.match(/<dt>(.*?)<\/dt>/)[1],
             from: node.frontmatter.title,
             slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
-            title: term.match(/<dt>(.*?)<\/dt>/)[1],
             definition: term.match(/<dd>\n\n\s*(.*?)\n\n\s*<\/dd>/)[1],
             letter: term.match(/<dt>(.*?)<\/dt>/)[1][0].toUpperCase(),
           })
@@ -46,12 +46,12 @@ class Glossary extends React.Component {
       }
     })
 
-    defLists.sort((a, b) =>
-      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
-    )
-    defLists.sort(function(a, b) {
-      return a.title[0].localeCompare(b.title[0])
-    })
+//    defLists.sort((a, b) =>
+//      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+//    )
+//    defLists.sort(function(a, b) {
+//      return a.title[0].localeCompare(b.title[0])
+//    })
     //console.log("defLists: ", defLists) // For debugging
 
     let allDfns = []
@@ -78,15 +78,18 @@ class Glossary extends React.Component {
         })
       }
     })
-    allDfns.sort((a, b) =>
-      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
-    )
-    allDfns.sort(function(a, b) {
-      return a.title[0].localeCompare(b.title[0])
-    })
+//    allDfns.sort((a, b) =>
+//      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+//    )
+//    allDfns.sort(function(a, b) {
+//      return a.title[0].localeCompare(b.title[0])
+//    })
     //console.log("allDfns: ", allDfns) //For Debugging
 
     const allDefs = allDfns.concat(defLists)
+    allDefs.sort((a, b) =>
+      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+    )
     //console.log("allDefs: ", allDefs) //For Debugging
 
     const letters = [
@@ -152,18 +155,20 @@ class Glossary extends React.Component {
                       ) : null}
                       {allDefs
                         .filter(def => {
+                          //console.log("Now rendering ", def.title, def) //For Debugging
                           return (
                             def.letter.toUpperCase() === index.toUpperCase()
                           )
                         })
                         .map(({ from, slug, title, definition }) => (
                           <>
-                            <section key={title}>
+                            <section key={title.replace(/ +/g, '-')}>
                               <hr />
-                              <Link to={`#${title.toLowerCase()}`}>
+                              <Link to={`#${title.toLowerCase().replace(/ +/g, '-')}`}>
                                 <h3
-                                  key={`${title}-header`}
+                                  key={`${title.replace(/ +/g, '-')}-header`}
                                   id={title.toLowerCase().replace(/ +/g, '-')}
+                                  name={title.toLowerCase().replace(/ +/g, '-')}
                                   className="glossary-term"
                                 >
                                   {title.charAt(0).toUpperCase() + title.slice(1)}
