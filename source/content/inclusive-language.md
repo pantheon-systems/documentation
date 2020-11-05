@@ -57,6 +57,8 @@ This guide applies to everything. Consider inclusive language in the product, pr
 
 Avoid the use of violent metaphors such as STONITH, rape, or murder when talking about technical topics. Most often, a more specific and literal term is more useful to the reader and more welcoming. 
 
+Phrases like "one throat to choke" can be replaced with "one hand to shake" or "a single point of accountability." These alternatives remove the violent language and refocus on productive partnerships.
+
 ### What is gendered language
 
 [<dfn id="gendered-lang">Gendered language</dfn>](https://www.google.com/search?q=gendered+language&oq=gendered+language&aqs=chrome..69i57j0l4j46j0l2.1907j0j7&sourceid=chrome&ie=UTF-8) is commonly understood as language that has a bias towards a particular sex or social gender.
