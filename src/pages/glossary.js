@@ -34,9 +34,10 @@ class Glossary extends React.Component {
       //console.log("match: ", matches) // For Debugging
       if (matches && matches.length) {
         matches.forEach(term => {
+          //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           defLists.push({
             from: node.frontmatter.title,
-            slug: node.fields.slug,
+            slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
             title: term.match(/<dt>(.*?)<\/dt>/)[1],
             definition: term.match(/<dd>\n\n\s*(.*?)\n\n\s*<\/dd>/)[1],
             letter: term.match(/<dt>(.*?)<\/dt>/)[1][0].toUpperCase(),
@@ -63,10 +64,11 @@ class Glossary extends React.Component {
       //console.log("isDfn", isDfn) //For Debugging
       if (isDfn && isDfn.length) {
         isDfn.forEach(def => {
+          //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           allDfns.push({
-            from: node.frontmatter.title,
-            slug: node.fields.slug,
             title: def.match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[2],
+            from: node.frontmatter.title,
+            slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
             definition: def,
             letter: def
               .match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[1][0]
