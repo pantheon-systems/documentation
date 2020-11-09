@@ -163,7 +163,7 @@ class Glossary extends React.Component {
                               <Link to={`#${title.toLowerCase()}`}>
                                 <h3
                                   key={`${title}-header`}
-                                  id={title.toLowerCase()}
+                                  id={title.toLowerCase().replace(/ +/g, '-')}
                                   className="glossary-term"
                                 >
                                   {title.charAt(0).toUpperCase() + title.slice(1)}
