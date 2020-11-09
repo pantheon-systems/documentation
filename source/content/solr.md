@@ -104,7 +104,7 @@ Search facets allow search results to be filtered; examples include seeing a lis
 
 <dd>
 
-structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.
+Structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.
 
 </dd>
 
@@ -112,7 +112,7 @@ structure containing extracted keywords from a document for rapid search and ret
 
 <dd>
 
-calculated relevance of matches influenced by bias, represented as a float.
+Calculated relevance of matches influenced by bias, represented as a float.
 
 </dd>
 
