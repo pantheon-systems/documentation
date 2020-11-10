@@ -74,3 +74,7 @@ As a side note, `terminus 'wp user update'` can be used to change almost any pro
 ### Option C: Reset your password directly in the database (advanced)
 
 If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [wordpress.org](https://wordpress.org/support/article/resetting-your-password/#through-mysql-command-line) and [Accessing MySQL Databases](/mysql-access) for more information.
+
+### Option D: Use the Emergency Password Reset Script
+
+If all the options listed won't work, then try the Emergency Password Reset Script. Please see documentation on  [wordpress.org](https://wordpress.org/support/article/resetting-your-password/#using-the-emergency-password-reset-script).  Please note that it's not a plugin but a PHP script. For security reason, remember to delete the script when you are done.
