@@ -3,17 +3,13 @@ title: Use Pantheon Localdev to Develop Sites Locally
 description: Localdev makes it easy to develop your sites locally with the Pantheon workflow.
 categories: [develop]
 tags: [localdev, local, workflow]
-earlyaccess: true
-earlynote: The documentation on this page discusses features and options that are still in production. Pantheon Support for Localdev may be limited.
 contributors: [edwardangert]
-reviewed: "2020-04-21"
+reviewed: "2020-12-04"
 ---
 
-Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow).
+Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining [Pantheon Workflow](/pantheon-workflow).
 
-Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview, even when you don't have an internet connection.
-
-Localdev is in active development, with new features and updates coming soon. Please submit feedback and feature requests through the [Pantheon Localdev Customer Feedback](https://docs.google.com/forms/d/e/1FAIpQLSdy2WU7H3bSd94YmEuTvGhzmmT_xP3LlCgORXOkTt-M8UIAXw/viewform) form.
+Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview. Once the site has been cloned locally, develop sites with the help of Localdev even when you don't have an internet connection.
 
 ## Install and Connect Localdev
 
@@ -31,7 +27,10 @@ If you have an older version of Localdev already installed on your machine, remo
 Once Localdev is installed, a list of your sites is displayed in a column on the left.
 
 ## Download and Test Beta Versions
+
 Download Edge versions to get the latest features, bug fixes, instructions, and help test Localdev.
+
+Note that some versions of Localdev are not compatible with some versions of Docker. See GitHub for more information, or (we don't recommend this) to continue with an untested version of Docker, you can turn off the compatibility check in Localdev's settings.
 
 1. From within your Localdev installation, select Settings in left menu.
 1. In the Current Version section, click on `switch to edge`:
@@ -126,12 +125,15 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 While Localdev is in beta, [support request best practices](/support/#best-practices) are especially important for our team to help you resolve the issue, or to report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** tab and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
+
    - Application reports are collected and stored locally in `~/.pantheonlocaldev`.
 
 1. Reproduce the error and note the steps taken.
+
    - If the error is inconsistent, make note of this as well. Multiple reports of an inconsistent error help our team troubleshoot.
 
 1. Report the error:
+
    - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/support/#real-time-chat-support) and include the steps you took to reproduce the error.
 
 ### Provide Feedback or Feature Requests
@@ -143,7 +145,9 @@ Please submit feedback and feature requests through the [Pantheon Localdev Custo
 The steps in this section should only be used as a last resort. This resets Localdev and will remove the machine token and all local copies of your connected sites.
 
 1. Click **Settings**
+
 1. **Reset to defaults**
+
 1. **Proceed with reset**
 
 ## Changelog
