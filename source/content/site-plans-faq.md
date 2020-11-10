@@ -87,8 +87,8 @@ If you exceed the Performance Extra Large plan limits of 300,000 monthly visits 
 
 | Payment Type      | Price            |
 |:----------------- |:---------------- |
-| List Monthly      |  $2,000          |
-| List Annual       |  $22,000         |
+| List Monthly      |  $1,500          |
+| List Annual       |  $16,500         |
 
 Note that the annual plan prices are listed as annual cost.
 
