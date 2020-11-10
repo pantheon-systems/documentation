@@ -46,9 +46,9 @@ Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accord
 <?php
 /*
   Plugin Name: Site Config
-  Plugin URI: /docs/environment-specific-config
-  Description: Activating and deactivates plugins based on environment.
-  Version: 0.1
+  Plugin URI: https://pantheon.io/docs/environment-specific-config
+  Description: Activates and deactivates plugins based on environment.
+  Version: 0.1.1
   Author: Pantheon
   Author URI: https://pantheon.io/docs/contributors
 */
