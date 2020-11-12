@@ -14,7 +14,7 @@ Pantheon is testing a release of Drupal with integrated Composer and is opening 
 
 ## Get Access to Integrated Composer
 
-Integrated Composer is currently limited to customers with a Pantheon [organization](/organizations). If you are not part of an organization already, contact [Support](/support) to request access and your CSE will add you to a test organization from which you can deploy the upstream. If you are already part of an organization, the feature can be enabled organization-wide.
+Integrated Composer is currently limited to customers with a Pantheon [organization](/organizations). If you are not part of an organization already, contact [Support](/support) to request access and your CSE will add you to a test organization from which you can deploy the Upstream. If you are already part of an organization, the feature can be enabled organization-wide.
 
 ## Create a Drupal or WordPress Site with Integrated Composer
 
@@ -26,7 +26,7 @@ Integrated Composer is currently limited to customers with a Pantheon [organizat
 
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
 
-1. Create a new Drupal 8 or WordPress site from the upstream to confirm that it’s working.
+1. Create a new Drupal 8 or WordPress site from the Upstream.
 
    - Do not customize the upstream yet.
 
@@ -89,7 +89,7 @@ Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNA
      1.0.0
      ```
 
-   - Increment the config version number when you update dependencies. If you don't increment the version number, updated dependencies will be ignored. Replace `x.y.z` in this example with something like `1.0.1`:
+   - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. Replace `x.y.z` in this example with something like `1.0.1`:
 
      ```bash{promptUser: user}
      composer config version x.y.z
