@@ -2833,6 +2833,10 @@ dt {
 	margin-top: .5em;
 }
 
+.glossary-term {
+	text-transform: capitalize;
+}
+
 /* Was this helpful widget */
 /* .helpful {
 	margin: 60px 0;
