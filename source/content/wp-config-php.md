@@ -44,6 +44,8 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 In order to get the latest WordPress upstream updates while avoiding merge conflicts, Pantheon includes `wp-config-pantheon.php`.
 
+If you don’t see `wp-config-pantheon.php` in your [WP code directory](/code#wordpress-code-structure), apply the latest upstream updates as shown in the [WordPress and Drupal Core Updates](/core-updates) doc
+
 Do not edit `wp-config-pantheon.php`. It includes database and environment configuration settings that the platform uses and that Pantheon maintains.
 
 ## Environment-specific Configuration
