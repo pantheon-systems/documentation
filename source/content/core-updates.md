@@ -302,7 +302,7 @@ Whenever there's a new release of WordPress or Drupal core, updates will be avai
 
 </Alert>
 
-## Supress WordPress Admin Notice
+## Suppress WordPress Admin Notice
 
 By default WordPress admin will check for new upstream updates instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin, you will still see upstream updates in the Pantheon dashboard.
 
