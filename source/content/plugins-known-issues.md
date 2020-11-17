@@ -138,7 +138,7 @@ ___
 
 <ReviewDate date="2020-02-10" />
 
-**Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+**Issue 1:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 **Solution:** Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
 
@@ -152,6 +152,17 @@ Be sure to add this configuration _above_ the comment to stop editing:
 ![Example of Autoptimize configuration above the stop editing comment](../images/autoptimize-config.png)
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
+
+**Issue 2:** Autoptimize generates a php file upon activation "wp-content/autoptimize_404_handler.php" if not present autoptimize will throw a php warning
+
+```
+Warning: file_put_contents(/code/wp-content/autoptimize_404_handler.php): failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize/classes/autoptimizeCache.php on line 642
+```
+
+**Solution 1:** Activate the plugin to generate autoptimize_404_handler.php the file from Dev before committing.
+
+**Solution 2:** An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link)
+ for autoptimize_404_handler.php, This will also future proof any changes the plugin might do with every update.
 
 ___
 
