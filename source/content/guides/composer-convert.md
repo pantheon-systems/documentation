@@ -1,13 +1,18 @@
 ---
 title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Drupal 8 sites often require the usage of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed upstream.
+description: Use Composer to manage Drupal 8 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed Upstream.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal 8"
 categories: [develop]
 tags: [composer, site, workflow]
-contributors: [dustinleblanc, stovak]
+contributors: [dustinleblanc, greg-1-anderson]
+reviewed: "2020-12-01"
 ---
+
+Drupal 8 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed Upstream.
+
+Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps. This conversion process may be automated in the future, but initially we will need to document the manual process.
 
 ## Before You Begin
 
@@ -21,68 +26,15 @@ export SITE=my-example-site
 
 </Alert>
 
-This document is for you if you meet the following criterion:
+## Steps we'll take
 
-- You have [Git](/git), [Composer](/composer), and [Terminus](/terminus), installed and configured on your local computer.
+1. Convert to Composer
+1. Upgrade to Drupal 8.9
+1. Upgrade to Drupal 9
 
-  If not, you'll need to install these utilities for your specific operating system.
+## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
-- [You have a local copy of your site cloned from it's git repo](/git#clone-your-site-codebase) your _current_ Pantheon site repository in a working directory on your local computer.
-
-- Your site repository has a "/web" folder at it's root. 
-
-  [Serving Sites from the Web Subdirectory](/nested-docroot)
-
-- Your site has our DROPS-8 repo in it's upstream.
-
-  You can find out the answer to that question with the following command(s):
-
-```bash{outputLines:2-99}
-terminus site:info $SITE
------------------- -------------------------------------------------------------------------------------
-ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-Name               my-example-site
-Label              MyExampleSite
-Created            2019-12-02 18:28:14
-Framework          drupal8
-Region             United States
-Organization       3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-Plan               Elite
-Max Multidevs      Unlimited
-Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
-Holder Type        organization
-Holder ID          3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-Owner              3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-Is Frozen?         false
-Date Last Frozen   1970-01-01 00:00:00
------------------- -------------------------------------------------------------------------------------
-```
-
-The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
-If not, this document does not apply to you.
-
-- Your site has applied all of the most recent updates from the drops-8 upstream.
-
-  You can find out the answer to that question with the following command:
-
-```bash{outputLines:2-6}
-terminus upstream:updates:list $SITE
-[warning] There are no available updates for this site.
------------ ----------- --------- --------
-Commit ID   Timestamp   Message   Author
------------ ----------- --------- --------
-```
-
-Anything other than "no updates available" and you will need to apply the updates either by command line
-or via the Pantheon dashboard before continuing.
-
-<Alert title="Danger" type="danger">
-Going any farther without having met the above criterion could result in damage to your site making it inoperable.
-</Alert>
-
-## Checkout a New Branch
-
-You're about to make some massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back can be complicated:
+You're about to make massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
@@ -90,50 +42,51 @@ You're about to make some massive changes to the codebase. We recommend you to d
 cd ~/projects/$SITE/
 ```
 
-2. Create the new branch:
+1. Add the Pantheon Drupal Upstream as a new remote, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
+
+  ```bash{promptUser:user}
+  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
+  ```
+
+  You can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
+
+1. Copy your configuration from the default branch:
+
+  ```bash{promptUser:user}
+  git checkout master sites/default/config
+  git mv sites/default/config/* config
+  git commit -m "Pull in configuration from default branch"
+  ```
+
+1. Compare your `pantheon.yml` with the new `pantheon.upstream.yml` and check for conflicts:
+
+  ```bash{promptUser:user}
+  git diff master:pantheon.yml pantheon.upstream.yml
+  ```
+
+1. If you need your `pantheon.yml`, copy it over (be sure to edit if needed):
+
+  ```bash{promptUser:user}
+  git checkout master pantheon.yml
+  git add pantheon.yml
+  git commit -m 'Copy my pantheon.yml'
+  ```
+
+### (Optional) Return to Drupal 8
+
+If you’re not ready to update to Drupal 9 yet. (Advisable: test the Composer conversion before testing the Drupal 9 upgrade)
+Note that you might want to hand-edit your composer.json and remove the drupal/core entry altogether. The empty drupal/core entry from the steps above will cause drupal/core to be erased and redownloaded frequently
 
 ```bash{promptUser:user}
-git checkout -b composify
+cd upstream-configuration/
+composer remove zaporylie/composer-drupal-optimizations --no-update
+composer require drupal/core-recommended:^8 --no-update
+cd -
+composer config --json "extra.patches.drupal/core" '{}'
+composer update
+git add .
+git commit -m 'Revert to Drupal 8'
 ```
-
-You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
-
-## Set up a Multidev (Optional)
-
-If your Pantheon account has access to [Multidev](/multidev), create a Mmultidev to push your new code to:
-
-```bash{promptUser:user}
-git push origin composify && terminus env:create $SITE.dev composify
-```
-
-This will set up the Multidev environment to receive and demo our changed code.
-
-## Create a New Composer Project
-
-1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
-
-```bash{promptUser:user}
-cd ..
-```
-
-2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
-
-```bash{promptUser:user}
-composer create-project pantheon-systems/example-drops-8-composer $site-composer
-cd $site-composer
-```
-
-This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
-
-### Copy pantheon.upstream.yml
-
-Since the drops-8 upstream has a `pantheon.upstream.yml` and the example-drops-8-composer upstream does not, copy over our old file for the platform to properly load the site. From the `$site-composer` directory, run:
-
-```bash{promptUser:user}
-cp ../$SITE/pantheon.upstream.yml .
-```
-
-`ls` should reveal that the new code repository now has a copy of the `pantheon.upstream.yml`.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -147,11 +100,8 @@ A Composer-managed site should be able to include all custom code via Composer. 
 
 When reviewing your site, take stock of exactly what versions of modules you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, etc):
 
-```bash{outputLines:2-4}
-find . -maxdepth 2 -name '*.info.yml' \
-  -exec basename '{}' '.info.yml' ';' \
-  -exec grep -e '^version' '{}' ';' \
-  -exec echo ';'
+```bash{promptUser:user}
+terminus drush site.dev -- pm:projectinfo --fields=name,version --format=table
 ```
 
 This will list each module followed by the version of that module that is installed.
@@ -207,6 +157,13 @@ Your existing site may have customizations to `settings.php` or any other config
 
 It is not wise to completely overwrite the `settings.php` file with the old one, as there are customizations for moving the configuration directory you don't want to overwrite, as well as platform specific customizations.
 
+```bash{promptUser:user}
+git checkout master sites/default/settings.php
+mv -f sites/default/settings.php web/sites/default/
+git rm -rf sites
+git diff
+```
+
 The resulting `settings.php` should have no `$databases` array.
 
 #### Configuration
@@ -223,6 +180,34 @@ If you are using an exported config, you will need to move the configuration fil
 ```
 
 Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, retrieve them via [SFTP](/sftp), as the Git clone would not contain them. The example project is configured to use this location.
+
+## Set up a Multidev (Optional)
+
+If your Pantheon account has access to [Multidev](/multidev), create a Multidev to push your new code to:
+
+```bash{promptUser:user}
+git push origin composerify && terminus env:create $site.dev composerify
+```
+
+This will set up the Multidev environment to receive and demo our changed code.
+
+## Create a New Composer Project
+
+1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
+
+  ```bash{promptUser:user}
+  cd ..
+  ```
+
+2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
+
+    ```bash{promptUser:user}
+    composer create-project pantheon-systems/example-drops-8-composer $site-composer
+    cd $site-composer
+    ```
+
+This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
+
 
 ## Update to Latest Drupal Core
 
@@ -262,11 +247,11 @@ You should see a large amount of files committed to the new branch we created ea
 
 ## Deploy
 
-You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
+You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
 
-Once you have confirmed the site is working, merge `composify` into `master`, and follow the standard workflow to QA a code change before going live.
+Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
 
-If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a local development solution, consider testing your `composify` branch locally before merging.
+If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a local development solution, consider testing your `composerify` branch locally before merging.
 
 ## Change Upstreams
 
