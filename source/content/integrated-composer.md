@@ -2,35 +2,46 @@
 title: Integrated Composer
 description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
-categories: [drupal]
+categories: [get-started]
 contributors: [edwardangert]
-searchboost: 150
-reviewed: "2020-07-21"
+reviewed: "2020-11-18"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-Pantheon is testing a release of Drupal with integrated Composer and is opening the feature to users for Limited Availability testing.
+Creating a new Drupal 9 site with Integrated Composer is now available as part of Pantheon's Limited Availability release. Drupal 9 sites created through Pantheon's Limited Availability program are production-ready. 
 
-## Get Access to Integrated Composer
+Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing  Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability in early December.
 
-Integrated Composer is currently limited to customers with a Pantheon [organization](/organizations). If you are not part of an organization already, contact [Support](/support) to request access and your CSE will add you to a test organization from which you can deploy the Upstream. If you are already part of an organization, the feature can be enabled organization-wide.
+## Create a Drupal 9 Site with Integrated Composer
 
-## Create a Drupal or WordPress Site with Integrated Composer
+1. If you don't have one, [Create a Pantheon account]().
+
+1. Use this link to [create a new Drupal 9 Integrated Composer site](https://dashboard.pantheon.io/sites/create?upstream_id=56e0a55f-fa74-49d2-a4b3-af18dacee008) from the Upstream.
+
+   - Enter a name for the site.
+   
+   - Choose an organization if applicable.
+   
+   - Choose a region for the site. Click Continue.
+
+1. In the Development tab on the dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
+
+1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
+
+1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
+
+## Create a WordPress Site with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely):
-
-   - **Drupal**: [https://github.com/pantheon-upstreams/drupal-project](https://github.com/pantheon-upstreams/drupal-project).
 
    - **WordPress**: [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
 
-1. Create a new Drupal 8 or WordPress site from the Upstream.
+1. Create a new WordPress site from the Upstream.
 
    - Do not customize the upstream yet.
-
-   - **Drupal 8**: Set the site's Development Mode to [SFTP](/sftp#sftp-mode).
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
