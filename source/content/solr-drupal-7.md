@@ -7,6 +7,7 @@ tags: [solr]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
 ---
+
 [Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 This guide provides information on using **Pantheon's Solr Service** with Drupal 7.
@@ -78,7 +79,7 @@ Choose the appropriate schema for the module that you are using (apachesolr or s
 
 Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
 
-```php
+```php:title=settings.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
  // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
  // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
@@ -184,9 +185,7 @@ terminus drush <site>.<env> -- vget search_api_solr_connection_class
 
 If you receive the following error, be sure that you have followed all of the instructions as described in the INSTALL.txt. We can not resolve this for you as it is part of the module setup:
 
-```php
-Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
-```
+> Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
 
 ### Post Schema Into All Environments
 
