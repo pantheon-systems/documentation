@@ -26,12 +26,6 @@ For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8]
 
 You are now ready to begin integrating with Drupal.
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
-
-</Enablement>
-
 ## Install Solr for Drupal
 
 This guide describes how to implement Solr search using Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with this module is not supported, and may result in unexpected behavior.
