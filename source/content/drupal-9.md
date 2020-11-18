@@ -21,11 +21,43 @@ Pantheon engineers are rolling out changes often.
 
 </Alert>
 
-## Create a New Drupal 9 Site with Integrated Composer
+Test Drupal 9 with a fresh installation using either Integrated Composer (currently in Limited Availability) or Build Tools:
+
+- [Create a new Drupal 9 site with integrated Composer](#create-a-new-drupal-9-site-with-integrated-composer).
+  - If you simply want to test the browser experience of Drupal 9 and get access to forthcoming Pantheon support for Composer in the Dashboard.
+
+- [Create a new Drupal 9 Site with Continuous Integration and Build Tools](#create-a-drupal-9-site-with-continuous-integration-via-build-tools).
+  - To create a new site with a continuous integration (**CI**) workflow using GitHub.
+
+|                                                                                        | **Benefits**                                                                                                                                               | **Considerations**                                                                                                         |
+|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| [**Integrated Composer**](#create-a-new-drupal-9-site-with-integrated-composer)        | • Composer automatically runs on Pantheon <br /> • Lean repository (vendor dir not in git) <br /> • Integrated 1-click Pantheon updates & Custom Upstreams | • Early Access only <br /> • Requires a unique site-name prefix                                                            |
+| [**Build Tools**](#create-a-drupal-9-site-with-continuous-integration-via-build-tools) | • Composer automatically runs via CI <br /> • Pull request-based workflow <br /> • Supports automated testing                                              | • Requires 3rd-party CI <br /> • Terminus required <br /> • Composer updates happen outside the 1-click Pantheon Dashboard |
 
 If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). Once you're ready, [test-upgrade an existing Pantheon Drupal 8 site to Drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
 
+## Create a New Drupal 9 Site with Integrated Composer
+
 <Partial file="drupal-9-upstream-install.md" />
+
+## Create a Drupal 9 Site with Continuous Integration via Build Tools
+
+Want to regularly develop with continuous integration (CI) and automated tests? Leverage Pantheon’s [Build Tools](/guides/build-tools) to get up and running quickly with a CI workflow to build, test, and deploy Drupal 9.
+
+These steps use GitHub and CircleCI:
+
+1. Install the [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin).
+   - This will require generating a [Pantheon machine token](/machine-tokens), a [CircleCI API token](https://circleci.com/docs/2.0/managing-api-tokens/), and a [GitHub API credential](https://developer.github.com/v3/#authentication).
+
+1. Enable support for custom CircleCI Orbs in your Organizational settings. In CircleCI, click **Settings**, then **Security**, and under **Allow Uncertified Orbs** click **Yes**:
+
+   ![Allow Uncertified Orbs in CircleCI](../images/circleci/circleci-allow-uncertified-orbs.png)
+
+1. Use Terminus to create a new Drupal 9 site, complete with a customizable CI workflow. Remember to replace `<NEW-SITE-NAME>` in this example with a name for your new site, and `optional-pantheon-organization-name` with your choice (if any):
+
+  ```bash{promptUser: user}
+  terminus build:project:create "pantheon-systems/drupal-9-with-circleci-orb:dev-master" <NEW-SITE-MACHINE-NAME> --stability=dev --team='optional-pantheon-organization-name'
+  ```
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
