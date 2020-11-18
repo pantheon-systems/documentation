@@ -9,33 +9,32 @@ reviewed: "2020-11-18"
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-Creating a new Drupal 9 site with Integrated Composer is now available as part of Pantheon's Limited Availability release. Drupal 9 sites created through Pantheon's Limited Availability program are production-ready. 
+Creating a new Drupal 9 site with Integrated Composer is now available as part of Pantheon's Limited Availability release. Drupal 9 sites created through Pantheon's Limited Availability program are production-ready.
 
-Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing  Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability in early December.
+Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability in early December.
 
-## Create a Drupal 9 Site with Integrated Composer
+## Create a New Site With Integrated Composer
+### Drupal 9 with Integrated Composer
 
-1. If you don't have one, [Create a Pantheon account]().
+1. Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs). Familiarize with the [User Dashboard](/guides/quickstart/user-dashboard) and return to this section. You'll create a new site in the next step.
 
 1. Use this link to [create a new Drupal 9 Integrated Composer site](https://dashboard.pantheon.io/sites/create?upstream_id=56e0a55f-fa74-49d2-a4b3-af18dacee008) from the Upstream.
 
    - Enter a name for the site.
-   
-   - Choose an organization if applicable.
-   
-   - Choose a region for the site. Click Continue.
 
-1. In the Development tab on the dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
+   - Choose an Organization if applicable.
+
+   - Choose a region for the site. Click **Continue**.
+
+1. In the Development tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-## Create a WordPress Site with Integrated Composer
+### WordPress with Integrated Composer
 
-1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely):
-
-   - **WordPress**: [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
+1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
 
@@ -73,7 +72,7 @@ Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNA
 
 ## How to Add Dependencies to Your Upstream
 
-1. Start with the local clone of the upstream repository you created above.
+1. Start with the local clone of the Upstream repository you created above.
 
 1. Change into the `upstream-config` directory:
 
@@ -100,10 +99,10 @@ Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNA
      1.0.0
      ```
 
-   - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. Replace `x.y.z` in this example with something like `1.0.1`:
+   - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. Replace `1.0.1` in this example with another number:
 
      ```bash{promptUser: user}
-     composer config version x.y.z
+     composer config version 1.0.1
      ```
 
 1. Commit and push.
