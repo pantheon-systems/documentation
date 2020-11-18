@@ -13,13 +13,11 @@ Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
-<Alert title="A note about Early Access" type="danger">
+<Alert title="A note about Limited Availability" type="danger">
 
-**Support for Early Access releases is limited.**
+Currently, Drupal 9 is available on Pantheon as a Limited Availability feature release. This means the feature is currently in active development.
 
-Currently, Drupal 9 is only available on Pantheon as an Early Access feature release. This means the feature is currently in active development and is intended for testing and evaluation purposes only.
-
-Pantheon engineers are rolling out changes often, and easy updates from Drupal 9 Early Access are not guaranteed.
+Pantheon engineers are rolling out changes often.
 
 </Alert>
 
@@ -154,17 +152,6 @@ terminus preview:d9
 | [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) |     Yes     |     Yes     |
 | [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |   Not yet   |
 
-### Does Pantheon have plans to upgrade MariaDB?
-
-Yes, Pantheon has plans to upgrade MariaDB platform-wide with the official platform release of Drupal 9.
-
-### When will Drupal 9 be officially supported for production sites on Pantheon?
-
-There are no new features in Drupal 9 until Drupal 9.1, which is scheduled for release on December 2, 2020. Drupal 9 on Pantheon is currently in Early Access and scheduled for General Availability with the release of Drupal 9.1.
-
 ### Where can I report an issue?
 
-Drupal 9 issues can be reported on GitHub:
-
-- Report issues with Drupal 9 via Build Tools to the [drupal-9-with-circleci-orb](https://github.com/pantheon-systems/drupal-9-with-circleci-orb/issues) repo.
-- Report issues with Drupal 9 via Integrated Composer to the [drupal-9-project](https://github.com/stevector/drupal-9-project/issues) repo.
+[Contact support](/support) to report any issues that you encounter.
