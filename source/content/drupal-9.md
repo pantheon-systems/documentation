@@ -4,7 +4,7 @@ description: Test the latest Drupal on the Pantheon WebOps Platform.
 categories: [get-started]
 tags: [site]
 contributors: [populist, edwardangert]
-reviewed: "2020-09-29"
+reviewed: "2020-11-18"
 ---
 
 Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding-drupal/drupal-9-resources):
@@ -13,19 +13,17 @@ Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
-<Alert title="Early Access Only - Not for Production Use" type="danger">
+<Alert title="A note about Early Access" type="danger">
 
-**Do not use this Early Access release for your live site.**
+**Support for Early Access releases is limited.**
 
 Currently, Drupal 9 is only available on Pantheon as an Early Access feature release. This means the feature is currently in active development and is intended for testing and evaluation purposes only.
 
 Pantheon engineers are rolling out changes often, and easy updates from Drupal 9 Early Access are not guaranteed.
 
-Sites may be deleted without notice.
-
 </Alert>
 
-Test Drupal 9 with a fresh installation using either our Integrated Composer Early Access program or Build Tools:
+Test Drupal 9 with a fresh installation using either Integrated Composer (currently in Limited Availability) or Build Tools:
 
 - [Create a new Drupal 9 site with integrated Composer](#create-a-new-drupal-9-site-with-integrated-composer).
   - If you simply want to test the browser experience of Drupal 9 and get access to forthcoming Pantheon support for Composer in the Dashboard.
@@ -42,11 +40,7 @@ If you're not ready to create a new site yet, you can also [check an existing si
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-Join our Early Access program to test out both Drupal 9 and Pantheon Integrated Composer support.
-
-1. [Fill out this form](https://docs.google.com/forms/d/1lahWKMT2VHXfr9hg15VIQY2Kn6z_j77o7Te6hZqsNgw) to get access to our “Drupal 9 Early Access” group. Once you are added, you'll have access to a new "Drupal 9 Early Access" site creation option from your Pantheon Dashboard.
-
-1. Spin up a new "Drupal 9 Early Access" site! This will give you the [Drupal 9 starter codebase](https://github.com/stevector/drupal-9-project) and will automatically trigger a Composer install and `git commit` on site creation.
+<Partial file="drupal-9-upstream-install.md" />
 
 ## Create a Drupal 9 Site with Continuous Integration via Build Tools
 
@@ -56,6 +50,7 @@ These steps use GitHub and CircleCI:
 
 1. Install the [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin).
    - This will require generating a [Pantheon machine token](/machine-tokens), a [CircleCI API token](https://circleci.com/docs/2.0/managing-api-tokens/), and a [GitHub API credential](https://developer.github.com/v3/#authentication).
+
 1. Enable support for custom CircleCI Orbs in your Organizational settings. In CircleCI, click **Settings**, then **Security**, and under **Allow Uncertified Orbs** click **Yes**:
 
    ![Allow Uncertified Orbs in CircleCI](../images/circleci/circleci-allow-uncertified-orbs.png)
@@ -116,7 +111,7 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   composer create-project -d ~/.terminus/plugins pantheon-systems/terminus-d9-preview:^0.1
   ```
 
-1. Create and switch to a new testing multidev:
+1. Create and switch to a new testing Multidev:
 
   ```bash{promptUser: user}
   terminus preview:d9
@@ -138,13 +133,13 @@ Are you already running a Pantheon site using our [Drupal 8 upstream](https://gi
   git push origin preview-d9
   ```
 
-You should not attempt to merge your Drupal 9 preview multidev into the dev environment until Drupal 9 is officially supported on Pantheon.
+You should not attempt to merge your Drupal 9 preview Multidev into the dev environment until Drupal 9 is officially supported on Pantheon.
 
 ### Refresh Existing preview-d9 Multidev With Latest Dev Environment
 
-This destroys the code, database and files on the existing `preview-d9` multidev and re-creates it from the latest dev environment. Save any changes you made on this environment to your local computer before refreshing the environment.
+This destroys the code, database and files on the existing `preview-d9` Multidev and re-creates it from the latest dev environment. Save any changes you made on this environment to your local computer before refreshing the environment.
 
-If you make changes to your dev environment that you want to test in Drupal 9, run `terminus preview:d9` again to update the existing multidev:
+If you make changes to your dev environment that you want to test in Drupal 9, run `terminus preview:d9` again to update the existing Multidev:
 
 ```bash{promptUser: user}
 terminus preview:d9
@@ -165,7 +160,7 @@ Yes, Pantheon has plans to upgrade MariaDB platform-wide with the official platf
 
 ### When will Drupal 9 be officially supported for production sites on Pantheon?
 
-There are no new features in Drupal 9 until Drupal 9.1, which is scheduled for release on December 2. Drupal 9 on Pantheon is currently in early access and scheduled for general availability with the release of Drupal 9.1.
+There are no new features in Drupal 9 until Drupal 9.1, which is scheduled for release on December 2, 2020. Drupal 9 on Pantheon is currently in Early Access and scheduled for General Availability with the release of Drupal 9.1.
 
 ### Where can I report an issue?
 
