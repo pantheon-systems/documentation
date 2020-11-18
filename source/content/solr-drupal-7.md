@@ -34,11 +34,7 @@ Learn how to configure Solr with help from our experts. Pantheon delivers custom
 
 ## Install Solr for Drupal
 
-<Alert title="Warning" type="danger">
-
 This guide describes how to implement Solr search using Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with this module is not supported, and may result in unexpected behavior.
-
-</Alert>
 
 ### Add Either the Apache Solr Search or Search API Solr Search Module
 
@@ -155,6 +151,7 @@ The Pantheon Apache Solr module provides an interface for administrators to send
 ### Drupal Status Report
 
 The Pantheon Apache Solr module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.
+
  ![Solr reports](../images/solr-reports.png)
 
 ## Troubleshooting
@@ -207,5 +204,5 @@ The following code changes are required before Solr can be safely uninstalled an
 
 ## See Also
 
-[Apache Solr on Pantheon](/solr)
-[Using OpenSolr with Pantheon](/opensolr)
+- [Apache Solr on Pantheon](/solr)
+- [Using OpenSolr with Pantheon](/opensolr)
