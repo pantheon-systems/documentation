@@ -7,6 +7,7 @@ tags: [solr]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
 ---
+
 [Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 This guide provides information on using **Pantheon's Solr Service** with Drupal 7.
@@ -25,19 +26,9 @@ For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8]
 
 You are now ready to begin integrating with Drupal.
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
-
-</Enablement>
-
 ## Install Solr for Drupal
 
-<Alert title="Warning" type="danger">
-
 This guide describes how to implement Solr search using Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with this module is not supported, and may result in unexpected behavior.
-
-</Alert>
 
 ### Add Either the Apache Solr Search or Search API Solr Search Module
 
@@ -78,7 +69,7 @@ Choose the appropriate schema for the module that you are using (apachesolr or s
 
 Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
 
-```php
+```php:title=settings.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
  // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
  // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
@@ -154,6 +145,7 @@ The Pantheon Apache Solr module provides an interface for administrators to send
 ### Drupal Status Report
 
 The Pantheon Apache Solr module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.
+
  ![Solr reports](../images/solr-reports.png)
 
 ## Troubleshooting
@@ -184,9 +176,7 @@ terminus drush <site>.<env> -- vget search_api_solr_connection_class
 
 If you receive the following error, be sure that you have followed all of the instructions as described in the INSTALL.txt. We can not resolve this for you as it is part of the module setup:
 
-```php
-Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
-```
+> Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
 
 ### Post Schema Into All Environments
 
@@ -208,5 +198,5 @@ The following code changes are required before Solr can be safely uninstalled an
 
 ## See Also
 
-[Apache Solr on Pantheon](/solr)
-[Using OpenSolr with Pantheon](/opensolr)
+- [Apache Solr on Pantheon](/solr)
+- [Using OpenSolr with Pantheon](/opensolr)
