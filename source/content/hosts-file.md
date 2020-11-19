@@ -11,7 +11,7 @@ The `hosts` file exists on all major operating systems. It's a list of IP addres
 
 <Partial file="_hosts-file.md" />
 
-## Configure Your Hosts File With a Local Alias to Your Pantheon Environment
+## Configure Your Hosts File with a Local Alias to Your Pantheon Environment
 
 1. Use `dig` to get the IP address of your Pantheon environment to use in your `hosts` file. Replace `dev-example.pantheonsite.io` with your site's domain:
 
@@ -20,7 +20,7 @@ The `hosts` file exists on all major operating systems. It's a list of IP addres
  203.0.113.42
  ```
 
-1. Edit the `hosts` file as shown above to map the result to a local alias that makes it easier for you:
+1. Edit the `hosts` file as shown below to map the result to an alias for easier local development:
 
  ```none
  203.0.113.42    dev-example
