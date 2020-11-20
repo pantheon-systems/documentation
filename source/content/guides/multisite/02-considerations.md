@@ -30,7 +30,7 @@ Before you get started using WordPress Site Networks, there are a few key detail
 Let's review each point at depth.
 
 ## The Decision is Permanent
-The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon.
+The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon. Similarly, switching from a single-site to a WordPress Site Network requires migrating the code, database, and files of the single-site into a new Wordpress Site Network. 
 
 ## Choose Between Subdirectories and Subdomains
 When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains.
