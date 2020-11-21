@@ -154,16 +154,13 @@ Be sure to add this configuration _above_ the comment to stop editing:
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
 
 **Issue 2:** Autoptimize generates a php file upon activation "wp-content/autoptimize_404_handler.php" if not present autoptimize will throw a php warning
-
+and enabling this setting requires write access and specific location directive not configured in platform's Nginx configuration. 
 ```
 Warning: file_put_contents(/code/wp-content/autoptimize_404_handler.php): failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize/classes/autoptimizeCache.php on line 642
 ```
 
-**Solution 1:** Activate the plugin to generate autoptimize_404_handler.php the file from Dev before committing.
-
-**Solution 2:** An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link)
- for autoptimize_404_handler.php, This will also future proof any changes the plugin might do with every update.
-
+**Solution:** Uncheck *Enable 404 fallbacks* in Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
+The Pantheon Platform does not provide support for custom configuration, Hence file redirects will not work. More information can be found in [here.](https://pantheon.io/docs/advanced-redirects#redirect-files)
 ___
 
 ## [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/)
