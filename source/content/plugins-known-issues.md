@@ -160,7 +160,7 @@ Warning: file_put_contents(/code/wp-content/autoptimize_404_handler.php): failed
 ```
 
 **Solution:** Uncheck *Enable 404 fallbacks* in Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
-The Pantheon Platform does not provide support for custom configuration, Hence file redirects will not work. More information can be found in [here.](https://pantheon.io/docs/advanced-redirects#redirect-files)
+The Pantheon Platform does not provide support for custom configuration, hence file redirects will not work. More information can be found in [here.](https://pantheon.io/docs/advanced-redirects#redirect-files)
 ___
 
 ## [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/)
