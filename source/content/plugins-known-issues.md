@@ -154,7 +154,7 @@ Be sure to add this configuration _above_ the comment to stop editing:
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
 
 **Issue 2:** Autoptimize generates a php file upon activation "wp-content/autoptimize_404_handler.php" if not present autoptimize will throw a php warning
-and enabling this setting requires write access and specific location directive not configured in platform's Nginx configuration. 
+and enabling this setting requires write access and a [location directive](https://wordpress.org/plugins/autoptimize/#%0Awhat%20does%20%E2%80%9Cenable%20404%20fallbacks%E2%80%9D%20do%3F%20why%20would%20i%20need%20this%3F%0A) not configured in platform's Nginx configuration. 
 ```
 Warning: file_put_contents(/code/wp-content/autoptimize_404_handler.php): failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize/classes/autoptimizeCache.php on line 642
 ```
