@@ -7,9 +7,7 @@ contributors: [populist, edwardangert]
 reviewed: "2020-11-18"
 ---
 
-Drupal 9 is, according to [drupal.org](https://www.drupal.org/docs/understanding-drupal/drupal-9-resources):
-
-> "...a cleaned-up version of Drupal 8... \[with] deprecated code removed and third-party dependencies updated."
+Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 

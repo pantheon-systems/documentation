@@ -3,18 +3,19 @@ title: Integrated Composer
 description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
-contributors: [edwardangert]
+contributors: [ari, edwardangert]
 reviewed: "2020-11-18"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-Creating a new Drupal 9 site with Integrated Composer is now available as part of Pantheon's Limited Availability release. Drupal 9 sites created through Pantheon's Limited Availability program are production-ready.
-
-Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability in early December.
+Create a new site with Integrated Composer as part of Pantheon's Limited Availability release. New sites created through Pantheon's Limited Availability program are production-ready.
 
 ## Create a New Site With Integrated Composer
+
 ### Drupal 9 with Integrated Composer
+
+Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability.
 
 <Partial file="drupal-9-upstream-install.md" />
 
@@ -135,6 +136,9 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
 
 All Composer commands are available through the **Commit Log** in the Site Dashboard's development environment.
 
+### Can I view live logs?
+
+Composer build logs are only available after the task or action completes (or fails).
 ### How do I view Composer's changes?
 
 Use `git diff` to view changes, excluding composer.lock
@@ -144,3 +148,15 @@ git diff d94d1a1179 -- . ':(exclude)composer.lock'
 ```
 
 Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to see what packages have changed after `composer update`.
+
+### Can I use a Composer GUI?
+
+Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+### What features are planned for Integrated Composer on Pantheon?
+
+Pantheon's devs are working hard to make the Integrated Composer experience on Pantheon better.
+
+Features that are still in development:
+
+ - Integrated Composer and [Build Tools](/guides/build-tools)
+ - Upgrade an existing site to use Integrated Composer
