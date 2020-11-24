@@ -55,7 +55,7 @@ All sites must be disassociated from the card before it can be deleted.
 
 <Alert title="Warning" type="danger">
 
-Deleting a card profile from your account will also delete it's associated billing history (invoices and transactions). Go to **View Invoices** to download past invoices, prior to deleting your credit card profile.
+Deleting a card profile from your account will also delete its associated billing history (invoices and transactions). Go to **View Invoices** to download past invoices, prior to deleting your credit card profile.
 
 </Alert>
 
