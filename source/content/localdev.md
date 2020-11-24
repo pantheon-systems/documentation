@@ -7,32 +7,34 @@ contributors: [edwardangert]
 reviewed: "2020-12-04"
 ---
 
-Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining [Pantheon Workflow](/pantheon-workflow).
+Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives macOS users a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow).
 
 Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview.
 
 ## Install and Connect Localdev
 
-If you have an older version of Localdev already installed on your machine, remove it to avoid potential compatibility issues. Newer versions of Localdev include support for automatic updates.
+If you have an older pre-release version of Localdev already installed on your machine, remove it to avoid potential compatibility issues. Lando releases from 1.0 and on include support for automatic updates.
 
-1. Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg`.
+1. Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg` file.
 
-1. Localdev checks the Docker installation. Once it's done, click **Continue installation**.
+1. Localdev checks the Docker installation, and can install or update it for you if needed. Once it's done, click **Continue installation**.
 
     - If you leave the **Allow Localdev to report usage and errors** box checked, anonymous usage and will be reported to help improve the application. You can change this setting again later if you change your mind.
+
+  The Docker window may open several times instructing you to start the Docker server. You can ignore this and minimize the window.
 
 1. [Create a machine token](/machine-tokens/#create-a-machine-token) for Localdev:
 
     1. Click the **here** link in Localdev's **Connect Pantheon account** step to open a browser to the **Create New Token** section of your Pantheon Dashboard.
     1. Click **Generate token** to keep the pre-populated name and create a token.
-    1. Copy the **Machine Token** from the modal that appears. This token will only be shown once, so go to the next step before you click **I understand**.
+    1. Copy the **Machine Token** from the modal. This token will only be shown once, so go to the next step before you click **I understand**.
     1. In Localdev, paste the token into the box below **Enter your Machine Token** and click **Submit**.
 
-     ![Connect a Pantheon Account with a Machine Token](../images/localdev/localdev-install-connect-account.png)
+      ![Connect a Pantheon Account with a Machine Token](../images/localdev/localdev-install-connect-account.png)
 
 1. Once Localdev successfully authenticates your account, click **Start** to sync your account with Localdev.
 
-    - If you still have **Your new machine token is ready** in your browser from the previous step, click **I understand** there to close that modal.
+    - If you still have **Your new machine token is ready** in your browser from the previous step, click **I understand** there to close the modal.
 
 1. Click **Go to Localdev** to show the Localdev dashboard.
 
@@ -44,53 +46,40 @@ Once Localdev is installed and synced, a list of your sites is displayed in a co
 
 Select a site from the **Sites** panel on the left, and **Choose an Environment** if the site has any Multidev environments. Click **Pull for local development** to clone the site locally and boot the local environment. This process will take several minutes.
 
-Each site is cloned to its own directory within `~/Localdev/` by default. If your site specifies `web_docroot: true` in its [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) or [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file (a nested docroot) the site's code will be located in the `web` subdirectory.
+Each site is cloned to its own directory within `~/Localdev/` by default. If your site specifies a nested docroot with `web_docroot: true` in its [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) or [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file, the site's code will be located in the `web` subdirectory.
 
 ![Localdev clones the site code](../images/localdev/localdev-cloning-site.png)
 
 Since this is the first time you are cloning the entire site code, this will take several minutes. Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once per site.
 
-If there are any errors, Localdev will revert all changes and return you to the "Clone your development site" screen. Try the process again, then consult the [Troubleshooting section](#faq-troubleshooting-and-support) below for how to contact Support.
+If there are any errors, Localdev will revert all changes and return you to the "Clone the dev environment" screen. Try the process again, then consult the [Troubleshooting section](#faq-troubleshooting-and-support) below for how to contact Support.
 
 ### The Localdev Site Screen
 
 ![Screenshot of the Localdev Site screen](../images/localdev/localdev-site-running-screen.png)
 
-Sometimes the lower right corner says **site started**, sometimes **your site is ready to go!**
-
 ## Start and Stop the Container
 
-When you first pull a Site for local development, Localdev automatically starts a Docker container for it in way that closely resembles [Pantheon's Platform architecture](https://pantheon.io/features/elastic-hosting?docs). This allows you to develop your site locally, without risking compatibility issues once synced.
+When you first pull a Site for local development, Localdev automatically starts a Docker container that closely resembles [Pantheon's Platform architecture](https://pantheon.io/features/elastic-hosting?docs). This allows you to develop your site locally, without risking compatibility issues once synced.
 
 To start a stopped site container, click the grey **Stopped** button in the upper right-hand corner and click **Start** to start the local server.
 
 ![In the Stopped button's dropdown, click Start](../images/localdev/localdev-start-destroy.png)
 
-Once the container has been started, you can preview the site using the **Open Browser** button in the **Local Site** row in the <i className="fa fa-wrench"></i> **Develop** tab, and track changed files using the <i className="fa fa-arrow-down"></i> **Pull** and <i className="fa fa-arrow-up"></i> **Push** tabs.
+Once the container has been started, you can preview the site from the <i className="fa fa-wrench"></i> **Develop** tab, on the **Local Site** row by clicking the **Open Browser** button. Sync changes using the <i className="fa fa-arrow-down"></i> **Pull** and <i className="fa fa-arrow-up"></i> **Push** tabs.
 
 ![Localdev Develop tab shows that the container is running](../images/localdev/localdev-develop-tab-container-running.png)
 
 ## Your Pantheon Site in Localdev
 
-- Not local yet cloud: <i className="fa fa-cloud"></i>
-- Container stopped: <i className="fa fa-stop-circle"></i>
-- Container started: <i className="fa fa-play-circle"></i>
-- Develop tab: <i className="fa fa-wrench"></i>
-- Pull tab: <i className="fa fa-arrow-down"></i>
-- Push tab: <i className="fa fa-arrow-up"></i>
-- Config tab: <i className="fa fa-cog"></i>
-- Advanced tab: <i className="fa fa-bolt"></i>
-- Logs tab: <i className="fa fa-bug"></i>
+From the **<i className="fa fa-wrench"></i> Develop** tab, you can:
 
-screenshot
-
-Open Browser
-Open Dashboard
-Open Finder
-Launch terminal
-
-/hosts-file#configure-your-hosts-file-with-a-local-alias-to-your-pantheon-environment
-
+- View the local site from **Open Browser**.
+- View the Site Dasboard on Pantheon from **Open Dashboard**.
+- View your local site files from **Open Finder**.
+- SSH into the local site container to run Drush, WP-CLI, or Terminus commands from **Launch Terminal**. Note that this will connect into the container shell, not just the terminal environment for your local computer.
+- View the database container information and optionally enable PhpMyAdmin for it.
+- Enable [MailHog](https://github.com/mailhog/MailHog) to test email from your local site.
 
 ## Use a Local IDE to Develop your Pantheon Site
 
@@ -145,9 +134,9 @@ Help improve Localdev by sharing bug reports and feedback in the [GitHub issue q
 
 ### What does Localdev do about existing Lando config files?
 
-Localdev will use the existing `.lando` file only when the site is initially cloned. After the initial site clone, there is currently no `lando rebuild` equivalent that will force Localdev to reconsider the landofile.
+Localdev will use an existing `.lando` file only when the site is initially cloned. After the initial site clone, there is currently no `lando rebuild` equivalent that will force Localdev to reconsider the landofile. Note that if there are services specified in `.lando`, Localdev will return an error.
 
-Note that if there are services specified in `.lando`, Localdev will return an error.
+While Localdev uses parts of Lando under the hood, they should be considered separate tools. Using Localdev and Lando on the same local site is not recommended.
 
 ### Can WordPress Site Networks be developed through Localdev?
 
@@ -167,7 +156,7 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 
 ### Contact Support / File an Issue
 
-While Localdev is in beta, [support request best practices](/support/#best-practices) are especially important for our team to help you resolve the issue, or to report any potential issues in Localdev itself.
+Before contacting support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** tab and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
@@ -195,17 +184,6 @@ The steps in this section should only be used as a last resort. This resets Loca
 
 1. **Proceed with reset**
 
-## Docs: FA icons Localdev uses
-
-- Not local yet cloud: <i className="fa fa-cloud"></i>
-- Container stopped: <i className="fa fa-stop-circle"></i>
-- Container started: <i className="fa fa-play-circle"></i>
-- Develop tab: <i className="fa fa-wrench"></i>
-- Pull tab: <i className="fa fa-arrow-down"></i>
-- Push tab: <i className="fa fa-arrow-up"></i>
-- Config tab: <i className="fa fa-cog"></i>
-- Advanced tab: <i className="fa fa-bolt"></i>
-- Logs tab: <i className="fa fa-bug"></i>
 ## Changelog
 
 <LocaldevChangelog />
