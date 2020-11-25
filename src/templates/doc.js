@@ -26,7 +26,6 @@ import Partial from "../components/partial"
 import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
 import Example from "../components/styleExample"
-import LocaldevChangelog from "../components/localdevChangelog"
 import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
@@ -52,7 +51,6 @@ const shortcodes = {
   ChecklistItem,
   Image,
   Example,
-  LocaldevChangelog,
   DrushChangelog,
   ReviewDate,
   Youtube,

@@ -36,6 +36,7 @@ import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
+import LocaldevChangelog from "../components/localdevChangelog"
 
 const shortcodes = {
   Callout,
@@ -63,6 +64,7 @@ const shortcodes = {
   ResourceSelector,
   DNSProviderDocs,
   Check,
+  LocaldevChangelog,
 }
 
 class GuideTemplate extends React.Component {
