@@ -167,6 +167,10 @@ See [Getting Support](/support) and explore our [support features](https://panth
 
 ## Security
 
+### Pantheon User Account Login Session Length
+
+<Partial file="dashboard-login-session-length.md" />
+
 ### PCI Compliance on Pantheon
 
 Since you can alter your code on Pantheon, you must certify your own applications. PCI compliance for applications deployed on any platform cannot be guaranteed by the platform alone. We recommend architectures designed to work with PCI SAQ-A to minimize both risk and compliance efforts.

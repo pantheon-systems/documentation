@@ -54,4 +54,8 @@ In this lesson, we’re going to explore the User Dashboard.
 
 </Accordion>
 
+Note:
+
+- <Partial file="dashboard-login-session-length.md" />
+
 You should now be familiar with the Pantheon User Dashboard. When you’re ready, you may continue to the next lesson.
