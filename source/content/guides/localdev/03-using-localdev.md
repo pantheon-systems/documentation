@@ -48,7 +48,7 @@ Once the container has been started, you can preview the site from the <i classN
 
 ![Localdev Develop tab shows that the container is running](../../../images/localdev/localdev-develop-tab-container-running.png)
 
-## Develop
+### Develop
 
 From the **<i className="fa fa-wrench"></i> Develop** tab, you can:
 
@@ -59,34 +59,41 @@ From the **<i className="fa fa-wrench"></i> Develop** tab, you can:
 - View the database container information and access [phpMyAdmin](https://www.phpmyadmin.net/) if enabled from the [Config](#Config) tab.
 - Access email caputure through [MailHog](https://github.com/mailhog/MailHog), if enabled from [Config](#config).
 
-## Push and Pull
+### Push and Pull
 
 If you have a Git client that you're already comfortable with, you can use it to track, commit, push, and pull as you normally would. Navigate or point your Git client to track your local code directory, for example: `/Users/yourUser/Localdev/examplesite`.
 
-To have Localdev deal with Git for you, use the **Pull** and **Push** tabs.
+To have Localdev deal with Git for you, use the **<i className="fa fa-arrow-down"></i> Pull** and **<i className="fa fa-arrow-up"></i> Push** tabs.
 
 In **Pull** tab, check the **Pull code** option to copy the site's code from the Pantheon Dev environment to your local environment. The *Last Pull* line below each option's area shows the last time the code was synched.
 
 After you make changes to your site:
 
-1. Navigate to the **Push** tab
+1. Navigate to the **<i className="fa fa-arrow-up"></i> Push** tab
 1. Select the information you want pushed to the Pantheon Development environment
 1. Enter a **Git commit message** that describes the changes made in this particular push
 1. Click **Push**
 
-## Config
+### Config
 
 From the **<i className="fa fa-cog"></i> Config** tab for a site, you can initialize tools like [phpMyAdmin](https://www.phpmyadmin.net/) or [MailHog](https://github.com/mailhog/MailHog), enable [CDN](/global-cdn) emulation to test cookies, or enable [Solr](/solr) / [Redis](/redis) for the local site.
 
-## Advanced
+### Advanced
 
 From the **<i className="fa fa-bolt"></i> Advanced** tab, you can
 
-- Change the verbosity in the **<i className="fa fa-bug"></i> Logs tab**,
+- Change the verbosity in the **<i className="fa fa-bug"></i> Logs** tab,
 - Initiate a force rebuild (see [troubleshooting](/guides/localdev/troubleshoot-support) for more information),
 - Force-remove the entire application, which will also destroy all local site databases.
 
-## Logs
+### Logs
+
+**<i className="fa fa-bug"></i> Logs** provides three views:
+
+- Activity shows what actions have been taken from the app.
+- Console shows (TODO: find out what console is supposed to show)
+- Logs (beta) shows the application logs for Lando and any underlying tools like Localdev or Docker.
+  - When viewing logs, the links at the bottom allow you to switch between the various containers for your site's environment, including the appserver, redis / solr, nginx, mailhog, and phpmyadmin (if enabled).
 
 ## Use a Local IDE to Develop your Pantheon Site
 
