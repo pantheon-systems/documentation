@@ -19,9 +19,11 @@ Pantheon supports Drupal 7, 8, and 9 sites. As of February 2016, the Drupal comm
 Pantheon supports the most recent release of WordPress via our [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured `wp-config.php`.
 
 ### How much does Pantheon cost?
+
 You can develop new sites for free on Pantheon. Billing starts when you're ready to go live and direct traffic to a site. See available plans on our [pricing page](https://pantheon.io/pricing).
 
 ### Where are the Pantheon servers located?
+
 In addition to the United States data center, [new sites can be created](/regions) in Australia, Canada, and the European Union (EU). Pantheon's [Global CDN](/global-cdn) serves content from 70+ POPs (points of presence) distributed around the world.
 
 ### Can I run other applications on Pantheon?
@@ -164,6 +166,10 @@ See our documentation for details about configuring Solr for [WordPress](/wordpr
 See [Getting Support](/support) and explore our [support features](https://pantheon.io/support).
 
 ## Security
+
+### Pantheon User Account Login Session Length
+
+<Partial file="dashboard-login-session-length.md" />
 
 ### PCI Compliance on Pantheon
 
