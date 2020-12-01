@@ -331,6 +331,10 @@ File directories on Pantheon's file serving infrastructure cannot be moved or re
 
 Pantheon does not and will not support Server Side Includes. We recommend converting those to use PHP includes.
 
+## Static Files
+
+Pantheon strips cookies for files with common static file extensions. See [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) doc for more information.
+
 ## Streaming Media
 
 Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform.
