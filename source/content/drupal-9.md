@@ -121,3 +121,19 @@ terminus preview:d9
 ### Where can I report an issue?
 
 [Contact support](/support) to report any issues that you encounter.
+
+### Error: Class "Drupal\views\Routing\ViewPageController" does not exist
+
+As reported in [Drupal Issue 3161309](https://www.drupal.org/project/drupal/issues/3161309), some fresh installations may encounter the error:
+
+```none
+InvalidArgumentException: Class "Drupal\views\Routing\ViewPageController" does not exist.
+```
+
+If you encounter this error, [clear the cache through the Site Dashboard](/clear-caches#pantheon-dashboard), or with the [Terminus](/terminus)`drush cr` command:
+
+```bash{promptUser: user}
+terminus drush <site>.<env> -- cr
+```
+
+Given the nature of the bug, it might be easier to reinstall Drupal 9.
