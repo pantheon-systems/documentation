@@ -95,6 +95,16 @@ Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0
 
 For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush).
 
+#### Permissions
+
+Site-local Drush needs executable permissions. If you encounter "permission denied" errors when running Drush commands, adjust permissions on the Drush executable:
+
+```bash
+chmod +x vendor/bin/drush
+```
+
+Then commit and push this change back up to your Pantheon site.
+
 ### Drush 5 on Older Sites
 
 Drupal sites created on Pantheon in late 2015 or earlier that do not have `drush_version` defined in `pantheon.yml` may default to Drush 5. In this case, you may see the following error:
