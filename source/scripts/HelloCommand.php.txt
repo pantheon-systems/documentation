@@ -1,0 +1,14 @@
+use Pantheon\Terminus\Commands\TerminusCommand;
+
+class HelloCommand extends TerminusCommand
+{
+    /**
+     * Print the classic message to the log.
+     *
+     * @command hello
+     */
+    public function sayHello()
+    {
+        $this->log()->notice("Hello, World!");
+    }
+}
