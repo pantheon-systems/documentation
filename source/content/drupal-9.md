@@ -1,10 +1,10 @@
 ---
-title: Drupal 9 Early Access
+title: Drupal 9
 description: Test the latest Drupal on the Pantheon WebOps Platform.
 categories: [get-started]
 tags: [site]
 contributors: [populist, edwardangert]
-reviewed: "2020-11-18"
+reviewed: "2020-12-02"
 ---
 
 Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
