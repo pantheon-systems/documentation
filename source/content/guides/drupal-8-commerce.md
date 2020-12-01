@@ -16,8 +16,8 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 This process uses Composer to manage modules and dependencies. Before proceeding, you may wish to consult the following docs:
 
- - [Composer Fundamentals and Workflows](/composer)
- - [Build Tools](/guides/build-tools)
+- [Composer Fundamentals and Workflows](/composer)
+- [Build Tools](/guides/build-tools)
 
 <Alert title="Note" type="info">
 
@@ -29,22 +29,22 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 In addition to Pantheon, you will need accounts at:
 
- - [GitHub](https://github.com)
- - [CircleCI](https://circleci.com)
+- [GitHub](https://github.com)
+- [CircleCI](https://circleci.com)
 
 1. Follow the [Before You Begin](/guides/build-tools/create-project/#prerequisites) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.
 
 1. This guide uses several variables in example [Terminus](/terminus) commands. This lets you copy and paste without needing to change the variable. For this to work, you must first export the variables in your local terminal session:
 
-  ```bash
+  ```bash{promptUser: user}
   export SITENAME=yoursitenamehere
   export GITHUB_TOKEN=yourgithubtokenhere
   export CIRCLE_TOKEN=yourcirclecitokenhere
   ```
 
-   - `SITENAME` will be used as the machine names of the Pantheon site and the GitHub repo created in this process
-   - `GITHUB_TOKEN` lets Terminus interact with your GitHub account to create the repository
-   - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHub repo
+    - `SITENAME` will be used as the machine names of the Pantheon site and the GitHub repo created in this process
+    - `GITHUB_TOKEN` lets Terminus interact with your GitHub account to create the repository
+    - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHub repo
 
 ## Create a New Drupal 8 Site
 
@@ -123,4 +123,4 @@ What you do next is up to you and your needs. Remember that you're now using Com
 
 ## See Also
 
- - [Drupal Commerce](https://drupalcommerce.org/)
+- [Drupal Commerce](https://drupalcommerce.org/)
