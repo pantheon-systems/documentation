@@ -30,6 +30,7 @@ If you are an administrator for a Pantheon organization, [contact support](/supp
 | Delete sites or remove users from an org | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Manage a site's plan                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Create/Manage Custom Upstreams                  | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Change site upstream                | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
 ### Site-Level: Roles and Permissions
 
