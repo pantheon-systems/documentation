@@ -1,6 +1,6 @@
 ---
 title: Drupal 9
-description: Test the latest Drupal on the Pantheon WebOps Platform.
+description: Launch the latest Drupal on the Pantheon WebOps Platform.
 categories: [get-started]
 tags: [site]
 contributors: [populist, edwardangert]
@@ -11,7 +11,7 @@ Drupal 9 includes many of the features and layout that Drupal 8 users are famili
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
-<Alert title="A note about Limited Availability" type="danger">
+<Alert title="A note about Limited Availability" type="info" icon="leaf">
 
 Currently, Drupal 9 is available on Pantheon as a Limited Availability feature release. This means the feature is currently in active development.
 
@@ -21,9 +21,11 @@ Pantheon engineers are rolling out changes often.
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). Once you're ready, [test-upgrade an existing Pantheon Drupal 8 site to Drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
+Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability.
 
 <Partial file="drupal-9-upstream-install.md" />
+
+If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). Once you're ready, [test-upgrade an existing Pantheon Drupal 8 site to Drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
