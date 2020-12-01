@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  pfe: pantheon-systems/front-end@0.3.0
+  pfe: pantheon-systems/front-end@dev:node-12
   queue: eddiewebb/queue@1.5.0
 
 workflows:

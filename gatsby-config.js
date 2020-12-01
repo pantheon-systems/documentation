@@ -96,21 +96,6 @@ module.exports = {
       options: {
         path: `${__dirname}/source/content`,
         name: `content`,
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              noInlineHighlight: true,
-              aliases: {},
-              prompt: {
-                user: "user",
-                host: "localhost",
-              },
-            },
-          },
-        ]
       },
     },
     ...(process.env.NODE_ENV === 'development' ? [
