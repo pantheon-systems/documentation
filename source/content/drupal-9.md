@@ -19,6 +19,12 @@ Pantheon engineers are rolling out changes often.
 
 </Alert>
 
+## Before You Begin
+
+The steps in this doc require command line tools on your local machine. You'll also need to be logged in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+
+Install [Git](/git), then follow the first three steps in the [Prerequisites section of the Build Tools guide](/guides/build-tools/create-project/#prerequisites) to install Composer and Terminus, and to create an SSH key.
+
 ## Create a New Drupal 9 Site with Integrated Composer
 
 Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability.

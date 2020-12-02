@@ -1,5 +1,3 @@
-1. Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs). Familiarize with the [User Dashboard](/guides/quickstart/user-dashboard) and return to this section. You'll create a new site in the next step.
-
 1. Use this link to create a new Drupal 9 Integrated Composer site from the Upstream: [https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789). On the **Create Your Pantheon Site** page:
 
    - Enter a name for the site.
@@ -8,8 +6,27 @@
 
    - Choose a region for the site. Click **Continue**.
 
-1. In the Development tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
+   After you click Continue, it will take several minutes for the platform to set everything up.
 
-1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
+1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
 
-1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
+1. Still in the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
+
+1. Return to the Dev tab, set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
+
+1. Run `composer install`.
+
+1. Copy the default `services.yml`:
+
+   ```bash{promptUser: user}
+   cp web/sites/default/default.services.yml web/sites/default/services.yml
+   ```
+
+   Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file/
+
+1. Commit and push:
+
+   ```bash{promptUser: user}
+   git add web/sites/default/services.yml && git commit -m "copy over services.yml"
+   git push origin master
+   ```
