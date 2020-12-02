@@ -50,7 +50,8 @@ For installation instructions and additional details, see [Enabling Solr for Wor
 - The search terms `in` and `or` are ignored, regardless of casing.
 
 - Re-indexing may be required following any platform issue or event (server outage, service degradation). Check the [status page](https://status.pantheon.io) for current and past platform events.
-- Elite sites with the Pantheon Solr add-on cannot enable [Disaster Recovery](https://pantheon.io/docs/disaster-recovery) and will need to use an alternative.
+
+- The Solr index is not included in Pantheon's [Disaster Recover](/disaster-recovery#solr-search-and-disaster-recovery), and would need to be recreated in the event of failover.
 
 - Pantheon's Solr offering is limited to a single index.
 
