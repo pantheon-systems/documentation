@@ -856,28 +856,40 @@ if (defined( "PANTHEON_BINDING" )) {
 
 ___
 
-## [WP-Rocket](https://wp-rocket.me/)
+## WP Rocket
 
-<ReviewDate date="2020-10-08" />
+<ReviewDate date="2020-10-19" />
 
-**Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP-Rocket will auto-create
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create
 the `advanced-cache.php` file.
 
 **Solution:**
 
-1. In SFTP mode, install the WP-Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
+1. In SFTP mode, install the WP Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
 1. Activate the plugin from the dashboard.
-1. Disable WP-Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
+1. Disable WP Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
 
    ```php:title=wp-config.php
    define('WP_CACHE', false);
    ```
 
-1. **Optional on writable environments:** The WP-Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this plugin [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
+1. **Optional on writable environments:** The WP Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
 
-**Issue 2:** WP-rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
+**Issue 2:** WP rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution:** [Create symlinks](#assumed-write-access) as noted above.
+**Solution 1:** WP version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
+
+```php:title=wp-config.php
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/wp-rocket-config/' );
+```
+
+```php:title=wp-config.php
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/new-path/cache/' );
+```
+
+Version 3.2 through 3.4 allows setting only the cache path, and still requires a symlink for the other paths (see below).
+
+**Solution 2:** [Create symlinks](#assumed-write-access) as noted above.
 
 After symlinking, make sure to manually create these folders in *ALL* environments.
 
