@@ -669,6 +669,24 @@
               url: '/pantheon-yml'
             - text: 'Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks'
               url: '/quicksilver'
+    - title: 'Composer'
+      subtitle: 'Use Composer to automate updates to packages, CMS core, and custom configurations.'
+      subtopic-lists:
+        - title: ''
+          links:
+            - text: 'Composer Fundamentals and WebOps Workflows'
+              url: '/composer'
+            - text: 'Convert a Standard Drupal 8 Site to a Composer Managed Site'
+              url: '/guides/composer-convert'
+            - text: 'Drupal 8 and Composer on Pantheon Without Continuous Integration'
+              url: '/guides/drupal-8-composer-no-ci'
+        - title: ''
+          links:
+            - text: 'Integrated Composer'
+              url: '/integrated-composer'
+            - text: 'PhpStorm for Composer Managed Drupal 8 Sites'
+              url: '/guides/phpstorm-composer'
+            
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
       subtopic-lists:
