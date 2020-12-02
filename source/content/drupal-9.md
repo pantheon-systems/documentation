@@ -31,7 +31,7 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 <Partial file="drupal-9-upstream-install.md" />
 
-If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). Once you're ready, [test-upgrade an existing Pantheon Drupal 8 site to Drupal 9](#test-upgrade-an-existing-pantheon-drupal-8-site-to-drupal-9).
+If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). 
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
@@ -42,6 +42,8 @@ If you're not ready to create a new site yet, you can also [check an existing si
 1. Review the [How to Prepare Your Drupal 7 or Drupal 8 Site for Drupal 9](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9) guide on Drupal.org.
 
 1. Use the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal 8/9 module to generate a full report of your site’s compatibility.
+
+1. [Help contributed modules](https://www.drupal.org/node/3032484) prepare for Drupal 9, for example by updating modules' deprecated API usages and converting tests to PHPUnit.
 
 1. Check out [Acquia’s Drupal 9 Deprecation Status Upgrade Tracker](https://dev.acquia.com/drupal9/deprecation_status) for information about Drupal 9 support for contributed Drupal modules and themes.
 
@@ -66,56 +68,7 @@ $node = Node::load(1);
 
 Since most of these changes are relatively minor, there are a number of [deprecation checking and correction tools](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/deprecation-checking-and-correction-tools) available.
 
-## Test-upgrade an Existing Pantheon Drupal 8 Site to Drupal 9
 
-Are you already running a Pantheon site using our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8)? Use our [Multidev](/multidev) feature to test Drupal 9 in a new branch.
-
-1. Clone your Drupal 8 site’s codebase [to your computer](/local-development#get-the-code) and change directory to it. You can create a new Drupal 8 site or use an existing Drupal 8 site:
-
-  ```bash{promptUser: user}
-  git clone <url for site repo>
-  cd <site-name>
-  ```
-
-1. Install the [Terminus D9 Preview plugin](https://github.com/pantheon-systems/terminus-d9-preview) to create a Multidev environment called `preview-d9` on your Drupal 8 site for testing:
-
-  ```bash{promptUser: user}
-  composer create-project -d ~/.terminus/plugins pantheon-systems/terminus-d9-preview:^0.1
-  ```
-
-1. Create and switch to a new testing Multidev:
-
-  ```bash{promptUser: user}
-  terminus preview:d9
-  ```
-
-1. Modify the `pantheon.yml` file to specify PHP 7.3 or newer and Drush 8:
-
-  ```yaml:title=pantheon.yml
-  php_version: 7.4
-  drush_version: 8
-  ```
-
-  Note that Drupal 9 is not yet compatible with the pre-installed Drush 10 on Pantheon.
-
-1. Commit and push your changes:
-
-  ```bash{promptUser: user}
-  git commit -am "test upgrade to Drupal 9"
-  git push origin preview-d9
-  ```
-
-You should not attempt to merge your Drupal 9 preview Multidev into the dev environment until Drupal 9 is officially supported on Pantheon.
-
-### Refresh Existing preview-d9 Multidev With Latest Dev Environment
-
-This destroys the code, database and files on the existing `preview-d9` Multidev and re-creates it from the latest dev environment. Save any changes you made on this environment to your local computer before refreshing the environment.
-
-If you make changes to your dev environment that you want to test in Drupal 9, run `terminus preview:d9` again to update the existing Multidev:
-
-```bash{promptUser: user}
-terminus preview:d9
-```
 
 ## FAQ
 
@@ -138,7 +91,7 @@ As reported in [Drupal Issue 3161309](https://www.drupal.org/project/drupal/issu
 InvalidArgumentException: Class "Drupal\views\Routing\ViewPageController" does not exist.
 ```
 
-If you encounter this error, [clear the cache through the Site Dashboard](/clear-caches#pantheon-dashboard), or with the [Terminus](/terminus)`drush cr` command:
+If you encounter this error, [clear the cache through the Site Dashboard](/clear-caches#pantheon-dashboard), or with the [Terminus](/terminus) `drush cr` command:
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- cr
