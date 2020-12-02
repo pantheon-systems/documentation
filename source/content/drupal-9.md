@@ -21,9 +21,11 @@ Pantheon engineers are rolling out changes often.
 
 ## Before You Begin
 
-The steps in this doc require command line tools on your local machine. You'll also need to be logged in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+- Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
 
-Install [Git](/git), then follow the first three steps in the [Prerequisites section of the Build Tools guide](/guides/build-tools/create-project/#prerequisites) to install Composer and Terminus, and to create an SSH key.
+- Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
+
+- Install and configure [Git](/git) on your local computer. 
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
