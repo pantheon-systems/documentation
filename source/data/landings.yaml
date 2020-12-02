@@ -793,6 +793,8 @@
               url: '/cache-control'
             - text: 'Caching: Advanced Topics'
               url: '/caching-advanced-topics'
+            - text: 'Debug Caching Issues'
+              url: '/debug-cache'
             - text: 'Working with Cookies on Pantheon'
               url: '/cookies'
             - text: 'Setting Up CloudFront CDN with Drupal'
@@ -918,6 +920,8 @@
     - title: 'Code'
       subtitle: 'Learn how to handle PHP errors, notices, warnings, and exceptions.'
       links:
+        - text: 'Debug Caching Issues'
+          url: '/debug-cache'
         - text: 'Debugging Slow Performance'
           url: '/debug-slow-performance'
         - text: 'Debug Intermittent PHP 7 Notices'
