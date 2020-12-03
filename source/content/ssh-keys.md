@@ -127,7 +127,7 @@ To resolve, add your SSH key to the ssh-agent using the following command, repla
 ssh-add ~/.ssh/id_rsa
 ```
 
-Also if you use a recent Linux distribution (for example Fedora 33+), make sure RSA keys are enable in `~/.ssh/config`:
+Also if you use a recent Linux distribution (for example Fedora 33+), make sure RSA keys are enabled in `~/.ssh/config`:
 ```
 Host *.drush.in
   PubkeyAcceptedKeyTypes=ssh-rsa
