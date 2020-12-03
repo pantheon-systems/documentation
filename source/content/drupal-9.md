@@ -92,7 +92,7 @@ services.yml does not exist! Copy the default.service.yml to services.yml and se
 Create services.yml file inside sites/default directory by copying default/services.yml file. See https://www.drupal.org/documentation/install/settings-file for details.
 ```
 
-Use the terminal on the local machine where you cloned the site, and from the project's root directory, copy the `default.services.yml` to its own file:
+Use the terminal on the local machine where you cloned the site, and from the project's root directory, copy `default.services.yml` to its own file:
 
 ```bash{promptUser: user}
 cp web/sites/default/default.services.yml web/sites/default/services.yml
