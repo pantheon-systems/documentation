@@ -175,6 +175,26 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 1. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
+<Accordion title="Database Cleanup (optional)" id="database-cleanup-d8" icon="lightbulb">
+
+After enabling Redis via this method, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
+
+To do this, [connect directly to MySQL](https://pantheon.io/docs/mysql-access) and run the command:
+
+```sql
+SHOW TABLES LIKE 'cache%';
+```
+
+This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+
+To empty them, run this command on each table, replacing `<tablename>` with the name of the cache table:
+
+```sql
+TRUNCATE TABLE `<tablename>`;
+```
+
+</Accordion>
+
 </Tab>
 
 <Tab title="Drupal 7" id={"d7-install"}>
@@ -230,6 +250,26 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 1. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
 
 1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
+
+<Accordion title="Database Cleanup (optional)" id="database-cleanup-d7" icon="lightbulb">
+
+After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
+
+To do this, [connect directly to MySQL](https://pantheon.io/docs/mysql-access) and run the command:
+
+```sql
+SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
+```
+
+This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+
+To empty them, run this command on each table, replacing `<tablename>` with the name of the cache table:
+
+```sql
+TRUNCATE TABLE `<tablename>`;
+```
+
+</Accordion>
 
 </Tab>
 
