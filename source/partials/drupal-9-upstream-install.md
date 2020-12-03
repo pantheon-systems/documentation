@@ -22,7 +22,7 @@
    cp web/sites/default/default.services.yml web/sites/default/services.yml
    ```
 
-   Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file/
+   Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
 
 1. Commit and push:
 

@@ -25,7 +25,13 @@ Pantheon engineers are rolling out changes often.
 
 - Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-- Install and configure [Git](/git) on your local computer. 
+- Install and configure [Git](/git) and [Composer](https://getcomposer.org/download/) on your local computer.
+
+   - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
+
+     ```bash{promptUser:user}
+     brew install git composer
+     ```
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
@@ -33,7 +39,7 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 <Partial file="drupal-9-upstream-install.md" />
 
-If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility). 
+If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](#test-an-existing-drupal-site-for-drupal-9-upgrade-compatibility).
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
@@ -69,8 +75,6 @@ $node = Node::load(1);
 ```
 
 Since most of these changes are relatively minor, there are a number of [deprecation checking and correction tools](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/deprecation-checking-and-correction-tools) available.
-
-
 
 ## FAQ
 
