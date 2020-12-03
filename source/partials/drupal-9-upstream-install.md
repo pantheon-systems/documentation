@@ -14,7 +14,7 @@
 
 1. Return to the Dev tab, set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
 
-1. Run `composer install`.
+1. In your local terminal, from the project root directory, run `composer install`.
 
 1. Copy the default `services.yml`:
 
