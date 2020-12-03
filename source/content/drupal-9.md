@@ -78,6 +78,27 @@ Since most of these changes are relatively minor, there are a number of [depreca
 
 ## FAQ
 
+### Can I upgrade my existing Drupal site to Drupal 9?
+
+Not yet. While Drupal 9 on Pantheon is in Limited Availability, there is no supported upgrade path yet.
+
+### Pantheon Launch Check Status Error: services.yml does not exist
+
+After you set up Drupal 9, you might see this error in the **Best practices** section of the Pantheon Launch Check:
+
+```none
+services.yml does not exist! Copy the default.service.yml to services.yml and see https://www.drupal.org/documentation/install/settings-file for details.
+
+Create services.yml file inside sites/default directory by copying default/services.yml file. See https://www.drupal.org/documentation/install/settings-file for details.
+```
+
+Use the terminal on the local machine where you cloned the site, and from the project's root directory, copy the `default.services.yml` to its own file:
+
+```bash{promptUser: user}
+cp web/sites/default/default.services.yml web/sites/default/services.yml
+```
+
+Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
 ### Pantheon Drupal 8 Modules Being Upgraded to Drupal 9
 
 | Module Name                                                                                 | Drupal 8 Version? | Drupal 9 Version? |

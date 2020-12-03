@@ -16,14 +16,6 @@
 
 1. In your local terminal, from the project root directory, run `composer install`.
 
-1. Copy the default `services.yml`:
-
-   ```bash{promptUser: user}
-   cp web/sites/default/default.services.yml web/sites/default/services.yml
-   ```
-
-   Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
-
 1. Commit and push:
 
    ```bash{promptUser: user}
