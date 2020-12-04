@@ -1,0 +1,10 @@
+{
+  "name": "my-username/terminus-hello-world",
+  "description": "An Hello, World Terminus command",
+  "type": "terminus-plugin",
+  "extra": {
+    "terminus": {
+      "compatible-version": "2.*"
+    }
+  }
+}
