@@ -15,10 +15,3 @@
 1. Return to the Dev tab, set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
 
 1. In your local terminal, from the project root directory, run `composer install`.
-
-1. Commit and push:
-
-   ```bash{promptUser: user}
-   git add web/sites/default/services.yml && git commit -m "copy over services.yml"
-   git push origin master
-   ```
