@@ -55,7 +55,7 @@ From the **<i className="fa fa-wrench"></i> Develop** tab, you can:
 - View the local site from **Open Browser**.
 - View the [Site Dashboard](/sites) on Pantheon from **Open Dashboard**.
 - View your local site files from **Open Finder**.
-- SSH into the local site container to run [Drush](/drush), [WP-CLI](/wp-cli), or [Terminus](/terminus) commands from **Launch Terminal**. Note that this will connect into the container shell, not just the terminal environment for your local computer.
+- SSH into the local site container to run [Composer](/composer) [Drush](/drush), [WP-CLI](/wp-cli), or [Terminus](/terminus) commands from **Launch Terminal**. Note that this will connect into the container shell, not just the terminal environment for your local computer.
 - View the database container information and access [phpMyAdmin](https://www.phpmyadmin.net/) if enabled from the [Config](#Config) tab.
 - Access email caputure through [MailHog](https://github.com/mailhog/MailHog), if enabled from [Config](#config).
 
