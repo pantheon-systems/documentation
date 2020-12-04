@@ -1,20 +1,44 @@
 releases:
+  - version: 1.0.0
+    date: 2020-12-03
+    requiresShutdown: true
+    changelog: !markdown |
+      ### Upstream changes
+        * Updated to Lando `3.0.22`
+        * Updated to Composer `2.0.7`
+        * Updated to Docker Desktop `2.5.0.1`, fixes problems with macOS Big Sur
+      ### Improvements
+        * Corrected various copy inconsistencies
+  - version: 0.12.0
+    date: 2020-11-09
+    requiresShutdown: true
+    changelog: !markdown |
+      ### Upstream changes
+        * Updated to Lando `3.0.19`
+        * Updated to Terminus `2.4.1`
+        * Updated to Docker Desktop `2.5.0.0`
+      ### New features
+        * Added early access support for Drupal 9
   - version: 0.11.0
-    date: 2020-07-16
+    date: 2020-10-19
     requiresShutdown: true
     changelog: !markdown |
       ### Upstream changes
         * Updated Drush 8 to `8.3.5`
-        * Updated to Lando `3.0.8`
+        * Updated to Lando `3.0.15`
         * Updated to Terminus `2.4.0`
+        * Updated to Docker Desktop `2.4.0.0`
+        * Updated to Docker Compose `1.27.4`
       ### New features
-        * Added opt-in and experimental support for fast `mutagen` syncing, this can increase site performance considerably
         * Added symlink from `/code -> /app` for better COE support
       ### Improvements
         * Improved database pull speed
         * Various UX improvements
       ### Bug fixes
         * Fixed bug causing database pull to fail with a foreign key constraint
+        * Fixed bug causing database pull to fail when app emits php errors
+        * Fixed bug causing database pull to always pull `dev`
+        * Fixed bug causing database pull to not correctly exclude cache data
   - version: 0.10.1
     date: 2020-06-17
     requiresShutdown: true
