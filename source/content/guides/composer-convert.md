@@ -1,6 +1,6 @@
 ---
 title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Use Composer to manage Drupal 8 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed Upstream.
+description: Drupal 8 and 9 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal 8"
@@ -10,7 +10,7 @@ contributors: [dustinleblanc, greg-1-anderson]
 reviewed: "2020-12-01"
 ---
 
-Drupal 8 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed Upstream.
+Drupal sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase. At a high level, the goals of the conversion are to remove dependencies that Composer will manage from your git repository, and tell Composer about those dependencies instead.
 
 Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps. This conversion process may be automated in the future, but initially we will need to document the manual process.
 
@@ -28,7 +28,7 @@ export SITE=my-example-site
 
 ## Steps we'll take
 
-1. Convert to Composer
+1. Convert a Drupal 8 (drops-8) site to Composer
 1. Upgrade to Drupal 8.9
 1. Upgrade to Drupal 9
 
@@ -48,6 +48,8 @@ cd ~/projects/$SITE/
   git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
   ```
 
+  This upstream is a useful starting point for converting Drupal 8 sites to Composer, but it is a Drupal 9 upstream. To use it for Drupal 8, we will adjust the version numbers in a later step.
+
   You can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
 1. Copy your configuration from the default branch:
@@ -55,23 +57,26 @@ cd ~/projects/$SITE/
   ```bash{promptUser:user}
   git checkout master sites/default/config
   git mv sites/default/config/* config
+  git rm -f sites/default/config/.htaccess
   git commit -m "Pull in configuration from default branch"
   ```
 
-1. Compare your `pantheon.yml` with the new `pantheon.upstream.yml` and check for conflicts:
+1. Check for `pantheon.yml` settings you need to preserve by comparing your old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 
   ```bash{promptUser:user}
   git diff master:pantheon.yml pantheon.upstream.yml
   ```
 
-1. If you need your `pantheon.yml`, copy it over (be sure to edit if needed):
+1. If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old pantheon.yml to preserve these settings:
 
   ```bash{promptUser:user}
   git checkout master pantheon.yml
   git add pantheon.yml
   git commit -m 'Copy my pantheon.yml'
   ```
-
+Note that a few settings must be left as they are in `pantheon.upstream.yml` for sites using Integrated Composer. These are:
+* `web_docroot`
+* `build_step`
 ### (Optional) Return to Drupal 8
 
 If you’re not ready to update to Drupal 9 yet. (Advisable: test the Composer conversion before testing the Drupal 9 upgrade)
@@ -79,10 +84,10 @@ Note that you might want to hand-edit your composer.json and remove the drupal/c
 
 ```bash{promptUser:user}
 cd upstream-configuration/
-composer remove zaporylie/composer-drupal-optimizations --no-update
 composer require drupal/core-recommended:^8 --no-update
 cd -
-composer config --json "extra.patches.drupal/core" '{}'
+# Remove new MariaDB directive from pantheon.upstream.yml
+sed -i 's/^\s*version: 10.[0-9]*$/  {}/' pantheon.upstream.yml
 composer update
 git add .
 git commit -m 'Revert to Drupal 8'
@@ -158,10 +163,15 @@ Your existing site may have customizations to `settings.php` or any other config
 It is not wise to completely overwrite the `settings.php` file with the old one, as there are customizations for moving the configuration directory you don't want to overwrite, as well as platform specific customizations.
 
 ```bash{promptUser:user}
-git checkout master sites/default/settings.php
-mv -f sites/default/settings.php web/sites/default/
-git rm -rf sites
-git diff
+# Ensure working tree is clean
+git status
+git checkout master
+git checkout -b old-settings-php
+git mv sites/default/settings.php web/sites/default
+git commit -m 'Relocate settings.php'
+git checkout composerify
+# Interactively extract relevant hunks from old settings.php
+git checkout -p old-settings-php web/sites/default/settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
@@ -258,7 +268,7 @@ If your plan does not include Multidev, you will have to merge to master before 
 Your Pantheon site is no longer compatible with traditional upstream updates. Avoid confusion by moving your site to an empty upstream:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $SITE empty
+terminus site:upstream:set $site drupal9
 ```
 
 ## Ongoing Core Updates
