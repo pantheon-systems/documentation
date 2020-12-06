@@ -276,6 +276,30 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 }
 ```
 
+### Security Headers
+
+Since Pantheon's Nginx config cannot be modified to add security headers and most of the results from search engines are solutions modifying the `.htaccess` file for Apache-based platforms, so adding the code below in an mu-plugin can help our in adding security headers in Nginx-based sites.
+
+This is applicably mainly when accessing the REST API of WordPress but not when directly accessing assets like https://example.com/wp-content/uploads/2020/01/sample.json
+
+Sample code below is only and example to get you started and you'll need to modify it to match your needs especially the Content Security Policy. You can use [this](https://securityheaders.com) to check your security headers.
+
+```php
+function additional_securityheaders( $headers ) {
+	if ( ! is_admin() ) {
+		$headers['Referrer-Policy']             = 'no-referrer-when-downgrade';
+		$headers['X-Content-Type-Options']      = 'nosniff';
+		$headers['XX-XSS-Protection']           = '1; mode=block';
+		$headers['Feature-Policy: geolocation'] = 'geolocation "none" ; camera "none"';
+		$headers['Content-Security-Policy:']    = 'script-src "self"';
+		$headers['X-Frame-Options:']            = 'SAMEORIGIN';
+	}
+
+	return $headers;
+}
+add_filter( 'wp_headers', 'additional_securityheaders' );
+```
+
 ### WP-CFM Compatibility
 
 [WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/multidev) environments, but a Must Use plugin needs to be configured:
