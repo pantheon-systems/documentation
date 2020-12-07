@@ -62,13 +62,11 @@ The steps in this section should only be used as a last resort. This resets Loca
 
 ### What does Localdev do about existing Lando config files?
 
-Localdev will use an existing `.lando` file only when the site is initially cloned. After the initial site clone, there is currently no `lando rebuild` equivalent that will force Localdev to reconsider the landofile. Note that if there are services specified in `.lando`, Localdev will return an error.
-
-While Localdev uses parts of Lando under the hood, they should be considered separate tools. Using Localdev and Lando on the same local site is not recommended.
+While Localdev uses parts of Lando under the hood, they should be considered separate tools. Localdev will not respect existing Lando configuration files, and we recommend keeping the two tools separate. That is, if you are going to use both tools, they should point to separate project directories.
 
 ### Can WordPress Site Networks be developed through Localdev?
 
-At this time, WordPress Site Network (also known as WordPress Multisite) development is not supported through Localdev.
+At this time, WordPress Site Network (also known as WordPress Multisite) is supported only for networks using sub-directories, not subdomains. See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Site Networks](/guides/multisite) guide for more information.
 
 ### How do you configure PHP versions for sites in the LocalDev environment?
 

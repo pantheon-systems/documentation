@@ -18,7 +18,7 @@ If you have an older pre-release version of Localdev already installed on your m
 
 1. Localdev checks the Docker installation, and can install or update it for you if needed. Once it's done, click **Continue installation**.
 
-    - If you leave the **Allow Localdev to report usage and errors** box checked, anonymous usage and will be reported to help improve the application. You can change this setting again later if you change your mind.
+    - If you leave the **Allow Localdev to report usage and errors** box checked, anonymous usage and errors and will be reported to help improve the application. You can change this setting again later if you change your mind.
 
   The Docker window may open several times instructing you to start the Docker server. You can ignore this and minimize the window.
 
