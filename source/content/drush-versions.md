@@ -99,7 +99,7 @@ For more information, see [Avoiding “Dependency Hell” with Site-Local Drush]
 
 Site-local Drush needs executable permissions. If you encounter "permission denied" errors when running Drush commands, adjust permissions on the Drush executable:
 
-```bash
+```bash{promptUser: user}
 chmod +x vendor/bin/drush
 ```
 
