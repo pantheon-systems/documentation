@@ -74,13 +74,16 @@ cd ~/projects/$SITE/
   git add pantheon.yml
   git commit -m 'Copy my pantheon.yml'
   ```
+
 Note that a few settings must be left as they are in `pantheon.upstream.yml` for sites using Integrated Composer. These are:
+
 * `web_docroot`
 * `build_step`
+
 ### (Optional) Return to Drupal 8
 
 If you’re not ready to update to Drupal 9 yet. (Advisable: test the Composer conversion before testing the Drupal 9 upgrade)
-Note that you might want to hand-edit your composer.json and remove the drupal/core entry altogether. The empty drupal/core entry from the steps above will cause drupal/core to be erased and redownloaded frequently
+Note that you might want to manually edit `composer.json` and remove the `drupal/core` entry if it exists. The empty drupal/core entry from the steps above will cause drupal/core to be erased and redownloaded frequently
 
 ```bash{promptUser:user}
 cd upstream-configuration/
@@ -209,7 +212,7 @@ This will set up the Multidev environment to receive and demo our changed code.
   cd ..
   ```
 
-2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
+1. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
 
     ```bash{promptUser:user}
     composer create-project pantheon-systems/example-drops-8-composer $site-composer
@@ -218,20 +221,9 @@ This will set up the Multidev environment to receive and demo our changed code.
 
 This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
 
-
-## Update to Latest Drupal Core
-
-The Pantheon Drupal 8 Composer repository may not depend on the latest secure release of Drupal Core. To keep your site safe, it's a good idea to pull the latest version in now -- before moving on -- by running:
-
-```bash{promptUser:user}
-composer update drupal/core --with-dependencies
-```
-
 ## Prepare to Deploy
 
-At this point, your new project directory should contain all of the unique code from your existing Drupal 8 site, plus all of the code required to make a Composer driven project work. Since Pantheon requires all runtime code to be present when deploying to the platform, if no CI solution is a part of your workflow, you must now modify the project to be deployable straight to Pantheon.
-
-If you do plan on using a CI solution, refer to our [Build Tools](/guides/build-tools) guide at this point.
+At this point, your new project directory should contain all of the unique code from your existing Drupal 8 site, plus all of the code required to make a Composer driven project work.
 
 From the `$site-composer` directory, run the following:
 
@@ -273,16 +265,9 @@ terminus site:upstream:set $site drupal9
 
 ## Ongoing Core Updates
 
-Core updates are carried out via Composer:
+One-click core updates can be made through the Dashboard.
 
-```bash{promptUser:user}
-git pull origin master
-composer update drupal/core --with-dependencies
-composer prepare-for-pantheon
-composer install --no-dev
-```
-
-Review and commit file changes, then push back to Pantheon.
+Navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
 
 ## Troubleshooting
 
