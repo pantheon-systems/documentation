@@ -28,9 +28,10 @@ The following is a list of plugins that assumes write access, and the specific f
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 | Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                           |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-|                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files and this plugin can cause your deployment workflows to break. You can download           |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)             +-------------------------------------------------------+ full backups [from the Site Dashboard](/backups). See [below](#All-in-One-WP-Migration)     |
-|                                                                                               | wp-content/plugins/all-in-one-wp-migrations/storage   | for additional options.                                                         |
+|                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause  |
+|                                                                                               |                                                       | your deployment workflows to break. You can download full backups               |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)             +-------------------------------------------------------+  [from the Site Dashboard](/backups). See [below](#all-in-one-wp-migration)     |
+|                                                                                               | wp-content/plugins/all-in-one-wp-migrations/storage   | for additional information.                                                     |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                     | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions.          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
@@ -76,9 +77,11 @@ Plugins and Themes with issues resolved (at least partially) by this include:
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 
-## [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) 
+## All-in-One WP Migration
 
-<ReviewDate date="2020-11-30" /> 
+<ReviewDate date="2020-11-30" />
+
+**Issue:** [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) attempts to store all of the environment's code, database, and files in version control. This is too much for git to handle, and will cause all deployments to fail.
 
 <Alert title="Warning" type="danger">
 
@@ -86,9 +89,7 @@ There is a very strong possibility this plugin will break the site's workflows, 
 
 </Alert>
 
-**Issue:** The plugin attempts to store all of the environment's code, database, and files in version control. This is too much for git to handle, and will cause all deployments to fail.
-
-**Solution:** Use the platforms automated backups [from the Site Dashboard](/backups)
+**Solution:** Use the platforms automated backups [from the Site Dashboard](/backups).
 
 ___
 
