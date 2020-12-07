@@ -16,7 +16,7 @@ editpath: localdev/04-troubleshoot-support.md
 
 Before contacting support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
 
-1. Navigate to the **Settings** tab and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
+1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
    - Application reports are collected and stored locally in `~/.pantheonlocaldev`.
 
@@ -44,7 +44,7 @@ mkdir: cannot create directory '/app/./wp-content/uploads':
 File exists\n","label":"myawesomesite","timestamp":"2020-11-25T16:40:12.057Z"}
 ```
 
-The contents of `wp-contents/uploads` should be symlinked to files, in keeping with the [code moves up, content moves down](/pantheon-workflow#code-moves-up-content-moves-down) aspect of the Pantheon WebOps workflow.
+The contents of `wp-contents/uploads` should be symlinked to files, in keeping with the [code moves up, content moves down](/pantheon-workflow#code-moves-up-content-moves-down) best practice of the Pantheon WebOps workflow.
 
 You can [contact support](#contact-support) for help moving your files out of the codebase.
 
@@ -66,15 +66,15 @@ While Localdev uses parts of Lando under the hood, they should be considered sep
 
 ### Can WordPress Site Networks be developed through Localdev?
 
-At this time, WordPress Site Network (also known as WordPress Multisite) is supported only for networks using sub-directories, not subdomains. See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Site Networks](/guides/multisite) guide for more information.
+At this time, WordPress Site Network (also known as WordPress Multisite) is supported only for networks using subdirectories, not subdomains. See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Site Networks](/guides/multisite) guide for more information.
 
-### How do you configure PHP versions for sites in the LocalDev environment?
+### How do you configure PHP versions for sites in the Localdev environment?
 
-LocalDev will [respect the changes made to your local `pantheon.yml`](/php-versions#configure-php-version) file.
+Localdev will [respect the changes made to your local `pantheon.yml`](/php-versions#configure-php-version) file.
 
-A force rebuild is required for changes in `pantheon.yml` to take effect:
+A forced rebuild is required for changes in `pantheon.yml` to take effect:
 
-![Force Rebuild your app in LocalDev](../../../images/localdev/localdev-rebuild.png)
+![Force Rebuild your app in Localdev](../../../images/localdev/localdev-rebuild.png)
 
 You can verify which version of PHP your site is using by clicking **Launch Terminal**, then running `php -v`:
 
@@ -82,4 +82,4 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 
 ### Can I create Multidev environments from Localdev?
 
-No, new multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create)
+No, new multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).
