@@ -156,7 +156,7 @@ mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
 
 Install and use one of the following WordPress plugins:
 
-- [IP Ban](https://wordpress.org/plugins/simple-ip-ban/)
+- [IP Blacklist Cloud](https://wordpress.org/plugins/ip-blacklist-cloud/)
 - [WP-Ban](https://wordpress.org/plugins/wp-ban/)
 
 </Tab>
