@@ -13,7 +13,7 @@ This guide will help you get up and running with [Lando](https://lando.dev/), an
 
 <Enablement title="Try Localdev" link="https://pantheon.io/localdev?docs">
 
-Pantheon has been building our own local development tool! Localdev is built using Lando, has a friendly GUI, and is great for WordPress and Drupal sites. Click above to try it out, or check out the [docs](/localdev).
+Pantheon has been building our own local development tool! Localdev is built using Lando, has a friendly GUI, and is great for WordPress and Drupal sites. Click above to try it out, or check out the [docs](/guides/localdev).
 
 </Enablement>
 
