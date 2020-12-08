@@ -1,6 +1,6 @@
 ---
 title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Drupal 8 and 9 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase.
+description: Upgrade a Drupal 8 site to integrated Composer and Drupal 9.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -10,79 +10,21 @@ contributors: [dustinleblanc, greg-1-anderson]
 reviewed: "2020-12-01"
 ---
 
-Drupal sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase. At a high level, the goals of the conversion are to remove dependencies that Composer will manage from your git repository, and tell Composer about those dependencies instead.
+Drupal sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase. At a high level, the goals of the conversion are to remove dependencies that Composer will manage from your Git repository, and tell Composer about those dependencies instead.
 
-Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps. This conversion process may be automated in the future, but initially we will need to document the manual process.
+Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps.
 
 ## Before You Begin
 
-<Alert title="Danger" type="danger">
-Using this tutorial without having met all of the the below criterion could result in damage to your site making it inoperable.
-</Alert>
+- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer.
+   - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
 
-This document is for you if you meet the following criterion:
+     ```bash{promptUser:user}
+     brew install git composer
+     ```
 
-- You have [Git](/git), [Composer](/composer), and [Terminus](/terminus),
-  installed and configured on your local computer.
-
-  If not, you'll need to install these utilities for your specific operating system.
-
-  - Mac users can use [Homebrew](https://brew.sh/) to install both
-    Git and Composer, along with their required dependencies:
-
-  ```bash{promptUser:user}
-  brew install git composer
-  ```
-
-- You have a [local copy](/git#clone-your-site-codebase) of your site
-  cloned from it's git repo your _current_ Pantheon site repository in a working directory on your local computer.
-
-- Your site repository DOES NOT have a "/web" folder at it's root.
-
-- [Serving Sites from the Web Subdirectory](/nested-docroot)
-
-- Your site has our DROPS-8 repo in it's upstream.
-
-  You can find out the answer to that question with the following command(s):
-
-  ```bash{outputLines:2-99}
-  terminus site:info $SITE
-  ------------------ -------------------------------------------------------------------------------------
-  ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-  Name               my-example-site
-  Label              MyExampleSite
-  Created            2019-12-02 18:28:14
-  Framework          drupal8
-  Region             United States
-  Organization       3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-  Plan               Elite
-  Max Multidevs      Unlimited
-  Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
-  Holder Type        organization
-  Holder ID          3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-  Owner              3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
-  Is Frozen?         false
-  Date Last Frozen   1970-01-01 00:00:00
-  ------------------ -------------------------------------------------------------------------------------
-  ```
-
-  The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
-  If not, this document does not apply to you.
-
-- Your site has applied all of the most recent updates from the
-  drops-8 upstream.
-
-  You can find out the answer to that question with the following command:
-
-  ```bash{outputLines:2-6}
-  terminus upstream:updates:list $SITE
-  [warning] There are no available updates for this site.
-  ----------- ----------- --------- --------
-  Commit ID   Timestamp   Message   Author
-  ----------- ----------- --------- --------
-  ```
-
-  Anything other than "no updates available" and you will need to apply the updates either by command line or via the Pantheon dashboard before continuing.
+- [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
+- Review [Serving Sites from the Web Subdirectory](/nested-docroot)
 
 <Alert title="Exports" type="export">
 
@@ -177,6 +119,23 @@ composer update
 git add .
 git commit -m 'Revert to Drupal 8'
 ```
+
+## Create a New Composer Project
+
+1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
+
+  ```bash{promptUser:user}
+  cd ..
+  ```
+
+1. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
+
+    ```bash{promptUser:user}
+    composer create-project pantheon-systems/example-drops-8-composer $site-composer
+    cd $site-composer
+    ```
+
+This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in a new directory with the `$site` alias`-composer`.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -283,23 +242,18 @@ git push origin composerify && terminus env:create $site.dev composerify
 ```
 
 This will set up the Multidev environment to receive and demo our changed code.
+## Commit
 
-## Create a New Composer Project
+Commit your work to the Git repo. From the `$site` directory, run the following:
 
-1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
+```bash{promptUser: user}
+cp -r .git ../$site-composer/
+cd ../$site-composer
+git add .
+git commit -m "Convert to Composer based install"
+```
 
-  ```bash{promptUser:user}
-  cd ..
-  ```
-
-1. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
-
-    ```bash{promptUser:user}
-    composer create-project pantheon-systems/example-drops-8-composer $site-composer
-    cd $site-composer
-    ```
-
-This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
+You should see a large number of files committed to the new branch created earlier.
 
 ## Prepare to Deploy
 
@@ -314,27 +268,17 @@ composer install --no-dev
 
 This should modify the `.gitignore` file and cleanup any errant `.git` directories in the codebase, to prepare your new code for direct deployment to Pantheon.
 
-## Commit
+## Deploy
 
-Commit your work to the git repo. From the `$SITE` directory, run the following:
+You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
 
-```bash{promptUser: user}
-cp -r .git ../$site-composer/
-cd ../$site-composer
-git add .
-git commit -m "ran composer prepare-for-pantheon and install"
-git push origin composerify && terminus env:create $SITE.dev composerify
+```bash{promptUser:user}
+git push origin composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
 
-### Deploy to Dev
-
-You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
-
-Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
-
-If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a local development solution, consider testing your `composerify` branch locally before merging.
+If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a [local development](/local-development) solution, consider testing your `composerify` branch locally before merging.
 
 ## Change Upstreams
 
