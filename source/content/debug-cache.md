@@ -108,7 +108,7 @@ If the `cache-control` header returns `private, must-revalidate` unexpectedly, e
 
 PHP sessions will make your page uncacheable. It is impossible to use cached content when there are sessions in place, for example:
 
-```bash{outputLines: 2-18}
+```bash{outputLines: 2-21}
 curl -I https://www.example.com
 HTTP/2 200
 cache-control: public, max-age=600
