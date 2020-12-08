@@ -1,6 +1,6 @@
 ---
 title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Drupal 8 and 9 sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase.
+description: Upgrade a Drupal 8 site to integrated Composer and Drupal 9.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal 8"
@@ -10,11 +10,21 @@ contributors: [dustinleblanc, greg-1-anderson]
 reviewed: "2020-12-01"
 ---
 
-Drupal sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase. At a high level, the goals of the conversion are to remove dependencies that Composer will manage from your git repository, and tell Composer about those dependencies instead.
+Drupal sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase. At a high level, the goals of the conversion are to remove dependencies that Composer will manage from your Git repository, and tell Composer about those dependencies instead.
 
-Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps. This conversion process may be automated in the future, but initially we will need to document the manual process.
+Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps.
 
 ## Before You Begin
+
+- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer.
+   - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
+
+     ```bash{promptUser:user}
+     brew install git composer
+     ```
+
+- [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
+- Review [Serving Sites from the Web Subdirectory](/nested-docroot)
 
 <Alert title="Exports" type="export">
 
@@ -96,6 +106,23 @@ git add .
 git commit -m 'Revert to Drupal 8'
 ```
 
+## Create a New Composer Project
+
+1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
+
+  ```bash{promptUser:user}
+  cd ..
+  ```
+
+1. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
+
+    ```bash{promptUser:user}
+    composer create-project pantheon-systems/example-drops-8-composer $site-composer
+    cd $site-composer
+    ```
+
+This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in a new directory with the `$site` alias`-composer`.
+
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
 What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
@@ -116,7 +143,7 @@ This will list each module followed by the version of that module that is instal
 
 You can add these modules to your new codebase using Composer by running the following for each module in the `$site-composer` directory:
 
-```{promptUser:user}
+```bash{promptUser:user}
 composer require drupal/MODULE_NAME:^VERSION
 ```
 
@@ -203,23 +230,18 @@ git push origin composerify && terminus env:create $site.dev composerify
 ```
 
 This will set up the Multidev environment to receive and demo our changed code.
+## Commit
 
-## Create a New Composer Project
+Commit your work to the Git repo. From the `$site` directory, run the following:
 
-1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
+```bash{promptUser: user}
+cp -r .git ../$site-composer/
+cd ../$site-composer
+git add .
+git commit -m "Convert to Composer based install"
+```
 
-  ```bash{promptUser:user}
-  cd ..
-  ```
-
-1. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
-
-    ```bash{promptUser:user}
-    composer create-project pantheon-systems/example-drops-8-composer $site-composer
-    cd $site-composer
-    ```
-
-This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
+You should see a large number of files committed to the new branch created earlier.
 
 ## Prepare to Deploy
 
@@ -234,26 +256,17 @@ composer install --no-dev
 
 This should modify the `.gitignore` file and cleanup any errant `.git` directories in the codebase, to prepare your new code for direct deployment to Pantheon.
 
-## Commit
-
-Commit your work to the git repo. From the `$SITE` directory, run the following:
-
-```bash{promptUser: user}
-cp -r .git ../$site-composer/
-cd ../$site-composer
-git add .
-git commit -m "Convert to Composer based install"
-```
-
-You should see a large amount of files committed to the new branch we created earlier.
-
 ## Deploy
 
 You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
 
+```bash{promptUser:user}
+git push origin composerify
+```
+
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
 
-If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a local development solution, consider testing your `composerify` branch locally before merging.
+If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a [local development](/local-development) solution, consider testing your `composerify` branch locally before merging.
 
 ## Change Upstreams
 
