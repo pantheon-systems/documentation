@@ -36,12 +36,6 @@ export SITE=my-example-site
 
 </Alert>
 
-## Steps we'll take
-
-1. Convert a Drupal 8 (drops-8) site to Composer
-1. Upgrade to Drupal 8.9
-1. Upgrade to Drupal 9
-
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
 You're about to make massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
