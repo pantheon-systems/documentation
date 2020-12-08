@@ -4,7 +4,7 @@ description: Learn how to identify and resolve caching issues affecting your Pan
 categories: [performance]
 tags: [cache, cdn, cookies]
 contributors: [rachelwhitton]
-reviewed: "2020-12-02"
+reviewed: "2020-12-08"
 ---
 
 ## Before You Begin
@@ -73,7 +73,7 @@ content-length: 41278
 
 This specific example is from a Drupal site that has anonymous caching enabled, but has "none" set for expiration of cached pages within Drupal's performance settings (`/admin/config/development/performance`). For details, see [Drupal Performance and Caching Settings](/drupal-cache).
 
-### Set-Cookie Conflicts
+### Set-Cookie Headers
 Pantheon's platform will not cache a response that contains the `set-cookie` header.
 
 <Alert title="Note" type="info" >
@@ -86,15 +86,14 @@ Search for instances across the site's codebase and once isolated, edit the cook
 
 Next, wrap a conditional statement around the `setcookie();` function to check whether the cookie is already defined in the request. The goal of this effort is to send `set-cookie` only on the initial request, and never on subsequent requests. For code example, see [Working with Cookies on Pantheon](/cookies#cache-varying-cookies).
 
-<Alert title="Warning" type="danger" >
-
-Adjusting plugin or theme code directly means this fix will need to be reapplied manually again with the next plugin or theme update. This can work well as a quick fix but often times the better solution is finding an alternative plugin or moving the related functionality to the front-end.
-
-</Alert>
-
 The initial request will still break through cache - that's expected, because it would not find anything defined for the cookie. Subsequent requests back to the site should find the cookie data defined in the request headers. Subsequent requests should not be sending `set-cookie` and should now be served by cache.
 
-Again, avoid testing via curl for the `set-cookie` conflict. When it comes to cookies, Curl doesn't send the value back like your browser would so subsequent requests present as failures no matter what.
+#### Cookie alternatives
+Cache-varying `STYXKEY` cookies are generally intended for use with custom code. If you modify a third-party plugin, you'll need to make the same modification after each update. There are many ways to approach this (creating patch files, using Composer scripts, forking a project, etc), but in any case, this adds some maintenance overhead.
+
+You may want to consider an alternative module or plugin that does not set cache-busting cookies, or you may be able to implement the same functionality using JavaScript on the front-end of the site.
+
+Pantheon's [Advanced Global CDN](/advanced-global-cdn) service may also be a good option if your cookie-setting logic can be moved to the CDN layer. One common use-case for this is [geolocation](/advanced-global-cdn#geolocation-based-actions): instead of detecting a visitor's location with PHP code and setting cookies, this information can be fetched much quicker from the edge and passed to the application via an HTTP response header.
 
 ### Drupal Config Conflicts
 
