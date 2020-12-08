@@ -103,9 +103,11 @@ If the `cache-control` header returns `private, must-revalidate` unexpectedly, e
 
 - Or the conflict could be coming from a contrib module. For example, if the Domain module is in use, check performance for that particular module (e.g., `/admin/structure/domain/view/1/config`), which overrides the site performance config (`/admin/config/development/performance`).
 
-### WordPress Sessions
+### PHP Sessions
 
-PHP sessions will make your page uncacheable. It is impossible to use cached content when there are sessions in place, for example:
+A page that includes a PHP session is always uncacheable. While sessions are generally intended to be used for handling authenticated users, you may see a module, plugin or theme start a session for anonymous traffic as well. This is an application anti-pattern and will make scaling the site for high-traffic extremely difficult, as you won't be able to absorb that traffic at the CDN layer -- it all has to bootstrap Drupal or WordPress.
+
+You can spot PHP session cookies in HTTP headers using curl:
 
 ```bash{outputLines: 2-21}
 curl -I https://www.example.com
@@ -126,11 +128,11 @@ x-cache-hits: 0
 x-timer: S1607456945.789723,VS0,VE340
 vary: Accept-Encoding, Cookie
 x-robots-tag: noindex
-age: 0  // highlight-line
+age: 0
 accept-ranges: bytes
 via: 1.1 varnish
 ```
 
-Best practice is to use a cookie based solution so that only initial requests are uncached.
+Once you've found the source of the session, you'll want to remove or deactivate whatever sets it. Storing data about an anonymous visitor can be handled more efficiently in the user's browser -- a cache-varying cookie or utilizing [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) is likely a better choice.
 
-For details, see [WordPress and PHP Sessions](/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).
+For more information, see [WordPress and PHP Sessions](/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).
