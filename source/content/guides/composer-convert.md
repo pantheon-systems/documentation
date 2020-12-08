@@ -136,7 +136,7 @@ A Composer-managed site should be able to include all custom code via Composer. 
 When reviewing your site, take stock of exactly what versions of modules you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, etc):
 
 ```bash{promptUser:user}
-terminus drush site.dev -- pm:projectinfo --fields=name,version --format=table
+terminus drush $site.dev -- pm:projectinfo --fields=name,version --format=table
 ```
 
 This will list each module followed by the version of that module that is installed.
@@ -261,12 +261,18 @@ This should modify the `.gitignore` file and cleanup any errant `.git` directori
 You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
 
 ```bash{promptUser:user}
+git commit -am "ran composer prepare-for-pantheon and install"
 git push origin composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
 
 If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a [local development](/local-development) solution, consider testing your `composerify` branch locally before merging.
+
+```bash{promptUser:user}
+git commit -am "ran composer prepare-for-pantheon and install"
+git push -f origin master
+```
 
 ## Change Upstreams
 
