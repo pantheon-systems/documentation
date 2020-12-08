@@ -121,6 +121,11 @@ You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or
 
 </Tab>
 
+<Tab title="Other" id="other">
+
+Other Git based providers can be used like Azure DevOps or an On-Prem Bitbucket. You will need to create a new project in that system. Contact support and we can try to work it out with you.
+
+</Tab>
 </TabList>
 
 ## Pull in Core from Pantheon's Upstream
@@ -291,6 +296,23 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
   1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
 
       ![GitLab reporter permission](../images/gitlab-reporter.png)
+
+  1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
+
+     - A name for the custom upstream
+     - The `https` clone URL (ending in `.git`)
+     - The Access Token for the new user.
+
+</Tab>
+
+<Tab title="Other" id="other-auth">
+
+  Custom Upstreams from other repositories must be created for you by Pantheon Support. Contact support and we can try to work it out with you.
+  
+These are common steps needed for most Git Providers:
+  1. Prepare a new user specifically for Pantheon access.
+
+  1. This new account will need to be accessable via API for Pantheon, it must also have access to the repository created in the earlier step.
 
   1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
 
