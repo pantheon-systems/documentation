@@ -30,7 +30,7 @@ Every Pantheon site comes with 3 separate environments— Dev, Test, Live—whic
 
 <Alert title="Note" type="info">
 
-Agencies have access to additional development environments under the{" "} <Icon icon={"cloud"} text={"Multidev"} /> tab.
+Agencies have access to additional development environments under the <Icon icon={"cloud"} text={"Multidev"} /> tab.
 
 </Alert>
 
