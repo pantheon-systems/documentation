@@ -75,6 +75,14 @@ For security purposes, we recommend removing tokens from your account when they 
 
 Currently, machine tokens cannot be generated using Microsoft Edge browser. As a workaround, generate the token using Mozilla Firefox or Google Chrome, which has been tested as working on Windows 10.
 
+### Invalid Token Names
+
+The following token names are not allowed, and will be automatically renamed to "Generic Feature Phone":
+
+- pantheon hud
+- pantheonHud
+- pantheon-hud
+
 ## See Also
 
 [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)
