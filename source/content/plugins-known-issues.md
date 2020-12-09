@@ -153,14 +153,18 @@ Be sure to add this configuration _above_ the comment to stop editing:
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
 
-**Issue 2:** Autoptimize generates a php file upon activation "wp-content/autoptimize_404_handler.php" if not present autoptimize will throw a php warning
-and enabling this setting requires write access and a [location directive](https://wordpress.org/plugins/autoptimize/#%0Awhat%20does%20%E2%80%9Cenable%20404%20fallbacks%E2%80%9D%20do%3F%20why%20would%20i%20need%20this%3F%0A) not configured in platform's Nginx configuration. 
-```
-Warning: file_put_contents(/code/wp-content/autoptimize_404_handler.php): failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize/classes/autoptimizeCache.php on line 642
+**Issue 2:** Autoptimize attempts to generate the file `wp-content/autoptimize_404_handler.php` upon activation, and if not present will throw a php warning.
+
+Enabling this setting requires write access and a [location directive](https://wordpress.org/plugins/autoptimize/#%0Awhat%20does%20%E2%80%9Cenable%20404%20fallbacks%E2%80%9D%20do%3F%20why%20would%20i%20need%20this%3F%0A) not configured in platform's Nginx configuration, generating the error:
+
+```php
+Warning: file_put_contents(/code/wp-content/autoptimize_404_handler.php):
+failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize/classes/autoptimizeCache.php on line 642
 ```
 
-**Solution:** Uncheck *Enable 404 fallbacks* in Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
-The Pantheon Platform does not provide support for custom configuration, hence file redirects will not work. More information can be found in [here.](https://pantheon.io/docs/advanced-redirects#redirect-files)
+**Solution:** Uncheck **Enable 404 fallbacks** in the Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
+The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/advanced-redirects#redirect-files) section of [Advanced Redirects and Restrictions](/advanced-redirects).
+
 ___
 
 ## [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/)
