@@ -86,15 +86,15 @@ Not yet. While Drupal 9 on Pantheon is in Limited Availability, there is no supp
 
 After you set up Drupal 9, you might see this error in the **Best practices** section of the Pantheon Launch Check:
 
-```none
-services.yml does not exist! Copy the default.service.yml to services.yml and see https://www.drupal.org/documentation/install/settings-file for details.
-
-Create services.yml file inside sites/default directory by copying default/services.yml file. See https://www.drupal.org/documentation/install/settings-file for details.
-```
+> <span  style="color:red">x <strong>sites/default/services.yml:</strong></span> services.yml does not exist! Copy the default.service.yml to services.yml and see https://www.drupal.org/documentation/install/settings-file for details.
+><br />
+><br />
+>
+> *Create services.yml file inside sites/default directory by copying default/services.yml file. See https://www.drupal.org/documentation/install/settings-file for details.*
 
 Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is set to **Git**, then use the terminal on the local machine where you cloned the site, and from the project's root directory:
 
-1. Copy `default.services.yml` to its own file:
+1. Copy `default.services.yml` to `services.yml`:
 
  ```bash{promptUser: user}
  cp web/sites/default/default.services.yml web/sites/default/services.yml
@@ -103,11 +103,12 @@ Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is s
 1. Commit and push:
 
  ```bash{promptUser: user}
- git add web/sites/default/services.yml && git commit -m "copy over services.yml"
+ git add web/sites/default/services.yml && git commit -m "init services.yml"
  git push origin master
   ```
 
 Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
+
 ### Pantheon Drupal 8 Modules Being Upgraded to Drupal 9
 
 | Module Name                                                                                 | Drupal 8 Version? | Drupal 9 Version? |
