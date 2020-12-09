@@ -487,12 +487,9 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
 | Sandbox*               |               64           |
-| Performance Small      |               64           |
+| Basic                  |               64           |
+| Performance Small      |               256          |
 | Performance M, L, XL   |               512          |
-| Professional           |               256          |
-| Flagship               |               512          |
-| Business               |               512          |
-| BusinessXL             |               1024         |
 | Elite                  |               1024         |
 
 *Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on paid plans.
