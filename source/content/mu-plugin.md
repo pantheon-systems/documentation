@@ -290,9 +290,9 @@ function additional_securityheaders( $headers ) {
     $headers['Referrer-Policy']             = 'no-referrer-when-downgrade';
     $headers['X-Content-Type-Options']      = 'nosniff';
     $headers['XX-XSS-Protection']           = '1; mode=block';
-    $headers['Feature-Policy: geolocation'] = 'geolocation "none" ; camera "none"';
-    $headers['Content-Security-Policy:']    = 'script-src "self"';
-    $headers['X-Frame-Options:']            = 'SAMEORIGIN';
+    $headers['Permissions-Policy']         = 'geolocation=(self "https://example.com") microphone=() camera=()';
+    $headers['Content-Security-Policy']    = 'script-src "self"';
+    $headers['X-Frame-Options']            = 'SAMEORIGIN';
   }
 
   return $headers;
