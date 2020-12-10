@@ -123,7 +123,9 @@ You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or
 
 <Tab title="Other" id="other">
 
-Other Git hosting providers (like Azure DevOps or a self-hosted Bitbucket server) can be used, but we cannot detail specific instructions for each and every provider. You will need to create a new project in that system. Contact support and we can try to work it out with you.
+Other Git hosting providers (like Azure DevOps or a self-hosted Bitbucket server) can be used, but we cannot detail specific instructions for each and every provider. You will need to create a new project in that system.
+
+As detailed below, [Pantheon Support](/support) will need to add this Custom Upstream for you from a support ticket.
 
 </Tab>
 
@@ -333,11 +335,15 @@ These are common steps needed for most Git Providers:
 
 1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
 
-    - A name for the custom upstream
+    - A name for the custom upstream,
 
-    - The `https` clone URL (ending in `.git`)
+    - The CMS within (WordPress, Drupal 7/8/9),
 
-    - The Access Token for the new user.
+    - The `https` clone URL (ending in `.git`),
+
+    - The username and Access Token for the new user,
+
+    - The name of the branch to be used by Pantheon (usually `master`).
 
 </Tab>
 
