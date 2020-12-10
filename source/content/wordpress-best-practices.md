@@ -120,11 +120,11 @@ This method has the advantage of being toggleable without deploying code, by act
 
 ## Security Headers
 
-Pantheon's Nginx configuration cannot be modified to add security headers, and most solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
+Pantheon's Nginx configuration cannot be modified to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
 
-Adding code like the example below in a plugin or to your theme can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform.
+There are plugins for WordPress that do not require `.htaccess` to set security headers (like [GD Security Headers](https://wordpress.org/plugins/gd-security-headers/) or [HTTP headers to improve web site security](https://wordpress.org/plugins/http-security/)), but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 
-These headers apply when accessing site pages or the REST API of WordPress, but not when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
+Adding code like the example below in a plugin or to your theme can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. These headers apply when accessing site pages or the REST API of WordPress, but not when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
 
 The code below is only an example to get you started. You'll need to modify it to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers and links to additional information on where to improve your security header profile.
 
