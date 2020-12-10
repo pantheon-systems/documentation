@@ -291,6 +291,20 @@ If you have an existing archive (tgz) file in `sites/default/files` the `drush a
 
 Go the to files directory of your existing site and check if the site archive was generated successfully. If you're hosting the archive on a third party like Dropbox or Google Drive, confirm that it was uploaded successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command again if you can't find the site archive.
 
+### Maximum Index Size
+
+From the [MySQL reference manual](https://dev.mysql.com/doc/refman/5.7/en/charset-unicode-conversion.html):
+
+> InnoDB has a maximum index length of 767 bytes for tables that use COMPACT or REDUNDANT row format, so for utf8mb3 or utf8mb4 columns, you can index a maximum of 255 or 191 characters, respectively. If you currently have utf8mb3 columns with indexes longer than 191 characters, you must index a smaller number of characters.
+
+Sites migrated from hosts using `utf8mb3` are upgraded to `utf8mb4`. If those sites have indexes larger than 191 characters, they will beed to be updated. One method to update index length uses the `ALTER TABLE` command:
+
+```sql
+ALTER TABLE tableName DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+```
+
+This command can be used as part of a script to find and update large indexes.
+
 ## Frequently Asked Questions (FAQs)
 
 ### How do I clone an existing Pantheon site?
