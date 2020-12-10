@@ -537,11 +537,11 @@ See the [plugin documentation](https://polylang.pro/doc/php-constants/) for more
 
 ___
 
-## [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/)
+## Posts 2 Posts
 
-<ReviewDate date="2020-10-12" />
+<ReviewDate date="2020-12-10" />
 
-**Issue:** This plugin sets an incompatible index value for meta_key when creating new database tables.
+**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) sets an incompatible index value for meta_key when creating new database tables.
 
 **Solution:** You can apply [this patch](https://gist.github.com/rachelwhitton/a348b3aff2aabf867dccd8188bcddb12) to ensure new tables created by the plugin use the supported `meta_key(191)` index value. You can fix existing tables via the MySQL commandline, for example:
 
