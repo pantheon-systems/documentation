@@ -280,7 +280,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 
 Pantheon's Nginx configuration cannot be modified to add security headers, and most solutions written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms. Adding code like the example below in an mu-plugin can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform.
 
-These headers apply when accessing the REST API of WordPress, but not when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
+These headers apply when accessing site pages or the REST API of WordPress, but not when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
 
 The code below is only an example to get you started. You'll need to modify it to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers and links to additional information on where to improve your security header profile.
 
