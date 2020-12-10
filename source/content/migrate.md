@@ -293,7 +293,7 @@ Go the to files directory of your existing site and check if the site archive wa
 
 ### Maximum Index Size
 
-From the [MySQL reference manual](https://dev.mysql.com/doc/refman/5.7/en/charset-unicode-conversion.html):
+From the [MySQL reference manual](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html):
 
 > InnoDB has a maximum index length of 767 bytes for tables that use COMPACT or REDUNDANT row format, so for utf8mb3 or utf8mb4 columns, you can index a maximum of 255 or 191 characters, respectively. If you currently have utf8mb3 columns with indexes longer than 191 characters, you must index a smaller number of characters.
 
