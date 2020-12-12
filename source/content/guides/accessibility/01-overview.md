@@ -1,5 +1,5 @@
 ---
-title: Optimize Your Site for Accessibility
+title: Accessibility Guide
 subtitle: Overview
 description: How to extend your site's reach with accessibility planning, fixes, and reporting.
 categories: [optimize]

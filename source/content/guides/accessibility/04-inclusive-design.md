@@ -1,5 +1,5 @@
 ---
-itle: Optimize Your Site for Accessibility
+title: Optimize Your Site for Accessibility
 subtitle: Inclusive Design
 description: Design for inclusion to future-proof your site.
 categories: [optimize]
