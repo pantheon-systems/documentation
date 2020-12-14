@@ -10,17 +10,7 @@ tags: [cdn, https, professional-services]
 
 A white glove concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
-## Upgrade to the Global CDN
-
-If your site is using our Legacy SSL service, it's on deprecated legacy infrastructure served from a single server in the central US. When you upgrade to the Global CDN you'll see faster performance, with content  delivered from almost 50 points of presence (POPs) around the world.
-
-If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Global CDN is configured to only use TLS 1.2 and no weak 3DES cipher. On the legacy infrastructure, your site isn't as fast, secure, or as resilient as it could be.
-
-### Option 1: Automated Certificate Management via Let's Encrypt
-
-If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/https) to get best-in-class encryption and an A+ grade from SSL Labs.
-
-### Option 2: Manually Managed Custom Certificates
+## Manually Managed Custom Certificates
 
 If you require a custom, dedicated certificate, you can now bring it to the Global CDN. This is a paid service that our Sales Team can help you with.
 
@@ -72,17 +62,17 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 
 ## Technical Specifications
 
-|                                                                       | Legacy                    | Global CDN with Let's Encrypt   | Global CDN with a Custom Certificate  |
-|:--------------------------------------------------------------------- |:------------------------- |:------------------------------- |:--------------------------------------|
-| **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt | Bring your own                        |
-| **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
-| **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br />Some very old browsers not supported <sup> [1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> * |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A                         | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts)     | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts) *         |
-| **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
-| **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |
-| **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  | [Global CDN](/global-cdn)        |
-| **Encryption Endpoint**                                               | Load Balancer             | Application Container           | Application Container                 |
+|                                                                       | Global CDN with Let's Encrypt   | Global CDN with a Custom Certificate  |
+|:--------------------------------------------------------------------- |:------------------------------- |:------------------------------------- |
+| **Certificate Type**                                                  | Shared, issued by Let's Encrypt | Bring your own                        |
+| **Renewal**                                                           | Automatic                       | Self-managed (up to you)              |
+| **Inbound IP**                                                        | Static (shared)                 | Static (shared)                       |
+| **Client Support**                                                    | 95.55% of Browsers <br />Some very old browsers not supported <sup> [1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> * |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts)     | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts) * |
+| **Protocol**                                                          | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
+| **Ciphers**                                                           | No Weak 3DES cipher             | No Weak 3DES cipher                   |
+| **Delivery**                                                          | [Global CDN](/global-cdn)  | [Global CDN](/global-cdn)        |
+| **Encryption Endpoint**                                               | Application Container           | Application Container                 |
 
 \* The browser compatibility and SSL Labs scores are guaranteed for shared Let’s Encrypt certificates. The same results are typical for a custom certificate from a mainstream CA with mainstream attributes, but not guaranteed.  For custom certificates, compatibility and SSL Labs score depends on attributes of that certificate, such as number of SAN entries, CA and signing algorithm.
 
