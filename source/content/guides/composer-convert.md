@@ -71,23 +71,22 @@ You're about to make massive changes to the codebase. We recommend you to do thi
   git diff master:pantheon.yml pantheon.upstream.yml
   ```
 
-1. If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old pantheon.yml to preserve these settings:
+   - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old pantheon.yml to preserve these settings:
 
-  ```bash{promptUser:user}
-  git checkout master pantheon.yml
-  git add pantheon.yml
-  git commit -m 'Copy my pantheon.yml'
-  ```
+     ```bash{promptUser:user}
+     git checkout master pantheon.yml
+     git add pantheon.yml
+     git commit -m 'Copy my pantheon.yml'
+     ```
 
-Note that a few settings must be left as they are in `pantheon.upstream.yml` for sites using Integrated Composer. These are:
+   Note that a few settings must be left as they are in `pantheon.upstream.yml` for sites using Integrated Composer. These are:
 
-* `web_docroot`
-* `build_step`
+     * `web_docroot`
+     * `build_step`
 
 ### (Optional) Return to Drupal 8
 
-If you’re not ready to update to Drupal 9 yet. (Advisable: test the Composer conversion before testing the Drupal 9 upgrade)
-Note that you might want to manually edit `composer.json` and remove the `drupal/core` entry if it exists. The empty drupal/core entry from the steps above will cause drupal/core to be erased and redownloaded frequently
+If you have access to the [Multidev](/multidev) feature, test the Composer conversion in a Multidev before testing the Drupal 9 upgrade. If you’re not ready to update to Drupal 9 yet, return to Drupal 8:
 
 ```bash{promptUser:user}
 cd upstream-configuration/
@@ -248,29 +247,39 @@ composer prepare-for-pantheon
 composer install --no-dev
 ```
 
-This should modify the `.gitignore` file and cleanup any errant `.git` directories in the codebase, to prepare your new code for direct deployment to Pantheon.
+This modifies the `.gitignore` file and cleans up any errant `.git` directories in the codebase to prepare your new code for direct deployment to Pantheon.
 
 ## Deploy
 
-You've now committed the code to a branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions on our documentation on [log collection](/logs).
+You've now committed the code to the local branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
+
+### Deploy to a Multidev
+
+If your site has Multidev, push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
 ```bash{promptUser:user}
-git commit -am "ran composer prepare-for-pantheon and install"
+git add .
+git commit -m "ran composer prepare-for-pantheon and install"
 git push origin composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
 
-If your plan does not include Multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a [local development](/local-development) solution, consider testing your `composerify` branch locally before merging.
+### Deploy to Dev
+
+If you have a [local development](/local-development) solution, consider testing your `composerify` branch locally before merging.
+
+To force push the changes from the local branch to the `master` Dev branch:
 
 ```bash{promptUser:user}
-git commit -am "ran composer prepare-for-pantheon and install"
-git push -f origin master
+git add .
+git commit -m "ran composer prepare-for-pantheon and install"
+git push -f origin composerify:master
 ```
 
 ## Change Upstreams
 
-Your Pantheon site is no longer compatible with traditional upstream updates. Avoid confusion by moving your site to an empty upstream:
+Set the site to use the Drupal 9 Upstream:
 
 ```bash{promptUser:user}
 terminus site:upstream:set $site drupal9
