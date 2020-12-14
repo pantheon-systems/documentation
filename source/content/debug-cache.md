@@ -84,11 +84,11 @@ Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues
 
 </Alert>
 
-Search for instances across the site's codebase and once isolated, edit the cookie name so that is matches the [`STYXKEY[a-zA-Z0-9_-]+` naming convention](/caching-advanced-topics#using-styxkey).
+Search for instances of the cookie name across the site's codebase and once isolated, edit the cookie name so that is matches the [`STYXKEY[a-zA-Z0-9_-]+` naming convention](/caching-advanced-topics#using-styxkey).
 
 Next, wrap a conditional statement around the `setcookie();` function to check whether the cookie is already defined in the request. The goal of this effort is to send `set-cookie` only on the initial request, and never on subsequent requests. For a code example, see [Working with Cookies on Pantheon](/cookies#cache-varying-cookies).
 
-The initial request will still break through the cache. That's expected, because it would not find anything defined for the cookie. Subsequent requests back to the site should find the cookie data defined in the request headers. Subsequent requests should not be sending `set-cookie` and should now be served by cache.
+The initial request will still break through the cache. That's expected, because it would not find anything defined for the cookie. Subsequent requests back to the site should now be served by the cache, as the cookie is already set.
 
 #### Cookie alternatives
 
