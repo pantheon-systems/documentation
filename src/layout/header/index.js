@@ -190,7 +190,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        logo: file(relativePath: { eq: "Pantheon_Color_rev_clear.png" }) {
+        logo: file(relativePath: { eq: "logo-pantheon-logotype.png" }) {
           childImageSharp {
             fluid {
               src
