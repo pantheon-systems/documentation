@@ -126,7 +126,7 @@ There are plugins for WordPress that do not require `.htaccess` to set security 
 
 Adding code like the example below in a plugin (or [mu-plugin](/mu-plugin)) can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
 
-The code below is only an example to get you started. You'll need to modify it to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers, and links to additional information on how to improve your security header profile.
+The code below is only an example to get you started. You'll need to modify it to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers, and link to additional information on how to improve your security header profile.
 
 ```php
 function additional_securityheaders( $headers ) {
@@ -144,4 +144,4 @@ function additional_securityheaders( $headers ) {
 add_filter( 'wp_headers', 'additional_securityheaders' );
 ```
 
-**Note:** Because the headers are applied by php code when WordPress is invoked, they will not be added when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
+**Note:** Because the headers are applied by PHP code when WordPress is invoked, they will not be added when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
