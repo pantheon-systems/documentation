@@ -303,7 +303,7 @@ Sites migrated from hosts using `utf8mb3` are upgraded to `utf8mb4`. If those si
 Index column size too large. The maximum column size is 767 bytes
 ```
 
-The offending tables will need to be updated. One method to update index length uses the `ALTER TABLE` command:
+These tables will need to be updated. One method to update index length uses the `ALTER TABLE` command:
 
 ```sql
 ALTER TABLE tableName DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
