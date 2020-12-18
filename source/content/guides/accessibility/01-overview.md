@@ -34,15 +34,15 @@ For each guideline, there are testable success criteria at [three levels](https:
 
 ### Semantic HTML
 
-Using Semantic HTML regions, logical header order in page construction are best practices that significantly improve the operability and navigation of a site or application. 
+Using Semantic HTML regions and logical header order in page construction are best practices that significantly improve the operability and navigation of a site or application. 
 
 ### HTML controls and ARIA roles
 
 Use native HTML elements (such as `<button>` rather than `<div role="button">`) whenever possible, to simplify development. HTML elements have built-in handlers for receiving focus and activation that ensure they will work for those relying on keyboard navigation without additional scripting.
 
-## How accessibility impacts SEO
+## User experience, digital accessibility, and SEO
 
-Making a website fast is no longer enough to achieve the top spots on search results pages. User experience matters. Google's [Core Web Vitals](https://web.dev/learn-web-vitals/) shift SEO to focus on multiple factors (including page speed) that contribute to great user experience. So removing barriers to use is key to SEO.
+Making a website fast is no longer enough to achieve the top spots on search results pages. Great user experience matters. Google's [Core Web Vitals](https://web.dev/learn-web-vitals/), the scoring system that is part of Google's page ranking calculations, shift search engine optimization (SEO) to focus on multiple factors (including page speed) that contribute to great user experience. So removing barriers to use is key to SEO.
 
 ## Where to start
 
