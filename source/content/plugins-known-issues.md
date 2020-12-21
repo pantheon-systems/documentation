@@ -523,7 +523,32 @@ ___
 
 ___
 
-## ManageWP Worker
+## [Jetpack](https://wordpress.org/plugins/jetpack/)
+
+<ReviewDate date="2020-12-21" />
+
+**Issue 1:** Plugin requires the XMLRPC interface to communicate with Automattic servers. The Pantheon WordPress upstream disables access to the XMLRPC endpoint by default as it is a common scanning target for bots and sees lots of invalid traffic.
+
+**Solution:** Modify your site's `pantheon.yml` to [allow access](/docs/pantheon-yml#protected-web-paths-override) to the xmlrpc.php path.
+Add the following:
+```
+protected_web_paths_override: true
+protected_web_paths:
+  - /private
+  - /wp-content/uploads/private
+```
+This will maintian the normal privacy settings for other paths, but will allow XMLRPC to work again.
+
+___
+
+## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
+
+**Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
+
+**Solution:** If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
+___
+
+## [ManageWP worker](https://wordpress.org/plugins/worker/)
 
 <ReviewDate date="2018-10-12" />
 
