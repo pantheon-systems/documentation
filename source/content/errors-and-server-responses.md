@@ -36,7 +36,7 @@ This issue can happen with HTTP Basic Auth and Drupal’s AJAX, as it doesn't al
 We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for JS files, that is the best solution.
 
 ### Pantheon 502 Bad Gateway
-"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx (the web server) will report this problem.
+"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, nginx (the web server) will report this problem.
 
 ### Pantheon 502 Routing failure
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
@@ -61,7 +61,15 @@ This error generally occurs when a request timeouts. If end user pages take long
 If you get a generic Service Unavailable and you're using AJAX when HTTP Basic Auth is enabled (the security username/password), then that's a misleading message. The best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon 504 Target Not Responding
-"The web page you were looking for could not be delivered." No php workers are available to handle the request. These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
+"The web page you were looking for could not be delivered." 
+
+A common cause for this error is an [idle container](/application-containers#idle-containers) that has spun down due to inactivity. Wake the environment by loading the home page in your browser or using the [`terminus env:wake` command](/terminus/commands/env-wake).
+
+"No php workers are available to handle the request."
+
+ These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit is reached, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. 
+ 
+ Once the nginx queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
 
 This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/site-plan).
 
