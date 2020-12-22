@@ -1,10 +1,39 @@
 import React from 'react'
-import WPapiRef from '../../../source/data/wpApiRef.json'
+//import WPapiRef from '../../../source/data/wpApiRef.json'
 import Accordion from './accordion/'
 import './commands/style.css'
 
+const apiSource = 'https://demo.wp-api.org/wp-json/wp/v2/'
+const options = ["posts", "blocks", "categories", "tags", "pages", "comments", "taxonomies", "media", "users", "types", "statuses", "settings", "themes"]
+
+let apiRef = {}
+
+const getAPIRef = async (url, option) => {
+  try{
+    const response = await fetch(`${apiSource}${option}`, {
+      method: 'OPTIONS',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    if (response.ok) {
+      const jsonResponse = await response.json
+      return jsonResponse
+    }
+  } catch(error) {
+    console.log(error)
+  }
+}
+
+options.forEach(opt => {
+  apiRef[opt] = getAPIRef(apiSource, opt)
+})
+
+console.log(options)
+
 const WordPressAPIRef = (props) => {
-    const object = WPapiRef[`${props.object}`]
+    //const object = WPapiRef[`${props.object}`]
     //console.log("API Object: ", object)
     const getArgs = object.endpoints[0]
     const postArgs = object.endpoints[1]
