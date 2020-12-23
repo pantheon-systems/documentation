@@ -152,6 +152,13 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 ### Can I use a Composer GUI?
 
 Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+
+### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
+
+Integrated Composer needs to consider the use-case where a site might already have non-Composer-managed modules in the standard `/modules/contrib` directory. To support this, we create the `modules/composer` directory for modules added by Integrated Composer.
+
+If your site does not fall into this category, it is safe to rename the `composer` directory back to the standard `contrib`.
+
 ### What features are planned for Integrated Composer on Pantheon?
 
 Pantheon's devs are working hard to make the Integrated Composer experience on Pantheon better.
