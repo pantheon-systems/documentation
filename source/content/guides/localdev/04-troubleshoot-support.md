@@ -48,6 +48,19 @@ The contents of `wp-contents/uploads` should be symlinked to files, in keeping w
 
 You can [contact support](#contact-support) for help moving your files out of the codebase.
 
+### Clone of a New Site Failed
+
+If you attempt to clone a site before opening the admin panel to initialize the database, Localdev will fail to pull it locally. The logs under **show detail (beta)** will show:
+
+```docker
+Pulling your database... This miiiiight take a minute
+ [notice] Command: anita-wordpress.dev -- wp db export [Exit: 0]
+Checking db pull for expected tables...
+Database pull failed...
+```
+
+See step 9 of [Create a Site](/create-sites#create-a-site).
+
 ### Log out and Reset to Defaults
 
 The steps in this section should only be used as a last resort. This resets Localdev and will remove the machine token and all local copies of your connected sites.
