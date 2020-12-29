@@ -10,11 +10,13 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 <Alert title="Note" type="info" >
 
-To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through December 31, 2020. See the [blog post](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1st) for more information (note: this offer has been extended since the post was published).
+Pantheon is extending our [COVID WebOps offer](http://pantheon.io/blog/supporting-orgs-on-covid-19-front-line?docs) to qualified government, medical, or educational institutions with a crisis communications website, and to non-profit organizations directly providing relief.
+
+We launched this initiative at the beginning of COVID-19 to support organizations responding to the pandemic or delivering vital information to the public. This evolved to include a pre-built response site to allow organizations on the COVID-19 front lines to deploy rapidly and deliver emergency communications.
 
 </Alert>
 
-Multidev is available to all accounts ~~with [Gold support](/support/#support-features-and-response-times) and above~~ through December 31, 2020. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
+Multidev is available to all accounts with [Gold support](/support/#support-features-and-response-times) and above. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
@@ -54,9 +56,11 @@ Branch names can contain any ASCII letter and number (a through z, 0 through 9) 
 Yes, you can; your Git repository is not restricted. If you do not use Multidev, then the interface will not show the branches, allow creation of an environment for a branch, and so forth.
 
 ## Can I create a new environment for my local branch?
+
 Yes. Push a new branch from your local (e.g., `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
 
 ## Is there a limit on the number of branches or environments?
+
 There is no limit on the number of branches you can have in your Git repository. The limit on Multidev environments is 10 per site.
 
 ## Can I associate a domain with a branch environment?
@@ -84,4 +88,5 @@ Yes, you can backup and restore a branch environment. However, if you restore an
 If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
 
 ## Creating a Multidev Failed - Specified Key Was Too Long
+
 Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb).
