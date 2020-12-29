@@ -22,9 +22,7 @@ Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs)
 
 ### Should I have access to Multidev?
 
-Yes! Multidev is available to all users until through December 31, 2020.
-
-After that, users will have access to Multidev if they:
+Users have access to Multidev if they:
 
 - Have been assigned a role as a member of an Organization that has the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs)).
 - Are a Direct Online customer with Gold support or above.
