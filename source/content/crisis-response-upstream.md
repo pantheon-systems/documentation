@@ -14,7 +14,7 @@ The **Pantheon Crisis Response WordPress Upstream** is a specialized WordPress [
 
 ![Crisis Response WP home page](../images/covid-response-home.png)
 
-If you are a government, medical, or educational institution with a crisis communications website, or a non-profit organization directly providing relief, we will [provide the full service of our WebOps platform](https://pantheon.io/resources-navigate-covid-19) at no charge through December 31, 2020. We want you to deliver vital information to the public without worrying about traffic cost or site availability.
+If you are a government, medical, or educational institution with a crisis communications website, or a non-profit organization directly providing relief, we will [provide the full service of our WebOps platform](https://pantheon.io/resources-navigate-covid-19) at no charge. We want you to deliver vital information to the public without worrying about traffic cost or site availability.
 
 ## Features
 
