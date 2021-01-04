@@ -86,37 +86,46 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
   <Tab title="Drupal 8" id="d8tab" active={true}>
 
   ```php
-  if (!defined('PANTHEON_ENVIRONMENT')) {
-      $config['environment_indicator.indicator']['name'] = 'Local';
-      $config['environment_indicator.indicator']['bg_color'] = '#808080';
-      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+/*
+* Environment Indicator module settings.
+* see: https://pantheon.io/docs/environment-indicator
+*/
+
+if (!defined('PANTHEON_ENVIRONMENT')) {
+    $config['environment_indicator.indicator']['name'] = 'Local';
+    $config['environment_indicator.indicator']['bg_color'] = '#808080';
+    $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+  }
+  // Pantheon Env Specific Config
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+      case 'localdev': // Localdev or Lando environments
+        $config['environment_indicator.indicator']['name'] = 'LocalDev';
+        $config['environment_indicator.indicator']['bg_color'] = '#808080';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      case 'dev':
+        $config['environment_indicator.indicator']['name'] = 'Dev';
+        $config['environment_indicator.indicator']['bg_color'] = '#d25e0f';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      case 'test':
+        $config['environment_indicator.indicator']['name'] = 'Test';
+        $config['environment_indicator.indicator']['bg_color'] = '#c50707';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      case 'live':
+        $config['environment_indicator.indicator']['name'] = 'Live!';
+        $config['environment_indicator.indicator']['bg_color'] = '#4C742C';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      default:
+        // Multidev catchall
+        $config['environment_indicator.indicator']['name'] = 'Multidev';
+        $config['environment_indicator.indicator']['bg_color'] = '#efd01b';
+        $config['environment_indicator.indicator']['fg_color'] = '#000000';
+        break;
     }
-    // Pantheon Env Specific Config
-    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-      switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-        case 'dev':
-          $config['environment_indicator.indicator']['name'] = 'Dev';
-          $config['environment_indicator.indicator']['bg_color'] = '#d25e0f';
-          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-          break;
-        case 'test':
-          $config['environment_indicator.indicator']['name'] = 'Test';
-          $config['environment_indicator.indicator']['bg_color'] = '#c50707';
-          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-          break;
-        case 'live':
-          $config['environment_indicator.indicator']['name'] = 'Live!';
-          $config['environment_indicator.indicator']['bg_color'] = '#4C742C';
-          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-          break;
-        default:
-          // Multidev catchall
-          $config['environment_indicator.indicator']['name'] = 'Multidev';
-          $config['environment_indicator.indicator']['bg_color'] = '#efd01b';
-          $config['environment_indicator.indicator']['fg_color'] = '#000000';
-          break;
-      }
-    }
+  }
   ```
 
   </Tab>
@@ -124,6 +133,11 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
   <Tab title="Drupal 7" id="d7tab">
 
   ```php
+  /*
+  * Environment Indicator module settings.
+  * see: https://pantheon.io/docs/environment-indicator
+  */
+  
   $conf['environment_indicator_overwrite'] = TRUE;
     $conf['environment_indicator_overwritten_position'] = 'top';
     $conf['environment_indicator_overwritten_fixed'] = FALSE;
@@ -136,6 +150,10 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
     // Pantheon Env Specific Config
     if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
         switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+          case 'localdev': // Localdev or Lando environments
+            $config['environment_indicator.indicator']['name'] = 'LocalDev';
+            $config['environment_indicator.indicator']['bg_color'] = '#808080';
+            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
           case 'dev':
             $conf['environment_indicator_overwritten_name'] = 'Dev';
             $conf['environment_indicator_overwritten_color'] = '#d25e0f';
