@@ -113,7 +113,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
       // Pantheon Env Specific Config
       if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
         switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-          case 'localdev': // Localdev or Lando environments
+          case 'lando': // Localdev or Lando environments
             $config['environment_indicator.indicator']['name'] = 'LocalDev';
             $config['environment_indicator.indicator']['bg_color'] = '#808080';
             $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
@@ -164,7 +164,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
       // Pantheon Env Specific Config
       if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
           switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-            case 'localdev': // Localdev or Lando environments
+            case 'landos': // Localdev or Lando environments
               $config['environment_indicator.indicator']['name'] = 'LocalDev';
               $config['environment_indicator.indicator']['bg_color'] = '#808080';
               $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
