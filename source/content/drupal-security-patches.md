@@ -12,11 +12,12 @@ When Drupal releases critical security releases, Pantheon takes immediate steps 
 - use a [Custom Upstream](/custom-upstream) or [Public Distribution](/start-state/#public-distributions) which hasn't been patched, or no upstream
 - encounter merge conflicts when applying upstream updates
 
-
 This doc describes how to manually patch your Drupal core.
 
 <Alert title="Warning" type="danger">
+
 Use the [standard process to update core](/core-updates) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.
+
 </Alert>
 
 Visit the [Drupal Security page](https://www.drupal.org/security) for the latest Drupal security announcements and patches.
@@ -103,4 +104,4 @@ done
 
 ## See Also
 
- - [Drupal Security Advisory](https://www.drupal.org/security)
+- [Drupal Security Advisory](https://www.drupal.org/security)
