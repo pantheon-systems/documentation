@@ -19,6 +19,21 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 <Partial file="drupal-9-upstream-install.md" />
 
+### Drupal 8 with Integrated Composer
+
+1. Follow step 1 of the [Drupal 9](#drupal-9-with-integrated-composer) section above.
+
+1. Keep the site's Development Mode set to Git, and [clone the site locally](/local-development#get-the-code).
+
+1. From a terminal working in the project root directory, update Composer's version requirements for the project:
+
+  ```bash{outputLines: 2}
+  composer require drupal/core-composer-scaffold:^8.8 \
+  drupal/core-recommended:^8.8 pantheon-systems/drupal-integrations:^8
+  ```
+
+1. Run `composer install`, then commit and push the resulting changes to Pantheon.
+
 ### WordPress with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
