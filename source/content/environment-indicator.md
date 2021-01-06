@@ -114,7 +114,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
       if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
         switch ($_ENV['PANTHEON_ENVIRONMENT']) {
           case 'lando': // Localdev or Lando environments
-            $config['environment_indicator.indicator']['name'] = 'LocalDev';
+            $config['environment_indicator.indicator']['name'] = 'Local Dev';
             $config['environment_indicator.indicator']['bg_color'] = '#808080';
             $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
           case 'dev':
@@ -165,7 +165,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
       if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
           switch ($_ENV['PANTHEON_ENVIRONMENT']) {
             case 'landos': // Localdev or Lando environments
-              $config['environment_indicator.indicator']['name'] = 'LocalDev';
+              $config['environment_indicator.indicator']['name'] = 'Local Dev';
               $config['environment_indicator.indicator']['bg_color'] = '#808080';
               $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
             case 'dev':
@@ -203,10 +203,12 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus env:deploy $site.test --sync-content --cc --updatedb --note="Install and configure Environment Indicator"
  ```
 
+  If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
+
 1. Deploy the module to the Live environment within the Site Dashboard or with Terminus:
 
- ```bash{promptUser: user}
- terminus env:deploy $site.live --cc --updatedb --note="Install and configure Environment Indicator"
- ```
+  ```bash{promptUser: user}
+  terminus env:deploy $site.live --cc --updatedb --note="Install and configure Environment Indicator"
+  ```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
