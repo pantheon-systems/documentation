@@ -25,7 +25,7 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. Keep the site's Development Mode set to Git, and [clone the site locally](/local-development#get-the-code).
 
-1. From a terminal working in the project root directory, update Composer's version requirements for the project:
+1. From a terminal working in the "upstream-configuration" directory, update Composer's version requirements for the project:
 
   ```bash{outputLines: 2}
   composer require drupal/core-composer-scaffold:^8.8 \
