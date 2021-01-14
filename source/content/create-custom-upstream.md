@@ -172,7 +172,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash{promptUser: user}
-    git checkout master
+    git checkout -b master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
     git push origin master
@@ -183,7 +183,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 8" id="d81">
 
     ```bash{promptUser: user}
-    git checkout master
+    git checkout -b master
     git fetch pantheon-drops-8
     git merge pantheon-drops-8/master
     git push origin master
@@ -194,7 +194,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title=" Drupal 7" id="d71">
 
     ```bash{promptUser: user}
-    git checkout master
+    git checkout -b master
     git fetch pantheon-drops-7
     git merge pantheon-drops-7/master
     git push origin master
