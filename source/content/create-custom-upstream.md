@@ -307,7 +307,12 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 
 1. From the repository, click on **<i class="fa fa-gear"></i> Settings**, then **Repository**.
 
-1. Click **Expand** next to **Deploy Tokens** and fill out at least a name for the token. You can optionally define an expiration date and username. We suggest setting a custom username to provide to Pantheon Support. Give the token the **read_repository** scope:
+1. Click **Expand** next to **Deploy Tokens** and fill out the fields:
+
+    - **Name**: Used to identify the token in GitLab.
+    - **Expires at**: We recommend leaving this blank. If the token expires, you will need to create a new one and contact Pantheon Support again to update it.
+    - **Username**: We suggest setting a custom username to provide to Pantheon Support.
+    - Give the token the **read_repository** scope.
 
     ![Adding a deploy token to a GitLab repository](../images/gitlab-deploy-token.png)
 
