@@ -305,21 +305,19 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
 
-1. Prepare a new GitLab user specifically for Pantheon access.
+1. From the repository, click on **<i class="fa fa-gear"></i> Settings**, then **Repository**.
 
-1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
+1. Click **Expand** next to **Deploy Tokens** and fill out at least a name for the token. You can optionally define an expiration date and username. We suggest setting a custom username to provide to Pantheon Support. Give the token the **read_repository** scope:
 
-    ![GitLab Personal Access Token](../images/gitlab-api.png)
+    ![Adding a deploy token to a GitLab repository](../images/gitlab-deploy-token.png)
 
-1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
-
-    ![GitLab reporter permission](../images/gitlab-reporter.png)
+1. After you click **Create deploy token**, save the token immediately to provide to Pantheon Support. GitLab will not show it again.
 
 1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
 
    - A name for the custom upstream,
    - The `https` clone URL (ending in `.git`),
-   - The Access Token for the new user.
+   - The Username and Access Token for the deploy token.
 
 </Tab>
 
