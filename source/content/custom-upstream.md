@@ -53,16 +53,18 @@ Spend less time doing non-core activities and reclaim lost billable hours where 
 
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
 
-<div class="upstream-overview-outter-clear">
-<div class="upstream-overview-outter">
-<div class="upstream-content-inner-icon">
+<div className="upstream-overview-outter-clear">
+<div className="upstream-overview-outter">
+<div className="upstream-content-inner-icon">
 
 ![Parent upstream level](../images/levelone-icon.png)
 
-- Core Updates
+<ul class="upstream">
+<li>Core Updates</li>
+</ul>
 
 </div>
-<div class="upstream-content-inner-content">
+<div className="upstream-content-inner-content">
 <h3>Level 1: Pantheon's Core Upstream</h3>
 
 The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
@@ -70,17 +72,19 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 </div>
 </div>
 </div>
-<div class="upstream-overview-outter-clear">
-<div class="upstream-overview-outter">
-<div class="upstream-content-inner-icon">
+<div className="upstream-overview-outter-clear">
+<div className="upstream-overview-outter">
+<div className="upstream-content-inner-icon">
 
 ![Custom upstream level](../images/leveltwo-icon.png)
 
-- Parent Theme
-- Common plugins / Contrib modules
+<ul class="upstream">
+<li>Parent Theme</li>
+<li>Common plugins / Contrib modules</li>
+</ul>
 
 </div>
-<div class="upstream-content-inner-content">
+<div className="upstream-content-inner-content">
 <h3>Level 2: Your Custom Upstream</h3>
 
 The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
@@ -90,8 +94,8 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 </div>
 </div>
 </div>
-<div class="upstream-overview-outter">
-<div class="upstream-content-inner-icon">
+<div className="upstream-overview-outter">
+<div className="upstream-content-inner-icon">
 
 ![Site upstream level](../images/levelthree-icon.png)
 
@@ -100,7 +104,7 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 <li>Site-specific plugins / Custom code</li>
 </ul>
 </div>
-<div class="upstream-content-inner-content">
+<div className="upstream-content-inner-content">
 <h3>Level 3: Site Repository</h3>
 
 Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
