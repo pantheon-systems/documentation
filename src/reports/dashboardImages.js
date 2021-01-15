@@ -21,7 +21,9 @@ const CollapImage = (props) => {
       <Image
         style={ hideImg ?
           {
-            height: "20px"
+            height: "20px",
+            borderStyle: "solid",
+            borderWidth: "2px",
           } : null
         }
         onClick={handleImgClick}
@@ -49,6 +51,13 @@ class DashboardImages extends React.Component {
       <StaticQuery
         query={graphql`
           query {
+            allFile(filter: {extension: {regex: "/(jpg|png)/"}, relativeDirectory: {eq: "dashboard"}}) {
+              edges {
+                node {
+                  relativePath
+                }
+              }
+            }
             allMdx(filter: {rawBody: {regex: "/dashboard\\/[\\S]+.(jpg|png)/"}}) {
               edges {
                 node {
@@ -73,14 +82,15 @@ class DashboardImages extends React.Component {
 
           /* Construct the constants for each of our Graphql Queries */
           const pages = data.allMdx.edges
-          console.log(pages)
-
+          //console.log(pages)
           const tertiaryPages = data.allMdx.edges.filter(
             page => {
               return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
             }
           )
           //console.log(tertiaryPages)
+          const dashImgs = data.allFile.edges
+          //console.log(dashImgs)
 
 
           const makeNewIssue = (page) => {
@@ -152,9 +162,57 @@ class DashboardImages extends React.Component {
                 </div>
               </div>
 
+              {/* Table of docs sorted by Image */}
+              <Accordion title="Pages per Image" active={true} id="pagePerImg">
+              <div className="table-responsive">
+                <table className="table table-commands table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th width="33%">Image Preview</th>
+                    <th width="33%">Path</th>
+                    <th>Used In</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    {dashImgs.map((img, i) => {
+                      const imgPath = img.node.relativePath
+                      return(
+                        <tr key={i}>
+                          <td>
+                            <CollapImage path={imgPath} />
+                          </td>
+                          <td>
+                            {imgPath}
+                          </td>
+                          <td>
+                            {pages.filter(page => {
+                              const slug = page.node.fields.slug
+                              const body = page.node.rawBody.toLowerCase()
+                              return (
+                                body.indexOf(imgPath) >= 0
+                              )
+                              })
+                              .map((page) => {
+                                const slug = page.node.fields.slug
+                                return (
+                                  <>
+                                  <Link to={slug.includes('guides/') ? `${slug}` :`/${slug}`} >{slug}</Link><br /> <br />
+                                  </>
+                                )
+                              })
+                            }
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              </Accordion>
 
 
-              {/* Table of Docs */}
+              {/* Table of images sorted by Doc */}
+              <Accordion title="Images per Page" id="imgPerPage" >
               <div className="table-responsive">
                 <table className="table table-commands table-bordered table-striped">
                   <thead>
@@ -217,6 +275,7 @@ class DashboardImages extends React.Component {
                   </tbody>
                 </table>
               </div>
+              </Accordion>
             </Layout>
           )
         }}
