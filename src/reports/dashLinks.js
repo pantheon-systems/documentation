@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
 //import newGitHubIssueUrl from "new-github-issue-url"
@@ -8,7 +8,7 @@ This report provides all links to Dashboard pages and features, for quick
 reference when they are updates or changed in the product.
 */
 
-// Helper / Builder Functions
+// Helper / Builder Functions //
 
 /* This function filters an array to unique entities, without changing the
 object type to a set. */
@@ -53,7 +53,7 @@ const SearchField = props => {
   )
 }
 
-// Main Page Component
+// Main Page Component //
 
 // Create the React Component as a function
 const DashLinks = () => {
@@ -79,11 +79,6 @@ const DashLinks = () => {
     }
   `)
 
-  /* These objects contain the data used in the search fields on the page to
-  filter the results */
-  const [searchTitle, setSearchTitle] = useState("")
-  const [searchLinks, setSearchLinks] = useState("")
-
   //These objects are shorthand references to data in the query.
   const pages = queryData.allMdx.edges //All Pages
   const tertiaryPages = queryData.allMdx.edges.filter(
@@ -93,10 +88,20 @@ const DashLinks = () => {
     }
   )
 
-  const ResultsTable = () => {
-    return (
-      <tbody>
-        {pages
+  /* These objects contain the data used in the search fields on the page to
+  filter the results */
+  const [searchTitle, setSearchTitle] = useState("")
+  const [searchLinks, setSearchLinks] = useState("")
+
+  // And one for the table data, filtered by the search fields
+  const [filteredPages, setFilteredPages] = useState(pages)
+
+  /* This call to the useEffect hook applies the filtering to our results table
+  if either search term has a value.*/
+  useEffect(() => {
+    if (searchTitle || searchLinks) {
+      const applyFilter = data =>
+        data
           .filter(page => {
             return (
               page.node.frontmatter.title
@@ -106,32 +111,42 @@ const DashLinks = () => {
           })
           .filter(page => {
             return (
-              page.node.body
-                .toLowerCase()
-                .indexOf(searchLinks.toLowerCase()) >= 0
+              page.node.body.toLowerCase().indexOf(searchLinks.toLowerCase()) >=
+              0
             )
           })
-          .map((page, i) => {
-            return (
-              <tr key={i}>
-                <td>{page.node.frontmatter.title || "Partial File"}</td>
-                <td>{page.node.fields.slug}</td>
-                <td>
-                  {uniq(
-                    page.node.body
-                      .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g))
-                      .map((link, i) => link + "\n")
-                  )}
-                </td>
-              </tr>
-            )
-          })}
+      setFilteredPages(applyFilter(pages))
+    } else {
+      setFilteredPages(pages)
+    }
+  }, [pages, searchTitle, searchLinks, setFilteredPages])
+
+  /* Component to construct the table body by mapping on the pages data, after
+  it's been filtered by the search terms*/
+  const ResultsTable = () => {
+    return (
+      //Construct a table body
+      <tbody>
+        {filteredPages.map((page, i) => {
+          return (
+            <tr key={i}>
+              <td>{page.node.frontmatter.title || "Partial File"}</td>
+              <td>{page.node.fields.slug}</td>
+              <td>
+                {uniq(
+                  page.node.body
+                    .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g))
+                    .map((link, i) => link + "\n")
+                )}
+              </td>
+            </tr>
+          )
+        })}
       </tbody>
     )
   }
 
   // Render
-
   return (
     <Layout>
       <SearchField
