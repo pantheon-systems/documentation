@@ -81,8 +81,7 @@ const DashLinks = () => {
 
   //These objects are shorthand references to data in the query.
   const pages = queryData.allMdx.edges //All Pages
-  const tertiaryPages = queryData.allMdx.edges.filter(
-    //All guide sub-pages
+  const tertiaryPages = queryData.allMdx.edges.filter( //All guide sub-pages
     page => {
       return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
     }
@@ -99,27 +98,26 @@ const DashLinks = () => {
   /* This call to the useEffect hook applies the filtering to our results table
   if either search term has a value.*/
   useEffect(() => {
-    if (searchTitle || searchLinks) {
-      const applyFilter = data =>
+    if (searchTitle || searchLinks) { //If either search field has a value...
+      const applyFilter = data => // Define a function to filter the table, using data as a placeholder value,
         data
-          .filter(page => {
+          .filter(page => { // Filter out objects where the title doesn't match the title search value,
             return (
               page.node.frontmatter.title
                 .toLowerCase()
                 .indexOf(searchTitle.toLowerCase()) >= 0
             )
           })
-          .filter(page => {
+          .filter(page => { // Filter objects where the body doesn't contain the specified link string,
             return (
-              page.node.body.toLowerCase().indexOf(searchLinks.toLowerCase()) >=
-              0
+              page.node.body.toLowerCase().indexOf(searchLinks.toLowerCase()) >= 0
             )
           })
-      setFilteredPages(applyFilter(pages))
+      setFilteredPages(applyFilter(pages)) //Apply the filter function to the pages,
     } else {
-      setFilteredPages(pages)
+      setFilteredPages(pages) // Return the full set if no search terms are applied.
     }
-  }, [pages, searchTitle, searchLinks, setFilteredPages])
+  }, [pages, searchTitle, searchLinks, setFilteredPages]) //If the data in any of these objects changes, the useEffect hook is called.
 
   /* Component to construct the table body by mapping on the pages data, after
   it's been filtered by the search terms*/
@@ -127,16 +125,16 @@ const DashLinks = () => {
     return (
       //Construct a table body
       <tbody>
-        {filteredPages.map((page, i) => {
+        {filteredPages.map((page, i) => { // Map over each page and,
           return (
-            <tr key={i}>
-              <td>{page.node.frontmatter.title || "Partial File"}</td>
-              <td>{page.node.fields.slug}</td>
+            <tr key={i}> {/*Create a table row*/}
+              <td>{page.node.frontmatter.title || "Partial File"}</td> {/*Provide the page title, or specify a partial file if there isn't one*/}
+              <td>{page.node.fields.slug}</td> {/*Provide the path to the page*/}
               <td>
-                {uniq(
-                  page.node.body
-                    .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g))
-                    .map((link, i) => link + "\n")
+                {uniq( //Return only one unique instance where,
+                  page.node.body //in the body
+                    .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g)) // there's a reference to a dashboard page,
+                    .map((link, i) => link + "\n") // and list each one on a new line.
                 )}
               </td>
             </tr>
