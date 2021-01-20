@@ -13,19 +13,19 @@ reference when they are updates or changed in the product.
 /* This function filters an array to unique entities, without changing the
 object type to a set. */
 function uniq(a) {
-  var seen = {};
+  var seen = {}
   return a.filter(function(item) {
-    return seen.hasOwnProperty(item) ? false : (seen[item] = true);
-  });
+    return seen.hasOwnProperty(item) ? false : (seen[item] = true)
+  })
 }
 
 /* This function creates a search field  component. it accepts as arguments
 the object and object setter used to represent the data it's filtering on,*/
-const SearchField = (props) => {
+const SearchField = props => {
   const title = props.title
   const data = props.data
   const dataSetter = props.dataSetter
-  
+
   return (
     <div className="form-group">
       <div className="input-group">
@@ -57,14 +57,13 @@ const SearchField = (props) => {
 
 // Create the React Component as a function
 const DashLinks = () => {
-
-// Data
+  // Data
 
   /* Create a function to query all pages that include a dashboard link,
   excluding the base domain dashboard.pantheon.io. */
   const queryData = useStaticQuery(graphql`
     query {
-      allMdx(filter: {body: {regex: "/dashboard.pantheon.io\\/[a-z]/"}}) {
+      allMdx(filter: { body: { regex: "/dashboard.pantheon.io/[a-z]/" } }) {
         edges {
           node {
             fields {
@@ -87,19 +86,29 @@ const DashLinks = () => {
 
   //These objects are shorthand references to data in the query.
   const pages = queryData.allMdx.edges //All Pages
-  const tertiaryPages = queryData.allMdx.edges.filter( //All guide sub-pages
+  const tertiaryPages = queryData.allMdx.edges.filter(
+    //All guide sub-pages
     page => {
       return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
     }
   )
-  
 
-// Render
+  // Render
 
   return (
     <Layout>
-      <SearchField title="Doc Title" data={searchTitle} dataSetter={setSearchTitle} key="search1"/>
-      <SearchField title="Dashboard Link" data={searchLinks} dataSetter={setSearchLinks} key="search2"/>
+      <SearchField
+        title="Doc Title"
+        data={searchTitle}
+        dataSetter={setSearchTitle}
+        key="search1"
+      />
+      <SearchField
+        title="Dashboard Link"
+        data={searchLinks}
+        dataSetter={setSearchLinks}
+        key="search2"
+      />
       <div className="table-responsive">
         <table className="table table-commands table-bordered table-striped">
           <thead>
@@ -132,16 +141,23 @@ const DashLinks = () => {
               })
               .filter(page => {
                 return (
-                  page.node.body.toLowerCase()
-                  .indexOf(searchLinks.toLowerCase()) >= 0
+                  page.node.body
+                    .toLowerCase()
+                    .indexOf(searchLinks.toLowerCase()) >= 0
                 )
               })
               .map((page, i) => {
                 return (
                   <tr key={i}>
-                    <td>{page.node.frontmatter.title || 'Partial File'}</td>
+                    <td>{page.node.frontmatter.title || "Partial File"}</td>
                     <td>{page.node.fields.slug}</td>
-                    <td>{uniq(page.node.body.match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g)).map((link, i) => link + '\n'))}</td>
+                    <td>
+                      {uniq(
+                        page.node.body
+                          .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g))
+                          .map((link, i) => link + "\n")
+                      )}
+                    </td>
                   </tr>
                 )
               })}
@@ -150,7 +166,6 @@ const DashLinks = () => {
       </div>
     </Layout>
   )
-
 }
 
 export default DashLinks
