@@ -93,6 +93,43 @@ const DashLinks = () => {
     }
   )
 
+  const ResultsTable = () => {
+    return (
+      <tbody>
+        {pages
+          .filter(page => {
+            return (
+              page.node.frontmatter.title
+                .toLowerCase()
+                .indexOf(searchTitle.toLowerCase()) >= 0
+            )
+          })
+          .filter(page => {
+            return (
+              page.node.body
+                .toLowerCase()
+                .indexOf(searchLinks.toLowerCase()) >= 0
+            )
+          })
+          .map((page, i) => {
+            return (
+              <tr key={i}>
+                <td>{page.node.frontmatter.title || "Partial File"}</td>
+                <td>{page.node.fields.slug}</td>
+                <td>
+                  {uniq(
+                    page.node.body
+                      .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g))
+                      .map((link, i) => link + "\n")
+                  )}
+                </td>
+              </tr>
+            )
+          })}
+      </tbody>
+    )
+  }
+
   // Render
 
   return (
@@ -130,38 +167,7 @@ const DashLinks = () => {
               <th>Dashboard Link</th>
             </tr>
           </thead>
-          <tbody>
-            {pages
-              .filter(page => {
-                return (
-                  page.node.frontmatter.title
-                    .toLowerCase()
-                    .indexOf(searchTitle.toLowerCase()) >= 0
-                )
-              })
-              .filter(page => {
-                return (
-                  page.node.body
-                    .toLowerCase()
-                    .indexOf(searchLinks.toLowerCase()) >= 0
-                )
-              })
-              .map((page, i) => {
-                return (
-                  <tr key={i}>
-                    <td>{page.node.frontmatter.title || "Partial File"}</td>
-                    <td>{page.node.fields.slug}</td>
-                    <td>
-                      {uniq(
-                        page.node.body
-                          .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g))
-                          .map((link, i) => link + "\n")
-                      )}
-                    </td>
-                  </tr>
-                )
-              })}
-          </tbody>
+          <ResultsTable />
         </table>
       </div>
     </Layout>
