@@ -1,4 +1,12 @@
 releases:
+  - version: 1.0.1
+    date: 2020-12-14
+    requiresShutdown: true
+    changelog: !markdown |
+      ### Upstream changes
+        * Updated to Lando `3.0.24`
+        * Updated to Composer `2.0.7`
+        * Updated to Docker Desktop `3.0.1`
   - version: 1.0.0
     date: 2020-12-03
     requiresShutdown: true
