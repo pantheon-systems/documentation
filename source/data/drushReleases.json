@@ -1,5 +1,46 @@
 [
   {
+    "url": "https://api.github.com/repos/drush-ops/drush/releases/35960772",
+    "assets_url": "https://api.github.com/repos/drush-ops/drush/releases/35960772/assets",
+    "upload_url": "https://uploads.github.com/repos/drush-ops/drush/releases/35960772/assets{?name,label}",
+    "html_url": "https://github.com/drush-ops/drush/releases/tag/10.4.0-rc1",
+    "id": 35960772,
+    "author": {
+      "login": "weitzman",
+      "id": 7740,
+      "node_id": "MDQ6VXNlcjc3NDA=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7740?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/weitzman",
+      "html_url": "https://github.com/weitzman",
+      "followers_url": "https://api.github.com/users/weitzman/followers",
+      "following_url": "https://api.github.com/users/weitzman/following{/other_user}",
+      "gists_url": "https://api.github.com/users/weitzman/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/weitzman/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/weitzman/subscriptions",
+      "organizations_url": "https://api.github.com/users/weitzman/orgs",
+      "repos_url": "https://api.github.com/users/weitzman/repos",
+      "events_url": "https://api.github.com/users/weitzman/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/weitzman/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "MDc6UmVsZWFzZTM1OTYwNzcy",
+    "tag_name": "10.4.0-rc1",
+    "target_commitish": "10.x",
+    "name": "10.4.0-rc1",
+    "draft": false,
+    "prerelease": true,
+    "created_at": "2021-01-04T17:31:48Z",
+    "published_at": "2021-01-04T17:35:47Z",
+    "assets": [
+
+    ],
+    "tarball_url": "https://api.github.com/repos/drush-ops/drush/tarball/10.4.0-rc1",
+    "zipball_url": "https://api.github.com/repos/drush-ops/drush/zipball/10.4.0-rc1",
+    "body": "Moves migrate commands from migrate:run to Drush core https://www.drush.org/latest/migrate/"
+  },
+  {
     "url": "https://api.github.com/repos/drush-ops/drush/releases/33776746",
     "assets_url": "https://api.github.com/repos/drush-ops/drush/releases/33776746/assets",
     "upload_url": "https://uploads.github.com/repos/drush-ops/drush/releases/33776746/assets{?name,label}",
@@ -145,7 +186,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5001776,
-        "download_count": 3556,
+        "download_count": 6105,
         "created_at": "2020-10-01T01:34:01Z",
         "updated_at": "2020-10-01T01:34:01Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.4.5/drush.phar"
@@ -219,7 +260,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5001775,
-        "download_count": 53,
+        "download_count": 66,
         "created_at": "2020-10-01T00:46:54Z",
         "updated_at": "2020-10-01T00:46:55Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.4.4/drush.phar"
@@ -293,7 +334,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5001767,
-        "download_count": 31,
+        "download_count": 38,
         "created_at": "2020-10-01T00:21:17Z",
         "updated_at": "2020-10-01T00:21:18Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.4.3/drush.phar"
@@ -367,7 +408,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5001756,
-        "download_count": 1334,
+        "download_count": 1516,
         "created_at": "2020-09-14T20:35:33Z",
         "updated_at": "2020-09-14T20:35:33Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.4.2/drush.phar"
@@ -441,7 +482,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5001678,
-        "download_count": 1419,
+        "download_count": 1545,
         "created_at": "2020-08-21T23:49:30Z",
         "updated_at": "2020-08-21T23:49:30Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.4.1/drush.phar"
@@ -638,7 +679,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5001662,
-        "download_count": 1544,
+        "download_count": 2173,
         "created_at": "2020-08-04T03:08:28Z",
         "updated_at": "2020-08-04T03:08:29Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.4.0/drush.phar"
@@ -712,7 +753,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4998220,
-        "download_count": 221,
+        "download_count": 259,
         "created_at": "2020-08-02T03:07:53Z",
         "updated_at": "2020-08-02T03:07:53Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.6/drush.phar"
@@ -868,7 +909,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4996227,
-        "download_count": 82019,
+        "download_count": 105991,
         "created_at": "2020-05-30T02:20:28Z",
         "updated_at": "2020-05-30T02:20:29Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.5/drush.phar"
@@ -942,7 +983,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4995568,
-        "download_count": 247,
+        "download_count": 250,
         "created_at": "2020-05-29T04:06:02Z",
         "updated_at": "2020-05-29T04:06:02Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.4/drush.phar"
@@ -1016,7 +1057,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 5028695,
-        "download_count": 6882,
+        "download_count": 8263,
         "created_at": "2020-05-16T22:13:23Z",
         "updated_at": "2020-05-16T22:13:24Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.3/drush.phar"
@@ -1336,7 +1377,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4890093,
-        "download_count": 83434,
+        "download_count": 86836,
         "created_at": "2019-11-26T23:01:59Z",
         "updated_at": "2019-11-26T23:01:59Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.2/drush.phar"
@@ -1550,79 +1591,5 @@
     "tarball_url": "https://api.github.com/repos/drush-ops/drush/tarball/10.0.0-rc4",
     "zipball_url": "https://api.github.com/repos/drush-ops/drush/zipball/10.0.0-rc4",
     "body": "-  Fix [#3903](https://github.com/drush-ops/drush/issues/3903). Remove default DatabaseConnection during early bootstrap in site:install ([#4230](https://github.com/drush-ops/drush/issues/4230))\r\n-  Initial Drupal 9 compat. ([#4232](https://github.com/drush-ops/drush/issues/4232)) "
-  },
-  {
-    "url": "https://api.github.com/repos/drush-ops/drush/releases/20965268",
-    "assets_url": "https://api.github.com/repos/drush-ops/drush/releases/20965268/assets",
-    "upload_url": "https://uploads.github.com/repos/drush-ops/drush/releases/20965268/assets{?name,label}",
-    "html_url": "https://github.com/drush-ops/drush/releases/tag/8.3.1",
-    "id": 20965268,
-    "author": {
-      "login": "weitzman",
-      "id": 7740,
-      "node_id": "MDQ6VXNlcjc3NDA=",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/7740?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/weitzman",
-      "html_url": "https://github.com/weitzman",
-      "followers_url": "https://api.github.com/users/weitzman/followers",
-      "following_url": "https://api.github.com/users/weitzman/following{/other_user}",
-      "gists_url": "https://api.github.com/users/weitzman/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/weitzman/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/weitzman/subscriptions",
-      "organizations_url": "https://api.github.com/users/weitzman/orgs",
-      "repos_url": "https://api.github.com/users/weitzman/repos",
-      "events_url": "https://api.github.com/users/weitzman/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/weitzman/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "node_id": "MDc6UmVsZWFzZTIwOTY1MjY4",
-    "tag_name": "8.3.1",
-    "target_commitish": "346536f579a55a2e895d1434324521bab71459f9",
-    "name": null,
-    "draft": false,
-    "prerelease": false,
-    "created_at": "2019-10-24T23:13:00Z",
-    "published_at": "2019-10-24T23:40:54Z",
-    "assets": [
-      {
-        "url": "https://api.github.com/repos/drush-ops/drush/releases/assets/15713688",
-        "id": 15713688,
-        "node_id": "MDEyOlJlbGVhc2VBc3NldDE1NzEzNjg4",
-        "name": "drush.phar",
-        "label": "",
-        "uploader": {
-          "login": "weitzman",
-          "id": 7740,
-          "node_id": "MDQ6VXNlcjc3NDA=",
-          "avatar_url": "https://avatars0.githubusercontent.com/u/7740?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/weitzman",
-          "html_url": "https://github.com/weitzman",
-          "followers_url": "https://api.github.com/users/weitzman/followers",
-          "following_url": "https://api.github.com/users/weitzman/following{/other_user}",
-          "gists_url": "https://api.github.com/users/weitzman/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/weitzman/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/weitzman/subscriptions",
-          "organizations_url": "https://api.github.com/users/weitzman/orgs",
-          "repos_url": "https://api.github.com/users/weitzman/repos",
-          "events_url": "https://api.github.com/users/weitzman/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/weitzman/received_events",
-          "type": "User",
-          "site_admin": false
-        },
-        "content_type": "application/octet-stream",
-        "state": "uploaded",
-        "size": 4797229,
-        "download_count": 3718,
-        "created_at": "2019-10-24T23:40:53Z",
-        "updated_at": "2019-10-24T23:40:54Z",
-        "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.1/drush.phar"
-      }
-    ],
-    "tarball_url": "https://api.github.com/repos/drush-ops/drush/tarball/8.3.1",
-    "zipball_url": "https://api.github.com/repos/drush-ops/drush/zipball/8.3.1",
-    "body": null
   }
 ]
