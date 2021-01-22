@@ -38,6 +38,8 @@ Once you're added to the project, navigate to your existing Dashboard, and add `
 
 ### Autopilot
 
+[Autopilot](/autopilot) documentation.
+
 ## Utility Navigation
 
 Your user icon, Gravatar, or <i className="fa fa-user-circle"></i> by default, gives you quick access to your User Settings and information about who you're logged in as.
