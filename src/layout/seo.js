@@ -93,6 +93,10 @@ function SEO({
           content: `${title} | ${site.siteMetadata.title}`,
         },
         {
+          name: 'category',
+          content: categories,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
