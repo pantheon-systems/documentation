@@ -124,6 +124,8 @@ exports.createPages = ({ graphql, actions }) => {
               layout
               permalink
               draft
+              categories
+              tags
             }
             fields {
               slug
@@ -152,6 +154,8 @@ exports.createPages = ({ graphql, actions }) => {
               layout
               permalink
               draft
+              categories
+              tags
             }
             fields {
               slug
@@ -237,8 +241,9 @@ exports.createPages = ({ graphql, actions }) => {
     const docs = result.data.allDocs.edges
     docs.forEach(doc => {
       const template = calculateTemplate(doc.node, "doc")
+      //console.log(`Slug: ${doc.node.fields.slug}\nCategories: ${doc.node.frontmatter.categories}`) //For Debugging
       createPage({
-        path: doc.node.fields.slug,
+        path: `${doc.node.frontmatter.categories}/${doc.node.fields.slug}`,
         component: path.resolve(`./src/templates/${template}.js`),
         context: {
           slug: doc.node.fields.slug,
@@ -254,7 +259,7 @@ exports.createPages = ({ graphql, actions }) => {
         const next = calculateNext(guide);
         const template = calculateTemplate(guide.node, "guide")
         createPage({
-          path: guide.node.fields.slug,
+          path: `${guide.node.frontmatter.categories}/${guide.node.fields.slug}`,
           component: path.resolve(`./src/templates/${template}.js`),
           context: {
             slug: guide.node.fields.slug,
