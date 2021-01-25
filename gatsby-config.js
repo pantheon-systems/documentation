@@ -236,7 +236,7 @@ module.exports = {
         serialize: ({site, allSitePage}) =>
           allSitePage.nodes.map(node => {
             return {
-              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              url: `https://pr-6219--pantheon-docs.my.pantheonfrontend.website${node.path}`,
               changeFreq: `daily`,
               priority: 0.7,
             }
