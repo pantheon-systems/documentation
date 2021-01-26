@@ -5,15 +5,10 @@ dnsprovider: true
 description: Learn how to point your Network Solutions domain to a Pantheon site.
 categories: [go-live]
 tags: [dns]
+reviewed: "2021-01-26"
 permalink: docs/:basename
 editpath: dns-providers/network-solutions.md/
 ---
-
-<Alert type="danger" title="Warning">
-
-Network Solutions does not host AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. They support glue records pointing to another authoritative name server. We recommend transferring DNS services to a provider that hosts IPv6 records directly.
-
-</Alert>
 
 ## Before You Begin
 
@@ -79,12 +74,20 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ### AAAA Records
 
-Glue records to a name server that hosts AAAA records can be set via the [How Do I Modify IPv6 Records?](https://knowledge.web.com/subjects/article/KA-01100/en-us#NS) instructions on the Network Solutions docs, and require an email to their support to complete.
+1.  In the IPV6 Address (AAAA Records) section, click **Edit AAAA Records**.
+
+1. Enter the AAAA record value provided by Pantheon in the **IPv6** field. 
+
+1. Enter the desired Time to Live (TTL).
+
+1. Click **Continue**.
+
+1. Review the information on the confirmation page, and then click **Save Changes**.
 
 ## Network Solutions Docs
 
-- [Managing Advanced DNS Records](https://knowledge.web.com/subjects/article/KA-01111/en-us#Network%20Solutions)
-- [Adding an IPv6 AAAA record](https://knowledge.web.com/subjects/article/KA-01100/en-us#NS)
+- [Managing Advanced DNS Records](https://knowledge.web.com/subjects/article/KA-01111/)
+- [Adding an IPv6 AAAA record](https://knowledge.web.com/subjects/article/KA-01111/en-us#IPV6%20Address)
 
 ## Next Steps
 
