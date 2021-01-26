@@ -52,7 +52,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 </Tab>
 
-<Tab title="WordPress Network" id="wp-network">
+<Tab title="WordPress Site Network" id="wp-network">
 
   ```bash{promptUser: user}
   git pull -Xtheirs git://github.com/pantheon-systems/wordpress-network.git master
