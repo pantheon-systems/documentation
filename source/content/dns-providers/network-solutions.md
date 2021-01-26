@@ -42,7 +42,7 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 
 1. The domain likely has a few default values for `www` and the bare domain. Paste the IP address provided by Pantheon in the Numeric IP field for the existing `@ (None)` record, then delete any default records like so:
 
-  ![Network Solutions Edit A Records](../../images/dns/networksolutions/a-records.png)
+  ![Network Solutions Edit A Records](../../images/dns/networksolutions/add-a-records.png)
 
 1. Select desired Time to Live (TTL).
 
@@ -78,7 +78,7 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. For each domain hosted at Pantheon, enter the AAAA record value provided by Pantheon in the **IPv6** field:
 
-  ![The AAAA record fields in the Network Solutions dashboard](../../images/dns/networksolutions/aaaa-records.png)
+  ![The AAAA record fields in the Network Solutions dashboard](../../images/dns/networksolutions/add-aaaa-records.png)
 
 1. Enter the desired Time to Live (TTL).
 
