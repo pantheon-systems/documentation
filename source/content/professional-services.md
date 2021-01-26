@@ -72,4 +72,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Onboarding
 
-Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team stays with you for up to 90 days to make sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
+Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team makes sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
