@@ -32,9 +32,24 @@ Pantheon's Autopilot:
 - Tests the updates with automated visual regression testing
 - Optionally deploys the updates
 
+## Get Autopilot
+
+Contact Sales?
+## Enable Autopilot
+
+Autopilot can be enabled for each eligible Workspace.
+
+1. In the left bar, click **<i className="fa fa-robot"></i> Autopilot**
+
+1. Choose which sites to enable Autopilot on: **All sites**, **Some sites**, or **One site**.
+
+   - If you choose **Some sites** or **One site**, choose the sites from the dropdown menu that appears.
+
+1. Choose the **Deployment Destination**: Multidev, Dev, Test, or Live
+
 ## Acceptable Change
 
-Autopilot allows you to configure a threshold of acceptable change, so small expected changes don't trigger false positives. This is useful for common changes like:
+Autopilot allows you to configure a threshold of acceptable change so that small expected changes don't trigger false positives. This is useful for common changes like:
 
 - Randomized testimonials feeds
 - Sliders
@@ -72,7 +87,7 @@ Yes. Access to Autopilot is account-based and individual sites in that account c
 
 ### Does Autopilot work with Composer?
 
-Yes, Autopilot is fully compatible with Pantheon's [Integrated Composer](/integrated-composer) feature.
+Yes. Autopilot is fully compatible with Pantheon's [Integrated Composer](/integrated-composer) feature.
 
 ### Does Autopilot automatically deploy changes to the Live environment?
 
@@ -84,7 +99,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your Account Tier, Autopilot can take up to 100 screenshots per day.
+Yes. Depending on your [Account Tier](/support#support-features-and-response-times), Autopilot can take up to 100 screenshots per day.
 
 ## See Also
 

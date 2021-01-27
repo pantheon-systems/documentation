@@ -28,19 +28,28 @@ The New Dashboard shows long lists of sites within seconds, does this other real
 
 Contact [Support](/support) and ask for access to the New Dashboard and the supporting Slack Community.
 
-Once you're added to the project, navigate to your existing Dashboard, and add `beta` between between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to a blank page on the New Dashboard Workspace. Click **Sites** on the left to get to the Sites view.
+Once you're added to the project, navigate to your existing Dashboard, then add `beta` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to a blank page on the New Dashboard's Workspace. Click **Sites** on the left to get to the Sites view.
 
 ## Features of the New Dashboard
 
-### Workspaces
-
-### The Left Bar Navigation
-
 ### Autopilot
 
-[Autopilot](/autopilot) documentation.
+[Autopilot](https://pantheon.io/autopilot?docs) tracks and implements changes, and alerts you if something looks off. See the [Autopilot](/autopilot) documentation to learn how to use Autopilot to handle your WebOps.
+
+### Pantheon Support
+
+The same great [Support](/support) you already love. The New Dashboard makes it easier to find the right resources, whatever your question is, wherever you are in your Workspace.
+
+For quick access to the old Dashboard and Pantheon Documentation, <i className="fa fa-question-circle"></i>
 
 ## Utility Navigation
 
 Your user icon, Gravatar, or <i className="fa fa-user-circle"></i> by default, gives you quick access to your User Settings and information about who you're logged in as.
-### User Settings
+
+### Workspaces
+
+Each Workspace is a portal for all your Site and Organization WebOps needs.
+
+
+
+Switch between Workspaces to manages each one's Sites, Users, Upstreams, and settings.
