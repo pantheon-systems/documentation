@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
 import Image from "../layout/image"
@@ -9,46 +9,59 @@ This report creates a table of every image in /source/images which isn't being u
 It is only visible when running a local development environment, at localhost:8000/unusedImages
 */
 
-const unusedImages = ({data}) => {
-  //console.log(`data: ${JSON.stringify(data)}`) // For Debugging
+const unusedImages = () => {
 
-  //Create an array object of all images in /source/images
-  const allImgs = data.allFile.edges.map(edge => edge.node.relativePath)
-  //console.log(`allImgs ${typeof(allImgs)}: ${JSON.stringify(allImgs)}`) // For Debugging
-  /* Example of the allImgs object:
-  ["CC-BY-SA_icon.png",
-  "CDN-speedTest-docs-guide.png",
-  "Pantheon-doc-logo@2x.png","Pantheon_Color_rev_clear.png",
-  "Multisite-risk_2.png",
-  "add-solr-widget.png",
-  ...
-  ]
-  */
+  //Define the data objects for image and page data
+  const [allImgs, setAllImgs] = useState([])
+  const [allContent, setAllContent] = useState([])
 
-  //Create a data object of all content (docs, guides, partials)
-  const allContent = data.allMdx.edges.map(edge => {
-    return (
-      {
-        name: edge.node.frontmatter.title,
-        slug: edge.node.fields.slug,
-        body: edge.node.rawBody
-      })
-  })
-  //console.log(`allContent ${typeof allContent}: ${JSON.stringify(allContent)}`) // For Debugging
-  /* Example of the allContent object. Note that objects without names are partial files.:
-  [
-    {
-    "name":"",
-    "slug":"add-supporting-org",
-    "body":"<Alert title=\"Note\" type=\"info\">\n\nBecause Supporting Organizations...."
-    },
-    {
-    "name":"Add a Client Site to Your Organization Dashboard",
-    "slug":"add-client-site",
-    "body":"---\ntitle: Add a Client Site to Your Organization Dashboard\ndescription: Learn how to..."
-    },
-  ]
-  */
+  // Fetch the data from GraphQL on page load
+  useEffect(() => {
+    const body = {
+      query: `
+        query {
+          allFile(filter: {extension: {regex: "/(jpg|png)/"} }) {
+            edges {
+              node {
+                relativePath
+              }
+            }
+          }
+          allMdx(filter: {rawBody: {regex: "/(jpg|png)/"}}) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+                rawBody
+              }
+            }
+          }
+        }`
+    }
+    fetch(`http://localhost:8000/___graphql`, {
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type' : 'application/json',
+      },
+      method: 'POST',
+    })
+    .then(response => response.json())
+    .then(resultData => {
+      setAllImgs(resultData.data.allFile.edges.map(edge => edge.node.relativePath))
+      setAllContent(resultData.data.allMdx.edges.map(edge => {
+        return (
+          {
+            name: edge.node.frontmatter.title,
+            slug: edge.node.fields.slug,
+            body: edge.node.rawBody
+          }
+        )}
+      ))})
+    }, [])
 
   //Create a function which builds an array of image paths where the path is not found in any content piece.
   const findUnusedImages = (imgs, content) => {
@@ -95,31 +108,5 @@ const unusedImages = ({data}) => {
   )
 
 }
-
-// This is the query to GraphQL which fills the {data} object with... data
-export const query = graphql`
-  query {
-    allFile(filter: {extension: {regex: "/(jpg|png)/"} }) {
-      edges {
-        node {
-          relativePath
-        }
-      }
-    }
-    allMdx(filter: {rawBody: {regex: "/(jpg|png)/"}}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-          rawBody
-        }
-      }
-    }
-  }
-`
 
 export default unusedImages
