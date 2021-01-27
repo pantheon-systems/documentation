@@ -122,6 +122,7 @@ const DashLinks = () => {
   // Render
   return (
     <Layout>
+      <h1>Links to Dashboard Features in Docs</h1>
       <SearchField
         title="Doc Title"
         data={searchTitle}
