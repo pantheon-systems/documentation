@@ -20,13 +20,6 @@ const unusedImages = () => {
     const body = {
       query: `
         query {
-          allFile(filter: {extension: {regex: "/(jpg|png)/"}, relativeDirectory: {ne: "assets"}}) {
-            edges {
-              node {
-                relativePath
-              }
-            }
-          }
           allMdx(filter: {rawBody: {regex: "/(jpg|png)/"}}) {
             edges {
               node {
@@ -37,6 +30,13 @@ const unusedImages = () => {
                   title
                 }
                 rawBody
+              }
+            }
+          }
+          allFile(filter: {extension: {regex: "/(jpg|png)/"}, relativeDirectory: {regex: "/(^(?!assets).).+/"}}) {
+            edges {
+              node {
+                relativePath
               }
             }
           }
@@ -67,8 +67,8 @@ const unusedImages = () => {
   const findUnusedImages = (imgs, content) => {
     const images = imgs
     const bodies = content.map(c => c.body)
-    let foundImages = images.filter( image => !bodies.some(body => body.includes(image)) )
-    return foundImages
+    let nonReferencedImages = images.filter( image => !bodies.some(body => body.includes(image)) )
+    return nonReferencedImages
   }
   //console.log(`findImages(): ${findImages(allImgs, allContent)}`)
 
@@ -76,9 +76,11 @@ const unusedImages = () => {
   //console.log(`unusedImages ${typeof unusedImages}: ${JSON.stringify(unusedImages)}`)
 
   // Create a factory function which returns table rows for each instance in the aforementioned array.
-  const unusedImageRow = (image) => {
+  const unusedImageRow = (image, i) => {
+    console.log(i + 1, image)
     return (
-      <tr>
+      <tr key={i}>
+        <td>{i + 1}</td>
         <td><Image path={image} style={{maxWidth: "400px"}}/></td>
         <td>{image}</td>
       </tr>
@@ -94,13 +96,13 @@ const unusedImages = () => {
           <thead>
           <tr><td><strong>Count</strong>: {unusedImages.length}</td></tr>
           <tr>
+            <th>Count</th>
             <th>Image Preview</th>
             <th>Filename</th>
-            <th>Other Data?</th>
           </tr>
           </thead>
           <tbody>
-          {unusedImages.map(image => unusedImageRow(image))}
+          {unusedImages.map((image, i) => unusedImageRow(image, i))}
           </tbody>
         </table>
       </div>
