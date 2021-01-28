@@ -111,6 +111,7 @@ class GuideTemplate extends React.Component {
         <SEO
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
+          keywords={node.frontmatter.tags}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
@@ -205,6 +206,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         getfeedbackform
+        tags
         type
       }
       fileAbsolutePath
