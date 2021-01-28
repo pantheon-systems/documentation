@@ -15,7 +15,7 @@ function GuideItem(props) {
 					<div className="pantheon-workflows">
 						<Image
 							alt={text}
-							path={image}
+							path={`assets/${image}`}
 							style={{ maxHeight: '200px' }}
 							className="main-topic-info__plugin-image"
 						/>

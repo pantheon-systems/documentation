@@ -20,7 +20,7 @@ const unusedImages = () => {
     const body = {
       query: `
         query {
-          allFile(filter: {extension: {regex: "/(jpg|png)/"} }) {
+          allFile(filter: {extension: {regex: "/(jpg|png)/"}, relativeDirectory: {ne: "assets"}}) {
             edges {
               node {
                 relativePath
