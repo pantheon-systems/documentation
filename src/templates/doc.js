@@ -99,7 +99,7 @@ class DocTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
           categories={node.frontmatter.categories}
-          tags={node.frontmatter.tags}
+          keywords={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
