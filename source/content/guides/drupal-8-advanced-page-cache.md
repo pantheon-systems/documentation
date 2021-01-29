@@ -396,7 +396,7 @@ The code we added clears all references to each taxonomy term every time a node 
 
   ![Views edit screen](../../images/guides/drupal-8-advanced-page-cache/img11-view-taxonomy-term.png)
 
-4. For the custom tag, use `{% verbatim %}taxonomy-listing:{{ raw_arguments.tid }}{% endverbatim %}`. Save the View:
+4. For the custom tag, use `taxonomy-listing:{{ raw_arguments.tid }}`. Save the View:
 
  ![Views caching config form](../../images/guides/drupal-8-advanced-page-cache/img12-page-caching-option.png)
 
