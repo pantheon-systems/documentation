@@ -23,15 +23,13 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. Follow step 1 of the [Drupal 9](#drupal-9-with-integrated-composer) section above.
 
-1. Keep the site's Development Mode set to Git, and [clone the site locally](/local-development#get-the-code).
+2. Keep the site's Development Mode set to Git, and [clone the site locally](/local-development#get-the-code).
 
-1. From a terminal working in the root directory, update Composer's version requirements for the project:
+3. From a terminal working in the root directory, update Composer's version requirements for the project:
 
   ```bash{outputLines: 2}
   composer require drupal/core-recommended:^8.8 pantheon-systems/drupal-integrations:^8
   ```
-
-1. Run `composer install`, then commit and push the resulting changes to Pantheon.
 
 ### WordPress with Integrated Composer
 
