@@ -172,7 +172,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash{promptUser: user}
-    git checkout master
+    git checkout -b master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
     git push origin master
@@ -183,7 +183,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 8" id="d81">
 
     ```bash{promptUser: user}
-    git checkout master
+    git checkout -b master
     git fetch pantheon-drops-8
     git merge pantheon-drops-8/master
     git push origin master
@@ -194,7 +194,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title=" Drupal 7" id="d71">
 
     ```bash{promptUser: user}
-    git checkout master
+    git checkout -b master
     git fetch pantheon-drops-7
     git merge pantheon-drops-7/master
     git push origin master
@@ -305,21 +305,24 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
 
-1. Prepare a new GitLab user specifically for Pantheon access.
+1. From the repository, click on **<i class="fa fa-gear"></i> Settings**, then **Repository**.
 
-1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
+1. Click **Expand** next to **Deploy Tokens** and fill out the fields:
 
-    ![GitLab Personal Access Token](../images/gitlab-api.png)
+    - **Name**: Used to identify the token in GitLab.
+    - **Expires at**: We recommend leaving this blank. If the token expires, you will need to create a new one and contact Pantheon Support again to update it.
+    - **Username**: We suggest setting a custom username to provide to Pantheon Support.
+    - Give the token the **read_repository** scope.
 
-1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
+    ![Adding a deploy token to a GitLab repository](../images/gitlab-deploy-token.png)
 
-    ![GitLab reporter permission](../images/gitlab-reporter.png)
+1. After you click **Create deploy token**, save the token immediately to provide to Pantheon Support. GitLab will not show it again.
 
 1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
 
-   - A name for the custom upstream,
+   - A name for the Custom Upstream,
    - The `https` clone URL (ending in `.git`),
-   - The Access Token for the new user.
+   - The Username and Access Token for the deploy token.
 
 </Tab>
 
@@ -335,7 +338,7 @@ These are common steps needed for most Git Providers:
 
 1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
 
-    - A name for the custom upstream,
+    - A name for the Custom Upstream,
 
     - The CMS within (WordPress, Drupal 7/8/9),
 
