@@ -2,14 +2,14 @@ import React from "react"
 
 /*
 This component creates an embedded YouTube video. You can give it a video ID
-or playlist ID, and it can be customized to include  start and stop times
+or playlist ID, and it can be customized to include start and stop times.
 
 PARAMETERS:
 title="Video title"
 src="youtubeVideoIdHash" If embedding a playlist, include only the playlist ID (starts with PL)
-start="60" integer value for number of seconds from the beginning to start at.
-end="120" integer value for number of seconds from the beginning to end at
-  Note that this value is measure from the start of the video, not the start of playback as specified by start.
+start="60" integer value for start point of video clip, as number of seconds from video beginning
+end="120" integer value for end point of video clip, as number of seconds from video beginning
+  Note this value is measured from the start of the video, not the start of the video clip.
 
 For reference, see https://developers.google.com/youtube/player_parameters
 */
