@@ -28,7 +28,7 @@ echo "Apply markdown callout"
 sed -i -e 's/|/!markdown |/g' source/data/localdev/changelog.yml
 
 ## Import Drush releases
-echo "Downloading Localdev changelog..."
+echo "Downloading Drush changelog..."
 curl  -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/drush-ops/drush/releases -o source/data/drushReleases.json
 
 echo "Convert local Issue and Pull references to Markdown links"

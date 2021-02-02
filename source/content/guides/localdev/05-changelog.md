@@ -11,4 +11,4 @@ anchorid: localdev/changelog
 editpath: localdev/05-changelog.md
 ---
 
-<LocaldevChangelog />
+<NewLocaldevChangelog />
