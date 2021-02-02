@@ -1,32 +1,36 @@
 ---
-title: Scoping a Migration - Professional Services
-description: On of the services offered by Pantheon Professional Services is a smooth migration of existing sites. This doc outlines what you can expect.
+title: Website Migration Service
+description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites. This doc outlines what you can expect.
 tags: [services, migration]
 categories: [develop]
 reviewed: "2021-02-01"
 ---
 
-## Migration Project Scope Statement
+The Website Migration Service offered by [Pantheon Professional Services](/professional-services) makes it easier for you to ensure a smooth migration of your existing sites. 
 
-If you are currently working with Pantheon Professional Services Migrations, please reach out to your Migration Engagement Manager via Slack with any questions or concerns regarding this document.
+[Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
+
+If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager via Slack with any questions or concerns.
+
+## Migration Project Scope
 
 Our goal is to migrate your site without any loss of functionality.
 
-**As such the following are included in your migration:**
+**The following are included in migrations:**
 
-- Bringing over your site code, database, and user upload files
-- Resyncing your database and user upload files as a part of the site launch
-- Disabling unneeded/unsupported modules/plugins
-- Moving [redirects](/redirects/) from `htaccess` into `settings.php` or `wp-config`
-- Setting up external [SMTP](/smtp) to work with the provider of your choice
+- Bring over your site code, database, and user upload files
+- Resync your database and user upload files as a part of the site launch
+- Disable unneeded/unsupported modules/plugins
+- Move [redirects](/redirects/) from `htaccess` into `settings.php` or `wp-config`
+- Set up external [SMTP](/smtp) to work with the provider of your choice
 - Implement [cron](/drupal-cron) triggering services, via New Relic (on any non-Basic plan site)
 - For sites using Acquia Search, Pantheon will switch you to Pantheon Solr
   - Please be certain to review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first
-- Ensuring your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
+- Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
 
-Each site migration includes up to **5 hours** to be used researching issues or implementing [known solutions](/modules-plugins-known-issues/). These hours **do not** roll over for use on other sites. If we mention that we are out of hours, it means we have already used up these 5 hours.
+Each site migration includes up to **5 hours** to be used researching issues or implementing [known solutions](/modules-plugins-known-issues/). These hours **do not** roll over for use on other sites. The Migration Team will let you know when the 5 hours have been used. 
 
-**This includes handling core considerations, for example:**
+**This includes handling core considerations. For example:**
 
 - As part of the migration, if you will be using:
   - **Pantheon Default Upstreams**: Before Pantheon hands the site off to you for User Acceptance Testing, it will be brought up to the most current release. If this causes issues, we will roll it back to the current version on your production server
