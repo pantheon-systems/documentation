@@ -40,20 +40,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <Partial file="https-requirements.md" />
 
-
-## Technical Specifications
-
-|                                                                       | Legacy                    | Global CDN with Let's Encrypt   |
-|:--------------------------------------------------------------------- |:------------------------- |:------------------------------- |
-| **Certificate Type**                                                  | Bring your own            | Issued by Let's Encrypt         |
-| **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
-| **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br /> Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/pantheon-yml/#enforce-https--hsts)     |
-| **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
-| **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
-| **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  |
-| **Encryption Endpoint**                                               | Load Balancer             | Application Container           |
+<Partial file="tables/https-specs.md" />
 
 ## Frequently Asked Questions
 
