@@ -8,7 +8,7 @@ tags: [cdn, https, professional-services]
 
 ## Access
 
-A white glove concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
+A concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
 ## Manually Managed Custom Certificates
 
