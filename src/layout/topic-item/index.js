@@ -17,7 +17,7 @@ function TopicItem(props) {
 					<div className={topic.secondary ? 'flex-panel-body-inner' : 'flex-panel-main-body-inner'}>
 						<Image
 							alt={topic.title}
-							path={topic.icon}
+							path={`assets/${topic.icon}`}
 							className={topic.secondary ? 'topic-info__image' : 'main-topic-info__plugin-image'}
 						/>
 						<div className={topic.secondary ? 'topic-info__description-well' : ''}>
