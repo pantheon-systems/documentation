@@ -50,7 +50,7 @@ You can [contact support](#contact-support) for help moving your files out of th
 
 ### Clone of a New Site Failed
 
-If you attempt to clone a site before opening the admin panel to initialize the database, Localdev will fail to pull it locally. The logs under **show detail (beta)** will show:
+If you attempt to initialize a site within Localdev before you've completed the CMS install on Pantheon, it will fail when attempting to pull the (non-existent) database from the platform. The logs under **show detail (beta)** will show:
 
 ```docker
 Pulling your database... This miiiiight take a minute
