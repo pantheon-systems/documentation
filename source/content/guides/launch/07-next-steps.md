@@ -24,6 +24,7 @@ getfeedbackform: default
 Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in your glory.
 
 When you're ready to launch another site, use this best-practice checklist to establish a repeatable going live procedure.
+
 ## Best Practice Checklist for Going Live
 
 <ChecklistItem title="Create the Live environment" link="/guides/quickstart/create-test-live/" />
@@ -51,6 +52,8 @@ When you're ready to launch another site, use this best-practice checklist to es
 <ChecklistItem title="Add Domains to the Live Environment" link="/guides/launch/domains/" />
 
 <ChecklistItem title="Redirect to a Primary Domain" link="/guides/launch/redirects/" />
+
+<ChecklistItem title="Update URL references (WordPress)" link="/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning" />
 
 <ChecklistItem title="Configure DNS" link="/guides/launch/domains/" />
 
