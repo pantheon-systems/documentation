@@ -51,7 +51,7 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
 1. Add the Search API Pantheon module as a required dependency:
 
   ```bash{promptUser: user}
-  composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
+  composer require "drupal/search_api_pantheon ~1.6" --prefer-dist
   ```
 
 1. You should now have the Search API Pantheon module installed along with its dependencies. Run `git status` to make sure you see the expected result. Commit and push the changes:
