@@ -51,7 +51,7 @@ core/
 - `composer.json`: The two different `composer.json` files allow customization of individual sites without inherent merge conflicts and enable one-click updates.
   - Root-level: Site-level customizations.
   - `upstream-config/composer.json`: Composer automatically updates `composer.json` with customizations for the upstream. Avoid manually modifying this file.
-- `pantheon.upstream.yml`: The `build_step: true` directive in `pantheon.upstream.yml` enables the build step. This name is temporary and will change.
+- `pantheon.upstream.yml`: The `build_step: true` directive in `pantheon.upstream.yml` enables the build step.
 
 When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file and commits it back to the site’s code repository.
 
