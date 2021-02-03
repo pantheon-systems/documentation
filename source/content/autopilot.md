@@ -34,7 +34,7 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-Contact Sales?
+Contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs)
 ## Enable Autopilot
 
 Autopilot can be enabled for each eligible Workspace.
@@ -99,7 +99,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account Tier](/support#support-features-and-response-times), Autopilot can take up to 100 screenshots per day.
+Yes. Depending on your [Account Tier](/support#support-features-and-response-times), Autopilot can be set up for 25 pages on each site. Will check for updates once a week. Can also be run on demand.
 
 ## See Also
 
