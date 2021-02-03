@@ -14,7 +14,7 @@ editpath: localdev/04-troubleshoot-support.md
 
 ## Contact Support
 
-Before contacting support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
+Before contacting Support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
@@ -95,4 +95,4 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 
 ### Can I create Multidev environments from Localdev?
 
-No, new multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).
+No, new Multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).
