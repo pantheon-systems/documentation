@@ -6,7 +6,7 @@ categories: [develop]
 reviewed: "2021-02-01"
 ---
 
-The Website Migration Service offered by [Pantheon Professional Services](/professional-services) makes it easier for you to ensure a smooth migration of your existing sites. 
+The Website Migration Service offered by [Pantheon Professional Services](/professional-services) makes it easier for you to ensure a smooth migration of your existing sites.
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 
@@ -16,7 +16,7 @@ If you are currently working with Pantheon Professional Services Migrations, rea
 
 Our goal is to migrate your site without any loss of functionality.
 
-**The following are included in migrations:**
+### Included in Migrations
 
 - Bring over your site code, database, and user upload files
 - Resync your database and user upload files as a part of the site launch
@@ -28,7 +28,7 @@ Our goal is to migrate your site without any loss of functionality.
   - Please be certain to review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first
 - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
 
-Each site migration includes up to **5 hours** to be used researching issues or implementing [known solutions](/modules-plugins-known-issues/). These hours **do not** roll over for use on other sites. The Migration Team will let you know when the 5 hours have been used. 
+Each site migration includes up to **5 hours** to be used researching issues or implementing [known solutions](/modules-plugins-known-issues/). These hours **do not** roll over for use on other sites. The Migration Team will let you know when the 5 hours have been used.
 
 **This includes handling core considerations. For example:**
 
@@ -37,7 +37,7 @@ Each site migration includes up to **5 hours** to be used researching issues or 
   - **Nested Docroot or Composer**: Your sites will be migrated at their current version
   - **Custom or Alternative Upstream**: Your sites will be brought over using the most current release in your upstream
 
-**Examples of things that may be considered out of scope:**
+### Out of Scope for Site Migrations
 
 - Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
   - Issues that arise as a result of [Pantheon platform configurations](/platform-considerations)
@@ -57,7 +57,9 @@ Each site migration includes up to **5 hours** to be used researching issues or 
   - Switching to Solr from another search platform
   - Any code changes made to the site after the initial migration begins. You may add any code changes to a Multidev and merge them in post-launch - or take ownership of the site and move them in before launch
 
-**You may elect to purchase Custom Application Service (CAS) hours (minimum: 4 hours) for the Pantheon Migration Team to complete additional work, including:**
+## Custom Application Service (CAS) Hours
+
+You may elect to purchase CAS hours (minimum: 4 hours) for the Pantheon Migration Team to complete additional work, which can include:
 
 - Creating a Custom Upstream for you
 - Creating cron-related custom modules
