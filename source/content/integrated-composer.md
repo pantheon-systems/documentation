@@ -25,10 +25,10 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 2. Set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
 
-3. From a terminal working in the root directory, update Composer's version requirements for the project:
+3. From a terminal working in the root directory, remove the lock file and then update Composer's version requirements for the project:
 
   ```bash{outputLines: 2}
-  composer require drupal/core-recommended:^8.8 pantheon-systems/drupal-integrations:^8
+  rm composer.lock && composer require drupal/core-recommended:^8.8 pantheon-systems/drupal-integrations:^8
   ```
 
 ### WordPress with Integrated Composer
