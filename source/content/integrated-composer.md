@@ -23,7 +23,7 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. Follow step 1 of the [Drupal 9](#drupal-9-with-integrated-composer) section above.
 
-2. Keep the site's Development Mode set to Git, and [clone the site locally](/local-development#get-the-code).
+2. Set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
 
 3. From a terminal working in the root directory, update Composer's version requirements for the project:
 
