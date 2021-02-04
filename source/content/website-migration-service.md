@@ -18,6 +18,8 @@ Pantheon's goal is to migrate your site to our WebOps platform without any loss 
 
 ### Included in Migrations
 
+For all sites identified in the agreed on Project Requirements, the Migrations Team will:
+
 - Transfer site code, database, and files
 
 - Resync your database and user-uploaded files as a part of the site launch
@@ -26,7 +28,7 @@ Pantheon's goal is to migrate your site to our WebOps platform without any loss 
 
 - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
 
-- [Implement known solutions](#implementing-known-solutions) (includes up to five hours' worth of work)
+- [Implement known solutions](#implement-known-solutions) to existing incompatibilities (includes up to five hours' worth of work)
 
 - Set up external [SMTP](/smtp) to work with the provider of your choice
 
@@ -38,7 +40,9 @@ Pantheon's goal is to migrate your site to our WebOps platform without any loss 
 
 - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
 
-#### Implementing Known Solutions
+- Additional tasks identified in the Project Requirements
+
+#### Implement Known Solutions
 
 Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues).
 
@@ -48,7 +52,7 @@ Implementing known solutions includes handling core considerations. For example,
 
 - Pantheon Default Upstreams
 
-  - Before Pantheon hands the site off to you for User Acceptance Testing, Pantheon will update the site to use the most current Upstream release.
+  - Before Pantheon hands the site off to you for User Acceptance Testing (UAT), Pantheon will update the site to use the most current Upstream release.
 
     - If this causes issues, we will roll it back to the current version on your production server
 
@@ -61,6 +65,10 @@ Implementing known solutions includes handling core considerations. For example,
   - Your sites will be brought over using the most current release in your upstream
 
 ### Out of Scope for Site Migrations
+
+1. Sites not listed in the original migrations agreement
+
+   - Contact your Account Rep to migrate more sites.
 
 1. Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
 
@@ -92,6 +100,8 @@ Implementing known solutions includes handling core considerations. For example,
 
 1. Deployment workflow configuration, updates, or changes
 
+1. Preservation of Git history
+
 1. Adding any new functionality that didn't previously exist on the site, which includes:
 
    - Enabling or disabling S3 or other CDN configurations
@@ -106,7 +116,6 @@ Implementing known solutions includes handling core considerations. For example,
 
 You may elect to purchase CAS hours (four hour minimum) for the Pantheon Migration Team to complete additional work, which can include:
 
-
 - Creating a Custom Upstream for you
 
 - Creating cron-related custom modules
@@ -120,3 +129,21 @@ You may elect to purchase CAS hours (four hour minimum) for the Pantheon Migrati
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
 - Re-configuring your application layer SSO
+
+## Your Responsibilities
+
+1. Provide a site inventory prior to the migration kick-off meeting
+
+1. Join and participate in the dedicated migration support channel that will be provided in Pantheon’s Slack instance
+
+1. Provide the Pantheon Migration Team with necessary access to current host or to code, database, and files
+
+1. Initiate a code freeze from the migration's start until the site(s) launch on Pantheon
+
+   - Otherwise you accept responsibility for any code changes made to the source server once migrations have commenced.
+
+1. Perform any User Acceptance Testing (UAT) within the timeline specified by the migrations agreement
+
+1. Communicate content freeze to affected stakeholders
+
+1. Perform DNS cutover within the timeline specified in the migrations agreement
