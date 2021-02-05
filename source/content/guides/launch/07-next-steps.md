@@ -27,40 +27,40 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 ## Best Practice Checklist for Going Live
 
-<ChecklistItem title="Create the Live environment" link="/guides/quickstart/create-test-live/" />
+- [Create the Live environment](/guides/quickstart/create-test-live/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Upgrade Site Plan" link="/guides/launch/plans/" />
+- [Upgrade Site Plan](/guides/launch/plans/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Enable and Schedule Weekly Backups" link="/guides/launch/launch-check/" />
+- [Enable and Schedule Weekly Backups](/guides/launch/launch-check/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Enable Redis" link="/redis#enable-redis" />
+- [Enable Redis](/redis#enable-redis) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Configure Caching" link="/global-cdn-caching/" />
+- [Configure Caching](/global-cdn-caching/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Test Cache" link="/test-global-cdn-caching/" />
+- [Test Cache](/test-global-cdn-caching/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="(WordPress) Disable XML-RPC" link="/wordpress-best-practices/#avoid-xml-rpc-attacks" />
+- [(WordPress) Disable XML-RPC](/wordpress-best-practices/#avoid-xml-rpc-attacks) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Set Up Outgoing Email" link="/email/" />
+- [Set Up Outgoing Email](/email/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Activate New Relic Pro" link="/new-relic/#activate-new-relic-apm-pro" />
+- [Activate New Relic Pro](/new-relic/#activate-new-relic-apm-pro) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Setup Availability Monitoring" link="/new-relic/#configure-ping-monitors-for-availability" />
+- [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Load and Performance Test" link="/load-and-performance-testing/" />
+- [Load and Performance Test](/load-and-performance-testing/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Add Domains to the Live Environment" link="/guides/launch/domains/" />
+- [Add Domains to the Live Environment](/guides/launch/domains/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Redirect to a Primary Domain" link="/guides/launch/redirects/" />
+- [Redirect to a Primary Domain](/guides/launch/redirects/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="(WordPress) Update URL references" link="/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning" />
+- [(WordPress) Update URL references](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Configure DNS" link="/guides/launch/domains/" />
+- [Configure DNS](/guides/launch/domains/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Launch Check" />
+- Launch Check
 
-   - <ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
+  - [WordPress Launch Check](/wordpress-launch-check/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-   - <ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
+  - [Drupal Launch Check](/drupal-launch-check/) <span className="glyphicon glyphicon-unchecked" ></span>
 
-<ChecklistItem title="Review Status Report" link="/guides/launch/launch-check/" />
+- [Review Status Report](/guides/launch/launch-check/) <span className="glyphicon glyphicon-unchecked" ></span>

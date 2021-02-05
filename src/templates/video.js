@@ -24,7 +24,6 @@ import Color from "../components/color.js"
 import Download from "../components/download"
 import Partial from "../components/partial"
 import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
 import Example from "../components/styleExample"
 import Youtube from "../components/youtube"
 
@@ -43,7 +42,6 @@ const shortcodes = {
   Color,
   Download,
   Partial,
-  ChecklistItem,
   Image,
   Example,
   Youtube,
