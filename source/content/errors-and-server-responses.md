@@ -112,6 +112,34 @@ It is not uncommon for API or web-service integration extensions (plugins or mod
 
 Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why extensions (plugins or modules) and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
 
+### Examples: Set a timeout on an external request
+
+Set a 10 second timeout on a generic PHP curl request:
+
+```php
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+```
+
+Set a 10 second timeout on an external request made with Drupal 7's `drupal_http_request` function:
+
+```php
+drupal_http_request($url, $options = array('timeout' => 10))
+```
+
+Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default, but you can override that to set a lower value globally like this:
+
+```php
+$settings['http_client_config']['timeout'] = 10;
+```
+
+Or for an individual request like this:
+
+```php
+$client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
+$client->request('GET', $url,['timeout' => 10]);
+```
+
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
 
 ## Overloaded Workers
