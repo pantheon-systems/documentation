@@ -39,7 +39,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 <ChecklistItem title="Test Cache" link="/test-global-cdn-caching/" />
 
-<ChecklistItem title="Disable XML-RPC For WordPress" link="/wordpress-best-practices/#avoid-xml-rpc-attacks" />
+<ChecklistItem title="(WordPress) Disable XML-RPC" link="/wordpress-best-practices/#avoid-xml-rpc-attacks" />
 
 <ChecklistItem title="Set Up Outgoing Email" link="/email/" />
 
@@ -53,14 +53,14 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 <ChecklistItem title="Redirect to a Primary Domain" link="/guides/launch/redirects/" />
 
-<ChecklistItem title="Update URL references (WordPress)" link="/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning" />
+<ChecklistItem title="(WordPress) Update URL references" link="/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning" />
 
 <ChecklistItem title="Configure DNS" link="/guides/launch/domains/" />
 
-<ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
+<ChecklistItem title="Launch Check" />
 
-**OR**
+   - <ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
 
-<ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
+   - <ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
 
 <ChecklistItem title="Review Status Report" link="/guides/launch/launch-check/" />
