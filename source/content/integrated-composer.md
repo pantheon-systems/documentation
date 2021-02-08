@@ -196,6 +196,7 @@ All Composer commands are available through the **Commit Log** in the Site Dashb
 ### Can I view live logs?
 
 Composer build logs are only available after the task or action completes (or fails).
+
 ### How do I view Composer's changes?
 
 Use `git diff` to view changes, excluding composer.lock
@@ -224,3 +225,10 @@ Features that are still in development:
 
  - Integrated Composer and [Build Tools](/guides/build-tools)
  - Upgrade an existing site to use Integrated Composer
+
+### Why is my site no longer including the files that should be added by Integrated Composer? The Workflow shows an error during Sync Code or Deploying to a new Environment.
+
+On the most recent commit, click "View Log" to see the Composer command that was run and the output that was given by the Composer command. If there is an error in the output, it is likely due to some error in your site's `composer.json` or `composer.lock` file or an issue with a Composer library you are using.
+
+To resolve, try to understand the log message to pinpoint what needs to change in your Composer files or code. It may be a syntax/parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
+
