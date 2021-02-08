@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Final Checklist
+subtitle: Final Review
 description: Part seven of our Launch Essentials guide covers the next steps to take after your site goes live.
 launch: true
 survey: true
@@ -25,7 +25,7 @@ Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in yo
 
 When you're ready to launch another site, use this best-practice checklist to establish a repeatable going live procedure.
 
-## Best Practice Checklist for Going Live
+## Final Review for Going Live
 
 - [Create the Live environment](/guides/quickstart/create-test-live/)
 
