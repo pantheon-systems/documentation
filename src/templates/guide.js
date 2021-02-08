@@ -30,7 +30,6 @@ import BuildTools from "../components/buildTools.js"
 import BuildToolsChangelog from "../components/buildToolsChangelog.js"
 import Partial from "../components/partial.js"
 import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
@@ -57,7 +56,6 @@ const shortcodes = {
   BuildTools,
   BuildToolsChangelog,
   Partial,
-  ChecklistItem,
   Image,
   ReviewDate,
   Youtube,
