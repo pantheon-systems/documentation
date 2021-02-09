@@ -124,7 +124,8 @@ curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 Set a 10 second timeout on an external request made with Drupal 7's `drupal_http_request` function:
 
 ```php
-drupal_http_request($url, $options = array('timeout' => 10))
+$options = array('timeout' => 10);
+drupal_http_request($url, $options);
 ```
 
 Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default, but you can override that to set a lower value globally like this:
@@ -137,7 +138,7 @@ Or for an individual request like this:
 
 ```php
 $client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
-$client->request('GET', $url,['timeout' => 10]);
+$client->request('GET', $url, ['timeout' => 10]);
 ```
 
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
