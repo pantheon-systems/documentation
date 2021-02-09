@@ -141,6 +141,24 @@ $client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
 $client->request('GET', $url, ['timeout' => 10]);
 ```
 
+WordPress: Add timeouts using the [http_request_args](https://developer.wordpress.org/reference/hooks/http_request_args/) filter, or the [http_api_curl](https://developer.wordpress.org/reference/hooks/http_api_curl/) action. This code would go in a custom plugin or your theme's `functions.php` file.
+
+```php
+add_filter( 'http_request_args', 'pantheon_http_request_args', 100, 1 );
+function pantheon_http_request_args( $r )
+{
+    $r['timeout'] = 10;
+    return $r;
+}
+​
+add_action( 'http_api_curl', 'pantheon_http_api_curl', 100, 1 );
+function pantheon_http_api_curl( $handle )
+{
+    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 10 );
+    curl_setopt( $handle, CURLOPT_TIMEOUT, 10 );
+}
+```
+
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
 
 ## Overloaded Workers
