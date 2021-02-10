@@ -126,6 +126,12 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
   composer remove drupal/pkg-name
   ```
 
+## Pantheon Supports Composer 2
+
+The version of Composer on the platform is Composer 2.
+
+Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
+
 ## Pantheon's Scope of Support for Composer
 
 <Partial file="composer-support-scope.md" />
