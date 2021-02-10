@@ -135,3 +135,31 @@ terminus drush <site>.<env> -- cr
 ```
 
 Given the nature of the bug, it might be easier to reinstall Drupal 9.
+
+### Merge conflict in composer.json or Composer libraries are missing
+
+This is an error that might appear in two different ways when you update Drupal 9 core through the Dashboard:
+
+1. A merge conflict.
+
+1. Missing Composer libraries.
+
+   - You might see this if you checked off **Auto-apply updates**.
+
+If you encounter either of these errors when you apply updates to a Drupal 9 site, view the log for the commit that encountered an issue:
+
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+
+1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
+
+To resolve, examine the output of the log. If lines have been overwritten from the `require` section in `composer.json`, add the lines back and run `composer install` again.
+
+If there is an error in the output, it is likely due to a conflict in the site's `composer.json` or `composer.lock` file or an issue with a Composer library the site uses:
+
+```bash
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+  "CONFLICT (content): Merge conflict in composer.json"
+]
+```
+
+In the case of a merge conflict, [resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts), run `composer install`, and push the changes back to confirm that things have been resolved.
