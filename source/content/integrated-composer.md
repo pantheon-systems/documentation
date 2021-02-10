@@ -169,9 +169,14 @@ Features that are still in development:
  - Integrated Composer and [Build Tools](/guides/build-tools)
  - Upgrade an existing site to use Integrated Composer
 
-### Why is my site no longer including the files that should be added by Integrated Composer? The Workflow shows an error during Sync Code or Deploying to a new Environment.
+### Dashboard Workflow Shows an Error During Sync Code or Deploying to a New Environment
 
-On the most recent commit, click "View Log" to see the Composer command that was run and the output that was given by the Composer command. If there is an error in the output, it is likely due to some error in your site's `composer.json` or `composer.lock` file or an issue with a Composer library you are using.
+If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
-To resolve, try to understand the log message to pinpoint what needs to change in your Composer files or code. It may be a syntax/parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
+1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
+
+If there is an error in the output, it may be due to an error in the site's `composer.json` or `composer.lock` file, or there may be an issue with a Composer library the site uses.
+
+To resolve, examine the error in the log. It may be a syntax or parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
