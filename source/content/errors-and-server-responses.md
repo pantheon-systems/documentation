@@ -108,60 +108,64 @@ Pages that leverage a large number of views can often bog down because of the sl
 Individually slow queries should be refactored if possible. However, often caching can help mitigate slow queries or high query volumes quickly. There will still be slow page loads when the cache needs to be populated, but subsequent page-loads should be speedier.
 
 ## External Web Service Calls
-It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
+
+It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third-party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a [timeout](/timeouts) on Pantheon.
 
 Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why extensions (plugins or modules) and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
 
 ### Examples: Set a timeout on an external request
 
-Set a 10 second timeout on a generic PHP curl request:
+- Set a 10 second timeout on a generic PHP curl request:
 
-```php
-curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-```
+   ```php
+   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+   curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+   ```
 
-Set a 10 second timeout on an external request made with Drupal 7's `drupal_http_request` function:
+- Set a 10 second timeout on an external request made with Drupal 7's `drupal_http_request` function:
 
-```php
-$options = array('timeout' => 10);
-drupal_http_request($url, $options);
-```
+   ```php
+   $options = array('timeout' => 10);
+   drupal_http_request($url, $options);
+   ```
 
-Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default, but you can override that to set a lower value globally like this:
+- Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default. Override that to set a lower value:
 
-```php
-$settings['http_client_config']['timeout'] = 10;
-```
+   - Globally:
 
-Or for an individual request like this:
+     ```php
+     $settings['http_client_config']['timeout'] = 10;
+     ```
 
-```php
-$client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
-$client->request('GET', $url, ['timeout' => 10]);
-```
+   - For an individual request:
 
-WordPress: Add timeouts using the [http_request_args](https://developer.wordpress.org/reference/hooks/http_request_args/) filter, or the [http_api_curl](https://developer.wordpress.org/reference/hooks/http_api_curl/) action. This code would go in a custom plugin or your theme's `functions.php` file.
+     ```php
+     $client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
+     $client->request('GET', $url, ['timeout' => 10]);
+     ```
 
-```php
-add_filter( 'http_request_args', 'pantheon_http_request_args', 100, 1 );
-function pantheon_http_request_args( $r )
-{
-    $r['timeout'] = 10;
-    return $r;
-}
+- WordPress: Add timeouts using the [http_request_args](https://developer.wordpress.org/reference/hooks/http_request_args/) filter, or the [http_api_curl](https://developer.wordpress.org/reference/hooks/http_api_curl/) action. This code would go in a custom plugin or your theme's `functions.php` file:
+
+   ```php
+   add_filter( 'http_request_args', 'pantheon_http_request_args', 100, 1 );
+   function pantheon_http_request_args( $r )
+   {
+       $r['timeout'] = 10;
+       return $r;
+   }
 ​
-add_action( 'http_api_curl', 'pantheon_http_api_curl', 100, 1 );
-function pantheon_http_api_curl( $handle )
-{
-    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 10 );
-    curl_setopt( $handle, CURLOPT_TIMEOUT, 10 );
-}
-```
+   add_action( 'http_api_curl', 'pantheon_http_api_curl', 100, 1 );
+   function pantheon_http_api_curl( $handle )
+   {
+       curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 10 );
+       curl_setopt( $handle, CURLOPT_TIMEOUT, 10 );
+   }
+   ```
 
-If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
+If you encounter frequent problems with external web services, evaluate the code making the call, and the service provider itself.
 
 ## Overloaded Workers
+
 If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
 
 ```php
