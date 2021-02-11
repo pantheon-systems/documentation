@@ -1,4 +1,6 @@
-**Note:** Please fill out the PR Template to ensure proper processing.
+<!--
+**Note:** Please fill out the PR Template to ensure proper processing. If you're not sure about a section, leave it empty, do not remove it.
+-->
 
 Closes: #
 
@@ -14,7 +16,7 @@ The following changes are already committed:
 -
 
 ## Remaining Work
-(Remove if not needed)
+<!-- Remove if not needed -->
 The following changes still need to be completed:
 
 - [ ] List any outstanding work here
