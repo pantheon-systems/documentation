@@ -13,7 +13,7 @@ Get involved by:
 - Suggesting new docs
 - Commenting on work in progress
 
-## Edit Directly on GitHub
+## Edit Directly with GitHub
 
 - See an issue with a doc? Click **Contribute** within the doc and select **Report Doc Issue**.
 - Want to improve a doc? Click **Contribute** within the doc and select **Edit this page**.
