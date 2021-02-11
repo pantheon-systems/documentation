@@ -1,5 +1,5 @@
 ---
-title: Convert a Standard Drupal 8 Site to a Composer Managed Site
+title: Upgrade a Drupal 8 Site to a Composer-Managed Drupal 9 Site
 description: Upgrade a Drupal 8 site to integrated Composer and Drupal 9.
 type: guide
 permalink: docs/guides/:basename
@@ -10,13 +10,17 @@ contributors: [dustinleblanc, greg-1-anderson]
 reviewed: "2020-12-01"
 ---
 
-Drupal sites often require the use of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a conversion of the site's codebase. At a high level, the goals of the conversion are to remove dependencies that Composer will manage from your Git repository, and tell Composer about those dependencies instead.
+Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
-Existing sites that wish to upgrade from Drupal 8 to Drupal 9 and convert to Integrated Composer, or just convert to Integrated Composer and defer the Drupal 9 upgrade will need to go through some manual steps.
+For a smooth upgrade experience, and to avoid potential conflicts, this doc shows how to migrate a Drupal 8 site to a freshly prepared, new Drupal 9 site.
+
+The goals of this upgrade are to remove dependencies from the old site that Composer will manage from your Git repository, and tell Composer about those dependencies in the new site instead.
+
+Please note, that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
 
 ## Before You Begin
 
-- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer.
+- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer. Pantheon requires Composer 2 at minimum.
    - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
 
      ```bash{promptUser:user}
@@ -52,7 +56,7 @@ export SITE=my-example-site
 
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
-You're about to make massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
+This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
@@ -60,17 +64,15 @@ You're about to make massive changes to the codebase. We recommend you to do thi
 cd ~/projects/$SITE/
 ```
 
-1. Add the Pantheon Drupal Upstream as a new remote, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
+1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{promptUser:user}
   git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
   ```
 
-  This upstream is a useful starting point for converting Drupal 8 sites to Composer, but it is a Drupal 9 upstream. To use it for Drupal 8, we will adjust the version numbers in a later step.
+  If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
-  You can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
-
-1. Copy your configuration from the default branch:
+1. Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
 
   ```bash{promptUser:user}
   git checkout master sites/default/config
@@ -85,7 +87,7 @@ cd ~/projects/$SITE/
   git diff master:pantheon.yml pantheon.upstream.yml
   ```
 
-   - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old pantheon.yml to preserve these settings:
+   - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old `pantheon.yml` to preserve these settings:
 
      ```bash{promptUser:user}
      git checkout master pantheon.yml
@@ -97,38 +99,7 @@ cd ~/projects/$SITE/
 
      * `web_docroot`
      * `build_step`
-
-### (Optional) Return to Drupal 8
-
-If you have access to the [Multidev](/multidev) feature, test the Composer conversion in a Multidev before testing the Drupal 9 upgrade. If you’re not ready to update to Drupal 9 yet, return to Drupal 8:
-
-```bash{promptUser:user}
-cd upstream-configuration/
-composer require drupal/core-recommended:^8 --no-update
-cd -
-# Remove new MariaDB directive from pantheon.upstream.yml
-sed -i 's/^\s*version: 10.[0-9]*$/  {}/' pantheon.upstream.yml
-composer update
-git add .
-git commit -m 'Revert to Drupal 8'
-```
-
-## Create a New Composer Project
-
-1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
-
-  ```bash{promptUser:user}
-  cd ..
-  ```
-
-1. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
-
-    ```bash{promptUser:user}
-    composer create-project pantheon-systems/example-drops-8-composer $site-composer
-    cd $site-composer
-    ```
-
-This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in a new directory with the `$site` alias`-composer`.
+     * `database`
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -140,7 +111,7 @@ What makes your site code unique is your selection of contributed modules and th
 
 A Composer-managed site should be able to include all custom code via Composer. Begin by reviewing your existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-When reviewing your site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.). This command works on Drush 8. If you're using Drush 9, use `pm:list` or refer to [Drush Commands](https://drushcommands.com/drush-9x/pm/pm:projectinfo/):
+When reviewing your site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.):
 
 ```bash{promptUser:user}
 terminus drush $site.dev -- pm:projectinfo --fields=name,version --format=table
@@ -200,13 +171,10 @@ It is not wise to completely overwrite the `settings.php` file with the old one,
 ```bash{promptUser:user}
 # Ensure working tree is clean
 git status
-git checkout master
-git checkout -b old-settings-php
-git mv sites/default/settings.php web/sites/default
-git commit -m 'Relocate settings.php'
-git checkout composerify
-# Interactively extract relevant hunks from old settings.php
-git checkout -p old-settings-php web/sites/default/settings.php
+git checkout master sites/default/settings.php
+diff -Nup web/sites/default/settings.php sites/default/settings.php 
+# Edit settings.php as needed
+rm sites/default/settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
@@ -235,31 +203,6 @@ git push origin composerify && terminus env:create $site.dev composerify
 ```
 
 This will set up the Multidev environment to receive and demo our changed code.
-## Commit
-
-Commit your work to the Git repo. From the `$site` directory, run the following:
-
-```bash{promptUser: user}
-cp -r .git ../$site-composer/
-cd ../$site-composer
-git add .
-git commit -m "Convert to Composer based install"
-```
-
-You should see a large number of files committed to the new branch created earlier.
-
-## Prepare to Deploy
-
-At this point, your new project directory should contain all of the unique code from your existing Drupal 8 site, plus all of the code required to make a Composer driven project work.
-
-If your site has Multidev, push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
-
-```bash{promptUser:user}
-composer prepare-for-pantheon
-composer install --no-dev
-```
-
-This modifies the `.gitignore` file and cleans up any errant `.git` directories in the codebase to prepare your new code for direct deployment to Pantheon.
 
 ## Deploy
 
