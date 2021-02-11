@@ -13,6 +13,9 @@ At the top of the page you'll find all the environments for your site: Dev, Test
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
 
+## Workflows
+View Status of site transactions like Committed code changes, Cleared Code Cache, Automated backup complete, etc. Colored Red status means the transaction failed.
+
 ## Team
 
 The Team tab allows you to change the site owner; add supporting agencies; and add, manage, and delete users. For more information, see [Team Management](/team-management).
