@@ -9,7 +9,7 @@ Closes: #
 **[Doc Title](https://pantheon.io/docs/doc-title)** - A one sentence summation of the pertinent changes (including not-yet-completed work) provided by this PR.
 
 ## Effect
-(Use this section to detail the changes summarized above, or remove if not needed)
+<!-- Use this section to detail the changes summarized above, or remove if not needed -->
 The following changes are already committed:
 
 -
