@@ -95,7 +95,7 @@ cd ~/projects/$SITE/
      git commit -m 'Copy my pantheon.yml'
      ```
 
-   Note that a few settings must be left as they are in `pantheon.upstream.yml` for sites using Integrated Composer. These are:
+   If you prefer to keep the values for any of the following settings from `pantheon.upstream.yml`, remove them from `pantheon.yml`:
 
      * `web_docroot`
      * `build_step`
