@@ -81,7 +81,7 @@ This process involves significant changes to the codebase. We recommend you to d
      git commit -m 'Copy my pantheon.yml'
      ```
 
-   Note that a few settings must be left as they are in `pantheon.upstream.yml` for sites using Integrated Composer. These are:
+   If you prefer to keep the values for any of the following settings from `pantheon.upstream.yml`, remove them from `pantheon.yml`:
 
      * `web_docroot`
      * `build_step`
@@ -135,12 +135,14 @@ Custom code should be manually copied from the existing site repository to the C
 Modules:
 
 ```bash{promptUser:user}
+mkdir -p ../$site-composer/web/modules/custom # create the directory if it doesn't already exist
 cp -r /modules/custom/awesome_module ../$site-composer/web/modules/custom
 ```
 
 Themes:
 
 ```bash{promptUser:user}
+mkdir -p ../$site-composer/web/themes/custom # create the directory if it doesn't already exist
 cp -r /themes/custom/great_theme ../$site-composer/web/themes/custom
 ```
 
