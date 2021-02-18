@@ -78,6 +78,8 @@ The next few sections of this guide use the example variables `steve-site-d8` an
   ```bash{promptUser: user}
   terminus drush steve-site-d8.dev -- site-install -y
   ```
+  
+  If you get the error `ControlPath too long` you may need to [update your ssh configuration](https://pantheon.io/docs/ssh-keys#control-path-error).
 
   Use the password included in the output of that command to sign into the site with your browser, or use this command to get a one-time login link:
 
