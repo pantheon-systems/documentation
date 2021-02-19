@@ -13,7 +13,7 @@ Replica MySQL databases are available for sites on the [Elite service level](htt
 </Alert>
 
 ## Advantages of MySQL Replication
-Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. MySQL replication rapidly copies content from the "primary" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
+Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. MySQL replication rapidly copies content from the "primary" database to one other "replica" database. This allows you to spread requests across multiple databases to improve site performance and load times.
 
 ## About HyperDB
 The [HyperDB](https://wordpress.org/support/plugin/hyperdb) plugin replaces the standard [`wpdb`](https://codex.wordpress.org/Class_Reference/wpdb) class so that WordPress is able to write and read from additional database servers. The drop-in plugin supports database replication, failover, load balancing, and partitioning — all tools for scaling WordPress.
