@@ -1,8 +1,8 @@
 ## More resources for Command Line Interface with Terminus 
 
-<Youtube src="vMNPa89xIv4" />
-
 You're on a roll! Sign up for workshop #3: [Integrate and Automate with Quicksilver](https://pantheon.io/live-workshops/integrate-and-automate-quicksilver). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
+
+<Youtube src="vMNPa89xIv4" start="16" />
 
 ### Your Feedback Helps
 
