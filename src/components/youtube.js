@@ -5,7 +5,7 @@ This component creates an embedded YouTube video. You can give it a video ID
 or playlist ID, and it can be customized to include start and stop times.
 
 PARAMETERS:
-title="Video title"
+title="Video title" (required for accessibility)
 src="youtubeVideoIdHash" If embedding a playlist, include only the playlist ID (starts with PL)
 start="60" integer value for start point of video clip, as number of seconds from video beginning
 end="120" integer value for end point of video clip, as number of seconds from video beginning
@@ -43,6 +43,7 @@ const Youtube = ( props ) => { //Construct our component as a function
         position: "relative",
         height: "0px",
         overflow: "hidden",
+        marginBottom: "1em",
       }}
     >
       <div className="embedVideo-container">
