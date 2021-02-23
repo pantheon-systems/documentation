@@ -15,7 +15,7 @@ The **Visit Site** button is available for each environment so you can view the 
 
 ## Workflows
 
-When there is a change to the structure of the site, such as a site plan change, newly committed code changes, cleared code cache, an automated backup completes, etc., the status of that event appears in the Workflows dropdown. If the status is red, the transaction failed and more information may be available in the Status or Errors sections.
+When there is a change to the structure of the site, such as a site plan change, newly committed code changes, cleared code cache, an automated backup completes, etc., the status of that event appears in the <dfn id="workflows">Workflows</dfn> dropdown. If the status is red, the transaction failed and more information may be available in the Status or Errors sections.
 
 When an event has triggered a Workflow, an animated <span class="fa fa-spinner"></span> icon appears to the left of **Workflows**.
 
