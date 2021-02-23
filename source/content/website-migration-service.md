@@ -3,7 +3,7 @@ title: Website Migration Service
 description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites. This doc outlines what you can expect.
 tags: [services, migration]
 categories: [develop]
-reviewed: "2021-02-01"
+reviewed: "2021-02-23"
 ---
 
 The Website Migration Service offered by [Pantheon Professional Services](/professional-services) helps ensure a smooth migration of your existing sites to Pantheon.
@@ -28,7 +28,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
 
-- [Implement known solutions](#implement-known-solutions) to existing incompatibilities (includes up to five hours' worth of work)
+- [Implement solutions](#implement-known-solutions) to known existing incompatibilities (includes up to five hours' worth of work)
 
 - Set up external [SMTP](/smtp) to work with the provider of your choice
 
@@ -42,9 +42,9 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - Additional tasks identified in the Project Requirements
 
-#### Implement Known Solutions
+#### Implement Solutions to Known Existing Incompatibilities
 
-Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues).
+Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues) to incompatibilities that have already been identified by our Success teams.
 
 These hours are tracked by the Migration Team and do not roll over for use on other sites.
 
