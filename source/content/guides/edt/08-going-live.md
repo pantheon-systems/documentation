@@ -28,8 +28,6 @@ All links from the video are provided below.
 
 <Youtube src="f8gM5l7dJr8" title="Essential Developer Training - Going Live" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Pricing Comparison](https://pantheon.io/plans/pricing-comparison)

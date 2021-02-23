@@ -97,11 +97,11 @@ class VideoTemplate extends React.Component {
                 contributors={node.frontmatter.contributors}
                 featured={node.frontmatter.featuredcontributor}
               />
-              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+              <article style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{node.body}</MDXRenderer>
                 </MDXProvider>
-              </div>
+              </article>
             </div>
             <div
               className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
