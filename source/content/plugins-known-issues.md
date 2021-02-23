@@ -1050,7 +1050,7 @@ ___
 
 <ReviewDate date="2021-02-23" />
 
-**Issue:** This plugin works on the platform but might not perform the function that users expect. WP-Ban returns a [200-level](/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits.
+**Issue:** WP-Ban returns a [200-level](/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
 
 **Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
 
