@@ -1046,6 +1046,14 @@ The optimal number of records to process at one time depends on how many post_me
 
 ___
 
+## [WP-Ban](https://wordpress.org/plugins/wp-ban/)
+
+<ReviewDate date="2021-02-23" />
+
+**Issue:** This plugin works on the platform but might not perform the function that users expect. IPs banned using WP-Ban will return a [200-level](/metrics#available-metrics) response code which does count towards Site Visits.
+
+___
+
 ## [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
 
 <ReviewDate date="2018-10-17" />
