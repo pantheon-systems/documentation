@@ -1,6 +1,8 @@
-## Congratulations on completing Website Performance with Varnish, Redis, and New Relic! 🎉
+## More resources for Website Performance with Varnish, Redis, and New Relic
 
 Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practices](https://pantheon.io/live-workshops/going-live-best-practices). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
+
+- <Youtube src="j1v2gAV7R_A"  start="12" />
 
 ### Your Feedback Helps
 
@@ -20,6 +22,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
+- [Discuss this class and ask questions[(https://discuss.pantheon.io/c/pantheon-training/performance-varnish-redis-new-relic/55)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
 - [Pantheon Support](/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
