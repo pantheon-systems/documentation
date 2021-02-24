@@ -22,7 +22,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-- [Discuss this class and ask questions[(https://discuss.pantheon.io/c/pantheon-training/performance-varnish-redis-new-relic/55)
+- [Discuss this class and ask questions](https://discuss.pantheon.io/c/pantheon-training/performance-varnish-redis-new-relic/55)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
 - [Pantheon Support](/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
