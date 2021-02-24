@@ -1,5 +1,5 @@
 import React from "react"
-
+import './style.css'
 /*
 This component creates an embedded YouTube video. You can give it a video ID
 or playlist ID, and it can be customized to include start and stop times.
@@ -37,14 +37,7 @@ const Youtube = ( props ) => { //Construct our component as a function
 
   return (// Return the iframe, wrapped in a div.
     <div
-      className="gatsby-resp-iframe-wrapper"
-      style={{
-        paddingBottom: "56.5%",
-        position: "relative",
-        height: "0px",
-        overflow: "hidden",
-        marginBottom: "1em",
-      }}
+      className="gatsby-resp-iframe-wrapper ytWrapper"
     >
       <div className="embedVideo-container">
         <iframe

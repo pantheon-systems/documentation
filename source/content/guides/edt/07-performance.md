@@ -28,8 +28,6 @@ All links from the video are provided below.
 
 <Youtube src="gdpGZpxdXDo" title="Essential Developer Training - Performance" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Caching: Advanced Topics](/caching-advanced-topics)

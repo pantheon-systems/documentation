@@ -28,8 +28,6 @@ All links from the video are provided below.
 
 <Youtube src="zh-grS2YqdE" title="Essential Developer Training - Command Line Interface" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Terminus Manual: Get Started](/terminus)

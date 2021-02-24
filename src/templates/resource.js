@@ -111,11 +111,11 @@ class ResourceTemplate extends React.Component {
                 reviewDate={node.frontmatter.reviewed}
                 isoDate={isoDate.frontmatter.reviewed}
               />
-              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+              <article style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{node.body}</MDXRenderer>
                 </MDXProvider>
-              </div>
+              </article>
             </div>
             {/* <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} /> */}
           </div>
