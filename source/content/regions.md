@@ -28,7 +28,7 @@ A Pantheon site has all site resources located in the region in which it was cre
 
 Automated and manual backups of all site components (code, database, and files) are stored in the site's region and created by job workers also running in the site's region. Additionally, any database or file clones between site environments are run by job workers in the site's region.
 
-Localized, region-specific [Disaster Recovery](/disaster-recovery) is also available.
+Localized, region-specific [Multizone Failover](/multizone-failover) is also available.
 
 With this set of region-specific resources, you can run WordPress or Drupal sites on Pantheon and meet your region's legal, regulatory, or data sovereignty requirements.
 
