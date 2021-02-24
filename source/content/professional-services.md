@@ -50,9 +50,11 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 
 Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/onboarding#pre-launch-load-testing) for details.
 
-## Custom Application Services
+## Professional Service Hours (formerly CAS)
 
 Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services?docs) for details.
+
+This used to be called Custom Application Services (CAS), and has been renamed to capture the broader set of services Pantheon Professional Services offers.
 
 ## Additional Services
 
