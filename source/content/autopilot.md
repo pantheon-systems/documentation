@@ -81,7 +81,7 @@ Autopilot can report failures via email or [Quicksilver](/quicksilver) hooks imm
 
 If you build or maintain WordPress and Drupal sites, Autopilot is for you.
 
-Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual and tedious maintenance work it takes to keep sites updated.
+Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
 Autopilot requires Multidev, and is available to Pantheon accounts with [Gold support](/support#support-features-and-response-times) or higher.
 
@@ -103,7 +103,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account Tier](/support#support-features-and-response-times), Autopilot can be set up for 25 pages on each site. Will check for updates once a week. Can also be run on demand.
+Yes. Depending on your [Account Tier](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
 
 ## See Also
 
