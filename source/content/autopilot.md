@@ -3,7 +3,7 @@ title: Pantheon Autopilot
 description: Bring visual regression testing to your WordPress or Drupal site
 contributors: [nathantyler, alexfornuto]
 categories: [automate]
-tags: [iterate, site, testing, webops]
+tags: [iterate, autopilot, testing, webops]
 reviewed: "2021-02-01"
 ---
 
@@ -11,15 +11,9 @@ reviewed: "2021-02-01"
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-This page refers to products and features which are currently in development or Early Access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments.
+This page refers to products and features that are currently in development or Early Access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments. **[Contact Sales](https://pantheon.io/earlyaccess/autopilot?docs)** for details about the Autopilot Early Access program.
 
 </Alert>
-
-<Enablement title="Get Early Access" link="https://pantheon.io/earlyaccess/autopilot?docs">
-
-Sign up to learn about Early Access for Autopilot by clicking **Get Early Access** above.
-
-</Enablement>
 
 ## How Autopilot Works
 
@@ -28,13 +22,13 @@ Sign up to learn about Early Access for Autopilot by clicking **Get Early Access
 Pantheon's Autopilot:
 
 - Automatically detects when new updates are available
-- Performs the updates in an isolated Multidev environment
+- Performs the updates in an isolated [Multidev](/multidev) environment
 - Tests the updates with automated visual regression testing
 - Optionally deploys the updates
 
 ## Get Autopilot
 
-Contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) - Autopilot Early Access program been filled. Spots may be available for Limited Availability testing.
+The Autopilot Early Access program has been filled. Spots may be available for Limited Availability testing; contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) for details.
 
 ## Enable Autopilot
 
@@ -59,7 +53,7 @@ Autopilot can be enabled for each eligible Workspace.
 
 ## Acceptable Change
 
-Autopilot allows you to configure a threshold of acceptable change so that small expected changes don't trigger false positives. This is useful for common changes like:
+Autopilot allows you to configure a threshold of acceptable change so that small, expected changes don't trigger false positives. This is useful for common changes like:
 
 - Randomized testimonials feeds
 - Sliders
