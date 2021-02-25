@@ -5,14 +5,14 @@ description: A streamlined Support experience for your Workspace.
 categories: [platform]
 tags: [dashboard]
 contributors: [edwardangert]
-reviewed: "2021-01-14"
+reviewed: "2021-02-26"
 layout: guide
 permalink: docs/guides/new-dashboard/support
 anchorid: new-dashboard
 editpath: new-dashboard/03-support.md
 ---
 
-Click the Support tab for resources, existing tickets, or to create a new Support ticket, depending on the [Support available for your account](/support).
+Click the **Support** tab for resources, existing tickets, or to create a new Support ticket, depending on the [Support available for your account](/support).
 
 ## Feedback
 

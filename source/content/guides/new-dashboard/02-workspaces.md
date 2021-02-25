@@ -5,7 +5,7 @@ description: Workspaces are a home base for your WebOps.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
-reviewed: "2021-01-14"
+reviewed: "2021-02-26"
 layout: guide
 permalink: docs/guides/new-dashboard/workspaces
 anchorid: new-dashboard

@@ -34,9 +34,11 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-Contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs)
+Contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) - Autopilot Early Access program been filled. Spots may be available for Limited Availability testing.
+
 ## Enable Autopilot
 
+<!-- commenting out while in EA
 Autopilot can be enabled for each eligible Workspace.
 
 1. In the left bar, click **<i className="fa fa-robot"></i> Autopilot**
@@ -46,6 +48,14 @@ Autopilot can be enabled for each eligible Workspace.
    - If you choose **Some sites** or **One site**, choose the sites from the dropdown menu that appears.
 
 1. Choose the **Deployment Destination**: Multidev, Dev, Test, or Live
+-->
+
+1. After Autopilot has been enabled, from the [New Dashboard](/guides/new-dashboard) click **Sites**.
+1. Click **Get Started**.
+1. Configure the Autopilot scope and frequency.
+1. Specify which pages Autopilot should track.
+1. List the plugins, modules, and updates the Autopilot should exclude.
+1. Start testing with **Get Started**. This process will take several minutes.
 
 ## Acceptable Change
 
