@@ -1,4 +1,4 @@
-## More resources for Going Live Best Practices! 🎉
+## More Resources for Going Live Best Practices! 🎉
 
 This is the final of the five [Live Workshops](https://pantheon.io/live-workshops)!
 
@@ -10,7 +10,7 @@ You must be feeling really great about developer workflows, Terminus, Quicksilve
 
 We sincerely want this training to be useful. Please help us improve by [sharing your feedback](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495041). It only takes you a moment but it makes a big difference for us.
 
-### Resources from this Workshop
+### Resources From This Workshop
 
 - [Pantheon Pricing Comparison](https://pantheon.io/plans/pricing-comparison)
 - Doc: [Load and Performance Testing](/load-and-performance-testing)
