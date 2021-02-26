@@ -51,7 +51,7 @@ For installation instructions and additional details, see [Enabling Solr for Wor
 
 - Re-indexing may be required following any platform issue or event (server outage, service degradation). Check the [status page](https://status.pantheon.io) for current and past platform events.
 
-- The Solr index is not included in Pantheon's [Disaster Recover](/disaster-recovery#solr-search-and-disaster-recovery), and would need to be recreated in the event of failover.
+- The Solr index is not included in Pantheon's [Multizone Failover](/multizone-failover#solr-search-and-multizone-failover), and would need to be recreated in the event of failover.
 
 - Pantheon's Solr offering is limited to a single index.
 
