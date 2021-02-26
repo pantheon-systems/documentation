@@ -8,7 +8,6 @@ reviewed: "2020-02-26"
 
 ## Overview
 
-Pantheon's [Site Multizone Failover](https://pantheon.io/features/disaster-recovery) (**DR**) service is designed for mission-critical websites that need to ensure business continuity during the unlikely event of a zone failure. While Pantheon can’t prevent disasters from happening, we have architected a multi-zone, high availability (**HA**) solution with intelligent failover at the Global CDN layer that can help minimize the effects of an incident.
 
 Multizone Failover is more than just a combination of technology. It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
 
@@ -16,9 +15,9 @@ Multizone Failover is more than just a combination of technology. It includes 24
 
 With Multizone Failover in place, Pantheon monitors datacenter health and proactively manages failover to avoid or minimize data loss.
 
-Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data loss in the event of a major outage. In short, think “lost transactions.” The RPO is largely determined by whether there is replication lag or not, which can result from heavy transactional load on the site’s database. We rarely see replication lag, and when we do, we have automated tools to rebuild the site’s replica and alert our team if a site is consistently experiencing replication lag. This way, we can proactively notify you so you can work toward a solution. For sites with DR enabled, Pantheon’s RPO is 5 minutes.
+Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data loss in the event of a major outage. In short, think “lost transactions.” The RPO is largely determined by whether there is replication lag or not, which can result from heavy transactional load on the site’s database. We rarely see replication lag, and when we do, we have automated tools to rebuild the site’s replica and alert our team if a site is consistently experiencing replication lag. This way, we can proactively notify you so you can work toward a solution. For sites with Multizone Failover enabled, Pantheon’s RPO is 5 minutes.
 
-Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with DR enabled, Pantheon’s RTO is 15 minutes.
+Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with Multizone Failover enabled, Pantheon’s RTO is 15 minutes.
 
 ## Access
 
@@ -125,7 +124,7 @@ Read more about configuring and optimizing Solr Power in the [Solr Search for Wo
 
 </TabList>
 
-### Mitigating Solr/DR issues
+### Mitigating Solr/Multizone Failover issues
 
 You may also consider one of the following options:
 
