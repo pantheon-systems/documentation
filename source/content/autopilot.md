@@ -4,7 +4,7 @@ description: Bring visual regression testing to your WordPress or Drupal site
 contributors: [nathantyler, alexfornuto]
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
-reviewed: "2021-02-01"
+reviewed: "2021-02-26"
 ---
 
 [Autopilot](https://pantheon.io/autopilot?docs) on Pantheon automatically detects, performs, and deploys updates for WordPress and Drupal CMS solutions.
@@ -103,7 +103,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account Tier](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
 
 ## See Also
 
