@@ -28,7 +28,7 @@ The New Dashboard shows long lists of sites within seconds, does this other real
 
 Contact [Support](/support) or your Account Manager and ask for access to the New Dashboard and the supporting Slack Community.
 
-Once you're added to the project, navigate to your existing Dashboard, then add `beta` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to a blank page on the New Dashboard's Workspace. Click **Sites** on the left to get to the Sites view.
+Once you're added to the project, navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to a blank page on the New Dashboard's Workspace. Click **Sites** on the left to get to the Sites view.
 
 ## Features of the New Dashboard
 
