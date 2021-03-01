@@ -24,7 +24,7 @@ This page refers to products and features which are currently in development or 
 
 ## Get Access
 
-The New Dashboard shows long lists of sites within seconds, does this other really cool thing, and looks really nice. Want to try it?
+Want to try the New Dashboard?
 
 Contact [Support](/support) or your Account Manager and ask for access to the New Dashboard and the supporting Slack Community.
 
