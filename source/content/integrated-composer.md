@@ -4,7 +4,7 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2020-11-18"
+reviewed: "2021-03-01"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
@@ -136,7 +136,58 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 <Partial file="composer-support-scope.md" />
 
-## Troubleshooting / FAQ
+## Troubleshooting
+
+### Upstream Updates Cannot Be Applied
+
+When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.`
+
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+
+1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
+
+  ```bash
+  We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+    "CONFLICT (content): Merge conflict in composer.json"
+  ]
+  ```
+
+The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost. To resolve, merge the changes manually:
+
+1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
+
+1. Merge in the upstream changes:
+
+   ```bash{promptUser: user}
+   git pull https://github.com/pantheon-upstreams/drupal-project master
+   ```
+
+1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
+
+   ```bash
+   Auto-merging composer.json
+   CONFLICT (content): Merge conflict in composer.json
+
+   Automatic merge failed; fix conflicts and then commit the result.
+   ```
+
+1. [Resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts) and follow the instructions to commit the merged changes.
+
+1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly and that the correct libraries are installed or updated. If the command fails, the merge was not made correctly and the error may point to how `composer.json` needs to change.
+
+1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
+
+### Changes Lost During Upstream Updates
+
+When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
+
+To resolve, there are two potential solutions:
+
+- If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
+
+- Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+
+## FAQ
 
 ### What Composer commands does Pantheon run?
 
@@ -173,50 +224,3 @@ Features that are still in development:
 
  - Integrated Composer and [Build Tools](/guides/build-tools)
  - Upgrade an existing site to use Integrated Composer
-
-### When Applying Upstream Updates, Updates Cannot Be Applied
-
-When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log`
-
-Clicking on "View log" gives you this message:
-
-```bash
-We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
-  "CONFLICT (content): Merge conflict in composer.json"
-]
-```
-
-The upstream updates and your Composer changes to the site are in conflict that cannot be automatically merged by Git. To resolve this, you need to merge the changes manually. Checking the "Auto-resolve updates" will cause your changes to the site's composer.json file to be lost, so that is not a recommended option.
-
-1. Create a local Git clone of the Pantheon site repository.
-
-1. Run this command to merge in the upstream changes:
-
-   ```bash{promptUser: user}
-   git pull https://github.com/pantheon-upstreams/drupal-project master
-   ```
-
-1. You will get a message that there are conflicts in composer.json that cannot be merged automatically:
-
-   ```bash{outputLines:4}
-   Auto-merging composer.json
-   CONFLICT (content): Merge conflict in composer.json
-   
-   Automatic merge failed; fix conflicts and then commit the result.
-   ```
-
-1. [Resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts) and follow the instructions to commit the merged changes.
-
-1. To verify that the merge completed, run `composer install` on your local copy to verify that the composer.json parses correctly and the correct libraries are installed/updated. If the command fails, the merge was not made correctly and the error may point to how the composer.json needs to change.
-
-1. Push the changes to Pantheon. Integrated Composer will run again with the updated composer.json.
-
-### When Applying Upstream Updates, "Auto-Resolve Updates" Was Selected And Changes Were Lost
-
-When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
-
-To resolve, there are a couple potential solutions.:
-
-1. Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in the previous section.
-
-1. If you have a copy of the composer.json contents from before the updates were applied, then add the changes you made before back to the updated composer.json file.
