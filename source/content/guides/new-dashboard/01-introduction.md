@@ -24,11 +24,9 @@ This page refers to products and features which are currently in development or 
 
 ## Get Access
 
-The New Dashboard shows long lists of sites within seconds, does this other really cool thing, and looks really nice. Want to try it?
+Want to try the New Dashboard?
 
-Contact [Support](/support) or your Account Manager and ask for access to the New Dashboard and the supporting Slack Community.
-
-Once you're added to the project, navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
+Navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
 
 ## Features of the New Dashboard
 
