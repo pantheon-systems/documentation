@@ -136,21 +136,29 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 <Partial file="composer-support-scope.md" />
 
-## Troubleshooting
+## Troubleshooting Code Syncs and Upstream Updates
 
-### Upstream Updates Cannot Be Applied
-
-When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.`
+If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
 1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
 
-  ```bash
-  We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
-    "CONFLICT (content): Merge conflict in composer.json"
-  ]
-  ```
+### Dashboard Workflow Shows an Error During Sync Code or Deploying to a New Environment
+
+If there is an error in the output, it may be due to an error in the site's `composer.json` or `composer.lock` file, or there may be an issue with a Composer library the site uses.
+
+To resolve, examine the error in the log. It may be a syntax or parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
+
+### Upstream Updates Cannot Be Applied
+
+When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log`:
+
+```bash
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+  "CONFLICT (content): Merge conflict in composer.json"
+]
+```
 
 The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost. To resolve, merge the changes manually:
 
@@ -223,17 +231,5 @@ Pantheon's devs are working hard to make the Integrated Composer experience on P
 
 Features that are still in development:
 
- - Integrated Composer and [Build Tools](/guides/build-tools)
- - Upgrade an existing site to use Integrated Composer
-
-### Dashboard Workflow Shows an Error During Sync Code or Deploying to a New Environment
-
-If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
-
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
-
-1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
-
-If there is an error in the output, it may be due to an error in the site's `composer.json` or `composer.lock` file, or there may be an issue with a Composer library the site uses.
-
-To resolve, examine the error in the log. It may be a syntax or parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
+- Integrated Composer and [Build Tools](/guides/build-tools)
+- Upgrade an existing site to use Integrated Composer
