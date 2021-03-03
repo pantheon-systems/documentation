@@ -117,5 +117,5 @@ git push origin master -f
 ## What if Dev is behind Test and Live?
 
 This happens if you **reset** Dev to an earlier commit, rather than using **revert**.
-To bring everything back in sync and to the same commit, you will need to make a commit on Dev. This can be a 'dummy' commit - that is, just a space or extra line added to a comment within a file.
+To bring everything back in sync and to the same commit, you will need to make a commit on Dev. This can be a trivial commit - just a space or extra line added to a comment within a file will work.
 Once you commit that change, you'll see the commit available for deployment on Test, and then on Live.
