@@ -29,6 +29,7 @@ Please note, that since you are migrating a site through this process, the new s
 
 - [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
 - Review [Serving Sites from the Web Subdirectory](/nested-docroot)
+- [Update your site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8)
 
 <Alert title="Exports" type="export">
 
@@ -98,7 +99,6 @@ cd ~/projects/$SITE/
    If you prefer to keep the values for any of the following settings from `pantheon.upstream.yml`, remove them from `pantheon.yml`:
 
      * `web_docroot`
-     * `build_step`
      * `database`
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
@@ -111,7 +111,7 @@ What makes your site code unique is your selection of contributed modules and th
 
 A Composer-managed site should be able to include all custom code via Composer. Begin by reviewing your existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-When reviewing your site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.):
+When reviewing your site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.). This command works on Drush 8. If you're using Drush 9, use `drush pm:list` or refer to [Drush Commands](https://drushcommands.com/drush-9x/pm/pm:projectinfo/):
 
 ```bash{promptUser:user}
 terminus drush $site.dev -- pm:projectinfo --fields=name,version --format=table
@@ -172,7 +172,7 @@ It is not wise to completely overwrite the `settings.php` file with the old one,
 # Ensure working tree is clean
 git status
 git checkout master sites/default/settings.php
-diff -Nup web/sites/default/settings.php sites/default/settings.php 
+diff -Nup web/sites/default/settings.php sites/default/settings.php
 # Edit settings.php as needed
 rm sites/default/settings.php
 ```
@@ -194,28 +194,20 @@ If you are using an exported config, you will need to move the configuration fil
 
 Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, retrieve them via [SFTP](/sftp), as the Git clone would not contain them. The example project is configured to use this location.
 
-## Set up a Multidev (Optional)
-
-If your Pantheon account has access to [Multidev](/multidev), create a Multidev to push your new code to:
-
-```bash{promptUser:user}
-git push origin composerify && terminus env:create $site.dev composerify
-```
-
-This will set up the Multidev environment to receive and demo our changed code.
-
 ## Deploy
 
-You've now committed the code to the local branch. If your site has Multidev, you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
+You've now committed the code to the local branch. If your site has [Multidev](/multidev), you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
 
-### Deploy to a Multidev
+### Deploy to a Multidev (optional)
+
+Continue to [Deploy to Dev](#deploy-to-dev) if you don't have access to access to Multidev.
 
 If your site has Multidev, push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
 ```bash{promptUser:user}
 git add .
 git commit -m "ran composer prepare-for-pantheon and install"
-git push origin composerify
+git push origin composerify && terminus env:create $site.dev composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
