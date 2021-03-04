@@ -1,6 +1,6 @@
 ---
 title: Get Support
-description: Learn how to access Pantheon's expert team and what your support package includes.
+description: Learn how to access Pantheon's expert team and what your Account package includes.
 categories: [platform]
 tags: [dashboard, support]
 reviewed: "2020-02-11"
@@ -10,7 +10,7 @@ reviewed: "2020-02-11"
 
 ## Support Features and Response Times
 
-Pantheon offers a [range of support packages](https://pantheon.io/resources/pantheon-support-overview-datasheet) that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
+Pantheon offers a [range of support packages](https://pantheon.io/resources/pantheon-support-overview-datasheet) that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Accounts.
 
 | Support Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
@@ -104,7 +104,7 @@ Once a ticket is submitted, you can view details for your support requests. If a
 
 ## Pantheon On-Call
 
-Diamond and Platinum support customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum Account customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
@@ -112,7 +112,7 @@ We love helping developers succeed! Our support packages range from basic platfo
 
 ### Code
 
-Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+Your site code belongs to you. We can offer Diamond Account customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
 
 ### Outdated Core
 
@@ -134,7 +134,7 @@ We don’t maintain the integrity of your site. We provide the platform on which
 
 ### Debugging
 
-Code-level debugging and site architecture recommendations are available to Diamond support packages. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/troubleshoot) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond Accounts. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/troubleshoot) to get you started.
 
 ### Performance
 
@@ -162,11 +162,11 @@ We are also happy to help developers learn the ins and outs of making their site
 
 ### Dedicated Support
 
-Diamond support customers get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
 
 Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
 
-Diamond support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
+Diamond Accounts are intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
 
 ## FAQs
 
