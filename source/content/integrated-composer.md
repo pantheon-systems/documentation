@@ -138,6 +138,8 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
+### View the Output of the Commit Log First
+
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
@@ -152,7 +154,7 @@ To resolve, examine the error in the log. It may be a syntax or parse error of t
 
 ### Upstream Updates Cannot Be Applied
 
-When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log`:
+When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
 
 ```bash
 We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
