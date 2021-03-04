@@ -6,23 +6,78 @@ permalink: docs/guides/:basename
 cms: "Drupal 8"
 categories: [develop]
 tags: [composer, site, workflow]
-contributors: [dustinleblanc]
+contributors: [dustinleblanc, stovak]
 ---
 
 ## Before You Begin
-
-- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer.
-- [Clone](/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
-- Review [Serving Sites from the Web Subdirectory](/nested-docroot)
 
 <Alert title="Exports" type="export">
 
 This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
 ```bash{promptUser:user}
-export site=yoursitename
+export SITE=my-example-site
 ```
 
+</Alert>
+
+This document is for you if you meet the following criterion:
+
+- You have [Git](/git), [Composer](/composer), and [Terminus](/terminus), installed and configured on your local computer.
+
+  If not, you'll need to install these utilities for your specific operating system.
+
+- [You have a local copy of your site cloned from it's git repo](/git#clone-your-site-codebase) your _current_ Pantheon site repository in a working directory on your local computer.
+
+- Your site repository has a "/web" folder at it's root. 
+
+  [Serving Sites from the Web Subdirectory](/nested-docroot)
+
+- Your site has our DROPS-8 repo in it's upstream.
+
+  You can find out the answer to that question with the following command(s):
+
+```bash{outputLines:2-99}
+terminus site:info $SITE
+------------------ -------------------------------------------------------------------------------------
+ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Name               my-example-site
+Label              MyExampleSite
+Created            2019-12-02 18:28:14
+Framework          drupal8
+Region             United States
+Organization       3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Plan               Elite
+Max Multidevs      Unlimited
+Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
+Holder Type        organization
+Holder ID          3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Owner              3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Is Frozen?         false
+Date Last Frozen   1970-01-01 00:00:00
+------------------ -------------------------------------------------------------------------------------
+```
+
+The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
+If not, this document does not apply to you.
+
+- Your site has applied all of the most recent updates from the drops-8 upstream.
+
+  You can find out the answer to that question with the following command:
+
+```bash{outputLines:2-6}
+terminus upstream:updates:list $SITE
+[warning] There are no available updates for this site.
+----------- ----------- --------- --------
+Commit ID   Timestamp   Message   Author
+----------- ----------- --------- --------
+```
+
+Anything other than "no updates available" and you will need to apply the updates either by command line
+or via the Pantheon dashboard before continuing.
+
+<Alert title="Danger" type="danger">
+Going any farther without having met the above criterion could result in damage to your site making it inoperable.
 </Alert>
 
 ## Checkout a New Branch
@@ -31,24 +86,24 @@ You're about to make some massive changes to the codebase. We recommend you to d
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
-  ```bash{promptUser:user}
-  cd ~/projects/$site/
-  ```
+```bash{promptUser:user}
+cd ~/projects/$SITE/
+```
 
 2. Create the new branch:
 
-  ```bash{promptUser:user}
-  git checkout -b composify
-  ```
+```bash{promptUser:user}
+git checkout -b composify
+```
 
-  You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
+You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
 
 ## Set up a Multidev (Optional)
 
 If your Pantheon account has access to [Multidev](/multidev), create a Mmultidev to push your new code to:
 
 ```bash{promptUser:user}
-git push origin composify && terminus env:create $site.dev composify
+git push origin composify && terminus env:create $SITE.dev composify
 ```
 
 This will set up the Multidev environment to receive and demo our changed code.
@@ -57,16 +112,16 @@ This will set up the Multidev environment to receive and demo our changed code.
 
 1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
 
-  ```bash{promptUser:user}
-  cd ..
-  ```
+```bash{promptUser:user}
+cd ..
+```
 
 2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
 
-    ```bash{promptUser:user}
-    composer create-project pantheon-systems/example-drops-8-composer $site-composer
-    cd $site-composer
-    ```
+```bash{promptUser:user}
+composer create-project pantheon-systems/example-drops-8-composer $site-composer
+cd $site-composer
+```
 
 This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
 
@@ -75,7 +130,7 @@ This will create a new directory based on the example project [pantheon-systems/
 Since the drops-8 upstream has a `pantheon.upstream.yml` and the example-drops-8-composer upstream does not, copy over our old file for the platform to properly load the site. From the `$site-composer` directory, run:
 
 ```bash{promptUser:user}
-cp ../$site/pantheon.upstream.yml .
+cp ../$SITE/pantheon.upstream.yml .
 ```
 
 `ls` should reveal that the new code repository now has a copy of the `pantheon.upstream.yml`.
@@ -150,7 +205,7 @@ Follow suit with any other custom code you need to carry over.
 
 Your existing site may have customizations to `settings.php` or any other config files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
-It is not wise to completely overwrite the  `settings.php` file with the old one, as there are customizations for moving the configuration directory you don't want to overwrite, as well as platform specific customizations.
+It is not wise to completely overwrite the `settings.php` file with the old one, as there are customizations for moving the configuration directory you don't want to overwrite, as well as platform specific customizations.
 
 The resulting `settings.php` should have no `$databases` array.
 
@@ -194,7 +249,7 @@ This should modify the `.gitignore` file and cleanup any errant `.git` directori
 
 ## Commit
 
-Commit your work to the git repo. From the `$site` directory, run the following:
+Commit your work to the git repo. From the `$SITE` directory, run the following:
 
 ```bash{promptUser: user}
 cp -r .git ../$site-composer/
@@ -218,7 +273,7 @@ If your plan does not include Multidev, you will have to merge to master before 
 Your Pantheon site is no longer compatible with traditional upstream updates. Avoid confusion by moving your site to an empty upstream:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $site empty
+terminus site:upstream:set $SITE empty
 ```
 
 ## Ongoing Core Updates
