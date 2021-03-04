@@ -82,10 +82,7 @@ cd ~/projects/$SITE/
      git commit -m 'Copy my pantheon.yml'
      ```
 
-   If you prefer to keep the values for any of the following settings from `pantheon.upstream.yml`, remove them from `pantheon.yml`:
-
-     * `web_docroot`
-     * `database`
+   If you prefer to keep the value for `database` from `pantheon.upstream.yml`, remove it from `pantheon.yml`.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
