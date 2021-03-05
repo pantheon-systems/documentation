@@ -79,6 +79,10 @@ Yes, you can backup and restore a branch environment. However, if you restore an
 
 If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
 
+## How long will the Multidev stay active?
+
+Multidev environments spin down after about 1 hour of idle time. [More details here](https://pantheon.io/docs/application-containers#idle-containers).
+
 ## Creating a Multidev Failed - Specified Key Was Too Long
 
 Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb).
