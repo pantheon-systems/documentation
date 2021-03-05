@@ -10,9 +10,9 @@ reviewed: "2020-02-11"
 
 ## Support Features and Response Times
 
-Pantheon offers a [range of support packages](https://pantheon.io/resources/pantheon-support-overview-datasheet) that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Accounts.
+Pantheon offers a [range of Account packages](https://pantheon.io/resources/pantheon-support-overview-datasheet) that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Accounts.
 
-| Support Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
+| Account Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
@@ -26,7 +26,7 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
 
 ### One ticket per issue
 
@@ -50,7 +50,7 @@ We're all only human. We always try our best to understand the situation, but we
 
 ### The Support Tab from the Organization Dashboard
 
-If you are part of an Organization with an enhanced support package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
+If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
 
 ![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
 
@@ -83,7 +83,7 @@ Some in-browser ad or tracking blockers can interfere with the **Launch Chat** b
 
 ## Ticket Support
 
-The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times) and the [support overview datasheet](https://pantheon.io/resources/pantheon-support-overview-datasheet). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times) and the [support overview datasheet](https://pantheon.io/resources/pantheon-support-overview-datasheet). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 
@@ -108,7 +108,7 @@ Diamond and Platinum Account customers can directly page Pantheon's operations r
 
 ## Scope of Support
 
-We love helping developers succeed! Our support packages range from basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the scope support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
 
 ### Code
 
