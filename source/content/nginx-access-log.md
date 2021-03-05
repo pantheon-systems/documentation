@@ -4,7 +4,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess to gathe
 tags: [logs]
 categories: []
 goaccess: true
-contributors: [albertcausing]
+contributors: [albertcausing,]
 ---
 Pantheon uses nginx web servers for optimal performance. Log files record the web server events and activities and can help you identify potential issues and gather information about users.
 
@@ -62,6 +62,23 @@ Generate a report for a given site and environment:
 ```bash
 access_getlogs --site=<site> --env=<env>
 ```
+
+## Alternatives to GoAccess
+
+The `nginx-access.log` file can also be navigated from via CLI, without GoAccess. The following commands are a great starting point for navigation of the `nginx-access.log` file: 
+
+Locate the most frequent IP addresses:
+
+```cat nginx-access.log | awk '{print $1}' nginx-access.log| sort | uniq -c | sort -nr| head```
+
+Locate the most frequent URLs:
+
+```cat nginx-access.log | awk -F\" '{print $2}' nginx-access.log| sort | uniq -c | sort -nr | head```
+
+
+Identify the most frequent User Agents:
+
+```cat nginx-access.log | awk -F\" '{print $6}' nginx-access.log | sort | uniq -c | sort -nr | head```
 
 
 
