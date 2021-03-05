@@ -69,7 +69,7 @@ The `nginx-access.log` file can also be navigated from via CLI, without GoAccess
 
 Locate the most frequent IP addresses:
 
-```cat nginx-access.log | awk '{print $1}' nginx-access.log| sort | uniq -c | sort -nr| head```
+```cat nginx-access.log | awk -F\" '{ print $8 }' | sort | uniq -c | sort -frn | head -n 25```
 
 Locate the most frequent URLs:
 
