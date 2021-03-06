@@ -8,7 +8,7 @@ reviewed: "2019-11-27"
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
 
-Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/localdev), currently in active development.
+Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/guides/localdev), currently in active development.
 
 </Alert>
 

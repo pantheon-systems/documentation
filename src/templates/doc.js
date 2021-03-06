@@ -24,9 +24,7 @@ import Color from "../components/color.js"
 import Download from "../components/download"
 import Partial from "../components/partial"
 import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
 import Example from "../components/styleExample"
-import LocaldevChangelog from "../components/localdevChangelog"
 import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
@@ -49,10 +47,8 @@ const shortcodes = {
   Color,
   Download,
   Partial,
-  ChecklistItem,
   Image,
   Example,
-  LocaldevChangelog,
   DrushChangelog,
   ReviewDate,
   Youtube,
@@ -101,7 +97,7 @@ class DocTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
           categories={node.frontmatter.categories}
-          tags={node.frontmatter.tags}
+          keywords={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />

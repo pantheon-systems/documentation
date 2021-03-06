@@ -30,12 +30,12 @@ import BuildTools from "../components/buildTools.js"
 import BuildToolsChangelog from "../components/buildToolsChangelog.js"
 import Partial from "../components/partial.js"
 import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
+import LocaldevChangelog from "../components/localdevChangelog"
 
 const shortcodes = {
   Callout,
@@ -56,13 +56,13 @@ const shortcodes = {
   BuildTools,
   BuildToolsChangelog,
   Partial,
-  ChecklistItem,
   Image,
   ReviewDate,
   Youtube,
   ResourceSelector,
   DNSProviderDocs,
   Check,
+  LocaldevChangelog,
 }
 
 class GuideTemplate extends React.Component {
@@ -109,6 +109,7 @@ class GuideTemplate extends React.Component {
         <SEO
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
+          keywords={node.frontmatter.tags}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
@@ -203,6 +204,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         getfeedbackform
+        tags
         type
       }
       fileAbsolutePath

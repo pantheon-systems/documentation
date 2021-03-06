@@ -50,9 +50,11 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 
 Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/onboarding#pre-launch-load-testing) for details.
 
-## Custom Application Services
+## Professional Service Hours (formerly CAS)
 
 Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services?docs) for details.
+
+This used to be called Custom Application Services (CAS), and has been renamed to capture the broader set of services Pantheon Professional Services offers.
 
 ## Additional Services
 
@@ -72,4 +74,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Onboarding
 
-Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team stays with you for up to 90 days to make sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
+Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team makes sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.

@@ -10,7 +10,7 @@ Pantheon's infrastructure includes a number of layers. Our edge layer provides r
 
 ## Application Containers
 
-Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux containers with an optimized PHP stack in place. Each container includes its own Nginx, APCu cache, and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) to learn more about Pantheon's infrastructure.
+Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux containers with an optimized PHP stack in place. Each container includes its own Nginx, [APCu cache](/apcu), and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) to learn more about Pantheon's infrastructure.
 
 Every environment for your site (Dev, Test, Live) runs on its own container. At the Performance Medium level and above, the Test and Live environments have [multiple containers](#multiple-application-containers) serving your site.
 
@@ -39,7 +39,7 @@ terminus env:wake <site>.<env>
     - mbstring
     - XML
     - IMAP
-  - Extensions: APCu, New Relic PHP agent, OAuth, Redis
+  - Extensions: [APCu cache](/apcu), New Relic PHP agent, OAuth, Redis
   - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php ?>` instead)
   - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](/timeouts).
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.

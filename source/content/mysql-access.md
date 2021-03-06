@@ -145,3 +145,7 @@ No, only one database per site is provided. While create privileges are granted,
 ### Can I put unique tables in the Pantheon database?
 
 Pantheon places no restrictions on the contents of the database.
+
+### Can I create another database user?
+
+No, Pantheon only provides one database user. Some customers have asked about creating a read-only user to provide read but not write access to the database. Consider creating an API or JSON-request application to provide access to the required information.

@@ -1,4 +1,6 @@
-**Note:** Please fill out the PR Template to ensure proper processing.
+<!--
+**Note:** Please fill out the PR Template to ensure proper processing. If you're not sure about a section, leave it empty, do not remove it.
+-->
 
 Closes: #
 
@@ -7,14 +9,14 @@ Closes: #
 **[Doc Title](https://pantheon.io/docs/doc-title)** - A one sentence summation of the pertinent changes (including not-yet-completed work) provided by this PR.
 
 ## Effect
-(Use this section to detail the changes summarized above, or remove if not needed)
+<!-- Use this section to detail the changes summarized above, or remove if not needed -->
 The following changes are already committed:
 
 -
 -
 
 ## Remaining Work
-(Remove if not needed)
+<!-- Remove if not needed -->
 The following changes still need to be completed:
 
 - [ ] List any outstanding work here

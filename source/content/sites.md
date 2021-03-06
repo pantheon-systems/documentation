@@ -127,7 +127,9 @@ Set a common password for accessing an environment to add an extra layer of secu
 
 ## Site UUID
 
-Every user, organization, product and site is assigned a UUID which is internal to Pantheon. The site UUID is found within the URL for the site Dashboard and resembles the following:
+Every user, organization, product, and site is assigned a <dfn id="UUID">UUID</dfn> which is internal to Pantheon. The site UUID is unique combination of 32 alphanumeric characters, found within the URL for the site Dashboard.
+
+A UUID resembles the following:
 
 ```none
 de305d54-75b4-431b-adb2-eb6b9e546014

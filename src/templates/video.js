@@ -24,7 +24,6 @@ import Color from "../components/color.js"
 import Download from "../components/download"
 import Partial from "../components/partial"
 import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
 import Example from "../components/styleExample"
 import Youtube from "../components/youtube"
 
@@ -43,7 +42,6 @@ const shortcodes = {
   Color,
   Download,
   Partial,
-  ChecklistItem,
   Image,
   Example,
   Youtube,
@@ -99,11 +97,11 @@ class VideoTemplate extends React.Component {
                 contributors={node.frontmatter.contributors}
                 featured={node.frontmatter.featuredcontributor}
               />
-              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+              <article style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{node.body}</MDXRenderer>
                 </MDXProvider>
-              </div>
+              </article>
             </div>
             <div
               className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"

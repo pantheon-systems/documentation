@@ -28,8 +28,6 @@ All links from the video are provided below.
 
 <Youtube src="CedEqwSbF6g" title="Essential Developer Training - Developer Workflow" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Developer Workflow](/develop)

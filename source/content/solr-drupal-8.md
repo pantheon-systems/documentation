@@ -16,7 +16,7 @@ contributors: [peter-pantheon, cityofoaksdesign]
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
-Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which will reach end-of-life in December 2020. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
+Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which will reach end-of-life in December 2021. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
 </Alert>
 
@@ -51,7 +51,7 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
 1. Add the Search API Pantheon module as a required dependency:
 
   ```bash{promptUser: user}
-  composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
+  composer require "drupal/search_api_pantheon ~1.6" --prefer-dist
   ```
 
 1. You should now have the Search API Pantheon module installed along with its dependencies. Run `git status` to make sure you see the expected result. Commit and push the changes:

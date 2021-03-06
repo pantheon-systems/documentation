@@ -15,11 +15,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 </Enablement>
 
-<Alert title="Note" type="info" >
-
-To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through December 31, 2020. See the [blog post for more information](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1st) (note: this offer has been extended since the post was published).
-
-</Alert>
+<Partial file="covid-offer.md" />
 
 ## Benefits of Multidev
 
@@ -74,7 +70,7 @@ Independent infrastructure for a site, including code, database, and files.
 
 <dd>
 
-To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
+To divide in branches, copying source code to start independent development. At Pantheon, we are also copying content (files and database) when forking.
 
 </dd>
 

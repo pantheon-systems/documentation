@@ -4,6 +4,7 @@ description: Understand how to use Redis as a caching mechanism for your Pantheo
 categories: [performance]
 tags: [cache, plugins, modules]
 contributors: [cityofoaksdesign]
+reviewed: "2021-03-01"
 ---
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -162,8 +163,13 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
      $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
      $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
 
+     $settings['redis_compress_length'] = 100;
+     $settings['redis_compress_level'] = 1;
+
      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
      $settings['cache_prefix']['default'] = 'pantheon-redis';
+     
+     $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
    }
    ```
 
@@ -487,12 +493,9 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
 | Sandbox*               |               64           |
-| Performance Small      |               64           |
+| Basic                  |               64           |
+| Performance Small      |               256          |
 | Performance M, L, XL   |               512          |
-| Professional           |               256          |
-| Flagship               |               512          |
-| Business               |               512          |
-| BusinessXL             |               1024         |
 | Elite                  |               1024         |
 
 *Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on paid plans.

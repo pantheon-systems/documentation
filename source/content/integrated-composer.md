@@ -51,7 +51,7 @@ core/
 - `composer.json`: The two different `composer.json` files allow customization of individual sites without inherent merge conflicts and enable one-click updates.
   - Root-level: Site-level customizations.
   - `upstream-config/composer.json`: Composer automatically updates `composer.json` with customizations for the upstream. Avoid manually modifying this file.
-- `pantheon.upstream.yml`: The `build_step: true` directive in `pantheon.upstream.yml` enables the build step. This name is temporary and will change.
+- `pantheon.upstream.yml`: The `build_step: true` directive in `pantheon.upstream.yml` enables the build step.
 
 When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file and commits it back to the site’s code repository.
 
@@ -126,6 +126,12 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
   composer remove drupal/pkg-name
   ```
 
+## Pantheon Supports Composer 2
+
+The version of Composer on the platform is Composer 2.
+
+Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
+
 ## Pantheon's Scope of Support for Composer
 
 <Partial file="composer-support-scope.md" />
@@ -152,6 +158,13 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 ### Can I use a Composer GUI?
 
 Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+
+### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
+
+Integrated Composer needs to consider the use case where a site might already have non-Composer-managed modules in the standard `/modules/contrib` directory. To support this, we create the `/modules/composer` directory for modules added by Integrated Composer.
+
+If your site does not fall into this category, it is safe to rename the `composer` directory back to the standard `contrib`.
+
 ### What features are planned for Integrated Composer on Pantheon?
 
 Pantheon's devs are working hard to make the Integrated Composer experience on Pantheon better.

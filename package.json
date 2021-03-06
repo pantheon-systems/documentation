@@ -52,7 +52,7 @@
     "gatsby-transformer-yaml": "^2.3.3",
     "gatsby-transformer-yaml-full": "^0.2.0",
     "gatsby-yaml-full-markdown": "^0.2.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "jest": "^24.9.0",
     "new-github-issue-url": "^0.2.1",
     "node-font-awesome": "^1.0.2",
