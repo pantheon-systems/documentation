@@ -6,8 +6,7 @@ permalink: docs/guides/:basename
 cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
-contributors: [dustinleblanc, greg-1-anderson]
-reviewed: "2020-12-01"
+contributors: [dustinleblanc, greg-1-anderson, stovak]
 ---
 
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
@@ -20,17 +19,6 @@ Please note, that since you are migrating a site through this process, the new s
 
 ## Before You Begin
 
-- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer. Pantheon requires Composer 2 at minimum.
-   - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
-
-     ```bash{promptUser:user}
-     brew install git composer
-     ```
-
-- [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
-- Review [Serving Sites from the Web Subdirectory](/nested-docroot)
-- [Update your site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8)
-
 <Alert title="Exports" type="export">
 
 This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
@@ -41,7 +29,66 @@ export SITE=my-example-site
 
 </Alert>
 
-## Add the Pantheon Integrated Composer Upstream in a New Local Branch
+This document is for you if you meet the following criterion:
+
+- You have [Git](/git), [Composer](/composer), and [Terminus](/terminus), installed and configured on your local computer.
+
+  If not, you'll need to install these utilities for your specific operating system.
+
+- [You have a local copy of your site cloned from it's git repo](/git#clone-your-site-codebase) your _current_ Pantheon site repository in a working directory on your local computer.
+
+- Your site repository has a "/web" folder at it's root.
+
+  [Serving Sites from the Web Subdirectory](/nested-docroot)
+
+- Your site has our DROPS-8 repo in it's upstream.
+
+  You can find out the answer to that question with the following command(s):
+
+```bash{outputLines:2-99}
+terminus site:info $SITE
+------------------ -------------------------------------------------------------------------------------
+ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Name               my-example-site
+Label              MyExampleSite
+Created            2019-12-02 18:28:14
+Framework          drupal8
+Region             United States
+Organization       3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Plan               Elite
+Max Multidevs      Unlimited
+Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
+Holder Type        organization
+Holder ID          3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Owner              3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+Is Frozen?         false
+Date Last Frozen   1970-01-01 00:00:00
+------------------ -------------------------------------------------------------------------------------
+```
+
+The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
+If not, this document does not apply to you.
+
+- Your site has applied all of the most recent updates from the drops-8 upstream.
+
+  You can find out the answer to that question with the following command:
+
+```bash{outputLines:2-6}
+terminus upstream:updates:list $SITE
+[warning] There are no available updates for this site.
+----------- ----------- --------- --------
+Commit ID   Timestamp   Message   Author
+----------- ----------- --------- --------
+```
+
+Anything other than "no updates available" and you will need to apply the updates either by command line
+or via the Pantheon dashboard before continuing.
+
+<Alert title="Danger" type="danger">
+Going any farther without having met the above criterion could result in damage to your site making it inoperable.
+</Alert>
+
+## Checkout a New Branch
 
 This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
 
@@ -53,36 +100,62 @@ cd ~/projects/$SITE/
 
 1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
 
-  ```bash{promptUser:user}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
-  ```
+```bash{promptUser:user}
+git checkout -b composify
+```
 
-  If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
+You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
+
+## Set up a Multidev (Optional)
+
+If your Pantheon account has access to [Multidev](/multidev), create a Mmultidev to push your new code to:
+
+```bash{promptUser:user}
+git push origin composify && terminus env:create $SITE.dev composify
+```
+
+This will set up the Multidev environment to receive and demo our changed code.
+
+## Create a New Composer Project
+
+```bash{promptUser:user}
+git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
+```
+
+If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
 1. Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
 
-  ```bash{promptUser:user}
-  git checkout master sites/default/config
-  git mv sites/default/config/* config
-  git rm -f sites/default/config/.htaccess
-  git commit -m "Pull in configuration from default branch"
-  ```
+```bash{promptUser:user}
+git checkout master sites/default/config
+git mv sites/default/config/* config
+git rm -f sites/default/config/.htaccess
+git commit -m "Pull in configuration from default branch"
+```
 
 1. Check for `pantheon.yml` settings you need to preserve by comparing your old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 
+```bash{promptUser:user}
+git diff master:pantheon.yml pantheon.upstream.yml
+```
+
+- If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old `pantheon.yml` to preserve these settings:
+
   ```bash{promptUser:user}
-  git diff master:pantheon.yml pantheon.upstream.yml
+  git checkout master pantheon.yml
+  git add pantheon.yml
+  git commit -m 'Copy my pantheon.yml'
   ```
 
-   - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old `pantheon.yml` to preserve these settings:
+Since the drops-8 upstream has a `pantheon.upstream.yml` and the example-drops-8-composer upstream does not, copy over our old file for the platform to properly load the site. From the `$site-composer` directory, run:
 
-     ```bash{promptUser:user}
-     git checkout master pantheon.yml
-     git add pantheon.yml
-     git commit -m 'Copy my pantheon.yml'
-     ```
+```bash{promptUser:user}
+cp ../$SITE/pantheon.upstream.yml .
+```
 
-   If you prefer to keep the value for `database` from `pantheon.upstream.yml`, remove it from `pantheon.yml`.
+# `ls` should reveal that the new code repository now has a copy of the `pantheon.upstream.yml`.
+
+If you prefer to keep the value for `database` from `pantheon.upstream.yml`, remove it from `pantheon.yml`.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
