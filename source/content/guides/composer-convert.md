@@ -261,6 +261,22 @@ Continue to [Deploy to Dev](#deploy-to-dev) if you don't have access to access t
 If your site has Multidev, push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
 ```bash{promptUser:user}
+<<<<<<< HEAD
+composer prepare-for-pantheon
+composer install --no-dev
+```
+
+This should modify the `.gitignore` file and cleanup any errant `.git` directories in the codebase, to prepare your new code for direct deployment to Pantheon.
+
+## Commit
+
+Commit your work to the git repo. From the `$SITE` directory, run the following:
+
+```bash{promptUser: user}
+cp -r .git ../$site-composer/
+cd ../$site-composer
+=======
+>>>>>>> origin/6117-composer-convert-ic
 git add .
 git commit -m "ran composer prepare-for-pantheon and install"
 git push origin composerify && terminus env:create $site.dev composerify
@@ -285,7 +301,11 @@ git push -f origin composerify:master
 Set the site to use the Drupal 9 Upstream:
 
 ```bash{promptUser:user}
+<<<<<<< HEAD
+terminus site:upstream:set $SITE empty
+=======
 terminus site:upstream:set $site drupal9
+>>>>>>> origin/6117-composer-convert-ic
 ```
 
 ## Ongoing Core Updates
