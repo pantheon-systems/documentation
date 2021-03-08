@@ -223,6 +223,34 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [`/changelog/*`, `/terminus/commands/*`],
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          site {
+            siteMetadata {
+              siteUrl
+            }
+            pathPrefix
+          }
+        }`,
+        resolveSiteURL: ({site, allSitePage}) => {
+          return site.siteMetadata.siteUrl
+        },
+        serialize: ({site, allSitePage}) =>
+          allSitePage.nodes.map(node => {
+            return {
+              url: `https://pr-6219--pantheon-docs.my.pantheonfrontend.website${node.path}`,
+              changeFreq: `daily`,
+              priority: 0.7,
+            }
+          })
+      },
     },
     `gatsby-plugin-fontawesome-css`,
   ],
