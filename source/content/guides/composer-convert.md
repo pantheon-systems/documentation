@@ -6,34 +6,49 @@ permalink: docs/guides/:basename
 cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
-contributors: [dustinleblanc, greg-1-anderson]
-reviewed: "2020-12-01"
+contributors: [dustinleblanc, greg-1-anderson, stovak]
+reviewed: "2021-03-10"
 ---
 
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
-For a smooth upgrade experience, and to avoid potential conflicts, this doc shows how to migrate a Drupal 8 site to a freshly prepared, new Drupal 9 site.
+For a smooth upgrade experience, and to avoid potential conflicts, this guide shows how to migrate a Drupal 8 site to a freshly prepared, new Drupal 9 site.
 
-The goals of this upgrade are to remove dependencies from the old site that Composer will manage from your Git repository, and tell Composer about those dependencies in the new site instead.
+The goals of this upgrade are to remove dependencies that Composer will manage from the old site's Git repository, and have Composer manage those dependencies in the new site instead.
 
-Please note, that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
+Note that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
 
 ## Before You Begin
 
-- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer. Pantheon requires Composer 2 at minimum.
-   - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
+<Alert title="Danger" type="danger">
 
-     ```bash{promptUser:user}
-     brew install git composer
-     ```
+Using this tutorial without having met all of the the below criterion could result in damage to your site making it inoperable.
 
-- [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
-- Review [Serving Sites from the Web Subdirectory](/nested-docroot)
-- [Update your site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8)
+</Alert>
+
+This document is for you if you meet the following criterion:
+
+- You have [Git](/git), [Composer](/composer), and [Terminus](/terminus), installed and configured on your local computer.
+
+  If not, install these utilities for your specific operating system.
+
+  - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
+
+  ```bash{promptUser:user}
+  brew install git composer
+  ```
+
+- You have a [local copy](/git#clone-your-site-codebase) of your site cloned from its Git repo your _current_ Pantheon site repository in a working directory on your local computer.
+
+- Your site repository DOES NOT have a `/web` folder at its root.
+
+   - [Serving Sites from the Web Subdirectory](/nested-docroot)
 
 <Alert title="Exports" type="export">
 
-This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$SITE` in your terminal session to match your site name. You can find a list of sites and sitenames by using the terminus command like so:
+This guide uses the local command line environment, and there are several commands dependent on your specific site. To make this easier, set the variable `$SITE` in your terminal session to match the site name.
+
+Use `terminus stie:list` for a list of sites you have access to:
 
 ```bash{outputLines:2-99}
 terminus site:list
@@ -47,13 +62,51 @@ afrocentric-ventures        a6328b1d-08a5-1234-   Sandbox       wordpress_networ
 --------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
 ```
 
-Once you have your site name value export it as an environment variable:
+Once you have the site name value export it as a temporary environment variable:
 
 ```bash{promptUser:user}
 export SITE=my-example-site
 ```
 
 </Alert>
+
+- Your site has the Pantheon DROPS-8 repo in its upstream.
+
+  You can find out the answer to that question with the following command(s):
+
+  ```bash{outputLines:2-17}
+  terminus site:info $SITE
+  ------------------ -------------------------------------------------------------------------------------
+  ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Name               my-example-site
+  Label              MyExampleSite
+  Created            2019-12-02 18:28:14
+  Framework          drupal8
+  Region             United States
+  Organization       3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Plan               Elite
+  Max Multidevs      Unlimited
+  Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
+  Holder Type        organization
+  Holder ID          3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Owner              3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Is Frozen?         false
+  Date Last Frozen   1970-01-01 00:00:00
+  ------------------ -------------------------------------------------------------------------------------
+  ```
+
+  The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`. If not, this document does not apply to you.
+
+- Your site has applied all of the most recent updates from the `drops-8` upstream.
+
+  You can find out the answer to that question with the following command:
+
+  ```bash{outputLines:2}
+  terminus upstream:updates:list $SITE
+  [warning] There are no available updates for this site.
+  ```
+
+  Anything other than `no updates available` and you will need to apply the updates either by command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard) before continuing.
 
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
