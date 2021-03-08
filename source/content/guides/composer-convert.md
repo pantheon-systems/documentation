@@ -6,7 +6,7 @@ permalink: docs/guides/:basename
 cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
-contributors: [dustinleblanc, greg-1-anderson]
+contributors:  [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2020-12-01"
 ---
 
@@ -20,23 +20,96 @@ Please note, that since you are migrating a site through this process, the new s
 
 ## Before You Begin
 
-- Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local computer. Pantheon requires Composer 2 at minimum.
-   - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
 
-     ```bash{promptUser:user}
-     brew install git composer
-     ```
+<Alert title="Danger" type="danger">
+Using this tutorial without having met all of the the below criterion could result in damage to your site making it inoperable.
+</Alert>
 
-- [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
-- Review [Serving Sites from the Web Subdirectory](/nested-docroot)
-- [Update your site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8)
+This document is for you if you meet the following criterion:
+
+- You have [Git](/git), [Composer](/composer), and [Terminus](/terminus),
+  installed and configured on your local computer.
+
+  If not, you'll need to install these utilities for your specific operating system.
+
+  - Mac users can use [Homebrew](https://brew.sh/) to install both
+    Git and Composer, along with their required dependencies:
+
+  ```bash{promptUser:user}
+  brew install git composer
+  ```
+
+- You have a [local copy](/git#clone-your-site-codebase) of your site
+  cloned from it's git repo your _current_ Pantheon site repository in a working directory on your local computer.
+
+- Your site repository DOES NOT have a "/web" folder at it's root.
+
+- [Serving Sites from the Web Subdirectory](/nested-docroot)
+
+- Your site has our DROPS-8 repo in it's upstream.
+
+  You can find out the answer to that question with the following command(s):
+
+  ```bash{outputLines:2-99}
+  terminus site:info $SITE
+  ------------------ -------------------------------------------------------------------------------------
+  ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Name               my-example-site
+  Label              MyExampleSite
+  Created            2019-12-02 18:28:14
+  Framework          drupal8
+  Region             United States
+  Organization       3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Plan               Elite
+  Max Multidevs      Unlimited
+  Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
+  Holder Type        organization
+  Holder ID          3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Owner              3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
+  Is Frozen?         false
+  Date Last Frozen   1970-01-01 00:00:00
+  ------------------ -------------------------------------------------------------------------------------
+  ```
+
+  The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
+  If not, this document does not apply to you.
+
+- Your site has applied all of the most recent updates from the
+  drops-8 upstream.
+
+  You can find out the answer to that question with the following command:
+
+  ```bash{outputLines:2-6}
+  terminus upstream:updates:list $SITE
+  [warning] There are no available updates for this site.
+  ----------- ----------- --------- --------
+  Commit ID   Timestamp   Message   Author
+  ----------- ----------- --------- --------
+  ```
+
+  Anything other than "no updates available" and you will need to apply the updates either by command line or via the Pantheon dashboard before continuing.
+
 
 <Alert title="Exports" type="export">
 
-This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
+This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$SITE` in your terminal session to match your site name. You can find a list of sites and sitenames by using the terminus command like so:
+
+```bash{outputLines:2-99}
+terminus site:list
+--------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
+Name                        ID                    Plan          Framework           Region           Owner                Created               Memberships   Is Frozen?
+--------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
+canada-moose-nwork          a3d980ce-286c-1234-   Sandbox       drupal8             Canada           3374708c-987e-1234   2020-12-15 19:40:42   d3ecc20c-395a false
+wordpress-johnny-test       a4cd9954-fab2-1234-   Sandbox       wordpress           United States    c96ddb25-336a-1234   2020-09-02 07:18:51   d3ecc20c-395a false
+my-example-site             a5ef29b8-8886-1234-   Elite         wordpress           United States    ed828d9d-2389-1234   2020-03-29 18:25:32   d3ecc20c-395a false
+afrocentric-ventures        a6328b1d-08a5-1234-   Sandbox       wordpress_network   EU               c41af587-4e78-1234   2019-12-23 15:23:02   d3ecc20c-395a true
+--------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
+```
+
+Once you have your site name value export it as an environment variable:
 
 ```bash{promptUser:user}
-export site=yoursitename
+export SITE=my-example-site
 ```
 
 </Alert>
@@ -47,11 +120,12 @@ This process involves significant changes to the codebase. We recommend you to d
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
-  ```bash{promptUser:user}
-  cd ~/projects/$site/
-  ```
+```bash{promptUser:user}
+cd ~/projects/$SITE/
+```
 
 1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
+
 
   ```bash{promptUser:user}
   git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
@@ -84,6 +158,7 @@ This process involves significant changes to the codebase. We recommend you to d
 
    If you prefer to keep the value for `database` from `pantheon.upstream.yml`, remove it from `pantheon.yml`.
 
+
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
 What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
@@ -97,7 +172,7 @@ A Composer-managed site should be able to include all custom code via Composer. 
 When reviewing your site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.). This command works on Drush 8. If you're using Drush 9, use `pm:list` or refer to [Drush Commands](https://drushcommands.com/drush-9x/pm/pm:projectinfo/):
 
 ```bash{promptUser:user}
-terminus drush $site.dev -- pm:projectinfo --fields=name,version --format=table
+terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
 ```
 
 This will list each module followed by the version of that module that is installed.
@@ -212,7 +287,7 @@ git push -f origin composerify:master
 Set the site to use the Drupal 9 Upstream:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $site drupal9
+terminus site:upstream:set $SITE drupal9
 ```
 
 ## Ongoing Core Updates
