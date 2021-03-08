@@ -90,7 +90,7 @@ This document is for you if you meet the following criterion:
 
 - You are not using a package/library manager (like "Ludwig") that is not COMPOSER.
 
-  Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you can cd to your root folder and run `composer update` to get "Back on the composer ranch" and add your modules and themes to the composer file as below.
+  Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you can disable the package manger in Drupal 8(under "EXTEND") and then cd to your root folder and run `composer update` to get "Back on the composer ranch" and add your modules and themes to the composer file as below.
 
 <Alert title="Exports" type="export">
 
