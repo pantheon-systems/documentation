@@ -1094,7 +1094,7 @@ ___
 
 **Solution 1:**
 
-1. In `wp-config.php`, add the following after the `define('WP_TEMP_DIR', $_SERVER['HOME'] .'/tmp');` line:
+1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
   define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');
