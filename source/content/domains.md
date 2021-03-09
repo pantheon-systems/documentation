@@ -50,7 +50,7 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 
 Add all domains (`example.com` and `www.example.com` are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch). Automatic resolution of domains and wildcards are not supported.
 
-*Custom domain limit is counted regardless of which environment the custom domain is added.*
+Note that each custom domain is counted regardless of the environment to which it's added.
 
 </Alert>
 
