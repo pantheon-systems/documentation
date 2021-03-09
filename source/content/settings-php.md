@@ -261,15 +261,17 @@ Drupal 7 sites that plan to use [Drush](/drush) should have a `settings.php` fil
 
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
-### How do I enable IonCube Decoder support?
+### How do I enable ionCube Decoder support?
 
-If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
+1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/php-versions). Please note later PHP versions do not currently support ionCube.
 
-```php:title=settings.php
-ini_set('ioncube.loader.encoded_paths', '/');
-```
+1. Enable ionCube Decoder support site-wide by adding this line to `settings.php`:
 
-*(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
+  ```php:title=settings.php
+  ini_set('ioncube.loader.encoded_paths', '/');
+  ```
+
+*(More information can be found in our [PHP 7.1 & ionCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ## Troubleshooting
 
