@@ -90,7 +90,7 @@ This document is for you if you meet the following criterion:
 
 - You are not using a package/library manager (like "Ludwig") that is not COMPOSER.
 
-  Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you can disable the package manger in Drupal 8(under "EXTEND") and then cd to your root folder and run `composer update` to get "Back on the composer ranch" and add your modules and themes to the composer file as below.
+  Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you can disable it in Drupal 8's admin (under "EXTEND") and run `composer update --optimize-autoloader --prefer-dist` from the root directory to get "Back on the composer ranch" and add your modules and themes to the composer file as below.
 
 <Alert title="Exports" type="export">
 
@@ -120,34 +120,34 @@ export SITE=my-example-site
 
 This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
 
-1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
+1.  In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
 ```bash{promptUser:user}
 cd ~/projects/$SITE/
 ```
 
-1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
+1.  Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
 
-```bash{promptUser:user}
-git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
-```
+    ```bash{promptUser:user}
+    git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
+    ```
 
 If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
-1. Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
+1.  Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
 
-```bash{promptUser:user}
-git checkout master sites/default/config
-git mv sites/default/config/* config
-git rm -f sites/default/config/.htaccess
-git commit -m "Pull in configuration from default branch"
-```
+    ```bash{promptUser:user}
+    git checkout master sites/default/config
+    git mv sites/default/config/* config
+    git rm -f sites/default/config/.htaccess
+    git commit -m "Pull in configuration from default branch"
+    ```
 
-1. Check for `pantheon.yml` settings you need to preserve by comparing your old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
+1.  Check for `pantheon.yml` settings you need to preserve by comparing your old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 
-```bash{promptUser:user}
-git diff master:pantheon.yml pantheon.upstream.yml
-```
+    ```bash{promptUser:user}
+    git diff master:pantheon.yml pantheon.upstream.yml
+    ```
 
 - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old `pantheon.yml` to preserve these settings:
 
@@ -167,36 +167,48 @@ What makes your site code unique is your selection of contributed modules and th
 
 #### Modules and Themes
 
-A Composer-managed site should be able to include all custom code via Composer. Begin by reviewing your existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
+THE GOAL: to have composer manage all your contrib modules, contrib themes, core upgrades and libraries.
 
-When reviewing your site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.). This command works on Drush 8. If you're using Drush 9, use `pm:list` or refer to [Drush Commands](https://drushcommands.com/drush-9x/pm/pm:projectinfo/):
+WHY?: so that upgrading your Drupal install is a matter of `cd`-ing to the directory and running `composer upgrade`
 
-```bash{promptUser:user}
-terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
-```
+To serve this end: we need to make sure all of your modules and themes that were downloaded from drupal.org are in the `composer.json` "require" list.
 
-This will list each module followed by the version of that module that is installed.
+We have a script that identifies those modules and puts them in your composer.json file, but the script has limitations:
 
-You can add these modules to your new codebase using Composer by running the following for each module in the `$site-composer` directory. If you use the [Ludwig module](https://www.drupal.org/project/ludwig) do not add it since Composer will take over:
+1. This script DOES NOT resolve your composer.json version problems.
 
-```bash{promptUser:user}
-composer require drupal/MODULE_NAME:^VERSION
-```
+   If there's a version conflict when you `composer install` you will need to resolve them yourself. The first time may be a little painful but going forward, you shouldn't have to do this every time you upgrade. This should be a one-and-done task.
 
-Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module your site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) [in the documentation for Composer](https://getcomposer.org/doc/articles/versions.md#caret-version-range-) itself.
+1. This script DOES NOT Check for D9 compatibility.
 
-If you get the following error:
+   The Drupal module that does that is called ("upgrade status")[https://drupal.org/project/upgrade_status].
 
-```none
-[InvalidArgumentException]
-Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-```
+1. This script DOES NOT Resolve module stability.
 
-It means that one of the modules you are using (or its dependencies) are not stable. If there is not a stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` [in the documentation for Composer](https://getcomposer.org/doc/04-schema.md#minimum-stability) itself.
+   If you get the following error:
+
+   ```none
+   [InvalidArgumentException]
+   Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
+   ```
+
+   It means that one of the modules you are using (or its dependencies) are not stable. If there is not a stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` [in the documentation for Composer](https://getcomposer.org/doc/04-schema.md#minimum-stability) itself.
+
+To run the module migration script, cd to the root directory of your repository and run `bin/migrateModules.php`.
+
+you can see which modules were added by running `git diff composer.json`.
 
 #### Libraries
 
-Libraries can be handled in the same way, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
+Javascript Libraries can/should be added by requiring them like so:
+
+```
+composer require npm-asset/{NPM MODULE NAME}
+composer require bower-asset/{NPM MODULE NAME}
+
+```
+
+doing so will install them in the web/libraries folder and they will get security updates when you run `composer update` along with all your Drupal modules and core.
 
 ### Custom Code
 
