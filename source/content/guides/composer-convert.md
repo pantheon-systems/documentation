@@ -7,7 +7,7 @@ cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
-reviewed: "2020-12-01"
+reviewed: "2021-03-10"
 ---
 
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
@@ -34,9 +34,11 @@ This document is for you if you meet the following criterion:
   - Mac users can use [Homebrew](https://brew.sh/) to install both
     Git and Composer, along with their required dependencies:
 
-  ```bash{promptUser:user}
-  brew install git composer
-  ```
+    ```bash{promptUser:user}
+    brew install git composer
+    ```
+
+  - Windows instructions are forthcoming.
 
 - You have a [local copy](/git#clone-your-site-codebase) of your site
   cloned from it's git repo your _current_ Pantheon site repository in a working directory on your local computer.
@@ -88,9 +90,9 @@ This document is for you if you meet the following criterion:
 
   Anything other than "no updates available" and you will need to apply the updates either by command line or via the Pantheon dashboard before continuing.
 
-- You are not using a package/library manager (like "Ludwig") that is not COMPOSER.
+- You are not using a package/library manager (like "Ludwig").
 
-  Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you can disable it in Drupal 8's admin (under "EXTEND") and run `composer update --optimize-autoloader --prefer-dist` from the root directory to get "Back on the composer ranch" and add your modules and themes to the composer file as below.
+  Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you should disable it in Drupal 8's admin (under "EXTEND"). And it should not be included when you move the modules over, later in this tutorial.
 
 <Alert title="Exports" type="export">
 
@@ -167,12 +169,44 @@ What makes your site code unique is your selection of contributed modules and th
 
 #### Modules and Themes
 
-THE GOAL: to have composer manage all your contrib modules, contrib themes, core upgrades and libraries.
+THE GOAL: To have composer manage all your contrib modules, contrib themes, core upgrades and libraries. The only thing that should be checked in is custom code, custom themes and custom modules that are specific to your site and your site alone.
 
-WHY?: so that upgrading your Drupal install is a matter of `cd`-ing to the directory and running `composer upgrade`
+WHY?: So that upgrading your Drupal install is a matter of `cd`-ing to the directory and running `composer upgrade`
 
 To serve this end: we need to make sure all of your modules and themes that were downloaded from drupal.org are in the `composer.json` "require" list.
 
+A Composer-managed site should be able to include all custom code via Composer. Begin by reviewing your existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
+
+1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+
+This command works on Drush 8. If you're using Drush 9, use `pm:list` or refer to [Drush Commands](https://drushcommands.com/drush-9x/pm/pm:projectinfo/):
+
+```bash{promptUser:user}
+terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
+```
+
+This will list each module followed by the version of that module that is installed.
+
+1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE-composer` directory.
+
+If you use the [Ludwig module](https://www.drupal.org/project/ludwig) do not add it since Composer will take over:
+
+```bash{promptUser:user}
+composer require drupal/MODULE_NAME:^VERSION
+```
+
+Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) [in the documentation for Composer](https://getcomposer.org/doc/articles/versions.md#caret-version-range-) itself.
+
+- If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
+
+```none
+[InvalidArgumentException]
+Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
+```
+
+If there is not a stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` [in the documentation for Composer](https://getcomposer.org/doc/04-schema.md#minimum-stability) itself.
+
+<Alert type="danger" name="Warning" >
 We have a script that identifies those modules and puts them in your composer.json file, but the script has limitations:
 
 1. This script DOES NOT resolve your composer.json version problems.
@@ -194,9 +228,14 @@ We have a script that identifies those modules and puts them in your composer.js
 
    It means that one of the modules you are using (or its dependencies) are not stable. If there is not a stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` [in the documentation for Composer](https://getcomposer.org/doc/04-schema.md#minimum-stability) itself.
 
+1. This script DOES NOT resolve patches.
+
+   Many times a module will be "patched" or have a `.patch` file that fixes known issues before the fix is available in the downloaded version. This script does not attempt to resolve any patches.
+
 To run the module migration script, cd to the root directory of your repository and run `bin/migrateModules.php`.
 
 you can see which modules were added by running `git diff composer.json`.
+</Alert>
 
 #### Libraries
 
