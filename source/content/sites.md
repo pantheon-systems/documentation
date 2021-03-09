@@ -13,6 +13,12 @@ At the top of the page you'll find all the environments for your site: Dev, Test
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
 
+## Workflows
+
+When there is a change to the structure of the site, such as a site plan change, newly committed code changes, cleared code cache, an automated backup completes, etc., the status of that event appears in the <dfn id="workflows">Workflows</dfn> dropdown. If the status is red, the transaction failed and more information may be available in the Status or Errors sections.
+
+When an event has triggered a Workflow, an animated <span class="fa fa-spinner"></span> icon appears to the left of **Workflows**.
+
 ## Team
 
 The Team tab allows you to change the site owner; add supporting agencies; and add, manage, and delete users. For more information, see [Team Management](/team-management).
