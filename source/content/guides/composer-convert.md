@@ -49,9 +49,8 @@ This document is for you if you meet the following criterion:
 
 - Your site has our DROPS-8 repo in it's upstream.
 
-  You can find out the answer to that question with the following command(s):
-
-  ```bash{outputLines:2-99}
+<Accordion title="Use Terminus to Confirm the drops-8 Upstream" id="drops-8-framework" icon="info-sign">
+  ```bash{outputLines:2-18}
   terminus site:info $SITE
   ------------------ -------------------------------------------------------------------------------------
   ID                 3f2a3ea1-fe0b-1234-9c9f-3cxeAA123f88
@@ -71,7 +70,7 @@ This document is for you if you meet the following criterion:
   Date Last Frozen   1970-01-01 00:00:00
   ------------------ -------------------------------------------------------------------------------------
   ```
-
+</Accordion>
   The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
   If not, this document does not apply to you.
 
