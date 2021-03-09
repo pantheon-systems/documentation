@@ -94,10 +94,9 @@ This document is for you if you meet the following criterion:
 
   Some installs have used a package manager (e.g. [Ludwig](https://www.drupal.org/project/ludwig)). If you meet all the other requirements, you should disable it in Drupal 8's admin (under "EXTEND"). And it should not be included when you move the modules over, later in this tutorial.
 
-<Alert title="Exports" type="export">
-
 This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$SITE` in your terminal session to match your site name. You can find a list of sites and sitenames by using the terminus command like so:
 
+<Accordion title="How to Use Terminus to Find the Site Name" id="site-name" icon="info-sign">
 ```bash{outputLines:2-99}
 terminus site:list
 --------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
@@ -109,14 +108,12 @@ my-example-site             a5ef29b8-8886-1234-   Elite         wordpress       
 afrocentric-ventures        a6328b1d-08a5-1234-   Sandbox       wordpress_network   EU               c41af587-4e78-1234   2019-12-23 15:23:02   d3ecc20c-395a true
 --------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
 ```
-
+</Accordion>
 Once you have your site name value export it as an environment variable:
 
 ```bash{promptUser:user}
 export SITE=my-example-site
 ```
-
-</Alert>
 
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
