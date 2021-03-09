@@ -1,10 +1,15 @@
 ---
 title: Pantheon Autopilot
+subtitle: Introduction
 description: Bring visual regression testing to your WordPress or Drupal site
-contributors: [nathantyler, alexfornuto]
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
-reviewed: "2021-02-26"
+contributors: [nathantyler, alexfornuto, edwardangert]
+type: guide
+anchorid: autopilot
+permalink: docs/guides/autopilot/
+editpath: autopilot/01-introduction.md
+reviewed: "2021-03-26"
 ---
 
 [Autopilot](https://pantheon.io/autopilot?docs) on Pantheon automatically detects, performs, and deploys updates for WordPress and Drupal CMS solutions.

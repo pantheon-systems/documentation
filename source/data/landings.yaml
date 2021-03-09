@@ -580,6 +580,8 @@
     - title: ''
       subtitle: ''
       links:
+        - text: 'Pantheon Autopilot Visual Regression Testing for Your WordPress or Drupal Site'
+          url: '/guides/autopilot'
         - text: 'Integrating Asana with Pantheon using Quicksilver Hooks'
           url: '/guides/asana'
           icons: 'fa fa-book'
