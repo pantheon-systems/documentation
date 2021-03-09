@@ -14,15 +14,15 @@ reviewed: "2021-03-26"
 
 [Autopilot](https://pantheon.io/autopilot?docs) on Pantheon automatically detects, performs, and deploys updates for WordPress and Drupal CMS solutions.
 
-<Alert title="Early Access" type="info" icon="leaf">
+<Alert title="Limited Availability" type="info" icon="leaf">
 
-This page refers to products and features that are currently in development or Early Access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments. **[Contact Sales](https://pantheon.io/earlyaccess/autopilot?docs)** for details about the Autopilot Early Access program.
+This page refers to products and features that are currently in development Limited Availability. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments. **[Contact Sales](https://pantheon.io/earlyaccess/autopilot?docs)** for details about the Autopilot Limited Availability program.
 
 </Alert>
 
 ## How Autopilot Works
 
-![A gif showing Autopilot visual regression testing](../images/dashboard/vrt.gif)
+![A gif showing Autopilot visual regression testing](../../../images/dashboard/vrt.gif)
 
 Pantheon's Autopilot:
 
@@ -33,7 +33,7 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-The Autopilot Early Access program has been filled. Spots may be available for Limited Availability testing; contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) for details.
+The Autopilot Limited Availability program has been filled. Spots may be available for Limited Availability testing; contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) for details.
 
 ## Enable Autopilot
 
