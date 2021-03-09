@@ -71,8 +71,9 @@ This document is for you if you meet the following criterion:
   ------------------ -------------------------------------------------------------------------------------
   ```
 </Accordion>
-  The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
-  If not, this document does not apply to you.
+
+The `Framework` should be `drupal8` and `Upstream` value should be `git://github.com/pantheon-systems/drops-8.git`.
+If not, this document does not apply to you.
 
 - Your site has applied all of the most recent updates from the
   drops-8 upstream.
@@ -230,7 +231,9 @@ We have a script that identifies those modules and puts them in your composer.js
 
 To run the module migration script, cd to the root directory of your repository and run `bin/migrateModules.php`.
 
-you can see which modules were added by running `git diff composer.json`.
+You can see which modules were added by running `git diff composer.json`.
+
+Then remove the `composer.lock` file (you can delete it. Composer will create a new one with the modules you just added) and run `composer install` and resolve any lingering version conflicts.
 </Alert>
 
 #### Libraries
