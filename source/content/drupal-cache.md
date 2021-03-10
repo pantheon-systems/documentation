@@ -76,7 +76,7 @@ In addition to storing in-flight form data, Drupal writes to the `cache_form` ta
 $conf['form_cache_expiration'] = 1800; // Expire cache_form items after 30 minutes.
 ```
 
-Cleanup on the `cache_form` table runs on cron. If the table continues to grow too much despite setting a low expiration time, you may need to troubleshoot cron. In a pinch, you can also safely drop the entire table with a SQL query:
+Cleanup on the `cache_form` table runs on cron. If the table continues to grow too much despite setting a low expiration time, you may need to [troubleshoot cron](/drupal-cron#troubleshooting-cron). In a pinch, you can also safely drop the entire table with a SQL query:
 
 ```sql
 mysql> TRUNCATE TABLE cache_form;
