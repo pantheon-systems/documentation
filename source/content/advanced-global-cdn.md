@@ -3,7 +3,7 @@ title: Advanced Global CDN
 description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 categories: [performance]
 tags: [cdn, security, professional-services]
-reviewed: "2020-08-31"
+reviewed: "2021-03-10"
 ---
 
 [<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale. 
@@ -77,7 +77,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
   
  With **Image Optimization (IO)** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
 
-- Layer 7/Enterprise DDoS protection & mitigation
+- Layer 7/Enterprise WAF rules
 
  Application-layer (OSI Layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
