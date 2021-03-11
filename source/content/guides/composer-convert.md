@@ -47,6 +47,8 @@ This guide uses the local command line environment, and there are several comman
 
 You might encounter significant issues if the site does not match these requirements.
 
+Before you continue, confirm that your site meets the following:
+
 - The site has the [Pantheon drops-8 repo](https://github.com/pantheon-systems/drops-8) in its Upstream.
 
   <Accordion title="Use Terminus to Confirm the drops-8 Upstream" id="drops-8-framework" icon="info-sign">
@@ -78,8 +80,6 @@ You might encounter significant issues if the site does not match these requirem
    - See [Serving Sites from the Web Subdirectory](/nested-docroot) for information about nested docroots.
 
 - The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
-
-   - Disable Ludwig if it is installed on the site. In Drupal 8's admin, click **Extend**. Ensure that the checkbox next to the Ludwig module is not checked.
 
 ## Prepare the Site and Environment
 
@@ -175,9 +175,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
   This will list each module followed by the version of that module that is installed.
 
-1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE-composer` directory.
-
-  Remember: If you use the [Ludwig module](https://www.drupal.org/project/ludwig) do not add it since Composer will take over:
+1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE-composer` directory:
 
   ```bash{promptUser:user}
   composer require drupal/MODULE_NAME:^VERSION
