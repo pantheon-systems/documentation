@@ -52,7 +52,7 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
   sftp> cd code/private/
   sftp> put GoogleIDPCertificate-mydomain.com.pem
   Uploading GoogleIDPCertificate-mydomain.com.pem to /srv/bindings/972dd.../code/private/GoogleIDPCertificate-mydomain.com.pem
-  GoogleIDPCertificate-alexfornuto.com.pem                                                                            100% 1253    27.6KB/s   00:00
+  GoogleIDPCertificate-mydomain.com.pem                                                                            100% 1253    27.6KB/s   00:00
   sftp> quit
   terminus env:commit --message "Added the Google IDP Certificate to a protected path" $site.$env
    [notice] Your code was committed.
