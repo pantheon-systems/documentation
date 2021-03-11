@@ -18,6 +18,14 @@ The goals of this upgrade are to remove dependencies that Composer will manage f
 
 Note that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
 
+<Alert title="Note" type="info">
+
+To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
+
+Pantheon support is not available to users who avoid the Multidev steps.
+
+</Alert>
+
 ## Before You Begin
 
 This guide uses the local command line environment, and there are several commands dependent on the site name. To make this easier, set the temporary variable `$SITE` in your terminal session to match the site name:
@@ -304,13 +312,11 @@ Locate the configuration files in the existing site and move them here. If they 
 
 ## Deploy
 
-You've now committed the code to the local branch. If the site has [Multidev](/multidev), you can deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
+You've now committed the code to the local branch. Deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
 
-### Deploy to a Multidev (optional)
+### Deploy to a Multidev
 
-Continue to [Deploy to Dev](#deploy-to-dev) if you don't have access to access to Multidev.
-
-If the site has Multidev, push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
+Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
 ```bash{promptUser:user}
 git add .
