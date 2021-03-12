@@ -811,7 +811,20 @@ ___
 
 <ReviewDate date="2019-08-25" />
 
-**Issue:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-dev environments. Because the plugin uses `is_dir` to check for the path, a symlink to `files/` does not resolve the issue.
+**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-dev environments. Because the plugin uses `is_dir` to check for the path, a symlink to `files/` does not resolve the issue.
+
+**Solution:** Create Symlink for `wp-content/webp-express` from the wp-content directory run
+
+```
+$ ln -s ./uploads/webp-express ./webp-express
+```
+
+See [Using Extensions That Assume Write Access](https://pantheon.io/docs/symlinks-assumed-write-access) for more information.
+
+**Issue 2:** Broken Webp Images due to the files are being serve from the wrong directory
+
+**Solution:** Set the Webp Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and perform a clear cache.
+
 ___
 
 ## Weather Station
