@@ -61,3 +61,7 @@ Autopilot has AI to detect autoplay videos and reset frames for consistent scree
 1. Click **Continue** to choose updates to exclude. If no eligible updates are available, or once you've added all the things to exclude, click **Save** to start Autopilot.
 
 ![Autopilot Status page shows update status. A status popup notification in the lower right shows that Autopilot has been initialized.](../../../images/autopilot/autopilot-status-initialized.png)
+
+## Configure Autopilot for Premium and Paid Plugins and Modules
+
+Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
