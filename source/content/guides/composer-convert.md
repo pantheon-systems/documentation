@@ -40,10 +40,12 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 1. [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
 
-1. This guide uses several commands that depend on the site name in the local command line environment. To make this easier, set the temporary variable `$SITE` in your terminal session to match the site name:
+1. This guide uses several commands that depend on the site name in the local command line environment.
+
+  To make this easier, set the temporary variable `$SITE` in your terminal session to match the site name. Replace `anita-drupal` in this example:
 
    ```bash{promptUser:user}
-   export SITE=anita-drupal
+   export SITE=anita-drupal && echo "New alias set as $SITE"
    ```
 
    <Accordion title="How to Use Terminus to Find the Site Name" id="site-name" icon="info-sign">
@@ -151,6 +153,8 @@ This process involves significant changes to the codebase. We recommend you to d
   git diff master:pantheon.yml pantheon.upstream.yml
   ```
 
+  Press `q` on your keyboard to exit the diff display.
+
    - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old `pantheon.yml` to preserve these settings:
 
      ```bash{promptUser:user}
@@ -204,6 +208,8 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
    If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
 
+<!-- commenting out until the script has a proper place to live
+
 **Trust a robot?**
 
 One of Pantheon's engineers got tired of doing this process by hand, so he trained some robots to identify modules and put them into `composer.json`.
@@ -256,6 +262,7 @@ If you still want to try it:
 1. Run `composer install` and resolve any remaining version conflicts.
 
 </Accordion>
+-->
 
 #### Libraries
 
@@ -330,18 +337,6 @@ git push origin composerify && terminus env:create $SITE.dev composerify
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard workflow to QA a code change before going live.
 
-### Deploy to Dev
-
-If you have a [local development](/local-development) solution, consider testing your `composerify` branch locally before merging.
-
-To force push the changes from the local branch to the `master` Dev branch:
-
-```bash{promptUser:user}
-git add .
-git commit -m "ran composer prepare-for-pantheon and install"
-git push -f origin composerify:master
-```
-
 ## Change Upstreams
 
 Set the site to use the Drupal 9 Upstream:
@@ -350,6 +345,7 @@ Set the site to use the Drupal 9 Upstream:
 terminus site:upstream:set $site drupal9
 ```
 
+Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
 ## Ongoing Core Updates
 
 One-click core updates can be made through the Dashboard.
