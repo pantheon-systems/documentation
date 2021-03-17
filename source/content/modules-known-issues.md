@@ -355,13 +355,13 @@ ___
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 ___
 
-## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 8 (core)
+## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 8/9 (core)
 
-<ReviewDate date="2020-03-26" />
+<ReviewDate date="2021-03-17" />
 
 **Issue**: Sometimes, after a fresh system install, the **Manage** > **Extend** > **+ Install new module** and **Manage** > **Appearance** > **+ Install new theme** buttons are missing.
 
-This is a known bug in Drupal 8. See [#3033480](https://www.drupal.org/project/drupal/issues/3033480) for more information.
+This is a known bug in Drupal 8 and Drupal 9. See [#2350711](https://www.drupal.org/project/drupal/issues/2350711) for more information.
 
 **Solution**:
 
