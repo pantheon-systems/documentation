@@ -345,6 +345,12 @@ Set the site to use the Drupal 9 Upstream:
 terminus site:upstream:set $site drupal9
 ```
 
+Enter `yes` when prompted:
+
+```bash
+Are you sure you want change the upstream for anita-drupal to Drupal 9? (yes/no) [no]:
+```
+
 Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
 ## Ongoing Core Updates
 
