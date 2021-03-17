@@ -63,6 +63,7 @@ You can hook into the following workflows:
 | `deploy_product`                       | Create site                                                         | Dev                        | `after` stage valid, `before` stage invalid |
 | `sync_code`                            | Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard | Dev or Multidev            |                                             |
 | `create_cloud_development_environment` | Create Multidev environment                                         | Multidev                   | `after` stage valid, `before` stage invalid |
+| `autopilot_vrt`                        | Autopilot Visual Regression test                                    | "Autopilot" Multidev       | `after` stage valid, `before` stage invalid |
 
 ## Secrets
 
@@ -113,6 +114,10 @@ remote: Successfully applied `pantheon.yml` to the 'new-feature' environment.
 remote:
 remote:
 ```
+
+### Autopilot VRT Hook Does Not Run When Expected
+
+Sometimes Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your "Autopilot" multidev from the dashboard. Be sure to also delete the "Autopilot" branch, and then create the "Autopilot" multidev again in the dashboard. Once you do this, your scripts should start running after the Visual Regression tests complete.
 
 ## See Also
 
