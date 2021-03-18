@@ -7,7 +7,7 @@ contributors: [ari, edwardangert]
 reviewed: "2021-03-01"
 ---
 
-Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
+Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
 
 Create a new site with Integrated Composer as part of Pantheon's Limited Availability release. New sites created through Pantheon's Limited Availability program are production-ready.
 
