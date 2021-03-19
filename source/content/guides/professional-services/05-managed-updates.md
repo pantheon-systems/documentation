@@ -1,6 +1,6 @@
 ---
 title: Managed Updates
-subtitle: Protection and mitigation at the network and transport layers
+subtitle: Managed Updates
 description: Managed Updates offerings and requirements for Drupal 8 compatibility
 categories: [manage]
 tags: [composer, professional-services, updates, workflow]

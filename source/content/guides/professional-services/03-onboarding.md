@@ -1,6 +1,6 @@
 ---
 title: Onboarding Services
-subtitle: What to expect from a site migration
+subtitle: Onboarding Services
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
 categories: [get-started]
 tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]

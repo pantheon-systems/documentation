@@ -1,6 +1,6 @@
 ---
 title: Website Migration Service
-subtitle: What to expect from a site migration
+subtitle: Website Migration Service
 description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites.
 categories: [develop]
 tags: [professional-services, migration]

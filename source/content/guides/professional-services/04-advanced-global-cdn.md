@@ -1,12 +1,12 @@
 ---
 title: Advanced Global CDN
-subtitle: Protection and mitigation at the network and transport layers
+subtitle: Advanced Global CDN
 description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 categories: [performance]
 tags: [cdn, security, professional-services]
 reviewed: "2021-04-01"
 layout: guide
-permalink: docs/guides/onboarding
+permalink: docs/guides/advanced-global-cdn
 anchorid: advanced-global-cdn
 editpath: professional-services/04-advanced-global-cdn.md
 ---
