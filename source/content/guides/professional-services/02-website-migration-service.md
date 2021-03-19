@@ -1,12 +1,17 @@
 ---
 title: Website Migration Service
-description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites. This doc outlines what you can expect.
-tags: [professional-services, migration]
+subtitle: What to expect from a site migration
+description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites.
 categories: [develop]
-reviewed: "2021-02-23"
+tags: [professional-services, migration]
+reviewed: "2021-04-01"
+layout: guide
+permalink: docs/guides/website-migration-service
+anchorid: website-migration-service
+editpath: professional-services/02-website-migration-service.md
 ---
 
-The Website Migration Service offered by [Pantheon Professional Services](/professional-services) helps ensure a smooth migration of your existing sites to Pantheon.
+The Website Migration Service offered by [Pantheon Professional Services](/guides/professional-services) helps ensure a smooth migration of your existing sites to Pantheon.
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 

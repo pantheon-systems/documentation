@@ -1,9 +1,14 @@
 ---
-title: Professional Services
+title: Pantheon Professional Services
+subtitle: Introduction
 description: Pantheon Professional Services include consulting, migrations, load testing, training, AGCDN, Managed Updates, and dedicated Customer Success Managers.
-tags: [services, migration, AGCDN, managed updates]
 categories: [develop]
-reviewed: "2020-05-19"
+tags: [services, migration, AGCDN, managed updates]
+reviewed: "2021-04-01"
+layout: guide
+permalink: docs/guides/professional-services
+anchorid: professional-services
+editpath: professional-services/01-introduction.md
 ---
 
 The Pantheon Professional Services (**PS**) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. [Contact us](https://pantheon.io/professional-services?docs) for details.

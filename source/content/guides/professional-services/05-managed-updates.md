@@ -1,9 +1,14 @@
 ---
 title: Managed Updates
-description: Descriptions of the Managed Updates products and requirements for Drupal 8 compatibility
-reviewed: "2020-08-21"
+subtitle: Protection and mitigation at the network and transport layers
+description: Managed Updates offerings and requirements for Drupal 8 compatibility
 categories: [manage]
 tags: [composer, professional-services, updates, workflow]
+reviewed: "2021-04-01"
+layout: guide
+permalink: docs/guides/managed-updates
+anchorid: managed-updates
+editpath: professional-services/05-managed-updates.md
 ---
 
 [Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)
@@ -18,7 +23,7 @@ To make Managed Updates available to customers of all sizes and needs, Pantheon 
 
 ### Premium
 
-Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. 
+Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled.
 
 ### Lite
 

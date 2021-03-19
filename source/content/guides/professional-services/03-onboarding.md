@@ -1,9 +1,14 @@
 ---
 title: Onboarding Services
+subtitle: What to expect from a site migration
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
-tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
 categories: [get-started]
-reviewed: "2020-05-26"
+tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
+reviewed: "2021-04-01"
+layout: guide
+permalink: docs/guides/onboarding
+anchorid: onboarding
+editpath: professional-services/03-onboarding.md
 ---
 
 Pantheon Onboarding Managers are your website operations (**WebOps**) experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team is dedicated to making sure your team has the WebOps tools and training to work effectively on the Pantheon platform.
