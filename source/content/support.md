@@ -18,7 +18,7 @@ Pantheon offers a [range of support packages](https://pantheon.io/resources/pant
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
 | [**Tickets**](#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
-| [**Professional Services**](/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
+| [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
 
 ## Best Practices
 

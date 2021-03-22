@@ -42,7 +42,7 @@ To retain your existing CDN, set up a "stacked CDN" configuration. Ensure that y
 
 While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
-If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/advanced-global-cdn) service.
+If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/guides/advanced-global-cdn) service.
 
 ### Is the www-redirector service still available?
 
@@ -88,4 +88,4 @@ To prevent issues with Twitter card validation and to reduce the overall time to
 
 ## Advanced Global CDN
 
-For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/advanced-global-cdn) service.
+For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/guides/advanced-global-cdn) service.

@@ -25,7 +25,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - Doc: [HTTPS on Pantheon's Global CDN](/free-https)
 - Doc: [Configure Redirects](/redirects)
 - Doc: [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)
-- [Pantheon's Advanced Global CDN](https://pantheon.io/product/advanced-global-cdn)
+- [Pantheon's Advanced Global CDN](https://pantheon.io/product/guides/advanced-global-cdn)
 
 ### Keep Learning After Today
 

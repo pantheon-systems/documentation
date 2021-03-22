@@ -11,7 +11,7 @@ anchorid: advanced-global-cdn
 editpath: professional-services/04-advanced-global-cdn.md
 ---
 
-[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
+[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/guides/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
 
 Each AGCDN service configuration is offered as an annual contract subscription. Customers can include multiple sites to the configuration, or conditionally apply specific rules.
 
@@ -104,7 +104,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
   The customer is responsible for purchasing, maintaining payment for, and supporting these plugins.
 
-[See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
+[See a comparison of the features](https://pantheon.io/product/guides/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
 ## Frequently Asked Questions
 
@@ -114,7 +114,7 @@ Yes, Global CDN is included free of charge for all Pantheon customers. This enab
 
 ### Who sets up the Fastly edge configuration files?
 
-Advanced Global CDN is supported by Pantheon’s experienced [Professional Services](/professional-services) team, who can set up, configure, and maintain your Fastly edge configurations.
+Advanced Global CDN is supported by Pantheon’s experienced [Professional Services](/guides/professional-services) team, who can set up, configure, and maintain your Fastly edge configurations.
 
 ### Is the CDN configurable?
 
@@ -127,4 +127,4 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 ## See Also
 
 - [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
-- [Professional Services](/professional-services) - Learn all the great services our expert team can provide.
+- [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.

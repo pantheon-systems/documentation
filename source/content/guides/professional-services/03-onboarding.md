@@ -53,4 +53,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Professional Services
 
-Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations, load testing, [Advanced Global CDN](/advanced-global-cdn) implementation, and [Managed Updates](/managed-updates) services. See our [Professional Services](/professional-services) overview, or [contact us](https://pantheon.io/professional-services?docs) for details.
+Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations, load testing, [Advanced Global CDN](/guides/advanced-global-cdn) implementation, and [Managed Updates](/guides/managed-updates) services. See our [Professional Services](/guides/professional-services) overview, or [contact us](https://pantheon.io/professional-services?docs) for details.

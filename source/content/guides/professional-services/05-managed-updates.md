@@ -11,7 +11,7 @@ anchorid: managed-updates
 editpath: professional-services/05-managed-updates.md
 ---
 
-[Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)
+[Managed Updates](https://pantheon.io/professional-services/guides/managed-updates?docs) is a service offered by our [Professional Services](/guides/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/guides/managed-updates-webinar?docs)
 
 With Pantheon Managed Updates (**PMU**), you get:
 
@@ -131,4 +131,4 @@ Additionally:
 ## See Also
 - [Serving Sites from the Web Subdirectory](/nested-docroot)
 - [Custom Upstreams](/custom-upstream)
-- [Professional Services](/professional-services)
+- [Professional Services](/guides/professional-services)
