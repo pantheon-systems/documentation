@@ -15,7 +15,7 @@ The Website Migration Service offered by [Pantheon Professional Services](/guide
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 
-If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager via Slack with any questions or concerns.
+If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
 
 ## Migration Project Scope
 
@@ -39,7 +39,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - Implement [cron](/drupal-cron) triggering services, via New Relic (on any non-Basic plan site)
 
-- Configure sites that use Acquia Search to use Pantheon Solr instead
+- Configure sites that use Acquia Search to use Pantheon Search instead
 
   - Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first
 
@@ -152,3 +152,7 @@ You may elect to purchase CAS hours (four hour minimum) for the Pantheon Migrati
 1. Communicate content freeze to affected stakeholders
 
 1. Perform DNS cutover within the timeline specified in the migrations agreement
+
+## See Also
+
+- []()
