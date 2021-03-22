@@ -15,25 +15,25 @@ The Website Migration Service offered by [Pantheon Professional Services](/guide
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 
+The Migrations Team's goal is to migrate your site to our WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration. If you're looking for the doc on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate)
+
 If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
 
-## Migration Project Scope
+## Migration Project Scope - What's Included
 
-Pantheon's goal is to migrate your site to our WebOps platform without any loss of functionality.
-
-### Included in Migrations
+You'll meet with a Migration Engagement Manager to outline the Project Requirements that will list the sites that the migration includes.
 
 For all sites identified in the agreed on Project Requirements, the Migrations Team will:
 
 - Transfer site code, database, and files
 
-- Resync your database and user-uploaded files as a part of the site launch
+- Resync the database and user-uploaded files as a part of the site launch
 
 - Disable unnecessary or unsupported modules and plugins
 
 - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
 
-- [Implement solutions](#implement-known-solutions) to known existing incompatibilities (includes up to five hours' worth of work)
+- [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
 
 - Set up external [SMTP](/smtp) to work with the provider of your choice
 
@@ -47,7 +47,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - Additional tasks identified in the Project Requirements
 
-#### Implement Solutions to Known Existing Incompatibilities
+### Implement Solutions to Known Existing Incompatibilities
 
 Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues) to incompatibilities that have already been identified by our Success teams.
 
@@ -56,27 +56,21 @@ These hours are tracked by the Migration Team and do not roll over for use on ot
 Implementing known solutions includes handling core considerations. For example, if the migration includes:
 
 - Pantheon Default Upstreams
-
   - Before Pantheon hands the site off to you for User Acceptance Testing (UAT), Pantheon will update the site to use the most current Upstream release.
-
     - If this causes issues, we will roll it back to the current version on your production server
 
 - Nested Docroot or Composer
-
   - Your sites will be migrated at their current version
 
 - Custom or Alternative Upstream
-
   - Your sites will be brought over using the most current release in your upstream
 
-### Out of Scope for Site Migrations
+## Out of Scope for Site Migrations
 
 1. Sites not listed in the original migrations agreement
-
    - Contact your Account Rep to migrate more sites.
 
 1. Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
-
    - Issues that arise as a result of:
 
      - [Pantheon platform considerations](/platform-considerations)
@@ -117,9 +111,9 @@ Implementing known solutions includes handling core considerations. For example,
 
    - You may add any code changes to a Multidev and merge them in post-launch, or once you take ownership of the site, move changes in before launch
 
-## Custom Application Service (CAS) Hours
+## Professional Services (PS) Hours
 
-You may elect to purchase CAS hours (four hour minimum) for the Pantheon Migration Team to complete additional work, which can include:
+You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migration Team to complete additional work, which can include:
 
 - Creating a Custom Upstream for you
 
@@ -134,6 +128,8 @@ You may elect to purchase CAS hours (four hour minimum) for the Pantheon Migrati
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
 - Re-configuring your application layer SSO
+
+These used to be called Custom Application Services (CAS) hours.
 
 ## Your Responsibilities
 
@@ -155,4 +151,6 @@ You may elect to purchase CAS hours (four hour minimum) for the Pantheon Migrati
 
 ## See Also
 
-- []()
+- [Migrate Sites to Pantheon](/migrate) and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
+- [Migrate to Pantheon: WordPress Site Networks](/migrate-wordpress-site-networks)
+- [Video: Guided WordPress Migrations](/videos/migrate-wordpress)
