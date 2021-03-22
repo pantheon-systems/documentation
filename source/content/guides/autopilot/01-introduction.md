@@ -52,6 +52,10 @@ Yes. Access to Autopilot is account-based and individual sites in that account c
 
 Yes. Autopilot is fully compatible with Pantheon's [Integrated Composer](/integrated-composer) feature.
 
+### Does Autopilot work with build tools?
+
+Not yet. Autopilot is not compatible with Build Tools or other workflows that use external Git repositories.
+
 ### Does Autopilot automatically deploy changes to the Live environment?
 
 You can specify the environments to which Autopilot deploys. See the next page for [configuration options](/guides/enable-autopilot).
