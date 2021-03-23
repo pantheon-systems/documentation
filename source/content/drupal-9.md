@@ -163,9 +163,10 @@ git commit -m "Add custom projects."
 ```bash
 # Fetch your D8 settings file.
 git show original/master:sites/default/settings.php > web/sites/default/original-settings.php
-# Check for any customizations.
+# Check for any customizations (if this returns nothing, you can move on to the next step).
+# Copy what you need over to web/sites/default/settings.php, and commit as needed.
 diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-# Copy customizations over to web/sites/default/settings.php and commit as needed, then remove the original.
+# Remove the original copy.
 rm web/sites/default/original-settings.php
 ```
 
