@@ -8,7 +8,6 @@ reviewed: "2020-02-26"
 
 ## Overview
 
-
 Multizone Failover is more than just a combination of technology. It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
 
 ### RPO and RTO - Minutes to Recovery
@@ -22,8 +21,6 @@ Recovery Time Objective (**RTO**) is the target amount of time within which a bu
 ## Access
 
 Site Multizone Failover is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us?docs).
-
-![Chart showing Pantheon's zone-based Multizone Failover architecture](../images/site-dr-diagram.png)
 
 ## Features
 
