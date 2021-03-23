@@ -153,6 +153,8 @@ git commit -m "Add contrib projects."
 
 ```bash
 git checkout original/master -- modules/custom themes/custom
+git mv themes/* web/themes
+git mv modules/* web/modules
 git commit -m "Add custom projects."
 ```
 
