@@ -138,7 +138,7 @@ git commit -m "Add Quicksilver scripts."
 7. List contrib modules and themes on your D8 site:
 
 ```bash
-terminus drush $D8_SITE.dev -- pm:list --fields=name,version --no-core --status=enabled
+terminus drush $D8_SITE.dev -- pm:projectinfo status=enabled --fields=name,version --format=table
 ```
 
 Then use Composer on your D9 site to add these there:
