@@ -180,6 +180,12 @@ terminus connection:set $D9_SITE.dev git
 git push origin master
 ```
 
+12. Run database updates:
+
+```bash
+terminus drush $D9_SITE.dev -- updatedb
+```
+
 12. Review the site, then proceed to launch using the Pantheon Relauch documentation.
 
 ## FAQ
