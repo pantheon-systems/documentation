@@ -186,7 +186,7 @@ git push origin master
 terminus drush $D9_SITE.dev -- updatedb
 ```
 
-12. Review the site, then proceed to launch using the Pantheon Relauch documentation.
+12. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
 
 ## FAQ
 
