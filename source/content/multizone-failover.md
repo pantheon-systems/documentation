@@ -8,11 +8,13 @@ reviewed: "2020-02-26"
 
 ## Overview
 
-Multizone Failover is more than just a combination of technology. It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
+[<dfn id="mzfailover">Multizone Failover</dfn>](https://pantheon.io/features/disaster-recovery?docs) is a high-availability Disaster Recovery solution with intelligent failover at the Global CDN layer. 
+
+It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
 
 ### RPO and RTO - Minutes to Recovery
 
-With Multizone Failover in place, Pantheon monitors datacenter health and proactively manages failover to avoid or minimize data loss.
+Multizone Failover monitors datacenter health and proactively manages failover to avoid or minimize data loss.
 
 Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data loss in the event of a major outage. In short, think “lost transactions.” The RPO is largely determined by whether there is replication lag or not, which can result from heavy transactional load on the site’s database. We rarely see replication lag, and when we do, we have automated tools to rebuild the site’s replica and alert our team if a site is consistently experiencing replication lag. This way, we can proactively notify you so you can work toward a solution. For sites with Multizone Failover enabled, Pantheon’s RPO is 5 minutes.
 
