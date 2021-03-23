@@ -3,6 +3,7 @@ Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentati
 
 Pantheon Documentation
 ======================
+
 https://pantheon.io/docs/
 
 This repository contains the [Pantheon](https://pantheon.io) documentation, as well as the tools to build local test environments.
@@ -20,13 +21,15 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide/) for our guidelines
 ## Local Installation
 
 ### Prerequisites
- - MacOS or Linux system (untested with Bash on Windows)
- - [Node.js](https://nodejs.org/en/)
- - Gatsby CLI:
+  - You can optionally use [Lando](https://docs.lando.dev)
+    - By leveraging Lando you can avoid havting to install node.js, and gatsby cli on your local computer
+  - MacOS or Linux system (untested with Bash on Windows)
+  - [Node.js](https://nodejs.org/en/)
+  - Gatsby CLI:
 
-   ```bash
-   npm install -g gatsby-cli
-   ```
+```bash
+npm install -g gatsby-cli
+```
 
 ### Get the Code
 
@@ -39,15 +42,14 @@ git clone https://github.com/pantheon-systems/documentation.git
 Or
 
 ```bash
-git@github.com:pantheon-systems/documentation.git
+git clone git@github.com:pantheon-systems/documentation.git
+cd documentation
 ```
 
 ### Install
 
-```
-cd documentation/
-npm ci
-```
+You can install via Lando or directly on your host computer. Both ways require the docs app to use a `GITHUB_API` token to operate.
+
 #### GitHub Token
 We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
 
@@ -57,13 +59,26 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 1. Copy the token to your clipboard.
 1. Create or edit `.env.development`, and add (replacing $TOKENHASH ):
 
-   ```
-   GITHUB_API=$TOKENHASH
-   ```
+```bash
+GITHUB_API=$TOKENHASH
+```
+
+#### Using Lando
+
+```bash
+lando start
+```
+
+The `lando start` command will fire up the app, install node dependencies, and start the `gatsby develop` server for you.
+
+#### Using gatsby cli Directly
+```bash
+npm ci
+```
 
 ### Run
 
-```
+```bash
 cd documentation/
 gatsby develop
 ```
