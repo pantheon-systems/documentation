@@ -1,30 +1,26 @@
 ---
-title: Installing Redis on Drupal or WordPress
-description: Understand how to use Redis as a caching mechanism for your Pantheon site.
+title: Object Cache (formerly Redis) for Drupal or WordPress
+description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 categories: [performance]
-tags: [cache, plugins, modules]
-contributors: [cityofoaksdesign]
+tags: [cache, plugins, modules, database]
+contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2021-03-01"
 ---
-Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+Pantheon's[<dfn id="objectcache">Object Cache (formerly Redis)</dfn>]() is an open-source, networked, in-memory, key-value data store based on the Redis object cache that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+## Benefits of Object Cache
 
-Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
+Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
 
-</Enablement>
+### Scalable Performance
 
-## Benefits of Redis
+Object Cache provides an alternative caching backend to take that work off the database, improving performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
-Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increase load-times.
+## Enable Object Cache
 
-Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+All plans except for the Basic plan can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
 
-## Enable Redis
-
-All plans except for the Basic plan can use Redis. Sandbox site plans can enable and use Redis for developmental purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
-
-| Plans         | Redis Support <Popover content="Available across all environments, including Multidevs."/> |
+| Plans         | Object Cache Support <Popover content="Available across all environments, including Multidevs."/> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
 | Basic         | ❌                                 |
@@ -35,7 +31,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <Tab title="WordPress" id="wp-install" active={true}>
 
-1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Object Cache server to come online.
 
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/terminus), [set the connection mode to SFTP](/sftp) then run:
 
@@ -131,7 +127,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <Tab title="Drupal 8" id="d8-install">
 
-1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
 1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
@@ -488,7 +484,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ## Frequently Asked Questions
 
-### How much Redis cache is available for each plan level?
+### How much Object cache is available for each plan level?
 
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
@@ -498,11 +494,11 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 | Performance M, L, XL   |               512          |
 | Elite                  |               1024         |
 
-*Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on paid plans.
+*Object Cache is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the [Enable Object Cache](#enable-object-cache) section above for details about which account types have Object Cache on paid plans.
 
-### What happens when Redis reaches maxmemory?
+### What happens when Object Cache reaches maxmemory?
 
-When the specified amount of memory is reached, Redis follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file.
+When the specified amount of memory is reached, Object Cache follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file.
 
 On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, please see the official [Redis documentation](https://redis.io/topics/lru-cache).
 
@@ -537,7 +533,7 @@ activerehashing yes
 
 Note that the `maxmemory` value will vary based on plan level.
 
-### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
+### If Object Cache hits the upper limit of memory usage, is this logged on Pantheon?
 
 Yes. There is a `redis.log` file that is available on the Redis container for each environment.
 
@@ -555,11 +551,11 @@ sftp>
 
 ### Why won't my site work after importing a database backup?
 
-When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
+When you replace the database with one that doesn't match the Object cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Object cache from the command line](#clear-cache).
 
-## Safely Remove Redis
+## Safely Remove Object Cache
 
-The following code changes are required before Redis can be safely uninstalled and disabled:
+The following code changes are required before Object Cache can be safely uninstalled and disabled:
 
 <TabList>
 
