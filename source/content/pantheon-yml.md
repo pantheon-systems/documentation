@@ -105,8 +105,30 @@ php_version: 7.0
 
 * [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
 * Drupal and PHP 7 require [Drush 7 or greater](/drush-versions/#configure-drush-version).
-* From time to time, we will roll out a new default version of PHP, which will be available to apply as One-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
+* From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
+
+### Specify a Version of MariaDB
+
+Use the `db_directive` in the `pantheon.yml` to choose a specific version of MariaDB.
+
+- When to use it and when not to
+- Why it’s a good idea to do this
+
+Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
+
+This table shows the recommended MariaDB version for each CMS:
+
+| CMS            | Recommended MariaDB Version |
+|----------------|-----------------------------|
+| Drupal <6.51   | 10.0 - 10.3                 |
+| Drupal >= 6.51 | 10.0 - 10.5                 |
+| Drupal < 7.76  | 10.0 - 10.3                 |
+| Drupal >= 7.76 | 10.0 - 10.5                 |
+| Drupal < 8.5   | 10.0 - 10.3                 |
+| Drupal >= 8.6  | 10.0 - 10.5                 |
+| Drupal >= 9.0  | 10.4 - 10.5                 |
+| WordPress      | 10.0 - 10.5                 |
 
 ### Drush Version
 
@@ -116,7 +138,7 @@ Add `drush_version` to the top level of the `pantheon.yml` file to configure the
 drush_version: 8
 ```
 
-For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions/).
+For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ### Filemount Path
 
