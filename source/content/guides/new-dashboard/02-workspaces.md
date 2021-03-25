@@ -37,15 +37,15 @@ Click a table heading to sort the table by that heading.
 Manage Team members and assign [roles and permissions](/change-management#roles-and-permissions). If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization here.
 ## Autopilot
 
-[Autopilot](/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
+[Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
 
 ![A gif showing Autopilot visual regression testing](../../../images/dashboard/vrt.gif)
 
-Once it's enabled, use it to visually compare changes to the site. Visit the [Autopilot documentation](/autopilot) for more information.
+Once it's enabled, use it to visually compare changes to the site. Visit the [Autopilot documentation](/guides/autopilot) for more information.
 
 ## Upstreams
 
-Create a new Workspace-specific [Custom Upstreams](/custom-upstream) using a GitHub or Bitbucket repository.
+Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository.
 
 ## Support
 
