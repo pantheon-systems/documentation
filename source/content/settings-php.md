@@ -27,7 +27,7 @@ For Drupal 7 and earlier, Pantheon uses a variant of Pressflow Drupal to allow t
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/read-environment-config) (including domain_access)
-- [Installing Redis on Drupal or WordPress](/redis)
+- [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Platform and Custom Domains](/domains)
 - [Configure Redirects](/redirects)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
@@ -147,9 +147,9 @@ Depending on your use case, there are three possibilities:
   
   </Alert>
 
-- For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis) guide for examples.
+- For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/object-cache) guide for examples.
 
-- For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Redis](/redis) guide for examples.
+- For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Redis](/object-cache) guide for examples.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472).
 

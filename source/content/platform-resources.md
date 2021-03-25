@@ -86,7 +86,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." /></th>
+        <th scope="row" class="thead-inverse">Redis <Popover content="For details, see <a href='/docs/redis/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." /></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>

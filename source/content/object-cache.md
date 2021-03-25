@@ -129,7 +129,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
-1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+1. Install and activate the [Redis](https://www.drupal.org/project/object-cache) module from Drupal.org.
 
   <Alert title="Note" type="info">
 
@@ -209,7 +209,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
+1. Add the [Redis](https://www.drupal.org/project/object-cache) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus remote:drush <site>.<env> -- en redis -y
@@ -463,7 +463,7 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 
 ### You have requested a non-existent service
 
-The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/redis) module before it has been enabled:
+The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/object-cache) module before it has been enabled:
 
 ```php
 Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:

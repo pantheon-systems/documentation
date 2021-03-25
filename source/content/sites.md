@@ -27,7 +27,7 @@ The Team tab allows you to change the site owner; add supporting agencies; and a
 
 ### Add-Ons
 
-Pantheon offers several add-ons to help you build dynamic sites. These include [Apache Solr](/solr) and [Redis](/redis).
+Pantheon offers several add-ons to help you build dynamic sites. These include [Apache Solr](/solr) and [Redis](/object-cache).
 
 ### Delete Site
 

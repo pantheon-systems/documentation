@@ -60,7 +60,7 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 
 ### Basic Plan
 
-[New Relic](/new-relic), [Redis](/redis), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/new-relic), [Redis](/object-cache), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 For Redis and Solr, the following code changes are required before the feature can be safely disabled:
 
