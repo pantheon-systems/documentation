@@ -5,7 +5,7 @@ description: Autopilot visual regression testing (VRT) results and how to deal w
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
-anchorid: autopilot
+anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-03-26"

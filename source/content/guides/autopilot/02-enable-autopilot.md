@@ -5,7 +5,7 @@ description: Enable and configure Autopilot visual regression testing (VRT) for 
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
-anchorid: autopilot
+anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
 reviewed: "2021-03-26"
