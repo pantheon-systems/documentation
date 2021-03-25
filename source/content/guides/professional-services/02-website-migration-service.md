@@ -35,7 +35,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
 
-- Set up external [SMTP](/smtp) to work with the provider of your choice
+- Set up external [email](/email) to work with the provider of your choice
 
 - Implement [cron](/drupal-cron) triggering services, via New Relic (on any non-Basic plan site)
 
