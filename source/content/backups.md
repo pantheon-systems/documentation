@@ -1,8 +1,8 @@
 ---
 title: Backups Tool
 description: Learn how to backup your Drupal or WordPress site on Pantheon.
-tags: [getstarted]
-categories: []
+tags: [backups, security]
+categories: [develop]
 ---
 
 The Backups tab is where you manage all the details for your site's backup. Each backup contains three components: code, database, and files.
