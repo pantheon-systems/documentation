@@ -46,7 +46,7 @@ Autopilot requires Multidev, and is available to Pantheon Gold Accounts or highe
 ## FAQ
 ### Is Autopilot configurable per site?
 
-Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/enable-autopilot)
+Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/autopilot/enable-autopilot)
 
 ### Does Autopilot work with Composer?
 
@@ -58,7 +58,7 @@ Not yet. Autopilot is not compatible with Build Tools or other workflows that us
 
 ### Does Autopilot automatically deploy changes to the Live environment?
 
-You can specify the environments to which Autopilot deploys. See the next page for [configuration options](/guides/enable-autopilot).
+You can specify the environments to which Autopilot deploys. See the next page for [configuration options](/guides/autopilot/enable-autopilot).
 
 ## See Also
 
