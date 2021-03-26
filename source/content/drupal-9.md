@@ -76,120 +76,120 @@ $node = Node::load(1);
 
 Since most of these changes are relatively minor, there are a number of [deprecation checking and correction tools](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/deprecation-checking-and-correction-tools) available.
 
-## Convert an existing Drupal 8 site to Drupal 9
-
-Steps to convert and migrate your Drupal 8 site to a new Drupal 9 instance.
+## Convert an Existing Drupal 8 Site to Drupal 9
 
 Prerequisites:
-- Install Terminus, Git, and Composer (see "[Before You Begin](drupal-9#before-you-begin)" above)
+- Install Terminus, Git, and Composer (see "[Before You Begin](#before-you-begin)" above)
 - Install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin
 - Set environment variables with your Drupal 8 and Drupal 9 site names:
 
-```bash
-export D8_SITE=best-drupal8-site-ever
-export D9_SITE=best-drupal9-site-ever
-```
+  ```bash{promptUser: user}
+  export D8_SITE=best-drupal8-site-ever
+  export D9_SITE=best-drupal9-site-ever
+  ```
 
-1. Create a new Drupal 9 site using the link in the [Create a New Drupal 9 Site](drupal-9#create-a-new-drupal-9-site-with-integrated-composer) section above.
+Steps to convert and migrate your Drupal 8 site to a new Drupal 9 instance.
 
-2. Use Git to clone your new Drupal 9 site codebase to your local machine.
+1. Create a new Drupal 9 site using the link in the [Create a New Drupal 9 Site](#create-a-new-drupal-9-site-with-integrated-composer) section above.
 
-3. On the Drupal 9 site, add your Drupal 8 site repo as remote. You can retrieve the D8 site's Git URL via the Dashboard, or with Terminus:
+1. Use Git to clone your new Drupal 9 site codebase to your local machine.
 
-```bash
-terminus connection:info $D8_SITE.dev --field=git_url
-```
+1. From the local Drupal 9 site's directory, use Terminus to retrieve the D8 site's Git URL:
 
-Add this as a remote on the D9 site:
+  ```bash{promptUser: user}
+  terminus connection:info $D8_SITE.dev --field=git_url
+  ```
 
-```bash
-git remote add original ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
-git fetch original
-```
+1. Add the Drupal 8 site as a remote repository. Use the URL retrieved in the previous step:
 
-4. Copy over exported configuration from the original site. From your D9 site, run the following commands:
+  ```bash{promptUser: user}
+  git remote add original ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
+  git fetch original
+  ```
 
-```bash
-git checkout original/master -- sites/default/config
-git mv sites/default/config/* config/
-git commit -m "Add site configuration."
-```
+1. Copy over exported configuration from the original site. From your D9 site, run the following commands:
 
-5. Compare your current `pantheon.yml` file with the new D9 `pantheon.upstream.yml`:
+  ```bash{promptUser: user}
+  git checkout original/master -- sites/default/config
+  git mv sites/default/config/* config/
+  git commit -m "Add site configuration."
+  ```
 
-```bash
-git diff original/master:pantheon.yml pantheon.upstream.yml
-```
+1. Compare your current `pantheon.yml` file with the new D9 `pantheon.upstream.yml`:
 
-If you have customizations in your D8 site's `pantheon.yml` that you want to keep for D9 (e.g, a Quicksilver script or site-specific protected web paths), copy `pantheon.yml` over:
+  ```bash{promptUser: user}
+  git diff original/master:pantheon.yml pantheon.upstream.yml
+  ```
 
-```bash
-git checkout original/master -- pantheon.yml
-git commit -m "Update pantheon.yml."
-```
+1. If you have customizations in your D8 site's `pantheon.yml` that you want to keep for D9 (e.g., a Quicksilver script or site-specific protected web paths), copy `pantheon.yml` over:
 
-6. Copy over any Quicksilver scripts referenced in `pantheon.yml`:
+  ```bash{promptUser: user}
+  git checkout original/master -- pantheon.yml
+  git commit -m "Update pantheon.yml."
+  ```
 
-```bash
-git checkout original/master -- private/scripts
-git commit -m "Add Quicksilver scripts."
-```
+1. Copy over any Quicksilver scripts referenced in `pantheon.yml`:
 
-7. List contrib modules and themes on your D8 site:
+  ```bash{promptUser: user}
+  git checkout original/master -- private/scripts
+  git commit -m "Add Quicksilver scripts."
+  ```
 
-```bash
-terminus drush $D8_SITE.dev -- pm:projectinfo --status=enabled --fields=name,version --format=table
-```
+1. List contrib modules and themes on your D8 site:
 
-Then use Composer on your D9 site to add these there:
+  ```bash{promptUser: user}
+  terminus drush $D8_SITE.dev -- pm:projectinfo --status=enabled --fields=name,version --format=table
+  ```
 
-```bash
-composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
-git add composer.*
-git commit -m "Add contrib projects."
-```
+1. Then use Composer on your D9 site to add these there:
 
-8. Copy over any custom modules or themes from your D8 site:
+  ```bash{promptUser: user}
+  composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
+  git add composer.*
+  git commit -m "Add contrib projects."
+  ```
 
-```bash
-git checkout original/master -- modules/custom themes/custom
-git mv themes/* web/themes
-git mv modules/* web/modules
-git commit -m "Add custom projects."
-```
+1. Copy over any custom modules or themes from your D8 site:
 
-9. Check `settings.php` for any customizations to copy over:
+  ```bash{promptUser: user}
+  git checkout original/master -- modules/custom themes/custom
+  git mv themes/* web/themes
+  git mv modules/* web/modules
+  git commit -m "Add custom projects."
+  ```
 
-```bash
-# Fetch your D8 settings file.
-git show original/master:sites/default/settings.php > web/sites/default/original-settings.php
-# Check for any customizations (if this returns nothing, you can move on to the next step).
-# Copy what you need over to web/sites/default/settings.php, and commit as needed.
-diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-# Remove the original copy.
-rm web/sites/default/original-settings.php
-```
+1. Check `settings.php` for any customizations to copy over:
 
-10. Copy your files and database from your D8 site to the D9 site:
+  ```bash{promptUser: user}
+  # Fetch your D8 settings file.
+  git show original/master:sites/default/settings.php > web/sites/default/original-settings.php
+  # Check for any customizations (if this returns nothing, you can move on to the next step).
+  # Copy what you need over to web/sites/default/settings.php, and commit as needed.
+  diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
+  # Remove the original copy.
+  rm web/sites/default/original-settings.php
+  ```
 
-```bash
-terminus site:clone $D8_SITE.live $D9_SITE.dev --no-code --no-destination-backup --no-source-backup
-```
+1. Copy your files and database from your D8 site to the D9 site:
 
-11. Push the D9 codebase from your local machine up to Pantheon:
+  ```bash{promptUser: user}
+  terminus site:clone $D8_SITE.live $D9_SITE.dev --no-code --no-destination-backup --no-source-backup
+  ```
 
-```bash
-terminus connection:set $D9_SITE.dev git
-git push origin master
-```
+1. Push the D9 codebase from your local machine up to Pantheon:
 
-12. Run database updates:
+  ```bash{promptUser: user}
+  terminus connection:set $D9_SITE.dev git
+  git push origin master
+  ```
 
-```bash
-terminus drush $D9_SITE.dev -- updatedb
-```
+1. Run database updates:
 
-12. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
+  ```bash{promptUser: user}
+  terminus drush $D9_SITE.dev -- updatedb
+  ```
+
+1. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
 
 ## FAQ
 
