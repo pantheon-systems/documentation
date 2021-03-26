@@ -12,17 +12,7 @@ anchorid: drupal-9-guide/migrate-new-d9
 editpath: drupal-9/02-existing-8-new-9.md
 ---
 
-In this section, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
-
-Prerequisites:
-- Install Terminus, Git, and Composer (see "[Before You Begin](#before-you-begin)" above)
-- Install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin
-- Set environment variables with your Drupal 8 and Drupal 9 site names:
-
-  ```bash{promptUser: user}
-  export D8_SITE=best-drupal8-site-ever
-  export D9_SITE=best-drupal9-site-ever
-  ```
+In this doc, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
 
 ## Prepare the Local Environment
 
