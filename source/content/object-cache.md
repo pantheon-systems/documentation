@@ -1,12 +1,12 @@
 ---
-title: Object Cache (formerly Redis) for Drupal or WordPress
+title: Object Cache (formerly Redis)
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 categories: [performance]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2021-03-01"
 ---
-Pantheon's[<dfn id="objectcache">Object Cache (formerly Redis)</dfn>]() is an open-source, networked, in-memory, key-value data store based on the Redis object cache that can be used as a drop-in caching backend for your Drupal or WordPress website.
+Pantheon's[<dfn id="objectcache">Object Cache (formerly Redis)</dfn>]() is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Object Cache
 
@@ -351,6 +351,16 @@ redis> DBSIZE
 :0
 ```
 
+### View Service Configuration Details
+
+To check the cache memory, you can use the `config get *memory*` command. The following is sample output:
+
+```bash
+redis> config get *memory*
+maxmemory
+52428800
+```
+
 ## Troubleshooting
 
 ### Cannot Activate the Redis Plugin for WordPress
@@ -383,7 +393,7 @@ $conf['redis_perm_ttl'] = 21600;
 
 <Alert title="Warning" type="danger">
 
-The Redis cache needs to be flushed with 'flushall' in the Redis terminal connection afterwards, in order for this to have any effect.
+The object cache needs to be flushed with 'flushall' in the Redis terminal connection afterwards, in order for this to have any effect.
 
 </Alert>
 
