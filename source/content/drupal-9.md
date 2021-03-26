@@ -78,6 +78,8 @@ Since most of these changes are relatively minor, there are a number of [depreca
 
 ## Convert an Existing Drupal 8 Site to Drupal 9
 
+In this section, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
+
 Prerequisites:
 - Install Terminus, Git, and Composer (see "[Before You Begin](#before-you-begin)" above)
 - Install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin
@@ -100,17 +102,17 @@ Steps to convert and migrate your Drupal 8 site to a new Drupal 9 instance.
   terminus connection:info $D8_SITE.dev --field=git_url
   ```
 
-1. Add the Drupal 8 site as a remote repository. Use the URL retrieved in the previous step:
+1. Add the Drupal 8 site as a remote repository called `existing-8`. Use the URL retrieved in the previous step:
 
   ```bash{promptUser: user}
-  git remote add original ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
-  git fetch original
+  git remote add existing-8 ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
+  git fetch existing-8
   ```
 
 1. Copy over exported configuration from the original site. From your D9 site, run the following commands:
 
   ```bash{promptUser: user}
-  git checkout original/master -- sites/default/config
+  git checkout existing-8/master -- sites/default/config
   git mv sites/default/config/* config/
   git commit -m "Add site configuration."
   ```
@@ -118,20 +120,20 @@ Steps to convert and migrate your Drupal 8 site to a new Drupal 9 instance.
 1. Compare your current `pantheon.yml` file with the new D9 `pantheon.upstream.yml`:
 
   ```bash{promptUser: user}
-  git diff original/master:pantheon.yml pantheon.upstream.yml
+  git diff existing-8/master:pantheon.yml pantheon.upstream.yml
   ```
 
 1. If you have customizations in your D8 site's `pantheon.yml` that you want to keep for D9 (e.g., a Quicksilver script or site-specific protected web paths), copy `pantheon.yml` over:
 
   ```bash{promptUser: user}
-  git checkout original/master -- pantheon.yml
+  git checkout existing-8/master -- pantheon.yml
   git commit -m "Update pantheon.yml."
   ```
 
 1. Copy over any Quicksilver scripts referenced in `pantheon.yml`:
 
   ```bash{promptUser: user}
-  git checkout original/master -- private/scripts
+  git checkout existing-8/master -- private/scripts
   git commit -m "Add Quicksilver scripts."
   ```
 
@@ -152,7 +154,7 @@ Steps to convert and migrate your Drupal 8 site to a new Drupal 9 instance.
 1. Copy over any custom modules or themes from your D8 site:
 
   ```bash{promptUser: user}
-  git checkout original/master -- modules/custom themes/custom
+  git checkout existing-8/master -- modules/custom themes/custom
   git mv themes/* web/themes
   git mv modules/* web/modules
   git commit -m "Add custom projects."
@@ -162,7 +164,7 @@ Steps to convert and migrate your Drupal 8 site to a new Drupal 9 instance.
 
   ```bash{promptUser: user}
   # Fetch your D8 settings file.
-  git show original/master:sites/default/settings.php > web/sites/default/original-settings.php
+  git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
   # Check for any customizations (if this returns nothing, you can move on to the next step).
   # Copy what you need over to web/sites/default/settings.php, and commit as needed.
   diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
