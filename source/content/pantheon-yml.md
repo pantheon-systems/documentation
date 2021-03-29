@@ -110,6 +110,8 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
+Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
+
 Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
 ```yaml
@@ -117,23 +119,20 @@ database:
   version: 10.0
 ```
 
-- When to use it and when not to
-- Why it’s a good idea to do this
-
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
 This table shows the recommended MariaDB version for each CMS:
 
-| CMS            | Recommended MariaDB Version |
-|----------------|-----------------------------|
-| Drupal <6.51   | 10.0 - 10.3                 |
-| Drupal >= 6.51 | 10.0 - 10.5                 |
-| Drupal < 7.76  | 10.0 - 10.3                 |
-| Drupal >= 7.76 | 10.0 - 10.5                 |
-| Drupal < 8.5   | 10.0 - 10.3                 |
-| Drupal >= 8.6  | 10.0 - 10.5                 |
-| Drupal >= 9.0  | 10.4 - 10.5                 |
-| WordPress      | 10.0 - 10.5                 |
+| CMS            | Recommended MariaDB Version | Customizable After |
+|----------------|-----------------------------|--------------------|
+| Drupal <6.51   | Default                     | May, 2021          |
+| Drupal >= 6.51 | Default                     | May, 2021          |
+| Drupal < 7.76  | Default                     | May, 2021          |
+| Drupal >= 7.76 | Default                     | May, 2021          |
+| Drupal < 8.5   | Default                     | May, 2021          |
+| Drupal >= 8.6  | 10.0 - 10.4                 |                    |
+| Drupal >= 9.0  | 10.4 - 10.4                 |                    |
+| WordPress      | Default                     | July, 2021         |
 
 ### Drush Version
 
