@@ -4,10 +4,10 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2020-11-18"
+reviewed: "2021-03-01"
 ---
 
-Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
+Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
 
 Create a new site with Integrated Composer as part of Pantheon's Limited Availability release. New sites created through Pantheon's Limited Availability program are production-ready.
 
@@ -136,7 +136,68 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 <Partial file="composer-support-scope.md" />
 
-## Troubleshooting / FAQ
+## Troubleshooting Code Syncs and Upstream Updates
+
+### View the Output of the Commit Log First
+
+If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
+
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+
+1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
+
+### Dashboard Workflow Shows an Error During Sync Code or Deploying to a New Environment
+
+If there is an error in the output, it may be due to an error in the site's `composer.json` or `composer.lock` file, or there may be an issue with a Composer library the site uses.
+
+To resolve, examine the error in the log. It may be a syntax or parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
+
+### Upstream Updates Cannot Be Applied
+
+When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
+
+```bash
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+  "CONFLICT (content): Merge conflict in composer.json"
+]
+```
+
+The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost. To resolve, merge the changes manually:
+
+1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
+
+1. Merge in the upstream changes:
+
+   ```bash{promptUser: user}
+   git pull https://github.com/pantheon-upstreams/drupal-project master
+   ```
+
+1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
+
+   ```bash
+   Auto-merging composer.json
+   CONFLICT (content): Merge conflict in composer.json
+
+   Automatic merge failed; fix conflicts and then commit the result.
+   ```
+
+1. [Resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts) and follow the instructions to commit the merged changes.
+
+1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly and that the correct libraries are installed or updated. If the command fails, the merge was not made correctly and the error may point to how `composer.json` needs to change.
+
+1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
+
+### Changes Lost During Upstream Updates
+
+When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
+
+To resolve, there are two potential solutions:
+
+- If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
+
+- Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+
+## FAQ
 
 ### What Composer commands does Pantheon run?
 
@@ -145,6 +206,7 @@ All Composer commands are available through the **Commit Log** in the Site Dashb
 ### Can I view live logs?
 
 Composer build logs are only available after the task or action completes (or fails).
+
 ### How do I view Composer's changes?
 
 Use `git diff` to view changes, excluding composer.lock
@@ -171,5 +233,5 @@ Pantheon's devs are working hard to make the Integrated Composer experience on P
 
 Features that are still in development:
 
- - Integrated Composer and [Build Tools](/guides/build-tools)
- - Upgrade an existing site to use Integrated Composer
+- Integrated Composer and [Build Tools](/guides/build-tools)
+- Upgrade an existing site to use Integrated Composer
