@@ -175,7 +175,7 @@ What makes your site code unique is your selection of contributed modules and th
 
 The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (we'll call this _contributed code_). The only things that should be migrated from the existing site are custom code, custom themes, and custom modules that are specific to the existing site.
 
-The steps here ensure that any modules and themes from [drupal.org](drupal.org) are in the `composer.json` `require` list.
+The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
 Once Composer is aware of all the contributed code, you'll be able to run `composer upgrade` from within the directory to have Composer upgrade all the contributed code automatically.
 

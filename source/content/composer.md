@@ -51,7 +51,7 @@ A Custom Upstream based off Pantheon's example repositories would need to commit
 
 This workflow has one very serious shortcoming, that is site-specific dependencies are likely to cause a lot of conflicts. The practical use case for this WebOps workflow is for a large group of sites that require a single set of dependencies. You should only use this method if you don’t intend to use site specific themes, modules, or plugins downstream.
 
-You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and Users in Charge roles.
+You can also prevent upstream updates by [setting an empty upstream](/nested-docroot#disable-one-click-updates). This action is available to Site Owner, Organization Administrator, and Users in Charge roles.
 
 ## Next Steps
 Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) if you don't want to use CI tools in your development process.
