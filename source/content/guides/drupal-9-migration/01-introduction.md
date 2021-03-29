@@ -1,15 +1,15 @@
 ---
-title: Upgrade to Drupal 9 on Pantheon
+title: Migrate to Drupal 9 on Pantheon
 subtitle: Introduction
-description: Upgrade, migrate, or start a fresh new Drupal 9 site on Pantheon.
-categories: [develop]
+description: Steps to upgrade, perform a guided migration, or migrate manually to Drupal 9 on Pantheon.
+categories: [get-started]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9
-anchorid: drupal-9-guide
-editpath: drupal-9/01-introduction.md
+permalink: docs/guides/drupal-9-migration
+anchorid: drupal-9-migration
+editpath: drupal-9-migration/01-introduction.md
 ---
 
 Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
@@ -18,4 +18,4 @@ Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://s
 
 There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're building out the documentation within this guide to try to help you through your adventure.
 
-See our [Drupal 9](/drupal-9) doc to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.
+See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) docs to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.

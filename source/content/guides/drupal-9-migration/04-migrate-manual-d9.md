@@ -1,15 +1,15 @@
 ---
-title: Migrate a Drupal 8 Site to Drupal 9 on Pantheon
-subtitle: Migrate an Existing Drupal 8 Site to a New Drupal 9 Site
+title: Migrate to Drupal 9 on Pantheon
+subtitle: Manually Migrate
 description: Migrate a Drupal 8 Site to Drupal 9 on Pantheon
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9/migrate-new-d9
-anchorid: drupal-9-guide/migrate-new-d9
-editpath: drupal-9/02-existing-8-new-9.md
+permalink: docs/guides/drupal-9-migration/migrate-manual-d9
+anchorid: migrate-manual-d9
+editpath: drupal-9-migration/04-migrate-manual-d9.md
 ---
 
 In this doc, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
