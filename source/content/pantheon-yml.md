@@ -110,7 +110,12 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-Use the `db_directive` in the `pantheon.yml` to choose a specific version of MariaDB.
+Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
+
+```yaml
+database:
+  version: 10.0
+```
 
 - When to use it and when not to
 - Why it’s a good idea to do this
