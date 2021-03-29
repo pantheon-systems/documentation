@@ -77,11 +77,7 @@ Implementing known solutions includes handling core considerations. For example,
 
      - Plugins or Modules that have been identified as [problematic](/modules-plugins-known-issues/)
 
-   - Code that relies on specific:
-  
-     - PHP extensions
-
-     - Server packages that are not currently on Pantheon
+   - Code that relies on specific PHP libraries, packages, server applications, or other dependencies not supported by the platform.
 
    - Anything dependent on languages not available on the platform (Java, Python, Perl, etc.)
 
