@@ -32,7 +32,7 @@ This doc uses the following aliases:
 
 ## Create a New Drupal 9 Site and Migrate the Drupal 8 Code
 
-1. Create a new Drupal 9 site following the instructions in the [Create a New Drupal 9 Site](drupal-9#create-a-new-drupal-9-site-with-integrated-composer) section.
+1. Create a new Drupal 9 site following the instructions in the [Create a New Drupal 9 Site](/drupal-9#create-a-new-drupal-9-site-with-integrated-composer) section.
 
 1. From the local Drupal 9 site's directory, use Terminus to retrieve the D8 site's Git URL:
 
