@@ -12,7 +12,13 @@ anchorid: next-steps
 editpath: drupal-9-migration/06-next-steps.md
 ---
 
-Next steps.
+If you are migrating an existing Pantheon Drupal site to Drupal 9, get ready to take your Drupal 9 site live following the steps to [Relaunch an Existing Pantheon Site](/relaunch).
 
 ## Additional Resources
+
+- [Integrated Composer Overview](/integrated-composer)
+- [Composer Fundamentals and WebOps Workflows](/composer)
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+
+
 
