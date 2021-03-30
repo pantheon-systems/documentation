@@ -7,6 +7,7 @@ cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-migration/troubleshoot
 anchorid: troubleshoot
 editpath: drupal-9-migration/05-troubleshoot.md
@@ -41,7 +42,7 @@ Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is s
 
 Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
 
-### Error: Class "Drupal\views\Routing\ViewPageController" does not exist
+### Error: Class ViewPageController Does Not Exist
 
 As reported in [Drupal Issue 3161309](https://www.drupal.org/project/drupal/issues/3161309), some fresh installations may encounter the error:
 

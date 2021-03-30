@@ -7,6 +7,7 @@ cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-migration/migrate-manual-d9
 anchorid: migrate-manual-d9
 editpath: drupal-9-migration/04-migrate-manual-d9.md
