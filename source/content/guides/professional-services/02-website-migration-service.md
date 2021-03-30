@@ -29,23 +29,36 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - Resync the database and user-uploaded files as a part of the site launch
 
-- Disable unnecessary or unsupported modules and plugins
+- Multisite support
+- Dynamic content support
+- Cron New Relic configuration
+  - Implement [cron](/drupal-cron) triggering services, via New Relic (on any non-Basic plan site)
 
-- Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
+- Plugin/Module audit
+- Plugin/Module optimization
+- Plugin & theme workarounds
+  - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
+  - Disable unnecessary or unsupported modules and plugins
 
-- [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
+- SSL certificate pre-provisioning
+  - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
 
-- Set up external [email](/email) to work with the provider of your choice
+- SSO configuration
+- Email configuration
+  - Set up external [email](/email) to work with the provider of your choice
 
-- Implement [cron](/drupal-cron) triggering services, via New Relic (on any non-Basic plan site)
+- Redirect handling
+  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
 
-- Configure sites that use Acquia Search to use Pantheon Search instead
+- Search configuration
+  - Configure sites that use Acquia Search to use Pantheon Search instead
+    - Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first
 
-  - Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first
-
-- Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
+- Enable and configure Visual Regression Testing
 
 - Additional tasks identified in the Project Requirements
+
+Throughout the process, you'll have access to the Migrations Team through a dedicated Slack channel, and launch support when it's time to go live.
 
 ### Implement Solutions to Known Existing Incompatibilities
 
