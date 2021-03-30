@@ -20,7 +20,7 @@ For reference implementations see [example.pantheon.yml](https://github.com/pant
 
 Define the `api_version` property in order for `pantheon.yml` to be valid:
 
-```yaml
+```yaml:title=pantheon.yml
 api_version: 1
 ```
 
@@ -28,7 +28,7 @@ api_version: 1
 
 Protect files and directories inside of your docroot from public web access with `protected_web_paths`. For example, the following ensures that a visitor to `https://example.com/example.txt` or `https://example.com/example_directory/any_nested_file` receives Access Denied (403):
 
-```yaml
+```yaml:title=pantheon.yml
 protected_web_paths:
   - /example.txt
   - /example_directory
@@ -49,7 +49,7 @@ The `pantheon.upstream.yml` file provided by your upstream might define protecte
 
 To disable all of the protected web paths defined by your site's upstream and all protected paths defined by the Pantheon platform, set the `protected_web_paths_override` property to `true`:
 
-```yaml
+```yaml:title=pantheon.yml
 protected_web_paths_override: true
 ```
 
@@ -83,7 +83,7 @@ Pantheon sites (using the default Pantheon upstreams) created or updated on or a
 
 Nest your docroot one level beneath your code repository in a directory named `web`:
 
-```yaml
+```yaml:title=pantheon.yml
 web_docroot: true
 ```
 
@@ -97,7 +97,7 @@ Override the upstream's default PHP version with the `php_version` property. PHP
 
 For example, to override the upstream default value at the site level to PHP 7:
 
-```yaml
+```yaml:title=pantheon.yml
 php_version: 7.0
 ```
 
@@ -114,9 +114,9 @@ Keep the software your site uses current and up to date, or set a specific versi
 
 Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
-```yaml
+```yaml:title=pantheon.yml
 database:
-  version: 10.0
+  version: 10.4
 ```
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
@@ -138,7 +138,7 @@ This table shows the recommended MariaDB version for each CMS:
 
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
 
-```yaml
+```yaml:title=pantheon.yml
 drush_version: 8
 ```
 
@@ -156,7 +156,7 @@ We recommend *only* changing this setting when needed for [Custom Upstream Confi
 
 The only valid filemount path other than the default path for each CMS is `/files` relative to your docroot:
 
-```yaml
+```yaml:title=pantheon.yml
 filemount: /files
 ```
 
