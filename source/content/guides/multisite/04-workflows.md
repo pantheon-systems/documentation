@@ -137,7 +137,7 @@ In a stock WordPress install (e.g. no custom plugins), there are a few key place
 Try running `wp search-replace` against this limited subset of data:
 
 ```bash
-terminus wp <site>.<env> -- search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus wp <site>.<env> -- wp db tables "wp_*options" --network | paste -s -d ' ' -) --url=<old-domain>
+terminus wp <site>.<env> -- search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus wp <site>.<env> -- db tables "wp_*options" --network | paste -s -d ' ' -) --url=<old-domain>
 ```
 
 In this example:
