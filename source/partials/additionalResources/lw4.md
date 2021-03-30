@@ -1,8 +1,8 @@
-## More resources for Website Performance with Varnish, Redis, and New Relic
+## More resources for Website Performance with Varnish, Object Cache, and New Relic® Performance Monitoring
 
 Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practices](https://pantheon.io/live-workshops/going-live-best-practices). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
-- <Youtube src="4sW2K6-PQ3Q" title="Website Performance with Varnish, Redis, and New Relic" start="57" />
+- <Youtube src="4sW2K6-PQ3Q" title="Website Performance with Varnish, Pantheon Object Cache, and New Relic® Performance Monitoring" start="57" />
 
 ### Your Feedback Helps
 
@@ -13,11 +13,11 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - Drupal Module: [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)
-- Doc: [Installing Redis on Drupal or WordPress](/redis)
+- Doc: [Installing Pantheon Object Cache on Drupal or WordPress](/redis)
 - Doc: [New Relic APM Pro](/new-relic)
 - Blog post: [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
-- Blog post: [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-- Blog post: [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+- Blog post: [Troubleshooting WordPress Performance with New Relic® Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+- Blog post: [New Relic® Performance Monitoring & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - Doc: [Uptime monitoring with New Relic Synthetics](/new-relic#configure-ping-monitors-for-availability)
 
 ### Keep Learning After Today
