@@ -121,9 +121,11 @@ database:
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-This table shows the recommended MariaDB version for each CMS:
+Not all CMS versions can be configured to use a specific database version on Pantheon yet.
 
-| CMS            | Recommended MariaDB Version | Customizable After |
+This table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
+
+| CMS            | Recommended MariaDB Version | Configurable After |
 |----------------|-----------------------------|--------------------|
 | Drupal <6.51   | Default                     | May, 2021          |
 | Drupal >= 6.51 | Default                     | May, 2021          |
