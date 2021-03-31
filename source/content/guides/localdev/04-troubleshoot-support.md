@@ -96,3 +96,8 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 ### Can I create Multidev environments from Localdev?
 
 No, new Multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).
+
+### Can I setup Localdev with a Mac that has an M1 chip?
+
+No, as of the moment Macs with M1 chip is not yet supported.
+
