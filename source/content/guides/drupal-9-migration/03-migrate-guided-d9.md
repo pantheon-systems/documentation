@@ -9,7 +9,7 @@ reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/migrate-guided-d9
-anchorid: migrate-guided-d9
+anchorid: drupal-9-migration/migrate-guided-d9
 editpath: drupal-9-migration/03-migrate-guided-d9.md
 ---
 
@@ -21,7 +21,7 @@ We're working hard to bring you the right doc in the first place you'll go looki
 
 There's no `under-construction.gif`, but check back soon.
 
-In the meantime, try the [Manually Migrate](/guides/migrate-manual-d9) part of this guide to get your existing Drupal 8 code onto a fresh, new Drupal 9 site.
+In the meantime, try the [Manually Migrate](/guides/drupal-9-migration/migrate-manual-d9) part of this guide to get your existing Drupal 8 code onto a fresh, new Drupal 9 site.
 
 <!-- Checking out our comments too? Alright!
 

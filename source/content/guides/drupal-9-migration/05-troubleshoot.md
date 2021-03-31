@@ -9,7 +9,7 @@ reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/troubleshoot
-anchorid: troubleshoot
+anchorid: drupal-9-migration/troubleshoot
 editpath: drupal-9-migration/05-troubleshoot.md
 ---
 
@@ -57,7 +57,6 @@ terminus drush <site>.<env> -- cr
 ```
 
 Given the nature of the bug, it might be easier to reinstall Drupal 9.
-
 
 ### Pantheon Drupal 8 Modules Being Upgraded to Drupal 9
 

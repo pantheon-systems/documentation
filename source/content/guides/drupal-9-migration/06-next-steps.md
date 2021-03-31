@@ -8,7 +8,7 @@ tags: [code, launch, migrate, site, updates]
 reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-migration/next-steps
-anchorid: next-steps
+anchorid: drupal-9-migration/next-steps
 editpath: drupal-9-migration/06-next-steps.md
 ---
 
@@ -19,6 +19,3 @@ If you are migrating an existing Pantheon Drupal site to Drupal 9, get ready to 
 - [Integrated Composer Overview](/integrated-composer)
 - [Composer Fundamentals and WebOps Workflows](/composer)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
-
-
-
