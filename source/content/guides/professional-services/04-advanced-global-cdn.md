@@ -1,17 +1,18 @@
 ---
-title: Advanced Global CDN
+title: Pantheon Professional Services
 subtitle: Advanced Global CDN
 description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 categories: [performance]
 tags: [cdn, security, professional-services]
 reviewed: "2021-04-01"
 layout: guide
-permalink: docs/guides/advanced-global-cdn
+showtoc: true
+permalink: docs/guides/professional-services/advanced-global-cdn
 anchorid: advanced-global-cdn
 editpath: professional-services/04-advanced-global-cdn.md
 ---
 
-[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/guides/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
+[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/guides/professional-services/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
 
 Each AGCDN service configuration is offered as an annual contract subscription. Customers can include multiple sites to the configuration, or conditionally apply specific rules.
 
@@ -104,7 +105,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
   The customer is responsible for purchasing, maintaining payment for, and supporting these plugins.
 
-[See a comparison of the features](https://pantheon.io/product/guides/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
+[See a comparison of the features](https://pantheon.io/product/guides/professional-services/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
 ## Frequently Asked Questions
 

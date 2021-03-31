@@ -1,12 +1,13 @@
 ---
-title: Onboarding Services
+title: Pantheon Professional Services
 subtitle: Onboarding Services
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
 categories: [get-started]
 tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
 reviewed: "2021-04-01"
 layout: guide
-permalink: docs/guides/onboarding
+showtoc: true
+permalink: docs/guides/professional-services/onboarding
 anchorid: onboarding
 editpath: professional-services/03-onboarding.md
 ---
@@ -51,4 +52,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Professional Services
 
-Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations, load testing, [Advanced Global CDN](/guides/advanced-global-cdn) implementation, and [Managed Updates](/guides/managed-updates) services. See our [Professional Services](/guides/professional-services) overview, or [contact us](https://pantheon.io/professional-services?docs) for details.
+Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations, load testing, [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) implementation, and [Managed Updates](/guides/professional-services/managed-updates) services. See our [Professional Services](/guides/professional-services) overview, or [contact us](https://pantheon.io/professional-services?docs) for details.

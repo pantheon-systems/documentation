@@ -1,23 +1,46 @@
 ---
-title: Website Migration Service
-subtitle: Website Migration Service
+title: Pantheon Professional Services
+subtitle: Managed Migration Service
 description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites.
 categories: [develop]
 tags: [professional-services, migration]
 reviewed: "2021-04-01"
 layout: guide
-permalink: docs/guides/website-migration-service
+showtoc: true
+permalink: docs/guides/professional-services/website-migration-service
 anchorid: website-migration-service
 editpath: professional-services/02-website-migration-service.md
 ---
 
-The Website Migration Service offered by [Pantheon Professional Services](/guides/professional-services) helps ensure a smooth migration of your existing sites to Pantheon.
+The Managed Migration Service offered by [Pantheon Professional Services](/guides/professional-services) helps ensure a smooth migration of your existing sites to Pantheon.
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 
-The Migrations Team's goal is to migrate your site to our WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration. If you're looking for the doc on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate)
+The Migrations Team's goal is to migrate your site to our WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration. 
+
+For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate).
 
 If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
+
+## Standard Migrations
+
+Standard Migrations are ideal for smaller and simpler sites. Standard migrations include having our team of experts stand up your site on Pantheon, with everything included in the [Migration Project Scope](/guides/professional-services/website-migration-service#migration-project-scope---whats-included) below.
+
+## Premium Migrations
+
+Premium Migrations are designed for larger and more complex sites - and include everything in the Standard Migrations scope plus one of the following:
+
+- An extra 10 hours of troubleshooting/solutioning
+
+- A Custom Upstream
+
+- For older WP Network sites, conversion from `blogs.dir` to `wp-content/uploads` format
+
+- One additional Code/Content resync
+
+- One Performance Report, with estimates for recommended work
+
+- Cron configurations that require a custom module
 
 ## Migration Project Scope - What's Included
 
@@ -29,34 +52,45 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 
 - Resync the database and user-uploaded files as a part of the site launch
 
-- Multisite support
-- Dynamic content support
-- Cron New Relic configuration
+- Split up Drupal Multisites
+
+- Migrate WP Network sites, as networked or standalone sites
+
+- Resync content prior to launch
+
+- Configure Cron New Relic
   - Implement [cron](/drupal-cron) triggering services, via New Relic (on any non-Basic plan site)
 
+### Included Tasks for Plugins, Modules, and Themes
+
 - Plugin/Module audit
+
 - Plugin/Module optimization
+
 - Plugin & theme workarounds
   - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
+
   - Disable unnecessary or unsupported modules and plugins
 
-- SSL certificate pre-provisioning
-  - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
+### Included Configuration Support
+
+-  SSL certificate pre-provisioning
+   - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned.
 
 - SSO configuration
+
 - Email configuration
-  - Set up external [email](/email) to work with the provider of your choice
+  - Set up external [email](/email) to work with the provider of your choice.
 
 - Redirect handling
-  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
+  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`.
 
 - Search configuration
-  - Configure sites that use Acquia Search to use Pantheon Search instead
-    - Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first
+  - Configure sites that use Acquia Search to use Pantheon Search instead. (Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.)
 
-- Enable and configure Visual Regression Testing
+- Enable and configure Visual Regression Testing. 
 
-- Additional tasks identified in the Project Requirements
+- Additional tasks identified in the Project Requirements.
 
 Throughout the process, you'll have access to the Migrations Team through a dedicated Slack channel, and launch support when it's time to go live.
 

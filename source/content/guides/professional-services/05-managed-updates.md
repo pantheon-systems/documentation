@@ -1,17 +1,18 @@
 ---
-title: Managed Updates
+title: Pantheon Professional Services
 subtitle: Managed Updates
 description: Managed Updates offerings and requirements for Drupal 8 compatibility
 categories: [manage]
 tags: [composer, professional-services, updates, workflow]
 reviewed: "2021-04-01"
 layout: guide
-permalink: docs/guides/managed-updates
+showtoc: true
+permalink: docs/guides/professional-services/managed-updates
 anchorid: managed-updates
 editpath: professional-services/05-managed-updates.md
 ---
 
-[Managed Updates](https://pantheon.io/professional-services/guides/managed-updates?docs) is a service offered by our [Professional Services](/guides/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/guides/managed-updates-webinar?docs)
+[Managed Updates](https://pantheon.io/guides/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/guides/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/guides/managed-updates-webinar?docs)
 
 With Pantheon Managed Updates (**PMU**), you get:
 

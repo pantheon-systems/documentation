@@ -6,6 +6,7 @@ categories: [develop]
 tags: [services, migration, AGCDN, managed updates]
 reviewed: "2021-04-01"
 layout: guide
+showtoc: true
 permalink: docs/guides/professional-services
 anchorid: professional-services
 editpath: professional-services/01-introduction.md
@@ -35,11 +36,11 @@ Pantheon's Managed Updates service keeps your site up to date with minimal inter
 
 Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
-Visit our [Managed Updates](/guides/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/guides/managed-updates?docs) for details.
+Visit our [Managed Updates](/guides/professional-services/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/guides/professional-services/managed-updates?docs) for details.
 
 ## Advanced Global CDN
 
-Implement additional services like IP-based geolocation, extended WAF, Image Optimization, and Domain Masking using our [Advanced Global CDN](/guides/advanced-global-cdn) implementation.
+Implement additional services like IP-based geolocation, extended WAF, Image Optimization, and Domain Masking using our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) implementation.
 
 **Advanced Global CDN process overview:**
 
@@ -53,7 +54,7 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 
 ## Pre-launch Load Testing
 
-Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/guides/onboarding#pre-launch-load-testing) for details.
+Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) for details.
 
 ## Professional Service Hours (formerly CAS)
 
@@ -79,4 +80,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Onboarding
 
-Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team makes sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/guides/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
+Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team makes sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/guides/professional-services/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
