@@ -791,7 +791,7 @@
         - title: 'Edge Layer & CDN Configurations'
           links:
             - text: Advanced Global CDN
-              url: '/guides/advanced-global-cdn'
+              url: '/guides/professional-services/advanced-global-cdn'
             - text: 'Caching'
               url: '/videos/cache'
               icon: 'fa fa-video-camera'
