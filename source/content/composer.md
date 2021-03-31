@@ -44,6 +44,7 @@ We recommend the Pull Request workflow for single site use cases, and for most u
 
 However, this method does not support One-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
 
+
 ## Custom Upstream Workflow
 It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.
 
@@ -51,7 +52,7 @@ A Custom Upstream based off Pantheon's example repositories would need to commit
 
 This workflow has one very serious shortcoming, that is site-specific dependencies are likely to cause a lot of conflicts. The practical use case for this WebOps workflow is for a large group of sites that require a single set of dependencies. You should only use this method if you don’t intend to use site specific themes, modules, or plugins downstream.
 
-You can also prevent upstream updates by [setting an empty upstream](/nested-docroot#disable-one-click-updates). This action is available to Site Owner, Organization Administrator, and Users in Charge roles.
+You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and Users in Charge roles.
 
 ## Next Steps
 Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) if you don't want to use CI tools in your development process.

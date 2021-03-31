@@ -2,7 +2,7 @@
 
 This is the final of the five [Live Workshops](https://pantheon.io/live-workshops)!
 
-- <Youtube src="QzCf8VO002s"  start="17" />
+ <Youtube src="rPL_D1hIFJ8" title="Going Live Best Practices" start="36" />
 
 You must be feeling really great about developer workflows, Terminus, Quicksilver, and topics around making your website fast. If not, [let us know how we can improve](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495041) and consider attending [Pantheon Office Hours](https://pantheon.io/agencies/office-hours) this Wednesday to get some more assistance.
 
