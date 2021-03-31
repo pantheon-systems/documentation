@@ -13,10 +13,23 @@ anchorid: migrate-guided-d9
 editpath: drupal-9-migration/03-migrate-guided-d9.md
 ---
 
-This overview outlines the steps perform a guided, in-place upgrade of an existing Pantheon-hosted Drupal 8 site to Drupal 9.
+This page is a placeholder for documentation in the works.
+
+It's not something you usually see from the Pantheon Docs team, and maybe you're just as surprised as we are.
+
+We're working hard to bring you the right doc in the first place you'll go looking for it.
+
+There's no `under-construction.gif`, but check back soon.
+
+In the meantime, try the [Manually Migrate](/guides/migrate-manual-d9) part of this guide to get your existing Drupal 8 code onto a fresh, new Drupal 9 site.
+
+<!-- Checking out our comments too? Alright!
+
+This overview outlines the steps perform a guided, in-place upgrade of an existing Pantheon-hosted Drupal 8 site to Drupal 9 using the Pantheon Dashboard.
 
 ## Will This Guide Work for Your Site?
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
-1. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
+Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
+-->
