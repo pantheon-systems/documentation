@@ -60,10 +60,9 @@ If you're not ready to create a new site yet, you can also [check an existing si
 
 To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/guides/drupal-9-migration).
 
-
 ## Troubleshooting and Support
 
-See the [Drupal 9 Migration Guide](guides/drupal-9-migration/troubleshoot) for help troubleshooting common issues with Drupal 9 with Integrated Composer. 
+See the [Drupal 9 Migration Guide](/guides/drupal-9-migration/troubleshoot) for help troubleshooting common issues with Drupal 9 with Integrated Composer.
 
 ### Where can I report an issue?
 
