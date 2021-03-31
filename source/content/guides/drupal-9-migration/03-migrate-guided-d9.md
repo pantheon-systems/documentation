@@ -1,34 +1,69 @@
 ---
 title: Migrate to Drupal 9 on Pantheon
 subtitle: Migrate Existing Sites
-description: Guided Migration for Drupal 8 Sites to Drupal 9 on Pantheon
+description: Guided Migration for Drupal 8 Sites to Drupal 9 With Integrated Composer on Pantheon
 categories: [get-started]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
-reviewed: "2021-03-31"
+contributors: [dustinleblanc, greg-1-anderson, stovak]
 layout: guide
 permalink: docs/guides/drupal-9-migration/migrate-guided-d9
 anchorid: drupal-9-migration/migrate-guided-d9
 editpath: drupal-9-migration/03-migrate-guided-d9.md
+reviewed: "2021-03-31"
 ---
 
-This page is a placeholder for documentation in the works.
+Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
-It's not something you usually see from the Pantheon Docs team, and maybe you're just as surprised as we are.
+For a smooth upgrade experience, and to avoid potential conflicts, this doc shows how to migrate a Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer.
 
-We're working hard to bring you the right doc in the first place you'll go looking for it.
+The goals of this upgrade are to remove dependencies that Composer will manage from the existing site's Git repository, and have Composer manage those dependencies in the new site instead.
 
-There's no `under-construction.gif`, but check back soon.
+Note that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
 
-In the meantime, try the [Manually Migrate](/guides/drupal-9-migration/migrate-manual-d9) part of this guide to get your existing Drupal 8 code onto a fresh, new Drupal 9 site.
+<Alert title="Note" type="info">
 
-<!-- Checking out our comments too? Alright!
+To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
 
-This overview outlines the steps perform a guided, in-place upgrade of an existing Pantheon-hosted Drupal 8 site to Drupal 9 using the Pantheon Dashboard.
+Pantheon support is not available to users who avoid the Multidev steps.
+
+</Alert>
 
 ## Will This Guide Work for Your Site?
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
-Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
--->
+## Prepare the Local Environment
+
+<Partial file="drupal-9/prepare-local-environment.md" />
+
+<Partial file="drupal-8-convert-to-composer.md" />
+
+## Change Upstreams
+
+Set the site to use the Drupal 9 Upstream:
+
+```bash{promptUser:user}
+terminus site:upstream:set $site drupal9
+```
+
+Enter `yes` when prompted:
+
+```bash
+Are you sure you want change the upstream for anita-drupal to Drupal 9? (yes/no) [no]:
+```
+
+Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
+## Ongoing Core Updates
+
+One-click core updates can be made through the Dashboard.
+
+Navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
+
+## Troubleshooting
+
+<Partial file="composer-updating.md" />
+
+## See Also
+
+- [Composer Fundamentals and Workflows](/composer)
