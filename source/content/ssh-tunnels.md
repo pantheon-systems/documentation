@@ -19,7 +19,7 @@ To restrict access to these services to SSH tunnels only, consider [Secure Runti
 ## Prerequisites
 
 - Local installation of a MySQL client
-- [Redis command-line client](/redis#use-the-redis-command-line-client)
+- [Redis command-line client](/object-cache#use-the-redis-command-line-client)
 - Add an [SSH key](/ssh-keys) to your Pantheon User Dashboard
 
 ## Create Secure Connection to MySQL using TLS
