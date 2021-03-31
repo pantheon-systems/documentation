@@ -183,8 +183,6 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
 1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to change to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
 
-  This command works on Drush 8. If you're using Drush 9, use `pm:list` or refer to [Drush Commands](https://drushcommands.com/drush-9x/pm/pm:projectinfo/):
-
   ```bash{promptUser:user}
   terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
   ```
@@ -199,6 +197,24 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
   Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
 
+  Some modules use different version formats.
+
+   - For older-style Drupal version strings:
+
+   ```none
+   Chaos Tools (ctools)  8.x-3.4
+   ```
+
+    Replace the `8.x-` to convert this into `^3.4`
+
+   - Semantic Versioning version strings:
+
+   ```none
+   Devel (devel)  4.1.1
+   ```
+
+    Use the version directly, e.g. `^4.1.1`
+
    - If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
 
    ```none
@@ -206,7 +222,13 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
    Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
    ```
 
-   If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
+   If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or `dev` (not recommended). You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
+
+     - If a dev version of a module fails because it requires a dev version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
+
+     ```bash{promptUser:user}
+     composer require drupal/some-module:^1@dev org/some-dependency:^2@dev
+     ```
 
 <!-- commenting out until the script has a proper place to live
 
@@ -220,7 +242,7 @@ Robots are cool, but they're not perfect, so you should understand the goal of t
 
 First, disclaimers:
 
-Pantheon support is not available for this script or anything that results from trying to use it.
+This script is provided without warranty or direct support. Issues and questions may be filed in GitHub but their resolution is not guaranteed.
 
 Proceed at your own risk. Automation is better when you understand what it's doing.
 
@@ -294,14 +316,14 @@ Follow suit with any other custom code you need to carry over.
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
-It is not wise to completely overwrite the `settings.php` file with the old one, as there are customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
+We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
 
 ```bash{promptUser:user}
 git status # Ensure working tree is clean
-git checkout master sites/default/settings.php
-diff -Nup web/sites/default/settings.php sites/default/settings.php
-# Edit settings.php as needed
-rm sites/default/settings.php
+git show master:sites/default/settings.php > web/sites/default/original-settings.php
+diff -Nup --ignore-all-space web/sites/default/settings.php web/sites/default/original-settings.php
+# edit web/sites/default/settings.php and commit as needed
+rm web/sites/default/original-settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
