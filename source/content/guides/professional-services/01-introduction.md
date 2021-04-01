@@ -36,7 +36,7 @@ Pantheon's Managed Updates service keeps your site up to date with minimal inter
 
 Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
-Visit our [Managed Updates](/guides/professional-services/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/guides/professional-services/managed-updates?docs) for details.
+Visit our [Managed Updates](/guides/professional-services/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/managed-updates?docs) for details.
 
 ## Advanced Global CDN
 
