@@ -111,5 +111,5 @@ From here, you can update the existing demo content, or delete it and create new
 
 ## See Also
 
-- [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams
+- [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
