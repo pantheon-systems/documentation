@@ -20,7 +20,7 @@ The internet can make any website famous overnight, and this may not be under yo
 
 Load tests and other performance reviews of the Pantheon platform are generally prohibited by our [AUP](https://legal.pantheon.io). Although it may result in significant traffic spikes, Pantheon fully supports customers choosing to load test their site (excluding the platform). Contact [Pantheon Support](/support) prior to performing such tests to make them aware there will be an extraordinary event that should be considered.
 
-If you identify an underlying issue that may affect the platform, please let us know. If an issue is identified with your codebase, Pantheon can [recommend a Partner](https://pantheon.io/agencies/agency-finder?docs) or connect you with our [Professional Services](/professional-services) team to help you with remediation.
+If you identify an underlying issue that may affect the platform, please let us know. If an issue is identified with your codebase, Pantheon can [recommend a Partner](https://pantheon.io/agencies/agency-finder?docs) or connect you with our [Professional Services](/guides/professional-services) team to help you with remediation.
 
 ### What about Denial of Service and other attacks?
 

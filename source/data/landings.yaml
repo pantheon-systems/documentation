@@ -12,7 +12,7 @@
     subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
     url: 'https://pantheon.io/live-demo?docs'
   topics-groups:
-    - title: 'Create Sandbox Site'
+    - title: 'Create a New Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
       links:
         - text: 'Create a Drupal 8 Site From the Command Line Using Terminus and Drush'
@@ -80,6 +80,10 @@
               url: '/migrate-manual'
             - text: 'Migrate to Pantheon: WordPress Site Networks'
               url: '/migrate-wordpress-site-networks'
+        - title: 'Website Migration Service'
+          links:
+            - text: 'Contract Pantheon Professional Services'
+              url: '/guides/professional-services/website-migration-service'
 - title: 'Develop'
   path: 'develop'
   video_id: 'v7qe2_OZ95k'
@@ -212,6 +216,8 @@
     - title: 'Add On Services'
       subtitle: 'Use free services to improve search and enable robust application caching.'
       links:
+        - text: 'Professional Services'
+          url: '/guides/professional-services'
         - text: 'New Relic APM Pro'
           url: '/new-relic'
           icon: 'fa fa-book'
@@ -785,7 +791,7 @@
         - title: 'Edge Layer & CDN Configurations'
           links:
             - text: Advanced Global CDN
-              url: '/advanced-global-cdn'
+              url: '/guides/professional-services/advanced-global-cdn'
             - text: 'Caching'
               url: '/videos/cache'
               icon: 'fa fa-video-camera'

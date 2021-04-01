@@ -32,7 +32,7 @@ It serves a use case where a domain's public traffic is delivered from a Server-
 
 ![A flow diagram of the Decoupled Bridge architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
-Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/professional-services) team.
+Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
 Each Decoupled Bridge site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
 
 We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.

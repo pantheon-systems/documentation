@@ -1,9 +1,15 @@
 ---
-title: Onboarding Services
+title: Pantheon Professional Services
+subtitle: Onboarding Services
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
-tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
 categories: [get-started]
-reviewed: "2020-05-26"
+tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
+reviewed: "2021-04-01"
+layout: guide
+showtoc: true
+permalink: docs/guides/professional-services/onboarding
+anchorid: onboarding
+editpath: professional-services/03-onboarding.md
 ---
 
 Pantheon Onboarding Managers are your website operations (**WebOps**) experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team is dedicated to making sure your team has the WebOps tools and training to work effectively on the Pantheon platform.
@@ -36,8 +42,6 @@ The following services are not fulfilled by the Onboarding Manager but are addit
 
 ### Customer Success Management
 
-Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals.
-
 Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us?docs) for details.
 
 ### Expert Training
@@ -48,4 +52,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Professional Services
 
-Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations, load testing, [Advanced Global CDN](/advanced-global-cdn) implementation, and [Managed Updates](/managed-updates) services. See our [Professional Services](/professional-services) overview, or [contact us](https://pantheon.io/professional-services?docs) for details.
+Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. Pantheon Professional Services include consulting, migrations, load testing, [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) implementation, and [Managed Updates](/guides/professional-services/managed-updates) services. See our [Professional Services](/guides/professional-services) overview, or [contact us](https://pantheon.io/professional-services?docs) for details.

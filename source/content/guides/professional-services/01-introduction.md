@@ -1,9 +1,15 @@
 ---
-title: Professional Services
+title: Pantheon Professional Services
+subtitle: Introduction
 description: Pantheon Professional Services include consulting, migrations, load testing, training, AGCDN, Managed Updates, and dedicated Customer Success Managers.
-tags: [services, migration, AGCDN, managed updates]
 categories: [develop]
-reviewed: "2020-05-19"
+tags: [services, migration, AGCDN, managed updates]
+reviewed: "2021-04-01"
+layout: guide
+showtoc: true
+permalink: docs/guides/professional-services
+anchorid: professional-services
+editpath: professional-services/01-introduction.md
 ---
 
 The Pantheon Professional Services (**PS**) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. [Contact us](https://pantheon.io/professional-services?docs) for details.
@@ -22,7 +28,7 @@ Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts pr
 - **Launch Planning**: We work with your team to coordinate launch planning, including content resyncs, load testing, SSL certificate pre-provisioning, and more.
 - **Launch**: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
 
-[Contact our migrations team](https://pantheon.io/migrations?docs) for details.
+Visit the [Site Migrations](/guides/professional-services/website-migration-service) doc, or [contact our Migrations Team](https://pantheon.io/migrations?docs) for details.
 
 ## Managed Updates
 
@@ -30,11 +36,11 @@ Pantheon's Managed Updates service keeps your site up to date with minimal inter
 
 Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
-Visit our [Managed Updates](/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/managed-updates?docs) for details.
+Visit our [Managed Updates](/guides/professional-services/managed-updates) doc, or [contact us](https://pantheon.io/professional-services/managed-updates?docs) for details.
 
 ## Advanced Global CDN
 
-Implement additional services like IP-based geolocation, extended WAF, Image Optimization, and Domain Masking using our [Advanced Global CDN](/advanced-global-cdn) implementation.
+Implement additional services like IP-based geolocation, extended WAF, Image Optimization, and Domain Masking using our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) implementation.
 
 **Advanced Global CDN process overview:**
 
@@ -44,11 +50,11 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 - **Launch**: We provide you with the information you will need to launch or re-launch your site on Advanced Global CDN.
 - **Post-Launch**: PS provides up to four hours per quarter to address requests and changes to the Advanced Global CDN service throughout the lifetime of the contract.
 
-[Contact us](https://pantheon.io/professional-services?docs) for details.
+Visit our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) doc, or [contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Pre-launch Load Testing
 
-Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/onboarding#pre-launch-load-testing) for details.
+Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) for details.
 
 ## Professional Service Hours (formerly CAS)
 
@@ -62,9 +68,7 @@ The following services are not fulfilled by the Professional Services team but a
 
 ### Customer Success Management
 
-Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals.
-
-Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
+Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond Accounts and is available as an add-on for Gold and Platinum Accounts. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
 
 ### Expert Training
 
@@ -74,4 +78,4 @@ We review your current projects and workflow to deliver trainings designed speci
 
 ### Onboarding
 
-Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team makes sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
+Pantheon Onboarding Managers (**OM**) are your WebOps experts, to help facilitate a successful launch and ensure your team has the knowledge and tools to deliver value fast. Our Onboarding team makes sure your team has the WebOps tools and training to work effectively on the Pantheon platform. Visit the [Onboarding doc](/guides/professional-services/onboarding) or [contact us](https://pantheon.io/professional-services?docs) for more details.
