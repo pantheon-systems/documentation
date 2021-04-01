@@ -9,7 +9,7 @@ reviewed: "2019-11-06"
 
 ## Overview
 
-Apache Solr is a system for indexing and searching site content. Pantheon provides [Apache Solr](/solr) as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
+Apache Solr is a system for indexing and searching site content. Pantheon provides [Apache Solr](/pantheon-search) as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
 <Partial file="solr-version.md" />
 
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.

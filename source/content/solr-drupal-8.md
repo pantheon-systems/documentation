@@ -6,7 +6,7 @@ categories: [integrate]
 tags: [solr, modules]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/solr) is a system for indexing and searching site content.
+[Apache Solr](/pantheon-search) is a system for indexing and searching site content.
 
 <Alert title="Important Note" type="info">
 
