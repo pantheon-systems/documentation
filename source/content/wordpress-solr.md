@@ -7,7 +7,7 @@ tags: [solr, plugins]
 contributors: [cityofoaksdesign]
 ---
 
-[Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />
+[Apache Solr](/pantheon-search) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 

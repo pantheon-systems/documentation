@@ -57,9 +57,9 @@ If you rely on the Redis cache for locks (mutexes) or storing other long-term da
 
 ### Considerations for Sites Requiring Highly Available Search
 
-While [Pantheon Search](/solr) can be enabled on a site with Multizone Failover, Pantheon's Search service is not highly available, nor does it include failover for Solr. The RTO and RPO do not apply to Pantheon's Search Service.
+While [Pantheon Search](/pantheon-search) can be enabled on a site with Multizone Failover, Pantheon's Search service is not highly available, nor does it include failover for Solr. The RTO and RPO do not apply to Pantheon's Search Service.
 
-If your site requires highly available search, do not use Pantheon's Search service. If you require a highly available Solr service, please consider an [alternative Solr service](/solr#alternatives-to-pantheons-solr-service).
+If your site requires highly available search, do not use Pantheon's Search service. If you require a highly available Solr service, please consider an [alternative Solr service](/pantheon-search#alternatives-to-pantheons-solr-service).
 
 ### Using Pantheon Search on Sites With Multizone Failover
 
@@ -129,7 +129,7 @@ Read more about configuring and optimizing Solr Power in the [Solr Search for Wo
 
 You may also consider one of the following options:
 
-- Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
+- Use an [Alternative Solr Service](/pantheon-search#alternatives-to-pantheons-solr-service)
 
 - **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
