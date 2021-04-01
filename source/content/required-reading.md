@@ -28,7 +28,7 @@ Our tech includes NGINX, PHP, Redis, [Global CDN](/global-cdn-caching), Solr and
 
 ## Run
 - [Optimization for Pantheon and the Cloud](/cloud-optimization)
-- [New Relic Pro](/new-relic)
+- [New Relic&reg; Performance Monitoring](/new-relic)
 - [Applying Upstream Updates](/core-updates)
 - [Global CDN Caching for High Performance](/global-cdn-caching)
 - [Installing Redis on Drupal or WordPress](/redis)

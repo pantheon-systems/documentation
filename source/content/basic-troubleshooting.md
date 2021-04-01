@@ -170,4 +170,4 @@ $config['system.logging']['error_level'] = 'verbose';
 - [PHP Errors and Exceptions](/php-errors)
 - [Database Connection Errors](/database-connection-errors)
 - [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)

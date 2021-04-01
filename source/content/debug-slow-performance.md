@@ -38,7 +38,7 @@ As an example, if your slowest database operation is an INSERT to watchdog, then
 Learn more about [Log Files on Pantheon](/logs).
 
 ## Too Many Database Queries
-The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic Pro dashboard](/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
+The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic&reg; Performance Monitoring dashboard](/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
 
 ![New Relic map tab](../images/new-relic-map.png)<br />
 
