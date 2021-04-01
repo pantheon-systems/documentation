@@ -98,4 +98,4 @@ if ( ! empty( $_ENV['REPLICA_DB_HOST'] ) && ! is_admin() ) {
 // That's it!
 ```
 
-In this example, you’ll want [some form of cache fallback](/redis) if reads to the replica begin failing.
+In this example, you’ll want [some form of cache fallback](/object-cache) if reads to the replica begin failing.

@@ -13,7 +13,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - Drupal Module: [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)
-- Doc: [Installing Redis on Drupal or WordPress](/redis)
+- Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - Doc: [New Relic APM Pro](/new-relic)
 - Blog post: [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - Blog post: [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)

@@ -52,7 +52,7 @@ For more information on what is included in these checks and how they work, see 
 
 Since you're in fixin' mode, take some time to optimize performance using Redis and Pantheon's global CDN.
 
-### [Enable Redis](/redis)
+### [Enable Redis](/object-cache)
 
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 

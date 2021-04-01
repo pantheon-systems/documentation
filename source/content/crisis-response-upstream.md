@@ -30,7 +30,7 @@ These plugins were selected to improve the performance of the site, and better u
 
 - **[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)** - Automatically clear related pages from Pantheon’s Edge when you update content.
 
-- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using [Redis](/redis). For high visibility websites, a high-performance persistent object cache can have a huge impact.
+- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using [Pantheon Object Cache](/object-cache). For high visibility websites, a high-performance persistent object cache can have a huge impact.
 
 ### Content Features Plugins
 
@@ -107,9 +107,9 @@ From here, you can update the existing demo content, or delete it and create new
 ## Next Steps
 
 - Visit the [Launch Checks](/guides/launch/launch-check) guide to review key checks to perform before going live.
-- If utilizing Redis, follow our guide on [enabling WP Redis for WordPress](/redis#enable-redis).
+- If utilizing the Object Cache, follow our guide on [enabling Object Caching for WordPress](/object-cache#enable-redis).
 
 ## See Also
 
-- [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams
-- [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
+- [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
+- [Professional Services](/guides/professional-services) - Learn all the great services our expert teams can provide.

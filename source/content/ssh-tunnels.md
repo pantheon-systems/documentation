@@ -12,14 +12,14 @@ This technique configures an SSH client to forward a local port to a port on Pan
 Currently, there are two services on Pantheon that support SSH tunneling:
 
 - [MySQL database](/mysql-access) (dbserver)
-- [Redis cache](/redis)
+- [Redis cache](/object-cache)
 
 To restrict access to these services to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access).
 
 ## Prerequisites
 
 - Local installation of a MySQL client
-- [Redis command-line client](/redis#use-the-redis-command-line-client)
+- [Redis command-line client](/object-cache#use-the-redis-command-line-client)
 - Add an [SSH key](/ssh-keys) to your Pantheon User Dashboard
 
 ## Create Secure Connection to MySQL using TLS
