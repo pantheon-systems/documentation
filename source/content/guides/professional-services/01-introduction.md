@@ -28,7 +28,7 @@ Whatever your needs may be, Pantheon’s Drupal & WordPress migration experts pr
 - **Launch Planning**: We work with your team to coordinate launch planning, including content resyncs, load testing, SSL certificate pre-provisioning, and more.
 - **Launch**: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
 
-[Contact our migrations team](https://pantheon.io/migrations?docs) for details.
+Visit the [Site Migrations](/guides/professional-services/website-migration-service) doc, or [contact our Migrations Team](https://pantheon.io/migrations?docs) for details.
 
 ## Managed Updates
 
@@ -36,7 +36,7 @@ Pantheon's Managed Updates service keeps your site up to date with minimal inter
 
 Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly and tested, minimizing interference with your day-to-day operations.
 
-Visit our [Managed Updates](/guides/professional-services/managed-updates) doc, or [Contact us](https://pantheon.io/professional-services/managed-updates?docs) for details.
+Visit our [Managed Updates](/guides/professional-services/managed-updates) doc, or [contact us](https://pantheon.io/professional-services/managed-updates?docs) for details.
 
 ## Advanced Global CDN
 
@@ -50,7 +50,7 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 - **Launch**: We provide you with the information you will need to launch or re-launch your site on Advanced Global CDN.
 - **Post-Launch**: PS provides up to four hours per quarter to address requests and changes to the Advanced Global CDN service throughout the lifetime of the contract.
 
-[Contact us](https://pantheon.io/professional-services?docs) for details.
+Visit our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) doc, or [contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Pre-launch Load Testing
 
@@ -68,9 +68,7 @@ The following services are not fulfilled by the Professional Services team but a
 
 ### Customer Success Management
 
-Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals.
-
-Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
+Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond Accounts and is available as an add-on for Gold and Platinum Accounts. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
 
 ### Expert Training
 

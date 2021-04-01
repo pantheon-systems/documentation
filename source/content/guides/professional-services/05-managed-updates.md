@@ -40,28 +40,27 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
   - Codebase changes are pushed to client's remote repo and then applied to each of the sites
   - Build step does not rely on 3rd party sources
   - No other special deployment instructions
-- Drupal 7 or WordPress 5.4 or above.
+- Drupal 7 or WordPress 5.4 or above
 
 ## Product Comparison Table
 
-||Description|Managed Updates Portfolio Upstreams|Managed Updates Lite|Managed Updates Premium|
-|--- |--- |--- |--- |--- |
-|Core, plugin, and module updates|Full code updates from publicly accessible repositories and sources.|<Check/> |<Check/> |<Check/> |
-|Regular update detection|Daily scans of official repositories to detect when updates are available.|<Check/> |<Check/> |<Check/> |
-|Visual Regression Testing|VRT for every environment through which changes are deployed.|<Check/> |<Check/> |<Check/> |
-|Custom deployment scheduling|Adjustable scheduling for the deployment of core, plugin, and module updates.|❌|<Check/> |<Check/> |
-|Standalone sites|Maintenance of logically distinct and/or customized sites.|❌|<Check/> |<Check/> |
-|Workflow customization|Support for bespoke site update workflows.|❌|❌|<Check/> |
-|Remote pull requests to external repositories|Receive pull requests for successful updates that can be accepted at your convenience.|❌|❌|<Check/> |
-|Personalized update issue remediation|Expert support for remediating update and deployment issues.|❌|❌|<Check/> |
-|Headless site support|Updates for headless and decoupled sites.|❌|❌|<Check/> |
-|Composer compatibility support (Drupal 8)|Updates for Composer-built Drupal sites.|N/A|❌|<Check/> |
-|Custom build/CI process|Updates for sites using custom CI or build processes.|❌|❌|<Check/> |
-|Patched code support|Preserves patched code in applied updates.|Test and Deploy Only|Drupal 7 sites excluded|<Check/> |
-|Custom <abbr title="Visual Regression Testing">VRT</abbr>|VRT for authenticated pages or custom DOM elements.|❌|❌|<Check/> |
+| Feature                                       | Description                                                                            | Managed Updates Portfolio Upstreams | Managed Updates Lite    | Managed Updates Premium |
+|-----------------------------------------------|----------------------------------------------------------------------------------------|-------------------------------------|-------------------------|-------------------------|
+| Core, plugin, and module updates              | Full code updates from publicly accessible repositories and sources.                   | <Check/>                            | <Check/>                | <Check/>                |
+| Regular update detection                      | Daily scans of official repositories to detect when updates are available.             | <Check/>                            | <Check/>                | <Check/>                |
+| Visual Regression Testing                     | VRT for every environment through which changes are deployed.                          | <Check/>                            | <Check/>                | <Check/>                |
+| Custom deployment scheduling                  | Adjustable scheduling for the deployment of core, plugin, and module updates.          | ❌                                   | <Check/>                | <Check/>                |
+| Standalone sites                              | Maintenance of logically distinct and/or customized sites.                             | ❌                                   | <Check/>                | <Check/>                |
+| Workflow customization                        | Support for bespoke site update workflows.                                             | ❌                                   | ❌                       | <Check/>                |
+| Remote pull requests to external repositories | Receive pull requests for successful updates that can be accepted at your convenience. | ❌                                   | ❌                       | <Check/>                |
+| Personalized update issue remediation         | Expert support for remediating update and deployment issues.                           | ❌                                   | ❌                       | <Check/>                |
+| Headless site support                         | Updates for headless and decoupled sites.                                              | ❌                                   | ❌                       | <Check/>                |
+| Composer compatibility support (Drupal 8)     | Updates for Composer-built Drupal sites.                                               | N/A                                 | ❌                       | <Check/>                |
+| Custom build/CI process                       | Updates for sites using custom CI or build processes.                                  | ❌                                   | ❌                       | <Check/>                |
+| Patched code support                          | Preserves patched code in applied updates.                                             | Test and Deploy Only                | Drupal 7 sites excluded | <Check/>                |
+| Custom VRT                                    | VRT for authenticated pages or custom DOM elements.                                    | ❌                                   | ❌                       | <Check/>                |
 
-
-## Requirements and Steps for Drupal 8 compatibility
+## Requirements and Steps for Drupal 8 Compatibility
 
 In order to be supported by Pantheon Managed Updates, Drupal 8 sites should be in a "Composer-clean" state. This requires making sure the site’s codebase meets several criteria.
 
@@ -91,7 +90,7 @@ A Drupal 8 site using Managed Updates must:
 
   1. Copy all of the existing site’s custom themes to `web/themes/custom/`.
 
-  1. Finally, take the `composer.json` file from the site’s codebase and add all packages from "require" and "require-dev" sections to the new project’s `composer.json`. If there are duplicates, prefer versions from the example project, rather than from site.
+  1. Finally, take the `composer.json` file from the site’s codebase and add all packages from `require` and `require-dev` sections to the new project’s `composer.json`. If there are duplicates, prefer versions from the example project, rather than from site.
 
   </Accordion>
 
@@ -124,8 +123,8 @@ Additionally:
 - Custom modules should be stored in `web/modules/custom`.
 - Custom themes should be stored in `web/themes/custom`.
 - Local patches should be sourced from the `patches` directory in the project root.
-- After removing the `vendor` directory, `composer.lock` file, `web/modules/contrib/*`, `web/themes/contrib/*`, and `web/core/*`, running `composer install` should run with exit status "0" (no errors).
-- Composer-specific files and directories SHOULD NOT be included into .gitignore file.
+- After removing the `vendor` directory, `composer.lock` file, `web/modules/contrib/*`, `web/themes/contrib/*`, and `web/core/*`, running `composer install` should run with exit status `0` (no errors).
+- Composer-specific files and directories SHOULD NOT be included in the `.gitignore` file.
 - There should be no `.git` folders in the `modules` or `vendors` directories.
 - `"topfloor/composer-cleanup-vcs-dirs": "^1.0"` should be required in the top-level `composer.json` file.
 

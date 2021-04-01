@@ -42,7 +42,7 @@ Use the AGCDN Edge to generate JSON Web Tokens<Popover title="JSON Web Tokens" c
 
 ### Custom Error & Maintenance Page Rules
 
-Response code messages enable you to create custom error pages (e.g. 404 and 503 errors) for a tailored end-user experience.
+Response code messages enable you to create custom error pages (e.g., 404 and 503 errors) for a tailored end-user experience.
 
 ### Geolocation-based Actions
 
@@ -80,8 +80,8 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 ### Additional Features from WAF/IO
 
 - Efficient <abbr title="Image Optimization">IO</abbr> at the edge
-  
- With **Image Optimization (IO)** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
+
+  With **Image Optimization (IO)** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
 
 - Layer 7/Enterprise WAF rules
 
@@ -95,7 +95,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
   Our Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
 
-- Advanced bot detection & mitigation (Available as an add-on)
+- Advanced bot detection & mitigation (available as an add-on)
 
   The following third-party plugins are available:
   

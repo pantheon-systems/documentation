@@ -16,7 +16,7 @@ The Managed Migration Service offered by [Pantheon Professional Services](/guide
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 
-The Migrations Team's goal is to migrate your site to our WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration. 
+The Migrations Team's goal is to migrate your site to our WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
 
 For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate).
 
@@ -88,7 +88,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 - Search configuration
   - Configure sites that use Acquia Search to use Pantheon Search instead. (Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.)
 
-- Enable and configure Visual Regression Testing. 
+- Enable and configure Visual Regression Testing.
 
 - Additional tasks identified in the Project Requirements.
 
@@ -98,7 +98,7 @@ Throughout the process, you'll have access to the Migrations Team through a dedi
 
 Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues) to incompatibilities that have already been identified by our Success teams.
 
-These hours are tracked by the Migration Team and do not roll over for use on other sites.
+These hours are tracked by the Migrations Team and do not roll over for use on other sites.
 
 Implementing known solutions includes handling core considerations. For example, if the migration includes:
 
@@ -148,7 +148,7 @@ Implementing known solutions includes handling core considerations. For example,
 
    - Enabling or disabling S3 or other CDN configurations
 
-   - Switching to Solr from another search platform
+   - Switching to Pantheon Search from another search platform
 
 1. Any code changes made to the site after the initial migration begins.
 
@@ -156,7 +156,7 @@ Implementing known solutions includes handling core considerations. For example,
 
 ## Professional Services (PS) Hours
 
-You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migration Team to complete additional work, which can include:
+You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migrations Team to complete additional work, which can include:
 
 - Creating a Custom Upstream for you
 
@@ -166,7 +166,7 @@ You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migratio
 
 - Configuring or decommissioning S3 (existing S3 integrations are fine, this is just for changes to the file structures in the application)
 
-- Ensuring your applications are working with any required Secure Integrations
+- Ensuring your applications are working with any required [Secure Integrations](/secure-integration)
 
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
@@ -180,7 +180,7 @@ These used to be called Custom Application Services (CAS) hours.
 
 1. Join and participate in the dedicated migration support channel that will be provided in Pantheon’s Slack instance
 
-1. Provide the Pantheon Migration Team with necessary access to current host or to code, database, and files
+1. Provide the Pantheon Migrations Team with necessary access to current host or to code, database, and files
 
 1. Initiate a code freeze from the migration's start until the site(s) launch on Pantheon
 
