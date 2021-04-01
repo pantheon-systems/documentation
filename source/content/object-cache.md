@@ -7,7 +7,7 @@ contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2021-03-01"
 ---
 
-Pantheon's[<dfn id="objectcache">Object Cache (formerly Redis)</dfn>]() is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
+Pantheon's[<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-cache) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Object Cache
 
@@ -130,7 +130,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
-1. Install and activate the [Redis](https://www.drupal.org/project/object-cache) module from Drupal.org.
+1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
   <Alert title="Note" type="info">
 
@@ -210,7 +210,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-1. Add the [Redis](https://www.drupal.org/project/object-cache) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
+1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus remote:drush <site>.<env> -- en redis -y
@@ -474,7 +474,7 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 
 ### You have requested a non-existent service
 
-The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/object-cache) module before it has been enabled:
+The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/redis) module before it has been enabled:
 
 ```php
 Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
@@ -544,7 +544,7 @@ activerehashing yes
 
 Note that the `maxmemory` value will vary based on plan level.
 
-### If Object Cache hits the upper limit of memory usage, is this logged on Pantheon?
+### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
 
 Yes. There is a `redis.log` file that is available on the Redis container for each environment.
 
@@ -562,7 +562,7 @@ sftp>
 
 ### Why won't my site work after importing a database backup?
 
-When you replace the database with one that doesn't match the Object cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Object cache from the command line](#clear-cache).
+When you replace the database with one that doesn't match the object cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the object cache from the command line](#clear-cache).
 
 ## Safely Remove Object Cache
 
