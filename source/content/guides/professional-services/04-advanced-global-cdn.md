@@ -12,7 +12,7 @@ anchorid: advanced-global-cdn
 editpath: professional-services/04-advanced-global-cdn.md
 ---
 
-[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/guides/professional-services/advanced-global-cdn) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
+[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn?docs) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
 
 Each AGCDN service configuration is offered as an annual contract subscription. Customers can include multiple sites to the configuration, or conditionally apply specific rules.
 
@@ -70,7 +70,7 @@ Reduce requests to your CMS by moving page redirects to the edge.
 
 ### Domain Masking and Reverse Proxy
 
-- Domain masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths. 
+- Domain masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths.
 - Reverse proxy: serve content from another service (eg. S3) seamlessly from your application.
 
 ### Enterprise Blue/Green Deployment Support
@@ -105,7 +105,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
   The customer is responsible for purchasing, maintaining payment for, and supporting these plugins.
 
-[See a comparison of the features](https://pantheon.io/product/guides/professional-services/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
+[See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
 ## Frequently Asked Questions
 
