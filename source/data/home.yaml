@@ -87,7 +87,7 @@
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
       - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
-        url: '/redis/'
+        url: '/object-cache/'
       - text: 'Drupal Drush Command-Line Utility'
         url: '/drush/'
   changelog-preview:
