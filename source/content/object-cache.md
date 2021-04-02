@@ -1,5 +1,5 @@
 ---
-title: Object Cache (formerly Redis)
+title: "Object Cache (formerly Redis)"
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 categories: [performance]
 tags: [cache, plugins, modules, database]
