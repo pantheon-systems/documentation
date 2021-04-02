@@ -7,6 +7,7 @@ cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-migration/migrate-guided-d9
 anchorid: drupal-9-migration/migrate-guided-d9
 editpath: drupal-9-migration/03-migrate-guided-d9.md
