@@ -195,14 +195,14 @@ Modules:
 
 ```bash{promptUser:user}
 mkdir -p ../$SITE-composer/web/modules/custom # create the directory if it doesn't already exist
-cp -r /modules/custom/awesome_module ../$SITE-composer/web/modules/custom
+cp -r modules/custom/awesome_module ../$SITE-composer/web/modules/custom
 ```
 
 Themes:
 
 ```bash{promptUser:user}
 mkdir -p ../$SITE-composer/web/themes/custom # create the directory if it doesn't already exist
-cp -r /themes/custom/great_theme ../$SITE-composer/web/themes/custom
+cp -r themes/custom/great_theme ../$SITE-composer/web/themes/custom
 ```
 
 Follow suit with any other custom code you need to carry over.
@@ -248,7 +248,7 @@ Push the changes to a Multidev called `composerify` to safely test the site with
 
 ```bash{promptUser:user}
 git add .
-git commit -m "ran composer prepare-for-pantheon and install"
+git commit -m "convert to composer"
 git push origin composerify && terminus env:create $SITE.dev composerify
 ```
 
