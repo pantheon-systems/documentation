@@ -64,6 +64,31 @@ You can hook into the following workflows:
 | `sync_code`                            | Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard | Dev or Multidev            |                                             |
 | `create_cloud_development_environment` | Create Multidev environment                                         | Multidev                   | `after` stage valid, `before` stage invalid |
 
+## Variables
+
+When a workflow runs, there are a common set of variables that are made available through the `$_POST` global variable, in addition to the standard `$_ENV` and `$_SERVER` objects. These variables include the following:
+
+
+|Variable Name|Description|Hooks Available|Notes|
+|--|--|--|--|
+|`trace_id`|The unique ID of the workflow.|All| |
+|`site_id`|UUID of the site instance.|All| |
+|`environment`|Environment name that the workflow is running on.|All|Matches the `PANTHEON_ENVIRONMENT` environment variable.
+|`stage`|`before` or `after` indicator for when the workflow is running.|All|| |
+|`qs_description`|Description of the workflow as defined in `pantheon.yml`|All| |
+|`wf_type`|ID of the workflow hook that is running.|All| |
+|`wf_description`|Label of the workflow hook that is running.|All| |
+|`user_id`|UUID of the user account that initiated the task.|All|If task initiated by Pantheon, `user_id` will be "None".|
+|`user_firstname`|First name of the user account that initiated the task.|All|If task initiated by Pantheon, `user_firstname` will be "Pantheon".|
+|`user_lastname`|Last name of the user account that initiated the task.|All|If task initiated by Pantheon, `user_lastname` will be "Pantheon".|
+|`user_fullname`|UUID of the user account that initiated the task.|All|If task initiated by Pantheon, `user_fullname` will be "Pantheon".|
+|`user_email`|Email of the user account that initiated the task.|All|If task initiated by Pantheon, `user_email` will be `root@getpantheon.com`.|
+|`user_role`|UUID of the user that initiated the task.|All| |
+|`to_environment`|Target environment where database is being cloned to.|`clone_database`| |
+|`from_environment`|Source environment where database is being cloned from.|`clone_database`| |
+|`deploy_message`|Deploy message provided as part of a test of live deployment.|`deploy`|Only available if a deploy message is provided.
+
+
 ## Secrets
 
 Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr), or with a storage solution in your site's [private files path](/private-paths#private-path-for-files).
