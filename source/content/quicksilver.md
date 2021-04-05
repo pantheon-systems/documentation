@@ -89,6 +89,8 @@ When a workflow runs, there are a common set of variables that are made availabl
 |`deploy_message`|Deploy message provided as part of a test of live deployment.|`deploy`|Only available if a deploy message is provided.
 
 
+For examples on how to utilize these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
+
 ## Secrets
 
 Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr), or with a storage solution in your site's [private files path](/private-paths#private-path-for-files).
