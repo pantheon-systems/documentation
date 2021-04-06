@@ -69,7 +69,7 @@ At this time, Multidev on Pantheon will only work with the Pantheon hosted code 
 
 ## Is there a public API available for post-commit hooks or other integrations with external project management systems?
 
-No, but developers can use [Quicksilver hooks](/quicksilver/#hooks) to integrate Multidev creation and other workflows with external services.
+No, but developers can use [Quicksilver hooks](/quicksilver#hooks) to integrate Multidev creation and other workflows with external services.
 
 ## Can I backup and restore a branch environment?
 
