@@ -50,7 +50,7 @@ The API module is not needed for Drupal 8.
 
 ### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
 
-This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Apache Solr on Pantheon](/pantheon-search).
+This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Pantheon Search](/pantheon-search).
 
 ## [Login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
 
