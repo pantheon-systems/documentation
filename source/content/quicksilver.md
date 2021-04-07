@@ -117,4 +117,4 @@ remote:
 ## See Also
 
 - [The Pantheon.yml Configuration File](/pantheon-yml)
-- [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples/)
+- [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples/)
