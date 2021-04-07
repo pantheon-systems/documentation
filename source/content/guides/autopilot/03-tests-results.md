@@ -25,7 +25,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 ## Failing Tests
 
-Autopilot can report failures via email or [Quicksilver](/quicksilver) hooks immediately, and send a weekly email report summarizing all Autopilot activity.
+Autopilot can report failures via email or [Quicksilver hooks](/quicksilver#hooks) immediately, and send a weekly email report summarizing all Autopilot activity.
 
 If an error is detected during an update attempt, the **Autopilot Status** shows **Needs Attention** with two options to **Review Test Results** or to see **What Changed**.
 
@@ -45,4 +45,4 @@ From the **Autopilot Overview**:
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 5 pages on each site. It will check for updates once a week, and can also be run on demand. This number will increase for Autopilot General Availability.

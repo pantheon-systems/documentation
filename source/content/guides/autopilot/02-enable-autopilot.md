@@ -21,23 +21,17 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
 1. Sites for which Autopilot is available are listed on the **Autopilot Overview** page.
 
-1. Click **Actions**, **Manage Autopilot Settings**, the **Get Started** to start Autopilot setup.
+1. Click **Actions**, **Manage Autopilot Settings**, then **Get Started** to start Autopilot setup.
 
   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
 
 ## Set Autopilot to Deploy Successful Changes to Dev, Test, or Live
 
-1. Select the **Deployment Destination**. This determines the environment to which Autopilot can automatically apply changes.
+![Autopilot Setup - Scope and Cadence](../../../images/autopilot/autopilot-setup-scope-cadence.png)
 
-  For example, if you select **Test environment**, Autopilot will stage the changes in Dev, then deploy them to Test automatically if the changes pass VRT.
+On the **Scope and Cadence** page, use the **On**/**Off** toggles to choose which features and elements should be tracked for updates, then use the dropdown menus to choose the **Deployment Destination** and **Update Frequency**.
 
-  ![Enable Autopilot and select Deployment Destination](../../../images/autopilot/autopilot-get-started.png)
-
-1. Click **Customize** to choose which aspects of the site Autopilot should manage and how frequently Autopilot should make updates.
-
-  ![Autopilot Setup - Scope and Cadence](../../../images/autopilot/autopilot-setup-scope-cadence.png)
-
-  Click **Continue** to choose pages for screenshot comparison tests and acceptable change.
+Click **Continue** to choose pages for screenshot comparison tests and to define a range for acceptable changes.
 
 ## Acceptable Change
 
@@ -48,19 +42,23 @@ Autopilot allows you to configure a threshold of acceptable change so that small
 - Social (Twitter, Facebook, Pinterest, etc.) feeds
 - Advertising
 
-Autopilot has AI to detect autoplay videos and reset frames for consistent screenshots, to avoid false positives. Additional DOM element exclusion is in active development.
+Additional DOM element exclusion is in active development.
 
 ![Autopilot Setup - Visual Test Screenshots](../../../images/autopilot/autopilot-setup-screenshots.png)
 
 1. On the Visual Test Screenshots page, add the page URLs to track and the amount of Acceptable Change.
 
-  For percent change, consider that a 1% change is like a 1000 pixel wide image shifting 10 pixels over. You can adjust this setting later for individual tests.
+  For percent change, consider that a 1% change is like a 1000 pixel wide image shifting 10 pixels over.
+  
+  You can adjust this setting later for individual tests.
 
   Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
 
 1. Click **Continue** to choose updates to exclude. If no eligible updates are available, or once you've added all the things to exclude, click **Save** to start Autopilot.
 
-![Autopilot Status page shows update status. A status popup notification in the lower right shows that Autopilot has been initialized.](../../../images/autopilot/autopilot-status-initialized.png)
+1. Wait while Autopilot performs its tests and updates. This will take a while.
+
+  ![Autopilot Status page shows update status.](../../../images/autopilot/autopilot-status-performing-updates-20.png)
 
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
