@@ -73,6 +73,10 @@ Not yet.
 
 You can specify the environments to which Autopilot deploys. See the next page for [configuration options](/guides/autopilot/enable-autopilot).
 
+### Does the Autopilot Multidev count towards the Multidev limit?
+
+No. If you encounter any issues about Multidev limits, [contact Support](/support).
+
 ## See Also
 
 - [Robots, Autopilot, and The Holy Grail of WebOps](https://pantheon.io/blog/robots-autopilot-and-holy-grail-webops)
