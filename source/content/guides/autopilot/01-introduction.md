@@ -43,7 +43,7 @@ Site upkeep can be tedious with constant monitoring, building, maintaining websi
 
 Autopilot requires Multidev, and is available to Pantheon Gold Accounts or higher.
 
-Autopilot is enabled for Pantheon sites at the organization level. Your user should be added to the site's organization with at least Developer-level access.
+Autopilot is enabled for Pantheon sites at the organization level.
 
 ## Will Autopilot work for your site?
 

@@ -15,6 +15,8 @@ reviewed: "2021-03-26"
 
 Autopilot can be enabled for individual sites within each eligible Workspace.
 
+To work with Autopilot, [switch to the Workspace](/workspaces#switch-between-workspaces) for the site's Organization before you continue.
+
 ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
 1. If the site is in [SFTP mode](/sftp) with staged changes that haven't been committed yet, [commit those changes](/sftp#committing-sftp-changes) first.
