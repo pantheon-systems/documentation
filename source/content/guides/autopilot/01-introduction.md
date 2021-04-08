@@ -12,7 +12,7 @@ editpath: autopilot/01-introduction.md
 reviewed: "2021-03-26"
 ---
 
-[Autopilot](https://pantheon.io/autopilot?docs) on Pantheon automatically detects, performs, and deploys updates for WordPress and Drupal CMS solutions.
+[Autopilot](https://pantheon.io/autopilot?docs) is a new feature that's part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
 
 <Alert title="Limited Availability" type="info" icon="leaf">
 
@@ -43,18 +43,31 @@ Site upkeep can be tedious with constant monitoring, building, maintaining websi
 
 Autopilot requires Multidev, and is available to Pantheon Gold Accounts or higher.
 
+Autopilot is enabled for Pantheon sites at the organization level. Your user should be added to the site's organization with at least Developer-level access.
+
+## Will Autopilot work for your site?
+
+While Pantheon develops more features for Autopilot, some features aren't available yet.
+
+Right now, Autopilot doesn't work with sites that use [Integrated Composer](/integrated-composer).
+
 ## FAQ
+
 ### Is Autopilot configurable per site?
 
 Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/autopilot/enable-autopilot)
 
-### Does Autopilot work with Composer?
+### Will Autopilot email VRT results?
 
-Yes. Autopilot is fully compatible with Pantheon's [Integrated Composer](/integrated-composer) feature.
+Not yet. Pantheon's devs are working on Autopilot email notifications.
 
 ### Does Autopilot work with build tools?
 
 Not yet. Autopilot is not compatible with Build Tools or other workflows that use external Git repositories.
+
+### Does Autopilot support Terminus actions?
+
+Not yet.
 
 ### Does Autopilot automatically deploy changes to the Live environment?
 

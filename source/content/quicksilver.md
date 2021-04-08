@@ -117,7 +117,7 @@ remote:
 
 ### Autopilot VRT Hook Does Not Run When Expected
 
-Sometimes Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your "Autopilot" multidev from the dashboard. Be sure to also delete the "Autopilot" branch, and then create the "Autopilot" multidev again in the dashboard. Once you do this, your scripts should start running after the Visual Regression tests complete.
+For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your `Autopilot` Multidev from the dashboard. Be sure to also delete the `Autopilot` branch, and then create the `Autopilot` Multidev again in the Dashboard. Once you do this, your scripts should start running after the visual regression tests complete.
 
 ## See Also
 

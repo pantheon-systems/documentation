@@ -17,6 +17,8 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
 ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
+1. If the site is in [SFTP mode](/sftp) with staged changes that haven't been committed yet, [commit those changes](/sftp#committing-sftp-changes) first.
+
 1. In the left bar, click **<i className="fa fa-robot"></i> Autopilot**
 
 1. Sites for which Autopilot is available are listed on the **Autopilot Overview** page.
