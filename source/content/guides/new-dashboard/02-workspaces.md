@@ -7,6 +7,7 @@ tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
 reviewed: "2021-02-26"
 layout: guide
+showtoc: true
 permalink: docs/guides/new-dashboard/workspaces
 anchorid: new-dashboard
 editpath: new-dashboard/02-workspaces.md
@@ -16,7 +17,7 @@ editpath: new-dashboard/02-workspaces.md
 
 ## What is a Workspace?
 
-Workspaces are the improved version of the old Dashboards, combined into one place.
+[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the old Dashboards, combined into one place.
 
 If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or between Organizations.
 
