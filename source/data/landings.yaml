@@ -180,8 +180,6 @@
               icon: 'fa fa-video-camera'
             - text: 'Pantheon Filesystem'
               url: '/files'
-            - text: 'FileZilla on Pantheon'
-              url: '/filezilla'
             - text: 'rsync and SFTP'
               url: '/rsync-and-sftp'
             - text: 'Using WinSCP on Pantheon'
