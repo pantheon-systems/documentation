@@ -7,13 +7,21 @@ reviewed: "2021-04-08"
 ---
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
 
+## Find or Create pantheon.yml
+
+Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory.
+
+If the `pantheon.yml` file is not present, you may create one.
+
+For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
 Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
-For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+
 
 ## Advanced Site Configuration
 
@@ -187,6 +195,8 @@ When the same configuration value is defined in both files, the value from `pant
 
 ## Troubleshooting
 
+First, verify the syntax of entries in the file. Refer to the examples above for exact syntax, or try running the contents of your `pantheon.yml` file through a [YAML linter](http://www.yamllint.com/).
+
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
 The Platform will automatically reject a commit that includes a `pantheon.yml` error. The error message will resemble:
@@ -201,7 +211,7 @@ remote: Version '2' is not a valid pantheon.yml version!
 remote: Valid versions are: 1
 ```
 
-While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Please refer to the examples above for exact syntax, or try running the contents of your `pantheon.yml` file through a [YAML linter](http://www.yamllint.com/).
+While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common issue.
 
 ### Deploying Configuration Changes to Multidev
 
