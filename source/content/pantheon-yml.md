@@ -117,34 +117,6 @@ php_version: 7.0
 * From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
-### Specify a Version of MariaDB
-
-Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
-
-Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
-
-```yaml:title=pantheon.yml
-database:
-  version: 10.4
-```
-
-Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
-
-Not all CMS versions can be configured to use a specific database version on Pantheon yet.
-
-This table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
-
-| CMS            | Recommended MariaDB Version | Configurable After |
-|----------------|-----------------------------|--------------------|
-| Drupal <6.51   | Default                     | May, 2021          |
-| Drupal >= 6.51 | Default                     | May, 2021          |
-| Drupal < 7.76  | Default                     | May, 2021          |
-| Drupal >= 7.76 | Default                     | May, 2021          |
-| Drupal < 8.5   | Default                     | May, 2021          |
-| Drupal >= 8.6  | 10.0 - 10.4                 |                    |
-| Drupal >= 9.0  | 10.4 - 10.4                 |                    |
-| WordPress      | Default                     | July, 2021         |
-
 ### Drush Version
 
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
