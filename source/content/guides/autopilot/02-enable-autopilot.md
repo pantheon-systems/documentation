@@ -1,10 +1,12 @@
 ---
-title: Enable Pantheon Autopilot
+title: Pantheon Autopilot
 subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
+layout: guide
+showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
@@ -15,7 +17,7 @@ reviewed: "2021-03-26"
 
 Autopilot can be enabled for individual sites within each eligible Workspace.
 
-To work with Autopilot, [switch to the Workspace](/workspaces#switch-between-workspaces) for the site's Organization before you continue.
+To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization before you continue.
 
 ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 

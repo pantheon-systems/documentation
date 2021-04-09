@@ -6,8 +6,10 @@ categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 contributors: [nathantyler, alexfornuto, edwardangert]
 type: guide
+layout: guide
+showtoc: true
 anchorid: autopilot
-permalink: docs/guides/autopilot/
+permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
 reviewed: "2021-03-26"
 ---
@@ -41,7 +43,7 @@ If you build or maintain WordPress and Drupal sites, Autopilot is for you.
 
 Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
-Autopilot requires Multidev, and is available to Pantheon Gold Accounts or higher.
+Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Accounts or higher.
 
 Autopilot is enabled for Pantheon sites at the organization level.
 
