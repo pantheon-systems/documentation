@@ -15,6 +15,8 @@ reviewed: "2021-03-26"
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/multidev) so it can detect issues before applying them.
 
+## Successful Tests
+
 If you’re not comfortable with Autopilot deploying all the way to the Live environment, you can have Autopilot only deploy updates to Dev or Test and stop. You can proceed with other manual or automated QA processes, and deploy from the Test to Live environment when ready.
 
 You can specify the environments to which Autopilot deploys. When all tests pass, it can deploy to the:
@@ -22,8 +24,6 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 - Dev environment only: A good choice for a site under continual active development
 - Test environment (after Dev): A good choice for a high traffic site that needs an extra level of manual quality assurance (QA) or automated CI
 - Live environment (after Dev and Test)
-
-## Successful Tests
 
 ## Failing Tests
 
