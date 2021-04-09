@@ -37,7 +37,7 @@ Pantheon's Autopilot:
 
 Autopilot is available during Limited Availability to Gold Accounts and higher. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
 
-## Who is Autopilot for?
+## Who is Autopilot For?
 
 If you build or maintain WordPress and Drupal sites, Autopilot is for you.
 
@@ -47,7 +47,7 @@ Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Acco
 
 Autopilot is enabled for Pantheon sites at the organization level.
 
-## Will Autopilot work for your site?
+## Will Autopilot Work for Your Site?
 
 While Pantheon develops more features for Autopilot, some features aren't available yet.
 
