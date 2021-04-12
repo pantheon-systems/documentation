@@ -42,7 +42,7 @@ The following services are not fulfilled by the Onboarding Manager but are addit
 
 ### Customer Success Management
 
-Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us?docs) for details.
+Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond Accounts and is available for Gold and Platinum Accounts. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us?docs) for details.
 
 ### Expert Training
 
