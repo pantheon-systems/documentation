@@ -117,6 +117,34 @@ php_version: 7.0
 * From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
+### Specify a Version of MariaDB
+
+Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
+
+Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
+
+```yaml:title=pantheon.yml
+database:
+  version: 10.4
+```
+
+Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
+
+Not all CMS versions can be configured to use a specific database version on Pantheon yet.
+
+This table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
+
+| CMS            | Recommended MariaDB Version | Configurable After |
+|----------------|-----------------------------|--------------------|
+| Drupal <6.51   | Default                     | May, 2021          |
+| Drupal >= 6.51 | Default                     | May, 2021          |
+| Drupal < 7.76  | Default                     | May, 2021          |
+| Drupal >= 7.76 | Default                     | May, 2021          |
+| Drupal < 8.5   | Default                     | May, 2021          |
+| Drupal >= 8.6  | 10.0 - 10.4                 |                    |
+| Drupal >= 9.0  | 10.4 - 10.4                 |                    |
+| WordPress      | Default                     | July, 2021         |
+
 ### Drush Version
 
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
@@ -159,7 +187,7 @@ For more information, see [Automate your Workflow with Quicksilver Platform Inte
 
 ## Custom Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver#hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
