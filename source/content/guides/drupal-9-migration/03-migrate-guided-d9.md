@@ -34,6 +34,8 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
+In your site Dashboard, look for the blue banner across the top that says that your site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb).
+
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
