@@ -52,7 +52,7 @@ To learn more, see [Using the Pantheon Workflow](/pantheon-workflow).
 
 ### Does Pantheon offer professional services?
 
-Yes, see [Professional Services](/professional-services) for more information.
+Yes, see [Professional Services](/guides/professional-services) for more information.
 
 ### Can Pantheon run sites on highly available server clusters?
 

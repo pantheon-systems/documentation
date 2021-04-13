@@ -31,7 +31,7 @@ Our tech includes NGINX, PHP, Redis, [Global CDN](/global-cdn-caching), Solr and
 - [New Relic&reg; Performance Monitoring](/new-relic)
 - [Applying Upstream Updates](/core-updates)
 - [Global CDN Caching for High Performance](/global-cdn-caching)
-- [Installing Redis on Drupal or WordPress](/redis)
+- [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/sso)
 - [Backup Creation](/backups)

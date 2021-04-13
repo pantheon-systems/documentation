@@ -86,7 +86,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." /></th>
+        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." /></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>
@@ -118,20 +118,6 @@ The platform resources provided to your website depend on your current plan. Pan
 
 **MySQL Buffer Pool**: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
 
-<hr />
-
-**Redis Cache Size**: Amount of data a Redis instance can store. Note these numbers are intentionally set below the maximum memory for the Redis instance (which is the next logical power of 2) in order to ensure good performance.
-
-## View Service Configuration Details
-
-### MySQL
-For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
-
-### Redis
-Get your Redis connection string by going to the **Site Dashboard > Environment (e.g. Dev) > Connection Info**, and then run: `<your redis string> config get *memory*`
-
-### PHP
-See [Securely Working with phpinfo](/phpinfo#drupal-note) for ways to view your specific PHP configuration.
 
 ## Calculate Concurrent User / Dynamic Page Capacity
 

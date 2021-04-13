@@ -3,8 +3,17 @@ title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 categories: [platform]
 tags: [https, launch, code, workflow]
+reviewed: "2021-04-08"
 ---
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
+
+## Find or Create pantheon.yml
+
+Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory.
+
+If the `pantheon.yml` file is not present, you may create one.
+
+For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -12,7 +21,7 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 
 </Enablement>
 
-For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+
 
 ## Advanced Site Configuration
 
@@ -20,7 +29,7 @@ For reference implementations see [example.pantheon.yml](https://github.com/pant
 
 Define the `api_version` property in order for `pantheon.yml` to be valid:
 
-```yaml
+```yaml:title=pantheon.yml
 api_version: 1
 ```
 
@@ -28,7 +37,7 @@ api_version: 1
 
 Protect files and directories inside of your docroot from public web access with `protected_web_paths`. For example, the following ensures that a visitor to `https://example.com/example.txt` or `https://example.com/example_directory/any_nested_file` receives Access Denied (403):
 
-```yaml
+```yaml:title=pantheon.yml
 protected_web_paths:
   - /example.txt
   - /example_directory
@@ -49,7 +58,7 @@ The `pantheon.upstream.yml` file provided by your upstream might define protecte
 
 To disable all of the protected web paths defined by your site's upstream and all protected paths defined by the Pantheon platform, set the `protected_web_paths_override` property to `true`:
 
-```yaml
+```yaml:title=pantheon.yml
 protected_web_paths_override: true
 ```
 
@@ -83,7 +92,7 @@ Pantheon sites (using the default Pantheon upstreams) created or updated on or a
 
 Nest your docroot one level beneath your code repository in a directory named `web`:
 
-```yaml
+```yaml:title=pantheon.yml
 web_docroot: true
 ```
 
@@ -97,7 +106,7 @@ Override the upstream's default PHP version with the `php_version` property. PHP
 
 For example, to override the upstream default value at the site level to PHP 7:
 
-```yaml
+```yaml:title=pantheon.yml
 php_version: 7.0
 ```
 
@@ -105,18 +114,18 @@ php_version: 7.0
 
 * [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
 * Drupal and PHP 7 require [Drush 7 or greater](/drush-versions/#configure-drush-version).
-* From time to time, we will roll out a new default version of PHP, which will be available to apply as One-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
+* From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
 ### Drush Version
 
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
 
-```yaml
+```yaml:title=pantheon.yml
 drush_version: 8
 ```
 
-For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions/).
+For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ### Filemount Path
 
@@ -130,7 +139,7 @@ We recommend *only* changing this setting when needed for [Custom Upstream Confi
 
 The only valid filemount path other than the default path for each CMS is `/files` relative to your docroot:
 
-```yaml
+```yaml:title=pantheon.yml
 filemount: /files
 ```
 
@@ -150,13 +159,15 @@ For more information, see [Automate your Workflow with Quicksilver Platform Inte
 
 ## Custom Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver#hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
 When the same configuration value is defined in both files, the value from `pantheon.yml` will override the value from `pantheon.upstream.yml` at the site-level.
 
 ## Troubleshooting
+
+First, verify the syntax of entries in the file. Refer to the examples above for exact syntax, or try running the contents of your `pantheon.yml` file through a [YAML linter](http://www.yamllint.com/).
 
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
@@ -172,7 +183,7 @@ remote: Version '2' is not a valid pantheon.yml version!
 remote: Valid versions are: 1
 ```
 
-While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Please refer to the examples above for exact syntax, or try running the contents of your `pantheon.yml` file through a [YAML linter](http://www.yamllint.com/).
+While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common issue.
 
 ### Deploying Configuration Changes to Multidev
 

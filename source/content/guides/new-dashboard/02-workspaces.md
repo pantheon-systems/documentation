@@ -7,6 +7,7 @@ tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
 reviewed: "2021-02-26"
 layout: guide
+showtoc: true
 permalink: docs/guides/new-dashboard/workspaces
 anchorid: new-dashboard
 editpath: new-dashboard/02-workspaces.md
@@ -16,7 +17,7 @@ editpath: new-dashboard/02-workspaces.md
 
 ## What is a Workspace?
 
-Workspaces are the improved version of the old Dashboards, combined into one place.
+[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the old Dashboards, combined into one place.
 
 If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or between Organizations.
 
@@ -37,15 +38,15 @@ Click a table heading to sort the table by that heading.
 Manage Team members and assign [roles and permissions](/change-management#roles-and-permissions). If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization here.
 ## Autopilot
 
-[Autopilot](/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
+[Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
 
 ![A gif showing Autopilot visual regression testing](../../../images/dashboard/vrt.gif)
 
-Once it's enabled, use it to visually compare changes to the site. Visit the [Autopilot documentation](/autopilot) for more information.
+Once it's enabled, use it to visually compare changes to the site. Visit the [Autopilot documentation](/guides/autopilot) for more information.
 
 ## Upstreams
 
-Create a new Workspace-specific [Custom Upstreams](/custom-upstream) using a GitHub or Bitbucket repository.
+Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository.
 
 ## Support
 

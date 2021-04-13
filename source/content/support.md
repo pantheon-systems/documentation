@@ -1,6 +1,6 @@
 ---
 title: Get Support
-description: Learn how to access Pantheon's expert team and what your support package includes.
+description: Learn how to access Pantheon's expert team and what your Account package includes.
 categories: [platform]
 tags: [dashboard, support]
 reviewed: "2020-02-11"
@@ -10,15 +10,15 @@ reviewed: "2020-02-11"
 
 ## Support Features and Response Times
 
-Pantheon offers a [range of support packages](https://pantheon.io/resources/pantheon-support-overview-datasheet) that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
+Pantheon offers a range of Account packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled [Professional Services](/professional-services) with our Diamond Accounts.
 
-| Support Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
+| Account Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
 | [**Tickets**](#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
-| [**Professional Services**](/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
+| [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
 
 ## Best Practices
 
@@ -26,7 +26,7 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
 
 ### One ticket per issue
 
@@ -50,7 +50,7 @@ We're all only human. We always try our best to understand the situation, but we
 
 ### The Support Tab from the Organization Dashboard
 
-If you are part of an Organization with an enhanced support package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
+If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
 
 ![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
 
@@ -83,7 +83,7 @@ Some in-browser ad or tracking blockers can interfere with the **Launch Chat** b
 
 ## Ticket Support
 
-The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times) and the [support overview datasheet](https://pantheon.io/resources/pantheon-support-overview-datasheet). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 
@@ -104,15 +104,15 @@ Once a ticket is submitted, you can view details for your support requests. If a
 
 ## Pantheon On-Call
 
-Diamond and Platinum support customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum Account customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
-We love helping developers succeed! Our support packages range from basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the scope support we can provide, our [Professional Services](/professional-services) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
 
 ### Code
 
-Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+Your site code belongs to you. We can offer Diamond Account customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
 
 ### Outdated Core
 
@@ -134,7 +134,7 @@ We don’t maintain the integrity of your site. We provide the platform on which
 
 ### Debugging
 
-Code-level debugging and site architecture recommendations are available to Diamond support packages. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/troubleshoot) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond Accounts. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/troubleshoot) to get you started.
 
 ### Performance
 
@@ -162,11 +162,11 @@ We are also happy to help developers learn the ins and outs of making their site
 
 ### Dedicated Support
 
-Diamond support customers get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
 
 Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
 
-Diamond support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
+Diamond Accounts are intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
 
 ## FAQs
 

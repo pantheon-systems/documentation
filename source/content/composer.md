@@ -4,7 +4,8 @@ description: Start with Composer basics then explore suggested WebOps workflows 
 categories: [develop]
 tags: [composer, workflow, updates, webops]
 ---
-[<dfn id="composr">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site. 
+
+[<dfn id="composer">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site.
 
 At its primary level, Composer needs:
 
@@ -28,7 +29,6 @@ Composer looks within [The PHP Package Repository](https://packagist.org/) for d
  - Drupal 8: <https://packages.drupal.org/8>
  - Drupal 7: <https://packages.drupal.org/7>
 
-
 ## Managing Core as a Project Dependency
 Sites managed with Composer should use the nested docroot feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
 
@@ -43,7 +43,6 @@ In this WebOps workflow, a [Multidev](/multidev) environment is created on Panth
 We recommend the Pull Request workflow for single site use cases, and for most use cases involving larger site portfolios such as EDUs. You can create a "template" repository based off Pantheon's example repositories and customize it to your liking, then use the template to create new sites.
 
 However, this method does not support One-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
-
 
 ## Custom Upstream Workflow
 It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.

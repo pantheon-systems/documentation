@@ -32,7 +32,7 @@ Navigate to your existing Dashboard, then add `/beta/workspace/` between `panthe
 
 ### Autopilot
 
-[Autopilot](https://pantheon.io/autopilot?docs) tracks and implements changes, and alerts you if something looks off. See the [Autopilot](/autopilot) documentation to learn how to use Autopilot to handle your WebOps.
+[Autopilot](https://pantheon.io/autopilot?docs) tracks and implements changes, and alerts you if something looks off. See the [Autopilot](/guides/autopilot) documentation to learn how to use Autopilot to handle your WebOps.
 
 ### Pantheon Support
 

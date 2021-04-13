@@ -1,4 +1,4 @@
-1. Disable the [Redis](https://www.drupal.org/project/redis) module.
+1. Disable the [Redis Object Cache](https://www.drupal.org/project/object-cache) module.
 
 1. Delete Redis configuration from `settings.php`.
 

@@ -13,7 +13,7 @@ nexturl: guides/edt/developer-workflow/
 nextpage: Developer Workflow
 previousurl: guides/edt/
 previouspage: Introduction
-editpath: edt/02-introduction-and-architechture.md
+editpath: edt/02-introduction-and-architecture.md
 image: launchGuide-twitterLarge
 ---
 

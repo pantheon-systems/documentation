@@ -417,4 +417,4 @@ function ip_in_list($ips) {
 
 </TabList>
 
-For more advanced security and optimization, consider the [Advanced CDN](/professional-services#advanced-cdn) service from our Professional Services team.
+For more advanced security and optimization, consider the [Advanced CDN](/guides/professional-services/advanced-global-cdn) service from our Professional Services team.

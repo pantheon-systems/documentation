@@ -42,8 +42,8 @@ Follow our [Launch Essentials](/guides/launch) guide to automatically provision 
 ## Solr
 All plans except for the Basic plan can enable [Solr](/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/wordpress-solr), [Enabling Solr with Drupal 7](/solr-drupal-7) or [Enabling Solr on Drupal 8](/solr-drupal-8).
 
-## Redis
-All plans except for the Basic plan can enable Redis for object caching. For installation instructions and additional details, see [Installing Redis on Drupal or WordPress](/redis).
+## Object Cache
+All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 
 ## WordPress
 
