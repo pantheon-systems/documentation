@@ -43,7 +43,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 - [Set Up Outgoing Email](/email/)
 
-- [Activate New Relic Pro](/new-relic/#activate-new-relic-apm-pro)
+- [Activate New Relic Pro](/new-relic/#activate-new-relic-performance-monitoring)
 
 - [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
 

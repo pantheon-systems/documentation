@@ -92,7 +92,7 @@ Contact Support if you are unsure what user the New Relic account is associated 
 
 New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
 
-1. Click **New Relic** > **Go to New Relic**  from the target environment within the Site Dashboard on Pantheon.
+1. Click **New Relic** > **Go to New Relic** from the target environment within the Site Dashboard on Pantheon.
 1. Select **Synthetics** from the menu bar at the top of the page.
 1. From the **Monitors** tab (default), click **Add new**, and enter the details for the URL you want to monitor.
 1. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance networking snafus.
@@ -112,7 +112,7 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 
 Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/debug-mysql-new-relic) could be the result of slow queries, or an elevated volume of queries overall.
 
-For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
+For more information on using New Relic's features, we encourage you to read the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
 
 * [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
 * [MySQL Troubleshooting With New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
@@ -233,7 +233,7 @@ App server response time measures how the page was built on Pantheon, including 
 
 ### Can I use my existing New Relic license with my Pantheon site?
 
-Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic&reg; Performance Monitoring license. [Activate New Relic&reg; Performance Monitoring](#activate-new-relic-apm-pro) for your site, then [contact support](/support). Be sure to provide:
+Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic&reg; Performance Monitoring license. [Activate New Relic&reg; Performance Monitoring](#activate-new-relic-performance-monitoring) for your site, then [contact support](/support). Be sure to provide:
 
 * The Site ID
 * Your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding)
@@ -251,7 +251,7 @@ We don't recommend turning off New Relic for any one environment as it makes tro
 
 ### Can I use the New Relic One Logs feature?
 
-New Relic&reg; Performance Monitoring logs are available at `/logs/newrelic.log`. The New Relic provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic's leftside menu.
+New Relic&reg; Performance Monitoring logs are available at `/logs/newrelic.log`. The New Relic provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic's left-side menu.
 
 See [Log Files on Pantheon](/logs) for more information on accessing your logs.
 
