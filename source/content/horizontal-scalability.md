@@ -71,10 +71,10 @@ Generally speaking, it is no longer necessary to increase application containers
 
 Requests that span more than 3 weeks require approval from the organization or site's Client Sales representative. 
 
-## New Relic Pro
-Consider enabling New Relic Pro for your site. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
+## New Relic&reg; Performance Monitoring
+Consider enabling New Relic&reg; Performance Monitoring for your site. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
 
-For more information, see [New Relic Pro](/new-relic).
+For more information, see [New Relic&reg; Performance Monitoring](/new-relic).
 
 ## Managing Temporary Files
 The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/tmp).

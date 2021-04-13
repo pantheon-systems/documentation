@@ -505,7 +505,7 @@ ___
 
 <ReviewDate date="2019-05-08" />
 
-**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
+**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
 
 ___
 

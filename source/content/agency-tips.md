@@ -76,11 +76,11 @@ Use the `pantheon.yml` file to set up platform hooks and advanced site configura
 
 ### New Relic APM Pro
 
-New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/new-relic). The following blog posts are also a great reference:
+New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic&reg; Performance Monitoring](/new-relic). The following blog posts are also a great reference:
 
-- [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
-- [New Relic &amp; Drupal: Find Your Site&#39;s Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+- [Getting Started with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
+- [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+- [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
 ## Cron
 Pantheon does not provide a way to set custom scheduling for cron jobs. For details, see [Cron for Drupal](/drupal-cron) and [Cron for WordPress](/wordpress-cron).
