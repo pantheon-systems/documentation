@@ -1046,6 +1046,16 @@ The optimal number of records to process at one time depends on how many post_me
 
 ___
 
+## [WP-Ban](https://wordpress.org/plugins/wp-ban/)
+
+<ReviewDate date="2021-02-23" />
+
+**Issue:** WP-Ban returns a [200-level](/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
+
+**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
+
+___
+
 ## [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
 
 <ReviewDate date="2018-10-17" />
