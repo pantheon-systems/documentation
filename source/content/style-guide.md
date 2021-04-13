@@ -23,7 +23,7 @@ Some General Rules:
 - [Avoid copulative verbs (e.g., "be")](http://writing.rocks/to-be-or-not-to-be/).
 - Avoid colloquialisms, personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
 - Only assume as much knowledge from the reader as specified in the [Before You Begin](#before-you-begin) section. Otherwise, explain everything.
-- Review our [Inclusive Language](https://pantheon.io/docs/inclusive-language) doc, and review your writing for inaccessible language.
+- Review our [Inclusive Language](/inclusive-language) doc, and review your writing for inaccessible language.
 
 ___
 
