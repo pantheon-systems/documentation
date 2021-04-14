@@ -19,7 +19,7 @@ It is important to note that this directory is not part of the document root and
 
 ## Access via SFTP
 
-You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [Filezilla](/filezilla) and navigating to the `/files` directory.
+You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [WinSCP](/winscp) and navigating to the `/files` directory.
 
 ## Pantheon-Related Files
 
