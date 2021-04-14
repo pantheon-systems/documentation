@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [alexfornuto, rachelwhitton]
-reviewed: "2020-11-04"
+reviewed: "2021-04-13"
 ---
 <!-- markdownlint-disable -->
 
