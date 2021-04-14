@@ -10,7 +10,7 @@ reviewed: "2020-02-11"
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled [Professional Services](/professional-services) with our Diamond Accounts.
+Pantheon offers a range of Account packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
 
 | Account Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
@@ -108,7 +108,7 @@ Diamond and Platinum Account customers can directly page Pantheon's operations r
 
 ## Scope of Support
 
-We love helping developers succeed! Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the scope support we can provide, our [Professional Services](/professional-services) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the scope support we can provide, our [Professional Services](/guides/professional-services) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
 
 ### Code
 
