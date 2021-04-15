@@ -24,7 +24,7 @@ The goals of this upgrade are to:
 
 - have Composer manage those dependencies in the new site instead.
 
-Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your existing commit history.
+Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your site's existing commit history.
 
 <Alert title="Multidev Required" type="danger">
 
