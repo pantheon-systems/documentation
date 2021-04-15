@@ -27,8 +27,9 @@ This process involves significant changes to the codebase. We recommend you to d
 
 1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
 
-  ```bash{promptUser:user}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout -b composerify ic/master
+  ```bash{outputLines:2}
+  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  Switched to a new branch 'composerify'
   ```
 
   If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
@@ -223,21 +224,6 @@ rm web/sites/default/original-settings.php
 
 The resulting `settings.php` should have no `$databases` array.
 
-#### Configuration
-
-If you are using an exported config, you will need to move the configuration files to a new location. The preferred (and assumed) location of the configuration directories when using a nested docroot and Composer is at the root of the repository next to the web directory:
-
-```none
- site-composer
-|-web
-|-config    <--Here!
-|-vendor
-|-composer.json
-|-etc...
-```
-
-Locate the configuration files in the existing site and move them here. If they are stored in the files directory on your existing site, retrieve them via [SFTP](/sftp), as the Git clone would not contain them. The example project is configured to use this location.
-
 ## Deploy
 
 You've now committed the code to the local branch. Deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
@@ -247,9 +233,7 @@ You've now committed the code to the local branch. Deploy that branch directly t
 Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
 ```bash{promptUser:user}
-git add .
-git commit -m "convert to composer"
-git push -u origin composerify && terminus env:create $SITE.dev composerify
+git push -u ic composerify && terminus env:create $SITE.dev composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard [relaunch workflow](/relaunch) to QA a code change before going live.
