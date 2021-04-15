@@ -249,7 +249,7 @@ Push the changes to a Multidev called `composerify` to safely test the site with
 ```bash{promptUser:user}
 git add .
 git commit -m "convert to composer"
-git push origin composerify && terminus env:create $SITE.dev composerify
+git push -u origin composerify && terminus env:create $SITE.dev composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard [relaunch workflow](/relaunch) to QA a code change before going live.
