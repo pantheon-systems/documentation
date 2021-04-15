@@ -1,28 +1,32 @@
 ---
-title: Migrate to Drupal 9 on Pantheon
-subtitle: Migrate Existing Sites
-description: Guided Migration for Drupal 8 Sites to Drupal 9 With Integrated Composer on Pantheon
+title: Migrate to Drupal 9
+subtitle: Upgrade from Drupal 8 
+description: Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer
 categories: [get-started]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-migration/migrate-guided-d9
-anchorid: drupal-9-migration/migrate-guided-d9
-editpath: drupal-9-migration/03-migrate-guided-d9.md
+permalink: docs/guides/drupal-9-migration/upgrade-to-d9
+anchorid: drupal-9-migration/upgrade-to-d9
+editpath: drupal-9-migration/03-upgrade-to-d9.md
 reviewed: "2021-03-31"
 ---
 
+This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer.
+
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
-For a smooth upgrade experience, and to avoid potential conflicts, this doc shows how to migrate a Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer.
+The goals of this upgrade are to:
 
-The goals of this upgrade are to remove dependencies that Composer will manage from the existing site's Git repository, and have Composer manage those dependencies in the new site instead.
+- remove dependencies that Composer will manage from the existing site's Git repository, and 
 
-Note that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
+- have Composer manage those dependencies in the new site instead.
 
-<Alert title="Note" type="info">
+Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your existing commit history.
+
+<Alert title="Multidev Required" type="danger">
 
 To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
 
