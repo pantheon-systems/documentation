@@ -25,7 +25,7 @@ This process involves significant changes to the codebase. We recommend you to d
   cd ~/projects/$SITE/
   ```
 
-1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` branch, and checkout to a new local branch based on it called `composerify`:
+1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
   git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
@@ -85,7 +85,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
   This will list each module followed by the version of that module that is installed.
 
-1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE-composer` directory:
+1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
 
   ```bash{promptUser:user}
   composer require drupal/MODULE_NAME:^VERSION
@@ -195,8 +195,9 @@ Manually copy custom code from the existing site repository to the Composer-mana
 Modules:
 
 ```bash{promptUser:user}
-mkdir -p ../$SITE-composer/web/modules/custom # create the directory if it doesn't already exist
-cp -r modules/custom/awesome_module ../$SITE-composer/web/modules/custom
+git checkout master modules/custom
+git mv modules/custom web/modules/
+git commit -m "Copy custom modules"
 ```
 
 Themes:
