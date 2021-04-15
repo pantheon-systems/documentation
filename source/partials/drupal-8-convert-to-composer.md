@@ -202,8 +202,9 @@ cp -r modules/custom/awesome_module ../$SITE-composer/web/modules/custom
 Themes:
 
 ```bash{promptUser:user}
-mkdir -p ../$SITE-composer/web/themes/custom # create the directory if it doesn't already exist
-cp -r themes/custom/great_theme ../$SITE-composer/web/themes/custom
+git checkout master themes/custom
+git mv themes/custom web/themes/
+git commit -m "Copy custom themes"
 ```
 
 Follow suit with any other custom code you need to carry over.
