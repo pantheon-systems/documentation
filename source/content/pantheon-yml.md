@@ -119,7 +119,7 @@ php_version: 7.0
 
 <Alert type="info" title="Do not set the database version unless the site is eligible.">
 
-The site is eligible to upgrade if the site's Dashboard shows a blue banner across the top that reads:
+The site is eligible to upgrade if the site's Dashboard displays a blue banner across the top that reads:
 
 > Good news, your site's database version is now configurable! Learn how.
 
@@ -136,19 +136,19 @@ database:
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-Not all CMS versions can be configured to use a specific database version on Pantheon yet.
+Currently, not all CMS versions can be configured to use a specific database version on Pantheon.
 
-This table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
+The following table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
 
 | CMS            | Recommended MariaDB Version | Configurable After |
 |----------------|-----------------------------|--------------------|
-| Drupal <6.51   | Default                     | May, 2021          |
+| Drupal < 6.51  | Default                     | May, 2021          |
 | Drupal >= 6.51 | Default                     | May, 2021          |
 | Drupal < 7.76  | Default                     | May, 2021          |
 | Drupal >= 7.76 | Default                     | May, 2021          |
 | Drupal < 8.5   | Default                     | May, 2021          |
-| Drupal >= 8.6  | 10.0 - 10.4                 |                    |
-| Drupal >= 9.0  | 10.4 - 10.4                 |                    |
+| Drupal >= 8.6  | 10.0 - 10.4                 | Not specified      |
+| Drupal >= 9.0  | 10.4                        | Not specified      |
 | WordPress      | Default                     | July, 2021         |
 
 ### Drush Version
