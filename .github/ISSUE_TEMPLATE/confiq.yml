@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Docs Discussion
+    url: https://app.slack.com/client/T02SWT9LF/
+    about: You can ask question or discuss Pantheon docs issues here.
