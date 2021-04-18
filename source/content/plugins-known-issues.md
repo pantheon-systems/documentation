@@ -931,11 +931,11 @@ the `advanced-cache.php` file.
 **Solution 1:** WP version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/wp-rocket-config/' );
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
 ```
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/new-path/cache/' );
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/new-path/cache/' );
 ```
 
 Version 3.2 through 3.4 allows setting only the cache path, and still requires a symlink for the other paths (see below).
