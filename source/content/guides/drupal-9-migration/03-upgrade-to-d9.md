@@ -1,6 +1,6 @@
 ---
 title: Migrate to Drupal 9
-subtitle: Upgrade from Drupal 8 
+subtitle: Upgrade from Drupal 8
 description: Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer
 categories: [get-started]
 cms: drupal-9
@@ -20,7 +20,7 @@ Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
 The goals of this upgrade are to:
 
-- remove dependencies that Composer will manage from the existing site's Git repository, and 
+- remove dependencies that Composer will manage from the existing site's Git repository, and
 
 - have Composer manage those dependencies in the new site instead.
 
