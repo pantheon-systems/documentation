@@ -5,6 +5,7 @@ categories: [platform]
 tags: [https, launch, code, workflow]
 reviewed: "2021-04-13"
 ---
+
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
 
 ## Find or Create pantheon.yml
@@ -20,8 +21,6 @@ For reference implementations see [example.pantheon.yml](https://github.com/pant
 Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
-
-
 
 ## Advanced Site Configuration
 
@@ -119,6 +118,16 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
+<ReviewDate date="2021-04-20" />
+
+<Alert type="info" title="Do not set the database version unless the site is eligible.">
+
+The site is eligible to upgrade if the site's Dashboard displays a blue banner across the top that reads:
+
+> Good news, your site's database version is now configurable! Learn how.
+
+</Alert>
+
 Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
 Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
@@ -130,19 +139,19 @@ database:
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-Not all CMS versions can be configured to use a specific database version on Pantheon yet.
+Currently, not all CMS versions can be configured to use a specific database version on Pantheon.
 
-This table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
+The following table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
 
 | CMS            | Recommended MariaDB Version | Configurable After |
 |----------------|-----------------------------|--------------------|
-| Drupal <6.51   | Default                     | May, 2021          |
+| Drupal < 6.51  | Default                     | May, 2021          |
 | Drupal >= 6.51 | Default                     | May, 2021          |
 | Drupal < 7.76  | Default                     | May, 2021          |
 | Drupal >= 7.76 | Default                     | May, 2021          |
 | Drupal < 8.5   | Default                     | May, 2021          |
-| Drupal >= 8.6  | 10.0 - 10.4                 |                    |
-| Drupal >= 9.0  | 10.4 - 10.4                 |                    |
+| Drupal >= 8.6  | 10.0 - 10.4                 | Not specified      |
+| Drupal >= 9.0  | 10.4                        | Not specified      |
 | WordPress      | Default                     | July, 2021         |
 
 ### Drush Version
