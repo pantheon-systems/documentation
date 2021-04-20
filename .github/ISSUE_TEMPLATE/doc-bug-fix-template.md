@@ -1,7 +1,7 @@
 ---
-name: Documentation Bug
+name: Fix Content
 about: Report a documentation bug, typo, or minor issue
-labels: Bug
+labels: Fix Content
 
 ---
 
