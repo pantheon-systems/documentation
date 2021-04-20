@@ -123,6 +123,8 @@ The site is eligible to upgrade if the site's Dashboard displays a blue banner a
 
 > Good news, your site's database version is now configurable! Learn how.
 
+[Contact Support](/support) if you're ready to use a different version of MariaDB, but you don't see the banner on the Dashboard yet.
+
 </Alert>
 
 Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
