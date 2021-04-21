@@ -52,9 +52,9 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-<Partial file="drupal-9-upstream-install.md" />
-
 If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](/guides/drupal-9-migration/prepare).
+
+<Partial file="drupal-9/drupal-9-upstream-install.md" />
 
 ## Upgrade or Migrate to Drupal 9
 

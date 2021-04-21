@@ -17,7 +17,7 @@ Create a new site with Integrated Composer as part of Pantheon's Limited Availab
 
 Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability.
 
-<Partial file="drupal-9-upstream-install.md" />
+<Partial file="drupal-9/drupal-9-upstream-install.md" />
 
 ### WordPress with Integrated Composer
 

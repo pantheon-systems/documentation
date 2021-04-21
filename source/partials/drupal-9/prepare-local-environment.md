@@ -10,8 +10,6 @@
 
 1. Install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
-1. [Clone](/git#clone-your-site-codebase) your current Pantheon site repository to a working directory on your local computer.
-
 1. This guide uses several commands that depend on the site name in the local command line environment.
 
   To make this easier, set the temporary variable `$SITE` in your terminal session to match the site name. Read the steps further in this doc to see which sites should be aliased (it may be more than one), then replace `anita-drupal` in this example:
