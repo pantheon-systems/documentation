@@ -5,6 +5,7 @@ categories: [platform]
 tags: [https, launch, code, workflow]
 reviewed: "2021-04-13"
 ---
+
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
 
 ## Find or Create pantheon.yml
@@ -116,6 +117,8 @@ php_version: 7.0
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
 ### Specify a Version of MariaDB
+
+<ReviewDate date="2021-04-20" />
 
 <Alert type="info" title="Do not set the database version unless the site is eligible.">
 

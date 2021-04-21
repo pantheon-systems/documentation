@@ -44,6 +44,7 @@ We recommend the Pull Request workflow for single site use cases, and for most u
 
 However, this method does not support One-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
 
+
 ## Custom Upstream Workflow
 It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.
 

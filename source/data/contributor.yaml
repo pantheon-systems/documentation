@@ -15,7 +15,7 @@
 - id: edwardangert
   name: Edward Angert
   twitter: https://twitter.com/edwardangert
-  bio: Technical Content Editor for Pantheon
+  bio: Senior Technical Writer for Pantheon
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
   linkedin: //www.linkedin.com/in/edward-angert/
@@ -342,6 +342,11 @@
   github: //github.com/carl-alberto
   bio: Pantheon Senior Customer Success Engineer
   avatar: //avatars.githubusercontent.com/u/5098765
+- id: stovak
+  name: Tom Stovall
+  github: //github.com/stovak
+  bio: Developer Experience Engineer
+  avatar: //avatars.githubusercontent.com/u/119924
 - id: szipfel
   name: Steve Zipfel
   avatar: //avatars2.githubusercontent.com/u/856298
