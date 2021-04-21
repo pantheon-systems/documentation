@@ -11,7 +11,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/migrate-manual-d9
 anchorid: drupal-9-migration/migrate-manual-d9
-editpath: drupal-9-migration/05-migrate-manual-d9.md
+editpath: drupal-9-migration/04-migrate-manual-d9.md
 ---
 
 In this doc, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.

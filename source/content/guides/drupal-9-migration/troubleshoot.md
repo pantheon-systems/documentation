@@ -10,7 +10,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/troubleshoot
 anchorid: drupal-9-migration/troubleshoot
-editpath: drupal-9-migration/07-troubleshoot.md
+editpath: drupal-9-migration/troubleshoot.md
 ---
 
 This guide provides common troubleshooting tasks when migrating to Drupal 9 with Integrated Composer.
