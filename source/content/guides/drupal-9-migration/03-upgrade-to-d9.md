@@ -11,7 +11,7 @@ showtoc: true
 permalink: docs/guides/drupal-9-migration/upgrade-to-d9
 anchorid: drupal-9-migration/upgrade-to-d9
 editpath: drupal-9-migration/03-upgrade-to-d9.md
-reviewed: "2021-03-31"
+reviewed: "2021-04-22"
 ---
 
 This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer.
@@ -36,9 +36,17 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-9/upgrade-site-requirements.md" />
+<Alert type="info" title="Do not upgrade unless the site is eligible.">
 
-In your site Dashboard, look for the blue banner across the top that says that your site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb).
+In your site Dashboard, look for the blue banner across the top that says that your site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
+
+> Good news, your site's database version is now configurable! Learn how.
+
+[Contact Support](/support) if you're ready to use Drupal 9, but you don't see the banner on the Dashboard.
+
+</Alert>
+
+<Partial file="drupal-9/upgrade-site-requirements.md" />
 
 ## Prepare the Local Environment
 
