@@ -5,7 +5,7 @@ categories: [develop]
 tags: [upstreams, workflow, webops]
 ---
 
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once an Organization Administrator creates a Custom Upstream, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization](/organizations) Dashboard of an eligible plan. Once an Organization Administrator creates a Custom Upstream, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <Alert title="Note" type="info">
 
@@ -143,6 +143,16 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     ```bash{promptUser: user}
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    ```
+
+    </Tab>
+
+    <TabList>
+
+    <Tab title="Drupal 9" id="d91">
+
+    ```bash{promptUser: user}
+    git remote add pantheon-drupal-9 git://github.com/pantheon-upstreams/drupal-project.git
     ```
 
     </Tab>
