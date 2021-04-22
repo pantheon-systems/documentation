@@ -158,7 +158,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. Enable the modules:
 
   ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate kint webprofiler -y
+  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate webprofiler -y
   ```
 
   All of these modules are helpful during active development. We use Devel Generate in this walkthrough to make nodes on the Live environment.
