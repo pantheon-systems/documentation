@@ -1,6 +1,6 @@
 ---
-name: New/changing feature for documentation
-about: For new features in Pantheon documentation
+name: New/Changing Content
+about: For new or changing features in Pantheon documentation
 labels: New Content
 
 ---
