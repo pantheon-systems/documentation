@@ -61,13 +61,13 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
   git pull origin custom-theme
   ```
 
-1. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
+1. Run the following command to copy the `regions:` section of Bartik's default info file to the info file of your new custom theme:
 
   ```bash
   cat web/core/themes/bartik/bartik.info.yml | sed -n -e '/regions:/,$p' >> web/themes/custom/amazing_theme/amazing_theme.info.yml
   ```
 
-1. Copy the logo over from Bartik to your custom theme:
+1. Copy the logo from Bartik to your custom theme:
 
   ```bash
   cp web/core/themes/bartik/logo.svg web/themes/custom/amazing_theme/logo.svg
@@ -91,14 +91,14 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     ```
 
 
-10. Commit changes to your custom theme and push up to GitHub:
+10. Commit changes to your custom theme and push to GitHub:
 
     ```bash
     git commit -m="Create amazing theme css and library files"
       git push origin custom-theme
     ```
 
-11. Once the build finishes from the last step, active your new theme and rebuild the cache:
+11. After the build from the last step completes, activate your new theme and rebuild the cache:
 
     ```bash
     terminus drupal $SITE.$ENV -- theme:install --set-default amazing_theme
@@ -119,7 +119,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     ```
 
 
-13. Commit your changes in Pantheon from the command line with Terminus to sync with GitHub:
+13. Commit your changes in Pantheon from the command line with Terminus, to sync with GitHub:
 
     ```bash
     terminus env:commit $SITE.$ENV --message="Activate new custom theme"
