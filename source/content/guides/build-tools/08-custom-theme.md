@@ -61,7 +61,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
   git pull origin custom-theme
   ```
 
-1. Run the following command to copy the `regions:` section of Bartik's default info file to the info file of your new custom theme:
+1. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
 
   ```bash
   cat web/core/themes/bartik/bartik.info.yml | sed -n -e '/regions:/,$p' >> web/themes/custom/amazing_theme/amazing_theme.info.yml
