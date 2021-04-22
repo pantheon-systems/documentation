@@ -5,18 +5,21 @@ Pull requests should be opened in a branch off the `main` branch. For more infor
 **Note:** Please fill out the PR template to ensure proper processing. If you're not sure about a section, leave it empty, do not remove it.
 -->
 
-Closes: #
+**Closes Issue:** #
 
 ## Summary
 
 **[Doc Title <Replace with the PR name>](https://pantheon.io/docs/doc-title <replace with a link to where the doc change is located on the Pantheon docs site>)** -  <Enter a one sentence summation of the pertinent changes (including not-yet-completed work) provided by this PR.>
+<!-- Example format: [Pantheon User Account Login Session Length](https://pantheon.io/docs/user-dashboard#pantheon-user-account-login-session-length)** - Adds action that Terminus users are also logged out after 24 hours of inactivity. -->
 
 ## Effect
 <!-- Use this section to detail the changes summarized above, or remove if not needed -->
 
 The following changes are already committed:
+
 *
 *
+
 
 ## Remaining Work
 <!-- Remove if not needed -->
