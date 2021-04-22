@@ -135,7 +135,7 @@ As detailed below, [Pantheon Support](/support) will need to add this Custom Ups
 
 To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
 
-1. Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon upstream as a [remote](https://git-scm.com/docs/git-remote):
+1. Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon Upstream as a [remote](https://git-scm.com/docs/git-remote):
 
     <TabList>
 
@@ -146,8 +146,6 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     ```
 
     </Tab>
-
-    <TabList>
 
     <Tab title="Drupal 9" id="d91">
 
@@ -185,6 +183,17 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     git checkout -b master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
+    git push origin master
+    ```
+
+    </Tab>
+
+    <Tab title="Drupal 9" id="d91">
+
+    ```bash{promptUser: user}
+    git checkout -b master
+    git fetch pantheon-drupal-9 main:master
+    git merge pantheon-drops-9/main
     git push origin master
     ```
 
@@ -259,7 +268,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
       1. Paste your new GitHub access token.
 
-   - **Framework**: Drupal 7, Drupal 8, or WordPress
+   - **Framework**: Drupal 7, Drupal 8, Drupal 9, or WordPress
 
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
@@ -304,7 +313,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
         1. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
 
-   - **Framework**: Drupal 7, Drupal 8, or WordPress
+   - **Framework**: Drupal 7, Drupal 8, Drupal 9, or WordPress
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
 1. Click **Create**.
@@ -376,7 +385,7 @@ If you would like to change the name or description of your Custom Upstream:
 
 ### Initial Connection Mode
 
-The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 8 defaults to the SFTP connection mode.
+The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 8 and Drupal 9 default to SFTP connection mode.
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 
