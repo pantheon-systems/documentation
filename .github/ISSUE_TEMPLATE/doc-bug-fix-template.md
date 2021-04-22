@@ -8,10 +8,10 @@ labels: Fix Content
 <!--- ** Partial or incorrectly filled out issues may be deferred.--->
 
 ## Expected behavior
-
+* 
 
 ## Actual behavior
-
+* 
 
 ### Steps to reproduce the problem
 
