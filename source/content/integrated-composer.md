@@ -4,30 +4,28 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2021-03-01"
+reviewed: "2021-04-23"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
-
-Create a new site with Integrated Composer as part of Pantheon's Limited Availability release. New sites created through Pantheon's Limited Availability program are production-ready.
 
 ## Create a New Site With Integrated Composer
 
 ### Drupal 9 with Integrated Composer
 
-Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability.
+- To convert an existing Drupal 8 site to a Composer-managed site, visit the [composer convert](/guides/drupal-9-migration) doc.
 
-<Partial file="drupal-9/drupal-9-upstream-install.md" />
+- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 ### WordPress with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 
-1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
+1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
 
 1. Create a new WordPress site from the Upstream.
 
-   - Do not customize the upstream yet.
+   - Do not customize the Upstream yet.
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
@@ -82,7 +80,7 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
 
 ## Add a Dependency to an Individual Site
 
-1. Clone the Git repository from the Pantheon site's dashboard.
+1. Clone the Git repository from the Pantheon site's Dashboard.
 
 1. Run `composer install`:
 
@@ -189,7 +187,7 @@ Composer build logs are only available after the task or action completes (or fa
 
 ### How do I view Composer's changes?
 
-Use `git diff` to view changes, excluding composer.lock
+Use `git diff` to view changes, excluding `composer.lock`:
 
 ```bash{promptUser: user}
 git diff d94d1a1179 -- . ':(exclude)composer.lock'
@@ -214,4 +212,3 @@ Pantheon's devs are working hard to make the Integrated Composer experience on P
 Features that are still in development:
 
 - Integrated Composer and [Build Tools](/guides/build-tools)
-- Upgrade an existing site to use Integrated Composer
