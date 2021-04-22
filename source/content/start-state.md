@@ -15,7 +15,7 @@ Select the site's framework during the [site creation process](/create-sites). P
 We base our Drupal repositories on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
-- [Drupal 9](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789)
+- [Drupal 9](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789) <Popover content="Defaults to SFTP Mode" />
 - [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) <Popover content="Install Requires SFTP Mode" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
