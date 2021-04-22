@@ -13,21 +13,22 @@ Priority: Low/Medium/High (choose one, remove the other options)
 
 ## Issue Description
 <!--- Describe what needs to be changed. --->
+* 
 
 ### How will this impact users?
-<!--- Describe how this document change will affect customers. --->
+<!--- Describe how this document change will affect Pantheon users. --->
 *
 
 ### Context
 <!--- Provide any appplicable background information. --->
-*
+* 
 
 
 ## Suggested Resolution
 <!--- Please complete if you have a suggestion for how this issue should be addressed. If not, this section can be removed. --->
+* 
 
 
-
-## Additional information
+## Additional Information
 <!--- This section can be removed if it is not needed. --->
-*
+* 
