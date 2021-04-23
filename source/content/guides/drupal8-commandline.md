@@ -47,7 +47,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
   terminus site:list
   ```
 
-If you see your Pantheon sites, then installation and authentication were successfully! Once you are comfortable with Terminus, you may find it faster to use than the browser.
+If you see your Pantheon sites, then installation and authentication were successful! Once you are comfortable with Terminus, you may find it faster to use than the browser.
 
 ## Create Your Site and Initialize Environments
 
@@ -79,7 +79,7 @@ The next few sections of this guide use the example variables `steve-site-d8` an
   terminus drush steve-site-d8.dev -- site-install -y
   ```
   
-  If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](https://pantheon.io/docs/ssh-keys#control-path-error).
+  If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
 
   Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
 
@@ -133,7 +133,7 @@ You may want to remove these modules after you launch your site, or use more adv
 
 <Alert title="Note" type="info">
 
-You may have heard that some Drupal 8 developers are [using Composer](https://pantheon.io/docs/composer/) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
+You may have heard that some Drupal 8 developers are [using Composer](/composer) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
 
 </Alert>
 

@@ -565,8 +565,8 @@ ___
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
-- [MySQL Slow Log](https://pantheon.io/docs/mysql-slow-log/)
-- [MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/)
+- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
 
 ___
 

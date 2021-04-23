@@ -151,6 +151,6 @@ If the WordPress Site Network works as expected after you run `wp search-replace
 Ultimately, the key idea is to only perform a search and replace where you absolutely need it, instead of globally against the entire database.
 
 ## Go for Launch
-In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Site Network on Pantheon. Check out the [Launch Essentials Guide](https://pantheon.io/docs/guides/launch/) when you're ready to push your site live — launching a WordPress Site Network isn't much different than launching a standard WordPress site.
+In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Site Network on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Site Network isn't much different than launching a standard WordPress site.
 
 Continue to the next page for some tips on how to manage networks and debug common issues.
