@@ -1,20 +1,24 @@
 Pull requests should be opened in a branch off the `main` branch. For more information on contributing to Pantheon documentation, see the [Contributor Guidelines](https://pantheon.io/docs/contribute). Please refer to our [Style Guide](https://pantheon.io/docs/style-guide) and [this reference](https://developers.google.com/style) for formatting recommendations when contributing to the docs. 
 
-
 <!--
-**Note:** Please fill out the PR template to ensure proper processing. If you're not sure about a section, leave it empty, do not remove it.
+**Note:** Please fill out the PR template to ensure proper processing. If you're not sure about a section, leave it empty.
 -->
 
 **Closes Issue:** #
 
 ## Summary
+<!--
+Please complete the Summary section
+-->
 
-**[Doc Title <Replace with the site page name>](https://pantheon.io/docs/doc-title <replace with a link to where the doc change is located on the Pantheon docs site>)** -  <Enter a one sentence summation of the pertinent changes (including not-yet-completed work) provided by this PR.>
+**[Doc Title <Replace with the site page name>](https://pantheon.io/docs/doc-title <Replace with a link to where the doc change is located on the Pantheon docs site>)** -  <Enter a one sentence summation of the pertinent changes (including not-yet-completed work) provided by this PR.>
+
 <!-- Example format: [Pantheon User Account Login Session Length](https://pantheon.io/docs/user-dashboard#pantheon-user-account-login-session-length)** - Adds action that Terminus users are also logged out after 24 hours of inactivity. -->
+
+
 
 ## Effect
 <!-- Use this section to detail the changes summarized above, or remove if not needed -->
-
 The following changes are already committed:
 
 *
