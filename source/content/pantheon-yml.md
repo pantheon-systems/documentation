@@ -139,6 +139,12 @@ database:
   version: 10.4
 ```
 
+<Alert title="Changing the database requires an exising env" type="warning">
+
+You must apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
+
+</Alert>
+
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
 Currently, not all CMS versions can be configured to use a specific database version on Pantheon.
