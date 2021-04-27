@@ -466,6 +466,25 @@ ___
 
 ___
 
+## Jetpack
+
+<ReviewDate date="2020-12-21" />
+
+**Issue 1:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with Automattic servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and sees lots of invalid traffic.
+
+**Solution:** Modify your site's `pantheon.yml` to [allow access](/pantheon-yml#protected-web-paths-override) to the `xmlrpc.php` path:
+
+```yml:title=pantheon.yml
+protected_web_paths_override: true
+protected_web_paths:
+  - /private
+  - /wp-content/uploads/private
+```
+
+This will maintain the normal security settings for other paths, but allows access for XMLRPC.
+
+___
+
 ## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
 
 **Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
@@ -565,8 +584,8 @@ ___
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
-- [MySQL Slow Log](https://pantheon.io/docs/mysql-slow-log/)
-- [MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/)
+- [MySQL Slow Log](/mysql-slow-log/)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic/)
 
 ___
 
