@@ -2,7 +2,7 @@
 
 Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practices](https://pantheon.io/live-workshops/going-live-best-practices). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
-- <Youtube src="j1v2gAV7R_A"  start="12" />
+- <Youtube src="oiiB5UdhKMg" title="Website Performance with Varnish, Redis, and New Relic" start="31" />
 
 ### Your Feedback Helps
 
