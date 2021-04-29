@@ -197,6 +197,24 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     git push origin master
     ```
 
+    Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies.
+
+    Use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
+
+    ```bash{promptUser: user}
+    composer require drupal/pkg-name --no-update
+    composer config version 1.0.1
+    ```
+
+    Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we're doing here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
+
+    Commit and push the changes:
+
+    ```bash{promptUser: user}
+    git commit -am "added composer dependencies"
+    git push origin master
+    ```
+
     </Tab>
 
     <Tab title="Drupal 8" id="d81">
