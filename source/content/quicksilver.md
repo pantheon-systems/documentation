@@ -14,7 +14,7 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 
 </Enablement>
 
-For example, committing a `pantheon.yml` file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
+For example, committing a [pantheon.yml](https://pantheon.io/docs/pantheon-yml) file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
 
 ```yaml:title=pantheon.yml
 api_version: 1
@@ -89,7 +89,7 @@ When a workflow runs, there are variables that are made available through the `$
 |`from_environment`|Source environment where the database is being cloned from|`clone_database`| |
 |`deploy_message`|Deploy message provided as part of a test of live deployment|`deploy`|This is only available if a deploy message is provided.|
 
-For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
+For examples on how to use these variables, see the [Quicksilver Examples](https://pantheon.io/docs/quicksilver-examples) repository.
 
 
 ## Secrets
@@ -148,5 +148,5 @@ For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detecte
 
 ## See Also
 
-- [The Pantheon.yml Configuration File](/pantheon-yml)
+- [The pantheon.yml Configuration File](https://pantheon.io/docs/pantheon-yml)
 - [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples/)
