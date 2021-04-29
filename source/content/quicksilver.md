@@ -14,7 +14,7 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 
 </Enablement>
 
-For example, committing a [pantheon.yml](https://pantheon.io/docs/pantheon-yml) file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
+For example, committing a [pantheon.yml](/pantheon-yml) file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
 
 ```yaml:title=pantheon.yml
 api_version: 1
@@ -148,5 +148,5 @@ For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detecte
 
 ## See Also
 
-- [The pantheon.yml Configuration File](https://pantheon.io/docs/pantheon-yml)
+- [The pantheon.yml Configuration File](/pantheon-yml)
 - [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples/)
