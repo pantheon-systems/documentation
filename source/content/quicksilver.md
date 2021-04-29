@@ -8,7 +8,7 @@ reviewed: "2020-03-10"
 
 Hook into platform workflows to automate your Pantheon WebOps workflow. Tell Pantheon which script you want to run, and the platform will run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
-[Quicksilver Cloud Hooks Training](https://pantheon.io/docs/learn-pantheon)
+<Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
 Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
 
