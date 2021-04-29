@@ -190,30 +190,32 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title="Drupal 9" id="d91">
 
-    ```bash{promptUser: user}
-    git checkout -b master
-    git fetch pantheon-drupal-9 master
-    git merge pantheon-drops-9/master
-    git push origin master
-    ```
+    1. Pull in the core files and commit them first:
 
-    Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies.
+     ```bash{promptUser: user}
+     git checkout -b master
+     git fetch pantheon-drupal-9 master
+     git merge pantheon-drops-9/master
+     git push origin master
+     ```
 
-    Use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
+    1. Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies.
 
-    ```bash{promptUser: user}
-    composer require drupal/pkg-name --no-update
-    composer config version 1.0.1
-    ```
+     Use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
 
-    Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we're doing here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
+     ```bash{promptUser: user}
+     composer require drupal/pkg-name --no-update
+     composer config version 1.0.1
+     ```
 
-    Commit and push the changes:
+       Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we're doing here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
 
-    ```bash{promptUser: user}
-    git commit -am "added composer dependencies"
-    git push origin master
-    ```
+    1. Commit and push the changes:
+
+     ```bash{promptUser: user}
+     git commit -am "added composer dependencies"
+     git push origin master
+     ```
 
     </Tab>
 
