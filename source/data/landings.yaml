@@ -548,7 +548,7 @@
           links:
             - text: 'The Pantheon.yml Configuration File'
               url: '/videos/pantheon-yml'
-              icons: 'fa fa-vide-camera'
+              icons: 'fa fa-video-camera'
             - text: 'Serving Sites from the Web Subdirectory'
               url: '/nested-docroot'
             - text: 'Upgrade PHP Versions'
