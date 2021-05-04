@@ -65,9 +65,9 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
 
-## DDoS Mitigation
+## DoS Attack Mitigation
 
-Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DDoS attack, our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
+Pantheon doesn't count [denial-of-service attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DoS or DDoS (_distributed_ denial-of-service) attack, our [Customer Success](/support) team is available to assist with identifying a DoS attempt, and take steps to mitigate it for your site.
 
 ### Block IPs in Drupal or WordPress
 
@@ -75,7 +75,7 @@ IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php` or vi
 
 #### Use a PHP Snippet to Block IPs
 
-Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DDoS attack, PHP can be added to the configuration file even while site performance is being affected.
+Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DoS attack, PHP can be added to the configuration file even while site performance is being affected.
 
 To block an IP, add the following to `settings.php` or `wp-config.php`. Remember to replace the example IP (`192.0.2.38`):
 
@@ -192,4 +192,4 @@ foreach ($user_agents_deny_list as $agent) {
 
 ## Advanced Protection and Performance With Advanced Global CDN
 
-[Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
+[Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DoS attempts.
