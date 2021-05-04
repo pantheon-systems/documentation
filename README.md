@@ -21,8 +21,8 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide/) for our guidelines
 ## Local Installation
 
 ### Prerequisites
-  - You can optionally use [Lando](https://docs.lando.dev)
-    - By leveraging Lando you can avoid havting to install node.js, and gatsby cli on your local computer
+  - Optionally, you can use [Lando](https://docs.lando.dev)
+    - By leveraging Lando, you can avoid installing Node.js, and the Gatsby CLI on your local machine.
   - MacOS or Linux system (untested with Bash on Windows)
   - [Node.js](https://nodejs.org/en/)
   - Gatsby CLI:
