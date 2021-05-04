@@ -189,18 +189,6 @@ foreach ($user_agents_deny_list as $agent) {
   }
 }
 ```
-```
-
-The `stripos` function does not block user agents with special characters like `-`. To block user agents with names that seem to evade the samples above, use `strpos`.
-
-In this example, replace the example user agent (`CASE-sensitive-BOT`):
-
-```php:title=wp-config.php%20or%20settings.php
-// For bots with special characters
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'CASE-sensitive-BOT') !== FALSE) {
-  header('HTTP/1.0 403 Forbidden');
-}
-```
 
 ## Advanced Protection and Performance With Advanced Global CDN
 
