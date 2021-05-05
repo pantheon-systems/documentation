@@ -8,9 +8,11 @@ reviewed: "2020-02-26"
 
 ## Overview
 
-[<dfn id="mzfailover">Multizone Failover</dfn>](https://pantheon.io/features/disaster-recovery?docs) is a high-availability Disaster Recovery solution with intelligent failover at the Global CDN layer. 
+[<dfn id="mzfailover">Multizone Failover</dfn>](https://pantheon.io/features/disaster-recovery?docs) is a high-availability Disaster Recovery solution with intelligent failover at the Global CDN layer.
 
 It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
+
+![Diagram showing Pantheon's zone-based Multizone Failover architecture](../images/site-mz-diagram.png)
 
 ### RPO and RTO - Minutes to Recovery
 
