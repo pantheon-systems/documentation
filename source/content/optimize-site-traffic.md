@@ -177,6 +177,7 @@ Remember to replace the example user agent (`UglyBot`):
 // Either check a single bot.
 if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
   header('HTTP/1.0 403 Forbidden');
+  exit;
 }
 
 // Or check against a list of bots.
