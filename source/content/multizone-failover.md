@@ -51,7 +51,6 @@ The object cache is not preserved after a site failover. This means you must ens
 To test in a Test Environment, click the **Clear Caches** button in the upper right hand corner of the Site Dashboard.
 
 You can also [connect to your Redis instance](/object-cache#use-the-redis-command-line-client) and run the `flushall` command to clear object cache via the Redis CLI.
-=======
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
@@ -141,4 +140,3 @@ If none of these options work for your site's needs, see our documentation on ho
 
 - [Global Regions](/regions)
 - [Backups Tool](/backups)
-- 
