@@ -272,6 +272,14 @@ Pantheon supports designated use cases for [WordPress Site Networks](/guides/mul
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
+## MySQL LOAD DATA LOCAL INFILE
+
+For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html), Pantheon does not support executing MySQL `LOAD DATA LOCAL INFILE` statements from your PHP application. As a workaround, developers can connect directly to MySQL and load files from their local machine:
+
+```bash{promptUser: user}
+MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`csv_test` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
+```
+
 ## nginx.conf
 
 Pantheon does not currently support modifying the `nginx.conf` per site, as we run a highly tuned universal configuration file. All of the containers run a standard profile, and we have opted to keep this configuration to keep the `nginx.conf` lean.
