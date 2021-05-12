@@ -1,6 +1,6 @@
 ---
 title: 'Required Reading: Essential Pantheon Documentation'
-description: Recommended documentation to learn about Pantheon WebOps management mlatform's technologies.
+description: Recommended documentation to learn about Pantheon WebOps management platform's technologies.
 categories: [get-started]
 tags: [workflow]
 ---
