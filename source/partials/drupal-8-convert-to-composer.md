@@ -43,7 +43,7 @@ This process involves significant changes to the codebase. We recommend you to d
   git commit -m "Pull in configuration from default branch"
   ```
 
-1. Check for `pantheon.yml` settings you need to preserve by comparing your old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
+1. Compare the old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 
   ```bash{promptUser:user}
   git diff master:pantheon.yml pantheon.upstream.yml
@@ -51,15 +51,17 @@ This process involves significant changes to the codebase. We recommend you to d
 
   Press `q` on your keyboard to exit the diff display.
 
-   - If there are settings from `pantheon.yml` (shown with a `-` in the diff output), consider copying over your old `pantheon.yml` to preserve these settings:
+1. Copy the old `pantheon.yml` to preserve settings:
 
-     ```bash{promptUser:user}
-     git checkout master pantheon.yml
-     git add pantheon.yml
-     git commit -m 'Copy my pantheon.yml'
-     ```
+  ```bash{promptUser:user}
+  git checkout master pantheon.yml
+  git add pantheon.yml
+  git commit -m 'Copy my pantheon.yml'
+  ```
 
-   If you prefer to keep the value for `database` from `pantheon.upstream.yml`, remove it from `pantheon.yml`.
+ Remove any values from `pantheon.yml` that you prefer to keep as listed in `pantheon.upstream.yml`.
+
+ Both `pantheon.yml` and the `api_version: 1` value in it are required.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -235,7 +237,7 @@ You've now committed the code to the local branch. Deploy that branch directly t
 Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
 ```bash{promptUser:user}
-git push -u ic composerify && terminus env:create $SITE.dev composerify
+git push -u origin composerify && terminus env:create $SITE.dev composerify
 ```
 
 Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard [relaunch workflow](/relaunch) to QA a code change before going live.
