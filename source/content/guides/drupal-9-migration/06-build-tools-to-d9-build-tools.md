@@ -50,26 +50,17 @@ brew install terminus jq rsync
 
 * clone your github source repo and cd into the directory, then:
 
- `git checkout -b d9-upgrade-2021` 
+ `git checkout -b d9-upgrade-2021`
 
 * Let's export the configs from production to make sure our local version has the latest:
 
 ```bash
-# Export the latest from the live environment
-# to sites/default/files/config
-terminus drush gk-8.live -- config:export \
-   --destination sites/default/files/config
-
-# Use terminus to get the (read-only) SFTP command
-# specific to the live environment.
-SFTP_COMMAND=$(terminus connection:info gk-8.live \
-   --format=json | jq -r ".sftp_command")
 
 # For rysnc, all we really need is the crazy-long
 # user and host name. Strip out the rest.
-# (Make sure the empty space is there at the end 
+# (Make sure the empty space is there at the end
 # before the bracket!)
-RSYNC_HOST=${SFTP_COMMAND#sftp -o Port=2222 } 
+RSYNC_HOST=$(terminus connection:info {Site Name}.live --field=sftp_host)
 
 # Use that hostname to do an rsync from that recent
 # config:export
@@ -107,29 +98,44 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum \
 TO:
 
 ```json
-[...]
+...
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
       "composer install --optimize-autoloader"
     ],
-[...]
+...
 ```
 
    Removing the "--no-dev" portion of that line. This will allow your dev dependencies to be available in the integration environment.
 
 `composer update -W --optimize-autoloader --prefer-dist`
 
-1. If your site doesn't already have a pantheon.yml file, create one ensuring the following values:
+1. If your site doesn't already have a pantheon.yml file, create one ensuring the following values (the comments "#" are optional):
 
 ```yaml
+# Used internally, but needs to be there:
 api_version: 1
+
+# Moves the DOCUMENT_ROOT of your site to
+# the */web* folder.
 web_docroot: true
+
+# Drupal 9 requires 7.3 or higher
+# If your code isn't ready for 7.4 you
+# may need to back this off until 7.3.
 php_version: 7.4
+
+# Drupal 9 requires a higher version of the db.
+# this will take a few minutes to complete
+# the upgrade to 10.4 once you push this file.
 database:
   version: 10.4
+
+# Drupal 9 "likes" drush 10. If you have written
+# a lot of custom drush commands you may need to
+# go back to drush 9 or 8.
 drush_version: 10
-enforce_https: full+subdomains
 ```
 
    It's ok if the file has more values than this in it, but these are the ones with which we are concerned. If the values already exist in the `pantheon.yml` file, change them to the values above. (Values accurate as of date())
@@ -143,19 +149,19 @@ git push origin d9-upgrade-2021
 If all has gone well, you will see something like the following:
 ```
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-remote: 
+remote:
 remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
 remote:      {{SOME URL TO YOUR REPOSITORY}}
-remote: 
+remote:
 ```
 
-COPY/PASTE that convenient URL into your browser to create a pull request. Creating a pull request will cause Build Tools to create an INTEGRATION ENVIRONMENT. 
+COPY/PASTE that convenient URL into your browser to create a pull request. Creating a pull request will cause Build Tools to create an INTEGRATION ENVIRONMENT.
 
 After the build has finished without error, you will see a new environment in the dashboard under "multi-dev" named to reference your pull request. Mine was `pr-146`.
 
 `terminus drush {site name}.{integration env} pm-enable upgrade_status --yes`
 
-You can get a one-time login to your site with the following command: 
+You can get a one-time login to your site with the following command:
 `terminus drush {site name}.{integration env} uli admin`
 
 Log into your site as admin and take a look under reports at "UPGRADE STATUS". Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions "UPGRADE STATUS" recommends. If your module is compatible it will need to be removed from the composer file.
@@ -239,4 +245,10 @@ git commit -m 'upgrade core to d9'
 git push origin d9-upgrade-2021
 ```
 
-1. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
+# Validation
+
+You can validate your database version with the following command:
+
+```terminus drush {site name}.{env} sqlq "SELECT VERSION();"```
+
+[ TODO: Add Other validation? ]
