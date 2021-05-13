@@ -88,14 +88,14 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum \
 
 ```bash{promptUser: user}
    composer require \
-	   drupal/upgrade_status:^3 \
-	   drupal/devel:^4 \
-	   drush/drush:^10 \
-	   -W --no-update
+     drupal/upgrade_status:^3 \
+     drupal/devel:^4 \
+     drush/drush:^10 \
+     -W --no-update
    composer require \
-	   phpunit/phpunit:"^8 | ^9 | ^10" \
-	   phpstan/phpstan \
-		 --dev -W --no-update
+     phpunit/phpunit:"^8 | ^9 | ^10" \
+     phpstan/phpstan \
+     --dev -W --no-update
 ```
 
 - Edit `composer.json` and remove `--no-dev` from the `scripts` section:
@@ -193,16 +193,16 @@ Custom module code is outside the scope of this document. See drupal.org for get
 - Temporarily add write access to protected files and directories:
 
 ```bash{promptUser: user}
-		chmod 777 web/sites/default
-		find web/sites/default -name "*settings.php" \
-		  -exec chmod 777 {} \;
-		find web/sites/default -name "*services.yml" \
-		  -exec chmod 777 {} \;
+    chmod 777 web/sites/default
+    find web/sites/default -name "*settings.php" \
+      -exec chmod 777 {} \;
+    find web/sites/default -name "*services.yml" \
+      -exec chmod 777 {} \;
 ```
 
 ## Heads turn as the star of our show makes an entrance: **CORE**
 
-```bash{promptUser: user}
+```bash{outputLines: 3-6,9-14,16}
 composer remove drupal/config_installer --no-update
 composer require drupal/core-recommended:^9 \
    drupal/core-composer-scaffold:^9 \
@@ -211,9 +211,9 @@ composer require drupal/core-recommended:^9 \
    -W --no-update
 
 composer require phpunit/phpunit:^9 \
-	 behat/behat:^3 \
-	 drupal/drupal-extension:^4 \
-	 --no-update -W --dev
+   behat/behat:^3 \
+   drupal/drupal-extension:^4 \
+   --no-update -W --dev
 
 # If you have drupal/core-dev installed.
 
@@ -229,7 +229,7 @@ When you're done updating modules, run
 composer update -W --optimize-autoloader --prefer-dist
 ```
 
-If you get an error, you probably haven't weeded out all the non-d9 module and theme updates and will need to have another look at the "Upgrade status" report in your integration environment.
+If you get an error, you probably haven't weeded out all the non-D9 module and theme updates and will need to have another look at the "Upgrade status" report in your integration environment.
 
 Once the update/install runs clean without errors:
 
@@ -270,7 +270,7 @@ git push origin d9-upgrade-2021
 Validate your database version with the following command:
 
 ```bash{promptUser: user}
-terminus drush {site name}.{env} sqlq "SELECT VERSION();"
+terminus drush $site.{env} sqlq "SELECT VERSION();"
 ```
 
 1. Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.
