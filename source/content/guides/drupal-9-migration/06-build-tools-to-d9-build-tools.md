@@ -123,7 +123,7 @@ web_docroot: true
 
 # Drupal 9 requires 7.3 or higher
 # If your code isn't ready for 7.4 you
-# may need to back this off until 7.3.
+# may need to back this off to 7.3.
 php_version: 7.4
 
 # Drupal 9 requires a higher version of the db.
