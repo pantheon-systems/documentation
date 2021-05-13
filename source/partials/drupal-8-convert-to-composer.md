@@ -59,7 +59,9 @@ This process involves significant changes to the codebase. We recommend you to d
   git commit -m 'Copy my pantheon.yml'
   ```
 
- If you prefer to keep the value for `database` from `pantheon.upstream.yml`, remove it from `pantheon.yml`.
+ Remove any values from `pantheon.yml` that you prefer to keep as listed in `pantheon.upstream.yml`.
+
+ Both `pantheon.yml` and the `api_version: 1` value in it are required.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
