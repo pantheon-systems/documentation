@@ -40,21 +40,34 @@ This tutorial is for you if you meet the following criterion:
 
 1. Your site has a blue banner and is database-ready for the upgrade to d9
 
+## Tools you will need
 
-## Tools you will need:
+Terminus, Bash JSON Query, rsync
 
+```bash{promptUser: user}
 brew install terminus jq rsync
+```
 
+## Wagons HO!
 
-## Wagons HO!:
+- Clone your GitHub source repo and `cd` into the directory, then:
 
-* clone your github source repo and cd into the directory, then:
+```bash{promptUser: user}
+git checkout -b d9-upgrade-2021
+```
 
- `git checkout -b d9-upgrade-2021`
+- Let's export the configs from production to make sure our local version has the latest:
 
-* Let's export the configs from production to make sure our local version has the latest:
+```bash{promptUser: user}
+# Export the latest from the live environment
+# to sites/default/files/config
+terminus drush gk-8.live -- config:export \
+   --destination sites/default/files/config
 
-```bash
+# Use terminus to get the (read-only) SFTP command
+# specific to the live environment.
+SFTP_COMMAND=$(terminus connection:info gk-8.live \
+   --format=json | jq -r ".sftp_command")
 
 # For rysnc, all we really need is the crazy-long
 # user and host name. Strip out the rest.
@@ -69,11 +82,11 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum \
    "${RSYNC_HOST}:files/config" .
 ```
 
-   If you do a `git status` it should changed files in the `config` directory if there are any changed configs in production.
+   If you do a `git status` it should show changed files in the `config` directory if there are any changed configs in production.
 
 ### Let's start ugradin' stuff!
 
-```bash
+```bash{promptUser: user}
    composer require \
 	   drupal/upgrade_status:^3 \
 	   drupal/devel:^4 \
@@ -85,9 +98,9 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum \
 		 --dev -W --no-update
 ```
 
-* Edit your composer file and change the following:
+- Edit `composer.json` and remove `--no-dev` from the `scripts` section:
 
-```json
+```json:title=composer.json
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
@@ -95,9 +108,9 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum \
     ],
 ```
 
-TO:
+To:
 
-```json
+```json:title=composer.json
 ...
   "scripts": {
     "build-assets": [
@@ -107,14 +120,15 @@ TO:
 ...
 ```
 
-   Removing the "--no-dev" portion of that line. This will allow your dev dependencies to be available in the integration environment.
+   Removing the `--no-dev` portion of that line will allow your dev dependencies to be available in the integration environment.
 
-`composer update -W --optimize-autoloader --prefer-dist`
+```bash{promptUser: user}
+composer update -W --optimize-autoloader --prefer-dist
+```
 
-1. If your site doesn't already have a pantheon.yml file, create one ensuring the following values (the comments "#" are optional):
+1. If your site doesn't already have a `pantheon.yml` file, create one with the following values (the comments `#` are optional):
 
-```yaml
-# Used internally, but needs to be there:
+```yaml:title=pantheon.yml
 api_version: 1
 
 # Moves the DOCUMENT_ROOT of your site to
@@ -138,16 +152,17 @@ database:
 drush_version: 10
 ```
 
-   It's ok if the file has more values than this in it, but these are the ones with which we are concerned. If the values already exist in the `pantheon.yml` file, change them to the values above. (Values accurate as of date())
+   It's ok if the file has more values than this in it, but these are the ones with which we are concerned. If the values already exist in the `pantheon.yml` file, change them to the values in this example.
 
-```
+```bash{promptUser: user}
 git add composer.json composer.lock pantheon.yml config/*
 git commit -m 'updating to drush 10/mariadb 10.4/config'
 git push origin d9-upgrade-2021
 ```
 
 If all has gone well, you will see something like the following:
-```
+
+```bash{outputLines:1-5}
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 remote:
 remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
@@ -159,20 +174,25 @@ COPY/PASTE that convenient URL into your browser to create a pull request. Creat
 
 After the build has finished without error, you will see a new environment in the dashboard under "multi-dev" named to reference your pull request. Mine was `pr-146`.
 
-`terminus drush {site name}.{integration env} pm-enable upgrade_status --yes`
+```bash{promptUser: user}
+terminus drush {site name}.{integration env} pm-enable upgrade_status --yes
+```
 
 You can get a one-time login to your site with the following command:
-`terminus drush {site name}.{integration env} uli admin`
 
-Log into your site as admin and take a look under reports at "UPGRADE STATUS". Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions "UPGRADE STATUS" recommends. If your module is compatible it will need to be removed from the composer file.
+```bash{promptUser: user}
+terminus drush {site name}.{integration env} uli admin
+```
 
-## Custom Module Code:
+Log into your site as admin and take a look under reports at "UPGRADE STATUS". Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions "UPGRADE STATUS" recommends. If your module is incompatible it will need to be removed from the composer file.
+
+## Custom Module Code
 
 Custom module code is outside the scope of this document. See drupal.org for getting your custom code updated with the new version numbers and any code deprecations.
 
-* Temporarily add write access to protected files and directories:
+- Temporarily add write access to protected files and directories:
 
-```bash
+```bash{promptUser: user}
 		chmod 777 web/sites/default
 		find web/sites/default -name "*settings.php" \
 		  -exec chmod 777 {} \;
@@ -182,8 +202,7 @@ Custom module code is outside the scope of this document. See drupal.org for get
 
 ## Heads turn as the star of our show makes an entrance: **CORE**
 
-```bash
-
+```bash{promptUser: user}
 composer remove drupal/config_installer --no-update
 composer require drupal/core-recommended:^9 \
    drupal/core-composer-scaffold:^9 \
@@ -200,55 +219,58 @@ composer require phpunit/phpunit:^9 \
 
 composer require drupal/core-dev:^9 \
 	 --dev -W --no-update
-
 ```
 
-If you have any obsolete modules uncovered by "UPGRADE STATUS" update them here using the '**--no-update -W**' switch because that will keep composer from the process of figuring out the module solution (which is the thing that takes so long in a composer run) until the very end and update all the dependencies along with.
+If you have any obsolete modules uncovered by `UPGRADE STATUS` update them here using the `**--no-update -W**` switch because that will keep composer from the process of figuring out the module solution (which is the thing that takes so long in a composer run) until the very end and update all the dependencies along with.
 
 When you're done updating modules, run
 
-`composer update -W --optimize-autoloader --prefer-dist`
+```bash{promptUser: user}
+composer update -W --optimize-autoloader --prefer-dist
+```
 
 If you get an error, you probably haven't weeded out all the non-d9 module and theme updates and will need to have another look at the "Upgrade status" report in your integration environment.
 
 Once the update/install runs clean without errors:
 
-* Edit your composer file and change the following:
+- Edit `composer.json` and remove `--no-dev` from the `scripts` section:
 
-```composer.json
-[...]
+```json:title=composer.json
+...
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
       "composer install --optimize-autoloader"
     ],
-[...]
+...
 ```
 
-TO:
+To:
 
-```composer.json
-[...]
+```json:title=composer.json
+...
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
       "composer install --optimize-autoloader --no-dev"
     ],
-[...]
+...
 ```
 
 That way, when the build arrives in production it arrives without all the dev dependencies.
 
-```
+```bash{promptUser: user}
 git add composer.json composer.lock pantheon.yml
 git commit -m 'upgrade core to d9'
 git push origin d9-upgrade-2021
 ```
 
-# Validation
+## Validation
 
-You can validate your database version with the following command:
+Validate your database version with the following command:
 
-```terminus drush {site name}.{env} sqlq "SELECT VERSION();"```
+```bash{promptUser: user}
+terminus drush {site name}.{env} sqlq "SELECT VERSION();"
+```
 
-[ TODO: Add Other validation? ]
+1. Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.
