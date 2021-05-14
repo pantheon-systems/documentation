@@ -123,3 +123,9 @@ Please see Google's help article: [My client isn't accepting my username and pas
 Office 365 uses ports `25` and `587` by default, and different options for sending via SMTP client, Direct send or SMTP relay. [This document](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3) outlines the limitations and configurations of each, to know what will work for your application.
 
 Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server](https://docs.microsoft.com/en-us/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing). Check your organization's Microsoft Exchange settings on what's allowed by your system.
+
+### Why does my site receive several requests to autodiscover.xml?
+
+This `autodiscover.xml` is associated with the use of mail software and errors can occur when the mail software incorrectly and repeatedly calls for an "autodiscover.xml" file. If left unmanaged, this may eventually start using unnecessary resources and can result in a slower site.
+
+You can block the requests to help mitigate the resource usage that `autodiscover.xml` can cause. You can add a new DNS CNAME record that points `autodiscover.xml` at a non-working IP address that is guaranteed to reject all connections.
