@@ -66,7 +66,7 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 ### Change a User's Role
 
-1. In the People tab, select the user's name.
+1. In the **People** tab, select the user's name.
 2. Click **Operations**, and choose **Change Role**.
 3. Select the new role from the drop-down, and click **Set User Role**.
 
