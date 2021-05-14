@@ -20,7 +20,7 @@ Priority: Low/Medium/High (choose one, remove the other options)
 *
 
 ### Context
-<!--- Provide any appplicable background information. --->
+<!--- Provide any applicable background information. --->
 * 
 
 
