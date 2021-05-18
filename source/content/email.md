@@ -126,6 +126,7 @@ Because we don't support SPF, it is likely that most Exchange or Office 365 serv
 
 ### Why does my site receive several requests to autodiscover.xml?
 
-This `autodiscover.xml` is associated with the use of mail software and errors can occur when the mail software incorrectly and repeatedly calls for an "autodiscover.xml" file. If left unmanaged, this may eventually start using unnecessary resources and can result in a slower site.
+This `autodiscover.xml` is associated with the use of mail software and errors can occur when the mail software incorrectly and repeatedly calls for an `autodiscover.xml` file. If left unmanaged, this may eventually start using unnecessary resources and can result in a slower site.
 
-You can block the requests to help mitigate the resource usage that `autodiscover.xml` can cause. You can add a new DNS CNAME record that points `autodiscover.xml` at a non-working IP address that is guaranteed to reject all connections.
+To avoid making Drupal or WordPress do the work of serving a 404, and to avoid getting billed for junk traffic, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
+
