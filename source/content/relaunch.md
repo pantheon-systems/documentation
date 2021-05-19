@@ -5,7 +5,7 @@ categories: [go-live]
 tags: [dns, https, launch, migrate]
 reviewed: "2020-09-08"
 ---
-Sites are considered launched on Pantheon once traffic is routed through custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
+Sites are considered launched on Pantheon once traffic is routed through a custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 
 <Alert title="Note" type="info">
 
@@ -106,7 +106,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
 
-1. Repeat steps 2-6 above for each affected domain. Keep in mind that `www.example.com` and `example.com` are different domains.
+1. Repeat steps 2-6 above for each affected domain. Note `www.example.com` and `example.com` are different domains.
 
 1. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
 
@@ -140,7 +140,7 @@ Best practices during normal operation (e.g. not during a site relaunch) suggest
 
 ### When do I switch the site from the old site to the new one?
 
-As soon as you complete step 3, visitors to your domain will see the new site. But technically, until step 5 is complete and DNS is fully propagated, your visitors may still see the new site with the old site's HTTPS certificate that will be going offline shortly.
+As soon as you complete step 3, visitors to your domain will see the new site. Until step 5 is complete and the DNS is fully propagated, your visitors may still see the new site with the old site's HTTPS certificate, that will go offline shortly.
 
 ## See Also
 
