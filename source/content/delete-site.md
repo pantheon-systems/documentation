@@ -8,7 +8,7 @@ reviewed: "2021-05-11"
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
-Only the site's User in Charge or Owner can delete a site. See [Roles and Permissions](/change-management#roles-and-permissions) for more information.
+Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Permissions](/change-management#roles-and-permissions) for more information.
 
 <Alert title="Warning" type="danger">
 
