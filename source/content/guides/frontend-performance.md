@@ -271,11 +271,11 @@ See our blog post for an example of [62% performance gains after upgrading](http
 
 #### Enable Redis Object Caching
 
-Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/redis).
+Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 
 #### Monitor Performance with New Relic
 
-If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic) for help identifying bottlenecks.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic&reg; Performance Monitoring](/new-relic) for help identifying bottlenecks.
 
 #### Helper Tools
 

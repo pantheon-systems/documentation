@@ -67,7 +67,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
   cat web/core/themes/bartik/bartik.info.yml | sed -n -e '/regions:/,$p' >> web/themes/custom/amazing_theme/amazing_theme.info.yml
   ```
 
-1. Copy the logo over from Bartik to your custom theme:
+1. Copy the logo from Bartik to your custom theme:
 
   ```bash
   cp web/core/themes/bartik/logo.svg web/themes/custom/amazing_theme/logo.svg
@@ -82,7 +82,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
             css/main.css: {}" > web/themes/custom/amazing_theme/amazing_theme.libraries.yml
     ```
 
-9. Create a new `css` directory for your custom theme along with a new file named `main.css` inside it. To test that your theme is working, add some very obvious styling such as an orange border around the content region:
+1. Create a new `css` directory for your custom theme along with a new file named `main.css` inside it. To test that your theme is working, add some very obvious styling such as an orange border around the content region:
 
     ```bash
     mkdir web/themes/custom/amazing_theme/css && echo "#content {
@@ -91,14 +91,14 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     ```
 
 
-10. Commit changes to your custom theme and push up to GitHub:
+1. Commit changes to your custom theme and push to GitHub:
 
     ```bash
     git commit -m="Create amazing theme css and library files"
       git push origin custom-theme
     ```
 
-11. Once the build finishes from the last step, active your new theme and rebuild the cache:
+1. After the build from the last step completes, activate your new theme and rebuild the cache:
 
     ```bash
     terminus drupal $SITE.$ENV -- theme:install --set-default amazing_theme
@@ -112,17 +112,17 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 
     ![Modified css](../../../images/pr-workflow/modified-css.png)
 
-12. You can use the [method described in an earlier lesson](/guides/build-tools/configure) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
+1. You can use the [method described in an earlier lesson](/guides/build-tools/configure) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
     terminus drush $SITE.$ENV -- config-export --yes
     ```
 
 
-13. Commit your changes in Pantheon from the command line with Terminus to sync with GitHub:
+1. Commit your changes in Pantheon from the command line with Terminus, to sync with GitHub:
 
     ```bash
     terminus env:commit $SITE.$ENV --message="Activate new custom theme"
     ```
 
-14. Return to GitHub and compare the `custom-theme` branch against `master`. You should see a few commits that are able to be merged. Click **Create Pull Request** and go through your team's standard peer review process.
+1. Return to GitHub and compare the `custom-theme` branch against `master`. You should see a few commits that are able to be merged. Click **Create Pull Request** and go through your team's standard peer review process.

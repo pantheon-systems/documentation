@@ -141,7 +141,7 @@ Now we'll look at HTTP Headers.
 
 For the rest of the guide, as we make content changes and inspect the changing HTTP headers, we will just reference `curl -I` output because browser inspector tools have a lot of additional information that would distract from our purpose. But if you are more comfortable in the browser, you can continue using that incognito window.
 
-For a walk through of how some of these different headers change caching behavior, see our [Frontend Performance Guide](https://pantheon.io/docs/guides/frontend-performance/). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
+For a walk through of how some of these different headers change caching behavior, see our [Frontend Performance Guide](/guides/frontend-performance). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
 
 ### Review HTTP Headers
 

@@ -13,7 +13,7 @@ nexturl: guides/edt/developer-workflow/
 nextpage: Developer Workflow
 previousurl: guides/edt/
 previouspage: Introduction
-editpath: edt/02-introduction-and-architechture.md
+editpath: edt/02-introduction-and-architecture.md
 image: launchGuide-twitterLarge
 ---
 
@@ -26,4 +26,4 @@ All links from the video are provided below.
 
 **Resource Links From Video**
 
-[Explore Platform Architecture](https://pantheon.io/docs/platform/)
+[Explore Platform Architecture](/platform)

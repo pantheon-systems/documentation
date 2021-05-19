@@ -3,17 +3,26 @@ title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
 categories: [manage]
 tags: [dashboard, git, terminus, updates]
-reviewed: "2020-02-06"
+reviewed: "2021-04-15"
 ---
+This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
+
+## Drupal 9
+
+Drupal 9 sites on Pantheon use Integrated Composer to allow one-click core updates through the Dashboard.
+
+To check for available updates, navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
+
+## Drupal 8 Composer-Managed Sites
+
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+
+## Non-Composer Managed WordPress and Drupal 7 / 8 Sites
+
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support).
 
-<Alert title="Note" type="info">
-
-Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
-
-</Alert>
 
 ## Apply Upstream Updates via the Site Dashboard
 

@@ -27,7 +27,7 @@ For Drupal 7 and earlier, Pantheon uses a variant of Pressflow Drupal to allow t
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/read-environment-config) (including domain_access)
-- [Installing Redis on Drupal or WordPress](/redis)
+- [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Platform and Custom Domains](/domains)
 - [Configure Redirects](/redirects)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
@@ -147,9 +147,9 @@ Depending on your use case, there are three possibilities:
   
   </Alert>
 
-- For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis) guide for examples.
+- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Object Cache](/object-cache) guide for examples.
 
-- For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Redis](/redis) guide for examples.
+- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Object Cache](/object-cache) guide for examples.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472).
 
@@ -261,15 +261,17 @@ Drupal 7 sites that plan to use [Drush](/drush) should have a `settings.php` fil
 
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
-### How do I enable IonCube Decoder support?
+### How do I enable ionCube Decoder support?
 
-If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
+1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/php-versions). Please note later PHP versions do not currently support ionCube.
 
-```php:title=settings.php
-ini_set('ioncube.loader.encoded_paths', '/');
-```
+1. Enable ionCube Decoder support site-wide by adding this line to `settings.php`:
 
-*(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
+  ```php:title=settings.php
+  ini_set('ioncube.loader.encoded_paths', '/');
+  ```
+
+*(More information can be found in our [PHP 7.1 & ionCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ## Troubleshooting
 

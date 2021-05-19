@@ -12,7 +12,7 @@ We do not prevent you from installing and using these plugins/modules. However, 
 
 **Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
 
-If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md).
+If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-known-issues.md).
 
 ___
 
@@ -168,9 +168,9 @@ ___
 
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
-**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
+**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
-1. [Enable Redis](/redis/), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable Redis.)
+1. [Enable the Object Cache](/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```php:title=imce.page.inc
@@ -363,12 +363,12 @@ ___
 
 This is a known bug in Drupal 8. See [#3033480](https://www.drupal.org/project/drupal/issues/3033480) for more information.
 
-**Solution**: 
+**Solution**:
 
 1. Navigate to the **Manage** > **Extend** page at `/admin/modules`.  
-1. Click the **Uninstall** tab, and uninstall the Update Manager module. 
-1. Click the **List** tab and re-install the Update Manager. 
-1. [Clear the cache](/clear-caches). 
+1. Click the **Uninstall** tab, and uninstall the Update Manager module.
+1. Click the **List** tab and re-install the Update Manager.
+1. [Clear the cache](/clear-caches).
 
 ___
 

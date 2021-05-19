@@ -1,5 +1,5 @@
 ---
-title: Pantheon Site Regions and Data Residency
+title: Pantheon Global Regions and Data Residency
 description: Learn how to launch sites in Australia, Canada, or the European Union.
 categories: [get-started]
 tags: [launch, site]
@@ -13,7 +13,7 @@ There are many scenarios in which you might prefer running a site within an Inte
 * Compliance standards that require data residency within the borders of Australia, Canada, or the European Union
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
-## Available Regions
+## Available Global Regions
 
 Four regions are available when creating a new site:
 
@@ -75,7 +75,7 @@ If you'd like help migrating your site between regions, our [Professional Servic
 
 ## Review Site Region
 
-Use the Dashboard to see the Pantheon Region in which the site is hosted:
+Use the Dashboard to see the Pantheon Global Region in which the site is hosted:
 
 1.  Navigate to the Site Dashboard
 1.  Click **Settings**, then **About Site**

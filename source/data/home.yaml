@@ -86,8 +86,8 @@
         url: '/git-faq/'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
-      - text: 'Installing Redis on Drupal or WordPress'
-        url: '/redis/'
+      - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
+        url: '/object-cache/'
       - text: 'Drupal Drush Command-Line Utility'
         url: '/drush/'
   changelog-preview:

@@ -1,1 +1,1 @@
-The Style guide has been moved to the [Docs Site](https://pantheon.io/docs/style-guide), or view the source file [here](https://github.com/pantheon-systems/documentation/blob/main/source/content/style-guide.md).
+The Style guide has been moved to the [Docs Site](/style-guide), or you can view the source file [here](https://github.com/pantheon-systems/documentation/blob/main/source/content/style-guide.md).

@@ -125,7 +125,7 @@ class GuideTemplate extends React.Component {
               <main id="docs-main" className="col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <article
-                    className={`col-xs-${contentCols} col-md-${contentCols}`}
+                    className={`col-xs-${contentCols} col-md-${contentCols} doc`}
                     id="doc"
                   >
                     <HeaderBody
@@ -144,12 +144,7 @@ class GuideTemplate extends React.Component {
                     </MDXProvider>
                   </article>
                   {node.frontmatter.showtoc && (
-                    <div
-                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-                      role="complementary"
-                    >
-                      <TOC title="Contents" />
-                    </div>
+                    <TOC title="Contents" />
                   )}
                 </div>
                 {node.frontmatter.getfeedbackform && (
