@@ -67,11 +67,11 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ## DoS Attack Mitigation
 
-Pantheon doesn't count [denial-of-service attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DoS or DDoS (_distributed_ denial-of-service) attack, our [Customer Success](/support) team is available to assist with identifying a DoS attempt, and take steps to mitigate it for your site.
+Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DoS or DDoS (_distributed_ denial-of-service) attack, our [Customer Success](/support) team is available to assist with identifying a DoS attempt, and take steps to mitigate it for your site.
 
 ### Block IPs in Drupal or WordPress
 
-IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php` or via Drupal module or WordPress plugin.
+IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php`, via a Drupal module, or WordPress plugin.
 
 #### Use a PHP Snippet to Block IPs
 
