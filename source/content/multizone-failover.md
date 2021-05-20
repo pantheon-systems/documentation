@@ -80,7 +80,7 @@ The reindexing process is application-side, and depending on your site the proce
 
 1. As a site administrator, navigate to `/admin/config/search/search-api/server/pantheon`.
 
-1. Click “Delete all indexed data on this server” to queue all content for re-indexing.
+1. Click **Delete all indexed data on this server** to queue all content for re-indexing.
 
 1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
 
