@@ -9,7 +9,7 @@ reviewed: "2020-03-03"
 
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
 
-## Review the nginx Access Log
+## Review the NGINX Access Log
 
 To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/nginx-access-log). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
 
@@ -17,7 +17,7 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
 
-In addition to your other WordPress security practices, take steps to thwart **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
+In addition to your other WordPress security practices, take steps to block **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
 1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
@@ -190,8 +190,15 @@ foreach ($bots as $bot) {
 }
 ```
 
+## Block `autodiscover.xml` requests
+
+To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
+
+Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This allows you to block requests and will return a 403 error that does not count towards the page views for which you are billed.
+
+
+
 ## Advanced Protection and Performance With Advanced Global CDN
 
 [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
 
-## Stop `autodiscover.xml` requests
