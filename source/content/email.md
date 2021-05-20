@@ -124,10 +124,10 @@ Office 365 uses ports `25` and `587` by default, and different options for sendi
 
 Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server](https://docs.microsoft.com/en-us/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing). Check your organization's Microsoft Exchange settings on what's allowed by your system.
 
-### Why does my site receive several requests to autodiscover.xml?
+### Why does my site receive numerous requests to autodiscover.xml?
 
-Autodiscover enables the configuration of Outlook profiles, based only a username and password automatically connect to their email servers without having to configure the settings manually. The `autodiscover.xml` is associated with the use of the mail software, and errors can occur when the mail software incorrectly and repeatedly calls for an `autodiscover.xml` file. If left unmanaged, this may eventually start using unnecessary resources and can result in a slower site.
+Autodiscover enables the configuration of Outlook profiles, based only on a username and password. It allows users to automatically connect to their email servers without having to configure the settings manually. An issue can occur when the mail software erroneously and repeatedly calls for an `autodiscover.xml` file. If left unmanaged, this may start using unnecessary resources, return 404 errors, and can result in a slower site.
 
-To avoid making Drupal or WordPress do the work of serving a 404, and to avoid getting billed for junk traffic, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
+To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
 
-Add the `autodiscover.xml` content to the `protected_web_paths` directive in `pantheon.yml`. This let's you block requests at the NGIX and will return a 403 error,instead. This does not count towards the page views you are billed. For information on configuring `pantheon.yml` to limit requests to `autodiscover.xml`, see 
+Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This let's you block requests at the NGIX and will return a 403 error instead, which does not count towards the page views you are billed.
