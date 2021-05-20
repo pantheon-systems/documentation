@@ -122,7 +122,7 @@ Please see Google's help article: [My client isn't accepting my username and pas
 
 Office 365 uses ports `25` and `587` by default, and different options for sending via SMTP client, Direct send or SMTP relay. [This document](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3) outlines the limitations and configurations of each, to know what will work for your application.
 
-Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server](https://docs.microsoft.com/en-us/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing). Check your organization's Microsoft Exchange settings on what's allowed by your system.
+Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if [configured at your email server](https://docs.microsoft.com/en-us/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing). Check your organization's Microsoft Exchange settings to see what's allowed by your system.
 
 ### Why does my site receive numerous requests to autodiscover.xml?
 
@@ -130,4 +130,4 @@ Autodiscover enables the configuration of Outlook profiles, based only on a user
 
 To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
 
-Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This let's you block requests at the NGIX and will return a 403 error instead, which does not count towards the page views you are billed.
+Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
