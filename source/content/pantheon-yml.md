@@ -139,7 +139,7 @@ database:
   version: 10.4
 ```
 
-<Alert title="Changing the database requires an exising env" type="warning">
+<Alert title="Changing the database requires an existing env" type="warning">
 
 You must apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
