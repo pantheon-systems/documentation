@@ -194,8 +194,7 @@ foreach ($bots as $bot) {
 
 To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
 
-Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This allows you to block requests and will return a 403 error that does not count towards the page views for which you are billed.
-
+Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml` to block requests.
 
 
 ## Advanced Protection and Performance With Advanced Global CDN
