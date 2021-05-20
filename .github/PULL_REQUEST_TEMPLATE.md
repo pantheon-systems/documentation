@@ -5,7 +5,7 @@ Pull requests should be opened in a branch off the `main` branch. For more infor
 -->
 
 
-**Closes:** #
+Closes #
 
 ## Summary
 <!--
