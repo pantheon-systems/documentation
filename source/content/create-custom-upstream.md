@@ -150,7 +150,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 9" id="d91">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-9 git://github.com/pantheon-upstreams/drupal-project
+    git remote add pantheon-drupal-9 git://github.com/pantheon-upstreams/drupal-project.git
     ```
 
     </Tab>
@@ -206,7 +206,6 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      ```bash{promptUser: user}
      cd upstream-config
      composer require drupal/pkg-name --no-update
-     composer config version 1.0.1
      ```
 
        Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
