@@ -190,7 +190,7 @@ foreach ($user_agents_deny_list as $agent) {
 }
 ```
 
-## Block `autodiscover.xml` requests
+## Block autodiscover.xml requests
 
 To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
 
