@@ -126,8 +126,8 @@ Because we don't support SPF, it is likely that most Exchange or Office 365 serv
 
 ### Why does my site receive numerous requests to autodiscover.xml?
 
-Autodiscover enables the configuration of Outlook profiles, based only on a username and password. It allows users to automatically connect to their email servers without having to configure the settings manually. An issue can occur when the mail software erroneously and repeatedly calls for an `autodiscover.xml` file. If left unmanaged, this may start using unnecessary resources, return 404 errors, and can result in a slower site.
+[`Autodiscover.xml`](https://docs.microsoft.com/en-us/exchange/architecture/client-access/autodiscover?view=exchserver-2019) automates the configuration of Outlook email server authentication. An issue can occur when the mail software erroneously and repeatedly calls for an `autodiscover.xml` file that does not exist. If left unmanaged, this may start using unnecessary resources, return 404 errors, and can result in a slower site.
 
-To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
+To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
 
-Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
+Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
