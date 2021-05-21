@@ -69,3 +69,15 @@ Additional DOM element exclusion is in active development.
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+
+## Enable Autopilot Email Alerts
+
+Configure email alerts for Autopilot from your Personal Workspace settings:
+
+![Personal Workspace Settings include options for Autopilot email alerts](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-alerts.png)
+
+1. Click the <i className="fa fa-user-circle"></i> Gravatar in the upper right corner and click <i className="fa fa-user-cog"></i> **User Settings**
+1. Click **Preferences** and choose your options in the **Autopilot Email Alerts** section:
+
+   - **Weekly Activity Digest**: A weekly summary of Autopilot activity across all sites within this workspace that have Autopilot enabled.
+   - **Failed Visual Regression Tests**: Real-time email alerts for failed VRT tests for a given site.
