@@ -90,7 +90,7 @@ SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you
 
 ### Can I use Pantheon's local MTA (postfix)?
 
-We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
+We strongly recommend that you do not use the local <abbr title="mail transfer agent">MTA</abbr> (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
 ### Can I access the mail logs for my site?
 
@@ -102,7 +102,7 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
 
 ### Are there SPF records for Pantheon's local MTA (postfix)?
 
-If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
+If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an <abbr title="sender policy framework">SPF</abbr> record, then you should include Pantheon's SPF record, as shown below:
 
 ```none
 v=spf1 include:spf.example.com include:spf.pantheon.io ~all
@@ -122,4 +122,12 @@ Please see Google's help article: [My client isn't accepting my username and pas
 
 Office 365 uses ports `25` and `587` by default, and different options for sending via SMTP client, Direct send or SMTP relay. [This document](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3) outlines the limitations and configurations of each, to know what will work for your application.
 
-Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server](https://docs.microsoft.com/en-us/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing). Check your organization's Microsoft Exchange settings on what's allowed by your system.
+Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if [configured at your email server](https://docs.microsoft.com/en-us/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing). Check your organization's Microsoft Exchange settings to see what's allowed by your system.
+
+### Why does my site receive numerous requests to autodiscover.xml?
+
+[`Autodiscover.xml`](https://docs.microsoft.com/en-us/exchange/architecture/client-access/autodiscover?view=exchserver-2019) automates the configuration of Outlook email server authentication. An issue can occur when the mail software erroneously and repeatedly calls for an `autodiscover.xml` file that does not exist. If left unmanaged, this may start using unnecessary resources, return 404 errors, and can result in a slower site.
+
+To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
+
+Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
