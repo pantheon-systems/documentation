@@ -192,9 +192,9 @@ foreach ($user_agents_deny_list as $agent) {
 
 ## Block `autodiscover.xml` requests
 
-To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to ignore instances of `autodiscover.xml`.
+To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
 
-Add the `autodiscover.xml` content to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml` to block requests.
+Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 Forbidden client error status response code.
 
 
 ## Advanced Protection and Performance With Advanced Global CDN
