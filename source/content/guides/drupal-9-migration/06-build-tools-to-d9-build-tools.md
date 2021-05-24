@@ -98,6 +98,16 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum \
      --dev -W --no-update
 ```
 
+- Enable deep patching to view the correct MariaDB version.
+
+  The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `Mysql 5.5.30`.
+
+  The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`
+
+  ```bash{promptUser: user}
+  composer config extra.enable-patching true
+  ```
+
 - Edit `composer.json` and remove `--no-dev` from the `scripts` section:
 
 ```json:title=composer.json
@@ -123,6 +133,7 @@ To:
    Removing the `--no-dev` portion of that line will allow your dev dependencies to be available in the integration environment.
 
 ```bash{promptUser: user}
+composer require cweagans/composer-patches drupal/upgrade_status --no-update
 composer update -W --optimize-autoloader --prefer-dist
 ```
 
@@ -188,7 +199,7 @@ Log into your site as admin and take a look under reports at "UPGRADE STATUS". A
 
 ## Custom Module Code
 
-Custom module code is outside the scope of this document. See drupal.org for getting your custom code updated with the new version numbers and any code deprecations.
+Custom module code is outside the scope of this document. See [drupal.org](https://drupal.org) for getting your custom code updated with the new version numbers and any code deprecations.
 
 - Temporarily add write access to protected files and directories:
 
