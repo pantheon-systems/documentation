@@ -6,7 +6,7 @@ categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 contributors: [stovak]
-reviewed: "2021-05-15"
+reviewed: "2021-05-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/build-tools-to-d9-build-tools
@@ -14,39 +14,37 @@ anchorid: drupal-9-migration/build-tools-to-d9-build-tools
 editpath: drupal-9-migration/06-build-tools-to-d9-build-tools.md
 ---
 
-In this doc, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
+This doc shows how to upgrade a Drupal 8 site that uses [Build Tools](/guides/build-tools) to a Drupal 9 site that continues to use the Build Tools workflow.
 
-## Will This Guide Work for Your Site?
+## Will This Guide Work for Your Build Tools Workflow?
 
-<Partial file="drupal-9/upgrade-site-requirements.md" />
+This tutorial is for you if the site:
+
+1. Code is managed using an external repository outside of Pantheon (GitHub, GitLab, Bitbucket, etc.)
+
+1. Is built through a service like GitHub Actions, Circle CI, or Travis
+
+1. Build artifacts are pushed to your Pantheon repository.
+
+1. Has a blue banner across the top that says that the site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
+
+   > Good news, your site's database version is now configurable! Learn how.
+
+   [Contact Support](/support) if you're ready to use Drupal 9, but you don't see the banner on the Dashboard.
 
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-This doc uses the following aliases:
-
-- **Alias:** alias
-
-## Build Tools Workflow
-
-This tutorial is for you if you meet the following criterion:
-
-1. You have an external repository outside of pantheon that manages your site's code.
-
-1. You use a build service like Github Actions, Circle CI or Travis to "build" the site.
-
-1. Those build artifacts are pushed to your pantheon repo.
-
-1. Your site has a blue banner and is database-ready for the upgrade to d9
-
-## Tools you will need
-
-Terminus, Bash JSON Query, rsync
+Install Bash JSON Query and rsync if they aren't already installed:
 
 ```bash{promptUser: user}
 brew install terminus jq rsync
 ```
+
+This doc uses the following aliases:
+
+- **Alias:** $SITE
 
 ## Wagons HO!
 
@@ -69,7 +67,7 @@ terminus drush gk-8.live -- config:export \
 SFTP_COMMAND=$(terminus connection:info gk-8.live \
    --format=json | jq -r ".sftp_command")
 
-# For rysnc, all we really need is the crazy-long
+# For rysnc, all we really need is the long
 # user and host name. Strip out the rest.
 # (Make sure the empty space is there at the end
 # before the bracket!)
@@ -199,7 +197,7 @@ Log into your site as admin and take a look under reports at "UPGRADE STATUS". A
 
 ## Custom Module Code
 
-Custom module code is outside the scope of this document. See [drupal.org](https://drupal.org) for getting your custom code updated with the new version numbers and any code deprecations.
+Custom module code is outside the scope of this document. See [drupal.org](https://www.drupal.org/docs/creating-custom-modules) for getting your custom code updated with the new version numbers and any code deprecations.
 
 - Temporarily add write access to protected files and directories:
 
