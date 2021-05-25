@@ -69,9 +69,52 @@ protected_web_paths:
 Composer require
 
 ```
-composer require shineunited/composer-build-scss scssphp/scssphp^1
+composer require drupal/scss_compiler
 ```
-Add the build step to composer's "post-install-cmd" hook as well as the post-update-cmd.
+
+as per the readme in the most recent version of the module:
+
+<blockquote>
+
+```yml
+# my_{module|theme}.libraries.yml
+main:
+  version: VERSION
+  css:
+    theme:
+      scss/styles.scss: {}
+      less/styles.less: {}
+```
+By default, compiled files are saved to `public://scss_compiler`
+
+Also you can define `css_path` — path where to save the compiled file,
+path relative to module/theme where libraries.yml place, for example:
+```yml
+# my_{module|theme}.libraries.yml
+main:
+  version: VERSION
+  css:
+    theme:
+      scss/styles.scss: { css_path: '/css/' }
+```
+File will be saved to `my_module/css/styles.css`
+
+Assets path option allow to define where static resources places, by default
+it's module/theme folder. Full path to assets folder. Supports token for
+theme/module.
+```yml
+# my_{module|theme}.libraries.yml
+main:
+  version: VERSION
+  css:
+    theme:
+      scss/styles.scss: { assets_path: '@my_module/assets/' }
+```
+url(images.jpg) in css will be compiled to
+url(modules/custom/my_module/assets/image.jpg);
+
+</blockquote>
+
 
 ## Step +1: add/commit/push
 
