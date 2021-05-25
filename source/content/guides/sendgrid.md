@@ -215,7 +215,7 @@ Then commit and push the symlink to Pantheon.
 
 1. Visit `/admin/config/system/smtp` once you've logged in as administrator.
 
-1. From within Install Options, select **On**.
+1. In **Install Options**, select **On**.
 
 1. Use the following within SMTP Server Settings:
 
