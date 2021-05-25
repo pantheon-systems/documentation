@@ -1,7 +1,7 @@
 ---
-title: Build Tools to D9 with Build Tools
-subtitle: subtitle
-description: Description
+title: D8 with Build Tools to D9 with Build Tools
+subtitle: "Upgrade-in-place: Drupal 8 with Build Tools"
+description: Upgrade a Drupal 8 site with Build Tools on Pantheon to a Drupal 9 site with Build Tools on Pantheon
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
