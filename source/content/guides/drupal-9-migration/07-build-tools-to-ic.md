@@ -37,13 +37,17 @@ This doc uses the following aliases:
 
 1. YOU HAVE COMPLETED THE BUILD TOOLS D9 UPGRADE HERE: {LINK TO #6}
 
-## Step 1: Turn off build tools
+1. Your site is hosted on Github and you use a build step and the artifacts are then checked into pantheon.
 
-## Step 2: (optional) Move any nodejs actions to github actions:
+1. Your build process does not involve NodeJS at any step
 
-https://raw.githubusercontent.com/actions/starter-workflows/main/ci/node.js.yml
 
-## Step 3: Change your pantheon.yml to reflect the following value(s):
+
+## Step +1: Turn off build tools
+
+First of all, we need to do some discovery and figure out where the build is triggered. Most likely scenario, there's a folder in your root directory named ".circle_ci", ".travis" or something along those lines that contains a configuration file that triggers the "build process" to begin and pushes your code's build artifcts to the pantheon repo. We're going to delete that folder and stop that process from happening.
+
+## Step +1: Change your pantheon.yml to reflect the following value(s):
 
 ```
 api_version: 1
@@ -60,7 +64,15 @@ protected_web_paths:
   - /sites/default/files/private/
   - /sites/default/files/config/
 ```
+## Step 1:
 
-## Step 4: add/commit/push
+Composer require
 
-## Step 5: verify the build completed successfully in Dashboard and/or Terminus
+```
+composer require shineunited/composer-build-scss scssphp/scssphp^1
+```
+Add the build step to composer's "post-install-cmd" hook as well as the post-update-cmd.
+
+## Step +1: add/commit/push
+
+## Step +1: verify the build completed successfully in Dashboard and/or Terminus

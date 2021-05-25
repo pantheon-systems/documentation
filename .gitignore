@@ -83,3 +83,4 @@ yarn-error.log
 /.env.development
 /.env.production
 /.envrc
+.idea
