@@ -10,7 +10,7 @@ reviewed: "2020-02-11"
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account options with a range of features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
+Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
