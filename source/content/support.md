@@ -1,6 +1,6 @@
 ---
 title: Get Support
-description: Learn how to access Pantheon's expert team and what your Account package includes.
+description: Learn how to access Pantheon's expert team and what your Account tier includes.
 categories: [platform]
 tags: [dashboard, support]
 reviewed: "2020-02-11"
@@ -10,9 +10,9 @@ reviewed: "2020-02-11"
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
+Pantheon offers a range of Account options that extend services to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
 
-| Account Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
+| Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
@@ -26,7 +26,7 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
 
 ### One ticket per issue
 
