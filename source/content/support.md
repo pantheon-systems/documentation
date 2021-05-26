@@ -26,7 +26,7 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab on the Organization Dashboard](#organization-dashboard-support-tab).
 
 ### One ticket per issue
 
@@ -48,7 +48,7 @@ If your site uses nonstandard admin URLs, custom logins, etc., please let us kno
 
 We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
-### The Support Tab from the Organization Dashboard
+### Organization Dashboard Support Tab
 
 If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
 
