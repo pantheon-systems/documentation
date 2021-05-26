@@ -44,43 +44,47 @@ brew install terminus jq rsync
 
 This doc uses the following aliases:
 
-- **Alias:** $SITE
+- **Alias:** `$SITE`
 
-## Wagons HO!
+## Prepare a Local Copy of the Site for Upgrade
 
-- Clone your GitHub source repo and `cd` into the directory, then:
+1. In the Dev tab of the site's Dashboard, set the Development Mode to **Git**, and [clone the site locally](/local-development#get-the-code).
 
-```bash{promptUser: user}
-git checkout -b d9-upgrade-2021
-```
+1. Change into the directory, then create a new branch based on the default. Change `d9-upgrade-2021` in this example:
 
-- Let's export the configs from production to make sure our local version has the latest:
+   ```bash{promptUser: user}
+   git checkout -b d9-upgrade-2021
+   ```
 
-```bash{promptUser: user}
-# Export the latest from the live environment
-# to sites/default/files/config
-terminus drush gk-8.live -- config:export \
-   --destination sites/default/files/config
+1. Export the config files from production to `sites/default/files/config` to ensure the local version has the latest:
 
-# Use terminus to get the (read-only) SFTP command
-# specific to the live environment.
-SFTP_COMMAND=$(terminus connection:info gk-8.live \
-   --format=json | jq -r ".sftp_command")
+   ```bash{promptUser: user}
+   terminus drush gk-8.live -- config:export --destination sites/default/files/config
+   ```
 
-# For rysnc, all we really need is the long
-# user and host name. Strip out the rest.
-# (Make sure the empty space is there at the end
-# before the bracket!)
-RSYNC_HOST=$(terminus connection:info {Site Name}.live --field=sftp_host)
+1. Use Terminus to get the (read-only) SFTP command specific to the live environment.
 
-# Use that hostname to do an rsync from that recent
-# config:export
-rsync -rvlz --copy-unsafe-links --size-only --checksum \
-   --ipv4 --progress -e 'ssh -p 2222' \
-   "${RSYNC_HOST}:files/config" .
-```
+   ```bash{promptUser: user}
+   SFTP_COMMAND=$(terminus connection:info gk-8.live --format=json | jq -r ".sftp_command")
+   ```
 
-   If you do a `git status` it should show changed files in the `config` directory if there are any changed configs in production.
+1. For rysnc, all we really need is the long user and host name. Strip out the rest. (Make sure the empty space is there at the end before the bracket!)
+
+   ```bash{promptUser: user}
+   RSYNC_HOST=$(terminus connection:info $SITE.live --field=sftp_host)
+   ```
+
+1. Use that hostname to do an rsync from that recent `config:export`
+
+   ```bash{promptUser: user}
+   rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_HOST}:files/config" .
+   ```
+
+1. If you do a `git status` it should show changed files in the `config` directory if there are any changed configs in production.
+
+   ```bash{promptUser: user}
+   git status
+   ```
 
 ### Let's start ugradin' stuff!
 
