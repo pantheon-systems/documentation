@@ -52,7 +52,7 @@ To learn more, see [Using the Pantheon Workflow](/pantheon-workflow).
 
 ### Does Pantheon offer professional services?
 
-Yes, see [Professional Services](/professional-services) for more information.
+Yes, see [Professional Services](/guides/professional-services) for more information.
 
 ### Can Pantheon run sites on highly available server clusters?
 
@@ -107,7 +107,7 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 
 ### Do you support Xdebug?
 
-No. Xdebug is not available on the platform. Local development tools such as [Lando](/guides/lando-wordpress) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic Pro](/new-relic).
+No. Xdebug is not available on the platform. Local development tools such as [Lando](/guides/lando-wordpress) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic&reg; Performance Monitoring](/new-relic).
 
 ### How do I increase the maximum execution time limit for a PHP script?
 

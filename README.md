@@ -12,10 +12,10 @@ This repository contains the [Pantheon](https://pantheon.io) documentation, as w
  - 8/5/19: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
 
 ### Contributing
-Our docs are written in [Markdown](https://daringfireball.net/projects/markdown/), extended with [MDX](https://github.com/mdx-js/mdx) components. The pages live in `source/content`. Read [CONTRIBUTING.md](<CONTRIBUTING.md>) for more details on contributing documentation improvements.
+Our docs are written in [Markdown](https://daringfireball.net/projects/markdown/), extended with [MDX](https://github.com/mdx-js/mdx) components. The pages live in `source/content`. Read [CONTRIBUTING](<CONTRIBUTING.md>) for more details on contributing documentation improvements.
 
 ### Style Guide
-Read [our Style Guide](https://pantheon.io/docs/style-guide/) for our guidelines on how to write documentation.
+Read [our Style Guide](https://pantheon.io/docs/style-guide) for our guidelines on how to write documentation.
 
 ## Local Installation
 

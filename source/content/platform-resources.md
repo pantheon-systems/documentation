@@ -1,5 +1,5 @@
 ---
-title: Platform Resources for Legacy Plans
+title: Platform Resources
 description: Get detailed information about platform resources for your Drupal or WordPress site.
 categories: [platform]
 tags: [billing]
@@ -86,7 +86,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." /></th>
+        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." /></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>
@@ -117,50 +117,6 @@ The platform resources provided to your website depend on your current plan. Pan
 <hr />
 
 **MySQL Buffer Pool**: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
-
-<hr />
-
-**Redis Cache Size**: Amount of data a Redis instance can store. Note these numbers are intentionally set below the maximum memory for the Redis instance (which is the next logical power of 2) in order to ensure good performance.
-
-## View Service Configuration Details
-
-### MySQL
-For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
-
-### Redis
-Get your Redis connection string by going to the **Site Dashboard > Environment (e.g. Dev) > Connection Info**, and then run: `<your redis string> config get *memory*`
-
-### PHP
-See [Securely Working with phpinfo](/phpinfo#drupal-note) for ways to view your specific PHP configuration.
-
-## Calculate Concurrent User / Dynamic Page Capacity
-
-<Alert title="Warning" type="danger">
-
-This following content is considered deprecated. Refer to [Traffic Limits and Overages](/traffic-limits) for updated information on how Pantheon defines plans and site traffic.
-
-</Alert>
-
-One common need in determining a plan level is calculating the amount of concurrent traffic a site can handle, especially when all or some of the traffic cannot be handled by caching.
-
-The first thing you must know is how fast your site responds to dynamic (uncached) page requests. Take the product of your containers and concurrency, and divide by that value to give you your max dynamic requests per second:
-
-`Containers * Concurrency / Average Page Response = Dynamic Capacity`
-
-So on a Personal plan, if your site responds in 750ms on average, your dynamic capacity would be about 5 requests per second:
-
-`1 * 4 / 0.75 = 5.333`
-
-Calculating what this means for logged in users can be done by making a "time between clicks" estimate so you can understand how many requests per second the average user generates.
-
-`Containers * Concurrency / Average Page Response * Time Between Clicks = User Capacity`
-
-The amount of time between users clicking (i.e. how frequently they need a new page) will vary a lot depending on your use case, but it's important to make an estimate.
-
-Example:
-If you're running an interactive user forum on a Business plan, you've tuned your site and know that your average backend response time is around 1500ms. You also know that broadly speaking the average user clicks a new link once every 20 seconds. Using this formula tells you that your Business plan should max out at around 200 concurrent users:
-
-`20 / 1.5 * 2 * 8 = 213`
 
 ## Frequently Asked Questions (FAQs)
 

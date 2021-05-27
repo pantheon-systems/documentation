@@ -286,6 +286,8 @@ Every site has an upstream assigned in order to deliver [one-click updates](/cor
   - Code has been refactored and moved to a new repository.
 - Set an empty upstream to disable one-click updates for sites managed by Composer.
 
+Confirm that the user you are authenticated as has the correct [Site-level permissions](/change-management#site-level-roles-and-permissions). Only a User in Charge or Owner can change a site's Upstream.
+
 To see all available upstreams, run:
 
 ```bash{promptUser: user}
@@ -304,9 +306,25 @@ As a safeguard, Terminus will prevent a framework switch such as moving from Dru
 
 <Alert title={"Note"} type={"info"}>
 
-To set an empty upstream for Composer managed sites, see [Serving Sites from
-the Web Subdirectory](/nested-docroot/).
+To set an empty upstream for Composer-managed sites, see [Serving Sites from the Web Subdirectory](/nested-docroot/).
 
 </Alert>
 
 After setting the upstream, you must bring in the new codebase by applying updates to the site. For details on how to apply updates, see the [example usage above](#applying-updates).
+
+### Terminus Error: Permission to change the upstream of this site
+
+If you encounter an error when setting a site's upstream:
+
+```bash{outputLines: 2}
+terminus site:upstream:set $SITE $UPSTREAM
+ [error]  You do not have permission to change the upstream of this site.
+```
+
+Confirm that the user you are authenticated as has the correct [site-level permissions](/change-management#site-level-roles-and-permissions).
+
+To check the currently authenticated user:
+
+```bash{promptUser: user}
+terminus auth:whoami
+```

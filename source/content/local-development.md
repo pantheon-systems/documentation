@@ -8,19 +8,13 @@ reviewed: "2019-11-27"
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
 
-Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/guides/localdev), currently in active development.
+Pantheon's [Localdev](/guides/localdev) offers the best of developing locally — with the ability to perform critical development tasks, including editing files and code, and pushing changes to Pantheon right from your desktop.
 
 </Alert>
 
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-
-Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's WebOps training can accelerate your workflow.
-
-</Enablement>
-
-Pantheon cannot troubleshoot or [support local development](/support#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev) instead of local development.
+Pantheon cannot troubleshoot or [support local development](/support#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev).
 
 If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
 
@@ -32,7 +26,7 @@ Be sure you have:
   - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
   - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
-- SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
+- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR rsync
 - [Terminus](/terminus)
 - [Drush](/drush) (optional)
 

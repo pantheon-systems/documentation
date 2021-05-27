@@ -71,7 +71,7 @@ Host *.drush.in
 ```
 
 ## See Also
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
 - [MySQL Slow Log](/mysql-slow-log)
 - [Converting MySQL Tables from MyISAM to InnoDB](/myisam-to-innodb)
 - [Database Connection Errors](/database-connection-errors)

@@ -45,7 +45,7 @@ If you’ve narrowed the problem down to a specific module or plugin and you’r
 Sometimes your CMS may encounter issues due to cached data that ends up in an odd state.
 
 - [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/terminus/commands/env-clear-cache).
-- Clear all keys from the Redis cache using the [Redis CLI](/redis#use-the-redis-command-line-client).
+- Clear all keys from the Object Cache using the [Redis CLI](/object-cache#use-the-redis-command-line-client).
 - Review the caching logic for your CMS version. [Drupal 8](/drupal-8-cache), for example, has some specific caching features that may be a factor.
 - For issues confined to a specific page or display element, review the specific [caching logic](/cache-control) for your site or page.
 - If the Pantheon Advanced Page Cache [plugin](/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
@@ -170,4 +170,4 @@ $config['system.logging']['error_level'] = 'verbose';
 - [PHP Errors and Exceptions](/php-errors)
 - [Database Connection Errors](/database-connection-errors)
 - [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
