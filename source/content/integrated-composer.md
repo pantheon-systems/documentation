@@ -33,11 +33,49 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-## Upstream and Site Structure
+
+## Add a Dependency to an Individual Site
+
+1. Clone the Git repository from the Pantheon site's dashboard.
+
+1. Run `composer install`:
+
+  ```bash{promptUser: user}
+  composer install
+  ```
+
+1. Add a new dependency locally:
+
+  ```bash{promptUser: user}
+  composer require drupal/pkg-name
+  ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
+
+1. Remove dependencies:
+
+  ```bash{promptUser: user}
+  composer remove drupal/pkg-name
+  ```
+
+## Apply One-click Updates
+
+1. Navigate to **Code** in the Dev tab of the site's Dashboard.
+
+1. Click **Check Now**. 
+
+1. If updates are available, click **Apply Updates**.
+
+
+## Upstream
+
+### Upstream and Site Structure
 
 <Partial file="ic-upstream-structure.md" />
 
-## How to Add Dependencies to Your Upstream
+### How to Add Dependencies to Your Upstream
 
 1. Start with the local clone of the Upstream repository you created above.
 
@@ -74,47 +112,18 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. Commit and push.
 
-## Apply One-click Updates
 
-Navigate to **Code** in the Dev tab of the site's Dashboard.
-
-Click **Check Now**. If updates are available, click **Apply Updates**.
-
-## Add a Dependency to an Individual Site
-
-1. Clone the Git repository from the Pantheon site's dashboard.
-
-1. Run `composer install`:
-
-  ```bash{promptUser: user}
-  composer install
-  ```
-
-1. Add a new dependency locally:
-
-  ```bash{promptUser: user}
-  composer require drupal/pkg-name
-  ```
-
-1. Commit `composer.json` and `composer.lock` and push.
-
-   - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
-
-1. Remove dependencies:
-
-  ```bash{promptUser: user}
-  composer remove drupal/pkg-name
-  ```
-
-## Pantheon Supports Composer 2
+## Support
+### Pantheon Supports Composer 2
 
 The version of Composer on the platform is Composer 2.
 
 Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
-## Pantheon's Scope of Support for Composer
+### Pantheon's Scope of Support for Composer
 
 <Partial file="composer-support-scope.md" />
+
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
