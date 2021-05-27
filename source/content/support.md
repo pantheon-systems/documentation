@@ -3,7 +3,7 @@ title: Get Support
 description: Learn how to access Pantheon's expert team and what your Account tier includes.
 categories: [platform]
 tags: [dashboard, support]
-reviewed: "2020-02-11"
+reviewed: "2021-05-27"
 ---
 
 ![Screenshot of the Support Tab](../images/dashboard/support-tab.png)
@@ -144,15 +144,15 @@ If your site is slow or modules aren't working, please see our [performance arti
 
 Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses) in your Development environment. If you [contact support](/support), include your findings and attach screenshots whenever possible.
 
-### Local Development
-
-We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
-
 ### Isolated Issues
 
 Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials or offer to connect you with an agency partner to help you with the resolution.
 
 If problems with your site become severe and overload resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+
+### Local Development
+
+We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
 
 ### Platform Support
 
