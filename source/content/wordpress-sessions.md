@@ -74,21 +74,21 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
  ```bash{promptUser: user}
  terminus env:commit --message "Adding php native sessions plugin" -- <site>.<env>
  ```
- ([More options for this command](https://pantheon.io/docs/terminus/commands/env-commit))
+ ([More options for this command](/terminus/commands/env-commit))
  
 1. If you are working on a Multidev, merge your changes into Dev:
 
  ```bash{promptUser: user}
  terminus multidev:merge-to-dev -- <site>.<multidev>
  ```
- ([More options for this command](https://pantheon.io/docs/terminus/commands/multidev-merge-to-dev))
+ ([More options for this command](/terminus/commands/multidev-merge-to-dev))
 
 1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
  ```bash{promptUser: user}
  terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](https://pantheon.io/docs/terminus/commands/env-deploy))
+ ([More options for this command](/terminus/commands/env-deploy))
 
 1. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
@@ -101,7 +101,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
  ```bash{promptUser: user}
  terminus env:deploy <site>.live --cc --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](https://pantheon.io/docs/terminus/commands/env-deploy))
+ ([More options for this command](/terminus/commands/env-deploy))
 
 
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
