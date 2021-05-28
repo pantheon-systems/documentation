@@ -3,8 +3,8 @@ title: Integrated Composer
 description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
-contributors: [ari, edwardangert]
-reviewed: "2021-03-01"
+contributors: [ari, edwardangert, joa-pan]
+reviewed: "2021-05-28"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
@@ -127,8 +127,6 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 ### Pantheon's Scope of Support for Composer
 
 <Partial file="composer-support-scope.md" />
-
-
 
 
 ## Troubleshooting Code Syncs and Upstream Updates
