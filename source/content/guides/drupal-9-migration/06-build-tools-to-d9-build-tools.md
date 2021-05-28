@@ -86,118 +86,105 @@ This doc uses the following aliases:
    git status
    ```
 
-### Let's start ugradin' stuff!
+## Upgrade Site Components Locally
 
-```bash{promptUser: user}
-   composer require \
-     drupal/upgrade_status:^3 \
-     drupal/devel:^4 \
-     drush/drush:^10 \
-     -W --no-update
-   composer require \
-     phpunit/phpunit:"^8 | ^9 | ^10" \
-     phpstan/phpstan \
-     --dev -W --no-update
-```
+1. Use Composer to declare version requirements:
 
-- Enable deep patching to view the correct MariaDB version.
+   ```bash{outputLines:2-5,6-8}
+    composer require \
+      drupal/upgrade_status:^3 \
+      drupal/devel:^4 \
+      drush/drush:^10 \
+      -W --no-update
+    composer require \
+      phpunit/phpunit:"^8 | ^9 | ^10" \
+      phpstan/phpstan \
+      --dev -W --no-update
+   ```
 
-  The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `Mysql 5.5.30`.
+1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `Mysql 5.5.30`.
 
-  The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`
+  The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`.
 
-  ```bash{promptUser: user}
-  composer config extra.enable-patching true
-  ```
+  Enable deep patching to view the correct MariaDB version in the Dashboard:
 
-- Edit `composer.json` and remove `--no-dev` from the `scripts` section:
+   ```bash{promptUser: user}
+   composer config extra.enable-patching true
+   ```
 
-```json:title=composer.json
-  "scripts": {
-    "build-assets": [
-      "@prepare-for-pantheon",
-      "composer install --optimize-autoloader --no-dev"
-    ],
-```
+1. Edit `composer.json` and remove `--no-dev` from the `scripts` section to allow the dev dependencies to be available in the integration environment.
 
-To:
+  Do not remove the close quote, `"`:
 
-```json:title=composer.json
-...
-  "scripts": {
-    "build-assets": [
-      "@prepare-for-pantheon",
-      "composer install --optimize-autoloader"
-    ],
-...
-```
+   ```json:title=composer.json
+     "scripts": {
+       "build-assets": [
+         "@prepare-for-pantheon",
+         "composer install --optimize-autoloader --no-dev" //highlight-line
+       ],
+   ```
 
-   Removing the `--no-dev` portion of that line will allow your dev dependencies to be available in the integration environment.
+1. Add `composer-patches` to the `require` list and run `composer update`:
 
-```bash{promptUser: user}
-composer require cweagans/composer-patches drupal/upgrade_status --no-update
-composer update -W --optimize-autoloader --prefer-dist
-```
+   ```bash{promptUser: user}
+   composer require cweagans/composer-patches drupal/upgrade_status --no-update
+   composer update -W --optimize-autoloader --prefer-dist
+   ```
 
-1. If your site doesn't already have a `pantheon.yml` file, create one with the following values (the comments `#` are optional):
+1. If the site doesn't already have a `pantheon.yml` file, create one with the following values (the comments `#` are optional):
 
-```yaml:title=pantheon.yml
-api_version: 1
+   ```yaml:title=pantheon.yml
+   api_version: 1
+   
+   # Move the DOCUMENT_ROOT of your site to the */web* folder:
+   web_docroot: true
+   
+   # Drupal 9 requires 7.3 or higher. If your code isn't ready for 7.4 you may need to use 7.3 here:
+   php_version: 7.4
+   
+   # Drupal 9 requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
+   database:
+     version: 10.4
+   
+   # Drupal 9 prefers drush 10. If you have written a lot of custom drush commands you may need to go back to drush 9 or 8:
+   drush_version: 10
+   ```
 
-# Moves the DOCUMENT_ROOT of your site to
-# the */web* folder.
-web_docroot: true
+   An existing `pantheon.yml` file may have more values than this in it, but these are the ones with which we are concerned. If the values already exist in the `pantheon.yml` file, change them to the values in this example.
 
-# Drupal 9 requires 7.3 or higher
-# If your code isn't ready for 7.4 you
-# may need to back this off to 7.3.
-php_version: 7.4
+1. Commit and push the changes:
 
-# Drupal 9 requires a higher version of the db.
-# this will take a few minutes to complete
-# the upgrade to 10.4 once you push this file.
-database:
-  version: 10.4
+   ```bash{promptUser: user}
+   git add composer.json composer.lock pantheon.yml config/*
+   git commit -m 'updating to drush 10/mariadb 10.4/config'
+   git push origin d9-upgrade-2021
+   ```
 
-# Drupal 9 "likes" drush 10. If you have written
-# a lot of custom drush commands you may need to
-# go back to drush 9 or 8.
-drush_version: 10
-```
+  If all has gone well, you will see something like the following:
 
-   It's ok if the file has more values than this in it, but these are the ones with which we are concerned. If the values already exist in the `pantheon.yml` file, change them to the values in this example.
+   ```bash{outputLines:1-5}
+   remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+   remote:
+   remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
+   remote:      {{URL TO YOUR REPOSITORY}}
+   remote:
+   ```
 
-```bash{promptUser: user}
-git add composer.json composer.lock pantheon.yml config/*
-git commit -m 'updating to drush 10/mariadb 10.4/config'
-git push origin d9-upgrade-2021
-```
+1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment**.
 
-If all has gone well, you will see something like the following:
+1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference your pull request.
 
-```bash{outputLines:1-5}
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-remote:
-remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
-remote:      {{SOME URL TO YOUR REPOSITORY}}
-remote:
-```
+   ```bash{promptUser: user}
+   terminus drush $SITE.{integration env} pm-enable upgrade_status --yes
+   ```
 
-COPY/PASTE that convenient URL into your browser to create a pull request. Creating a pull request will cause Build Tools to create an INTEGRATION ENVIRONMENT.
+1. Create a one-time login to your site with the following command:
 
-After the build has finished without error, you will see a new environment in the dashboard under "multi-dev" named to reference your pull request. Mine was `pr-146`.
+   ```bash{promptUser: user}
+   terminus drush $SITE.{integration env} uli admin
+   ```
 
-```bash{promptUser: user}
-terminus drush {site name}.{integration env} pm-enable upgrade_status --yes
-```
-
-You can get a one-time login to your site with the following command:
-
-```bash{promptUser: user}
-terminus drush {site name}.{integration env} uli admin
-```
-
-Log into your site as admin and take a look under reports at "UPGRADE STATUS". Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions "UPGRADE STATUS" recommends. If your module is incompatible it will need to be removed from the composer file.
+1. Log into the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
 
 ## Custom Module Code
 
