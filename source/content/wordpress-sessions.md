@@ -27,7 +27,7 @@ Warning: session_start(): user session functions not defined
 
 Plugins with session-using code are relying on PHP's default session manager, which is temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment.
 
-### Varnish or Caching is not Working when a Plugin or Theme that uses `$_SESSIONS` is Enabled
+### Varnish or Caching Is Not Working When a Plugin or Theme That Uses `$_SESSIONS` Is Enabled
 
 Due to how caching and sessions work, sessions need to be uncached to work properly, and it is impossible use cached content when there are sessions in place. It would be best to use a cookie based solution to avoid a performance hit from uncached session pages.
 
