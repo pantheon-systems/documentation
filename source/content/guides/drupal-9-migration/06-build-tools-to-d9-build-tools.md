@@ -90,7 +90,7 @@ This doc uses the following aliases:
 
 1. Use Composer to declare version requirements:
 
-   ```bash{outputLines:2-5,6-8}
+   ```bash{outputLines:2-5,7-9}
     composer require \
       drupal/upgrade_status:^3 \
       drupal/devel:^4 \
