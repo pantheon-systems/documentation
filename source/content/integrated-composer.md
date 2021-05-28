@@ -71,6 +71,8 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 ## Upstream
 
+Upstream refers to the source code that is hosted in the [Pantheon code repository](https://github.com/pantheon-upstreams/drupal-project) and includes the core code for Drupal, WordPress, and some customizations for the Pantheon platform.
+
 ### Upstream and Site Structure
 
 <Partial file="ic-upstream-structure.md" />
@@ -114,15 +116,17 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 
 ## Support
+
+### Pantheon's Scope of Support for Composer
+
+<Partial file="composer-support-scope.md" />
+
 ### Pantheon Supports Composer 2
 
 The version of Composer on the platform is Composer 2.
 
 Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
-### Pantheon's Scope of Support for Composer
-
-<Partial file="composer-support-scope.md" />
 
 
 ## Troubleshooting Code Syncs and Upstream Updates
