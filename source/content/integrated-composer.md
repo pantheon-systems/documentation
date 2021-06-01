@@ -25,9 +25,7 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
 
-1. Create a new WordPress site from the Upstream.
-
-   - Do not customize the upstream yet.
+1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
@@ -155,7 +153,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 ]
 ```
 
-The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost. To resolve, merge the changes manually:
+The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file, to be lost. To resolve, merge the changes manually:
 
 1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
 
@@ -176,7 +174,7 @@ The upstream updates and your Composer changes to the site are in a conflict tha
 
 1. [Resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts) and follow the instructions to commit the merged changes.
 
-1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly and that the correct libraries are installed or updated. If the command fails, the merge was not made correctly and the error may point to how `composer.json` needs to change.
+1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly, and that the correct libraries are installed or updated. If the command fails, then the merge was not made correctly and the error message may point to how `composer.json` needs to change.
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
