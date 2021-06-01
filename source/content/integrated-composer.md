@@ -38,15 +38,14 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. Run `composer install`:
 
-  ```bash{promptUser: user}
-  composer install
-  ```
-
+   ```bash{promptUser: user}
+    composer install
+   ```
 1. Add a new dependency locally:
 
-  ```bash{promptUser: user}
-  composer require drupal/pkg-name
-  ```
+   ```bash{promptUser: user}
+    composer require drupal/pkg-name
+   ```
 
 1. Commit `composer.json` and `composer.lock` and push.
 
@@ -54,9 +53,9 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. Remove dependencies:
 
-  ```bash{promptUser: user}
-  composer remove drupal/pkg-name
-  ```
+   ```bash{promptUser: user}
+    composer remove drupal/pkg-name
+   ```
 
 ## Apply One-click Updates
 
@@ -81,34 +80,36 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 1. Change into the `upstream-config` directory:
 
-  ```bash{promptUser: user}
-  cd upstream-config
-  ```
+    ```bash{promptUser: user}
+    cd upstream-config
+    ```
 
 1. Run:
 
-  ```bash{promptUser: user}
-  composer require drupal/pkg-name --no-update
-  ```
+    ```bash{promptUser: user}
+    composer require drupal/pkg-name --no-update
+    ```
 
-   `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. `--no-update` should not be included when adding dependencies to a site.
+     -  `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
+     -  `--no-update` should not be included when adding dependencies to a site.
 
 1. Set or increment the current configuration version:
 
-   - If this is your first time setting the config version:
+     - If this is your first time setting the config version:
 
      Confirm the version:
 
-     ```bash{outputLines:2}
-     composer config version
-     1.0.0
-     ```
+        ```bash{outputLines:2}
+        composer config version
+        1.0.0
+        ```
 
-   - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. Replace `1.0.1` in this example with another number:
+     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. 
+     - Replace `1.0.1` in this example with another number:
 
-     ```bash{promptUser: user}
-     composer config version 1.0.1
-     ```
+       ```bash{promptUser: user}
+        composer config version 1.0.1
+        ```
 
 1. Commit and push.
 
@@ -160,7 +161,7 @@ The upstream updates and your Composer changes to the site are in a conflict tha
 1. Merge in the upstream changes:
 
    ```bash{promptUser: user}
-   git pull https://github.com/pantheon-upstreams/drupal-project master
+   git pull https://github.com/pantheon-upstreams/drupal-project main
    ```
 
 1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
