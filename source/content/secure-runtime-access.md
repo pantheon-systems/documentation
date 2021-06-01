@@ -2,7 +2,7 @@
 title: Secure Runtime Access
 description: Limit access to your site's database for additional defense against traffic-based attacks and unauthorized access.
 tags: [security]
-categories: []
+categories: [develop]
 contributors: [edwardangert]
 searchboost: 150
 ---
@@ -15,7 +15,7 @@ In addition to defense in depth, this feature can be used to enforce role-based 
 
 ## How to Enable SRA on your site
 
-Secure Runtime Access is available to customers with an [Organizational](/organizations) dashboard. [Contact Support](/support) to request that SRA be enabled for your Site. Once it's enabled:
+Secure Runtime Access is available to [contract](https://pantheon.io/plans/pricing) customers with an [Organizational](/organizations) dashboard. [Contact Sales](https://pantheon.io/contact-us) to request that SRA be enabled for your Site. Once it's enabled:
 
 1. Navigate to your Site’s Dashboard and click **Settings**.
    Secure Runtime Access will appear under **Available Add-Ons**.
