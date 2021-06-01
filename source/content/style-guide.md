@@ -1,8 +1,8 @@
 ---
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
-contributors: [alexfornuto, rachelwhitton]
-reviewed: "2021-04-13"
+contributors: [alexfornuto, rachelwhitton, carolynshannon]
+reviewed: "2021-02-26"
 ---
 <!-- markdownlint-disable -->
 
@@ -20,10 +20,12 @@ ___
 
 Some General Rules:
 
-- [Avoid copulative verbs (e.g., "be")](http://writing.rocks/to-be-or-not-to-be/).
-- Avoid colloquialisms, personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
-- Only assume as much knowledge from the reader as specified in the [Before You Begin](#before-you-begin) section. Otherwise, explain everything.
-- Review our [Inclusive Language](/inclusive-language) doc, and review your writing for inaccessible language.
+- Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
+- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
+- Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
+- Use [Inclusive Language](https://pantheon.io/docs/inclusive-language), avoid colloquialisms and hyperbole.
+- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
+
 
 ___
 
