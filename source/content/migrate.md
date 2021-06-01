@@ -22,7 +22,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
 
-## Migrating Existing Sites
+## Migrate Existing Sites
 
 Pantheon provides a guided path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
 
@@ -110,7 +110,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 </TabList>
 
-## Manually Migrating a Site to Pantheon
+## Manually Migrate a Site to Pantheon
 
 Manually migrate your site to Pantheon when any of the following apply:
 
@@ -140,7 +140,7 @@ If your code, database, and files have completed migrating, but your site is not
 
 Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPress core is upgraded as part of migration, so you may have additional work to complete the upgrade.
 
-### Migrating from Acquia
+### Migrate from Acquia
 
 Acquia uses a nested docroot directory called `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
