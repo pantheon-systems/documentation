@@ -44,15 +44,16 @@ brew install terminus jq rsync
 
 This doc uses the following aliases:
 
-- **Alias:** `$SITE`
+- **Alias:** `$SITE` for the site name.
 
 ## Prepare a Local Copy of the Site for Upgrade
 
-1. In the Dev tab of the site's Dashboard, set the Development Mode to **Git**, and [clone the site locally](/local-development#get-the-code).
+1. In the **Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
 
 1. Change into the directory, then create a new branch based on the default. Change `d9-upgrade-2021` in this example:
 
    ```bash{promptUser: user}
+   cd $SITE
    git checkout -b d9-upgrade-2021
    ```
 
@@ -68,13 +69,13 @@ This doc uses the following aliases:
    SFTP_COMMAND=$(terminus connection:info gk-8.live --format=json | jq -r ".sftp_command")
    ```
 
-1. For rysnc, all we really need is the long user and host name. Strip out the rest. (Make sure the empty space is there at the end before the bracket!)
+1. For rysnc, copy the long user and host name. leaving out the rest. Make sure the empty space is there at the end before the bracket.
 
    ```bash{promptUser: user}
    RSYNC_HOST=$(terminus connection:info $SITE.live --field=sftp_host)
    ```
 
-1. Use that hostname to do an rsync from that recent `config:export`
+1. Use that hostname to rsync from `config:export`:
 
    ```bash{promptUser: user}
    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_HOST}:files/config" .
@@ -102,7 +103,7 @@ This doc uses the following aliases:
       --dev -W --no-update
    ```
 
-1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `Mysql 5.5.30`.
+1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
 
   The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`.
 
@@ -162,7 +163,7 @@ This doc uses the following aliases:
 
   If all has gone well, you will see something like the following:
 
-   ```bash{outputLines:1-5}
+   ```bash
    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
    remote:
    remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
@@ -170,7 +171,7 @@ This doc uses the following aliases:
    remote:
    ```
 
-1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment**. This is called `$ENV` in the next steps.
+1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment** Multidev. This is called `$ENV` in the next steps.
 
 1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference your pull request.
 
@@ -184,7 +185,7 @@ This doc uses the following aliases:
    terminus drush $SITE.$ENV uli admin
    ```
 
-1. Log into the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
+1. Log into the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules **Upgrade Status** says are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
 
 ## Custom Module Code
 
@@ -223,7 +224,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
       --dev -W --no-update
    ```
 
-1. If `UPGRADE STATUS` displays obsolete modules, update them using the `--no-update -W` switch to instruct Composer to check for all dependencies together rather than for each module. Replace `OBSOLETE-MODULE-NAME` in this example with the module to update:
+1. If the **Upgrade Status** under **Reports** displays obsolete modules, update the modules using the `--no-update -W` switch to instruct Composer to check for all dependencies together rather than for each module. Replace `OBSOLETE-MODULE-NAME` in this example with the module to update:
 
    ```bash{outputLines: 2}
    composer require drupal/OBSOLETE-MODULE-NAME:^9 \
@@ -234,11 +235,11 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
 1. When you're done updating modules, run `composer update`:
 
-```bash{promptUser: user}
-composer update -W --optimize-autoloader --prefer-dist
-```
+   ```bash{promptUser: user}
+   composer update -W --optimize-autoloader --prefer-dist
+   ```
 
-   If this command returns an error, check the output for any incompatible module or themes and check the **Upgrade Status** in the integration environment.
+   If this command returns an error, check the output for any incompatible modules or themes and check the **Upgrade Status** under **Reports** in the integration environment.
 
 1. Edit `composer.json` and remove `--no-dev` from the `scripts` section:
 
@@ -260,7 +261,7 @@ composer update -W --optimize-autoloader --prefer-dist
        ],
    ```
 
-   That way, when the build arrives in production it arrives without all the dev dependencies.
+   This way, when the build arrives to production it excludes the dev dependencies.
 
 1. Commit the changes and push them to the development environment:
 
@@ -272,7 +273,7 @@ composer update -W --optimize-autoloader --prefer-dist
 
 ## Confirm the MariaDB Version and Updates
 
-Validate your database version with the following command:
+Validate your database version with `terminus drush`:
 
 ```bash{promptUser: user}
 terminus drush $SITE.$ENV sqlq "SELECT VERSION();"
