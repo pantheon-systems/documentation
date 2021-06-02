@@ -170,18 +170,18 @@ This doc uses the following aliases:
    remote:
    ```
 
-1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment**.
+1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment**. This is called `$ENV` in the next steps.
 
 1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference your pull request.
 
    ```bash{promptUser: user}
-   terminus drush $SITE.{integration env} pm-enable upgrade_status --yes
+   terminus drush $SITE.$ENV pm-enable upgrade_status --yes
    ```
 
 1. Create a one-time login to your site with the following command:
 
    ```bash{promptUser: user}
-   terminus drush $SITE.{integration env} uli admin
+   terminus drush $SITE.$ENV uli admin
    ```
 
 1. Log into the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules Upgrade Status says are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
@@ -190,87 +190,92 @@ This doc uses the following aliases:
 
 Custom module code is outside the scope of this document. See [drupal.org](https://www.drupal.org/docs/creating-custom-modules) for getting your custom code updated with the new version numbers and any code deprecations.
 
-- Temporarily add write access to protected files and directories:
+## Use Composer to Update Drupal Core
 
-```bash{promptUser: user}
-    chmod 777 web/sites/default
-    find web/sites/default -name "*settings.php" \
-      -exec chmod 777 {} \;
-    find web/sites/default -name "*services.yml" \
-      -exec chmod 777 {} \;
-```
+1. Temporarily add write access to protected files and directories:
 
-## Heads turn as the star of our show makes an entrance: **CORE**
+   ```bash{promptUser: user}
+   chmod 777 web/sites/default
+   find web/sites/default -name "*settings.php" -exec chmod 777 {} \;
+   find web/sites/default -name "*services.yml" -exec chmod 777 {} \;
+   ```
 
-```bash{outputLines: 3-6,9-14,16}
-composer remove drupal/config_installer --no-update
-composer require drupal/core-recommended:^9 \
-   drupal/core-composer-scaffold:^9 \
-   drupal/core-project-message:^9  \
-   drush/drush:^10 \
-   -W --no-update
+1. Use Composer to remove `config_installer` and add new requirements:
 
-composer require phpunit/phpunit:^9 \
-   behat/behat:^3 \
-   drupal/drupal-extension:^4 \
-   --no-update -W --dev
+   ```bash{outputLines: 3-7,9-11}
+   composer remove drupal/config_installer --no-update
+   composer require drupal/core-recommended:^9 \
+      drupal/core-composer-scaffold:^9 \
+      drupal/core-project-message:^9 \
+      drush/drush:^10 \
+      -W --no-update
 
-# If you have drupal/core-dev installed.
+   composer require phpunit/phpunit:^9 \
+      behat/behat:^3 \
+      drupal/drupal-extension:^4 \
+      --no-update -W --dev
+   ```
 
-composer require drupal/core-dev:^9 \
-	 --dev -W --no-update
-```
+1. If you have `core-dev` installed:
 
-If you have any obsolete modules uncovered by `UPGRADE STATUS` update them here using the `**--no-update -W**` switch because that will keep composer from the process of figuring out the module solution (which is the thing that takes so long in a composer run) until the very end and update all the dependencies along with.
+   ```bash{outputLines: 2}
+   composer require drupal/core-dev:^9 \
+      --dev -W --no-update
+   ```
 
-When you're done updating modules, run
+1. If `UPGRADE STATUS` displays obsolete modules, update them using the `--no-update -W` switch to instruct Composer to check for all dependencies together rather than for each module. Replace `OBSOLETE-MODULE-NAME` in this example with the module to update:
+
+   ```bash{outputLines: 2}
+   composer require drupal/OBSOLETE-MODULE-NAME:^9 \
+      --dev -W --no-update
+   ```
+
+   Repeat this step for each obsolete module in the project.
+
+1. When you're done updating modules, run `composer update`:
 
 ```bash{promptUser: user}
 composer update -W --optimize-autoloader --prefer-dist
 ```
 
-If you get an error, you probably haven't weeded out all the non-D9 module and theme updates and will need to have another look at the "Upgrade status" report in your integration environment.
+   If this command returns an error, check the output for any incompatible module or themes and check the **Upgrade Status** in the integration environment.
 
-Once the update/install runs clean without errors:
+1. Edit `composer.json` and remove `--no-dev` from the `scripts` section:
 
-- Edit `composer.json` and remove `--no-dev` from the `scripts` section:
+   ```json:title=composer.json
+     "scripts": {
+       "build-assets": [
+         "@prepare-for-pantheon",
+         "composer install --optimize-autoloader"
+       ],
+   ```
 
-```json:title=composer.json
-...
-  "scripts": {
-    "build-assets": [
-      "@prepare-for-pantheon",
-      "composer install --optimize-autoloader"
-    ],
-...
-```
+   To:
 
-To:
+   ```json:title=composer.json
+     "scripts": {
+       "build-assets": [
+         "@prepare-for-pantheon",
+         "composer install --optimize-autoloader --no-dev" //highlight-line
+       ],
+   ```
 
-```json:title=composer.json
-...
-  "scripts": {
-    "build-assets": [
-      "@prepare-for-pantheon",
-      "composer install --optimize-autoloader --no-dev"
-    ],
-...
-```
+   That way, when the build arrives in production it arrives without all the dev dependencies.
 
-That way, when the build arrives in production it arrives without all the dev dependencies.
+1. Commit the changes and push them to the development environment:
 
-```bash{promptUser: user}
-git add composer.json composer.lock pantheon.yml
-git commit -m 'upgrade core to d9'
-git push origin d9-upgrade-2021
-```
+   ```bash{promptUser: user}
+   git add composer.json composer.lock pantheon.yml
+   git commit -m "upgrade core to d9"
+   git push origin d9-upgrade-2021
+   ```
 
-## Validation
+## Confirm the MariaDB Version and Updates
 
 Validate your database version with the following command:
 
 ```bash{promptUser: user}
-terminus drush $site.{env} sqlq "SELECT VERSION();"
+terminus drush $SITE.$ENV sqlq "SELECT VERSION();"
 ```
 
-1. Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.
+Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.
