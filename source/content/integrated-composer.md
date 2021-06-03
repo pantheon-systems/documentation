@@ -4,7 +4,7 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2021-03-01"
+reviewed: "2021-05-28"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
@@ -25,60 +25,12 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
 
-1. Create a new WordPress site from the Upstream.
-
-   - Do not customize the upstream yet.
+1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-## Upstream and Site Structure
-
-<Partial file="ic-upstream-structure.md" />
-
-## How to Add Dependencies to Your Upstream
-
-1. Start with the local clone of the Upstream repository you created above.
-
-1. Change into the `upstream-config` directory:
-
-  ```bash{promptUser: user}
-  cd upstream-config
-  ```
-
-1. Run:
-
-  ```bash{promptUser: user}
-  composer require drupal/pkg-name --no-update
-  ```
-
-   `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. `--no-update` should not be included when adding dependencies to a site.
-
-1. Set or increment the current configuration version:
-
-   - If this is your first time setting the config version:
-
-     Confirm the version:
-
-     ```bash{outputLines:2}
-     composer config version
-     1.0.0
-     ```
-
-   - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. Replace `1.0.1` in this example with another number:
-
-     ```bash{promptUser: user}
-     composer config version 1.0.1
-     ```
-
-1. Commit and push.
-
-## Apply One-click Updates
-
-Navigate to **Code** in the Dev tab of the site's Dashboard.
-
-Click **Check Now**. If updates are available, click **Apply Updates**.
 
 ## Add a Dependency to an Individual Site
 
@@ -86,15 +38,14 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
 
 1. Run `composer install`:
 
-  ```bash{promptUser: user}
-  composer install
-  ```
-
+   ```bash{promptUser: user}
+    composer install
+   ```
 1. Add a new dependency locally:
 
-  ```bash{promptUser: user}
-  composer require drupal/pkg-name
-  ```
+   ```bash{promptUser: user}
+    composer require drupal/pkg-name
+   ```
 
 1. Commit `composer.json` and `composer.lock` and push.
 
@@ -102,19 +53,80 @@ Click **Check Now**. If updates are available, click **Apply Updates**.
 
 1. Remove dependencies:
 
-  ```bash{promptUser: user}
-  composer remove drupal/pkg-name
-  ```
+   ```bash{promptUser: user}
+    composer remove drupal/pkg-name
+   ```
 
-## Pantheon Supports Composer 2
+## Apply One-click Updates
+
+1. Navigate to **Code** in the Dev tab of the site's Dashboard.
+
+1. Click **Check Now**. 
+
+1. If updates are available, click **Apply Updates**.
+
+
+## Upstream
+
+Upstream refers to the source code that is hosted in the [Pantheon code repository](https://github.com/pantheon-upstreams/drupal-project) and includes the core code for Drupal, WordPress, and some customizations for the Pantheon platform.
+
+### Upstream and Site Structure
+
+<Partial file="ic-upstream-structure.md" />
+
+### How to Add Dependencies to Your Upstream
+
+1. Start with the local clone of the Upstream repository you created above.
+
+1. Change into the `upstream-config` directory:
+
+    ```bash{promptUser: user}
+    cd upstream-config
+    ```
+
+1. Run:
+
+    ```bash{promptUser: user}
+    composer require drupal/pkg-name --no-update
+    ```
+
+     -  `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
+     -  `--no-update` should not be included when adding dependencies to a site.
+
+1. Set or increment the current configuration version:
+
+     - If this is your first time setting the config version:
+
+     Confirm the version:
+
+        ```bash{outputLines:2}
+        composer config version
+        1.0.0
+        ```
+
+     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. 
+     - Replace `1.0.1` in this example with another number:
+
+       ```bash{promptUser: user}
+        composer config version 1.0.1
+        ```
+
+1. Commit and push.
+
+
+## Support
+
+### Pantheon Supports Composer 2
 
 The version of Composer on the platform is Composer 2.
 
 Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
-## Pantheon's Scope of Support for Composer
+
+### Pantheon's Scope of Support for Composer
 
 <Partial file="composer-support-scope.md" />
+
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
@@ -142,14 +154,14 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 ]
 ```
 
-The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost. To resolve, merge the changes manually:
+The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file, to be lost. To resolve, merge the changes manually:
 
 1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
 
 1. Merge in the upstream changes:
 
    ```bash{promptUser: user}
-   git pull https://github.com/pantheon-upstreams/drupal-project master
+   git pull https://github.com/pantheon-upstreams/drupal-project main
    ```
 
 1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
@@ -163,7 +175,7 @@ The upstream updates and your Composer changes to the site are in a conflict tha
 
 1. [Resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts) and follow the instructions to commit the merged changes.
 
-1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly and that the correct libraries are installed or updated. If the command fails, the merge was not made correctly and the error may point to how `composer.json` needs to change.
+1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly, and that the correct libraries are installed or updated. If the command fails, then the merge was not made correctly and the error message may point to how `composer.json` needs to change.
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
