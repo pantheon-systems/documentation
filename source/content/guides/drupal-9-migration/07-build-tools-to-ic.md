@@ -39,13 +39,18 @@ This doc uses the following aliases:
 
 1. Your site is hosted on Github and you use a build step and the artifacts are then checked into pantheon.
 
-1. Your build process does not involve NodeJS at any step
+1. Your build process does not involve NodeJS at any step.
 
+1. You don't have automated tests that run during your build process.
 
 
 ## Step +1: Turn off build tools
 
-First of all, we need to do some discovery and figure out where the build is triggered. Most likely scenario, there's a folder in your root directory named ".circle_ci", ".travis" or something along those lines that contains a configuration file that triggers the "build process" to begin and pushes your code's build artifcts to the pantheon repo. We're going to delete that folder and stop that process from happening.
+First of all, we need to do some discovery and figure out where the build is triggered.
+Most likely scenario, there's a folder in your root directory named ".circle_ci", ".travis"
+or something along those lines that contains a configuration file that triggers the "build
+process" to begin and pushes your code's build artifcts to the pantheon repo. We're
+going to delete that folder and stop that process from happening.
 
 ## Step +1: Change your pantheon.yml to reflect the following value(s):
 
@@ -64,6 +69,15 @@ protected_web_paths:
   - /sites/default/files/private/
   - /sites/default/files/config/
 ```
+
+The magic happens with this directive: `build_step: true`.
+This tells our build system to run composer when you check in your code.
+Before it does, there are a few more requirements we need to ensure.
+
+## Step 1: Any dir into which composer must write, must be '.gitignor'-ed.
+
+
+
 ## Step 1:
 
 Composer require
