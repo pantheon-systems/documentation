@@ -3,7 +3,7 @@ title: Integrated Composer
 description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
-contributors: [ari, edwardangert, joa-pan]
+contributors: [ari, edwardangert]
 reviewed: "2021-05-28"
 ---
 
