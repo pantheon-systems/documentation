@@ -241,7 +241,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
    If this command returns an error, check the output for any incompatible modules or themes and check the **Upgrade Status** under **Reports** in the integration environment.
 
-1. Edit `composer.json` and remove `--no-dev` from the `scripts` section:
+1. Edit `composer.json` and add `--no-dev` from the `scripts` section:
 
    ```json:title=composer.json
      "scripts": {
