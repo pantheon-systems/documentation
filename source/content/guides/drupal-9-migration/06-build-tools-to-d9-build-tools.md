@@ -176,7 +176,7 @@ This doc uses the following aliases:
 1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference your pull request.
 
    ```bash{promptUser: user}
-   terminus drush $SITE.$ENV pm-enable upgrade_status --yes
+   terminus env:info $SITE.$ENV
    ```
 
 1. Create a one-time login to your site with the following command:
