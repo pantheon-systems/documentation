@@ -18,15 +18,15 @@ This doc shows how to upgrade a Drupal 8 site that uses [Build Tools](/guides/bu
 
 ## Will This Guide Work for Your Build Tools Workflow?
 
-This tutorial is for you if the site:
+Before you continue, confirm that your site meets the following:
 
-1. Code is managed using an external repository outside of Pantheon (GitHub, GitLab, Bitbucket, etc.)
+1. Code is managed using an external repository outside of Pantheon (GitHub, GitLab, Bitbucket, etc.).
 
-1. Is built through a service like GitHub Actions, Circle CI, or Travis
+1. The site is built through a service like GitHub Actions, Circle CI, or Travis.
 
 1. Build artifacts are pushed to your Pantheon repository.
 
-1. Has a blue banner across the top that says that the site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
+1. The site's Dashboard displays a blue banner banner across the top that says that the site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
 
    > Good news, your site's database version is now configurable! Learn how.
 
@@ -36,46 +36,36 @@ This tutorial is for you if the site:
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-Install Bash JSON Query and rsync if they aren't already installed:
+Install the [jq](https://formulae.brew.sh/formula/jq) JSON processor and [rsync](https://formulae.brew.sh/formula/rsync) on your local environment if they aren't already installed. On MacOS with Homebrew, run:
 
 ```bash{promptUser: user}
-brew install terminus jq rsync
+brew install jq rsync
 ```
-
-This doc uses the following aliases:
-
-- **Alias:** `$SITE` for the site name.
 
 ## Prepare a Local Copy of the Site for Upgrade
 
 1. In the **Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
 
-1. Change into the directory, then create a new branch based on the default. Change `d9-upgrade-2021` in this example:
+1. Change into the `$SITE` directory, then create a new branch based on the default:
 
    ```bash{promptUser: user}
    cd $SITE
    git checkout -b d9-upgrade-2021
    ```
 
-1. Export the config files from production to `sites/default/files/config` to ensure the local version has the latest:
+1. Use Terminus and Drush to export the latest version of the config files from the production envronment to `sites/default/files/config`:
 
    ```bash{promptUser: user}
-   terminus drush gk-8.live -- config:export --destination sites/default/files/config
+   terminus drush $SITE.live -- config:export --destination sites/default/files/config
    ```
 
-1. Use Terminus to get the (read-only) SFTP command specific to the live environment.
-
-   ```bash{promptUser: user}
-   SFTP_COMMAND=$(terminus connection:info gk-8.live --format=json | jq -r ".sftp_command")
-   ```
-
-1. For rysnc, copy the long user and host name. leaving out the rest. Make sure the empty space is there at the end before the bracket.
+1. For rsync, copy the sftp host information.
 
    ```bash{promptUser: user}
    RSYNC_HOST=$(terminus connection:info $SITE.live --field=sftp_host)
    ```
 
-1. Use that hostname to rsync from `config:export`:
+1. Use that host name to rsync from `config:export`:
 
    ```bash{promptUser: user}
    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_HOST}:files/config" .
@@ -86,7 +76,7 @@ This doc uses the following aliases:
    ```bash{promptUser: user}
    git status
    ```
-
+terminus drush anita-drupal-8.live -- config:export --destination sites/default/files/config
 ## Upgrade Site Components Locally
 
 1. Use Composer to declare version requirements:
