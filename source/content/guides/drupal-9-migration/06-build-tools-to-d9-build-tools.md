@@ -16,6 +16,12 @@ editpath: drupal-9-migration/06-build-tools-to-d9-build-tools.md
 
 This doc shows how to upgrade a Drupal 8 site that uses [Build Tools](/guides/build-tools) to a Drupal 9 site that continues to use the Build Tools workflow.
 
+<Alert title="About Build Tools" type="info" icon="info-sign">
+
+Build Tools connects Pantheon with your CI service and external Git provider. See the [Build Tools Guide](/guides/build-tools#a-build-tools-projects-components) for details on supported Git and CI services combinations.
+
+</Alert>
+
 ## Will This Guide Work for Your Build Tools Workflow?
 
 Before you continue, confirm that your site meets the following:
@@ -130,7 +136,7 @@ terminus drush anita-drupal-8.live -- config:export --destination sites/default/
    # Move the DOCUMENT_ROOT of your site to the */web* folder:
    web_docroot: true
    
-   # Drupal 9 requires 7.3 or higher. If your code isn't ready for 7.4 you may need to use 7.3 here:
+   # Drupal 9 requires PHP 7.3 or higher. If your code isn't ready for PHP 7.4 you may need to use 7.3 here:
    php_version: 7.4
    
    # Drupal 9 requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
