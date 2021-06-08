@@ -28,7 +28,7 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide) for our guidelines 
 ```bash
 npm install -g gatsby-cli
 ```
-   - Alternatively, you can use [Lando](https://docs.lando.dev). You can use Lando instead, to avoid installing Node.js and the Gatsby CLI on your local machine.
+   - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine.
 
 ### Get the Code
 
