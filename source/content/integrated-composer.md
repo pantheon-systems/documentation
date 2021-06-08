@@ -15,7 +15,7 @@ Create a new site with Integrated Composer as part of Pantheon's Limited Availab
 
 ### Drupal 9 with Integrated Composer
 
-You can [upgrade from an existing Drupal 8](https://pantheon.io/docs/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer.
+You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer.
 
 <Partial file="drupal-9/drupal-9-upstream-install.md" />
 
