@@ -2,7 +2,7 @@
 
 Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practices](https://pantheon.io/live-workshops/going-live-best-practices). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
-- <Youtube src="j1v2gAV7R_A"  start="12" />
+- <Youtube src="m4epJ4_ZhYM" title="Website Performance with Varnish, Redis, and New Relic" start="30" />
 
 ### Your Feedback Helps
 
@@ -14,7 +14,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)
 - Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
-- Doc: [New Relic APM Pro](/new-relic)
+- Doc: [New Relic&reg; Performance Monitoring](/new-relic)
 - Blog post: [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - Blog post: [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 - Blog post: [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)

@@ -2,7 +2,7 @@
 
 You're on a roll! Sign up for workshop #3: [Integrate and Automate with Quicksilver](https://pantheon.io/live-workshops/integrate-and-automate-quicksilver). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
-<Youtube src="vr2NsjQZzIg" title="Command Line Interface with Terminus" start="16" />
+<Youtube src="f7SFI5-aCc4" title="Command Line Interface with Terminus" start="11" />
 
 ### Your Feedback Helps
 

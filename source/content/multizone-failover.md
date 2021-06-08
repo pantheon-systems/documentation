@@ -8,9 +8,11 @@ reviewed: "2020-02-26"
 
 ## Overview
 
-[<dfn id="mzfailover">Multizone Failover</dfn>](https://pantheon.io/features/disaster-recovery?docs) is a high-availability Disaster Recovery solution with intelligent failover at the Global CDN layer. 
+[<dfn id="mzfailover">Multizone Failover</dfn>](https://pantheon.io/features/disaster-recovery?docs) is a high-availability Disaster Recovery solution with intelligent failover at the Global CDN layer.
 
 It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
+
+![Diagram showing Pantheon's zone-based Multizone Failover architecture](../images/site-mz-diagram.png)
 
 ### RPO and RTO - Minutes to Recovery
 
@@ -49,7 +51,6 @@ The object cache is not preserved after a site failover. This means you must ens
 To test in a Test Environment, click the **Clear Caches** button in the upper right hand corner of the Site Dashboard.
 
 You can also [connect to your Redis instance](/object-cache#use-the-redis-command-line-client) and run the `flushall` command to clear object cache via the Redis CLI.
-=======
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
@@ -79,7 +80,7 @@ The reindexing process is application-side, and depending on your site the proce
 
 1. As a site administrator, navigate to `/admin/config/search/search-api/server/pantheon`.
 
-1. Click “Delete all indexed data on this server” to queue all content for re-indexing.
+1. Click **Delete all indexed data on this server** to queue all content for re-indexing.
 
 1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
 
@@ -139,4 +140,3 @@ If none of these options work for your site's needs, see our documentation on ho
 
 - [Global Regions](/regions)
 - [Backups Tool](/backups)
-- 

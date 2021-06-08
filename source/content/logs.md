@@ -6,7 +6,7 @@ tags: [logs, newrelic, workflow]
 reviewed: "2020-07-14"
 ---
 
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic&reg; Performance Monitoring](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
 The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
 
@@ -307,4 +307,4 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 - [PHP Slow Log](/php-slow-log)
 - [PHP Errors and Exceptions](/php-errors)
 - [Bots and Indexing](/bots-and-indexing)
-- [New Relic](/new-relic)
+- [New Relic&reg; Performance Monitoring](/new-relic)

@@ -12,7 +12,7 @@ workflows:
           deployment-path: docs
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
-          gatsby-cache-version: "v1.8.12"
+          gatsby-cache-version: "v1.8.18"
           pre-steps:
             - checkout
             - run:
@@ -74,7 +74,7 @@ jobs:
           command: .circleci/scripts/merge_conflicts.sh
       - run:
           name: Test links
-          command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs" || exit 0
+          command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
 
   lighthouse:
     docker:

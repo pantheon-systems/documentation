@@ -182,7 +182,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 After enabling Redis via this method, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
 
-To do this, [connect directly to MySQL](https://pantheon.io/docs/mysql-access) and run the command:
+To do this, [connect directly to MySQL](/mysql-access) and run the command:
 
 ```sql
 SHOW TABLES LIKE 'cache%';
@@ -258,7 +258,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
 
-To do this, [connect directly to MySQL](https://pantheon.io/docs/mysql-access) and run the command:
+To do this, [connect directly to MySQL](/mysql-access) and run the command:
 
 ```sql
 SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';

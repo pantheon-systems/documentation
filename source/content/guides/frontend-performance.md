@@ -275,7 +275,7 @@ Sites loading a lot of content can benefit from an object cache like Redis. For 
 
 #### Monitor Performance with New Relic
 
-If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic) for help identifying bottlenecks.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic&reg; Performance Monitoring](/new-relic) for help identifying bottlenecks.
 
 #### Helper Tools
 

@@ -62,7 +62,7 @@ While these are related topics, they need to be evaluated separately for your pr
 
 Typically, the best practice is to optimize for performance first and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
-Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic APM Pro](/new-relic) to give you insights about your site's performance.
+Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic&reg; Performance Monitoring](/new-relic) to give you insights about your site's performance.
 
 ## Multiple Application Containers
 

@@ -1,6 +1,6 @@
 ---
 title: 'Required Reading: Essential Pantheon Documentation'
-description: Recommended documentation to learn about Pantheon WebOps management mlatform's technologies.
+description: Recommended documentation to learn about Pantheon WebOps management platform's technologies.
 categories: [get-started]
 tags: [workflow]
 ---
@@ -28,7 +28,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/globa
 
 ## Run
 - [Optimization for Pantheon and the Cloud](/cloud-optimization)
-- [New Relic Pro](/new-relic)
+- [New Relic&reg; Performance Monitoring](/new-relic)
 - [Applying Upstream Updates](/core-updates)
 - [Global CDN Caching for High Performance](/global-cdn-caching)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
