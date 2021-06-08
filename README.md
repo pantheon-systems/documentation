@@ -21,8 +21,6 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide/) for our guidelines
 ## Local Installation
 
 ### Prerequisites
-  - Optionally, you can use [Lando](https://docs.lando.dev)
-    - By leveraging Lando, you can avoid installing Node.js, and the Gatsby CLI on your local machine.
   - MacOS or Linux system (untested with Bash on Windows)
   - [Node.js](https://nodejs.org/en/)
   - Gatsby CLI:
@@ -30,6 +28,7 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide/) for our guidelines
 ```bash
 npm install -g gatsby-cli
 ```
+   - Alternatively, you can use [Lando](https://docs.lando.dev). You can use Lando instead, to avoid installing Node.js and the Gatsby CLI on your local machine.
 
 ### Get the Code
 
@@ -48,9 +47,14 @@ cd documentation
 
 ### Install
 
-You can install via Lando or directly on your host computer. Both ways require the docs app to use a `GITHUB_API` token to operate.
+#### Using the Gatsby CLI directly
+
+```bash
+npm ci
+```
 
 #### GitHub Token
+You can install directly on your host computer or via Lando. Both ways require the docs app to use a `GITHUB_API` token to operate.
 We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
 
 1. Log in to GitHub and go to <https://github.com/settings/tokens>
@@ -63,24 +67,21 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 GITHUB_API=$TOKENHASH
 ```
 
-#### Using Lando
-
-```bash
-lando start
-```
-
-The `lando start` command will fire up the app, install node dependencies, and start the `gatsby develop` server for you.
-
-#### Using gatsby cli Directly
-```bash
-npm ci
-```
-
 ### Run
 
 ```bash
 cd documentation/
 gatsby develop
+```
+You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
+
+
+#### Using Lando
+
+Alternatively, you can use [Lando](https://gist.github.com/tormi/a8b8fc39f9481373b24dc94cb8d2ee31). The `lando start` command intiates the the app, installs node dependencies, and starts the `gatsby develop` server for you.
+
+```bash
+lando start
 ```
 
 You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
