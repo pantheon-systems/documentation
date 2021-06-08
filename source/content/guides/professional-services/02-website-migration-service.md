@@ -86,7 +86,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
   - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`.
 
 - Search configuration
-  - Configure sites that use Acquia Search to use Pantheon Search instead. Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.
+  - Configure sites that use Acquia Search to use Pantheon Search instead. 
 
 - Enable and configure Visual Regression Testing.
 
