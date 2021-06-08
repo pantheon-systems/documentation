@@ -60,7 +60,7 @@ If you rely on the Redis cache for locks (mutexes) or storing other long-term da
 
 While [Pantheon Search](/pantheon-search) can be enabled on a site with Multizone Failover, Pantheon's Search service is not highly available, nor does it include failover for Pantheon Search. The RTO and RPO do not apply to Pantheon's Search Service.
 
-If your site requires highly available search, do not use Pantheon's Search service. If you require a highly available Solr service, please consider an [alternative Solr service](/solr#alternatives-to-pantheons-solr-service).
+If your site requires highly available search, do not use Pantheon's Search service. If you require a highly available Solr service, please consider an [alternative Solr service](/pantheon-search#alternatives-to-pantheons-solr-service).
 
 ### Using Pantheon Search on Sites With Multizone Failover
 
