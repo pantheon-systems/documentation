@@ -16,8 +16,6 @@ Creating a Multidev environment creates an application container with a database
 
 ### How can my Organization get Multidev and how much does it cost?
 
-<Partial file="covid-offer.md" />
-
 Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
 ## Change Management
@@ -49,8 +47,6 @@ Any large agency that has multiple developers who login frequently via username/
 As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/ssh-keys).
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
-
-<Partial file="covid-offer.md" />
 
 Only organizational team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
