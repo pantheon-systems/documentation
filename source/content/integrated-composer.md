@@ -51,11 +51,19 @@ Please note the Limited Availability program does not include a path to upgrade 
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
 
-1. Remove dependencies:
+### Remove Individual Site dependencies
+
+If/when you decide to remove the dependency:
+
+1. Remove the dependency locally:
 
    ```bash{promptUser: user}
     composer remove drupal/pkg-name
    ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, etc.
 
 ## Apply One-click Updates
 
