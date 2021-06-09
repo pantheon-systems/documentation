@@ -582,11 +582,32 @@ ___
 
 ## [Redirection](https://wordpress.org/plugins/redirection/)
 
-<ReviewDate date="2019-01-17" />
+<ReviewDate date="2021-06-08" />
 
-**Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
+**Issue 1:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
 **Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
+
+**Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname, as a result, Redirection's "URL and server" based redirects never match.
+
+**Solution:** In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+  ```php:title=wp-config.php
+  // Map $_SERVER['HTTP_HOST'] to $_SERVER['SERVER_NAME'] 
+  // to allow the Redirection plugin to work when using 
+  // "URL and server" based redirects. By default, 
+  // $_SERVER['SERVER_NAME'] returns Pantheon's internal 
+  // server name and not the current hostname, as a 
+  // result, Redirection's "URL and server" based 
+  // redirects never match.
+  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+  ```
+
+<Alert title="Warning" type="danger">
+
+This workaround may potentially break other functionality that depends on the default Pantheon return value for `$_SERVER['SERVER_NAME']`.
+
+</Alert>
 
 ___
 
