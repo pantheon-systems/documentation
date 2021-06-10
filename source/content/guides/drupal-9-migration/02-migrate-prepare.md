@@ -13,7 +13,7 @@ anchorid: drupal-9-migration/prepare
 editpath: drupal-9-migration/02-migrate-prepare.md
 ---
 
-This overview outlines the steps to prepare an existing Drupal site for upgrade or migration to Drual 9 with Integrated Composer.
+This overview outlines the steps to prepare an existing Drupal site for upgrade or migration to Drupal 9 with Integrated Composer.
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
