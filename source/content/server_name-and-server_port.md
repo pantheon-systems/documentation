@@ -42,11 +42,18 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-## Known Plugins/Modules Using SERVER_NAME
+## Known Plugins/Modules That Use SERVER_NAME
+
+- [Gravity Forms](http://www.gravityforms.com/)
+- [Simple Share Buttons](https://simplesharebuttons.com/plus/)
+
+### WordPress Plugins That Use SERVER_NAME
 
 - [Give](https://wordpress.org/plugins/give/)
-- [Gravity Forms](http://www.gravityforms.com/)
+- [WP Super Cache](https://wordpress.org/support/plugin/wp-super-cache)
+
+### Drupal Modules That Use SERVER_NAME
+
 - [OAuth](https://www.drupal.org/project/oauth)
 - [reCAPTCHA](https://www.drupal.org/project/recaptcha)
-- [Simple Share Buttons](https://simplesharebuttons.com/plus/)
-- [WP Super Cache](https://wordpress.org/support/plugin/wp-super-cache)
+- [AMP](https://www.drupal.org/project/amp)
