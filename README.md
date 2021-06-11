@@ -3,6 +3,7 @@ Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentati
 
 Pantheon Documentation
 ======================
+
 https://pantheon.io/docs/
 
 This repository contains the [Pantheon](https://pantheon.io) documentation, as well as the tools to build local test environments.
@@ -20,13 +21,14 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide) for our guidelines 
 ## Local Installation
 
 ### Prerequisites
- - MacOS or Linux system (untested with Bash on Windows)
- - [Node.js](https://nodejs.org/en/)
- - Gatsby CLI:
+  - MacOS or Linux system (untested with Bash on Windows)
+  - [Node.js](https://nodejs.org/en/)
+  - Gatsby CLI:
 
-   ```bash
-   npm install -g gatsby-cli
-   ```
+```bash
+npm install -g gatsby-cli
+```
+   - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine.
 
 ### Get the Code
 
@@ -39,16 +41,20 @@ git clone https://github.com/pantheon-systems/documentation.git
 Or
 
 ```bash
-git@github.com:pantheon-systems/documentation.git
+git clone git@github.com:pantheon-systems/documentation.git
+cd documentation
 ```
 
 ### Install
 
-```
-cd documentation/
+#### Using the Gatsby CLI directly
+
+```bash
 npm ci
 ```
+
 #### GitHub Token
+You can install directly on your host computer or via Lando. Both ways require the docs app to use a `GITHUB_API` token to operate.
 We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
 
 1. Log in to GitHub and go to <https://github.com/settings/tokens>
@@ -57,15 +63,25 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 1. Copy the token to your clipboard.
 1. Create or edit `.env.development`, and add (replacing $TOKENHASH ):
 
-   ```
-   GITHUB_API=$TOKENHASH
-   ```
+```bash
+GITHUB_API=$TOKENHASH
+```
 
 ### Run
 
-```
+```bash
 cd documentation/
 gatsby develop
+```
+You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
+
+
+#### Using Lando
+
+Alternatively, you can use [Lando](https://gist.github.com/tormi/a8b8fc39f9481373b24dc94cb8d2ee31). The `lando start` command intiates the the app, installs node dependencies, and starts the `gatsby develop` server for you.
+
+```bash
+lando start
 ```
 
 You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.

@@ -1,18 +1,18 @@
 ---
 title: Get Support
-description: Learn how to access Pantheon's expert team and what your Account package includes.
+description: Learn how to access Pantheon's expert team and what your Account tier includes.
 categories: [platform]
 tags: [dashboard, support]
-reviewed: "2020-02-11"
+reviewed: "2021-05-27"
 ---
 
 ![Screenshot of the Support Tab](../images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
+Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
 
-| Account Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
+| Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
@@ -26,7 +26,7 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
 
 ### One ticket per issue
 
@@ -48,7 +48,7 @@ If your site uses nonstandard admin URLs, custom logins, etc., please let us kno
 
 We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
-### The Support Tab from the Organization Dashboard
+### Organization Dashboard Support Tab
 
 If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
 
@@ -144,15 +144,15 @@ If your site is slow or modules aren't working, please see our [performance arti
 
 Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses) in your Development environment. If you [contact support](/support), include your findings and attach screenshots whenever possible.
 
-### Local Development
-
-We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
-
 ### Isolated Issues
 
 Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials or offer to connect you with an agency partner to help you with the resolution.
 
 If problems with your site become severe and overload resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+
+### Local Development
+
+We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
 
 ### Platform Support
 

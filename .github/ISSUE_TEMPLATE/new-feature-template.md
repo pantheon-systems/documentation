@@ -1,5 +1,5 @@
 ---
-name: New/Changing Content
+name: New or Changing Content
 about: For new or changing features in Pantheon documentation
 labels: New Content
 

@@ -79,11 +79,10 @@ When you're done, click **Update Settings**. Your WordPress application is now s
 
 <Tab title="Drupal 8" id="tab-2-anchor" active={true}>
 
-When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module. While you can use the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module to send mail to SendGrid over SMTP, our testing (as of the last update) was hampered by a [known issue](https://www.drupal.org/project/smtp/issues/3135015) with the module recognizing the presence of a required PHP library.
-
+When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module.
 <Alert title="Warning" type="danger" >
 
-The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/guides/build-tools) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
+The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/guides/build-tools) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) guides. We cannot support non-Composer workflows using this module. For details, see [the module README](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
 
 </Alert>
 
@@ -228,7 +227,7 @@ Then commit and push the symlink to Pantheon.
 
 1. Visit `/admin/config/system/smtp` once you've logged in as administrator.
 
-1. From within Install Options, select **On**.
+1. In **Install Options**, select **On**.
 
 1. Use the following within SMTP Server Settings:
 
