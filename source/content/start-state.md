@@ -12,7 +12,7 @@ Select the site's framework during the [site creation process](/create-sites). P
 
 ## Pantheon Upstreams
 
-We base our Drupal repositories on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
+We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/), and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
 - [Drupal 9](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789) <Popover content="Defaults to SFTP Mode" />
