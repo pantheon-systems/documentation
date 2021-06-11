@@ -190,7 +190,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <Tab title="Drupal 9" id="d91">
 
-    1. Pull in the core files and commit them first:
+    1. Pull and commit the core files:
 
      ```bash{promptUser: user}
      git checkout -b master
