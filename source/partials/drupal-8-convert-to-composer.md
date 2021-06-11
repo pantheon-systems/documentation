@@ -240,4 +240,28 @@ Push the changes to a Multidev called `composerify` to safely test the site with
 git push -u origin composerify && terminus env:create $SITE.dev composerify
 ```
 
-Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard [relaunch workflow](/relaunch) to QA a code change before going live.
+Once you do this, your multidev will not work. You need to, after creating the mutlidev, make a change to the `pantheon.yml` file such as adding an empty line to the end of the file. Add that file to the branch, commmit it, and push it. Now the multidev will build out Integrated Composer correctly.
+
+Unfortunately, since the commit history of the multidev has no commits in common with the master branch, you cannot view the commit history on the multidev in the Dashboard or the Integrated Composer logs. But if your site is not working, try running this command on your local branch:
+
+```bash{promptUser:user}
+composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
+```
+
+If Composer runs into an error or any files that are not ignored by the `.gitignore` file are changed, you will need to resolve those issues. See Troubleshooting section for Integrated Composer.
+
+Once you have confirmed the site is working, the commit history of the old site needs to be removed and replaced with the commits on the multidev. Run these commands on your "composerify" branch:
+
+```bash{promptUser:user}
+git log --format="%H" -n 1 # Prints the commit ID of the latest commit in this branch
+```
+
+This will give you a commit ID number, something like this: `fd3636f58f5b275b998bb1c9267bff8808353840`. Use `git reset` to remove the existing commits and change the commit history to the same as the multidev, then force push that to the dev environment:
+
+```bash{promptUser:user}
+git checkout master # Switch to master branch
+git reset --hard fd3636f58f5b275b998bb1c9267bff8808353840 # Reset commmit history to match the branch
+git push --force origin master
+```
+
+Now the Dev environment has a whole new set of code deployed to it that is using Drupal 9 and Integrated Composer. Once you have verified Dev works as expected, then you can deploy the code changes to test and later live when fully ready to go.
