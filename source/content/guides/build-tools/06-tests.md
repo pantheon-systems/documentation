@@ -14,21 +14,21 @@ image: buildToolsGuide-thumb
 
 The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses [Behat](http://behat.org/en/latest/) and the WordPress example uses [WordHat](https://wordhat.info/).
 
-The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml) file sets the path for a project's collection of Behat tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
+The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat/behat-pantheon.yml) file sets the path for a project's collection of Behat tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 
-There are also visual regression tests using [Backstopjs](https://github.com/garris/BackstopJS) that run when `composer.lock` has changed, but `composer.json` has not. The scripts are a part of the template repositories: [example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer) and [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer)
+There are also visual regression tests using [BackstopJS](https://github.com/garris/BackstopJS) that run when `composer.lock` has changed, but `composer.json` has not. The scripts are a part of the template repositories: [example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer) and [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer)
 
 ## Extending the Example Test Suite
 
 The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request) has been applied to the associated Multidev environment:
 
-1. Pull down commits added to the `slogan` branch from the previous lesson:
+1. Pull commits added to the `slogan` branch in the previous lesson:
 
   ```bash{promptUser: user}
   git pull origin slogan
   ```
 
-1. Create the directory `tests/site-features` and add a new file called `slogan.feature` containing:
+1. Create the directory `tests/site-features` and add a new file called `slogan.feature` that contains the following:
 
   ```gherkin
   Feature: Confirm that configuration was applied
@@ -42,7 +42,7 @@ The following is an example of how to increase test coverage for your project by
       Then I should see "Making the world amazing"
   ```
 
-  It's a relatively simple task to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
+  It's a relatively simple task to add new tests that exercise your site through its interface. The following example demonstrates testing that an administrator can create with a new page on the site.
 
 1. Create a new file called `content-ui.feature` within the `tests/site-features` directory containing:
 

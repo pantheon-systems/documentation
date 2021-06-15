@@ -129,13 +129,13 @@ No matter who you're communicating with or the method of your communication, it'
 
 With a global community of WordPressers and Drupalistas, we are bound to have conflicts around how we speak to and write about one another. Rather than using a shifting and undocumented list of what's okay and what isn't, this list is intended to guide us toward respectful communication.
 
-To that end, we strongly encourage any community member with questions or concerns about this list to [open an issue](https://pantheon.io/docs/contribute) or reach out to community@pantheon.io for further discussion.
+To that end, we strongly encourage any community member with questions or concerns about this list to [open an issue](/contribute) or reach out to community@pantheon.io for further discussion.
 
 ## Looking to the Future
 
 Because language constantly evolves, we welcome and encourage additions and alterations to this document from Pantheon employees and community members.
 
-Our [guide on contributing to Pantheon documentation](https://pantheon.io/docs/contribute) can help you get started.
+Our [guide on contributing to Pantheon documentation](/contribute) can help you get started.
 
 ## See Also
 

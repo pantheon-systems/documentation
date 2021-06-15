@@ -1,0 +1,9 @@
+article > .ytWrapper {
+    margin-bottom: 1em;
+}
+.ytWrapper {
+    padding-bottom: 56.5%;
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+}

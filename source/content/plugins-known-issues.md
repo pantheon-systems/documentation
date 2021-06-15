@@ -13,7 +13,7 @@ We do not prevent you from installing and using these plugins or themes. However
 
 **Plugin & Theme Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
 
-If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md).
+If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-plugins-known-issues.md).
 
 ### Assumed Write Access
 
@@ -381,7 +381,7 @@ ___
 
 **Issue:** Site suddenly shows a white screen of death.
 
-**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/redis#clear-cache).
+**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/object-cache#clear-cache).
 
 ___
 
@@ -505,7 +505,7 @@ ___
 
 <ReviewDate date="2019-05-08" />
 
-**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
+**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
 
 ___
 
@@ -565,8 +565,8 @@ ___
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
-- [MySQL Slow Log](https://pantheon.io/docs/mysql-slow-log/)
-- [MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/)
+- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
 
 ___
 
@@ -931,11 +931,11 @@ the `advanced-cache.php` file.
 **Solution 1:** WP version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/wp-rocket-config/' );
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
 ```
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . 'wp-content/uploads/new-path/cache/' );
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/new-path/cache/' );
 ```
 
 Version 3.2 through 3.4 allows setting only the cache path, and still requires a symlink for the other paths (see below).
@@ -1023,7 +1023,7 @@ ___
 
   ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
 
-The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported. 
+The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported.
 
 - Instead of importing one large file, it is best to set it up as recurring cron import as outlined in WP All Import's [documentation](https://www.wpallimport.com/documentation/recurring/cron/).
 
@@ -1043,6 +1043,16 @@ The optimal number of records to process at one time depends on how many post_me
 - Cron Processing Time Limit should be set not more than 50 seconds
 - Clean up temporary files
 - Lower the chunk size to less than 100
+
+___
+
+## [WP-Ban](https://wordpress.org/plugins/wp-ban/)
+
+<ReviewDate date="2021-02-23" />
+
+**Issue:** WP-Ban returns a [200-level](/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
+
+**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
 
 ___
 
@@ -1094,7 +1104,7 @@ ___
 
 **Solution 1:**
 
-1. In `wp-config.php`, add the following after the `define('WP_TEMP_DIR', $_SERVER['HOME'] .'/tmp');` line:
+1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
   define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');

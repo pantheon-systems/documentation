@@ -96,7 +96,7 @@ Cache-varying `STYXKEY` cookies are generally intended for use with custom code.
 
 You may want to consider an alternative module or plugin that does not set cache-busting cookies, or you may be able to implement the same functionality using JavaScript on the front-end of the site.
 
-Pantheon's [Advanced Global CDN](/advanced-global-cdn) service may also be a good option if your cookie-setting logic can be moved to the CDN layer. One common use-case for this is [geolocation](/advanced-global-cdn#geolocation-based-actions): instead of detecting a visitor's location with PHP code and setting cookies, this information can be fetched much quicker from the edge and passed to the application via an HTTP response header.
+Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service may also be a good option if your cookie-setting logic can be moved to the CDN layer. One common use-case for this is [geolocation](/guides/professional-services/advanced-global-cdn#geolocation-based-actions): instead of detecting a visitor's location with PHP code and setting cookies, this information can be fetched much quicker from the edge and passed to the application via an HTTP response header.
 
 ### Drupal Config Conflicts
 

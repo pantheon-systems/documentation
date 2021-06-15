@@ -18,7 +18,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 - Site Admin
 - Command Line
 
-**Note:** To clear the Redis cache, please see our [Redis](/redis#clear-cache) doc.
+**Note:** To clear the Object cache, please see our [Object Cache](/object-cache#clear-cache) doc.
 
 ### Pantheon Dashboard
 1. Navigate to the Site Dashboard and select the desired environment.

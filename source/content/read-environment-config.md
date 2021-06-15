@@ -56,7 +56,7 @@ $conf = $settings['conf'];
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/redis#enable-redis) in `settings.php`. For example, for Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, for Drupal 7:
 
 ```php
 // All Pantheon Environments.
@@ -66,7 +66,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
   // All $conf variables and Redis configuration go after extract()
 
-  // If using Redis add appropriate settings per /docs/redis/
+  // If using Redis add appropriate settings per /docs/object-cache/
 
   // Add other $conf variables, for example for Fast 404 pages
 

@@ -1,11 +1,11 @@
 ---
 title: Continuous Integration Solutions on Pantheon
 description: Run automated unit and integration tests with Terminus and Drupal SimpleTest.
-tags: [platformintegrations]
-categories: []
+tags: [continuous-integration, workflow]
+categories: [develop]
 contributors: [ccjjmartin]
 ---
-Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/support).
+[<dfn id="ci">Continuous Integration</dfn>](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/support).
 
 See our [Build Tools](/guides/build-tools) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
 
@@ -106,3 +106,9 @@ At this time, Pantheon does not provide or support:
 - Running [Jenkins](https://jenkins.io/index.html) or other Continuous Integration software on our servers. You'll need to self-host or use a hosted CI solution. [Compare solutions here](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software).
 - Shell access
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/) Unit Testing PHP Framework: You can still write tests and include them in your code, but you'll need to run them on a CI server, not Pantheon.
+
+## Read More
+
+- [Build Tools](/guides/build-tools)
+- [Localdev](/guides/localdev)
+- [Pantheon Multidev](/multidev)

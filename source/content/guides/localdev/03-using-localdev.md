@@ -98,7 +98,7 @@ Pulling content will *overwrite* your local working data. If you need to keep a 
 
 ### Config
 
-From the site **<i className="fa fa-cog"></i> Config** tab, you can initialize tools like [phpMyAdmin](https://www.phpmyadmin.net/) or [MailHog](https://github.com/mailhog/MailHog), enable [CDN](/global-cdn) emulation to test cookies, or enable [Solr](/solr) or [Redis](/redis) for the local site.
+From the site **<i className="fa fa-cog"></i> Config** tab, you can initialize tools like [phpMyAdmin](https://www.phpmyadmin.net/) or [MailHog](https://github.com/mailhog/MailHog), enable [CDN](/global-cdn) emulation to test cookies, or enable [Solr](/solr) or [Redis](/object-cache) for the local site.
 
 ### Advanced
 

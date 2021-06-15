@@ -23,9 +23,9 @@ class LandingTemplate extends Component {
               <h1 className="title">{topic.title}</h1>
               <section className="row">
                   {topic.video_id && (
-                    <article className="col-md-6 hero-video__video">
+                    <div className="col-md-6 hero-video__video">
                       <Youtube src={topic.video_id} title={topic.title}/>
-                    </article>
+                    </div>
                   )}
                   {(topic.cta || topic.cta_alt) && (
                     <div className="col-md-6">

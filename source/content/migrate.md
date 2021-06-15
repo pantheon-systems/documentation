@@ -3,12 +3,18 @@ title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
 categories: [get-started]
 tags: [dashboard, migrate, site]
+reviewed: "2021-04-01"
 ---
+
+This doc shows how to use the Pantheon Dashboard to migrate a website to Pantheon from another platform.
+
+If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
+
 ## Before You Begin
 
 To ensure a successful migration, complete the following tasks on the source site first:
 
-- Read [Platform Considerations](/platform-considerations)
+- Read [Platform Considerations](/platform-considerations) and review [manual migration considerations](/migrate#manually-migrate)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - Make sure your code is compatible with the latest recommended version of PHP for your CMS. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
@@ -58,7 +64,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
  ![Successful Migration BlogVault](../images/dashboard/successful-site-migration-complete-blogvault.png)
 
-If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
+If the migration is not successful, [contact Support](/support) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 
 <Alert title="Note" type="info">
 
@@ -104,7 +110,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 </TabList>
 
-## Manually Migrate
+## Manually Migrate a Site to Pantheon
 
 Manually migrate your site to Pantheon when any of the following apply:
 
@@ -136,7 +142,7 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 ### Migrate from Acquia
 
-Acquia uses a nested docroot directory named `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+Acquia uses a nested docroot directory called `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 

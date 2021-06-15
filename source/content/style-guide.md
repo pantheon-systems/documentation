@@ -1,12 +1,12 @@
 ---
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
-contributors: [alexfornuto, rachelwhitton]
-reviewed: "2020-11-04"
+contributors: [alexfornuto, rachelwhitton, carolynshannon]
+reviewed: "2021-02-26"
 ---
 <!-- markdownlint-disable -->
 
-All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's Documentation.
+All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's documentation.
 
 You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
@@ -20,10 +20,12 @@ ___
 
 Some General Rules:
 
-- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
-- Avoid colloquialisms and personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
 - Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
-- Review our [Inclusive Language](https://pantheon.io/docs/inclusive-language) doc, and review your writing for inaccessible language.
+- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
+- Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
+- Use [Inclusive Language](https://pantheon.io/docs/inclusive-language), avoid colloquialisms and hyperbole.
+- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
+
 
 ___
 
@@ -110,7 +112,7 @@ If a page is specificially written for a single CMS or CMS version, it's tagged 
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus).
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus) .
 
 <Example>
 
@@ -150,7 +152,7 @@ All documentation uses MarkDown to render headings and typographic elements like
 
 ### Headings
 
-Give heading levels a meaningful hierarchy to ensure accessible navigation and structure.
+Give heading levels a meaningful hierarchy to ensure accessible navigation and structure. Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for headings listed in the TOC.
 
 <Example>
 

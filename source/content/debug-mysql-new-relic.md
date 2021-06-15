@@ -1,20 +1,20 @@
 ---
-title: MySQL Troubleshooting with New Relic APM
-description: Use integrated reporting services with New Relic Pro to isolate MySQL performance issues on your Drupal or WordPress sites.
+title: MySQL Troubleshooting with New Relic Performance Monitoring
+description: Use integrated reporting services with New Relic Performance Monitoring to isolate MySQL performance issues on your Drupal or WordPress sites.
 categories: [troubleshoot]
 tags: [database, newrelic]
 reviewed: "2020-10-07"
 ---
 
-While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use [New Relic APM](/new-relic). This article explains how you can troubleshoot MySQL databases with New Relic APM.
+While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use [New Relic&reg; Performance Monitoring](/new-relic). This article explains how you can troubleshoot MySQL databases with New Relic APM.
 
-## Open New Relic Pro
+## Open New Relic&reg; Performance Monitoring
 
 From within Pantheon, go to the Site Dashboard for the site you suspect is having problems with MySQL query performance. Select the environment: Dev, Test, or Live. Click the **New Relic** tab, and select **Go to New Relic**.
 
 ## Investigate Activity
 
-1. By default New Relic APM lists your **Applications**. Select the application the issue has been reported on (Dev/Test/Live).
+1. By default New Relic&reg; Performance Monitoring lists your **Applications**. Select the application the issue has been reported on (Dev/Test/Live).
 
 1. Using the graph, locate the time period the issue occurred in. This is usually visually apparent via large spikes in the graph. If not, use the New Relic time period selection tool to broaden your search (30 min, 60 min, 3 hours, etc.) until you find the problem.
 
@@ -36,7 +36,7 @@ At times, systems like Drupal's Watchdog appear at the top. In general, that's a
 
 1. Once located, you can see how and where it's happening by finding the path near the bottom of the page.
 
-1. The New Relic Pro trace does not give the full query; it only shows the query with placeholders, which cannot be executed against MySQL as is. To do that, you'll need to look in the MySQL slow log. Go back to the site's panel on the Dashboard and get the SFTP connection information. Modify it per [this article](/mysql-access#frequently-asked-questions) to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
+1. The New Relic&reg; Performance Monitoring trace does not give the full query; it only shows the query with placeholders, which cannot be executed against MySQL as is. To do that, you'll need to look in the MySQL slow log. Go back to the site's panel on the Dashboard and get the SFTP connection information. Modify it per [this article](/mysql-access#frequently-asked-questions) to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
 
 ### Review the Slow Log
 
@@ -55,7 +55,7 @@ Now that the problem has been found, it can be addressed. In this case, simply a
 
 ## Recap
 
-1. Use New Relic Pro to narrow and identify periods of time that have high load and/or slow response times.
+1. Use New Relic&reg; Performance Monitoring to narrow and identify periods of time that have high load and/or slow response times.
 
 1. Narrow down the scope to one of those time periods and find the worst performing transactions.
 

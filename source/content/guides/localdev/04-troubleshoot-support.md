@@ -14,7 +14,7 @@ editpath: localdev/04-troubleshoot-support.md
 
 ## Contact Support
 
-Before contacting support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
+Before contacting Support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
@@ -30,7 +30,7 @@ Before contacting support, review the [support request best practices](/support#
 
 ## Provide Feedback or Feature Requests
 
-Please submit feedback and feature requests through the [Pantheon Localdev Customer Feedback](https://docs.google.com/forms/d/e/1FAIpQLSdy2WU7H3bSd94YmEuTvGhzmmT_xP3LlCgORXOkTt-M8UIAXw/viewform) form.
+Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](https://pantheon.io/docs/pantheon-community#joining-the-community).
 
 ## Troubleshooting
 
@@ -47,6 +47,19 @@ File exists\n","label":"myawesomesite","timestamp":"2020-11-25T16:40:12.057Z"}
 The contents of `wp-contents/uploads` should be symlinked to files, in keeping with the [code moves up, content moves down](/pantheon-workflow#code-moves-up-content-moves-down) best practice of the Pantheon WebOps workflow.
 
 You can [contact support](#contact-support) for help moving your files out of the codebase.
+
+### Clone of a New Site Failed
+
+If you attempt to initialize a site within Localdev before you've completed the CMS install on Pantheon, it will fail when attempting to pull the (non-existent) database from the platform. The logs under **show detail (beta)** will show:
+
+```docker
+Pulling your database... This miiiiight take a minute
+ [notice] Command: anita-wordpress.dev -- wp db export [Exit: 0]
+Checking db pull for expected tables...
+Database pull failed...
+```
+
+See step 9 of [Create a Site](/create-sites#create-a-site).
 
 ### Log out and Reset to Defaults
 
@@ -82,4 +95,4 @@ You can verify which version of PHP your site is using by clicking **Launch Term
 
 ### Can I create Multidev environments from Localdev?
 
-No, new multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).
+No, new Multidev environments must still be created from the Site Dashboard or [Terminus](/terminus/commands/multidev-create).

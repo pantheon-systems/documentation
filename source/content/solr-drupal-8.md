@@ -72,6 +72,7 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
   ```bash{promptUser: user}
   git commit -am "Require drupal/search_api_pantheon ~1.0"
   git push origin solr
+  terminus multidev:create <site>.dev solr
   ```
 
   </Tab>

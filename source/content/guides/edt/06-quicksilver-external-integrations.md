@@ -28,8 +28,6 @@ All links from the video are provided below.
 
 <Youtube src="4BRX12bFO4Q" title="Essential Developer Training - External Integrations" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Automate & Integrate](/automate)

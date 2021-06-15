@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Final Checklist
+subtitle: Final Review
 description: Part seven of our Launch Essentials guide covers the next steps to take after your site goes live.
 launch: true
 survey: true
@@ -24,40 +24,43 @@ getfeedbackform: default
 Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in your glory.
 
 When you're ready to launch another site, use this best-practice checklist to establish a repeatable going live procedure.
-## Best Practice Checklist for Going Live
 
-<ChecklistItem title="Create the Live environment" link="/guides/quickstart/create-test-live/" />
+## Final Review for Going Live
 
-<ChecklistItem title="Upgrade Site Plan" link="/guides/launch/plans/" />
+- [Create the Live environment](/guides/quickstart/create-test-live/)
 
-<ChecklistItem title="Enable and Schedule Weekly Backups" link="/guides/launch/launch-check/" />
+- [Upgrade Site Plan](/guides/launch/plans/)
 
-<ChecklistItem title="Enable Redis" link="/redis#enable-redis" />
+- [Enable and Schedule Weekly Backups](/guides/launch/launch-check/)
 
-<ChecklistItem title="Configure Caching" link="/global-cdn-caching/" />
+- [Enable Redis](/object-cache#enable-object-cache)
 
-<ChecklistItem title="Test Cache" link="/test-global-cdn-caching/" />
+- [Configure Caching](/global-cdn-caching/)
 
-<ChecklistItem title="Disable XML-RPC For WordPress" link="/wordpress-best-practices/#avoid-xml-rpc-attacks" />
+- [Test Cache](/test-global-cdn-caching/)
 
-<ChecklistItem title="Set Up Outgoing Email" link="/email/" />
+- [(WordPress) Disable XML-RPC](/wordpress-best-practices/#avoid-xml-rpc-attacks)
 
-<ChecklistItem title="Activate New Relic Pro" link="/new-relic/#activate-new-relic-apm-pro" />
+- [Set Up Outgoing Email](/email/)
 
-<ChecklistItem title="Setup Availability Monitoring" link="/new-relic/#configure-ping-monitors-for-availability" />
+- [Activate New Relic Pro](/new-relic/#activate-new-relic-performance-monitoring)
 
-<ChecklistItem title="Load and Performance Test" link="/load-and-performance-testing/" />
+- [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
 
-<ChecklistItem title="Add Domains to the Live Environment" link="/guides/launch/domains/" />
+- [Load and Performance Test](/load-and-performance-testing/)
 
-<ChecklistItem title="Redirect to a Primary Domain" link="/guides/launch/redirects/" />
+- [Add Domains to the Live Environment](/guides/launch/domains/)
 
-<ChecklistItem title="Configure DNS" link="/guides/launch/domains/" />
+- [Redirect to a Primary Domain](/guides/launch/redirects/)
 
-<ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
+- [(WordPress) Update URL references](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning)
 
-**OR**
+- [Configure DNS](/guides/launch/domains/)
 
-<ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
+- Launch Check
 
-<ChecklistItem title="Review Status Report" link="/guides/launch/launch-check/" />
+  - [WordPress Launch Check](/wordpress-launch-check/)
+
+  - [Drupal Launch Check](/drupal-launch-check/)
+
+- [Review Status Report](/guides/launch/launch-check/)

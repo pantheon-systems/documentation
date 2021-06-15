@@ -53,7 +53,7 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 
 Now that you've upgraded your site to a paid plan, it's the perfect time to test how your site works in the wild.
 
-### [New Relic APM Pro](/new-relic/#activate-new-relic-apm-pro)
+### [New Relic&reg; Performance Monitoring](/new-relic/#activate-new-relic-performance-monitoring)
 
 In preparation for these tests, activate New Relic APM Pro so you can observe your site's performance like a maverick. This service is accessible from the Pantheon Site Dashboard for all site plans except Basic, and it offers a nearly real-time look into the performance of a web application.
 

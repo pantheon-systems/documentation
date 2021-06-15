@@ -59,17 +59,15 @@ Sites using retired versions of PHP will continue to serve pages, but new develo
 
 </dl>
 
-
-<Alert title="Note" type="info">
+### CMS Version Requirements
 
 Before changing your PHP version, confirm that your CMS is compatible:
 
 - [WordPress Requirements](https://wordpress.org/about/requirements/)
-- [Drupal 8 PHP versions supported](https://www.drupal.org/docs/8/system-requirements/php-requirements#php_required)
-- [Drupal 7 PHP versions supported](https://www.drupal.org/docs/7/system-requirements/drupal-7-php-requirements#php_required)
+- [Drupal 8 and 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
 - As of Drupal 6.45, Drupal 6 is [compatible with PHP 7.2](https://www.mydropwizard.com/blog/announcing-drupal-645-and-selected-contrib-php-72). Older versions of Drupal 6 require PHP 5.4 and below.
 
-</Alert>
 
 ## Configure PHP Version
 
@@ -139,7 +137,7 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 ### Upgrading PHP Version May Require Upgrading Drush Versions
 
-If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`, for example, upgrading Drush should resolve the issue. For more information, see [Manage Drush Versions on Pantheon](https://pantheon.io/docs/drush-versions/#configure-drush-version).
+If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`, for example, upgrading Drush should resolve the issue. For more information, see [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version).
 
 ## See Also
 

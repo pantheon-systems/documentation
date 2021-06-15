@@ -12,7 +12,7 @@ reviewed: "2020-10-08"
 
 ### Can APCu be used as a cache backend on Pantheon?
 
-Yes, APCu can be used as a cache backend or a "key-value store"; however, this is not recommended. APCu lacks the ability to span multiple application containers. Instead, Pantheon provides [Redis](/redis) as a caching backend for Drupal and WordPress, which has coherency across multiple [application containers](/application-containers).
+Yes, APCu can be used as a cache backend or a "key-value store"; however, this is not recommended. APCu lacks the ability to span multiple application containers. Instead, Pantheon provides a Redis-based [Object Cache](/object-cache) as a caching backend for Drupal and WordPress, which has coherence across multiple [application containers](/application-containers).
 
 ### How can I determine what my current APCu settings are?
 
@@ -28,5 +28,5 @@ No. The **Clear Caches** button in the Site Dashboard does not interact with APC
 
 - [Application Containers overview](/application-containers)
 - [Clearing the cache](/clear-caches)
-- [Redis](/redis)
+- [Object Cache (formerly Redis)](/object-cache)
 - [Securely Working with phpinfo](/phpinfo)

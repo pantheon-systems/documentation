@@ -10,7 +10,7 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 <Partial file="covid-offer.md" />
 
-Multidev is available to all accounts with [Gold support](/support/#support-features-and-response-times) and above. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
+Multidev is available to all [Gold Accounts](/support/#support-features-and-response-times) and above. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
@@ -19,7 +19,7 @@ Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs)
 Users have access to Multidev if they:
 
 - Have been assigned a role as a member of an Organization that has the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs)).
-- Are a Direct Online customer with Gold support or above.
+- Are a Direct Online Gold Account customer or above.
 
 If you fully meet either of these conditions and still don't have access to Multidev, please [contact support](https://dashboard.pantheon.io/#support).
 
@@ -69,7 +69,7 @@ At this time, Multidev on Pantheon will only work with the Pantheon hosted code 
 
 ## Is there a public API available for post-commit hooks or other integrations with external project management systems?
 
-No, but developers can use [Quicksilver hooks](/quicksilver/#hooks) to integrate Multidev creation and other workflows with external services.
+No, but developers can use [Quicksilver hooks](/quicksilver#hooks) to integrate Multidev creation and other workflows with external services.
 
 ## Can I backup and restore a branch environment?
 

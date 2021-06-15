@@ -183,7 +183,7 @@ grep Time mysqld-slow.log | cut -d: -f1,2 | sort | uniq -c
 
 This means there were 70 slow queries between 10 and 11AM (UTC). That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
-For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic).
+For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic).
 
 ## See Also
 - [Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)

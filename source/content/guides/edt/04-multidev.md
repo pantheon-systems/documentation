@@ -28,8 +28,6 @@ All links from the video are provided below.
 
 <Youtube src="oaIS6LgzTKU" title="Essential Developer Training - Multidev" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Pantheon Multidev docs](/multidev)
