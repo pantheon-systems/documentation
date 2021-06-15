@@ -78,7 +78,7 @@ module.exports = {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               // Moves downloadable scripts to a subdirectory in the build artifact
-              destignationDir: f => `scripts/${f.name}`, // destignationDir is defined in gatsby-node.js
+              destinationDir: f => `scripts/${f.name}`, // destinationDir is defined in gatsby-node.js
             },
           },
         ],
