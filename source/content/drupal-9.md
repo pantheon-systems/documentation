@@ -69,3 +69,16 @@ See the [Drupal 9 Migration Guide](/guides/drupal-9-migration/troubleshoot) for 
 ### Where can I report an issue?
 
 [Contact support](/support) to report any issues that you encounter.
+
+### Can I Use Lando or Localdev for Drupal 9
+
+Local development options for Drupal 9 are currently being implemented into [Localdev](/guides/localdev).
+
+Some users have reported success using [Lando](https://docs.lando.dev/basics/) with Drupal 9, but it relies on a workaround and requires extra configuration. Check the status of the [Lando repo's issue](https://github.com/lando/lando/issues/2831#issuecomment-771833900) before you continue.
+
+Manually update the [Lando config file](https://docs.lando.dev/config/global.html#config-yml) to set `drupal9` as the framework:
+
+```yml:title=~/.lando/config.yml
+# Lando issue 2831 workaround for D9
+framework: drupal9
+```
