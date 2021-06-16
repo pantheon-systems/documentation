@@ -52,10 +52,6 @@ Sending location info to your application is much faster than fetching it from a
 
 [Device detection](https://docs.fastly.com/en/guides/delivering-different-content-to-different-devices) can drive differentiated delivery strategies at the edge of the network, to address issues that impact mobile user experience.
 
-### Persistent Uptime
-
-Adjusts the "serve stale content" setting to make content available from the edge even if the site is unavailable.
-
 ### Complete CDN Edge Logs
 
 See every request to your website, whether or not the content was cached. Server logs can only record requests that couldn't be fulfilled from a CDN's cache. Full CDN edge logs replace these with logs from the edge, to provide a complete picture of your traffic.
