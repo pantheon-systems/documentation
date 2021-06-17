@@ -82,7 +82,7 @@ brew install jq rsync
    ```bash{promptUser: user}
    git status
    ```
-terminus drush anita-drupal-8.live -- config:export --destination sites/default/files/config
+
 ## Upgrade Site Components Locally
 
 1. Use Composer to declare version requirements:
