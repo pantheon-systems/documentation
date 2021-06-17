@@ -128,7 +128,7 @@ brew install jq rsync
    composer update -W --optimize-autoloader --prefer-dist
    ```
 
-1. If the site doesn't already have a `pantheon.yml` file, create one with the following values (the comments `#` are optional):
+1. If the site doesn't already have a `[pantheon.yml](/pantheon-yml#find-or-create-pantheonyml)` file, create one with the following values (the comments `#` are optional):
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -143,7 +143,7 @@ brew install jq rsync
    database:
      version: 10.4
    
-   # Drupal 9 prefers drush 10. If you have written a lot of custom drush commands you may need to go back to drush 9 or 8:
+   # Drupal 9 prefers Drush 10. If you have written a lot of custom Drush commands you may need to go back to Drush 9 or 8:
    drush_version: 10
    ```
 
@@ -157,7 +157,7 @@ brew install jq rsync
    git push origin d9-upgrade-2021
    ```
 
-  If all has gone well, you will see something like the following:
+  If goes well, you will see something like the following:
 
    ```bash
    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
@@ -175,7 +175,7 @@ brew install jq rsync
    terminus env:info $SITE.$ENV
    ```
 
-1. Create a one-time login to your site with the following command:
+1. Use Terminus Drush to create a one-time login to your site:
 
    ```bash{promptUser: user}
    terminus drush $SITE.$ENV uli admin
@@ -257,7 +257,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
        ],
    ```
 
-   This way, when the build arrives to production it excludes the dev dependencies.
+   This way, when the build is deployed to production it will exclude the dev dependencies.
 
 1. Commit the changes and push them to the development environment:
 
