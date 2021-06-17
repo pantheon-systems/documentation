@@ -5,7 +5,7 @@ description: Upgrade a Drupal 8 site with Build Tools on Pantheon to a Drupal 9 
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
-contributors: [stovak]
+contributors: [stovak, edwardangert, carolynshannon]
 reviewed: "2021-05-31"
 layout: guide
 showtoc: true
@@ -28,7 +28,7 @@ Before you continue, confirm that your site meets the following:
 
 1. Code is managed using an external repository outside of Pantheon (GitHub, GitLab, Bitbucket, etc.).
 
-1. The site is built through a service like GitHub Actions, Circle CI, or Travis.
+1. The site is built through a service like Circle CI.
 
 1. Build artifacts are pushed to your Pantheon repository.
 
