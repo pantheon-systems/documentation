@@ -117,7 +117,7 @@ brew install jq rsync
      "scripts": {
        "build-assets": [
          "@prepare-for-pantheon",
-         "composer install --optimize-autoloader --no-dev" //highlight-line
+         "composer install --optimize-autoloader" //highlight-line
        ],
    ```
 
