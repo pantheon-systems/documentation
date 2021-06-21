@@ -53,6 +53,8 @@ Please note the Limited Availability program does not include a path to upgrade 
 
 ### Remove Individual Site Dependencies
 
+You can remove site dependencies if they are no longer needed. 
+
 1. Remove the dependency locally:
 
    ```bash{promptUser: user}
