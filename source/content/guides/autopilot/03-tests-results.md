@@ -43,6 +43,8 @@ From the **Autopilot Overview**:
 
 ![Autopilot Overview shows a site with a failed test](../../../images/autopilot/autopilot-overview-failed-vrt.png)
 
+If there's a failed test that requires review, review and acknowledge the test results before you run another test to avoid duplicate test results.
+
 ## FAQ
 
 ### Is there a limit to the number screenshots Autopilot will take?
