@@ -500,7 +500,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
 | Sandbox*               |               64           |
-| Basic                  |               64           |
+| Basic                  |               N/A          |
 | Performance Small      |               256          |
 | Performance M, L, XL   |               512          |
 | Elite                  |               1024         |
