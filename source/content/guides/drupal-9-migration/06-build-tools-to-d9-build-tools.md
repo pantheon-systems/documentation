@@ -24,7 +24,7 @@ Build Tools connects Pantheon with your CI service and external Git provider. Se
 
 ## Will This Guide Work for Your Build Tools Workflow?
 
-Before you continue, confirm that your site meets the following:
+Before you continue, confirm that your site meets the following criteria:
 
 1. Code is managed using an external repository outside of Pantheon (GitHub, GitLab, Bitbucket, etc.).
 
@@ -32,7 +32,7 @@ Before you continue, confirm that your site meets the following:
 
 1. Build artifacts are pushed to your Pantheon repository.
 
-1. The site's Dashboard displays a blue banner banner across the top that says that the site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
+1. The site's Dashboard displays a blue banner across the top that says that the site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
 
    > Good news, your site's database version is now configurable! Learn how.
 
@@ -77,7 +77,7 @@ brew install jq rsync
    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_HOST}:files/config" .
    ```
 
-1. If you do a `git status` it should show changed files in the `config` directory if there are any changed configs in production.
+1. If you do a `git status` it should show changed files in the `config` directory if there are any changed configurations in production.
 
    ```bash{promptUser: user}
    git status
@@ -157,7 +157,7 @@ brew install jq rsync
    git push origin d9-upgrade-2021
    ```
 
-  If goes well, you will see something like the following:
+  If all goes well, you will see something like the following:
 
    ```bash
    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
@@ -169,7 +169,7 @@ brew install jq rsync
 
 1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment** Multidev. This is called `$ENV` in the next steps.
 
-1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference your pull request.
+1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference to your pull request.
 
    ```bash{promptUser: user}
    terminus env:info $SITE.$ENV
@@ -181,7 +181,7 @@ brew install jq rsync
    terminus drush $SITE.$ENV uli admin
    ```
 
-1. Log into the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules **Upgrade Status** says are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
+1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
 
 ## Custom Module Code
 
@@ -213,7 +213,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
       --no-update -W --dev
    ```
 
-1. If you have `core-dev` installed:
+1. If you have `core-dev` installed, follow below (skip this step if you do not have `core-dev` installed):
 
    ```bash{outputLines: 2}
    composer require drupal/core-dev:^9 \
