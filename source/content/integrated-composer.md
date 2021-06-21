@@ -49,11 +49,19 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
 
-1. Remove dependencies:
+### Remove Individual Site Dependencies
+
+You can remove site dependencies if they are no longer needed. 
+
+1. Remove the dependency locally:
 
    ```bash{promptUser: user}
     composer remove drupal/pkg-name
    ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, etc.
 
 ## Apply One-click Updates
 
