@@ -51,9 +51,7 @@ Please note the Limited Availability program does not include a path to upgrade 
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
 
-### Remove Individual Site dependencies
-
-If/when you decide to remove the dependency:
+### Remove Individual Site Dependencies
 
 1. Remove the dependency locally:
 
