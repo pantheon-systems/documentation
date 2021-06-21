@@ -47,4 +47,4 @@ From the **Autopilot Overview**:
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 5 pages on each site. It will check for updates once a week, and can also be run on demand. This number will increase for Autopilot General Availability.
+Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
