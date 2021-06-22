@@ -13,12 +13,11 @@ anchorid: new-dashboard
 editpath: new-dashboard/03-personal-settings.md
 ---
 
-
 ## Personal Settings
 
-The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click your avatar in the top-right corner and then click **User Settings**.
+The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **User Settings**.
 
-![A screenshot of a the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.png)
+![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.png)
 
 ### Profile
 
