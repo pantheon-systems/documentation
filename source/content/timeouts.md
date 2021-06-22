@@ -21,9 +21,9 @@ When troubleshooting timeout errors, first verify that the timeout is not caused
 
 | Name                                                                                                                         | Timeout     | Description |
 |:---------------------------------------------------------------------------------------------------------------------------- |:----------- |:----------- |
-| Connection Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for a timeout. |
-| First Byte Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for the first byte. |
-| Between Bytes Timeout                                                                                                        | 59 seconds  | Number of seconds to wait for between bytes. |
+| Connection Timeout                                                                                                           | 120 seconds  | Number of seconds to wait for a timeout. |
+| First Byte Timeout                                                                                                           | 120 seconds  | Number of seconds to wait for the first byte. |
+| Between Bytes Timeout                                                                                                        | 120 seconds  | Number of seconds to wait for between bytes. |
 | Pantheon executed Drupal cron                                                                                                | 180 seconds | Only applies to Pantheon's automatic hourly execution of Drush cron. |
 | [PHP set_time_limit](https://secure.php.net/manual/en/function.set-time-limit.php)                                           | 120 seconds | Number of seconds a script can run. If reached, the script returns a fatal error. |
 | Load Balancer                                                                                                                | 120 seconds | Applies to HTTPS requests and requests to a DNS A record. Requests using the Pantheon CNAME for HTTP requests are *not* limited. |
