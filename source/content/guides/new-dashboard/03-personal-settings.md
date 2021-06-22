@@ -45,7 +45,7 @@ For security reasons, you’ll need to log in again after your password is chang
 ![A screenshot of a the Personal Settings Preferences page](../../../images/dashboard/new-dashboard/personal-settings-preferences.png)
 
 #### Autopilot Email Alerts
-You can choose whether you recieve email alerts for the following:
+You can choose whether you receive email notifications for the following:
 * Weekly activity Digest - Summary of Autopilot activity across all sites within the workspace that Autopilot is enabled
 * Failed Visaul Regression Tests - Real-time email alerts for failed VRT test for a specified site  
 
@@ -53,7 +53,7 @@ You can choose whether you recieve email alerts for the following:
 
 If you would like to be directed to the new dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**. 
 
-The Early Access option is recommended for Autopilot users. If you choose to use the new dashboard, you will not be able to navigate to your User organization and will not be able to view certain features. If you select the Early Access option you will not be able to view Billing or older features.
+The Early Access option is recommended for Autopilot users. If you choose to use the new dashboard, you will not be able to navigate to your User organization and will not be able to view certain features. By selecting the Early Access option, you will not be able to view Billing or older features.
 
 
 
