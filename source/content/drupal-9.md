@@ -5,10 +5,12 @@ categories: [get-started]
 tags: [site]
 cms: drupal-9
 contributors: [populist, edwardangert]
-reviewed: "2021-03-31"
+reviewed: "2021-06-18"
 ---
 
-This how-to guide walks you through the high level, end-to-end deployment steps to set up Drupal 9 on the Pantheon WebOps platform.
+Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
+
+Since Drupal 9 on Pantheon is in active development and includes a number of significant changes from previous versions of Drupal, this doc outlines the biggest changes and answers frequently asked questions.
 
 ## About Drupal 9
 
@@ -22,7 +24,7 @@ On the Pantheon Platform, Drupal 9 sites use [Integrated Composer](/integrated-c
 
 <Alert title="A note about Limited Availability" type="info" icon="leaf">
 
-Currently, Drupal 9 is available on Pantheon as a Limited Availability feature release. This means the feature is currently in active development.
+Drupal 9 is available on Pantheon as a Limited Availability feature release while additional features are in active development.
 
 Pantheon engineers are rolling out changes often.
 
@@ -52,13 +54,13 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-If you're not ready to create a new site yet, you can also [check an existing site's compatibility to upgrade](/guides/drupal-9-migration/prepare).
-
-<Partial file="drupal-9/drupal-9-upstream-install.md" />
+[Create a new Drupal 9 site from the Dashboard](/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
 
 ## Upgrade or Migrate to Drupal 9
 
 To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/guides/drupal-9-migration).
+
+To check an existing site's compatibility to upgrade, visit our [Prepare for Drupal 9 section](/guides/drupal-9-migration/prepare).
 
 ## Troubleshooting and Support
 
