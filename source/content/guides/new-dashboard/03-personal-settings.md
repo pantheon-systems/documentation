@@ -8,9 +8,9 @@ contributors: [joa-pan]
 reviewed: "2021-05-20"
 layout: guide
 showtoc: true
-permalink: docs/guides/new-dashboard/workspaces
+permalink: docs/guides/new-dashboard/personal-settings
 anchorid: new-dashboard
-editpath: new-dashboard/03-workspaces.md
+editpath: new-dashboard/03-personal-settings.md
 ---
 
 
