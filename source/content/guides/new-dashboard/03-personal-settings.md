@@ -22,7 +22,7 @@ The Personal Settings of your profile help you control several key aspects of th
 
 ### Profile
 
-Update your name, email address, or delete your account.  
+Update your name, email address, or [delete your account](/delete-account).  
 
 #### Login Details
 You can update the current email address or password associated with your Dashboard. 
