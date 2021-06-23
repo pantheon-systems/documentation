@@ -3,20 +3,25 @@ title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
 categories: [get-started]
 tags: [upstreams, site]
+reviewed: "2021-04-23"
 ---
-The site's framework is selected during the creation process. Pantheon Upstreams provide default installations of WordPress, Drupal 8 and Drupal 7. [Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
+
+Select the site's framework during the [site creation process](/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, Drupal 8, and Drupal 7.
+
+[Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
 
 ## Pantheon Upstreams
 
-We base our Drupal 7 repository on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
+We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/), and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
+- [Drupal 9](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789) <Popover content="Defaults to SFTP Mode" />
 - [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) <Popover content="Install Requires SFTP Mode" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ## Public Distributions
 
-We include a growing number of "Drupal products" as available upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
+We include a growing number of "Drupal products" as available Upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
 
 <Alert title="Note" type="info">
 
@@ -49,7 +54,7 @@ terminus upstream:list --all
 
 ## Create Sites with Terminus
 
-Create new sites with [Terminus, the Pantheon CLI](/terminus). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream, like so:
+Create new sites with [Terminus, the Pantheon CLI](/terminus). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream:
 
 ```bash{outputLines: 2-4}
 terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"
@@ -59,6 +64,6 @@ terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"
 terminus dashboard:view my-new-panopoly-site
 ```
 
-## Importing an Existing Site
+## Import an Existing Site
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/migrate).
