@@ -68,7 +68,8 @@ Enter `yes` when prompted:
 Are you sure you want change the upstream for anita-drupal to Drupal 9? (yes/no) [no]:
 ```
 
-Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
+Note that only the [User in Charge](/change-management/#site-level-roles-and-permissions) can set the Upstream.
+
 ## Ongoing Core Updates
 
 One-click core updates can be made through the Dashboard.
