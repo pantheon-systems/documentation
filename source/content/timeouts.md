@@ -8,7 +8,7 @@ reviewed: "2020-03-18"
 
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. 
 
-When troubleshooting timeout errors, first verify that the timeout is not caused by [idle application containers](/application-containers#idle-containers). Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus). 
+When troubleshooting timeout errors, first verify that the timeout is not caused by [idle application containers](/application-containers/#idle-containers). Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus). 
 
 ## User-Configurable Timeouts
 
