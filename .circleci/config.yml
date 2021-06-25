@@ -10,6 +10,9 @@ workflows:
       - pfe/gatsby-build-and-deploy:
           use-yarn: false
           deployment-path: docs
+          # https://circleci.com/docs/2.0/configuration-reference/#docker-executor
+          # https://github.com/pantheon-systems/frontend-orb#parameters
+          resource-class: xlarge
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
           gatsby-cache-version: "v1.8.20"
