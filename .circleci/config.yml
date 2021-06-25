@@ -12,7 +12,7 @@ workflows:
           deployment-path: docs
           # https://circleci.com/docs/2.0/configuration-reference/#docker-executor
           # https://github.com/pantheon-systems/frontend-orbs#parameters
-          resouce-class: large
+          resource-class: large
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
           gatsby-cache-version: "v1.8.19"
