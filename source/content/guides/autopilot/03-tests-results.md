@@ -43,7 +43,9 @@ From the **Autopilot Overview**:
 
 ![Autopilot Overview shows a site with a failed test](../../../images/autopilot/autopilot-overview-failed-vrt.png)
 
-If there's a failed test that requires review, review and acknowledge the test results before you run another test to avoid duplicate test results.
+### Acknowledge All Failed Test Results Before You Run Another Test
+
+When a failed test requires review, no new tests can be run on the site until the results have been approved or discarded through Autopilot.
 
 ## FAQ
 
