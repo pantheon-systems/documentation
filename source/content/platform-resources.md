@@ -65,35 +65,35 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>100GB+</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."/></th>
+        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <Popover content="For details, see <a href='/domains/#custom-domains'>Domains and Redirects</a>."/></th>
         <td>5</td>
         <td>25</td>
         <td>100</td>
         <td>200</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."/></th>
+        <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/https/'>HTTPS on Pantheon's Global CDN</a>."/></th>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." /></th>
+        <th scope="row" class="thead-inverse">New Relic <Popover content="For details, see <a href='/new-relic/'>New Relic APM Pro</a>." /></th>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."/></th>
+        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."/></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-      <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."/></th>
+      <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/multidev/'>Multidev</a>, regardless of plan."/></th>
         <td></td>
         <td></td>
         <td>✓</td>
