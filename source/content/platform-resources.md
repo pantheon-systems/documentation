@@ -41,7 +41,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>256MB</td>
         <td>256MB</td>
         <td>512MB</td>
-        <td>512MB<Popover content="Up to 1024MB is available for certain Elite plans. <a href='https://pantheon.io/pantheon-elite-plans'>Learn more about Pantheon Elite Plans</a> and contact Sales for information about plans with custom resources."/></td>
+        <td>512MB<Popover content="Up to 1024MB is available for certain Elite plans. <a href='https://pantheon.io/pantheon-elite-plans'>Learn more about Pantheon Elite Plans</a> and contact Sales for information about plans with custom resources." /></td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">MySQL Buffer Pool</th>
