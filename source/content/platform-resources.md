@@ -41,7 +41,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>256MB</td>
         <td>256MB</td>
         <td>512MB</td>
-        <td>512MB<Popover content="Up to 1024MB is available for certain Elite plans. <a href='https://pantheon.io/pantheon-elite-plans'>Learn more about Pantheon Elite Plans</a> and contact Sales for information about plans with custom resources." /></td>
+        <td>512MB<Popover content="Up to 1024MB is available for certain Elite plans. <a href='https://pantheon.io/pantheon-elite-plans'>Learn more about Pantheon Elite Plans</a> and contact Sales for information about plans with custom resources."/></td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">MySQL Buffer Pool</th>
@@ -65,7 +65,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>100GB+</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." /></th>
+        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."/></th>
         <td>5</td>
         <td>25</td>
         <td>100</td>
@@ -86,7 +86,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." /></th>
+        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."/></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>
