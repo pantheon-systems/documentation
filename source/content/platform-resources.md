@@ -72,7 +72,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>200</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." /></th>
+        <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."/></th>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
@@ -93,7 +93,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>✓</td>
       </tr>
       <tr>
-      <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan." /></th>
+      <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."/></th>
         <td></td>
         <td></td>
         <td>✓</td>
