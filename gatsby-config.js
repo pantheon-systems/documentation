@@ -106,21 +106,6 @@ module.exports = {
       options: {
         path: `${__dirname}/source/content`,
         name: `content`,
-        plugins: [
-          { // Styles code blocks and adds features like prompts, and highlighting
-            resolve: `gatsby-remark-prismjs`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              noInlineHighlight: true,
-              aliases: {},
-              prompt: {
-                user: "user",
-                host: "localhost",
-              },
-            },
-          },
-        ]
       },
     },
     // When running Gatsby develop, creates reporting pages
