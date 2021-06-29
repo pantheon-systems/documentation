@@ -70,9 +70,9 @@ Additional DOM element exclusion is in active development.
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
 
-## Enable Autopilot Email Alerts
+## Enable Autopilot Email Notifications
 
-Configure email alerts for Autopilot from your Personal Workspace settings:
+Configure email notifications for Autopilot from your Personal Workspace settings:
 
 ![Personal Workspace Settings include options for Autopilot email alerts](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-alerts.png)
 
@@ -80,4 +80,5 @@ Configure email alerts for Autopilot from your Personal Workspace settings:
 1. Click **Preferences** and choose your options in the **Autopilot Email Alerts** section:
 
    - **Weekly Activity Digest**: A weekly summary of Autopilot activity across all sites within this workspace that have Autopilot enabled.
+     - Digests are sent each Monday with information about the previous seven days.
    - **Failed Visual Regression Tests**: Real-time email alerts for failed VRT tests for a given site.
