@@ -121,10 +121,13 @@ The platform resources provided to your website depend on your current plan. Pan
 ## Frequently Asked Questions (FAQs)
 
 ### Are these the complete specs and memory for my site?
+
 There are many "under the hood" configuration values not show here, but these are the most important values for understanding whether or not Pantheon will fit for a given site.
 
 ### Is memory shared between containers?
+
 No, your database and application container resources are not shared. They operate in their own Linux user space with their own memory.
 
 ### Are the specs the same for all three environments (Dev/Test/Live)?
+
 Yes they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.
