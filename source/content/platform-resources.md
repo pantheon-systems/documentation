@@ -130,4 +130,4 @@ No, your database and application container resources are not shared. They opera
 
 ### Are the specs the same for all three environments (Dev/Test/Live)?
 
-Yes they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.
+Yes, they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.
