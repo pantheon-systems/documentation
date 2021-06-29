@@ -13,7 +13,7 @@ This page reflects resources for legacy site plans. Sites that have been upgrade
 
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
-## Platform Resources
+## Legacy Platform Resources
 
 <table class="table table-condensed table-bordered">
     <thead class="thead-inverse">
