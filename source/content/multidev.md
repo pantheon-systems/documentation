@@ -15,8 +15,6 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 </Enablement>
 
-<Partial file="covid-offer.md" />
-
 ## Benefits of Multidev
 
 **Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
