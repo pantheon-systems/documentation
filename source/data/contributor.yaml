@@ -6,12 +6,6 @@
   drupal: //www.drupal.org/u/chicagomom
   twitter: //twitter.com/chicagomom
   linkedin: //www.linkedin.com/in/carolynshannon/
-- id: alexfornuto
-  name: Alex Fornuto
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Alex%20Fornuto.jpg
-  github: //github.com/alexfornuto
-  twitter: https://twitter.com/AlexFornuto
-  bio: Technical Writer. Confirmed human via Gom Jabbar.
 - id: edwardangert
   name: Edward Angert
   twitter: https://twitter.com/edwardangert
@@ -19,12 +13,18 @@
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
   linkedin: //www.linkedin.com/in/edward-angert/
+- id: alexfornuto
+  name: Alex Fornuto
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Alex%20Fornuto.jpg
+  github: //github.com/alexfornuto
+  twitter: https://twitter.com/AlexFornuto
+  bio: Technical Writer. Confirmed human via Gom Jabbar.
 - id: rachelwhitton
   name: Rachel Whitton
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
   github: //github.com/rachelwhitton
   twitter: https://twitter.com/rachwhitton
-  bio: Engagement Manager, Professional Services
+  bio: Team Lead, Migration Services
 - id: populist
   name: Matt Cheney
   avatar: //avatars1.githubusercontent.com/u/520521
@@ -35,7 +35,7 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
   twitter: https://twitter.com/outlandishjosh
   linkedin: //www.linkedin.com/in/joshkoenig
-  bio: Co-Founder & Head of Developer Experience
+  bio: Chief Strategy Officer
 - id: ari
   name: Ari Gold
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/AriNew.jpg
@@ -52,7 +52,7 @@
   github: //github.com/stevector
   drupal: https://www.drupal.org/user/179805
   wordpress: //profiles.wordpress.org/stevector
-  bio: Technical Product Marketing Manager
+  bio: Director, Technical Marketing
 - id: andrewmallis
   name: Andrew Mallis
   avatar: //avatars1.githubusercontent.com/u/249362?v=3&s=400
@@ -79,7 +79,7 @@
 - id: sarahg
   name: Sarah German
   twitter: https://twitter.com/hey_germano
-  bio: Platform Reliability Manager
+  bio: Community contributor
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
   github: //github.com/sarahg
   drupal: //www.drupal.org/user/562544
