@@ -1,7 +1,7 @@
 ---
 title: Drupal 8 with Build Tools to D9 with Build Tools
 subtitle: "Upgrade-in-place: Drupal 8 with Build Tools"
-description: Upgrade a Drupal 8 site with Build Tools on Pantheon to a Drupal 9 site with Build Tools on Pantheon
+description: Upgrade a Pantheon Drupal 8 site with Build Tools to a Drupal 9 site with Build Tools
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
@@ -128,7 +128,7 @@ brew install jq rsync
    composer update -W --optimize-autoloader --prefer-dist
    ```
 
-1. If the site doesn't already have a `[pantheon.yml](/pantheon-yml#find-or-create-pantheonyml)` file, create one with the following values (the comments `#` are optional):
+1. If the site doesn't already have a [pantheon.yml](/pantheon-yml#find-or-create-pantheonyml) file, create one with the following values (the comments `#` are optional):
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -237,17 +237,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
    If this command returns an error, check the output for any incompatible modules or themes and check the **Upgrade Status** under **Reports** in the integration environment.
 
-1. Edit `composer.json` and add `--no-dev` from the `scripts` section:
-
-   ```json:title=composer.json
-     "scripts": {
-       "build-assets": [
-         "@prepare-for-pantheon",
-         "composer install --optimize-autoloader"
-       ],
-   ```
-
-   To:
+1. Next, edit `composer.json` and add `--no-dev` from the `scripts` section, to exclude the dev dependencies when the build is deployed to production.
 
    ```json:title=composer.json
      "scripts": {
@@ -256,8 +246,6 @@ Custom module code is outside the scope of this document. See [drupal.org](https
          "composer install --optimize-autoloader --no-dev" //highlight-line
        ],
    ```
-
-   This way, when the build is deployed to production it will exclude the dev dependencies.
 
 1. Commit the changes and push them to the development environment:
 
