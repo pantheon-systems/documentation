@@ -1,5 +1,5 @@
 {
   "globals": {
-    "MktoForms2": true
+    "MktoForms2": "readonly"
   }
 }
