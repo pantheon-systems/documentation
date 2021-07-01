@@ -18,7 +18,12 @@
   avatar: //github.com/joa-pan.png?size=460
   bio: Senior Technical Writer
   github: //github.com/joa-pan
-  dev.to: https://dev.to/joaedwar
+- id: michellecolon-pantheon
+  name: Michelle Colón
+  avatar: //github.com/michellecolon-pantheon.png?size=460
+  bio: Technical Writer
+  github: //github.com/michellecolon-pantheon
+  linkedin: //www.linkedin.com/in/michellecolon  
 - id: eabquina
   name: Eladio Abquina
   bio: Engagement Manager, Professional Services
