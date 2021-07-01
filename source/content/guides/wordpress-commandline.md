@@ -226,7 +226,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
   You should see the new theme within **Appearance** > **Themes** of the WordPress Dashboard:
 
-  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../images/wordpress-commandline-child-theme-wp.png)
+  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../images/wordpress-commandline-child-theme-wp.jpg)
 
   Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 
