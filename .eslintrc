@@ -1,5 +1,7 @@
 {
   "globals": {
-    "MktoForms2": "readonly"
+    "MktoForms2": "readonly",
+    "jQuery": "readonly",
+    "$": "readonly"
   }
 }
