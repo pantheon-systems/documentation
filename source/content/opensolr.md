@@ -203,7 +203,7 @@ Next, add the fields your index should include for indexing.
 
 If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you can do so by clicking on the **Configuration** icon on your Opensolr Search Index's Tools page, then selecting the configuration file you wish to edit.
 
-![Opensolr configuration file editor page](../images/opensolr-config-files-editor.png)
+![Opensolr configuration file editor page](../images/opensolr-config-files-editor.jpg)
 
 ## See Also
 
