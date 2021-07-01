@@ -48,10 +48,7 @@ You’ll need to log in again after your password is changed.
 
 ### Autopilot Email Notifications
 
-You can choose whether you receive email notifications for the following:
-
-* **Weekly activity Digest** - Summary of Autopilot activity across all sites within the workspace that Autopilot is enabled.
-* **Failed Visual Regression Tests** - Real-time email notifications for failed VRT test for a specified site.
+<Partial file="autopilot/autopilot-email-notifications.md" />
 
 ### Pantheon Early Access Program
 
