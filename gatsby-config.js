@@ -26,17 +26,6 @@ module.exports = {
     "Mdx.frontmatter.contributors": "ContributorYaml",
   },
   plugins: [
-    // { // Consumes Yaml files into GraphQL
-    //   // https://www.gatsbyjs.com/plugins/gatsby-transformer-yaml-full/
-    //   resolve: `gatsby-transformer-yaml-full`,
-    //   options: {
-    //     plugins: [
-    //       // Handles markdown in Yaml files, like the Localdev changelog
-    //       // https://www.gatsbyjs.com/plugins/gatsby-yaml-full-markdown/
-    //       `gatsby-yaml-full-markdown`,
-    //     ],
-    //   },
-    // },
     `gatsby-transformer-yaml`,
     // Supports SCSS stylesheets. Prime to be removed with a CSS refactor
     `gatsby-plugin-sass`, //https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/
