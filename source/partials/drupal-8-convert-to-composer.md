@@ -273,7 +273,7 @@ Once you have confirmed that the site works in the Multidev, replace the `master
    git log --format="%H" -n 1
    ```
 
-   This will give you a commit ID like `fd3636f58f5b275b998bb1c9267bff8808353840`.
+   This will give you a commit hash like `fd3636f58f5b275b998bb1c9267bff8808353840`.
 
 1. Reset the `master` branch to match that commit then force push that to the Dev environment:
 
@@ -287,7 +287,7 @@ Now the site's Dev environment has a Drupal 9 codebase.
 
 ### Inspect Site Logs to Troubleshoot
 
-Before you do too much work to try to investigate issues, if the site doesn't load properly, clear the cache and try again.
+If the site doesn't load properly, before you do too much work to investigate issues, clear the cache and try again.
 
 Use Terminus to inspect the site's logs;
 
