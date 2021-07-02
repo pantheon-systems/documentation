@@ -230,40 +230,69 @@ The resulting `settings.php` should have no `$databases` array.
 
 ## Deploy
 
-You've now committed the code to the local branch. Deploy that branch directly to a new Multidev and test the site in the browser.
+You've now committed the code to the local branch. Deploy that branch directly to a new Multidev (called `composerify` in the steps below) and test the site in the browser.
 
 ### Deploy to a Multidev
 
-Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
+1. Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
 
-```bash{promptUser:user}
-git push -u origin composerify && terminus env:create $SITE.dev composerify
-```
+   ```bash{promptUser:user}
+   git push -u origin composerify && terminus env:create $SITE.dev composerify
+   ```
 
-Once you do this, your multidev will not work. You need to, after creating the mutlidev, make a change to the `pantheon.yml` file such as adding an empty line to the end of the file. Add that file to the branch, commmit it, and push it. Now the multidev will build out Integrated Composer correctly.
+1. Make a small change to `pantheon.yml`:
 
-Unfortunately, since the commit history of the multidev has no commits in common with the master branch, you cannot view the commit history on the multidev in the Dashboard or the Integrated Composer logs. But if your site is not working, try running this command on your local branch:
+   ```yaml:title=pantheon.yml
+   small change example
+   ```
+
+1. Commit and push the change to trigger an Integrated Composer build on the Multidev:
+
+   ```bash{promptUser: user}
+   git commit -am "trigger composer build"
+   git push origin composerify
+   ```
+
+Since the commit history of the `composerify` Multidev has no commits in common with the `master` branch, you cannot view the Multidev commit history from the Dashboard or the Integrated Composer logs.
+
+If the site is not working, try this Composer command on the local `composerify` branch:
 
 ```bash{promptUser:user}
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or any files that are not ignored by the `.gitignore` file are changed, you will need to resolve those issues. See Troubleshooting section for Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
 
-Once you have confirmed the site is working, the commit history of the old site needs to be removed and replaced with the commits on the multidev. Run these commands on your "composerify" branch:
+### Move composerify to the Main Dev Branch
 
-```bash{promptUser:user}
-git log --format="%H" -n 1 # Prints the commit ID of the latest commit in this branch
+Once you have confirmed that the site works in the Multidev, replace the `master` branch and its commit history with the `composerify` Multidev's commit history.
+
+1. Retrieve the most recent commit hash from the local `composerify` branch:
+
+   ```bash{promptUser:user}
+   git log --format="%H" -n 1
+   ```
+
+   This will give you a commit ID like `fd3636f58f5b275b998bb1c9267bff8808353840`.
+
+1. Reset the `master` branch to match that commit then force push that to the Dev environment:
+
+   ```bash{promptUser: user}
+   git checkout master
+   git reset --hard fd3636f58f5b275b998bb1c9267bff8808353840
+   git push --force origin master
+   ```
+
+Now the site's Dev environment has a Drupal 9 codebase.
+
+### Inspect Site Logs to Troubleshoot
+
+Before you do too much work to try to investigate issues, if the site doesn't load properly, clear the cache and try again.
+
+Use Terminus to inspect the site's logs;
+
+```bash{promptUser: user}
+terminus drush $SITE.composerify -- wd-show
 ```
 
-This will give you a commit ID number, something like this: `fd3636f58f5b275b998bb1c9267bff8808353840`. Use `git reset` to remove the existing commits and change the commit history to the same as the multidev, then force push that to the dev environment:
-
-```bash{promptUser:user}
-git checkout master # Switch to master branch
-git reset --hard fd3636f58f5b275b998bb1c9267bff8808353840 # Reset commmit history to match the branch
-git push --force origin master
-```
-
-Now the Dev environment has a whole new set of code deployed to it that is using Drupal 9 and Integrated Composer. Once you have verified Dev works as expected, then you can deploy the code changes to test and later live when fully ready to go.
-
-If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
+See our [logs collection](/logs) documentation for more information.
