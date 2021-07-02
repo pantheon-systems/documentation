@@ -13,9 +13,7 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 ### Drupal 9 with Integrated Composer
 
-You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer.
-
-- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
+You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer. To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 ### WordPress with Integrated Composer
 
