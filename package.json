@@ -50,8 +50,6 @@
     "gatsby-transformer-remark": "^4.5.0",
     "gatsby-transformer-sharp": "^3.8.0",
     "gatsby-transformer-yaml": "^3.8.0",
-    "gatsby-transformer-yaml-full": "0.3.4",
-    "gatsby-yaml-full-markdown": "0.3.4",
     "highlight.js": "^10.4.1",
     "jest": "^24.9.0",
     "new-github-issue-url": "^0.2.1",
