@@ -225,9 +225,9 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 </Accordion>
 
-### Drupal 7
+### Drupal
 
-1. Drupal 7 users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
+1. Drupal users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
 
     ```php:title=setting.php
     /**
