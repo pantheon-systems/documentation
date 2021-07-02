@@ -57,12 +57,6 @@ WP Offload Media requires a paid license but is configurable in the WordPress ad
 
 <Alert title="Note" type="info">
 
-This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/), our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80).
-
-</Alert>
-
-<Alert title="Note" type="info">
-
 This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214). If you need an alternative plugin with premium support and a multisite version, consider [WP Offload Media](#install-and-deploy-wp-offload-media).
 
 </Alert>
@@ -117,6 +111,9 @@ Upon successful migration, this command will also provide a search/replace comma
 
 #### Multisite compatibility
 
+WP Offload Media plugin is supported.
+
+See [WP Offload Media documentation](https://deliciousbrains.com/wp-offload-media/doc/multisite-per-subsite-bucket-and-custom-domain-settings/)
 
 #### Further configuration
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting and offline development.
