@@ -230,7 +230,7 @@ The resulting `settings.php` should have no `$databases` array.
 
 ## Deploy
 
-You've now committed the code to the local branch. Deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
+You've now committed the code to the local branch. Deploy that branch directly to a new Multidev and test the site in the browser.
 
 ### Deploy to a Multidev
 
@@ -265,3 +265,5 @@ git push --force origin master
 ```
 
 Now the Dev environment has a whole new set of code deployed to it that is using Drupal 9 and Integrated Composer. Once you have verified Dev works as expected, then you can deploy the code changes to test and later live when fully ready to go.
+
+If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
