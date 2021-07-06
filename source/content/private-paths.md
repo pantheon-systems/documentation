@@ -66,6 +66,10 @@ These files will be web-accessible based on the access control rules that you se
 
 To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**.
 
+## Protected Web Paths
+
+Another way to protect files and directories is to define a protected web path in your `pantheon.yml` file. See [Protected Web Paths](/pantheon-yml#protected-web-paths) for more information.
+
 ## Troubleshooting
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
