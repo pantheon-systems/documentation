@@ -195,7 +195,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      ```bash{promptUser: user}
      git checkout -b master
      git fetch pantheon-drupal-9 master
-     git merge pantheon-drops-9/master
+     git merge pantheon-drupal-9/master
      git push origin master
      ```
 
