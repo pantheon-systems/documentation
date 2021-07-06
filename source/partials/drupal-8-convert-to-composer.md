@@ -243,7 +243,10 @@ You've now committed the code to the local branch. Deploy that branch directly t
 1. Make a small change to `pantheon.yml`:
 
    ```yaml:title=pantheon.yml
-   small change example
+   database:
+    version: 10.4
+
+   # add a comment to trigger a change and build
    ```
 
 1. Commit and push the change to trigger an Integrated Composer build on the Multidev:
