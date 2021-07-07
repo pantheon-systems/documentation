@@ -207,7 +207,7 @@ You can also transfer a single file or a single directory at a time instead of t
 
 You'll need to configure database credentials matching your local database to develop locally. You don't want to manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`) because you could easily commit that change to version control and trigger a connection error on Dev when pushing to Pantheon.
 
-Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by git, it won't be found on Pantheon but it will be applied when you run the site locally.
+Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
 Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
@@ -225,22 +225,31 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 </Accordion>
 
-### Drupal 7
+### Drupal settings.local.php
 
-1. Drupal 7 users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
+Create the local settings file and add it to `.gitignore`.
 
-    ```php:title=setting.php
-    /**
-     * Include a local settings file if it exists. D7 only
-     */
-    $local_settings = dirname(__FILE__) . '/settings.local.php';
-    if (file_exists($local_settings)) {
-      include $local_settings;
-    }
-    ```
+1. Change to the site's directory and create the file. Change the first command in this example to fit the site's directory structure:
 
-1. You will also need to exclude the local configuration file from git, by adding the following to `.gitignore`:
+   ```bash{promptUser: user}
+   cd sites/default
+   touch settings.local.php
+   ```
 
-    ```git:title=.gitignore
-    sites/*/settings.local.php
-    ```
+1. Add the local configuration file to `.gitignore`:
+
+   ```git:title=.gitignore
+   sites/*/settings.local.php
+   ```
+
+Drupal 7 users need to add a reference to the local file from within `settings.php`:
+
+```php:title=sites/default/settings.php
+/**
+ * Drupal 7 only: Include a local settings file if it exists.
+ */
+$local_settings = dirname(__FILE__) . '/settings.local.php';
+if (file_exists($local_settings)) {
+  include $local_settings;
+}
+```
