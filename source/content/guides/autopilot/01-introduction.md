@@ -49,7 +49,7 @@ Autopilot is enabled for Pantheon sites at the organization level.
 
 ## Will Autopilot Work for Your Site?
 
-While Pantheon develops more features for Autopilot, some features aren't available yet. See the FAQ below for some examples.
+Pantheon is working on developing more features for Autopilot, yet some features are currently not available. Refer to the following FAQ section for more information.
 
 ## FAQ
 
