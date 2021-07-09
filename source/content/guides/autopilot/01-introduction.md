@@ -63,7 +63,7 @@ Not yet. Pantheon's devs are working on Autopilot email notifications.
 
 ### Does Autopilot work with Integrated Composer?
 
-Yes. If your site is using [Integrated Composer](/integrated-composer) (`build_step` is `true` in pantheon.yml), Autopilot will be able to update it.
+Yes. If your site is using [Integrated Composer](/integrated-composer) (`build_step` is `true` in the `pantheon.yml` file), Autopilot will be able to update it.
 
 ### Does Autopilot work with build tools?
 
@@ -71,7 +71,7 @@ Not yet. Autopilot is not compatible with Build Tools or other workflows that us
 
 ### What versions of Drush are supported by Autopilot?
 
-Currently, Autopilot only supports Drush 8. See [drush versions](/drush-versions) for information on setting your Drush version.
+Currently, Autopilot only supports Drush 8. Refer to the documentation on [Drush versions](/drush-versions) for more information.
 
 ### Does Autopilot support Terminus actions?
 
