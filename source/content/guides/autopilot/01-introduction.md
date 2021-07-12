@@ -71,7 +71,7 @@ Not yet. Autopilot is not compatible with Build Tools or other workflows that us
 
 ### What versions of Drush are supported by Autopilot?
 
-Currently, Autopilot only supports Drush 8. Refer to the documentation on [Drush versions](/drush-versions) for more information.
+Currently, Autopilot only supports Drush 8. However, Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information. 
 
 ### Does Autopilot support Terminus actions?
 
