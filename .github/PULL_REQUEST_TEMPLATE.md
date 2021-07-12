@@ -1,9 +1,8 @@
+<!--
 Pull requests should be opened in a branch off the `main` branch. For more information on contributing to Pantheon documentation, see the [Contributor Guidelines](https://pantheon.io/docs/contribute). Please refer to our [Style Guide](https://pantheon.io/docs/style-guide) and [this reference](https://developers.google.com/style) for formatting recommendations when contributing to the docs. 
 
-<!--
 **Note:** Please fill out the PR template to ensure proper processing. If you're not sure about a section, leave it empty.
 -->
-
 
 Closes #
 
