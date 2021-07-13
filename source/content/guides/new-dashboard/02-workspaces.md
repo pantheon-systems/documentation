@@ -24,7 +24,9 @@ editpath: new-dashboard/02-workspaces.md
 
 To create a new workspace from the dashboard, click the Organization’s name and icon in the upper left, and select **Create New Workspace** from the drop-down menu. 
 
-If you are creating the the Workspace for a web agency, you will be assigned a Partner Trial Tier. If the Workspace is not for an agency, you will be assigned a Silver Tier Workspace by default. 
+![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
+
+If you are creating the the Workspace for a web agency, you will be assigned a Partner Trial Tier. If the Workspace is not for an agency, you will be assigned a Silver Tier Workspace.
 
 
 ### Switch Between Workspaces
