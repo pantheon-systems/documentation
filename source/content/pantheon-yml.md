@@ -118,7 +118,9 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-04-20" />
+<ReviewDate date="2021-07-13" />
+
+Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version.
 
 <Alert type="info" title="Do not set the database version unless the site is eligible.">
 
