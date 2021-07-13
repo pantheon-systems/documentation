@@ -22,7 +22,7 @@ editpath: new-dashboard/02-workspaces.md
 
 ### Create a New Workspace
 
-To create a new workspace from the dashboard, click the Organization’s name and icon in the upper left, and select **Create New Workspace** from the drop-down menu. 
+To create a new Workspace from the Dashboard, click the Organization’s name and icon in the upper left, and select **Create New Workspace** from the drop-down menu. 
 
 ![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
 
