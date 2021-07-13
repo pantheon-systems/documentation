@@ -17,11 +17,19 @@ editpath: new-dashboard/02-workspaces.md
 
 ## What is a Workspace?
 
-[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the old Dashboards, combined into one place.
+[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the old Dashboards, with Pantheon features and actions that are conveniently available in one place.
 
-If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or between Organizations.
+
+### Create a New Workspace
+
+To create a new workspace from the dashboard, click the Organization’s name and icon in the upper left, and select **Create New Workspace** from the drop-down menu. 
+
+If you are creating the the Workspace for a web agency, you will be assigned a Partner Trial Tier. If the Workspace is not for an agency, you will be assigned a Silver Tier Workspace by default. 
+
 
 ### Switch Between Workspaces
+
+If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or between Organizations.
 
 Switch between Workspaces by clicking the Organization’s name and icon in the upper left:
 
@@ -33,9 +41,14 @@ The **<i className="fa fa-window-restore"></i> Sites** tab shows a table of all 
 
 Click a table heading to sort the table by that heading.
 
+
 ## Team
 
-Manage Team members and assign [roles and permissions](/change-management#roles-and-permissions). If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization here.
+By default, all users are assigned the Administrator role after the Workspace is created.
+
+You can manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
+
+
 ## Autopilot
 
 [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
