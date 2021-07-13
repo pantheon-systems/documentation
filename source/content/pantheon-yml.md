@@ -160,8 +160,8 @@ The following table shows the recommended MariaDB version for each CMS, as well 
 | Drupal < 7.76  | Default                     | August, 2021       |
 | Drupal >= 7.76 | Default                     | August, 2021       |
 | Drupal < 8.5   | Default                     | August, 2021       |
-| Drupal >= 8.6  | 10.0 - 10.4                 | August, 2021       |
-| Drupal >= 9.0  | 10.4                        | August, 2021       |
+| Drupal >= 8.6  | 10.0 - 10.4                 | Now Available      |
+| Drupal >= 9.0  | 10.4                        | Now Available      |
 | WordPress      | Default                     | August, 2021       |
 
 ### Drush Version
