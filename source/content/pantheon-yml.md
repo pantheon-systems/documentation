@@ -118,7 +118,11 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-04-20" />
+<ReviewDate date="2021-07-13" />
+
+Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
+
+Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version.
 
 <Alert type="info" title="Do not set the database version unless the site is eligible.">
 
@@ -129,8 +133,6 @@ The site is eligible to upgrade if the site's Dashboard displays a blue banner a
 [Contact Support](/support) if you're ready to use a different version of MariaDB, but you don't see the banner on the Dashboard.
 
 </Alert>
-
-Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
 Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
@@ -153,14 +155,14 @@ The following table shows the recommended MariaDB version for each CMS, as well 
 
 | CMS            | Recommended MariaDB Version | Configurable After |
 |----------------|-----------------------------|--------------------|
-| Drupal < 6.51  | Default                     | May, 2021          |
-| Drupal >= 6.51 | Default                     | May, 2021          |
-| Drupal < 7.76  | Default                     | May, 2021          |
-| Drupal >= 7.76 | Default                     | May, 2021          |
-| Drupal < 8.5   | Default                     | May, 2021          |
-| Drupal >= 8.6  | 10.0 - 10.4                 | Not specified      |
-| Drupal >= 9.0  | 10.4                        | Not specified      |
-| WordPress      | Default                     | July, 2021         |
+| Drupal < 6.51  | Default                     | August, 2021       |
+| Drupal >= 6.51 | Default                     | August, 2021       |
+| Drupal < 7.76  | Default                     | August, 2021       |
+| Drupal >= 7.76 | Default                     | August, 2021       |
+| Drupal < 8.5   | Default                     | August, 2021       |
+| Drupal >= 8.6  | 10.0 - 10.4                 | Now Available      |
+| Drupal >= 9.0  | 10.4                        | Now Available      |
+| WordPress      | Default                     | August, 2021       |
 
 ### Drush Version
 
