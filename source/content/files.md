@@ -48,11 +48,13 @@ Sites migrated from other hosts may have custom or absolute paths in the "Store 
 
 1. In the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`)
 1. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
-1. Optional: Ensure there is no defined setting in `wp-config.php` i.e.; `define(‘UPLOADS’, ‘wp-content/myimages’);`.
+1. Optional: Ensure there is no defined setting in `wp-config.php`, i.e., `define(‘UPLOADS’, ‘wp-content/myimages’);`.
 
 ### Known Limitations of File Names and Permissions
 
-If you have a module that is encountering the following error, please note that changing the file permission to `770` from `660` via SFTP (`chmod 660`) does not report any errors. However, it does not mean that the file has been updated. 
+File names and permissions are set by the system and cannot be changed.
+
+Some modules or plugins might return the following error:
 
 ```none
 User notice: Key file "file:///files/private/public.key" permissions are not correct,
@@ -60,8 +62,4 @@ recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey
 (line 59 of /code/vendor/league/oauth2-server/src/CryptKey.php)
 ```
 
-<Alert title="Note"  type="info" >
-
-File Names and Permissions are set by the system as default and are immutable.
-  
-</Alert>
+If you try to change the file permissions to `770` from `660` via SFTP, the change will fail silently. The platform will not update the file permissions and will not return an error.
