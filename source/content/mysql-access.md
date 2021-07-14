@@ -162,4 +162,4 @@ To disable hexadecimal notation, add `--skip-binary-as-hex` to the database conn
 mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…
 ```
 
-For more information on this behavior change, please see the [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).
+For more information on this behavior change, please refer to [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).
