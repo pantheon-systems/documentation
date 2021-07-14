@@ -3,6 +3,7 @@ title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
 categories: [platform]
 tags: [code, files]
+reviewed: "2021-07-14"
 ---
 
 Files are large pieces of static content not stored in your database, usually images, documents, or user uploads. Because they are distinct from your site's [code](/code), they are excluded from version control via Pantheon's `.gitignore` files <Popover content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git on which paths to ignore." />:
@@ -46,18 +47,19 @@ Pantheon does not support simultaneous SFTP connections. To avoid errors, set yo
 Sites migrated from other hosts may have custom or absolute paths in the "Store Uploads in This Folder" configuration. This can be resolved by using the recommended configuration:
 
 1. In the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`)
-2. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
-3. Optional: Ensure there is no defined setting in `wp-config.php` i.e.; `define(‘UPLOADS’, ‘wp-content/myimages’);`.
+1. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
+1. Optional: Ensure there is no defined setting in `wp-config.php` i.e.; `define(‘UPLOADS’, ‘wp-content/myimages’);`.
 
 ### Known Limitations of File Names and Permissions
 
 If you have a module that is encountering the following error, please note that changing the file permission to `770` from `660` via SFTP (`chmod 660`) does not report any errors. However, it does not mean that the file has been updated. 
 
-```
+```none
 User notice: Key file "file:///files/private/public.key" permissions are not correct,
 recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey->__construct()
 (line 59 of /code/vendor/league/oauth2-server/src/CryptKey.php)
 ```
+
 <Alert title="Note"  type="info" >
 
 File Names and Permissions are set by the system as default and are immutable.
