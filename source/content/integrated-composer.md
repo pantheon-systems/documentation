@@ -215,7 +215,7 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 
 ### Can I use a Composer GUI?
 
-Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+Pantheon does not offer support for Composer GUIs or any conflicts that might be caused by one.
 
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 
