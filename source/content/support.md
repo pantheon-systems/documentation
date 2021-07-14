@@ -20,6 +20,27 @@ Pantheon offers a range of Account options that include the features required fo
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
 | [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
 
+### Scope Explanations
+
+- **Platform**: Support helps:
+   - Identify and remedy Platform, Dashboard, Dev/Test/Live workflow, and connection mode issues
+   - Find appropriate documentation
+- **Technical**: Adds support for:
+   - Autopilot
+   - Drupal and WordPress application-level and site support
+   - Identifying problematic modules and plugins
+   - Multidev
+   - Assistance with basic CDN, Terminus, Localdev, and Custom Upstreams
+- **Performance**:
+   - New Relic
+   - Caching
+   - Cloud integrations
+   - Custom Upstreams
+   - Advanced Workflows
+   - Advanced CDN
+   - Terminus
+- **Dedicated**: Bespoke site debugging.
+
 ## Best Practices
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
