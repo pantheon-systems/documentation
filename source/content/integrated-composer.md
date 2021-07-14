@@ -13,9 +13,7 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 ### Drupal 9 with Integrated Composer
 
-- To convert an existing Drupal 8 site to a Composer-managed site, visit the [composer convert](/guides/drupal-9-migration) doc.
-
-- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
+You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer. To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 ### WordPress with Integrated Composer
 
@@ -217,7 +215,7 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 
 ### Can I use a Composer GUI?
 
-Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+Pantheon does not offer support for Composer GUIs or any conflicts that might be caused by one.
 
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 
