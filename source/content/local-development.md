@@ -30,10 +30,12 @@ Be sure you have:
 - [Terminus](/terminus)
 - [Drush](/drush) (optional)
 
+<Partial file="export-alias.md" />
+
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash{promptUser: user}
-terminus env:clear-cache <site>.<env>
+terminus env:clear-cache $SITE.<env>
 ```
 
 There are three parts to any dynamic website:
@@ -106,8 +108,8 @@ From within the Site Dashboard:
 1. Create and get the database with Terminus commands:
 
     ```bash{promptUser: user}
-    terminus backup:create <site>.<env> --element=db
-    terminus backup:get <site>.<env> --element=db
+    terminus backup:create $SITE.<env> --element=db
+    terminus backup:get $SITE.<env> --element=db
     ```
 
 1. Import the archive into your local MySQL database using the following command:
@@ -125,8 +127,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 Run the following Terminus commands:
 
 ```bash{promptUser: user}
-terminus backup:create <site>.<env> --element=files
-terminus backup:get <site>.<env> --element=files
+terminus backup:create $SITE.<env> --element=files
+terminus backup:get $SITE.<env> --element=files
 ```
 
 This will create and get a backup of the site's files.
