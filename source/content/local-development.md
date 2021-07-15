@@ -20,6 +20,16 @@ If you encounter any issues, visit the [Lando GitHub repository](https://github.
 
 ## Before You Begin
 
+There are three parts to any dynamic website:
+
+1. **Code**: The application, modules or plugins, and themes.
+
+1. **Database**: The content.
+
+1. **Files**: User uploaded or application generated.
+
+You will need to transfer each one from Pantheon to your local environment.
+
 Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
@@ -47,16 +57,6 @@ To save time, clear the target site environment's cache. This can be done from t
 ```bash{promptUser: user}
 terminus env:clear-cache $SITE.$ENV
 ```
-
-There are three parts to any dynamic website:
-
-1. Code (The application, modules or plugins, and themes)
-
-1. Database (content)
-
-1. Files (user uploaded or application generated)
-
-You will need to transfer each one from Pantheon to your local environment.
 
 ## Get the Code
 
