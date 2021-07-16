@@ -149,3 +149,15 @@ Pantheon places no restrictions on the contents of the database.
 ### Can I create another database user?
 
 No, Pantheon only provides one database user. Some customers have asked about creating a read-only user to provide read but not write access to the database. Consider creating an API or JSON-request application to provide access to the required information.
+
+### How do I convert output from hexadecimal to a binary data?
+
+When updating your MySQL client (CLI) from 5.x to 8.x, reading data from DB columns with BLOB types (such as the `variable` table in Drupal 7.x) may change data from binary to hexadecimal (ex: `0×1f34c9`).
+
+To disable hexadecimal notation, add `--skip-binary-as-hex` to the [database connection](/guides/quickstart/connection-modes/) when you connect from the command line:
+
+```bash{promptUser: user}
+mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…
+```
+
+For more information on this behavior change, please refer to [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).
