@@ -26,7 +26,7 @@ To create a new Workspace from the Dashboard, click the Organization’s name an
 
 ![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
 
-If you are creating the the Workspace for a web agency, you will be assigned a Partner Trial Tier. If the Workspace is not for an agency, you will be assigned a Silver Tier Workspace.
+If you are creating the the Workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the Workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
 
 
 ### Switch Between Workspaces
