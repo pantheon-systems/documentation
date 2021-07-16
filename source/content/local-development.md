@@ -20,6 +20,16 @@ If you encounter any issues, visit the [Lando GitHub repository](https://github.
 
 ## Before You Begin
 
+There are three parts to any dynamic website:
+
+1. **Code**: The application, modules or plugins, and themes.
+
+1. **Database**: The content.
+
+1. **Files**: User uploaded or application generated.
+
+You will need to transfer each one from Pantheon to your local environment.
+
 Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
@@ -30,21 +40,23 @@ Be sure you have:
 - [Terminus](/terminus)
 - [Drush](/drush) (optional)
 
+### Export Variables
+
+<Partial file="export-alias.md" />
+
+Export the environment as a variable as well:
+
+```bash{promptUser:user}
+export ENV=dev
+```
+
+### Clear Site Environment Cache
+
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash{promptUser: user}
-terminus env:clear-cache <site>.<env>
+terminus env:clear-cache $SITE.$ENV
 ```
-
-There are three parts to any dynamic website:
-
-1. Code (The application, modules or plugins, and themes)
-
-1. Database (content)
-
-1. Files (user uploaded or application generated)
-
-You will need to transfer each one from Pantheon to your local environment.
 
 ## Get the Code
 
@@ -52,11 +64,11 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 1. Go to Your Site Dashboard, and log in to Pantheon and load the Dashboard for the site you want to work on.
 
-2. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
+1. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
 
-    ![Copy and Paste Git Clone](../images/dashboard/git-string.png)<br />
+    ![Copy and Paste Git Clone](../images/dashboard/git-string.png)
 
-3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
+1. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
     ```bash{promptUser: user}
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -106,8 +118,8 @@ From within the Site Dashboard:
 1. Create and get the database with Terminus commands:
 
     ```bash{promptUser: user}
-    terminus backup:create <site>.<env> --element=db
-    terminus backup:get <site>.<env> --element=db
+    terminus backup:create $SITE.$ENV --element=db
+    terminus backup:get $SITE.$ENV --element=db
     ```
 
 1. Import the archive into your local MySQL database using the following command:
@@ -125,8 +137,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 Run the following Terminus commands:
 
 ```bash{promptUser: user}
-terminus backup:create <site>.<env> --element=files
-terminus backup:get <site>.<env> --element=files
+terminus backup:create $SITE.$ENV --element=files
+terminus backup:get $SITE.$ENV --element=files
 ```
 
 This will create and get a backup of the site's files.
