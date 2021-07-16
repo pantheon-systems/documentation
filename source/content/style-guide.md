@@ -935,6 +935,30 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 ___
 
+## Reusable Content
+
+Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
+
+Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
+
+Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
+
+After you create the file, include it in the doc:
+
+<Example>
+
+<Partial file="partial-example.md" />
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<Partial file="partial-example.md" />
+```
+
+</Example>
+
+___
+
 ## Tooltips
 
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
