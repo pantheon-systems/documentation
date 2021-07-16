@@ -48,7 +48,7 @@ Click a table heading to sort the table by that heading.
 
 By default, all users are assigned the Administrator role after the Workspace is created.
 
-You can manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
+Manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
 
 
 ## Autopilot
