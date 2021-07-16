@@ -31,9 +31,9 @@ If you are creating the the Workspace for a web agency, you will be assigned a P
 
 ### Switch Between Workspaces
 
-If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or between Organizations.
+If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or to work between Organizations.
 
-Switch between Workspaces by clicking the Organization’s name and icon in the upper left:
+Click the Organization’s name and icon in the upper left to switch between Workspaces:
 
 ![Workspace switcher shows a personal and Agency workspace](../../../images/dashboard/new-dashboard/workspaces-selector.png)
 
