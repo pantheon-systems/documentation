@@ -26,11 +26,11 @@ This page refers to products and features which are currently in development or 
 
 Want to try the New Dashboard?
 
-Click **Switch to New Dashboard** in the User or Organization Dashboard to access the new Dashboard. 
+<!--- Click **Switch to New Dashboard** in the User or Organization Dashboard to access the new Dashboard. 
 
 ![A screenshot of the Switch to New Dashboard button](../../../images/dashboard/new-dashboard/switch-new-dashboard.png)--->
 
-Alternatively, you can navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
+You can navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately transported to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
 
 ## Features of the New Dashboard
 
