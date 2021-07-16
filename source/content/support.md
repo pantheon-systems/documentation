@@ -34,7 +34,7 @@ Pantheon offers a range of Account options that include the features required fo
 - **Performance**:
    - New Relic
    - Caching
-   - Cloud integrations
+   - Cloud Integrations
    - Custom Upstreams
    - Advanced Workflows
    - Advanced CDN
