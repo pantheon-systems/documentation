@@ -54,4 +54,4 @@ You’ll need to log in again after your password is changed.
 
 If you would like to be directed to the new dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
 
-If you choose to use the new dashboard, you will not be able to navigate to your User Organization and will not be able to view certain features. If you select the Early Access option, you will not be able to view Billing or older features.
+If you choose to use the new Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the new Dashboard.
