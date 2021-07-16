@@ -24,7 +24,7 @@ On the Pantheon Platform, Drupal 9 sites use [Integrated Composer](/integrated-c
 
 <Alert title="A note about Limited Availability" type="info" icon="leaf">
 
-Drupal 9 is available on Pantheon as a Limited Availability feature release while additional features are in active development.
+Drupal 9 with Integrated Composer is available on Pantheon as a Limited Availability feature release while additional features are in active development.
 
 Pantheon engineers are rolling out changes often.
 
