@@ -137,13 +137,25 @@ Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'
 
 ## Frequently Asked Questions
 
-### How can I access my MySQL slow query logs?
+### How can I access my MySQL Slow Query logs?
 
-Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the `logs` subdirectory.
+Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html).
+
+To access the log for your database:
+
+1. Get the SFTP connection info for the environment in question.
+1. Replace the word `appserver` with `dbserver` in the connection string.
+1. The MySQL slow query logs are in the `logs` subdirectory.
 
 ### How can I access MySQL binary logs?
 
-To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"), connect to the database server as described above for the slow query logs. Binlogs are stored in the `data` subdirectory. These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
+These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
+
+To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"):
+
+1. Get the SFTP connection info for the environment in question.
+1. Replace the word `appserver` with `dbserver` in the connection string.
+1. The MySQL slow query logs are in the `data` subdirectory.
 
 ### Are table prefixes supported?
 
