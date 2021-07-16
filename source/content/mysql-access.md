@@ -3,18 +3,23 @@ title: Accessing MySQL Databases
 description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 categories: [develop]
 tags: [database, local, ssh]
-reviewed: "2020-07-30"
+reviewed: "2021-07-16"
 ---
+
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
 
 <Alert title="Note" type="info">
+
 Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.
+
 </Alert>
 
 ## Database Connection Information
 
-MySQL credentials for each site environment are located in the Dashboard:<br />
-![MySQL Credentials](../images/dashboard/mysql-info.png)<br />
+MySQL credentials for each site environment are located in the Dashboard:
+
+![MySQL Credentials](../images/dashboard/mysql-info.png)
+
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
@@ -25,7 +30,13 @@ The following required fields are provided:
 
 As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
-There's a wide array of MySQL clients that can be used, including [MySQL Workbench](https://dev.mysql.com/downloads/workbench/), [Sequel Pro](https://www.sequelpro.com/download), [Navicat](https://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
+There's a wide array of MySQL clients that can be used, including:
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
+- [Sequel Pro](https://www.sequelpro.com/download),
+- [Navicat](https://www.navicat.com/download),
+- [PHPMyAdmin](https://www.phpmyadmin.net/),
+
+and others. See the documentation or issue queue of your software to learn more about how to configure a connection.
 
 ### Open Sequel Pro Database Connection
 
