@@ -615,7 +615,7 @@ ___
 
 ## [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 
-**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module. It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about `["HTTP_HOST"]`.
+**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module. It attempts to use `['SERVER_NAME']` instead of the recommended `['HTTP_HOST']`. Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about `['HTTP_HOST']`.
 
 ___
 
