@@ -76,9 +76,13 @@ Local development options for Drupal 9 are currently being implemented into [Loc
 
 Some users have reported success using [Lando](https://docs.lando.dev/basics/) with Drupal 9, but it relies on a workaround and requires extra configuration. Check the status of the [Lando repo's issue](https://github.com/lando/lando/issues/2831#issuecomment-771833900) before you continue.
 
-Manually update the [Lando config file](https://docs.lando.dev/config/global.html#config-yml) to set `drupal9` as the framework:
+Manually update the [landofile](https://docs.lando.dev/config/lando.html#base-file) in the project folder, and set `drupal9` as the framework:
 
-```yml:title=~/.lando/config.yml
+```yml:title=lando.yml
 # Lando issue 2831 workaround for D9
 framework: drupal9
 ```
+
+When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal8` for a Drupal 8 or Drupal 9 site.
+
+If you created new project with Lando, change the value for `framework` to `drupal9`, then run `lando rebuild`.
