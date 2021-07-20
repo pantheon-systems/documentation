@@ -1,11 +1,11 @@
 ---
-title: Apache Solr on Pantheon
-description: Detailed information on using Apache Solr on your Pantheon Drupal or WordPress site.
+title: Pantheon Search (formerly Pantheon Solr)
+description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
 categories: [integrate]
-tags: [solr]
+tags: [solr, search]
 reviewed: "2020-10-15"
 ---
-Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Solr.
+Pantheon Search (formerly Pantheon Solr) is a system for indexing and searching site content. Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Pantheon Search.
 
 <Partial file="solr-version.md" />
 
@@ -21,22 +21,22 @@ Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/projec
 
 </Alert>
 
-## Which Plans Can Use Solr?
+## Which Plans Can Use Pantheon Search?
 
-All plans except for a Basic plan can use Solr. Solr is available to Sandbox site plans for developmental purposes, but Solr will not be available going live on a Basic plan.
+All plans except for a Basic plan can use Pantheon Search. Pantheon Search is available to Sandbox site plans for developmental purposes, but Pantheon Search will not be available going live on a Basic plan.
 
-| Plans         | Solr Support <Popover content="Available across all environments, including Multidevs." /> |
+| Plans         | Pantheon Search Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ---------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
 | Basic         | ❌  |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
-## Using Solr with WordPress or Drupal
+## Using Pantheon Search with WordPress or Drupal
 
 For installation instructions and additional details, see [Enabling Solr for WordPress](/wordpress-solr), [Enabling Solr with Drupal 7](/solr-drupal-7) or [Enabling Solr on Drupal 8](/solr-drupal-8).
 
-## Known Limitations of Pantheon's Solr Service
+## Known Limitations of Pantheon's SearchService
 
 - Solr can only be enabled by [Admin users or Users in Charge](/change-management#site-level-roles-and-permissions).
 

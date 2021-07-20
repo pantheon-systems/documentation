@@ -77,4 +77,4 @@ Provides an alternative caching backend, taking work off the database, which is 
 
 ## [WP Solr](https://wordpress.org/plugins/solr-power/)
 
-Enable the Apache Solr search engine for your WordPress website. For more information, see [Enabling Solr for WordPress](/wordpress-solr).
+Enable the Pantheon Search (Solr) engine for your WordPress website. For more information, see [Enabling Pantheon Search for WordPress](/wordpress-solr).

@@ -153,7 +153,7 @@ Yes. See [Public Distributions](/start-state/#public-distributions) for details.
 
 Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS. Pantheon also provides advanced caching addons for WordPress & Drupal.
 
-### What version of Apache Solr does Pantheon run?
+### What version of Apache Solr does Pantheon Search run?
 
 <Partial file="solr-version.md" />
 

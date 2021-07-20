@@ -8,11 +8,11 @@ contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
 ---
 
-[Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
+[Apache Solr](/pantheon-search) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 This guide provides information on using **Pantheon's Solr Service** with Drupal 7.
 
-If you are looking for additional search features for more advanced use cases, you may want to consider [alternative Solr service](/solr#alternatives-to-pantheons-solr-service) for your site. See the [Opensolr](/opensolr) guide for one example.
+If you are looking for additional search features for more advanced use cases, you may want to consider [alternative Solr service](/pantheon-search#alternatives-to-pantheons-solr-service) for your site. See the [Opensolr](/opensolr) guide for one example.
 
 For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/solr-drupal-8).
 
@@ -198,5 +198,5 @@ The following code changes are required before Solr can be safely uninstalled an
 
 ## See Also
 
-- [Apache Solr on Pantheon](/solr)
+- [Apache Solr on Pantheon](/pantheon-search)
 - [Using OpenSolr with Pantheon](/opensolr)
