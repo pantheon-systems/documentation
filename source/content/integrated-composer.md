@@ -17,6 +17,18 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 - To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
+### Drupal 8 with Integrated Composer
+
+1. Follow step 1 of the [Drupal 9](#drupal-9-with-integrated-composer) section above.
+
+2. Set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
+
+3. From a terminal working in the root directory, remove the lock file and then update Composer's version requirements for the project:
+
+  ```bash{outputLines: 2}
+  rm composer.lock && composer require drupal/core-recommended:^8.8 pantheon-systems/drupal-integrations:^8
+  ```
+
 ### WordPress with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
