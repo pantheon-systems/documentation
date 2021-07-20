@@ -43,7 +43,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-## See Also
+## Please Also Refer To
 
 - [Advanced Redirects and Restrictions](/advanced-redirects)
 - [Configuring Settings.php](/settings-php)
