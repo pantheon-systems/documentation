@@ -582,17 +582,40 @@ ___
 
 ## [Redirection](https://wordpress.org/plugins/redirection/)
 
-<ReviewDate date="2019-01-17" />
+<ReviewDate date="2021-07-19" />
 
-**Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
+**Issue 1:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
 **Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
+
+**Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
+
+**Solution:** In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+  ```php:title=wp-config.php
+  // Map $_SERVER['HTTP_HOST'] to $_SERVER['SERVER_NAME']
+  // to allow the Redirection plugin to work when using
+  // "URL and server" based redirects. By default,
+  // $_SERVER['SERVER_NAME'] returns Pantheon's internal
+  // server name and not the current hostname, as a
+  // result, Redirection's "URL and server"-based
+  // redirects never match.
+  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+  ```
+
+Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about how to use `HTTP_Host` on Pantheon.
+
+<Alert title="Warning" type="danger">
+
+This workaround may potentially break other functionality that depends on the default Pantheon return value for `$_SERVER['SERVER_NAME']`.
+
+</Alert>
 
 ___
 
 ## [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 
-**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
+**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module. It attempts to use `['SERVER_NAME']` instead of the recommended `['HTTP_HOST']`. Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about `['HTTP_HOST']`.
 
 ___
 
@@ -626,7 +649,7 @@ ___
 Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://<env>-example.pantheonsite.io').
 ```
 
-The plugin generates the site's URL using `$_SERVER['SERVER_NAME']` instead of `$_SERVER['HTTP_HOST']`. Due to the dynmic nature of Pantheon's cloud architecture, [`$_SERVER['HTTP_HOST']` is considered best practice.](/server_name-and-server_port#use-http_host-instead-of-server_name)
+The plugin generates the site's URL using `$_SERVER['SERVER_NAME']` instead of `$_SERVER['HTTP_HOST']`. Due to the dynamic nature of Pantheon's cloud architecture, [`$_SERVER['HTTP_HOST']` is considered best practice.](/server_name-and-server_port#use-http_host-instead-of-server_name)
 
 **Solution:** Add the following line to `wp-config.php`:
 
