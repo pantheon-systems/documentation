@@ -24,7 +24,7 @@ If you are currently working with Pantheon Professional Services Migrations, rea
 
 ## Standard Migrations
 
-Standard Migrations are ideal for smaller and simpler sites. Standard migrations include having our team of experts stand up your site on Pantheon, with everything included in the [Migration Project Scope](/guides/professional-services/website-migration-service#migration-project-scope---whats-included) below.
+Standard migrations include having our team of experts stand up your site on Pantheon, with everything included in the [Migration Project Scope](/guides/professional-services/website-migration-service#migration-project-scope---whats-included) below.
 
 ## Premium Migrations
 
@@ -64,20 +64,19 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 ### Included Tasks for Plugins, Modules, and Themes
 
 - Plugin/Module audit
+  - Disable unnecessary or unsupported modules and plugins
 
-- Plugin/Module optimization
+- Pantheon Plugin/Module installation
+  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, Redis, and/or Pantheon Search, as needed.  
 
 - Plugin & theme workarounds
   - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
 
-  - Disable unnecessary or unsupported modules and plugins
 
 ### Included Configuration Support
 
 -  SSL certificate pre-provisioning
    - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned.
-
-- SSO configuration
 
 - Email configuration
   - Set up external [email](/email) to work with the provider of your choice.
@@ -88,10 +87,6 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 - Search configuration
   - Configure sites that use Acquia Search to use Pantheon Search instead. (Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.)
 
-- Enable and configure Visual Regression Testing.
-
-- Additional tasks identified in the Project Requirements.
-
 Throughout the process, you'll have access to the Migrations Team through a dedicated Slack channel, and launch support when it's time to go live.
 
 ### Implement Solutions to Known Existing Incompatibilities
@@ -100,11 +95,13 @@ Each site migration includes up to **five hours** of the Migration Team's time f
 
 These hours are tracked by the Migrations Team and do not roll over for use on other sites.
 
-Implementing known solutions includes handling core considerations. For example, if the migration includes:
+### Site Configuration 
+
+During the Migration project kick-off, the team will review which of the following will be best for your site:
 
 - Pantheon Default Upstreams
   - Before Pantheon hands the site off to you for User Acceptance Testing (UAT), Pantheon will update the site to use the most current Upstream release.
-    - If this causes issues, we will roll it back to the current version on your production server
+   - If this causes issues, we will roll it back to the current version on your production server
 
 - Nested Docroot or Composer
   - Your sites will be migrated at their current version
@@ -170,7 +167,7 @@ You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migratio
 
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
-- Re-configuring your application layer SSO
+- Re-configuring your application layer SSO, if there are issues post-migration.
 
 These used to be called Custom Application Services (CAS) hours.
 
