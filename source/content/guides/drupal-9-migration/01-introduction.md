@@ -26,16 +26,18 @@ See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) do
 
 - Existing Site on Pantheon
   - With Build Tools (assumes Composer?)
-    - CI
+    - [CI](/guides/drupal-9-migration/build-tools-to-d9-build-tools)
     - No CI
   - With Composer
   - No Composer
+    - [In Place](/guides/drupal-9-migration/upgrade-to-d9)
+    - [New Site](/guides/drupal-9-migration/migrate-manual-d9)
   - Custom Upstream
 - Existing Site on Another Platform
   - D8
     - Composer
       - Yes
-      - No
+      - [No](/guides/drupal-9-migration/migrate-manual-d9)
   - D9
     - Composer
       - Yes
