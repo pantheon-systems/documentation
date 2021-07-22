@@ -199,12 +199,12 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      git push origin master
      ```
 
-    1. Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-config` directory.
+    1. Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
      Change to it and use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
 
      ```bash{promptUser: user}
-     cd upstream-config
+     cd upstream-configuration
      composer require drupal/pkg-name --no-update
      ```
 
