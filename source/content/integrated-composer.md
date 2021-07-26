@@ -119,7 +119,6 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 1. Commit and push.
 
-
 ## Support
 
 ### Pantheon Supports Composer 2
@@ -128,11 +127,9 @@ The version of Composer on the platform is Composer 2.
 
 Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
-
 ### Pantheon's Scope of Support for Composer
 
 <Partial file="composer-support-scope.md"/>
-
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
@@ -160,7 +157,23 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 ]
 ```
 
-The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file, to be lost. To resolve, merge the changes manually:
+**Issue 1:** The site might use a [Custom Upstream](/custom-upstream).
+
+**Solution:** Copy the Upstream URL and then follow **Solution 2**:
+
+1. From the Site Dashboard, go to the Dev environment.
+
+1. Click **Settings**, then **About site**.
+
+1. Copy the **Upstream** URL and use it in place of the Pantheon Upstream URL in **Solution 2**.
+
+**Issue 2:** The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git.
+
+- We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost.
+
+**Solution 2:**
+
+Merge the changes manually:
 
 1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
 
