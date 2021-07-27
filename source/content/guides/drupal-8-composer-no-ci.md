@@ -11,7 +11,9 @@ contributors: [ataylorme, dwayne, davidneedham]
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/) for managing a Drupal 8 site on your local machine and pushing to Pantheon.
 
-Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/core-updates).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
+Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/core-updates). This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
+
+To maintain the ability to apply core updates via the Site Dashboard, use the [Composer Convert](/guides/composer-convert) doc.
 
 <Alert title="Note" type="info">
 
@@ -261,5 +263,6 @@ To maintain best practice, some of the steps in this section require access to t
 P.S. the [Pantheon Community](/pantheon-community) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
 
 ## See Also
+
 - [Composer Fundamentals and WebOps Workflows](/composer)
 - [Pantheon YAML Configuration Files](/pantheon-yml)

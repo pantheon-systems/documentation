@@ -13,7 +13,9 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 ### Drupal 9 with Integrated Composer
 
-You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer. To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
+- To convert an existing Drupal 8 site to a Composer-managed site, visit the [Composer Convert](/guides/composer-convert) doc.
+
+- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 ### WordPress with Integrated Composer
 
@@ -27,7 +29,6 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-
 ## Add a Dependency to an Individual Site
 
 1. Clone the Git repository from the Pantheon site's dashboard.
@@ -37,6 +38,7 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
    ```bash{promptUser: user}
     composer install
    ```
+
 1. Add a new dependency locally:
 
    ```bash{promptUser: user}
@@ -49,7 +51,7 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
 
 ### Remove Individual Site Dependencies
 
-You can remove site dependencies if they are no longer needed. 
+You can remove site dependencies if they are no longer needed.
 
 1. Remove the dependency locally:
 
@@ -65,10 +67,9 @@ You can remove site dependencies if they are no longer needed.
 
 1. Navigate to **Code** in the Dev tab of the site's Dashboard.
 
-1. Click **Check Now**. 
+1. Click **Check Now**.
 
 1. If updates are available, click **Apply Updates**.
-
 
 ## Upstream
 
@@ -94,8 +95,8 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
     composer require drupal/pkg-name --no-update
     ```
 
-     -  `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
-     -  `--no-update` should not be included when adding dependencies to a site.
+     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
+     - `--no-update` should not be included when adding dependencies to a site.
 
 1. Set or increment the current configuration version:
 
