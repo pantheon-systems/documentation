@@ -212,7 +212,7 @@ git commit -m "Copy custom themes"
 
 Follow suit with any other custom code you need to carry over.
 
-#### Settings.php
+#### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
