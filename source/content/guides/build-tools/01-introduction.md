@@ -53,7 +53,7 @@ In general, it's a good fit if your team is comfortable with:
 
 <Enablement title="Developer Resources" link="https://pantheon.io/learn-pantheon">
 
-Pantheon's Developer Relations team holds trainings, Office Hours and monitors posts in our community forum. Join us to learn about Terminus, automations, advanced workflows like Build Tools, and more.
+Pantheon's Developer Advocacy team holds trainings, Office Hours and monitors posts in our community forum. Join us to learn about Terminus, automations, advanced workflows like Build Tools, and more.
 
 </Enablement>
 

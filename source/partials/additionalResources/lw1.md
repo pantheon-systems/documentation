@@ -1,6 +1,6 @@
 ## Congratulations on Completing Getting Started with Pantheon!
 
-Keep a good thing going! Sign up for workshop #2: [Command Line Interface with Terminus](https://pantheon.io/live-workshops/command-line-interface-terminus). Or pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
+Keep a good thing going! Sign up for workshop #2: [Command Line Interface with Terminus](https://pantheon.io/on-demand-trainings/command-line-interface-terminus). Or pick one of our other [Getting Started Workshops](https://pantheon.io/on-demand-trainings).
 
 ### Your Feedback Helps
 

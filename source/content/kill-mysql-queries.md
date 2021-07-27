@@ -7,9 +7,9 @@ reviewed: "2020-10-28"
 ---
 Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL database](/mysql-access).
 
-<Enablement title="Ramp up website performance" link="https://pantheon.io/live-workshops/website-performance-varnish-redis-and-new-relic?docs">
+<Enablement title="Ramp up website performance" link="https://pantheon.io/on-demand-trainings/website-performance-varnish-redis-and-new-relic?docs">
 
-Make your site faster. Check out our free weekly workshop, where you'll learn about caching pages with our Advanced CDN, our Redis backend cache, and see how to use New Relic&reg; Performance Monitoring for monitoring performance.
+Make your site faster. Check out our free on-demand training, where you'll learn about caching pages with our Advanced CDN, our Redis backend cache, and see how to use New Relic&reg; Performance Monitoring for monitoring performance.
 
 </Enablement>
 

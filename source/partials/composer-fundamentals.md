@@ -5,9 +5,9 @@ Composer is a PHP dependency manager that provides an alternative, more modern w
 
 Understanding how Composer can be used independent of Drupal or WordPress is a good place to learn more about the general concepts. For a summary of basic usage, see [Composer's own documentation](https://getcomposer.org/doc/01-basic-usage.md).
 
-<Callout title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Callout title="Automation Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+Master Composer concepts with help from our experts. Pantheon delivers on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Callout>
 

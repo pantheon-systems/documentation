@@ -2,7 +2,7 @@
 
 <Youtube src="Xs8QBZHlEDA" title="Automate and Integrate With Quicksilver" start="20" />
 
-If you thought that was interesting you should sign up for workshop #4: [Website Performance with Varnish, Redis, and New Relic](https://pantheon.io/live-workshops/website-performance-varnish-redis-and-new-relic). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
+If you thought that was interesting you should sign up for workshop #4: [Website Performance with Varnish, Redis, and New Relic](https://pantheon.io/on-demand-trainings/website-performance-varnish-redis-and-new-relic). Or pick one of our other [On-Demand Workshops](https://pantheon.io/on-demand-trainings).
 
 ### Your Feedback Helps
 

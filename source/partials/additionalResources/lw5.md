@@ -1,6 +1,6 @@
 ## More Resources for Going Live Best Practices! 🎉
 
-This is the final of the five [Live Workshops](https://pantheon.io/live-workshops)!
+This is the final of the five [On-Demand Essential Trainings](https://pantheon.io/on-demand-trainings)!
 
  <Youtube src="c2yF3Bm-h4k" title="Going Live Best Practices" start="17" />
 

@@ -1,6 +1,6 @@
 ## More resources for Website Performance with Varnish, Redis, and New Relic
 
-Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practices](https://pantheon.io/live-workshops/going-live-best-practices). You can also pick one of our other [Live Workshops](https://pantheon.io/live-workshops), happening every Thursday.
+Speed ahead to the next class! Sign up for workshop #5: [Going Live Best Practices](https://pantheon.io/on-demand-trainings/going-live-best-practices). You can also pick one of our other [On-Demand Workshops](https://pantheon.io/on-demand-trainings).
 
 - <Youtube src="QxQ__f6lUU0" title="Website Performance with Varnish, Redis, and New Relic" start="16" />
 
