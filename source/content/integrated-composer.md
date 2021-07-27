@@ -159,7 +159,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 
 **Issue 1:** The site might use a [Custom Upstream](/custom-upstream).
 
-**Solution:** Copy the Upstream URL and then follow **Solution 2**:
+**Solution 1:** Copy the Upstream URL and then follow **Solution 2**:
 
 1. From the Site Dashboard, go to the Dev environment.
 
