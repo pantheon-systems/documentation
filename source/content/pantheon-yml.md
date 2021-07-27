@@ -118,11 +118,11 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-07-13" />
+<ReviewDate date="2021-07-27" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
-Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version.
+Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
 
 <Alert type="info" title="Do not set the database version unless the site is eligible.">
 
