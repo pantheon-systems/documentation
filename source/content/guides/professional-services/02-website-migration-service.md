@@ -167,7 +167,7 @@ You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migratio
 
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
-- Re-configuring your application layer SSO, if there are issues post-migration.
+- Re-configuring your application layer SSO, if there are issues post-migration
 
 These used to be called Custom Application Services (CAS) hours.
 
