@@ -67,7 +67,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
   - Disable unnecessary or unsupported modules and plugins
 
 - Pantheon Plugin/Module installation
-  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, Redis, and/or Pantheon Search, as needed.  
+  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, Redis, and/or Pantheon Search, as needed
 
 - Plugin & theme workarounds
   - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
@@ -76,13 +76,13 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 ### Included Configuration Support
 
 -  SSL certificate pre-provisioning
-   - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned.
+   - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
 
 - Email configuration
-  - Set up external [email](/email) to work with the provider of your choice.
+  - Set up external [email](/email) to work with the provider of your choice
 
 - Redirect handling
-  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`.
+  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
 
 - Search configuration
   - Configure sites that use Acquia Search to use Pantheon Search instead. (Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.)
@@ -112,7 +112,7 @@ During the Migration project kick-off, the team will review which of the followi
 ## Out of Scope for Site Migrations
 
 1. Sites not listed in the original migrations agreement
-   - Contact your Account Rep to migrate more sites.
+   - Contact your Account Rep to migrate more sites
 
 1. Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
    - Issues that arise as a result of:
