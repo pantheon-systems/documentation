@@ -1,417 +1,416 @@
-releases:
-  - version: 1.0.1
-    date: 2020-12-14
-    requiresShutdown: true
-    changelog: !markdown |
-      ### Upstream changes
-        * Updated to Lando `3.0.24`
-        * Updated to Composer `2.0.7`
-        * Updated to Docker Desktop `3.0.1`
-  - version: 1.0.0
-    date: 2020-12-03
-    requiresShutdown: true
-    changelog: !markdown |
-      ### Upstream changes
-        * Updated to Lando `3.0.22`
-        * Updated to Composer `2.0.7`
-        * Updated to Docker Desktop `2.5.0.1`, fixes problems with macOS Big Sur
-      ### Improvements
-        * Corrected various copy inconsistencies
-  - version: 0.12.0
-    date: 2020-11-09
-    requiresShutdown: true
-    changelog: !markdown |
-      ### Upstream changes
-        * Updated to Lando `3.0.19`
-        * Updated to Terminus `2.4.1`
-        * Updated to Docker Desktop `2.5.0.0`
-      ### New features
-        * Added early access support for Drupal 9
-  - version: 0.11.0
-    date: 2020-10-19
-    requiresShutdown: true
-    changelog: !markdown |
-      ### Upstream changes
-        * Updated Drush 8 to `8.3.5`
-        * Updated to Lando `3.0.15`
-        * Updated to Terminus `2.4.0`
-        * Updated to Docker Desktop `2.4.0.0`
-        * Updated to Docker Compose `1.27.4`
-      ### New features
-        * Added symlink from `/code -> /app` for better COE support
-      ### Improvements
-        * Improved database pull speed
-        * Various UX improvements
-      ### Bug fixes
-        * Fixed bug causing database pull to fail with a foreign key constraint
-        * Fixed bug causing database pull to fail when app emits php errors
-        * Fixed bug causing database pull to always pull `dev`
-        * Fixed bug causing database pull to not correctly exclude cache data
-  - version: 0.10.1
-    date: 2020-06-17
-    requiresShutdown: true
-    changelog: !markdown |
-      ### Bug fixes
-        * Fixed bug causing Localdev to not `terminus auth` correctly when it starts up an application. [#63](https://github.com/pantheon-systems/localdev-issues/issues/63)
-  - version: 0.10.0
-    date: 2020-04-07
-    requiresShutdown: true
-    changelog: !markdown |
-      ### Upstream changes
-        * Updated to Composer `1.10.1`
-        * Updated to Docker Desktop `2.3.0.3`
-        * Updated Drush 8 to `8.3.2`
-        * Updated to nginx `1.16`
-        * Updated to Lando `3.0.4`
-        * Updated to PhpMyAdmin `5.0`
-        * Updated to Terminus `2.3.0`
-        * Updated to Traefik `2.2`
-      ### New features
-        * Added new log and activity viewer
-        * Added MailHog
-        * Added legacy `SIMPLETEST_` envvars
-        * Added Docker Desktop compatibility check [#57](https://github.com/pantheon-systems/localdev-issues/issues/57)
-        * Can now see more than `200` Pantheon sites in your account [#11](https://github.com/pantheon-systems/localdev-issues/issues/11)
-        * `drush_version` in `pantheon.yml` will now set Drush, falls back to latest Drush 8
-        * `proxy` will now auto recreate on new versions
-      ### Improvements
-        * Improved CPU usage during idle time
-        * Improved updating of apps built on older versions of Localdev
-        * Improved UX prompting user to rebuild on a start error
-        * Improved feedback when errors occur during pull and push [#53](https://github.com/pantheon-systems/localdev-issues/issues/53)
-        * Improved app tab navigation
-      ### Bug fixes
-        * Fixed bug causing `nginx` to periodically crash silently
-        * Fixed bug causing app state to become detached while syncing
-        * Fixed bug causing proxy ports to unexpectedly change
-        * Fixed bug causing logs to grow indefinitely
-        * Fixed bug causing app start to fail if proxy was unable to locate suitable ports
-        * Fixed bug causing Localdev to push to unexpected environments
-        * Fixed bug causing Localdev pull and push to fail when checked out to branch that wasnt also a multidev env
-        * Fixed bug causing rebuilds to fail if run directly after another failing command
-        * Fixed bug causing silent error when trying to pull code from `test` or `live`
-        * Fixed bug causing code push to fail if `git` `user.name` and `user.email` were not set [#39](https://github.com/pantheon-systems/localdev-issues/issues/39) [#47](https://github.com/pantheon-systems/localdev-issues/issues/47)
-        * Fixed bug causing `terminus` to update the incorrect version
-        * Fixed bug causing `simple_saml` to fail due to an unset `PATH_INFO`
-  - version: 0.9.3
-    date: 2020-03-22
-    requiresShutdown: true
-    changelog: !markdown |
-      ## UPDATE IMMEDIATELY!!!
-        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
-      ### Critical fixes
-        * Fixed `CRITICAL` breaking changes in upstream images
-      ### New features
-        * Added force remove option to all apps
-        * Added support for Docker Desktop `2.2.0.4`
-        * Added support for multidev environments
-        * Added ability to configure where you clone projects
-        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
-      ### Improvements
-        * Improved user experience
-        * Improved handling of installing to non-empty directories
-        * Stopped removing local codebase on environment destruction
-  - version: 0.9.2
-    date: 2020-03-22
-    requiresShutdown: true
-    changelog: !markdown |
-      ## UPDATE IMMEDIATELY!!!
-        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
-      ### Critical fixes
-        * Fixed `CRITICAL` breaking changes in upstream images
-      ### New features
-        * Added force remove option to all apps
-        * Added support for Docker Desktop `2.2.0.4`
-        * Added support for multidev environments
-        * Added ability to configure where you clone projects
-        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
-      ### Improvements
-        * Improved user experience
-        * Improved handling of installing to non-empty directories
-        * Stopped removing local codebase on environment destruction
-  - version: 0.9.1
-    date: 2020-03-22
-    requiresShutdown: true
-    changelog: !markdown |
-      ## UPDATE IMMEDIATELY!!!
-        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
-      ### Critical fixes
-        * Fixed `CRITICAL` breaking changes in upstream images
-      ### New features
-        * Added force remove option to all apps
-        * Added support for Docker Desktop `2.2.0.4`
-        * Added support for multidev environments
-        * Added ability to configure where you clone projects
-        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
-      ### Improvements
-        * Improved user experience
-        * Improved handling of installing to non-empty directories
-        * Stopped removing local codebase on environment destruction
-  - version: 0.9.0
-    date: 2020-03-22
-    requiresShutdown: true
-    changelog: !markdown |
-      ## UPDATE IMMEDIATELY!!!
-        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
-      ### Critical fixes
-        * Fixed `CRITICAL` breaking changes in upstream images
-      ### New features
-        * Added force remove option to all apps
-        * Added support for Docker Desktop `2.2.0.4`
-        * Added support for multidev environments
-        * Added ability to configure where you clone projects
-        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
-      ### Improvements
-        * Improved user experience
-        * Improved handling of installing to non-empty directories
-        * Stopped removing local codebase on environment destruction
-  - version: 0.8.0
-    date: 2020-03-20
-    requiresShutdown: true
-    changelog: !markdown |
-      ## UPDATE IMMEDIATELY!!!
-        * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
-      ### Critical fixes
-        * Fixed `CRITICAL` breaking changes in upstream images
-      ### New features
-        * Added support for Docker Desktop `2.2.0.4`
-        * Added support for multidev environments
-        * Added ability to configure where you clone projects
-        * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
-      ### Improvements
-        * Improved user experience
-        * Improved handling of installing to non-empty directories
-        * Stopped removing local codebase on environment destruction
-  - version: 0.7.0
-    date: 2020-01-14
-    requiresShutdown: true
-    changelog: !markdown |
-      ### New features
-        * Added macOS Catalina Support!
-        * Added a `beta` release channel
-        * Added ability to toggle `cache` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
-        * Added ability to toggle `edge` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
-        * Added ability to toggle `index` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
-        * Added ability to rebuild a given app
-        * Added basic online/offline detection
-        * Added support for `phpmyadmin` as toggleable service
-        * Added surfacing of release notes
-        * Added option to automatically quit Docker on Localdev quit
-      ### Improvements
-        * Improved cancellation of app initialization
-        * Improved application state detection
-        * Improved handling when port `2222` is blocked
-        * Improved shutdown and quit
-        * Improved process handling and management
-        * Improved revoked token detection and mitigation
-        * Improved application destruction UX
-        * Improved Docker state management
-        * Improved error handling and logging
-        * Improved "botched state" cleanup
-        * Improved progress indicators
-        * Improved UX on `phpmyadmin` selection
-      ### Bug fixes
-        * Fixed bug in 0.6.0 causing develop screen to not show if user did not have `pma` installed
-        * Fixed various initialization bugs
-        * Fixed various "app is stuck" bugs
-        * Fixed bug causing pre-0.6.0 installs to not be detected
-      ### Notes
-        * Going forward Localdev will manage its own Lando configuration [#18](https://github.com/pantheon-systems/localdev-issues/issues/18)
-  - version: 0.6.0
-    date: 2020-01-13
-    requiresShutdown: true
-    changelog: !markdown |
-      ### New features
-        * Added macOS Catalina Support!
-        * Added a `beta` release channel
-        * Added ability to toggle `edge` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
-        * Added ability to rebuild a given app
-        * Added basic online/offline detection
-        * Added support for `phpmyadmin` as toggleable service
-        * Added surfacing of release notes
-        * Added option to automatically quit Docker on Localdev quit
-      ### Improvements
-        * Improved cancellation of app initialization
-        * Improved application state detection
-        * Improved shutdown and quit
-        * Improved process handling and management
-        * Improved revoked token detection and mitigation
-        * Improved application destruction UX
-        * Improved Docker state management
-        * Improved error handling and logging
-        * Improved "botched state" cleanup
-        * Improved progress indicators
-      ### Bug fixes
-        * Fixed various initialization bugs
-        * Fixed various "app is stuck" bugs
-        * Fixed bug causing pre-0.6.0 installs to not be detected
-      ### Notes
-        * Going forward Localdev will manage its own Lando configuration [#18](https://github.com/pantheon-systems/localdev-issues/issues/18)
-  - version: 0.5.7
-    date: 2019-11-04
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Complete OSX Catalina Support!
-  - version: 0.5.6
-    date: 2019-10-30
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Preliminary Catalina support
-  - version: 0.5.5
-    date: 2019-10-30
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Complete OSX Catalina Support!
-  - version: 0.5.4
-    date: 2019-10-15
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Added changelog display when updates are detected [#123](https://github.com/pantheon-systems/localdev/issues/123)
-      * Improved support for stable and beta channels
-      * Fixed download and install from Settings [#129](https://github.com/pantheon-systems/localdev/issues/129)
-  - version: 0.5.3
-    date: 2019-09-17
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * This is a test release for the edge/beta channel; No functional changes
-  - version: 0.5.2
-    date: 2019-09-17
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * This is a test release for the edge/beta channel; No functional changes
-  - version: 0.5.1
-    date: 2019-09-13
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Added support and configuration for the `edge` (non-stable) release channel
-  - version: 0.5.0
-    date: 2019-08-07
-    instructions: !markdown |
-      If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Added ability to launch shell to use `drush`, `composer`, `terminus`, `wp-cli`, etc [#13](https://github.com/pantheon-systems/localdev-issues/issues/13)
-      * Fixed `Congratulations! It should be impossible...` Docker bug
-      * Updated to Docker Desktop `2.1.0.0`
-  - version: 0.4.3
-    date: 2019-07-16
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Added a stable release alias at `https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg`
-      * Added instance id to all error reports
-      * Added instance id to config screen
-      * Fixed bug where default error stack trace and message value were the wrong type [#1](https://github.com/pantheon-systems/localdev-issues/issues/1)
-      * Locked down token length validation to 45 characters
-      * Updated to [Lando 3.0.0-rc.18](https://github.com/lando/lando/releases/tag/v3.0.0-rc.18), fixes bugs, improves error logging
-  - version: 0.4.2
-    date: 2019-06-11
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Added "CLI connection string" to dashboard [#10](https://github.com/pantheon-systems/localdev-issues/issues/10)
-      * Fixed bug where default error stack trace and message value were the wrong type [#1](https://github.com/pantheon-systems/localdev-issues/issues/1)
-      * Changed `localhost` to `127.0.0.1` in DB connection info [#10](https://github.com/pantheon-systems/localdev-issues/issues/10)
-      * Updated to [Lando 3.0.0-rc.17](https://github.com/lando/lando/releases/tag/v3.0.0-rc.17)
-  - version: 0.4.1
-    date: 2019-05-21
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Fixed regression causing database creds to not surface correctly [#112](https://github.com/pantheon-systems/localdev/issues/112)
-      * Fixed bug causing site destroy to throw a `name not defined` error
-      * Improved error capture to include identifying information if possible
-      * Updated to [Lando 3.0.0-rc.16+b72f0ce](https://github.com/lando/lando/tree/b72f0ce6c75662ac467e07fb88210b2abd03dc9b)
-      * Updated README.md to include useful troubleshooting materials
-  - version: 0.4.0
-    date: 2019-03-19
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.4.0
-    instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Added `dev` site and Pantheon Dashboard links to Develop tab [#95](https://github.com/pantheon-systems/localdev/issues/95)
-      * Added splash screen for when Docker needs to startup [#90](https://github.com/pantheon-systems/localdev/issues/90)
-      * Added `pld` namespacing to PLD containers so they don't collide with `lando` ones [#25](https://github.com/pantheon-systems/localdev/issues/25)
-      * Fixed inconsistencies between n-invoked progress runners [#29](https://github.com/pantheon-systems/localdev/issues/29)
-      * Improved sync between Docker engine status and sites running status [#2](https://github.com/pantheon-systems/localdev-issues/issues/2)
-      * Removed redundant `code` pull on site initialization [#4](https://github.com/pantheon-systems/localdev-issues/issues/4)
-      * Updated to [Lando 3.0.0-rc.14](https://github.com/lando/lando/releases/tag/v3.0.0-rc.14)
-  - version: 0.3.1
-    date: 2019-02-28
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.3.1
-    instructions: If you are updating from before `0.3.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
-    changelog: !markdown |
-      * Updated to [Lando 3.0.0-rc.13](https://github.com/lando/lando/releases/tag/v3.0.0-rc.13)
-  - version: 0.3.0
-    date: 2019-02-14
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0
-    instructions: !markdown |
-      You will _likely_ although not neccesarily want to take the following actions after updating to this version:
+- version: 1.0.1
+  date: 2020-12-14
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### Upstream changes
+      * Updated to Lando `3.0.24`
+      * Updated to Composer `2.0.7`
+      * Updated to Docker Desktop `3.0.1`
+- version: 1.0.0
+  date: 2020-12-03
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### Upstream changes
+      * Updated to Lando `3.0.22`
+      * Updated to Composer `2.0.7`
+      * Updated to Docker Desktop `2.5.0.1`, fixes problems with macOS Big Sur
+    ### Improvements
+      * Corrected various copy inconsistencies
+- version: 0.12.0
+  date: 2020-11-09
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### Upstream changes
+      * Updated to Lando `3.0.19`
+      * Updated to Terminus `2.4.1`
+      * Updated to Docker Desktop `2.5.0.0`
+    ### New features
+      * Added early access support for Drupal 9
+- version: 0.11.0
+  date: 2020-10-19
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### Upstream changes
+      * Updated Drush 8 to `8.3.5`
+      * Updated to Lando `3.0.15`
+      * Updated to Terminus `2.4.0`
+      * Updated to Docker Desktop `2.4.0.0`
+      * Updated to Docker Compose `1.27.4`
+    ### New features
+      * Added symlink from `/code -> /app` for better COE support
+    ### Improvements
+      * Improved database pull speed
+      * Various UX improvements
+    ### Bug fixes
+      * Fixed bug causing database pull to fail with a foreign key constraint
+      * Fixed bug causing database pull to fail when app emits php errors
+      * Fixed bug causing database pull to always pull `dev`
+      * Fixed bug causing database pull to not correctly exclude cache data
+- version: 0.10.1
+  date: 2020-06-17
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### Bug fixes
+      * Fixed bug causing Localdev to not `terminus auth` correctly when it starts up an application. [#63](https://github.com/pantheon-systems/localdev-issues/issues/63)
+- version: 0.10.0
+  date: 2020-04-07
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### Upstream changes
+      * Updated to Composer `1.10.1`
+      * Updated to Docker Desktop `2.3.0.3`
+      * Updated Drush 8 to `8.3.2`
+      * Updated to nginx `1.16`
+      * Updated to Lando `3.0.4`
+      * Updated to PhpMyAdmin `5.0`
+      * Updated to Terminus `2.3.0`
+      * Updated to Traefik `2.2`
+    ### New features
+      * Added new log and activity viewer
+      * Added MailHog
+      * Added legacy `SIMPLETEST_` envvars
+      * Added Docker Desktop compatibility check [#57](https://github.com/pantheon-systems/localdev-issues/issues/57)
+      * Can now see more than `200` Pantheon sites in your account [#11](https://github.com/pantheon-systems/localdev-issues/issues/11)
+      * `drush_version` in `pantheon.yml` will now set Drush, falls back to latest Drush 8
+      * `proxy` will now auto recreate on new versions
+    ### Improvements
+      * Improved CPU usage during idle time
+      * Improved updating of apps built on older versions of Localdev
+      * Improved UX prompting user to rebuild on a start error
+      * Improved feedback when errors occur during pull and push [#53](https://github.com/pantheon-systems/localdev-issues/issues/53)
+      * Improved app tab navigation
+    ### Bug fixes
+      * Fixed bug causing `nginx` to periodically crash silently
+      * Fixed bug causing app state to become detached while syncing
+      * Fixed bug causing proxy ports to unexpectedly change
+      * Fixed bug causing logs to grow indefinitely
+      * Fixed bug causing app start to fail if proxy was unable to locate suitable ports
+      * Fixed bug causing Localdev to push to unexpected environments
+      * Fixed bug causing Localdev pull and push to fail when checked out to branch that wasnt also a multidev env
+      * Fixed bug causing rebuilds to fail if run directly after another failing command
+      * Fixed bug causing silent error when trying to pull code from `test` or `live`
+      * Fixed bug causing code push to fail if `git` `user.name` and `user.email` were not set [#39](https://github.com/pantheon-systems/localdev-issues/issues/39) [#47](https://github.com/pantheon-systems/localdev-issues/issues/47)
+      * Fixed bug causing `terminus` to update the incorrect version
+      * Fixed bug causing `simple_saml` to fail due to an unset `PATH_INFO`
+- version: 0.9.3
+  date: 2020-03-22
+  requiresShutdown: true
+  changelogMarkdown: >
+    ## UPDATE IMMEDIATELY!!!
+      * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+    ### Critical fixes
+      * Fixed `CRITICAL` breaking changes in upstream images
+    ### New features
+      * Added force remove option to all apps
+      * Added support for Docker Desktop `2.2.0.4`
+      * Added support for multidev environments
+      * Added ability to configure where you clone projects
+      * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+    ### Improvements
+      * Improved user experience
+      * Improved handling of installing to non-empty directories
+      * Stopped removing local codebase on environment destruction
+- version: 0.9.2
+  date: 2020-03-22
+  requiresShutdown: true
+  changelogMarkdown: >
+    ## UPDATE IMMEDIATELY!!!
+      * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+    ### Critical fixes
+      * Fixed `CRITICAL` breaking changes in upstream images
+    ### New features
+      * Added force remove option to all apps
+      * Added support for Docker Desktop `2.2.0.4`
+      * Added support for multidev environments
+      * Added ability to configure where you clone projects
+      * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+    ### Improvements
+      * Improved user experience
+      * Improved handling of installing to non-empty directories
+      * Stopped removing local codebase on environment destruction
+- version: 0.9.1
+  date: 2020-03-22
+  requiresShutdown: true
+  changelogMarkdown: >
+    ## UPDATE IMMEDIATELY!!!
+      * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+    ### Critical fixes
+      * Fixed `CRITICAL` breaking changes in upstream images
+    ### New features
+      * Added force remove option to all apps
+      * Added support for Docker Desktop `2.2.0.4`
+      * Added support for multidev environments
+      * Added ability to configure where you clone projects
+      * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+    ### Improvements
+      * Improved user experience
+      * Improved handling of installing to non-empty directories
+      * Stopped removing local codebase on environment destruction
+- version: 0.9.0
+  date: 2020-03-22
+  requiresShutdown: true
+  changelogMarkdown: >
+    ## UPDATE IMMEDIATELY!!!
+      * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+    ### Critical fixes
+      * Fixed `CRITICAL` breaking changes in upstream images
+    ### New features
+      * Added force remove option to all apps
+      * Added support for Docker Desktop `2.2.0.4`
+      * Added support for multidev environments
+      * Added ability to configure where you clone projects
+      * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+    ### Improvements
+      * Improved user experience
+      * Improved handling of installing to non-empty directories
+      * Stopped removing local codebase on environment destruction
+- version: 0.8.0
+  date: 2020-03-20
+  requiresShutdown: true
+  changelogMarkdown: >
+    ## UPDATE IMMEDIATELY!!!
+      * If you have an existing locally pulled down site that is not functioning click on that site in the sidebar, go to the `Advanced` tab and initialize a `Force Rebuild`.
+    ### Critical fixes
+      * Fixed `CRITICAL` breaking changes in upstream images
+    ### New features
+      * Added support for Docker Desktop `2.2.0.4`
+      * Added support for multidev environments
+      * Added ability to configure where you clone projects
+      * Updated to Lando `3.0.0-aft.2` for speed, performance and stability improvements
+    ### Improvements
+      * Improved user experience
+      * Improved handling of installing to non-empty directories
+      * Stopped removing local codebase on environment destruction
+- version: 0.7.0
+  date: 2020-01-14
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### New features
+      * Added macOS Catalina Support!
+      * Added a `beta` release channel
+      * Added ability to toggle `cache` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+      * Added ability to toggle `edge` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+      * Added ability to toggle `index` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+      * Added ability to rebuild a given app
+      * Added basic online/offline detection
+      * Added support for `phpmyadmin` as toggleable service
+      * Added surfacing of release notes
+      * Added option to automatically quit Docker on Localdev quit
+    ### Improvements
+      * Improved cancellation of app initialization
+      * Improved application state detection
+      * Improved handling when port `2222` is blocked
+      * Improved shutdown and quit
+      * Improved process handling and management
+      * Improved revoked token detection and mitigation
+      * Improved application destruction UX
+      * Improved Docker state management
+      * Improved error handling and logging
+      * Improved "botched state" cleanup
+      * Improved progress indicators
+      * Improved UX on `phpmyadmin` selection
+    ### Bug fixes
+      * Fixed bug in 0.6.0 causing develop screen to not show if user did not have `pma` installed
+      * Fixed various initialization bugs
+      * Fixed various "app is stuck" bugs
+      * Fixed bug causing pre-0.6.0 installs to not be detected
+    ### Notes
+      * Going forward Localdev will manage its own Lando configuration [#18](https://github.com/pantheon-systems/localdev-issues/issues/18)
+- version: 0.6.0
+  date: 2020-01-13
+  requiresShutdown: true
+  changelogMarkdown: >
+    ### New features
+      * Added macOS Catalina Support!
+      * Added a `beta` release channel
+      * Added ability to toggle `edge` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+      * Added ability to rebuild a given app
+      * Added basic online/offline detection
+      * Added support for `phpmyadmin` as toggleable service
+      * Added surfacing of release notes
+      * Added option to automatically quit Docker on Localdev quit
+    ### Improvements
+      * Improved cancellation of app initialization
+      * Improved application state detection
+      * Improved shutdown and quit
+      * Improved process handling and management
+      * Improved revoked token detection and mitigation
+      * Improved application destruction UX
+      * Improved Docker state management
+      * Improved error handling and logging
+      * Improved "botched state" cleanup
+      * Improved progress indicators
+    ### Bug fixes
+      * Fixed various initialization bugs
+      * Fixed various "app is stuck" bugs
+      * Fixed bug causing pre-0.6.0 installs to not be detected
+    ### Notes
+      * Going forward Localdev will manage its own Lando configuration [#18](https://github.com/pantheon-systems/localdev-issues/issues/18)
+- version: 0.5.7
+  date: 2019-11-04
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Complete OSX Catalina Support!
+- version: 0.5.6
+  date: 2019-10-30
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Preliminary Catalina support
+- version: 0.5.5
+  date: 2019-10-30
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Complete OSX Catalina Support!
+- version: 0.5.4
+  date: 2019-10-15
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Added changelog display when updates are detected [#123](https://github.com/pantheon-systems/localdev/issues/123)
+    * Improved support for stable and beta channels
+    * Fixed download and install from Settings [#129](https://github.com/pantheon-systems/localdev/issues/129)
+- version: 0.5.3
+  date: 2019-09-17
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * This is a test release for the edge/beta channel; No functional changes
+- version: 0.5.2
+  date: 2019-09-17
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * This is a test release for the edge/beta channel; No functional changes
+- version: 0.5.1
+  date: 2019-09-13
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Added support and configuration for the `edge` (non-stable) release channel
+- version: 0.5.0
+  date: 2019-08-07
+  instructions: >
+    If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Added ability to launch shell to use `drush`, `composer`, `terminus`, `wp-cli`, etc [#13](https://github.com/pantheon-systems/localdev-issues/issues/13)
+    * Fixed `Congratulations! It should be impossible...` Docker bug
+    * Updated to Docker Desktop `2.1.0.0`
+- version: 0.4.3
+  date: 2019-07-16
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Added a stable release alias at `https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg`
+    * Added instance id to all error reports
+    * Added instance id to config screen
+    * Fixed bug where default error stack trace and message value were the wrong type [#1](https://github.com/pantheon-systems/localdev-issues/issues/1)
+    * Locked down token length validation to 45 characters
+    * Updated to [Lando 3.0.0-rc.18](https://github.com/lando/lando/releases/tag/v3.0.0-rc.18), fixes bugs, improves error logging
+- version: 0.4.2
+  date: 2019-06-11
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Added "CLI connection string" to dashboard [#10](https://github.com/pantheon-systems/localdev-issues/issues/10)
+    * Fixed bug where default error stack trace and message value were the wrong type [#1](https://github.com/pantheon-systems/localdev-issues/issues/1)
+    * Changed `localhost` to `127.0.0.1` in DB connection info [#10](https://github.com/pantheon-systems/localdev-issues/issues/10)
+    * Updated to [Lando 3.0.0-rc.17](https://github.com/lando/lando/releases/tag/v3.0.0-rc.17)
+- version: 0.4.1
+  date: 2019-05-21
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Fixed regression causing database creds to not surface correctly [#112](https://github.com/pantheon-systems/localdev/issues/112)
+    * Fixed bug causing site destroy to throw a `name not defined` error
+    * Improved error capture to include identifying information if possible
+    * Updated to [Lando 3.0.0-rc.16+b72f0ce](https://github.com/lando/lando/tree/b72f0ce6c75662ac467e07fb88210b2abd03dc9b)
+    * Updated README.md to include useful troubleshooting materials
+- version: 0.4.0
+  date: 2019-03-19
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.4.0
+  instructions: If you are updating from before `0.4.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Added `dev` site and Pantheon Dashboard links to Develop tab [#95](https://github.com/pantheon-systems/localdev/issues/95)
+    * Added splash screen for when Docker needs to startup [#90](https://github.com/pantheon-systems/localdev/issues/90)
+    * Added `pld` namespacing to PLD containers so they don't collide with `lando` ones [#25](https://github.com/pantheon-systems/localdev/issues/25)
+    * Fixed inconsistencies between n-invoked progress runners [#29](https://github.com/pantheon-systems/localdev/issues/29)
+    * Improved sync between Docker engine status and sites running status [#2](https://github.com/pantheon-systems/localdev-issues/issues/2)
+    * Removed redundant `code` pull on site initialization [#4](https://github.com/pantheon-systems/localdev-issues/issues/4)
+    * Updated to [Lando 3.0.0-rc.14](https://github.com/lando/lando/releases/tag/v3.0.0-rc.14)
+- version: 0.3.1
+  date: 2019-02-28
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.3.1
+  instructions: If you are updating from before `0.3.0` you should check out the [Update Instructions](https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0) for that version before proceeding.
+  changelogMarkdown: >
+    * Updated to [Lando 3.0.0-rc.13](https://github.com/lando/lando/releases/tag/v3.0.0-rc.13)
+- version: 0.3.0
+  date: 2019-02-14
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0
+  instructions: >
+    You will _likely_ although not neccesarily want to take the following actions after updating to this version:
 
-      * Go into Localdev's Configuration pane and initiate a _Factory Reset_
-      * Remove the _entire_ Pantheon Localdev config directory `rm -rf ~/.pantheonlocaldev/`
+    * Go into Localdev's Configuration pane and initiate a _Factory Reset_
+    * Remove the _entire_ Pantheon Localdev config directory `rm -rf ~/.pantheonlocaldev/`
 
-      You may additionally wish to:
+    You may additionally wish to:
 
-      * Remove any local codebases you have previously pulled for use with Localdev `rm -rf ~/Localdev`
-      * Run `docker ps` and then `docker rm -f` to remove any lingering Pantheon containers
+    * Remove any local codebases you have previously pulled for use with Localdev `rm -rf ~/Localdev`
+    * Run `docker ps` and then `docker rm -f` to remove any lingering Pantheon containers
 
-      Other Considerations:
+    Other Considerations:
 
-      * It may be valuable to review the [Lando Pantheon Documentation](https://docs.devwithlando.io/tutorials/pantheon.html) as some changes have been made and some nice features added.
-      * If your Landofile has a good degree of custom magicks in it we recommended you review the [Update Guide](https://docs.devwithlando.io/guides/updating-to-rc2.html) to make sure that it is compatible with newer versions of Lando.
-    changelog: !markdown |
-      Rebased on [Lando RC9](https://github.com/lando/lando/releases/tag/v3.0.0-rc.9)
+    * It may be valuable to review the [Lando Pantheon Documentation](https://docs.devwithlando.io/tutorials/pantheon.html) as some changes have been made and some nice features added.
+    * If your Landofile has a good degree of custom magicks in it we recommended you review the [Update Guide](https://docs.devwithlando.io/guides/updating-to-rc2.html) to make sure that it is compatible with newer versions of Lando.
+  changelogMarkdown: >
+    Rebased on [Lando RC9](https://github.com/lando/lando/releases/tag/v3.0.0-rc.9)
 
-      * Added handling for frozen sites [#101](https://github.com/pantheon-systems/localdev/issues/101)
-      * Fixed scroll issue in footer [#65](https://github.com/pantheon-systems/localdev/issues/65)
-      * Fixed funky behavior when trying to add a `git` commit message [#100](https://github.com/pantheon-systems/localdev/issues/100)
-      * Fixed issue causing additional hyphens to be added to a sites name [#76](https://github.com/pantheon-systems/localdev/issues/76) [#97](https://github.com/pantheon-systems/localdev/issues/97)
-      * Fixed markdown showing in "Running" indicator [#104](https://github.com/pantheon-systems/localdev/issues/104)
-      * Improved handling of "multi inits" [#24](https://github.com/pantheon-systems/localdev/issues/24)
-      * Slow usage [#89](https://github.com/pantheon-systems/localdev/issues/89)
-      * Inability to launch some sites [#47](https://github.com/pantheon-systems/localdev/issues/47) [#92](https://github.com/pantheon-systems/localdev/issues/92) [#93](https://github.com/pantheon-systems/localdev/issues/93)
-      * Better (and faster) healthchecks [#61](https://github.com/pantheon-systems/localdev/issues/61)
-      * These [general improvements](https://thinktandem.io/blog/2019/02/01/lando-is-ready-for-the-masses-with-rc2-release/) to Lando have also been made.
-  - version: 0.2.3
-    date: 2018-11-06
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.3
-    changelog: !markdown |
-      * Corrected a typo in FACTORY RESET [#87](https://github.com/pantheon-systems/localdev/issues/87)
-      * Improved the entire design and UX
-  - version: 0.2.2
-    date: 2018-10-23
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.2
-    changelog: !markdown |
-      * Improved installation process UX
-  - version: 0.2.1
-    date: 2018-10-09
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.1
-    instructions: !markdown |
-      * If you have an app running before upgrading you will need to restart it for the `pantheonlocal.com` domain name change to take place
-      * If you have previously installed Pantheon Localdev you will likely want to make sure that it is not running the older version of the proxy otherwise PLD will likely assign port `8000` and `444` for the new `pantheonlocal.com` domain. The easiest way to make sure this is not the case is to click `Stop All` on the Pantheon Localdev dashboard and run `docker stop landoproxyhyperion5000gandalfedition_proxy_1` before starting up an app.
-    changelog: !markdown |
-      Rebased on [Lando RC1 pre-release](https://github.com/lando/lando/releases/tag/v3.0.0-rc.1) and switched to `pantheonlocal.com` domain.
+    * Added handling for frozen sites [#101](https://github.com/pantheon-systems/localdev/issues/101)
+    * Fixed scroll issue in footer [#65](https://github.com/pantheon-systems/localdev/issues/65)
+    * Fixed funky behavior when trying to add a `git` commit message [#100](https://github.com/pantheon-systems/localdev/issues/100)
+    * Fixed issue causing additional hyphens to be added to a sites name [#76](https://github.com/pantheon-systems/localdev/issues/76) [#97](https://github.com/pantheon-systems/localdev/issues/97)
+    * Fixed markdown showing in "Running" indicator [#104](https://github.com/pantheon-systems/localdev/issues/104)
+    * Improved handling of "multi inits" [#24](https://github.com/pantheon-systems/localdev/issues/24)
+    * Slow usage [#89](https://github.com/pantheon-systems/localdev/issues/89)
+    * Inability to launch some sites [#47](https://github.com/pantheon-systems/localdev/issues/47) [#92](https://github.com/pantheon-systems/localdev/issues/92) [#93](https://github.com/pantheon-systems/localdev/issues/93)
+    * Better (and faster) healthchecks [#61](https://github.com/pantheon-systems/localdev/issues/61)
+    * These [general improvements](https://thinktandem.io/blog/2019/02/01/lando-is-ready-for-the-masses-with-rc2-release/) to Lando have also been made.
+- version: 0.2.3
+  date: 2018-11-06
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.3
+  changelogMarkdown: >
+    * Corrected a typo in FACTORY RESET [#87](https://github.com/pantheon-systems/localdev/issues/87)
+    * Improved the entire design and UX
+- version: 0.2.2
+  date: 2018-10-23
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.2
+  changelogMarkdown: >
+    * Improved installation process UX
+- version: 0.2.1
+  date: 2018-10-09
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.1
+  instructions: >
+    * If you have an app running before upgrading you will need to restart it for the `pantheonlocal.com` domain name change to take place
+    * If you have previously installed Pantheon Localdev you will likely want to make sure that it is not running the older version of the proxy otherwise PLD will likely assign port `8000` and `444` for the new `pantheonlocal.com` domain. The easiest way to make sure this is not the case is to click `Stop All` on the Pantheon Localdev dashboard and run `docker stop landoproxyhyperion5000gandalfedition_proxy_1` before starting up an app.
+  changelogMarkdown: >
+    Rebased on [Lando RC1 pre-release](https://github.com/lando/lando/releases/tag/v3.0.0-rc.1) and switched to `pantheonlocal.com` domain.
 
-      * Switched domain to `pantheonlocal.com` [#83](https://github.com/pantheon-systems/localdev/issues/83)
-      * Switched to Pantheon certificates [#75](https://github.com/pantheon-systems/localdev/issues/75)
-      * Rebased on Lando RC1 pre-release
-  - version: 0.2.0
-    date: 2018-09-05
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.0
-    changelog: !markdown |
-      First pass rebasing on almost-ready-to-be-released Lando RC1
+    * Switched domain to `pantheonlocal.com` [#83](https://github.com/pantheon-systems/localdev/issues/83)
+    * Switched to Pantheon certificates [#75](https://github.com/pantheon-systems/localdev/issues/75)
+    * Rebased on Lando RC1 pre-release
+- version: 0.2.0
+  date: 2018-09-05
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.2.0
+  changelogMarkdown: >
+    First pass rebasing on almost-ready-to-be-released Lando RC1
 
-      * Improved site init cancel [#62](https://github.com/pantheon-systems/localdev/issues/62)
-      * Improved stop, start, refresh and stop all UX [#21](https://github.com/pantheon-systems/localdev/issues/21)
-      * Improved Docker auto-start func [#73](https://github.com/pantheon-systems/localdev/issues/73)
-      * Rebased on new Lando RC1 API
-      * Separated `push` into individual components for better UX [#54](https://github.com/pantheon-systems/localdev/issues/54)
-      * Prepped for custom proxyDomain certs [#78](https://github.com/pantheon-systems/localdev/issues/78)
-  - version: 0.1.26
-    date: 2018-07-25
-    url: https://github.com/pantheon-systems/localdev/releases/tag/v0.1.26
-    changelog: !markdown |
-      Some smaller UX improvements and just kicking out a new release because we've been stagnate for awhile.
+    * Improved site init cancel [#62](https://github.com/pantheon-systems/localdev/issues/62)
+    * Improved stop, start, refresh and stop all UX [#21](https://github.com/pantheon-systems/localdev/issues/21)
+    * Improved Docker auto-start func [#73](https://github.com/pantheon-systems/localdev/issues/73)
+    * Rebased on new Lando RC1 API
+    * Separated `push` into individual components for better UX [#54](https://github.com/pantheon-systems/localdev/issues/54)
+    * Prepped for custom proxyDomain certs [#78](https://github.com/pantheon-systems/localdev/issues/78)
+- version: 0.1.26
+  date: 2018-07-25
+  url: https://github.com/pantheon-systems/localdev/releases/tag/v0.1.26
+  changelogMarkdown: >
+    Some smaller UX improvements and just kicking out a new release because we've been stagnate for awhile.
 
-      * Added some basic from-the-internet screenshots to the site list [#20](https://github.com/pantheon-systems/localdev/issues/20)
-      * Added a stubbed out loading screen with content TBD [#30](https://github.com/pantheon-systems/localdev/issues/30)
-      * Changed search to be case insensitive, white-space agnositc and inclusive [#48](https://github.com/pantheon-systems/localdev/issues/48)
-      * Improved default site screen to be got-sites aware [#27](https://github.com/pantheon-systems/localdev/issues/27)
-      * Set a minimum screen size for the app window [#64](https://github.com/pantheon-systems/localdev/issues/64)
-      * Updated autoupdate UX to use Bootstrap modals instead of nasty native JS alerts dialogs [#58](https://github.com/pantheon-systems/localdev/issues/58)
+    * Added some basic from-the-internet screenshots to the site list [#20](https://github.com/pantheon-systems/localdev/issues/20)
+    * Added a stubbed out loading screen with content TBD [#30](https://github.com/pantheon-systems/localdev/issues/30)
+    * Changed search to be case insensitive, white-space agnositc and inclusive [#48](https://github.com/pantheon-systems/localdev/issues/48)
+    * Improved default site screen to be got-sites aware [#27](https://github.com/pantheon-systems/localdev/issues/27)
+    * Set a minimum screen size for the app window [#64](https://github.com/pantheon-systems/localdev/issues/64)
+    * Updated autoupdate UX to use Bootstrap modals instead of nasty native JS alerts dialogs [#58](https://github.com/pantheon-systems/localdev/issues/58)

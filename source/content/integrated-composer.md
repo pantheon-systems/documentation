@@ -129,7 +129,7 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 ### Pantheon's Scope of Support for Composer
 
-<Partial file="composer-support-scope.md" />
+<Partial file="composer-support-scope.md"/>
 
 
 ## Troubleshooting Code Syncs and Upstream Updates
@@ -138,7 +138,7 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to the **Code** in the **Dev** tab of your Site Dashboard.
 
 1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
 

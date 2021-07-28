@@ -14,8 +14,6 @@ The **Pantheon Crisis Response WordPress Upstream** is a specialized WordPress [
 
 ![Crisis Response WP home page](../images/covid-response-home.png)
 
-If you are a government, medical, or educational institution with a crisis communications website, or a non-profit organization directly providing relief, we will [provide the full service of our WebOps platform](https://pantheon.io/resources-navigate-covid-19) at no charge. We want you to deliver vital information to the public without worrying about traffic cost or site availability.
-
 ## Features
 
 This distribution features a minimal set of plugins for easy maintenance that can be tailored to your organization’s specific needs and capabilities. A few assumptions have been made to simplify the site building process for any organization utilizing this upstream, which are detailed in the plugin list below:
@@ -64,7 +62,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 1. [Contact Sales](https://pantheon.io/contact-us) and we will work with you to get an appropriate site plan and organization set up free of charge.
 
-1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your development site. During the site deployment process, you should receive a password reset notice to the email address associated with your Pantheon account. 
+1. On the Dev environment tab of the site dashboard, click the **Site Admin** button to go to your development site. During the site deployment process, you should receive a password reset notice to the email address associated with your Pantheon account.
 
   If not, use your email address for the username and click on **Forgot Password**. Be sure to set a strong password.
 

@@ -3,12 +3,11 @@ title: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
 categories: [develop]
 tags: [collaborate, workflow, webops, multidev]
+reviewed: "2021-06-30"
 ---
 For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev).
 
 ## Who has access to Multidev?
-
-<Partial file="covid-offer.md" />
 
 Multidev is available to all [Gold Accounts](/support/#support-features-and-response-times) and above. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
 

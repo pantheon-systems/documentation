@@ -377,6 +377,31 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNode, createNodeField } = actions
 
+  if (node.internal.owner === "gatsby-transformer-yaml") {
+    Object.keys(node).forEach((item) => {
+      if (!item.endsWith("Markdown")) {
+        return
+      }
+      const textNode = {
+        id: `${node.id}-${item}`,
+        parent: node.id,
+        dir: path.resolve("./"),
+        internal: {
+          type: `${node.internal.type}${item}`,
+          mediaType: "text/markdown",
+          content: node[item],
+          contentDigest: digest(node[item]),
+        },
+      }
+      createNode(textNode)
+      createNodeField({
+        node,
+        name: `${item}___NODE`,
+        value: textNode.id,
+      })
+    })
+  }
+
   // MDX content
   if (node.internal.type === `Mdx`) {
     const sourceInstanceName = getNode(node.parent).sourceInstanceName;

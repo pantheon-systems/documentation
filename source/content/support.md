@@ -14,11 +14,32 @@ Pantheon offers a range of Account options that include the features required fo
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
-| **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
+| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic Custom Upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Custom Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
 | [**Tickets**](#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
 | [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
+
+### Scope Explanations
+
+- **Platform**: Support helps:
+   - Identify and remedy Platform, Dashboard, Dev/Test/Live workflow, and connection mode issues
+   - Find appropriate documentation
+- **Technical**: Adds support for:
+   - Autopilot
+   - Drupal and WordPress application-level and site support
+   - Identifying problematic modules and plugins
+   - Multidev
+   - Assistance with basic CDN, Terminus, Localdev, and Custom Upstreams
+- **Performance**:
+   - New Relic
+   - Caching
+   - Cloud Integrations
+   - Custom Upstreams
+   - Advanced Workflows
+   - Advanced CDN
+   - Terminus
+- **Dedicated**: Bespoke site debugging.
 
 ## Best Practices
 

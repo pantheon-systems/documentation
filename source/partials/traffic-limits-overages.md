@@ -1,6 +1,6 @@
 ## Traffic Limits and Overages
 
-Pantheon optimizes the resources and performance of your site based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs). Your pricing plan determines the [backend resources](/platform-resources#platform-resources) Pantheon deploys to support site performance and to serve the corresponding traffic levels for each plan. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using [Pantheon's Site Dashboard](/metrics).
+Pantheon optimizes the resources and performance of your site based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs). Your pricing plan determines the [backend resources](/site-plans-faq#plan-resources) Pantheon deploys to support site performance and to serve the corresponding traffic levels for each plan. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using [Pantheon's Site Dashboard](/metrics).
 
 As your site grows on Pantheon, you are able to modify your plan based on the metrics you find in the Site Dashboard. If your traffic is continually over your plan limit, we may automatically adjust you to a pricing plan that better aligns with your traffic growth. This is important to ensure the continued performance of all sites on Pantheon, and to avoid any negative impact to your site as traffic levels change.
 

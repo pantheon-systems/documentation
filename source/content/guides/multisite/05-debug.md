@@ -56,17 +56,3 @@ Because it's a confusing error, it's helpful to understand how it's caused. This
 When you visit `mstest.dev` in your browser, you'll see the “Error establishing database connection” message. Essentially, WordPress displays an error message because it couldn't find the requested site in the `wp_blogs` table.
 
 Check out the [open WordPress.org Trac ticket](https://core.trac.wordpress.org/ticket/41424) where this message is being discussed, and will hopefully be improved in the future.
-
-### Error: “Site Not Found”
-
-After running `wp search-replace` on a WordPress Site Network with a persistent object cache enabled, you may see a message like this:
-
-```bash
-Success: Made 2419 replacements. Please remember to flush your persistent object cache with `wp cache flush`.
-```
-
-However, running `wp cache flush` may produce an "Error: site not found" message if the old domain lookup value is still in cache.
-
-You've entered an indeterminate state where you'd expect you could flush cache against the new URL, but the cache still has the old URL, so you need to flush cache against the old URL before the new URL works.
-
-Follow along on [this GitHub issue](https://github.com/wp-cli/cache-command/issues/17) to see when execution is improved in WP-CLI.

@@ -179,6 +179,10 @@ const Footer = ({ data }) => {
                         <span>|</span>{" "}
                         <a href="https://pantheon.io/pantheon-terms-service">
                           Terms of Use
+                        </a>{" "}
+                        <span>|</span>{" "}
+                        <a href="https://pantheon.io/accessibility-statement">
+                          Accessibility Statement
                         </a>
                       </div>
                     </div>
