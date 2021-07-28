@@ -63,28 +63,28 @@ Switch to Drush 8 in the `pantheon.yml` file.
 
 
 
-## Modified Plugin Name 
+## Modified Plugin or Theme Name 
 
 Error Message: “Ran into an issue with a WordPress update and did not proceed with deployment."
 
 
 ### Issue
 
-When WordPress updates a plugin or theme, and then a plugin/theme by that slug cannot be found— usually caused by a plugin being renamed. Because this disables the plugin, we cannot continue to deployment.
+The error message is displayed when a plugin is renamed or WordPress updates a plugin or theme, and the URL for the corresponding plugin or theme cannot be found. The discrepency between the plugin name and the URL disables the plugin, and deployment can not continue.
 
 #### Diagnosis
 
 To determine which plugin is causing the issue:
 
-Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added. For example, `akismet-disable 2.2` no longer exists, but `akismet 2.3` is available.
+Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added. 
 
-Compare the list of plugins for Autopilot and Dev with the Wordpress plugin list and determine if anything varies. Ensure no entries are missing missing. If there is a discrepency among the lists, or a plugin is omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
+Compare the list of plugins for Autopilot and Dev to the Wordpress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance among the lists - a plugin is omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
 You should contact an Autopilot engineer to check the state machine logs, which requires AWS access.
 
 ### Solution
 
-Remove the plugin/theme from the site if it is not being used. Revert the plugin/theme to it's original name and correct metedata if it is being used. 
+Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL. 
 
-Alternively, you can add the plugin/theme to the **Excluded Updates** list in Autopilot settings.
+Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
 
