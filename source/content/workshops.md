@@ -1,5 +1,5 @@
 ---
-title: Pantheon Workshop Resources
+title: Pantheon Workshops
 description: Pantheon workshop sessions, resources, and feedback forms.
 contributors: [davidneedham]
 layout: resource
