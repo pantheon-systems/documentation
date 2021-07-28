@@ -10,22 +10,22 @@ showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/04-troubleshoot.md
-reviewed: "2021-06-10"
+reviewed: "2021-07-21"
 ---
 
-## Troubleshoot Common Autopilot Error Messages
+# Troubleshoot Autopilot Error Messages
+
+You may encounter errors when using Autopilot. This page has a consolidated list of common issues and solutions you may encounter with Autopilot.
 
 
-
-
-## Exclusions reports “We didn’t detect any plugins, modules or themes that were eligible for exclusion.”
+## “We didn’t detect any plugins, modules or themes that were eligible for exclusion.”
  
 
 ### Issue
 
 The extensions list used for Exclusions should be refreshed when the Autopilot plan is set for the first time and on slow-converge after, but since the plan is only set after Autopilot is initialized, the list is unavailable the first time Autopilot is setup.
 
-### Resolution
+### Solution
 
 The workflow to refresh extensions can then be triggered from the GraphQL Playground with the following mutation:
 
@@ -40,42 +40,42 @@ mutation {
 }
 ```
 
-Once that workflow is complete (it should be fairly quick, and can be monitored in the debug tab of the Hermes dashboard), refresh the Autopilot Settings (or restart the initialization step wizard) and extension options should be present.
+After that workflow is completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
 
 
-## Drush version 8 required 
-
- 
-### Issue
-
-(Drush 5/7/9/10 is  not supported) Autopilot only works on Drupal site running Drush 8. If/when we complete the bug card, we might be able to silently/automatically handle the majority of sites running Drush 5/7 without impacting the application
-
-### Workaround
-
-Switch to Drush 8 in `pantheon.yml`. 
-
-“The site has reached its limit for Multidev Environments.” is reported, but site is below limit
-
+## "Drush version 8 required" 
 
  
 ### Issue
 
-Autopilot reports this “Out of Multidevs” for any issue with creating or converging the autopilot Environment.
+Autopilot only works on Drupal sites that are running Drush 8. Drush 5/7/9/10 are not supported.
+
+### Solution
+
+Switch to Drush 8 in the `pantheon.yml` file. 
 
 
-#### Diagnosis
 
-Investigate the “Workflows” debug tab to see the reason for the converge failure:
+## “The site has reached its limit for Multidev Environments” is reported, but the site is the below limit.
+
+
+### Issue
+
+Autopilot reports this “limit of Out of Multidevs” error message for instance of creating or converging the Autopilot environment.
+
+
+### Solution
+Investigate the **Workflows** tab to see the reason for the converge failure:
 
 https://admin.dashboard.pantheon.io/sites/{SITE_UUID}#debug/workflows
 
-These logs will likely have more useful information re: the failure than anything Autopilot has in AWS State Machines or Lambda logs.
+The workflow logs will have useful information on what is causing the erros.
 
-### Workaround
 
-Deleting and creating the environment from scratch can often reset the environment back to a healthier state. Delete the autopilot multidev and associated branch from the site, and enqueue Autopilot again. The Autopilot workflow will re-create the multidev when it is time, assuming the site is below its multidev limit.
+Often, deleting and creating the environment from scratch can reset the environment to a healthier state. Delete the Autopilot Multidev and associated branch from the site, and enqueue Autopilot. The Autopilot workflow will recreate the Multidev environment, providing the site is below its multidev limit.
 
-“We ran into an issue with a WordPress update and did not proceed with deployment. This is likely caused by a modified plugin name.”
+
+## “We ran into an issue with a WordPress update and did not proceed with deployment. This is likely caused by a modified plugin name.”
 
 
 ### Issue
