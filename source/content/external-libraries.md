@@ -3,7 +3,7 @@ title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
 categories: [platform]
 tags: [code, libraries, modules, plugins]
-reviewed: "2020-05-18"
+reviewed: "2020-07-27"
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
@@ -156,6 +156,13 @@ When creating a new preset, if the "Division by Zero" warning appears, add the [
 Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
 
 ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node/773342) (like advpng and OptiPNG) are not available at this time.
+
+### WordPress ImageMagick Configuration
+
+Once you have installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it on your plugin settings page and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click Regenerate button.
+
+![Regenerate button in sidebar](../images/imagemagick-regenerate.png)
+
 
 ## Troubleshooting and FAQs
 
