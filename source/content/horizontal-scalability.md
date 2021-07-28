@@ -54,7 +54,11 @@ On Pantheon, all Performance plans include Overage Protection to prevent one-tim
 
 ### Elite or Contract Plans
 
-We allow an increase in application containers for campaigns or peak traffic. A request can be sent to Pantheon Support with the following information:
+Elite sites have the added benefit of managed resource provisioning, both for anticipated and unexpected traffic spikes.
+
+When an Elite site encounters massive sudden or unexpected increases in traffic, the Pantheon platform alerts Pantheon Support, who ensure that the most appropriate level of platform resources are provisioned for the site to handle the traffic spike.
+
+For an anticipated increase in traffic, open a Support ticket with the following information:
 
 - **How much extra traffic?**
 
