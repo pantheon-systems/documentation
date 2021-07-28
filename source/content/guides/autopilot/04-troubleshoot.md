@@ -15,15 +15,18 @@ reviewed: "2021-07-21"
 
 # Troubleshoot Autopilot Error Messages
 
-You may encounter errors when using Autopilot. This page has a consolidated list of common issues and solutions you may encounter with Autopilot.
+This page has a consolidated list of common issues and solutions you may encounter when using Autopilot.
 
 
-## “We didn’t detect any plugins, modules or themes that were eligible for exclusion.”
+
+## Element Exclusions 
+
+Error Message: "We didn’t detect any plugins, modules or themes that were eligible for exclusion."
  
 
 ### Issue
 
-The extensions list used for Exclusions should be refreshed when the Autopilot plan is set for the first time and on slow-converge after, but since the plan is only set after Autopilot is initialized, the list is unavailable the first time Autopilot is setup.
+The extensions list used for exclusions should be refreshed when the Autopilot plan is initialized for the first time or when using the slow converge feature. Since the plan is only set after Autopilot is initialized, the list is unavailable when Autopilot is started for the first time. 
 
 ### Solution
 
@@ -40,10 +43,13 @@ mutation {
 }
 ```
 
-After that workflow is completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
+After that workflow completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
 
 
-## "Drush version 8 required" 
+
+##  Drush Version
+
+Error Message: "Drush version 8 required" 
 
  
 ### Issue
@@ -56,26 +62,10 @@ Switch to Drush 8 in the `pantheon.yml` file.
 
 
 
-## “The site has reached its limit for Multidev Environments” is reported, but the site is the below limit.
 
+## Modified Plugin Name 
 
-### Issue
-
-Autopilot reports this “limit of Out of Multidevs” error message for instance of creating or converging the Autopilot environment.
-
-
-### Solution
-Investigate the **Workflows** tab to see the reason for the converge failure:
-
-https://admin.dashboard.pantheon.io/sites/{SITE_UUID}#debug/workflows
-
-The workflow logs will have useful information on what is causing the erros.
-
-
-Often, deleting and creating the environment from scratch can reset the environment to a healthier state. Delete the Autopilot Multidev and associated branch from the site, and enqueue Autopilot. The Autopilot workflow will recreate the Multidev environment, providing the site is below its multidev limit.
-
-
-## “We ran into an issue with a WordPress update and did not proceed with deployment. This is likely caused by a modified plugin name.”
+Error Message: “Ran into an issue with a WordPress update and did not proceed with deployment."
 
 
 ### Issue
@@ -86,17 +76,15 @@ When WordPress updates a plugin or theme, and then a plugin/theme by that slug c
 
 To determine which plugin is causing the issue:
 
-Check the uncommitted diff on autopilot multidev. There is likely a plugin deleted and another added (i.e. akismet-disable version 2.2 no longer exists, but akismet 2.3 now does).
+Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added. For example, `akismet-disable 2.2` no longer exists, but `akismet 2.3` is available.
 
-Compare the list of plugins between autopilot and dev with wp plugin list and see if there is one that is missing/has changed (it will be disabled on the autopilot branch).
+Compare the list of plugins for Autopilot and Dev with the Wordpress plugin list and determine if anything varies. Ensure no entries are missing missing. If there is a discrepency among the lists, or a plugin is omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
-Ping an autopilot engineer to check the state machine logs (requires AWS access).
+You should contact an Autopilot engineer to check the state machine logs, which requires AWS access.
 
-### Resolution
+### Solution
 
-Remove the plugin/theme from the site if it is not being used
+Remove the plugin/theme from the site if it is not being used. Revert the plugin/theme to it's original name and correct metedata if it is being used. 
 
-rename the plugin/theme back to the original, correct slug if it is in use
-
-OR add it to the Excluded Updates in Autopilot settings.
+Alternively, you can add the plugin/theme to the **Excluded Updates** list in Autopilot settings.
 
