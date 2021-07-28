@@ -18,8 +18,8 @@ const Footer = ({ data }) => {
         <div id="office-hours" className="office-hours">
           <p>Got questions? We've got answers!</p>
           <p>
-            <a href="https://pantheon.io/demo?docs" className="demo-cta cta docs-cta">
-              On-Demand Training
+            <a href="https://pantheon.io/learn-pantheon?docs" className="demo-cta cta docs-cta">
+              Learn Pantheon
             </a>{" "}
             <a
               href="https://pantheon.io/developers/office-hours?docs"

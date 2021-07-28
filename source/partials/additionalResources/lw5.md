@@ -1,14 +1,25 @@
-## More Resources for Going Live Best Practices! 🎉
+## Going Live Best Practices
 
-This is the final of the five [On-Demand Essential Trainings](https://pantheon.io/on-demand-trainings)!
+Launching a website on Pantheon is easy! In this workshop, observe best practices from our Developer Advocates that ensure you’re prepared for success during your new website launch.
+
+### What You'll Learn In This Workshop
+
+- Learn how to prepare your website to live on Pantheon
+- Use load tests to make sure you've picked the right plan
+- What to check before taking your website live
+- How to redirect to a primary domain for better SEO
 
  <Youtube src="c2yF3Bm-h4k" title="Going Live Best Practices" start="17" />
 
-You must be feeling really great about developer workflows, Terminus, Quicksilver, and topics around making your website fast. If not, [let us know how we can improve](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495041) and consider attending [Pantheon Office Hours](https://pantheon.io/agencies/office-hours) this Wednesday to get some more assistance.
+### You did it!
+
+Congratulations! You must be feeling really great about developer workflows, Terminus, Quicksilver, and topics around making your website fast. 
+
+Keep learning after today! Consider attending [Pantheon Office Hours](https://pantheon.io/agencies/office-hours), or drop in to our Community forum to [Discuss this workshop and ask questions](https://discuss.pantheon.io/c/pantheon-training/going-live-best-practices/56).
 
 ### Your Feedback Helps
 
-We sincerely want this training to be useful. Please help us improve by [sharing your feedback](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495041). It only takes you a moment but it makes a big difference for us.
+We sincerely want this workshop to be useful. Please help us improve by [sharing your feedback](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495041). It only takes you a moment but it makes a big difference for us.
 
 ### Resources From This Workshop
 
@@ -27,9 +38,9 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - Doc: [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)
 - [Pantheon's Advanced Global CDN](https://pantheon.io/product/advanced-global-cdn)
 
-### Keep Learning After Today
 
-- [Discuss this class and ask questions](https://discuss.pantheon.io/c/pantheon-training/going-live-best-practices/56)
+### Additional Resources
+
 - [Pantheon Community (Slack + forum)](/pantheon-community)
 - [Pantheon Support](/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
