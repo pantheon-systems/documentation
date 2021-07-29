@@ -161,7 +161,9 @@ ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node
 
 Once you have installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it on your plugin settings page and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click Regenerate button.
 
-![Regenerate button in sidebar](../images/imagemagick-regenerate.png)
+![ImageMagick Engine Settings](../images/imagemagick-engine-settings.png)
+
+![Regenerate button in sidebar](../images/imagemagick-regenerate-sidebar.png)
 
 
 ## Troubleshooting and FAQs
