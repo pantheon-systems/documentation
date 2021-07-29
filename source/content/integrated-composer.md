@@ -161,13 +161,13 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 
 **Solution 1:** Copy the Upstream URL and then follow **Solution 2**:
 
-1. From the Site Dashboard, go to the Dev environment.
+1. From the Site Dashboard, navigate to the Dev environment.
 
 1. Click **Settings**, then **About site**.
 
-1. Copy the **Upstream** URL and use it in place of the Pantheon Upstream URL in **Solution 2**.
+1. Copy the **Upstream** URL and use it instead of the Pantheon Upstream URL in **Solution 2**.
 
-**Issue 2:** The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git.
+**Issue 2:** The upstream updates and your Composer changes to the site, are in a conflict that cannot be automatically merged by Git.
 
 - We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost.
 
