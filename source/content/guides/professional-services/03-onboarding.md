@@ -46,7 +46,7 @@ Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping
 
 ### Expert Training
 
-Highly customized, one-on-one training from Pantheon's Developer Advocacy (**DevRel**) experts to help your development team apply custom workflows to active Pantheon projects. Tailored WebOps training for your entire team is also available.
+Highly customized, one-on-one training from Pantheon's Developer Advocacy experts to help your development team apply custom workflows to active Pantheon projects. Tailored WebOps training for your entire team is also available.
 
 We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, on-site, or online for multiple offices. [Contact us](https://pantheon.io/learn-pantheon?docs) for details.
 

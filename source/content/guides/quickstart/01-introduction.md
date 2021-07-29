@@ -22,7 +22,7 @@ Welcome! This guide is designed to get you started on Pantheon.
   title="Getting Started Training"
   link="https://pantheon.io/getting-started-pantheon?docs"
 >
-  Ramp up faster with an on-demand recorded version of this material, delivered by
+  Ramp up faster with an on-demand, recorded version of this material, delivered by
   Pantheon's Developer Advocacy team.
 </Callout>
 
