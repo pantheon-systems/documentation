@@ -14,7 +14,7 @@ One of the easiest tips we can offer for immediate results. Pantheon Partner Age
 
 
 ## Learn Pantheon through Product Trainings, Resources, and Guides
-[Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs) from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
+[Get hands on training](https://pantheon.io/learn-pantheon?docs) from knowledgeable experts at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
 
 ## Become a Supporting Organization
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.

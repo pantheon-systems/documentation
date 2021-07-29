@@ -53,8 +53,8 @@ All links from the video are provided below.
 
 </Callout>
 
-<Enablement title="Getting Essential Developer Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Getting Essential Developer Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
+Ramp up faster with an on-demand, recorded version of this material, delivered by Pantheon's Developer Advocacy team.
 
 </Enablement>

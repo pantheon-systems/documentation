@@ -17,9 +17,9 @@ The Terminus command line interface provides advanced interaction with Pantheon.
 
 Install Terminus on macOS or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). For details on legacy versions of Terminus, see [Legacy Terminus Versions](/terminus/get-started/legacy/).
 
-<Enablement title="Command Line Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Command Line Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
