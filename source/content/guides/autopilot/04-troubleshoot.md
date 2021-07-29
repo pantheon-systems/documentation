@@ -23,7 +23,7 @@ Error Message: "We didn’t detect any plugins, modules or themes that were elig
 The extensions list used for exclusions should be refreshed when the Autopilot plan is initialized for the first time or when using the slow converge feature. Since the plan is only set after Autopilot is initialized, the list is unavailable when Autopilot is started for the first time. 
 
 ### Solution
-The workflow to refresh extensions can then be triggered from the GraphQL Playground with the following mutation:
+The workflow to refresh extensions can then be triggered from the GraphQL Playground with the following code change:
 
 ```
 mutation {
