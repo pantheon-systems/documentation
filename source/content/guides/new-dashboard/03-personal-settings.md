@@ -8,52 +8,50 @@ contributors: [joa-pan]
 reviewed: "2021-05-20"
 layout: guide
 showtoc: true
-permalink: docs/guides/new-dashboard/workspaces
+permalink: docs/guides/new-dashboard/personal-settings
 anchorid: new-dashboard
-editpath: new-dashboard/03-workspaces.md
+editpath: new-dashboard/03-personal-settings.md
 ---
 
+The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **User Settings**.
 
-## Personal Settings
+![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.png)
 
-The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click your avatar in the top-right corner and then click **User Settings**.
+## Profile
 
-![A screenshot of a the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.png)
+Update your name, email address, password, or [delete your account](/delete-account).
 
-### Profile
+### Login Details
 
-Update your name, email address, or [delete your account](/delete-account).  
+You can update the current email address or password associated with your Dashboard.
 
-#### Login Details
-You can update the current email address or password associated with your Dashboard. 
+#### Email
 
 To update the email address, click **Change Email Address**. Enter the updated email address in the **New Email Address** field and click **Save Changes**.
 
-To update the password, click **Change Password**. You are directed to a page where you are prompted to enter your current password and your desired new password. Enter the updated password in the **New Password** field, confrim your entry, and then click **Save Changes**.
+#### Password
 
-When changing your password, make sure the new password meets the requirements:
+To update the password, click **Change Password**. You are directed to a page where you are prompted to enter your current password and your desired new password. Enter the updated password in the **New Password** field, confirm your entry, and then click **Save Changes**.
 
-* At least 8 characters—the more characters, the better.
-* A mixture of both uppercase and lowercase letters.
-* A mixture of letters and numbers.
-* Inclusion of at least one special character. For example, use ! @ # ? %. Do not use < or > in your password.
+When changing your password, make sure the new password meets the following requirements:
 
-For security reasons, you’ll need to log in again after your password is changed.
+* At least 8 characters
+* A mixture of both uppercase and lowercase letters
+* A mixture of letters and numbers
+* Inclusion of at least one special character. For example, use !, @, #, ?, %. Do not use < or > in your password.
 
-### Preferences
+You’ll need to log in again after your password is changed.
+
+## Preferences
 
 ![A screenshot of a the Personal Settings Preferences page](../../../images/dashboard/new-dashboard/personal-settings-preferences.png)
 
-#### Autopilot Email Alerts
-You can choose whether you recieve email alerts for the following:
-* Weekly activity Digest - Summary of Autopilot activity across all sites within the workspace that Autopilot is enabled
-* Failed Visaul Regression Tests - Real-time email alerts for failed VRT test for a specified site  
+### Autopilot Email Notifications
 
-#### Pantheon Early Access Program
+<Partial file="autopilot/autopilot-email-notifications.md" />
 
-If you would like to be directed to the new dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**. 
+### Pantheon Early Access Program
 
-The Early Access option is recommended for Autopilot users. If you choose to use the new dashboard, you will not be able to navigate to your User organization and will not be able to view certain features. If you select the Early Access option you will not be able to view Billing or older features.
+If you would like to be directed to the new dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
 
-
-
+If you choose to use the new Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the new Dashboard.

@@ -69,3 +69,7 @@ Additional DOM element exclusion is in active development.
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+
+## Enable Autopilot Email Notifications
+
+<Partial file="autopilot/autopilot-email-notifications.md" />

@@ -60,11 +60,19 @@ WordPress does not have a core feature to configure a private path folder for fi
 
 Site developers could author their own custom solution to provide authentication, access checks, and ultimately use PHP's [readfile()](http://php.net/readfile/) or [fpassthru()](http://php.net/fpassthru/) functions to read files from the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) areas, respectively, and then output them to the authenticated web user's browser.
 
+### Known Limitations of File Names and Permissions
+
+Please see [Pantheon Filesystem](/files#known-limitations-of-file-names-and-permissions) for more information.
+
 ### Additional Drupal Configuration
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
 To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**.
+
+## Protected Web Paths
+
+Another way to protect files and directories is to define a protected web path in your `pantheon.yml` file. See [Protected Web Paths](/pantheon-yml#protected-web-paths) for more information.
 
 ## Troubleshooting
 

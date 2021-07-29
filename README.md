@@ -25,10 +25,11 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide) for our guidelines 
   - [Node.js](https://nodejs.org/en/)
   - Gatsby CLI:
 
-```bash
-npm install -g gatsby-cli
-```
-   - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine.
+    ```bash
+    npm install -g gatsby-cli
+    ```
+
+  - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine. Lando requires a Docker version in the `2.1.0.0` - `3.1.99` range. 
 
 ### Get the Code
 
@@ -59,13 +60,13 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 
 1. Log in to GitHub and go to <https://github.com/settings/tokens>
 1. Click Generate new token
-1. Give it a name and click the public_repo checkbox, then the Generate Token button at the bottom
+1. Give the token a name and click the **public_repo** checkbox, then the Generate Token button at the bottom
 1. Copy the token to your clipboard.
-1. Create or edit `.env.development`, and add (replacing $TOKENHASH ):
+1. Create or edit `.env.development`, and add (replacing `$TOKENHASH` ):
 
-```bash
-GITHUB_API=$TOKENHASH
-```
+    ```bash
+    GITHUB_API=$TOKENHASH
+    ```
 
 ### Run
 
@@ -78,7 +79,7 @@ You can view the local environment at `localhost:8000/`. Updates to docs are aut
 
 #### Using Lando
 
-Alternatively, you can use [Lando](https://gist.github.com/tormi/a8b8fc39f9481373b24dc94cb8d2ee31). The `lando start` command intiates the the app, installs node dependencies, and starts the `gatsby develop` server for you.
+Alternatively, you can use [Lando](https://gist.github.com/tormi/a8b8fc39f9481373b24dc94cb8d2ee31). The `lando start` command initiates the app, installs node dependencies, and starts the `gatsby develop` server for you:
 
 ```bash
 lando start

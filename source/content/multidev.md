@@ -9,13 +9,11 @@ Multidev is development environments for teams and allows a developer to fork th
 
 ![Dev Test and Live icon](../images/multidev-flow.png)
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
-
-<Partial file="covid-offer.md" />
 
 ## Benefits of Multidev
 

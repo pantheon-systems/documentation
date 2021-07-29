@@ -8,9 +8,9 @@
     url: '/guides/quickstart'
   cta_alt:
     type: 'Demo'
-    title: 'Live Demo'
+    title: 'Pantheon Overview Demo'
     subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
-    url: 'https://pantheon.io/live-demo?docs'
+    url: 'https://pantheon.io/demo?docs'
   topics-groups:
     - title: 'Create a New Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
@@ -93,10 +93,10 @@
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
     url: '/terminus'
   cta_alt:
-    type: 'Live Workshop'
+    type: 'Essential Developer Training'
     title: 'Command Line Interface with Terminus'
     subtitle: "An introduction to Terminus: Pantheon's command line interface."
-    url: 'https://pantheon.io/live-workshops/command-line-interface-terminus?docs'
+    url: 'https://pantheon.io/workshops/command-line-interface-terminus?docs'
   subtopics:
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
@@ -378,9 +378,9 @@
     url: '/guides/launch'
   cta_alt:
     title: 'Going Live Best Practices'
-    type: 'Live Workshop'
+    type: 'Essential Developer Training'
     subtitle: 'How do you take a website live on Pantheon?'
-    url: 'https://pantheon.io/live-workshops/going-live-best-practices?docs'
+    url: 'https://pantheon.io/workshops/going-live-best-practices?docs'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
@@ -571,9 +571,9 @@
     url: '/quicksilver/'
   cta_alt:
     title: 'Automate and Integrate with Quicksilver'
-    type: 'Live Workshop'
+    type: 'Essential Developer Training'
     subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
-    url: 'https://pantheon.io/live-workshops/integrate-and-automate-quicksilver?docs'
+    url: 'https://pantheon.io/workshops/integrate-and-automate-quicksilver?docs'
   topics-groups:
     - title: ''
       subtitle: ''
@@ -744,9 +744,9 @@
     url: '/guides/frontend-performance'
   cta_alt:
     title: 'Website Performance'
-    type: 'Live Workshop'
+    type: 'Essential Developer Training'
     subtitle: 'How does Pantheon help your website run faster than other platforms?'
-    url: 'https://pantheon.io/live-workshops/website-performance-varnish-redis-and-new-relic?docs'
+    url: 'https://pantheon.io/workshops/website-performance-varnish-redis-and-new-relic?docs'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'

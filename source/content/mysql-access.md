@@ -3,18 +3,23 @@ title: Accessing MySQL Databases
 description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 categories: [develop]
 tags: [database, local, ssh]
-reviewed: "2020-07-30"
+reviewed: "2021-07-16"
 ---
+
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
 
 <Alert title="Note" type="info">
+
 Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.
+
 </Alert>
 
 ## Database Connection Information
 
-MySQL credentials for each site environment are located in the Dashboard:<br />
-![MySQL Credentials](../images/dashboard/mysql-info.png)<br />
+MySQL credentials for each site environment are located in the Dashboard:
+
+![MySQL Credentials](../images/dashboard/mysql-info.png)
+
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
@@ -25,7 +30,13 @@ The following required fields are provided:
 
 As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
-There's a wide array of MySQL clients that can be used, including [MySQL Workbench](https://dev.mysql.com/downloads/workbench/), [Sequel Pro](https://www.sequelpro.com/download), [Navicat](https://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
+There's a wide array of MySQL clients that can be used, including:
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
+- [Sequel Pro](https://www.sequelpro.com/download),
+- [Navicat](https://www.navicat.com/download),
+- [PHPMyAdmin](https://www.phpmyadmin.net/),
+
+and others. See the documentation or issue queue of your software to learn more about how to configure a connection.
 
 ### Open Sequel Pro Database Connection
 
@@ -126,13 +137,25 @@ Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'
 
 ## Frequently Asked Questions
 
-### How can I access my MySQL slow query logs?
+### How can I access my MySQL Slow Query logs?
 
-Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the `logs` subdirectory.
+Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html).
+
+To access the log for your database:
+
+1. Get the SFTP connection info for the environment in question.
+1. Replace the word `appserver` with `dbserver` in the connection string.
+1. The MySQL slow query logs are in the `logs` subdirectory.
 
 ### How can I access MySQL binary logs?
 
-To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"), connect to the database server as described above for the slow query logs. Binlogs are stored in the `data` subdirectory. These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
+These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
+
+To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"):
+
+1. Get the SFTP connection info for the environment in question.
+1. Replace the word `appserver` with `dbserver` in the connection string.
+1. The MySQL slow query logs are in the `data` subdirectory.
 
 ### Are table prefixes supported?
 
@@ -149,3 +172,15 @@ Pantheon places no restrictions on the contents of the database.
 ### Can I create another database user?
 
 No, Pantheon only provides one database user. Some customers have asked about creating a read-only user to provide read but not write access to the database. Consider creating an API or JSON-request application to provide access to the required information.
+
+### How do I convert output from hexadecimal to a binary data?
+
+When updating your MySQL client (CLI) from 5.x to 8.x, reading data from DB columns with BLOB types (such as the `variable` table in Drupal 7.x) may change data from binary to hexadecimal (ex: `0×1f34c9`).
+
+To disable hexadecimal notation, add `--skip-binary-as-hex` to the [database connection](/guides/quickstart/connection-modes/) when you connect from the command line:
+
+```bash{promptUser: user}
+mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…
+```
+
+For more information on this behavior change, please refer to [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).

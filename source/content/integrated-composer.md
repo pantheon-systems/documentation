@@ -9,21 +9,17 @@ reviewed: "2021-05-28"
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
 
-Create a new site with Integrated Composer as part of Pantheon's Limited Availability release. New sites created through Pantheon's Limited Availability program are production-ready.
-
 ## Create a New Site With Integrated Composer
 
 ### Drupal 9 with Integrated Composer
 
-Please note the Limited Availability program does not include a path to upgrade from previous Drupal versions to Drupal 9. Upgrade instructions for existing Drupal 8 Composer-enabled sites will be available when Integrated Composer moves into General Availability.
-
-<Partial file="drupal-9/drupal-9-upstream-install.md" />
+You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer. To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 ### WordPress with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 
-1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon dashboard.
+1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
 
 1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
 
@@ -51,11 +47,19 @@ Please note the Limited Availability program does not include a path to upgrade 
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
 
-1. Remove dependencies:
+### Remove Individual Site Dependencies
+
+You can remove site dependencies if they are no longer needed. 
+
+1. Remove the dependency locally:
 
    ```bash{promptUser: user}
     composer remove drupal/pkg-name
    ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, etc.
 
 ## Apply One-click Updates
 
@@ -76,7 +80,7 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 ### How to Add Dependencies to Your Upstream
 
-1. Start with the local clone of the Upstream repository you created above.
+1. Clone the Git repository from the Pantheon site's Dashboard.
 
 1. Change into the `upstream-config` directory:
 
@@ -113,7 +117,6 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 1. Commit and push.
 
-
 ## Support
 
 ### Pantheon Supports Composer 2
@@ -122,11 +125,9 @@ The version of Composer on the platform is Composer 2.
 
 Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
-
 ### Pantheon's Scope of Support for Composer
 
-<Partial file="composer-support-scope.md" />
-
+<Partial file="composer-support-scope.md"/>
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
@@ -134,7 +135,7 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to the **Code** in the **Dev** tab of your Site Dashboard.
 
 1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
 
@@ -154,7 +155,23 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 ]
 ```
 
-The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file, to be lost. To resolve, merge the changes manually:
+**Issue 1:** The site might use a [Custom Upstream](/custom-upstream).
+
+**Solution 1:** Copy the Upstream URL and then follow **Solution 2**:
+
+1. From the Site Dashboard, navigate to the Dev environment.
+
+1. Click **Settings**, then **About site**.
+
+1. Copy the **Upstream** URL and use it instead of the Pantheon Upstream URL in **Solution 2**.
+
+**Issue 2:** The upstream updates and your Composer changes to the site, are in a conflict that cannot be automatically merged by Git.
+
+- We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost.
+
+**Solution 2:**
+
+Merge the changes manually:
 
 1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
 
@@ -201,7 +218,7 @@ Composer build logs are only available after the task or action completes (or fa
 
 ### How do I view Composer's changes?
 
-Use `git diff` to view changes, excluding composer.lock
+Use `git diff` to view changes, excluding `composer.lock`:
 
 ```bash{promptUser: user}
 git diff d94d1a1179 -- . ':(exclude)composer.lock'
@@ -211,7 +228,7 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 
 ### Can I use a Composer GUI?
 
-Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+Pantheon does not offer support for Composer GUIs or any conflicts that might be caused by one.
 
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 
@@ -226,4 +243,3 @@ Pantheon's devs are working hard to make the Integrated Composer experience on P
 Features that are still in development:
 
 - Integrated Composer and [Build Tools](/guides/build-tools)
-- Upgrade an existing site to use Integrated Composer

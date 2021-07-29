@@ -16,13 +16,8 @@ completiontime: 2 hours
 image: launchGuide-twitterLarge
 ---
 
-Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training?docs).
+Welcome! This is a guide version of our on-demand [Essential Developer Workshops](https://pantheon.io/workshops?docs).
 
-<Enablement title="Get Instructor-Led Essential Developer Training" link="https://pantheon.io/learn-pantheon?docs">
-
-Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
-
-</Enablement>
 
 In this guide, you'll learn:
 
