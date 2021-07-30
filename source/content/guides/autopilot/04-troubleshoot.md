@@ -17,13 +17,11 @@ This page is a consolidated list of common issues and solutions you may encounte
 
 ## Element Exclusions
 
-Error Message:
-
-> We didn’t detect any plugins, modules or themes that were eligible for exclusion.
+> **Error Message:** We didn’t detect any plugins, modules or themes that were eligible for exclusion.
 
 ### Issue
 
-The extensions list used for exclusions should be refreshed when the Autopilot plan is initialized for the first time or when using the slow converge feature. Since the plan is only set after Autopilot is initialized, the list is unavailable when Autopilot is started for the first time.
+If the Autopilot plan is started for the first time or the slow converge feature is used, the extensions list used for exclusions should be refreshed. Since the plan is only set after Autopilot is initialized, the list is unavailable when Autopilot is started for the first time.
 
 ### Solution
 
@@ -44,9 +42,7 @@ After that workflow completes, refresh the Autopilot settings or restart the ini
 
 ## Drush Version
 
-Error Message:
-
-> Drush version 8 required
+> **Error Message:** Drush version 8 required
 
 ### Issue
 
@@ -58,9 +54,7 @@ Switch to Drush 8 in the `pantheon.yml` file.
 
 ## Modified Plugin or Theme Name
 
-Error Message:
-
-> Ran into an issue with a WordPress update and did not proceed with deployment.
+> **Error Message:** Ran into an issue with a WordPress update and did not proceed with deployment.
 
 ### Issue
 
