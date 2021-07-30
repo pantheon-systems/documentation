@@ -1,7 +1,7 @@
 ---
 title: Pantheon Autopilot
 subtitle: Troubleshoot Autopilot Error Messages
-description: "How to remedy some common Autopilot errors."
+description: "Diagnose and remedy some common Autopilot errors."
 categories: [automate]
 tags: [autopilot, troubleshoot, webops]
 type: guide
@@ -10,7 +10,7 @@ showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/04-troubleshoot.md
-reviewed: "2021-07-21"
+reviewed: "2021-07-30"
 ---
 
 This page is a consolidated list of common issues and solutions you may encounter when using Autopilot.
