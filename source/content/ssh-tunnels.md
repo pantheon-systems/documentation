@@ -71,8 +71,11 @@ Use the required values from the **Connection Info** tab, the desired environmen
 ```bash{promptUser: user}
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
+  * Replace `<LOCAL_PORT>` with an available port on your device.
+  * Replace `<SERVER_PORT>` with the designated port found on your Site Dashboard.
+  * Often, the same input can be used for the `<LOCAL_PORT>` and `<SERVER_PORT>`.
 
-Replace `PORT` with the database port specified in the **Connection Info** tab. Do the same for `PASSWORD`, then execute the following:
+Replace `PORT` with the database port specified in the **Connection Info** tab. Do the same for `PASSWORD`, then execute the following command:
 
 ```bash{promptUser: user}
 mysql -u pantheon -h 127.0.0.1 -P PORT pantheon -pPASSWORD
