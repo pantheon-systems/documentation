@@ -159,7 +159,7 @@ ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node
 
 ### WordPress ImageMagick Configuration
 
-Once you have installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it on your plugin settings page and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click Regenerate button.
+Once you have installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it in your plugin settings and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click Regenerate button.
 
 ![ImageMagick Engine Settings](../images/imagemagick-engine-settings.png)
 
