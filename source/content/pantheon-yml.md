@@ -118,7 +118,7 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-07-27" />
+<ReviewDate date="2021-08-02" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
@@ -134,6 +134,8 @@ The site is eligible to upgrade if the site's Dashboard displays a blue banner a
 
 </Alert>
 
+Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
+
 Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
 ```yaml:title=pantheon.yml
@@ -141,28 +143,7 @@ database:
   version: 10.4
 ```
 
-<Alert title="Changing the database requires an existing env" type="warning">
-
-You must apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
-
-</Alert>
-
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
-
-Currently, not all CMS versions can be configured to use a specific database version on Pantheon.
-
-The following table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
-
-| CMS            | Recommended MariaDB Version | Configurable After |
-|----------------|-----------------------------|--------------------|
-| Drupal < 6.51  | Default                     | August, 2021       |
-| Drupal >= 6.51 | Default                     | August, 2021       |
-| Drupal < 7.76  | Default                     | August, 2021       |
-| Drupal >= 7.76 | Default                     | August, 2021       |
-| Drupal < 8.5   | Default                     | August, 2021       |
-| Drupal >= 8.6  | 10.0 - 10.4                 | Now Available      |
-| Drupal >= 9.0  | 10.4                        | Now Available      |
-| WordPress      | Default                     | August, 2021       |
 
 ### Drush Version
 
