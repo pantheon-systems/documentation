@@ -43,7 +43,7 @@ After that workflow completes, refresh the Autopilot settings or restart the ini
 Error Message: "Drush version 8 required" 
 
 ### Issue
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5/7/9/10 are not supported.
+Autopilot only works on Drupal sites that are running Drush 8. Drush 5/7/9/10 are not supported. This limitation does not apply to sites that are Composer-managed. Composer-managed sites should use Drush 10 and will not display the Drush version error. Currently, Autopilot only supports Integrated Composer; build tools sites cannot be updated.
 
 ### Solution
 Switch to Drush 8 in the `pantheon.yml` file. 
