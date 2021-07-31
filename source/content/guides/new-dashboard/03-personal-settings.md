@@ -5,7 +5,7 @@ description: Customize and manage your personal settings.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [joa-pan]
-reviewed: "2021-05-20"
+reviewed: "2021-07-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/personal-settings
@@ -15,7 +15,7 @@ editpath: new-dashboard/03-personal-settings.md
 
 The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **User Settings**.
 
-![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.png)
+![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.jpg)
 
 ## Profile
 
@@ -42,15 +42,22 @@ When changing your password, make sure the new password meets the following requ
 
 You’ll need to log in again after your password is changed.
 
-## Preferences
-
-![A screenshot of a the Personal Settings Preferences page](../../../images/dashboard/new-dashboard/personal-settings-preferences.png)
+## Notifications
 
 ### Autopilot Email Notifications
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
 
-### Pantheon Early Access Program
+## SSH Keys
+
+SSH keys allow you to establish a secure connection between your computer and Pantheon. Visit the SSH Keys tab to review your existing configured keys, and add or revoke SSH keys. Follow the steps in [SSH Keys](/ssh-keys) to generate, add, and revoke SSH keys. 
+
+
+## Machine Tokens
+
+
+
+## Early Access Features
 
 If you would like to be directed to the new dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
 
