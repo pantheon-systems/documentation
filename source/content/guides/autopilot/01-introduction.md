@@ -59,7 +59,7 @@ Yes. Access to Autopilot is account-based and individual sites in that account c
 
 ### Will Autopilot email VRT results?
 
-Yes. Configure [Autopilot activity digests and alerts](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications) in your Personal Workspace settings Notifications tab. 
+Yes. Configure [Autopilot activity digests and alerts](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications) in your Personal Workspace settings **Notifications** tab. 
 
 ### Does Autopilot work with Integrated Composer?
 
