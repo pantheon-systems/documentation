@@ -1,4 +1,4 @@
-Configure email notifications for Autopilot alerts and activity digests in  your Personal Workspace settings:
+Configure email notifications for Autopilot alerts and activity digests in your Personal Workspace settings:
 
 ![Personal Workspace Settings include options for Autopilot email notifications](../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
 
