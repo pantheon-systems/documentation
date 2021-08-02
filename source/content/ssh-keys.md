@@ -52,13 +52,13 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ### Add SSH Key - New Dashboard
 
-1. Log in to your Pantheon Dashboard, and go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page. 
+1. Log in to your Pantheon Dashboard, and go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page.
 
 1. Click **Add New Key**.
 
 1. Paste the copied public key into the box, and click **Save**.
 
-  ![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
+  ![Adding SSH Keys](../images/dashboard/new-dashboard/add-ssh-key-new-dashboard.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
 
