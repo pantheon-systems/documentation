@@ -11,7 +11,7 @@ showtoc: true
 anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
-reviewed: "2021-03-26"
+reviewed: "2021-08-02"
 ---
 
 [Autopilot](https://pantheon.io/autopilot?docs) is a new feature that's part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
@@ -59,7 +59,7 @@ Yes. Access to Autopilot is account-based and individual sites in that account c
 
 ### Will Autopilot email VRT results?
 
-Yes. Configure [Autopilot activity digests and alerts](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications) in your Personal Workspace settings **Notifications** tab. 
+Yes. Configure [Autopilot activity digests and notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications) in your Personal Workspace settings **Notifications** tab.
 
 ### Does Autopilot work with Integrated Composer?
 
@@ -71,7 +71,7 @@ Not yet. Autopilot is not compatible with Build Tools or other workflows that us
 
 ### What versions of Drush are supported by Autopilot?
 
-Currently, Autopilot only supports Drush 8. However, Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information. 
+Currently, Autopilot only supports Drush 8. However, Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information.
 
 ### Does Autopilot support Terminus actions?
 
