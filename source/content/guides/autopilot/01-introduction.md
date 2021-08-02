@@ -59,7 +59,7 @@ Yes. Access to Autopilot is account-based and individual sites in that account c
 
 ### Will Autopilot email VRT results?
 
-Not yet. Pantheon's devs are working on Autopilot email notifications.
+Yes. Configure [Autopilot activity digests and alerts](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications) in your Personal Workspace settings **Notifications** tab. 
 
 ### Does Autopilot work with Integrated Composer?
 
