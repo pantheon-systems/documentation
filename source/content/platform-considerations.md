@@ -138,7 +138,7 @@ Be sure to encode URLs that use ampersands with `%26` in place of `&`.
 
 ## Drupal Steward
 
-The Pantheon platform includes [Drupal Steward](https://www.drupal.org/drupal-security-team/steward), a platform-level mitigation of certain highly-critical vulnerabilities that are identified in Drupal core, as a feature for all Drupal sites on Pantheon.
+The Pantheon platform includes [Drupal Steward](https://www.drupal.org/drupal-security-team/steward), a platform-level mitigation of certain highly-critical vulnerabilities that are identified in Drupal core, as a feature for all Drupal sites on Pantheon. All Pantheon sites are protected by Drupal Steward.
 
 For more information about Drupal Steward, visit the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq).
 
