@@ -249,29 +249,30 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
-**Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
+**Issue 2:** In order to attach or upload files, local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
 
 **Solution:** You can customize the upload path for the temporary folder using the following:
 
 `define( 'WPCF7_UPLOADS_TMP_DIR', '/your/file/path' );`
 
-At this time, this setting alone does not resolve the issue. A bug has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
+At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
 
 The suggested temporary workaround is to comment out the following code in your `/contact-form-7/includes/mail.php` file:
 ```php
-#if ( ! wpcf7_is_file_path_in_content_dir( $path ) ) {
-#  if ( WP_DEBUG ) {
-#    trigger_error(
-#      sprintf(
+# Comment out the following code:
+if ( ! wpcf7_is_file_path_in_content_dir( $path ) ) {
+  if ( WP_DEBUG ) {
+    trigger_error(
+      sprintf(
         /* translators: %s: Attachment file path. */
-#        __( 'Failed to attach a file. %s is not in the allowed directory.', 'contact-form-7' ),
-#        $path
-#      ),
-#      E_USER_NOTICE
-#    );
-#  }
-#  return false;
-#}
+        __( 'Failed to attach a file. %s is not in the allowed directory.', 'contact-form-7' ),
+        $path
+      ),
+      E_USER_NOTICE
+    );
+  }
+  return false;
+}
 ```
 
 ___
