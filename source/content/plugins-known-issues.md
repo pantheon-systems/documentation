@@ -228,7 +228,7 @@ ___
 
 ## [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 
-<ReviewDate date="2019-02-21" />
+<ReviewDate date="2021-08-21" />
 
 **Issue 1:** This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
@@ -249,7 +249,10 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
-**Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/), the plugin code fails for upload directories that are symlinks.
+**Issue 2:** You can customize the upload path using the following:
+`define( 'WPCF7_UPLOADS_TMP_DIR', '/your/file/path' );`
+
+Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/), the plugin code fails for upload directories that are symlinks.
 
 **Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the codebase in `wp-content` or another subdirectory thereof.
 
