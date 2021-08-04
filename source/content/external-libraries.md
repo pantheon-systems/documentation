@@ -83,7 +83,7 @@ In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless
 
 ### Drupal PhantomJS Configuration
 
-Once you have downloaded and enabled the PhantomJS Capture module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `/admin/config/user-interface/phantomjs_capture` to specify the library path.
+After you've downloaded and enabled the PhantomJS Capture module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at `/admin/config/user-interface/phantomjs_capture` to specify the library path.
 
 ## Apache Tika
 
@@ -159,7 +159,7 @@ ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node
 
 ### WordPress ImageMagick Configuration
 
-Once you have installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it in your plugin settings and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click Regenerate button.
+After you've installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it in your plugin settings and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click **Regenerate**.
 
 ![ImageMagick Engine Settings](../images/imagemagick-engine-settings.png)
 
