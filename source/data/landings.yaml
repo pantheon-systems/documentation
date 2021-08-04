@@ -598,9 +598,6 @@
         - text: 'Integrate Trello on Pantheon with Quicksilver Hooks'
           url: '/guides/trello'
           icons: 'fa fa-book'
-        - text: 'Using Wraith for Visual Regression Testing'
-          url: '/guides/visual-diff-with-wraith'
-          icons: 'fa fa-book'
         - text: 'Deploy to Pantheon from an External Repository using DeployBot'
           url: '/deploybot'
         - text: 'AWS S3 Setup for Drupal'
@@ -1069,5 +1066,4 @@
           url: '/guides/lockr'
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
-        - text: 'Using Wraith for Visual Regression Testing'
-          url: '/guides/visual-diff-with-wraith'
+          
