@@ -21,6 +21,7 @@ Here are some popular email services you can use on the platform and their corre
 | Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](/guides/sendgrid) |
 | Mandrill  | [Drupal](https://www.drupal.org/project/mandrill) \| [WordPress](https://wordpress.org/plugins/wpmandrill/) |
 | Mailgun   | [Drupal](https://www.drupal.org/project/mailgun) \| [WordPress](https://wordpress.org/plugins/mailgun/) |
+| Postmark | [Drupal](https://www.drupal.org/project/postmark) \| [WordPress](https://wordpress.org/plugins/postmark-approved-wordpress-plugin/) |
 | SparkPost | [Drupal](https://www.drupal.org/project/sparkpost) \| [WordPress](https://wordpress.org/plugins/sparkpost/) |
 | Sendinblue | [Drupal](https://www.drupal.org/project/sendinblue) \| [WordPress](https://wordpress.org/plugins/mailin/) |
 
