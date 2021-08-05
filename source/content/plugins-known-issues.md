@@ -864,7 +864,8 @@ export ENV=dev
   touch /tmp/wordfence-waf.php /tmp/.user.ini
   ```
 
-1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**:
+1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**.  
+Complete this step in Dev, Test, and Live Environments. 
 
   ```bash{promptUser: user}
   sftp -o Port=2222 env.UUID@appserver.env.UUID.drush.in
@@ -924,7 +925,7 @@ if (defined( "PANTHEON_BINDING" )) {
 }
 ```
 
-**Please note:** You will need to make this change every time the plugin is updated.
+You will need to make this change every time the plugin is updated.
 
 **Issue 2:** This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/).
 
@@ -934,8 +935,7 @@ ___
 
 <ReviewDate date="2020-10-19" />
 
-**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create
-the `advanced-cache.php` file.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create the `advanced-cache.php` file.
 
 **Solution:**
 
