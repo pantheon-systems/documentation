@@ -14,29 +14,24 @@ anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal-9.md
 ---
 
-[Apache Solr](/solr) is a system for indexing and searching site content.
+<Alert title="Early Access" type="info" icon="leaf">
 
-<Alert title="Important Note" type="info">
-
-**Pantheon Search with Solr 8** derives from Solr and can perform full-text content searching in a single language.
-
-<Partial file="solr-version.md" />
-
-If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
-
-Pantheon Search with Solr 8 supports [Search API Solr x.x.x](https://www.drupal.org/project/search_api_solr), and requitres the companion Search API Pantheon module, configiured following the installation directions below.
+This page refers to products and features which are currently in development or early access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments.
 
 </Alert>
 
+## Will This Guide Work for Your Site?
+
+Apache Solr 8 for Drupal 9 will work for you if your site meets all of the following:
+
+- Drupal 9 with Integrated Composer
+- single search index
+
+If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search service.
+
 ## Before You Begin
 
-Be sure that you:
-
 - Enable Solr in the Pantheon Site Dashboard: **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
-
-- Install [Composer](https://getcomposer.org/)
-
-- Create a Drupal 9 with Integrated Composer managed site on Pantheon following the [Drupal 9](/drupal-9) guide, or migrate to Drupal 9 with Integrated Composer using the (Drupal 9 Migration Guide)[/guides/drupal-9-migration].
 
 ## Install Pantheon Search With Solr 8 on Drupal 9
 
