@@ -21,7 +21,7 @@ This page is a list of common issues and solutions that you may encounter when u
 
 ### Issue
 
-Since the Autopilot plan is only set after Autopilot is initialized, the list of elements is unavailable when Autopilot is started for the first time.
+The list of elements is unavailable when Autopilot is started for the first time; it is only set after Autopilot is initialized.
 
 Refresh the extensions list used for exclusions, when Autopilot is started for the first time.
 
