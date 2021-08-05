@@ -30,11 +30,15 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
+The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information. 
+
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
 <Partial file="drupal-8-convert-to-composer.md" />
+
+If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information. 
 
 ## Change Upstreams
 
