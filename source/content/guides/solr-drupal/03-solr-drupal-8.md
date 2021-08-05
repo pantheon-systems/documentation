@@ -1,12 +1,17 @@
 ---
-title: Enabling Solr on Drupal 8
+title: Apache Solr for Drupal
+subtitle: Using Solr on Drupal 8
 description: Detailed information on using Apache Solr with Drupal 8.
 cms: "Drupal 8"
 categories: [integrate]
-tags: [solr, modules]
+tags: [solr, search, modules]
 contributors: [peter-pantheon, cityofoaksdesign]
+layout: guide
+showtoc: true
+permalink: docs/guides/solr-drupal/solr-drupal-8
+anchorid: solr-drupal
+editpath: solr-drupal/03-solr-drupal-8.md
 ---
-[Apache Solr](/solr) is a system for indexing and searching site content.
 
 <Alert title="Important Note" type="info">
 
@@ -16,7 +21,7 @@ contributors: [peter-pantheon, cityofoaksdesign]
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
-Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which will reach end-of-life in December 2021. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
+Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which reached end-of-life in December 2021. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
 </Alert>
 

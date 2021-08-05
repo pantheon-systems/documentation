@@ -1,20 +1,22 @@
 ---
-title: Enabling Solr with Drupal 7
+title: Apache Solr for Drupal
+subtitle: Using Solr on Drupal 7
 description: Detailed information on using Apache Solr with Drupal 7.
 cms: "Drupal 7"
 categories: [integrate]
-tags: [solr]
+tags: [solr, search, modules]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
+layout: guide
+showtoc: true
+permalink: docs/guides/solr-drupal/solr-drupal-7
+anchorid: solr-drupal
+editpath: solr-drupal/04-solr-drupal-7.md
 ---
-
-[Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 This guide provides information on using **Pantheon's Solr Service** with Drupal 7.
 
 If you are looking for additional search features for more advanced use cases, you may want to consider [alternative Solr service](/solr#alternatives-to-pantheons-solr-service) for your site. See the [Opensolr](/opensolr) guide for one example.
-
-For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/solr-drupal-8).
 
 ## Before You Begin
 
