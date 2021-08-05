@@ -118,21 +118,15 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-08-02" />
+<ReviewDate date="2021-08-05" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
-Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
-
-<Alert type="info" title="Do not set the database version unless the site is eligible.">
-
-The site is eligible to upgrade if the site's Dashboard displays a blue banner across the top that reads:
+The site is eligible to upgrade when the site's Dashboard displays a blue banner across the top that reads:
 
 > Good news, your site's database version is now configurable! Learn how.
 
-[Contact Support](/support) if you're ready to use a different version of MariaDB, but you don't see the banner on the Dashboard.
-
-</Alert>
+Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
 
 Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
@@ -144,6 +138,21 @@ database:
 ```
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
+
+This table shows the recommended MariaDB version for each CMS:
+
+| CMS           | Recommended MariaDB Version |
+|---------------|-----------------------------|
+| Drupal < 6.51 | 10.3                        |
+| Drupal ≥ 6.51 | 10.4                        |
+| Drupal < 7.76 | 10.3                        |
+| Drupal ≥ 7.76 | 10.4                        |
+| Drupal < 8.5  | 10.3                        |
+| Drupal ≥ 8.6  | 10.4                        |
+| Drupal ≥ 9.0  | 10.4                        |
+| WordPress     | 10.4                        |
+
+Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
 
 ### Drush Version
 
