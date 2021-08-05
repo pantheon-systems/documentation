@@ -23,11 +23,11 @@ This page is a list of common issues and solutions that you may encounter when u
 
 Since the Autopilot plan is only set after Autopilot is initialized, the list of elements is unavailable when Autopilot is started for the first time.
 
-When Autopilot is started for the first time or the Slow Converge feature is used, refresh the extensions list used for exclusions.
+Refresh the extensions list used for exclusions, when Autopilot is started for the first time.
 
 ### Solution
 
-Trigger a workflow to refresh extensions from the GraphQL Playground with the following code change:
+Trigger a workflow to refresh extensions with the following code change:
 
 ```graphql
 mutation {
@@ -72,7 +72,7 @@ To determine which plugin is causing the issue:
 
 1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance among the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
-Contact an Autopilot engineer to check the state machine logs, which requires AWS access.
+Contact support for help. 
 
 ### Solution
 
