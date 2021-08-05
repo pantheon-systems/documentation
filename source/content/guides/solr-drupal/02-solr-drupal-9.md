@@ -24,8 +24,8 @@ This page refers to products and features which are currently in development or 
 
 Apache Solr 8 for Drupal 9 will work for you if your site meets all of the following:
 
-- Drupal 9 with Integrated Composer
-- single search index
+- runs [Drupal 9 with Integrated Composer](/drupal-9)
+- uses a single search index
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search service.
 
