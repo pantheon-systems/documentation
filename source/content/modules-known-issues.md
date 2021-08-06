@@ -114,7 +114,7 @@ ___
 
 ## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference)
 
-<ReviewDate date="2020-06-30" />
+<ReviewDate date="2021-08-06" />
 
 Dynamic Entity Reference provides a field combination for Drupal 8 that allows for the reference of more than one entity type.
 
