@@ -18,7 +18,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 ## Requirements
 
-- PHP Version 5.5.38 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
+- PHP Version 7.0 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
 - [PHP-CLI](http://www.php-cli.com/)
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
