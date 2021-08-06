@@ -112,6 +112,15 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 ___
 
+## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference)
+
+<ReviewDate date="2020-06-30" />
+
+Dynamic Entity Reference provides a field combination for Drupal 8 that allows for the reference of more than one entity type.
+
+**Issue**: The Dynamic Entity Reference module is an alpha version contributor module, and the MySQL queries it creates cannot be controlled or regulated. MySQL triggers are not well-supported in Drupal or WordPress applications. On Pantheon, when cloning the database between environments, these triggers may not work or may cause errors when used.
+___
+
 ## [DropzoneJS](https://www.drupal.org/project/dropzonejs)
 
 <ReviewDate date="2020-06-30" />
