@@ -16,12 +16,6 @@ reviewed: "2021-08-02"
 
 [Autopilot](https://pantheon.io/autopilot?docs) is a new feature that's part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
 
-<Alert title="Limited Availability" type="info" icon="leaf">
-
-This page refers to products and features that are currently in development Limited Availability. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments. **[Contact Sales](https://pantheon.io/earlyaccess/autopilot?docs)** for details about the Autopilot Limited Availability program.
-
-</Alert>
-
 ## What Autopilot Does
 
 Pantheon's Autopilot:
