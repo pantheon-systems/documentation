@@ -23,7 +23,7 @@ Update your name, email address, password, or [delete your account](/delete-acco
 
 ### Login Details
 
-You can update the current email address or password associated with your Dashboard.
+You can update the current email address or password associated with your Dashboard. 
 
 #### Email
 
@@ -42,6 +42,7 @@ When changing your password, make sure the new password meets the following requ
 
 You’ll need to log in again after your password is changed.
 
+
 ## Notifications
 
 ### Autopilot Email Notifications
@@ -55,10 +56,17 @@ SSH keys allow you to establish a secure connection between your computer and Pa
 
 ## Machine Tokens
 
+Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
+
+The token key will only be shown once and provides the same access as your username and password. To learn more about machine tokens, refer to the [Creating and Revoking Machine Tokens](/machine-tokens) documentation.
 
 
-## Early Access Features
+## Preferences
 
-If you would like to be directed to the new dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
+### New Pantheon Features
 
-If you choose to use the new Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the new Dashboard.
+#### Redesigned Dashboard Interface
+
+If you would like to be directed to the redesigned Dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
+
+If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 
