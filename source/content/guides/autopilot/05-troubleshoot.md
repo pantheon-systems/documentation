@@ -72,7 +72,7 @@ To determine which plugin is causing the issue:
 
 1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance among the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
-Contact support for help. 
+Contact support for help.
 
 ### Solution
 
