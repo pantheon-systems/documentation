@@ -86,7 +86,7 @@ Enable the Search API Pantheon module via the [Drupal interface](https://www.dru
 
 ### Disable Drupal Core's Search Module (Optional)
 
-If you are using Search API, then you probably will not be using Drupal Core's Search module. Uninstall the Search core module from `/admin/modules/uninstall` to avoid confusion in further configuration steps.
+If you are using Search API Pantheon, then you probably will not be using Drupal Core's Search module. Uninstall the Search core module from `/admin/modules/uninstall` to avoid confusion in further configuration steps.
 
 ### Add The Search Server
 
