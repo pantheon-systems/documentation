@@ -47,7 +47,14 @@ You’ll need to log in again after your password is changed.
 
 ### Autopilot Email Notifications
 
-<Partial file="autopilot/autopilot-email-notifications.md" />
+You can configure email notifications for Autopilot alerts and activity digests in your Personal Workspace settings:
+
+Click **Notifications** and choose your options in the **Autopilot Email Notifications** section:
+
+   - **Weekly Activity Digest**: A weekly summary of Autopilot activity across all sites within the workspaces that have Autopilot enabled.
+     - Digests are sent each Monday with information about the previous seven days.
+   - **Failed Visual Regression Tests**: Real-time email notifications for failed visual regression tests for a given site.
+
 
 ## SSH Keys
 
