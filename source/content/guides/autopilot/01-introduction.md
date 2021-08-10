@@ -14,13 +14,7 @@ editpath: autopilot/01-introduction.md
 reviewed: "2021-08-02"
 ---
 
-[Autopilot](https://pantheon.io/autopilot?docs) is a new feature that's part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
-
-<Alert title="Limited Availability" type="info" icon="leaf">
-
-This page refers to products and features that are currently in development Limited Availability. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments. **[Contact Sales](https://pantheon.io/earlyaccess/autopilot?docs)** for details about the Autopilot Limited Availability program.
-
-</Alert>
+[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
 
 ## What Autopilot Does
 
@@ -35,7 +29,7 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-Autopilot is available during Limited Availability to Gold Accounts and higher. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
+Autopilot is available to Gold Accounts and higher. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
 
 ## Who is Autopilot For?
 
@@ -46,10 +40,6 @@ Site upkeep can be tedious with constant monitoring, building, maintaining websi
 Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Accounts or higher.
 
 Autopilot is enabled for Pantheon sites at the organization level.
-
-## Will Autopilot Work for Your Site?
-
-Pantheon is working on developing more features for Autopilot, yet some features are currently not available. Refer to the following FAQ section for more information.
 
 ## FAQ
 
@@ -63,15 +53,17 @@ Yes. Configure [Autopilot activity digests and notifications](/guides/autopilot/
 
 ### Does Autopilot work with Integrated Composer?
 
-Yes. If your site is using [Integrated Composer](/integrated-composer) (`build_step` is `true` in the `pantheon.yml` file), Autopilot will be able to update it.
+Yes. If your site is using [Integrated Composer](/integrated-composer) (`build_step` is `true` in the `pantheon.yml` [file](/pantheon-yml)), Autopilot will be able to update it.
 
-### Does Autopilot work with build tools?
+### Does Autopilot work with Build Tools?
 
-Not yet. Autopilot is not compatible with Build Tools or other workflows that use external Git repositories.
+Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/guides/build-tools/) or other workflows that use external Git repositories.
 
 ### What versions of Drush are supported by Autopilot?
 
-Currently, Autopilot only supports Drush 8. However, Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information.
+Currently, Autopilot only supports Drush 8 for all sites up to Drupal 9. Drupal 9 uses Drush 10 and is compatible with Autopilot.
+
+However, Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information.
 
 ### Does Autopilot support Terminus actions?
 

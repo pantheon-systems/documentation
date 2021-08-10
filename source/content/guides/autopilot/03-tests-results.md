@@ -10,12 +10,14 @@ showtoc: true
 anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
-reviewed: "2021-03-26"
+reviewed: "2021-08-09"
 ---
 
-Autopilot updates and visually tests a copy of your site on a [Multidev](/multidev) so it can detect issues before applying them.
+Autopilot updates and visually tests a copy of your site on a [Multidev](/multidev) so it can detect issues before it tries to apply updates.
 
 ## Successful Tests
+
+Autopilot can automatically apply updates and deploy to the Live environment.
 
 If you’re not comfortable with Autopilot deploying all the way to the Live environment, you can have Autopilot only deploy updates to Dev or Test and stop. You can proceed with other manual or automated QA processes, and deploy from the Test to Live environment when ready.
 
@@ -29,19 +31,19 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 Autopilot can report failures via email or [Quicksilver hooks](/quicksilver#hooks) immediately, and send a weekly email report summarizing all Autopilot activity.
 
-If an error is detected during an update attempt, the **Autopilot Status** shows **Needs Attention** with two options to **Review Test Results** or to see **What Changed**.
+![Autopilot overview page shows a site with a failed test](../../../images/autopilot/autopilot-overview-failed-vrt.png)
+
+If an error is detected during an update attempt, the **Autopilot Status** shows **Needs Attention** with two options to **Review Test Results** or to **View Update Details**.
 
 ![Autopilot Status shows a Needs Attention notice and prompt to Review Test Results](../../../images/autopilot/autopilot-status-failed-screenshots.png)
 
-Click **What Changed?** for **Update Details**:
+Click **View Update Details** for details:
 
 ![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
 
-You may need to investigate the error in the Autopilot Multidev.
+Click **Review Test Results** to compare changes.
 
-From the **Autopilot Overview**:
-
-![Autopilot Overview shows a site with a failed test](../../../images/autopilot/autopilot-overview-failed-vrt.png)
+If you accept the changes, click **Approve**. Otherwise, click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to choose whether to see the Multidev, or adjust the threshold for acceptable changes.
 
 ### Acknowledge All Failed Test Results Before You Run Another Test
 
