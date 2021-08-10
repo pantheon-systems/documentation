@@ -23,13 +23,17 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 1. If the site is in [SFTP mode](/sftp) with staged changes that haven't been committed yet, [commit those changes](/sftp#committing-sftp-changes) first.
 
-1. In the left bar, click **<i className="fa fa-robot"></i> Autopilot**.
+1. In the left bar, click <i className="fa fa-robot"></i> **Autopilot**.
 
-1. Sites for which Autopilot is available are listed on the **Autopilot Overview** page.
+1. Sites for which Autopilot is available are listed in the **Autopilot Enabled** table.
 
-1. Click **Actions**, **Manage Autopilot Settings**, then **Get Started** to start Autopilot setup.
+1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> dropdown in the Site's row, then **Manage Autopilot Settings**.
 
-  During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
+1. Click **Get Started** to start Autopilot setup.
+
+   - If the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites), Autopilot skips the setup stage and brings you to the [**Autopilot Configuration**](#autopilot-configuration---manage-autopilot-settings)
+
+During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
 
 ## Configure Autopilot to Track Changes and Deploy to Dev, Test, or Live
 

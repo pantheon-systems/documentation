@@ -43,7 +43,7 @@ Click **View Update Details** for details:
 
 Click **Review Test Results** to compare changes.
 
-If you accept the changes, click **Aporove**. Otherwise, click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to choose whether to see the Multidev, or adjust the threshold for acceptable changes.
+If you accept the changes, click **Approve**. Otherwise, click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to choose whether to see the Multidev, or adjust the threshold for acceptable changes.
 
 ### Acknowledge All Failed Test Results Before You Run Another Test
 
