@@ -25,17 +25,59 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 1. In the left bar, click <i className="fa fa-robot"></i> **Autopilot**.
 
-1. Sites for which Autopilot is available are listed in the **Autopilot Enabled** table.
+1. Sites for which Autopilot is available are listed in the **All Sites** column of the **Sites** table.
 
-1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> dropdown in the Site's row, then **Manage Autopilot Settings**.
+1. Click **Enable Autopilot** in the Site's row.
 
-1. Configure settings on the **Autopilot Configuration** page that loads. Each section of the configuration is described on this page.
+1. Click **Get Started** to start Autopilot setup.
 
-  If the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+  During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
 
-  Click **Save** for each section of the configuration in which you make changes.
+1. In the **Configuration** step, use the **On**/**Off** toggles to choose which features and elements should be tracked for updates then click **Continue** to set a schedule for Autopilot:
 
-## Autopilot Configuration
+  ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
+
+1. Schedule Autopilot to run:
+
+   - Never (Update Manually)
+   - Weekly
+   - Monthly
+
+   Then use the dropdown menu to choose the deployment destination:
+
+   - Dev
+   - Test
+   - Live
+
+   ![Autopilot Setup - Schedule screen. Select how frequently Autopilot should run and where successful updates should be applied.](../../../images/autopilot/autopilot-setup-schedule.png)
+
+   Click **Continue** to choose pages for screenshot comparison tests.
+
+1. Add pages to track for visual regression testing:
+
+  ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
+
+  Click **Continue** to choose updates to exclude.
+
+1. Autopilot checks for plugins, modules, and themes that are eligible for exclusion.
+
+  If any are shown on the **Excluded Updates** screen, select any that should be excluded:
+
+   ![Autopilot Setup - Excluded Updates screen. Select which plugins, modules, or themes should be excluded.](../../../images/autopilot/autopilot-setup-excluded-updates.png)
+
+  Click **Save** to initialize Autopilot on the Site.
+
+1. Wait while Autopilot performs its tests and updates. This will take a while.
+
+## Autopilot Configuration - Manage Autopilot Settings
+
+From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, then **Manage Autopilot Settings**.
+
+The Autopilot Configuration page shows all the steps from the initial setup on one page.
+
+If the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+
+Click **Save** for each section of the configuration in which you make changes.
 
 ### Update Scope
 
