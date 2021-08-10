@@ -104,6 +104,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 - [Static Sites and Empty Upstreams](/static-site-empty-upstream)
 
+
 ### Composer Content-Length Mismatch and/or Degraded Mode
 
 If you encounter an issue such as:
