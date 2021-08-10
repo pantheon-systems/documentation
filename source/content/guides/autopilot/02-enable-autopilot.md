@@ -10,7 +10,7 @@ showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2021-08-09"
+reviewed: "2021-08-10"
 ---
 
 ## Enable Autopilot
