@@ -59,13 +59,13 @@ The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/mast
 
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
- ![Drupal Admin Search and Metadata Solr](../images/solr-search-metadata.png)
+ ![Drupal Admin Search and Metadata Solr](../../../images/solr-search-metadata.png)
 
 ### Post the schema.xml Using the Pantheon Apache Solr Module
 
 The next step is to post the `schema.xml`, which describes Drupal fields to the Solr search indexer. Posting the schema will activate the Solr server for the site environment. Click **Post schema.xml**.
 
-![Solr configuration schema](../images/solr-config-schema.png)
+![Solr configuration schema](../../../images/solr-config-schema.png)
 
 Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.
 
@@ -100,11 +100,11 @@ You will need to enable either Apache Solr Search or Search API Solr Search, dep
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
 
- ![Enable Solr module](../images/enable-solr-module.png)
+ ![Enable Solr module](../../../images/enable-solr-module.png)
 
 Browse to the main Apache Solr settings screen and you should now see an index is ready for you. You do not need to configure any server settings, but you can still handle your facet and bias settings as per normal:
 
- ![Configure Solr Settings](../images/apache-solr-module-config.png)
+ ![Configure Solr Settings](../../../images/apache-solr-module-config.png)
 
 Note that the default connection parameters are correct and do not need changing. After this point, your configuration and settings will be the same as any generic Apache Solr use case.
 
@@ -116,7 +116,7 @@ Note that the default connection parameters are correct and do not need changing
 
 Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.
 
-![Enable Solr Search required modules](../images/enable-solr-required.png)
+![Enable Solr Search required modules](../../../images/enable-solr-required.png)
 
 </Tab>
 
@@ -136,19 +136,19 @@ This interface reports what the last schema that was posted to the service and w
 
 **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**
 
-![Pantheon Apache Solr status](../images/solr-status.png)
+![Pantheon Apache Solr status](../../../images/solr-status.png)
 
 ### Execute Query
 
 The Pantheon Apache Solr module provides an interface for administrators to send queries directly to the Solr server, independently of any contrib module. This is advanced functionality and is intended for debugging purposes only. Try queries like `/admin/ping` to see the raw server response.
 
- ![Send query to Solr](../images/solr-execute-query.png)
+ ![Send query to Solr](../../../images/solr-execute-query.png)
 
 ### Drupal Status Report
 
 The Pantheon Apache Solr module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.
 
- ![Solr reports](../images/solr-reports.png)
+ ![Solr reports](../../../images/solr-reports.png)
 
 ## Troubleshooting
 
@@ -188,7 +188,7 @@ This needs to be done for Dev, Test, and Live individually. You can do this at `
 
 **ApacheSolr module:** You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
 
-![ApacheSolr Indexing](../images/d7-solr-reindex.png)
+![ApacheSolr Indexing](../../../images/d7-solr-reindex.png)
 
 **Search API Solr module:** Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
 
