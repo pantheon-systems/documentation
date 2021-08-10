@@ -57,7 +57,7 @@ Yes. If your site is using [Integrated Composer](/integrated-composer) (`build_s
 
 ### Does Autopilot work with Build Tools?
 
-Not yet. Autopilot is not compatible with Build Tools or other workflows that use external Git repositories.
+Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/guides/build-tools/) or other workflows that use external Git repositories.
 
 ### What versions of Drush are supported by Autopilot?
 

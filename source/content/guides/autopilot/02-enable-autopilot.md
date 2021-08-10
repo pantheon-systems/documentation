@@ -23,7 +23,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 1. If the site is in [SFTP mode](/sftp) with staged changes that haven't been committed yet, [commit those changes](/sftp#committing-sftp-changes) first.
 
-1. In the left bar, click <i className="fa fa-robot"></i> **Autopilot**.
+1. In the Global Primary Navigation, click the <i className="fa fa-robot"></i> **Autopilot** icon.
 
 1. Sites for which Autopilot is available are listed in the **All Sites** column of the **Sites** table.
 
@@ -140,11 +140,11 @@ Select any that should be excluded, then click **Save**.
 
 ### Excluded Web Elements
 
-CSS selectors that you want to exclude from the visual regression tests.
+Add any CSS selectors that you want to exclude from the visual regression tests.
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
-Add any CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
+List the CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
 
 Click **Save**.
 
