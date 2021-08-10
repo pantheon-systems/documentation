@@ -122,6 +122,26 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 
 </TabList>
 
+## Extend Solr for Drupal 7
+
+### Apache Tika
+
+The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
+
+Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
+
+Once you have downloaded and installed the ApacheSolr Attachments module ([apachesolr_attachments](https://www.drupal.org/project/apachesolr_attachments)), you'll need to configure the module's settings.
+
+1. Go to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the following fields:
+
+    - **Extract Using:** Tika (local java application)
+    - **Tika Directory Path:** `/srv/bin`
+    - **Tika jar file:** `tika-app-1.18.jar`
+
+1. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
+
+If everything is working correctly, you will see the success message "Text can be successfully extracted".
+
 ## Additional Help
 
 The Pantheon Solr module provides a comprehensive help section that describes a number of key Solr concepts and terms. View it by going to **Administration** > **Help** > **Pantheon Apache Solr**.

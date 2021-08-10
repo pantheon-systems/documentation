@@ -140,6 +140,26 @@ The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older v
 
 <Partial file="solr-commit-changes.md" />
 
+## Extend Solr for Drupal 8
+
+### Apache Tika
+
+The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
+
+Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
+
+Download and install the Search API Attachments module ([search_api_attachments](https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
+
+1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and enter the following fields:
+
+   - **Extraction method:** Tika Extractor
+   - **Path to java executable:** `java`
+   - **Path to Tika .jar file:** `/srv/bin/tika-app-1.18.jar`
+
+1. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
+
+If everything is working correctly, you will see the success message "Extracted data: Congratulations! The extraction seems working! Yay!".
+
 ## Safely Remove Solr
 
 The following code changes are required before Solr can be safely uninstalled and disabled:
