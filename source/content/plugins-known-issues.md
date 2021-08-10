@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov]
+contributors: [aleksandrkorolyov, jocastaneda]
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support).
@@ -251,9 +251,12 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 
 **Issue 2:** In order to attach or upload files, local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
 
-**Solution:** You can customize the upload path for the temporary folder using the following:
 
-`define( 'WPCF7_UPLOADS_TMP_DIR', '/your/file/path' );`
+**Solution:** You can customize the upload path for the temporary folder using the following:  
+
+`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`  
+
+Please note that the temporary folder needs to reside in a folder that can be accessed by dev, test, live, or whichever [multidev](/multidev) you are using.
 
 At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
 
