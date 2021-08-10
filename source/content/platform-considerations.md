@@ -144,6 +144,11 @@ The Pantheon platform includes [Drupal Steward](https://www.drupal.org/drupal-se
 
 For more information about Drupal Steward, visit the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq).
 
+## Dynamic Entity Reference
+
+The Dynamic Entity Reference module in Drupal 8 allows users to reference more than one entity type. The module is an alpha version contributor module, and the MySQL queries it creates cannot be controlled or regulated. MySQL triggers are not well-supported in Drupal or WordPress applications. On Pantheon, when cloning the database between environments, these triggers may not work or may cause errors when used.
+
+
 ## Email and Deliverability
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
