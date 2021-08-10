@@ -48,10 +48,6 @@ After creating a new site, follow the standard code commit processes by adding f
 
 Yes! You can start a new static site using an Empty Upstream.
 
-### Can I use this process to host statically generated JAMStack sites?
-
-Yes, compiled static sites compiled that don't require a Drupal or WordPress CMS backend can be hosted on Pantheon using this method. If you're looking for a fully decoupled CMS solution please refer to our [Decoupled Sites](/features/decoupled-cms) page.
-
 ### Can I add static files to an existing WordPress or Drupal site?
 
 Yes, you can commit any static HTML file to your site that is unrelated to the CMS.
@@ -64,9 +60,13 @@ An Empty Upstream, behind the scenes, is essentially an empty Drupal environment
 
 Yes, traffic will be counted the same way. Refer to our [Traffic Metrics](/traffic-limits) documentation for more information.
 
-### Can I use this process to host my own site built with Gatsby?
+### Can I use this process to host statically generated JAMStack sites?
 
-Yes! Some customers utilize a two-site approach on Pantheon whereas one site is the CMS backend (headless WordPress or Drupal), and the other site is the decoupled frontend (Frontity, Gatsby, etc). Of course, you will likely have different deployment workflows for each site, and you would need to determine the best workflow for you and your team. If you're looking for more power, see our [Decoupled Sites](/features/decoupled-cms) page for information on how Pantheon can host full-featured CMS decoupled frontends.
+Yes, compiled static sites compiled that don't require a Drupal or WordPress CMS backend can be hosted on Pantheon using this method. Some customers utilize a two-site approach on Pantheon whereas one site is the CMS backend (headless WordPress or Drupal), and the other site is the decoupled frontend (Frontity, Gatsby, etc). Of course, you will likely have different deployment workflows for updating each site, and you would need to determine the best workflow for you and your team. 
+
+For other Decoupled configurations, please refer to our [Decoupled Sites](/decoupled-sites) documentation.
+
+
 
 ## More on How Pantheon Uses Upstreams Here:
 
