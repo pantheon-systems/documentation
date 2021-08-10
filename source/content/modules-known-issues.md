@@ -338,7 +338,7 @@ ___
 
 <ReviewDate date="2020-03-12" />
 
-**Issue**: This module overrides a class from the [Pantheon Apache Solr module](/solr-drupal-7) responsible for connecting to Pantheon's Apache Solr service. As a result, Solr connection is lost.
+**Issue**: This module overrides a class from the [Pantheon Apache Solr module](/guides/solr-drupal/solr-drupal-7) responsible for connecting to Pantheon's Apache Solr service. As a result, Solr connection is lost.
 
 **Solution**: Instead of patching the module, you can fix the issue with a custom module:
 

@@ -157,7 +157,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 <Partial file="solr-version.md" />
 
-See our documentation for details about configuring Solr for [WordPress](/wordpress-solr), [Drupal 7](/solr-drupal-7) and [Drupal 8](/solr-drupal-8).
+See our documentation for details about configuring Solr for [WordPress](/wordpress-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7) and [Drupal 8](/guides/solr-drupal/solr-drupal-8).
 
 ## Support
 
