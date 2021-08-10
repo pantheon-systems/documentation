@@ -1,139 +1,69 @@
 ---
-title: Introduction to Custom Upstreams
-description: Learn how to use Custom Upstreams to free up developer time.
+title: Decoupled Sites
+description: Pantheon is working to bring you the latest tools to build decoupled sites.
+contributors: [stevector, alexfornuto]
 categories: [get-started]
-tags: [collaborate, launch, upstreams, webops, workflow]
+tags: [site, webops, workflow]
+reviewed: "2020-10-27"
 ---
 
-<Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />
+<p><dfn id="decoupled">Decoupled Architecture</dfn> is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks specialized to their areas of expertise; Front-end Developers can use modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic LAMP stack systems like WordPress and Drupal.</p>
 
-If you are a digital agency that serves clients, or if you are a reseller of Pantheon as part of a managed solution, download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
+<Alert title="Early Access" type="info" icon="leaf">
 
-<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs" campaign="docs-agility">
-
-How mature is your web team? Take our Web Team Agility Assessment to find out.
-
-</Enablement>
-
-For corporate or higher education customers, Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
-
-<Alert title="Note" type="info">
-
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/support/#custom-upstreams). If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/composer).
+This page refers to products and features which are currently in development or early access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments.
 
 </Alert>
 
-## Benefits
+## Pantheon's Decoupled Architecture
 
-### Standardize Design and Functionality Across Many Sites
+Pantheon is enabling developers and agencies to easily create and manage decoupled sites from a single platform, by providing two new products: Decoupled Bridge and Edge Sites.
 
-Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
+<Enablement link="https://pantheon.io/decoupled-cms?docs" title="Sign up for updates!">
 
-Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
+Sign up for Edge Sites updates, or talk to Sales to participate in Early Access for Decoupled Bridge. Click the link above to get started!
 
-> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
+</Enablement>
 
-### Efficient Update Strategy
+### Decoupled Bridge
 
-Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updates across massive site portfolios.
+**Decoupled Bridge** is a product for running a [Node.js](https://nodejs.org/) codebase in parallel with a WordPress or Drupal site.
+It serves a use case where a domain's public traffic is delivered from a Server-Side Rendered front-end framework such as [Frontity](https://frontity.org/), [Next.js](https://nextjs.org/), or [Nuxt.js](https://nuxtjs.org/) and administrative content editing is done in a WordPress or Drupal interface.
 
-New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
+![A flow diagram of the Decoupled Bridge architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
-![Custom upstream update strategy](../images/update-diagram.png)
+Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
+Each Decoupled Bridge site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
 
-> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
+We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
+The monorepo structure allows for easier synchronization of changes that affect the back-end and front-end sides together.
 
-### Scale Client Services
+### Edge Sites
 
-Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
+**Edge Sites** is a forthcoming product for running websites built to run on a Content Delivery Network (CDN).
+Edge Sites takes the results of a Node.js static site generator process and deploys it to the edge of our [Global CDN](/global-cdn).
 
-> Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
+Edge Sites will be optimized for popular Static Site Generator (SSG) frameworks like Gatsby.
+A finalized list of supported frameworks will be developed by working with customer sites during Early Access and Limited Availability phases.
 
-## Workflow Overview
+[Sign up for email updates to hear the latest on Edge Sites development](https://pantheon.io/decoupled-cms?docs).
 
-There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
+![A flow diagram of the Edge Sites architecture](../images/decoupled/edge-sites-diagram.png)
 
-<div className="upstream-overview-outter-clear">
-<div className="upstream-overview-outter">
-<div className="upstream-content-inner-icon">
+## FAQ
 
-![Parent upstream level](../images/levelone-icon.png)
+### What Content Management Systems (CMS) will Decoupled Bridge and Edge Sites support?
 
-<ul class="upstream">
-<li>Core Updates</li>
-</ul>
+WordPress and Drupal are still the CMSs of choice at Pantheon, and are the only data source available for these products.
 
-</div>
-<div className="upstream-content-inner-content">
-<h3>Level 1: Pantheon's Core Upstream</h3>
+### What Git providers will Decoupled Bridge and Edge Sites support?
 
-The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
+Both products are being developed with GitHub as the location of source repositories.
+During Early Access and Limited Availability we will evaluate other providers with which our customers need to integrate.
 
-</div>
-</div>
-</div>
-<div className="upstream-overview-outter-clear">
-<div className="upstream-overview-outter">
-<div className="upstream-content-inner-icon">
+## See Also
 
-![Custom upstream level](../images/leveltwo-icon.png)
-
-<ul class="upstream">
-<li>Parent Theme</li>
-<li>Common plugins / Contrib modules</li>
-</ul>
-
-</div>
-<div className="upstream-content-inner-content">
-<h3>Level 2: Your Custom Upstream</h3>
-
-The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
-
-The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or other Git repository host <Popover content="Contact support to create a custom upstream from another host." />. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
-
-</div>
-</div>
-</div>
-<div className="upstream-overview-outter">
-<div className="upstream-content-inner-icon">
-
-![Site upstream level](../images/levelthree-icon.png)
-
-<ul class="upstream">
-<li>Child Theme</li>
-<li>Site-specific plugins / Custom code</li>
-</ul>
-</div>
-<div className="upstream-content-inner-content">
-<h3>Level 3: Site Repository</h3>
-
-Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
-
-The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.
-
-</div>
-</div>
-
-## Terminology
-
-Here are definitions for commonly used terms:
-
-- **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
-
-- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
-
-- **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-
-- **Repository**: A collection of files packaged in a single directory under version control.
-
-- **Remote Repository**: A central version control location, e.g. residing on GitHub or Bitbucket.
-
-- **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-
-- **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
-
-## Next Steps
-
-Once you've grasped the concepts discussed above, you're ready to create your own Custom Upstream.
-
-- [Create a Custom Upstream](/create-custom-upstream)
+- [The Five Ws of Decoupled Websites](https://2020.wpcampus.org/schedule/the-five-ws-of-decoupled-websites/)
+- [How Decoupled Architectures Can Benefit the Entire Web Team, and Drive User Engagement](https://pantheon.io/blog/decoupled-architectures-can-benefit-every-member-of-web-team)
+- [Drupal: Sometimes Headless, Never Heartless](https://pantheon.io/blog/drupal-sometimes-headless-never-heartless)
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)
