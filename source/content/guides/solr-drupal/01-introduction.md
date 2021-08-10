@@ -9,7 +9,7 @@ contributors: [carolynshannon]
 reviewed: "2021-08-05"
 layout: guide
 showtoc: true
-permalink: docs/guides/solr-drupal/introduction
+permalink: docs/guides/solr-drupal
 anchorid: solr-drupal
 editpath: solr-drupal/01-introduction.md
 ---
