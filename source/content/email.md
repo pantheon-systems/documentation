@@ -16,15 +16,16 @@ For outgoing emails, we recommend integrating a third-party service provider tha
 
 Here are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration method:
 
-| Provider  | Integration | 
+| Provider  | Integration |
 |:--------- |:----------- |
-| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) |
-| Mandrill  | [Drupal](https://www.drupal.org/project/mandrill) \| [WordPress](https://wordpress.org/plugins/wpmandrill/) |
 | Mailgun   | [Drupal](https://www.drupal.org/project/mailgun) \| [WordPress](https://wordpress.org/plugins/mailgun/) |
-| SparkPost | [Drupal](https://www.drupal.org/project/sparkpost) \| [WordPress](https://wordpress.org/plugins/sparkpost/) |
+| Mandrill  | [Drupal](https://www.drupal.org/project/mandrill) \| [WordPress](https://wordpress.org/plugins/wpmandrill/) |
+| Postmark | [Drupal](https://www.drupal.org/project/postmark) \| [WordPress](https://wordpress.org/plugins/postmark-approved-wordpress-plugin/) |
+| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](/guides/sendgrid) |
 | Sendinblue | [Drupal](https://www.drupal.org/project/sendinblue) \| [WordPress](https://wordpress.org/plugins/mailin/) |
+| SparkPost | [Drupal](https://www.drupal.org/project/sparkpost) \| [WordPress](https://wordpress.org/plugins/sparkpost/) |
 
-[SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/guides/sendgrid).
+[SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. Review our guide [Using SendGrid To Deliver Email](/guides/sendgrid) for details.
 
 ### SMTP Providers & Configurations
 
@@ -34,11 +35,11 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
 
 | Provider   | Port Documentation                                                                                          |
 |:---------- |:----------------------------------------------------------------------------------------------------------- |
-| Sendgrid   | [2525](https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html)                 |
-| Mandrill   | [2525](https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-)                |
-| Mailgun    | [2525](http://blog.mailgun.com/25-465-587-what-port-should-i-use/)                                          |
-| SparkPost  | [2525](https://www.sparkpost.com/docs/faq/smtp-connection-problems/)                                        |
 | Amazon SES | [587 (STARTTLS), 2465 (TLSWRAPPER)](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html) |
+| Mailgun    | [2525](http://blog.mailgun.com/25-465-587-what-port-should-i-use/)                                          |
+| Mandrill   | [2525](https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-)                |
+| Sendgrid   | [2525](https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html)                 |
+| SparkPost  | [2525](https://www.sparkpost.com/docs/faq/smtp-connection-problems/)                                        |
 
 If you do not find your service provider in the table above, check with their support and/or documentation.
 
