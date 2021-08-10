@@ -27,3 +27,4 @@ Add Static Files to Create a Path [06:29]()
 
 ## See Also
 - [Static Sites and Empty Upstreams](/statis-site-empty-upstream)
+

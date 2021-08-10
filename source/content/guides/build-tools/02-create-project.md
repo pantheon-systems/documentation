@@ -100,6 +100,10 @@ As packages pulled by Composer are updated (along with their dependencies), vers
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
 
+### See Also
+
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)
+
 ### Composer Content-Length Mismatch and/or Degraded Mode
 
 If you encounter an issue such as:
