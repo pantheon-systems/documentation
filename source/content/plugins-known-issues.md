@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov]
+contributors: [aleksandrkorolyov, jocastaneda]
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support).
@@ -36,7 +36,7 @@ The following is a list of plugins that assumes write access, and the specific f
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                     | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions.          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 |                                                                                               | wp-content/et-cache                                   | Remember to repeat this process for each environment,                           |
-| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including multidevs.                                                            |
+| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including Multidevs.                                                            |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 |                                                                                               |                                                       | You can override this path on the plugin configuration page                     |
 | [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)                             | wp-content/gallery                                    | (`/wp-admin/admin.php?page=ngg_other_options`) to use                           |
@@ -228,7 +228,7 @@ ___
 
 ## [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 
-<ReviewDate date="2019-02-21" />
+<ReviewDate date="2021-08-21" />
 
 **Issue 1:** This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
@@ -249,9 +249,34 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
-**Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/), the plugin code fails for upload directories that are symlinks.
+**Issue 2:** In order to attach or upload files, local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
 
-**Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the codebase in `wp-content` or another subdirectory thereof.
+
+**Solution:** You can customize the upload path for the temporary folder using the following:  
+
+`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`  
+
+Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
+
+At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
+
+The suggested temporary workaround is to comment out the following code in your `/contact-form-7/includes/mail.php` file:
+```php
+# Comment out the following code:
+if ( ! wpcf7_is_file_path_in_content_dir( $path ) ) {
+  if ( WP_DEBUG ) {
+    trigger_error(
+      sprintf(
+        /* translators: %s: Attachment file path. */
+        __( 'Failed to attach a file. %s is not in the allowed directory.', 'contact-form-7' ),
+        $path
+      ),
+      E_USER_NOTICE
+    );
+  }
+  return false;
+}
+```
 
 ___
 
