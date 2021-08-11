@@ -28,4 +28,4 @@ Add Static Landing Page to an Exsiting WordPress or Drupal site - 06:14
 Add Static Files to Create a Path - 06:29  
 
 ## See Also
-- [Static Sites and Empty Upstreams](/statis-site-empty-upstream)
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)
