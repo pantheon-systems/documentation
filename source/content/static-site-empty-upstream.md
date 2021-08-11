@@ -19,10 +19,12 @@ An Empty Upstream is a [Custom Upstream](/custom-upstream) repository that is de
 
 ## Getting Started
 
-There are two ways to create an Empty site.
+There are two ways to create an Empty site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
 
-1. Create a site through the Pantheon dashboard: [Create Empty Site](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65)
-1. Create a site through Terminus:
+<Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" /><br/>
+
+1. Create a site via the Pantheon Dashboard: [Create Empty Site](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65)
+1. Create a site via Terminus:
 
   ```bash{promptUser: user}
 terminus site:create my-new-site "My New Site" empty
