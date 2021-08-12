@@ -130,18 +130,6 @@ Dynamic Entity Reference provides a field combination for Drupal 8 that allows f
 
 ___
 
-## [Fast 404](https://www.drupal.org/project/fast_404)
-
-<ReviewDate date="2018-06-22" />
-
-**Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
-
-**Solution**: Pressflow settings can be [decoded in settings.php](/read-environment-config) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"])`.
-
-Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/sites/default/default.settings.php#L518) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.4/sites/default/default.settings.php#L640) cores provide a basic version of this same feature via configuration in `settings.php`.
-
-___
-
 ## [Front](https://www.drupal.org/project/front)
 
 <ReviewDate date="2018-01-03" />
