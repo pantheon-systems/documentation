@@ -137,3 +137,7 @@ Here are definitions for commonly used terms:
 Once you've grasped the concepts discussed above, you're ready to create your own Custom Upstream.
 
 - [Create a Custom Upstream](/create-custom-upstream)
+
+## See Also
+
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)

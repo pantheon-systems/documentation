@@ -66,3 +66,4 @@ During Early Access and Limited Availability we will evaluate other providers wi
 - [The Five Ws of Decoupled Websites](https://2020.wpcampus.org/schedule/the-five-ws-of-decoupled-websites/)
 - [How Decoupled Architectures Can Benefit the Entire Web Team, and Drive User Engagement](https://pantheon.io/blog/decoupled-architectures-can-benefit-every-member-of-web-team)
 - [Drupal: Sometimes Headless, Never Heartless](https://pantheon.io/blog/drupal-sometimes-headless-never-heartless)
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)
