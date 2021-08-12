@@ -1,5 +1,5 @@
 ---
-title: Static Sites and Empty Upstreams
+title: Use an Empty Upstream to Host a Static Site on Pantheon
 description: How to create a static site using an empty Upstream on Pantheon.
 contributors: [michellecolon-pantheon, kyletaylored]
 categories: [get-started]
@@ -7,7 +7,7 @@ tags: [upstreams, site]
 reviewed: "2021-08-12"
 ---
 
-Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where Empty Upstreams come in.
+Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
 
 The usual [Scope of Support](/support#scope-of-support) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
 
@@ -15,13 +15,13 @@ This process assumes you already have a static site developed and that you have 
 
 ## What is an Empty Upstream?
 
-An Empty Upstream is a [Custom Upstream](/custom-upstream) repository that does not have any content or code. For use cases where a customer needs a blank start state, Pantheon provides an Empty Upstream. A common use case to use Empty Upstreams is our [Build Tools](/guides/build-tools) setup. In this doc, we us it to host static HTML or PHP sites.
+An empty Upstream is a [Custom Upstream](/custom-upstream) repository that does not have any content or code. For use cases where a customer needs a blank start state, Pantheon provides an empty Upstream. A common use case to use empty Upstreams is our [Build Tools](/guides/build-tools) setup. In this doc, we us it to host static HTML or PHP sites.
 
 ## Create a Site With an Empty Upstream
 
 <Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" />
 
-There are two ways to create an Empty Upstream site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
+There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
 
 - Via the Pantheon Dashboard:
 
@@ -43,7 +43,7 @@ Once the files have been added to the Site, [commit the code](/sftp#committing-s
 
 ### Can I create a static site on Pantheon?
 
-Yes! You can start a new static site using an Empty Upstream.
+Yes! You can start a new static site using an empty Upstream.
 
 ### Can I add static files to an existing WordPress or Drupal site?
 
@@ -51,7 +51,7 @@ Yes, you can commit any static HTML file to your site that is unrelated to the C
 
 ### Are there platform features I can/cannot use with this?
 
-An Empty Upstream, behind the scenes, is essentially an empty Drupal environment. All of the tools available to the Site Plan will be available. But, if you are only using static HTML, tools like Redis and New Relic are not utilized as no requests are being processed by PHP.
+An empty Upstream, behind the scenes, is essentially an empty Drupal environment. All of the tools available to the Site Plan will be available. But, if you are only using static HTML, tools like Redis and New Relic are not utilized as no requests are being processed by PHP.
 
 ### Does traffic count the same way?
 
