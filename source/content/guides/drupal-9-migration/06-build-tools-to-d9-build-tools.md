@@ -32,12 +32,6 @@ Before you continue, confirm that your site meets the following criteria:
 
 1. Build artifacts are pushed to your Pantheon repository.
 
-1. The site's Dashboard displays a blue banner across the top that says that the site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
-
-   > Good news, your site's database version is now configurable! Learn how.
-
-   [Contact Support](/support) if you're ready to use Drupal 9, but you don't see the banner on the Dashboard.
-
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
