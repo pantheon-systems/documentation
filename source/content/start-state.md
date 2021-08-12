@@ -19,9 +19,13 @@ We base our Drupal repositories on the canonical source from [Drupal.org](https:
 - [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) <Popover content="Install Requires SFTP Mode" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
-### See Also
+### Empty Upstream
 
-- [Static Sites and Empty Upstreams](/static-site-empty-upstream)
+An empty Upstream is a Custom Upstream that does not have any content or code:
+
+- [Pantheon Empty Upstream](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65)
+
+Use an empty Upstream to [host a static site or files on Pantheon](/static-site-empty-upstream).
 
 ## Public Distributions
 
