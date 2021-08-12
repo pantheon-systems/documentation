@@ -14,12 +14,6 @@ editpath: new-dashboard/01-introduction.md
 
 The new Pantheon Dashboard is WebOps in a single, fast Workspace. Easily visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and everything else to keep your developer experience smooth and uneventful.
 
-<Alert title="Early Access" type="info" icon="leaf">
-
-This page refers to products and features which are currently in development or Early Access. The content on this page is subject to change as development continues, so check back frequently to learn the latest developments.
-
-</Alert>
-
 ![A screenshot of the new Dashboard shows a Workspace with a list of sites](../../../images/dashboard/new-dashboard/workspace.png)
 
 ## Get Access
@@ -31,6 +25,12 @@ Click **Try the New Dashboard** in the User or Organization Dashboard to access 
 ![A screenshot of the Switch to New Dashboard button](../../../images/dashboard/new-dashboard/try-new-dashboard.png)
 
 Alternatively, you can navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately directed to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
+
+<Alert title="Limited Availability" type="info" icon="leaf">
+
+The New Dashboard is available as a Limited Availability feature release while additional features are in active development. Pantheon engineers are rolling out new functionality often.
+
+</Alert>
 
 ## Features of the New Dashboard
 
