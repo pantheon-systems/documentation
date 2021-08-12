@@ -51,10 +51,12 @@ Yes! You can start a new static site using an [empty Upstream](https://dashboard
 
 Yes, you can commit any static HTML file to your site that is unrelated to the CMS.
 
-If you would like the path to have a clean URL (for example, `example.com/page-name` vs `example.com/page-name.html`), the HTML file should be an `index.html` file in a directory of the desired path name. See the example directory structure below of a WordPress site that contains a static landing page located at `example.com/landing-page`:
+If you would like the path to have a clean URL (for example, `example.com/page-name` vs. `example.com/page-name.html`), the HTML file should be an `index.html` file in a directory of the desired path name.
 
-```bash
-docroot
+This example directory structure shows a WordPress site that contains a static landing page located at `example.com/landing-page`:
+
+```bash:title=docroot/
+docroot/
 ├── wp-content
 │   ├── index.php
 │   ├── mu-plugins/
@@ -62,11 +64,13 @@ docroot
 │   ├── themes/
 │   └── uploads/
 ├── index.php
+//highlight-start
 └── landing-page
     ├── index.html
     ├── assets/
     ├── css/
     └── js/
+//highlight-end
 ```
 
 ### Are there platform features I can/cannot use with this?
