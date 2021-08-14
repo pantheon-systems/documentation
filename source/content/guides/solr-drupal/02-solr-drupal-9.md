@@ -16,25 +16,24 @@ editpath: solr-drupal/02-solr-drupal-9.md
 
 Pantheon Search with Solr 8 gives Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/integrated-composer) easy one-click updates. 
 
+<Partial file="pantheon-search-status.md" />
 
-<Alert title="Early Access" type="info" icon="leaf">
+## Drupal 9 Site Setup
 
-This page refers to products and features which are currently in early access. The content on this page may change as development continues, so check back frequently to learn the latest developments.
+Pantheon Search for Drupal 9 starts with an existing Pantheon Drupal 9 site. See our [Drupal 9](/drupal-9) doc or [Drupal 9 upgrade and migration](/guides/drupal-9-migration) guide to get your Drupal 9 site set up.
 
-</Alert>
+## Solr 8 Features
 
-If you are interested in participating in the Pantheon Search with Solr 8 Early Access program, contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs).
+Pantheon Search with Solr 8 includes multiple built-in features to make scalable, high-performance search more customizable than ever, including:
 
-## Will Pantheon Search with Solr 8 Work for Your Site?
+- media/rich content type indexing such as PDFs, Word documents
+- built-in faceting
+- multiple language support
+- geospatial search with [Geofield](https://www.drupal.org/project/geofield)
+- Drupal Views integration for building search results pages and custom search forms
 
-Pantheon Solr 8 for Drupal 9 will work for you if your site:
+## Custom Processors
 
-- runs [Drupal 9 with Integrated Composer](/drupal-9)
-- uses a single search index
+Search API module processors provide a variety of configuration options for your Pantheon Search results, like boosting results based on dates, taxonomy terms, or specific content types, controlling access to content based on permissions, and adding highlighted excerpts to results. 
 
-
-### Upgrading to Drupal 9?
-
-To use Pantheon Search with Solr 8, start by upgrading your site to Drupal 9 using our [Drupal 9 upgrade and migration](/guides/drupal-9-migration) guide. 
-
-
+See the [Search API module processors documentation](https://www.drupal.org/docs/8/modules/search-api/getting-started/processors) for details.
