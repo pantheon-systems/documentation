@@ -15,7 +15,7 @@ This process assumes you already have a static site developed and that you have 
 
 ## What is an Empty Upstream?
 
-An empty Upstream is a [Custom Upstream](/custom-upstream) repository (a [Start State](/start-state) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
+An empty Upstream is a [Custom Upstream](/custom-upstream) repository (a [Start State](/start-state)) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
 
 Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-tools) setup. In this doc, we use it to host static HTML or PHP sites.
 
