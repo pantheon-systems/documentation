@@ -44,6 +44,21 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-8-convert-to-composer.md" />
 
+
+## Is My Site Ready to Be Upgraded?
+
+Before you attempt to upgrade to Drupal 9, it important to know whether your site is ready. Drupal provides a contribute module, [Upgrade Status](https://www.drupal.org/project/upgrade_status), that will answer this question. If you are a Drupal 8 user and are still on a non-Composer-managed site like `drops-8`, doing a conversion to [Integrated Composer](integrated-composer) would take a lot of effort. 
+
+Drupal `8.8.0` and later is "Composer-ready," which means that it is possible to run `composer require` on a stock Drupal 8 site and end up with a site that still works. Doing this means that you cannot upgrade via the dashboard or Drush any longer, and further work (a full Composer conversion) would be required to be able to apply future updates via Composer. However, it is not necessary for the resulting site to be upgradable if the user's only goal is to run the Upgrade Status report and view their site's upgrade readiness. Reasonable results can be achieved by installing Upgrade Status into a multidev, and then deleting the entire environment when done.
+
+1. Create a new multidev
+1. Clone your site locally.
+1. Check out the multidev branch
+1. Add Upgrade Status module via composer require drupal/upgrade_status
+1. Add, commit and push code
+1. Visit multidev environment in browser. Enable upgrade status, view upgrade status page and profit
+1. Delete multidev when done.
+
 ## Change Upstreams
 
 Set the site to use the Drupal 9 Upstream:
