@@ -60,10 +60,6 @@ See every request to your website, whether or not the content was cached. Server
 
 Change or filter request and response headers before your application starts up to create, add, delete, or update parts of your request and apply custom rules.
 
-### Persistent Cache
-
-Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, it will use a cached version instread of displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
-
 ### Edge Redirects
 
 Reduce requests to your CMS by moving page redirects to the edge.

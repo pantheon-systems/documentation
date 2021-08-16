@@ -32,6 +32,18 @@ We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpr
 
 For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
+### Persistent Cache
+
+Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, it will use a cached version instread of displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
+
+#### How Do I Do the Thing?
+
+
+### Troubleshooting
+
+#### How I Know If It's Working?
+
+
 ## Frequently Asked Questions
 
 ### I already have a CDN. Can I use it with the Pantheon Global CDN?
