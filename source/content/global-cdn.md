@@ -32,16 +32,22 @@ We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpr
 
 For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
-### Persistent Cache
+## Persistent Cache
 
-Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, it will use a cached version instread of displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
+Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, it will use a cached version instead of displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
 
-#### How Do I Do the Thing?
+### How Do I Configure This Setting?
+
+On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](//wordpress-cache-plugin#pantheon-page-cache-plugin-configuration), you can adjust your CDN edge configuration to serve stale content for a specific amount of time.
 
 
-### Troubleshooting
+### Caching Exceptions
 
-#### How I Know If It's Working?
+Your site’s CMS page-level caching must be correctly configured in order to take advantage of Persistent Cache. 
+
+Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). You can learn more about the exceptions to page caching rules in [Caching: Advanced Topics](caching-advanced-topics#allow-a-user-to-bypass-the-cache). 
+
+### How I Know If It's Working?
 
 
 ## Frequently Asked Questions
