@@ -112,6 +112,17 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 ___
 
+## [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+
+<ReviewDate date="2021-08-13" />
+
+This plugin is [deprecated](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
+
+**Issue**: The `wikimedia/composer-merge-plugin` package plugin automatically runs `composer update` during `composer install`, causing conflicts with Pantheon's Integrated Composer framework. 
+
+**Solution**: Sites managing dependencies for a custom project should move to the recommended [path repository method](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
+___
+
 ## [DropzoneJS](https://www.drupal.org/project/dropzonejs)
 
 <ReviewDate date="2020-06-30" />
