@@ -150,7 +150,7 @@ Tika can extract content from a number of document formats such as HTML, XML, M
 
 Download and install the Search API Attachments module ([search_api_attachments](https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
 
-1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and enter the following fields:
+1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and edit the following fields:
 
    - **Extraction method:** Tika Extractor
    - **Path to java executable:** `java`
@@ -158,7 +158,7 @@ Download and install the Search API Attachments module ([search_api_attachments]
 
 1. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
 
-If everything is working correctly, you will see the success message "Extracted data: Congratulations! The extraction seems working! Yay!".
+If everything is working correctly, the message "Extracted data: Congratulations! The extraction seems to be working! Yay!" will be displayed.
 
 ## Safely Remove Solr
 
