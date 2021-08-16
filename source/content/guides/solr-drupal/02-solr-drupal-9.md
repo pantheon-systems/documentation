@@ -26,10 +26,13 @@ Pantheon Search for Drupal 9 starts with an existing Pantheon Drupal 9 site. See
 
 Pantheon Search with Solr 8 includes multiple built-in features to make scalable, high-performance search more customizable than ever, including:
 
-- media/rich content type indexing such as PDFs, Word documents
+- media/rich content type indexing such as PDFs, Word documents 
+  - Solr has the ability to store information about document relationships in the index. The stored information can be used for queries and can also return child pages in nested form if the relationship is properly stored in the index.
 - built-in faceting
 - multiple language support
+  - Use Solr’s stemming and language identification libraries that allows for the searching of multiple languages using separate fields, the same field through (separate Solr cores),or in the same field and Solr core.
 - geospatial search with [Geofield](https://www.drupal.org/project/geofield)
+  - Solr supports location data for use in spatial/geospatial searches. Using spatial search, you can index points or other shapes, filter search results by shapes, and sort by distance between points.
 - Drupal Views integration for building search results pages and custom search forms
 
 ## Custom Processors
