@@ -122,10 +122,6 @@ php_version: 7.0
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
-The site is eligible to upgrade when the site's Dashboard displays a blue banner across the top that reads:
-
-> Good news, your site's database version is now configurable! Learn how.
-
 Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
 
 Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
