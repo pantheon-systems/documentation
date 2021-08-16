@@ -36,16 +36,6 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 ## Will This Guide Work for Your Site?
 
-<Alert type="info" title="Do not upgrade unless the site is eligible.">
-
-In your site Dashboard, look for the blue banner across the top that says that your site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
-
-> Good news, your site's database version is now configurable! Learn how.
-
-[Contact Support](/support) if you're ready to use Drupal 9, but you don't see the banner on the Dashboard.
-
-</Alert>
-
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
 ## Prepare the Local Environment
