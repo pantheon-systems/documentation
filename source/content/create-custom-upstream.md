@@ -342,7 +342,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 <Tab title="GitLab" id="gitlab-auth">
 
-Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
+Custom Upstreams from GitLab repositories must be set up for you by Pantheon Support.
 
 1. From the repository, click on **<i class="fa fa-gear"></i> Settings**, then **Repository**.
 
