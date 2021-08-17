@@ -1,7 +1,7 @@
 The upstream has the following directory structure:
 
-```none:title=core/
-core/
+```none:title=code/
+code/
 ├─ .gitignore
 ├─ composer.json
 └─ pantheon.upstream.yml
