@@ -29,6 +29,8 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <DNSProviderDocs />
 
+If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org) certificate you can run diagnostics at [Let's Debug](https://letsdebug.net/). This tool can identify an array of issues specifically for [Let's Encrypt](https://letsencrypt.org) certificates including problems with DNS, nameservers, networking issues, common website misconfigurations, and CA policy issues. 
+  
 </Accordion>
 
 Click [here](/dns/#frequently-asked-questions) to learn more about DNS settings.
