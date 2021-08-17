@@ -45,15 +45,11 @@ The Pantheon Global CDN delivers pages directly to users from the Varnish edge p
 ## Notify Support of Potential Risks
 There are a number of development activities and external events that carry inherent risk. The risk of downtime can be minimized by notifying the support team ahead of time. Events that can be escalated ahead of time include:
 
-* **Traffic Events:** 
+* **Traffic Events**: If your site has an Elite site plan and it is expecting elevated traffic, submit a ticket with details about the expected volume, duration, and nature of the traffic. The support engineers will review current performance and determine whether to add additional application servers to support a higher level of concurrent traffic.
 
-    If your site has an Elite site plan and it is expecting elevated traffic, submit a ticket with details about the expected volume, duration, and nature of the traffic. The support engineers will review current performance and determine whether to add additional application servers to support a higher level of concurrent traffic.
+* **Deployments**: If you are deploying code to your Live environment and are concerned about potential issues, you can notify support. Use the chat option to quickly get assistance on your site.
 
-* **Deployments:**
-    If you are deploying code to your Live environment and are concerned about potential issues, you can notify support. Use the chat option to quickly get assistance on your site.
-
-* **Launches or Relaunches:**
-    These processes can involve many actors, and with advance notice Customer Success Managers can join launch calls to provide an immediate escalation point in the event something goes wrong. 
+* **Launches or Relaunches**: These processes can involve many actors, and with advance notice Customer Success Managers can join launch calls to provide an immediate escalation point in the event something goes wrong. 
 
 
 ## Develop a Disaster Recovery Playbook
