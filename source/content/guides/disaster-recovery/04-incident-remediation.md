@@ -70,7 +70,6 @@ The **Database/files** tools on the Site Dashboard can be used to clone either t
 #### Restoring a database from a backup
 
 The database can be restored from a selected backup via Terminus. The Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](https://pantheon.io/docs/terminus/commands/backup-restore) documentation for more information. 
-
  
 #### Restoring a database from an external dump
 
