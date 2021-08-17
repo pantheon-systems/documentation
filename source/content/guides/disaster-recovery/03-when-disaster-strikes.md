@@ -10,7 +10,7 @@ contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
 layout: guide
 permalink: docs/guides/disaster-recovery/when-disaster-strikes/
-anchorid: disaster-recovery/when-disaster-strikes
+anchorid: disaster-recovery
 editpath: disaster-recovery/03-when-disaster-strikes.md
 ---
 
