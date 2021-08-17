@@ -8,7 +8,6 @@ categories: [platform]
 tags: [webops, workflow]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
-layout: guide
 permalink: docs/guides/disaster-recovery/planning-ahead/
 anchorid: planning-ahead
 editpath: disaster-recovery/02-planning-ahead.md
