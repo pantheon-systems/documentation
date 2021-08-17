@@ -80,7 +80,7 @@ No. If you encounter any issues about Multidev limits, [contact Support](/suppor
 
 ### Does Autopilot perform tests on authenticated pages?
 
-Not yet. Currently, Autopilot only supports tests on anonymous access versions of pages. Support for authenticated (logged-in user) page tests are planned for a future release.
+Not yet. Currently, Autopilot only supports tests on anonymous access versions of pages. Support for authenticated (logged-in user) page tests is planned for a future release.
 
 ## See Also
 
