@@ -10,7 +10,7 @@ contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
 type: guide
 permalink: docs/guides/disaster-recovery/introduction/
-anchorid: disaster-recovery/introduction
+anchorid: disaster-recovery
 editpath: disaster-recovery/01-introduction.md
 ---
 
