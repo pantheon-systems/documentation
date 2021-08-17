@@ -1,6 +1,8 @@
 Before you attempt to upgrade to Drupal 9, confirm that the site is ready with the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal module.
 
-Converting a Drupal 8 site that is not managed by Composer (`drops-8`) to [Integrated Composer](/integrated-composer) is time-consuming. Upgrade Status helps find potential issues before you invest the time to convert the site.
+This step is optional, but because converting a Drupal 8 site that is not managed by Composer (`drops-8`) to use [Integrated Composer](/integrated-composer) is time-consuming. Upgrade Status helps find potential issues before you invest the time to convert the site.
+
+<Accordion title="Test Drupal Upgrade Status in a Temporary Multidev" id="drupal-upgrade-status" icon="lightbulb">
 
 Drupal `8.8.0` and later are "Composer-ready," which means that it is possible to run `composer require` on a stock Drupal 8 site and have a site that still works.
 
@@ -39,3 +41,5 @@ Since we're just checking whether or not a site can be upgraded, install the Upg
   ```bash{promptUser: user}
   terminus multidev:delete --delete-branch -- $SITE.site-upgrade-status
   ```
+
+</Accordion>
