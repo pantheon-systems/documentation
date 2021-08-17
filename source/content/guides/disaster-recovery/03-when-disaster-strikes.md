@@ -56,7 +56,7 @@ Note that tickets and chat have tier-specific response time objectives, while em
 
 #### Escalation Paths
 
-Depending on the account tier, your escalation path may differ. Escalation paths include:
+Depending on the account tier, your escalation path may differ. Escalation paths include the following:
 
 * Dedicated Customer Success Engineer: All Diamond tier accounts have a named senior support engineer, and tickets and issues are routed preferentially to them. 
 
