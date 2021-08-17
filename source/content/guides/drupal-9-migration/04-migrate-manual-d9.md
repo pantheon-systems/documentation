@@ -1,7 +1,7 @@
 ---
 title: Migrate to Drupal 9 on Pantheon
 subtitle: Manually Migrate
-description: Migrate a Drupal 8 Site to Drupal 9 on Pantheon
+description: Migrate a Drupal 8 Site on Pantheon to Drupal 9 on Pantheon
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
