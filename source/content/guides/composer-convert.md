@@ -30,17 +30,19 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
-The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information. 
+The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
+### Apply All Available Upstream Updates
+
+<Partial file="drupal-apply-upstream-updates.md" />
+
 ### Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
 
-<Partial file="drupal-9/drupal-upgrade_status.md" />
-
-## Convert the Site to Composer
+<Partial file="drupal-9/drupal-upgrade-status.md" />
 
 <Partial file="drupal-8-convert-to-composer.md" />
 
