@@ -1,14 +1,14 @@
 Before you attempt to upgrade to Drupal 9, confirm that the site is ready with the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal module.
 
-This step is optional, but because converting a Drupal 8 site that is not managed by Composer (`drops-8`) to use [Integrated Composer](/integrated-composer) is time-consuming. Upgrade Status helps find potential issues before you invest the time to convert the site.
+This step is optional. Converting a Drupal 8 site that is not managed by Composer (`drops-8`) to use [Integrated Composer](/integrated-composer) is time-consuming. Upgrade Status helps find potential issues before you invest the time to convert the site.
 
 <Accordion title="Test Drupal Upgrade Status in a Temporary Multidev" id="drupal-upgrade-status" icon="lightbulb">
 
-Drupal `8.8.0` and later are "Composer-ready," which means that it is possible to run `composer require` on a stock Drupal 8 site and have a site that still works.
+Drupal `8.8.0` and later are "Composer-ready," which means that it is possible to run `composer require` on a Drupal 8 site and have a site that still works.
 
 Doing this would mean that you cannot upgrade via the Dashboard or Drush any longer, and a full [Composer conversion](/guides/composer-convert) would be required in order to apply future updates via Composer.
 
-Since we're just checking whether or not a site can be upgraded, install the Upgrade Status module in a temporary Multidev and view the results. Delete the environment when done:
+Since you are checking whether or not a site can be upgraded, install the Upgrade Status module in a temporary Multidev and view the results. Delete the environment when done:
 
 1. Create a new Multidev:
 
