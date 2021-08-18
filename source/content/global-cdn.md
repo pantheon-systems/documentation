@@ -34,7 +34,7 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Persistent Cache
 
-Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, it will use a cached version instead of displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
+Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, stale cached versions will be favored over displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
 
 ### How Do I Configure This Setting?
 
