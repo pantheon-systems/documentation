@@ -2,13 +2,14 @@
 title: Pantheon Disaster Recovery Playbook
 subtitle: Planning Ahead
 description: Avert potential site failures
+generator: pagination
+layout: guide
 categories: [platform]
-tags: [dashboard, webops, workflow]
+tags: [webops, workflow]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
-layout: guide
-permalink: docs/guides/disaster-recovery
-anchorid: disaster-recovery
+permalink: docs/guides/disaster-recovery/planning-ahead/
+anchorid: planning-ahead
 editpath: disaster-recovery/02-planning-ahead.md
 ---
 
