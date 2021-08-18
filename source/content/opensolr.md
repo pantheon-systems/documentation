@@ -34,7 +34,7 @@ This doc assumes that you have already enabled:
 
 <Alert title="Note" type="info">
 
-To get started managing Drupal 8 using Composer, follow the [convert to Composer](/guides/composer-convert) guide.
+To get started managing Drupal 8 using Composer, follow the [Convert to Composer](/guides/composer-convert) guide.
 
 </Alert>
 
