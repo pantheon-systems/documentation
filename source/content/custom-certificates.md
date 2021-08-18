@@ -1,6 +1,6 @@
 ---
 title: 'Custom Certificates on The Pantheon Global CDN'
-description: For contract customers who require dedicated, custom TLS certificates
+description: For contract customers who require dedicated, custom TLS certificates.
 reviewed: "2020-12-14"
 categories: [go-live]
 tags: [cdn, https, professional-services]
@@ -9,6 +9,15 @@ tags: [cdn, https, professional-services]
 ## Access
 
 A concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
+
+<Alert title="Warning" type="danger" >
+
+This guide does not apply if you have subscribed to [Advanced Global CDN](/guides/professional-services#advanced-global-cdn). For Advanced Global CDN, there is a different process in which you would have to provide a certificate bundle that includes:
+- Main Certificate
+- Intermediate Certificate
+- Private Key
+
+</Alert>
 
 ## Manually Managed Custom Certificates
 
