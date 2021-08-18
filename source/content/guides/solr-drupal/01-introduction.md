@@ -18,7 +18,7 @@ editpath: solr-drupal/01-introduction.md
 
 Pantheon Search for Drupal extends Drupal's Search API Solr functionality, providing enterprise Apache Solr search from Pantheon's cloud infrastructure.
 
-## The [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon) Module
+## The Search API Pantheon Module
 
 The Search API Pantheon module (for Drupal 8 and 9) simplifies the usage of [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) on Pantheon. Pantheon Search derives from Apache Solr 8.8 and can perform full-text content searching in a single language. With Pantheon Search, you can optimize searches and return results based on dates, taxonomy terms, specific content types, as well as control access to content based on permissions, and add highlighted excerpts to results. 
 
