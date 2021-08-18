@@ -94,4 +94,3 @@ For other Decoupled configurations, please refer to our [Decoupled Sites](/decou
 - [Choosing Your Start State](/start-state)
 - [Switch Upstreams](/terminus/examples#switch-upstreams)
 - [Introduction to Custom Upstreams](/custom-upstream)
-- [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci#creating-the-pantheon-site)

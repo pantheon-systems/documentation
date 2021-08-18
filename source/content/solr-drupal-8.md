@@ -28,11 +28,11 @@ Be sure that you:
 
 - Install [Composer](https://getcomposer.org/)
 
-- Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or the [Composer without CI](/guides/drupal-8-composer-no-ci) guide.
+- Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or [convert an existing Drupal site to use Composer](/guides/composer-convert) guide.
 
 <Alert title="Warning" type="danger">
 
-Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/guides/build-tools) and [Composer without CI](/guides/drupal-8-composer-no-ci) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
+Solr on Drupal 8 requires a Composer-managed workflow, as described in our [Build Tools](/guides/build-tools) and [Convert to Composer](/guides/composer-convert) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
 
 </Alert>
 
