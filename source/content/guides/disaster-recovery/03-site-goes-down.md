@@ -9,7 +9,7 @@ tags: [webops]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
 type: guide
-permalink: docs/guides/disaster-recovery/site-goes-down/
+permalink: docs/guides/disaster-recovery/site-goes-down
 anchorid: disaster-recovery
 editpath: disaster-recovery/03-site-goes-down.md
 ---
