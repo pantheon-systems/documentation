@@ -8,10 +8,10 @@ categories: [platform]
 tags: [webops]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
-layout: guide
-permalink: docs/guides/disaster-recovery/when-disaster-strikes/
-anchorid: when-disaster-strikes
-editpath: disaster-recovery/03-when-disaster-strikes.md
+type: guide
+permalink: docs/guides/disaster-recovery/site-goes-down/
+anchorid: site-goes-down
+editpath: disaster-recovery/03-site-goes-down.md
 ---
 
 ## Open an Emergency Downtime Ticket
