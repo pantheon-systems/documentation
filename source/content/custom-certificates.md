@@ -8,6 +8,15 @@ reviewed: "2021-08-25"
 
 A concierge service is now available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
+<Alert title="Warning" type="danger" >
+
+This guide does not apply if you have subscribed to [Advanced Global CDN](/guides/professional-services#advanced-global-cdn). For Advanced Global CDN, there is a different process in which you would have to provide a certificate bundle that includes:
+- Main Certificate
+- Intermediate Certificate
+- Private Key
+
+</Alert>
+
 ## Manually Managed Custom Certificates
 
 If you require a custom, dedicated certificate, you can now bring it to the Global CDN. This is a paid service that our Sales Team can help you with.
