@@ -4,4 +4,4 @@ Pantheon Search with Solr 8 Early Access will soon be available for contract cus
 
 </Alert>
 
-If you are interested in participating in the Pantheon Search with Solr 8 Early Access program, contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs). 
+If you are a contract customer, and are interested in participating in the Pantheon Search with Solr 8 Early Access program, contact your Customer Success Manager (CSM) or Account Manager (AM), or [contact us](https://pantheon.io/contact-us?docs). 
