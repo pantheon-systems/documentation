@@ -49,7 +49,7 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
 
 ### Remove Individual Site Dependencies
 
-You can remove site dependencies if they are no longer needed. 
+You can remove site dependencies if they are no longer needed.
 
 1. Remove the dependency locally:
 
@@ -65,10 +65,9 @@ You can remove site dependencies if they are no longer needed.
 
 1. Navigate to **Code** in the Dev tab of the site's Dashboard.
 
-1. Click **Check Now**. 
+1. Click **Check Now**.
 
 1. If updates are available, click **Apply Updates**.
-
 
 ## Upstream
 
@@ -130,6 +129,10 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 <Partial file="composer-support-scope.md"/>
 
 ## Troubleshooting Code Syncs and Upstream Updates
+
+### Site-local Drush Is Required for Drupal 9 Sites
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 
 ### View the Output of the Commit Log First
 
