@@ -9,8 +9,8 @@ tags: [dashboard, webops, workflow]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
 type: guide
-permalink: docs/guides/incident-remediation/
-anchorid: incident-remediation
+permalink: docs/guides/disaster-recovery/incident-remediation
+anchorid: disaster-recovery
 editpath: disaster-recovery/04-incident-remediation.md
 ---
 
