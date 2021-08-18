@@ -54,7 +54,11 @@ On Pantheon, all Performance plans include Overage Protection to prevent one-tim
 
 ### Elite or Contract Plans
 
-We allow an increase in application containers for campaigns or peak traffic. A request can be sent to Pantheon Support with the following information:
+Elite sites have the added benefit of managed resource provisioning, both for anticipated and unexpected traffic spikes.
+
+When an Elite site encounters massive sudden or unexpected increases in traffic, the Pantheon platform alerts Pantheon Support, who ensure that the most appropriate level of platform resources are provisioned for the site to handle the traffic spike.
+
+For an anticipated increase in traffic, open a [Support ticket](/support#ticket-support) with the following information:
 
 - **How much extra traffic?**
 
@@ -62,15 +66,15 @@ We allow an increase in application containers for campaigns or peak traffic. A 
 
 - **How much is Anonymous or Authenticated traffic?**
 
-  Aside from the total count, we need to know the ration of Anonymous and Authenticated traffic in order to determine if visits. There are times that sites can still withstand traffic spikes if majority are anonymous and cached.
+  Aside from the total count, we need to know the ration of Anonymous and Authenticated traffic in order to determine number of visits. There are times that sites can still withstand traffic spikes if majority are Anonymous and cached.
 
 - **What is the timeframe of the campaign or peak traffic?**
 
-  When is the campaign expected to start and end measured in days.
+  When the campaign is expected to start and end, measured in days.
 
 - **Where is the traffic concentration?**
 
-  Describe if the additional traffic will hit all at once at a specific hour of the day, or be spread throughout business hours etc. The more descriptive, the easier to determine how to increase resources.
+  Describe if the additional traffic will hit all at once at a specific hour of the day, or be spread throughout business hours, etc. The more descriptive, the easier to determine how to increase resources.
 
 Generally speaking, it is no longer necessary to increase application containers when there is a large increase in mostly anonymous traffic. This is best determined using the information above. We derive the number of *requests per minute* as the basis for the number of servers.
 

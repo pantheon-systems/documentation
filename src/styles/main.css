@@ -2933,9 +2933,6 @@ dt {
 	width: 90%;
 	margin-top: -10px;
 }
-.upstream-overview-outter-clear::after {
-	content: url("../../static/images/arrow.svg");
-}
 .upstream-overview-outter-clear {
 	text-align: center;
 }

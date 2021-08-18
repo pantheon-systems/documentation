@@ -130,11 +130,19 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 
 MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
+MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Events](https://dev.mysql.com/doc/refman/8.0/en/events-overview.html) are also not supported. As an alternative, you may consider Cron for [WordPress](https://pantheon.io/docs/wordpress-cron) or [Drupal](https://pantheon.io/docs/drupal-cron). 
+
 ## Drupal 7 and Ampersands
 
-A Drupal 7 site given a URL with an ampersand (&) in it, excluding query parameter separation, will return a 404, regardless of the presence of a matching path.
+A Drupal 7 site given a URL with an ampersand (`&`) in it, excluding query parameter separation, will return a 404, regardless of the presence of a matching path.
 
 Be sure to encode URLs that use ampersands with `%26` in place of `&`.
+
+## Drupal Steward
+
+The Pantheon platform includes [Drupal Steward](https://www.drupal.org/drupal-security-team/steward), a platform-level mitigation of certain highly-critical vulnerabilities that are identified in Drupal core, as a feature for all Drupal sites on Pantheon. All Pantheon sites are protected by Drupal Steward.
+
+For more information about Drupal Steward, visit the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq).
 
 ## Email and Deliverability
 
@@ -271,6 +279,14 @@ See [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for i
 Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
+
+## MySQL LOAD DATA LOCAL INFILE
+
+For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html), Pantheon does not support executing MySQL `LOAD DATA LOCAL INFILE` statements from your PHP application. As a workaround, developers can [connect directly to MySQL](/mysql-access) and load files from their local machine:
+
+```bash{promptUser: user}
+MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`mytable` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
+```
 
 ## nginx.conf
 

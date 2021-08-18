@@ -16,9 +16,9 @@ If the `pantheon.yml` file is not present, you may create one.
 
 For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
 
-<Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Set up existing scripts and write your own with help from our experts. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
@@ -118,19 +118,13 @@ php_version: 7.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-04-20" />
+<ReviewDate date="2021-08-05" />
 
-<Alert type="info" title="Do not set the database version unless the site is eligible.">
+Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
-The site is eligible to upgrade if the site's Dashboard displays a blue banner across the top that reads:
+Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
 
-> Good news, your site's database version is now configurable! Learn how.
-
-[Contact Support](/support) if you're ready to use a different version of MariaDB, but you don't see the banner on the Dashboard.
-
-</Alert>
-
-Keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
+Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
 Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
@@ -139,28 +133,22 @@ database:
   version: 10.4
 ```
 
-<Alert title="Changing the database requires an existing env" type="warning">
-
-You must apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
-
-</Alert>
-
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-Currently, not all CMS versions can be configured to use a specific database version on Pantheon.
+This table shows the recommended MariaDB version for each CMS:
 
-The following table shows the recommended MariaDB version for each CMS, as well as an estimate of when the database can be configured:
+| CMS           | Recommended MariaDB Version |
+|---------------|-----------------------------|
+| Drupal < 6.51 | 10.3                        |
+| Drupal ≥ 6.51 | 10.4                        |
+| Drupal < 7.76 | 10.3                        |
+| Drupal ≥ 7.76 | 10.4                        |
+| Drupal < 8.5  | 10.3                        |
+| Drupal ≥ 8.6  | 10.4                        |
+| Drupal ≥ 9.0  | 10.4                        |
+| WordPress     | 10.4                        |
 
-| CMS            | Recommended MariaDB Version | Configurable After |
-|----------------|-----------------------------|--------------------|
-| Drupal < 6.51  | Default                     | May, 2021          |
-| Drupal >= 6.51 | Default                     | May, 2021          |
-| Drupal < 7.76  | Default                     | May, 2021          |
-| Drupal >= 7.76 | Default                     | May, 2021          |
-| Drupal < 8.5   | Default                     | May, 2021          |
-| Drupal >= 8.6  | 10.0 - 10.4                 | Not specified      |
-| Drupal >= 9.0  | 10.4                        | Not specified      |
-| WordPress      | Default                     | July, 2021         |
+Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
 
 ### Drush Version
 

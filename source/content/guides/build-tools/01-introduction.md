@@ -19,7 +19,7 @@ Build Tools connects Pantheon with your CI service and external Git provider. It
 
 ![Build Tools Structure diagram ](../../../images/pr-workflow/build-tools-structure-diagram.png)
 
-Using Build Tools will make it easy to create new projects that:
+Build Tools helps you create new projects that:
 
 1. Allow customization with your choice of Git provider and Continuous Integration (CI) service.
 
@@ -45,15 +45,15 @@ Build Tools currently supports the following combinations of Git and CI services
 
 It's quick to get started with a Build Tools project, but it’s also helpful to understand the components and how they work together.
 
-In general, it's a good fit if your team is comfortable with:
+In general, Build Tools might be a good fit if your team is comfortable with:
 
 - command-line tools,
-- creating a bash script with terminus commands,
+- creating a bash script with Terminus commands,
 - CI to automate the deployments.
 
 <Enablement title="Developer Resources" link="https://pantheon.io/learn-pantheon">
 
-Pantheon's Developer Relations team holds trainings, Office Hours and monitors posts in our community forum. Join us to learn about Terminus, automations, advanced workflows like Build Tools, and more.
+Pantheon's Developer Advocacy team holds trainings and Office Hours, and monitors posts in our community forum. Join us to learn about Terminus, automations, advanced workflows like Build Tools, and more.
 
 </Enablement>
 
@@ -62,3 +62,7 @@ Pantheon's Developer Relations team holds trainings, Office Hours and monitors p
 <BuildToolsChangelog />
 
 </Accordion>
+
+## More Resources
+
+- [Integrated Composer](/integrated-composer) for another way to manage deployments and dependencies if you don't need a CI.

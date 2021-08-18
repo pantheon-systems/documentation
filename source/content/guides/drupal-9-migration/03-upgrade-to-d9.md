@@ -36,21 +36,19 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 ## Will This Guide Work for Your Site?
 
-<Alert type="info" title="Do not upgrade unless the site is eligible.">
-
-In your site Dashboard, look for the blue banner across the top that says that your site is compatible with a [database upgrade](/pantheon-yml#specify-a-version-of-mariadb):
-
-> Good news, your site's database version is now configurable! Learn how.
-
-[Contact Support](/support) if you're ready to use Drupal 9, but you don't see the banner on the Dashboard.
-
-</Alert>
-
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
+
+### Apply All Available Upstream Updates
+
+<Partial file="drupal-apply-upstream-updates.md" />
+
+### Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
+
+<Partial file="drupal-9/drupal-upgrade-status.md" />
 
 <Partial file="drupal-8-convert-to-composer.md" />
 
@@ -68,7 +66,8 @@ Enter `yes` when prompted:
 Are you sure you want change the upstream for anita-drupal to Drupal 9? (yes/no) [no]:
 ```
 
-Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
+Note that the [User in Charge](/change-management#site-level-roles-and-permissions), Site Owner, or Organization Administrator can change the Upstream.
+
 ## Ongoing Core Updates
 
 One-click core updates can be made through the Dashboard.

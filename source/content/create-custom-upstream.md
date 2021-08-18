@@ -195,16 +195,16 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      ```bash{promptUser: user}
      git checkout -b master
      git fetch pantheon-drupal-9 master
-     git merge pantheon-drops-9/master
+     git merge pantheon-drupal-9/master
      git push origin master
      ```
 
-    1. Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-config` directory.
+    1. Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
      Change to it and use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
 
      ```bash{promptUser: user}
-     cd upstream-config
+     cd upstream-configuration
      composer require drupal/pkg-name --no-update
      ```
 
@@ -342,7 +342,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 <Tab title="GitLab" id="gitlab-auth">
 
-Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
+A Custom Upstream from a GitLab repository must be set up for you by Pantheon Support.
 
 1. From the repository, click on **<i class="fa fa-gear"></i> Settings**, then **Repository**.
 

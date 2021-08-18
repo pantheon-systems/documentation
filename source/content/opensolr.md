@@ -34,7 +34,7 @@ This doc assumes that you have already enabled:
 
 <Alert title="Note" type="info">
 
-To get started managing Drupal 8 using Composer, see the **Drupal 8 and Composer** [site building](/guides/drupal-8-composer-no-ci) and [site conversion](/guides/composer-convert) guides.
+To get started managing Drupal 8 using Composer, follow the [Convert to Composer](/guides/composer-convert) guide.
 
 </Alert>
 
@@ -203,7 +203,7 @@ Next, add the fields your index should include for indexing.
 
 If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you can do so by clicking on the **Configuration** icon on your Opensolr Search Index's Tools page, then selecting the configuration file you wish to edit.
 
-![Opensolr configuration file editor page](../images/opensolr-config-files-editor.png)
+![Opensolr configuration file editor page](../images/opensolr-config-files-editor.jpg)
 
 ## See Also
 

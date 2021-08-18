@@ -6,4 +6,5 @@ article > .ytWrapper {
     position: relative;
     height: 0px;
     overflow: hidden;
+    margin-bottom: 1em;
 }

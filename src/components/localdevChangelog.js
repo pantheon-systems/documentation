@@ -4,7 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 
 const LocaldevChangelog = ({ data }) => (
   <>
-    {data.localdevYaml.releases.map((localdev, i) => {
+    {data.allChangelogYaml.nodes.map((localdev, i) => {
       return (
         <div key={i}>
           <h3 className="toc-ignore" id={localdev.version}>
@@ -14,9 +14,10 @@ const LocaldevChangelog = ({ data }) => (
             <div
               className="toc-ignore"
               dangerouslySetInnerHTML={{
-                __html: localdev.changelog
-                  .replace(/h3/g, 'h3 class="toc-ignore"')
-                  .replace(/h2/g, 'h2 class="toc-ignore"'),
+                __html:
+                  localdev.fields.changelogMarkdown.childrenMarkdownRemark[0]?.html
+                    ?.replace(/h3/g, 'h3 class="toc-ignore"')
+                    ?.replace(/h2/g, 'h2 class="toc-ignore"'),
               }}
             />
           </MDXProvider>
@@ -27,18 +28,24 @@ const LocaldevChangelog = ({ data }) => (
   </>
 )
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query {
-        localdevYaml {
-          releases {
+        allChangelogYaml {
+          nodes {
             version
-            changelog
+            fields {
+              changelogMarkdown {
+                childrenMarkdownRemark {
+                  html
+                }
+              }
+            }
           }
         }
       }
     `}
-    render={data => <LocaldevChangelog data={data} {...props} />}
+    render={(data) => <LocaldevChangelog data={data} {...props} />}
   />
 )

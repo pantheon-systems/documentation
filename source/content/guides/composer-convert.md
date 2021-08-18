@@ -10,9 +10,9 @@ contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2021-03-31"
 ---
 
-Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
+Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies.
 
-For a smooth upgrade experience, and to avoid potential conflicts, this guide shows how to migrate a Drupal 8 site to a freshly prepared, new Drupal 9 site.
+For a smooth upgrade experience, and to avoid potential conflicts, this guide shows how to convert a Drupal 8 site to use Composer to manage deployments and dependencies.
 
 The goals of this upgrade are to remove dependencies that Composer will manage from the existing site's Git repository, and have Composer manage those dependencies in the new site instead.
 
@@ -30,11 +30,23 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
+The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
+### Apply All Available Upstream Updates
+
+<Partial file="drupal-apply-upstream-updates.md" />
+
+### Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
+
+<Partial file="drupal-9/drupal-upgrade-status.md" />
+
 <Partial file="drupal-8-convert-to-composer.md" />
+
+If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
 ## Change Upstreams
 

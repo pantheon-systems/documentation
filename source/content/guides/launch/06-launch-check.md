@@ -4,6 +4,7 @@ subtitle: Launch Checks
 description: Part six of our Launch Essentials guide covers launch checks to perform before going live.
 anchorid: launch-check
 layout: guide
+showtoc: true
 categories: [go-live]
 tags: [backup, launch, webops]
 type: guide
@@ -46,15 +47,16 @@ For more information on what is included in these checks and how they work, see 
 
   **Shoot for all green, but at the very least be sure and fix all errors and review every notice.**
 
-<Accordion title="Level Up: Maximize Performance by Configuring Cache (Optional)" id="host-specific1" icon="graduation-cap">
+## Level Up: Maximize Performance by Configuring Cache (Optional)
+
 
 ## Ready to launch like the pros?
 
-Since you're in fixin' mode, take some time to optimize performance using Redis and Pantheon's global CDN.
+Since you're in fixin' mode, take some time to optimize performance using Object Cache (formerly Redis) and Pantheon's global CDN.
 
-### [Enable Redis](/object-cache)
+### [Enable Object Cache](/object-cache)
 
-Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+Pantheon's [Object Cache (formerly Redis)](/object-cache) provides an alternative, drop-in caching backend for your website, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
@@ -68,4 +70,3 @@ Serving anonymous traffic from virtual memory allows a cached response to be ret
 
 Learn how to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
 
-</Accordion>

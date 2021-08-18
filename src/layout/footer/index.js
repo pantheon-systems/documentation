@@ -18,8 +18,8 @@ const Footer = ({ data }) => {
         <div id="office-hours" className="office-hours">
           <p>Got questions? We've got answers!</p>
           <p>
-            <a href="https://pantheon.io/live-demo?docs" className="demo-cta cta docs-cta">
-              Live Weekly Demo
+            <a href="https://pantheon.io/learn-pantheon?docs" className="demo-cta cta docs-cta">
+              Learn Pantheon
             </a>{" "}
             <a
               href="https://pantheon.io/developers/office-hours?docs"
@@ -179,6 +179,10 @@ const Footer = ({ data }) => {
                         <span>|</span>{" "}
                         <a href="https://pantheon.io/pantheon-terms-service">
                           Terms of Use
+                        </a>{" "}
+                        <span>|</span>{" "}
+                        <a href="https://pantheon.io/accessibility-statement">
+                          Accessibility Statement
                         </a>
                       </div>
                     </div>

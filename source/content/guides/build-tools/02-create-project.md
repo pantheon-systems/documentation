@@ -100,6 +100,10 @@ As packages pulled by Composer are updated (along with their dependencies), vers
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
 
+### Host a Static Site on Pantheon
+
+Use Build Tools to help [host a static site or files on Pantheon](/static-site-empty-upstream).
+
 ### Composer Content-Length Mismatch and/or Degraded Mode
 
 If you encounter an issue such as:
@@ -125,6 +129,7 @@ This indicates a network-level issue. We recommend contacting your Internet Serv
 Check the output for the recommended fix. For example, PHP `7.0` is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
 
 ### The site name is already taken on Pantheon
+
 The following error occurs when running `terminus build:project-create` before authenticating your session with Terminus:
 
 ```bash

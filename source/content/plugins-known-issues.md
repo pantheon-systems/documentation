@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov]
+contributors: [aleksandrkorolyov, jocastaneda]
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support).
@@ -36,7 +36,7 @@ The following is a list of plugins that assumes write access, and the specific f
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                     | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions.          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 |                                                                                               | wp-content/et-cache                                   | Remember to repeat this process for each environment,                           |
-| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including multidevs.                                                            |
+| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including Multidevs.                                                            |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 |                                                                                               |                                                       | You can override this path on the plugin configuration page                     |
 | [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)                             | wp-content/gallery                                    | (`/wp-admin/admin.php?page=ngg_other_options`) to use                           |
@@ -228,7 +228,7 @@ ___
 
 ## [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 
-<ReviewDate date="2019-02-21" />
+<ReviewDate date="2021-08-21" />
 
 **Issue 1:** This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
@@ -249,9 +249,34 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
-**Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/), the plugin code fails for upload directories that are symlinks.
+**Issue 2:** In order to attach or upload files, local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
 
-**Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the codebase in `wp-content` or another subdirectory thereof.
+
+**Solution:** You can customize the upload path for the temporary folder using the following:  
+
+`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`  
+
+Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
+
+At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
+
+The suggested temporary workaround is to comment out the following code in your `/contact-form-7/includes/mail.php` file:
+```php
+# Comment out the following code:
+if ( ! wpcf7_is_file_path_in_content_dir( $path ) ) {
+  if ( WP_DEBUG ) {
+    trigger_error(
+      sprintf(
+        /* translators: %s: Attachment file path. */
+        __( 'Failed to attach a file. %s is not in the allowed directory.', 'contact-form-7' ),
+        $path
+      ),
+      E_USER_NOTICE
+    );
+  }
+  return false;
+}
+```
 
 ___
 
@@ -582,17 +607,40 @@ ___
 
 ## [Redirection](https://wordpress.org/plugins/redirection/)
 
-<ReviewDate date="2019-01-17" />
+<ReviewDate date="2021-07-19" />
 
-**Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
+**Issue 1:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
 **Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
+
+**Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
+
+**Solution:** In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+  ```php:title=wp-config.php
+  // Map $_SERVER['HTTP_HOST'] to $_SERVER['SERVER_NAME']
+  // to allow the Redirection plugin to work when using
+  // "URL and server" based redirects. By default,
+  // $_SERVER['SERVER_NAME'] returns Pantheon's internal
+  // server name and not the current hostname, as a
+  // result, Redirection's "URL and server"-based
+  // redirects never match.
+  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+  ```
+
+Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about how to use `HTTP_Host` on Pantheon.
+
+<Alert title="Warning" type="danger">
+
+This workaround may potentially break other functionality that depends on the default Pantheon return value for `$_SERVER['SERVER_NAME']`.
+
+</Alert>
 
 ___
 
 ## [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 
-**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
+**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module. It attempts to use `['SERVER_NAME']` instead of the recommended `['HTTP_HOST']`. Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about `['HTTP_HOST']`.
 
 ___
 
@@ -626,7 +674,7 @@ ___
 Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://<env>-example.pantheonsite.io').
 ```
 
-The plugin generates the site's URL using `$_SERVER['SERVER_NAME']` instead of `$_SERVER['HTTP_HOST']`. Due to the dynmic nature of Pantheon's cloud architecture, [`$_SERVER['HTTP_HOST']` is considered best practice.](/server_name-and-server_port#use-http_host-instead-of-server_name)
+The plugin generates the site's URL using `$_SERVER['SERVER_NAME']` instead of `$_SERVER['HTTP_HOST']`. Due to the dynamic nature of Pantheon's cloud architecture, [`$_SERVER['HTTP_HOST']` is considered best practice.](/server_name-and-server_port#use-http_host-instead-of-server_name)
 
 **Solution:** Add the following line to `wp-config.php`:
 
@@ -841,7 +889,8 @@ export ENV=dev
   touch /tmp/wordfence-waf.php /tmp/.user.ini
   ```
 
-1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**:
+1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**.  
+Complete this step in Dev, Test, and Live Environments. 
 
   ```bash{promptUser: user}
   sftp -o Port=2222 env.UUID@appserver.env.UUID.drush.in
@@ -901,7 +950,7 @@ if (defined( "PANTHEON_BINDING" )) {
 }
 ```
 
-**Please note:** You will need to make this change every time the plugin is updated.
+You will need to make this change every time the plugin is updated.
 
 **Issue 2:** This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/).
 
@@ -911,8 +960,7 @@ ___
 
 <ReviewDate date="2020-10-19" />
 
-**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create
-the `advanced-cache.php` file.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create the `advanced-cache.php` file.
 
 **Solution:**
 

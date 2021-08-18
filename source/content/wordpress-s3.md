@@ -5,7 +5,7 @@ cms: "WordPress"
 categories: [integrate]
 tags: [files]
 contributors: [sarahg]
-date: 6/4/2018
+date: 7/7/2021
 ---
 
 Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations/#highly-populated-directories) or [serving large files](/platform-considerations/#large-files).
@@ -27,7 +27,7 @@ When creating an AWS account, you will have to enter credit card information. Th
 
 This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
-```bash
+```bash{promptUser: user}
 export site=yoursitename
 export env=dev
 ```
@@ -35,31 +35,34 @@ export env=dev
 </Alert>
 
 ## Configure S3 within the AWS Console
+
 Before integrating S3 with your site, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com).
 
 ### Create a New AWS S3 Bucket
+
 If you do not have an existing bucket for your site, create one:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **S3**.
-2. Click **Create Bucket**.
-3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Because the bucket name is visible in the URL that points to the objects stored in the bucket, ensure that the bucket name you choose is appropriate.
-4. Select a region and click **Create**.
-5. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
-6. In the **Permissions** tab, tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
-7. Review your settings, and then click **Create bucket**.
+
+1. Click **Create Bucket**.
+
+1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Because the bucket name is visible in the URL that points to the objects stored in the bucket, ensure that the bucket name you choose is appropriate.
+
+1. Select a region and click **Create**.
+
+1. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
+
+1. In the **Permissions** tab, tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
+
+1. Review your settings, and then click **Create bucket**.
 
 ## Integrate S3 with WordPress
+
 You will need to install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
 WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/wp-cli) for setup and migration.
 
 ### Install and Deploy S3 Uploads
-
-<Alert title="Note" type="info">
-
-This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/), our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80).
-
-</Alert>
 
 <Alert title="Note" type="info">
 
@@ -75,13 +78,13 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
   </Alert>
 
-2. Rename the extracted folder to remove the version number. For example:
+1. Rename the extracted folder to remove the version number. For example:
 
-  ```bash
-  mv S3-Uploads-2.0.0/ S3-Uploads
-  ```
+   ```bash{promptUser: user}
+   mv S3-Uploads-2.0.0/ S3-Uploads
+   ```
 
-3. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
+1. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
    <Alert title="Note" type="info">
 
@@ -89,17 +92,17 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
-5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
+1. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus wp $site.dev plugin activate S3-Uploads
     ```
 
-6. Use WP-CLI to verify your AWS setup.
+1. Use WP-CLI to verify your AWS setup.
 
-    ```bash
+    ```bash{promptUser: user}
     terminus wp $site.dev s3-uploads verify
     ```
 
@@ -107,7 +110,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
 You can migrate existing media files to S3 with the following command:
 
-```bash
+```bash{promptUser: user}
 terminus wp $site.dev -- s3-uploads migrate-attachments
 ```
 
@@ -117,9 +120,14 @@ Upon successful migration, this command will also provide a search/replace comma
 
 #### Multisite compatibility
 
+WP Offload Media plugin is supported.
+
+See the [WP Offload Media documentation](https://deliciousbrains.com/wp-offload-media/doc/multisite-per-subsite-bucket-and-custom-domain-settings/).
 
 #### Further configuration
+
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting and offline development.
 
 ### Install and Deploy WP Offload Media
+
 Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-media/doc/quick-start-guide). No specialized configuration is required for this plugin to run on Pantheon.

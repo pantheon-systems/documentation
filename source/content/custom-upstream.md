@@ -7,7 +7,7 @@ tags: [collaborate, launch, upstreams, webops, workflow]
 
 <Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />
 
-If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
+If you are a digital agency that serves clients, or if you are a reseller of Pantheon as part of a managed solution, download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
 <Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs" campaign="docs-agility">
 
@@ -137,3 +137,7 @@ Here are definitions for commonly used terms:
 Once you've grasped the concepts discussed above, you're ready to create your own Custom Upstream.
 
 - [Create a Custom Upstream](/create-custom-upstream)
+
+## See Also
+
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)

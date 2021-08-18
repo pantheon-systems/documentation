@@ -13,7 +13,7 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 ### Drupal 9 with Integrated Composer
 
-- To convert an existing Drupal 8 site to a Composer-managed site, visit the [composer convert](/guides/drupal-9-migration) doc.
+- To convert an existing Drupal 8 site to a Composer-managed site, visit the [Composer Convert](/guides/composer-convert) doc.
 
 - To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
@@ -29,7 +29,6 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-
 ## Add a Dependency to an Individual Site
 
 1. Clone the Git repository from the Pantheon site's dashboard.
@@ -39,6 +38,7 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
    ```bash{promptUser: user}
     composer install
    ```
+
 1. Add a new dependency locally:
 
    ```bash{promptUser: user}
@@ -49,20 +49,27 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
 
-1. Remove dependencies:
+### Remove Individual Site Dependencies
+
+You can remove site dependencies if they are no longer needed.
+
+1. Remove the dependency locally:
 
    ```bash{promptUser: user}
     composer remove drupal/pkg-name
    ```
 
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, etc.
+
 ## Apply One-click Updates
 
 1. Navigate to **Code** in the Dev tab of the site's Dashboard.
 
-1. Click **Check Now**. 
+1. Click **Check Now**.
 
 1. If updates are available, click **Apply Updates**.
-
 
 ## Upstream
 
@@ -88,8 +95,8 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
     composer require drupal/pkg-name --no-update
     ```
 
-     -  `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
-     -  `--no-update` should not be included when adding dependencies to a site.
+     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
+     - `--no-update` should not be included when adding dependencies to a site.
 
 1. Set or increment the current configuration version:
 
@@ -111,7 +118,6 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 1. Commit and push.
 
-
 ## Support
 
 ### Pantheon Supports Composer 2
@@ -120,11 +126,9 @@ The version of Composer on the platform is Composer 2.
 
 Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
-
 ### Pantheon's Scope of Support for Composer
 
-<Partial file="composer-support-scope.md" />
-
+<Partial file="composer-support-scope.md"/>
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
@@ -132,7 +136,7 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to the **Code** in the **Dev** tab of your Site Dashboard.
 
 1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
 
@@ -152,7 +156,23 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 ]
 ```
 
-The upstream updates and your Composer changes to the site are in a conflict that cannot be automatically merged by Git. We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file, to be lost. To resolve, merge the changes manually:
+**Issue 1:** The site might use a [Custom Upstream](/custom-upstream).
+
+**Solution 1:** Copy the Upstream URL and then follow **Solution 2**:
+
+1. From the Site Dashboard, navigate to the Dev environment.
+
+1. Click **Settings**, then **About site**.
+
+1. Copy the **Upstream** URL and use it instead of the Pantheon Upstream URL in **Solution 2**.
+
+**Issue 2:** The upstream updates and your Composer changes to the site, are in a conflict that cannot be automatically merged by Git.
+
+- We do not recommend using **Auto-resolve updates** in this case since it will cause your changes to the site's `composer.json` file to be lost.
+
+**Solution 2:**
+
+Merge the changes manually:
 
 1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
 
@@ -209,7 +229,7 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 
 ### Can I use a Composer GUI?
 
-Pantheon does not offer support for Composer GUIs or any conflicts that might be cause by one.
+Pantheon does not offer support for Composer GUIs or any conflicts that might be caused by one.
 
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 

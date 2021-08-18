@@ -1,20 +1,3 @@
-## Apply All Available Upstream Updates
-
-[Update the site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8) Upstream and apply all available updates.
-
-1. Use Terminus to list all available updates:
-
-  ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE
-  [warning] There are no available updates for this site.
-  ```
-
-1. If any updates are available, apply them using the command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
-
-  ```bash{promptUser: user}
-  terminus upstream:updates:apply $SITE.dev --updatedb
-  ```
-
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
 This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
@@ -212,7 +195,7 @@ git commit -m "Copy custom themes"
 
 Follow suit with any other custom code you need to carry over.
 
-#### Settings.php
+#### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
@@ -230,14 +213,72 @@ The resulting `settings.php` should have no `$databases` array.
 
 ## Deploy
 
-You've now committed the code to the local branch. Deploy that branch directly to a new Multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize the site's logs via `terminus drush $SITE.composerify -- wd-show` to inspect the watchdog logs, or follow the directions in our documentation on [log collection](/logs).
+You've now committed the code to the local branch. Deploy that branch directly to a new Multidev (called `composerify` in the steps below) and test the site in the browser.
 
 ### Deploy to a Multidev
 
-Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
+1. Push the changes to a Multidev called `composerify` to safely test the site without affecting the Dev environment:
+
+   ```bash{promptUser:user}
+   git push -u origin composerify && terminus env:create $SITE.dev composerify
+   ```
+
+1. Make a small change to `pantheon.yml`:
+
+   ```yaml:title=pantheon.yml
+   database:
+    version: 10.4
+
+   # add a comment to trigger a change and build
+   ```
+
+1. Commit and push the change to trigger an Integrated Composer build on the Multidev:
+
+   ```bash{promptUser: user}
+   git commit -am "trigger composer build"
+   git push origin composerify
+   ```
+
+Since the commit history of the `composerify` Multidev has no commits in common with the `master` branch, you cannot view the Multidev commit history from the Dashboard or the Integrated Composer logs.
+
+If the site is not working, try this Composer command on the local `composerify` branch:
 
 ```bash{promptUser:user}
-git push -u origin composerify && terminus env:create $SITE.dev composerify
+composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-Once you have confirmed the site is working, merge `composerify` into `master`, and follow the standard [relaunch workflow](/relaunch) to QA a code change before going live.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
+
+### Move composerify to the Main Dev Branch
+
+Once you have confirmed that the site works in the Multidev, replace the `master` branch and its commit history with the `composerify` Multidev's commit history.
+
+1. Retrieve the most recent commit hash from the local `composerify` branch:
+
+   ```bash{promptUser:user}
+   git log --format="%H" -n 1
+   ```
+
+   This will give you a commit hash like `fd3636f58f5b275b998bb1c9267bff8808353840`.
+
+1. Reset the `master` branch to match that commit then force push that to the Dev environment:
+
+   ```bash{promptUser: user}
+   git checkout master
+   git reset --hard fd3636f58f5b275b998bb1c9267bff8808353840
+   git push --force origin master
+   ```
+
+Now the site's Dev environment has a Drupal 9 codebase.
+
+### Inspect Site Logs to Troubleshoot
+
+If the site doesn't load properly, before you do too much work to investigate issues, clear the cache and try again.
+
+Use Terminus to inspect the site's logs;
+
+```bash{promptUser: user}
+terminus drush $SITE.composerify -- wd-show
+```
+
+See our [logs collection](/logs) documentation for more information.

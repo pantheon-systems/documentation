@@ -13,9 +13,9 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev).
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline WebOps workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps practices.
+Optimize your dev team and streamline WebOps workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps practices.
 
 </Enablement>
 
@@ -118,7 +118,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 You may also clone, import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
-The [database clone operation](/sites/#database--files) excludes some tables by default. The excluded tables are:
+The [database clone operation](/database-workflow#cloning-the-database) excludes some tables by default. The excluded tables are:
 
 * `cache`
 * `cache_block`

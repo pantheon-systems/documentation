@@ -100,7 +100,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 <dd>
 
-If a page is specificially written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, `"Drupal 8"`, or `"Drupal 9"`.
+If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, `"Drupal 8"`, or `"Drupal 9"`.
 
 </dd>
 
@@ -932,6 +932,30 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 </Example>
 
 </Accordion>
+
+___
+
+## Reusable Content
+
+Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
+
+Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
+
+Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
+
+After you create the file, include it in the doc:
+
+<Example>
+
+<Partial file="partial-example.md" />
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<Partial file="partial-example.md" />
+```
+
+</Example>
 
 ___
 
