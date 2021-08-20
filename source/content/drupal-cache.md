@@ -18,6 +18,7 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
+
 ![Drupal 8 Caching options](../images/d8-cache-config.png)
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
@@ -28,13 +29,23 @@ On Pantheon, this value defaults to 15 minutes. This is done on the first cache-
 Note that Drupal 8 has no setting to configure the minimum cache lifetime.
 
 ### Bandwidth Optimization
- ![Drupal 8 aggregate CSS and JS files](../images/d8-aggregate-css-js.png)<br />
+
+![Drupal 8 aggregate CSS and JS files](../images/d8-aggregate-css-js.png)
+
 On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ### Cache Tags
+
 Drupal 8 introduced a [cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) system that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
 This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
+
+For Drupal 9, install the Pantheon Advanced Page Cache module via [Composer](/integrated-composer#add-a-dependency-to-an-individual-site), then enable it via the Drupal Admin:
+
+```bash{promptUser: user}
+composer require drupal/pantheon_advanced_page_cache
+git commit -am "add pantheon advanced page cache module" && git push origin master
+```
 
 ## Drupal 7 Performance Configuration
 

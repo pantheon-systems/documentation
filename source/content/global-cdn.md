@@ -34,18 +34,19 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Persistent Cache
 
-Serve your Drupal or WordPress site, even when it's down. If the server is not responding and can't serve a new copy of a page, stale cached versions will be favored over displaying an error. With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
+Serve your Drupal or WordPress site even in the unlikely event that it goes down.
 
-### How Do I Configure This Setting?
+If the server is not responding and can't serve a new copy of a page, a cached version will be favored over displaying an error, even if the cached version has expired (this is called _stale cache_). With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
 
-On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](//wordpress-cache-plugin#pantheon-page-cache-plugin-configuration), you can adjust your CDN edge configuration to serve stale content for a specific amount of time.
+### Caching Exceptions - How long does content stay fresh?
 
+Adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL).
 
-### Caching Exceptions
+Your site’s CMS page-level caching must be correctly configured in order to take advantage of Persistent Cache.
 
-Your site’s CMS page-level caching must be correctly configured in order to take advantage of Persistent Cache. 
+On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration), you can adjust your CDN edge configuration to serve stale content for a specific amount of time.
 
-Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). You can learn more about the exceptions to page caching rules in [Caching: Advanced Topics](caching-advanced-topics#allow-a-user-to-bypass-the-cache). 
+Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). You can learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
 
 ### How I Know If It's Working?
 
