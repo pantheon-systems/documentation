@@ -6,7 +6,7 @@ categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 contributors: [stovak, edwardangert, carolynshannon]
-reviewed: "2021-06-30"
+reviewed: "2021-08-20"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/build-tools-to-d9-build-tools
