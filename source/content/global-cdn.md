@@ -50,8 +50,13 @@ For best results, set the cache TTL to a value equal to or over 3700 seconds.
 
 Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). You can learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
 
-### How I Know If It's Working?
+### Confirm That Persistent Cache Works
 
+To test how stale cache is served, compare the header results of a page refresh of the site's Dev environment to the same page in Maintenance Mode.
+
+Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset. Refresh the page in the browser for the newest information.
+
+Examine the results for the `age`, `max-age`
 
 ## Frequently Asked Questions
 
