@@ -177,6 +177,24 @@ brew install jq rsync
 
 1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
 
+### Upgrade MariaDB in All Environments
+
+Once you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
+
+This mitigates the possible risks associated with the time it takes for the platform to upgrade the database. The possible risks are minimal, but just in case:
+
+```bash{promptUser: user}
+git push origin master
+```
+
+From the Dashboard, merge the code from Dev, through Test, to Live.
+
+Or use Terminus, and replace the `$ENV` in this example with the target environment:
+
+```bash{promptUser: user}
+terminus env:deploy --sync-content --note "upgrade DB" --updatedb -- $SITE.$ENV
+```
+
 ## Custom Module Code
 
 Custom module code is outside the scope of this document. See [drupal.org](https://www.drupal.org/docs/creating-custom-modules) for getting your custom code updated with the new version numbers and any code deprecations.
