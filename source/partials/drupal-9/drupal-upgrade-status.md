@@ -13,13 +13,13 @@ Since you are checking whether or not a site can be upgraded, install the Upgrad
 1. Create a new Multidev:
 
   ```bash{promptUser: user}
-  terminus multidev:create $SITE.dev site-upgrade-status
+  terminus multidev:create $SITE.dev site-upstat
   ```
 
 1. Check out the Multidev branch:
 
   ```bash{promptUser: user}
-  git checkout site-upgrade-status
+  git checkout site-upstat
   ```
 
 1. Add the Upgrade Status module:
@@ -31,7 +31,7 @@ Since you are checking whether or not a site can be upgraded, install the Upgrad
 1. Add, commit, and push the code:
 
   ```bash{promptUser: user}
-  git add . && git commit -m "test site upgrade status" && git push origin site-upgrade-status
+  git add . && git commit -m "test site upgrade status" && git push origin site-upstat
   ```
 
 1. Use a web browser to visit the Drupal admin in the Multidev environment. Enable the Upgrade Status module and view the Upgrade Status page.
@@ -39,7 +39,7 @@ Since you are checking whether or not a site can be upgraded, install the Upgrad
 1. Delete Multidev when done:
 
   ```bash{promptUser: user}
-  terminus multidev:delete --delete-branch -- $SITE.site-upgrade-status
+  terminus multidev:delete --delete-branch -- $SITE.site-upstat
   ```
 
 </Accordion>
