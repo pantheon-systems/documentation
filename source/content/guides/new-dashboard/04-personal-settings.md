@@ -10,7 +10,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/personal-settings
 anchorid: new-dashboard
-editpath: new-dashboard/03-personal-settings.md
+editpath: new-dashboard/04-personal-settings.md
 ---
 
 The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **User Settings**.

@@ -1,6 +1,6 @@
 ---
 title: The New Pantheon Dashboard
-subtitle: Configure Billing Settings
+subtitle: Settings
 description: Manage site plans, view plan history, and change billing preferences
 categories: [platform]
 tags: [dashboard]
@@ -9,10 +9,10 @@ reviewed: "2021-08-04"
 layout: guide
 permalink: docs/guides/new-dashboard/settings
 anchorid: new-dashboard
-editpath: new-dashboard/05-settings.md
+editpath: new-dashboard/06-settings.md
 ---
 
-## Billing
+## Personal Workspace
 
 ### Site Subscriptions
 
@@ -34,5 +34,15 @@ You can use multiple payment methods in the workspace. To add a payment method, 
 ![A screenshot of the adding card information](../../../images/dashboard/new-dashboard/add-payment.png)
 
 
+## Organization Workspace
+Workspace settings are visible to Admins only.
 
+### Site Billing Terms
+You can add optional payment and terms of service information for Sites built in your Workspace.
+
+Users can purchase a site plan on a Sandbox site. Enter a site address in the **Customized Billing Instruction URL** field to direct users where they can view workspace billing instructions.
+
+If a user attempts to update a site plan for any site that is not in a Sandbox, the user can view you administrators that can assist them. 
+
+You can enter terms and conditions that are displayed to workspace members.
 
