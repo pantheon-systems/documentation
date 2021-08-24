@@ -1,6 +1,6 @@
 <Alert title="Early Access" type="info" icon="leaf">
 
-Pantheon Search with Solr 8 Early Access will soon be available for contract customers. The content on this page may change as development continues, so check back frequently to learn more about the latest developments.
+Pantheon Search with Solr 8 is currently available as part of our early access program. The content on this page may change as development continues, so check back frequently to learn more about the latest developments.
 
 </Alert>
 
