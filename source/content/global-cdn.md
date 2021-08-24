@@ -56,7 +56,32 @@ To test how stale cache is served, compare the header results of a page refresh 
 
 Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset. Refresh the page in the browser for the newest information.
 
-Examine the results for the `age`, `max-age`
+Examine the results for the `age` and `max-age`.
+
+To examine the headers through the command line, use a `curl` command to examine the headers before and after you set the site to Maintenance Mode:
+
+```bash{outputLines: 2-20}
+curl --head https://pantheon.io/docs
+HTTP/2 301
+content-type: text/html
+location: https://pantheon.io/docs/
+server: nginx
+strict-transport-security: max-age=31622400
+x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
+x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
+cache-control: public, max-age=86400
+date: Tue, 24 Aug 2021 15:30:21 GMT
+x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
+x-cache: HIT, HIT
+x-cache-hits: 1, 1
+x-timer: S1629819022.932985,VS0,VE1
+pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
+vary: Cookie, Cookie
+age: 9654
+accept-ranges: bytes
+via: 1.1 varnish, 1.1 varnish
+content-length: 162
+```
 
 ## Frequently Asked Questions
 
