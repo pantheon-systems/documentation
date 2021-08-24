@@ -132,6 +132,10 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 ## Troubleshooting Code Syncs and Upstream Updates
 
+### Site-local Drush Is Required for Drupal 9 Sites
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
+
 ### View the Output of the Commit Log First
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:

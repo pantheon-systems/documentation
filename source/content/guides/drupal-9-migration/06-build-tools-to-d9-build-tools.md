@@ -53,7 +53,7 @@ brew install jq rsync
    git checkout -b d9-upg-21
    ```
 
-1. Use Terminus and Drush to export the latest version of the config files from the production envronment to `sites/default/files/config`:
+1. Use Terminus and Drush to export the latest version of the config files from the production environment to `sites/default/files/config`:
 
    ```bash{promptUser: user}
    terminus drush $SITE.live -- config:export --destination sites/default/files/config

@@ -132,4 +132,4 @@ This doc uses the following aliases:
   terminus drush $D9_SITE.dev -- updatedb
   ```
 
-1. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
+1. Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.

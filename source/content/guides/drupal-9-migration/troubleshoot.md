@@ -65,6 +65,10 @@ Given the nature of the bug, it might be easier to reinstall Drupal 9.
 | [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) |     Yes     |     Yes     |
 | [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |   Not yet   |
 
+### Site-local Drush Is Required for Drupal 9 Sites
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
+
 ### Where can I report an issue?
 
 [Contact support](/support) to report any issues that you encounter.
