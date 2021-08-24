@@ -37,7 +37,7 @@ All you need before you begin is a Pantheon account. If you don't have one, <a h
 
 <Alert title="Note" type="info">
 
-Are you an agency? Do you build sites for others? If so, check **Are you an agency?** on the [signup form](https://pantheon.io/register) to get more free features and really make the most of this guide. Size doesn't matter; you can sign up if you're an agency of one or one-thousand.
+Are you an agency? Do you build sites for others? If so, check **Are you an agency?** on the [signup form](https://pantheon.io/register) to get more free features and really make the most of this guide.You can sign up if you're an agency of one or one thousand.
 
 </Alert>
 
