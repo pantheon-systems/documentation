@@ -1,23 +1,12 @@
 ---
-title: 'Custom Certificates on The Pantheon Global CDN'
+title: 'Custom Certificates on the Pantheon Global Cdn'
 description: For contract customers who require dedicated, custom TLS certificates.
 reviewed: "2020-12-14"
 categories: [go-live]
 tags: [cdn, https, professional-services]
 ---
 
-## Access
-
-A concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
-
-<Alert title="Warning" type="danger" >
-
-This guide does not apply if you have subscribed to [Advanced Global CDN](/guides/professional-services#advanced-global-cdn). For Advanced Global CDN, there is a different process in which you would have to provide a certificate bundle that includes:
-- Main Certificate
-- Intermediate Certificate
-- Private Key
-
-</Alert>
+A concierge service is now available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
 ## Manually Managed Custom Certificates
 
@@ -32,13 +21,17 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
    - The end-client certificate
    - Any intermediate certificates provided by the CA.
 
-  Be sure to send these as separate files, not a "chained cert".
+  Be sure to send these as separate files, not a "chained cert."
 
-  <Alert type="info" title="Note">
+  **AGCDN Users**: Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
 
-  When adding the domain to your environment, you may be presented with the option to **Verify your domain to provision HTTPS**. You can skip this step by clicking **Skip to updating DNS**.
+   - Main Certificate
+   - Intermediate Certificate
+   - Private Key
 
-  </Alert>
+1. [Add the domain to your environment](/domains#add-a-custom-domain)
+
+  If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
 
 1. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
