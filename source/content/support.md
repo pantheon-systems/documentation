@@ -20,6 +20,8 @@ Pantheon offers a range of Account options that include the features required fo
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
 | [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
 
+Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are generally available on business days, Monday through Friday, 9AM to 5PM PST.
+
 ### Scope Explanations
 
 - **Platform**: Support helps:
