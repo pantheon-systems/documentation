@@ -181,7 +181,7 @@ brew install jq rsync
 
 Once you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
 
-This mitigates the possible risks associated with the time it takes for the platform to upgrade the database. The possible risks are minimal, but just in case:
+The possible risks associated with the time it takes for the platform to upgrade the database are mininmal, but you can use the following command to mitigate potential errors :
 
 ```bash{promptUser: user}
 git push origin master
