@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
 title: "Custom Certificates on the Pantheon Global CDN"
-=======
-title: 'Custom Certificates on the Pantheon Global Cdn'
->>>>>>> 31f9cfb6a (turn alerts into steps)
 description: For contract customers who require dedicated, custom TLS certificates.
 categories: [go-live]
 tags: [cdn, https, professional-services]
@@ -11,18 +7,6 @@ reviewed: "2021-08-25"
 ---
 
 A concierge service is now available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
-<<<<<<< HEAD
-
-<Alert title="Warning" type="danger" >
-
-This guide does not apply if you have subscribed to [Advanced Global CDN](/guides/professional-services#advanced-global-cdn). For Advanced Global CDN, there is a different process in which you would have to provide a certificate bundle that includes:
-- Main Certificate
-- Intermediate Certificate
-- Private Key
-
-</Alert>
-=======
->>>>>>> 31f9cfb6a (turn alerts into steps)
 
 ## Manually Managed Custom Certificates
 
@@ -37,18 +21,6 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
    - The end-client certificate
    - Any intermediate certificates provided by the CA.
 
-<<<<<<< HEAD
-  Be sure to send these as separate files, and not as a  "chained cert".
-  **AGCDN Users**: Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
-
-   - Main Certificate
-   - Intermediate Certificate
-   - Private Key
-
-1. [Add the domain to your environment](/domains#add-a-custom-domain)
-   
-   If you are be presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
-=======
   Be sure to send these as separate files, not a "chained cert."
 
   **AGCDN Users**: Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
@@ -60,7 +32,6 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 1. [Add the domain to your environment](/domains#add-a-custom-domain)
 
   If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
->>>>>>> 31f9cfb6a (turn alerts into steps)
 
 1. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
