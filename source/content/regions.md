@@ -41,30 +41,16 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 ### Create a New Site in a Specific Region using Terminus
 
 1. Install and authenticate [Terminus](/terminus). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/terminus/updates).
-1. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.
 
- - Available regions:
- 
-| Name                    |  Code   |
-|:------------------------- |:------------------------------- |
-|  Australia  | au               |
-| Canada | ca |
-| European Union | eu |
-|  United States            | us |
+1. Use Terminus to create a new site associated with your organization and include the `--region` option.
 
- For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
+<Partial file="terminus-available-regions-table.md" />
 
- ```bash
- terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
- ```
-
-  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../images/create-site-eu.png)
-
-  See `terminus site:create --help` for more information on the options and values used in this command.
+See `terminus site:create --help` for more information on the options and values used in this command.
 
 ## Migrate an Existing Site to a New Region
 
-1.  Create a new site (as described above) 
+1.  Create a new site (as described above)
 1.  Copy over the site's code, database, and files.
     * For details see [How to Manually Migrate Sites to Pantheon](/migrate-manual/#import-your-code).
 1.  Move domains and DNS to the new site.

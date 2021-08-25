@@ -1,12 +1,17 @@
 ---
-title: Enabling Solr on Drupal 8
+title: Apache Solr for Drupal
+subtitle: Using Solr on Drupal 8
 description: Detailed information on using Apache Solr with Drupal 8.
 cms: "Drupal 8"
 categories: [integrate]
-tags: [solr, modules]
+tags: [solr, search, modules]
 contributors: [peter-pantheon, cityofoaksdesign]
+layout: guide
+showtoc: true
+permalink: docs/guides/solr-drupal/solr-drupal-8
+anchorid: solr-drupal
+editpath: solr-drupal/03-solr-drupal-8.md
 ---
-[Apache Solr](/solr) is a system for indexing and searching site content.
 
 <Alert title="Important Note" type="info">
 
@@ -16,7 +21,7 @@ contributors: [peter-pantheon, cityofoaksdesign]
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
-Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which will reach end-of-life in December 2021. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
+Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which reached end-of-life in December 2021. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
 </Alert>
 
@@ -28,11 +33,11 @@ Be sure that you:
 
 - Install [Composer](https://getcomposer.org/)
 
-- Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or the [Composer without CI](/guides/drupal-8-composer-no-ci) guide.
+- Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or [convert an existing Drupal site to use Composer](/guides/composer-convert) guide.
 
 <Alert title="Warning" type="danger">
 
-Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/guides/build-tools) and [Composer without CI](/guides/drupal-8-composer-no-ci) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
+Solr on Drupal 8 requires a Composer-managed workflow, as described in our [Build Tools](/guides/build-tools) and [Convert to Composer](/guides/composer-convert) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
 
 </Alert>
 
@@ -134,6 +139,26 @@ To actually search your index you will need a module like [Search API Pages](htt
 The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older version of Solr, use the `8.x-1.x` branch of [Search API Solr](https://www.drupal.org/project/search_api_solr) and its Solr 4 schema file.
 
 <Partial file="solr-commit-changes.md" />
+
+## Extend Solr for Drupal 8
+
+### Apache Tika
+
+The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
+
+Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
+
+Download and install the Search API Attachments module ([search_api_attachments](https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
+
+1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and edit the following fields:
+
+   - **Extraction method:** Tika Extractor
+   - **Path to java executable:** `java`
+   - **Path to Tika .jar file:** `/srv/bin/tika-app-1.18.jar`
+
+1. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
+
+If everything is working correctly, the message "Extracted data: Congratulations! The extraction seems to be working! Yay!" will be displayed.
 
 ## Safely Remove Solr
 

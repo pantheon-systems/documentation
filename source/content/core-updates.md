@@ -9,13 +9,13 @@ This doc includes instructions to make core updates to WordPress and Drupal site
 
 ## Drupal 9
 
-Drupal 9 sites on Pantheon use Integrated Composer to allow one-click core updates through the Dashboard.
+Drupal 9 sites on Pantheon use [Integrated Composer](/integrated-composer) to allow one-click core updates through the Dashboard.
 
 To check for available updates, navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
 
 ## Drupal 8 Composer-Managed Sites
 
-Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [convert the site to Integrated Composer](/guides/composer-convert).
 
 ## Non-Composer Managed WordPress and Drupal 7 / 8 Sites
 

@@ -50,10 +50,10 @@ brew install jq rsync
 
    ```bash{promptUser: user}
    cd $SITE
-   git checkout -b d9-upgrade-2021
+   git checkout -b d9-upg-21
    ```
 
-1. Use Terminus and Drush to export the latest version of the config files from the production envronment to `sites/default/files/config`:
+1. Use Terminus and Drush to export the latest version of the config files from the production environment to `sites/default/files/config`:
 
    ```bash{promptUser: user}
    terminus drush $SITE.live -- config:export --destination sites/default/files/config
@@ -148,7 +148,7 @@ brew install jq rsync
    ```bash{promptUser: user}
    git add composer.json composer.lock pantheon.yml config/*
    git commit -m 'updating to drush 10/mariadb 10.4/config'
-   git push origin d9-upgrade-2021
+   git push origin d9-upg-21
    ```
 
   If all goes well, you will see something like the following:
@@ -156,7 +156,7 @@ brew install jq rsync
    ```bash
    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
    remote:
-   remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
+   remote: Create a pull request for 'd9-upg-21' on GitHub by visiting:
    remote:      {{URL TO YOUR REPOSITORY}}
    remote:
    ```
@@ -246,7 +246,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
    ```bash{promptUser: user}
    git add composer.json composer.lock pantheon.yml
    git commit -m "upgrade core to d9"
-   git push origin d9-upgrade-2021
+   git push origin d9-upg-21
    ```
 
 ## Confirm the MariaDB Version and Updates

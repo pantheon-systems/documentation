@@ -1,20 +1,3 @@
-## Apply All Available Upstream Updates
-
-[Update the site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8) Upstream and apply all available updates.
-
-1. Use Terminus to list all available updates:
-
-  ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE
-  [warning] There are no available updates for this site.
-  ```
-
-1. If any updates are available, apply them using the command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
-
-  ```bash{promptUser: user}
-  terminus upstream:updates:apply $SITE.dev --updatedb
-  ```
-
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
 This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
@@ -212,7 +195,7 @@ git commit -m "Copy custom themes"
 
 Follow suit with any other custom code you need to carry over.
 
-#### Settings.php
+#### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
