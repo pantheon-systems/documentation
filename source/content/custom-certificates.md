@@ -1,9 +1,9 @@
 ---
-title: 'Custom Certificates on the Pantheon Global Cdn'
+title: "Custom Certificates on the Pantheon Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
-reviewed: "2020-12-14"
 categories: [go-live]
 tags: [cdn, https, professional-services]
+reviewed: "2021-08-25"
 ---
 
 A concierge service is now available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
