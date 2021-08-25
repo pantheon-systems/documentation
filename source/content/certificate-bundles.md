@@ -1,8 +1,10 @@
 ---
 title: Pantheon Certificate Bundles
-description: Published Certificate Bundles from Pantheon
+description: Published Certificate bundles from Pantheon
+categories: [develop]
 tags: [certificates, lockr, siteintegrations, security, moreguides]
-categories: [integrate,develop]
+contributors: [clintonPantheon]
+reviewed: "2021-08-16"
 ---
 
 The table below is a list of certificates published by Pantheon.  These certificates can be used to integrate tooling with Pantheon.
