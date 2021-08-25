@@ -27,7 +27,7 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 
   <Alert type="info" title="Note">
 
-  When adding the domain to your environment, you may be presented with the option to **Verify your domain to provision HTTPS**. You can skip this step by clicking **Skip to updating DNS**.
+  When adding the domain to your environment, you may be presented with the option to **Verify your domain to provision HTTPS**. You can skip this step by clicking **Skip without HTTPS**.
 
   </Alert>
 
