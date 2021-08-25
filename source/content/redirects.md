@@ -1,8 +1,8 @@
 ---
 title: Configure Redirects
 description: Review considerations and recommendations on how to handle redirect logic via Primary Domains or PHP.
-tags: [redirects, variables, dns]
-categories: [go-live,develop]
+categories: [go-live]
+tags: [dns, https, redirects]
 reviewed: "2020-02-12"
 ---
 
@@ -46,7 +46,7 @@ This is the preferred method of setting HTTPS & HSTS for your site. Find the `en
 
 ## Redirect with PHP
 
-If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. Note that redirecting the platform domain will break the screenshot of your site in the User Dashboard, and may complicating troubleshooting for our [Support](/support) team.
 
 <Partial file="_redirects.md" />
 

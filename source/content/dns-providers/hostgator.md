@@ -3,8 +3,10 @@ title: HostGator Domain Configuration
 provider: HostGator
 dnsprovider: true
 description: Learn how to point your HostGator domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+draft: true
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/hostgator.md/
 ---
 ## Before You Begin

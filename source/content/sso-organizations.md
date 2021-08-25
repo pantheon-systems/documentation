@@ -1,12 +1,14 @@
 ---
 title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
-tags: [security, tools]
-categories: [manage,develop]
+categories: [manage]
+tags: [security, organizations]
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/sso).
 
-SAML SSO is included for customers with Diamond Support, and is available for purchase for Pantheon Organizations with Platinum or below. SAML is an organization-wide feature only and is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support package, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
+Once enabled, SAML applies to an entire email domain and is not available on a per-site, per-environment, or per-user basis.
+
+SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/organizations). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
 
 ## User Experience
 * User submits the Pantheon login form with their email address.
@@ -76,4 +78,3 @@ There are 3 types of certificate that you can generate:
  - `token-signing`
 
 Use a `token-signing` certificate, otherwise you will get a thumbprint error.
-

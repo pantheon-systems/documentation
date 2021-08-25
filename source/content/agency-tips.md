@@ -1,8 +1,8 @@
 ---
 title: Pantheon Agency Tips
 description: Tips for agencies working on Pantheon.
-tags: [tools]
 categories: [manage]
+tags: [agencies, organizations, collaborate]
 contributors: [davidneedham]
 searchboost: 90
 ---
@@ -14,7 +14,7 @@ One of the easiest tips we can offer for immediate results. Pantheon Partner Age
 
 
 ## Learn Pantheon through Product Trainings, Resources, and Guides
-[Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs) from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
+[Get hands on training](https://pantheon.io/learn-pantheon?docs) from knowledgeable experts at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
 
 ## Become a Supporting Organization
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
@@ -40,10 +40,10 @@ The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspa
 Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Solr
-All plans except for the Basic plan can enable [Solr](/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/wordpress-solr), [Enabling Solr with Drupal 7](/solr-drupal-7) or [Enabling Solr on Drupal 8](/solr-drupal-8).
+All plans except for the Basic plan can enable [Solr](/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/wordpress-solr), [Enabling Solr with Drupal 7](/guides/solr-drupal/solr-drupal-7) or [Enabling Solr on Drupal 8](/guides/solr-drupal/solr-drupal-8).
 
-## Redis
-All plans except for the Basic plan can enable Redis for object caching. For installation instructions and additional details, see [Installing Redis on Drupal or WordPress](/redis).
+## Object Cache
+All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 
 ## WordPress
 
@@ -76,11 +76,11 @@ Use the `pantheon.yml` file to set up platform hooks and advanced site configura
 
 ### New Relic APM Pro
 
-New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/new-relic). The following blog posts are also a great reference:
+New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic&reg; Performance Monitoring](/new-relic). The following blog posts are also a great reference:
 
-- [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
-- [New Relic &amp; Drupal: Find Your Site&#39;s Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+- [Getting Started with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
+- [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+- [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
 ## Cron
 Pantheon does not provide a way to set custom scheduling for cron jobs. For details, see [Cron for Drupal](/drupal-cron) and [Cron for WordPress](/wordpress-cron).

@@ -1,16 +1,17 @@
 ---
 title: Enabling Solr for WordPress
 description: Detailed information on using Apache Solr with WordPress.
-tags: [integration]
-categories: [wordpress, solr,develop]
+cms: "WordPress"
+categories: [integrate]
+tags: [solr, plugins]
 contributors: [cityofoaksdesign]
 ---
 
 [Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+Learn how to configure Solr with help from our experts. Pantheon delivers on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
@@ -96,7 +97,7 @@ For details, see the [Optimize command](https://solarium.readthedocs.io/en/stabl
 
 <Alert title="Note" type="info">
 
-Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment separately.
 
 </Alert>
 

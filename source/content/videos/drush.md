@@ -2,11 +2,13 @@
 title: Drush
 description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename/
-tags: [devdrush]
-categories: [develop,drupal,workflow]
+permalink:  docs/videos/:basename
 layout: video
+cms: "Drupal"
+categories: [develop]
+tags: [drush, cli]
 searchboost: 50
+type: video
 ---
 
 <Youtube src="wAL4LQwy8Ow" title="Drush" />

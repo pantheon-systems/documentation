@@ -1,8 +1,8 @@
 ---
-title: Pantheon Site Regions and Data Residency
+title: Pantheon Global Regions and Data Residency
 description: Learn how to launch sites in Australia, Canada, or the European Union.
-tags: [create, regions]
 categories: [get-started]
+tags: [launch, site]
 contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 ---
@@ -13,7 +13,7 @@ There are many scenarios in which you might prefer running a site within an Inte
 * Compliance standards that require data residency within the borders of Australia, Canada, or the European Union
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
-## Available Regions
+## Available Global Regions
 
 Four regions are available when creating a new site:
 
@@ -22,15 +22,15 @@ Four regions are available when creating a new site:
 * Canada (**CA**)
 * European Union (**EU**)
 
-### EU Data Residency
+### Data Residency
 
-Pantheon sites have all site resources in the region in which it was created. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
+A Pantheon site has all site resources located in the region in which it was created. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
 
-Automated and manual backups of all site components (code, database, and files) are stored in the EU and created by job workers also running in the EU. Additionally, any database or file clones between site environments are run by EU job workers.
+Automated and manual backups of all site components (code, database, and files) are stored in the site's region and created by job workers also running in the site's region. Additionally, any database or file clones between site environments are run by job workers in the site's region.
 
-Localized, EU-specific [Disaster Recovery](/disaster-recovery) is also available.
+Localized, region-specific [Multizone Failover](/multizone-failover) is also available.
 
-With this set of EU-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet the European Union's legal, regulatory, or data sovereignty requirements.
+With this set of region-specific resources, you can run WordPress or Drupal sites on Pantheon and meet your region's legal, regulatory, or data sovereignty requirements.
 
 ## Create a New Site in a New Region
 
@@ -75,7 +75,7 @@ If you'd like help migrating your site between regions, our [Professional Servic
 
 ## Review Site Region
 
-Use the Dashboard to see the Pantheon Region in which the site is hosted:
+Use the Dashboard to see the Pantheon Global Region in which the site is hosted:
 
 1.  Navigate to the Site Dashboard
 1.  Click **Settings**, then **About Site**

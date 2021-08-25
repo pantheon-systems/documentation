@@ -1,8 +1,8 @@
 ---
 title: Getting the Client IP Address
 description: Getting the client IP address to set up geolocation capabilities on your Pantheon site.
-tags: [Drupal, geolocation]
 categories: [develop]
+tags: [cdn]
 reviewed: "2020-03-09"
 ---
 
@@ -10,7 +10,7 @@ reviewed: "2020-03-09"
 
 This page was written before the [Pantheon Global CDN](/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are no longer an accurate way to geolocate your traffic.
 
-If geolocation is a requirement for your site, consider an [Advanced Global CDN](/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare.
+If geolocation is a requirement for your site, consider an [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare.
 
 </Alert>
 

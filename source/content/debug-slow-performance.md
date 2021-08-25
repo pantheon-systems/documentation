@@ -1,8 +1,8 @@
 ---
 title: Debugging Slow Performance
 description: Identify common problems with Drupal or WordPress performance speeds and deploy solutions.
-tags: [logs, debugcode]
-categories: [troubleshoot,performance]
+categories: [performance]
+tags: [cache, code, logs, measure]
 ---
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.
 
@@ -20,7 +20,7 @@ Each loop executed user\_load(1, TRUE), then triggered the error. Times are rou
 |:------------- |:------ |:-------- |:-------- |:--------- |:----------- |:-------------|
 | **none**      | 0.00s  | 0.08s    | 0.17s    | 0.30s     | 3.04s       | 32.81s       |
 | **E_NOTICE**  | 0.01s  | 0.16s    | 0.34s    | 0.71s     | 7.10s       | 79.52s       |
-| **E_WARNING** | 0.01s  | 0.16s    | 0.33s    | 0.70s     | 7.67s       | 134.68	    	|
+| **E_WARNING** | 0.01s  | 0.16s    | 0.33s    | 0.70s     | 7.67s       | 134.68       |
 
 Turning off error reporting suppresses the symptom, not the problem, and **PHP execution will still be slow as long as there are errors**.
 
@@ -38,7 +38,7 @@ As an example, if your slowest database operation is an INSERT to watchdog, then
 Learn more about [Log Files on Pantheon](/logs).
 
 ## Too Many Database Queries
-The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic Pro dashboard](/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
+The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic&reg; Performance Monitoring dashboard](/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
 
 ![New Relic map tab](../images/new-relic-map.png)<br />
 
@@ -66,7 +66,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
 
-One of the services Pantheon offers is [Redis as a caching backend](/redis), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
+One of the services Pantheon offers is an [Object Cache backend](/object-cache), which is a key-value store and is optimized for this type of work.​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
@@ -79,8 +79,8 @@ Cache misses are by nature slow - if something needs to be cached it's performed
 There are a large number of caches involved in every single request, including:
 
 - [Pantheon Global CDN](/global-cdn-caching) - Spread out across multiple servers, and the cache is not shared between servers.
-- [APC](/alternative-php-cache) - PHP has its own opcode cache, which is not shared between application containers.
-- [Drupal](https://drupal.org/node/326504) and [Redis](/redis) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
+- [APCu](/apcu) - PHP has its own user-level cache, which is not shared between application containers.
+- [Drupal](https://drupal.org/node/326504) and [Redis](/object-cache) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.
@@ -110,7 +110,7 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 
 - Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
 - Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
-- Enabling [Redis](/redis) could boost site performance by providing an in-memory backend caching
+- Enabling [Redis](/object-cache) could boost site performance by providing an in-memory backend caching
 - [Update PHP version](/php-versions)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 

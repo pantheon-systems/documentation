@@ -7,9 +7,11 @@ terminuscreate: true
 showtoc: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, plugins, terminus, workflow]
 nexturl: terminus/configuration/
 previousurl: terminus/plugins/directory/
-permalink: docs/terminus/plugins/:basename/
+permalink: docs/terminus/plugins/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---
@@ -34,14 +36,7 @@ mkdir $HOME/.terminus/plugins/hello-world
 
 In order for Terminus to recognize the directory as a plugin, the directory must contain a valid `composer.json` file. Download the following file and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`):
 
-<div class="script-file-header">
-  composer.json
-  <a id="downloadLink">
-    <button class="btn btn-default btn-download">
-      <i class="fa fa-download" aria-hidden="true" /> Download File
-    </button>
-  </a>
-</div>
+<Download file="composer.json" />
 
 ```json
 {
@@ -50,7 +45,7 @@ In order for Terminus to recognize the directory as a plugin, the directory must
   "type": "terminus-plugin",
   "extra": {
     "terminus": {
-      "compatible-version": "1.*"
+      "compatible-version": "2.*"
     }
   }
 }
@@ -74,14 +69,7 @@ mkdir $HOME/.terminus/plugins/hello-world/src
 
 Download the following file and move it to your plugin's `src` directory (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
 
-<div class="script-file-header">
-  HelloCommand.php
-  <a id="downloadLinkb">
-    <button class="btn btn-default btn-download">
-      <i class="fa fa-download" aria-hidden="true" /> Download File
-    </button>
-  </a>
-</div>
+<Download file="HelloCommand.php" />
 
 ```php
 use Pantheon\Terminus\Commands\TerminusCommand;

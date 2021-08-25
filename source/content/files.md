@@ -1,25 +1,26 @@
 ---
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
-tags: [infrastructure, sftpfiles]
-categories: [platform,develop]
+categories: [platform]
+tags: [code, files]
+reviewed: "2021-07-14"
 ---
 
-Files are large pieces of static content not stored in your database, usually images, documents, or user uploads. Because they are distinct from your site's [code](/code), they are excluded from version control via Pantheon's `.gitignore` files <Popover content="The [.gitignore file](https://git-scm.com/docs/gitignore) is located at the root of the site's codebase and instructs Git on which paths to ignore." />:
+Files are large pieces of static content not stored in your database, usually images, documents, or user uploads. Because they are distinct from your site's [code](/code), they are excluded from version control via Pantheon's `.gitignore` files <Popover content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git on which paths to ignore." />:
 
 - [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
-- [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
+- [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore)
 
 The Pantheon architecture comprises highly available [application containers](/application-containers) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
 Valhalla creates a symbolic link (**symlink**), to the `files` directory in the appropriate location of your docroot (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal).
 
-It is important to note that the `files` directory in your site root is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root. Any non-standard file locations should be symbolically linked to `/files` or moved manually.
+It is important to note that this directory is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root.  Any non-standard file locations should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
 
-You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [Filezilla](/filezilla) and navigating to the `/files` directory.
+You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [WinSCP](/winscp) and navigating to the `/files` directory.
 
 ## Pantheon-Related Files
 
@@ -46,5 +47,19 @@ Pantheon does not support simultaneous SFTP connections. To avoid errors, set yo
 Sites migrated from other hosts may have custom or absolute paths in the "Store Uploads in This Folder" configuration. This can be resolved by using the recommended configuration:
 
 1. In the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`)
-2. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
-3. Optional: Ensure there is no defined setting in `wp-config.php` i.e.; `define(‘UPLOADS’, ‘wp-content/myimages’);`.
+1. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
+1. Optional: Ensure there is no defined setting in `wp-config.php`, i.e., `define(‘UPLOADS’, ‘wp-content/myimages’);`.
+
+### Known Limitations of File Names and Permissions
+
+File names and permissions are set by the system and cannot be changed.
+
+Some modules or plugins might return the following error:
+
+```none
+User notice: Key file "file:///files/private/public.key" permissions are not correct,
+recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey->__construct()
+(line 59 of /code/vendor/league/oauth2-server/src/CryptKey.php)
+```
+
+If you try to change the file permissions to `770` from `660` via SFTP, the change will fail silently. The platform will not update the file permissions and will not return an error.

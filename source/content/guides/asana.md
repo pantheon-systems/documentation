@@ -1,10 +1,10 @@
 ---
 title: Integrating Asana with Pantheon using Quicksilver Hooks
 description: Learn how to integrate Asana project management application with the Pantheon.
-tags: [siteintegrations]
-category: [integrate]
+categories: [integrate]
+tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 5/4/2017
 contributors: [scottmassey]
 ---
@@ -150,4 +150,4 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
     ![Asana message](../../images/integrations/asana/asana-task.png)
 
 ## Conclusion
-In this guide, we covered a simple integration between Asana and Pantheon. Feel free to expand our example. Additionally, if you use [GitHub](https://github.com) with Asana, you can further integrate with [Unito](https://unito.io/sync/asana/github/), a free integration service. This should reduce a few steps in the development process for your team by letting the robots handle the communication.
+In this guide, we covered a simple integration between Asana and Pantheon. Feel free to expand our example. Additionally, if you use [GitHub](https://github.com) with Asana, you can further integrate with [Unito](https://unito.io/asana-sync/), a free integration service. This should reduce a few steps in the development process for your team by letting the robots handle the communication.

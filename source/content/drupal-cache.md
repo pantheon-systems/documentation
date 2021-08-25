@@ -1,12 +1,13 @@
 ---
 title: Drupal Performance and Caching Settings
 description: Optimize Drupal and Global CDN caching to maximize your site's performance.
-tags: [drupal, caching, CDN]
+cms: "Drupal"
 categories: [performance]
+tags: [caching, cdn]
 ---
 To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/global-cdn-caching), you'll need to configure your site's performance settings.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs" campaign="docs-webops">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
 Learn industry best practices for Drupal caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
 

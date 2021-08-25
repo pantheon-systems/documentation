@@ -1,10 +1,12 @@
 ---
 title: WordPress Site Networks
 subtitle: Introduction
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Deploy a WordPress multisite on the Pantheon Platform.
 layout: guide
 type: guide
-featuredcontributor: true
+cms: "WordPress"
+categories: [develop]
+tags: [multisite]
 contributors: [danielbachhuber]
 anchorid: multisite
 multisite: true

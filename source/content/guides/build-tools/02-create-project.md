@@ -1,108 +1,159 @@
 ---
 title: Build Tools
 subtitle: Create a New Project
-description: In step two of the Build Tools guide, learn how to create your new project.
-anchorid: create-project
+description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
 categories: [develop]
-layout: guide
-type: guide
+tags: [composer, terminus, webops, workflow]
 buildtools: true
-generator: pagination
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
+anchorid: create-project
+type: guide
 permalink: docs/guides/build-tools/create-project/
-nexturl: guides/build-tools/new-pr/
-previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
+reviewed: "2020-05-08"
 ---
-In this section we'll use the Terminus Build Tools Plugin to create a new Pantheon Site, a corresponding GitHub repository, and configure CircleCI to run tests.
 
-1. Create a new project (replace `pantheon-d8-composer-project` with the name of your new site):
+In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, a Continuous Integration service, and a Pantheon site.
 
-  ```bash
-  terminus build:project:create d8 pantheon-d8-composer-project
+<Alert title="Note" type="info">
+
+These instructions are written with GitHub as the Git provider repository, CircleCI as the CI, and a Pantheon site.
+
+Substitute your chosen Git Provider and CI service in these instructions with the options of your choice. See [A Build Tools Project's Components](/guides/build-tools#a-build-tools-projects-components) for the supported combinations.
+
+</Alert>
+
+## Prerequisites
+
+Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed.
+
+1. Install [Composer](/composer).
+   - Verify your installation with `composer --version`:
+
+    ```bash{outputLines: 2}
+    composer --version
+    Composer version 1.10.6 2020-05-06 10:28:10
+    ```
+
+1. Install the most recent release of [Terminus](/terminus/).
+   - Verify your installation with `terminus --version`:
+
+    ```bash{outputLines: 2}
+    terminus --version
+    Terminus 2.3.0
+    ```
+
+1. [Add an SSH key](/ssh-keys) in your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+
+1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus.
+
+1. Create the `$HOME/.terminus/plugin` directory if it does not already exist:
+
+  ```bash{promptUser: user}
+  mkdir -p ~/.terminus/plugins
   ```
 
-  <Alert title="Note" type="info">
+1. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
-  Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer) that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.
+   ```bash{promptUser: user}
+   composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0
+   ```
 
-  </Alert>
+### Access Tokens (Optional)
 
-  Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
+The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens) and [CircleCI](https://circleci.com/account/api), which are stored as environment variables. The GitHub token needs the **repo** (required) and **delete-repo** (optional) scopes. Optionally, you may generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
 
-  ![Create Project Prompts](../../../images/pr-workflow/build-env-create-project-prompts.png)
+```bash{promptUser: user}
+export GITHUB_TOKEN=yourGitHubToken
+export CIRCLE_TOKEN=yourCircleCIToken
+```
 
-  This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/ssh-keys) manually to fix the build process.
+If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app).
 
-  <Accordion title="Troubleshooting" id="troubleshoot-install" icon="wrench">
+## Create a Build Tools Project
 
-  <Alert title="Note" type="info">
+Scaffold a new project from a template repository and perform a one-time setup to connect an external Git provider and CI service with Pantheon. This setup also configures SSH keys and environment variables. To use your own template repository see [Customization](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#customization) in the Build Tools Plugin documentation.
 
-  As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
+Modify the commands in the following examples to match your project's needs.
 
-  As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+- Start a GitHub project with WordPress:
 
-  </Alert>
-
-  ### Composer Content-Length Mismatch and/or Degraded Mode
-  If you encounter an issue such as:
-
-  ```php
-  The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: Operation timed out
-  Retrying with degraded mode, check https://getcomposer.org/doc/articles/troubleshooting.md#degraded-mode for more info
-  The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: Operation timed out
-  https://packagist.org could not be fully loaded, package information was loaded from the local cache and may be out of date
-
-  [Composer\Downloader\TransportException]
-  Content-Length mismatch
-
-  create-project [-s|--stability STABILITY] [--prefer-source] [--prefer-dist] [--repository REPOSITORY] [--repository-url REPOSITORY-URL] [--dev] [--no-dev] [--no-custom-installers] [--no-scripts] [--no-progress] [--no-secure-http] [--keep-vcs] [--no-install] [--ignore-platform-reqs] [--] [<package>] [<directory>] [<version>]
-
-  [error]  Command `composer create-project --working-dir=/private/var/folders/lp/7_1gh83s5mn9lwfjvqqlf1lm0000gn/T/local-sitevPumRP pantheon-systems/example-wordpress-composer pantheon-wp-composer-project -n --stability dev` failed with exit code 1
+  ```bash{promptUser: user}
+  terminus build:project:create --git=github --team='My Agency Name' wp my-site
   ```
 
-  This indicates a network level issue. We recommend contacting your Internet Service Provider (ISP) for support. One way to reduce connection woes is to use a non-standard channel with less activity/noise on wireless modems.
+- Start a GitHub project with Drupal 8:
 
-  ### Your requirements could not be resolved to an installable set of packages
-  Check the output for the recommended fix. For example, PHP 7.0 is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
-
-  ### The site name is already taken on Pantheon
-  The following error occurs when running `terminus build:project-create` before authenticating your session with Terminus:
-
-  ```
-  BuildToolsCommand.php line 166:
-      The site name exampleuniquesitename is already taken on Pantheon.
+  ```bash{promptUser: user}
+  terminus build:project:create --git=github --team='My Agency Name' d8 my-site
   ```
 
-  To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus and try the build command again:
+The script will ask for additional information such as tokens/credentials for GitHub and the associated CI.
 
-  ```bash
-  terminus auth:login --machine-token=<machine-token>
-  ```
+For a list of all available command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
 
-  ### Additional Support
-  Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
+### Troubleshooting
 
-    * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
-    * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues)
-    * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues)
+<Accordion title="Troubleshooting" id="troubleshoot-install" icon="wrench">
 
-  </Accordion>
+As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
-2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
+As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
 
-  ![Initial Project Page](../../../images/pr-workflow/initial-project-page.png)
+### Host a Static Site on Pantheon
 
-  The badges on your project page provide quick access to the different components used to manage your site:
+Use Build Tools to help [host a static site or files on Pantheon](/static-site-empty-upstream).
 
-    - The CircleCI page for your project
-    - Your Pantheon dashboard
-    - Your test site
+### Composer Content-Length Mismatch and/or Degraded Mode
 
-  If you click on the CircleCI badge, you can watch your project's initial test run. Once your tests successfully complete, the orange CircleCI "no builds" badge will become a green "passing" badge:
+If you encounter an issue such as:
 
-  ![Passing Project Page](../../../images/pr-workflow/passing-project-page.png)
+```php
+The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: Operation timed out
+Retrying with degraded mode, check https://getcomposer.org/doc/articles/troubleshooting.md#degraded-mode for more info
+The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: Operation timed out
+https://packagist.org could not be fully loaded, package information was loaded from the local cache and may be out of date
+
+[Composer\Downloader\TransportException]
+Content-Length mismatch
+
+create-project [-s|--stability STABILITY] [--prefer-source] [--prefer-dist] [--repository REPOSITORY] [--repository-url REPOSITORY-URL] [--dev] [--no-dev] [--no-custom-installers] [--no-scripts] [--no-progress] [--no-secure-http] [--keep-vcs] [--no-install] [--ignore-platform-reqs] [--] [<package>] [<directory>] [<version>]
+
+[error]  Command `composer create-project --working-dir=/private/var/folders/lp/7_1gh83s5mn9lwfjvqqlf1lm0000gn/T/local-sitevPumRP pantheon-systems/example-wordpress-composer pantheon-wp-composer-project -n --stability dev` failed with exit code 1
+```
+
+This indicates a network-level issue. We recommend contacting your Internet Service Provider (ISP) for support. One way to reduce connection woes is to use a non-standard channel with less activity/noise on wireless modems.
+
+### Your requirements could not be resolved to an installable set of packages
+
+Check the output for the recommended fix. For example, PHP `7.0` is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
+
+### The site name is already taken on Pantheon
+
+The following error occurs when running `terminus build:project-create` before authenticating your session with Terminus:
+
+```bash
+BuildToolsCommand.php line 166:
+    The site name exampleuniquesitename is already taken on Pantheon.
+```
+
+To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus and try the build command again:
+
+```bash{promptUser: user}
+terminus auth:login --machine-token=<machine-token>
+```
+
+### Additional Support
+
+Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
+
+- [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
+- [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
+
+</Accordion>
+
+## View Your New Project Repo
+
+Once your site is ready, the URL to your project page will be printed in the terminal. Copy this address and paste it into a browser to visit your new project on Github:
+
+![Initial Project Page shows title of project in GitHub](../../../images/pr-workflow/initial-project-page.png)

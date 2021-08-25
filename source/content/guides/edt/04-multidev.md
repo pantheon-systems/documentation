@@ -4,6 +4,8 @@ subtitle: Multidev
 anchorid: multidev
 edt: true
 layout: guide
+categories: [develop]
+tags: [git, iterate, multidev, webops, workflow]
 type: guide
 generator: pagination
 pagination:
@@ -25,8 +27,6 @@ All links from the video are provided below.
 **Watch the video:**
 
 <Youtube src="oaIS6LgzTKU" title="Essential Developer Training - Multidev" />
-
-<br />
 
 **Resource Links From Video**
 

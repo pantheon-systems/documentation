@@ -6,6 +6,8 @@ quickstart: true
 anchorid: onserver-dev-part2
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [code, dashboard, iterate, sftp]
 type: guide
 pagination:
   provider: data.quickstartpages
@@ -31,11 +33,11 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
 1.  Navigate to <Icon icon={"embed-close"} text={"Code"}/> in the <Icon icon={"wrench"} text={"Dev"}/> tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
-2.  Click <Icon icon={"info-sign"} text={"SFTP Connection Info"}/> to access the credentials for connecting to your preferred SFTP client.
+2.  Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
-3.  Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
+3.  Click **Open SFTP Client**, and enter your User Dashboard password when prompted.
 
-    If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
+    If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
 
 4.  Now open the `code` folder in your SFTP client, and navigate to the theme you installed previously.
 

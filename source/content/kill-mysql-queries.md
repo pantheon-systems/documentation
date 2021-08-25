@@ -1,15 +1,15 @@
 ---
 title: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
-tags: [debugdb]
-categories: [develop,troubleshoot]
-reviewed: "2020-02-05"
+categories: [troubleshoot]
+tags: [cli, database]
+reviewed: "2020-10-28"
 ---
-Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL Database](/mysql-access).
+Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL database](/mysql-access).
 
-<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs">
+<Enablement title="Ramp up website performance" link="https://pantheon.io/workshops/website-performance-varnish-redis-and-new-relic?docs">
 
-How mature is your web team? Take our Web Team Agility Assessment to find out.
+Make your site faster. Check out our free on-demand training, where you'll learn about caching pages with our Advanced CDN, our Redis backend cache, and see how to use New Relic&reg; Performance Monitoring for monitoring performance.
 
 </Enablement>
 
@@ -39,10 +39,30 @@ mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the foll
 
 Copy the provided query in the output and run as instructed.
 
+## Next Steps
+
+### Troubleshoot With New Relic&reg; Performance Monitoring
+
+To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic). Using our integrated reporting services with New Relic&reg; Performance Monitoring, you can isolate MySQL performance issues on your Drupal or WordPress sites.
+
+### Review Slow Query Logs
+
+Use your site's [MySQL Slow Log](/mysql-slow-log) to troubleshoot MySQL and identify serious performance issues.
+
+### Enable Redis
+
+Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
+
+[Redis](/object-cache) provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+
+### Consider MySQL Replication (WordPress)
+
+Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. [MySQL replication](/hyperdb) rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
+
 ## See Also
 
 - [Access MySQL Databases](/mysql-access)
 - [Database Connection Errors](/database-connection-errors)
 - [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
 - [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb)

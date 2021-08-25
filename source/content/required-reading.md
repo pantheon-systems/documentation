@@ -1,8 +1,8 @@
 ---
 title: 'Required Reading: Essential Pantheon Documentation'
-description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
-tags: [getstarted]
-categories: [getstarted]
+description: Recommended documentation to learn about Pantheon WebOps management platform's technologies.
+categories: [get-started]
+tags: [workflow]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable [WebOps](https://en.wikipedia.org/wiki/Web_operations) platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
@@ -28,10 +28,10 @@ Our tech includes NGINX, PHP, Redis, [Global CDN](/global-cdn-caching), Solr and
 
 ## Run
 - [Optimization for Pantheon and the Cloud](/cloud-optimization)
-- [New Relic Pro](/new-relic)
+- [New Relic&reg; Performance Monitoring](/new-relic)
 - [Applying Upstream Updates](/core-updates)
 - [Global CDN Caching for High Performance](/global-cdn-caching)
-- [Installing Redis on Drupal or WordPress](/redis)
+- [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/sso)
 - [Backup Creation](/backups)

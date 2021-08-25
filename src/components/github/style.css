@@ -1,0 +1,24 @@
+
+.btn-contribute .fa {
+  font-size: 15px;
+  line-height: 0.9;
+}
+.btn-contribute {
+  height: 20px;
+
+  float: left;
+  background-color: #efd01b;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 0px 8px 0px 0px;
+  margin-right: 5px;
+  font-size: 75%;
+  padding: 2px 5px 2px 5px;
+}
+
+.btn-contribute:active,
+.btn-contribute:focus,
+.btn-contribute:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+  color: #44525e;
+}

@@ -3,7 +3,9 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Going Live
 description: Merge your new SAML configuration to your live environment, and update the appropriate values
 contributors: [alexfornuto, danielbachhuber]
-categories: [integrate,develop]
+cms: "WordPress"
+categories: [integrate]
+tags: [sso, saml, users, security, launch]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/going-live
@@ -27,10 +29,10 @@ The values under **Service Provider Settings** will change for each environment 
 
 <Alert type="danger" title="Warning">
 
-We do *not* reccomend transferring the `wp_saml_auth_settings` database values between environments with tools like WP-CFM, as this can overwrite environment-specific values.
+We do *not* recommend transferring the `wp_saml_auth_settings` database values between environments with tools like WP-CFM, as this can overwrite environment-specific values.
 
 </Alert>
 
-Once you've merged and tested your changes in the Live environment, you're done! Congratulations on successfully configuring SAML authenitcation from your Google organization on your WordPress site.
+Once you've merged and tested your changes in the Live environment, you're done! Congratulations on successfully configuring SAML authentication from your Google organization on your WordPress site.
 
-You can stop here, or go on to Advanced Configutation Options to learn how to further customize your authentication gateway.
+You can stop here, or go on to Advanced Configuration Options to learn how to further customize your authentication gateway.

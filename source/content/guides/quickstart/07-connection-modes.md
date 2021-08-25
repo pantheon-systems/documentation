@@ -6,6 +6,8 @@ quickstart: true
 anchorid: connection-modes
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [code, dashboard, git, sftp, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages

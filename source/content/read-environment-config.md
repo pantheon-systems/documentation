@@ -1,8 +1,8 @@
 ---
 title: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
-tags: [variables, infrastructure]
-categories: [platform,develop]
+categories: [platform]
+tags: [code, database, files, redis]
 ---
 
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your site's code.
@@ -56,7 +56,7 @@ $conf = $settings['conf'];
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/redis/#enable-redis) in `settings.php`. For example, for Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, for Drupal 7:
 
 ```php
 // All Pantheon Environments.
@@ -66,7 +66,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
   // All $conf variables and Redis configuration go after extract()
 
-  // If using Redis add appropriate settings per /docs/redis/
+  // If using Redis add appropriate settings per /docs/object-cache/
 
   // Add other $conf variables, for example for Fast 404 pages
 
@@ -89,15 +89,23 @@ Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superg
 
 For more information, see [configuring wp-config.php](/wp-config-php).
 
-## Using $_SERVER
+## Hard-coded Directory References and $_ENV\['HOME']
 
-When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains/#primary-domain).
+As a general best-practice, the home directory should be referenced through the `$_ENV` variable:
+
+```php
+$_ENV['HOME']
+```
+
+### Using $_SERVER
+
+When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains#primary-domain).
 
 For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/server_name-and-server_port).
 
 <Alert title="Note" type="info">
 
-The `$_SERVER` variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of `phpinfo();` displayed on a site, don't leave this open to public viewing. 
+The `$_SERVER` variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of `phpinfo();` displayed on a site, don't leave this open to public viewing.
 
 </Alert>
 

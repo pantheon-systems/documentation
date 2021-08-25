@@ -3,8 +3,9 @@ title: DNS Made Easy Domain Configuration
 provider: DNS Made Easy
 dnsprovider: true
 description: Learn how to point your DNS Made Easy domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/dns-made-easy.md/
 ---
 ## Before You Begin

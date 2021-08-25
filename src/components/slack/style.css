@@ -1,0 +1,25 @@
+.btn-slack {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.btn-slack {
+  height: 25px;
+  color: #000 !important;
+  float: left;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #d5d5d5;
+  padding: 0px 8px 0px 0px;
+  margin-right: 5px;
+  padding: 2px 5px 25px 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-slack:active,
+.btn-slack:focus,
+.btn-slack:hover {
+  opacity: 1 !important;
+  font-weight: bold;
+}

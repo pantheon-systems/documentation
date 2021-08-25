@@ -5,6 +5,9 @@ description: Overview of WordPress multisite support on the Pantheon Platform.
 anchorid: considerations
 layout: guide
 type: guide
+cms: "WordPress"
+categories: [develop]
+tags: [multisite]
 multisite: true
 generator: pagination
 pagination:
@@ -17,16 +20,20 @@ previousurl: guides/multisite/
 editpath: multisite/02-considerations.md
 image: multisite
 ---
-Before you get started using WordPress Site Networks, there are a few key details to keep in mind:
+
+Switching from a single-site to a WordPress Site Network requires migrating the code, database, and files of the single-site into a new Wordpress Site Network.
+
+Before you start using WordPress Site Networks, keep these key details in mind:
 
 * [The decision is permanent](#the-decision-is-permanent).
 * [Choose between subdirectories and subdomains](#choose-between-subdirectories-and-subdomains).
 * [Users are shared](#users-are-shared).
 * [Themes and plugins are shared](#themes-and-plugins-are-shared).
 
-Let's review each point at depth.
+Let's review each point in depth.
 
 ## The Decision is Permanent
+
 The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon.
 
 ## Choose Between Subdirectories and Subdomains

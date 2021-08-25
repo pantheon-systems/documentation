@@ -4,6 +4,7 @@
     title: 'Quick Start Guide'
     sub-title: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart/'
+    type: 'guide'
   topics: 
     - title: 'Get Started'
       summary: 'Migrate existing sites or spin up a new site, then learn how to manage your projects on Pantheon.'
@@ -47,6 +48,21 @@
       icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
+  fourohfourlinks:
+    title: 'Popular Documentation'
+    links:
+      - text: 'Terminus Manual'
+        url: '/terminus/'
+      - text: 'Quick Start Guide'
+        url: '/guides/quickstart/'
+      - text: 'Using the Pantheon Workflow'
+        url: '/pantheon-workflow/'
+      - text: 'Domains and Redirects'
+        url: '/domains/'
+      - text: 'Git FAQs'
+        url: '/git-faq/'
+      - text: 'Generating and Adding SSH Keys'
+        url: '/ssh-keys/'
   three-column-links:
     title: 'Popular Documentation'
     links: 
@@ -70,8 +86,8 @@
         url: '/git-faq/'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
-      - text: 'Installing Redis on Drupal or WordPress'
-        url: '/redis/'
+      - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
+        url: '/object-cache/'
       - text: 'Drupal Drush Command-Line Utility'
         url: '/drush/'
   changelog-preview:

@@ -5,9 +5,11 @@ description: Automate your workflow with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [automate]
+tags: [cli, local, terminus, workflow]
 nexturl: terminus/plugins/
 previousurl: terminus/commands/
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---
@@ -68,7 +70,7 @@ while read -r PANTHEON_SITE_NAME; do
     IS_FROZEN="$(terminus site:info $PANTHEON_SITE_NAME --field=frozen)"
 
     # If the site is frozen
-    if [[ "true" == "${IS_FROZEN}" ]]
+    if [[ "1" == "${IS_FROZEN}" ]]
     then
         # Then skip it
         echo -e "Skipping a backup of the site '$PANTHEON_SITE_NAME' because it is frozen...\n"

@@ -2,15 +2,15 @@
 title: Pantheon Global CDN
 description: Improve Site Performance and Security with Pantheon's Global CDN.
 reviewed: "2020-02-27"
-tags: [CDN,security]
-categories: [develop]
+categories: [performance]
+tags: [cache, cdn, launch, security]
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 70+ global **POP**s (Points Of Presence) where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 70+ global **POP**s (Points Of Presence) where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal WebOps.
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
@@ -34,19 +34,15 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Frequently Asked Questions
 
-### I already have a CDN - should I switch?
+### I already have a CDN. Can I use it with the Pantheon Global CDN?
 
-Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
+Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address.
 
-1. It includes [free and automatic HTTPS service](/https)
+To retain your existing CDN, set up a "stacked CDN" configuration. Ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
-1. It is heavily optimized for website performance
+While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
-1. It is configured, maintained, and supported by Pantheon
-
-1. It is available at no additional cost
-
-Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
+If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service.
 
 ### Is the www-redirector service still available?
 
@@ -67,10 +63,6 @@ No, we pre-configured the CDN so you don’t have to hassle with configuration, 
 ### Do I get access to hit rates or other statistics?
 
 Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics).
-
-### Can I use other CDNs with the Pantheon Global CDN?
-
-Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
 
@@ -96,4 +88,4 @@ To prevent issues with Twitter card validation and to reduce the overall time to
 
 ## Advanced Global CDN
 
-For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/advanced-global-cdn) service.
+For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service.

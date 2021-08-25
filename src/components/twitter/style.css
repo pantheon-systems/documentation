@@ -1,0 +1,26 @@
+
+.btn-twitter .fa {
+  font-size: 15px;
+  line-height: 0.9;
+  color: #fff !important;
+}
+
+.btn-twitter {
+  height: 20px;
+  color: #fff !important;
+  float: left;
+  background-color: rgb(18, 124, 187);
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 0px 8px 0px 0px;
+  margin-right: 5px;
+  font-size: 75%;
+  padding: 2px 5px 2px 5px;
+}
+
+.btn-twitter:active,
+.btn-twitter:focus,
+.btn-twitter:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+  color: #fff !important;
+}

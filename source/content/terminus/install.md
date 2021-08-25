@@ -2,17 +2,12 @@
 title: Terminus Manual
 subtitle: Install
 description: Learn how to install Terminus to your local computer.
-terminusinstall: true
-terminuspage: true
-showtoc: true
-type: terminuspage
 layout: terminuspage
-permalink: docs/terminus/:basename/
-nexturl: terminus/examples/
-previousurl: terminus/
+categories: [develop]
+tags: [cli, local, terminus, workflow]
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
-reviewed: "2020-02-05"
-searchboost: 100
+reviewed: "2020-08-14"
 ---
 
 Terminus is available for macOS and Linux.
@@ -23,7 +18,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 ## Requirements
 
-- PHP Version 5.5.38 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
+- PHP Version 7.0 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
 - [PHP-CLI](http://www.php-cli.com/)
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
@@ -32,26 +27,25 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 There are several ways to install Terminus, depending on your use case:
 
-- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus).
-- For a composer-managed version of Terminus that is _not_ part of your other composer-managed project(s) and doesn't utilize global composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
+- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
+- For a Composer-managed version of Terminus that is _not_ part of your other Composer-managed project(s) and doesn't utilize global Composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
 
-### Standalone Terminus
+### Standalone Terminus PHAR
 
-1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/.bin/` and renaming the file to `terminus`:
+The following commands will:
 
-  ```bash{promptUser: user}
-  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O $HOME/bin/
-  ```
-
-  Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
-
-  Your installation directory must be in or added to your `$PATH` environment variable in order to call `terminus` from any working directory.
-
-1. Make the Terminus file executable. The example below assumes the same installation path as above:
+- create a `terminus` folder in your home directory (`~/`),
+- get the latest release tag of Terminus,
+- download and save the release as `~/terminus/terminus`,
+- make the file executable,
+- add a symlink to your local `bin` directory for the Terminus executable.
 
   ```bash{promptUser: user}
-  chmod +x ~/bin/terminus
+  mkdir ~/terminus && cd ~/terminus
+  curl -L https://github.com/pantheon-systems/terminus/releases/download/$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m{"tag_name": "\K.*?(?=")}g')/terminus.phar --output terminus
+  chmod +x terminus
+  sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
 
 <Alert type="info" title="Note">
@@ -62,7 +56,7 @@ There is an unofficial third-party installer script which will download `terminu
 
 ### Terminus Installer PHAR
 
-Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
+The Terminus `installer.phar` can be used to install a Composer-managed version of Terminus that is not part of your other Composer-managed project(s) and doesn't utilize global Composer installations. Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
 
 ```bash{promptUser: user}
 mkdir ~/terminus && cd ~/terminus
@@ -94,6 +88,10 @@ terminus auth:login --email=dev@example.com
 Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
 ## Troubleshooting
+
+### Terminus PHAR Installer: Parse error near ')'
+
+If you use ZSH and get `parse error near ')'`, ZSH is inserting escape characters (`\`) into the command on paste. You can [disable magic functions](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template#L35-L36) to eliminate this behavior.
 
 ### Permission Denied
 

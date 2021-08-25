@@ -36,7 +36,7 @@ This issue can happen with HTTP Basic Auth and Drupal’s AJAX, as it doesn't al
 We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for JS files, that is the best solution.
 
 ### Pantheon 502 Bad Gateway
-"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx (the web server) will report this problem.
+"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, nginx (the web server) will report this problem.
 
 ### Pantheon 502 Routing failure
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
@@ -61,7 +61,15 @@ This error generally occurs when a request timeouts. If end user pages take long
 If you get a generic Service Unavailable and you're using AJAX when HTTP Basic Auth is enabled (the security username/password), then that's a misleading message. The best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon 504 Target Not Responding
-"The web page you were looking for could not be delivered." No php workers are available to handle the request. These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
+"The web page you were looking for could not be delivered." 
+
+A common cause for this error is an [idle container](/application-containers#idle-containers) that has spun down due to inactivity. Wake the environment by loading the home page in your browser or using the [`terminus env:wake` command](/terminus/commands/env-wake).
+
+"No php workers are available to handle the request."
+
+ These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit is reached, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. 
+ 
+ Once the nginx queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
 
 This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/site-plan).
 
@@ -100,13 +108,64 @@ Pages that leverage a large number of views can often bog down because of the sl
 Individually slow queries should be refactored if possible. However, often caching can help mitigate slow queries or high query volumes quickly. There will still be slow page loads when the cache needs to be populated, but subsequent page-loads should be speedier.
 
 ## External Web Service Calls
-It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
+
+It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third-party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a [timeout](/timeouts) on Pantheon.
 
 Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why extensions (plugins or modules) and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
 
-If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
+### Examples: Set a timeout on an external request
+
+- Set a 10 second timeout on a generic PHP curl request:
+
+   ```php
+   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+   curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+   ```
+
+- Set a 10 second timeout on an external request made with Drupal 7's `drupal_http_request` function:
+
+   ```php
+   $options = array('timeout' => 10);
+   drupal_http_request($url, $options);
+   ```
+
+- Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default. Override that to set a lower value:
+
+   - Globally:
+
+     ```php
+     $settings['http_client_config']['timeout'] = 10;
+     ```
+
+   - For an individual request:
+
+     ```php
+     $client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
+     $client->request('GET', $url, ['timeout' => 10]);
+     ```
+
+- WordPress: Add timeouts using the [http_request_args](https://developer.wordpress.org/reference/hooks/http_request_args/) filter, or the [http_api_curl](https://developer.wordpress.org/reference/hooks/http_api_curl/) action. This code would go in a custom plugin or your theme's `functions.php` file:
+
+   ```php
+   add_filter( 'http_request_args', 'pantheon_http_request_args', 100, 1 );
+   function pantheon_http_request_args( $r )
+   {
+       $r['timeout'] = 10;
+       return $r;
+   }
+​
+   add_action( 'http_api_curl', 'pantheon_http_api_curl', 100, 1 );
+   function pantheon_http_api_curl( $handle )
+   {
+       curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 10 );
+       curl_setopt( $handle, CURLOPT_TIMEOUT, 10 );
+   }
+   ```
+
+If you encounter frequent problems with external web services, evaluate the code making the call, and the service provider itself.
 
 ## Overloaded Workers
+
 If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
 
 ```php
@@ -122,7 +181,7 @@ Even with logging disabled, these errors will still be written to the server PHP
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic Pro](/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic&reg; Performance Monitoring](/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 
 ### Upgrade Your Plan
@@ -134,7 +193,7 @@ If the all the errors have been resolved and the views, batches and tasks have b
 
 There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
 
-If you are seeing timeouts in unexpected places, debugging with New Relic Pro or looking at your php slow logs can be informative.
+If you are seeing timeouts in unexpected places, debugging with New Relic&reg; Performance Monitoring or looking at your php slow logs can be informative.
 
 ## Admin Work-Arounds
 

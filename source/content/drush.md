@@ -1,8 +1,9 @@
 ---
 title: Drupal Drush Command-Line Utility
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
-tags: [devdrush]
-categories: [drupal,workflow]
+cms: "Drupal"
+categories: [develop]
+tags: [drush]
 reviewed: "2020-02-06"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
@@ -11,7 +12,7 @@ Drush commands require a `settings.php` file, and it's a best practice to have o
 
 ## Terminus Drush and Local Drush
 
-Refer to Drush's [install documentation](http://docs.drush.org/en/master/install/) for details on installing Drush locally.
+Refer to Drush's [install documentation](https://docs.drush.org/en/8.x/install/) for details on installing Drush locally.
 
 Drush-savvy developers should also install and utilize [Terminus](/terminus), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
@@ -59,7 +60,6 @@ $aliases['example.*'] = array(
   'ssh-options' => '-p 2222 -o "AddressFamily inet"',
   'path-aliases' => array(
     '%files' => 'files',
-    '%drush-script' => 'drush',
    ),
 );
 ```
@@ -71,7 +71,6 @@ Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sit
   host: appserver.${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1.drush.in
   paths:
     files: files
-    drush-script: drush9
   uri: ${env-name}-example.pantheonsite.io
   user: ${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1
   ssh:
@@ -408,7 +407,7 @@ You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) ins
 
 ### Timeouts When Using Long-Running Migrate or Other Drush Commands
 
-Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](https://pantheon.io/docs/timeouts/). To avoid a timeout related to a lack of output, be sure your commands return output to the terminal session in under 10 minutes.
+Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](/timeouts). To avoid a timeout related to a lack of output, be sure your commands return output to the terminal session in under 10 minutes.
 
 For example, using the `--feedback` flag:
 

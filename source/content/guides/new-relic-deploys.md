@@ -1,22 +1,21 @@
 ---
-title: Automatically Label Code Changes in New Relic using Quicksilver Hooks
-description: A guide to integrating Pantheon and New Relic for deployment labeling.
-tags: [siteintegrations]
-categories: [workflow]
+title: Automatically Label Code Changes in New Relic®; Performance Monitoring using Quicksilver Hooks
+description: A guide to integrating Pantheon and New Relic®; Performance Monitoring for deployment labeling.
+categories: [automate]
+tags: [code, newrelic, quicksilver, workflow]
 type: guide
-permalink: docs/guides/:basename/
-date: 5/1/2017
+permalink: docs/guides/:basename
+reviewed: "2020-08-18"
 contributors: [scottmassey]
 ---
-New Relic is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic Pro within the Site Dashboard on all sites for free.
 
-In this guide, we'll automatically label code changes to your site in New Relic's Deployment page using Pantheon's Quicksilver hooks. This creates a traceable connection between performance changes and code deployments, allowing developers to see if a code change positively or negatively impacted performance.
+New Relic&reg; Performance Monitoring is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic&reg; Pro within the Site Dashboard on all sites for free.
 
-## Activate New Relic Pro
+In this guide, we'll automatically label code changes to your site in New Relic&reg;'s Deployment page using Pantheon's [Quicksilver hooks](/quicksilver/#hooks) and [Terminus](/terminus). This creates a traceable connection between performance changes and code deployments, allowing developers to see if a code change positively or negatively impacted performance.
 
-1. From the Site Dashboard, click **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
-2. Click **Activate New Relic Pro**. The Site Dashboard will begin showing New Relic data shortly after an environment receives web requests.
-3. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Go to New Relic** button.
+## Activate New Relic&reg; Performance Monitoring Pro
+
+Follow the instructions at [New Relic APM Pro](/new-relic/#activate-new-relic-performance-monitoring) to activate New Relic&reg; Performance Monitoring for your site.
 
 ## Configure Quicksilver Hook to Record Deployments
 
@@ -32,10 +31,17 @@ export site=yoursitename
 
 </Alert>
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/git#clone-your-site-codebase) and navigate to the project's root directory. You can use Terminus to provide the clone command:
 
-  ```bash{promptUser:user}
+  ```bash{outputLines:2-3}
   terminus connection:info $site.dev --fields='Git Command' --format=string
+
+  git clone ssh://codeserver.dev.2187...d85b@codeserver.dev.2187...d85b.drush.in:2222/~/repository.git sitename
+  ```
+
+  After you copy and run the output command, change directory to the site code root:
+
+  ```bash{promptUser: user}
   cd $site
   ```
 
@@ -92,11 +98,8 @@ export site=yoursitename
 
   ![Deployment tab display](../../images/integrations/newrelic/deploy_tab.png)
 
-  You can also view deployments from the Overview tab:
-
-  ![Deployment overview display](../../images/integrations/newrelic/deploy_marker.png)
-
-1. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic.
+1. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic&reg; Performance Monitoring.
 
 ## Conclusion
-This is a fast way to integrate New Relic and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
+
+This is a fast way to integrate New Relic&reg; Performance Monitoring and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.

@@ -1,8 +1,8 @@
 ---
 title: Managing Drupal and WordPress Subsites Under a Single Domain
 description: Best practices for having Drupal or WordPress subsites on one domain.
-tags: [redirects]
 categories: [go-live]
+tags: [multisite, redirects]
 ---
 Pantheon only supports one application codebase and one database per site. We do not support database prefixes or Drupal multisite. Our workflow, backup, and deployment tools only perform as expected given the standard Pantheon setup.
 

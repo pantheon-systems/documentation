@@ -1,8 +1,8 @@
 ---
 title: Use the Pantheon WebOps Workflow
 description: Understand the Pantheon WebOps workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
-tags: [workflow, dashboard]
-categories: [get-started,develop]
+categories: [get-started]
+tags: [workflow, dashboard, webops]
 ---
 
 <Alert title="Note" type="info">
@@ -13,9 +13,9 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev).
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline WebOps workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps practices.
+Optimize your dev team and streamline WebOps workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps practices.
 
 </Enablement>
 
@@ -65,7 +65,7 @@ Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt yo
 
  - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
- - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for databse changes.
+ - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
 
    On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
@@ -110,7 +110,7 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev. There are two ways to update code in Test or Live:
 
-1. **Use the Workflow** (Recommended): Deploy code from Dev to Test to Live via the Site Dashboard or Terminus as outlined above.
+1. **Use the Workflow** (Recommended): Deploy code from Dev to Test to Live via the Site Dashboard or Terminus as outlined above, beginning in the [Combine Code from Dev and Content from Live in Test](#combine-code-from-dev-and-content-from-live-in-test) section.
 
 2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
@@ -118,7 +118,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 You may also clone, import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
-The [database clone operation](/sites/#database--files) excludes some tables by default. The excluded tables are:
+The [database clone operation](/database-workflow#cloning-the-database) excludes some tables by default. The excluded tables are:
 
 * `cache`
 * `cache_block`

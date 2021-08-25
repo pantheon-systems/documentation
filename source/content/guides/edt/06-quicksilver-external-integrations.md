@@ -4,6 +4,8 @@ subtitle: External Integrations
 anchorid: external-integrations
 edt: true
 layout: guide
+categories: [integrate]
+tags: [collaborate, continuous-integration, quicksilver, webops, workflow]
 type: guide
 generator: pagination
 pagination:
@@ -25,8 +27,6 @@ All links from the video are provided below.
 **Watch the video:**
 
 <Youtube src="4BRX12bFO4Q" title="Essential Developer Training - External Integrations" />
-
-<br />
 
 **Resource Links From Video**
 

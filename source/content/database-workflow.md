@@ -1,8 +1,8 @@
 ---
 title: Database Workflow Tool
 description: Learn about the database that runs in your Pantheon Drupal or WordPress site.
-tags: [services, dashboard, workflow]
-categories: [get-started,platform,develop]
+categories: [platform]
+tags: [dashboard, database, workflow]
 ---
 The Pantheon platform provides each site environment with a dedicated MySQL container running [MariaDB](https://en.wikipedia.org/wiki/MariaDB) that can be maintained remotely or locally. For a comprehensive list of MySQL settings, [access your database](/mysql-access/#database-connection-information) and use the [SHOW VARIABLES](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) statement.
 
@@ -34,10 +34,12 @@ Learn more about the [Pantheon Workflow](/pantheon-workflow).
 <Partial file="search-replace-domains.md" />
 
 ### Base table or view not found
+
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.
 
 However, Drupal 7 sites using the configuration override system to enable CSS aggregation and compression (`$conf['preprocess_css'] = 1;`) will see the following error after wiping an environment:
-```
+
+```sql
 Additional uncaught exception thrown while handling exception.
 
 Original
@@ -63,13 +65,13 @@ Sites with large databases may encounter a timeout when trying to run `terminus 
 
 You can avoid this by configuring your local machine to send an SSH keepalive packet every 60 seconds. Add this to your `$HOME/.ssh/ssh_config` file:
 
-```
+```ini
 Host *.drush.in
   ServerAliveInterval 60
 ```
 
 ## See Also
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
 - [MySQL Slow Log](/mysql-slow-log)
 - [Converting MySQL Tables from MyISAM to InnoDB](/myisam-to-innodb)
 - [Database Connection Errors](/database-connection-errors)

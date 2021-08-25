@@ -2,25 +2,24 @@
 title:  Terminus Manual
 subtitle: Get Started
 terminuspage: true
-description: Manual for our command line interface, Terminus, for advanced interaction with Pantheon.
+description: Manual for the Terminus command line interface for advanced interaction with the Pantheon platform.
 type: terminuspage
 layout: terminuspage
-tags: [devterminus]
-categories: [workflow,develop]
-permalink: docs/:basename/
+categories: [develop]
+tags: [cli, drush, terminus, workflow, wp-cli]
+permalink: docs/:basename
 nexturl: terminus/install/
 image: terminus-thumbLarge
 reviewed: "2020-02-05"
-searchboost: 200
 ---
 
-Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
+The Terminus command line interface provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
 Install Terminus on macOS or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). For details on legacy versions of Terminus, see [Legacy Terminus Versions](/terminus/get-started/legacy/).
 
-<Enablement title="Command Line Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Command Line Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 

@@ -1,8 +1,8 @@
 ---
 title: Running WordPress and Drupal as a Backend API
 description: Learn about headless development models for decoupled architecture on Pantheon.
-tags: [infrastructure]
-categories: [platform]
+categories: [develop]
+tags: [modules, plugins]
 contributors: [eabquina, rachelwhitton]
 ---
 Pantheon supports running WordPress and Drupal as an API (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
@@ -56,7 +56,7 @@ Some key differences of decoupled architecture include:
 Backend APIs running on Pantheon take advantage of the following platform features for optimal performance:
 
 * [**Global CDN**](/global-cdn): Cache backend API responses from WordPress or Drupal in 40+ global POPs (points of presence).
-* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Installing Redis on Drupal or WordPress](/redis).
+* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 <!--todo: does solr belong here? help wanted describing the benefits of solr in context of decoupled site.]-->
 
 

@@ -2,6 +2,8 @@
 title: Terminus 2.0
 description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [alexfornuto]
+categories: [platform]
+tags: [cli, drush, local, wp-cli, terminus]
 ---
 
 <Alert title="Note" type="info" >

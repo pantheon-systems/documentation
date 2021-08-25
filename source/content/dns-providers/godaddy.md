@@ -3,8 +3,9 @@ title: GoDaddy Domain Configuration
 provider: GoDaddy
 dnsprovider: true
 description: Learn how to point your GoDaddy domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/godaddy.md/
 ---
 ## Before You Begin

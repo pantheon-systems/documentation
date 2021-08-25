@@ -1,9 +1,10 @@
 ---
 title: Backups Tool
 description: Learn how to backup your Drupal or WordPress site on Pantheon.
-tags: [getstarted]
-categories: []
+tags: [backups, security]
+categories: [develop]
 ---
+
 The Backups tab is where you manage all the details for your site's backup. Each backup contains three components: code, database, and files.
 
 - **Code** is anything version controlled and committed via the Site Dashboard. Uncommitted SFTP changes to code are not backed up.
@@ -18,7 +19,7 @@ We strongly urge you to backup your site regularly.
 
 This doc offers [Terminus](/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
-```bash
+```bash{promptUser: user}
 export site=yoursitename
 export env=dev
 ```
@@ -41,7 +42,7 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 
 If you prefer the command line, you can use [Terminus](/terminus) to create backups:
 
-```bash
+```bash{promptUser: user}
 terminus backup:create $site.$env --element=<element> --keep-for=<days>
 ```
 
@@ -61,7 +62,7 @@ Backups created on Pantheon are stored offsite on Google Cloud Storage instances
 
 <Download file="pantheon-backup-to-s3.sh" />
 
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/master/source/scripts/pantheon-backup-to-s3.sh.txt bash GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/pantheon-backup-to-s3.sh.txt bash GITHUB-EMBED
 
 ### Via the Dashboard
 
@@ -81,39 +82,39 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 ### Via the Command Line
 
-If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`Wget`](https://www.gnu.org/software/wget/) or [Terminus](/terminus).
 
+#### Unix/MacOS
+
+```bash{promptUser: user}
+wget https://storage.googleapis.com/gcs-pantheon-backups/...
 ```
-wget "wget https://storage.googleapis.com/gcs-pantheon-backups/..."
+
+#### Windows
+
+When using Wget in the Windows Powershell, wrap the URL in double quotes (`"`). The shell doesn't return any output until the download completes:
+
+```bash{promptUser: winshell}
+wget "https://storage.googleapis.com/gcs-pantheon-backups/..."
 ```
 
-You can also use [Terminus](/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
+#### Terminus
 
-```bash
+Note that `--element=all` is only available when creating backups and not when downloading:
+
+```bash{promptUser: user}
 terminus backup:get $site.$env --element=<code|files|db> --to=path/to/file.tar.gz
 ```
 
-<Alert title="Note" type="info">
-
-When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
-
-</Alert>
+File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`. When specifying the file path for `--to`, be sure to use the correct extension.
 
 Select an older archive by running `terminus backup:list $site.$env`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
 
-```bash
+```bash{promptUser: user}
 terminus backup:get $site.$env --file=<filename> --to=path/to/file.tar.gz
 ```
 
-Now that you have created the archive files, check out how to [restore an environment from a backup](/restore-environment-backup).
-
-
-<Alert title="Note" type="info">
-
 Links to backups are signed URLs directly from Google Cloud Storage and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.
-
-</Alert>
-
 
 ## Restore From an Existing Backup
 
@@ -126,7 +127,7 @@ For a clear visual of the Git repo contents, you can use a free tool like [Sourc
 
 <Alert title="Note" type="info">
 
-The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/wordpress/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore).
+The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore).
 
 </Alert>
 

@@ -1,8 +1,8 @@
 ---
 title: The Site Dashboard
 description: Learn how to use the Pantheon Site Dashboard to build and manage your Drupal or WordPress sites.
+categories: [platform]
 tags: [dashboard]
-categories: [getstarted]
 reviewed: "2020-02-07"
 ---
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
@@ -13,6 +13,12 @@ At the top of the page you'll find all the environments for your site: Dev, Test
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
 
+## Workflows
+
+When there is a change to the structure of the site, such as a site plan change, newly committed code changes, cleared code cache, an automated backup completes, etc., the status of that event appears in the <dfn id="workflows">Workflows</dfn> dropdown. If the status is red, the transaction failed and more information may be available in the Status or Errors sections.
+
+When an event has triggered a Workflow, an animated <span class="fa fa-spinner"></span> icon appears to the left of **Workflows**.
+
 ## Team
 
 The Team tab allows you to change the site owner; add supporting agencies; and add, manage, and delete users. For more information, see [Team Management](/team-management).
@@ -21,7 +27,7 @@ The Team tab allows you to change the site owner; add supporting agencies; and a
 
 ### Add-Ons
 
-Pantheon offers several add-ons to help you build dynamic sites. These include [Apache Solr](/solr) and [Redis](/redis).
+Pantheon offers several add-ons to help you build dynamic sites. These include [Apache Solr](/solr) and [Redis](/object-cache).
 
 ### Delete Site
 
@@ -66,7 +72,7 @@ Here you can find the [SSH clone URL](/git), [Database Connection Information](/
 The core of the Pantheon Workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
-- **Content** includes files not under Git version control, like images and pdfs, and the database.
+- **Content** includes files not under Git version control, like images and PDFs, and the database.
 
 The [Code tool](/code) on Dev/Multidev environments includes a Connection Mode toggle to switch between SFTP and Git. The Code tool on the Test and Live environments displays a Commit Log that displays all the commits that are on the environment.
 
@@ -127,7 +133,9 @@ Set a common password for accessing an environment to add an extra layer of secu
 
 ## Site UUID
 
-Every user, organization, product and site is assigned a UUID which is internal to Pantheon. The site UUID is found within the URL for the site Dashboard and resembles the following:
+Every user, organization, product, and site is assigned a <dfn id="UUID">UUID</dfn> which is internal to Pantheon. The site UUID is unique combination of 32 alphanumeric characters, found within the URL for the site Dashboard.
+
+A UUID resembles the following:
 
 ```none
 de305d54-75b4-431b-adb2-eb6b9e546014

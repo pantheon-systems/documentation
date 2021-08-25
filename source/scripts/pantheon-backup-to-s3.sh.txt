@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # pantheon-backup-to-s3.sh
 # Script to backup Pantheon sites and copy to Amazon s3 bucket

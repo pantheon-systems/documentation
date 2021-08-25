@@ -2,10 +2,11 @@
 title: Introduction to Terminus
 description: The Pantheon CLI.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename/
-categories: [develop,workflow]
-tags: [devterminus]
+permalink:  docs/videos/:basename
+categories: [develop]
+tags: [terminus, workflow, cli, wp-cli, drush]
 layout: video
+type: video
 searchboost: 50
 ---
 
@@ -21,9 +22,7 @@ And deploy changes between Dev, Test, and Live environments. I’ll do this by r
 
 If it can be accomplished in the Pantheon dashboard, it can probably be accomplished with Terminus.
 
-
 You can also execute Drupal or WordPress-specific commands using Drush or WP-CLI. For example, the command  `terminus drush` followed by the site name and environment, then `user-create -- newuser1` with the email address of the user, can be used to create a new Drupal user.
-
 
 Update WordPress plugins by running `terminus wp` the site name and environment, `-- plugin update --all`, to update all.
 
@@ -34,7 +33,6 @@ You can write scripts in Terminus to automate numerous other tasks for both Word
 Terminus can help you access extra data and functionality that isn’t available in the Pantheon dashboard. For example, we can run the command `terminus workflow:watch` to stream workflow data on the `drushme` site.
 
 In this example, I am switching the connection mode from SFTP to Git. And now I’m running a backup from the dashboard.
-
 
 You can also add commands to Terminus by [installing plugins](/terminus/plugins). [Official Pantheon plugins](/terminus/plugins/directory) can be downloaded from our website or you can [write your own](/terminus/plugins/create).
 

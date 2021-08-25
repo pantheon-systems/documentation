@@ -1,8 +1,8 @@
 ---
 title: Billing in the Site Dashboard
 description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
-tags: [billing]
-categories: [manage,go-live]
+categories: [manage]
+tags: [billing, dashboard]
 reviewed: "2020-01-10"
 ---
 
@@ -28,20 +28,26 @@ Changing your site billing is typically done at launch time. For a comprehensive
 
 The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
-<Alert tile="Note" type="info">
+<Alert title="Note" type="info">
 
 If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
+
+## View a Recent Invoice from the Dashboard
+
+<Partial file="view-invoices.md" />
 
 ## Transfer Ownership and Billing for This Site
 
 <Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
 
-## Add New Credit Card
+## Your Credit Cards
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+### Add a New Credit Card
+
+If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all plans, use the steps in this section to add a new credit card profile in the **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** section of your User Dashboard.
 
 1. If the site:
     - Is currently in Sandbox mode:
@@ -50,14 +56,16 @@ If you need to assume site and billing ownership, the current Site Owner must tr
     - Already has a card associated with it:
         - Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
 
+1. Go to the Site Dashboard and click the **Billing** tab.
+
+1. Find the existing card under **Billing Information** and click **Change** next to it, then click **Add New Card**.
+
 1. Enter your credit card information and click **Add Card**.
 
 1. To add the card to the site, select the new card and click **Update Credit Card**.
     - Skip this step to store the card without adding it to the site.
 
-This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard. Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
-
-## Your Credit Cards
+Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
 
 ### Bill This Site to a New Card
 
@@ -82,6 +90,10 @@ After downgrading from a paid plan to Sandbox, remove the card as a payment meth
 
  You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
 
+### Replace or Update an Old or Expired Credit Card
+
+<Partial file="replace-credit-card.md" />
+
 ## Frequently Asked Questions
 
 ### What forms of payment are accepted?
@@ -102,9 +114,9 @@ No, payment for a site can only come from one card at a time.
 
 ### Why don't I get email notifications about upcoming billing?
 
-Billing emails are only sent to the billing contact email, set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment:
+When a billing cycle approaches, billing emails are only sent to the billing contact email. The billing contact is set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment.
 
-![Billing Contact](../images/dashboard/billing-contact.png)
+To update the email to which notifications are sent, follow the steps in [Replace or Update an Old or Expired Credit Card](#replace-or-update-an-old-or-expired-credit-card). Use the same card information with a new email address in the **Add Payment Method** modal to receive emails at a different address while continuing to bill the same card.
 
 If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 
@@ -113,4 +125,4 @@ If you are the billing contact for an online site plan, check your spam folder, 
 - [Account Billing in the User Dashboard](/account-billing)
 - [Manage Plans in the Site Dashboard](/site-plan)
 - [Traffic Limits and Overages](/traffic-limits)
-- [New Site Plans FAQs](/new-plans-faq)
+- [Site Plans FAQs](/site-plans-faq)

@@ -4,6 +4,8 @@ subtitle: Going Live
 anchorid: going-live
 edt: true
 layout: guide
+categories: [go-live]
+tags: [dns, launch]
 type: guide
 survey: true
 generator: pagination
@@ -26,13 +28,10 @@ All links from the video are provided below.
 
 <Youtube src="f8gM5l7dJr8" title="Essential Developer Training - Going Live" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Pricing Comparison](https://pantheon.io/plans/pricing-comparison)
  - [Performance and load testing](/load-and-performance-testing)
- - [Varnish Checker](https://varnishcheck.pantheon.io/)
  - [Performance guide](/guides/frontend-performance)
  - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/)
  - [Webpagetest.org](https://www.webpagetest.org)
@@ -54,8 +53,8 @@ All links from the video are provided below.
 
 </Callout>
 
-<Enablement title="Getting Essential Developer Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Getting Essential Developer Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
+Ramp up faster with an on-demand, recorded version of this material, delivered by Pantheon's Developer Advocacy team.
 
 </Enablement>

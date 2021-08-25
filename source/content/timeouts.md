@@ -1,11 +1,14 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
-tags: [debugging, timeouts, drush, terminus, drupal, wordpress, solr]
-categories: [troubleshoot,platform]
+categories: [troubleshoot]
+tags: [cron, drush, ssh, solr, terminus]
 reviewed: "2020-03-18"
 ---
-Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus).
+
+Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. 
+
+When troubleshooting timeout errors, first verify that the timeout is not caused by [idle application containers](/application-containers#idle-containers). Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus). 
 
 ## User-Configurable Timeouts
 
@@ -18,9 +21,9 @@ Rules are for the good of the group, and timeouts are no exception. Timeouts are
 
 | Name                                                                                                                         | Timeout     | Description |
 |:---------------------------------------------------------------------------------------------------------------------------- |:----------- |:----------- |
-| Connection Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for a timeout. |
-| First Byte Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for the first byte. |
-| Between Bytes Timeout                                                                                                        | 59 seconds  | Number of seconds to wait for between bytes. |
+| Connection Timeout                                                                                                           | 120 seconds  | Number of seconds to wait for a timeout. |
+| First Byte Timeout                                                                                                           | 120 seconds  | Number of seconds to wait for the first byte. |
+| Between Bytes Timeout                                                                                                        | 120 seconds  | Number of seconds to wait for between bytes. |
 | Pantheon executed Drupal cron                                                                                                | 180 seconds | Only applies to Pantheon's automatic hourly execution of Drush cron. |
 | [PHP set_time_limit](https://secure.php.net/manual/en/function.set-time-limit.php)                                           | 120 seconds | Number of seconds a script can run. If reached, the script returns a fatal error. |
 | Load Balancer                                                                                                                | 120 seconds | Applies to HTTPS requests and requests to a DNS A record. Requests using the Pantheon CNAME for HTTP requests are *not* limited. |

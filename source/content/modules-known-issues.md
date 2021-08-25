@@ -1,17 +1,18 @@
 ---
 title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
-tags: [Drupal, modules]
-categories: [troubleshoot, integrate]
+cms: "Drupal"
+categories: [troubleshoot]
+tags: [modules]
 ---
 
-This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/support).
+This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/support).
 
 We do not prevent you from installing and using these plugins/modules. However, we cannot provide support for incompatible modules, or if they are used against the guidance provided here.
 
 **Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
 
-If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md).
+If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-known-issues.md).
 
 ___
 
@@ -26,7 +27,7 @@ ___
 
 <ReviewDate date="2020-02-10" />
 
-**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
+**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. Refer to the [Platform Considerations](/platform-considerations/#nginx.conf) documentation and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182) for more information.
 ___
 
 ## [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
@@ -38,23 +39,25 @@ ___
 
 ## [Background Process](https://www.drupal.org/project/background_process)
 
-**Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform. See [https://www.drupal.org/node/2233843](https://www.drupal.org/node/2233843).
+**Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform. Refer to [https://www.drupal.org/node/2233843](https://www.drupal.org/node/2233843) for more information.
 
 ___
 
 ## [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/backups/#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/backups/#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F) for more information.
 
-**Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. See [Access Backups](/backups/#access-backups) for more details.
+**Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. Refer to the [Access Backups](/backups/#access-backups) documentation for more details.
 
 ___
 
-## [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
+## [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth)
 
-**Issue**: This contrib module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
+<ReviewDate date="2020-08-25" />
 
-**Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/security/#troubleshoot).
+**Issue**: This module conflicts with [Pantheon's Dashboard Security Tool](/security#password-protect-your-sites-environments) when both are enabled on Drupal sites, resulting in 403 errors.
+
+**Solution**:  We suggest using Pantheon's Dashboard Security Tool if you want to set up HTTP authentication. Additionally, refer to [Advanced Redirects and Restrictions](/advanced-redirects) for more options to control and restrict access to some or all of your site.
 
 ___
 
@@ -68,7 +71,7 @@ ___
 
 ## [Boost](https://www.drupal.org/project/boost)
 
-**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. See [Pantheon's Global CDN](/global-cdn).
+**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. Refer to [Pantheon's Global CDN](/global-cdn) documentation for more information.
 
 ___
 
@@ -86,7 +89,7 @@ ___
 
 This module has been deprecated by its authors for Drupal 8 and above. The suggestions made below are for Drupal 7 users, and are not guaranteed to be successful in all use cases.
 
-If you're creating a new site that needs Composer-managed libraries, we strongly reccomend using Drupal 8.1 or newer.
+If you're creating a new site that needs Composer-managed libraries, we strongly recommend using Drupal 8.1 or newer.
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
@@ -109,15 +112,32 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 ___
 
-## [Fast 404](https://www.drupal.org/project/fast_404)
+## [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
 
-<ReviewDate date="2018-06-22" />
+<ReviewDate date="2021-08-13" />
 
-**Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
+This plugin is [deprecated](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
 
-**Solution**: Pressflow settings can be [decoded in settings.php](/read-environment-config) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"])`.
+**Issue**: The `wikimedia/composer-merge-plugin` package plugin automatically runs `composer update` during `composer install`, causing conflicts with Pantheon's Integrated Composer framework. 
 
-Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/sites/default/default.settings.php#L518) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.4/sites/default/default.settings.php#L640) cores provide a basic version of this same feature via configuration in `settings.php`.
+**Solution**: Sites managing dependencies for a custom project should move to the recommended [path repository method](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
+___
+
+## [DropzoneJS](https://www.drupal.org/project/dropzonejs)
+
+<ReviewDate date="2020-06-30" />
+
+**Issue:** Uploads using the "Media Entity DropzoneJS" widget do not reliably work on Pantheon. The widget relies on a temporary path that is not shared between application containers. Refer to [this issue](https://www.drupal.org/project/dropzonejs/issues/2916330) for more information.
+
+___
+
+## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference)
+
+<ReviewDate date="2021-08-06" />
+
+Dynamic Entity Reference provides a field combination for Drupal 8 that allows for the reference of more than one entity type.
+
+**Issue**: The Dynamic Entity Reference module is an alpha version contributor module, and the MySQL queries it creates cannot be controlled or regulated. MySQL triggers are not well supported in Drupal or WordPress applications. On Pantheon, when cloning the database between environments, these triggers may not work or may cause errors when used.
 
 ___
 
@@ -149,7 +169,42 @@ ___
 
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
- **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/security/#troubleshoot).
+ **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, refer to [Security on the Pantheon Dashboard](/security/#troubleshoot) for more information.
+
+___
+
+## [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
+
+**Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
+
+**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
+
+1. [Enable the Object Cache](/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
+1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
+
+ ```php:title=imce.page.inc
+ $cache_key = 'imce-' . $file;
+ $cache = cache_get($cache_key);
+ if ($cache) {
+  return $cache->data;
+ }
+ if
+ (is_file($file) && ($dot = strrpos($file, '.')) &&
+ in_array(strtolower(substr($file, $dot+1)), array('jpg', 'jpeg',
+ 'gif','png')) && ($info = @getimagesize($file)) &&
+ in_array($info[2], array(IMAGETYPE_JPEG, IMAGETYPE_GIF, IMAGETYPE_PNG)) )
+ {
+   $result = array('width' => $info[0], 'height' => $info[1], 'type' => $info[2], 'mime' => $info['mime']);
+   cache_set($cache_key, $result);
+   return $result;
+ }
+ return FALSE;
+ }
+ ```
+
+1. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
+
+You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
 
 ___
 
@@ -186,13 +241,13 @@ ___
 
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 ___
 
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 
-**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 **Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
@@ -212,7 +267,7 @@ ___
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site's cache after importing the data.
 
- Additionally, Pathologic can cause the change of base URLs in a domain access configuration based on the value of `$options['url']` in the site Drush config. This is set to the first domain listed on an environment by default on Pantheon, which can result in unexpected root domains being written to the cache. See [our Drush documentation](/drush/#known-limitations) for more information about overriding this value.
+ Additionally, Pathologic can cause the change of base URLs in a domain access configuration based on the value of `$options['url']` in the site Drush config. This is set to the first domain listed on an environment by default on Pantheon, which can result in unexpected root domains being written to the cache. Refer to [our Drush documentation](/drush/#known-limitations) for more information about overriding this value.
 
 ## [Persistent Login](https://www.drupal.org/project/persistent_login)
 
@@ -221,9 +276,9 @@ ___
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
  ___
 
-## [Plupload](https://www.drupal.org/project/plupload)
+## Plupload
 
-**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**: [Plupload](https://www.drupal.org/project/plupload) requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in `settings.php`. Example:
 
@@ -231,18 +286,11 @@ ___
 $conf['plupload_temporary_uri'] ='private://tmp';
 ```
 
-You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:
-
-```php:title=filefield_sources_plupload.module
-$temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filename);
-```
-
-This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
 ___
 
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 
-<ReviewDate date="2020-02-10" />
+<ReviewDate date="2020-05-05" />
 
 **Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
@@ -266,6 +314,11 @@ if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') 
   $conf['recaptcha_site_key'] = NULL;
 }
 ```
+
+___
+
+**Issue 3:** reCAPTCHA relies on `$_SERVER['SERVER_NAME']` which is ephemeral on horizontally-scaled platforms like Pantheon. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) for details and workarounds.
+
 ___
 
 ## [S3 File System](https://www.drupal.org/project/s3fs)
@@ -294,13 +347,13 @@ ___
 
 <ReviewDate date="2020-03-12" />
 
-**Issue**: This module overrides a class from the [Pantheon Apache Solr module](/solr-drupal-7) responsible for connecting to Pantheon's Apache Solr service. As a result, Solr connection is lost.
+**Issue**: This module overrides a class from the [Pantheon Apache Solr module](/guides/solr-drupal/solr-drupal-7) responsible for connecting to Pantheon's Apache Solr service. As a result, Solr connection is lost.
 
 **Solution**: Instead of patching the module, you can fix the issue with a custom module:
 
-1. Define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa). See the [module source code](https://git.drupalcode.org/project/search_api_solr_date_sort/-/blob/7.x-1.x/includes/service.inc) for examples.
+1. Define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa). Refer to the [module source code](https://git.drupalcode.org/project/search_api_solr_date_sort/-/blob/7.x-1.x/includes/service.inc) for examples.
 
-1. Implement the `hook_search_api_service_info_alter()` function in your custom module's `.module` file and add your class into a configuration array. See the [developer documentation](https://www.drupal.org/node/1999396) for details. Ensure that your [module's weight](https://www.drupal.org/docs/7/creating-custom-modules/howtos/how-to-update-a-modules-weight) is gereater than that of `search_api_solr_date` and `pantheon_apachesolr`.
+1. Implement the `hook_search_api_service_info_alter()` function in your custom module's `.module` file and add your class into a configuration array. Refer to the [developer documentation](https://www.drupal.org/node/1999396) for details. Ensure that your [module's weight](https://www.drupal.org/docs/7/creating-custom-modules/howtos/how-to-update-a-modules-weight) is gereater than that of `search_api_solr_date` and `pantheon_apachesolr`.
 
 ___
 
@@ -311,20 +364,20 @@ ___
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 ___
 
-## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 8 (core)
+## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 8/9 (core)
 
-<ReviewDate date="2020-03-26" />
+<ReviewDate date="2021-03-17" />
 
 **Issue**: Sometimes, after a fresh system install, the **Manage** > **Extend** > **+ Install new module** and **Manage** > **Appearance** > **+ Install new theme** buttons are missing.
 
-This is a known bug in Drupal 8. See [#3033480](https://www.drupal.org/project/drupal/issues/3033480) for more information.
+This is a known bug in Drupal 8 and Drupal 9. Refer to Issue [#2350711](https://www.drupal.org/project/drupal/issues/2350711) for more information.
 
-**Solution**: 
+**Solution**:
 
 1. Navigate to the **Manage** > **Extend** page at `/admin/modules`.  
-1. Click the **Uninstall** tab, and uninstall the Update Manager module. 
-1. Click the **List** tab and re-install the Update Manager. 
-1. [Clear the cache](/clear-caches). 
+1. Click the **Uninstall** tab, and uninstall the Update Manager module.
+1. Click the **List** tab and re-install the Update Manager.
+1. [Clear the cache](/clear-caches).
 
 ___
 
@@ -332,12 +385,12 @@ ___
 
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. See [Pantheon's Global CDN](/global-cdn)
+**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/global-cdn) documentation. 
 ___
 
 ## [Views data export](https://www.drupal.org/project/views_data_export)
 
-**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) below for more information.
+**Issue**: This module requires the use of the `/tmp` directory. Refer to [Using the tmp Directory](#using-the-tmp-directory) below, for more information.
 
 **Solution**: A possible solution would be to set the export directory in `settings.php` to a `public://` stream wrapper location versus a `temporary://` one.  Example:
 
@@ -357,7 +410,7 @@ Additionally, the variable can be set using Drush:
 drush vset views_data_export_directory 'public://'
 ```
 
-Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733).
+Also refer to the [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733).
 
 ___
 

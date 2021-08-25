@@ -1,10 +1,10 @@
 ---
 title: Parsing Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
-tags: [logs, nginx, goacess]
 categories: [performance]
+tags: [logs, measure]
 contributors: [albertcausing, sarahg]
-reviewed: "2020-01-09"
+reviewed: "2020-08-29"
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
@@ -25,7 +25,7 @@ Be sure that you have:
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
   
-This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.3 ([release notes](https://goaccess.io/release-notes#release-1.3)).
+This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.4 ([release notes](https://goaccess.io/release-notes)).
 
 ## Edit GoAccess Configuration
 
@@ -36,9 +36,9 @@ The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goacces
 Add the following lines to the `goaccess.conf` file:
 
 ```none:title=goaccess.conf
-time-format %T
+time-format %H:%M:%S
 date-format %d/%b/%Y
-log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
+log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
 ```
 
 ## Create a report
@@ -71,21 +71,14 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
   ```
 
 ### Troubleshooting "goaccess.conf Not Found"
-In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found by the binary. To resolve:
 
-1. Display the default config path:
+In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess versions 1.3 and earlier, `goaccess.conf` is not found by the binary.
 
-  ```bash{promptUser: user}
-  goaccess --dcf
-  ```
+To resolve, [update your local packages](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages), or to update the GoAccess package specifically:
 
-1. Move `goaccess.conf` from `/usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess` to `/usr/local/Cellar/goaccess/[VERSION]/conf/etc`:
-
-  ```bash{promptUser: user}
-  mv /usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess /usr/local/Cellar/goaccess/[VERSION]/conf/etc
-  ```
-
-An [issue has been filed](https://github.com/allinurl/goaccess/issues/1640) on the GoAccess repo.
+```bash{promptUser: user}
+brew upgrade goaccess
+```
 
 ## Automate GoAccess Reports
 

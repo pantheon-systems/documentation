@@ -1,14 +1,10 @@
-<Alert title="Warning" type="danger">
-
 Drupal 8.7.x sites that have modified the `config_sync_directory` value in `settings.php` may see this error when upgrading to Drupal 8.8.x:
 
-<br/>
-
-**`CONFIGURATION SYNC DIRECTORY`**
-
-The directory *sites/default/config* does not exist.
-
-<br/>
+> **`CONFIGURATION SYNC DIRECTORY`**
+>
+> The directory *sites/default/config* does not exist.
+>
+>
 
 To resolve (or avoid before upgrading), update the modified code as follows:
 
@@ -26,6 +22,4 @@ To resolve (or avoid before upgrading), update the modified code as follows:
   $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
   ```
 
-**Note:** `example-drops-8-composer` (the starting template for all Composer-managed sites on Pantheon) includes this configuration in `settings.php`. Any site built from this example (e.g. using either the No CI workflow or the Build Tools workflow) will need to be updated.
-
-</Alert>
+**Note:** `example-drops-8-composer` (the starting template for all Composer-managed sites on Pantheon) includes this configuration in `settings.php`. Any site built from this example (e.g., using either the No CI workflow or the Build Tools workflow) will need to be updated.

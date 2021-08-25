@@ -1,12 +1,12 @@
 ---
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
-tags: [services]
 categories: [platform]
-reviewed: "2020-01-29"
+tags: [code, libraries, modules, plugins]
+reviewed: "2020-07-27"
 ---
 
-There are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available on the platform.
+There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
 
 ## wkhtmltopdf
 
@@ -68,7 +68,7 @@ If your WordPress site uses Composer, consider the [PHP WkHtmlToPdf](https://git
 
 ### Unable to Generate PDF File
 
-Due to a [known issue in wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4242) and sites that use the CSS `quotes` property, some users may have issues with downloading a PDF created by wkhtmltopdf. In Live environments, creating a PDF fails silently. On Dev, you'll encounter the error `Unable to generate PDF file`.
+Due to a [known issue in wkhtmltopdf 0.12.5](https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4242) and sites that use the CSS `quotes` property, some users may have issues with downloading a PDF created by wkhtmltopdf. In Live environments, creating a PDF fails silently. On Dev, you'll encounter the error `Unable to generate PDF file`.
 
 To confirm the source of the error, log in to the Drupal Admin and click **Reports** in the menu, then **Recent Log Messages** and look for `print_pdf` or `(returned 127): No stderr output available`.
 
@@ -83,43 +83,15 @@ In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless
 
 ### Drupal PhantomJS Configuration
 
-Once you have downloaded and enabled the PhantomJS Capture module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `/admin/config/user-interface/phantomjs_capture` to specify the library path.
+After you've downloaded and enabled the PhantomJS Capture module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at `/admin/config/user-interface/phantomjs_capture` to specify the library path.
 
 ## Apache Tika
 
-The [Apache Tika](https://tika.apache.org//) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
+The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
-### Drupal 7 Tika Configuration
-
-Once you have downloaded and installed the ApacheSolr Attachments module ([apachesolr_attachments](https://www.drupal.org/project/apachesolr_attachments)), you'll need to configure the module's settings.
-
-1. Go to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the following fields:
-
-    - **Extract Using:** Tika (local java application)
-    - **Tika Directory Path:** `/srv/bin`
-    - **Tika jar file:** `tika-app-1.18.jar`
-
-1. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
-
-If everything is working correctly, you will see the success message "Text can be successfully extracted".
-
-### Drupal 8 Tika Configuration
-
-Download and install the Search API Attachments module ([search_api_attachments](https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
-
-1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and enter the following fields:
-
-   - **Extraction method:** Tika Extractor
-   - **Path to java executable:** `java`
-   - **Path to Tika .jar file:** `/srv/bin/tika-app-1.18.jar`
-
-1. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
-
-If everything is working correctly, you will see the success message "Extracted data: Congratulations! The extraction seems working! Yay!".
-
-### WordPress Tika Configuration
+See the [Solr for Drupal](/guides/solr-drupal) guide for instructions on using Apache Tika with Pantheon Drupal sites.
 
 There are no known plugins in the WordPress.org repository that will enable the use of Tika.
 
@@ -133,19 +105,28 @@ Sites that are using an old version of Tika should be upgraded to the supported 
 
 ## ImageMagick
 
-[ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php),  [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. 
+[ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php), [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
 
-Pantheon runs ImageMagick 6.8.8-10 Q16 x86_64 2015-03-10.
+Pantheon runs ImageMagick 6.9.10-86 Q16 x86_64 2020-01-13.
 
 ### Drupal ImageMagick Configuration
 
-Once you have downloaded and enabled the Imagemagick module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
+Once you have downloaded and enabled the [ImageMagick module](https://www.drupal.org/project/imagemagick), you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
 
 When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives) conf variable to your `settings.php` file.
 
 Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
 
 ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node/773342) (like advpng and OptiPNG) are not available at this time.
+
+### WordPress ImageMagick Configuration
+
+After you've installed the [ImageMagick Engine Plugin](https://wordpress.org/plugins/imagemagick-engine/#installation), you'll need to enable it in your plugin settings and configure the settings. In the Regenerate Images sidebar, select the sizes you would like to reimage and click **Regenerate**.
+
+![ImageMagick Engine Settings](../images/imagemagick-engine-settings.png)
+
+![Regenerate button in sidebar](../images/imagemagick-regenerate-sidebar.png)
+
 
 ## Troubleshooting and FAQs
 

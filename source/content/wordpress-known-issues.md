@@ -1,8 +1,9 @@
 ---
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
-tags: [debugcode]
-categories: [wordpress,troubleshoot]
+cms: "WordPress"
+categories: [troubleshoot]
+tags: [code]
 ---
 This page tracks known issues and the recommended solution (if any) for running WordPress on the Pantheon website platform. Most sites work fine, but there are some common gotchas we are tracking and working to address.
 
@@ -13,13 +14,13 @@ If you are importing a site and the database has custom prefixes for your DB tab
  - Update the `$table_prefix` variable in the `wp-config.php` file,
  - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
-<Alert tile="Note" type="info">
+<Alert title="Note" type="info">
 Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
 </Alert>
 
 ## Automatic Updates
 
-WordPress's automatic update functionality will not work on Pantheon site environments. We disable all automatic updates by default with the [Pantheon Updates](https://github.com/pantheon-systems/WordPress/blob/master/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin, found within the mu-plugins directory of our WordPress upstream. This plugin disables core, theme, and plugin updates on all Pantheon environments. Attempting to override this functionality by editing or removing this file will break your Test and Live environments. The codebase for these environments is not writeable, and WordPress will continually attempt to download and unpack core updates, which it cannot do on these environments. For more information, see the following:
+WordPress's automatic update functionality will not work on Pantheon site environments. We disable all automatic updates by default with the [Pantheon Updates](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin, found within the mu-plugins directory of our WordPress upstream. This plugin disables core, theme, and plugin updates on all Pantheon environments. Attempting to override this functionality by editing or removing this file will break your Test and Live environments. The codebase for these environments is not writeable, and WordPress will continually attempt to download and unpack core updates, which it cannot do on these environments. For more information, see the following:
 
 - [Applying Upstream Updates](/core-updates/ "How to apply core updates to sites on Pantheon")
 - [Updating WordPress Plugins](/cms-admin/#wordpress-dashboard "How to update plugins")

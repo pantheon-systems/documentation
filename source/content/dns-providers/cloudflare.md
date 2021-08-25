@@ -3,8 +3,9 @@ title: Cloudflare Domain Configuration
 provider: Cloudflare
 dnsprovider: true
 description: Learn how to point your domain to a Pantheon site using Cloudflare
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/cloudflare.md/
 ---
 You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan to use features like their WAF or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, however, then ensure you follow the guide below to enforce HTTPS to prevent any issues.

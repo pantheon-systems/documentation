@@ -3,8 +3,9 @@ title: Gandi Domain Configuration
 provider: Gandi
 dnsprovider: true
 description: Learn how to point your Gandi domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/gandi.md/
 ---
 ## Before You Begin

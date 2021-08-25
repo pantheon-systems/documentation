@@ -1,31 +1,45 @@
 ---
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
-categories: [get-started, workflow,develop]
-tags: [dashboard, devterminus, git]
-contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]
-reviewed: "2020-02-06"
+categories: [manage]
+tags: [dashboard, git, terminus, updates]
+reviewed: "2021-04-15"
 ---
+This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
+
+## Drupal 9
+
+Drupal 9 sites on Pantheon use [Integrated Composer](/integrated-composer) to allow one-click core updates through the Dashboard.
+
+To check for available updates, navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
+
+## Drupal 8 Composer-Managed Sites
+
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [convert the site to Integrated Composer](/guides/composer-convert).
+
+## Non-Composer Managed WordPress and Drupal 7 / 8 Sites
+
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support).
 
-<Alert title="Note" type="info">
-
-Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
-
-</Alert>
 
 ## Apply Upstream Updates via the Site Dashboard
 
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
 
-  ![upstream updates](../images/dashboard/updates-available.png)
+  ![Sreenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
 1. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
-1. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
+
+1. From the **Update Options** menu, you can select whether or not you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied:
+
+  ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
+
 1. Click **Apply Updates**.
+
 1. Click **Visit Development Site** in the Development Environment to test and QA the site.
+
 1. Follow the standard [Pantheon Workflow](/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
 
 ### Auto-Resolve Conflicts
@@ -291,7 +305,19 @@ This process lets you manually resolve the conflict using the command line and a
 
 Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
 
+<Alert title="Warning" type="danger">
+
 <Partial file="drupal-8-8-warning.md" />
+
+</Alert>
+
+## Suppress WordPress Admin Notice
+
+By default WordPress admin will check for new upstream updates instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin, you will still see upstream updates in the Pantheon dashboard.
+
+```php:title=wp-config.php
+define( 'DISABLE_PANTHEON_UPDATE_NOTICES', true );
+```
 
 ## Troubleshooting
 
@@ -332,7 +358,9 @@ There are multiple reasons that 503 errors might occur when updating:
 This issue happens when you attempt to update very outdated core files from the Dashboard. Perform the following to resolve:
 
 1. Modify `.gitignore` and add a `#` at the beginning of the `pantheon.upstream.yml` line to comment it out
+
 1. Set the Site Connection Mode to SFTP
+
 1. Reupload the `pantheon.upstream.yml` file if missing:
 
  <TabList>
@@ -347,7 +375,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal 8" id="d8-2conflict-merge">
 
-  GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+  GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
  [View on GitHub](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
 
@@ -355,7 +383,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal 7" id="d7-2conflict-merge">
 
- GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+ GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
   [View on GitHub](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 
@@ -364,5 +392,7 @@ This issue happens when you attempt to update very outdated core files from the 
  </TabList>
 
 1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
+
 1. Set the Site Connection Mode to Git and reapply updates
+
 1. Modify `.gitignore` and remove the `#` before the `pantheon.upstream.yml` line to instruct Git to ignore the file again

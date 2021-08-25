@@ -2,21 +2,11 @@
 title: Launch Essentials
 subtitle: Configure DNS and Provision HTTPS
 description: Part four of our Launch Essentials guide covers DNS records and HTTPS provisioning.
-launch: true
 anchorid: dns
-generator: pagination
-layout: guide
+categories: [go-live]
+tags: [dns, https, launch, webops]
 type: guide
-pagination:
-    provider: data.launchpages
-use:
-    - launchpages
-    - docs_tags
 permalink: docs/guides/launch/configure-dns/
-nexturl: guides/launch/redirects/
-nextpage: Redirect to a Primary Domain
-previousurl: guides/launch/domains/
-previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
@@ -37,19 +27,10 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <Accordion title=" DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/1-and-1)
- - [Cloudflare Domain Configuration](/cloudflare)
- - [DNS Made Easy Domain Configuration](/dns-made-easy)
- - [DreamHost Domain Configuration](/dreamhost)
- - [Dyn Domain Configuration](/dyn)
- - [eNom Domain Configuration](/enom)
- - [Gandi Domain Configuration](/gandi)
- - [GoDaddy Domain Configuration](/godaddy)
- - [Google Domain Configuration](/google)
- - [Namecheap Domain Configuration](/namecheap)
- - [Network Solutions Domain Configuration](/network-solutions)
- - [Amazon Route 53 Domain Configuration](/route53)
+<DNSProviderDocs />
 
+If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org) certificate you can run diagnostics at [Let's Debug](https://letsdebug.net/). This tool can identify an array of issues specifically for [Let's Encrypt](https://letsencrypt.org) certificates including problems with DNS, nameservers, networking issues, common website misconfigurations, and CA policy issues. 
+  
 </Accordion>
 
 Click [here](/dns/#frequently-asked-questions) to learn more about DNS settings.

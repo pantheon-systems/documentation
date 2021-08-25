@@ -1,8 +1,8 @@
 ---
 title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
-tags: [debugfiles]
 categories: [troubleshoot]
+tags: [cli, code, files]
 reviewed: "2020-03-13"
 ---
 
@@ -32,7 +32,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 </Alert>
 
-1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/git/#install-git) and [clone the code](/git/#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/git#install-git) and [clone the code](/git#clone-your-site-codebase) locally if you have not done so already.
 
 1. From your terminal, `cd` to the site code repository:
 
@@ -43,12 +43,12 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 1. Move the directory you want to replace with a symlink. This serves to both back up any data that may otherwise be lost, and to prevent the symlink from being nested inside the existing directory:
 
     ```bash{promptUser: user}
-    mv ./wp-content/path/plugin-expects-write-to ~/backups/
+    mv ./wp-content/path/plugin-expects-write-to ~/backups
     ```
 
-    The command above moves the directory to a folder named `backups` in your home directory, `~/`. Replace this with your preferred backup location.
+    The command above moves the directory to a local `backups` directory in your home folder. Replace this with your preferred backup location. Note that this backup is now outside and separate from your site's codebase, and is only a safety measure to prevent data loss. Once you've confirmed that the symlink works across all environments and no data has been lost, you can remove this backup.
 
-1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
+1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
 
    ```bash{promptUser: user}
    cd wp-content/path/
@@ -61,7 +61,15 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     ln -s ../uploads/new-directory #The last nested directory should mirror the directory name the plugin expects to write to
     ```
 
-1. Stage your changes
+    <Accordion title="About ln Arguments" id="example-panel" icon="education">
+
+    The most common usage of `ln` is the form `ln -s path/to/source.file path/to/destination.file`. The `-s` flag creates a **symbolic** link, which is more like a redirect to the source, whereas a **hard link** is a new file sharing the same inode<Popover title="inode" content="An inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory." /> in the file system.
+
+    By default, `ln` creates a file in the current working directory with the same name as the source. In the example above, we don't provide a destination file name as an argument. This simplifies the command when the link doesn't need a different name.
+
+    </Accordion>
+
+1. Stage your changes:
 
     ```bash{promptUser: user}
     git add .
@@ -80,7 +88,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     ```
 
  Your commit can be seen in the Dev environment's commit history. Once this commit is synced to all environments, the plugin will successfully write files within any environment, even when the Dev environment's connection mode is set to Git.
- 
+
  You should not see the newly created files in the Dashboard as "ready to commit," as files are not version controlled. Only the symlink to the new path is in the codebase.
 
   <Alert title="Note" type="info">
@@ -282,7 +290,7 @@ Some modules and plugins verify that the target directory exists using `is_dir()
 
 ### Incorrect Symlink Paths
 
-If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
+If a symlinked folder doesn't show the proper contents, double-check that the path is correct. In Bash, `ls -l` will show symlinks paths:
 
 ```bash{outputLines:2-3}
 ls -l
@@ -290,7 +298,7 @@ ls -l
 lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/
 ```
 
-Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the currect directory.
+Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the current directory.
 
 ## See Also
 For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).

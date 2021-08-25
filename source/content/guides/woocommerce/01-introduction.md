@@ -2,10 +2,12 @@
 title: WooCommerce Quick Start
 subtitle: Introduction
 description: This guide covers how to quickly spinup a new WooCommerce site on Pantheon.
-tags: [woocommerce]
 contributors: [BFTrick]
 featuredcontributor: true
 layout: guide
+cms: "WordPress"
+categories: [get-started]
+tags: [plugins, site]
 type: guide
 anchorid: woocommerce
 woocommerce: true
@@ -38,8 +40,6 @@ Before we get going it's important that you already have a [Pantheon account](ht
 At Pantheon we believe in workflows and processes that make developer's (and site owner's) lives better. To help with that, every site on Pantheon has three environments: **<span class="glyphicons glyphicons-wrench"></span> Dev**, **<span class="glyphicons glyphicons-equalizer"></span> Test**, and **<span class="glyphicons glyphicons-cardio"></span> Live**.
 
 ![Pantheon workflow](../../../images/guides/woocommerce/00-pantheon-workflow.png)
-
-<Image alt="Pantheon Workflow" path="guides/woocommerce/00-pantheon-workflow.png" />
 
 We believe so strongly in this that we have our own [workflow process](/pantheon-workflow) to help you move code from dev to test and from test to live, and move the database from **<span class="glyphicons glyphicons-cardio"></span> Live** to test and from **<span class="glyphicons glyphicons-equalizer"></span> Test** to **<span class="glyphicons glyphicons-wrench"></span> Dev**. We'll cover how to do this later in this guide.
 

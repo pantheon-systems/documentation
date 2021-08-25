@@ -1,14 +1,14 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Detailed information on how to use SFTP Mode to directly develop your Drupal or WordPress site on Pantheon.
-tags: [admin]
 categories: [develop]
+tags: [files, sftp, code]
 reviewed: "2020-02-18"
 ---
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
@@ -16,7 +16,7 @@ In some cases, working via Git may not be the best option. You may not like loca
 
 SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP mode first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
-<Alert tile="SFTP Mode Considerations" type="danger">
+<Alert title="SFTP Mode Considerations" type="danger">
 
 #### Commit Frequently
 
@@ -100,7 +100,6 @@ This can be useful when you have many changes you wish to undo or if it would ot
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
 - PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
-- [FileZilla](/filezilla)
 - [WinSCP](/winscp)
 - [Visual Studio Code](/visual-studio-code)
 
@@ -126,7 +125,7 @@ We recommend [adding an SSH Key](/ssh-keys), which allows more security than a s
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please see [Using the Pantheon Workflow](/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
+This is part of the [Pantheon WebOps workflow](/pantheon-workflow) that keeps code and content safe. Please see [Using the Pantheon Workflow](/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn more about why.
 
 ### SFTP changes do not show up in the Site Dashboard.
 

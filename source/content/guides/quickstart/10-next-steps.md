@@ -7,6 +7,8 @@ anchorid: next-steps
 generator: pagination
 survey: true
 layout: guide
+categories: [get-started]
+tags: [launch, webops, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
@@ -31,10 +33,10 @@ But this is just the tip of the iceberg. Ready to learn more? Here are just some
 
 <Callout
   title={"Are you an agency?"}
-  link={"https://pantheon.io/agencies/learn-pantheon?docs"}
+  link={"https://pantheon.io/solutions/web-agency-success-tools?docs"}
 >
 
 Accelerate your journey to workflow nirvana with help from the experts at
-Pantheon. Check out our [WebOps training program](https://pantheon.io/agencies/learn-pantheon?docs).
+Pantheon. Check out our [WebOps training program](https://pantheon.io/solutions/web-agency-success-tools?docs).
 
 </Callout>

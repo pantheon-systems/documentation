@@ -1,8 +1,8 @@
 ---
 title:  Deploy to Pantheon from an External Repository using DeployBot
 description: Learn how to set up and use DeployBot to deploy from repositories hosted with a third party provider, like GitHub, to Pantheon.
-categories: [workflow,develop]
-tags: [siteintegrations, workflow]
+categories: [automate]
+tags: [git, workflow]
 contributors: [ataylorme, rachelwhitton]
 ---
 
@@ -28,7 +28,7 @@ There are a few known limitations to consider before proceeding:
 ### Example Workflow
 Let's say I use [Composer](/composer) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub, then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
 
-```
+```json:title=composer.json
 {
   "minimum-stability": "dev",
   "config"      : {
@@ -114,7 +114,7 @@ Let's say I use [Composer](/composer) to manage my WordPress site's plugin and t
 
 ### Deploy to Pantheon
 1. DeployBot will automatically deploy to Pantheon after pushing to GitHub if you setup automatic deployments. Otherwise, use the **Deploy** button to manually trigger a build.
-2. Access the Dev environment of your Site Dashboard and review the uncomitted SFTP changes:
+2. Access the Dev environment of your Site Dashboard and review the uncommitted SFTP changes:
 
 3. Commit, then deploy changes up to the Test and Live environments using the [standard Pantheon workflow](/pantheon-workflow).
 
