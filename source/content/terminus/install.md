@@ -44,6 +44,9 @@ The following commands will:
   ```bash{promptUser: user}
   mkdir ~/terminus && cd ~/terminus
   curl -L https://github.com/pantheon-systems/terminus/releases/download/$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m{"tag_name": "\K.*?(?=")}g')/terminus.phar --output terminus
+
+  #If you get the following error: "zsh: parse error near `)'," remove the '\' after the '$' and run the command again.
+ 
   chmod +x terminus
   sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
