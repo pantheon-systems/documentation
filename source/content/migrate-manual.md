@@ -165,11 +165,11 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="Drupal 9" id="d9-code">
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
+  Copy the following directories from your existing site to a matching directory in your new site's `code/web` directory:
 
    - `libraries`
    - `modules`
-   - `profile`
+   - `profiles`
    - `themes`
    - `vendor`
    - `sites`, excluding `sites/default/files`.
