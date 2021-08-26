@@ -67,13 +67,13 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
   git commit -m "Add site configuration."
   ```
 
-1. List contrib modules and themes on your old site:
+1. List the contrib modules and themes on the old site:
 
   ```bash{promptUser: user}
   terminus drush $OLD_SITE.dev -- pm:projectinfo --status=enabled --fields=name,version --format=table
   ```
 
-1. Then use Composer on your Pantheon D9 site to add these there:
+1. Use Composer to install each module and theme on the Pantheon Drupal 9 site:
 
   ```bash{promptUser: user}
   composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
@@ -81,7 +81,7 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
   git commit -m "Add contrib projects."
   ```
 
-1. Copy over any custom modules or themes from your old site:
+1. Copy any custom modules or themes from the old site to the Pantheon site:
 
   ```bash{promptUser: user}
   git checkout former-platform/master -- modules/custom themes/custom
@@ -121,4 +121,4 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
   terminus drush $PANTHEON_SITE.dev -- updatedb
   ```
 
-1. Review the site, then proceed to launch using the [Pantheon Relauch](/relaunch) documentation.
+1. Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.
