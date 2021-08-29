@@ -936,6 +936,8 @@ Complete this step in Dev, Test, and Live Environments.
 
 1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
+## Alternative Plugin
+You could try using [WP Cerber](https://wordpress.org/plugins/wp-cerber/) This does not require creating symlinks. (Pantheon has not tested this plugin)
 ___
 
 ## [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
