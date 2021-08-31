@@ -28,7 +28,7 @@ Once setup is complete on our end, we'll provide you with the information you ne
 
 <Alert title="Note" type="info" >
 
-Due to the technicality of this implementation, please allow us at least 1 business day to fulfill this request given all information is complete and there are no issues that may arise.
+At a minimum, allow one business day to fulfill this implementation request. Provide complete information to ensure timely and efficient processesing, and to minimize any issues that may arise.
 
 </Alert>
 
