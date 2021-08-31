@@ -31,7 +31,7 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 
 1. [Add the domain to your environment](/domains#add-a-custom-domain)
    
-   If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
+   If you are be presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
 
 1. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
