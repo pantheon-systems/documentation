@@ -54,18 +54,65 @@ Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the
 
 To test how stale cache is served, compare the header results of a page refresh:
 
-1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset
-1. Go to your site's Dev environment in Maintenance Mode
-1. Clear the cache from either the Advanced Page Cache or from the dashboard
-1. Refresh the page in the browser for the newest information
+<TabList>
 
-Examine the results for the `age` and `max-age`.
+<Tab title="Via Command Line" id="cli" active={true}>
 
-To examine the headers through the command line, use a `curl` command. 
+1. Examine the headers through the command line:
 
-```bash{outputLines: 2-20}
-curl --head https://pantheon.io/docs | grep PContext-Resp-Is-StaleHTTP/2 301
-```
+  ```bash{outputLines: 2-20}
+  curl --head https://pantheon.io/docs
+  HTTP/2 301
+  content-type: text/html
+  location: https://pantheon.io/docs/
+  server: nginx
+  strict-transport-security: max-age=31622400
+  x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
+  x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
+  cache-control: public, max-age=86400
+  date: Tue, 24 Aug 2021 15:30:21 GMT
+  x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
+  x-cache: HIT, HIT
+  x-cache-hits: 1, 1
+  x-timer: S1629819022.932985,VS0,VE1
+  pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
+  vary: Cookie, Cookie
+  age: 9654
+  accept-ranges: bytes
+  via: 1.1 varnish, 1.1 varnish
+  content-length: 162
+  ```
+  
+  Note the result for `age` or `max-age`.
+  
+1. Navigate to your site's Dev environment and set the site to Maintenance Mode.
+  
+1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
+
+1. In a terminal, cURL the site headers filtered for stale cache:
+
+  ```bash{promptUser: user}
+  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-StaleHTTP/2 301
+  ```  
+  If the result includes `PContext-Resp-Is-StaleHTTP/2 301`, the page has been successfully served from stale cache. 
+  
+</Tab>
+
+<Tab title="Via Web Browser" id="web-browser">
+
+1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset.
+
+1. Go to your site's Dev environment and set the site to Maintenance Mode.
+  
+1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
+
+1. Go back to your page and view the Developer Tools, and Refresh for the newest header responses.
+  
+    If the result includes `PContext-Resp-Is-StaleHTTP/2 301`, the page has been successfully served from stale cache. 
+
+</Tab>
+  
+</TabList>
 
 ## Frequently Asked Questions
 
