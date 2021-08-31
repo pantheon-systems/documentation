@@ -13,6 +13,7 @@ reviewed: "2021-09-01"
 
 Drupal 9.2.x will receive security coverage until June 15, 2022. Sites on 9.1.x or earlier should update to [Drupal 9.1.11](https://www.drupal.org/project/drupal/releases/9.1.11).
 
+<!-- excerpt -->
 
 ### Drupal 8.9.18
 
