@@ -21,8 +21,7 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
    - The end-client certificate
    - Any intermediate certificates provided by the CA.
 
-  Be sure to send these as separate files, not a "chained cert."
-  
+  Be sure to send these as separate files, and not as a  "chained cert".
   **AGCDN Users**: Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
 
    - Main Certificate
