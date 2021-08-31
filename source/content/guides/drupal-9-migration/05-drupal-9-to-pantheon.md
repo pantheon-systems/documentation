@@ -27,8 +27,6 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
 This doc uses the following aliases:
 
-- **Alias:** `OLD-SITE`
-  - **Site Name:** `former-platform`
 - **Alias:** `PANTHEON-SITE`
   - **Site Name:** `best-drupal9-site-ever`
 
