@@ -52,35 +52,19 @@ Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the
 
 ### Confirm That Persistent Cache Works
 
-To test how stale cache is served, compare the header results of a page refresh of the site's Dev environment to the same page in Maintenance Mode.
+To test how stale cache is served, compare the header results of a page refresh:
 
-Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset. Refresh the page in the browser for the newest information.
+1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset
+1. Go to your site's Dev environment in Maintenance Mode
+1. Clear the cache from either the Advanced Page Cache or from the dashboard
+1. Refresh the page in the browser for the newest information
 
 Examine the results for the `age` and `max-age`.
 
-To examine the headers through the command line, use a `curl` command to examine the headers before and after you set the site to Maintenance Mode:
+To examine the headers through the command line, use a `curl` command. 
 
 ```bash{outputLines: 2-20}
-curl --head https://pantheon.io/docs
-HTTP/2 301
-content-type: text/html
-location: https://pantheon.io/docs/
-server: nginx
-strict-transport-security: max-age=31622400
-x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
-x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
-cache-control: public, max-age=86400
-date: Tue, 24 Aug 2021 15:30:21 GMT
-x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
-x-cache: HIT, HIT
-x-cache-hits: 1, 1
-x-timer: S1629819022.932985,VS0,VE1
-pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
-vary: Cookie, Cookie
-age: 9654
-accept-ranges: bytes
-via: 1.1 varnish, 1.1 varnish
-content-length: 162
+curl --head https://pantheon.io/docs | grep PContext-Resp-Is-StaleHTTP/2 301
 ```
 
 ## Frequently Asked Questions
