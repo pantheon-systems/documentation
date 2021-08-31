@@ -22,7 +22,7 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
    - Any intermediate certificates provided by the CA.
 
   Be sure to send these as separate files, not a "chained cert."
-
+  
   **AGCDN Users**: Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
 
    - Main Certificate
@@ -30,8 +30,8 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
    - Private Key
 
 1. [Add the domain to your environment](/domains#add-a-custom-domain)
-
-  If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
+   
+   If you are be presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
 
 1. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 

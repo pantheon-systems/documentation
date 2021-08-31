@@ -4,7 +4,7 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2021-05-28"
+reviewed: "2021-08-30"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
@@ -218,6 +218,12 @@ To resolve, there are two potential solutions:
 - If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
 - Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+
+### Issues using `wikimedia/composer-merge-plugin`
+
+Use of the `wikimedia/composer-merge-plugin` is deprecated within [Drupal](https://www.drupal.org/node/3069730).
+
+When using Pantheon's Integrated Composer, this plugin often tries to run a "composer update" during the "composer install," which is not allowed and will cause errors. We recommend removing `composer-merge-plugin` from your Composer toolchain.
 
 ## FAQ
 
