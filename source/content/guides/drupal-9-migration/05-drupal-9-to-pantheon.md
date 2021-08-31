@@ -19,7 +19,7 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
 - Drupal 9
 - Composer-managed
-- Git repository?
+- Able to get a local copy of the existing site / access to a Git repository of it?
 
 ## Prepare the Local Environment
 
