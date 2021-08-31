@@ -27,9 +27,9 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
 This doc uses the following aliases:
 
-- **Alias:** `OLD_SITE`
+- **Alias:** `OLD-SITE`
   - **Site Name:** `former-platform`
-- **Alias:** `PANTHEON_SITE`
+- **Alias:** `PANTHEON-SITE`
   - **Site Name:** `best-drupal9-site-ever`
 
 ## Create a New Drupal 9 Site
@@ -38,31 +38,20 @@ This doc uses the following aliases:
 
 - Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-[Create a new Drupal 9 site from the Dashboard](/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
+## Create a Local Copy of the Old Site's Code
+
+Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-your-code) to create a Git-tracked local copy of the site. In that doc, export the database and files, but do not add them or upload any files. Return to this doc once you have created a full local backup of the old site.
 
 ### Site Structure
 
 <Partial file="ic-upstream-structure.md" />
 
-## Create a Local Copy of the Old Site's Code
-
-Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-your-code) to create a Git-tracked local copy of the site. In that doc, import the database, but do not add it or upload any files. Return to this doc once you have created a full local backup of the old site.
-
 ## Migrate the Old Drupal Site's Code to the Pantheon Drupal 9 Site
-
-1. If the old site is already available in a Git repository, retrieve the old site's Git URL.
-
-1. Add the old site as a remote repository called `former-platform`. Use the URL retrieved in the previous step:
-
-  ```bash{promptUser: user}
-  git remote add former-platform ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
-  git fetch former-platform
-  ```
 
 1. Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
 
   ```bash{promptUser: user}
-  git checkout former-platform/master -- sites/default/config
+  mkdir config
   git mv sites/default/config/* config/
   git commit -m "Add site configuration."
   ```
@@ -70,10 +59,10 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
 1. List the contrib modules and themes on the old site:
 
   ```bash{promptUser: user}
-  terminus drush $OLD_SITE.dev -- pm:projectinfo --status=enabled --fields=name,version --format=table
+  composer show
   ```
 
-1. Use Composer to install each module and theme on the Pantheon Drupal 9 site:
+1. Use Composer to add each module and theme on the Pantheon Drupal 9 site:
 
   ```bash{promptUser: user}
   composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
@@ -81,10 +70,17 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
   git commit -m "Add contrib projects."
   ```
 
+1. Use Composer to install the requirements on the Pantheon Drupal 9 site, then push the changes to the platform:
+
+  ```bash{promptUser: user}
+  composer install
+  git add . && git commit -m "composer install" && git push origin master
+  ```
+
 1. Copy any custom modules or themes from the old site to the Pantheon site:
 
   ```bash{promptUser: user}
-  git checkout former-platform/master -- modules/custom themes/custom
+  mkdir web/{themes, modules}
   git mv themes/* web/themes
   git mv modules/* web/modules
   git commit -m "Add custom projects."
@@ -93,8 +89,8 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
 1. Check `settings.php` for any customizations to copy over:
 
   ```bash{promptUser: user}
-  # Fetch your old settings file.
-  git show former-platform/master:sites/default/settings.php > web/sites/default/original-settings.php
+  mkdir -p web/sites/default
+  git show sites/default/settings.php > web/sites/default/original-settings.php
   # Check for any customizations (if this returns nothing, you can move on to the next step).
   # Copy what you need over to web/sites/default/settings.php, and commit as needed.
   diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
@@ -102,23 +98,31 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
   rm web/sites/default/original-settings.php
   ```
 
-1. Copy the files and database from your old site to the Pantheon D9 site:
+1. Use Terminus to import the old site's database (created in the [migrate manual](/migrate-manual#add-your-database) doc) into the Pantheon D9 site. This example uses a local `db.sql.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
 
   ```bash{promptUser: user}
-  terminus site:clone $OLD_SITE.live $PANTHEON_SITE.dev --no-code --no-destination-backup --no-source-backup
+  terminus import:database $PANTHEON-SITE.dev ~/db.sql.gz
+  ```
+
+1. Use Terminus to import the old site's files (created in the [migrate manual](/migrate-manual#upload-your-files) doc) into the Pantheon D9 site. This example uses a local `files.tar.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
+
+  ```bash{promptUser: user}
+  terminus import:files $PANTHEON-SITE.dev ~/files.tar.gz
   ```
 
 1. Push the Pantheon D9 codebase from your local machine up to Pantheon:
 
   ```bash{promptUser: user}
-  terminus connection:set $PANTHEON_SITE.dev git
+  terminus connection:set $PANTHEON-SITE.dev git
   git push origin master
   ```
 
 1. Run database updates:
 
   ```bash{promptUser: user}
-  terminus drush $PANTHEON_SITE.dev -- updatedb
+  terminus drush $PANTHEON-SITE.dev -- updatedb
   ```
+
+1. Navigate to the Site Dashboard and click **I've Successfully Migrated Manually**.
 
 1. Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.
