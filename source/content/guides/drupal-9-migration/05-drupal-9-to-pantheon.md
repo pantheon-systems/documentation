@@ -27,8 +27,8 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
 This doc uses the following aliases:
 
-- **Alias:** `PANTHEON-SITE`
-  - **Site Name:** `best-drupal9-site-ever`
+- **Alias:** `SITE`
+  - **Site Name:** `anita-drupal`
 
 ## Create a New Drupal 9 Site
 
@@ -99,26 +99,26 @@ Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-
 1. Use Terminus to import the old site's database (created in the [migrate manual](/migrate-manual#add-your-database) doc) into the Pantheon D9 site. This example uses a local `db.sql.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
 
   ```bash{promptUser: user}
-  terminus import:database $PANTHEON-SITE.dev ~/db.sql.gz
+  terminus import:database $SITE.dev ~/db.sql.gz
   ```
 
 1. Use Terminus to import the old site's files (created in the [migrate manual](/migrate-manual#upload-your-files) doc) into the Pantheon D9 site. This example uses a local `files.tar.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
 
   ```bash{promptUser: user}
-  terminus import:files $PANTHEON-SITE.dev ~/files.tar.gz
+  terminus import:files $SITE.dev ~/files.tar.gz
   ```
 
 1. Push the Pantheon D9 codebase from your local machine up to Pantheon:
 
   ```bash{promptUser: user}
-  terminus connection:set $PANTHEON-SITE.dev git
+  terminus connection:set $SITE.dev git
   git push origin master
   ```
 
 1. Run database updates:
 
   ```bash{promptUser: user}
-  terminus drush $PANTHEON-SITE.dev -- updatedb
+  terminus drush $SITE.dev -- updatedb
   ```
 
 1. Navigate to the Site Dashboard and click **I've Successfully Migrated Manually**.
