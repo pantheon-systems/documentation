@@ -38,7 +38,14 @@ This doc uses the following aliases:
 
 ## Create a Local Copy of the Old Site's Code
 
-Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-your-code) to create a Git-tracked local copy of the site. In that doc, export the database and files, but do not add them or upload any files. Return to this doc once you have created a full local backup of the old site.
+Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-your-code) to:
+
+- Prepare a new Pantheon Drupal 9 Site
+- Copy files from the old platform to the Pantheon Drupal 9 Site
+- Create a Git-tracked local copy of the Pantheon Drupal 9 Site
+- Export the database and files from the old platform, but do not add them or upload any files to Pantheon.
+
+Return to this doc once you have created a full local copy of the Pantheon Drupal 9 Site and have the database and files ready.
 
 ### Site Structure
 
