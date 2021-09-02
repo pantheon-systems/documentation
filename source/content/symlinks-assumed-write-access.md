@@ -3,7 +3,7 @@ title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 categories: [troubleshoot]
 tags: [cli, code, files]
-reviewed: "2020-03-13"
+reviewed: "2021-09-02"
 ---
 
 Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
@@ -108,7 +108,7 @@ As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-i
 
 <Alert  title="Note" type="info">
 
-You must manually create the target folders `wp-content\et-cache` for Dev, Test, Live, and any Multidev environments.
+You must manually create the target folders `wp-content/et-cache` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
@@ -131,31 +131,31 @@ et-cache -> ./uploads/et-cache
 Note that the syntax for Windows Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target. From the root of your installation, run `mklink` as an admin:
 
 ```bash{promptUser: winshell}
-mklink /d .\wp-content\et-cache .\uploads\et-cache
+mklink /d ./wp-content/et-cache ./uploads/et-cache
 ```
 
 Each command will return the following upon success:
 
 ```none
-symbolic link created for .\wp-content\et-cache <<===>> .\uploads\et-cache
+symbolic link created for ./wp-content/et-cache <<===>> ./uploads/et-cache
 ```
 
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
 You can also verify success using `dir`:
 
 ```powershell
-<SYMLINKD>        et-cache [.\uploads\et-cache]
+<SYMLINKD>        et-cache [./uploads/et-cache]
 ```
 
 </Accordion>
 
-<Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
+<Accordion title="Nitropack" id="nitropack-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [WP-Rocket](https://wp-rocket.me/) assumes write access to the codebase.
+As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Nitropack](https://wordpress.org/plugins/nitropack/) assumes write access to the `wp-content/nitropack` folder and to `advanced.cache.php`.
 
 <Alert  title="Note" type="info">
 
-You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+You must manually create the target folders `wp-content/uploads/cache` and `wp-content/uploads/wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
@@ -179,23 +179,74 @@ wp-rocket-config -> ./uploads/wp-rocket-config
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash{promptUser: winshell}
-mklink /d .\wp-content\cache .\uploads\cache
-mklink /d .\wp-content\wp-rocket-config .\uploads\wp-rocket-config
+mklink /d ./wp-content/cache ./uploads/cache
+mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
 ```
 
 Each command will return the following upon success:
 
 ```none
-symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
-symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
+symbolic link created for ./wp-content/cache <<===>> ./uploads/cache
+symbolic link created for ./wp-content/wp-rocket-config <<===>> ./uploads/wp-rocket-config
 ```
 
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
 You can also verify success using `dir`:
 
 ```powershell
-<SYMLINKD>        cache [.\uploads\cache]
-<SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
+<SYMLINKD>        cache [./uploads/cache]
+<SYMLINKD>        wp-rocket-config [./uploads/wp-rocket-config]
+```
+
+</Accordion>
+
+<Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
+
+As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [WP-Rocket](https://wp-rocket.me/) assumes write access to the codebase.
+
+<Alert  title="Note" type="info">
+
+You must manually create the target folders `wp-content/uploads/cache` and `wp-content/uploads/wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+
+</Alert>
+
+#### For MacOS & Linux
+
+From the `wp-content` directory:
+
+```bash{promptUser: user}
+ln -s ./uploads/cache ./cache
+ln -s ./uploads/wp-rocket-config ./wp-rocket-config
+```
+
+To verify, use `ls -al`:
+
+```none
+cache -> ./uploads/cache
+wp-rocket-config -> ./uploads/wp-rocket-config
+```
+
+#### For Windows
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
+
+```bash{promptUser: winshell}
+mklink /d ./wp-content/cache ./uploads/cache
+mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+```
+
+Each command will return the following upon success:
+
+```none
+symbolic link created for ./wp-content/cache <<===>> ./uploads/cache
+symbolic link created for ./wp-content/wp-rocket-config <<===>> ./uploads/wp-rocket-config
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+You can also verify success using `dir`:
+
+```powershell
+<SYMLINKD>        cache [./uploads/cache]
+<SYMLINKD>        wp-rocket-config [./uploads/wp-rocket-config]
 ```
 
 </Accordion>
@@ -206,23 +257,23 @@ As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-
 
 1. Manually move the target folders:
 
-  `wp-content\themes\uncode\core\assets\css`
+  `wp-content/themes/uncode/core/assets/css`
 
-  To: `wp-content\uploads\uncode\assets\css`
+  To: `wp-content/uploads/uncode/assets/css`
 
   And:
 
-  `wp-content\themes\uncode\library\css`
+  `wp-content/themes/uncode/library/css`
 
-  To: `wp-content\uploads\uncode\library\css` in Dev.
+  To: `wp-content/uploads/uncode/library/css` in Dev.
 
 1. Copy the files generated from:
 
-  `wp-content\themes\uncode\library\css`
+  `wp-content/themes/uncode/library/css`
 
   To:
 
-  `wp-content\uploads\uncode\library\css`
+  `wp-content/uploads/uncode/library/css`
 
   In Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
 
@@ -252,28 +303,28 @@ css -> ../../../uploads/uncode/library/css
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
 
 ```bash{promptUser: winshell}
-mklink /d .\themes\uncode\core\assets ..\..\..\..\uploads\uncode\assets\css
-mklink /d .\themes\uncode\library ..\..\..\uploads\uncode\library\css
+mklink /d ./themes/uncode/core/assets ../../../../uploads/uncode/assets/css
+mklink /d ./themes/uncode/library ../../../uploads/uncode/library/css
 ```
 
 Each command will return the following upon success:
 
 ```none
-symbolic link created for .\themes\uncode\core\assets <<===>> ..\..\..\..\uploads\uncode\assets\css
-symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncode\library\css
+symbolic link created for ./themes/uncode/core/assets <<===>> ../../../../uploads/uncode/assets/css
+symbolic link created for ./themes/uncode/library <<===>> ../../../uploads/uncode/library/css
 ```
 
-To verify that you have done it correctly, you should have these when you list your folders in `wp-content\themes\uncode\core\assets` directory:
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content/themes/uncode/core/assets` directory:
 You can also verify success using `dir`:
 
 ```powershell
-<SYMLINKD>        css [..\..\..\..\uploads\uncode\assets\css]
+<SYMLINKD>        css [../../../../uploads/uncode/assets/css]
 ```
 
-And in the `themes\uncode\library` directory:
+And in the `themes/uncode/library` directory:
 
 ```powershell
-<SYMLINKD>        css [..\..\..\uploads\uncode\library\css]
+<SYMLINKD>        css [../../../uploads/uncode/library/css]
 ```
 
 </Accordion>
