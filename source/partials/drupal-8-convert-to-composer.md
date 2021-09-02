@@ -62,10 +62,10 @@ Once Composer is aware of all the contributed code, you'll be able to run `compo
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to change to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.):
 
   ```bash{promptUser:user}
-  terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
+  terminus drush $SITE.dev pm:projectinfo -- --fields=name,version --format=table
   ```
 
   This will list each module followed by the version of that module that is installed.
