@@ -78,7 +78,7 @@ You can specify the environments to which Autopilot deploys. See the next page f
 
 No. Autopilot always tests updates against a Multidev based on the current Dev environment.
 
-To have Autopilot compare updates to the Live environment, keep the Dev environment [synchronized with the Live environment](/pantheon-workflow) to have Autopilot test updates against the most up-to-date state of the Live environment.
+For Autopilot to compare updates to the Live environment, keep the Dev environment [synchronized with the Live environment](/pantheon-workflow), to ensure Autopilot test updates against the most up-to-date state of the Live environment.
 
 ### Does the Autopilot Multidev count towards the Multidev limit?
 
