@@ -69,7 +69,7 @@ Feeling comfortable with WP-CLI? Here are a [few of the many commands](https://d
 Use `echo` to pipe (or _redirect_) a SQL query through WP-CLI via [Terminus](/terminus):
 
 ```bash{promptUser: user}
-echo "SELECT * FROM wp_users WHERE ID=1" | terminus wp $site.$env -- db query
+echo "SELECT * FROM wp_users WHERE ID=1;" | terminus wp $site.$env -- db query
 ```
 
 ## Execute PHP Code Using WP-CLI on Pantheon
