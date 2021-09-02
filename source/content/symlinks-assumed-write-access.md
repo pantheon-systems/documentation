@@ -155,48 +155,23 @@ As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-
 
 <Alert  title="Note" type="info">
 
-You must manually create the target folders `wp-content/uploads/cache` and `wp-content/uploads/wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+You must manually create the target folders `code/wp-content/uploads/nitropack` and `code/wp-content/uploads/advanced-cache.php` for Dev, Test, and Live environments.
 
 </Alert>
 
-#### For MacOS & Linux
+1. In the command line, navigate to `code/wp-content/uploads` in your Dev environment. Or, if you are using an SFTP client (such as [FileZilla](https://filezilla-project.org/)), navigate to `files/`.
 
-From the `wp-content` directory:
+1. Create a `nitropack` folder and an `advanced-cache.php` file, using the following command: `mkdir ./nitropack​ && touch ./advanced-cache.php`.
 
-```bash{promptUser: user}
-ln -s ./uploads/cache ./cache
-ln -s ./uploads/wp-rocket-config ./wp-rocket-config
-```
+    **Note:** Be sure to delete any `advanced-cache.php` file that is present in the `./uploads` directory before creating the file.
 
-To verify, use `ls -al`:
+1. Repeat steps 1 and 2 for your Test and Live environments.
 
-```none
-cache -> ./uploads/cache
-wp-rocket-config -> ./uploads/wp-rocket-config
-```
+1. Create a symlink in your `code/wp-content` directory:  
+    `ln -s ./uploads/nitropack/ ./nitropack`  
+    `ln -s ./uploads/advanced-cache.php ./advanced-cache.php`
 
-#### For Windows
-Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
-
-```bash{promptUser: winshell}
-mklink /d ./wp-content/cache ./uploads/cache
-mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
-```
-
-Each command will return the following upon success:
-
-```none
-symbolic link created for ./wp-content/cache <<===>> ./uploads/cache
-symbolic link created for ./wp-content/wp-rocket-config <<===>> ./uploads/wp-rocket-config
-```
-
-To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
-You can also verify success using `dir`:
-
-```powershell
-<SYMLINKD>        cache [./uploads/cache]
-<SYMLINKD>        wp-rocket-config [./uploads/wp-rocket-config]
-```
+1. Commit changes to Live environment.
 
 </Accordion>
 
