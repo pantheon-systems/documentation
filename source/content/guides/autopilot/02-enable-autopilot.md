@@ -53,7 +53,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
    Click **Continue** to choose pages for screenshot comparison tests.
 
-1. Add pages to track for visual regression testing:
+1. Add pages to track for visual regression testing. Autopilot automatically suggests up to ten URL paths during setup:
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
