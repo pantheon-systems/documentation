@@ -31,7 +31,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
 
-1. In the **Configuration** step, use the **On**/**Off** toggles to choose which features and elements should be tracked for or excluded from updates then click **Continue** to set a schedule and deployment destination for Autopilot:
+1. In the **Configuration** step, use the **On**/**Off** toggles to choose which features and elements should be tracked for, or excluded from, updates then click **Continue** to set a schedule and deployment destination for Autopilot.
 
   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes). Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
   
