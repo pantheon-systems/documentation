@@ -27,21 +27,20 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 1. Sites for which Autopilot is available are listed in the **All Sites** column of the **Sites** table.
 
-1. Click **Enable Autopilot** in the Site's row.
-
-1. Click **Get Started** to start Autopilot setup.
+1. Click **Activate** in the Site's row.
 
   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
 
-1. In the **Configuration** step, use the **On**/**Off** toggles to choose which features and elements should be tracked for updates then click **Continue** to set a schedule for Autopilot:
+1. In the **Configuration** step, use the **On**/**Off** toggles to choose which features and elements should be tracked for or excluded from updates then click **Continue** to set a schedule and deployment destination for Autopilot:
 
   ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
 
 1. Schedule Autopilot to run:
 
    - Never (Update Manually)
-   - Weekly
    - Monthly
+   - Weekly
+   - Daily ([Contact Sales](https://pantheon.io/contact-sales?docs))
 
    Then use the dropdown menu to choose the deployment destination:
 
@@ -57,17 +56,11 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
-  Click **Continue** to choose updates to exclude.
-
-1. Autopilot checks for plugins, modules, and themes that are eligible for exclusion.
-
-  If any are shown on the **Excluded Updates** screen, select any that should be excluded:
-
-   ![Autopilot Setup - Excluded Updates screen. Select which plugins, modules, or themes should be excluded.](../../../images/autopilot/autopilot-setup-excluded-updates.png)
-
   Click **Save** to initialize Autopilot on the Site.
 
-1. Wait while Autopilot performs its tests and updates. This will take a while.
+1. Click **Status** in the Autopilot sidebar for the current status of the testing. This process might take a while:
+
+  ![Autopilot Sidebar - The sidebar shows links to Status, Activity, and Configuration screens.](../../../images/autopilot/autopilot-sidebar.png)
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
