@@ -92,9 +92,9 @@ To test how stale cache is served, compare the header results of a page refresh:
 1. In a terminal, cURL the site headers filtered for stale cache:
 
   ```bash{promptUser: user}
-  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-StaleHTTP/2 301
+  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
   ```  
-  If the result includes `PContext-Resp-Is-StaleHTTP/2 301`, the page has been successfully served from stale cache. 
+  If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache. 
   
 </Tab>
 
