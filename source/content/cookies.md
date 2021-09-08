@@ -37,7 +37,8 @@ As an alternative to setting a `NO_CACHE` cookie within the response, you can [m
 
 ## Disable Page Caching in The Dev Environment
 
-In Dev and Multidev environments, Pantheon will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
+In Dev and Multidev environments, 
+will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
 
 If you need to work around your CMS to bypass caching for pages in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
@@ -56,7 +57,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Varying Cookies
 
-Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
+Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's Edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
 
@@ -68,7 +69,7 @@ If the value has already been set, do not set the cookie again in the response. 
 
 If the value is **not** set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime.
 
-The following example can be used for either WordPress and Drupal:
+The following code example can be used for either WordPress or Drupal:
 
 ```php
 $bar = 'Around here, football is the winter sport of choice!';
