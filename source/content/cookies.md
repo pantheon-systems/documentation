@@ -5,13 +5,13 @@ categories: [performance]
 tags: [cache, code, cookies]
 ---
 
-This page covers working with basic cookies on Pantheon. If you're looking to create session based cookies to bypass caching, refer to [Using Your Own Session-Syle Cookies](/caching-advanced-topics/#using-your-own-session-style-cookies) from our Caching: Advanced Topics doc.
+This page covers working with basic cookies on Pantheon. If you want to create session based cookies to bypass caching, refer to the documentation on [Using Your Own Session-Syle Cookies](/caching-advanced-topics/#using-your-own-session-style-cookies)
 
 ## Disable Caching for Specific Pages
 
-You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
+You can use regular expressions to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from the cache. If the request matches, bypass caching by setting the `NO_CACHE` cookie in the response.
 
-For example, this block sets `NO_CACHE` for all pages in the `/news/` directory:
+For example, the following code example sets `NO_CACHE` for all pages in the `/news/` directory:
 
 ```php
 /*
@@ -31,15 +31,15 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 }
 ```
 
-**Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
+**To restrict the cookie to the specific directory, ensure the `friendly_path` variable is corrrectly set.**
 
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass cache on Pantheon.
+As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass the cache on Pantheon.
 
-## Disable Caching in The Dev Environment
+## Disable Page Caching in The Dev Environment
 
-You may decide to disable caching in the Dev environment as you make changes to cacheable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
+In Dev and Multidev environments, Pantheon will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
 
-To bypass caching in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+If you need to work around your CMS to bypass caching for pages in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
 ```php
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
@@ -62,13 +62,13 @@ First, check to see if the cookie is set within the incoming request. If the coo
 
 <Alert title="Note" type="info">
 
-If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a `Set-Cookie:` header.
+If the value has already been set, do not set the cookie again in the response. Pantheon cannot cache a response that contains a `Set-Cookie:` header.
 
 </Alert>
 
 If the value is **not** set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime.
 
-The following example can be used interchangeably between WordPress and Drupal:
+The following example can be used for either WordPress and Drupal:
 
 ```php
 $bar = 'Around here, football is the winter sport of choice!';
@@ -102,11 +102,11 @@ else{
 
 ## Setting Cookies for Platform Domains
 
-Setting cookies for the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies for platform domains (e.g. `dev-site-name.pantheonsite.io`) and custom domains (e.g. `example.com`, `xyz.example.com`).
+Setting cookies for the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies for platform domains (for example `dev-site-name.pantheonsite.io`) and custom domains (for example `example.com`, `xyz.example.com`).
 
 ## Cookie Size Limit
 
-The Pantheon Edge size limit for Cookies is 10K. Any larger cookies are dropped, and the request is processed as if there was no cookie sent. The header `X-Cookies-Dropped: 1` is added to the request and response, indicating that they have been truncated.
+The Pantheon Edge size limit for cookies is 10KB. Cookies larger than this size are dropped, and the request is not completely processed. The header `X-Cookies-Dropped: 1` is added to the request and response, indicating that the action has been truncated.
 
 Knowing this, you can choose to configure your code to listen for this header and respond, with a custom error page for example.
 
@@ -114,21 +114,23 @@ Note that too many `set-cookie` headers in the response can also create issues.
 
 ## Static Files
 
-Pantheon strips cookies for files with common static file extensions. See [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) doc for more information.
+Pantheon strips cookies for files with common static file extensions. Refer to [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) documentation for more information.
 
 ## FAQ
 
 ### Why isn't my cookie being saved/retrieved?
 
-It's important to note that for the response to be cached by Pantheon's edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention.
+It's important to note that for the variant response to be respected by Pantheon's Edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention. For the cookie to be passed to the CMS on every request, it must be one of the cache-busting cookies.
 
-### My site is not being cached when I used `X` plugin/module that uses this cookie
+### Why is my site not behaving as expected with a plugin/module that uses cookies to deliver different page content or functionality?
 
-The best way to utilize cookies on Pantheon is by having the cookie name match the `STYXKEY[a-zA-Z0-9_-]+` naming convention, and loading them in the first load, not on every page load. Refer to the sample code outlined [here](#cache-varying-cookies)
+The best way to use cookies on Pantheon is to have the cookie name match the `STYXKEY[a-zA-Z0-9_-]+` naming convention, and to load them in the first load, not on every page load. For more information, refer to the code example outlined in the [Cache-Varying Cookies](#cache-varying-cookies) section. 
 
 ### A plugin/module is using `cookie_name`, can I request it be added to the [Cache-Busting Cookies List](/cookies/#cache-busting-cookies)?
 
-No, the vcl cookie pattern is a platform wide setting and cannot be overridden. You will need to modify your code to have the cookie name prefix as `STYXKEY_` and follow the sample code [here](#cache-varying-cookies) in order for your site to be properly cached.
+The VCL cookie pattern is a platform wide setting and cannot be overridden on an individual site basis. Pantheon maintains the list of cache-busting cookies. On very rare occasions, Pantheon can modify the list if there are new use cases for login or authorization that are common and affect many users. 
+
+For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Refer to the code example in the [Cache-Varying Cookies]](#cache-varying-cookies) section, for more information on properly caching. 
 
 ## See Also
 
