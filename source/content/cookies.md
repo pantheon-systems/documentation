@@ -122,7 +122,7 @@ Pantheon strips cookies for files with common static file extensions. See [File 
 
 It's important to note that for the variant response to be respected by Pantheon's edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention. For the cookie to be passed to the CMS on every request, it must be one of the cache-busting cookies.
 
-### My site is not behaving normally when I used `X` plugin/module that uses cookies to deliver different pages
+### My site is not behaving as expected with a plugin/module that uses cookies to deliver different page content or functionality (e.g. paywalls)
 
 The best way to utilize cookies on Pantheon is by having the cookie name match the `STYXKEY[a-zA-Z0-9_-]+` naming convention, and loading them in the first load, not on every page load. Refer to the sample code outlined [here](#cache-varying-cookies)
 
