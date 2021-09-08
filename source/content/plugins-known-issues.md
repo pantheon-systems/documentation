@@ -936,6 +936,23 @@ Complete this step in Dev, Test, and Live Environments.
 
 1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
+**Issue:** When enabling WAF (Web Application Firewall) it might result to an error "Error Connecting to the Database", the Wordfence plugin generated a bad wordfence-waf.php file.
+
+**Solution** Replace the following lines on wordfence-waf.php
+
+from:
+```
+if (file_exists('/code/wordfence-waf.php')) {
+include_once '/code/wordfence-waf.php';
+}
+```
+to:
+
+```
+if (file_exists('/code/includes/prepend.php')) {
+        include_once '/code/includes/prepend.php';
+}
+```
 ___
 
 ## [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
