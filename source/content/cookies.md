@@ -62,7 +62,7 @@ First, check to see if the cookie is set within the incoming request. If the coo
 
 <Alert title="Note" type="info">
 
-If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a `Set-Cookie:` header.
+If the value has already been set, do not set the cookie again in the response. Pantheon cannot cache a response that contains a `Set-Cookie:` header.
 
 </Alert>
 
@@ -120,15 +120,17 @@ Pantheon strips cookies for files with common static file extensions. See [File 
 
 ### Why isn't my cookie being saved/retrieved?
 
-It's important to note that for the response to be cached by Pantheon's edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention.
+It's important to note that for the variant response to be respected by Pantheon's edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention. For the cookie to be passed to the CMS on every request, it must be one of the cache-busting cookies.
 
-### My site is not being cached when I used `X` plugin/module that uses this cookie
+### My site is not behaving normally when I used `X` plugin/module that uses cookies to deliver different pages
 
 The best way to utilize cookies on Pantheon is by having the cookie name match the `STYXKEY[a-zA-Z0-9_-]+` naming convention, and loading them in the first load, not on every page load. Refer to the sample code outlined [here](#cache-varying-cookies)
 
 ### A plugin/module is using `cookie_name`, can I request it be added to the [Cache-Busting Cookies List](/cookies/#cache-busting-cookies)?
 
-No, the vcl cookie pattern is a platform wide setting and cannot be overridden. You will need to modify your code to have the cookie name prefix as `STYXKEY_` and follow the sample code [here](#cache-varying-cookies) in order for your site to be properly cached.
+The vcl cookie pattern is a platform wide setting and cannot be overridden on a per-site basis. We do maintain the list of cache-busting cookies and can modify it as appropriate if there are new use-cases for login or authorization that are common, but this rarely happens.
+
+For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Follow the sample code [here](#cache-varying-cookies) in order for your site to be properly cached.
 
 ## See Also
 
