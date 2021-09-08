@@ -376,20 +376,6 @@ PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file 
 
 ___
 
-## [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
-
-<ReviewDate date="2018-10-16" />
-
-**Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
-
-> EWWW Image Optimizer uses jpegtran, optipng, pngout, pngquant, gifsicle, and cwebp. You are missing: jpegtran, optipng, gifsicle. Please install via the Settings Page or the Installation Instructions.
-
-The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/6-the-plugin-says-i-m-missing-something) do not apply to Pantheon.
-
-**Solution:** Use an alternative plugin like [EWWW Image Optimizer Cloud](https://wordpress.org/plugins/ewww-image-optimizer-cloud/), which is a cloud version of the plugin that executes the compression from an external service instead of the server. Another alternative that works well with the default configuration is [Smush Image Compression and Optimization](https://wordpress.org/plugins/wp-smushit/).
-
-___
-
 ## [FacetWP](https://facetwp.com)
 
 <ReviewDate date="2019-10-15" />
