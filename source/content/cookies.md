@@ -35,11 +35,11 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass cache on Pantheon.
 
-## Disable Caching in The Dev Environment
+## Disable Page Caching in The Dev Environment
 
-You may decide to disable caching in the Dev environment as you make changes to cacheable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
+In dev and multidev environments, Pantheon will not cache page asset files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to turn down the cache lifetime in your CMS to zero.
 
-To bypass caching in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+If you need to work around your CMS to bypass caching for pages in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
 ```php
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
