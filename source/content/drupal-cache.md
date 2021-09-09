@@ -64,19 +64,19 @@ On Pantheon, the "Compress cached pages" setting should not checked, as pages 
  ![Drupal 7 aggregate CSS and JS files](../images/aggregate-css-js.png)<br />
 On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
-### The cache_form table
+### The `cache_form` Table
 
-Drupal 7 sites can encounter performance problems when the `cache_form` table in the database grows large in size. Unlike other Drupal cache tables, entries in `cache_form` are only removed after they expire. By default, this is 6 hours.
+Drupal 7 sites can encounter performance problems when the `cache_form` table in the database grows to be too large in size. Unlike other Drupal cache tables, entries in `cache_form` are only removed after expiration. By default, entries expire after six hours. Entries which are older than six hours will be deleted.
 
-In addition to storing in-flight form data, Drupal writes to the `cache_form` table every time a form that utilizes the `#ajax` Form API property is _viewed_. On a high-traffic site, or a site with an AJAX form on every page (e.g, a search field with autocomplete), traffic alone can cause the table to grow large enough to severely impact performance, impede MySQL replication, and cause downtime.
+In addition to storing in-flight form data, Drupal writes to the `cache_form` table every time a form that uses the `#ajax` Form API property is viewed. On a high-traffic site, or a site with an AJAX form on every page (for example a search field with autocomplete), traffic can cause the table to grow large enough to severely impact performance, impede MySQL replication, and cause downtime.
 
-[Drupal 7.61](https://www.drupal.org/node/2857751) introduced a feature to control the expiration of entries in `cache_form`. If your site is having issues with this table, you can add this to your `settings.php` file:
+[Drupal 7.61](https://www.drupal.org/node/2857751) introduced a feature to control the expiration of entries in `cache_form`. If your site is having issues with the table, you can add the following code to your `settings.php` file:
 
 ```php
 $conf['form_cache_expiration'] = 1800; // Expire cache_form items after 30 minutes.
 ```
 
-Cleanup on the `cache_form` table runs on cron. If the table continues to grow too much despite setting a low expiration time, you may need to [troubleshoot cron](/drupal-cron#troubleshooting-cron). In a pinch, you can also safely delete the contents of the table with a SQL query:
+Cleanup on the `cache_form` table runs on cron. If the table continues to grow to be too large, despite setting a low expiration time, you can [troubleshoot cron](/drupal-cron#troubleshooting-cron). You can also safely delete the contents of the table with a SQL query:
 
 ```sql
 mysql> TRUNCATE TABLE cache_form;
