@@ -229,7 +229,6 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 - Drupal 8 - [https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php)
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 
-
 ### Where can I find examples of Pantheon settings.php?
 
 You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
