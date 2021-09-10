@@ -10,7 +10,7 @@ Pantheon runs nginx web servers for optimal performance. Your site's nginx acces
 
 <Alert title="Note" type="info">
 
-Requests served by the [Pantheon Global CDN](/global-cdn) will not hit the nginx webserver and will not be logged in `nginx-access.log`.
+Requests served by the [Pantheon Global CDN](/global-cdn) will not hit the nginx web server and will not be logged in `nginx-access.log`.
 
 </Alert>
 

@@ -161,7 +161,7 @@ ___
 
 <ReviewDate date="2019-07-10" />
 
-**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
+**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx web servers and Apache modules are not compatible with the Platform.
 
 ___
 
