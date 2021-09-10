@@ -139,8 +139,6 @@ This table shows the recommended MariaDB version for each CMS:
 
 | CMS           | Recommended MariaDB Version |
 |---------------|-----------------------------|
-| Drupal < 6.51 | 10.3                        |
-| Drupal ≥ 6.51 | 10.4                        |
 | Drupal < 7.76 | 10.3                        |
 | Drupal ≥ 7.76 | 10.4                        |
 | Drupal < 8.5  | 10.3                        |

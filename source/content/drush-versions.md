@@ -51,9 +51,9 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 ## Compatibility and Requirements
 
-Drush 8 is compatible with Drupal 6, 7, and 8.
+Drush 8 is compatible with Drupal 7 and 8.
 
-Always use Drush 8 with Drupal 7 and Drupal 6 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 and later.
+Always use Drush 8 with Drupal 7 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 and later.
 
 While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
 

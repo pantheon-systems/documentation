@@ -455,22 +455,6 @@ Fatal error: require_once(): Failed opening required
 '/srv/bindings/xxxxxxxxx/code/sites/all/modules/redis/redis.autoload.inc'
 ```
 
-### Drupal 6 Cache Backport
-
-If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](https://git.drupalcode.org/project/cache_backport/blob/master/INSTALL.txt) for how to configure Cache Backport.
-
-If you see the following message:
-
-```bash
-File not found:
-'sites/all/modules/cache_backport/system.admin.inc'
-```
-
-You skipped a step; `settings.php` must include the cache\_backport files. Add the following to `settings.php` before the Redis configuration:
-
-```php:title=settings.php
-$conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
-```
 
 ### You have requested a non-existent service
 
