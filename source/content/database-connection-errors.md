@@ -35,24 +35,7 @@ Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](
 
 Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
 
-However, because the Pantheon environment data is not loaded at this time, any bootstrap to the database level will fail since there is no valid connection information. In this case, include a snippet in your `settings.php` _before_ the module's include call. For example:
-
-### Drupal 6 Style
-
-```php
-$settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-  $info = $settings['databases']['default']['default'];
-  $db_url = sprintf("%s://%s:%s@%s:%s/%s",
-                    $info['driver'],
-                    $info['username'],
-                    $info['password'],
-                    $info['host'],
-                    $info['port'],
-                    $info['database']);
-  $conf = $settings['conf'];
-  # Include any other settings.php magic here.
-  include './sites/all/modules/domain/settings.inc';
-```
+However, because the Pantheon environment data is not loaded at this time, any bootstrap to the database level will fail since there is no valid connection information. In this case, include a snippet in your `settings.php` before the module's include call. 
 
 ### Drupal 7 Style
 

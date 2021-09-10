@@ -66,7 +66,6 @@ Before changing your PHP version, confirm that your CMS is compatible:
 - [WordPress Requirements](https://wordpress.org/about/requirements/)
 - [Drupal 8 and 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
-- As of Drupal 6.45, Drupal 6 is [compatible with PHP 7.2](https://www.mydropwizard.com/blog/announcing-drupal-645-and-selected-contrib-php-72). Older versions of Drupal 6 require PHP 5.4 and below.
 
 
 ## Configure PHP Version

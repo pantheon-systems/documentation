@@ -118,17 +118,6 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 }
 ```
 
-### Drupal 6
-
-```php
-// Local development configuration.
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  // Database.
-  $db_url = 'mysql://username:password@localhost/databasename';
-  $db_prefix = '';
-}
-```
-
 ## Frequently Asked Questions
 
 ### Can I delete the default.settings.php file?
@@ -239,7 +228,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 - Drupal 8 - [https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php)
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
-- Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
+
 
 ### Where can I find examples of Pantheon settings.php?
 
