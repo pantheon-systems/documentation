@@ -26,10 +26,10 @@ Keep this page open and login to your [Namecheap account](https://www.namecheap.
 ## Configure DNS Records on Namecheap
 
 ### A Record
-2. Select **Domain List** then click the **Manage** button next to the domain you want to point to Pantheon.
-3. Navigate to **Advanced DNS** and click the **Add New Record** button.
-4. Select **A Record** for Type and enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
-5. Select desired Time to Live (TTL).
+1. Select **Domain List** then click the **Manage** button next to the domain you want to point to Pantheon.
+2. Navigate to **Advanced DNS** and click the **Add New Record** button.
+3. Select **A Record** for Type and enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
+4. Select desired Time to Live (TTL).
 
     <Accordion title="Learn More" id="ttl" icon="info-sign">
 
@@ -41,7 +41,7 @@ Keep this page open and login to your [Namecheap account](https://www.namecheap.
 
     </Accordion>
 
-6. Click **Save changes**.
+5. Click **Save changes**.
 
 ### AAAA Records
 1. From the **Advanced DNS** tab, click the **Add New Record** button.
