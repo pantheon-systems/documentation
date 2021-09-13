@@ -2,7 +2,7 @@
     "application":
     {
         "name": "Terminus",
-        "version": "2.5.0"
+        "version": "2.6.1"
     },
     "commands":
     [
@@ -314,7 +314,7 @@
                 "help [--format FORMAT] [--raw] [--] [<command_name>]"
             ],
             "description": "Displays help for a command",
-            "help": "The <info>help</info> command displays help for a given command:\n\n <info>php /usr/local/bin/terminus help list</info>\n\nYou can also output the help in other formats by using the <comment>--format</comment> option:\n\n <info>php /usr/local/bin/terminus help --format=xml list</info>\n\nTo display the list of available commands, please use the <info>list</info> command.",
+            "help": "The <info>help</info> command displays help for a given command:\n\n  <info>php /usr/local/bin/terminus help list</info>\n\nYou can also output the help in other formats by using the <comment>--format</comment> option:\n\n  <info>php /usr/local/bin/terminus help --format=xml list</info>\n\nTo display the list of available commands, please use the <info>list</info> command.",
             "definition":
             {
                 "arguments":
@@ -441,7 +441,7 @@
                 "list [--raw] [--format FORMAT] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-y|--yes] [--] <command> [<namespace>]"
             ],
             "description": "Lists commands",
-            "help": "The <info>list</info> command lists all commands:\n\n <info>php /usr/local/bin/terminus list</info>\n\nYou can also display the commands for a specific namespace:\n\n <info>php /usr/local/bin/terminus list test</info>\n\nYou can also output the information in other formats by using the <comment>--format</comment> option:\n\n <info>php /usr/local/bin/terminus list --format=xml</info>\n\nIt's also possible to get raw list of commands (useful for embedding command runner):\n\n <info>php /usr/local/bin/terminus list --raw</info>",
+            "help": "The <info>list</info> command lists all commands:\n\n  <info>php /usr/local/bin/terminus list</info>\n\nYou can also display the commands for a specific namespace:\n\n  <info>php /usr/local/bin/terminus list test</info>\n\nYou can also output the information in other formats by using the <comment>--format</comment> option:\n\n  <info>php /usr/local/bin/terminus list --format=xml</info>\n\nIt's also possible to get raw list of commands (useful for embedding command runner):\n\n  <info>php /usr/local/bin/terminus list --raw</info>",
             "definition":
             {
                 "arguments":
@@ -835,7 +835,7 @@
             "name": "backup:automatic:disable",
             "usage":
             [
-                "backup:automatic:disable <site>.<env>",
+                "backup:automatic:disable <site_env>",
                 "backup:automatic:disable <site>.<env> Disables the regular backup schedule for <site>'s <env> environment."
             ],
             "description": "Disables automatic backups.",
@@ -844,9 +844,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -943,9 +943,10 @@
             "name": "backup:automatic:enable",
             "usage":
             [
-                "backup:automatic:enable [--day [DAY]] [--] <site>.<env>",
+                "backup:automatic:enable [--day [DAY]] [--keep-for [KEEP-FOR]] [--] <site_env>",
                 "backup:automatic:enable <site>.<env> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups that are retained for one month.",
-                "backup:automatic:enable <site>.<env> --day=<day> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups on <day> that are retained for one month."
+                "backup:automatic:enable <site>.<env> --day=<day> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups on <day> that are retained for one month.",
+                "backup:automatic:enable <site>.<env> --keep-for=<days> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups on <day> that are retained for <days>."
             ],
             "description": "Enables automatic daily backups that are retained for one week and weekly backups retained for one month.",
             "help": "Enables automatic daily backups that are retained for one week and weekly backups retained for one month.",
@@ -953,9 +954,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -972,6 +973,16 @@
                         "is_value_required": false,
                         "is_multiple": false,
                         "description": "Day of the week to make the month-long backup in any format recognized by PHP strtotime",
+                        "default": null
+                    },
+                    "keep-for":
+                    {
+                        "name": "--keep-for",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Retention period, in days, to retain the weekly backup. The default is 32 days.",
                         "default": null
                     },
                     "help":
@@ -1062,9 +1073,9 @@
             "name": "backup:automatic:info",
             "usage":
             [
-                "backup:automatic:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "backup:automatic:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "backup:automatic:info <site>.<env> Displays the day when <site>'s <env> environment's weekly backup is created.",
-                "backup:automatic:info <site>.<env> --format=table Displays the hour of <site>'s <env> environment's daily backups (retained for one week) and the day on which its weekly backups (retained for one month) are made."
+                "backup:automatic:info <site>.<env> --format=table Displays the hour of <site>'s <env> environment's daily backups (retained for one week), day on which its weekly backups (retained for one month) are made, and how long it is kept for."
             ],
             "description": "Displays the hour when daily backups are created and the day of the week when weekly backups are created.",
             "help": "Displays the hour when daily backups are created and the day of the week when weekly backups are created.",
@@ -1072,9 +1083,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1100,7 +1111,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: Daily Backup Hour (daily_backup_hour), Weekly Backup Day (weekly_backup_day)",
+                        "description": "Available fields: Daily Backup Hour (daily_backup_hour), Weekly Backup Day (weekly_backup_day), Weekly Backup Expiry (expiry)",
                         "default": ""
                     },
                     "field":
@@ -1201,7 +1212,7 @@
             "name": "backup:create",
             "usage":
             [
-                "backup:create [--element [ELEMENT]] [--keep-for [KEEP-FOR]] [--] <site>.<env>",
+                "backup:create [--element [ELEMENT]] [--keep-for [KEEP-FOR]] [--] <site_env>",
                 "backup:create <site>.<env> Creates a backup of <site>'s <env> environment.",
                 "backup:create <site>.<env> --element=<element> Creates a backup of <site>'s <env> environment's <element>.",
                 "backup:create <site>.<env> --keep-for=<days> Creates a backup of <site>'s <env> environment and retains it for <days> days.",
@@ -1213,9 +1224,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1241,8 +1252,8 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Retention period, in days, to retain backup",
-                        "default": 365
+                        "description": "Retention period, in days, to retain backup. It defaults to 365 days.",
+                        "default": null
                     },
                     "help":
                     {
@@ -1332,7 +1343,7 @@
             "name": "backup:get",
             "usage":
             [
-                "backup:get [--file [FILE]] [--element [ELEMENT]] [--to [TO]] [--] <site>.<env>",
+                "backup:get [--file [FILE]] [--element [ELEMENT]] [--to [TO]] [--] <site_env>",
                 "backup:get <site>.<env> Displays the URL for the most recent backup of any type in <site>'s <env> environment.",
                 "backup:get <site>.<env> --file=<file_name> Displays the URL for the backup with the file name <file_name> in <site>'s <env> environment.",
                 "backup:get <site>.<env> --element=<element> Displays the URL for the most recent <element> backup in <site>'s <env> environment.",
@@ -1345,9 +1356,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1474,7 +1485,7 @@
             "name": "backup:info",
             "usage":
             [
-                "backup:info [--file [FILE]] [--element [ELEMENT]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "backup:info [--file [FILE]] [--element [ELEMENT]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "backup:info <site>.<env> Displays information about the most recent backup of any type in <site>'s <env> environment.",
                 "backup:info <site>.<env> --file=<file_name> Displays information about the backup with the file name <file_name> in <site>'s <env> environment.",
                 "backup:info <site>.<env> --element=<element> Displays information about the most recent <element> backup in <site>'s <env> environment."
@@ -1485,9 +1496,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1634,7 +1645,7 @@
             "name": "backup:list",
             "usage":
             [
-                "backup:list [--element [ELEMENT]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "backup:list [--element [ELEMENT]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "backup:list <site>.<env> Lists all backups made of <site>'s <env> environment.",
                 "backup:list <site>.<env> --element=<element> Lists all <element> backups made of <site>'s <env> environment.",
                 "backups"
@@ -1645,9 +1656,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1784,7 +1795,7 @@
             "name": "backup:restore",
             "usage":
             [
-                "backup:restore [--file [FILE]] [--element [ELEMENT]] [--] <site>.<env>",
+                "backup:restore [--file [FILE]] [--element [ELEMENT]] [--] <site_env>",
                 "backup:restore <site>.<env> Restores the most recent backup of any type to <site>'s <env> environment.",
                 "backup:restore <site>.<env> --file=<backup> Restores backup with the <backup> file name to <site>'s <env> environment. Use terminus backup:list to identify available backups.",
                 "backup:restore <site>.<env> --element=<element> Restores the most recent <element> backup to <site>'s <env> environment."
@@ -1795,9 +1806,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2053,7 +2064,7 @@
             "name": "connection:info",
             "usage":
             [
-                "connection:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "connection:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "connection:info <site>.<env> Displays connection information for <site>'s <env> environment.",
                 "connection:info <site>.<env> --fields='git_*' Displays connection information fields related to Git for <site>'s <env> environment."
             ],
@@ -2063,9 +2074,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2192,7 +2203,7 @@
             "name": "connection:set",
             "usage":
             [
-                "connection:set <site>.<env> <mode>",
+                "connection:set <site_env> <mode>",
                 "connection:set <site>.<env> <mode> Sets the connection mode of <site>'s <env> environment to <mode>."
             ],
             "description": "Sets Git or SFTP connection mode on a development environment (excludes Test and Live).",
@@ -2201,9 +2212,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment (excludes Test and Live) in the format `site-name.env`",
@@ -2308,7 +2319,7 @@
             "name": "dashboard:view",
             "usage":
             [
-                "dashboard:view [--print] [--site>.<env] [--] [<site>.<env>]",
+                "dashboard:view [--print] [--site_env] [--] [<site_env>]",
                 "dashboard:view Opens browser to user's account on the Pantheon Dashboard.",
                 "dashboard:view --print Prints the URL for user's account on the Pantheon Dashboard.",
                 "dashboard:view <site> Opens browser to <site> on the Pantheon Dashboard.",
@@ -2321,9 +2332,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": false,
                         "is_array": false,
                         "description": "",
@@ -2342,9 +2353,9 @@
                         "description": "Print URL only",
                         "default": false
                     },
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "--site>.<env",
+                        "name": "--site_env",
                         "shortcut": "",
                         "accept_value": false,
                         "is_value_required": false,
@@ -2440,7 +2451,7 @@
             "name": "domain:add",
             "usage":
             [
-                "domain:add <site>.<env> <domain>",
+                "domain:add <site_env> <domain>",
                 "domain:add <site>.<env> <domain_name> Associates <domain_name> with <site>'s <env> environment."
             ],
             "description": "Associates a domain with the environment.",
@@ -2449,9 +2460,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2556,7 +2567,7 @@
             "name": "domain:dns",
             "usage":
             [
-                "domain:dns [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "domain:dns [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "domain:dns <site>.<env> Displays recommended DNS settings for <site>'s <env> environment."
             ],
             "description": "Displays recommended DNS settings for the environment.",
@@ -2565,9 +2576,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2694,7 +2705,7 @@
             "name": "domain:list",
             "usage":
             [
-                "domain:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "domain:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "domain:list <site>.<env> Displays domains associated with <site>'s <env> environment.",
                 "domains"
             ],
@@ -2704,9 +2715,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2971,7 +2982,7 @@
             "name": "domain:primary:add",
             "usage":
             [
-                "domain:primary:add <site>.<env> <domain>",
+                "domain:primary:add <site_env> <domain>",
                 "domain:primary:add <site>.<env> <domain> Designates <domain> as the primary domain of <site>'s <env> environment."
             ],
             "description": "Sets a domain associated to the environment as primary, causing all traffic to redirect to it.",
@@ -2980,9 +2991,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3087,7 +3098,7 @@
             "name": "domain:primary:remove",
             "usage":
             [
-                "domain:primary:remove <site>.<env>",
+                "domain:primary:remove <site_env>",
                 "domain:primary:remove <site>.<env> Un-designates the primary domain of <site>'s <env> environment.",
                 "domain:primary:rm"
             ],
@@ -3097,9 +3108,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3196,7 +3207,7 @@
             "name": "domain:remove",
             "usage":
             [
-                "domain:remove <site>.<env> <domain>",
+                "domain:remove <site_env> <domain>",
                 "domain:remove <site>.<env> <domain_name> Disassociates <domain_name> from <site>'s <env> environment.",
                 "domain:rm"
             ],
@@ -3206,9 +3217,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3313,7 +3324,7 @@
             "name": "env:clear-cache",
             "usage":
             [
-                "env:clear-cache <site>.<env>",
+                "env:clear-cache <site_env>",
                 "env:clear-cache <site>.<env> Clears caches for <site>'s <env> environment.",
                 "env:cc"
             ],
@@ -3323,9 +3334,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3422,9 +3433,9 @@
             "name": "env:clone-content",
             "usage":
             [
-                "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--] <site>.<env> <target_env>",
+                "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--] <site_env> <target_env>",
                 "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env> environment to <target_env> environment and clears the cache.",
+                "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env> environment to <target_env> environment and clears the database.",
                 "env:clone-content <site>.<env> <target_env> --db-only Clones only the database from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --files-only Clones only files from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env> environment to <target_env> environment and updates the Drupal database (if applicable)."
@@ -3435,9 +3446,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Origin site & environment in the format `site-name.env`",
@@ -3582,7 +3593,7 @@
             "name": "env:code-log",
             "usage":
             [
-                "env:code-log [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "env:code-log [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "env:code-log <site>.<env> Displays the code log for <site>'s <env> environment."
             ],
             "description": "Displays the code log for the environment.",
@@ -3591,9 +3602,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3720,7 +3731,7 @@
             "name": "env:commit",
             "usage":
             [
-                "env:commit [--message [MESSAGE]] [--force] [--] <site>.<env>",
+                "env:commit [--message [MESSAGE]] [--force] [--] <site_env>",
                 "env:commit <site>.<env> Commits code changes to <site>'s <env> environment with the default message.",
                 "env:commit <site>.<env> --message=<message> Commits code changes to <site>'s <env> environment with the message <message>."
             ],
@@ -3730,9 +3741,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3849,7 +3860,7 @@
             "name": "env:deploy",
             "usage":
             [
-                "env:deploy [--sync-content] [--note [NOTE]] [--cc] [--updatedb] [--] <site>.<env>",
+                "env:deploy [--sync-content] [--note [NOTE]] [--cc] [--updatedb] [--] <site_env>",
                 "env:deploy <site>.test Deploy code from <site>'s Dev environment to the Test environment.",
                 "env:deploy <site>.live Deploy code from <site>'s Test environment to the Live environment.",
                 "env:deploy <site>.test --sync-content Deploy code from <site>'s Dev environment to the Test environment and clone content from the Live environment to the Test environment.",
@@ -3863,9 +3874,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env` (only Test or Live environment)",
@@ -4002,7 +4013,7 @@
             "name": "env:diffstat",
             "usage":
             [
-                "env:diffstat [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "env:diffstat [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "env:diffstat <site>.<env> Displays a diff of uncommitted code changes on <site>'s <env> environment."
             ],
             "description": "Displays the diff of uncommitted code changes on a development environment.",
@@ -4011,9 +4022,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment in the format `site-name.env`",
@@ -4140,7 +4151,7 @@
             "name": "env:info",
             "usage":
             [
-                "env:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "env:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "env:info <site>.<env> Displays status and configuration for <site>'s <env> environment."
             ],
             "description": "Displays environment status and configuration.",
@@ -4149,9 +4160,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4417,7 +4428,7 @@
             "name": "env:metrics",
             "usage":
             [
-                "env:metrics [--period [PERIOD]] [--datapoints [DATAPOINTS]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "env:metrics [--period [PERIOD]] [--datapoints [DATAPOINTS]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "env:metrics <site>.<env> Displays metrics for <site>'s <env> environment.",
                 "env:metrics <site> Displays the combined metrics for all of <site>'s environments.",
                 "env:metrics <site> --fields=datetime,pages_served Displays only the pages served for each date period.",
@@ -4431,9 +4442,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`. Defaults to the live environment if `.env` is not specified.",
@@ -4580,7 +4591,7 @@
             "name": "env:view",
             "usage":
             [
-                "env:view [--print] [--] <site>.<env>",
+                "env:view [--print] [--] <site_env>",
                 "env:view <site>.<env> Opens the browser to <site>'s <env> environment.",
                 "env:view <site>.<env> --print Prints the URL for <site>'s <env> environment.",
                 "site:view"
@@ -4591,9 +4602,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4700,7 +4711,7 @@
             "name": "env:wake",
             "usage":
             [
-                "env:wake <site>.<env>",
+                "env:wake <site_env>",
                 "env:wake <site>.<env> Wakes <site>'s <env> environment by pinging it."
             ],
             "description": "Wakes the environment by pinging it. Note: Development environments and Sandbox sites will automatically sleep after a period of inactivity.",
@@ -4709,9 +4720,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4808,7 +4819,7 @@
             "name": "env:wipe",
             "usage":
             [
-                "env:wipe <site>.<env>",
+                "env:wipe <site_env>",
                 "env:wipe <site>.<env> Deletes all database/files on <site>'s <env> environment."
             ],
             "description": "Deletes all files and database content in the environment.",
@@ -4817,9 +4828,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4916,7 +4927,7 @@
             "name": "https:info",
             "usage":
             [
-                "https:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "https:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "https:info <site>.<env> Displays HTTPS configuration for <site>'s <env> environment."
             ],
             "description": "Provides information for HTTPS on being used for the environment.",
@@ -4925,9 +4936,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5054,7 +5065,7 @@
             "name": "https:remove",
             "usage":
             [
-                "https:remove <site>.<env>",
+                "https:remove <site_env>",
                 "https:remove <site>.<env> Disables HTTPS and removes the SSL certificate from <site>'s <env> environment.",
                 "https:disable",
                 "https:rm"
@@ -5065,9 +5076,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5164,7 +5175,7 @@
             "name": "https:set",
             "usage":
             [
-                "https:set [--intermediate-certificate [INTERMEDIATE-CERTIFICATE]] [--] <site>.<env> <certificate> <private_key>",
+                "https:set [--intermediate-certificate [INTERMEDIATE-CERTIFICATE]] [--] <site_env> <certificate> <private_key>",
                 "https:set <site>.<env> <cert_file> <key_file> Enables HTTPS for <site>'s <env> environment using the SSL certificate at <cert_file> and private key at <key_file>.",
                 "https:set <site>.<env> <cert> <key> --intermediate-certificate=<int_cert_file> Enables HTTPS for <site>'s <env> environment using the SSL certificate at <cert_file>, private key at <key_file> and intermediate certificate(s) at <int_cert_file>.",
                 "https:add",
@@ -5176,9 +5187,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5410,7 +5421,7 @@
             "name": "import:database",
             "usage":
             [
-                "import:database <site>.<env> <url>",
+                "import:database <site_env> <url>",
                 "import:database <site>.<env> <archive_url> Imports the database archive at <archive_url> to <site>'s <env> environment.",
                 "import:db"
             ],
@@ -5420,9 +5431,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5527,7 +5538,7 @@
             "name": "import:files",
             "usage":
             [
-                "import:files <site>.<env> <url>",
+                "import:files <site_env> <url>",
                 "import:files <site>.<env> <archive_url> Imports the files in the archive at <archive_url> to <site>'s <env> environment."
             ],
             "description": "Imports a file archive to the environment.",
@@ -5536,9 +5547,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5760,7 +5771,7 @@
             "name": "lock:disable",
             "usage":
             [
-                "lock:disable <site>.<env>",
+                "lock:disable <site_env>",
                 "lock:disable <site>.<env> Disables HTTP basic authentication on <site>'s <env> environment."
             ],
             "description": "Disables HTTP basic authentication on the environment.",
@@ -5769,9 +5780,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5868,7 +5879,7 @@
             "name": "lock:enable",
             "usage":
             [
-                "lock:enable <site>.<env> <username> <password>",
+                "lock:enable <site_env> <username> <password>",
                 "lock:enable <site>.<env> <username> <password> Enables HTTP basic authentication on <site>'s <env> environment with the username <username> and the password <password>."
             ],
             "description": "Enables HTTP basic authentication on the environment. Note: HTTP basic authentication username and password are stored in plaintext.",
@@ -5877,9 +5888,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5992,7 +6003,7 @@
             "name": "lock:info",
             "usage":
             [
-                "lock:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "lock:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "lock:info <site>.<env> Displays HTTP basic authentication status and configuration for <site>'s <env> environment."
             ],
             "description": "Displays HTTP basic authentication status and configuration for the environment.",
@@ -6001,9 +6012,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -6469,7 +6480,7 @@
             "name": "multidev:create",
             "usage":
             [
-                "multidev:create [--no-db] [--no-files] [--] <site>.<env> <multidev>",
+                "multidev:create [--no-db] [--no-files] [--] <site_env> <multidev>",
                 "multidev:create <site>.<env> <multidev> Creates the Multidev environment, <multidev>, within <site> with database and files from the <env> environment.",
                 "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev> environment without database from the <env> environment.",
                 "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev> environment without files from the <env> environment.",
@@ -6481,9 +6492,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & source environment in the format `site-name.env`",
@@ -6608,7 +6619,7 @@
             "name": "multidev:delete",
             "usage":
             [
-                "multidev:delete [--delete-branch] [--] <site>.<env>",
+                "multidev:delete [--delete-branch] [--] <site_env>",
                 "multidev:delete <site>.<multidev> Deletes <site>'s <multidev> Multidev environment.",
                 "multidev:delete <site>.<multidev> --delete-branch Deletes <site>'s <multidev> Multidev environment and deletes its associated Git branch.",
                 "env:delete"
@@ -6619,9 +6630,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & Multidev environment in the format `site-name.env`",
@@ -6867,7 +6878,7 @@
             "name": "multidev:merge-from-dev",
             "usage":
             [
-                "multidev:merge-from-dev [--updatedb] [--] <site>.<env>",
+                "multidev:merge-from-dev [--updatedb] [--] <site_env>",
                 "multidev:merge-from-dev <site>.<multidev> Merges code commits from <site>'s Dev environment into the <multidev> environment.",
                 "multidev:merge-from-dev <site>.<multidev> --updatedb Merges code commits from <site>'s Dev environment into the <multidev> environment and runs update.php afterwards.",
                 "env:merge-from-dev"
@@ -6878,9 +6889,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & Multidev environment in the form `site-name.env`",
@@ -6987,7 +6998,7 @@
             "name": "multidev:merge-to-dev",
             "usage":
             [
-                "multidev:merge-to-dev [--updatedb] [--] <site>.<env>",
+                "multidev:merge-to-dev [--updatedb] [--] <site_env>",
                 "multidev:merge-to-dev <site>.<multidev> Merges code commits from <site>'s <multidev> environment into the Dev environment.",
                 "multidev:merge-to-dev <site>.<multidev> --updatedb Merges code commits from <site>'s <multidev> environment into the Dev environment and runs update.php afterwards.",
                 "env:merge-to-dev"
@@ -6998,9 +7009,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & Multidev environment in the form `site-name.env`",
@@ -9642,7 +9653,7 @@
             "name": "remote:drush",
             "usage":
             [
-                "remote:drush [--progress] [--] <site>.<env> [<command>]...",
+                "remote:drush [--progress] [--] <site_env> [<drush_command>]...",
                 "remote:drush <site>.<env> -- <command> Runs the Drush command <command> remotely on <site>'s <env> environment.",
                 "remote:drush <site>.<env> --progress -- <command> Runs a Drush command with a progress bar",
                 "drush"
@@ -9653,17 +9664,17 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
                         "default": null
                     },
-                    "command":
+                    "drush_command":
                     {
-                        "name": "command",
+                        "name": "drush_command",
                         "is_required": false,
                         "is_array": true,
                         "description": "Drush command",
@@ -9770,7 +9781,7 @@
             "name": "remote:wp",
             "usage":
             [
-                "remote:wp [--progress] [--] <site>.<env> [<command>]...",
+                "remote:wp [--progress] [--] <site_env> [<wp_command>]...",
                 "remote:wp <site>.<env> -- <command> Runs the WP-CLI command <command> remotely on <site>'s <env> environment.",
                 "remote:wp <site>.<env> --progress -- <command> Runs a WP-CLI command with a progress bar",
                 "wp"
@@ -9781,17 +9792,17 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
                         "default": null
                     },
-                    "command":
+                    "wp_command":
                     {
-                        "name": "command",
+                        "name": "wp_command",
                         "is_required": false,
                         "is_array": true,
                         "description": "WP-CLI command",
@@ -10125,7 +10136,7 @@
             "name": "self:console",
             "usage":
             [
-                "self:console [--site>.<env] [--] [<site>.<env>]",
+                "self:console [--site_env] [--] [<site_env>]",
                 "self:console Opens an interactive PHP console within Terminus.",
                 "self:console <site> Opens an interactive PHP console within Terminus and loads <site> as $site.",
                 "self:console <site>.<env> Opens an interactive PHP console within Terminus and loads <site> and its <env> environment as $site and $env."
@@ -10136,9 +10147,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": false,
                         "is_array": false,
                         "description": "",
@@ -10147,9 +10158,9 @@
                 },
                 "options":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "--site>.<env",
+                        "name": "--site_env",
                         "shortcut": "",
                         "accept_value": false,
                         "is_value_required": false,
@@ -13684,7 +13695,7 @@
             "name": "upstream:updates:apply",
             "usage":
             [
-                "upstream:updates:apply [--updatedb] [--accept-upstream] [--] <site>.<env>",
+                "upstream:updates:apply [--updatedb] [--accept-upstream] [--] <site_env>",
                 "upstream:updates:apply <site>.<env> Applies upstream updates to <site>'s <env> environment.",
                 "upstream:updates:apply <site>.<env> --updatedb Applies upstream updates to <site>'s <env> environment and runs update.php after update.",
                 "upstream:updates:apply <site>.<env> --accept-upstream Applies upstream updates to <site>'s <env> environment and attempts to automatically resolve conflicts in favor of the upstream."
@@ -13695,9 +13706,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment",
@@ -13814,7 +13825,7 @@
             "name": "upstream:updates:list",
             "usage":
             [
-                "upstream:updates:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
+                "upstream:updates:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
                 "upstream:updates:list <site>.<env> Displays a list of new code commits available from the upstream for <site>'s <env> environment."
             ],
             "description": "Displays a cached list of new code commits available from the upstream for a site's development environment. Note: To refresh the cache you will need to run site:upstream:clear-cache before running this command.",
@@ -13823,9 +13834,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment",
@@ -13952,7 +13963,7 @@
             "name": "upstream:updates:status",
             "usage":
             [
-                "upstream:updates:status <site>.<env>",
+                "upstream:updates:status <site_env>",
                 "upstream:updates:status <site>.<env> Displays either \"outdated\" if <site>'s <env> environment has upstream updates or \"current\" if not."
             ],
             "description": "Displays a whether there are updates available from the upstream for a site's environment.",
@@ -13961,9 +13972,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "site_env":
                     {
-                        "name": "site>.<env",
+                        "name": "site_env",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -14330,7 +14341,7 @@
             [
                 "workflow:info:status [--id [ID]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
                 "workflow:info:status <site> <workflow> Displays the status of <site>'s workflow <workflow>.",
-                "workflow:info:status <site> Displays the status of <site>'s most recently created workflow."
+                "workflow:info:status <site> Displays the status of <site>'s  most recently created workflow."
             ],
             "description": "Displays the status of a workflow.",
             "help": "Displays the status of a workflow.",
