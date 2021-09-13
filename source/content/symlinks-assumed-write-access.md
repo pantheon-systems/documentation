@@ -3,7 +3,7 @@ title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 categories: [troubleshoot]
 tags: [cli, code, files]
-reviewed: "2021-09-02"
+reviewed: "2021-09-13"
 ---
 
 Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
