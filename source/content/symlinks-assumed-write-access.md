@@ -167,7 +167,7 @@ You must manually create the target folders `code/wp-content/uploads/nitropack` 
 
 1. Repeat steps 1 and 2 for your Test and Live environments.
 
-1. Create a symlink in your `code/wp-content` directory:  
+1. Create a symlink in the `code/wp-content` directory in your Dev environment:  
     `ln -s ./uploads/nitropack/ ./nitropack`  
     `ln -s ./uploads/advanced-cache.php ./advanced-cache.php`
 

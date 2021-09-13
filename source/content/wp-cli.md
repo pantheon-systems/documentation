@@ -66,10 +66,10 @@ Feeling comfortable with WP-CLI? Here are a [few of the many commands](https://d
 
 ## Run SQL Queries Using WP-CLI on Pantheon
 
-Use the `wp db query` command via [Terminus](/terminus) to run SQL queries against the database on Pantheon:
+Use `echo` to pipe (or _redirect_) a SQL query through WP-CLI via [Terminus](/terminus):
 
 ```bash{promptUser: user}
-terminus wp $site.$env -- db query "SELECT * FROM wp_users WHERE ID=1"
+echo "SELECT * FROM wp_users WHERE ID=1;" | terminus wp $site.$env -- db query
 ```
 
 ## Execute PHP Code Using WP-CLI on Pantheon
