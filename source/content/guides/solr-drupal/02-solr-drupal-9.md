@@ -30,7 +30,7 @@ Pantheon Search with Solr 8 includes multiple built-in features to make scalable
   - Solr has the ability to store information about document relationships in the index. The stored information can be used for queries and can also return child pages in nested form if the relationship is properly stored in the index.
 - multiple language support
   - Use Solr’s stemming and language identification libraries that allows for the searching of multiple languages using separate fields, the same field (separate Solr cores), or the same field and Solr core.
-- Drupal Views integration for building search results pages and custom search forms
+
 
 ## Custom Processors
 
