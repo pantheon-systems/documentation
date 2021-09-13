@@ -43,8 +43,7 @@ The following commands will:
 
   ```bash{promptUser: user}
   mkdir ~/terminus && cd ~/terminus
-  curl -L https://github.com/pantheon-systems/terminus/releases/download/$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m{"tag_name": "\K.*?(?=")}g')/terminus.phar --output terminus
-  
+  curl -L https://github.com/pantheon-systems/terminus/releases/download/`curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g'`/terminus.phar --output terminus
   chmod +x terminus
   sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
