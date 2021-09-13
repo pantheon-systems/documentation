@@ -19,7 +19,7 @@ Be sure that you have a:
 Identify DNS values to point your domain to Pantheon:
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
-2. Click the **Details** button next to your domain.
+1. Click the **Details** button next to your domain.
 
 Keep this page open and login to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
 
@@ -27,9 +27,9 @@ Keep this page open and login to your [Namecheap account](https://www.namecheap.
 
 ### A Record
 1. Select **Domain List** then click the **Manage** button next to the domain you want to point to Pantheon.
-2. Navigate to **Advanced DNS** and click the **Add New Record** button.
-3. Select **A Record** for Type and enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
-4. Select desired Time to Live (TTL).
+1. Navigate to **Advanced DNS** and click the **Add New Record** button.
+1. Select **A Record** for Type and enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
+1. Select desired Time to Live (TTL).
 
     <Accordion title="Learn More" id="ttl" icon="info-sign">
 
@@ -41,22 +41,22 @@ Keep this page open and login to your [Namecheap account](https://www.namecheap.
 
     </Accordion>
 
-5. Click **Save changes**.
+1. Click **Save changes**.
 
 ### AAAA Records
 1. From the **Advanced DNS** tab, click the **Add New Record** button.
-2. Select **AAAA Record** for Type and enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Value** field.
-3. Select desired Time to Live (TTL).
-4. Click **Save changes**.
-5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
+1. Select **AAAA Record** for Type and enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Value** field.
+1. Select desired Time to Live (TTL).
+1. Click **Save changes**.
+1. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
 ### A Record for subdomain
 An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. From the **Advanced DNS** tab, click the **Add New Record** button.
-2. Select **A Record** for the Type and enter **www** in the **Host** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
-3. Select desired Time to Live (TTL).
-4. Click **Save changes**.
+1. Select **A Record** for the Type and enter **www** in the **Host** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
+1. Select desired Time to Live (TTL).
+1. Click **Save changes**.
 
 ## Namecheap Docs
 
