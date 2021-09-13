@@ -64,44 +64,23 @@ On Pantheon, the "Compress cached pages" setting should not checked, as pages 
  ![Drupal 7 aggregate CSS and JS files](../images/aggregate-css-js.png)<br />
 On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
-## Drupal 6
+### The `cache_form` Table
 
-### Caching Mode
+Drupal 7 sites can encounter performance problems when the `cache_form` table in the database grows to be too large in size. Unlike other Drupal cache tables, entries in `cache_form` are only removed after expiration. By default, entries expire after six hours. Entries which are older than six hours will be deleted.
 
-In Drupal 6, most users should set their cache mode to "Aggressive" to take advantage of the reverse-proxy layer. This is like checking "cache pages for anonymous users": Drupal will "double cache" the pages locally. That can be an advantage as they'll be held until the next cache flush, which can last much longer in practice than the reverse-proxy layer.
+In addition to storing in-flight form data, Drupal writes to the `cache_form` table every time a form that uses the `#ajax` Form API property is viewed. On a high-traffic site, or a site with an AJAX form on every page (for example a search field with autocomplete), traffic can cause the table to grow large enough to severely impact performance, impede MySQL replication, and cause downtime.
 
-Checking "External" prevents this kind of "double caching" by freeing Drupal from the responsibility to store a page that is also being stored at the reverse-proxy layer. Again, this should only be used on sites that don't want the long-term protection of an internal page cache.
+[Drupal 7.61](https://www.drupal.org/node/2857751) introduced a feature to control the expiration of entries in `cache_form`. If your site is having issues with the table, you can add the following code to your `settings.php` file:
 
-### Compatibility Warnings
-Any module implementing Drupal's `hook_boot()` or `hook_exit()` will show up with a compatibility warning on External or Aggressive modes. This is because when Drupal uses Aggressive mode no logic is executed on a successful cache hit. As soon as the CMS detects that the URL being request has a cache, it returns that cache.
+```php
+$conf['form_cache_expiration'] = 1800; // Expire cache_form items after 30 minutes.
+```
 
-Obviously, when the page is cached Externally in a reverse-proxy layer, Drupal is not consulted when cached pages are delivered.
+Cleanup on the `cache_form` table runs on cron. If the table continues to grow to be too large, despite setting a low expiration time, you can [troubleshoot cron](/drupal-cron#troubleshooting-cron). You can also safely delete the contents of the table with a SQL query:
 
-This limits some functionality in Drupal. For instance, the core `statistics.module` cannot count anonymous pageviews if it isn't being exercised every time a page is viewed. That said, `statistics.module` is not great for high performance sites.
-
-As a developer, you should understand the implications of the code in your application, and what it means to have cached pages delivered from an external source.
-
-### Minimum Cache Lifetime
-
-This is useful for high traffic sites that don't want to be flushing their caches when every comment is submitted.
-
-### Page Cache Maximum Age
-
-This determines the amount of time a cache will be honored in the reverse-proxy layer. Set it as high as you are comfortable.
-
-### Block Cache
-
-This can help with logged-in performance by preventing regeneration of block elements in sidebars every pageview.
-
-### Optimize CSS and JavaScript Files
-
-This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser render times significantly. You might want to turn it off in Dev if you are building a theme (or developing JS), but this should always be enabled in production.
-
-![Drupal 6 Performance cache settings](../images/page-cache-module-config.png)
-
-### Contributed Modules
-
-Contributed modules like `views.module` and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should definitely look at implementing their cache settings to provide a good logged-in user experience.
+```sql
+mysql> TRUNCATE TABLE cache_form;
+```
 
 ## See Also
 - [Global CDN Caching for High Performance](/global-cdn-caching)

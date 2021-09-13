@@ -40,7 +40,7 @@ The site owner should ensure the trusted host setting is up-to-date. Refer to th
 
 <Partial file="drupal-apply-upstream-updates.md" />
 
-### Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
+### (Optional) Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
 
 <Partial file="drupal-9/drupal-upgrade-status.md" />
 

@@ -423,7 +423,3 @@ Follow the [standard procedure for migrating WordPress sites to Pantheon](#migra
 1. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 
 1. Follow the procedure to [manually migrate](/migrate-manual) your site.
-
-### How do I migrate a Drupal 6 site to Pantheon?
-
-Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](https://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.

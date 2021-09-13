@@ -380,20 +380,6 @@ PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file 
 
 ___
 
-## [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
-
-<ReviewDate date="2018-10-16" />
-
-**Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
-
-> EWWW Image Optimizer uses jpegtran, optipng, pngout, pngquant, gifsicle, and cwebp. You are missing: jpegtran, optipng, gifsicle. Please install via the Settings Page or the Installation Instructions.
-
-The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/6-the-plugin-says-i-m-missing-something) do not apply to Pantheon.
-
-**Solution:** Use an alternative plugin like [EWWW Image Optimizer Cloud](https://wordpress.org/plugins/ewww-image-optimizer-cloud/), which is a cloud version of the plugin that executes the compression from an external service instead of the server. Another alternative that works well with the default configuration is [Smush Image Compression and Optimization](https://wordpress.org/plugins/wp-smushit/).
-
-___
-
 ## [FacetWP](https://facetwp.com)
 
 <ReviewDate date="2019-10-15" />
@@ -940,6 +926,23 @@ Complete this step in Dev, Test, and Live Environments.
 
 1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
+**Issue:** When enabling the Web Application Firewall (WAF), it can result in an "Error Connecting to the Database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file.
+
+**Solution:** To mitigate this issue, replace `/code/wordfence-waf.php` with `/code/includes/prepend.php`. Change the following code on `wordfence-waf.php` 
+from:
+
+```
+if (file_exists('/code/wordfence-waf.php')) {
+include_once '/code/wordfence-waf.php';
+}
+```
+to:
+
+```
+if (file_exists('/code/includes/prepend.php')) {
+        include_once '/code/includes/prepend.php';
+}
+```
 ___
 
 ## [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)

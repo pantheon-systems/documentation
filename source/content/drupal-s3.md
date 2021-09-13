@@ -134,9 +134,9 @@ terminus drush <site>.<env> -- en libraries s3fs -y
 Get the [AWS SDK Library 2.x](https://github.com/aws/aws-sdk-php/releases):
 
 ```bash{outputLines: 2-3}
-terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make code/
+terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make -y
   //or if you have a contrib subfolder for modules use:
-  //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make code/
+  //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make -y
 ```
 
 The above command will add the AWS SDK version 2.x library into the `sites/all/libraries/awssdk2` directory.
