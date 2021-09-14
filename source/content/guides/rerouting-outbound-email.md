@@ -73,7 +73,36 @@ If you don’t have a settings.php file, copy the default.settings.php file.  Yo
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE (lately I use [vim](http://www.vim.org) or [atom.io](https://atom.io)), open settings.php, and add the following:
+Using your favorite editor or IDE, open the `settings.php`, and add the following code:
+
+<TabList>
+
+<Tab title="Drupal 8" id="solr-d8"> 
+
+```php
+if (defined('PANTHEON_ENVIRONMENT')) {
+  if (PANTHEON_ENVIRONMENT == 'live') {
+    // Do not reroute email on Live.
+    $config['reroute_email.settings']['enable'] = FALSE;
+  }
+  else {
+    // Reroute email on all Pantheon environments but Live.
+    $config['reroute_email.settings']['enable'] = TRUE;
+    $config['reroute_email.settings']['address'] = 'tester+qa-' . PANTHEON_ENVIRONMENT . '@example.com';
+  }
+}
+
+if (!defined('PANTHEON_ENVIRONMENT')) {
+  // Reroute email when site is not on Pantheon (local install).
+  $config['reroute_email.settings']['enable'] = TRUE;
+  $config['reroute_email.settings']['address'] = 'tester+local-dev@example.com';
+}
+```
+  
+</Tab>
+
+
+<Tab title="Drupal 7" id="solr-d7">
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -96,14 +125,17 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['reroute_email_enable_message'] = 1;
 }
 ```
+</Tab>
 
+</TabList>
+
+  
 A few notes:
 
 - In order for the snippet to work as intended, **the module must be enabled in all environments.**
-- The config in settings.php overrides any settings in the Drupal Admin UI.
+- The config in `settings.php` overrides any settings in the Drupal Admin UI.
 - The PANTHEON_ENVIRONMENT variable changes the reroute_email settings based on environment.
-- If your site isn't on Pantheon look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in configuration.
-- For the email address, I chose to not create several new email addresses, although you can definitely do that.
+- If your site isn't on Pantheon, look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in your configuration.
 - I used my existing email address, taking advantage of the plus sign so I can have “extra” email addresses that are all delivered to my existing email address. It’s not a new trick, but it’s a handy feature [baked into Gmail](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html) and some other mail services. If you’re taking this route, you’ll also want to set up [email filters](https://support.google.com/mail/answer/6579?hl=en) to skip the inbox and label it appropriately based on the `To:` header.
 
 For more about Reroute Email’s settings, see the README.txt that ships with the module.
@@ -151,11 +183,11 @@ terminus drush <site>.live -- en reroute_email -y
 
 Now the Dev environment’s settings page for reroute_email (/admin/config/development/reroute_email) should look something like this:
 
-![The Reroute Email Configuration menu shows the email settings](../../images/reroute-email-config-settings.png)
+![The Reroute Email Configuration menu displays the email settings](../../images/reroute-email-config-settings.png)
 
 If you don’t see what you’re expecting, review your settings.php and ensure the commit is showing on your Dashboard:
 
-![The dashboard showing the code was deployed to the Dev environment](../../images/dashboard/verify-reroute-email-dashboard-commits2.png)
+![The dashboard displaying that the code was deployed to the Dev environment](../../images/dashboard/verify-reroute-email-dashboard-commits2.png)
 
 ## Go Forth and Test
 
