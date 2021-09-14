@@ -1,0 +1,28 @@
+name: Inclusive check
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version Number'
+        required: true
+        default: '0.0.3'
+
+jobs:
+  inclusivelint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install inclusive linter version ${{ github.event.inputs.version }}
+      run: |
+        wget https://github.com/inclusivelint/inclusivelint/releases/download/${{ github.event.inputs.version }}/inclusivelint -O- | tr -d '\r' >inclusivelint
+        sudo chmod +x inclusivelint && sudo mv inclusivelint /usr/bin
+        mkdir ~/.inclusivelint
+        wget https://github.com/inclusivelint/inclusivelint/releases/download/${{ github.event.inputs.version }}/outputRelation.txt -O- | tr -d '\r' >outputRelation.txt
+        sudo mv outputRelation.txt ~/.inclusivelint
+    - name: Run inclusive linter on ${{ github.ref }}
+      run: |
+        export TERM=xterm
+        inclusivelint .
