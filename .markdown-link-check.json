@@ -5,6 +5,10 @@
           "replacement": "https://pantheon.io/docs/"
         }
       ],
+    "aliveStatusCodes": [
+        200,
+        403
+    ]
     "retryOn429": true,
     "retryCount": 5
 }
