@@ -1,0 +1,10 @@
+{
+    "replacementPatterns": [
+        {
+          "pattern": "^/",
+          "replacement": "{{BASEURL}}/"
+        }
+      ],
+    "retryOn429": true,
+    "retryCount": 5
+}
