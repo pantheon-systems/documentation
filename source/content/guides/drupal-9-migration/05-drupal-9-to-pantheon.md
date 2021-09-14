@@ -21,31 +21,68 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 - Composer-managed
 - Able to get a local copy of the existing site / access to a Git repository of it?
 
+## Create a New Drupal 9 Site
+
+1. Log in to your Pantheon account. If you don't have an account yet, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+
+1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
+
+1. Navigate to your User Dashboard and click the **Migrate Existing Site** button:
+
+   ![The Migrate Existing Site Button](../../../images/dashboard/migrate-existing-site.png)
+
+1. Enter your current website URL, choose Drupal 9, and click **Continue**:
+
+   ![Choose the Starting State for your Migrated Site](../../../images/dashboard/migrate-step2.png)
+
+   Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
+
+1. Name your site and select an [Organization](/organizations) (optional), then click **Create Site**:
+
+   ![Name the Migrated Site and Optionally Choose an Organization](../../../images/dashboard/migrate-step3.png)
+
+1. Click the link to manually migrate your site then select **Yes** to confirm:
+
+  ![Choose Manual Drupal Migration](../../../images/dashboard/migrate-manual-drops.png)
+
+1. Click **Visit your Pantheon Site Dashboard**:
+
+  ![Creating Your Site on Pantheon Complete for manual migration](../../../images/dashboard/migrate-manual-visit-your-site-dashboard.png)
+
+Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
+
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
+Create a new folder to use while working on the migration.  You will be creating copies of the old site and new site in sub-folders.
+
 This doc uses the following aliases:
 
 - **Alias:** `SITE`
-  - **Site Name:** `anita-drupal`
+- **Site Name:** `anita-drupal`
 
-## Create a New Drupal 9 Site
+### Create a Local Copy of the Old Site's Code
 
-- Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+1. Obtain a local copy of your old site's code.  Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `sites/default/files` directory, or any other static assets you do not want tracked by version control.
 
-- Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
+1. Export the database and media files (`sites/default/files`) from the old platform, but do not add them or upload any files to Pantheon.
 
-## Create a Local Copy of the Old Site's Code
+## Retrieve a Local Copy of the Pantheon Site's Code
 
-Follow the steps in [Manually Migrate Sites to Pantheon](/migrate-manual#import-your-code) to:
+1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
-- Prepare a new Pantheon Drupal 9 Site
-- Copy files from the old platform to the Pantheon Drupal 9 Site
-- Create a Git-tracked local copy of the Pantheon Drupal 9 Site
-- Export the database and files from the old platform, but do not add them or upload any files to Pantheon.
+  ![Git connection mode](../../../images/dashboard/connection-mode-git.png)
 
-Return to this doc once you have created a full local copy of the Pantheon Drupal 9 Site and have the database and files ready.
+1. Copy the `git clone` command for the site repository.
+
+  The command should look similar to the following:
+
+  ```bash
+  git clone ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
+  ```
+
+1. Run the `git clone` command inside your working folder
 
 ### Site Structure
 
