@@ -1,13 +1,44 @@
 {
   "version": "0.1",
-  "language": "en",
   "ignorePaths": [
     "**/node_modules/**",
     "**/vscode-extension/**",
     "**/.git/**",
     ".vscode",
     "package-lock.json",
-    "report"
+    "report",
+    ".circleci"
   ],
-  "words": []
+  "language": "en",
+  // Dictionaries "spanish", "ruby", and "corp-term" will always be checked.
+  // Including "spanish" in the list of dictionaries means both Spanish and English
+  // words will be considered correct.
+  "dictionaries": ["bash", "companies", "corp-terms", "en_US", "fonts", "html", "misc", "php", "ruby", "softwareTerms", "spanish"],
+  // Define each dictionary.  Relative paths are relative to the config file.
+  "dictionaryDefinitions": [
+      { "name": "spanish", "path": "./spanish-words.txt"},
+      { "name": "ruby", "path": "./ruby.txt"},
+      { "name": "company-terms", "path": "./corp-terms.txt"}
+  ],
+  "words": [
+    "multidev"
+  ],
+  "languageSettings": [
+    {
+        // VSCode languageId. i.e. typescript, java, go, cpp, javascript, markdown, latex
+        // * will match against any file type.
+        "languageId": "markdown",
+        // Language locale. i.e. en-US, de-AT, or ru. * will match all locales.
+        // Multiple locales can be specified like: "en, en-US" to match both English and English US.
+        "locale": "*",
+        // To exclude patterns, add them to "ignoreRegExpList"
+        "ignoreRegExpList": [
+            "/#include.*/"
+        ],
+        // List of dictionaries to enable by name in `dictionaryDefinitions`
+        "dictionaries": ["cpp"],
+        // Dictionary definitions can also be supplied here. They are only used iff "languageId" and "locale" match.
+        "dictionaryDefinitions": []
+    }
+]
 }
