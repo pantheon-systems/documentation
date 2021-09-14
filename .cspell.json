@@ -12,15 +12,10 @@
   // Dictionaries "spanish", "ruby", and "corp-term" will always be checked.
   // Including "spanish" in the list of dictionaries means both Spanish and English
   // words will be considered correct.
-  "dictionaries": ["bash", "companies", "corp-terms", "en_US", "fonts", "html", "misc", "php", "ruby", "softwareTerms", "spanish"],
+  "dictionaries": ["pantheon"],
   // Define each dictionary.  Relative paths are relative to the config file.
   "dictionaryDefinitions": [
-      { "name": "spanish", "path": "./spanish-words.txt"},
-      { "name": "ruby", "path": "./ruby.txt"},
-      { "name": "company-terms", "path": "./corp-terms.txt"}
-  ],
-  "words": [
-    "multidev"
+      { "name": "pantheon", "path": "./.pantheon-dictionary.txt"}
   ],
   "flagWords": [
     "whitelist",
