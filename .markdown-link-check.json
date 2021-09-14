@@ -2,7 +2,7 @@
     "replacementPatterns": [
         {
           "pattern": "^/",
-          "replacement": "{{BASEURL}}/"
+          "replacement": "https://pantheon.io/docs/"
         }
       ],
     "retryOn429": true,
