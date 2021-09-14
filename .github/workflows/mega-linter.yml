@@ -48,7 +48,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: true # Set ${{ github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/master&#39; }} to validate only diff with master branch
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # ADD YOUR CUSTOM ENV VARIABLES HERE TO OVERRIDE VALUES OF .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
-          DISABLE: BASH,CREDENTIALS,CSS,HTML,JSON,XML
+          DISABLE: BASH,COPYPASTE,CREDENTIALS,CSS,HTML,JSON,XML
           DISABLE_LINTERS: JAVASCRIPT_STANDARD,PHP_BUILTIN,PHP_PHPCS,PHP_PHPSTAN,PHP_PSALM
           FILTER_REGEX_INCLUDE: (source/)
           # suppress alpaca
