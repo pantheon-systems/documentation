@@ -21,6 +21,10 @@
     "whitelist",
     "blacklist"
   ],
+  "flagWords": [
+    "whitelist",
+    "blacklist"
+  ],
   "languageSettings": [
     {
         // VSCode languageId. i.e. typescript, java, go, cpp, javascript, markdown, latex
