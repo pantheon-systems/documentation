@@ -1,4 +1,9 @@
   "words": [
-    "Multidev"
-    "Pantheon"
+    "docroot",
+    "Drush",
+    "Multidev",
+    "Pantheon",
+    "Terminus",
+    "Upstream",
+    "WebOps"
   ],
