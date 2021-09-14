@@ -7,7 +7,7 @@
     ".vscode",
     "package-lock.json",
     "report",
-    ".circleci"
+    "**/.circleci/**"
   ],
   "language": "en",
   // Dictionaries "spanish", "ruby", and "corp-term" will always be checked.
