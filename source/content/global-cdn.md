@@ -36,9 +36,9 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 Serve your Drupal or WordPress site even in the unlikely event that it goes down.
 
-If the server is not responding and can't serve a new copy of a page, a cached version will be favored over displaying an error, even if the cached version has expired (this is called _stale cache_). With Persistent Cache, the goal is to provide a seamless, uninterrupted experience for the user.
+The goal of Persistent Cache is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, a the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
 
-### Caching Exceptions - How long does content stay fresh?
+### How long does content stay fresh? Adjust TTL
 
 Adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL).
 
@@ -48,11 +48,11 @@ On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](/w
 
 For best results, set the cache TTL to a value equal to or over 3700 seconds.
 
-Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). You can learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
+Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). Learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
 
 ### Confirm That Persistent Cache Works
 
-To test how stale cache is served, compare the header results of a page refresh:
+To test how stale cache is served, compare the header results of a page refresh when the site's Dev environment is live to the header results when Dev is in Maintenance Mode:
 
 <TabList>
 
@@ -82,36 +82,39 @@ To test how stale cache is served, compare the header results of a page refresh:
   via: 1.1 varnish, 1.1 varnish
   content-length: 162
   ```
-  
+
   Note the result for `age` or `max-age`.
-  
-1. Navigate to your site's Dev environment and set the site to Maintenance Mode.
-  
+
+1. Navigate to the site's Dev environment and set the site to Maintenance Mode.
+
 1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
 
 1. In a terminal, cURL the site headers filtered for stale cache:
 
   ```bash{promptUser: user}
   curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
-  ```  
-  If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache. 
-  
+  ```
+
+  If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
+
 </Tab>
 
 <Tab title="Via Web Browser" id="web-browser">
 
-1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab and view the response headers for the page or asset.
+1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab.
 
-1. Go to your site's Dev environment and set the site to Maintenance Mode.
-  
+  Find the response headers for the page or asset.
+
+1. Go to the site's Dev environment and set the site to Maintenance Mode.
+
 1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
 
-1. Go back to your page and view the Developer Tools, and Refresh for the newest header responses.
-  
-    If the result includes `PContext-Resp-Is-StaleHTTP/2 301`, the page has been successfully served from stale cache. 
+1. Go back to the page and Developer Tools, then refresh the page for the newest header responses.
+
+  If the result includes `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
 
 </Tab>
-  
+
 </TabList>
 
 ## Frequently Asked Questions
