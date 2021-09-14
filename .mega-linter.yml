@@ -1,7 +1,7 @@
 # Configuration file for Mega-Linter
 # See all available variables at https://nvuillam.github.io/mega-linter/configuration/ and in linters documentation
 
-APPLY_FIXES: none # all, none, or list of linter keys
+APPLY_FIXES: markdownlint,misspell # all, none, or list of linter keys
 DEFAULT_BRANCH: main # Usually master or main
 # ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-formats will be disabled by default
 # ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be disabled by default
