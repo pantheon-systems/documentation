@@ -32,7 +32,18 @@ To create a Site, click **Create New Site**. You will be directed to the Legacy 
 
 You can filter by plan, upstream, status, or Site owner.
 
-
-#### Organizational Dashboard
+#### Organization Dashboard
 
 You can filter by plan, tags, upstream, status, or Site owner.
+
+
+## Autopilot
+You can view which sites are Autopilot Enabled, Needs Review, or has Errors. 
+
+Search sites by name and get quick access to details such as when a site was last updated, the deployment destination, status, and the update frequency.
+
+Click **Actions** to either manage settings or apply updates. 
+
+Autopilot on Pantheon automatically detects new site updates and tests them with automated visual regression testing. 
+
+Click **Review Test Results** to review the testing of a site.You are directed to the Review Test Results page for the site. You have the option to discard the test, accept changes, approve, or do more, such as add a threshold or view the Multidev.  You are directed to the Legacy Dashboard if you select **More Actions**.
