@@ -4,7 +4,7 @@ subtitle: Access Support and Provide Feedback
 description: A streamlined Support experience for your Workspace.
 categories: [platform]
 tags: [dashboard]
-contributors: [edwardangert]
+contributors: [edwardangert,joa-pan]
 reviewed: "2021-02-26"
 layout: guide
 permalink: docs/guides/new-dashboard/support
