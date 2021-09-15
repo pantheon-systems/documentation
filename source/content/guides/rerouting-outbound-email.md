@@ -7,15 +7,15 @@ tags: [workflow, email]
 type: guide
 permalink: docs/guides/:basename
 contributors: [ari]
-date: 09/15/2021
+reviewed: "2021-09-15"
 ---
 If your Drupal site sends outbound emails, you don't want to accidentally spam your users or customers from your Dev or Test environments. Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming customers during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your developer toolkit.
 
-If you don't manually change the settings stored in the database, you are at risk of accidentally spamming folks during debugging or quality assurance testing.
+If you don't manually change the settings stored in the database, you are at risk of accidentally spamming users during debugging or quality assurance testing.
 
-Reroute Email is easy to setup and the settings persist, even when moving the database between environments. You can install the reroute email and enable it in all environments, configure it via the [`settings.php`](/settings-php) with [environmental variables](/read-environment-config), to ensure you don't spam users during debugging or testing.
+Reroute Email is easy to setup and the settings persist, even when moving the database between environments. You can install the reroute email and enable it in all environments, and configure it via the [`settings.php`](/settings-php) with [environmental variables](/read-environment-config) to ensure you don't spam users during debugging or testing.
 
-You’ll be able to funnel all development and testing emails to a single inbox and will not have to log in to several email accounts, just to test your business expectations.
+You’ll be able to funnel all development and testing emails to a single inbox and will not have to log in to several email accounts to test your business expectations.
 
 ## Installation
 
@@ -78,7 +78,7 @@ Using your favorite editor or IDE, open the `settings.php`, and add the followin
 
 <TabList>
 
-<Tab title="Drupal 7" id="solr-d7">
+<Tab title="Drupal 7" id="d7">
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -104,7 +104,7 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 </Tab>
   
 
-<Tab title="Drupal 8" id="solr-d8"> 
+<Tab title="Drupal 8" id="d8"> 
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -141,7 +141,7 @@ git add sites/default/settings.php
 git commit
 ```
 
-In order for the `settings.php` config to work correctly, the `reroute_email` module must be enabled in all environments.
+In order for the `settings.php` configuration to work correctly, the `reroute_email` module must be enabled in all environments.
 
 
 ```none
