@@ -55,12 +55,17 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-Create a new folder to use while working on the migration.  You will be creating copies of the old site and new site in sub-folders.
+Create a new folder to use while working on the migration.  You will be creating copies of the old site and new site in separate  sub-folders.
 
 This doc uses the following aliases:
 
 - **Alias:** `SITE`
 - **Site Name:** `anita-drupal`
+- **Working folder** ?
+- **Old site folder** ?
+- **Pantheon site folder** ?
+
+####**Could/should we define environment variables here and make use of them in the commands below?**
 
 ### Create a Local Copy of the Old Site's Code
 
@@ -68,7 +73,7 @@ This doc uses the following aliases:
 
 1. Export the database and media files (`sites/default/files`) from the old platform, but do not add them or upload any files to Pantheon.
 
-## Retrieve a Local Copy of the Pantheon Site's Code
+### Retrieve a Local Copy of the Pantheon Site's Code
 
 1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
@@ -90,7 +95,7 @@ This doc uses the following aliases:
 
 ## Migrate the Old Drupal Site's Code to the Pantheon Drupal 9 Site
 
-1. Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
+1. [Working folder] Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
 
   ```bash{promptUser: user}
   mkdir config
@@ -98,33 +103,41 @@ This doc uses the following aliases:
   git commit -m "Add site configuration."
   ```
 
-1. List the contrib modules and themes on the old site:
+1. List the contrib modules and themes on the old site, in the old site's folder:
 
   ```bash{promptUser: user}
   composer show
   ```
 
-1. Use Composer to add each module and theme on the Pantheon Drupal 9 site:
+1. Repeat the following steps for each package listed in the previous step:
+
+  - [Pantheon site folder] Use Composer to add the package to the Pantheon site's composer.json:
 
   ```bash{promptUser: user}
   composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
+  ```
+
+  - [Old site folder] Delete the files associated with the package; they need to be absent from version control for Integrated Composer to work properly.
+
+  ```bash{promptUser: user}
+  rm -rf web/modules/ctools
+  ```
+
+1. [Pantheon site folder] Commit the updated composer files.
+
+  ```bash{promptUser: user}
   git add composer.*
   git commit -m "Add contrib projects."
   ```
 
-1. Use Composer to install the requirements on the Pantheon Drupal 9 site, then push the changes to the platform:
+1. [Working folder] Copy any custom modules or themes from the old site to the Pantheon site. These folders should no longer contain any contrib/community code which composer will install:
 
   ```bash{promptUser: user}
-  composer install
-  git add . && git commit -m "composer install" && git push origin master
-  ```
-
-1. Copy any custom modules or themes from the old site to the Pantheon site:
-
-  ```bash{promptUser: user}
-  mkdir web/{themes, modules}
-  git mv themes/* web/themes
-  git mv modules/* web/modules
+  mkdir anita-drupal/web/{libraries, profile, themes, modules}
+  cp old-site/libraries/* anita-drupal/web/libraries
+  cp old-site/profile/* anita-drupal/web/profile
+  cp old-site/themes/* anita-drupal/web/themes
+  cp old-site/modules/* anita-drupal/web/modules
   git commit -m "Add custom projects."
   ```
 
