@@ -182,7 +182,7 @@ If you don’t see what you’re expecting, review your `settings.php` and ensur
 
 ## Go Forth and Test
 
-Now, when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in the `settings.php` file. Our `settings.php` will ensure emails are not rerouted on Live. Make sure you’re using a [SMTP gateway](/email/#outgoing-email) on Live to ensure email deliverability.
+Now, when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in the `settings.php` file. The `settings.php` will ensure emails are not rerouted on Live. Make sure you’re using a [SMTP gateway](/email/#outgoing-email) on Live to ensure email deliverability.
 
 
 ## See Also
