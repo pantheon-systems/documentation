@@ -21,7 +21,7 @@ You’ll be able to funnel all development and testing emails to a single inbox 
 
 You can use [SFTP](/sftp) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module. Alternatively, you can use Git to keep automated backups running on Dev.
 
-For instance, you can use [Drupal 7 as a start state](/start-state/#import-an-existing-site) and perform a [git clone](/git) of the Pantheon site.
+For instance, you can use [a start state](/start-state/#import-an-existing-site) and perform a [git clone](/git) of the Pantheon site.
 
 ```bash{promptUser: user}
 cd sites
