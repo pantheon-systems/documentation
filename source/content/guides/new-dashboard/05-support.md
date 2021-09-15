@@ -4,7 +4,7 @@ subtitle: Support and Provide Feedback
 description: A streamlined Support experience for your Workspace.
 categories: [platform]
 tags: [dashboard]
-contributors: [edwardangert]
+contributors: [edwardangert,joa-pan]
 reviewed: "2021-08-26"
 layout: guide
 permalink: docs/guides/new-dashboard/support
@@ -30,13 +30,13 @@ You can contact support using the following methods:
 
 Available for Gold, Platninum, and Diamond customers.
 
-Click **Open support ticket** to create a new ticket. 
+1. Click **Open support ticket** to create a new ticket. 
 
-Select **Yes** if the issue is related to a site in your Workspace. Search for the site and then
+1. Select **Yes** if the issue is related to a site in your Workspace. Search for the site and then
 
-Select **This issue is causing site downtime**.
+1. Select **This issue is causing site downtime**.
 
-Click **Open Ticket**
+1. Click **Open Ticket**
 
 ### Live Chat
 
@@ -46,7 +46,7 @@ Click **Open Ticket**
 
 ## Ticket History 
 
-You can view your support ticket history 
+You can view your support ticket history. 
 
 
 ## Feedback
