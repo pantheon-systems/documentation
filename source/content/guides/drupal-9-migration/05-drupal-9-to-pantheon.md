@@ -65,7 +65,7 @@ This doc uses the following aliases:
 - **Old site folder** ?
 - **Pantheon site folder** ?
 
-####**Could/should we define environment variables here and make use of them in the commands below?**
+#### **Could/should we define environment variables here and make use of them in the commands below?**
 
 ### Create a Local Copy of the Old Site's Code
 
@@ -93,17 +93,15 @@ This doc uses the following aliases:
 
 <Partial file="ic-upstream-structure.md" />
 
-## Migrate the Old Drupal Site's Code to the Pantheon Drupal 9 Site
+## Add in the Custom and Contrib Code Needed to Run Your Site
 
-1. [Working folder] Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
+What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
 
-  ```bash{promptUser: user}
-  mkdir config
-  git mv sites/default/config/* config/
-  git commit -m "Add site configuration."
-  ```
+### Contributed Code
 
-1. List the contrib modules and themes on the old site, in the old site's folder:
+#### Modules and Themes
+
+1. [Old site folder] List the contrib modules and themes on the old site:
 
   ```bash{promptUser: user}
   composer show
@@ -111,17 +109,17 @@ This doc uses the following aliases:
 
 1. Repeat the following steps for each package listed in the previous step:
 
-  - [Pantheon site folder] Use Composer to add the package to the Pantheon site's composer.json:
+    1. [Pantheon site folder] Use Composer to add the package to the Pantheon site's composer.json:
 
-  ```bash{promptUser: user}
-  composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
-  ```
+        ```bash{promptUser: user}
+        composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
+        ```
 
-  - [Old site folder] Delete the files associated with the package; they need to be absent from version control for Integrated Composer to work properly.
+    2. [Pantheon site folder] Run `git status` and check for any new files showing up.  If any untracked files have appeared, add them to the `.gitignore` file until `git status` only shows `composer.json` and `composer.lock`.  If files composer adds are committed to version control, they will interfere with integrated composer on the platform.
 
-  ```bash{promptUser: user}
-  rm -rf web/modules/ctools
-  ```
+        ```bash{promptUser: user}
+        git status
+        ```
 
 1. [Pantheon site folder] Commit the updated composer files.
 
@@ -130,28 +128,66 @@ This doc uses the following aliases:
   git commit -m "Add contrib projects."
   ```
 
-1. [Working folder] Copy any custom modules or themes from the old site to the Pantheon site. These folders should no longer contain any contrib/community code which composer will install:
+#### Libraries
+
+Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
+
+### Custom Code
+
+Manually copy custom code from the old site to the corresponding Pantheon site directory.
+
+#### Modules and Themes
+
+[Pantheon site folder] Modules:
+
+```bash{promptUser:user}
+cp -R ../old-site/modules/custom web/modules
+git add web/modules/custom
+git commit -m "Copy custom modules"
+```
+
+[Pantheon site folder] Themes:
+
+```bash{promptUser:user}
+cp -R ../old-site/themes/custom web/themes
+git add web/themes/custom
+git commit -m "Copy custom themes"
+```
+
+Follow suit with any other custom code you need to carry over.
+
+#### settings.php
+
+Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition.
+
+We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
+
+The resulting `settings.php` should have no `$databases` array.
+
+
+### Configuration
+
+Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
 
   ```bash{promptUser: user}
-  mkdir anita-drupal/web/{libraries, profile, themes, modules}
-  cp old-site/libraries/* anita-drupal/web/libraries
-  cp old-site/profile/* anita-drupal/web/profile
-  cp old-site/themes/* anita-drupal/web/themes
-  cp old-site/modules/* anita-drupal/web/modules
-  git commit -m "Add custom projects."
+  mkdir config
+  git mv sites/default/config/* config/
+  git commit -m "Add site configuration."
   ```
 
-1. Check `settings.php` for any customizations to copy over:
+
+
+## Deploy
+
+You've now committed your code additions locally.  Push them up to Pantheon to deploy them to your dev environment.
 
   ```bash{promptUser: user}
-  mkdir -p web/sites/default
-  git show sites/default/settings.php > web/sites/default/original-settings.php
-  # Check for any customizations (if this returns nothing, you can move on to the next step).
-  # Copy what you need over to web/sites/default/settings.php, and commit as needed.
-  diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-  # Remove the original copy.
-  rm web/sites/default/original-settings.php
+  terminus connection:set $SITE.dev git
+  git push origin master
   ```
+
+## Import Your Database and Files
+
 
 1. Use Terminus to import the old site's database (created in the [migrate manual](/migrate-manual#add-your-database) doc) into the Pantheon D9 site. This example uses a local `db.sql.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
 
@@ -165,19 +201,14 @@ This doc uses the following aliases:
   terminus import:files $SITE.dev ~/files.tar.gz
   ```
 
-1. Push the Pantheon D9 codebase from your local machine up to Pantheon:
-
-  ```bash{promptUser: user}
-  terminus connection:set $SITE.dev git
-  git push origin master
-  ```
-
 1. Run database updates:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev -- updatedb
   ```
 
+## Finish and Review
+
 1. Navigate to the Site Dashboard and click **I've Successfully Migrated Manually**.
 
-1. Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.
+1. Review the site, then proceed to launch using the [Launch Essentials](/guides/launch) documentation.
