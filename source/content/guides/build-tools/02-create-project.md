@@ -10,7 +10,7 @@ type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
-reviewed: "2021-09-16"
+reviewed: "2020-05-08"
 ---
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, a Continuous Integration service, and a Pantheon site.
