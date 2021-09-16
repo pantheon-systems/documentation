@@ -10,7 +10,7 @@ type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
-reviewed: "2020-05-08"
+reviewed: "2021-09-16"
 ---
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, a Continuous Integration service, and a Pantheon site.
@@ -82,6 +82,12 @@ Modify the commands in the following examples to match your project's needs.
   terminus build:project:create --git=github --team='My Agency Name' wp my-site
   ```
 
+- Start a GitHub project with Drupal 9:
+
+  ```bash{promptUser: user}
+  terminus build:project:create --git=github --team='My Agency Name' d9 my-site
+  ```
+
 - Start a GitHub project with Drupal 8:
 
   ```bash{promptUser: user}
@@ -147,6 +153,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
+- [Drupal 9](https://github.com/pantheon-upstreams/drupal-project/issues)
 - [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 
