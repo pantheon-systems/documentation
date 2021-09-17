@@ -130,11 +130,11 @@ Read more about configuring and optimizing Solr Power in the [Solr Search for Wo
 
 You may also consider one of the following options:
 
-- Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
+- Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-search-service)
 
 - **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
-If none of these options work for your site's needs, see our documentation on how to safely remove Pantheon Search for [Drupal 8](/guides/solr-drupal/solr-drupal-8#safely-remove-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
+If none of these options work for your site's needs, see our documentation on how to safely remove Pantheon Search for [Drupal 8](/guides/solr-drupal/solr-drupal-8#safely-remove-pantheon-search), [Drupal 7](/guides/solr-drupal/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
 ## See also
 
