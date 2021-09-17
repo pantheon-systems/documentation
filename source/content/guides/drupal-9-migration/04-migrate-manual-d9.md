@@ -82,8 +82,9 @@ This doc uses the following aliases:
 
   ```bash{promptUser: user}
   terminus drush $D8_SITE.dev pm:projectinfo -- --fields=name,version --format=table
-
   ```
+
+  The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/drush-versions) before you continue.
 
 1. Then use Composer on your D9 site to add these there:
 
