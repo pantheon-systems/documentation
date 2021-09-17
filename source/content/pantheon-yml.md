@@ -32,6 +32,22 @@ Define the `api_version` property in order for `pantheon.yml` to be valid:
 api_version: 1
 ```
 
+### Solr
+
+Before you can install the Drupal serach module, you need to specify the Solr8 as the search index.
+
+```
+search:
+  version: 8
+```
+
+#### Considerations
+
+* The valid values are `3` and `8`.
+* Currently, Solr8 is only supported for Drupal 9 sites
+
+
+
 ### Protected Web Paths
 
 Protect files and directories inside of your docroot from public web access with `protected_web_paths`. For example, the following ensures that a visitor to `https://example.com/example.txt` or `https://example.com/example_directory/any_nested_file` receives Access Denied (403):
