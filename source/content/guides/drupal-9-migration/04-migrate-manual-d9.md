@@ -81,7 +81,8 @@ This doc uses the following aliases:
 1. List contrib modules and themes on your D8 site:
 
   ```bash{promptUser: user}
-  terminus drush $D8_SITE.dev pm:projectinfo -- --status=enabled --fields=name,version --format=table
+  terminus drush $D8_SITE.dev pm:projectinfo -- --fields=name,version --format=table
+
   ```
 
 1. Then use Composer on your D9 site to add these there:
