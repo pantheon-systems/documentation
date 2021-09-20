@@ -15,6 +15,19 @@ editpath: drupal-9-migration/05-drupal-9-to-pantheon.md
 
 In this doc, you'll migrate an existing Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with Integrated Composer on Pantheon.
 
+## Unresolved Questions / TO-DOs
+
+- [How] Do we address nested docroot vs not-nested docroot?
+- The document should probably describe the over-all arc we will pursue, at the start
+  - Address the question of composer packages being committed to version control, and how we need to not do that for IC
+- Configuration - not sure where to fit this, and not sure all sites will have it if we don't tell them how to get it
+- "Choose your existing CMS" screenshot needs updated: ../../../images/dashboard/migrate-step2.png
+- Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
+  - Partial defines a $SITE env var, but we might want to define others...
+- I kept referring to the "old site".. not sure if there's a better way to phrase it
+- Site structure.. seems like nice info to include, but not sure about current location
+
+
 ## Will This Guide Work for Your Site?
 
 - Drupal 9
@@ -31,7 +44,7 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
    ![The Migrate Existing Site Button](../../../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose Drupal 9, and click **Continue**:
+1. Enter your current website URL, choose "Drupal 8 or Drupal 9", and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../../../images/dashboard/migrate-step2.png)
 
@@ -55,7 +68,7 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-Create a new folder to use while working on the migration.  You will be creating copies of the old site and new site in separate  sub-folders.
+Create a new folder to use while working on the migration.  You will be creating copies of the old site and new site in separate sub-folders.
 
 This doc uses the following aliases:
 
@@ -65,7 +78,6 @@ This doc uses the following aliases:
 - **Old site folder** ?
 - **Pantheon site folder** ?
 
-#### **Could/should we define environment variables here and make use of them in the commands below?**
 
 ### Create a Local Copy of the Old Site's Code
 
@@ -101,7 +113,7 @@ What makes your site code unique is your selection of contributed modules and th
 
 #### Modules and Themes
 
-1. [Old site folder] List the contrib modules and themes on the old site:
+1. Navigate to the old site's folder, where the `composer.json` file is located, and have composer list the contrib modules and themes:
 
   ```bash{promptUser: user}
   composer show
