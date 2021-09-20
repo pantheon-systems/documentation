@@ -14,12 +14,6 @@ At its primary level, Composer needs:
 
 Understanding how Composer can be used independent of Drupal or WordPress is a good place to learn more about the general concepts. For a summary of basic usage, see [Composer's own documentation](https://getcomposer.org/doc/01-basic-usage.md).
 
-<Enablement title="Automation Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
-
-Learn Composer concepts with help from our experts. Pantheon delivers on-demand training to help development teams navigate the platform and improve internal WebOps.
-
-</Enablement>
-
 ## Dependencies
 
 Composer encourages a mental model where code not written specifically for a given project is a dependency. Only files unique to the project are tracked as part of the project's main source repository, also referred to as the canonical site repository. Dependencies for WordPress and Drupal include core, plugins, contrib modules, themes, and libraries. A single dependency, such as a theme, is referred to as a package.
