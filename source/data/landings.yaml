@@ -96,7 +96,7 @@
     type: 'Essential Developer Training'
     title: 'Command Line Interface with Terminus'
     subtitle: "An introduction to Terminus: Pantheon's command line interface."
-    url: 'https://pantheon.io/workshops/command-line-interface-terminus?docs'
+    url: 'https://pantheon.io/docs/guides/edt/terminus-cli/'
   subtopics:
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
@@ -370,7 +370,7 @@
     title: 'Going Live Best Practices'
     type: 'Essential Developer Training'
     subtitle: 'How do you take a website live on Pantheon?'
-    url: 'https://pantheon.io/workshops/going-live-best-practices?docs'
+    url: 'https://pantheon.io/docs/guides/edt/going-live/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
@@ -731,7 +731,7 @@
     title: 'Website Performance'
     type: 'Essential Developer Training'
     subtitle: 'How does Pantheon help your website run faster than other platforms?'
-    url: 'https://pantheon.io/workshops/website-performance-varnish-redis-and-new-relic?docs'
+    url: 'https://pantheon.io/docs/guides/edt/performance/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
