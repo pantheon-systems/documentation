@@ -13,9 +13,13 @@ anchorid: drupal-9-migration/prepare
 editpath: drupal-9-migration/02-migrate-prepare.md
 ---
 
-This overview outlines the steps to prepare an existing Drupal site for upgrade or migration to Drupal 9 with Integrated Composer.
+This overview outlines the steps to prepare an existing Drupal site for upgrade or migration to Drupal 9 with Integrated Composer or Composer with Build Tools.
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
+
+1. Convert Drupal 8 Site to Composer
+
+If you are starting with a Drupal 8 site without Composer, follow the steps to [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
 
 1. Upgrade to the latest Drupal 8.9 release.
 
