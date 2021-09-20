@@ -176,7 +176,7 @@ Manually create the target folders `code/wp-content/uploads/nitropack` and `code
   ln -s ./uploads/advanced-cache.php ./advanced-cache.php
   ```
 
-1. Commit changes to the Dev environment and push to your Test and Live environments, repectively.
+1. Commit changes to the Dev or Multidev environment, then deploy to Test to confirm the results before you deploy to Live.
 
 </Accordion>
 
