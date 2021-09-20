@@ -16,6 +16,17 @@ Drupal 9 includes many of the features and layout that Drupal 8 users are famili
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
-There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're building out the documentation within this guide to try to help you through your adventure.
+There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're building out the documentation within this guide to help you through your adventure.
 
-See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) docs to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.
+## Before You Begin
+
+Pantheon recommends using Composer to manage Drupal 8 and 9 site dependencies. This guide assumes you are using [Composer](/composer) with your Drupal site. 
+
+### Create a New Drupal 9 Site
+
+To get started with a new site, see our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) doc.
+
+### Convert Drupal 8 Site to Composer
+
+If you are migrating or upgrading a Drupal 8 site without Composer, begin by [Converting a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+

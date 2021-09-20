@@ -21,12 +21,13 @@ Composer encourages a mental model where code not written specifically for a giv
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: <https://wpackagist.org>
+- Drupal 9: <https://packages.drupal.org/9>
 - Drupal 8: <https://packages.drupal.org/8>
 - Drupal 7: <https://packages.drupal.org/7>
 
 ## Managing Core as a Project Dependency
 
-Sites managed with Composer should use the nested docroot feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
+Sites managed with Composer should use the [nested docroot](/nested-docroot) feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
 
 This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
@@ -54,9 +55,14 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 ## Next Steps
 
-Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [upgrade to Drupal 9](/guides/drupal-9-migration).
+Here are some ways to get started using Composer for your Pantheon sites:
 
-If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+- Create a new [Drupal 9 with Integrated Composer](/drupal-9) site. 
+- [Migrate or upgrade](/guides/drupal-9-migration) an existing Drupal 8 or 9 site to Drupal 9 with Integrated Composer.
+- [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+- Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer-managed sites with continuous integration (CI) workflows.
+- Create a new [WordPress with Integrated Composer](/integrated-composer) site.
+
 
 ### Partial Adoption
 

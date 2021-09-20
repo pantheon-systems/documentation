@@ -14,7 +14,10 @@ Since Drupal 9 on Pantheon is in active development and includes a number of sig
 
 ## About Drupal 9
 
-Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond, using Composer to easily manage site dependencies. 
+Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond. 
+
+
+Pantheon recommends using Composer to manage Drupal 8 and 9 site dependencies.
 
 If you're new to Composer, review our [Composer Fundamentals](/composer) workflow guide.
 
@@ -22,7 +25,7 @@ If you're new to Composer, review our [Composer Fundamentals](/composer) workflo
 
 On the Pantheon Platform, Drupal 9 sites use [Integrated Composer](/integrated-composer), letting you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-Pantheon recommends using Composer to manage Drupal 8 and 9 sites. Pantheon's [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-project) uses Composer, and this upstream is also the recommended starting point for forking new Drupal upstreams that work with the Platform's Integrated Composer build process.
+Pantheon's [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-project) is the base template for Drupal 9 Composer-managed sites. This upstream is also the recommended starting point for forking new Drupal upstreams that work with the Platform's Integrated Composer build process.
 
 If you are not able to use Composer to manage your Drupal 9 site dependencies, contact your [Pantheon Account Team](pantheon.io/contact-us?docs).
 
