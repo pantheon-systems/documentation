@@ -25,7 +25,12 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 - Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
   - Partial defines a $SITE env var, but we might want to define others...
 - I kept referring to the "old site".. not sure if there's a better way to phrase it
-- Site structure.. seems like nice info to include, but not sure about current location
+- Site structure.. seems like nice info to include, but not sure about the current spot in the doc
+- `composer show`
+- have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)?  wikimedia merge plugin?
+- have them add their "repositories" section to composer.json before adding packages?
+- instructions for importing database and files
+
 
 
 ## Will This Guide Work for Your Site?
@@ -109,25 +114,35 @@ This doc uses the following aliases:
 
 What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
 
-### Contributed Code
+### Composer packages
 
-#### Modules and Themes
+We need to add your composer packages to the new site's `composer.json` without committing any of the files created by those packages to version control.  We will build a list of packages to add, then add them one at a time while ensuring that the files they create are included in `.gitignore` so they aren't committed to version control.
 
 1. Navigate to the old site's folder, where the `composer.json` file is located, and have composer list the contrib modules and themes:
 
   ```bash{promptUser: user}
-  composer show
+  composer show -D
   ```
 
-1. Repeat the following steps for each package listed in the previous step:
+  This lists the packages directly required by `composer.json` and the version currently used by your site.  Since this will be a lengthy process, let's capture that list in a file we can work through while tracking our progress:
 
-    1. [Pantheon site folder] Use Composer to add the package to the Pantheon site's composer.json:
+  ```bash{promptUser: user}
+  composer show -D > composer-package-list.txt
+  ```
+
+  This creates a file named `composer-package-list.txt` for you to open in your text editor.
+
+1. If your existing site's `composer.json` contains
+
+1. Repeat the following steps for each package in the list we just produced:
+
+    1. In the Pantheon site's folder, `composer require -W` the package and version\, with a caret `^` added to the beginning of the version you're currently using.  For example, if your package list included `drupal/ctools` version 3.7.0, this is the command you would run:
 
         ```bash{promptUser: user}
-        composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
+        composer require -W drupal/ctools:^3.7.0
         ```
 
-    2. [Pantheon site folder] Run `git status` and check for any new files showing up.  If any untracked files have appeared, add them to the `.gitignore` file until `git status` only shows `composer.json` and `composer.lock`.  If files composer adds are committed to version control, they will interfere with integrated composer on the platform.
+    2. Run `git status` to check if any .  If any untracked files have appeared, add them to the `.gitignore` file until `git status` only shows `composer.json` and `composer.lock`.  If files composer adds are committed to version control, they will interfere with integrated composer on the platform.
 
         ```bash{promptUser: user}
         git status
@@ -147,6 +162,8 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 ### Custom Code
 
 Manually copy custom code from the old site to the corresponding Pantheon site directory.
+
+- `web/modules/custom` and `web/libraries` are ignored, so `git add -f`
 
 #### Modules and Themes
 
@@ -201,17 +218,9 @@ You've now committed your code additions locally.  Push them up to Pantheon to d
 ## Import Your Database and Files
 
 
-1. Use Terminus to import the old site's database (created in the [migrate manual](/migrate-manual#add-your-database) doc) into the Pantheon D9 site. This example uses a local `db.sql.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
+1. Import files
 
-  ```bash{promptUser: user}
-  terminus import:database $SITE.dev ~/db.sql.gz
-  ```
-
-1. Use Terminus to import the old site's files (created in the [migrate manual](/migrate-manual#upload-your-files) doc) into the Pantheon D9 site. This example uses a local `files.tar.gz` file. If your DB archive file is located at a URL, replace the file name with the full URL in this example:
-
-  ```bash{promptUser: user}
-  terminus import:files $SITE.dev ~/files.tar.gz
-  ```
+1. Import database
 
 1. Run database updates:
 
