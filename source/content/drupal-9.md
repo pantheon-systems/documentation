@@ -2,25 +2,29 @@
 title: Drupal 9
 description: Get started with Drupal 9 on the Pantheon WebOps Platform.
 categories: [get-started]
-tags: [site]
+tags: [site, composer]
 cms: drupal-9
 contributors: [populist, edwardangert]
 reviewed: "2021-06-18"
 ---
 
-Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
+[Drupal 9](/create-sites) is available on Pantheon to all customers, and as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
 
 Since Drupal 9 on Pantheon is in active development and includes a number of significant changes from previous versions of Drupal, this doc outlines the biggest changes and answers frequently asked questions.
 
 ## About Drupal 9
 
-Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
+Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond, using Composer to easily manage site dependencies. 
 
-Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
+If you're new to Composer, review our [Composer Fundamentals](/composer) workflow guide.
 
 ## Drupal 9 With Integrated Composer
 
 On the Pantheon Platform, Drupal 9 sites use [Integrated Composer](/integrated-composer), letting you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
+
+Pantheon recommends using Composer to manage Drupal 8 and 9 sites. Pantheon's [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-project) uses Composer, and this upstream is also the recommended starting point for forking new Drupal upstreams that work with the Platform's Integrated Composer build process.
+
+If you are not able to use Composer to manage your Drupal 9 site dependencies, contact your [Pantheon Account Team](pantheon.io/contact-us?docs).
 
 <Alert title="A note about Limited Availability" type="info" icon="leaf">
 
