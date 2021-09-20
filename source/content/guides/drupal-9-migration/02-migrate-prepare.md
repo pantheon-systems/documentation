@@ -17,9 +17,9 @@ This overview outlines the steps to prepare an existing Drupal site for upgrade 
 
 ## Test an Existing Drupal Site for Drupal 9 Upgrade Compatibility
 
-1. Convert Drupal 8 Site to Composer
+1. Drupal 8 Only: Convert Drupal 8 Site to Composer
 
-If you are starting with a Drupal 8 site without Composer, follow the steps to [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+   - If you are starting with a Drupal 8 site without Composer, follow the steps to [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
 
 1. Upgrade to the latest Drupal 8.9 release.
 
