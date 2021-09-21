@@ -21,7 +21,6 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 - The document should probably describe the over-all arc we will pursue, at the start
   - Address the question of composer packages being committed to version control, and how we need to not do that for IC
 - Configuration - not sure where to fit this, and not sure all sites will have it if we don't tell them how to get it
-- "Choose your existing CMS" screenshot needs updated: ../../../images/dashboard/migrate-step2.png
 - Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
   - Partial defines a $SITE env var, but we might want to define others...
 - I kept referring to the "old site".. not sure if there's a better way to phrase it
@@ -45,27 +44,11 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-1. Navigate to your User Dashboard and click the **Migrate Existing Site** button:
+1. Navigate to your User Dashboard and click the **Create New Site** button:
 
-   ![The Migrate Existing Site Button](../../../images/dashboard/migrate-existing-site.png)
+  ...
 
-1. Enter your current website URL, choose "Drupal 8 or Drupal 9", and click **Continue**:
-
-   ![Choose the Starting State for your Migrated Site](../../../images/dashboard/migrate-step2.png)
-
-   Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
-
-1. Name your site and select an [Organization](/organizations) (optional), then click **Create Site**:
-
-   ![Name the Migrated Site and Optionally Choose an Organization](../../../images/dashboard/migrate-step3.png)
-
-1. Click the link to manually migrate your site then select **Yes** to confirm:
-
-  ![Choose Manual Drupal Migration](../../../images/dashboard/migrate-manual-drops.png)
-
-1. Click **Visit your Pantheon Site Dashboard**:
-
-  ![Creating Your Site on Pantheon Complete for manual migration](../../../images/dashboard/migrate-manual-visit-your-site-dashboard.png)
+1. Click **Visit your Pantheon Site Dashboard**
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 
@@ -106,9 +89,11 @@ This doc uses the following aliases:
 
 1. Run the `git clone` command inside your working folder
 
+<!--
 ### Site Structure
 
 <Partial file="ic-upstream-structure.md" />
+-->
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -132,11 +117,20 @@ We need to add your composer packages to the new site's `composer.json` without 
 
   This creates a file named `composer-package-list.txt` for you to open in your text editor.
 
-1. If your existing site's `composer.json` contains
+1. If your existing site's `composer.json` contains additional repositories in the `repositories` section, or has patches in the `extras/packages` section, copy those into the pantheon site's `composer.json`
 
-1. Repeat the following steps for each package in the list we just produced:
+  Repository in old site's composer.json
+  ![repository in old composer.json](https://i.imgur.com/hO0snBW.png)
 
-    1. In the Pantheon site's folder, `composer require -W` the package and version\, with a caret `^` added to the beginning of the version you're currently using.  For example, if your package list included `drupal/ctools` version 3.7.0, this is the command you would run:
+  Copied to new composer.json without disturbing the "upstream-configuration" one that was already there:
+  ![repository moved to new composer.json](https://i.imgur.com/T6eNnXj.png)
+
+  Patches:
+  ![repository moved to new composer.json](https://i.imgur.com/x2SYPb1.png)
+
+1. Repeat the following steps for the packages in the list we just produced:
+
+    1. In the Pantheon site's folder, `composer require -W` the package and version, with a caret `^` added to the beginning of the version you're currently using.  For example, if your package list included `drupal/ctools` version `3.7.0`, this is the command you would run:
 
         ```bash{promptUser: user}
         composer require -W drupal/ctools:^3.7.0
