@@ -148,6 +148,22 @@ This table shows the recommended MariaDB version for each CMS:
 
 Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
 
+### Specify a Solr Version
+
+Before you install the Drupal module,you need to specify Solr8 as the search index.
+
+```
+search:
+  version: 8
+```
+
+#### Considerations
+
+* Depends on the CMS framework and version.
+* Currently, Solr8 is only supported for Drupal 9 sites.
+
+
+
 ### Drush Version
 
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
