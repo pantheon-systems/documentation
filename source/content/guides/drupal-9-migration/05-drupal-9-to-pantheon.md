@@ -101,6 +101,16 @@ What makes your site code unique is your selection of contributed modules and th
 
 ### Composer packages
 
+1. Copy your package list from the "requires" section of your site's composer.json and add it to the new site's composer.json.  If your composer.json defines additional repositories or patches, copy those over too.
+
+1. `composer update`
+
+1. `git status` to see if files have been added that aren't ignored by `.gitignore`.  If anything shows up other than `composer.*`, add it to `.gitignore` until `git status` only shows the composer files being modified.
+
+1. `git add composer.*; git commit -m "Add composer packages"`
+
+### Previously on "Composer packages"
+
 We need to add your composer packages to the new site's `composer.json` without committing any of the files created by those packages to version control.  We will build a list of packages to add, then add them one at a time while ensuring that the files they create are included in `.gitignore` so they aren't committed to version control.
 
 1. Navigate to the old site's folder, where the `composer.json` file is located, and have composer list the contrib modules and themes:
@@ -117,7 +127,27 @@ We need to add your composer packages to the new site's `composer.json` without 
 
   This creates a file named `composer-package-list.txt` for you to open in your text editor.
 
-1. If your existing site's `composer.json` contains additional repositories in the `repositories` section, or has patches in the `extras/packages` section, copy those into the pantheon site's `composer.json`
+1. Build a list of composer packages and versions to add to the new site.
+
+    - Edit the list produced in the previous step to remove the description, add a caret `^` to the beginning of each version number, and change the space between the package name and version to be a colon `:`.  The result should be a list of `package:^version` like this:
+
+    ```
+    drupal/ctools:^3.7.0
+    drupal/embed:^1.4.0
+    drupal/entity:^1.2.0
+    ```
+
+    - If your list contains `cweagans/composer-patches`, move it to the top of the list.
+
+    - If your list contains unsupported composer packages (e.g. `wikimedia/composer-merge-plugin`) they need to be removed.
+
+  <Alert title="Note" type="info">
+
+  If your existing site's `composer.json` contains additional repositories in the `repositories` section, or has patches in the `extras/packages` section, copy those into the pantheon site's `composer.json`
+
+  </Alert>
+
+  <Accordion title="Repositories and patches in composer.json" id="repositories-and-patches-in-composer-json" icon="info-sign">
 
   Repository in old site's composer.json
   ![repository in old composer.json](https://i.imgur.com/hO0snBW.png)
@@ -128,9 +158,11 @@ We need to add your composer packages to the new site's `composer.json` without 
   Patches:
   ![repository moved to new composer.json](https://i.imgur.com/x2SYPb1.png)
 
-1. Repeat the following steps for the packages in the list we just produced:
+  </Accordion>
 
-    1. In the Pantheon site's folder, `composer require -W` the package and version, with a caret `^` added to the beginning of the version you're currently using.  For example, if your package list included `drupal/ctools` version `3.7.0`, this is the command you would run:
+1. For each package in the list we produced in the previous step, use `composer require -W` to add it to the new site, then do `git status` to check for any new files that need to be added to .gitignore.
+
+    1. In the Pantheon site's folder, `composer require -W` the package and version.  For example, if your package list included `drupal/ctools` version `3.7.0`, this is the command you would run:
 
         ```bash{promptUser: user}
         composer require -W drupal/ctools:^3.7.0
@@ -142,16 +174,18 @@ We need to add your composer packages to the new site's `composer.json` without 
         git status
         ```
 
+  <Alert title="Note" type="info">
+
+  Multiple packages can be listed together in the same require command, e.g. `composer require -W drupal/ctools:^3.7.0 drupal/embed:^1.4.0 drupal/entity:^1.2.0`
+
+  </Alert>
+
 1. [Pantheon site folder] Commit the updated composer files.
 
   ```bash{promptUser: user}
   git add composer.*
   git commit -m "Add contrib projects."
   ```
-
-#### Libraries
-
-Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
 
 ### Custom Code
 
@@ -216,14 +250,32 @@ You've now committed your code additions locally.  Push them up to Pantheon to d
 
 1. Import database
 
+1. Rebuild cache:
+
+  ```bash{promptUser: user}
+  terminus drush $SITE.dev cr
+  ```
+
 1. Run database updates:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev -- updatedb
   ```
 
-## Finish and Review
+## Troubleshooting
 
-1. Navigate to the Site Dashboard and click **I've Successfully Migrated Manually**.
+When there are problems, you can sometimes get helpful messages about what's wrong with:
+
+  ```bash{promptUser: user}
+  terminus drush $SITE.dev watchdog:show
+  ```
+
+When you make changes to fix a problem, don't forget to rebuild cache:
+
+  ```bash{promptUser: user}
+  terminus drush $SITE.dev cr
+  ```
+
+## Finish and Review
 
 1. Review the site, then proceed to launch using the [Launch Essentials](/guides/launch) documentation.
