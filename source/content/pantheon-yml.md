@@ -162,8 +162,6 @@ search:
 * The valid values for the versions are `3` and `8`.
 * Currently, Solr 8 is only supported for Drupal 9 sites.
 
-
-
 ### Drush Version
 
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
