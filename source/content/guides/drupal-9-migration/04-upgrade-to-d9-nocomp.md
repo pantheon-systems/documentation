@@ -1,6 +1,6 @@
 ---
 title: Migrate to Drupal 9
-subtitle: Upgrade from Drupal 8 non-Composer
+subtitle: Upgrade from Drupal 8 no-Composer
 description: Upgrade Pantheon Drupal 8 Non-Composer Site to Drupal 9 With Integrated Composer
 categories: [get-started]
 cms: drupal-9
@@ -8,19 +8,19 @@ tags: [code, launch, migrate, site, updates]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-migration/upgrade-to-d9
-anchorid: drupal-9-migration/upgrade-to-d9
+permalink: docs/guides/drupal-9-migration/upgrade-to-d9-nocomp
+anchorid: drupal-9-migration/upgrade-to-d9-nocomp
 editpath: drupal-9-migration/04-upgrade-to-d9-nocomp.md
 reviewed: "2021-04-22"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site **without Composer** to a Drupal 9 site with Integrated Composer.
+This doc shows how to upgrade a Pantheon-hosted, **non-Composer-managed** Drupal 8 site to a Drupal 9 site with Integrated Composer.
 
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
 The goals of this upgrade are to:
 
-- remove dependencies that Composer will manage from the existing site's Git repository, and
+- remove dependencies that Composer will manage from the existing site's Git repository, 
 
 - have Composer manage those dependencies in the new site instead, then
 
