@@ -25,7 +25,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 
 ## Prerequisites
 
-Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed.
+Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may need to delete and re-install the Terminus Build Tools plugin to get the most recent version.
 
 1. Install [Composer](/composer).
    - Verify your installation with `composer --version`:
