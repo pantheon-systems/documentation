@@ -150,7 +150,7 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 ### Specify a Solr Version
 
-Before you install the Drupal module,you need to specify Solr8 as the search index.
+Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal 9 sites:
 
 ```
 search:
@@ -159,8 +159,8 @@ search:
 
 #### Considerations
 
-* Depends on the CMS framework and version.
-* Currently, Solr8 is only supported for Drupal 9 sites.
+* The valid values for the versions are `3` and `8`.
+* Currently, Solr 8 is only supported for Drupal 9 sites.
 
 
 
