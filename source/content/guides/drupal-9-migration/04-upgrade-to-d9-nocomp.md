@@ -24,7 +24,11 @@ The goals of this upgrade are to:
 
 - have Composer manage those dependencies in the new site instead, then
 
-- move the site upstream from Pantheon's [drops-8](https://github.com/pantheon-systems/drops-8) upstream to [drupal-project](https://github.com/pantheon-systems/drupal-project), Pantheon's Composer-enabled Drupal 9 template. 
+- switch the upstream from [drops-8](https://github.com/pantheon-systems/drops-8) to [drupal-project](https://github.com/pantheon-systems/drupal-project).
+
+## Drupal 9 Upstream Note
+
+<Partial file="drupal-9/drupal-9-upstream-note.md" />
 
 Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your site's existing commit history.
 

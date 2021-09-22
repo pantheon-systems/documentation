@@ -14,13 +14,16 @@ editpath: drupal-9-migration/03-upgrade-to-d9.md
 reviewed: "2021-04-22"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 **Composer-managed** site to a Drupal 9 site with Integrated Composer.
+This doc provides an overview of upgrading an existing Pantheon-hosted Drupal 8 **Composer-managed** site to a Drupal 9 site with Integrated Composer.
 
-## Differences in the Drupal 9 Upstream
+The process of upgrading a Pantheon Drupal 8 Composer-managed site to a Drupal 9 Integrated Composer site follows the steps in the [Manually Migrate](/guides/drupal-9-migration/migrate-manual-d9#prepare-the-local-environment) guide page. This doc provides additonal reference details, including:
+- an overview of the upgrade process
+- notes on differences between the Drupal 9 and Drupal 8 (`drops-8`) upstreams, and
+- information about ongoing site maintenance.
 
-Drupal 9 sites on Pantheon use the [drupal-project](https://github.com/pantheon-systems/drupal-project) upstream. 
+## Drupal 9 Upstream Note
 
-Unlike earlier Pantheon upstreams, the main branch of the `drupal-project` repository does not contain files that you are unlikely to adjust while building sites (including Drupal Core). Instead, these are managed by Composer as dependencies.
+<Partial file="drupal-9/drupal-9-upstream-note.md" />
 
 ## Upgrade Overview 
 
@@ -35,8 +38,7 @@ The goals of this upgrade are to:
 In addition, for Drupal 8 sites using the Pantheon `drops-8` upstream, switch the upstream from [drops-8](https://github.com/pantheon-systems/drops-8) to [drupal-project](https://github.com/pantheon-systems/drupal-project). 
 
 
-[additional page content here]
-
+To complete the site migration, follow the steps in the [Manually Migrate](/guides/drupal-9-migration/migrate-manual-d9#prepare-the-local-environment) guide page.
 
 ## Ongoing Core Updates
 
