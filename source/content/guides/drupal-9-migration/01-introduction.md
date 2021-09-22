@@ -1,7 +1,7 @@
 ---
 title: Migrate to Drupal 9 on Pantheon
 subtitle: Introduction
-description: Steps to upgrade, perform a guided migration, or migrate manually to Drupal 9 on Pantheon.
+description: Steps to upgrade or migrate to Drupal 9 on Pantheon.
 categories: [get-started]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
