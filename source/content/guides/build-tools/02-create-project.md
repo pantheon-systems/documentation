@@ -25,7 +25,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 
 ## Prerequisites
 
-Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may need to delete and re-install the Terminus Build Tools plugin to get the most recent version
+Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may need to delete and re-install the Terminus Build Tools plugin to get the most recent version.
 
 1. Install [Composer](/composer).
    - Verify your installation with `composer --version`:
@@ -97,7 +97,6 @@ Modify the commands in the following examples to match your project's needs.
 The script will ask for additional information such as tokens/credentials for GitHub and the associated CI.
 
 For a list of all available command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
-
 
 ### Troubleshooting
 
