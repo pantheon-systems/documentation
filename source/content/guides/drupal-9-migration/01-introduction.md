@@ -12,11 +12,9 @@ anchorid: drupal-9-migration
 editpath: drupal-9-migration/01-introduction.md
 ---
 
-Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
+This guide provides steps to upgrade or migrate a Drupal 8 or 9 site to Drupal 9 on the Pantheon Platform.
 
-Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
-
-There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're building out the documentation within this guide to help you through your adventure.
+There are a number of ways to upgrade to Drupal 9 on Pantheon, depending on the site's start state and target site workflow. This guide will help you through your adventure.
 
 ## Before You Begin
 
