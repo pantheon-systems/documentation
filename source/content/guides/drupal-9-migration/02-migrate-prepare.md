@@ -23,7 +23,7 @@ This overview outlines the steps to prepare an existing Drupal site for upgrade 
 
 1. Upgrade to the latest Drupal 8.9 release.
 
-   - Although Drupal supports upgrading to Drupal 9 from Drupal 8.8, ensure that your site is on the latest Drupal 8.9 release before trying Drupal 9 on Pantheon.
+   - Minimize issues by ensuring your site is on the latest Drupal 8.9 release before proceeding.
 
 1. Review the [How to Prepare Your Drupal 7 or Drupal 8 Site for Drupal 9](https://www.drupal.org/docs/9/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9) guide on Drupal.org.
 
