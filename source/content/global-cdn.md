@@ -6,7 +6,7 @@ categories: [performance]
 tags: [cache, cdn, launch, security]
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 70+ global **POP**s (Points Of Presence) where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering, with improved performance and security for customer sites. Tap into powerful and strategically distributed Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -32,17 +32,17 @@ We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpr
 
 For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
-## Persistent Cache
+## Experience Protection
 
 Serve your Drupal or WordPress site even in the unlikely event that it goes down.
 
-The goal of Persistent Cache is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, a the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
+The goal of Experience Protection is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, a the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
 
 ### How long does content stay fresh? Adjust TTL
 
 Adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL).
 
-Your site’s CMS page-level caching must be correctly configured in order to take advantage of Persistent Cache.
+Your site’s CMS page-level caching must be correctly configured in order to take advantage of Experience Protection.
 
 On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration), you can adjust your CDN edge configuration to serve stale content for a specific amount of time.
 
@@ -50,7 +50,7 @@ For best results, set the cache TTL to a value equal to or over 3700 seconds.
 
 Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). Learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
 
-### Confirm That Persistent Cache Works
+### Confirm That Experience Protection Works
 
 To test how stale cache is served, compare the header results of a page refresh when the site's Dev environment is live to the header results when Dev is in Maintenance Mode:
 
