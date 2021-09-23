@@ -38,7 +38,7 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 
 - Sites use Pantheon’s update workflow
   - Codebase changes are pushed to client's remote repo and then applied to each of the sites
-  - Build step does not rely on 3rd party sources
+  - Build step does not rely on 3rd-party sources
   - No other special deployment instructions
 - Drupal 7 or WordPress 5.4 or above
 

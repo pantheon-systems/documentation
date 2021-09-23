@@ -212,7 +212,7 @@ ___
 
 <ReviewDate date="2019-10-17" />
 
-**Issue**: ImageAPI Optimize supports 3rd party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
+**Issue**: ImageAPI Optimize supports 3rd-party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
 
 **Solution**: Use a 3rd-party module like [reSmush.It](https://www.drupal.org/project/resmushit) or a local application like [ImageOptim.](https://imageoptim.com) or [OptiPNG](http://optipng.sourceforge.net/).
 
