@@ -27,7 +27,7 @@ On the Pantheon Platform, Drupal 9 sites use [Integrated Composer](/integrated-c
 
 Pantheon's [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-project) is the base template for Drupal 9 Composer-managed sites. This upstream is also the recommended starting point for forking new Drupal upstreams that work with the Platform's Integrated Composer build process.
 
-If you are not able to use Composer to manage your Drupal 9 site dependencies, contact your [Pantheon Account Team](pantheon.io/contact-us?docs).
+If you are not able to use Composer to manage your Drupal 9 site dependencies, contact your [Pantheon Account Team](https://pantheon.io/contact-us?docs).
 
 <Alert title="A note about Limited Availability" type="info" icon="leaf">
 
