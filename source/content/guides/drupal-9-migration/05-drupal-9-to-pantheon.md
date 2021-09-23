@@ -20,16 +20,11 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 - [How] Do we address nested docroot vs not-nested docroot? - **Probably not necessary**
 - The document should probably describe the over-all arc we will pursue, at the start
   - Address the question of composer packages being committed to version control, and how we need to not do that for IC
-- Configuration - not sure where to fit this, and not sure all sites will have it if we don't tell them how to get it
 - Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
-  - Partial defines a $SITE env var, but we might want to define others...
 - I kept referring to the "old site".. not sure if there's a better way to phrase it
 - Site structure.. seems like nice info to include, but not sure about the current spot in the doc
-- `composer show`
+- `composer show` - not using this
 - have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)?  wikimedia merge plugin?
-- have them add their "repositories" section to composer.json before adding packages?
-- instructions for importing database and files
-
 
 
 ## Will This Guide Work for Your Site?
@@ -118,49 +113,14 @@ What makes your site code unique is your selection of contributed modules and th
 
 1. Copy your package list from the "requires" section of your site's composer.json and add it to the new site's composer.json.  If your composer.json defines additional repositories or patches, copy those over too.  Take care not to overwrite the `upstream-configuration` package & repository.
 
+Note: if your old site has custom patches in its codebase, make sure to copy those over as well.
+
 1. `composer update`
 
 1. `git status` to see if files have been added that aren't ignored by `.gitignore`.  If anything shows up other than `composer.*`, add it to `.gitignore` until `git status` only shows the composer files being modified.
 
 1. `git add composer.*; git commit -m "Add composer packages"`
 
-### Previously on "Composer packages"
-
-We need to add your composer packages to the new site's `composer.json` without committing any of the files created by those packages to version control.  We will build a list of packages to add, then add them one at a time while ensuring that the files they create are included in `.gitignore` so they aren't committed to version control.
-
-1. Navigate to the old site's folder, where the `composer.json` file is located, and have composer list the contrib modules and themes:
-
-  ```bash{promptUser: user}
-  composer show -D
-  ```
-
-  This lists the packages directly required by `composer.json` and the version currently used by your site.  Since this will be a lengthy process, let's capture that list in a file we can work through while tracking our progress:
-
-  ```bash{promptUser: user}
-  composer show -D > composer-package-list.txt
-  ```
-
-  This creates a file named `composer-package-list.txt` for you to open in your text editor.
-
-1. Build a list of composer packages and versions to add to the new site.
-
-    - Edit the list produced in the previous step to remove the description, add a caret `^` to the beginning of each version number, and change the space between the package name and version to be a colon `:`.  The result should be a list of `package:^version` like this:
-
-    ```
-    drupal/ctools:^3.7.0
-    drupal/embed:^1.4.0
-    drupal/entity:^1.2.0
-    ```
-
-    - If your list contains `cweagans/composer-patches`, move it to the top of the list.
-
-    - If your list contains unsupported composer packages (e.g. `wikimedia/composer-merge-plugin`) they need to be removed.
-
-  <Alert title="Note" type="info">
-
-  If your existing site's `composer.json` contains additional repositories in the `repositories` section, or has patches in the `extras/packages` section, copy those into the pantheon site's `composer.json`
-
-  </Alert>
 
   <Accordion title="Repositories and patches in composer.json" id="repositories-and-patches-in-composer-json" icon="info-sign">
 
@@ -175,32 +135,6 @@ We need to add your composer packages to the new site's `composer.json` without 
 
   </Accordion>
 
-1. For each package in the list we produced in the previous step, use `composer require -W` to add it to the new site, then do `git status` to check for any new files that need to be added to .gitignore.
-
-    1. In the Pantheon site's folder, `composer require -W` the package and version.  For example, if your package list included `drupal/ctools` version `3.7.0`, this is the command you would run:
-
-        ```bash{promptUser: user}
-        composer require -W drupal/ctools:^3.7.0
-        ```
-
-    2. Run `git status` to check if any .  If any untracked files have appeared, add them to the `.gitignore` file until `git status` only shows `composer.json` and `composer.lock`.  If files composer adds are committed to version control, they will interfere with integrated composer on the platform.
-
-        ```bash{promptUser: user}
-        git status
-        ```
-
-  <Alert title="Note" type="info">
-
-  Multiple packages can be listed together in the same require command, e.g. `composer require -W drupal/ctools:^3.7.0 drupal/embed:^1.4.0 drupal/entity:^1.2.0`
-
-  </Alert>
-
-1. [Pantheon site folder] Commit the updated composer files.
-
-  ```bash{promptUser: user}
-  git add composer.*
-  git commit -m "Add contrib projects."
-  ```
 
 ### Custom Code
 
