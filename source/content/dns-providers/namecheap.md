@@ -23,8 +23,12 @@ Identify DNS values to point your domain to Pantheon:
 
 Keep this page open and log in to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
 
-Note that when entering the value for the Name/Host, the bare domain and trailing dot (".") must be removed from the value provided by Pantheon. For example, the value entered in the **Name/Host** field for the Namecheap Advanced DNS configuration should look like `_name-sample`, or in the case of a subdomain `_name-sample.subdomain` where the subdomain is replaced with a specific subdomain.
+## Verify the Domain to Add HTTPS
+When entering the value for the Name/Host, the bare domain and trailing dot (".") must be removed from the value provided by Pantheon. For example, the value entered in the **Name/Host** field for the Namecheap Advanced DNS configuration should look like `_name-sample`, or in the case of a subdomain `_name-sample.subdomain` where the subdomain is replaced with a specific subdomain.
 
+Click **Verify Ownership**.
+
+You can skip verification. Click **Skip without HTTPS**. By skipping, you will get a browser warning until Pantheon automatically provisions HTTPS, which takes approximately one hour after going live.  
 
 ## Configure DNS Records on Namecheap
 
