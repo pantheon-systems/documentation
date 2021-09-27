@@ -17,6 +17,19 @@ This process involves significant changes to the codebase. We recommend you to d
 
   If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
+  <Accordion title="Troubleshoot: Permission denied (publickey)" id="permission-denied-publickey" icon="question-sign">
+
+  If you encounter a `Permission denied (publickey)` error, check that your [SSH keys](/ssh-keys) are set up correctly.
+
+  If you continue to encounter the error, use HTTPS to add the remote:
+
+   ```bash{outputLines:2}
+   git remote add ic https://github.com/pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   Switched to a new branch 'composerify'
+   ```
+
+  </Accordion>
+
 1. Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
 
   ```bash{promptUser:user}
