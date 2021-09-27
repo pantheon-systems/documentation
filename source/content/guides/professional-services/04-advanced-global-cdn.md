@@ -62,7 +62,7 @@ Change or filter request and response headers before your application starts up 
 
 ### Edge Redirects
 
-Reduce requests to your CMS by moving page redirects to the edge. We can do path, domains, pattern-based (RegEx), or redirects based on Geolocation information. We can also combine redirect behavior using Headers (Cookies, Responses etc).
+Reduce requests to your CMS by moving page redirects to the edge. We can do path, domain, and pattern-based (RegEx) redirects, or redirects based on geolocation information. We can also combine redirect behavior using Headers (Cookies, Responses, etc).
 
 ### Domain Masking and Reverse Proxy
 
