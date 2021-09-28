@@ -98,9 +98,9 @@ brew upgrade goaccess
 
 The `nginx-access.log` file can also be navigated from via CLI, without GoAccess. The following commands are a great starting point for navigation of the `nginx-access.log` file:
 
-Locate the most frequent IP addresses:
+Locate the most frequent client IP addresses:
 
-```cat nginx-access.log | awk -F\" '{ print $8 }' | sort | uniq -c | sort -frn | head -n 25```
+```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
 
 Locate the most frequent URLs:
 
