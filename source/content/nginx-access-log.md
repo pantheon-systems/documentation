@@ -104,12 +104,12 @@ Locate the most frequent client IP addresses:
 
 Locate the most frequent URLs:
 
-```cat nginx-access.log | awk -F\" '{print $2}' nginx-access.log| sort | uniq -c | sort -nr | head```
+```cat nginx-access.log | awk -F '\"' '{print $2}' | sort | uniq -c | sort -nr | head```
 
 
 Identify the most frequent User Agents:
 
-```cat nginx-access.log | awk -F\" '{print $6}' nginx-access.log | sort | uniq -c | sort -nr | head```
+```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
 
 
 ## See Also
