@@ -4,6 +4,8 @@ subtitle: User Dashboard
 description: In part two of our Quick Start guide, learn about the Pantheon User Dashboard
 anchorid: user-dashboard
 layout: guide
+categories: [get-started]
+tags: [dashboard]
 type: guide
 quickstart: true
 generator: pagination
@@ -20,7 +22,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=U7iaX-vwPrc`
+<Youtube src="U7iaX-vwPrc" title="User Dashboard Overview" />
 
 <Accordion title="User Dashboard Glossary (Optional)" id="user-dashboard-tour" icon="lightbulb">
 
@@ -44,12 +46,16 @@ In this lesson, we’re going to explore the User Dashboard.
 
   - **SSH Keys:** Add and manage your SSH keys.
 
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin](/migrate/).
+  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin](/migrate).
 
   - **Billing:** View and update your billing information for sites you own.
 
   - **Delete Account:** Delete your Pantheon account. This is useful for consolidating multiple accounts under a single user account.
 
 </Accordion>
+
+Note:
+
+- <Partial file="dashboard-login-session-length.md" />
 
 You should now be familiar with the Pantheon User Dashboard. When you’re ready, you may continue to the next lesson.

@@ -1,10 +1,10 @@
 ---
 title: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your Pantheon Drupal or WordPress site as an added security measure.
-tags: [siteintegrations, security, moreguides]
-categories: []
+categories: [integrate]
+tags: [security, saml, users]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [populist]
 date: 4/13/2015
 ---
@@ -43,7 +43,7 @@ For a single site, there are many different [WordPress plugins for two-factor au
 Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can:
 
   - synchronize and import your database
-  - use a tool like [WP-CFM](/wp-cfm/)
+  - use a tool like [WP-CFM](/wp-cfm)
   - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.
 
 </Alert>
@@ -56,7 +56,7 @@ For a single site, there are a few [different Drupal modules](https://groups.dru
 
 1. Install and enable the [Two-factor Authentication (TFA)](https://www.drupal.org/project/tfa) module and the [TFA Basic plugins](https://www.drupal.org/project/tfa_basic) module on your Drupal site.
 
-2. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/users) for either iOS or Android.
+2. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/download) for either iOS or Android.
 
 3. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**; set **TOTP** as the default validation plugin; add **Recovery Codes** as a fallback plugin; and allow **Trusted Browsers** for your domain.
 
@@ -94,7 +94,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 
 1. Sign up and create a [OneLogin account](https://www.onelogin.com/) for your organization.
 
-2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard (You need administrator priviledges to install apps). This needs to be done for each WordPress site that is being managed by OneLogin.
+2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard (You need administrator privileges to install apps). This needs to be done for each WordPress site that is being managed by OneLogin.
 
 3. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
 
@@ -170,6 +170,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 </TabList>
 
 ## Pantheon Platform TFA
+
 ### Log in with Google
 The Pantheon Dashboard offers social login with Google, which can be configured to use [Google TFA](https://www.google.com/landing/2step/):
 
@@ -182,7 +183,7 @@ We recommend adding an [SSH Key](/ssh-keys) to authenticate yourself on Pantheon
 </Alert>
 
 ### Single Sign-On for Orgs
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/sso-organizations/).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/sso-organizations).
 
 ## See Also
 - [Security on Pantheon](https://pantheon.io/security)

@@ -3,8 +3,9 @@ title: DreamHost Domain Configuration
 provider: DreamHost
 dnsprovider: true
 description: Learn how to point your DreamHost domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/dreamhost.md/
 ---
 ## Before You Begin
@@ -12,10 +13,11 @@ Be sure that you have a:
 
 
 - Registered domain name using DreamHost to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on DreamHost
+
 ### A Record
 1. Navigate to **Panel** > **Domains** > **Manage Domains** and click **DNS**.
 2. Leave the **Name** field blank, select A from the Type dropdown menu, and enter the A record value provided by Pantheon in the **Value** field.
@@ -40,5 +42,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

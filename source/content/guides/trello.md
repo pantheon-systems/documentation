@@ -1,9 +1,10 @@
 ---
 title: Integrate Trello on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Trello with your dev workflow on Pantheon.
-tags: [siteintegrations]
+categories: [integrate]
+tags: [collaborate, quicksilver, webops, workflow]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 date: 5/4/2017
 contributors: [scottmassey]
 ---
@@ -121,7 +122,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 

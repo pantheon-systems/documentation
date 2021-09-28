@@ -1,13 +1,13 @@
 ---
 title: Bypassing Cache with HTTP Headers
 description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
-tags: [cacheedge]
-categories: []
+categories: [performance]
+tags: [cache, cdn, cookies]
 ---
 ## Exclude Specific Pages from Caching
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="webops-cache-control">
 
 Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
 
@@ -74,7 +74,7 @@ Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wo
 
 <Alert title="Note" type="info">
 
-Place this code in an [MU Plugin](/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+Place this code in an [MU Plugin](/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
 
 </Alert>
 
@@ -173,10 +173,10 @@ X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 ```
 
-The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/test-global-cdn-caching/).
+The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/test-global-cdn-caching).
 
 ## See Also
-* [Clearing Caches for Drupal and WordPress](/clear-caches/)
+* [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Working with Cookies on Pantheon](/cookies)
-* [Testing Global CDN Caching](/test-global-cdn-caching/)
-* [Caching: Advanced Topics](/caching-advanced-topics/)
+* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Caching: Advanced Topics](/caching-advanced-topics)

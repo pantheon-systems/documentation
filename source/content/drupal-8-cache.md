@@ -1,12 +1,13 @@
 ---
 title: Drupal 8 Performance and Varnish Caching Settings
 description: Optimize Drupal 8 and Varnish caching to maximize your Pantheon site's performance.
-tags: [cacheapp]
-categories: [drupal8]
+cms: "Drupal"
+categories: [performance]
+tags: [cache]
 ---
 To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
 Learn industry best practices for Drupal caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
 
@@ -36,7 +37,7 @@ Some developers may wonder if HTTP/2 has replaced CSS and Javascript aggregation
 Other modules like `views.module`, which is now in Drupal 8's core, and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should consider implementing their cache settings to provide a good logged-in user experience.
 
 ## See Also
-- [Global CDN Caching for High Performance](/global-cdn-caching/)
+- [Global CDN Caching for High Performance](/global-cdn-caching)
 - [Cache API in Drupal 8](https://www.drupal.org/developing/api/8/cache)
 - [Drupal 8 Cache API Documentation](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/8)
 - [Drupal 8's Dynamic Page Cache](http://wimleers.com/article/drupal-8-dynamic-page-cache)

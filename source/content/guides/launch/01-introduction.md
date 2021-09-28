@@ -1,8 +1,10 @@
 ---
 title: Launch Essentials
 subtitle: Introduction
-description: Tips and tricks for launching sites on Pantheon like you're in a 55-foot tall jungle-walking robot exoskeleton, killin it.
-tags: [golive]
+description: Tips and tricks for launching sites on Pantheon like you're in a 55-foot tall jungle-walking robot exoskeleton.
+categories: [go-live]
+tags: [collaborate, launch, site, webops, workflow]
+reviewed: "2020-11-01"
 layout: guide
 type: guide
 anchorid: introduction
@@ -17,7 +19,6 @@ nexturl: guides/launch/plans/
 nextpage: Upgrade Site Plan
 editpath: launch/01-introduction.md
 image: getting-started-Largethumb
-searchboost: 150
 ---
 Welcome! This guide will help you take a site live on Pantheon.
 
@@ -31,7 +32,7 @@ Welcome! This guide will help you take a site live on Pantheon.
 * Review status reports
 * Optimize performance
 
-To get started, you need to [create your Live environment](/guides/quickstart/create-test-live/) and have a registered domain name where you can control DNS settings.
+To get started, you need to [create your Live environment](/guides/quickstart/create-test-live) and have a registered domain name where you can control DNS settings.
 
 <Alert title="Note" type="info">
 

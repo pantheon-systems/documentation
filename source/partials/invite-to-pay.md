@@ -10,3 +10,5 @@
 
 1. From the **Enter Billing Information** page, use the **<span class="glyphicons glyphicons-envelope"></span>Send a Request** button.
 1. Enter the recipient's email address and click the **Send Request** button. A link is immediately sent to the email address to pay through the secure site.
+
+Once the person has accepted the invitation and has paid for the site, they will receive the next invoice at the end of the billing cycle.

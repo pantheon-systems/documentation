@@ -1,8 +1,9 @@
 ---
 title: Fix Broken Links in Drupal
 description: Learn how to update Drupal site links so the URL references the correct file path and domain name.
-tags: [debugcode]
-categories: [drupal]
+cms: "Drupal"
+categories: [troubleshoot]
+tags: [code, launch]
 ---
 
 ## Update Links Referencing IP:Port
@@ -53,6 +54,6 @@ Clear cache after deploying this code change. All cached IP:PORT references will
 
 ## See Also
 
-[Private Paths](/private-paths/)
+[Private Paths](/private-paths)
 
-[Non-Standard File Paths](/non-standard-file-paths/)
+[Symlinks and Assumed Write Access](/symlinks-assumed-write-access)

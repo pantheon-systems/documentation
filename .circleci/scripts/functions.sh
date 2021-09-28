@@ -13,14 +13,14 @@ auth-terminus() {
         echo "Authentiction with Terminus failed \n"
         exit 1
     else
-        echo "Authenticated \n"
+        printf "Authenticated \n"
     fi
 }
 
 protected-branches() {
-    # Deploy any branch except master, dev, test, or live
+    # Deploy any branch except main, dev, test, or live
     printf "Checking $CIRCLE_BRANCH_SLUG against protected names... \n"
-    if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]
+    if [ "$CIRCLE_BRANCH_SLUG" != "main" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]
     then
         echo "Not a protected branch. \n"
     else
@@ -31,9 +31,10 @@ protected-branches() {
 
 gatsby-tokens() {
 # Set GitHub API token
-    touch $BUILD_PATH/gatsby/.env.production
-    echo "GITHUB_API=$GITHUB_TOKEN" > $BUILD_PATH/gatsby/.env.production
-    echo "SEGMENT_KEY=$SEGMENT_KEY" >> $BUILD_PATH/gatsby/.env.production
+    touch .env.production
+    echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
+    echo "SEGMENT_KEY=$SEGMENT_KEY" >> .env.production
+    echo "GTM_ID=$GTM_ID" >> .env.production
 }
 
 getExistingTerminusEnvs() {
@@ -62,4 +63,21 @@ skip-preview() {
     else
         return 1
     fi
+}
+
+try3 () {
+  for ((n=1;n<4;n++)); do
+    echo "$@"
+    if ! "$@"
+      then
+        echo "failed $n times..."
+        if [[ $n = 3 ]]
+          then exit 1
+        fi
+        sleep 1
+      else
+        echo "Completed after $n tries"
+        break
+      fi
+  done
 }

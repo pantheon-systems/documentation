@@ -1,0 +1,128 @@
+
+.manual-guide-toc h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  padding: 0px 0px 10px 40px;
+}
+
+@media (max-width: 500px) {
+  .manual-guide-toc h3 {
+    margin-top: 20px;
+  }
+}
+.manual-guide-toc a {
+  color: #45454d;
+  font-weight: normal;
+  line-height: 1.6;
+  text-decoration: none;
+  padding: 10px 10px 10px 40px;
+  margin-right: -1px;
+  font-size: 16px;
+}
+.manual-guide-toc ul {
+  line-height: normal;
+}
+.manual-guide-toc li {
+  list-style-type: none;
+  font-size: 16px !important;
+}
+.col-md-3.manual-guide-toc {
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: 130px;
+  background: #f5f5f5;
+  border-right: 1px solid #ccc;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #1e1e2b;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.invisible-manual-toc {
+  background: #fff !important;
+  height: 10px;
+}
+.manual-guide-toc {
+  padding: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.manual-guide-toc ul > li {
+  padding: 2px;
+}
+ul.manual-guide-toc > li > a:hover {
+  background-color: #ddd;
+  border-left: 5px solid #909090;
+  margin-left: 15px;
+  padding: 10px 20px;
+  margin-right: -18px;
+}
+.manual-guide-toc.active-trail li > a:hover {
+  cursor: default !important;
+  background-color: #fff !important;
+}
+.manual-guide-toc .active-trail {
+  font-weight: bold;
+  color: #0a6bb5;
+  background-color: #fff !important;
+  border-left: 5px solid #0a6bb5 !important;
+  margin-right: -18px;
+  padding: 10px 10px 10px 20px !important;
+  margin-left: 15px !important;
+  cursor: default !important;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.manual-guide-toc .active-trail > li > a:hover {
+  background-color: #fff !important;
+}
+.manual-guide-toc .child a {
+  padding: 10px 10px 10px 70px;
+}
+.manual-guide-toc .child a:hover {
+  padding: 10px 10px 10px 50px;
+}
+.manual-guide-toc .child .active-trail {
+  padding: 10px 10px 10px 50px !important;
+}
+.manual-guide-toc a {
+  padding: 10px 10px 10px 40px;
+  display: block;
+}
+.manual-guide-toc .child a {
+  padding: 10px 10px 10px 70px;
+}
+.manual-guide-toc .child a:hover {
+  padding: 10px 10px 10px 50px;
+}
+.manual-guide-toc .child .active-trail {
+  padding: 10px 10px 10px 50px !important;
+}
+
+@media (max-width: 994px) {
+  .col-md-3.manual-guide-toc {
+    width: 100% !important;
+    position: relative !important;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+ 
+  .manual-guide-toc .active-trail {
+    margin-right: 0px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  ul.manual-guide-toc > li > a:hover {
+    margin-right: 0px;
+  }
+  .manual-guide-toc .active-trail {
+    background-color: #f5f5f5 !important;
+  }
+}

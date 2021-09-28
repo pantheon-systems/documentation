@@ -6,6 +6,8 @@ quickstart: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, site, workflow]
 type: guide
 pagination:
   provider: data.quickstartpages
@@ -26,31 +28,33 @@ To begin, navigate back to the Pantheon **Site Dashboard**.
 
 Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
-<Alert title={"Note"} type={"info"}>
-  Agencies have access to additional development environments under the{" "}
-  <Icon icon={"cloud"} text={"Multidev"} /> tab.
+<Alert title="Note" type="info">
+
+Agencies have access to additional development environments under the <Icon icon={"cloud"} text={"Multidev"} /> tab.
+
 </Alert>
 
 ## <span class="glyphicons glyphicons-wrench"></span> Dev
+
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
 Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
 
 ## <span class="glyphicons glyphicons-equalizer"></span> Test
+
 This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
 To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
 
-![Pantheon Workflow](../../../images/workflow.png)
+![Pantheon Workflow](../../../images/code-workflow.png)
 
 ## <span class="glyphicons glyphicons-cardio"> </span> Live
+
 This environment is for your live site, where content creators actively post and upload media files.
 
 After passing review, you push your new code “up” from the Test environment to this Live environment.
 
-**Watch the video:**
-
-`youtube: https://www.youtube.com/watch?v=CZaog5_Sxmg`
+For more details, see [The Site Dashboard](/sites), or the condensed glossary below.
 
 <Accordion id={"site-dashboard-tour"} title={"Site Dashboard Glossary (Optional)"} icon={"lightbulb"}>
 

@@ -1,172 +1,176 @@
 ---
 title: Pantheon Global CDN
-description: Improve Site Performance and Security
-earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
-searchboost: 200
+description: Improve Site Performance and Security with Pantheon's Global CDN.
+reviewed: "2020-02-27"
+categories: [performance]
+tags: [cache, cdn, launch, security]
 ---
 
-Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 60+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/https) using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering, with improved performance and security for customer sites. Tap into powerful and strategically distributed Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal WebOps.
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
 ## How Does It Work?
-This new service takes Pantheon's traditional high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we can now terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
-Additionally, the Global CDN has an improved cache strategy that eliminates Pantheon's legacy "cache sharding" which meant that the same content needed to be cached in separate edge cache instances. This means higher cache hit rates.
+Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
-Finally, the Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available as Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
+- The Global CDN cache strategy eliminates "cache sharding," in which the same content needs to be cached in separate edge cache instances. This results in higher cache hit rates.
 
-In early testing we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
+- Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available as Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
+
+When we first turned on the Global CDN, we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
 
 ![Example before and after page load time](../images/global-cdn-time-to-load.png)
 
-## Eligibility
-All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take advantage of its superior features and performance.
-
-## Feature Comparison
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Global CDN</th>
-      <th>Deprecated Edge</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Price</th>
-      <td>Included</td>
-      <td>$60/mo surcharge for HTTPS</td>
-    </tr>
-    <tr>
-      <th>Delivery</th>
-      <td>Global Distribution</td>
-      <td>US Datacenter</td>
-    </tr>
-    <tr>
-      <th>Cache Lookups</th>
-      <td>Routed to the Pool Most Likely to Hit</td>
-      <td>Randomly Routed to One of Three Pools</td>
-    </tr>
-    <tr>
-      <th>Cache Clearing</th>
-      <td>Non-blocking, takes up to 150ms to take effect</td>
-      <td>Blocks, takes up to 2000ms</td>
-    </tr>
-    <tr>
-      <th>HTTPS Service</th>
-      <td >[Free and Managed](/https)</td>
-      <td>BYO Cert</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Cache Clearing
+
 We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to take advantage of the granular cache clearing capabilities of the Global CDN. Additionally, you can remove all pages from cache at once from the Site Dashboard, within the Site Admin, and even from the command line.
 
-For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches/).
+For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
-## Enabling the Global CDN
+## Experience Protection
 
-If you don't see action required in your Domains / HTTPS tool, please [contact support](/support) to enable the upgrade.
+Serve your Drupal or WordPress site even in the unlikely event that it goes down.
 
-### Upgrade Your Site
+The goal of Experience Protection is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, a the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
 
-1. From the Site Dashboard, click the **Start Upgrade** button in the <span class="glyphicons glyphicons-global"></span> Domains / HTTPS section of the <span class="glyphicons glyphicons-cardio"></span> Live tab.
-1. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait 60 minutes before updating DNS.
+### How long does content stay fresh? Adjust TTL
 
-  If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
+Adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL).
 
-    1. Click the "Details" button next to your site's bare domain.
-    1. Copy the "A" record's IP address provided for the site's bare domain.
-    1. Add a line to your [local hosts file](/hosts-file/) with the IP address from the previous step followed by the domain name, for example:
+Your site’s CMS page-level caching must be correctly configured in order to take advantage of Experience Protection.
 
-    ```
-    192.123.456.789 example.com
-    ```
+On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration), you can adjust your CDN edge configuration to serve stale content for a specific amount of time.
 
-  4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en), the test was successful. Remove the edits made to your hosts file once you have finished testing.
+For best results, set the cache TTL to a value equal to or over 3700 seconds.
 
+Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). Learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
 
-3. Click **Details** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS host to use the provided values.
+### Confirm That Experience Protection Works
 
-   **Terminology:** Terms you will see beside your domains and what they mean:
+To test how stale cache is served, compare the header results of a page refresh when the site's Dev environment is live to the header results when Dev is in Maintenance Mode:
 
-    - **Upgrade to CDN**: This means the domain is routing to our legacy infrastructure. Click **Upgrade to CDN** or **Details** to check and update the DNS recommendations
-    - **Setup Required**: This can mean several things; click **Setup Required** or **Details** to get more details
-    - **Launched**: Your domain successfully routes to the Pantheon Platform, and you got your free Let's Encrypt SSL cert. You're good to go!
+<TabList>
 
-    <Alert title="Pro Tip" type="info">
+<Tab title="Via Command Line" id="cli" active={true}>
 
-    Look up your DNS host with this free web tool: [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
+1. Examine the headers through the command line:
 
-    </Alert>
+  ```bash{outputLines: 2-20}
+  curl --head https://pantheon.io/docs
+  HTTP/2 301
+  content-type: text/html
+  location: https://pantheon.io/docs/
+  server: nginx
+  strict-transport-security: max-age=31622400
+  x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
+  x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
+  cache-control: public, max-age=86400
+  date: Tue, 24 Aug 2021 15:30:21 GMT
+  x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
+  x-cache: HIT, HIT
+  x-cache-hits: 1, 1
+  x-timer: S1629819022.932985,VS0,VE1
+  pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
+  vary: Cookie, Cookie
+  age: 9654
+  accept-ranges: bytes
+  via: 1.1 varnish, 1.1 varnish
+  content-length: 162
+  ```
 
-  DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propagation.
+  Note the result for `age` or `max-age`.
 
-    <Alert title="Pro Tip" type="info">
+1. Navigate to the site's Dev environment and set the site to Maintenance Mode.
 
-    Check the current state of DNS propagation from different parts of the world using this free web tool [https://www.whatsmydns.net](https://www.whatsmydns.net)
+1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
 
-    </Alert>
+1. In a terminal, cURL the site headers filtered for stale cache:
 
-4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/guides/launch/redirects/).
+  ```bash{promptUser: user}
+  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
+  ```
 
-For more details, see [HTTPS on Pantheon's Global CDN](/https).
+  If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
+
+</Tab>
+
+<Tab title="Via Web Browser" id="web-browser">
+
+1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab.
+
+  Find the response headers for the page or asset.
+
+1. Go to the site's Dev environment and set the site to Maintenance Mode.
+
+1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
+
+1. Go back to the page and Developer Tools, then refresh the page for the newest header responses.
+
+  If the result includes `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
+
+</Tab>
+
+</TabList>
 
 ## Frequently Asked Questions
 
-### Is there a deadline to upgrade?
-Ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes.
+### I already have a CDN. Can I use it with the Pantheon Global CDN?
 
-### I already have a CDN - should I switch?
-Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
+Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address.
 
-1. It includes [free and automatic HTTPS service](/https)
-2. It is heavily optimized for website performance
-3. It is configured, maintained, and supported by Pantheon
-4. It is available at no additional cost
+To retain your existing CDN, set up a "stacked CDN" configuration. Ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
-Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
+While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
+
+If you need additional features or customization for your CDN, consider our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service.
 
 ### Is the www-redirector service still available?
-No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects/) to your site's configuration file (wp-config.php or settings.php).
+
+No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects) to your site's configuration file (wp-config.php or settings.php).
 
 ### Are vanity domains supported?
-You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains/), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
+
+You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
 
 ### What about Cloudflare?
-See [Cloudflare Domain Configuration](/cloudflare/).
+
+See [Cloudflare Domain Configuration](/cloudflare).
 
 ### Is the CDN configurable?
+
 No, we pre-configured the CDN so you don’t have to hassle with configuration, and we can guarantee performance and uptime. The Global CDN's behavior is the same as our legacy cache which is heavily optimized for Drupal and WordPress sites, and serves billions of pages monthly, except it's globally distributed.
 
 ### Do I get access to hit rates or other statistics?
-Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics/).
 
-### Can I use other CDNs with the Pantheon Global CDN?
-Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
+Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics).
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
+
 You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header so that WordPress can build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
 
-```php
+```php:title=wp-config.php
 if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
   $_SERVER['HTTPS'] = 'on';
 }
 ```
 
 ### Can I expose the `Surrogate-Key-Raw` header?
+
 Yes! Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl request, then use `grep` to filter the output. Replace `https://www.example.com/` in the following example:
 
-```bash
+```bash{promptUser: user}
 curl -IsH "Pantheon-Debug:1" https://www.example.com/ | grep surrogate-key-raw
 ```
 
 ![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](../images/surrogate-key-raw-example.png)
 
 To prevent issues with Twitter card validation and to reduce the overall time to load, the `Surrogate-Key-Raw` header is not returned by default. Exposing this header provides context for entities included on a given page.
+
+## Advanced Global CDN
+
+For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service.

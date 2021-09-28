@@ -4,6 +4,8 @@ subtitle: Performance
 anchorid: performance
 edt: true
 layout: guide
+categories: [performance]
+tags: [cache, cdn]
 type: guide
 generator: pagination
 pagination:
@@ -24,19 +26,17 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/gdpGZpxdXDo`
-
-<br />
+<Youtube src="gdpGZpxdXDo" title="Essential Developer Training - Performance" />
 
 **Resource Links From Video**
 
  - [Caching: Advanced Topics](/caching-advanced-topics)
- - [Redis docs](/redis)
- - [New Relic docs](/new-relic/)
+ - [Redis docs](/object-cache)
+ - [New Relic docs](/new-relic)
  - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
  - [Troubleshooting WordPress with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
  - [Uptime monitoring with Synthetics](/new-relic/#configure-ping-monitors-for-availability)
- - [Load and Performance Testing](/load-and-performance-testing/)
+ - [Load and Performance Testing](/load-and-performance-testing)
 
 **CHALLENGE:**
 

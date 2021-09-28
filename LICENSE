@@ -2,12 +2,14 @@ The Creative Commons Attribution-ShareAlike 4.0 International license
 applies to all documentation. Code snippets are, additionally, available
 under the MIT License.
 
+All Code from the [Gatsby project](https://github.com/gatsbyjs/gatsby/) is used with permission and redistributed under the MIT license. 
+
 ========================================================================
-Code Snippets Only:
+Code Snippets and Gatsby code:
 The MIT License (MIT)
 ========================================================================
 
-Copyright (c) 2019 Pantheon
+Copyright (c) 2020 Pantheon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

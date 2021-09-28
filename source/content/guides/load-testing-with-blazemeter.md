@@ -1,10 +1,10 @@
 ---
 title: Load Testing Drupal and WordPress with BlazeMeter
 description: Learn how to use BlazeMeter to load test your Pantheon Drupal or WordPress site.
-tags: [newrelic, moreguides]
-categories: []
+categories: [performance]
+tags: [launch, measure, newrelic]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [jessifischer]
 date: 2/25/2015
 ---
@@ -100,4 +100,4 @@ Depending on the application you’re running, you can also access error and slo
 
 The errors and performance hits you discover will each will have a different solution. We recommend doing a search of the error message and reading solutions posted by others, or post your own issue and see if anyone else has an answer. Additionally, if a specific module or plugin is slow, check the issue queue to see if the problem is known and if a patch is available.
 
-Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](/mysql-slow-log/) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](/debug-mysql-new-relic/). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well.
+Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](/mysql-slow-log) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](/debug-mysql-new-relic). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well.

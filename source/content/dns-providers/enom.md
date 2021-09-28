@@ -1,20 +1,22 @@
 ---
-title: eNom Domain Configuration
-provider: eNom
+title: Enom Domain Configuration
+provider: Enom
 dnsprovider: true
-description: Learn how to point your eNom domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+description: Learn how to point your Enom domain to a Pantheon site.
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/enom.md/
 ---
 ## Before You Begin
 Be sure that you have a:
 
-- Registered domain name using eNom to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- Registered domain name using Enom to host DNS
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
-## Configure DNS Records on eNom
+## Configure DNS Records on Enom
+
 ### A Record
 1. Navigate to **Domains** > **My Domains**.
 2. Click on the domain you want to point to Pantheon.
@@ -34,11 +36,11 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 2. Enter **www** in the **Host Name** field, select **A** for the **Record Type** then enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Address** field.
 4. Click **Save**.
 
-## eNom Docs
+## Enom Docs
 
-[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain](https://www.enom.com/kb/kb/kb_0002_change-host-records.htm)
+[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain](https://www.Enom.com/kb/kb/kb_0002_change-host-records.htm)
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

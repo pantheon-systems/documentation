@@ -1,16 +1,21 @@
 #! /bin/bash
+# This script takes as an argument a target URL to test, then checks recursively for broken (relative) links.
 set -e
 
-# This script assumes you're already serving the site using --prefix-paths
+# Import Functions
+source $BUILD_PATH/.circleci/scripts/functions.sh
 
-echo "Checking for broken links.."
+# Exits if no target is provided as an argument.
+if [ "$1" = "" ]; then
+  echo "You forgot to provide a target."
+  exit 1
+fi
 
-cd $BUILD_PATH
+echo "Checking for broken links on ${1} .."
 
-if ./gatsby/node_modules/broken-link-checker/bin/blc -q -r -e -o http://localhost:9000/docs
+if try3 blc -q -r -e -o $1
 then
   echo "No broken internal links!"
 else
   exit 1
 fi
-

@@ -1,39 +1,45 @@
 ---
 title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
-tags: [logs, services]
-categories: []
+categories: [platform]
+tags: [logs, newrelic, workflow]
+reviewed: "2020-07-14"
 ---
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
+
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic&reg; Performance Monitoring](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
 The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
 
 ## Available Logs
 
-| Log        | Retention Policy           | Comments                                                |
-|:---------- |:-------------------------- |:------------------------------------------------------- |
-| **newrelic.log**          |                       | New Relic log; check if an environment is not logging. |
-| **nginx-access.log**      | Up to 60 days of logs |  Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/nginx-access-log). |
-| **nginx-error.log**       | 1MB of log data       | Webserver error log. |
-| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see [PHP Errors and Exceptions](/php-errors)" />  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
+| Log                   | Retention Policy           | Comments                                                |
+|:--------------------- |:--------------------- |:------------------------------------------------------- |
+| **newrelic.log**          |                       | New Relic log; check if an environment is not logging.  |
+| **nginx-access.log**      | Up to 60 days of logs | Web server access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/nginx-access-log). |
+| **nginx-error.log**       | 1MB of log data       | Web server error log.                                   |
+| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>" />  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
 | **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/php-slow-log) |
 | **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
 | **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
+| **mysql-bin.0001**        |                       | MySQL [binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html). Located in the database's `data/` directory. |
 
-Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
+Rotated log files are archived within the `/logs` directory on application containers and database servers.
+
+You may find that this directory contains sub-directories for services like Nginx and PHP (e.g. `/logs/nginx/nginx-access.log-20160617.gz` or `/logs/php/php-error.log-20160617.gz`) or log files directly in `logs` (e.g. `/logs/mysqld-slow-query.log-20160606`).
 
 <Alert title="Note" type="info">
 
-When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific.  Consider [automating the collection](#automate-downloading-logs) of logs regularly to maintain historical log data.
+When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific. Consider [automating the collection](#automate-downloading-logs) of logs regularly to maintain historical log data.
 
 </Alert>
 
 ## Access Logs Via SFTP
-Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+
+Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 In the Connection Information section of the dashboard, we can see a pattern about the hostnames:
 
-```
+```bash{promptUser: user}
 <env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in
 ```
 
@@ -44,59 +50,65 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 
 ## Downloading Logs
 
-<Accordion title="Watch: Download Appserver and Database Log Files" id="logs-video" icon="facetime-video">
-
-`youtube: https://youtu.be/t3cyL5h5vTI`
-
-</Accordion>
-
 ### Application Log Files
 
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
-2. Click **Connection Info** and copy the **SFTP Command Line** command.
-3. Open a terminal window and paste the SFTP connection command.
-4. Run the following SFTP command in terminal:
 
-   ```
+1. Click **Connection Info** and copy the **SFTP Command Line** command.
+
+1. Open a terminal window and paste the SFTP connection command.
+
+1. Run the following SFTP command in terminal:
+
+   ```none
    get -r logs
    ```
 
-You now have a local copy of the logs directory, which contains the following:
-```
+You now have a local copy of the logs directory.
+
+The directory structure will resemble:
+
+```none
 ├── logs
-    └──newrelic.log
-    └──nginx-access.log
-    └──nginx-error.log
-    └──php-error.log
-    └──php-fpm-error.log
-    └──php-slow.log
-    └──pyinotify.log
-    └──watcher.log
+    └──php
+        └──newrelic.log
+        └──php-error.log
+        └──php-fpm-error.log
+        └──php-slow.log
+    └──nginx
+        └──nginx-access.log
+        └──nginx-error.log
 ```
 
 ### Database Log Files
+
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
-2. Click **Connection Info** and copy the **SFTP Command Line** command.
-3. Edit and execute the command by replacing `appserver` with `dbserver`:
+
+1. Click **Connection Info** and copy the **SFTP Command Line** command.
+
+1. Edit and execute the command by replacing `appserver` with `dbserver`:
 
  From:
- ```
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+
+ ```bash{promptUser: user}
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
  To:
- ```
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+
+ ```bash{promptUser: user}
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
-4. Run the following SFTP command in terminal:
+1. Run the following SFTP command in terminal:
 
- ```
+ ```none
  get -r logs
  ```
 
 You now have a local copy of the logs directory, which contains the following:
-```
+
+```none
 ├── logs
     └──mysqld-slow-query.log
     └──mysqld.log
@@ -107,43 +119,71 @@ You now have a local copy of the logs directory, which contains the following:
 You can automate the process of accessing and maintaining these logs with a simple script.
 
 ### Create a Script
+
 Open your local terminal to create and access a new local directory:
 
-```bash
+```bash{promptUser: user}
 mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
 
 Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the following:
 
-```bash
-# Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-SITE_UUID=xxxxxxxxxxx
-ENV=live
-for app_server in `dig +short appserver.$ENV.$SITE_UUID.drush.in`;
-do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:logs/* app_server_$app_server
-done
+  <TabList>
 
-# Include MySQL logs
-db_server=`dig dbserver.$ENV.$SITE_UUID.drush.in +short`
-rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@dbserver.$ENV.$SITE_UUID.drush.in:logs db_server_$db_server
-```
+  <Tab title="Rsync version" id="rsync-ver" active={true}>
 
-<Alert title="Note" type="info">
+  ```bash:title=collect-logs.sh
+  #!/bin/bash
+  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxxxxxx
+  ENV=live
+  for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
+  do
+    rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$app_server:logs" "app_server_$app_server"
+  done
 
-For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.
+  # Include MySQL logs
+  for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
+  do
+    rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$db_server:logs" "db_server_$db_server"
+  done
+  ```
 
-</Alert>
+  </Tab>
+
+  <Tab title="SFTP version" id="sftp-ver">
+
+  ```bash:title=collect-logs.sh
+  #!/bin/bash
+  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxxxxxx
+  ENV=live
+  for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
+  do
+    echo "get -R logs \"app_server_$app_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$app_server"
+  done
+
+  # Include MySQL logs
+  for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
+  do
+    echo "get -R logs \"db_server_$db_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$db_server"
+  done
+  ```
+
+  </Tab>
+
+  </TabList>
 
 ### Collect Logs
+
 Download logs by executing the script from within the `site-logs` directory:
 
-```
-sh collect-logs.sh
+```bash{promptUser:user}
+bash collect-logs.sh
 ```
 
-You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
+You can now access the logs from within the `site-logs` directory. More than one directory is generated for sites that use multiple application containers.
 
 ## Frequently Asked Questions
 
@@ -152,9 +192,10 @@ You can now access the logs from within the `site-log` directory. More than one 
 See [Parsing nginx Access Logs with GoAccess](/nginx-access-log) for details.
 
 ### What is the first line in nginx-access.log?
-The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
 
-The client IP for the following example is `203.0.113.56`:
+The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the load balancer IP address will be listed second, after the client IP.
+
+The client IP for the following example is `122.248.101.126`:
 
 ```nginx
 203.0.113.56 - - [19/Feb/2016:02:00:00 +0000]  "GET /edu HTTP/1.1" 200 13142 "https://pantheon.io/agencies/pantheon-for-agencies" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0" 0.399 "122.248.101.126, 50.57.202.75, 10.x.x.x, 10.x.x.x"
@@ -166,7 +207,7 @@ No, syslog is not available. Technically, you can log Drupal events using the sy
 
 ### Can I access Apache Solr logs?
 
-No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/solr).
+No, access to Apache Solr logs is not available. For more information on debugging Solr, refer to the documentation on [Pantheon Search](/solr).
 
 ### Can I download Varnish logs?
 
@@ -192,24 +233,18 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 
 By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
-* Visit `/admin/reports/dblog` once you've logged in as administrator.
-* Using [Terminus](/terminus/):
+- Visit `/admin/reports/dblog` once you've logged in as administrator.
+- Using [Terminus](/terminus):
 
- ```bash
+ ```bash{promptUser: user}
  terminus drush <site>.<env> -- watchdog-show
  ```
 
- * Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
+- Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
-  ```bash
-  terminus drush <site>.<env> -- watchdog-show --tail
-  ```
-
-  <Alert title="Note" type="info">
-
-  At this time, `terminus drush "watchdog-show --tail"` is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.
-
-  </Alert>
+ ```bash{promptUser: user}
+ terminus drush <site>.<env> -- watchdog-show --tail
+ ```
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
@@ -217,29 +252,13 @@ We do not recommend disabling dblog. Best practice is to find and resolve the pr
 
 ### How do I access logs in environments with multiple containers?
 
-Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the following shell script:
-
-```bash
-# Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-SITE_UUID=UUID
-for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
-do
-mkdir $app_server
-sftp -o Port=2222 live.$SITE_UUID@$app_server << !
-  cd logs
-  lcd $app_server
-  mget *.log
-!
-done
-```
-- Adjust to `appserver.test.$SITE_UUID.drush.in` to pull logs from Test.
-- Adjust to `mget *` to include archived log files.
+Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the [shell script](#automate-downloading-logs) above.
 
 ### Can I `tail` server logs?
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
 
-You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
+You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
 
 1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
 
@@ -247,17 +266,17 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. In your project's `logs` directory, create `logwatcher.sh`:
 
-  ```bash
+  ```bash:title=logwatcher.sh
   #!/bin/bash
-  TERMINUS_HIDE_UPDATE_MESSAGE=1
+  export TERMINUS_HIDE_UPDATE_MESSAGE=1
 
-  LOGPATH=~/projects/mysite/logs
+  LOGPATH=~/projects/mysite/logs/
   LOGFILE=php-error.log
   SITE=sitename
   ENV=environment
 
   touch $LOGPATH/$LOGFILE
-  terminus rsync $SITE.$ENV:logs/$LOGFILE $LOGPATH
+  terminus rsync $SITE.$ENV:logs/php/$LOGFILE $LOGPATH
 
   tail $LOGPATH/$LOGFILE
   ```
@@ -270,21 +289,22 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. Make the script executable:
 
-   ```bash
+   ```bash{promptUser: user}
    chmod +x ~/projects/mysite/logs/logwatcher.sh
    ```
 
 1. Now you can use `watch` (available on macOS via Homebrew), to keep an updated view of the logs:
 
-   ```bash
+   ```bash{promptUser: user}
    watch -n2 ~/projects/mysite/logs/logwatcher.sh
    ```
 
    Stop the process with **CTRL-C**.
 
 ## See Also
-- [MySQL Slow Log](/mysql-slow-log/)
-- [PHP Slow Log](/php-slow-log/)
-- [PHP Errors and Exceptions](/php-errors/)
-- [Bots and Indexing](/bots-and-indexing/)
-- [New Relic](/new-relic)
+
+- [MySQL Slow Log](/mysql-slow-log)
+- [PHP Slow Log](/php-slow-log)
+- [PHP Errors and Exceptions](/php-errors)
+- [Bots and Indexing](/bots-and-indexing)
+- [New Relic&reg; Performance Monitoring](/new-relic)

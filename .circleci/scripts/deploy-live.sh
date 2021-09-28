@@ -10,7 +10,7 @@ cd $BUILD_PATH
 
 # Deploy modified files to production
 touch ./deployment-log.txt
-rsync --delete-delay -chrltzv --ipv4 --info=BACKUP,DEL -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/ | tee deployment-log.txt;
+try3 rsync --delete-delay -chrltzv --ipv4 --info=BACKUP,DEL -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/ | tee deployment-log.txt;
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
@@ -21,42 +21,35 @@ else
 fi
 
 
-#=====================================================#
-# Delete Multidev environment from static-docs site   #
-#=====================================================#
 
-# Identify existing environments for the static-docs site
-terminus env:list --format list --field=ID static-docs > ./env_list.txt
-echo "Existing environments:" && cat env_list.txt
-
-# Create array of existing environments on Static Docs
-getExistingTerminusEnvs "env_list.txt"
+#=====================================================#
+# Delete merged branches on GitHub                    #
+#=====================================================#
 
 # Update vm with current remote branches
+echo "running `git remote update origin --prune`" #DEBUG
 git remote update origin --prune
 
-# Identify merged remote branches, ignoring Pantheon defaults and master
-git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
+# Identify merged remote branches, ignoring Pantheon defaults and main
+echo "Identifying merged branches" #DEBUG
+git branch -r --merged main | awk -F'/' '/^ *origin/{if(!match($0, /(>|main)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
 
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 
-# Create an array of remote branches merged into master
-getMergedBranchMultidevName "merged-branches-clean.txt"
-
-# Compare existing environments and merged branches, delete only if the environment exists
-merged_branch=" ${merged_branch_multidev_names[*]} "
-for env in ${existing_terminus_envs[@]}; do
-  if [[ $merged_branch =~ " $env " ]] && [ "$env" != "sculpin" ] ; then
-    terminus multidev:delete static-docs.$env --delete-branch --yes
-  fi
-done
-
-getMergedBranchMultidevName "merged-branches-clean.txt"
+getMergedBranch() {
+    merged_branch_array=() # Clear array
+    while read -r branch # Read a line
+    do
+        # Save the first 11 chars, then remove -'s to follow multidev naming strategy
+        merged_branch_array+=( "$branch" ) # Append to the array
+    done < "$1"
+}
+getMergedBranch "merged-branches-clean.txt"
 
 # Delete merged branches from GH Repo
-  for branch in ${merged_branch_array[@]}; do
-    if [ "$branch" != "sculpin" ] ; then
-    git push origin --delete "$branch"
-    fi
-  done
+while IFS= read -r line; do
+  #git push origin --delete "$line"
+  echo "Deleteing branch $line"
+  curl -X DELETE -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/git/refs/heads/$line
+done < merged-branches-clean.txt

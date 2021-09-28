@@ -1,9 +1,10 @@
 ---
 title: Backups Tool
 description: Learn how to backup your Drupal or WordPress site on Pantheon.
-tags: [getstarted]
-categories: []
+tags: [backups, security]
+categories: [develop]
 ---
+
 The Backups tab is where you manage all the details for your site's backup. Each backup contains three components: code, database, and files.
 
 - **Code** is anything version controlled and committed via the Site Dashboard. Uncommitted SFTP changes to code are not backed up.
@@ -16,9 +17,9 @@ We strongly urge you to backup your site regularly.
 
 <Alert title="Exports" type="export">
 
-This doc offers [Terminus](/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+This doc offers [Terminus](/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
-```bash
+```bash{promptUser: user}
 export site=yoursitename
 export env=dev
 ```
@@ -41,7 +42,7 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 
 If you prefer the command line, you can use [Terminus](/terminus) to create backups:
 
-```bash
+```bash{promptUser: user}
 terminus backup:create $site.$env --element=<element> --keep-for=<days>
 ```
 
@@ -55,14 +56,13 @@ Daily backups are scheduled automatically.
 
 **All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
 
-
 ## Access Backups
 
 Backups created on Pantheon are stored offsite on Google Cloud Storage instances, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
 
 <Download file="pantheon-backup-to-s3.sh" />
 
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/master/source/scripts/pantheon-backup-to-s3.sh.txt bash GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/pantheon-backup-to-s3.sh.txt bash GITHUB-EMBED
 
 ### Via the Dashboard
 
@@ -82,43 +82,43 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 ### Via the Command Line
 
-If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`Wget`](https://www.gnu.org/software/wget/) or [Terminus](/terminus).
 
+#### Unix/MacOS
+
+```bash{promptUser: user}
+wget https://storage.googleapis.com/gcs-pantheon-backups/...
 ```
-wget "wget https://storage.googleapis.com/gcs-pantheon-backups/..."
+
+#### Windows
+
+When using Wget in the Windows Powershell, wrap the URL in double quotes (`"`). The shell doesn't return any output until the download completes:
+
+```bash{promptUser: winshell}
+wget "https://storage.googleapis.com/gcs-pantheon-backups/..."
 ```
 
-You can also use [Terminus](/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
+#### Terminus
 
-```bash
+Note that `--element=all` is only available when creating backups and not when downloading:
+
+```bash{promptUser: user}
 terminus backup:get $site.$env --element=<code|files|db> --to=path/to/file.tar.gz
 ```
 
-<Alert title="Note" type="info">
-
-When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
-
-</Alert>
+File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`. When specifying the file path for `--to`, be sure to use the correct extension.
 
 Select an older archive by running `terminus backup:list $site.$env`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
 
-```bash
+```bash{promptUser: user}
 terminus backup:get $site.$env --file=<filename> --to=path/to/file.tar.gz
 ```
 
-Now that you have created the archive files, check out how to [restore an environment from a backup](/restore-environment-backup).
-
-
-<Alert title="Note" type="info">
-
 Links to backups are signed URLs directly from Google Cloud Storage and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.
-
-</Alert>
-
 
 ## Restore From an Existing Backup
 
-Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/restore-environment-backup/).
+Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/restore-environment-backup).
 
 ## About Your Code Archives
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
@@ -127,7 +127,7 @@ For a clear visual of the Git repo contents, you can use a free tool like [Sourc
 
 <Alert title="Note" type="info">
 
-The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/wordpress/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore).
+The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore).
 
 </Alert>
 
@@ -150,7 +150,7 @@ This depends on how much content you have. When you are doing a full environment
 
 ### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/site-plan/) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/site-plan) for details about site plans on Pantheon.
 
 ### What time zone is the backup time shown in?
 
@@ -183,7 +183,7 @@ In comparison, Pantheon’s backup mechanism:
 - Creates distinct archives (code, database, files)
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus/).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
 
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>
@@ -196,6 +196,6 @@ From the Backup Log tab on the Site Dashboard, you can see the status of current
 
 ![Backups in progress](../images/backup-progress.png)
 
-If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
+If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/support) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 
 If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a CDN. Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.

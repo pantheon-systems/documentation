@@ -3,19 +3,21 @@ title: Name.com Domain Configuration
 provider: Name.com
 dnsprovider: true
 description: Learn how to point your Name.com domain to a Pantheon site.
-tags: [providers]
+categories: [go-live]
+tags: [dns]
 draft: true
-permalink: docs/:basename/
+permalink: docs/:basename
 editpath: dns-providers/name-com.md/
 ---
 ## Before You Begin
 Be sure that you have a:
 
 - Registered domain name using Cloudflare to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on Cloudflare
+
 ### A Record
 1. Click **DNS** in the menu bar.
 2. Select **A** from the dropdown menu.
@@ -55,5 +57,5 @@ The TXT record is only required if you need to prove ownership of your domain in
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

@@ -1,17 +1,17 @@
 ---
 title: Continuous Integration Solutions on Pantheon
 description: Run automated unit and integration tests with Terminus and Drupal SimpleTest.
-tags: [platformintegrations]
-categories: []
+tags: [continuous-integration, workflow]
+categories: [develop]
 contributors: [ccjjmartin]
 ---
-Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/support/).
+[<dfn id="ci">Continuous Integration</dfn>](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/support).
 
-See our [Build Tools](/guides/build-tools/) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
+See our [Build Tools](/guides/build-tools) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
 
 ## Terminus Command-Line Interface
 
-[Terminus](/terminus/) is a Symfony/Console-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
+[Terminus](/terminus) is a Symfony/Console-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
 
 - Site creation
 - [Multidev environment](/multidev) creation and removal
@@ -19,7 +19,6 @@ See our [Build Tools](/guides/build-tools/) guide for a more detailed look at a 
 - Code pushes
 
 You can use Terminus for scripting many operations. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
-
 
 ## Drupal SimpleTest
 
@@ -37,7 +36,7 @@ To run tests on Pantheon:
 
 1. Enable `site_test`:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
    ```
 
@@ -45,7 +44,7 @@ To run tests on Pantheon:
 
 1. Clear the cache immediately before running tests to avoid strange failures:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- cc all
    ```
 
@@ -53,7 +52,7 @@ To run tests on Pantheon:
 
 1. Get the absolute path before you can run the script:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT"
    ```
 
@@ -61,7 +60,7 @@ To run tests on Pantheon:
 
 The full command will look something like this:
 
-```bash
+```bash{promptUser: user}
 export TERMINUS_HIDE_UPDATE_MESSAGE=1
 terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
 ```
@@ -70,7 +69,7 @@ In the above command the `--url` option is required to be passed as multidevs do
 
 A full CircleCI command might look similar to this:
 
-```
+```yml
       - run:
           name: Test simpletest
           command: |
@@ -107,3 +106,9 @@ At this time, Pantheon does not provide or support:
 - Running [Jenkins](https://jenkins.io/index.html) or other Continuous Integration software on our servers. You'll need to self-host or use a hosted CI solution. [Compare solutions here](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software).
 - Shell access
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/) Unit Testing PHP Framework: You can still write tests and include them in your code, but you'll need to run them on a CI server, not Pantheon.
+
+## Read More
+
+- [Build Tools](/guides/build-tools)
+- [Localdev](/guides/localdev)
+- [Pantheon Multidev](/multidev)

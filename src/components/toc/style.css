@@ -1,0 +1,66 @@
+
+/*
+  Tocbot Library hack (used inTable of Contents component)
+  this solves the scrolling overlap with the nav bar
+*/
+@media (min-width: 769px) {
+  #doc h1::before,
+  #terminus h1::before,
+  #doc h2::before,
+  #terminus h2::before,
+  #doc h3::before,
+  #terminus h3::before {
+    display: block;
+    content: "";
+    height: 160px;
+    margin-top: -160px;
+    visibility: hidden;
+  }
+}
+#doc h1,
+#terminus h1,
+#doc h2,
+#terminus h2,
+#doc h3,
+#terminus h3 {
+  outline: darkred;
+}
+.tocify-item ul {
+  display: none;
+}
+.tocify-item.is-active-li ul {
+  display: block;
+}
+.toc-placeholder {
+  max-height: 77vh;
+  overflow: auto;
+}
+.toc-list .is-active-link::before, .toc-link::before {
+  display: none;
+}
+
+/* Turns the TOC sublevels visible as they are now handled by Tocbot */
+.pio-docs-sidebar .nav .nav {
+  display: block;
+}
+
+/* .pio-docs-sidebar .nav > li > a:hover,
+.pio-docs-sidebar .nav .nav > li > a:hover,
+.pio-docs-sidebar .nav > li > a:active,
+.pio-docs-sidebar .nav .nav > li > a:active,
+.pio-docs-sidebar .nav > li > a:focus,
+.pio-docs-sidebar .nav .nav > li > a:focus {
+  border-right: 0;
+  background-color: transparent;
+} */
+
+.toc-link:hover::before {
+  background-color: #ccc;
+}
+
+.toc-list.is-collapsible{
+  max-height: 5000px;
+}
+.toc-list.is-collapsible.is-collapsed{
+  max-height: 0;
+}

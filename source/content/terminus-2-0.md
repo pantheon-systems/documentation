@@ -2,11 +2,13 @@
 title: Terminus 2.0
 description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [alexfornuto]
+categories: [platform]
+tags: [cli, drush, local, wp-cli, terminus]
 ---
 
 <Alert title="Note" type="info" >
 
-If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
+If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/terminus) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
 
 </Alert>
 
@@ -140,5 +142,5 @@ The changes to these commands' behavior may affect existing integrations. For a 
 
 ## See Also
 
- - [The Terminus Manual](/terminus/)
+ - [The Terminus Manual](/terminus)
  - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

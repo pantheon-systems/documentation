@@ -1,9 +1,36 @@
 {
-    "MD001": false,
-    "MD013": false,
-    "MD022": false,
-    "MD023": false,
-    "MD024": false,
-    "MD029": false,
-    "MD033": {"allowed_elements": ["Alert", "Span", "Accordion", "Partial", "Enablement"]}
+  "MD001": false,
+  "MD013": false,
+  "MD023": false,
+  "MD024": false,
+  "MD029": false,
+  "MD033": {
+    "allowed_elements": [
+      "Alert",
+      "Accordion",
+      "dd",
+      "dl",
+      "Download",
+      "DrushChangelog",
+      "dt",
+      "Enablement",
+      "ExternalLink",
+      "LocaldevChangelog",
+      "Partial",
+      "Partial",
+      "Popover",
+      "ReviewDate",
+      "Span",
+      "Tab",
+      "TabList",
+      "DNSProviderDocs",
+      "Check",
+      "abbr",
+      "Youtube",
+      "Icon",
+      "dfn"
+    ]
+  },
+  "MD038": false
 }
+

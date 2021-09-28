@@ -12,32 +12,39 @@ then
     exit 0
 fi
 
-# Deploy any branch except master, dev, test, or live
+# Deploy any branch except main, dev, test, or live
 protected-branches
 
 # Authenticate with Terminus
 auth-terminus
 
+terminus auth:whoami #DEBUG
+
 # Find existing environments.
-printf "Write existing environments for the static docs site to a text file \n"
-terminus env:list --format list --field=ID static-docs > ./env_list.txt
+
+#printf "Write existing environments for the static docs site to a text file \n"
+#terminus env:list --format list --field=ID docs-preview > ./env_list.txt
+
+printf "Write existing Multidev environments for the docs preview site to a text file \n"
+terminus multidev:list docs-preview --format list --field=id #DEBUG
+terminus multidev:list docs-preview --format list --field=id > ./env_list.txt
 
 # Creating a new one if one doesn't exist for this branch.
 printf "Check env_list.txt, create environment if one does not already exist \n"
 if grep -Fxq "$MULTIDEV_NAME" ./env_list.txt; then
     echo "Existing environment found for $MULTIDEV_NAME"
     # Get the environment hostname and URL
-    export url=`terminus env:view static-docs.$MULTIDEV_NAME --print`
+    export url=`terminus env:view docs-preview.$MULTIDEV_NAME --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
 else
     printf "Creating multidev environment... \n"
-    terminus multidev:create static-docs.dev $MULTIDEV_NAME
+    terminus multidev:create docs-preview.dev $MULTIDEV_NAME --no-ansi -n -y
 
     # Get the environment hostname and identify deployment URL
     printf "Identifying environment hostname... \n"
-    export url=`terminus env:view static-docs.$MULTIDEV_NAME --print`
+    export url=`terminus env:view docs-preview.$MULTIDEV_NAME --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
@@ -50,17 +57,7 @@ cd $BUILD_PATH
 # Export preview build to the multidev environment.
 printf "Copying docs to $docs_url \n"
 touch ./multidev-log.txt
-while true
-do
-    if ! rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$STATIC_DOCS_UUID@appserver.$MULTIDEV_NAME.$STATIC_DOCS_UUID.drush.in:files/docs/ | tee multidev-log.txt;
-    then
-        echo "Failed, retrying..."
-        sleep 5
-    else
-        echo "Success: Deployed to $url"
-        break
-    fi
-done
+try3 rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$DOCS_PREVIEW_UUID@appserver.$MULTIDEV_NAME.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee multidev-log.txt;
 
 
 printf "\n Commenting on GitHub... \n"
@@ -70,7 +67,7 @@ export previous_commit=($(git log --format="%H" -n 2))
 export previous_commit="${previous_commit[1]}"
 
 #Save the body of previous comment for reuse
-curl https://api.github.com/repos/pantheon-systems/documentation/commits/$previous_commit/comments?access_token=$GITHUB_TOKEN  > comment.json;
+curl -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/commits/$previous_commit/comments  > comment.json;
 export last_comment_id=`cat comment.json | jq ".[0].id"`
 export existing_comment_body=`cat comment.json | jq ".[0].body"`
 export null="null"
@@ -89,7 +86,7 @@ else
     export comment=`cat comment.txt`
 
     #Delete first comment so the PR isn't overpopulated with bot comments
-    curl -X DELETE https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id?access_token=$GITHUB_TOKEN
+    curl -X DELETE -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id
 fi
 
 #Identify modified files from new commit
@@ -140,7 +137,7 @@ done < modified_files.txt
 
 #Create new comment on new commit, so when PR is open only one comment is present
 export comment=`cat comment.txt`
-curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
+curl -d '{ "body": "'$comment'" }' -X POST -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
 
 printf "Clear cache on multidev env. \n"
-terminus env:cc static-docs.$MULTIDEV_NAME
+terminus env:cc docs-preview.$MULTIDEV_NAME

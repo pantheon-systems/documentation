@@ -4,6 +4,8 @@ subtitle: Command Line Interface
 anchorid: command-line-interface
 edt: true
 layout: guide
+categories: [develop]
+tags: [cli, drush, terminus, wp-cli, workflow]
 type: guide
 generator: pagination
 pagination:
@@ -24,18 +26,16 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/zh-grS2YqdE`
-
-<br />
+<Youtube src="zh-grS2YqdE" title="Essential Developer Training - Command Line Interface" />
 
 **Resource Links From Video**
 
- - [Terminus Manual: Get Started](/terminus/)
- - [Terminus Manual: Install](/terminus/install/)
- - [Terminus Manual: Example Usage](/terminus/examples/)
- - [Terminus Manual: Command Reference](/terminus/commands/)
- - [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wordpress-commandline/)
- - [Create a Drupal 8 Site From the Command Line Using Terminus and Drush](/guides/drupal8-commandline/)
+ - [Terminus Manual: Get Started](/terminus)
+ - [Terminus Manual: Install](/terminus/install)
+ - [Terminus Manual: Example Usage](/terminus/examples)
+ - [Terminus Manual: Command Reference](/terminus/commands)
+ - [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wordpress-commandline)
+ - [Create a Drupal 8 Site From the Command Line Using Terminus and Drush](/guides/drupal8-commandline)
 
 **CHALLENGE:**
 

@@ -2,7 +2,7 @@
 title: MIME Types
 description: Learn how to add, change, and remove a file extension to a MIME type on Pantheon.
 tags: [services]
-categories: []
+categories: [platform]
 ---
 Pantheon promotes and respects internet standards, and for MIME types, we treat the [IANA Media Type List](https://www.iana.org/assignments/media-types/media-types.xhtml) as the canonical source of what headers to serve for what file extensions. This article describes what to do if you have a file type that isn't handled by IANA, or require an alternative.
 

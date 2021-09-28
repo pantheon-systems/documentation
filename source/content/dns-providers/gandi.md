@@ -3,8 +3,9 @@ title: Gandi Domain Configuration
 provider: Gandi
 dnsprovider: true
 description: Learn how to point your Gandi domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/gandi.md/
 ---
 ## Before You Begin
@@ -12,8 +13,8 @@ Be sure that you have a:
 
 
 - Registered domain name using Gandi to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -24,6 +25,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Gandi account](https://id.gandi.net/en/login) in a new tab before you continue.
 
 ## Configure DNS Records on Gandi
+
 ### A Record
 1. Navigate to the domain's management page and click **Edit the zone**.
 2. Click the **Add** button and select **A** from the type dropdown menu.
@@ -65,5 +67,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

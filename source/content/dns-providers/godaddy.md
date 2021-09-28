@@ -3,16 +3,17 @@ title: GoDaddy Domain Configuration
 provider: GoDaddy
 dnsprovider: true
 description: Learn how to point your GoDaddy domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/godaddy.md/
 ---
 ## Before You Begin
 Be sure that you have a:
 
 - Registered domain name using GoDaddy to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -23,6 +24,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in a new tab before you continue.
 
 ## Configure DNS Records on GoDaddy
+
 ### A Record
 
 ![Example A record](../../images/godaddy-dns-a-record.png)
@@ -74,5 +76,5 @@ If you receive an error message that says `The specified record already exists`,
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)
