@@ -36,7 +36,7 @@ For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 Serve your Drupal or WordPress site even in the unlikely event that it goes down.
 
-The goal of Experience Protection is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, a the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
+The goal of Experience Protection is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
 
 ### How long does content stay fresh? Adjust TTL
 
