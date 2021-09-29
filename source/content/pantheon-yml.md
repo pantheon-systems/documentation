@@ -160,7 +160,7 @@ For more information and compatibility requirements, see [Managing Drush Version
 
 ### Filemount Path
 
-Pantheon provides a [cloud-based filesystem](/files) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `sites/default/files` (Drupal) or `wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable.
+Pantheon provides a [cloud-based filesystem](/files) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `sites/default/files` (Drupal), `wp-content/uploads` (WordPress), or `app/uploads` (WordPress using Bedrock), but you can change the location with the `filemount` variable.
 
 <Alert title="Warning" type="danger">
 
