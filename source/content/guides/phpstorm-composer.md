@@ -2,8 +2,10 @@
 title: PhpStorm for Composer Managed Drupal 8 Sites
 description: Learn how to configure JetBrains PhpStorm for Pantheon sites managed with Composer using a GitHub Pull Request workflow.
 type: guide
-permalink: docs/guides/:basename/
-tags: [siteintegrations]
+permalink: docs/guides/:basename
+cms: "Drupal 8"
+categories: [integrate]
+tags: [code, composer, iterate, local]
 contributors: [LukasRos, rachelwhitton]
 multidev: true
 ---
@@ -14,7 +16,7 @@ Be sure that you:
 
 * Install [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/)
 * Install [Composer](https://getcomposer.org/)
-* Create a Composer managed following the [Build Tools](/guides/build-tools/) guide, which describes how to use build tools such as [GitHub](https://github.com/) and [CircleCI](https://circleci.com/) with [Composer](/composer/) on Pantheon.
+* Create a Composer managed following the [Build Tools](/guides/build-tools) guide, which describes how to use build tools such as [GitHub](https://github.com/) and [CircleCI](https://circleci.com/) with [Composer](/composer) on Pantheon.
 
 ## Create A New Project
 
@@ -22,9 +24,9 @@ Be sure that you:
 
    ![Welcome to PhpStorm](../../images/integrations/phpstorm/phpstorm-welcome.png)
 
-2. Open the GitHub project page for the site you created following the [Build Tools](/guides/build-tools/) guide. Copy the repository's SSH URL to your clipboard:
+2. Open the GitHub project page for the site you created following the [Build Tools](/guides/build-tools) guide. Copy the repository's SSH URL to your clipboard:
 
-    ![GitHub clone repo link](../../images/pr-workflow/clone.png)
+    ![GitHub clone repo link](../../images/github/github-code-clone-ssh.png)
 
 3. In PhpStorm, paste the repository's SSH URL in the **Git Repository URL** field (the **Directory Name** field will automatically populate after pasting the URL):
 
@@ -108,7 +110,7 @@ This means that if your Composer extension is not on the PHP Package Repository,
 5. Wait for a confirmation message from Composer.
 
 ## Open PR and Deploy to Multidev
-Now it's time to deploy and test the newly installed module. The Pull Request workflow demonstrated in the [Build Tools](/guides/build-tools/) guide encourages the mental model where only files unique to the project are tracked as part of the project's main "source" repository.
+Now it's time to deploy and test the newly installed module. The Pull Request workflow demonstrated in the [Build Tools](/guides/build-tools) guide encourages the mental model where only files unique to the project are tracked as part of the project's main "source" repository.
 
 For this example, that means we only care about changes made to the `composer.json` file and the `composer.lock` file. We don't want to track the actual code of the Pathauto module within our repository, we want Composer to build it for us based on our version constraints.
 

@@ -1,8 +1,9 @@
 ---
 title: Configuring PhpStorm to create WordPress Plugins on Pantheon
 description: Configure a local environment for building a WordPress plugin or theme using JetBrains PhpStorm.
-tags: [local]
-categories: [wordpress]
+cms: "WordPress"
+categories: [develop]
+tags: [plugins]
 ---
 ## Overview
 
@@ -12,7 +13,7 @@ For detailed information, see [WordPress Development using PhpStorm](https://con
 
 ## Create a WordPress site
 
-If you do not already have one, [create a new WordPress site](/guides/quickstart/) on Pantheon. This will be your empty site, in which to develop your new plugin or theme.
+If you do not already have one, [create a new WordPress site](/guides/quickstart) on Pantheon. This will be your empty site, in which to develop your new plugin or theme.
 
 ## Clone the Code Repository
 
@@ -69,7 +70,9 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 1. Root Path: Click the **Autodetect** button and the Root Path should be automatically populated:
 
     ![Add web server PhpStorm](../images/phpstorm-deployment-connection-tab.png)
-    <Alert tile="Warning" type="danger">
+
+    <Alert title="Warning" type="danger">
+
     PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you will need to update the root path any time the binding path changes for your Dev environment.
     </Alert>
 

@@ -2,6 +2,8 @@
 title: The Pantheon Community
 description: Share best practices with other experienced and active users of Pantheon's platform.
 contributors: [tessak22]
+categories: [get-started]
+tags: [collaborate, support]
 ---
 Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our community, through several channels:
 
@@ -30,4 +32,4 @@ Join the:
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/code-of-conduct/) for details, including how to report abuse.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/code-of-conduct) for details, including how to report abuse.

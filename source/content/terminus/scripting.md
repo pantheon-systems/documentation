@@ -5,9 +5,11 @@ description: Automate your workflow with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+categories: [automate]
+tags: [cli, local, terminus, workflow]
 nexturl: terminus/plugins/
 previousurl: terminus/commands/
-permalink: docs/terminus/:basename/
+permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---
@@ -29,7 +31,7 @@ Terminus needs to be authenticated in order to execute most commands. Before run
 
 - The [Pantheon Example Terminus Auto Update Script](https://github.com/pantheon-systems/example-terminus-auto-update-script) demonstrates how you can use Terminus to automate plugin and theme updating for multiple sites.
 
-* The [Example WordPress Composer](https://github.com/pantheon-systems/example-wordpress-composer) repository (used by our [Build Tools](/guides/build-tools/) guide) uses Terminus to [deploy staged changes](https://github.com/pantheon-systems/example-wordpress-composer/blob/46ff34e2b9f421a1c0eae72ade80376e8dd42f31/.circleci/deploy-to-pantheon.sh) to multidev environments.
+* The [Example WordPress Composer](https://github.com/pantheon-systems/example-wordpress-composer) repository (used by our [Build Tools](/guides/build-tools) guide) uses Terminus to [deploy staged changes](https://github.com/pantheon-systems/example-wordpress-composer/blob/46ff34e2b9f421a1c0eae72ade80376e8dd42f31/.circleci/deploy-to-pantheon.sh) to multidev environments.
 
 ## Bash Variables
 
@@ -68,7 +70,7 @@ while read -r PANTHEON_SITE_NAME; do
     IS_FROZEN="$(terminus site:info $PANTHEON_SITE_NAME --field=frozen)"
 
     # If the site is frozen
-    if [[ "true" == "${IS_FROZEN}" ]]
+    if [[ "1" == "${IS_FROZEN}" ]]
     then
         # Then skip it
         echo -e "Skipping a backup of the site '$PANTHEON_SITE_NAME' because it is frozen...\n"

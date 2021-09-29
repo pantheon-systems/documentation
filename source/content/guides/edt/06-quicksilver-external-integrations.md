@@ -4,6 +4,8 @@ subtitle: External Integrations
 anchorid: external-integrations
 edt: true
 layout: guide
+categories: [integrate]
+tags: [collaborate, continuous-integration, quicksilver, webops, workflow]
 type: guide
 generator: pagination
 pagination:
@@ -24,16 +26,14 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/4BRX12bFO4Q`
-
-<br />
+<Youtube src="4BRX12bFO4Q" title="Essential Developer Training - External Integrations" />
 
 **Resource Links From Video**
 
- - [Automate & Integrate](/automate/)
- - [Platform Integration Guides](/guides/)
- - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver/)
- - [Pantheon YAML Configuration Files](/pantheon-yml/)
+ - [Automate & Integrate](/automate)
+ - [Platform Integration Guides](/guides)
+ - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver)
+ - [Pantheon YAML Configuration Files](/pantheon-yml)
  - [Example scripts for using Pantheon's Quicksilver Platform Hooks](https://github.com/pantheon-systems/quicksilver-examples/)
 
 **CHALLENGE:**

@@ -3,16 +3,17 @@ title: Namecheap Domain Configuration
 provider: Namecheap
 dnsprovider: true
 description: Learn how to point your Namecheap domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/namecheap.md/
 ---
 ## Before You Begin
 Be sure that you have a:
 
 - Registered domain name using Namecheap to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -23,6 +24,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
 
 ## Configure DNS Records on Namecheap
+
 ### A Record
 2. Select **Domain List** then click the **Manage** button next to the domain you want to point to Pantheon.
 3. Navigate to **Advanced DNS** and click the **Add New Record** button.
@@ -62,5 +64,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

@@ -4,6 +4,8 @@ subtitle: Developer Workflow
 anchorid: developer-workflow
 edt: true
 layout: guide
+categories: [develop]
+tags: [dashboard, git, sftp, webops, workflow]
 type: guide
 generator: pagination
 pagination:
@@ -24,18 +26,16 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/CedEqwSbF6g`
-
-<br />
+<Youtube src="CedEqwSbF6g" title="Essential Developer Training - Developer Workflow" />
 
 **Resource Links From Video**
 
- - [Developer Workflow](/develop/)
- - [Use the Pantheon Development Workflow](/pantheon-workflow/)
- - [Pantheon Platform Considerations](/platform-considerations/)
- - [Pantheon YAML Configuration Files](/pantheon-yml/)
- - [Composer Fundamentals and Workflows](/composer/)
- - [Quick Start guide](/guides/quickstart/)
+ - [Developer Workflow](/develop)
+ - [Use the Pantheon Development Workflow](/pantheon-workflow)
+ - [Pantheon Platform Considerations](/platform-considerations)
+ - [Pantheon YAML Configuration Files](/pantheon-yml)
+ - [Composer Fundamentals and Workflows](/composer)
+ - [Quick Start guide](/guides/quickstart)
 
 **CHALLENGE:**
 

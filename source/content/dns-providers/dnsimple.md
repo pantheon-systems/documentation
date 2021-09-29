@@ -4,8 +4,9 @@ provider: Akamai
 dnsprovider: true
 description: Learn how to point your DNSimple domain to a Pantheon site.
 draft: true
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/dnsimple.md/
 ---
 ## Before You Begin
@@ -13,10 +14,11 @@ Be sure that you have a:
 
 
 - Registered domain name using Cloudflare to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on Cloudflare
+
 ### A Record
 1. Click **DNS** in the menu bar.
 2. Select **A** from the dropdown menu.
@@ -56,5 +58,5 @@ The TXT record is only required if you need to prove ownership of your domain in
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

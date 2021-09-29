@@ -2,13 +2,15 @@
 title: Introduction to Terminus
 description: The Pantheon CLI.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename/
-tags: [devterminus]
+permalink:  docs/videos/:basename
+categories: [develop]
+tags: [terminus, workflow, cli, wp-cli, drush]
 layout: video
+type: video
 searchboost: 50
 ---
 
-`youtube: https://youtu.be/njN2-z2pDFI`
+<Youtube src="njN2-z2pDFI" title="Command Line Interface" />
 
 You can interact with Pantheon using our command line interface—[Terminus](/terminus). In doing so, you can work faster and more efficiently, automate repetitive tasks, and access additional functionality.
 
@@ -20,9 +22,7 @@ And deploy changes between Dev, Test, and Live environments. I’ll do this by r
 
 If it can be accomplished in the Pantheon dashboard, it can probably be accomplished with Terminus.
 
-
 You can also execute Drupal or WordPress-specific commands using Drush or WP-CLI. For example, the command  `terminus drush` followed by the site name and environment, then `user-create -- newuser1` with the email address of the user, can be used to create a new Drupal user.
-
 
 Update WordPress plugins by running `terminus wp` the site name and environment, `-- plugin update --all`, to update all.
 
@@ -34,7 +34,6 @@ Terminus can help you access extra data and functionality that isn’t available
 
 In this example, I am switching the connection mode from SFTP to Git. And now I’m running a backup from the dashboard.
 
-
-You can also add commands to Terminus by [installing plugins](/terminus/plugins/). [Official Pantheon plugins](/terminus/plugins/directory/) can be downloaded from our website or you can [write your own](/terminus/plugins/create/).
+You can also add commands to Terminus by [installing plugins](/terminus/plugins). [Official Pantheon plugins](/terminus/plugins/directory) can be downloaded from our website or you can [write your own](/terminus/plugins/create).
 
 That was a quick introduction to our command line tool, Terminus. Use it to script repetitive tasks or just use it to develop faster without touching your mouse.

@@ -4,6 +4,8 @@ subtitle: Multidev
 anchorid: multidev
 edt: true
 layout: guide
+categories: [develop]
+tags: [git, iterate, multidev, webops, workflow]
 type: guide
 generator: pagination
 pagination:
@@ -24,17 +26,15 @@ All links from the video are provided below.
 
 **Watch the video:**
 
-`youtube: https://youtu.be/oaIS6LgzTKU`
-
-<br />
+<Youtube src="oaIS6LgzTKU" title="Essential Developer Training - Multidev" />
 
 **Resource Links From Video**
 
- - [Pantheon Multidev docs](/multidev/)
- - [Pantheon Multidev FAQ](/multidev-faq/)
- - [Pantheon Platform Considerations](/platform-considerations/)
- - [Pantheon YAML Configuration Files](/pantheon-yml/)
- - [Quick Start guide](/guides/quickstart/)
+ - [Pantheon Multidev docs](/multidev)
+ - [Pantheon Multidev FAQ](/multidev-faq)
+ - [Pantheon Platform Considerations](/platform-considerations)
+ - [Pantheon YAML Configuration Files](/pantheon-yml)
+ - [Quick Start guide](/guides/quickstart)
 
 **CHALLENGE:**
 

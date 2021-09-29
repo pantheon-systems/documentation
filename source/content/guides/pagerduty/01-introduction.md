@@ -2,8 +2,9 @@
 title: Incident Management
 subtitle: Introduction
 description: Configure uptime monitors with New Relic to automatically open an incident in PagerDuty and notify whoever's on-call, following a set escalation path.
-tags: [golive]
 layout: guide
+categories: [performance]
+tags: [logs, measure, newrelic, teams, webops]
 type: guide
 anchorid: introduction
 pagerduty: true
@@ -27,7 +28,7 @@ Welcome! This guide will help you configure uptime monitors on a Pantheon Site w
 * Integrate PagerDuty with Slack to acknowledge and resolve incidents (optional)
 
 ## Before You Begin
-To get started, you need to activate [New Relic APM Pro](/new-relic/) on Pantheon:
+To get started, you need to activate [New Relic&reg; Performance Monitoring](/new-relic) on Pantheon:
 
 1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic**.
 2. Click the **Activate New Relic Pro** button.

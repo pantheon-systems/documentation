@@ -6,6 +6,9 @@ woocommerce: true
 anchorid: configure
 generator: pagination
 layout: guide
+cms: "WordPress"
+categories: [get-started]
+tags: [plugins, site]
 type: guide
 pagination:
     provider: data.woocommercepages
@@ -21,7 +24,7 @@ image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 We've configured a few things for our WooCommerce site. But there are a few additional things to configure.
 
-The first is [adding PHP sessions to WordPress](/wordpress-sessions/). WordPress and WooCommerce core do not use PHP Sessions, but other plugins and extensions may.
+The first is [adding PHP sessions to WordPress](/wordpress-sessions). WordPress and WooCommerce core do not use PHP Sessions, but other plugins and extensions may.
 
 To enable PHP Sessions on Pantheon, install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/). It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
 

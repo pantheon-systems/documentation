@@ -1,8 +1,8 @@
 ---
 title: Enabling Mobile Redirection with Cloudflare
 description: Learn how to use Cloudflare to set up mobile redirection on your Drupal or WordPress site.
-tags: [redirects]
-categories: []
+categories: [go-live]
+tags: [cdn, https, redirects]
 ---
 
 Cloudflare's mobile redirect service is available to domains hosting DNS on any of their plans. For details, see [About Cloudflare Mobile Redirect](https://support.cloudflare.com/hc/en-us/articles/200168336-About-Cloudflare-Mobile-Redirect).

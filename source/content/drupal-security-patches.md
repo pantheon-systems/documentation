@@ -1,20 +1,23 @@
 ---
 title: Drupal Security Patches
 description: How to manually patch Drupal 7 and 8 with security patches, ahead of the upstream updates.
-categories: [drupal]
+cms: "Drupal"
+categories: [develop]
+tags: [security, updates]
 contributors: [alexfornuto, ari]
 ---
 
 When Drupal releases critical security releases, Pantheon takes immediate steps to patch our Drupal upstreams. These updates may not always be accessible for users who:
 
-- use a [Custom Upstream](/custom-upstream/) or [Public Distribution](/start-state/#public-distributions) which hasn't been patched, or no upstream
+- use a [Custom Upstream](/custom-upstream) or [Public Distribution](/start-state/#public-distributions) which hasn't been patched, or no upstream
 - encounter merge conflicts when applying upstream updates
-
 
 This doc describes how to manually patch your Drupal core.
 
 <Alert title="Warning" type="danger">
-Use the [standard process to update core](/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.
+
+Use the [standard process to update core](/core-updates) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.
+
 </Alert>
 
 Visit the [Drupal Security page](https://www.drupal.org/security) for the latest Drupal security announcements and patches.
@@ -66,7 +69,7 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
 ## Lock Multidev Environments
 
-As an additional security measures, sites with [Multidev](/multidev/) environments should consider [locking](/security/) them until they can be patched. If you have [Terminus](/terminus/) installed on your local computer, you can lock all environments at once with the following Bash script:
+As an additional security measures, sites with [Multidev](/multidev) environments should consider [locking](/security) them until they can be patched. If you have [Terminus](/terminus) installed on your local computer, you can lock all environments at once with the following Bash script:
 
 ```bash
 #!/bin/bash
@@ -101,4 +104,4 @@ done
 
 ## See Also
 
- - [Drupal Security Advisory](https://www.drupal.org/security)
+- [Drupal Security Advisory](https://www.drupal.org/security)

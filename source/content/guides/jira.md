@@ -1,9 +1,10 @@
 ---
 title: Integrate Jira on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Atlassian's issue tracking service, Jira, with the Pantheon Site Dashboard.
-tags: [siteintegrations]
 layout: doc
-permalink: docs/guides/:basename/
+categories: [integrate]
+tags: [collaborate, quicksilver, webops, workflow]
+permalink: docs/guides/:basename
 date: 5/4/2017
 contributors: [scottmassey]
 ---
@@ -125,7 +126,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 

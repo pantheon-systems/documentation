@@ -1,6 +1,6 @@
 1. Initialize composer to create a `composer.json` file with the Drupal 7 package repository:
 
-  ```bash
+  ```bash{promptUser: user}
   composer init --repository=https://packages.drupal.org/7 --no-interaction
   ```
 
@@ -12,7 +12,7 @@
 
   </Alert>
 
-  ```json
+  ```json:title=composer.json
   {
     "repositories": [
       {
@@ -42,4 +42,4 @@
     }
   }
   ```
-
+  

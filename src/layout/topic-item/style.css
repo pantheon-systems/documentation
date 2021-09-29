@@ -1,0 +1,106 @@
+.flex-panel-item-platform-integrations {
+  flex: 1 1 0%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+  min-width: 350px;
+}
+.flex-panel-item-platform-integrations > a:hover {
+  text-decoration: none !important;
+}
+.topic-item .topic-info-link:hover {
+  text-decoration: none;
+}
+.topic-item a.topic-info-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.flex-panel-body-home {
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  height: 100%;
+}
+.flex-panel-body-inner {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.flex-panel-main-body-inner {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.topic-item .topic-info__image {
+  float: left;
+  min-width: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0px;
+}
+.topic-item .topic-info__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: rgb(18, 124, 187);
+  line-height: 25px;
+  text-align: left;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+h3.topic-info__title::before {
+  height: auto !important;
+  margin-top: auto !important;
+  }
+.topic-item .hero-video__guide-main-topic-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  line-height: 43px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  color: rgb(18, 124, 187);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/* .topic-info .topic-info__image {
+  width: 30%;
+  height: 136px;
+  background-size: 75%;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .topic-info .topic-info__image {
+    background-position: center 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .topic-info .topic-info__image {
+    background-position: center 20px;
+  }
+} */
+.pantheon-workflows {
+	border: 1px solid #b5c0c3;
+	padding: 20px;
+	border-radius: 4px;
+}
+.pantheon-workflows > h3 {
+	margin-top: 15px;
+	font-family: "Open Sans", sans-serif;
+}
+.pantheon-workflows:hover {
+	background: #ffffff;
+	border: 1px solid #a4bbc1;
+	box-shadow: 0px 0px 11px;
+	border-radius: 5px;
+}
+@media screen and (max-width: 995px) {
+  .flex-panel-item-platform-integrations {
+    flex: 1 1 0%;
+    margin: 1rem 0;
+    color: #333;
+    min-width: auto;
+  }
+}

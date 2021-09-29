@@ -1,10 +1,12 @@
 ---
 title: WordPress Site Networks
 subtitle: Introduction
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Deploy a WordPress multisite on the Pantheon Platform.
 layout: guide
 type: guide
-featuredcontributor: true
+cms: "WordPress"
+categories: [develop]
+tags: [multisite]
 contributors: [danielbachhuber]
 anchorid: multisite
 multisite: true
@@ -42,6 +44,6 @@ We do not support uses of WordPress Site Networks that run functionally-differen
 - [WordPress Multi-Network](https://wordpress.org/plugins/wp-multi-network/) installations where multiple domains can be added aside from subdomains and subdirectories.
 
 ## Request a WordPress Site Network
-Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/migrate-wordpress-site-networks/).
+Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/migrate-wordpress-site-networks).
 
 Reach out to your account manager to request that a new WordPress Site Network be created for you. Once an employee of Pantheon has created the network, you will receive an email informing you that you've been added to the site. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).

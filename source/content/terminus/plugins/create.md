@@ -7,9 +7,11 @@ terminuscreate: true
 showtoc: true
 type: terminuspage
 layout: terminuspage
+categories: [develop]
+tags: [cli, local, plugins, terminus, workflow]
 nexturl: terminus/configuration/
 previousurl: terminus/plugins/directory/
-permalink: docs/terminus/plugins/:basename/
+permalink: docs/terminus/plugins/:basename
 image: terminus-thumbLarge
 searchboost: 100
 ---
@@ -34,14 +36,7 @@ mkdir $HOME/.terminus/plugins/hello-world
 
 In order for Terminus to recognize the directory as a plugin, the directory must contain a valid `composer.json` file. Download the following file and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`):
 
-<div class="script-file-header">
-  composer.json
-  <a id="downloadLink">
-    <button class="btn btn-default btn-download">
-      <i class="fa fa-download" aria-hidden="true" /> Download File
-    </button>
-  </a>
-</div>
+<Download file="composer.json" />
 
 ```json
 {
@@ -50,7 +45,7 @@ In order for Terminus to recognize the directory as a plugin, the directory must
   "type": "terminus-plugin",
   "extra": {
     "terminus": {
-      "compatible-version": "1.*"
+      "compatible-version": "2.*"
     }
   }
 }
@@ -74,14 +69,7 @@ mkdir $HOME/.terminus/plugins/hello-world/src
 
 Download the following file and move it to your plugin's `src` directory (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
 
-<div class="script-file-header">
-  HelloCommand.php
-  <a id="downloadLinkb">
-    <button class="btn btn-default btn-download">
-      <i class="fa fa-download" aria-hidden="true" /> Download File
-    </button>
-  </a>
-</div>
+<Download file="HelloCommand.php" />
 
 ```php
 use Pantheon\Terminus\Commands\TerminusCommand;
@@ -359,9 +347,9 @@ At this point, it would be a good idea to [configure your project tests to run a
 2. In the Circle CI settings, set up the following environment variables:
 
    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
-   - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens/) that has access to the test site.
+   - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens) that has access to the test site.
 
-3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys/), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/) (leave the "Hostname" field empty).
+3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/) (leave the "Hostname" field empty).
 
 At this point, your tests should run successfully on Circle CI. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's README.md file to show off your passing build status.
 

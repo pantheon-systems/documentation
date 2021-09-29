@@ -3,8 +3,9 @@ title: 1&1 Domain Configuration
 provider: 1&1
 dnsprovider: true
 description: Learn how to point your 1&1 domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
 ---
 <Alert title="Warning" type="danger">
@@ -17,10 +18,11 @@ editpath: dns-providers/1-and-1.md/
 Be sure that you have a:
 
 - Registered domain name using 1&1 to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on 1&1
+
 ### A/AAAA Records
 
 1. Click **Domain Center** from the Domains panel.
@@ -49,5 +51,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

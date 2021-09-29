@@ -7,6 +7,8 @@ pagerduty: true
 anchorid: next-steps
 generator: pagination
 layout: guide
+categories: [performance]
+tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagination:
     provider: data.pagerdutypages

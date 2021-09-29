@@ -1,0 +1,5 @@
+{
+    "MD013": false,
+    "MD041": false,
+    "MD033": {"allowed_elements": ["Alert", "Span", "Accordion", "Partial", "dl", "dt", "dd", "Enablement", "ExternalLink", "Partial", "Tab", "TabList", "Download", "LocaldevChangelog", "ReviewDate", "Popover"]}
+}

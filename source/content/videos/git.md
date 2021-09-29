@@ -2,14 +2,15 @@
 title: Git
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename/
-tags: [git]
-categories: [develop, cli]
+permalink:  docs/videos/:basename
+categories: [develop]
+tags: [git, cli, workflow]
 layout: video
 searchboost: 50
+type: video
 ---
 
-`youtube: https://youtu.be/LG7_wWQHtS4`
+<Youtube src="LG7_wWQHtS4" title="Git" />
 
 Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 
@@ -21,6 +22,6 @@ As long as Git is installed on your computer, all you need to do is grab the con
 
 Often you’re working on more than one version of the code, say for example both the current and future version of a website. With Git you can create a parallel version or branch of your current codebase and maintain the current version while you build the new one. On Pantheon, you can push that new version of the website to the platform, and then build an environment around it with [Multidev](/multidev).
 
-As you commit, you send those changes up the pipeline to your Live environment.  If a bug makes it past your automated testing, no problem. [Git allows you to quickly revert](/undo-commits/) just those changes without the risk of restoring the entire environment from a backup.
+As you commit, you send those changes up the pipeline to your Live environment.  If a bug makes it past your automated testing, no problem. [Git allows you to quickly revert](/undo-commits) just those changes without the risk of restoring the entire environment from a backup.
 
 With Git, Pantheon provides the industry standard for version control. Any changes are tracked and stored. We also give you the power of feature branching through multidev.

@@ -3,8 +3,9 @@ title: Dyn Domain Configuration
 provider: Dyn
 dnsprovider: true
 description: Learn how to point your Dyn domain to a Pantheon site.
-tags: [providers]
-permalink: docs/:basename/
+categories: [go-live]
+tags: [dns]
+permalink: docs/:basename
 editpath: dns-providers/dyn.md/
 ---
 ## Before You Begin
@@ -13,9 +14,9 @@ Be sure that you have a:
 
 - Registered domain name using Dyn to host DNS
 
-- [Paid Pantheon plan](/guides/launch/plans/)
+- [Paid Pantheon plan](/guides/launch/plans)
 
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live):
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live):
 
  ![Domains / HTTPS](../../images/dashboard/domain-added.png)
 
@@ -28,6 +29,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Dyn DNS account](https://portal.dynect.net/login/) in a new tab before you continue.
 
 ## Configure DNS Records on Dyn
+
 ### A Record
 1. Click **Overview** then **Manage** from the far right menu.
 1. Navigate to **Simple Editor** > **Records**.
@@ -69,5 +71,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

@@ -2,29 +2,24 @@
 title: Build Tools
 subtitle: Add a New Module
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
+cms: "Drupal"
+categories: [develop]
+tags: [composer, local, modules, site, terminus]
 buildtools: true
 anchorid: extend
-generator: pagination
-layout: guide
 type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/extend/
-nexturl: guides/build-tools/tests/
-previousurl: guides/build-tools/configure/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/new-pr/).
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request).
 
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.
 
-1. Navigate to the **Code** tab of the GitHub repository, then click **Clone or download** and copy the repository URL:
+1. Navigate to the **Code** tab of the GitHub repository, then click **<span class="glyphicons glyphicon-save"></span> Code** and copy the repository URL:
 
-  ![Clone repository](../../../images/pr-workflow/clone.png)
+  ![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 
 2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
@@ -79,7 +74,7 @@ This section will be performed from the command line, to prepare your local syst
     terminus drush $SITE.$ENV -- pm-enable pathauto --yes
     ```
 
-4. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
+4. You can use the [method described in an earlier lesson](/guides/build-tools/configure) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
     terminus drush $SITE.$ENV -- config-export --yes

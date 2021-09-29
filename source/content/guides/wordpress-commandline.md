@@ -1,10 +1,11 @@
 ---
 title: Create a WordPress Site From the Command Line Using Terminus and WP-CLI
 description: Learn how to install and use Terminus and WP-CLI to control a WordPress site on Pantheon.
-tags: [devterminus, create, moreguides]
-categories: []
+cms: "WordPress"
+categories: [get-started]
+tags: [terminus, wp-cli]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/guides/:basename
 contributors: [bmackinney, calevans, stevector, tessak22, davidneedham]
 date: 3/7/2017
 ---
@@ -21,7 +22,7 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
-Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus/).
+Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus).
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
@@ -37,7 +38,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   terminus auth:login --machine-token=‹machine-token›
   ```
 
-  For details, see [Terminus Manual: Install](/terminus/install/).
+  For details, see [Terminus Manual: Install](/terminus/install).
 
 3. Once installed, verify your session:
 
@@ -225,7 +226,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
   You should see the new theme within **Appearance** > **Themes** of the WordPress Dashboard:
 
-  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../images/wordpress-commandline-child-theme-wp.png)
+  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../images/wordpress-commandline-child-theme-wp.jpg)
 
   Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 
@@ -257,6 +258,6 @@ If you're a developer who lives in the command line, you now see the power of Te
 
 Here are some suggestions on where to go from here:
 
- - [Use the Pantheon Workflow](/pantheon-workflow/)
- - [WordPress Configuration Management (WP-CFM)](/wp-cfm/)
- - [The Terminus Manual](/terminus/)
+ - [Use the Pantheon Workflow](/pantheon-workflow)
+ - [WordPress Configuration Management (WP-CFM)](/wp-cfm)
+ - [The Terminus Manual](/terminus)

@@ -1,8 +1,10 @@
 ---
 title: Configuring Visual Studio Code for Pantheon
 description: Develop your Pantheon site locally using Visual Studio Code to edit and sync code.
-tags: [local, sftp]
+categories: [develop]
+tags: [code, collaborate, git, local, sftp]
 contributors: [sarahg, alexfornuto]
+reviewed: "2019-10-16"
 ---
 
 ## Overview
@@ -14,7 +16,7 @@ This doc covers setting up a Pantheon site in VS Code and using the SFTP extensi
 1. [Create a site](/create-sites) on Pantheon, or browse to the Dev environment Dashboard of an existing site.
 1. Use [SFTP](/rsync-and-sftp#sftp), [rsync](/rsync-and-sftp#rsync) or [Git](/git#clone-your-site-codebase) to clone your site files on the Dev environment down to your local machine.
 
-  If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" (e.g, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/sftp/).
+  If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" (e.g, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/sftp).
 
 1. Download and install [VS Code](https://code.visualstudio.com/).
 

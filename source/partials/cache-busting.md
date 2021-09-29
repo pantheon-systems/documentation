@@ -1,6 +1,6 @@
 The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (`.vcl`) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns the Global CDN will not cache:
 
-```
+```none
 NO_CACHE
 S+ESS[a-z0-9]+
 fbs[a-z0-9_]+

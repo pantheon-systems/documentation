@@ -5,6 +5,9 @@ description: Overview of WordPress multisite support on the Pantheon Platform.
 anchorid: considerations
 layout: guide
 type: guide
+cms: "WordPress"
+categories: [develop]
+tags: [multisite]
 multisite: true
 generator: pagination
 pagination:
@@ -17,22 +20,26 @@ previousurl: guides/multisite/
 editpath: multisite/02-considerations.md
 image: multisite
 ---
-Before you get started using WordPress Site Networks, there are a few key details to keep in mind:
+
+Switching from a single-site to a WordPress Site Network requires migrating the code, database, and files of the single-site into a new Wordpress Site Network.
+
+Before you start using WordPress Site Networks, keep these key details in mind:
 
 * [The decision is permanent](#the-decision-is-permanent).
 * [Choose between subdirectories and subdomains](#choose-between-subdirectories-and-subdomains).
 * [Users are shared](#users-are-shared).
 * [Themes and plugins are shared](#themes-and-plugins-are-shared).
 
-Let's review each point at depth.
+Let's review each point in depth.
 
 ## The Decision is Permanent
+
 The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon.
 
 ## Choose Between Subdirectories and Subdomains
 When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains.
 
-Given two new sites with slugs <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Slugs" data-content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site."><em class="fa fa-info-circle"></em></a> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs <Popover title="Slugs" content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.

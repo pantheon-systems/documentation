@@ -2,20 +2,13 @@
 title: Quick Start
 subtitle: Create New Site
 description: In part three of our Quick Start guide, learn how to create your new Pantheon site.
-quickstart: true
 anchorid: create-new-site
 generator: pagination
 layout: guide
+categories: [get-started]
+tags: [dashboard, users, workflow]
 type: guide
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/create-new-site/
-nexturl: guides/quickstart/site-dashboard/
-nextpage: Site Dashboard
-previousurl: guides/quickstart/user-dashboard/
-previouspage: User Dashboard
 editpath: quickstart/03-create-new-site.md
 image: launchGuide-twitterLarge
 ---
@@ -24,7 +17,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=NBL2Ejh8TI4`
+<Youtube src="NBL2Ejh8TI4" title="Create New Site" />
 
 **Create your site:**
 
@@ -42,7 +35,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
    <Alert title="Note" type="info">
 
-   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/custom-upstream/), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/custom-upstream), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
 
    </Alert>
 

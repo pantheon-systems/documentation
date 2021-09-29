@@ -1,10 +1,11 @@
 ---
 title: Importing Drush Site Archives with Terminus
 description: Import a Drupal Drush site archive using the Terminus, the Pantheon CLI tool.
-tags: [migratemanual]
-categories: [dupal]
+cms: "Drupal"
+categories: [get-started]
+tags: [migrate, terminus, drush]
 ---
-One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](https://drushcommands.com/drush-8x/core/archive-dump/) using our [Terminus command-line interface](/terminus/). This automates the packaging of the existing installation, improving the chances of success.
+One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](https://drushcommands.com/drush-8x/core/archive-dump/) using our [Terminus command-line interface](/terminus). This automates the packaging of the existing installation, improving the chances of success.
 
 ## Before You Begin
 
@@ -17,9 +18,11 @@ There are a few things you'll need in order to make this work:
 ## Generate a Drush Archive
 
 The first thing you'll need to do is to generate a Drush archive of your existing site. If you have Drush access to the site direct via the shell, it's easy with the archive-dump command:
-```bash
+
+```bash{promptUser: user}
 drush archive-dump --destination=drush-archive.tar.gz
 ```
+
 Executed from the site root will create a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places. The important thing is that you have a Drush archive that can be downloaded via a URL.
 
 ## Set Up Terminus
@@ -32,7 +35,7 @@ Importing a Drush site archive as we've prepared it above is easy.
 
 1. Authenticate into Pantheon with Terminus:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus auth:login --email=<email> --machine-token=<machine_token>
    ```
 
@@ -40,7 +43,7 @@ Importing a Drush site archive as we've prepared it above is easy.
 
 2. Start an import:
 
-   ```
+   ```bash{promptUser: user}
    terminus site:import <site> <url>
    ```
 
