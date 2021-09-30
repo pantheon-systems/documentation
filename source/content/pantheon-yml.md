@@ -81,7 +81,7 @@ Pantheon sites (using the default Pantheon upstreams) created or updated on or a
 
 #### Test Your Site's HSTS Configuration for an A+ Rating
 
-[SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
+[SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
 
 1. To test your configuration, select a short-duration HSTS header (`transitional` or `transitional+subdomains`), before committing to the long-duration HSTS header.
 
@@ -198,7 +198,7 @@ Complete the following before deploying `filemount` (**required**):
 
 ## Quicksilver Platform Integration Hooks
 
-Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a teammate. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
+Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
 
 For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
 
@@ -228,7 +228,7 @@ remote: Version '2' is not a valid pantheon.yml version!
 remote: Valid versions are: 1
 ```
 
-While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common issue.
+While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common reason for an invalid `pantheon.yml` file.
 
 ### Deploying Configuration Changes to Multidev
 
@@ -247,7 +247,7 @@ remote:
 
 ### Deploying Hotfixes
 
-Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (e.g, add a code comment), then deploy up to production using the standard Pantheon workflow.
+Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (for example add a code comment), then deploy up to production using the standard Pantheon workflow.
 
 ## See Also
 
