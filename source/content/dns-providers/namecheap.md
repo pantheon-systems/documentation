@@ -26,7 +26,7 @@ Keep this page open and log in to your [Namecheap account](https://www.namecheap
 ## Verify the Domain to Add HTTPS
 When entering the value for the Name/Host, the bare domain and trailing dot (".") must be removed from the value provided by Pantheon. For example, the value entered in the **Name/Host** field for the Namecheap Advanced DNS configuration should look like `_name-sample`, or in the case of a subdomain, like `_name-sample.subdomain` where the subdomain is replaced with a specific subdomain. 
 
-After completeing the fields on the page, click **Verify Ownership**.
+After completing the fields on the page, click **Verify Ownership**.
 
 You can click **Skip without HTTPS** to skip verification. By skipping, vistors to your site will receive a browser warning until Pantheon automatically provisions HTTPS, which can take approximately one hour after going live.  
 
