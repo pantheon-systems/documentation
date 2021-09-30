@@ -27,7 +27,7 @@ In the event of an attack, exploit, or other issue related to the global edge, f
 
 Recovery of a site that has gone down may take a matter of minutes, but time to recovery can be uncertain, so additional features have been implemented at the Global CDN level to provide a more immediate solution. Ideally, these features will minimize downtime while the specific issues are remediated.
 
-### Persistent Cache
+### Experience Protection
 
 The Global CDN will natively provide a layer of protection via the full-page cache. Persistent cache ensures that these requests are fulfilled using stale cache, sending back pages that have technically expired. This will only apply, however, to requests that normally would be cacheable - sites with a low cache hit rate will not be as protected.
 
@@ -61,7 +61,7 @@ In cases where the site code, database, or assets have become corrupted or compr
 As part of the Managed Updates deployment process, a Multidev will be cloned from the Live environment. It will be used primarily for testing, but also as a backup. If the Live deployment fails, results in a regression, or compromises the site, this Multidev will be used as the source to restore Live to a pre-deploy state.
 
 #### Codebase is unrecoverable
-The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](https://pantheon.io/docs/terminus/commands/backup-restore) documentation for more information. 
+The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore Tools** restore all aspects of the site, and cannot be used to selectively restore. Refer to the [Backup Restore](https://pantheon.io/docs/terminus/commands/backup-restore) documentation for more information. 
 
 #### Reverting a bad commit to Pantheon
 If a bad commit has been deployed to your Pantheon site, you can roll back the commit using Git. The process depends on the nature of the change and whether it involves core updates or upstream updates, etc. Refer to the [Undo Commits](https://pantheon.io/docs/undo-commits) documentation for more information. 
