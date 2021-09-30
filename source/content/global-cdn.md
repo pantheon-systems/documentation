@@ -117,6 +117,30 @@ To test how stale cache is served, compare the header results of a page refresh 
 
 </TabList>
 
+### Cache Management and Optimization
+
+As traffic on your site grows and changes, you can ensure that your site cache is performing at it's best. Understanding your site cache will _____...
+
+To set up caching on your site, you may do the following:
+
+<TabList>
+
+<Tab title="Via WordPress" id="wp-cache" active={true}>
+
+1. First, install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Here, you are able to set the global TTL (Time to Live) for your site.
+
+
+</Tab>
+
+<Tab title="Via Drupal" id="drupal-cache">
+
+1. 
+
+</Tab>
+
+</TabList>
+
+
 ## Frequently Asked Questions
 
 ### I already have a CDN. Can I use it with the Pantheon Global CDN?
