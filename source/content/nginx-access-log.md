@@ -24,7 +24,7 @@ Be sure that you have:
 * [GoAccess](https://goaccess.io/download)
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-  
+
 This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.4 ([release notes](https://goaccess.io/release-notes)).
 
 ## Edit GoAccess Configuration
@@ -93,6 +93,24 @@ brew upgrade goaccess
   # Create a GoAccess report and open it in a browser.
   goaccess */nginx-access.log* > goaccess.html && open goaccess.html # Or xdg-open for Linux
   ```
+
+## Alternatives to GoAccess
+
+You can navigate the `nginx-access.log` file using the CLI, without GoAccess. The following commands are a great starting point for navigatiing the `nginx-access.log` file:
+
+* Locate the most frequent client IP addresses
+
+  ```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
+
+* Locate the most frequent URLs
+
+  ```cat nginx-access.log | awk -F '\"' '{print $2}' | sort | uniq -c | sort -nr | head```
+
+
+* Identify the most frequent User Agents
+
+  ```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
+
 
 ## See Also
 
