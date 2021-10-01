@@ -96,20 +96,20 @@ brew upgrade goaccess
 
 ## Alternatives to GoAccess
 
-The `nginx-access.log` file can also be navigated from via CLI, without GoAccess. The following commands are a great starting point for navigation of the `nginx-access.log` file:
+You can navigate the `nginx-access.log` file using the CLI, without GoAccess. The following commands are a great starting point for navigatiing the `nginx-access.log` file:
 
-Locate the most frequent client IP addresses:
+* Locate the most frequent client IP addresses
 
-```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
+  ```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
 
-Locate the most frequent URLs:
+* Locate the most frequent URLs
 
-```cat nginx-access.log | awk -F '\"' '{print $2}' | sort | uniq -c | sort -nr | head```
+  ```cat nginx-access.log | awk -F '\"' '{print $2}' | sort | uniq -c | sort -nr | head```
 
 
-Identify the most frequent User Agents:
+* Identify the most frequent User Agents
 
-```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
+  ```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
 
 
 ## See Also
