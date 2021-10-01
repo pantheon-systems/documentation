@@ -40,36 +40,45 @@ The site owner should ensure the trusted host setting is up-to-date. Refer to th
 
 <Partial file="drupal-apply-upstream-updates.md" />
 
-### (Optional) Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
-
-<Partial file="drupal-9/drupal-upgrade-status.md" />
-
 <Partial file="drupal-8-convert-to-composer.md" />
+
+**TO BE INSERTED BEFORE** "Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:"
+
+3. Make sure your site remains on Drupal 8
+
+```
+$ composer require drupal/core-recommended:^8.9
+$ git add composer.*
+$ git commit -m "Remain on Drupal 8"
+```
+
+4. Prepare for an eventual upgrade to Drupal 9
+
+The Drupal community provides a module called Upgrade Status that will help to determine whether or not your site is ready to upgrade to Drupal 9. Add this module to your site with Composer:
+
+```
+$ composer require drupal/upgrade-status
+$ git add composer.*
+$ git commit -m "Add Upgrade Status module"
+```
+
+When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading. This step is optional; you may wait and add upgrade-status to your site later, if you prefer.
+
+**THEN CONTINUE THE REST OF THE TEMPLATE** drupal-8-convert-to-composer.md (renumber following sections)
 
 If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
 ## Change Upstreams
 
-Your Pantheon site is no longer compatible with traditional upstream updates. Avoid confusion by moving your site to an empty upstream:
+Your Pantheon site is now set up to use the new Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $site empty
+terminus site:upstream:set $site drupal9
 ```
+
+Following the `drupal9` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
-
-## Ongoing Core Updates
-
-Core updates are carried out via Composer:
-
-```bash{promptUser:user}
-git pull origin master
-composer update drupal/core --with-dependencies
-composer prepare-for-pantheon
-composer install --no-dev
-```
-
-Review and commit file changes, then push back to Pantheon.
 
 ## Troubleshooting
 
