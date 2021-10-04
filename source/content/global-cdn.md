@@ -119,16 +119,15 @@ To test how stale cache is served, compare the header results of a page refresh 
 
 ### Cache Management and Optimization
 
-As traffic on your site grows and changes, you can ensure that your site cache is performing at it's best. Understanding your site cache will _____...
-
-To set up caching on your site, you may do the following:
+To improve site caching and cache hit ratio, you must first understand the current state of your site's cache. For insight, you can do the following:
 
 <TabList>
 
 <Tab title="Via WordPress" id="wp-cache" active={true}>
 
-1. First, install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Here, you are able to set the global TTL (Time to Live) for your site.
+1. Install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Here, you are able to set the global TTL for your site.
 
+  ![Advanced Page Cache on WordPress.org](../images/advanced-page-cache-wordpress-plugin.png)
 
 </Tab>
 
@@ -139,6 +138,11 @@ To set up caching on your site, you may do the following:
 </Tab>
 
 </TabList>
+
+Once you know what your site's cache currently looks like, you can check your NGINX or Fastly logs for any traffic anomalies or overages.
+
+[NGINX logs](https://pantheon.io/docs/logs#available-logs) track all requests made to WordPress/Drupal, but do not include any requests that were served from the edge cache. You can use GoAccess to produce a compiled report on most common requests, such as: 404s, user agents, etc https://pantheon.io/docs/nginx-access-log 
+
 
 ### Common Caching Issues
 
