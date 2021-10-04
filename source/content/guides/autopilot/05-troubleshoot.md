@@ -79,3 +79,27 @@ Contact support for help.
 Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
 
 Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
+
+## Error: Autopilot is blocked
+
+> Autopilot is blocked due to uncommitted SFTP code changes.
+
+### Issue
+
+Autopilot will fail if there are uncommitted changes in the Dev environment.
+
+### Diagnosis
+
+If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk having a merge conflict when Autopilot is pushed back to Dev.
+
+If Autopilot attempted to deploy, then either: Tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
+
+
+### Solution
+
+If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing.
+
+
+Autopilot will log an error, which can be found in the activity feed. You would then need to manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
+
+If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
