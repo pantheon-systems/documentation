@@ -17,11 +17,13 @@ In this doc, you'll migrate an existing Composer-managed Drupal 9 site from anot
 
 ## Unresolved Questions / TO-DOs
 
-- [How] Do we address nested docroot vs not-nested docroot? - **Probably not necessary**
+- [x] How Do we address nested docroot vs not-nested docroot?
+  - "Composer-managed sites should almost always have a nested docroot. For now we could just make that a requirement. We should address the fact that the docroot name might be different on the source site. It's best to rename it to web, as Pantheon expects."
 - The document should probably describe the over-all arc we will pursue, at the start
   - Address the question of composer packages being committed to version control, and how we need to not do that for IC
 - Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
 - I kept referring to the "old site".. not sure if there's a better way to phrase it
+  - Edward to adjust to alias or `former-platform`
 - Site structure.. seems like nice info to include, but not sure about the current spot in the doc
 - `composer show` - not using this
 - have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)?  wikimedia merge plugin?
@@ -66,15 +68,15 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-Create a new folder to use while working on the migration.  You will be creating copies of the old site and new site in separate sub-folders.
+Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
 
 This doc uses the following aliases:
 
 - **Alias:** `SITE`
 - **Site Name:** `anita-drupal`
 - **Working folder** ?
-- **Old site folder** ?
-- **Pantheon site folder** ?
+- **Old site folder** `FORMER-PLATFORM`
+- **Pantheon site folder** `PANTHEON-D9`
 
 
 ### Create a Local Copy of the Old Site's Code
