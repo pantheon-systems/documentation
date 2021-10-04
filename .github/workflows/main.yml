@@ -34,18 +34,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
-on: issue_comment
-
-jobs:
-
-  issue_commented:
-    # This job only runs for issue comments
-    name: Issue comment
-    if: ${{ !github.event.issue.pull_request }}
-    runs-on: ubuntu-latest
-    steps:
-
-      # Make it easier to mark issues as spam by commenting /spam - https://github.com/balevine/mark-as-spam
-      - name: Mark As Spam
-        uses: balevine/mark-as-spam@v1.0
