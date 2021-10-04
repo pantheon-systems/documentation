@@ -1,7 +1,7 @@
 ---
 title: Pantheon Professional Services
 subtitle: Managed Updates
-description: Managed Updates offerings and requirements for Drupal 8 compatibility
+description: Managed Updates offerings and requirements for Drupal 8+ compatibility
 categories: [manage]
 tags: [composer, professional-services, updates, workflow]
 reviewed: "2021-04-01"
@@ -24,7 +24,7 @@ To make Managed Updates available to customers of all sizes and needs, Pantheon 
 
 ### Premium
 
-Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled.
+Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. Sites using Pantheon's Integrated Composer for Drupal 9+ is also supported.
 
 ### Lite
 
@@ -60,7 +60,7 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 | Patched code support                          | Preserves patched code in applied updates.                                             | Test and Deploy Only                | Drupal 7 sites excluded | <Check/>                |
 | Custom VRT                                    | VRT for authenticated pages or custom DOM elements.                                    | ❌                                   | ❌                       | <Check/>                |
 
-## Requirements and Steps for Drupal 8 Compatibility
+## Requirements and Steps for Drupal 8/9 Compatibility
 
 In order to be supported by Pantheon Managed Updates, Drupal 8 sites should be in a "Composer-clean" state. This requires making sure the site’s codebase meets several criteria.
 
@@ -127,6 +127,7 @@ Additionally:
 - Composer-specific files and directories SHOULD NOT be included in the `.gitignore` file.
 - There should be no `.git` folders in the `modules` or `vendors` directories.
 - `"topfloor/composer-cleanup-vcs-dirs": "^1.0"` should be required in the top-level `composer.json` file.
+- Sites using Drupal 9 with Integrated Composer are supported as long as they are successfully building and deploying to Live.
 
 ## See Also
 - [Serving Sites from the Web Subdirectory](/nested-docroot)
