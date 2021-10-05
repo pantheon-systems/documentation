@@ -86,20 +86,23 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 ### Issue
 
-Autopilot will fail if there are uncommitted changes in the Dev environment.
+Autopilot will fail if there are uncommitted SFTP code changes in the Dev environment.
 
 ### Diagnosis
 
-If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk having a merge conflict when Autopilot is pushed back to Dev.
+If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk of having a merge conflict when Autopilot is pushed back to Dev.
 
-If Autopilot attempted to deploy, then either: Tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
+If Autopilot attempted to deploy, then either: tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
 
 
 ### Solution
 
-If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing.
+If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed. 
 
+#### How to Re-run Autopilot If Tests Have Already Passed
 
-Autopilot will log an error, which can be found in the activity feed. You would then need to manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
+You can manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
+
+#### How to Re-run Autopilot If Tests Were Approved After Dev Changes
 
 If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
