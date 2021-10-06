@@ -119,7 +119,7 @@ To test how stale cache is served, compare the header results of a page refresh 
 
 ### Cache Management and Optimization
 
-To improve site caching and cache hit ratio, you must first understand the current state of your site's cache. For insight, you can do the following:
+To improve site caching and cache hit ratio, you must first understand the current state of your site's cache. To gain some preliminary insight, you can:
 
 <TabList>
 
@@ -141,7 +141,15 @@ To improve site caching and cache hit ratio, you must first understand the curre
 
 Once you know what your site's cache currently looks like, you can check your NGINX or Fastly logs for any traffic anomalies or overages.
 
-[NGINX logs](https://pantheon.io/docs/logs#available-logs) track all requests made to WordPress/Drupal, but do not include any requests that were served from the edge cache. You can use GoAccess to produce a compiled report on most common requests, such as: 404s, user agents, etc https://pantheon.io/docs/nginx-access-log 
+[NGINX logs](https://pantheon.io/docs/logs#available-logs) track all requests made to WordPress/Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](https://pantheon.io/docs/nginx-access-log) to produce a compiled report on most common requests, such as: 404s, user agents, etc.
+
+Fastly log extracts can be requested from your Customer Success Engineer. Standard analytics includes all pages requested, but will not include service calls and other traffic that does not load the tracking script.
+
+In your log report, you want to look for:
+- Disproportionate patterns of requests and 404s indicate possible exploits
+- Too many requests to the index paths may indicate a volumetric attack against the domain
+- Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt
+- Known exploit and excess traffic paths should be checked
 
 
 ### Common Caching Issues
