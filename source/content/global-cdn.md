@@ -125,7 +125,7 @@ To improve site caching and cache hit ratio, you must first understand the curre
 
 <Tab title="Via WordPress" id="wp-cache" active={true}>
 
-1. Install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Here, you are able to set the global TTL for your site.
+1. Install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Here, you are able to set the global TTL for your site. Pantheon's Page Cache plugin is included in the standard WordPress upstream and sets global TTL for your site.
 
   ![Advanced Page Cache on WordPress.org](../images/advanced-page-cache-wordpress-plugin.png)
 
@@ -133,7 +133,11 @@ To improve site caching and cache hit ratio, you must first understand the curre
 
 <Tab title="Via Drupal" id="drupal-cache">
 
-1. 
+1. Install the [Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache). This enables the selective purging of cache on content editing and creation.
+1. Visit `/admin/config/development/performance` for Drupal's performance settings. 
+    * [Drupal 7](/drupal-cache#drupal-7-performance-configuration) - set maximum age, minimum cache time, and enable "Cache pages for anonymous users"
+    * [Drupal 8](/drupal-cache#drupal-8-performance-configuration) - set maximum age
+
 
 </Tab>
 
@@ -141,7 +145,7 @@ To improve site caching and cache hit ratio, you must first understand the curre
 
 Once you know what your site's cache currently looks like, you can check your NGINX or Fastly logs for any traffic anomalies or overages.
 
-[NGINX logs](https://pantheon.io/docs/logs#available-logs) track all requests made to WordPress/Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](https://pantheon.io/docs/nginx-access-log) to produce a compiled report on most common requests, such as: 404s, user agents, etc.
+[NGINX logs](/logs#available-logs) track all requests made to WordPress/Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/nginx-access-log) to produce a compiled report on most common requests, such as: 404s, user agents, etc.
 
 Fastly log extracts can be requested from your Customer Success Engineer. Standard analytics includes all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
