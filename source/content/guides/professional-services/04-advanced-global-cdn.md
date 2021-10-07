@@ -18,6 +18,8 @@ Each AGCDN service configuration is offered as an annual contract subscription. 
 
 It includes a wide range of benefits that let teams individually manage their own sites, drive growth through site iteration, calibrate control over branding, and extend enterprise-grade security.
 
+> **Note**: At the moment, AGCDN only works with custom domains only. *.pantheonsite.io domains are not covered for now.
+
 ## Features
 
 ### OSI Layer 3 & 4 DDoS Protection & Mitigation
@@ -30,7 +32,7 @@ SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a s
 
 ### IP Allowlisting & Blocklisting
 
- Granular access control down to the IP address level helps protect intellectual property and secure development environments.
+ Restrict access to properties using Acess Control Lists (ACLs) that use IP adddresses to either allow or deny access
 
 - Blocklist - prevent users with specific IPs or in IP ranges from accessing your site.
 
@@ -47,6 +49,7 @@ Response code messages enable you to create custom error pages (e.g., 404 and 50
 ### Geolocation-based Actions
 
 Sending location info to your application is much faster than fetching it from a third-party API. AGCDN enables actions based on the physical location of your user (eg. blocking or redirecting based on country), and can send location information to your application for performant, custom control.
+
 
 ### Device Detection and Edge Control
 
