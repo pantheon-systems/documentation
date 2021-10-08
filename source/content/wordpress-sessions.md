@@ -52,7 +52,7 @@ Alternatively, you can inspect the headers using `curl -sI example.com` after ea
 
   Note: If you have a local copy of your site, you can search it for plugins that uses `session_start()` or `$_SESSIONS`, and start turning them off first.
 
-1. To check if a 3rd party must-use plugin or drop-in plugin is breaking the cache, temporarily remove the 3rd party must-use plugins and leave only the `Pantheon` and `WP Native PHP Sessions`. There should be no drop-ins in place.
+1. To check if a 3rd-party must-use plugin or drop-in plugin is breaking the cache, temporarily remove the 3rd-party must-use plugins and leave only the `Pantheon` and `WP Native PHP Sessions`. There should be no drop-ins in place.
 
 ### Install WordPress Native PHP Sessions Plugin
 
