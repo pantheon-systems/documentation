@@ -1,0 +1,20 @@
+# The `hacktoberfest-accepted` label is added to pull request
+hacktoberfest-accepted:
+  # Post a comment
+  comment: >
+    Thank you for participating in Hacktoberfest and contributing to Pantheon documentation! 
+  # Lock the thread
+  lock: true
+
+  pull_request_review:
+      types:
+        - submitted
+        - approved
+  jobs:
+    automerge:
+      runs-on: ubuntu-latest
+      steps:
+        - name: automerge
+          uses: "pascalgn/automerge-action@v0.14.3"
+          env:
+            GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
