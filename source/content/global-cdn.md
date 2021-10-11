@@ -155,7 +155,6 @@ In your log report, you want to look for:
 - Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt
 - Known exploit and excess traffic paths should be checked
 
-
 Please refer to the following docs for common caching issues:
 
 - [Caching: Advanced Topics](/caching-advanced-topics)
