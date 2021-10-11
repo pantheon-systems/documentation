@@ -32,14 +32,14 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Drupal and WordPress application-level and site support
    - Identifying problematic modules and plugins
    - Multidev
-   - Assistance with basic CDN, Terminus, Localdev, and Custom Upstreams
+   - Assistance with basic caching issues, Terminus, Localdev, and Custom Upstreams
 - **Performance**:
    - New Relic
    - Caching
    - Cloud Integrations
    - Custom Upstreams
    - Advanced Workflows
-   - Advanced CDN
+   - Complex Caching Use Cases
    - Terminus
 - **Dedicated**: Bespoke site debugging.
 
