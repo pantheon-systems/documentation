@@ -2,6 +2,7 @@
 title: Convert a Custom Upstream to Integrated Composer
 description: Convert a non-composer-managed D8-based custom upstream to Integrated Composer
 type: guide
+permalink: docs/guides/:basename
 cms: "Drupal"
 tags: [composer, workflow]
 categories: [develop]
@@ -62,6 +63,7 @@ We will be replacing the entire file structure with the Integrated Composer upst
 
     - For contrib modules & themes, add each module with `composer require drupal/MODULE_NAME:^VERSION --no-update` and commit
     - For custom modules & themes, the process is the same as the main Upgrade to Drupal 9 document:
+
         Modules:
 
         ```bash{promptUser:user}
@@ -94,5 +96,5 @@ You can test the integrated composer update on each site by cloning the site's c
 - Create a new composerify branch `git checkout -b composerify`
 - Merge the changes from the upstream `git merge upstream/composerify`
 - Push new branch up: `git push --set-upstream origin composerify`
-- Create a new multidev with terminus: `terminus multidev:create composerify
+- Create a new multidev with terminus: `terminus multidev:create composerify`
 
