@@ -156,27 +156,11 @@ In your log report, you want to look for:
 - Known exploit and excess traffic paths should be checked
 
 
-### Common Caching Issues
+Please refer to the following docs for common caching issues:
 
-#### Cookies
-
-Pantheon's platform will not cache a response that contains the *set-cookie* header. Cookies that adhere to the ‘styxkey’ naming convention can pass through while not breaking caching.
-
-#### Authenticated Traffic
-
-Authenticated requests breack cache, so sites like intranets, student portals, or developer portals will have naturally low cache hit rates.
-
-#### Low TTL and Low Traffic
-
-Pages that aren't commonly requested will time out of cache before they can be served again.
-
-#### Search
-
-Search queries can be cached, but more complex search applications (with lots of facets, for example) will generate a higher proportion of unique requests.
-
-#### Excess and Malicious Traffic
-
-Exploits will hit commonly-known CMS and WP paths, and some of these are uncacheable (.php extensions, for example). There are other patterns of excess traffic that are benign but which generate uncached traffic.
+- [Caching: Advanced Topics](/caching-advanced-topics)
+- [Debug Common Cache Busters](/guides/frontend-performance#debug-common-cache-busters)
+- [Traffic Limits and Overages](/traffic-limits)
 
 ## Frequently Asked Questions
 
