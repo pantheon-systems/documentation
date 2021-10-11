@@ -8,7 +8,7 @@ on:
     types: [approved]
   
 jobs:
-  mark-as-spam: # runs when it detects this as a comment: [/accepted-hack]
+  uses: # runs when it detects this as a comment: [/accepted-hack]
     automerge:
       runs-on: ubuntu-latest
       steps:
