@@ -3,9 +3,7 @@ hacktoberfest-accepted:
   # Post a comment
   comment: >
     Thank you for participating in Hacktoberfest and contributing to Pantheon documentation! 
-  # Lock the thread
-  lock: true
-
+    
   pull_request_review:
       types:
         - approved
