@@ -17,7 +17,7 @@ We will be replacing the entire file structure with the Integrated Composer upst
 
 
 - Create a local clone of custom upstream repo
-- You may wish to audit your upstream's customizations by comparing it with the drops-8 upstream
+- ("Tips" section?) You may wish to audit your upstream's customizations by comparing it with the drops-8 upstream
   - You can see your custom upstream's differences adding the drops-8 upstream as a second remote and using `git diff` to compare the branches
     - Add drops-8 as a second remote `git remote add drops-8 https://github.com/pantheon-systems/drops-8.git && git fetch drops-8`
     - For a list of files which differ `git diff --stat drops-8/master`
@@ -25,8 +25,8 @@ We will be replacing the entire file structure with the Integrated Composer upst
   - Assess the differences and note the ones that you will need to re-apply to the integrated composer codebase
 
 - Add integrated composer upstream as a second remote & fetch - `git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic`
-- Create a new branch for working
-- (on 'composerify' branch) `git rm -rf *` and commit "Removing all files" - this is because we're going to completely replace the file structure and re-add customizations
+- Create a new `composerify` branch for working in: `git checkout -b composerify`
+- (on 'composerify' branch) `git rm -rf *` and commit "Removing all files" - `git commit -m "Removing all files"` - this is because we're going to completely replace the file structure and re-add customizations
 - Add and commit files from integrated-composer upstream: `git checkout ic .`  `git commit -m "Add and commit Integrated Composer files"`
 - Edit `upstream-configuration/composer.json` and change the `drupal/core-recommended` version to only Drupal 8: `"drupal/core-recommended": "^8.8"`
 
@@ -96,5 +96,9 @@ You can test the integrated composer update on each site by cloning the site's c
 - Create a new composerify branch `git checkout -b composerify`
 - Merge the changes from the upstream `git merge upstream/composerify`
 - Push new branch up: `git push --set-upstream origin composerify`
-- Create a new multidev with terminus: `terminus multidev:create composerify`
+- Create a new multidev with terminus: `terminus multidev:create <SITE_NAME>.dev composerify`
+- Push a new commit with a trivial change, to get the build step to run - it doesn't run the first time `pantheon.yml` is pushed with `build_step: true`
+- Always clear cache after a push: `terminus drush <SITE_NAME>.composerify cr`
+- If you are encountering errors, it can be helpful to see recent watchdog messages: `terminus drush <SITE_NAME>.composerify ws`
+
 
