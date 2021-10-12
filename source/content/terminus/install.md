@@ -29,6 +29,7 @@ There are several ways to install Terminus, depending on your use case:
 
 - For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
 - For a Composer-managed version of Terminus that is _not_ part of your other Composer-managed project(s) and doesn't utilize global Composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
+- If you are in Mac, you could [install using homebrew](#homebrew-installation).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
 
 ### Standalone Terminus PHAR
@@ -64,6 +65,14 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
 ```
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
+
+### Homebrew Installation
+
+The Terminus application is published to Homebrew, to install it you should just run:
+
+```bash
+brew install pantheon-systems/external/terminus
+```
 
 ## Authenticate
 

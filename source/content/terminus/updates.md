@@ -29,7 +29,7 @@ If you used the [standalone Terminus PHAR](/terminus/install#standalone-terminus
 terminus self:update
 ```
 
-Note that the `self:update` command is only available for the standalone Terminus installation.
+Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/self-update) to see the available options.
 
 ## Update Terminus Installer PHAR
 
@@ -37,6 +37,14 @@ To update the Composer-managed version of Terminus that was installed with the [
 
 ```bash{promptUser: user}
 curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
+```
+
+### Update Terminus Homebrew Installation
+
+If you used the [Homebrew installation](/terminus/install#homebrew-installation) installation, update to the newest version with:
+
+```bash
+brew upgrade pantheon-systems/external/terminus
 ```
 
 <Alert title="Note" type={"info"}>

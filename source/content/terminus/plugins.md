@@ -24,6 +24,18 @@ If you are a plugin author, ensure your your plugin is updated for Terminus 2. S
 
 ## Install Plugins
 
+Depending on your Terminus version, the plugin installation process is different. Please refer to the appropiate section below.
+
+### Terminus 3
+
+Terminus 3 ships with the plugin manager. This means that to install a plugin you should use a Terminus command like this:
+
+```bash
+terminus self:plugin:install pantheon-systems/terminus-plugin-example
+```
+
+### Terminus 2
+
 Add plugins within the `$HOME/.terminus/plugins` directory on your local workstation. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist:
 
 ```bash{promptUser: user}
@@ -38,7 +50,7 @@ curl https://github.com/pantheon-systems/terminus-plugin-example/archive/1.x.tar
 
 <Accordion title="Composer and Git - Explore Advanced Installation Methods (Optional)" id="advance-installs" icon="lightbulb">
 
-### Install via Composer
+#### Install via Composer
 
 Plugins published on Packagist are available to install via the Composer package manager. From a terminal window on your computer, use the following commands:
 
@@ -46,7 +58,7 @@ Plugins published on Packagist are available to install via the Composer package
 composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-rsync-plugin:~1
 ```
 
-### Install via Git
+#### Install via Git
 
 Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (`$HOME/.terminus/plugins`). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On GitHub you can find it by clicking **<span class="glyphicons glyphicon-save"></span> Code** on the repository home page:
 
@@ -62,8 +74,32 @@ cd $HOME/.terminus/plugins && git clone https://github.com/pantheon-systems/term
 
 ## Update Plugins
 
+Depending on your Terminus version, the plugin update process is different. Please refer to the appropiate section below.
+
+### Terminus 3
+
+Terminus 3 ships with the plugin manager. This means that to update a plugin you should use a Terminus command like this:
+
+```bash
+terminus self:plugin:update pantheon-systems/terminus-plugin-example
+```
+
+### Terminus 2
+
 Delete the plugin from the `$HOME/.terminus/plugins` directory. Download the latest version of the plugin and move the plugin directory into the `$HOME/.terminus/plugins` directory.
 
 ## Uninstall Plugins
+
+Depending on your Terminus version, the plugin uninstallation process is different. Please refer to the appropiate section below.
+
+### Terminus 3
+
+Terminus 3 ships with the plugin manager. This means that to uninstall a plugin you should use a Terminus command like this:
+
+```bash
+terminus self:plugin:uninstall pantheon-systems/terminus-plugin-example
+```
+
+### Terminus 2
 
 Delete the plugin from the `$HOME/.terminus/plugins` directory.
