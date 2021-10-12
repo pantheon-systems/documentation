@@ -46,17 +46,19 @@ In this WebOps workflow, a [Multidev](/multidev) environment is created on Panth
 
 We recommend the Pull Request workflow for single site use cases, and for most use cases involving larger site portfolios such as EDUs. You can create a "template" repository based off Pantheon's example repositories and customize it to your liking, then use the template to create new sites.
 
-However, this method does not support One-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
+However, this method does not support one-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
+
+To maintain a Composer-based workflow with one-click updates through the Dashboard, consider using [Integrated Composer](/integrated-composer).
 
 ## Custom Upstream Workflow
 
-It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.
+Use [Integrated Composer](/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream).
 
-A Custom Upstream based off Pantheon's example repositories would need to commit all dependencies. Updates via Composer would only happen at the Custom Upstream repository level by a single repository maintainer. Those updates would then trickle down to sites created from the Custom Upstream as One-click updates in the Pantheon Site Dashboard.
+A Custom Upstream based off Pantheon's example repositories would need to commit all dependencies. Updates via Composer would only happen at the Custom Upstream repository level by a single repository maintainer. Those updates would then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard.
 
 This workflow has one very serious shortcoming, that is site-specific dependencies are likely to cause a lot of conflicts. The practical use case for this WebOps workflow is for a large group of sites that require a single set of dependencies. You should only use this method if you don’t intend to use site specific themes, modules, or plugins downstream.
 
-You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and Users in Charge roles.
+You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and User in Charge roles.
 
 ## Next Steps
 
@@ -72,4 +74,4 @@ If you're not ready to go all in with a Composer workflow and you want to see ho
 
 ## See Also
 
-- [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)

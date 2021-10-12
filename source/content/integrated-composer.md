@@ -7,13 +7,13 @@ contributors: [ari, edwardangert]
 reviewed: "2021-08-30"
 ---
 
-Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
+Integrated Composer is a Pantheon platform feature that lets you deploy updates to your [Composer](/composer)-managed Pantheon site from the Dashboard with one click.
 
 ## Create a New Site With Integrated Composer
 
 ### Drupal 9 with Integrated Composer
 
-- To convert an existing Drupal 8 site to a Composer-managed site, visit the [Composer Convert](/guides/composer-convert) doc.
+- To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
 - To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
@@ -117,7 +117,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
         1.0.0
         ```
 
-     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. 
+     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies.
      - Replace `1.0.1` in this example with another number:
 
        ```bash{promptUser: user}
