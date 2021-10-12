@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 reviewed: "2021-09-13"
 ---
 
@@ -479,13 +479,6 @@ ___
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 
-___
-
-## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
-
-**Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
-
-**Solution:** If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
 ___
 
 ## [ManageWP worker](https://wordpress.org/plugins/worker/)
