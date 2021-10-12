@@ -5,7 +5,7 @@ categories: [develop]
 tags: [composer, workflow, updates, webops]
 ---
 
-[<dfn id="composer">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site.
+[<dfn id="composer">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site.
 
 At its primary level, Composer needs:
 

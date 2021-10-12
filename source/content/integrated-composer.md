@@ -7,7 +7,9 @@ contributors: [ari, edwardangert]
 reviewed: "2021-08-30"
 ---
 
-Integrated Composer is a Pantheon platform feature that lets you deploy updates to your [Composer](/composer)-managed Pantheon site from the Dashboard with one click.
+[Composer](/composer) is a widely-used dependency and package manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site.
+
+Integrated Composer is a Pantheon platform feature that enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
 
 ## Create a New Site With Integrated Composer
 
