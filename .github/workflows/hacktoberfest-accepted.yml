@@ -9,7 +9,7 @@ on:
   
 jobs:
  hacktoberfest-accepted:
-  if: ${{ startsWith(github.event.comment.body, '/accept-hack') }}
+  if: github.event.comment.body == '/accept-hack'
   runs-on: ubuntu-latest
   steps:
     - name: add-label
