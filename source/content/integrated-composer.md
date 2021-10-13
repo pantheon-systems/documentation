@@ -9,14 +9,15 @@ reviewed: "2021-08-30"
 
 Integrated Composer is a Pantheon platform feature that extends Composer <Popover content="A widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site." /> functionality to Drupal and WordPress's core files, and treats them as a managed dependency. Integrated Composer enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
 
-## Create a New Site With Integrated Composer
+## Get Started With Integrated Composer
 
 ### Drupal 9 with Integrated Composer
 
-Create a new Drupal 9 site 
+- Follow the [Drupal 9](/drupal-9) doc to create a new Drupal 9 site with Integrated Composer built in.
 
-To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
-To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
+- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
+
+- To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
 ### WordPress with Integrated Composer
 
