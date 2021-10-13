@@ -106,22 +106,30 @@ For custom modules & themes, the process is the same as the main Upgrade to Drup
 
 
 
+## Individual site customizations
+
 If your child sites contain site-specific code, you'll want to audit those differences from each site
+- Examples: site-specific redirects, custom modules only present on a specific site
 - clone site repo
 - add your custom upstream as a second remote and fetch: `git remote add upstream <upstream's git URL> && git fetch upstream`
 - git diff your sites code against the upstream: `git diff upstream/master`
   - take note of the differences, you will need to re-apply these after applying the changes from the upstream
 
 
+## (Accordion?  Separate document?) Testing individual sites before rolling the change out to all sites
+
 You can test the integrated composer update on each site by cloning the site's code, adding the upstream as a second remote, and creating a multidev with the new code from the upstream
+- DO NOT MERGE MULTI-DEV TO MASTER ON INDIVIDUAL SITES
 - Clone site's code
 - Add upstream as a second remote and fetch: `git remote add upstream <upstream's git URL> && git fetch upstream`
 - Create a new composerify branch `git checkout -b composerify`
 - Merge the changes from the upstream `git merge upstream/composerify`
 - Push new branch up: `git push --set-upstream origin composerify`
 - Create a new multidev with terminus: `terminus multidev:create <SITE_NAME>.dev composerify`
-- Push a new commit with a trivial change, to get the build step to run - it doesn't run the first time `pantheon.yml` is pushed with `build_step: true`
+- [BUG - don't publish until fixed, then remove this lol]   ~~Push a new commit with a trivial change, to get the build step to run - it doesn't run the first time `pantheon.yml` is pushed with `build_step: true`~~
 - Always clear cache after a push: `terminus drush <SITE_NAME>.composerify cr`
 - If you are encountering errors, it can be helpful to see recent watchdog messages: `terminus drush <SITE_NAME>.composerify ws`
 
+## Final deployment
 
+Merge the "composerify" branch on the custom upstream onto the master branch.
