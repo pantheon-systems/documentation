@@ -102,6 +102,24 @@ If you have active sites and no keys remaining, you can still access the sites. 
 
 <Partial file="host-keys.md" />
 
+### Connections Fail With: no matching host key type found. Their offer: ssh-rsa
+
+[OpenSSH 8.8](https://www.openssh.com/txt/release-8.8) disables RSA signatures like the key type Pantheon uses.
+
+While we are working to remedy this on the platform, OpenSSH 8.8 will return this error for CLI commands:
+
+```shell
+Unable to negotiate with 203.0.113.123 port 2222: no matching host key type found. Their offer: ssh-rsa
+```
+
+**Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
+
+```none:title=~/.ssh/config
+Host *.drush.in
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+```
+
 ### Control Path Error
 
 You may receive the following error:

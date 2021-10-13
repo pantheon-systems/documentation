@@ -28,6 +28,8 @@ Open `~/.ssh/config` (or create a new file if one does not exist) and add the fo
 
 ```none:title=~/.ssh/config
 Host *.drush.in
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
     StrictHostKeyChecking no
 ```
 
