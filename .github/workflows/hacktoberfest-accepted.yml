@@ -1,22 +1,25 @@
-# The `hacktoberfest-accepted` label is added to pull request
-name: hacktoberfest-accepted
+# The `hacktoberfest-accepted` label is added to the pull request
+name: Hacktoberfest Accepted
+
 on: 
   pull_request:
-    branches: [main]
-    types: [opened]
+    types: opened
   pull_request_review:
-    types: [approved]
+    types: approved
   
 jobs:
-  mark-as-spam: # runs when it detects this as a comment: [/accepted-hack]
-    automerge:
-      runs-on: ubuntu-latest
-      steps:
-          - name: automerge
-            uses: "pascalgn/automerge-action@v0.14.3"
-            # Post a comment
-            comment: >
-              Thank you for participating in Hacktoberfest and contributing to Pantheon documentation! 
-            env:
-              GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-  
+ hacktoberfest-accepted:
+  if: github.event.comment.body == '/accept-hack'
+  runs-on: ubuntu-latest
+  steps:
+    - name: add-label
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        labels: hacktoberfest-accepted
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        
+    - name: Add comment
+      uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+      with: 
+        body: |
+          Thank you for participating in Hacktoberfest and contributing to Pantheon documentation!:sparkles:
