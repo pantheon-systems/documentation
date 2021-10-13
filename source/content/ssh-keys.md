@@ -116,6 +116,8 @@ Unable to negotiate with 203.0.113.123 port 2222: no matching host key type foun
 
 ```none:title=~/.ssh/config
 Host *.drush.in
+    # The settings on the next two lines are temporary until Pantheon updates the available key types.
+    # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
     HostkeyAlgorithms +ssh-rsa
     PubkeyAcceptedAlgorithms +ssh-rsa
 ```
