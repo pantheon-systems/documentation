@@ -16,6 +16,8 @@ Due to the nature of our platform, the connection information will change from t
 
 ## Database Connection Information
 
+<Partial file="platform-considerations-connections.md" />
+
 MySQL credentials for each site environment are located in the Dashboard:
 
 ![MySQL Credentials](../images/dashboard/mysql-info.png)
