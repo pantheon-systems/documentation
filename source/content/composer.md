@@ -46,7 +46,7 @@ In this WebOps workflow, a [Multidev](/multidev) environment is created on Panth
 
 We recommend the Pull Request workflow for single site use cases, and for most use cases involving larger site portfolios such as EDUs. You can create a "template" repository based off Pantheon's example repositories and customize it to your liking, then use the template to create new sites.
 
-However, this method does not support one-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
+However, this method does not support one-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling, or at the very least require additional training for your development team.
 
 To maintain a Composer-based workflow with one-click updates through the Dashboard, consider using [Integrated Composer](/integrated-composer).
 
