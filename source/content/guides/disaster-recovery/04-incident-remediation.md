@@ -29,7 +29,7 @@ Recovery of a site that has gone down may take a matter of minutes, but time to 
 
 ### Experience Protection
 
-The Global CDN will natively provide a layer of protection via the full-page cache. Persistent cache ensures that these requests are fulfilled using stale cache, sending back pages that have technically expired. This will only apply, however, to requests that normally would be cacheable - sites with a low cache hit rate will not be as protected.
+The Global CDN will natively provide a layer of protection via the full-page cache. Experience Protection ensures that these requests are fulfilled using stale cache, sending back pages that have technically expired. This will only apply, however, to requests that normally would be cacheable - sites with a low cache hit rate will not be as protected.
 
 ### Synthetic Responses
 
