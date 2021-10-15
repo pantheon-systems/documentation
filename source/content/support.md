@@ -183,7 +183,7 @@ Pantheon can only assist if we can replicate the problem. Intermittent issues an
 
 ### Isolated Issues
 
-Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials or offer to connect you with an agency partner to help you with the resolution.
+Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials or offer to connect you with an [agency partner](https://directory.pantheon.io/agencies?docs) to help you with the resolution.
 
 If problems with your site become severe and overload resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
@@ -203,7 +203,7 @@ Diamond Account customers get an extra level of assistance for their dev teams. 
 
 Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
 
-Diamond Accounts are intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
+Diamond Accounts are intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://directory.pantheon.io/agencies?docs) from Pantheon’s network of trusted partners.
 
 ## FAQs
 
