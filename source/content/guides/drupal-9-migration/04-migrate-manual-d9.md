@@ -1,7 +1,7 @@
 ---
 title: Migrate to Drupal 9 on Pantheon
 subtitle: Manually Migrate
-description: Migrate a Drupal 8 Site on Pantheon to Drupal 9 on Pantheon
+description: Migrate a Drupal 8 Site on Pantheon to a Drupal 9 on Pantheon
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
@@ -14,7 +14,7 @@ anchorid: drupal-9-migration/migrate-manual-d9
 editpath: drupal-9-migration/04-migrate-manual-d9.md
 ---
 
-In this doc, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
+Create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
 
 ## Will This Guide Work for Your Site?
 
@@ -50,7 +50,7 @@ This doc uses the following aliases:
   git fetch existing-8
   ```
 
-1. Copy over exported configuration from the original site. From your D9 site, run the following commands:
+1. Copy the exported configuration from the original site. From your D9 site, run the following commands:
 
   ```bash{promptUser: user}
   git checkout existing-8/master -- sites/default/config
@@ -64,14 +64,14 @@ This doc uses the following aliases:
   git diff existing-8/master:pantheon.yml pantheon.upstream.yml
   ```
 
-1. If you have customizations in your D8 site's `pantheon.yml` that you want to keep for D9 (e.g., a Quicksilver script or site-specific protected web paths), copy `pantheon.yml` over:
+1. If you have customizations in your D8 site's `pantheon.yml` that you want to keep for D9 (e.g., a Quicksilver script or site-specific protected web paths), copy the `pantheon.yml`:
 
   ```bash{promptUser: user}
   git checkout existing-8/master -- pantheon.yml
   git commit -m "Update pantheon.yml."
   ```
 
-1. Copy over any Quicksilver scripts referenced in `pantheon.yml`:
+1. Copy any Quicksilver scripts referenced in `pantheon.yml`:
 
   ```bash{promptUser: user}
   git checkout existing-8/master -- private/scripts
