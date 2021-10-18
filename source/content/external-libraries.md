@@ -117,7 +117,7 @@ When creating a new preset, if the "Division by Zero" warning appears, add the [
 
 Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
 
-ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node/773342) (like advpng and OptiPNG) are not available at this time.
+ImageAPI Optimize's [support for 3rd-party services](https://www.drupal.org/node/773342) (like advpng and OptiPNG) are not available at this time.
 
 ### WordPress ImageMagick Configuration
 

@@ -113,7 +113,7 @@ Adjust the above example record as needed for your domain:
 
 - Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
 - If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
-- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
+- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd-party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 

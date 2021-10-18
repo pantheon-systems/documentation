@@ -1,7 +1,7 @@
 ---
 title: Pantheon Professional Services
 subtitle: Managed Updates
-description: Managed Updates offerings and requirements for Drupal 8 compatibility
+description: Managed Updates offerings and requirements for Drupal 8+ compatibility
 categories: [manage]
 tags: [composer, professional-services, updates, workflow]
 reviewed: "2021-04-01"
@@ -24,11 +24,11 @@ To make Managed Updates available to customers of all sizes and needs, Pantheon 
 
 ### Premium
 
-Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled.
+Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. Sites using Pantheon's Integrated Composer for Drupal 9 are also supported.
 
 ### Lite
 
-Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continuous integration processes (see below for details).
+Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or Drupal 8 sites using a Composer-build workflow without continuous integration processes.
 
 ### Portfolio Upstreams
 
@@ -38,7 +38,7 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 
 - Sites use Pantheon’s update workflow
   - Codebase changes are pushed to client's remote repo and then applied to each of the sites
-  - Build step does not rely on 3rd party sources
+  - Build step does not rely on 3rd-party sources
   - No other special deployment instructions
 - Drupal 7 or WordPress 5.4 or above
 
@@ -60,7 +60,7 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 | Patched code support                          | Preserves patched code in applied updates.                                             | Test and Deploy Only                | Drupal 7 sites excluded | <Check/>                |
 | Custom VRT                                    | VRT for authenticated pages or custom DOM elements.                                    | ❌                                   | ❌                       | <Check/>                |
 
-## Requirements and Steps for Drupal 8 Compatibility
+## Requirements and Steps for Drupal 8/9 Compatibility
 
 In order to be supported by Pantheon Managed Updates, Drupal 8 sites should be in a "Composer-clean" state. This requires making sure the site’s codebase meets several criteria.
 
@@ -68,9 +68,9 @@ In order to be supported by Pantheon Managed Updates, Drupal 8 sites should be i
 
 A Drupal 8 site using Managed Updates must:
 
-- have build and deployment handled by Pantheon, not by an external CI/CD service,
-- not include a `pantheon.upstream.yml` file in the codebase (unless it’s custom upstream), only `pantheon.yml`,
-- use a [nested docroot](/nested-docroot) structure,
+- have the build and deployment handled by Pantheon, not by an external CI/CD service
+- not include a `pantheon.upstream.yml` file in the codebase (unless it’s a custom upstream), only `pantheon.yml`
+- use a [nested docroot](/nested-docroot) structure
 - be connected to the "[Empty drupal8](https://github.com/pantheon-systems/empty)" Pantheon upstream <Popover content="If the site is connected to a custom upstream, that upstream needs to use 'Empty drupal8'." />,
 - have a code-structure based on the [Composer Drops-8 Example](https://github.com/pantheon-systems/example-drops-8-composer) project.
 
@@ -97,7 +97,7 @@ A Drupal 8 site using Managed Updates must:
 Additionally:
 
 - Drupal core must be required as "`drupal/core-recommended`" package, not "`drupal/core.`".
-- All Drupal modules should be required by Composer (via `composer.json`).
+- All Drupal modules should be required by Composer via the `composer.json`.
 - Drupal core, themes, and modules should be locked to the exact versions currently installed on the Live environment. In `composer.json`, the "require" section should look like this for Drupal packages:
 
   <Alert title="Correct" type="success" icon="check">
@@ -127,6 +127,7 @@ Additionally:
 - Composer-specific files and directories SHOULD NOT be included in the `.gitignore` file.
 - There should be no `.git` folders in the `modules` or `vendors` directories.
 - `"topfloor/composer-cleanup-vcs-dirs": "^1.0"` should be required in the top-level `composer.json` file.
+- Sites using Drupal 9 with Integrated Composer are supported as long as they are successfully building and deploying to Live.
 
 ## See Also
 - [Serving Sites from the Web Subdirectory](/nested-docroot)

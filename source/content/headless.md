@@ -97,7 +97,7 @@ There is a contributed module called [REST UI](https://drupal.org/project/restui
 
 Because Views is also part of core, you can make a JSON resource once REST and Serialization modules are enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
 
-* Use Filter Criterias to extract content as you like it (e.g., `/json/articles?nid=5`).
+* Use Filter Criteria to extract content as you like it (e.g., `/json/articles?nid=5`).
 * You can also use Contextual Filters if we want to just append the end of the path (e.g., `rest/views/articles/1`) for filtering results.
 
 #### Example Requests

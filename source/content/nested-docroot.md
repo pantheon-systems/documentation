@@ -21,7 +21,8 @@ While URLs are limited to the web docroot, PHP is not. Using a nested docroot al
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
 
 ## Disable One-click Updates
-If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
+
+If you wish to stop using one-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
 
 <TabList>
 

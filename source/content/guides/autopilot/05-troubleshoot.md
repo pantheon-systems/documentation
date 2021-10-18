@@ -17,7 +17,7 @@ This page is a list of common issues and solutions that you may encounter when u
 
 ## Error: Element Exclusions
 
-> We didn’t detect any plugins, modules or themes that were eligible for exclusion.
+<Accordion title="We didn’t detect any plugins, modules or themes that were eligible for exclusion." id="no-eligible-available" icon="info-sign">
 
 ### Issue
 
@@ -42,9 +42,11 @@ mutation {
 
 After that workflow completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
 
+</Accordion>
+
 ## Error: Drush Version
 
-> Drush version 8 required
+<Accordion title="Drush version 8 required." id="drush-8-required" icon="info-sign">
 
 ### Issue
 
@@ -56,13 +58,15 @@ Composer-managed sites should use Drush 10 and will not display the Drush versio
 
 Switch to Drush 8 in the `pantheon.yml` file.
 
+</Accordion>
+
 ## Error: Modified Plugin or Theme Name
 
-> Ran into an issue with a WordPress update and did not proceed with deployment.
+<Accordion title="Ran into an issue with a WordPress update and did not proceed with deployment." id="wp-update-issue" icon="info-sign">
 
 ### Issue
 
-The error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepency between the plugin name and the URL disables the plugin, and the Autopilot deployment can not continue.
+The error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepancy between the plugin name and the URL disables the plugin, and the Autopilot deployment can not continue.
 
 ### Diagnosis
 
@@ -79,6 +83,24 @@ Contact support for help.
 Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
 
 Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
+
+</Accordion>
+
+## Autopilot Ran Into an Unexpected Error
+
+<Accordion title="Autopilot ran into an unexpected error. Contact Support for assistance." id="unexpected-error" icon="info-sign">
+
+Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
+
+</Accordion>
+
+## Unexpected Error Preventing Autopilot From Taking Screenshots of Your Website
+
+<Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
+
+Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
+
+</Accordion>
 
 ## Error: Autopilot is blocked
 

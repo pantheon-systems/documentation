@@ -175,7 +175,7 @@ dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a246
 Project bootstrap (7.x-3.0) downloaded to                              [success]
 /srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/themes/bootstrap.
 $ terminus env:commit <site>.<env> --message="Adding bootstrap"
-Success: Successfully commited.
+Success: Successfully committed.
 +---------------------+---------+-----------+------------------------------------------+-------------------+
 | Time                | Author  | Labels    | Hash                                     | Message           |
 +---------------------+---------+-----------+------------------------------------------+-------------------+

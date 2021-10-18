@@ -11,6 +11,6 @@ In September 2017, Google [announced](https://security.googleblog.com/2017/09/br
 
 When using one of the above domains as a vanity domain, keep in mind that every environment domain must have HTTPS provisioned or that environment's domain will be inaccessible. Because Pantheon doesn't provision HTTPS for vanity domains, this will need to be set up and managed using a [custom certificate](/custom-certificates). You should also keep in mind that any Multidev environments created using a secure only TLD will need to have HTTPS provisioned before the site domain will work.
 
-When using one of the above TLDs as a custom domain for your site, Pantheon will provision the necessary certificates if you are using Pantheon's automated Global CDN. If the site is using a custom certificate, then each custom domain needs to have the certificate provisioned by the 3rd party used to manage HTTPS for the site.
+When using one of the above TLDs as a custom domain for your site, Pantheon will provision the necessary certificates if you are using Pantheon's automated Global CDN. If the site is using a custom certificate, then each custom domain needs to have the certificate provisioned by the 3rd-party used to manage HTTPS for the site.
 
 </Accordion>
