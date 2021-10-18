@@ -13,9 +13,35 @@ editpath: autopilot/04-troubleshoot.md
 reviewed: "2021-07-30"
 ---
 
-This page is a list of common issues and solutions that you may encounter when using Autopilot.
+This page helps troubleshoot common issues that you may encounter when using Autopilot.
 
-## Error: Element Exclusions
+## Re-run Autopilot
+
+If you have already attempted to troubleshoot an error, or if you want to confirm that the error is consistent, try running Autopilot on the site again:
+
+1. Autopilot will not allow updates to be queued until all errors have been reviewed and acknowledged.
+
+  If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
+
+1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
+
+1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <em class="fa fa-refresh"></em> **Refresh Updates** to force Autopilot to check for new components.
+
+1. Click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates** to manually run Autopilot.
+
+1. Autopilot Status, click **Queue Updates**
+
+### Re-run Autopilot If Tests Have Already Passed
+
+Manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
+
+To manually start an update, click **Actions** in the site's row on the Autopilot screen, and click **Start Applying Updates**.
+
+### Re-run Autopilot If Tests Were Approved After Dev Changes
+
+If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
+
+## Element Exclusions
 
 <Accordion title="We didn’t detect any plugins, modules or themes that were eligible for exclusion." id="no-eligible-available" icon="info-sign">
 
@@ -104,7 +130,7 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## Error: Autopilot is blocked
 
-> Autopilot is blocked due to uncommitted SFTP code changes.
+<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes" id="uncommitted-sftp" icon="info-sign">
 
 ### Issue
 
@@ -116,15 +142,8 @@ If commits are pushed to Dev after the Autopilot Multidev is created, you run th
 
 If Autopilot attempted to deploy, then either: tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
 
-
 ### Solution
 
-If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed. 
+If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
 
-#### How to Re-run Autopilot If Tests Have Already Passed
-
-You can manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
-
-#### How to Re-run Autopilot If Tests Were Approved After Dev Changes
-
-If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
+</Accordion>
