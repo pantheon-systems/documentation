@@ -101,3 +101,30 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
 
 </Accordion>
+
+## Error: Autopilot is blocked
+
+> Autopilot is blocked due to uncommitted SFTP code changes.
+
+### Issue
+
+Autopilot will fail if there are uncommitted SFTP code changes in the Dev environment.
+
+### Diagnosis
+
+If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk of having a merge conflict when Autopilot is pushed back to Dev.
+
+If Autopilot attempted to deploy, then either: tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
+
+
+### Solution
+
+If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed. 
+
+#### How to Re-run Autopilot If Tests Have Already Passed
+
+You can manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
+
+#### How to Re-run Autopilot If Tests Were Approved After Dev Changes
+
+If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
