@@ -41,6 +41,50 @@ To manually start an update, click **Actions** in the site's row on the Autopilo
 
 If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
 
+## Autopilot is blocked
+
+<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes" id="uncommitted-sftp" icon="info-sign">
+
+### Issue
+
+Autopilot will fail if there are uncommitted SFTP code changes in the Dev environment.
+
+### Diagnosis
+
+If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk of having a merge conflict when Autopilot is pushed back to Dev.
+
+If Autopilot attempted to deploy, then either: tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
+
+### Solution
+
+If you experience this error, it will likely be at the end of the flow, at which point you should [re-run Autopilot](#re-run-autopilot) with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
+
+</Accordion>
+
+## Autopilot Ran Into an Unexpected Error
+
+<Accordion title="Autopilot ran into an unexpected error. Contact Support for assistance." id="unexpected-error" icon="info-sign">
+
+Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
+
+</Accordion>
+
+## Drush Version
+
+<Accordion title="Drush version 8 required." id="drush-8-required" icon="info-sign">
+
+### Issue
+
+Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported.
+
+Composer-managed sites should use Drush 10 and will not display the Drush version error. Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+
+### Solution
+
+Switch to Drush 8 in the `pantheon.yml` file.
+
+</Accordion>
+
 ## Element Exclusions
 
 <Accordion title="We didn’t detect any plugins, modules or themes that were eligible for exclusion." id="no-eligible-available" icon="info-sign">
@@ -66,23 +110,7 @@ mutation {
 }
 ```
 
-After that workflow completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
-
-</Accordion>
-
-## Drush Version
-
-<Accordion title="Drush version 8 required." id="drush-8-required" icon="info-sign">
-
-### Issue
-
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported.
-
-Composer-managed sites should use Drush 10 and will not display the Drush version error. Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
-
-### Solution
-
-Switch to Drush 8 in the `pantheon.yml` file.
+After the workflow completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
 
 </Accordion>
 
@@ -112,38 +140,10 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 </Accordion>
 
-## Autopilot Ran Into an Unexpected Error
-
-<Accordion title="Autopilot ran into an unexpected error. Contact Support for assistance." id="unexpected-error" icon="info-sign">
-
-Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
-
-</Accordion>
-
 ## Unexpected Error Preventing Autopilot From Taking Screenshots of Your Website
 
 <Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
 
 Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
-
-</Accordion>
-
-## Autopilot is blocked
-
-<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes" id="uncommitted-sftp" icon="info-sign">
-
-### Issue
-
-Autopilot will fail if there are uncommitted SFTP code changes in the Dev environment.
-
-### Diagnosis
-
-If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk of having a merge conflict when Autopilot is pushed back to Dev.
-
-If Autopilot attempted to deploy, then either: tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
-
-### Solution
-
-If you experience this error, it will likely be at the end of the flow, at which point you should [re-run Autopilot](#re-run-autopilot) with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
 
 </Accordion>
