@@ -14,12 +14,15 @@ This process is quite similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 
 
 We will replace the entire file structure with the code from Integrated Composer's upstream, then re-add your contrib and custom code to the new codebase.
 
-## New Branch With IC Code
+## New Branch With Integrated Composer Code
 
-1. Create a local clone of custom upstream repository
+1. Create a local clone of custom upstream repository, using the SSH URL, and change directory into the cloned repository.
+  ```bash{promptUser:user}
+  git clone <ssh_url>
+  ```
 1. Add Integrated Composer upstream as a second remote and fetch:
   ```bash{promptUser:user}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic
+  git remote add ic https://github.com/pantheon-upstreams/drupal-project.git && git fetch ic
   ```
 1. Create a new `composerify` branch to work in:
    ```bash{promptUser:user}
@@ -27,19 +30,25 @@ We will replace the entire file structure with the code from Integrated Composer
    ```
 1. On the `composerify` branch, run `git rm -rf *` and commit "Removing all files" - this is because we're going to completely replace the file structure and re-add customizations:
    ```bash{promptUser:user}
-    git commit -m "Removing all files"
+    git rm -rf * && git commit -m "Removing all files"
     ``` 
 1. Add and commit files from integrated-composer upstream:
    ```bash{promptUser:user}
-   git checkout ic .
+   git checkout ic/master .
    ```
    ```bash{promptUser:user}
-  git commit -m "Add and commit Integrated Composer files"
-  ```
-1. Edit `upstream-configuration/composer.json` and change the `drupal/core-recommended` version to only Drupal 8: 
+   git add .
+   ```
+    ```bash{promptUser:user}
+     git commit -m "Add and commit Integrated Composer files"
+   ```
+1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8, and commit: 
   ```bash{promptUser:user}
     "drupal/core-recommended": "^8.8"
-    ```
+  ```
+  ```bash{promptUser:user}
+    git commit -a -m "Setting Drupal core version to ^8.8"
+  ```
 
 ## Add in Your Contrib and Custom Code
 
