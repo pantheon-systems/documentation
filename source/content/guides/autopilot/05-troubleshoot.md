@@ -70,7 +70,7 @@ After that workflow completes, refresh the Autopilot settings or restart the ini
 
 </Accordion>
 
-## Error: Drush Version
+## Drush Version
 
 <Accordion title="Drush version 8 required." id="drush-8-required" icon="info-sign">
 
@@ -86,7 +86,7 @@ Switch to Drush 8 in the `pantheon.yml` file.
 
 </Accordion>
 
-## Error: Modified Plugin or Theme Name
+## Modified Plugin or Theme Name
 
 <Accordion title="Ran into an issue with a WordPress update and did not proceed with deployment." id="wp-update-issue" icon="info-sign">
 
@@ -100,7 +100,7 @@ To determine which plugin is causing the issue:
 
 1. Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added.
 
-1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance among the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
+1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
 Contact support for help.
 
@@ -128,7 +128,7 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 </Accordion>
 
-## Error: Autopilot is blocked
+## Autopilot is blocked
 
 <Accordion title="Autopilot is blocked due to uncommitted SFTP code changes" id="uncommitted-sftp" icon="info-sign">
 
@@ -144,6 +144,6 @@ If Autopilot attempted to deploy, then either: tests have already passed; or the
 
 ### Solution
 
-If you experience this error, it will likely be at the end of the flow, at which point you should re-run Autopilot with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
+If you experience this error, it will likely be at the end of the flow, at which point you should [re-run Autopilot](#re-run-autopilot) with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
 
 </Accordion>
