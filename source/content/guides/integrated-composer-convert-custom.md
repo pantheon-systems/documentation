@@ -52,9 +52,14 @@ We will replace the entire file structure with the code from Integrated Composer
 
 ## Add in Your Contrib and Custom Code
 
+THIS IS THE FIRST PGH IN THE SECTIONS
+
 This process the same as in the [Add in the Custom and Contrib Code Needed to Run Your Site](https://pantheon.io/docs/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
 
+OPTIONAL! INSIDE A NOTE?
 If you want to audit your upstream's customizations, you may do so by comparing it with the drops-8 upstream. You can see the differences by adding the drops-8 upstream as a second remote and using `git diff` to compare the branches:
+1. `cd` back to main branch
+
 1. Add drops-8 as a second remote:
    ```bash{promptUser:user}
    git remote add drops-8 https://github.com/pantheon-systems/drops-8.git && git fetch drops-8
@@ -66,45 +71,46 @@ Assess the differences and note the ones that you will need to reapply to the In
 
 ### Modules
 
-1.  Get a list of the modules that will need to be re-added.
+1.  On the `composerify` branch, we will get a list of the modules that will need to be re-added.
     - **If you know that all the sites have the same contrib and custom modules**, you can get the list of modules from a single representative site:
-    `terminus drush <SITE_NAME>.dev  -- pm-list --type=module --no-core --status=enabled`
-    - **If the sites have different modules installed**, you'll need to audit the modules across all sites and compile a unified list.
-2. Audit modules on all sites - create and run this bash script:
-      - Create a new file called `audit_site_modules.sh` with the following content:
-      ```bash{promptUser:user}
-        #!/usr/bin/env bash
+    `terminus drush <SITE_NAME>.dev  -- pm-list --type=module --no-core --status=enabled` PLEASE NOTE THAT YOU WILL NEED THIS LIST IN NEXT STEPS.
+    - **If the sites have different contrib and custom modules installed**, you'll need to audit the modules across all sites and compile a unified list.
+ACCORDION! SUBSECTION OF NOT KNOWING.
+      - **Audit modules on all sites - create and run this bash script:
+        - Create a new file called `audit_site_modules.sh` with the following content:
+        ```bash{promptUser:user}
+          #!/usr/bin/env bash
 
-        echo 'Updating site list now with site urls from the custom Drupal 8 Upstream.'
-        SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
+          echo 'Updating site list now with site urls from the custom Drupal 8 Upstream.'
+          SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
 
-        for site in $SITES
-        do
-          echo "---------- $site -----------"
-          terminus drush $site.dev  -- pm-list --type=module --no-core --status=enabled
-          echo "----------------------------"
-          echo
-        done | tee d8_upstream_sites_modules.txt
+          for site in $SITES
+          do
+            echo "---------- $site -----------"
+            terminus drush $site.dev  -- pm-list --type=module --no-core --status=enabled
+            echo "----------------------------"
+            echo
+          done | tee d8_upstream_sites_modules.txt
 
-        for site in $SITES
-        do
-          echo "---------- $site -----------"
-          terminus drush $site.dev  -- pm-list --type=theme --no-core --status=enabled
-          echo "----------------------------"
-          echo
-        done | tee d8_upstream_sites_themes.txt
+          for site in $SITES
+          do
+            echo "---------- $site -----------"
+            terminus drush $site.dev  -- pm-list --type=theme --no-core --status=enabled
+            echo "----------------------------"
+            echo
+          done | tee d8_upstream_sites_themes.txt
 
-      ```
-      - Make it executable: `chmod +x audit_site_modules.sh`
-      - Run it: `./audit_site_modules.sh`
-      - It will create two new files in the same folder:
-        - `d8_upstream_sites_modules.txt` - list of **modules** from each site
-        - `d8_upstream_sites_themes.txt` - list of **themes** from each site
-        - Go through these files and build a list of modules and themes you'll need to add to the codebase.
+        ```
+        - Make it executable: `chmod +x audit_site_modules.sh`
+        - Run it: `./audit_site_modules.sh`
+        - It will create two new files in the same folder:
+          - `d8_upstream_sites_modules.txt` - list of **modules** from each site
+          - `d8_upstream_sites_themes.txt` - list of **themes** from each site
+          - Go through these files and build a list of modules and themes you'll need to add to the codebase.
 
 ### Contrib Modules and Themes
 
-1. In your terminal, change the current directory to the `upstream-configuration`: 
+1. In your terminal, FROM THE COMPOSERIFY BRANCH, change the current directory to the `upstream-configuration`: 
   ```bash{promptUser:user}
   cd upstream-configuration
   ```
@@ -114,9 +120,13 @@ Assess the differences and note the ones that you will need to reapply to the In
   composer require drupal/MODULE_NAME:^VERSION --no-update  
   ```
 
+ADD A NOTE: IF THE VERSION HAS 8.X IN IT, REMOVE THEN RUN COMMAND AGAIN
+
+NOW COMMIT IT!! BREAK OUT THIS STEP: git add . then git commit -m "Added contrib modules"
+
 ### Custom Modules and Themes
 
-For custom modules and themes, the process is the same as the main Upgrade to Drupal 9 document:
+For custom modules and themes, the process is the same as the main [Upgrade to Drupal 9](/guides/drupal-9-migration/upgrade-to-d9#modules-and-themes-1) document:
 
   Modules:
 
@@ -140,6 +150,9 @@ For custom modules and themes, the process is the same as the main Upgrade to Dr
 
 If your child sites contain site-specific code, you'll want to audit those differences from each site. Examples of site-specific code are: site-specific redirects, and custom modules only present on a specific site.
 1. Clone site repository
+  ```bash{promptUser:user}
+  git clone <child_site_ssh_url>
+  ```
 1. Add your custom upstream as a second remote and fetch:
   ```bash{promptUser:user}
   git remote add upstream <upstream's git URL> && git fetch upstream`
