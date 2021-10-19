@@ -29,9 +29,6 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. Click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates** to manually run Autopilot.
 
-1. To get the Autopilot Status, click **Queue Updates**
-
-
 ### Re-run Autopilot If Tests Have Already Passed
 
 Manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence.
