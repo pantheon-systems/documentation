@@ -31,7 +31,7 @@ We will replace the entire file structure with the code from Integrated Composer
 1. On the `composerify` branch, run `git rm -rf *` and commit "Removing all files" - this is because we're going to completely replace the file structure and re-add customizations:
    ```bash{promptUser:user}
     git rm -rf * && git commit -m "Removing all files"
-    ``` 
+    ```
 1. Add and commit files from integrated-composer upstream:
    ```bash{promptUser:user}
    git checkout ic/master .
@@ -42,7 +42,7 @@ We will replace the entire file structure with the code from Integrated Composer
     ```bash{promptUser:user}
      git commit -m "Add and commit Integrated Composer files"
    ```
-1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8, and commit: 
+1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8, and commit:
   ```bash{promptUser:user}
     "drupal/core-recommended": "^8.8"
   ```
@@ -110,19 +110,26 @@ ACCORDION! SUBSECTION OF NOT KNOWING.
 
 ### Contrib Modules and Themes
 
-1. In your terminal, FROM THE COMPOSERIFY BRANCH, change the current directory to the `upstream-configuration`: 
+1. In your terminal, FROM THE COMPOSERIFY BRANCH, change the current directory to the `upstream-configuration`:
   ```bash{promptUser:user}
   cd upstream-configuration
   ```
 
-1. For the each contrib module & theme in the list you've gathered, add each module with `composer require drupal/MODULE_NAME:^VERSION --no-update` and commit:
-  ```bash{promptUser:user}
-  composer require drupal/MODULE_NAME:^VERSION --no-update  
-  ```
+1. For each contrib module & theme in the list you've gathered, do the following steps
+    - Add the package and version with composer. If the version starts with `8.x-`, remove that and include only the version number after `8.x-`.  For example, if the version is `8.x-3.2` you will use the version number `3.2`
+      ```bash{promptUser:user}
+      composer require drupal/MODULE_NAME:^VERSION --no-update
+      ```
+    - Confirm that only `composer.json` has been modified:
+      ```bash{promptUser:user}
+      git status
+      ```
+      - If anything other than composer.json has been modified, you will need to add it to `.gitignore`
+    - Commit the change
+      ```bash{promptUser:user}
+      git commit -am "Adding MODULE_NAME"
+      ```
 
-ADD A NOTE: IF THE VERSION HAS 8.X IN IT, REMOVE THEN RUN COMMAND AGAIN
-
-NOW COMMIT IT!! BREAK OUT THIS STEP: git add . then git commit -m "Added contrib modules"
 
 ### Custom Modules and Themes
 
