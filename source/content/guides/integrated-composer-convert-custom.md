@@ -170,6 +170,17 @@ If your child sites contain site-specific code, you'll want to audit those diffe
   ```
   1. Take note of the differences, you will need to reapply these after applying the changes from the upstream.
 
+
+## Testing individual sites
+  - clone individual site repo (if you haven't already)
+  - add custom upstream as a remote
+  - create 'composerify' branch
+  - merge upstream's composerify branch
+  - push
+  - create multidev
+  - view multidev
+  - add individual site customizations
+
 ## Final Deployment
 
 Merge the "composerify" branch on the custom upstream onto the master branch.
