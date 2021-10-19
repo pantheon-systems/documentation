@@ -29,15 +29,18 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. Click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates** to manually run Autopilot.
 
+1. To get the Autopilot Status, click **Queue Updates**
+
+
 ### Re-run Autopilot If Tests Have Already Passed
 
-Manually start an update, or Autopilot will automatically reschedule one at your site's update cadence.
+Manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence.
 
 To manually start an update, click **Actions** in the site's row on the Autopilot screen, and click **Start Applying Updates**.
 
 ### Re-run Autopilot If Tests Were Approved After Dev Changes
 
-If a test that was waiting was approved after changing the Dev environment, Autopilot will check periodically to see if Dev has changed since Autopilot ran.
+If a test that was waiting was approved after changing the Dev environment, Autopilot will periodically check to see if Dev has changed since Autopilot last ran.
 
 ## Autopilot is blocked
 
