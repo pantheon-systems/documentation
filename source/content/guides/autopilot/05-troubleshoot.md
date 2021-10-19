@@ -31,6 +31,7 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. To get the Autopilot Status, click **Queue Updates**
 
+
 ### Re-run Autopilot If Tests Have Already Passed
 
 Manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence.
@@ -43,7 +44,7 @@ If a test that was waiting was approved after changing the Dev environment, Auto
 
 ## Autopilot is blocked
 
-<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes" id="uncommitted-sftp" icon="info-sign">
+<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes." id="uncommitted-sftp" icon="info-sign">
 
 ### Issue
 
@@ -93,7 +94,7 @@ Switch to Drush 8 in the `pantheon.yml` file.
 
 The list of elements is unavailable when Autopilot is started for the first time; it is only set after Autopilot is initialized.
 
-Refresh the extensions list used for exclusions, when Autopilot is started for the first time.
+Refresh the extensions list used for exclusions when Autopilot is started for the first time.
 
 ### Solution
 
@@ -120,7 +121,7 @@ After the workflow completes, refresh the Autopilot settings or restart the init
 
 ### Issue
 
-The error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepancy between the plugin name and the URL disables the plugin, and the Autopilot deployment can not continue.
+This error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepancy between the plugin name and the URL disables the plugin, and the Autopilot deployment cannot continue.
 
 ### Diagnosis
 
@@ -130,7 +131,7 @@ To determine which plugin is causing the issue:
 
 1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
-Contact support for help.
+If you need assistance, [contact Support](/support).
 
 ### Solution
 
