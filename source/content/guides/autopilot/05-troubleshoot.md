@@ -27,7 +27,7 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <em class="fa fa-refresh"></em> **Refresh Updates** to force Autopilot to check for new components.
 
-1. Click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates** to manually run Autopilot.
+1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates**.
 
 ### Re-run Autopilot If Tests Have Already Passed
 
