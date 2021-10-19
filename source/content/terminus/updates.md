@@ -71,7 +71,10 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version           | EOL Date  |
 | ----------------- | --------- |
-| 2.5.0             | TBD       |
+| 2.6.2             |           |
+| 2.6.1             |           |
+| 2.6.0             |           |
+| 2.5.0             |           |
 | 2.4.1             | 1/20/2022 |
 | 2.4.0             | 9/08/2021 |
 | 2.3.0             | 6/20/2021 |
