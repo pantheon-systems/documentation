@@ -38,6 +38,7 @@ function downloadTerminus($installdir, $package)
     echo("\nDownloading Terminus " . $version . " from " . $url . " to /tmp \n");
     $couldDownload = file_put_contents("/tmp/" . $package . ".phar", file_get_contents($url));
     echo("Moving to " . $installdir . "...\n");
+    exec("sudo chown -R $USER:$USER /usr/local/bin/");
     if(!rename("/tmp/" . $package . ".phar", $installdir . "/" . $package)){
         echo("\n" . $installdir . " requires admin rights to write to...\n");
         exec("sudo mv /tmp/" . $package . ".phar " . $installdir . "/" . $package);
