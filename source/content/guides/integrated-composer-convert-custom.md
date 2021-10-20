@@ -47,70 +47,85 @@ We will replace the entire file structure with the code from Integrated Composer
     "drupal/core-recommended": "^8.8"
   ```
   ```bash{promptUser:user}
-    git commit -a -m "Setting Drupal core version to ^8.8"
+    git commit -am "Setting Drupal core version to ^8.8"
   ```
 
 ## Add in Your Contrib and Custom Code
 
-THIS IS THE FIRST PGH IN THE SECTIONS
-
 This process the same as in the [Add in the Custom and Contrib Code Needed to Run Your Site](https://pantheon.io/docs/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
 
-OPTIONAL! INSIDE A NOTE?
-If you want to audit your upstream's customizations, you may do so by comparing it with the drops-8 upstream. You can see the differences by adding the drops-8 upstream as a second remote and using `git diff` to compare the branches:
-1. `cd` back to main branch
+<Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">
 
+If you would like to audit your upstream's customizations, you may do so by comparing it with the drops-8 upstream. You can see the differences by adding the drops-8 upstream as a second remote and using `git diff` to compare the branches:
+1. Change directories back to main branch
+   ```bash{promptUser:user}
+   cd main
+   ```
 1. Add drops-8 as a second remote:
    ```bash{promptUser:user}
    git remote add drops-8 https://github.com/pantheon-systems/drops-8.git && git fetch drops-8
    ```
-  * For a list of the differing files, use: `git diff --stat drops-8/master`
-  * For different lines within a specific file, use: `git diff drops-8/master <file>`
+  * For a list of the differing files, use:
+   ```bash{promptUser:user}
+   git diff --stat drops-8/master
+   ```
+  * For different lines within a specific file, use:
+   ```bash{promptUser:user}
+   git diff drops-8/master <file>
+   ```
 
 Assess the differences and note the ones that you will need to reapply to the Integrated Composer codebase.
+
+</Accordion>
 
 ### Modules
 
 1.  On the `composerify` branch, we will get a list of the modules that will need to be re-added.
     - **If you know that all the sites have the same contrib and custom modules**, you can get the list of modules from a single representative site:
-    `terminus drush <SITE_NAME>.dev  -- pm-list --type=module --no-core --status=enabled` PLEASE NOTE THAT YOU WILL NEED THIS LIST IN NEXT STEPS.
-    - **If the sites have different contrib and custom modules installed**, you'll need to audit the modules across all sites and compile a unified list.
-ACCORDION! SUBSECTION OF NOT KNOWING.
-      - **Audit modules on all sites - create and run this bash script:
-        - Create a new file called `audit_site_modules.sh` with the following content:
-        ```bash{promptUser:user}
-          #!/usr/bin/env bash
+     ```bash{promptUser:user}
+     terminus drush <SITE_NAME>.dev  -- pm-list --type=module --no-core --status=enabled
+     ```
+    **Please note:** you will need this list in next steps.
+    - **If you do not know whether the sites have the same contrib and custom modules installed**, you'll need to audit the modules across all sites and compile a unified list.
 
-          echo 'Updating site list now with site urls from the custom Drupal 8 Upstream.'
-          SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
+    <Accordion title="Audit Contrib and Custom Modules" id="audit-contrib-custom-modules" icon="wrench">
 
-          for site in $SITES
-          do
-            echo "---------- $site -----------"
-            terminus drush $site.dev  -- pm-list --type=module --no-core --status=enabled
-            echo "----------------------------"
-            echo
-          done | tee d8_upstream_sites_modules.txt
+    1. To audit modules on all sites, create a new file called `audit_site_modules.sh` with the following content, and run this bash script:
 
-          for site in $SITES
-          do
-            echo "---------- $site -----------"
-            terminus drush $site.dev  -- pm-list --type=theme --no-core --status=enabled
-            echo "----------------------------"
-            echo
-          done | tee d8_upstream_sites_themes.txt
+      ```bash{promptUser:user}
+      #!/usr/bin/env bash
 
-        ```
-        - Make it executable: `chmod +x audit_site_modules.sh`
-        - Run it: `./audit_site_modules.sh`
+      echo 'Updating site list now with site urls from the custom Drupal 8 Upstream.'
+      SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
+
+      for site in $SITES
+      do
+        echo "---------- $site -----------"
+        terminus drush $site.dev  -- pm-list --type=module --no-core --status=enabled
+        echo "----------------------------"
+        echo
+      done | tee d8_upstream_sites_modules.txt
+
+      for site in $SITES
+      do
+        echo "---------- $site -----------"
+        terminus drush $site.dev  -- pm-list --type=theme --no-core --status=enabled
+        echo "----------------------------"
+        echo
+      done | tee d8_upstream_sites_themes.txt
+       ```
+    1. Make it executable: `chmod +x audit_site_modules.sh`
+    1. Run it: `./audit_site_modules.sh`
         - It will create two new files in the same folder:
           - `d8_upstream_sites_modules.txt` - list of **modules** from each site
           - `d8_upstream_sites_themes.txt` - list of **themes** from each site
-          - Go through these files and build a list of modules and themes you'll need to add to the codebase.
+    1. Go through these files and build a list of modules and themes you'll need to add to the codebase.
+
+    </Accordion>
 
 ### Contrib Modules and Themes
 
-1. In your terminal, FROM THE COMPOSERIFY BRANCH, change the current directory to the `upstream-configuration`:
+1. In your terminal, from the `composerify` branch, change the current directory to the `upstream-configuration`:
   ```bash{promptUser:user}
   cd upstream-configuration
   ```
@@ -129,7 +144,6 @@ ACCORDION! SUBSECTION OF NOT KNOWING.
       ```bash{promptUser:user}
       git commit -am "Adding MODULE_NAME"
       ```
-
 
 ### Custom Modules and Themes
 
