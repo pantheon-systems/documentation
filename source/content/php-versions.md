@@ -28,6 +28,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 | Version                                      | Recommended | Status |
 | --------------------------------------------:| ----------- | ------ |
+| [8.0](https://v80-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | Active |
 | [7.4](https://v74-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | Active |
 | [7.3](https://v73-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | Active |
 | [7.2](https://v72-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | Active |
