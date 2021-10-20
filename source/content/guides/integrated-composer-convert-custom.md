@@ -185,15 +185,37 @@ If your child sites contain site-specific code, you'll want to audit those diffe
   1. Take note of the differences, you will need to reapply these after applying the changes from the upstream.
 
 
-## Testing individual sites
-  - clone individual site repo (if you haven't already)
-  - add custom upstream as a remote
-  - create 'composerify' branch
-  - merge upstream's composerify branch
-  - push
-  - create multidev
-  - view multidev
-  - add individual site customizations
+## Testing individual sites and applying site-specific customizations
+
+Do the following steps for each child site you wish to test or that has unique code customizations.
+
+1. Clone the child site's repository. You can get the command from the "Clone with Git" button on the dashboard. The command will look something like:
+  ```bash{promptUser:user}
+  git clone ssh://codeserver.dev.SITE_ID@codeserver.dev.SITE_ID.drush.in:2222/~/repository.git <SITE_NAME>
+  ```
+1. Change directory into the newly created folder.
+  ```bash{promptUser:user}
+  cd <SITE_NAME>
+  ```
+1. Add your custom upstream as a second remote called 'upstream'
+  ```bash{promptUser:user}
+  git remote add upstream <upstream's git URL> && git fetch upstream`
+  ```
+1. Create a new branch based on the upstream's 'composerify' branch
+  ```bash{promptUser:user}
+  git checkout -b composerify --no-track upstream/composerify
+  ```
+1. Push the 'composerify' branch to the child site's repo
+  ```bash{promptUser:user}
+  git push --set-upstream origin composerify
+  ```
+1. Create a new multidev environment from the 'composerify' branch using `terminus`
+  ```bash{promptUser:user}
+  terminus multidev:create <SITE_NAME>.dev composerify
+  ```
+1. Re-add, commit, and push any code customizations that were specific/unique to this site
+1. View & test the multidev
+
 
 ## Final Deployment
 
