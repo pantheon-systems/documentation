@@ -654,6 +654,15 @@ This workaround may potentially break again with the next plugin update, and you
 
 ___
 
+## [Site24x7](https://wordpress.org/plugins/search/site24x7/)
+
+<ReviewDate date="2021-10-20" />
+
+**Issue:** Site24x7 is an uptime monitor that pings a site in order to monitor various functions and stability. Each time a site is pinged, Site24x7 uses a unique user agent string and/or various IP addresses, which may falsely inflate traffic metrics with Pantheon. 
+
+**Solution:** Consider using New Relic (#new-relic) or Pingdom (#pingdom-uptime-check) to monitor uptime - Pantheon maintains partnerships with these services and does not meter/bill for requests from their user agents. 
+___
+
 ## Slider Revolution
 
 <ReviewDate date="2020-10-01" />
