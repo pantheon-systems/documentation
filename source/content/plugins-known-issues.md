@@ -343,6 +343,7 @@ ___
 1. Create a [symlink](#assumed-write-access).
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+2. Disable Dynamic CSS at **Divi** > **Theme Options** > **General** > **Performance** and click to disable Dynamic CSS.
 
 **Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
 
