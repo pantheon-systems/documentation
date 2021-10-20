@@ -187,31 +187,31 @@ If your child sites contain site-specific code, you'll want to audit those diffe
 
 ## Testing individual sites and applying site-specific customizations
 
-Do the following steps for each child site you wish to test or that has unique code customizations.
+Do the following steps for each child site you wish to test or that has site-specific code. Examples of site-specific code are: site-specific redirects, and custom modules only present on a specific site.
 
 1. Clone the child site's repository. You can get the command from the "Clone with Git" button on the dashboard. The command will look something like:
   ```bash{promptUser:user}
-  git clone ssh://codeserver.dev.SITE_ID@codeserver.dev.SITE_ID.drush.in:2222/~/repository.git <SITE_NAME>
+  git clone ssh://codeserver.dev.<SITE_ID>@codeserver.dev.<SITE_ID>.drush.in:2222/~/repository.git <SITE_NAME>
   ```
 1. Change directory into the newly created folder.
   ```bash{promptUser:user}
   cd <SITE_NAME>
   ```
-1. Add your custom upstream as a second remote called 'upstream'
+1. Add your custom upstream as a second remote called 'upstream' and fetch. You can find the custom upstream's git URL on the repository dashboard (insert picture here)
   ```bash{promptUser:user}
-  git remote add upstream <upstream's git URL> && git fetch upstream`
+  git remote add upstream <upstream's git URL> && git fetch upstream
   ```
-1. Create a new branch based on the upstream's 'composerify' branch
+1. Create a new branch called `ic-test` based on the upstream's 'composerify' branch
   ```bash{promptUser:user}
-  git checkout -b composerify --no-track upstream/composerify
+  git checkout -b ic-test --no-track upstream/composerify
   ```
-1. Push the 'composerify' branch to the child site's repo
+1. Push the new `ic-test` branch to your Pantheon site
   ```bash{promptUser:user}
-  git push --set-upstream origin composerify
+  git push --set-upstream origin ic-test
   ```
-1. Create a new multidev environment from the 'composerify' branch using `terminus`
+1. Create a new multidev environment from the `ic-test` branch using `terminus`
   ```bash{promptUser:user}
-  terminus multidev:create <SITE_NAME>.dev composerify
+  terminus multidev:create <SITE_NAME>.dev ic-test
   ```
 1. Re-add, commit, and push any code customizations that were specific/unique to this site
 1. View & test the multidev
