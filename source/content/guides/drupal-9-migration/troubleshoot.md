@@ -63,7 +63,7 @@ Given the nature of the bug, it might be easier to reinstall Drupal 9.
 | Module Name                                                                                 | Drupal 8 Version? | Drupal 9 Version? |
 |---------------------------------------------------------------------------------------------|:-----------:|:-----------:|
 | [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) |     Yes     |     Yes     |
-| [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |   Not yet   |
+| [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |     Yes     |
 
 ### Site-local Drush Is Required for Drupal 9 Sites
 
