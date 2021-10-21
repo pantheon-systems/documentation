@@ -12,7 +12,7 @@ reviewed: "2021-10-13"
 
 This process is quite similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/docs/guides/drupal-9-migration/upgrade-to-d9) guide, except that we're staying on Drupal 8--to defer the Drupal 9 upgrade to later--and with some special considerations for custom upstreams.
 
-We will replace the entire file structure with the code from Integrated Composer's upstream, then re-add your contrib and custom code to the new codebase.
+Working in a new branch, you will replace the entire file structure with the code from Pantheon's Integrated Composer upstream, then re-add your contrib and custom code to the new codebase. Then you will create multidev environments on individual sites for testing and to apply any site-specific code customizations.
 
 ## New Branch With Integrated Composer Code
 
@@ -167,23 +167,6 @@ For custom modules and themes, the process is the same as the main [Upgrade to D
 
   Follow suit with any other custom code you need to carry over.
 
-## Individual Site Customizations
-
-If your child sites contain site-specific code, you'll want to audit those differences from each site. Examples of site-specific code are: site-specific redirects, and custom modules only present on a specific site.
-1. Clone site repository
-  ```bash{promptUser:user}
-  git clone <child_site_ssh_url>
-  ```
-1. Add your custom upstream as a second remote and fetch:
-  ```bash{promptUser:user}
-  git remote add upstream <upstream's git URL> && git fetch upstream`
-  ```
-1. Run a `git diff` of your sites code against the upstream:
-  ```bash{promptUser:user}
-  git diff upstream/master
-  ```
-  1. Take note of the differences, you will need to reapply these after applying the changes from the upstream.
-
 
 ## Testing individual sites and applying site-specific customizations
 
@@ -197,11 +180,11 @@ Do the following steps for each child site you wish to test or that has site-spe
   ```bash{promptUser:user}
   cd <SITE_NAME>
   ```
-1. Add your custom upstream as a second remote called 'upstream' and fetch. You can find the custom upstream's git URL on the repository dashboard (insert picture here)
+1. Add your custom upstream as a second remote called `upstream` and fetch. You can find the custom upstream's git URL on the repository dashboard (insert picture here)
   ```bash{promptUser:user}
   git remote add upstream <upstream's git URL> && git fetch upstream
   ```
-1. Create a new branch called `ic-test` based on the upstream's 'composerify' branch
+1. Create a new branch called `ic-test` based on the upstream's `composerify` branch.  If this site contains unique code customizations, you will be merging this branch later.
   ```bash{promptUser:user}
   git checkout -b ic-test --no-track upstream/composerify
   ```
@@ -213,10 +196,35 @@ Do the following steps for each child site you wish to test or that has site-spe
   ```bash{promptUser:user}
   terminus multidev:create <SITE_NAME>.dev ic-test
   ```
-1. Re-add, commit, and push any code customizations that were specific/unique to this site
-1. View & test the multidev
+1. Re-add, commit, and push any code customizations that were specific or unique to this site.
+   You can compare the site's master branch to your custom upstream's master branch using the following commands.
+
+   See files which have been changed:
+    ```bash{promptUser:user}
+    git diff --stat origin/master upstream/master
+    ```
+
+    See the line-by-line differences for a specific file:
+    ```bash{promptUser:user}
+    git diff origin/master upstream/master -- pantheon.yml
+    ```
+1. View & test the multidev [INSERT SCREENSHOT SHARED IN SLACK]
 
 
 ## Final Deployment
 
-Merge the "composerify" branch on the custom upstream onto the master branch.
+When you are ready...
+
+1. Merge the `composerify` branch on the custom upstream into the `master` branch and push.
+    ```bash{promptUser:user}
+    git checkout master
+    ```
+
+    ```bash{promptUser:user}
+    git merge composerify && git push origin master
+    ```
+
+1. Apply the upstream updates to your individual sites.  This will apply them only to the `dev` environment.
+1. If you applied any site-specific code to individual sites' `ic-test` multidev, then merge that multidev into the `dev` environment.
+1. Confirm the dev environment is working as expected.
+1. Deploy to live when ready.
