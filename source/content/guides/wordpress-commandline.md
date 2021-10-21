@@ -161,7 +161,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 4. Deploy the code to Test and pull content down from Live:
 
   ```bash
-  terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb --cc --note="Deploy C7 plugin"
+  terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb  --note="Deploy C7 plugin"
   ```
 
   <Alert title="Note" type="info">
@@ -179,7 +179,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 6. Once you've experimented in the Test environment and verified that your new plugin is working, and everything else is still in working order, deploy to Live:
 
   ```bash
-  terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy after CF7 Install"
+  terminus env:deploy $TERMINUS_SITE.live --updatedb  --note="Deploy after CF7 Install"
   ```
 
   <Alert title="Note" type="info">
@@ -241,7 +241,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 6. Deploy the themes to Test and pull content down from Live:
 
   ```bash
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploy Themes"
+  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb  --note="Deploy Themes"
   ```
 
   Apply configuration changes and make sure everything looks good on the Test environment's site URL.
@@ -249,7 +249,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 7. Deploy code to Live, then apply configuration changes:
 
   ```bash
-  terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy Themes"
+  terminus env:deploy $TERMINUS_SITE.live --updatedb  --note="Deploy Themes"
   ```
 
 ## The Power of Terminus and WP-CLI
