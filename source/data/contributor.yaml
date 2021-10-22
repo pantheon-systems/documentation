@@ -24,7 +24,7 @@
   avatar: //github.com/michellecolon-pantheon.png?size=460
   bio: Technical Writer for Pantheon
   github: //github.com/michellecolon-pantheon
-  linkedin: //www.linkedin.com/in/michellecolon  
+  linkedin: //www.linkedin.com/in/michellecolon
 - id: eabquina
   name: Eladio Abquina
   bio: Engagement Manager, Professional Services
@@ -66,6 +66,10 @@
   bio: Senior Content Strategist
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/IMG_2047.jpg
   linkedin: https://www.linkedin.com/in/caitlin-lee-bishop/
+- id: clintonPantheon
+  name: Clinton Bowen
+  github: //github.com/clintonPantheon
+  avatar: //avatars.githubusercontent.com/u/38017436?v=4
 - id: albertcausing
   name: Albert Causing
   bio: Customer Success Engineer
