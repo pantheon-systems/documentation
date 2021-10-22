@@ -62,61 +62,6 @@ To help generate CAA records, please see the free online tool: <https://sslmate.
 
 CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
 
-## Advanced Global CDN and Manually Managed Custom Certificates
-
-Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) provide the following certificate bundle:
-
-  - Main Certificate
-  - Intermediate Certificate
-  - Private Key
-
-Once Pantheon Support has confirmed receipt:
-
-1. [Add the domain to your environment](/domains#add-a-custom-domain)
-
-  If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
-
-1. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
-
-  ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
-
-1. [Test Before Going Live](#test-before-going-live) (optional, recommended)
-
-1. Update `A` and `AAAA` records to:
-
-  ```none
-  CNAME (all subdomains):
-  advcdn-pantheon.map.fastly.net
-  
-  A (apex domains):
-  151.101.2.228
-  151.101.66.228
-  151.101.130.228
-  151.101.194.228
-  
-  AAAA (apex domains):
-  2a04:4e42::740
-  2a04:4e42:200::740
-  2a04:4e42:400::740
-  2a04:4e42:600::740
-  2a04:4e42:800::740
-  2a04:4e42:a00::740
-  2a04:4e42:c00::740
-  2a04:4e42:e00::740
-  ```
-
-Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
-
-Since information about AGCDN is not available in the Dashboard, Support can help confirm configuration once complete.
-
-## Test Before Going Live
-
-Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
-
-<Partial file="_hosts-file.md" />
-
-For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
-
 ## Frequently Asked Questions
 
 ### Do I need a separate certificate for each site in my organization?
