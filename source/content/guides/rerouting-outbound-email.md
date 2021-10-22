@@ -168,8 +168,8 @@ You can do this through the Site Dashboard and the Drupal Admin UI, or by using 
 ```bash{promptUser: user}
 terminus auth:login
 terminus drush <site>.test -- en reroute_email -y
-terminus env:deploy <site>.test --sync-content  --updatedb --note="Initial deploy. Reroute Email demo"
-terminus env:deploy <site>.live  --updatedb --note="Initial deploy. Reroute Email demo"
+terminus env:deploy <site>.test --sync-content --updatedb --note="Initial deploy. Reroute Email demo"
+terminus env:deploy <site>.live --updatedb --note="Initial deploy. Reroute Email demo"
 terminus drush <site>.test -- en reroute_email -y
 terminus drush <site>.live -- en reroute_email -y
 ```
