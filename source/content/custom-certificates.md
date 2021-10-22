@@ -55,8 +55,8 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 
 A **Certification Authority Authorization** (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain. In order to ensure your custom certificate is served for all traffic, you must prevent Let’s Encrypt from issuing certificates. You have two options to prevent Let’s Encrypt from issuing certificates for domains on your custom certificate:
 
-- An empty CAA policy,
-- CAA records permitting your CA, but not Let’s Encrypt.
+- An empty CAA policy
+- CAA records permitting your CA, but not Let’s Encrypt
 
 To help generate CAA records, please see the free online tool: <https://sslmate.com/caa/>
 
@@ -105,7 +105,7 @@ Once Pantheon Support has confirmed receipt:
   2a04:4e42:e00::740
   ```
 
-  Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
+Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
 
 Since information about AGCDN is not available in the Dashboard, Support can help confirm configuration once complete.
 
@@ -129,7 +129,7 @@ Please allow two business days to get a CSR and load the certificate.
 
 ### How do I renew or replace my custom certificate?
 
-45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
+About 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
 
 To update a certificate with additional domains, [contact support](/support) with the following details:
 
