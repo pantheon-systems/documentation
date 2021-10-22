@@ -31,7 +31,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 <DNSProviderDocs />
 
 If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org) certificate you can run diagnostics at [Let's Debug](https://letsdebug.net/). This tool can identify an array of issues specifically for [Let's Encrypt](https://letsencrypt.org) certificates including problems with DNS, nameservers, networking issues, common website misconfigurations, and CA policy issues.
- 
+
 </Accordion>
 
 <Partial file="enable-https.md" />
@@ -41,6 +41,8 @@ If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically provisions a Let's Encrypt certificate for your site, and always renews it automatically, for no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them 30 days before expiration.
 
 <Partial file="https-requirements.md" />
+
+## Technical Specifications
 
 <Partial file="tables/https-specs.md" />
 

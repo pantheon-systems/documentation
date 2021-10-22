@@ -6,15 +6,19 @@ tags: [cdn, https, professional-services]
 reviewed: "2021-08-25"
 ---
 
-A concierge service is now available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
+A concierge service is now available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise?docs).
 
-## Manually Managed Custom Certificates
+The steps differ between sites with [Pantheon Global CDN](/#manually-managed-custom-certificates) and sites with [Advanced Global CDN](#advanced-global-cdn-and-manually-managed-custom-certificates).
+
+## Manually Managed Custom Certificate with Pantheon Global CDN
 
 If you require a custom, dedicated certificate, you can now bring it to the Global CDN. This is a paid service that our Sales Team can help you with.
 
-1. Please [contact sales](https://pantheon.io/contact-us) if you are not a contract customer.
+1. Contact your account manager or [contact sales](https://pantheon.io/contact-sales?docs) if you are not a contract customer.
 
-1. After a closed contract, the Pantheon Onboarding Team will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information. You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
+1. After a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
+
+  You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
 
 1. Once you have a set of certificates from the CA, send us:
 
@@ -39,19 +43,15 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 
 1. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
-1. [Disable Let's Encrypt by adding CAA DNS records](#disable-lets-encrypt-with-caa-records-required).
+1. [Disable Let's Encrypt by adding CAA DNS records](#disable-lets-encrypt-with-caa-records).
 
 1. Update `A` and `AAAA` records provided by Pantheon Support. Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
 
-## Test Before Going Live
+### Technical Specifications
 
-Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
+<Partial file="tables/https-specs.md" />
 
-<Partial file="_hosts-file.md" />
-
-For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
-
-## Disable Let's Encrypt with CAA Records (Required)
+### Disable Let's Encrypt with CAA Records
 
 A **Certification Authority Authorization** (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain. In order to ensure your custom certificate is served for all traffic, you must prevent Let’s Encrypt from issuing certificates. You have two options to prevent Let’s Encrypt from issuing certificates for domains on your custom certificate:
 
@@ -62,7 +62,60 @@ To help generate CAA records, please see the free online tool: <https://sslmate.
 
 CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
 
-<Partial file="tables/https-specs.md" />
+## Advanced Global CDN and Manually Managed Custom Certificates
+
+Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) provide the following certificate bundle:
+
+  - Main Certificate
+  - Intermediate Certificate
+  - Private Key
+
+Once Pantheon Support has confirmed receipt:
+
+1. [Add the domain to your environment](/domains#add-a-custom-domain)
+
+  If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
+
+1. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
+
+  ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
+
+1. [Test Before Going Live](#test-before-going-live) (optional, recommended)
+
+1. Update `A` and `AAAA` records to:
+
+  ```none
+  CNAME (all subdomains):
+  advcdn-pantheon.map.fastly.net
+  
+  A (apex domains):
+  151.101.2.228
+  151.101.66.228
+  151.101.130.228
+  151.101.194.228
+  
+  AAAA (apex domains):
+  2a04:4e42::740
+  2a04:4e42:200::740
+  2a04:4e42:400::740
+  2a04:4e42:600::740
+  2a04:4e42:800::740
+  2a04:4e42:a00::740
+  2a04:4e42:c00::740
+  2a04:4e42:e00::740
+  ```
+
+  Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
+
+Since information about AGCDN is not available in the Dashboard, Support can help confirm configuration once complete.
+
+## Test Before Going Live
+
+Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
+
+<Partial file="_hosts-file.md" />
+
+For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
 ## Frequently Asked Questions
 
@@ -76,7 +129,7 @@ Please allow two business days to get a CSR and load the certificate.
 
 ### How do I renew or replace my custom certificate?
 
-45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for [bringing a custom certificate](#option-2-manually-managed-custom-certificates)).
+45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
 
 To update a certificate with additional domains, [contact support](/support) with the following details:
 
@@ -118,7 +171,7 @@ AAAA record 2:  `2620:12a:8001::X`
 
 ### What if my DNS manager doesn't support CAA DNS records?
 
-CAA records are required  to [prohibit Let's Encrypt from issuing certificates](#disable-lets-encrypt-with-caa-records-required). If your DNS provider does not support CAA records, consider one that does. If using a DNS provider that supports CAA records is not possible, please inform your Engagement Manager, as our [Professional Services](/guides/professional-services) team can help.
+CAA records are required to [prohibit Let's Encrypt from issuing certificates](#disable-lets-encrypt-with-caa-records). If your DNS provider does not support CAA records, consider one that does. If using a DNS provider that supports CAA records is not possible, please inform your Engagement Manager, as our [Professional Services](/guides/professional-services) team can help.
 
 ## Caveats / Known Issues
 
