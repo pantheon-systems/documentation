@@ -186,7 +186,7 @@ You may have heard that some Drupal 8 developers are [using Composer](/composer)
 1. Deploy the changes to the Test environment:
 
   ```bash{promptUser: user}
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb   --note="Deploying exported config to enable modules"
+  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying exported config to enable modules"
   ```
 
   <Alert title="Note" type="info">
@@ -218,7 +218,7 @@ You may have heard that some Drupal 8 developers are [using Composer](/composer)
 1. Push your code changes to the Live environment:
 
   ```bash{promptUser: user}
-  terminus env:deploy $TERMINUS_SITE.live --updatedb   --note="Deploying exported config to enable modules"
+  terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying exported config to enable modules"
   ```
 
 1. Import the configuration on the Live environment:
@@ -272,7 +272,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 1. Deploy code and import configuration changes to Test:
 
   ```bash{outputLines: 2}
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb  --note="Deploying glossary View"
+  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying glossary View"
 
   terminus drush $TERMINUS_SITE.test -- config-import -y
   ```
@@ -282,7 +282,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 1. Deploy to the Live environment and import the changes:
 
   ```bash{outputLines: 2}
-  terminus env:deploy $TERMINUS_SITE.live --updatedb  --note="Deploying glossary View"
+  terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying glossary View"
 
   terminus drush $TERMINUS_SITE.live -- config-import -y
   ```
