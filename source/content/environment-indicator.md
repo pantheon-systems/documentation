@@ -61,7 +61,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.live -- plugin activate pantheon-hud
  ```
 
-All environments will now show the following indicator for logged in users with the `manage_options` capability:
+All environments will now show the following indicator for users who are logged in with the `manage_options` capability:
 
 ![Pantheon HUD](../images/pantheon-hud.png)
 
