@@ -87,7 +87,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
  ```bash{promptUser: user}
- terminus env:deploy <site>.test --sync-content  --updatedb --note="Install WordPress Native PHP Sessions plugin"
+ terminus env:deploy <site>.test --sync-content --updatedb --note="Install WordPress Native PHP Sessions plugin"
  ```
  ([More options for this command](/terminus/commands/env-deploy))
 
@@ -100,7 +100,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
 
  ```bash{promptUser: user}
- terminus env:deploy <site>.live  --note="Install WordPress Native PHP Sessions plugin"
+ terminus env:deploy <site>.live --note="Install WordPress Native PHP Sessions plugin"
  ```
  ([More options for this command](/terminus/commands/env-deploy))
 
