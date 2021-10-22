@@ -211,8 +211,8 @@
 
     },
     {
-      "zerox" : "site deploy --site=<site> --env=<env> --sync-content  --updatedb --note=<note>",
-      "onex" : "env:deploy <site>.<env> --sync-content  --updatedb --note=<note>"
+      "zerox" : "site deploy --site=<site> --env=<env> --sync-content --updatedb --note=<note>",
+      "onex" : "env:deploy <site>.<env> --sync-content --updatedb --note=<note>"
 
     },
     {
