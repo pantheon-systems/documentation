@@ -30,21 +30,25 @@ Once you have received a set of certificates from the CA, send the following to 
 
 <TabList>
 
-  <Tab title="For Global CDN" id="gcdn">
+  <Tab title="For Global CDN" id="gcdn" active={true}>
+    
     Sites with [Global CDN](/global-cdn) should provide the following:
 
    - The end-client certificate
    - Any intermediate certificates provided by the CA.
 
   Be sure to send these as separate files, not a "chained cert."
+    
  </Tab>
-    <Tab title="For Advanced Global CDN" id="agcdn">
+  
+ <Tab title="For Advanced Global CDN" id="agcdn">
 
 Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
 
    - Main Certificate
    - Intermediate Certificate
    - Private Key.
+   
  </Tab>
   
 </TabList>
