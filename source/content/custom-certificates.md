@@ -30,7 +30,7 @@ Once you have received a set of certificates from the CA, send the following to 
 
 <TabList>
 
-  <Tab title="For Global CDN" id="gcdn" active={true}>
+  <Tab title="For Global CDN" id="gcdn">
     Sites with [Global CDN](/global-cdn) should provide the following:
 
    - The end-client certificate
