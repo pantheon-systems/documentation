@@ -10,56 +10,56 @@ This article provides an overview of the steps to set up and work with manually 
 
 Custom Certificates service is available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. To get started, contact your account manager or our [Sales Team](https://pantheon.io/contact-us?docs).
 
-## Set Up Your Site To Use a Custom Certificate
+## Add a Custom Certificate
+
+### Send the CSR to Your CA
 
 Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). 
 
-<Alert title="CSR Note" type="info">
+#### CSR Notes
   
-  You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
+- You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
 
-</Alert>
+- Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
 
-### CA Limitations
-
-Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
-
-### Send Certificate Information 
+### Send the Certificates to Pantheon 
 
 Once you have received a set of certificates from the CA, send the following to your Pantheon Account Team:
 
 <TabList>
 
-  <Tab title="For Global CDN" id="gcdn" active={true}>
-    
+<Tab title="For Global CDN" id="ccgcdn" active={true}>
+
 Sites with [Global CDN](/global-cdn) should provide the following:
 
    1. The end-client certificate
    1. Any intermediate certificates provided by the CA.
 
-  Be sure to send these as separate files, not a "chained cert."
+Be sure to send these as separate files, not a "chained cert."
+
+Please allow two business days for your Account Team to load the certificate.
     
- </Tab>
-  
- <Tab title="For Advanced Global CDN" id="agcdn">
+</Tab>
+
+<Tab title="For AGCDN" id="ccagcdn">
 
 Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
 
 1. Main Certificate
 1. Intermediate Certificate
 1. Private Key.
-   
- </Tab>
-  
-</TabList>
 
 Please allow two business days for your Account Team to load the certificate.
+
+</Tab>
+
+</TabList>
 
 ### Add the Domain
 
 Next, [add the domain to your environment](/domains#add-a-custom-domain).
 
-  If you are be presented with the option to **Verify your domain to provision HTTPS**. Skip the verification by clicking **Skip to updating DNS**.
+  If you are presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
 
 Once the certificate is in place, you will see the following under **Details** for your domain(s):
 
@@ -78,13 +78,25 @@ To help generate CAA records, please see the free online tool: <https://sslmate.
 
 CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
 
-#### Let's Encrypt Certificate Served Instead of Custom Certificate
+#### Issue: A Let's Encrypt Certificate is being served instead of the custom certificate
 
 If a Let's Encrypt Certificate is deployed before the CAA record preventing it, [contact Pantheon Support](/support) for assistance. Please allow at least 3 business days for Pantheon to resolve the Let's Encrypt Certificate.
 
 ### Update A and AAAA Records
 
 Update `A` and `AAAA` records provided by Pantheon Support. Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
+
+## Renew or Replace a Custom Certificate
+
+About 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
+
+To update a certificate with additional domains, [contact Pantheon Support](/support) with the following details:
+
+- The current common name (CN) and any SANs
+- A colon-separated list of domains the certificate is valid for
+- The updated certificate attached
+
+It may take up to two business days to process the request.
 
 ## Remove a Custom Certificate
 
@@ -96,18 +108,6 @@ All sites require an encryption certificate. To downgrade a site that uses a cus
 ### Do I need a separate certificate for each site in my organization?
 
 You can use a single certificate to cover multiple domains spread across various environments or sites. Pantheon's Global and Advanced Global CDN use Server Name Indication (SNI), which automatically matches inbound requests with an appropriate certificate, including custom certificates.
-
-### How do I renew or replace my custom certificate?
-
-About 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
-
-To update a certificate with additional domains, [contact support](/support) with the following details:
-
-- The current common name (CN) and any SANs
-- A colon-separated list of domains the certificate is valid for
-- The updated certificate attached
-
-It may take up to two business days to process the request.
 
 ### What about sites purchased online?
 
