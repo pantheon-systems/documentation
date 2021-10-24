@@ -24,14 +24,6 @@ The goals of this upgrade are to:
 
 - update any dependencies.
 
-<Alert title="Multidev Required" type="danger">
-
-To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
-
-Pantheon support is not available to users who avoid the Multidev steps.
-
-</Alert>
-
 ## Will This Guide Work for Your Site?
 
 This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
