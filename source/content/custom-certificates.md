@@ -100,7 +100,7 @@ It may take up to two business days to process the request.
 
 ## Remove a Custom Certificate
 
-All sites require an encryption certificate. To downgrade a site that uses a custom certificate, modify the site's CAA records to re-enable Pantheon’s [Global CDN](/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
+All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
 
 
 ## Frequently Asked Questions
