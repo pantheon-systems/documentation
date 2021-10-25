@@ -57,6 +57,20 @@
     - title: 'Migrate your Sites to Pantheon'
       subtitle: 'Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.'
       subtopic-lists:
+        - title: 'Integrated Composer'
+          links:
+            - text: 'Integrated Composer Overview'
+              url: '/integrated-composer'
+            - text: 'Get Started with Composer'
+              url: '/composer'
+        - title: 'Upgrade and Migrate to Drupal 9'
+          links:
+            - text: 'Drupal 9'
+              url: '/drupal-9'          
+            - text: 'Drupal 9 Migration Guide'
+              url: '/guides/drupal-9-migration'
+            - text: 'Pantheon Search with Solr 8 for Drupal 9'
+              url: '/guides/solr-drupal/solr-drupal-9'      
         - title: 'Guided Migrations'
           links:
             - text: 'Guided WordPress Migrations'
