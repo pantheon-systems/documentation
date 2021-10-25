@@ -1,7 +1,7 @@
 ---
 title: Apache Solr for Drupal
 subtitle: Using Solr 8 on Drupal 9
-description: Guide to getting started with Pantheon Search Solr 8 on Drupal 9
+description: Information on using Pantheon Search with Solr 8 on Drupal 9
 cms: "Drupal 9"
 categories: [integrate]
 tags: [solr, search, modules]
