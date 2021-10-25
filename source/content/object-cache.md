@@ -477,6 +477,10 @@ wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
 
 This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
 
+### Filepath Error
+
+
+
 ## Frequently Asked Questions
 
 ### How much Object cache is available for each plan level?
