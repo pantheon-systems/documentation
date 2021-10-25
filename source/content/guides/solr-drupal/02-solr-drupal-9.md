@@ -37,7 +37,7 @@ For more information on Solr 8 features, refer to the [Drupal Search API Solr](h
 
 Search API module processors provide a variety of configuration options for your Pantheon Search results, like boosting results based on dates, taxonomy terms, or specific content types, controlling access to content based on permissions, and adding highlighted excerpts to results.
 
-See the [Search API module processors documentation](https://www.drupal.org/docs/8/modules/search-api/getting-started/processors) for details.
+Refer to the [Search API module processors documentation](https://www.drupal.org/docs/8/modules/search-api/getting-started/processors) for details.
 
 
 ## Before You Begin
@@ -59,7 +59,7 @@ Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr serv
 
 
 ## Enable Access to Pantheon Search
-As a Limited Availability participant, your will need to manually enable access to Solr 8 for your site, for each environment in which you wish to create an index (Dev, Test, Live, and Multidevs).
+As a Limited Availability participant, your will need to manually enable access to Solr 8 for your site, for each environment in which you would like to create an index (Dev, Test, Live, and Multidevs).
 
 ### Enable at the Site Level
 You must enable Pantheon Search at the site level and add the Apache Solr Index Server. This can be done by using either the Terminus CLI or through the Site Dashboard. 
