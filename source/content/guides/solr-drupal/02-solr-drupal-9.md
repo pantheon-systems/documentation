@@ -5,7 +5,7 @@ description: Information on using Pantheon Search with Solr 8 on Drupal 9
 cms: "Drupal 9"
 categories: [integrate]
 tags: [solr, search, modules]
-contributors: [carolynshannon],[joa-pan]
+contributors: [carolynshannon, joa-pan]
 reviewed: "2021-10-25"
 layout: guide
 showtoc: true
