@@ -4,4 +4,4 @@ This page refers to products and features which are currently in Limited Availab
 
 </Alert>
 
-Pantheon Search with Solr 8 on Drupal 9 is currently available in Limited Availability. If you are interested in learning more about Pantheon Search with Solr 8 in Limited Availability, refer to the [documentation](/guides/solr-drupal/solr-drupal-9). Additionally, you can contact your Customer Success Manager (CSM), Account Manager (AM), or [contact us](https://pantheon.io/contact-us?docs). 
+If you are interested in learning more about Pantheon Search with Solr 8 in Limited Availability, contact your Customer Success Manager (CSM), Account Manager (AM), or [contact us](https://pantheon.io/contact-us?docs). 

@@ -23,11 +23,11 @@ Pantheon Search with Solr 8 gives Drupal 9 web teams a high-performance search i
 
 Pantheon Search with Solr 8 includes multiple built-in features to make scalable, high-performance search more customizable, including the following:
 
-- Media/rich content type indexing for content such as PDFs and Word documents
+- Media/rich content type indexing for attachments such as PDFs and Word documents
   - Solr has the ability to store information about document relationships in the index. The stored information can be used for queries and can also return child pages in nested form if the relationship is properly stored in the index.
 
 - Multiple language support
-  - Use Solr’s stemming and language identification libraries that allows for the searching of multiple languages using separate fields, the same field (separate Solr cores), or the same field and Solr core.
+  - Use Solr’s stemming and language identification libraries that allow for the searching of multiple languages using separate fields, the same field (separate Solr cores), or the same field and Solr core.
 
 - Drupal Views integration for building search results pages and custom search forms
 
@@ -80,17 +80,21 @@ To enable at the Site level follow the following steps:
 
 
 ### Configure the Version
-After enabling the Apache Solr Index Server, configure the `pantheon.yml` for the platform environment. Before you install the Drupal search module, you need to specify the Solr version in the `pantheon.yml` to avoid incompatibilities. Currently, Solr 8 is only supported for Drupal 9 sites. Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`: 
+After enabling the Apache Solr Index Server, configure the `pantheon.yml` for the platform environment. Before you install the Drupal search module, you need to specify the Solr version in the `pantheon.yml` to avoid incompatibilities. Currently, Solr 8 is only supported for Drupal 9 sites. 
+
+Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`: 
 
 ```
 search:
   version: 8
 ```
-After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s Integrated Composer to update your site modules. For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
+After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s Integrated Composer to update your site modules. 
+
+For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
 
 
 #### Verify `pantheon.yml` is Properly Configured
-After setting up the Drupal 9 site using the Dev site, you can verify that your environment is configured correctly.
+After specifying the Solr 8 version in the Dev environment of your Drupal 9 site, verify that the environment is configured to use Solr 8.
 
 1. Navigate to **Reports > Status report** 
 1. Click **More Info** to identify the PHP version. This will lead you to the PHP Info page. 
@@ -100,7 +104,7 @@ The configured Solr environment will have several `PANTHEON_INDEX_*` variables, 
 
 
 ## Install and Enable the Search API Pantheon Module
-To installl and enable the Search API Pantheon Module the access to Solr 8 must be enabled and `pantheon.yml` should be configured to use the Solr 8 version. 
+To installl and enable the Search API Pantheon Module, access to Solr 8 must be enabled and `pantheon.yml` should be configured to use the Solr 8 version as described in the steps above. 
 
 ### Dependencies
 The dependencies will automatically be installed by Composer as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon`.
@@ -141,7 +145,9 @@ You may also enable the modules from the site’s Extend page located in `/admin
 ## Configure Pantheon Search
 
 ### Add Search Index
-You should add “Search API Solr Admin” to the list of modules to enable. Once the modules are enabled, navigate to **Configuration > Search & Metadata > Search API** within Drupal’s Admin interface. The server labeled Pantheon Search should be displayed, and the status should indicate the server has been enabled. 
+Enable the **Search API Solr Admin** module. 
+
+Navigate to **Configuration > Search & Metadata > Search API** within Drupal’s Admin interface. The server labeled Pantheon Search should be displayed, and the status should indicate the server has been enabled. 
 
 1. Click **Add Index** to configure a new search index.
 2. Give the index a name, and select the datasources that should be indexed. For each datasource enabled, select the desired bundles, languages, and options.
@@ -178,7 +184,7 @@ Pantheon supports the installation and configuration of Pantheon Search with Sol
 - multi-lingual support 
 - categorization based on indexed terms and faceting
 
-While there are limits to the scope support, Pantheon's Customer Success Engineers can provide recommendations and suggestions for improving the Limited Availbility experienece os using Pantheon Search with Solr 8 on Drupal 9.
+While there are limits to the scope support, Pantheon's Customer Success Engineers can provide recommendations and suggestions for using Pantheon Search with Solr 8 on Drupal 9.
 
 Technical Support for Pantheon Search with Solr 8 on Drupal 9 in Limited Availability does not include:
 
