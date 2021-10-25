@@ -1,6 +1,6 @@
 ---
 title: Apache Solr for Drupal
-subtitle: How to use Solr 8 on Drupal 9
+subtitle: Using Solr 8 on Drupal 9
 description: Guide to getting started with Pantheon Search Solr 8 on Drupal 9
 cms: "Drupal 9"
 categories: [integrate]
@@ -151,26 +151,46 @@ You should add “Search API Solr Admin” to the list of modules to enable. Onc
 
 The Index status page should indicate that the newly created index was successfully saved.
 
+### Add Fields to the Index
+To add fields to your new index, click the **Fields** tab, then click **Add fields**. When you are finished, click **Save changeas**.
 
+### Index Content
+If your site contains content, click **Index now** on the **View** tab of your Index’s Overview page to begin indexing existing content.
 
+Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. Both the server and index you just created should be displayed on the page.
 
+### Post the Schema
+Click on the server’s name to view the server. The **View** tab displays server connection information, schema version, and indices.
+To save and post the schema information, in the **Edit Mode** select the **Pantheon Admin** tab, and click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
 
+The server should respond with a `200 - OK` status for each schema file posted.
 
+## Uninstall Core Search
+If the default Drupal core Search module is still enabled for your site, you might want to uninstall it for performance reasons. Navigate to `admin/modules/uninstall` to uninstall the module.
 
+## Scope of Suport
+Limited Availability allows customers to set up Pantheon Search on Drupal 9 and take advantage of the features of the service. During the term of your Limited Availability, Pantheon will provide guidance and troubleshooting support in connection with questions and issues arising from the general installation and configuration of Pantheon Search with Solr8 on Drupal 9. 
 
+Pantheon supports the installation and configuration of Pantheon Search with Solr 8 on supported Drupal 9 site configurations on the platform. Support includes usage of documented workflows as defined in this documentation as well as support for the following features:
 
+- full text search
+- attachments/PDF search 
+- multi-lingual support 
+- categorization based on indexed terms and faceting
 
+While there are limits to the scope support, Pantheon's Customer Success Engineers can provide recommendations and suggestions for improving the Limited Availbility experienece os using Pantheon Search with Solr 8 on Drupal 9.
 
+Technical Support for Pantheon Search with Solr 8 on Drupal 9 in Limited Availability does not include:
 
+- debugging custom applications and code
+- customization of solutions, templates, or tools; including unsupported software functionality
+- issues specific to third-party add-ons or customer-developed code
+- consultation on administration, configuration, performance, or security
 
+Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr 3.6 users should recreate configuration and indexing on a fresh installation of Pantheon Search with Solr 8 on a Drupal 9 site.
 
+## Troubleshooting Pantheon Search for Drupal 9
+**The Search API Solr message "It is advisable to download and deploy an updated `config.zip` to your Solr server" is displayed**
+After installing the Search module, the Search API Solr module displays the message "It is advisable to download and deploy an updated `config.zip` to your Solr server."
 
-
-
-
-
-
-
-
-
-
+This message can safely be ignored, and resolves once a search index has been created and the schema files have been posted.
