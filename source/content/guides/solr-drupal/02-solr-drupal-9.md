@@ -104,7 +104,7 @@ The configured Solr environment will have several `PANTHEON_INDEX_*` variables, 
 
 
 ## Install and Enable the Search API Pantheon Module
-To installl and enable the Search API Pantheon Module, access to Solr 8 must be enabled and `pantheon.yml` should be configured to use the Solr 8 version as described in the steps above. 
+To install and enable the Search API Pantheon Module, access to Solr 8 must be enabled and `pantheon.yml` should be configured to use the Solr 8 version as described in the steps above. 
 
 ### Dependencies
 The dependencies will automatically be installed by Composer as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon`.
@@ -114,7 +114,7 @@ By entering the commands specified in the "Install the Search Module" section, y
 
 - Search API is Drupal's module for indexing content entities.
 
-- Search API Solr makes search API work with Apache Solr. Composer manaages which version
+- Search API Solr makes search API work with Apache Solr. Composer manages which version will be installed.
 
 - Guzzle version 6 is standard with Drupal Core 8 or 9.
 
@@ -122,24 +122,24 @@ By entering the commands specified in the "Install the Search Module" section, y
 To install the Search API Pantheon module, switch to your local machine. 
 
 1. Clone the Git repository for the desired environment from the Pantheon Site Dashboard.
-1. Enter the following commandin the terminal to run `composer install`:
+1. Enter the following command in the terminal to run `composer install`:
    ```
    composer install
    ```
-1. Enter the  the Add the Search API Pantheon module as a required dependency:
+1. Add the Search API Pantheon module as a required dependency:
    ```
    composer require pantheon-systems/search_api_pantheon ^8 --prefer-dist
    ```
    
-1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to check for changed files.
-1. Commit and push the changes.
+1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only composer.json and composer.lock were modified.
+1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site. 
 
 #### Enable Pantheon Search
 To enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command: 
  ```
  terminus drush {SiteName}.{env} -- pm-enable search_api_pantheon search_api_pantheon_admin
  ```
-You may also enable the modules from the site’s Extend page located in `/admin/modules`.
+You may also enable the modules from the site’s Extend page located in `/admin/modules`. 
 
 
 ## Configure Pantheon Search
@@ -152,13 +152,13 @@ Navigate to **Configuration > Search & Metadata > Search API** within Drupal’s
 1. Click **Add Index** to configure a new search index.
 2. Give the index a name, and select the datasources that should be indexed. For each datasource enabled, select the desired bundles, languages, and options.
 3. Select **Pantheon Search** as the Server.  
-4. In the Index Options panel, check **Index items immediately**.
+4. In the Index Options panel, esnure **Index items immediately** is checked.
 5. Click **Save** to add the new index.
 
 The Index status page should indicate that the newly created index was successfully saved.
 
 ### Add Fields to the Index
-To add fields to your new index, click the **Fields** tab, then click **Add fields**. When you are finished, click **Save changeas**.
+To add fields to your new index, click the **Fields** tab, then click **Add fields**. When you are finished, click **Save changes**.
 
 ### Index Content
 If your site contains content, click **Index now** on the **View** tab of your Index’s Overview page to begin indexing existing content.
@@ -167,24 +167,24 @@ Click **Search API** to return to the Search API overview page located in `admin
 
 ### Post the Schema
 Click on the server’s name to view the server. The **View** tab displays server connection information, schema version, and indices.
-To save and post the schema information, in the **Edit Mode** select the **Pantheon Admin** tab, and click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
+To save and post the schema information, select the **Pantheon Search Admin** tab, and click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
 
 The server should respond with a `200 - OK` status for each schema file posted.
 
 ## Uninstall Core Search
 If the default Drupal core Search module is still enabled for your site, you might want to uninstall it for performance reasons. Navigate to `admin/modules/uninstall` to uninstall the module.
 
-## Scope of Suport
+## Scope of Support
 Limited Availability allows customers to set up Pantheon Search on Drupal 9 and take advantage of the features of the service. During the term of your Limited Availability, Pantheon will provide guidance and troubleshooting support in connection with questions and issues arising from the general installation and configuration of Pantheon Search with Solr8 on Drupal 9. 
 
 Pantheon supports the installation and configuration of Pantheon Search with Solr 8 on supported Drupal 9 site configurations on the platform. Support includes usage of documented workflows as defined in this documentation as well as support for the following features:
 
-- full text search
+- full-text search
 - attachments/PDF search 
 - multi-lingual support 
 - categorization based on indexed terms and faceting
 
-While there are limits to the scope support, Pantheon's Customer Success Engineers can provide recommendations and suggestions for using Pantheon Search with Solr 8 on Drupal 9.
+While there are limits to the scope of support, Pantheon's Customer Success Engineers can provide recommendations and suggestions for using Pantheon Search with Solr 8 on Drupal 9.
 
 Technical Support for Pantheon Search with Solr 8 on Drupal 9 in Limited Availability does not include:
 
