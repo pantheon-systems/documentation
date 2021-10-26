@@ -577,7 +577,7 @@
     title: 'Automate and Integrate with Quicksilver'
     type: 'Essential Developer Training'
     subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
-    url: 'https://pantheon.io/workshops/integrate-and-automate-quicksilver?docs'
+    url: '/workshops?c=lw3'
   topics-groups:
     - title: ''
       subtitle: ''
