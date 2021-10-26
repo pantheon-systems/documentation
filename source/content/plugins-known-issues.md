@@ -942,8 +942,8 @@ include_once '/code/wordfence-waf.php';
 to:
 
 ```
-if (file_exists('/code/includes/prepend.php')) {
-        include_once '/code/includes/prepend.php';
+if (file_exists('/code/wordfence-waf.php')) {
+	include_once '../../includes/prepend.php';
 }
 ```
 ___
