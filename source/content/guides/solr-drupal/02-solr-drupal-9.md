@@ -70,13 +70,11 @@ You must enable Pantheon Search at the site level and add the Apache Solr Index 
 
 #### Using Terminus
 
-Enter the following command:
+Enter the following command. Replace `$SITE` with the specified name of the site:
 
 ```shell{promptUser:user}
-terminus solr:enable <site_name>
+terminus solr:enable $SITE
 ```
-
-Replace `<site_name>` with the specified name of the site.
 
 #### Using the Site Dashboard
 
@@ -90,7 +88,9 @@ To enable at the Site level follow the following steps:
 
 ### Configure the Version
 
-After enabling the Apache Solr Index Server, configure the `pantheon.yml` for the platform environment. Before you install the Drupal search module, you need to specify the Solr version in the `pantheon.yml` to avoid incompatibilities. Currently, Solr 8 is only supported for Drupal 9 sites.
+After you enable the Apache Solr Index Server, configure the `pantheon.yml` for the platform environment. Before you install the Drupal search module, specify the Solr version in the `pantheon.yml` to avoid incompatibilities.
+
+Currently, Solr 8 is only supported for Drupal 9 sites.
 
 Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
 
@@ -99,13 +99,13 @@ search:
   version: 8
 ```
 
-After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s Integrated Composer to update your site modules.
+After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/integrated-composer) to update your site modules.
 
 For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
 
 #### Verify `pantheon.yml` is Properly Configured
 
-After specifying the Solr 8 version in the Dev environment of your Drupal 9 site, verify that the environment is configured to use Solr 8.
+After you specify the Solr 8 version in the Dev environment of your Drupal 9 site, verify that the environment is configured to use Solr 8.
 
 1. Navigate to **Reports > Status report**
 1. Click **More Info** to identify the PHP version. This will lead you to the PHP Info page.
@@ -119,8 +119,9 @@ To install and enable the Search API Pantheon Module, access to Solr 8 must be e
 
 ### Dependencies
 
-The dependencies will automatically be installed by Composer as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon`.
-By entering the commands specified in the "Install the Search Module" section, you install the following dependencies:
+Composer automatically installs dependencies as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon`.
+
+The commands specified in the next section install the following dependencies:
 
 - Solarium is a Solr client library for PHP and is not Drupal-specific.
 
@@ -130,7 +131,7 @@ By entering the commands specified in the "Install the Search Module" section, y
 
 - Guzzle version 6 is standard with Drupal Core 8 or 9.
 
-### Install the  Search Module
+### Install the Search Module
 
 To install the Search API Pantheon module, switch to your local machine.
 
@@ -147,15 +148,15 @@ To install the Search API Pantheon module, switch to your local machine.
    composer require pantheon-systems/search_api_pantheon ^8 --prefer-dist
    ```
 
-1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only composer.json and composer.lock were modified.
-1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site. 
+1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
+1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
 
 #### Enable Pantheon Search
 
-To enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command:
+To enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command, replacing `$ENV` with the environment:
 
-```shell
-terminus drush {SiteName}.{env} -- pm-enable search_api_pantheon search_api_pantheon_admin
+```shell{promptUser:user}
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
 ```
 
 You may also enable the modules from the site’s Extend page located in `/admin/modules`.
@@ -221,10 +222,8 @@ Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr
 
 ## Troubleshooting Pantheon Search for Drupal 9
 
-The Search API Solr displays the following:
+If the Search API Solr displays the following after the Search module is installed:
 
 > It is advisable to download and deploy an updated `config.zip` to your Solr server.
 
-After installing the Search module, the Search API Solr module displays the message "It is advisable to download and deploy an updated `config.zip` to your Solr server."
-
-This message can safely be ignored, and resolves once a search index has been created and the schema files have been posted.
+This message can safely be ignored. It resolves once a search index has been created and the schema files have been posted.
