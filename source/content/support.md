@@ -14,7 +14,7 @@ Pantheon offers a range of Account options that include the features required fo
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
-| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic Custom Upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Custom Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
+| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic Custom Upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Custom Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="<ul><li>Bespoke site debugging</li></ul>" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
 | [**Tickets**](#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
@@ -204,6 +204,21 @@ Diamond Account customers get an extra level of assistance for their dev teams. 
 Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
 
 Diamond Accounts are intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
+
+### Professional Services
+
+The Pantheon Professional Services (PS) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. The PS team can provide more information on, and assist with:
+
+- Advanced Global CDN
+- Decoupled CMS
+- Custom SSL Certificate
+- Dedicated Database
+- Additional Domains
+- Managed Updates
+- Multizone Failover
+- Site Migrations
+
+For more information, refer to the [Professional Services guide](/guides/professional-services).
 
 ## FAQs
 
