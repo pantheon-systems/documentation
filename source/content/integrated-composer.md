@@ -146,6 +146,27 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 
+### Build Step Affected Files That Are Not Ignored by Git
+
+Some users have encountered an error when Git recognizes an unexpected change in `composer.json`:
+
+```bash
+The build step affected files that are not ignored by git:
++ echo M composer.json M composer.lock
+M composer.json M composer.lock
++ exit 1
+```
+
+To resolve this error:
+
+1. Add an empty new line to the end of `composer.json`:
+
+  ```shell
+  echo "" >> composer.json
+  ```
+
+1. Commit and push the changes
+
 ### View the Output of the Commit Log First
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
