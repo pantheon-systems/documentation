@@ -209,14 +209,14 @@ Diamond Accounts are intended to help developers succeed on Pantheon, not to pro
 
 The Pantheon Professional Services (PS) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. The PS team can provide more information on, and assist with:
 
-- Advanced Global CDN
-- Decoupled CMS
-- Custom SSL Certificate
+- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+- [Decoupled CMS](/decoupled-sites)
+- [Custom SSL Certificate](/custom-certificates)
 - Dedicated Database
-- Additional Domains
-- Managed Updates
-- Multizone Failover
-- Site Migrations
+- [Additional Domains](/domains)
+- [Managed Updates](/guides/professional-services/managed-updates)
+- [Multizone Failover](/multizone-failover)
+- [Site Migrations](/guides/professional-services/website-migration-service)
 
 For more information, refer to the [Professional Services guide](/guides/professional-services).
 
