@@ -58,6 +58,14 @@ Once the certificate is in place, you will see the following under **Details** f
 
   ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
 
+## Test Before Going Live
+
+Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
+
+<Partial file="_hosts-file.md" />
+
+For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
+
 ### Disable Let's Encrypt with CAA Records
 
 A **Certification Authority Authorization** (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain. In order to ensure your custom certificate is served for all traffic, you must prevent Let’s Encrypt from issuing certificates. 
