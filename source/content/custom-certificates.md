@@ -143,7 +143,7 @@ AAAA record 2:  `2620:12a:8001::X`
 CAA records are required in order to [prohibit Let's Encrypt from issuing certificates](#disable-lets-encrypt-with-caa-records). If your DNS provider does not support CAA records, consider one that does. If using a DNS provider that supports CAA records is not possible, please contact your [Professional Services](/guides/professional-services) Engagement Manager for help.
 
 
-### How do I relaunch an existing site?
+### How do I relaunch an existing site with a custom certificate?
 
 To take your site live by moving custom domains from one Site Dashboard to another, with minimal HTTPS interruptions, please refer to [Relaunch Existing Pantheon Site](/relaunch#prepare-for-relaunch).
 
