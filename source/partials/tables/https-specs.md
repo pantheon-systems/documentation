@@ -1,5 +1,3 @@
-## Technical Specifications
-
 |                                                                       | Global CDN with Let's Encrypt   | Global CDN with a Custom Certificate  |
 |:--------------------------------------------------------------------- |:------------------------------- |:------------------------------------- |
 | **Certificate Type**                                                  | Issued by Let's Encrypt         | Bring your own                        |
