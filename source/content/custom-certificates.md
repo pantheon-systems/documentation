@@ -12,23 +12,16 @@ Custom Certificates service is available to contract customers, including Elite,
 
 ## Add a Custom Certificate
 
-### Send the CSR to Your CA
-
-Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). 
-
-#### CSR Notes
-  
-- You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
-
-- Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
-
-### Send the Certificates to Pantheon 
-
-Once you have received a set of certificates from the CA, send the following to your Pantheon Account Team:
+Follow the steps below to request and send the appropriate certificate and (for AGCDN) private key information:
 
 <TabList>
 
 <Tab title="For Global CDN" id="ccgcdn" active={true}>
+
+### Send the CSR to Your CA
+
+Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). 
+
 
 Sites with [Global CDN](/global-cdn) should provide the following:
 
@@ -38,6 +31,12 @@ Sites with [Global CDN](/global-cdn) should provide the following:
 Be sure to send these as separate files, not a "chained cert."
 
 Please allow two business days for your Account Team to load the certificate.
+
+#### CSR Notes
+
+- You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
+
+- Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
     
 </Tab>
 
@@ -54,6 +53,7 @@ Please allow two business days for your Account Team to load the certificate.
 </Tab>
 
 </TabList>
+
 
 ### Add the Domain
 
