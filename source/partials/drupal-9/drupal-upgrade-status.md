@@ -18,9 +18,10 @@ Since you are checking whether or not a site can be upgraded, install the Upgrad
   terminus multidev:create $SITE.dev site-upstat
   ```
 
-1. Check out the Multidev branch:
+1. Fetch and check out the Multidev branch:
 
   ```bash{promptUser: user}
+  git fetch
   git checkout site-upstat
   ```
 
