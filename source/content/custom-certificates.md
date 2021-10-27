@@ -39,7 +39,7 @@ Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-c
 
 1. Main Certificate
 1. Intermediate Certificate
-1. Private Key.
+1. Private Key
 
 Please allow two business days for your Account Team to load the certificate.
 
