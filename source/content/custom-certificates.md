@@ -13,7 +13,7 @@ Custom Certificates service is available to contract customers, including Elite,
 
 ## Add a Custom Certificate
 
-Follow the steps below to request and send the appropriate certificate and (for AGCDN) private key information:
+Follow the steps below to request and send the appropriate certificate, and private key information for AGCDN where applicable:
 
 <TabList>
 
@@ -141,6 +141,11 @@ AAAA record 2:  `2620:12a:8001::X`
 ### What if my DNS manager doesn't support CAA DNS records?
 
 CAA records are required in order to [prohibit Let's Encrypt from issuing certificates](#disable-lets-encrypt-with-caa-records). If your DNS provider does not support CAA records, consider one that does. If using a DNS provider that supports CAA records is not possible, please contact your [Professional Services](/guides/professional-services) Engagement Manager for help.
+
+
+### How do I relaunch an existing site?
+
+To take your site live by moving custom domains from one Site Dashboard to another, with minimal HTTPS interruptions, please refer to [Relaunch Existing Pantheon Site](/relaunch#prepare-for-relaunch).
 
 ## Technical Specifications
 
