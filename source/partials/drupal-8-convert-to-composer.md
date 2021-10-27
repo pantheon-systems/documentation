@@ -35,7 +35,8 @@ Because of that, the steps below make these codebase changes in a new branch.
 Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
   ```
-  $ composer require drupal/core-recommended:^8.9
+  $ composer require --no-update drupal/core-recommended:^8.9
+  $ composer update drupal/core* -W
   $ git add composer.*
   $ git commit -m "Remain on Drupal 8"
   ```

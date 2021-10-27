@@ -36,19 +36,20 @@ This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
 
 To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal9` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
 
+## Ensure Dependencies are Drupal 9 Compatible
+
+Before changing the Drupal core version to Drupal 9, make sure all the components of your site are Drupal 9 compatible. Review the steps in drupal.org's [Upgrading a Drupal 8 site to Drupal 9](https://www.drupal.org/docs/upgrading-drupal/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/upgrading-a-drupal-8-site) for details, and use [Upgrade Status](https://www.drupal.org/project/upgrade_status) to check the compatibility of all contributed modules and themes.
 
 ## Set Drupal Core Version
 
 Set the Drupal core version to Drupal 9:
 
   ```
-  $ composer require drupal/core-recommended:^9.2
+  $ composer require --no-update drupal/core-recommended:^9.2
+  $ composer update drupal/core* -W
   $ git add composer.*
   $ git commit -m "upgrade to Drupal 9"
   ```
-
-**WHATEVER OTHER STEPS NEED TO HAPPEN.**
-
 
 ## Ongoing Core Updates
 

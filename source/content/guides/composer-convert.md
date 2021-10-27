@@ -20,9 +20,11 @@ The goals of this conversion are:
 
 1. Remove dependencies that Composer will manage from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
 
-1. Switch to the `drupal9` Integrated Composer upstream. Following the `drupal9` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. 
+1. Switch to the `drupal9` Integrated Composer upstream. 
 
-1. Add Drupal 8 core dependency instructions via `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+The `drupal9` Integrated Composer upstream works with Drupal 8, and following the `drupal9` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. 
+
+1. Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 ## Will This Guide Work for Your Site?
 
