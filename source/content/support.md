@@ -20,6 +20,8 @@ Pantheon offers a range of Account options that include the features required fo
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
 | [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
 
+Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are generally available on business days, Monday through Friday, 9AM to 5PM PST.
+
 ### Scope Explanations
 
 - **Platform**: Support helps:
@@ -43,13 +45,21 @@ Pantheon offers a range of Account options that include the features required fo
 
 ## Best Practices
 
-Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
+Keep these tips in mind when opening a new support ticket or chat, to help us resolve your issue faster.
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab.
 
-### One ticket per issue
+Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
+
+### Organization Dashboard Support Tab
+
+If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
+
+![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
+
+### One Ticket Per Issue
 
 Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
@@ -67,13 +77,9 @@ If your site uses nonstandard admin URLs, custom logins, etc., please let us kno
 
 ### Clarification
 
-We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
+We're all real humans. We always try our best to understand the situation, but we may not always get it right the first time.
 
-### Organization Dashboard Support Tab
-
-If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
-
-![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
+At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us (kindly), or to ask for clarification if we don't seem to understand the issue.
 
 ## Real Time Chat Support
 
@@ -98,7 +104,7 @@ You can download a transcript of your chat with the <em class="fa fa-arrow-down"
 
 <Alert title="Note" type="info">
 
-Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
+Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://www.intercom.com/help/en/articles/1200-why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
 
 </Alert>
 
@@ -121,7 +127,7 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Click **Open Ticket**
 
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except Unprivileged users.
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
 
 ## Pantheon On-Call
 
@@ -129,11 +135,21 @@ Diamond and Platinum Account customers can directly page Pantheon's operations r
 
 ## Scope of Support
 
-We love helping developers succeed! Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the scope support we can provide, our [Professional Services](/guides/professional-services) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
+We love helping developers succeed!
+
+Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager.
+
+While we have limits to the scope support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
+
+[Contact Sales](https://pantheon.io/contact-us?docs) if your requirements fall outside the scope outlined below.
 
 ### Code
 
-Your site code belongs to you. We can offer Diamond Account customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+Your site code belongs to you, and our support team does not change customer code.
+
+Pantheon provides updates to the Upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+
+We can offer Diamond Account customers advice on best practices and debugging assistance, but our support team does not change customer code.
 
 ### Outdated Core
 
@@ -147,7 +163,7 @@ We are unable to debug issues with the content or structure of the Custom Upstre
 
 ### Public Distributions
 
-If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 9, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
 
 ### Security
 

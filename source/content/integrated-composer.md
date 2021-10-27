@@ -4,7 +4,7 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2021-05-28"
+reviewed: "2021-08-30"
 ---
 
 Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
@@ -13,7 +13,9 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 ### Drupal 9 with Integrated Composer
 
-You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-to-d9) Composer-enabled site to Drupal 9 with Integrated Composer. To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
+- To convert an existing Drupal 8 site to a Composer-managed site, visit the [Composer Convert](/guides/composer-convert) doc.
+
+- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 ### WordPress with Integrated Composer
 
@@ -27,7 +29,6 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-
 ## Add a Dependency to an Individual Site
 
 1. Clone the Git repository from the Pantheon site's dashboard.
@@ -37,6 +38,7 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
    ```bash{promptUser: user}
     composer install
    ```
+
 1. Add a new dependency locally:
 
    ```bash{promptUser: user}
@@ -49,7 +51,7 @@ You can [upgrade from an existing Drupal 8](/guides/drupal-9-migration/upgrade-t
 
 ### Remove Individual Site Dependencies
 
-You can remove site dependencies if they are no longer needed. 
+You can remove site dependencies if they are no longer needed.
 
 1. Remove the dependency locally:
 
@@ -65,14 +67,13 @@ You can remove site dependencies if they are no longer needed.
 
 1. Navigate to **Code** in the Dev tab of the site's Dashboard.
 
-1. Click **Check Now**. 
+1. Click **Check Now**.
 
 1. If updates are available, click **Apply Updates**.
 
-
 ## Upstream
 
-Upstream refers to the source code that is hosted in the [Pantheon code repository](https://github.com/pantheon-upstreams/drupal-project) and includes the core code for Drupal, WordPress, and some customizations for the Pantheon platform.
+Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-project), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
 
 ### Upstream and Site Structure
 
@@ -82,20 +83,28 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 1. Clone the Git repository from the Pantheon site's Dashboard.
 
-1. Change into the `upstream-config` directory:
+1. Change into the Upstream's configuration directory:
+
+   - Drupal:
 
     ```bash{promptUser: user}
     cd upstream-config
     ```
 
-1. Run:
+   - WordPress:
+
+    ```bash{promptUser: user}
+    cd upstream-configuration
+    ```
+
+1. Run `composer require` for each dependency:
 
     ```bash{promptUser: user}
     composer require drupal/pkg-name --no-update
     ```
 
-     -  `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
-     -  `--no-update` should not be included when adding dependencies to a site.
+     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
+     - `--no-update` should not be included when adding dependencies to a site.
 
 1. Set or increment the current configuration version:
 
@@ -130,6 +139,10 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 <Partial file="composer-support-scope.md"/>
 
 ## Troubleshooting Code Syncs and Upstream Updates
+
+### Site-local Drush Is Required for Drupal 9 Sites
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 
 ### View the Output of the Commit Log First
 
@@ -205,6 +218,12 @@ To resolve, there are two potential solutions:
 - If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
 - Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+
+### Issues using `wikimedia/composer-merge-plugin`
+
+Use of the `wikimedia/composer-merge-plugin` is deprecated within [Drupal](https://www.drupal.org/node/3069730).
+
+When using Pantheon's Integrated Composer, this plugin often tries to run a "composer update" during the "composer install," which is not allowed and will cause errors. We recommend removing `composer-merge-plugin` from your Composer toolchain.
 
 ## FAQ
 

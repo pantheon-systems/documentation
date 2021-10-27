@@ -4,4 +4,4 @@
 
 1. Commit and deploy code changes to the Live environment.
 
-1. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** &gt; **Add Ons** and click the **Remove** button for Solr.
+1. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** &gt; **Add Ons** and click **Remove** for Solr.

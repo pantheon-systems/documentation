@@ -25,7 +25,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 
 ## Prerequisites
 
-Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed.
+Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may need to delete and re-install the Terminus Build Tools plugin to get the most recent version.
 
 1. Install [Composer](/composer).
    - Verify your installation with `composer --version`:
@@ -80,6 +80,12 @@ Modify the commands in the following examples to match your project's needs.
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' wp my-site
+  ```
+
+- Start a GitHub project with Drupal 9:
+
+  ```bash{promptUser: user}
+  terminus build:project:create --git=github --team='My Agency Name' d9 my-site
   ```
 
 - Start a GitHub project with Drupal 8:
@@ -147,6 +153,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
+- [Drupal 9](https://github.com/pantheon-upstreams/drupal-project/issues)
 - [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 

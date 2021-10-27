@@ -89,7 +89,7 @@ When a workflow runs, there are variables that are made available through the `$
 |`from_environment`|Source environment where the database is being cloned from|`clone_database`| |
 |`deploy_message`|Deploy message provided as part of a test of live deployment|`deploy`|This is only available if a deploy message is provided.|
 
-For examples on how to use these variables, see the [Quicksilver Examples](https://pantheon.io/docs/quicksilver-examples) repository.
+For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
 
 
 ## Secrets

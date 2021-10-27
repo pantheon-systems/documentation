@@ -6,7 +6,7 @@ categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
 contributors: [stovak, edwardangert, carolynshannon]
-reviewed: "2021-06-30"
+reviewed: "2021-08-20"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/build-tools-to-d9-build-tools
@@ -50,10 +50,10 @@ brew install jq rsync
 
    ```bash{promptUser: user}
    cd $SITE
-   git checkout -b d9-upgrade-2021
+   git checkout -b d9-upg-21
    ```
 
-1. Use Terminus and Drush to export the latest version of the config files from the production envronment to `sites/default/files/config`:
+1. Use Terminus and Drush to export the latest version of the config files from the production environment to `sites/default/files/config`:
 
    ```bash{promptUser: user}
    terminus drush $SITE.live -- config:export --destination sites/default/files/config
@@ -148,7 +148,7 @@ brew install jq rsync
    ```bash{promptUser: user}
    git add composer.json composer.lock pantheon.yml config/*
    git commit -m 'updating to drush 10/mariadb 10.4/config'
-   git push origin d9-upgrade-2021
+   git push origin d9-upg-21
    ```
 
   If all goes well, you will see something like the following:
@@ -156,7 +156,7 @@ brew install jq rsync
    ```bash
    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
    remote:
-   remote: Create a pull request for 'd9-upgrade-2021' on GitHub by visiting:
+   remote: Create a pull request for 'd9-upg-21' on GitHub by visiting:
    remote:      {{URL TO YOUR REPOSITORY}}
    remote:
    ```
@@ -176,6 +176,24 @@ brew install jq rsync
    ```
 
 1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
+
+### Upgrade MariaDB in All Environments
+
+Once you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
+
+The possible risks associated with the time it takes for the platform to upgrade the database are minimal, but you can use the following command to mitigate potential errors:
+
+```bash{promptUser: user}
+git push origin master
+```
+
+From the Dashboard, merge the code from Dev, through Test, to Live.
+
+Or use Terminus, and replace the `$ENV` in this example with the target environment:
+
+```bash{promptUser: user}
+terminus env:deploy --sync-content --note "upgrade DB" --updatedb -- $SITE.$ENV
+```
 
 ## Custom Module Code
 
@@ -246,7 +264,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
    ```bash{promptUser: user}
    git add composer.json composer.lock pantheon.yml
    git commit -m "upgrade core to d9"
-   git push origin d9-upgrade-2021
+   git push origin d9-upg-21
    ```
 
 ## Confirm the MariaDB Version and Updates
@@ -254,7 +272,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 Validate your database version with `terminus drush`:
 
 ```bash{promptUser: user}
-terminus drush $SITE.$ENV sqlq "SELECT VERSION();"
+echo 'SELECT VERSION();' | terminus drush $SITE.$ENV sqlq -
 ```
 
 Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.

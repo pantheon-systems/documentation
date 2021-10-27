@@ -3,7 +3,7 @@ title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 categories: [troubleshoot]
 tags: [cli, code, files]
-reviewed: "2020-03-13"
+reviewed: "2021-09-13"
 ---
 
 Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
@@ -106,9 +106,9 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi) is assumes write access to the codebase where the `et-cache` folder is located.
 
-<Alert  title="Note" type="info">
+<Alert title="Note" type="info">
 
-You must manually create the target folders `wp-content\et-cache` for Dev, Test, Live, and any Multidev environments.
+Manually create the target folders `wp-content/et-cache` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
@@ -149,13 +149,44 @@ You can also verify success using `dir`:
 
 </Accordion>
 
+<Accordion title="Nitropack" id="nitropack-panel" icon="wrench">
+
+As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Nitropack](https://wordpress.org/plugins/nitropack/) assumes write access to the `wp-content/nitropack` folder and to `advanced.cache.php`.
+
+<Alert title="Note" type="info">
+
+Manually create the target folders `code/wp-content/uploads/nitropack` and `code/wp-content/uploads/advanced-cache.php` for Dev, Test, and Live environments.
+
+</Alert>
+
+1. In the command line, navigate to `code/wp-content/uploads` in your Dev environment. Or, if you are using an SFTP client (such as [FileZilla](https://filezilla-project.org/)), navigate to `files/`.
+
+1. Create a `nitropack` folder and an `advanced-cache.php` file. Be sure to delete any existing `advanced-cache.php` that is present in the `./uploads` directory before creating the file:
+
+  ```bash{promptUser: user}
+  mkdir ./nitropack​ && touch ./advanced-cache.php
+  ```
+
+1. Repeat steps 1 and 2 for your Test and Live environments.
+
+1. Create a symlink in the `code/wp-content` directory in your Dev environment:
+
+  ```bash{promptUser: user}
+  ln -s ./uploads/nitropack/ ./nitropack
+  ln -s ./uploads/advanced-cache.php ./advanced-cache.php
+  ```
+
+1. Commit changes to the Dev or Multidev environment, then deploy to Test to confirm the results before you deploy to Live.
+
+</Accordion>
+
 <Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
 
 As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [WP-Rocket](https://wp-rocket.me/) assumes write access to the codebase.
 
-<Alert  title="Note" type="info">
+<Alert title="Note" type="info">
 
-You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+Manually create the target folders `wp-content/uploads/cache` and `wp-content/uploads/wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
@@ -176,6 +207,7 @@ wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
 #### For Windows
+
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash{promptUser: winshell}
@@ -204,25 +236,25 @@ You can also verify success using `dir`:
 
 As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the codebase.
 
-1. Manually move the target folders:
+1. Manually move the target folders. Note that Windows uses `\` instead of `/` to separate directories. These examples are formatted or Mac and Linux:
 
-  `wp-content\themes\uncode\core\assets\css`
+  `wp-content/themes/uncode/core/assets/css`
 
-  To: `wp-content\uploads\uncode\assets\css`
+  To: `wp-content/uploads/uncode/assets/css`
 
   And:
 
-  `wp-content\themes\uncode\library\css`
+  `wp-content/themes/uncode/library/css`
 
-  To: `wp-content\uploads\uncode\library\css` in Dev.
+  To: `wp-content/uploads/uncode/library/css` in Dev.
 
 1. Copy the files generated from:
 
-  `wp-content\themes\uncode\library\css`
+  `wp-content/themes/uncode/library/css`
 
   To:
 
-  `wp-content\uploads\uncode\library\css`
+  `wp-content/uploads/uncode/library/css`
 
   In Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
 
@@ -241,7 +273,7 @@ To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder:
 css -> ../../../../uploads/uncode/assets/css
 ```
 
-As well as in the `wp-content/themes/uncode/library` folder :
+As well as in the `wp-content/themes/uncode/library` folder:
 
 ```none
 css -> ../../../uploads/uncode/library/css
@@ -249,7 +281,7 @@ css -> ../../../uploads/uncode/library/css
 
 #### For Windows
 
-Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash (`\`) is used to denote folders. In the `wp-content` folder create the symlinks by:
 
 ```bash{promptUser: winshell}
 mklink /d .\themes\uncode\core\assets ..\..\..\..\uploads\uncode\assets\css

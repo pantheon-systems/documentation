@@ -60,7 +60,7 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 ## Next Steps
 
-Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) if you don't want to use CI tools in your development process.
+Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [upgrade to Drupal 9](/guides/drupal-9-migration).
 
 If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
 

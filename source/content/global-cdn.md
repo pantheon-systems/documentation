@@ -32,6 +32,91 @@ We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpr
 
 For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
+## Persistent Cache
+
+Serve your Drupal or WordPress site even in the unlikely event that it goes down.
+
+The goal of Persistent Cache is to provide a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, a the CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
+
+### How long does content stay fresh? Adjust TTL
+
+Adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL).
+
+Your site’s CMS page-level caching must be correctly configured in order to take advantage of Persistent Cache.
+
+On [Drupal](/drupal-cache#drupal-8-performance-configuration) and [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration), you can adjust your CDN edge configuration to serve stale content for a specific amount of time.
+
+For best results, set the cache TTL to a value equal to or over 3700 seconds.
+
+Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the cache, and will not see cached content. For best results, set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). Learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
+
+### Confirm That Persistent Cache Works
+
+To test how stale cache is served, compare the header results of a page refresh when the site's Dev environment is live to the header results when Dev is in Maintenance Mode:
+
+<TabList>
+
+<Tab title="Via Command Line" id="cli" active={true}>
+
+1. Examine the headers through the command line:
+
+  ```bash{outputLines: 2-20}
+  curl --head https://pantheon.io/docs
+  HTTP/2 301
+  content-type: text/html
+  location: https://pantheon.io/docs/
+  server: nginx
+  strict-transport-security: max-age=31622400
+  x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
+  x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
+  cache-control: public, max-age=86400
+  date: Tue, 24 Aug 2021 15:30:21 GMT
+  x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
+  x-cache: HIT, HIT
+  x-cache-hits: 1, 1
+  x-timer: S1629819022.932985,VS0,VE1
+  pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
+  vary: Cookie, Cookie
+  age: 9654
+  accept-ranges: bytes
+  via: 1.1 varnish, 1.1 varnish
+  content-length: 162
+  ```
+
+  Note the result for `age` or `max-age`.
+
+1. Navigate to the site's Dev environment and set the site to Maintenance Mode.
+
+1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
+
+1. In a terminal, cURL the site headers filtered for stale cache:
+
+  ```bash{promptUser: user}
+  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
+  ```
+
+  If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
+
+</Tab>
+
+<Tab title="Via Web Browser" id="web-browser">
+
+1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab.
+
+  Find the response headers for the page or asset.
+
+1. Go to the site's Dev environment and set the site to Maintenance Mode.
+
+1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
+
+1. Go back to the page and Developer Tools, then refresh the page for the newest header responses.
+
+  If the result includes `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
+
+</Tab>
+
+</TabList>
+
 ## Frequently Asked Questions
 
 ### I already have a CDN. Can I use it with the Pantheon Global CDN?

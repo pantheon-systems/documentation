@@ -26,6 +26,12 @@ Secure Integration uses TLS encryption to create a tunnel from the application c
 
 Once setup is complete on our end, we'll provide you with the information you need to use Secure Integration, including a PHP constant in the format `PANTHEON_SOIP_EXAMPLE`, where `EXAMPLE` is replaced with the service name you specify.
 
+<Alert title="Note" type="info" >
+
+At a minimum, allow one business day to fulfill this implementation request. Provide complete information to ensure timely and efficient processesing, and to minimize any issues that may arise.
+
+</Alert>
+
 ## Configure Your Site
 
 Once the gateway has been established, you must update your code to use it. This process varies depending on the modules or plugins in use, and the type of service you're routing through the gateway.

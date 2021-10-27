@@ -1,20 +1,3 @@
-## Apply All Available Upstream Updates
-
-[Update the site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8) Upstream and apply all available updates.
-
-1. Use Terminus to list all available updates:
-
-  ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE
-  [warning] There are no available updates for this site.
-  ```
-
-1. If any updates are available, apply them using the command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
-
-  ```bash{promptUser: user}
-  terminus upstream:updates:apply $SITE.dev --updatedb
-  ```
-
 ## Add the Pantheon Integrated Composer Upstream in a New Local Branch
 
 This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
@@ -59,9 +42,9 @@ This process involves significant changes to the codebase. We recommend you to d
   git commit -m 'Copy my pantheon.yml'
   ```
 
- Remove any values from `pantheon.yml` that you prefer to keep as listed in `pantheon.upstream.yml`.
+  Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then add `build_step: true` to `pantheon.yml` if it is not already included.
 
- Both `pantheon.yml` and the `api_version: 1` value in it are required.
+ In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -79,13 +62,15 @@ Once Composer is aware of all the contributed code, you'll be able to run `compo
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to change to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+
+  This will list each module followed by the version of that module that is installed:
 
   ```bash{promptUser:user}
-  terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
+  terminus drush $SITE.dev pm:projectinfo -- --fields=name,version --format=table
   ```
 
-  This will list each module followed by the version of that module that is installed.
+  The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/drush-versions) before you continue.
 
 1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
 
@@ -212,7 +197,7 @@ git commit -m "Copy custom themes"
 
 Follow suit with any other custom code you need to carry over.
 
-#### Settings.php
+#### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 

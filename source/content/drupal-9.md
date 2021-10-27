@@ -86,3 +86,7 @@ framework: drupal9
 When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal8` for a Drupal 8 or Drupal 9 site.
 
 If you created new project with Lando, change the value for `framework` to `drupal9`, then run `lando rebuild`.
+
+### Site-local Drush Is Required for Drupal 9 Sites
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
