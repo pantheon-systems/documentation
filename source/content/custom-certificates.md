@@ -152,7 +152,7 @@ To take your site live by moving custom domains from one Site Dashboard to anoth
 <Partial file="tables/https-specs.md" />
 
 
-## See Also
+## You May Also Refer To
 
 - [Pantheon Global CDN](/global-cdn)
 - [Advanced Global CDN](/guides/professional-services#advanced-global-cdn)
