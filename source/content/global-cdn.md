@@ -150,10 +150,10 @@ Once you know what your site's cache currently looks like, you can check your NG
 Fastly log extracts can be requested from your Customer Success Engineer. Standard analytics includes all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
 In your log report, you want to look for:
-- Disproportionate patterns of requests and 404s indicate possible exploits
-- Too many requests to the index paths may indicate a volumetric attack against the domain
-- Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt
-- Known exploit and excess traffic paths should be checked
+- Disproportionate patterns of requests and 404s indicate possible exploits.
+- Too many requests to the index paths may indicate a volumetric attack against the domain.
+- Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
+- Known exploit and excess traffic paths. 
 
 Please refer to the following docs for common caching issues:
 
