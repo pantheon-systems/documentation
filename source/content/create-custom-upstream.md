@@ -79,7 +79,9 @@ Choose your preferred Git host:
 
 1. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
  
-1. Change Include README and Include .gitignore to "No"
+1. Select **No** from the dropdown menu for **Include a README?** 
+ 
+1. Select **No** from the dropdown menu for **Include .gitignore?**
 
 1. Click **Create Repository**.
 
