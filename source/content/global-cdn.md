@@ -145,7 +145,7 @@ To improve site caching and cache hit ratio, you must first understand the curre
 
 Once you know what your site's cache currently looks like, you can check your NGINX or Fastly logs for any traffic anomalies or overages.
 
-[NGINX logs](/logs#available-logs) track all requests made to WordPress/Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/nginx-access-log) to produce a compiled report on most common requests, such as: 404s, user agents, etc.
+[NGINX logs](/logs#available-logs) track all requests made to WordPress or Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/nginx-access-log) to produce a compiled report on the most common requests, such as: 404s, user agents, etc.
 
 Fastly log extracts can be requested from your Customer Success Engineer. Standard analytics includes all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
