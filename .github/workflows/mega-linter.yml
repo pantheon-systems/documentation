@@ -53,6 +53,7 @@ jobs:
           FILTER_REGEX_INCLUDE: (source/)
           # suppress alpaca
           PRINT_ALPACA: false
+          PARALLEL: true
 
       # Upload Mega-Linter artifacts
       - name: Archive production artifacts
