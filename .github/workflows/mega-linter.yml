@@ -31,7 +31,7 @@ jobs:
     steps:
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v2.3.5
+        uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -54,6 +54,7 @@ jobs:
           # suppress alpaca
           PRINT_ALPACA: false
           PARALLEL: true
+          SPELL_CSPELL_DISABLE_ERRORS: false # Run linter but consider errors as warnings
 
       # Upload Mega-Linter artifacts
       - name: Archive production artifacts
