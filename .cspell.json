@@ -37,7 +37,7 @@
         "ignoreRegExpList": [
             "/#include.*/",
             "*/source/data/",
-            "*/source/docs/"
+            "*/source/docs/assets/"
         ],
         // List of dictionaries to enable by name in `dictionaryDefinitions`
         "dictionaries": ["cpp"],
