@@ -1,6 +1,10 @@
   "words": [
     "docroot",
     "Drush",
+    "HSTS",
+    "Kalabox",
+    "Localdev",
+    "Lockr",
     "Multidev",
     "Pantheon",
     "Terminus",
