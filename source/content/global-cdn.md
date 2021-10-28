@@ -125,7 +125,7 @@ To improve site caching and cache hit ratio, you must first understand the curre
 
 <Tab title="Via WordPress" id="wp-cache" active={true}>
 
-1. Install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Here, you are able to set the global TTL for your site. Pantheon's Page Cache plugin is included in the standard WordPress upstream and sets global TTL for your site.
+1. Install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Use this doc to set the global TTL for your site. Pantheon's Page Cache plugin is included in the standard WordPress upstream and sets global TTL for your site.
 
   ![Advanced Page Cache on WordPress.org](../images/advanced-page-cache-wordpress-plugin.png)
 
