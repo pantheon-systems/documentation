@@ -153,7 +153,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
       If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or `dev` (not recommended). You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
 
-        - If a dev version of a module fails because it requires a dev version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
+        - If a dev version of a module fails because it requires a development version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
 
         ```bash{promptUser:user}
         composer require drupal/some-module:^1@dev org/some-dependency:^2@dev
@@ -320,7 +320,7 @@ Once you have confirmed that the site works in the Multidev, replace the `master
    git push --force origin master
    ```
 
-Your site's dev environment is now set up to use the Drupal 9 Integrated Composer upstream. 
+Your site's Dev environment is now set up to use the Drupal 9 Integrated Composer upstream. 
 
 ### Troubleshooting: Inspect Site Logs
 
