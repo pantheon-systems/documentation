@@ -31,7 +31,7 @@ jobs:
     steps:
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.5
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -45,7 +45,7 @@ jobs:
         env:
           # All available variables are described in documentation
           # https://nvuillam.github.io/mega-linter/configuration/
-          VALIDATE_ALL_CODEBASE: true # Set ${{ github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/master&#39; }} to validate only diff with master branch
+          VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} # Set ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} to validate only diff with master branch / try false next
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # ADD YOUR CUSTOM ENV VARIABLES HERE TO OVERRIDE VALUES OF .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
           DISABLE: BASH,COPYPASTE,CREDENTIALS,CSS,HTML,JSON,MARKDOWN,YAML,XML
