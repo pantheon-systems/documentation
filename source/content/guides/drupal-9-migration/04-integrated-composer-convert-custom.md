@@ -95,7 +95,7 @@ Access the list of differences by adding the `drops-8` upstream as a second remo
    git diff --stat drops-8/master
    ```
 
-1. `git diff` different lines within a specific file:
+1. Run `git diff` for different lines within a specific file:
 
    ```bash{promptUser:user}
    git diff drops-8/master <FILE>
@@ -175,23 +175,23 @@ Assess the differences and note the ones that you will need to reapply to the In
 
 1. For each contrib module and theme in the list you've gathered, go through the following steps:
 
-  1. Add the package and version with Composer. If the version starts with `8.x-`, remove that and only include the version number after `8.x-`.
+    1. Add the package and version with Composer. If the version starts with `8.x-`, remove that and only include the version number after `8.x-`.
 
-    For example, if the version is `8.x-3.2`, use the version number `3.2`:
+      For example, if the version is `8.x-3.2`, use the version number `3.2`:
 
       ```bash{promptUser:user}
       composer require drupal/MODULE_NAME:^VERSION --no-update
       ```
 
-  1. Confirm that only `composer.json` has been modified:
+    1. Confirm that only `composer.json` has been modified:
 
       ```bash{promptUser:user}
       git status
       ```
 
-      - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
+        - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
 
-  1. Commit the change:
+    1. Commit the change:
 
       ```bash{promptUser:user}
       git commit -am "Adding MODULE_NAME"
@@ -277,7 +277,7 @@ Go through the following steps for each child site you wish to test, or that has
     git diff origin/master upstream/master -- pantheon.yml
     ```
 
-1. View & test the Multidev [INSERT SCREENSHOT SHARED IN SLACK]
+1. View & test the Multidev
 
   ![Example of Custom Upstream Git URL](../../../images/custom-upstream-git-url.png)
 
