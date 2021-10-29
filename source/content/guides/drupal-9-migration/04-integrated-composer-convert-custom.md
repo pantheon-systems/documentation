@@ -41,7 +41,7 @@ This doc uses [Terminus](/terminus).
    git checkout -b composerify
    ```
 
-1. On the `composerify` branch, run `git rm -rf *` and commit "removing all files". This is because you're going to completely replace the file structure and re-add customizations:
+1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. This is because you're going to completely replace the file structure and re-add customizations:
 
    ```bash{promptUser:user}
     git rm -rf * && git commit -m "Removing all files"
