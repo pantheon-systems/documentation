@@ -1,5 +1,5 @@
 Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
-
+[![Mega-Linter](https://github.com/pantheon-systems/documentation/workflows/Mega-Linter/badge.svg?branch=main)](https://github.com/pantheon-systems/documentation/actions?query=workflow%3AMega-Linter+branch%3Amain)
 
 Pantheon Documentation
 ======================
