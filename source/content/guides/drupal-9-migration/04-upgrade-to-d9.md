@@ -10,11 +10,11 @@ layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/upgrade-to-d9
 anchorid: drupal-9-migration/upgrade-to-d9
-editpath: drupal-9-migration/03-upgrade-to-d9.md
+editpath: drupal-9-migration/04-upgrade-to-d9.md
 reviewed: "2021-10-24"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 Composer-managed site to a Drupal 9 site with Integrated Composer.
+This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 Composer-managed site (following the steps on the [Composer Convert](/guides/drupal-9-migration/composer-convert) page) to a Drupal 9 site with Integrated Composer.
 
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
@@ -34,7 +34,7 @@ This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
 
 - The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
 
-To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal9` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
+To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal9` upstream, follow the steps on the [Composer Convert](/guides/drupal-9-migration/composer-convert) page.
 
 ## Ensure Dependencies are Drupal 9 Compatible
 
