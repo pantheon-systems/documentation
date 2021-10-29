@@ -55,14 +55,16 @@ This doc uses [Terminus](/terminus).
    git commit -m "Add and commit Integrated Composer files"
    ```
 
-1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8, then commit:
+1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8:
 
   ```json:title=upstream-configuration/composer.json
-    "drupal/core-recommended": "^8.8"
+  "drupal/core-recommended": "^8.8"
   ```
 
+1. Commit the change:
+
   ```bash{promptUser:user}
-    git commit -am "Setting Drupal core version to ^8.8"
+  git commit -am "Setting Drupal core version to ^8.8"
   ```
 
 ## Add Contrib and Custom Code
@@ -117,7 +119,7 @@ Assess the differences and note the ones that you will need to reapply to the In
 
     <Accordion title="Audit Contrib and Custom Modules" id="audit-contrib-custom-modules" icon="wrench">
 
-    1. To audit modules on all sites, create a new file called `audit_site_modules.sh` with the following content, and run this bash script:
+    1. To audit modules on all sites, create a new file called `audit_site_modules.sh` with the following content:
 
       ```bash:title=audit_site_modules.sh
       #!/usr/bin/env bash
@@ -148,7 +150,7 @@ Assess the differences and note the ones that you will need to reapply to the In
        chmod +x audit_site_modules.sh
        ```
     
-    1. Run it:
+    1. Run the script:
 
        ```bash{promptUser:user}
        ./audit_site_modules.sh
@@ -277,7 +279,7 @@ Go through the following steps for each child site you wish to test, or that has
 
 1. View & test the Multidev [INSERT SCREENSHOT SHARED IN SLACK]
 
-  ![Example of Custom Upstream Git URL](../images/custom-upstream-git-url.png)
+  ![Example of Custom Upstream Git URL](../../../images/custom-upstream-git-url.png)
 
 ## Final Deployment
 
