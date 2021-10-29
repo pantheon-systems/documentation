@@ -322,7 +322,7 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
     $allowed_endpoints = apply_filters( 'reqauth/allowed_endpoints', $allowed_endpoints );
 
 ```
-
+a randomly placed [line](/relative404) and [external 404](https://please404blopityboop.com/) that I'll remove with teh typo 
 ___
 
 ## Divi WordPress Theme & Visual Page Builder
