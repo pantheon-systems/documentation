@@ -17,13 +17,13 @@ This guide provides common troubleshooting tasks when migrating to Drupal 9 with
 
 ### Pantheon Launch Check Status Error: services.yml does not exist
 
-After you set up Drupal 9, you might see this error in the **Best practices** section of the Pantheon Launch Check:
+After you set up Drupal 9, the following error might be displayed in the **Best practices** section of the Pantheon Launch Check:
 
 > <span  style="color:red">x <strong>sites/default/services.yml:</strong></span> services.yml does not exist! Copy the default.service.yml to services.yml and see https://www.drupal.org/documentation/install/settings-file for details.
 ><br />
 ><br />
 >
-> *Create services.yml file inside sites/default directory by copying default/services.yml file. See https://www.drupal.org/documentation/install/settings-file for details.*
+> *Create services.yml file inside sites/default directory by copying default/services.yml file. Refer to https://www.drupal.org/documentation/install/settings-file for details.*
 
 Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is set to **Git**, then use the terminal on the local machine where you cloned the site, and from the project's root directory:
 
@@ -63,7 +63,7 @@ Given the nature of the bug, it might be easier to reinstall Drupal 9.
 | Module Name                                                                                 | Drupal 8 Version? | Drupal 9 Version? |
 |---------------------------------------------------------------------------------------------|:-----------:|:-----------:|
 | [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) |     Yes     |     Yes     |
-| [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |   Not yet   |
+| [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |     Yes     |
 
 ### Site-local Drush Is Required for Drupal 9 Sites
 

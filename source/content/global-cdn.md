@@ -117,6 +117,50 @@ To test how stale cache is served, compare the header results of a page refresh 
 
 </TabList>
 
+### Cache Management and Optimization
+
+To improve site caching and cache hit ratio, you must first understand the current state of your site's cache. To gain some preliminary insight, you can:
+
+<TabList>
+
+<Tab title="Via WordPress" id="wp-cache" active={true}>
+
+1. Install the [Advanced Page Cache (APC) Plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This enables the selective purging of cache on content editing and creation. For more information, you can refer to [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin). Use this doc to set the global TTL for your site. Pantheon's Page Cache plugin is included in the standard WordPress upstream and sets global TTL for your site.
+
+  ![Advanced Page Cache on WordPress.org](../images/advanced-page-cache-wordpress-plugin.png)
+
+</Tab>
+
+<Tab title="Via Drupal" id="drupal-cache">
+
+1. Install the [Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache). This enables the selective purging of cache on content editing and creation.
+1. Visit `/admin/config/development/performance` for Drupal's performance settings. 
+    * [Drupal 7](/drupal-cache#drupal-7-performance-configuration) - set maximum age, minimum cache time, and enable "Cache pages for anonymous users"
+    * [Drupal 8](/drupal-cache#drupal-8-performance-configuration) - set maximum age
+
+
+</Tab>
+
+</TabList>
+
+Once you know what your site's cache currently looks like, you can check your NGINX or Fastly logs for any traffic anomalies or overages.
+
+[NGINX logs](/logs#available-logs) track all requests made to WordPress or Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/nginx-access-log) to produce a compiled report on the most common requests, such as: 404s, user agents, etc.
+
+Fastly log extracts can be requested from your Customer Success Engineer. Standard analytics includes all pages requested, but will not include service calls and other traffic that does not load the tracking script.
+
+In your log report, you want to look for:
+- Disproportionate patterns of requests and 404s indicate possible exploits.
+- Too many requests to the index paths may indicate a volumetric attack against the domain.
+- Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
+- Known exploit and excess traffic paths. 
+
+Please refer to the following docs for common caching issues:
+
+- [Caching: Advanced Topics](/caching-advanced-topics)
+- [Debug Common Cache Busters](/guides/frontend-performance#debug-common-cache-busters)
+- [Traffic Limits and Overages](/traffic-limits)
+
 ## Frequently Asked Questions
 
 ### I already have a CDN. Can I use it with the Pantheon Global CDN?

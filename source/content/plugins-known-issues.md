@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda]
+contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
 reviewed: "2021-09-13"
 ---
 
@@ -222,9 +222,9 @@ ___
 
 <ReviewDate date="2018-10-03" />
 
-**Issue:** `Maintenance mode` gives the `ERR_TOO_MANY_REDIRECTS` error in the frontend. This plugin uses `503 Header status - Service Temporarily Unavailable` which creates a redirect loop. Please see [this issue](https://wordpress.org/support/topic/plugin-give-err_too_many_redirects-in-pantheon-hosting/) for more details regarding the error.
+**Issue:** `Maintenance mode` gives the `ERR_TOO_MANY_REDIRECTS` error in the frontend. This plugin returns the error `503 Header status - Service Temporarily Unavailable` which creates a redirect loop. Please see [this issue](https://wordpress.org/support/topic/plugin-give-err_too_many_redirects-in-pantheon-hosting/) for more details regarding the error.
 
-**Solution:** This plugin only works in the `Coming Soon Mode` on Pantheon, and you need to put content into the **Page Settings** > **Message** so the Coming Soon page won't appear as a blank white page.
+**Solution:** This plugin only works in the `Coming Soon Mode` on Pantheon. You need to add content to the **Page Settings** > **Message**, so the Coming Soon page won't appear as a blank page.
 
 Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/security#customize-lock-page).
 
@@ -481,13 +481,6 @@ ___
 
 ___
 
-## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
-
-**Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
-
-**Solution:** If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
-___
-
 ## [ManageWP worker](https://wordpress.org/plugins/worker/)
 
 <ReviewDate date="2018-10-12" />
@@ -651,6 +644,16 @@ ___
 This workaround may potentially break again with the next plugin update, and you will need to manually reapply the modification.
 
 </Alert>
+
+___
+
+## [Site24x7](https://wordpress.org/plugins/site24x7-rum/)
+
+<ReviewDate date="2021-10-20" />
+
+**Issue:** Site24x7 is an uptime monitor that pings a site in order to monitor various functions and stability. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon. 
+
+**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents. 
 
 ___
 
@@ -939,8 +942,8 @@ include_once '/code/wordfence-waf.php';
 to:
 
 ```
-if (file_exists('/code/includes/prepend.php')) {
-        include_once '/code/includes/prepend.php';
+if (file_exists('/code/wordfence-waf.php')) {
+	include_once '../../includes/prepend.php';
 }
 ```
 ___
