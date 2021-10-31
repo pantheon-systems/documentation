@@ -34,11 +34,11 @@ Because of that, the steps below make these codebase changes in a new branch.
 
 Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
-  ```
-  $ composer require --no-update drupal/core-recommended:^8.9
-  $ composer update drupal/core* -W
-  $ git add composer.*
-  $ git commit -m "Remain on Drupal 8"
+  ```bash{promptUser:user}
+  composer require --no-update drupal/core-recommended:^8.9
+  composer update drupal/core* -W
+  git add composer.*
+  git commit -m "Remain on Drupal 8"
   ```
 
 ### Add Upgrade Status Module
@@ -49,11 +49,11 @@ The Upgrade Status module will help to determine whether or not your site is rea
 
 Add the Upgrade Status module to your site with Composer:
 
-```
-$ composer require drupal/upgrade-status
-$ git add composer.*
-$ git commit -m "Add Upgrade Status module"
-```
+  ```bash{promptUser:user}
+  composer require drupal/upgrade-status
+  git add composer.*
+  git commit -m "Add Upgrade Status module"
+  ```
 
 When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading. 
 
