@@ -1,6 +1,6 @@
 ---
 title: Migrate to Drupal 9
-subtitle: Upgrade from Drupal 8
+subtitle: Upgrade from Drupal 8 Using Multidev
 description: Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer
 categories: [get-started]
 cms: drupal-9
@@ -14,9 +14,9 @@ editpath: drupal-9-migration/03-upgrade-to-d9.md
 reviewed: "2021-04-22"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer.
+This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer, using a **Multidev** to stage changes, and then replacing the `master` branch. 
 
-Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
+## Overview 
 
 The goals of this upgrade are to:
 
@@ -26,6 +26,9 @@ The goals of this upgrade are to:
 
 Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your site's existing commit history.
 
+
+## Will This Guide Work for Your Site?
+
 <Alert title="Multidev Required" type="danger">
 
 To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
@@ -33,8 +36,6 @@ To maintain best practice and to avoid difficult, time-consuming repairs to the 
 Pantheon support is not available to users who avoid the Multidev steps.
 
 </Alert>
-
-## Will This Guide Work for Your Site?
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
