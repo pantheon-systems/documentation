@@ -39,7 +39,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 9](https://github.com/pantheon-systems/drupal-project).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-systems/drupal-project/blob/default/.gitignore).
 
 #### Local Drupal configurations
 
@@ -165,16 +165,11 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="Drupal 9" id="d9-code">
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/` directory:
+  Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
+    
 
-   - `libraries`
-   - `modules`
-   - `profiles`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
-
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more     
+  details.
 
   </Tab>
 
