@@ -248,6 +248,12 @@ Use of the `wikimedia/composer-merge-plugin` is deprecated within [Drupal](https
 
 When using Pantheon's Integrated Composer, this plugin often tries to run a "composer update" during the "composer install," which is not allowed and will cause errors. We recommend removing `composer-merge-plugin` from your Composer toolchain.
 
+### Patches containing binary diffs fail in Pantheon
+
+When your site contains a binary patch like https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the composer build step will fail. This is due to the fact that [cweagans/composer-patches](https://github.com/cweagans/composer-patches) uses the patch utility to apply patches. Since recent versions, this utility doesn't support binary patches and fail.
+
+To workaround this issue, you should re-roll the patch to exclude the binary contents in it.
+
 ## FAQ
 
 ### What Composer commands does Pantheon run?
