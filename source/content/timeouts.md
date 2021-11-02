@@ -45,7 +45,7 @@ All non-web requests, such as those that do not pass Fastly's CDN, have a maximu
 
 <Alert title="Note" type="info">
 
-If the request passes through port `80` and `443` it is subject to a timeout at 59 seconds. 
+If the request passes through port `80` and `443` it will timeout at 59 seconds. 
 
 </Alert>
 
