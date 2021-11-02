@@ -236,4 +236,5 @@ You have now successfully integrated an industrial strength, simple to use, emai
 
 ## See Also
 
+- [Use WP Mail SMTP to Send Email with Sendgrid](/guides/sendgrid-wordpress-wp-mail-smtp)
 - [Prevent Spamming During Drupal Debugging and Testing](/guides/rerouting-outbound-email)
