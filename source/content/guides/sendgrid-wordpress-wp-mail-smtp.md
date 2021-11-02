@@ -9,9 +9,9 @@ reviewed: "2020-11-02"
 permalink: docs/guides/:basename
 ---
 
-[SendGrid](https://sendgrid.com/) is a popular email service, but its [WordPress plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) hasn't been updated in several years or tested with the latest 3 (as of this writing) major releases of WordPress.
+[SendGrid](https://sendgrid.com/) is a popular email service, but its [WordPress plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has been deprecated as of July 13, 2021.
 
-This guide will cover how to install and configure [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) to send emails from your WordPress site using Sendgrid
+This guide will cover how to install and configure [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) to send emails from your WordPress site using Sendgrid.
 
 <Alert title="Note" type="info">
 
@@ -23,7 +23,7 @@ WP Mail SMTP is not the only plugin available to integrate WordPress with Sendgr
 
 This guide assumes a pre-existing configuration of:
 
-- An configured WordPress site. See our [Quick Start](/guides/quickstart) guide if you need to set up a new WordPress site on Pantheon.
+- A configured WordPress site. See our [Quick Start](/guides/quickstart) guide if you need to set up a new WordPress site on Pantheon.
 - A familiarity with the [WebOps workflow](/pantheon-workflow), as we will be moving code and content between environments.
 - A SendGrid account and API key. Follow the steps in [Create a SendGrid Account](/guides/sendgrid/#create-a-sendgrid-account) to create and authenticate an account.
 - If your site has access to [Multidev](/multidev), we suggest creating a new Multidev environment to work in. If so, substitute the Multidev name for `dev` in the guide below, unless otherwise noted.
