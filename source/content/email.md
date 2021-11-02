@@ -3,6 +3,7 @@ title: Email with Drupal on Pantheon
 description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
 categories: [platform]
 tags: [email]
+reviewed: "2020-11-02"
 ---
 ## Incoming Email
 
