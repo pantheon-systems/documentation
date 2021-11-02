@@ -160,7 +160,7 @@ search:
 #### Considerations
 
 * The valid values for the versions are `3` and `8`.
-* Currently, Solr 8 is only supported for Drupal 9 sites.
+* Currently, Solr 8 is only supported for [Drupal 9](https://pantheon.io/docs/guides/solr-drupal/solr-drupal-9) sites.
 
 ### Drush Version
 
