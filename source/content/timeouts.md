@@ -38,15 +38,14 @@ When troubleshooting timeout errors, first verify that the timeout is not caused
 
 ### Why is the timeout still set to 59 seconds, after setting up the time out for 120 seconds?
 
-All web requests are set to 59 seconds. Fastly and GCDN terminate the requests if the backend does not respond after 59 seconds. PHP will continue to process the request until it hits the PHP `max_execution_time`, however the results will not be relayed to the user browser, as the connection has already terminated.
+All web requests are set to 59 seconds. Fastly's GCDN terminates the request if the backend does not respond after 59 seconds. PHP will continue to process the request until it hits the PHP `max_execution_time`, however the results will not be relayed to the user browser, because the connection has already terminated.
 
-All non-web requests, such as those that do not pass AGCDN or Fastly, have a maximum timeout of 120 seconds. This includes requests from Terminus or PHP scripts via SSH. 
-
+All non-web requests, such as those that do not pass Fastly's CDN, have a maximum timeout of 120 seconds. This includes requests from Terminus or PHP scripts via SSH. 
 
 
 <Alert title="Note" type="info">
 
-If the request is going to pass through port **80** and **443** it means it is subject to **59 seconds** as this ports are in Fastly/GCDN
+If the request passes through port `80` and `443` it is subject to a timeout at 59 seconds. 
 
 </Alert>
 
