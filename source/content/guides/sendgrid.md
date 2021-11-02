@@ -205,7 +205,7 @@ Then commit and push the symlink to Pantheon.
 
       <Alert title="Note" type="info">
 
-      Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/email)
+      Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email with Drupal on Pantheon](/email)
 
       </Alert>
 
