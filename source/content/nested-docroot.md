@@ -1,6 +1,6 @@
 ---
 title: Serving Sites from the Web Subdirectory
-description: Learn how to create a nested docroot to serve your Pantheon site from.
+description: Learn how to create and use a nested docroot to serve your Pantheon site.
 categories: [platform]
 tags: [code, site, terminus, workflow]
 contributors:
@@ -11,7 +11,11 @@ The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the direct
 
 <Alert title="Warning" type="danger">
 
-Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.
+Using Pantheon's one-click Dashboard upddates feature depends on correctly setting the `web_docroot` property. 
+
+- Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require setting the `web_docroot` property set in the `pantheon.upstream.yml` file.
+- Sites that use a [Custom Upstream](/custom-upstream) require setting the `web_docroot` property set in the `pantheon.upstream.yml` file.
+- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
 </Alert>
 
