@@ -13,42 +13,48 @@ anchorid: drupal-9-migration/drupal-9-to-pantheon
 editpath: drupal-9-migration/05-drupal-9-to-pantheon.md
 ---
 
-In this doc, you'll migrate an existing Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with Integrated Composer on Pantheon.
+In this doc, you'll migrate an existing Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with [Integrated Composer](/integrated-composer) on Pantheon.
 
-## Unresolved Questions / TO-DOs
+## Overview
 
-- [x] How Do we address nested docroot vs not-nested docroot?
-  - "Composer-managed sites should almost always have a nested docroot. For now we could just make that a requirement. We should address the fact that the docroot name might be different on the source site. It's best to rename it to web, as Pantheon expects."
-- The document should probably describe the over-all arc we will pursue, at the start
+In this migration you'll do the following:
+
+- Using Git, clone your existing site locally
+- Create a new Drupal 9 development site on Pantheon, and clone it locally
+
+Working locally across both the existing and new site codebases, you'll: 
+
+- Copy selected portions of the existing site code into the new site code
+- Copy portions of `composer.json` from the existing site to the new site
+- Copy and commit the existing site's custom modules, themes, profiles, and other dependencies to the new site
+- Make any needed customizations to `settings.php` on the new site
+- Carry over any additional code customizations from the existing site to the new Pantheon Drupal 9 site code
+
+<Alert title="Integrated Composer and existing files" type="danger">
+
+Integrated Composer will break if `composer install` tries to modify any files that are committed in Git. To avoid this, [DO THIS THING *****]
+
+</Alert>
+
+## Important Notes
+
+- Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name. 
+
   - Address the question of composer packages being committed to version control, and how we need to not do that for IC
 - Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
-- I kept referring to the "old site".. not sure if there's a better way to phrase it
   - Edward to adjust to alias or `former-platform`
-- Site structure.. seems like nice info to include, but not sure about the current spot in the doc
 - `composer show` - not using this
 - have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)?  wikimedia merge plugin?
 
 
 ## Will This Guide Work for Your Site?
 
-- Drupal 9
+Before you continue, confirm that your site meets the following requirements:
+
+- The existing Drupal 9 site uses Composer to manage site dependencies
 - Composer-managed
 - Able to get a local copy of the existing site / access to a Git repository of it?
 
-## Overview
-
-- Integrated Composer on Pantheon
-  - link to IC documentation
-  - explain that IC will break if composer install tries to modify any files that are committed in git
-
-- Overview of approach
-  - Old and new site both cloned locally
-  - Copy selected portions of old site code into new site code
-    - Portions of composer.json
-    - Copy and commit custom modules/themes/profiles/etc
-    - config files
-    - settings.php customizations
-    - etc (anything else custom from their old site)
 
 ## Create a New Drupal 9 Site
 
