@@ -36,6 +36,28 @@ When troubleshooting timeout errors, first verify that the timeout is not caused
 
 ## Frequently Asked Questions
 
+### After setting up the time out for 120 secs, it's still set 59 secs, why?
+
+- All web requests - 59 seconds (this is because Fastly/GCDN will terminate the requests if the backend will not respond after 59 seconds)
+  - PHP will continue to process the request until it hits the PHP max_execution_time but the results will not get relay to the user browser as the connection is already terminated.
+
+- All non-web requests have a maximum of 120 seconds. This is the request that is not passing GlobalCDN/Fastly
+  - Example:
+    - Terminus
+    - PHP script via SSH
+
+
+<Alert title="Note" type="info">
+
+If the request is going to pass through port **80** and **443** it means it is subject to **59 seconds** as this ports are in Fastly/GCDN
+
+</Alert>
+
+### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
+
+Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/terminus). With that said, most slow cron executions are due to PHP errors or a slow external service; best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/php-errors) for clues.
+
+
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
 Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/terminus). With that said, most slow cron executions are due to PHP errors or a slow external service; best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/php-errors) for clues.
