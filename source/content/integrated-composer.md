@@ -250,9 +250,9 @@ When using Pantheon's Integrated Composer, this plugin often tries to run a "com
 
 ### Patches containing binary diffs fail in Pantheon
 
-When your site contains a binary patch like https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the composer build step will fail. This is due to the fact that [cweagans/composer-patches](https://github.com/cweagans/composer-patches) uses the patch utility to apply patches. Since recent versions, this utility doesn't support binary patches and fail.
+If your site contains a binary patch, such as https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the Composer build step will fail. This is because [cweagans/composer-patches](https://github.com/cweagans/composer-patches) use the patch utility to apply patches. The most recent version of this utility does not support binary patches and fails when deployed.
 
-To workaround this issue, you should re-roll the patch to exclude the binary contents in it.
+A workaround for this issue, is to reconfigure the patch to exclude the binary contents in it.
 
 ## FAQ
 
