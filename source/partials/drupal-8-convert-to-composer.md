@@ -36,6 +36,7 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
   ```bash{promptUser:user}
   composer require --no-update drupal/core-recommended:^8.9
+  composer require "composer/installers:^1.9"
   composer update drupal/core* -W
   git add composer.*
   git commit -m "Remain on Drupal 8"
@@ -50,7 +51,7 @@ The Upgrade Status module will help to determine whether or not your site is rea
 Add the Upgrade Status module to your site with Composer:
 
   ```bash{promptUser:user}
-  composer require drupal/upgrade-status
+  composer require drupal/upgrade_status
   git add composer.*
   git commit -m "Add Upgrade Status module"
   ```
