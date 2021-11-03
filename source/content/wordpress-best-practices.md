@@ -43,7 +43,7 @@ This article provides suggestions, tips, and best practices for developing and m
   
 #### Manage License Keys for Themes or Plugins
 
-Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update, an deploy the updates to Test and Live environments. 
+Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments. 
 
 
 ## Testing
