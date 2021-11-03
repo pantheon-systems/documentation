@@ -51,7 +51,7 @@ The Upgrade Status module will help to determine whether or not your site is rea
 Add the Upgrade Status module to your site with Composer:
 
   ```bash{promptUser:user}
-  composer require drupal/upgrade-status
+  composer require drupal/upgrade_status
   git add composer.*
   git commit -m "Add Upgrade Status module"
   ```
