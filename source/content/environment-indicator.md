@@ -35,7 +35,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.$env -- plugin install pantheon-hud --activate
  ```
 
-1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus, and clear the cache:
+1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.test --sync-content --updatedb --note="Install Pantheon HUD plugin"
@@ -50,7 +50,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.test -- plugin activate pantheon-hud
  ```
 
-1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus, and clear the cache:
+1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.live --note="Install Pantheon HUD plugin"
@@ -201,7 +201,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   </TabList>
 
-1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the cache:
+1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
@@ -210,7 +210,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
-1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the cache:
+1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
   ```bash{promptUser: user}
   terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
