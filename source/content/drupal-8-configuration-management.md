@@ -62,11 +62,15 @@ terminus env:commit <site>.dev --message="Export configuration to code"
 
 terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy configuration to test"
 
+terminus env:clear-cache <site>.test
+
 terminus drush <site>.test -- config:import -y
 
 open https://test-mysite.pantheonsite.io
 
 terminus env:deploy <site>.live --note="Deploy configuration to live"
+
+terminus env:clear-cache <site>.live
 
 terminus drush <site>.live -- config:import -y
 
