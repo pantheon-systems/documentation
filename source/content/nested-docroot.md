@@ -7,19 +7,20 @@ contributors:
  - ataylorme
 ---
 
-The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
+The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g., `code/web`).
 
 <Alert title="Warning" type="danger">
 
-Using Pantheon's one-click Dashboard upddates feature depends on correctly setting the `web_docroot` property. 
+Using Pantheon's one-click Dashboard updates feature depends on a correctly set the `web_docroot` property.
 
-- Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require setting the `web_docroot` property set in the `pantheon.upstream.yml` file.
-- Sites that use a [Custom Upstream](/custom-upstream) require setting the `web_docroot` property set in the `pantheon.upstream.yml` file.
-- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
+- Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
+- Sites that use a [Custom Upstream](/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
+- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if you desire one-click Dashboard updates.
 
 </Alert>
 
 ## Advantages and Use Cases
+
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
