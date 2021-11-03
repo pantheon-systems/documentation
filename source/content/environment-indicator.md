@@ -210,10 +210,11 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
-1. Deploy the module to the Live environment within the Site Dashboard or with Terminus:
+1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the cache:
 
   ```bash{promptUser: user}
   terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
+  terminus env:clear-cache <site>.live
   ```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
