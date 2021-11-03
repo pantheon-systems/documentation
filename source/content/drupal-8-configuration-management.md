@@ -47,8 +47,6 @@ You can export your configuration into that directory directly using Drush's `co
    drush config:import -y
    ```
 
-1. Profit.
-
 Using Terminus, you can complete the above process from the command line.
 
 ### Workflow Example
@@ -138,4 +136,4 @@ Relocate the configuration directory for the default location using `git mv`:
 git mv web/sites/default/files/config .
 ```
 
-For additional details, see [this Pantheon blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
+For additional details, refer to [this Pantheon blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
