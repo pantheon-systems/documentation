@@ -192,6 +192,12 @@ And finally, let's initialize the Test environment to move the code, files, and 
 terminus env:deploy <site>.test --sync-content --updatedb
 ```
 
+For successful deployment, ensure you clear the site cache:
+
+```bash{promptUser: user}
+terminus env:clear-cache <site>.test
+```
+
 ## Congratulations!
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
 
