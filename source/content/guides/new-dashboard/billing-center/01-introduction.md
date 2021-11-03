@@ -12,9 +12,9 @@ anchorid: billing-center
 editpath: billing-center/01-introduction.md
 ---
 
-intro line
+The Billing Center gives you access to your available sites, plans, payment methods, and invoices, all in one place.
 
-## h2
+## Overview
 
 ## Personal Workspace Billing
 
