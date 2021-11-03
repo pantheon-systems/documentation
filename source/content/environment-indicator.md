@@ -35,10 +35,11 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.$env -- plugin install pantheon-hud --activate
  ```
 
-1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
+1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus, and clear the cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.test --sync-content --updatedb --note="Install Pantheon HUD plugin"
+ terminus env:clear-cache <site>.test
  ```
 
   If you're working from a Multidev environment, merge to Dev first.
@@ -49,10 +50,11 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.test -- plugin activate pantheon-hud
  ```
 
-1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
+1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus, and clear the cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.live --note="Install Pantheon HUD plugin"
+ terminus env:clear-cache <site>.live
  ```
 
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
@@ -199,10 +201,11 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   </TabList>
 
-1. Deploy the module to the Test environment within the Site Dashboard or with Terminus:
+1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
+ terminus env:clear-cache <site>.test
  ```
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
