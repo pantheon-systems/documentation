@@ -449,6 +449,16 @@ ___
 
 ___
 
+## [HM Require Login](https://github.com/humanmade/hm-require-login)
+
+<ReviewDate date="2021-11-04" />
+
+**Issue:** WordPress's cookies disappear shortly after a user successfully logs in. When the user attempts to access a second page in the WordPress Admin, the user is shown the login screen.
+
+**Solution:** Use an alternative plugin such as [Force Login](https://wordpress.org/plugins/wp-force-login/) or [Restricted Site Access](https://wordpress.org/plugins/restricted-site-access/).
+
+___
+
 ## [InfiniteWP](https://infinitewp.com)
 
 <ReviewDate date="2019-10-01" />
