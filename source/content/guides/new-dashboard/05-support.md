@@ -5,7 +5,7 @@ description: A streamlined Support experience for your Workspace.
 categories: [platform]
 tags: [dashboard]
 contributors: [edwardangert,joa-pan]
-reviewed: "2021-08-26"
+reviewed: "2021-11-02"
 layout: guide
 permalink: docs/guides/new-dashboard/support
 anchorid: new-dashboard
