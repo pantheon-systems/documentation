@@ -629,7 +629,13 @@ ___
 
 ## [SendGrid Subscription Widget](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)
 
-<ReviewDate date="2018-10-13" />
+<ReviewDate date="2021-11-04" />
+
+<Alert title="Note"  type="info" >
+
+This section exists for reference purposes, as SendGrid for WordPress has been [deprecated](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)  as of July 13, 2021. [Support](/support) can continue to help with platform issues, but may not be able to troubleshoot SendGrid-specific issues.
+
+</Alert>
 
 **Issue:** The email confirmation link sent from the Subscription Widget goes to a redirect loop (see the [open issue on wp.org](https://wordpress.org/support/topic/email-sent-from-the-subscription-widget-goes-to-a-redirect-loop-in-pantheon)). The link created uses a URL `GET` parameter `__sg_api`, which has double underscores. The platform strips this type of parameter to improve [caching performance](/pantheon_stripped/#which-query-parameters-are-optimized).
 
