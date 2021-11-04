@@ -235,7 +235,13 @@ terminus site:list --format=list | terminus site:mass-update:apply --accept-upst
 When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:
 
 ```bash{promptUser: user}
-terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates" 
+terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates"
+```
+
+Ensure you clear the site after each deployment:
+
+```bash{promptUser: user}
+terminus env:clear-cache <site>.test
 ```
 
 After testing changes, use Terminus to deploy code from Test up to Live:
@@ -243,6 +249,13 @@ After testing changes, use Terminus to deploy code from Test up to Live:
 ```bash{promptUser: user}
 terminus env:deploy my-site.live --note="Deploy core and contrib updates" 
 ```
+
+Ensure you clear the site after each deployment:
+
+```bash{promptUser: user}
+terminus env:clear-cache <site>.live
+```
+
 
 ## Reset Dev Environment to Live
 
