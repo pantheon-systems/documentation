@@ -93,4 +93,5 @@ Some good troubleshooting first steps include:
  - Check if the issue is theme related by using an unmodified default theme like [Bartik](https://www.drupal.org/project/bartik) or [Twenty Nineteen](https://wordpress.org/themes/twentynineteen/).
 
 ### Cache Is Cleared from Dashboard and Application but New Changes Are Not Visible
-This usually happens when using a 3rd Party CDN on top of Pantheon like Cloudflare, Stackpath, etc. Try clearing the cache from the 3rd-party CDN's dashboard.
+
+This usually happens when using a 3rd-party CDN on top of Pantheon like Cloudflare, Stackpath, etc.. Try clearing the cache from the 3rd-party CDN's dashboard.

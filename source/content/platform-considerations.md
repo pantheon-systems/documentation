@@ -215,7 +215,7 @@ For PDF viewer plugins that rely on Mozilla's [PDF.js](https://github.com/mozill
 
 Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
 
-Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/guides/professional-services/advanced-global-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/guides/professional-services/advanced-global-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/professional-services?docs) for more information.
 
 ## Inactive Site Freezing
 
@@ -247,7 +247,7 @@ Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file s
 |:--------------- | ------------------------------- |------------------------------------ |
 | ≤ 100MB         | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
 |   100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MB         | <span  style="color:red">❌</span>   | Must be hosted via 3rd party CDN    |
+| > 256MB         | <span  style="color:red">❌</span>   | Must be hosted via 3rd-party CDN    |
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 

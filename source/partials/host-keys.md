@@ -29,6 +29,10 @@ Open `~/.ssh/config` (or create a new file if one does not exist) and add the fo
 ```none:title=~/.ssh/config
 Host *.drush.in
     StrictHostKeyChecking no
+    # The settings on the next two lines are temporary until Pantheon updates the available key types.
+    # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
 ```
 
 Now, requests to any `*.drush.in` server address should automatically accept the server's SSH key fingerprint without prompting you.

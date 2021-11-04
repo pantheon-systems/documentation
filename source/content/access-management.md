@@ -35,7 +35,7 @@ The user account in question must [transfer ownership to another person in the o
 For all sites, we recommend instructing users to change their passwords regularly, using two-factor authentication, restricting access with Change Management, and carefully planning who will create client sites in the organization.
 
 ## See Also
-[Accessing an Account After the Owner Leaves](/site-access)
-[Role-Based Permissions & Change Management](/change-management)
-[Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication)
-[Team Management](/team-management)
+- [Accessing an Account After the Owner Leaves](/site-access)
+- [Role-Based Permissions & Change Management](/change-management)
+- [Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication)
+- [Team Management](/team-management)

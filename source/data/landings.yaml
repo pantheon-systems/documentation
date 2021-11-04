@@ -57,6 +57,20 @@
     - title: 'Migrate your Sites to Pantheon'
       subtitle: 'Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.'
       subtopic-lists:
+        - title: 'Integrated Composer'
+          links:
+            - text: 'Integrated Composer Overview'
+              url: '/integrated-composer'
+            - text: 'Get Started with Composer'
+              url: '/composer'
+        - title: 'Upgrade and Migrate to Drupal 9'
+          links:
+            - text: 'Drupal 9'
+              url: '/drupal-9'          
+            - text: 'Drupal 9 Migration Guide'
+              url: '/guides/drupal-9-migration'
+            - text: 'Pantheon Search with Solr 8 for Drupal 9'
+              url: '/guides/solr-drupal/solr-drupal-9'      
         - title: 'Guided Migrations'
           links:
             - text: 'Guided WordPress Migrations'
@@ -96,7 +110,7 @@
     type: 'Essential Developer Training'
     title: 'Command Line Interface with Terminus'
     subtitle: "An introduction to Terminus: Pantheon's command line interface."
-    url: 'https://pantheon.io/workshops/command-line-interface-terminus?docs'
+    url: 'https://pantheon.io/docs/guides/edt/terminus-cli/'
   subtopics:
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
@@ -220,11 +234,11 @@
           url: '/new-relic'
         - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
           url: '/object-cache'
-        - text: 'Apache Solr on Pantheon'
+        - text: 'Pantheon Search'
           url: '/solr'
-        - text: 'Enabling Solr with Drupal'
+        - text: 'Enabling Pantheon Search for Drupal'
           url: '/guides/solr-drupal'
-        - text: 'Enabling Solr for WordPress'
+        - text: 'Enabling Pantheon Search for WordPress'
           url: '/wordpress-solr'
     - title: 'Composer'
       subtitle: 'Use Composer to manage some or all of your dependencies.'
@@ -370,7 +384,7 @@
     title: 'Going Live Best Practices'
     type: 'Essential Developer Training'
     subtitle: 'How do you take a website live on Pantheon?'
-    url: 'https://pantheon.io/workshops/going-live-best-practices?docs'
+    url: 'https://pantheon.io/docs/guides/edt/going-live/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
@@ -563,7 +577,7 @@
     title: 'Automate and Integrate with Quicksilver'
     type: 'Essential Developer Training'
     subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
-    url: 'https://pantheon.io/workshops/integrate-and-automate-quicksilver?docs'
+    url: '/workshops?c=lw3'
   topics-groups:
     - title: ''
       subtitle: ''
@@ -598,7 +612,7 @@
           url: '/modules-plugins-known-issues'
         - text: 'Pantheon Plugins'
           url: '/plugins'
-        - text: 'Enabling Solr with Drupal'
+        - text: 'Enabling Pantheon Search with Drupal'
           url: '/guides/solr-drupal'
         - text: 'Using WP SAML Auth with Google Apps'
           url: '/guides/wordpress-google-sso'
@@ -731,7 +745,7 @@
     title: 'Website Performance'
     type: 'Essential Developer Training'
     subtitle: 'How does Pantheon help your website run faster than other platforms?'
-    url: 'https://pantheon.io/workshops/website-performance-varnish-redis-and-new-relic?docs'
+    url: 'https://pantheon.io/docs/guides/edt/performance/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'

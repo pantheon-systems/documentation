@@ -1,6 +1,6 @@
 - id: carolynshannon
   name: Carolyn Shannon
-  bio: Technical Documentation Manager for Pantheon
+  bio: Sr. Manager of Education Services, Pantheon
   avatar: //avatars.githubusercontent.com/u/55147679
   github: //github.com/carolyn-shannon
   drupal: //www.drupal.org/u/chicagomom
@@ -9,25 +9,25 @@
 - id: edwardangert
   name: Edward Angert
   twitter: https://twitter.com/edwardangert
-  bio: Senior Technical Writer for Pantheon
+  bio: Manager of Technical Documentation, Pantheon
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
   linkedin: //www.linkedin.com/in/edward-angert/
 - id: joa-pan
   name: Joanie Edwards
   avatar: //github.com/joa-pan.png?size=460
-  bio: Senior Technical Writer for Pantheon
+  bio: Senior Technical Writer, Pantheon
   github: //github.com/joa-pan
   drupal: https://www.drupal.org/u/_joan
 - id: michellecolon-pantheon
   name: Michelle Colón
   avatar: //github.com/michellecolon-pantheon.png?size=460
-  bio: Technical Writer for Pantheon
+  bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
-  linkedin: //www.linkedin.com/in/michellecolon  
+  linkedin: //www.linkedin.com/in/michellecolon
 - id: eabquina
   name: Eladio Abquina
-  bio: Engagement Manager, Professional Services
+  bio: Manager of Implementation Services, Pantheon
   twitter: https://twitter.com/eabquina
   github: //github.com/eabquina
   avatar: //pbs.twimg.com/profile_images/1290706689/SAMPLE2_400x400.jpg
@@ -35,7 +35,7 @@
 - id: carlalberto
   name: Carl Alberto
   github: //github.com/carl-alberto
-  bio: Pantheon Senior Customer Success Engineer
+  bio: Implementation Consultant, Pantheon
   avatar: //avatars.githubusercontent.com/u/5098765
 - id: suzannealdrich
   name: Suzanne Aldrich
@@ -49,7 +49,7 @@
 - id: greg-1-anderson
   name: Greg Anderson
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Greg_Anderson.jpg
-  bio: Open Source Contribution Engineer
+  bio: Manager of Engineering, Pantheon
   twitter: https://twitter.com/greg_1_anderson
   github: //github.com/greg-1-anderson
   drupal: //www.drupal.org/u/greg1anderson
@@ -63,12 +63,16 @@
   url: https://handbuilt.co/
 - id: caitybishop
   name: Caity Bishop
-  bio: Senior Content Strategist
+  bio: Manager of Content, Pantheon
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/IMG_2047.jpg
   linkedin: https://www.linkedin.com/in/caitlin-lee-bishop/
+- id: clintonPantheon
+  name: Clinton Bowen
+  github: //github.com/clintonPantheon
+  avatar: //avatars.githubusercontent.com/u/38017436?v=4
 - id: albertcausing
   name: Albert Causing
-  bio: Customer Success Engineer
+  bio: Support Team Lead, Pantheon
   avatar: //avatars0.githubusercontent.com/u/17841145
   twitter: https://twitter.com/acausing
   drupal: https://www.drupal.org/u/acausing
@@ -76,7 +80,7 @@
   name: Matt Cheney
   avatar: //avatars1.githubusercontent.com/u/520521
   twitter: https://twitter.com/populist
-  bio: Website developer extraordinaire
+  bio: Website developer extraordinaire, Pantheon
 - id: wbconnor
   name: Brent Connor
   avatar: //avatars2.githubusercontent.com/u/8883983
@@ -133,11 +137,11 @@
   twitter: https://twitter.com/AriAtPantheon
   github: //github.com/ari-gold
   drupal: //www.drupal.org/user/329006/
-  bio: Product Manager
+  bio: Product Manager, Pantheon
 - id: dgorton
   name: Drew Gorton
   twitter: https://twitter.com/dgorton
-  bio: Director of Developer Advocacy
+  bio: Director of Developer Relations, Pantheon
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Drew.jpg
   github: //github.com/dgorton
 - id: masonjames
@@ -154,14 +158,14 @@
   linkedin: //www.linkedin.com/in/fatimasarahkhalid/
   github: //github.com/sugaroverflow
   drupal: https://www.drupal.org/u/sugaroverflow
-  bio: Developer Programs Engineer
+  bio: Developer Programs Engineer, Pantheon
 - id: sparklingrobots
   name: Tara King
   avatar: //avatars.githubusercontent.com/u/2217845
   github: //github.com/sparklingrobots
   linkedin: //www.linkedin.com/in/kingtara
   drupal: //www.drupal.org/u/sparklingrobots
-  bio: Developer Outreach Manager at Pantheon
+  bio: Community contributor
 - id: mrfelton
   name: Tom Kirkpatrick
   url: https://www.systemseed.com
@@ -181,7 +185,7 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
   twitter: https://twitter.com/outlandishjosh
   linkedin: //www.linkedin.com/in/joshkoenig
-  bio: Chief Strategy Officer
+  bio: Chief Strategy Officer, Pantheon
 - id: aleksandrkorolyov
   name: Aleksandr Korolyov
   avatar: //www.drupal.org/files/styles/grid-2/public/user-pictures/picture-3615472-1558255512.png
@@ -231,7 +235,7 @@
 - id: scottmassey
   name: Scott Massey
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/ScottNew.jpg
-  bio: Master of Customer Success
+  bio: Master of Customer Success, Pantheon
   linkedin: //www.linkedin.com/in/scottlmassey
   github: //github.com/sukottokun
   twitter: https://twitter.com/astrocolossal
@@ -253,7 +257,6 @@
   url: https://www.mcdwayne.com
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Dwayne%20McDaniel.jpg
   twitter: https://twitter.com/mcdwayne
-  gplus: https://plus.google.com/u/0/116638905183908020634
   github: https://github.com/mcdwayne/
   linkedin: https://www.linkedin.com/in/dwaynemcdaniel
   drupal: https://www.drupal.org/u/mcdwayne
@@ -261,7 +264,7 @@
   bio: Community contributor
 - id: katiemac
   name: Katie McGonigal
-  bio: Senior Director, People Experience, Diversity, and Inclusion
+  bio: Community contributor
   avatar: //s.gravatar.com/avatar/2129d34480346a41960310bf9482cabd?s=240
 - id: mmenavas
   name: Maximo Mena
@@ -271,11 +274,10 @@
   bio: Maximo Mena was born in Lima, Peru. He moved to Phoenix, Arizona, in 2003 to attend Arizona State University (ASU), where he got a bachelor’s degree in Computer Systems Technology.
 - id: davidneedham
   name: David Needham
-  bio: Developer Advocate
+  bio: Community contributor
   linkedin: //www.linkedin.com/in/davidaneedham
   twitter: https://twitter.com/davidneedham
   drupal: //www.drupal.org/u/davidneedham
-  gplus: //plus.google.com/u/0/+DavidNeedham
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David%20Needham.png
 - id: stevector
   name: Steve Persch
@@ -286,13 +288,12 @@
   github: //github.com/stevector
   drupal: https://www.drupal.org/user/179805
   wordpress: //profiles.wordpress.org/stevector
-  bio: Director, Technical Marketing
+  bio: Director, Technical Marketing, Pantheon
 - id: iameap
   name: Eric Peterson
   url: //www.eric.pe/terson
   avatar: //s.gravatar.com/avatar/0cd9fdc3a5e346d8fd7b74c527a93346?s=300
   twitter: https://twitter.com/iamEAP
-  gplus: //plus.google.com/+iamEAP
   github: //github.com/iamEAP
   linkedin: //www.linkedin.com/in/iamEAP
   drupal: //www.drupal.org/u/iamEAP
@@ -315,7 +316,7 @@
 - id: peter-pantheon
   name: Peter Sawczynec
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
-  bio: Customer Onboarding Manager
+  bio: Customer Onboarding Manager, Pantheon
   github: //github.com/peter-pantheon
 - id: eeeschwartz
   name: Erik Schwartz
@@ -328,12 +329,12 @@
 - id: stovak
   name: Tom Stovall
   github: //github.com/stovak
-  bio: Developer Experience Engineer
+  bio: Developer Experience Engineer, Pantheon
   avatar: //avatars.githubusercontent.com/u/119924
 - id: dts
   name: David Strauss
   twitter: https://twitter.com/DavidStrauss
-  bio: CTO & Co-Founder
+  bio: CTO & Co-Founder, Pantheon
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/david_0.jpg
   github: //github.com/davidstrauss
 - id: petersuhm
@@ -376,7 +377,7 @@
 - id: nathantyler
   name: Nathan Tyler
   avatar: //avatars.githubusercontent.com/u/232096
-  bio: Product Manager
+  bio: Sr Product Manager, Pantheon
   github: //github.com/tylerdigital
 - id: digisavvy
   name: Alex Vasquez
@@ -388,12 +389,12 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
   github: //github.com/rachelwhitton
   twitter: https://twitter.com/rachwhitton
-  bio: Team Lead, Migration Services
+  bio: Team Lead, Migration Services, Pantheon
 - id: curmudgeon
   name: Kit Wong
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/KitNew.jpg
   github: //github.com/hengkit
-  bio: Principal Sales Engineer
+  bio: Principal Sales Engineer, Pantheon
 - id: bwood
   name: Brian Wood
   avatar: //avatars2.githubusercontent.com/u/185537
@@ -406,4 +407,4 @@
   avatar: //avatars2.githubusercontent.com/u/856298
   github: //github.com/szipfel
   twitter: https://twitter.com/szipfel
-  bio: Technical Engagement Manager
+  bio: Community contributor

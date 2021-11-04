@@ -207,7 +207,7 @@ No, syslog is not available. Technically, you can log Drupal events using the sy
 
 ### Can I access Apache Solr logs?
 
-No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/solr).
+No, access to Apache Solr logs is not available. For more information on debugging Solr, refer to the documentation on [Pantheon Search](/solr).
 
 ### Can I download Varnish logs?
 

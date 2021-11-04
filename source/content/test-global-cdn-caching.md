@@ -70,7 +70,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
   - Hostname of the Pantheon load balancing server at the origin datacenter. There are a number of these servers, and each request may be served by a different server.
 
 - **Server: nginx**
-  - A Pantheon webserver generated the original page content. This will always be shown, even if a page is served from the a Global CDN cache.
+  - A Pantheon web server generated the original page content. This will always be shown, even if a page is served from the a Global CDN cache.
 
 - **X-Drupal-Cache: HIT**
   - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information. **Drupal Only**
