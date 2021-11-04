@@ -18,6 +18,7 @@ Support features can be accessed in a centralized location, where users can open
 
 Click the **Support** tab for resources, existing tickets, or to create a new Support ticket, depending on the [Support available for your account](/support). 
 
+    Silver| Gold| Platinum| Diamond 
 Chat|24x5|24x7|	24x7: Priority|	24x7: Top Priority
 Tickets| ❌|24x5: 8 Hours|	24x7: 2 Hours|	24x7: 1 Hour
 Emergency On-Call| ❌|	❌	|24x7: 1 Hour|24x7: 15 Minutes|
@@ -71,8 +72,7 @@ Get answers, learn, and engage with other Pantheon users
 
 ## Ticket History 
 
-Search the ticket by Subject line. 
-You can view your support ticket  and order by history, by status, Ticket ID# , or Subject, created by, last udated, or related site
+Search the ticket by Subject line.You can view your support ticket  and order by history, by status, Ticket ID# , or Subject, created by, last udated, or related site
 
 
 ## Feedback
