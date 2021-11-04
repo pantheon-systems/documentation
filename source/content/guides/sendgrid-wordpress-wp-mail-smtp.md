@@ -11,7 +11,7 @@ permalink: docs/guides/:basename
 
 [SendGrid](https://sendgrid.com/) is a popular email service, but its [WordPress plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has been deprecated as of July 13, 2021.
 
-This guide will cover how to install and configure [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) to send emails from your WordPress site using Sendgrid.
+This guide covers how to install and configure [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) to send emails from your WordPress site using Sendgrid.
 
 <Alert title="Note" type="info">
 
@@ -46,7 +46,7 @@ Each method requires first setting your working environment (Dev or a Multidev e
 
   ![The Add Plugins search view](../../images/guides/wp-mail-smtp/search-plugins-install.png)
 
-1. Once installed, the same button will change to say **Activate**. Click it again.
+1. After it is installed, click **Activate**.
 
 WP Mail SMTP is now installed! You can now continue to [Configure WP Mail SMTP for SendGrid](#configure-wp-mail-smtp-for-sendgrid).
 
