@@ -22,36 +22,44 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus connection:set <site>.<env> sftp
-  ```
+    ```bash{promptUser: user}
+    terminus connection:set <site>.<env> sftp
+    ```
 
 1. Install the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin on the Dev Environment using the WordPress Dashboard or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus wp <site>.<env> -- plugin install --activate wp-cfm
-  ```
+    ```bash{promptUser: user}
+    terminus wp <site>.<env> -- plugin install --activate wp-cfm
+    ```
 
 1. Commit this change using the Site Dashboard or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus env:commit <site>.<env> --message="Install wp-cfm plugin"
-  ```
+    ```bash{promptUser: user}
+    terminus env:commit <site>.<env> --message="Install wp-cfm plugin"
+    ```
 
-1. Deploy this commit to the Test and Live environments using the Pantheon Dashboard or with Terminus:
+1. Deploy this commit to the Test and Live environments using the Pantheon Dashboard or with Terminus, and clear the cache:
 
-  ```bash{outputLines: 1}
-  # Deploy to Test|Live
-  terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy WP-CFM plugin to the Test environment"
-  terminus env:deploy <site>.live --updatedb --note="Deploy WP-CFM plugin to the Live environment"
-  ```
+    ```bash{outputLines: 1}
+    # Deploy to Test
+    terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy WP-CFM plugin to the Test environment"
+  
+    # Clear the cache
+    terminus env:clear-cache <site>.test
+  
+    # Deploy to Live
+    terminus env:deploy <site>.live --updatedb --note="Deploy WP-CFM plugin to the Live environment"
+  
+    # Clear the cache
+    terminus env:clear-cache <site>.live
+    ```
 
 1. Activate the plugin on the Test and Live environments using the WordPress Dashboard or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus wp <site>.test -- plugin activate wp-cfm
-  terminus wp <site>.live -- plugin activate wp-cfm
-  ```
+    ```bash{promptUser: user}
+    terminus wp <site>.test -- plugin activate wp-cfm
+    terminus wp <site>.live -- plugin activate wp-cfm
+    ```
 
 ## Configuration Bundling
 
@@ -82,17 +90,17 @@ To create a bundle:
 
 1. Select **Push** to export database values to the codebase.
 
- This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
+  This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
 
- ```bash{promptUser: user}
- terminus wp <site>.dev -- config push <bundle_name>
- ```
+    ```bash{promptUser: user}
+    terminus wp <site>.dev -- config push <bundle_name>
+    ```
 
 1. Commit your configuration to the codebase (`.json` bundle file) using the Site Dashboard or Terminus:
 
- ```bash{promptUser: user}
- terminus env:commit <site>.<env> --message="Create bundle_name.json for tracking configuration in code"
- ```
+    ```bash{promptUser: user}
+    terminus env:commit <site>.<env> --message="Create bundle_name.json for tracking configuration in code"
+    ```
 
 ## Deploy Configuration: Pull
 
@@ -102,15 +110,20 @@ Deploy the `.json` file from Dev to Test.
 
 1. Check **Pull files and the database from the Live environment?** and then click **Deploy Code from Development to Test Environment** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
 
-  ```bash{promptUser: user}
-  terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy code for <bundle_name> configuration"
-  ```
-
+    ```bash{promptUser: user}
+    terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy code for <bundle_name> configuration"
+    ```
+    Ensure you clear the site cache after the deployment:
+    
+    ```bash{promptUser: user}
+    terminus env:clear-cache <site>.test
+    ```
+  
 1. Import configuration from the codebase into the database by clicking **Pull** for your bundle(s) within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus wp <site>.test -- config pull <bundle_name>
-  ```
+    ```bash{promptUser: user}
+    terminus wp <site>.test -- config pull <bundle_name>
+    ```
 
 1. Test configuration on the Test environment URL with the content copied from Live.
 
@@ -118,15 +131,21 @@ Deploy the `.json` file from Dev to Test.
 
 1. Deploy the `.json` file from Test to Live using the same steps as above, or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus env:deploy <site>.live --updatedb --note="Deploy code for <bundle_name> configuration"
-  ```
+    ```bash{promptUser: user}
+    terminus env:deploy <site>.live --updatedb --note="Deploy code for <bundle_name> configuration"
+    ```
+    
+    Ensure you clear the site cache after the deployment:
+    
+    ```bash{promptUser: user}
+    terminus env:clear-cache <site>.live
+    ```
 
 1. Import configuration from the codebase into the database by clicking **Pull** within the Live environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
-  ```bash{promptUser: user}
-  terminus wp <site>.live -- config pull <bundle_name>
-  ```
+    ```bash{promptUser: user}
+    terminus wp <site>.live -- config pull <bundle_name>
+    ```
 
 1. Test the configuration on Live.
 
