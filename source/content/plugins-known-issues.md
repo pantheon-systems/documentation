@@ -76,7 +76,7 @@ Plugins and Themes with issues resolved (at least partially) by this include:
 - [Event Espresso](https://eventespresso.com/)
 - [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 - [Thrive Theme Builder](https://thrivethemes.com/themebuilder/)
-- [Visual Composer: Website Builder](https://visualcomposer.io/)
+- [Visual Composer: Website Builder](https://wordpress.org/plugins/visualcomposer/)
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
@@ -1197,7 +1197,7 @@ ___
 
 ### Self-Updating Themes
 
-Several WordPress themes, including [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/), [Nanosoft](https://themeforest.net/item/nanosoft-wp-theme-for-it-solutions-and-services-company/22064051), and [Uncode](https://undsgn.com/uncode/), present a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
+Several WordPress themes, including [Jupiter](https://jupiter.artbees.net/), [Nanosoft](https://themeforest.net/item/nanosoft-wp-theme-for-it-solutions-and-services-company/22064051), and [Uncode](https://undsgn.com/uncode/), present a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
 
 The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
 

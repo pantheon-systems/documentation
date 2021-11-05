@@ -50,7 +50,7 @@ However, this method does not support One-click updates in the Site Dashboard. A
 
 ## Custom Upstream Workflow
 
-It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.
+It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.
 
 A Custom Upstream based off Pantheon's example repositories would need to commit all dependencies. Updates via Composer would only happen at the Custom Upstream repository level by a single repository maintainer. Those updates would then trickle down to sites created from the Custom Upstream as One-click updates in the Pantheon Site Dashboard.
 
@@ -62,7 +62,7 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [upgrade to Drupal 9](/guides/drupal-9-migration).
 
-If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert).
 
 ### Partial Adoption
 
@@ -72,4 +72,4 @@ If you're not ready to go all in with a Composer workflow and you want to see ho
 
 ## See Also
 
-- [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)

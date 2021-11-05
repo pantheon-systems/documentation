@@ -14,7 +14,7 @@ The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not on
 
 <Alert title="Note" type="info">
 
-The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
+The following does **not** pertain to Composer-managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
 
 </Alert>
 
