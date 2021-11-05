@@ -46,7 +46,7 @@ Each method requires first setting your working environment (Dev or a Multidev e
 
   ![The Add Plugins search view](../../images/guides/wp-mail-smtp/search-plugins-install.png)
 
-1. Once installed, the same button will change to say **Activate**. Click it again.
+1. After it is installed, click **Activate**.
 
 WP Mail SMTP is now installed! You can now continue to [Configure WP Mail SMTP for SendGrid](#configure-wp-mail-smtp-for-sendgrid).
 

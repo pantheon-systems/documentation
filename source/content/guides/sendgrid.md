@@ -1,5 +1,5 @@
 ---
-title: Deliver Email Through Your Drupal Site on Pantheon Platform
+title: Deliver Email Through Your Drupal Site on the Pantheon Platform
 description: Detailed information on using SendGrid to deliver email through your Drupal site.
 categories: [integrate]
 tags: [code, email, modules, plugins]
@@ -7,15 +7,15 @@ type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois]
 date: 9/8/2015
-reviewed: "2020-11-02"
+reviewed: "2021-11-02"
 ---
 Email is a necessity when running a website, whether it's used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
 
-One of the most common reasons that email gets blocked is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
+One of the most common reasons that email gets blocked, is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
 
 <Alert title="Note"  type="info" >
 
-New Sendgrid account may need to wait 30 days before upgrading to a paid plan. If you're switching to Sendgrid from an existing email solution, make sure to plan for this.
+A new Sendgrid account may need to wait 30 days before upgrading to a paid plan. If you're switching to Sendgrid from an existing email solution, make sure to plan for this.
 
 </Alert>
 
