@@ -340,7 +340,7 @@ ___
 
 **Solution 2:**
 
-1. Disable Static CSS file generation in the divi theme.
+1. Disable Static CSS file generation in the Divi theme.
 
 1. Disable Dynamic CSS at **Divi** > **Theme Options** > **General** > **Performance** and click to disable Dynamic CSS.
 
