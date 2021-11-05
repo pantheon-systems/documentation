@@ -340,10 +340,15 @@ ___
 
 **Solution 2:**
 
-1. Create a [symlink](#assumed-write-access).
+1. Disable Static CSS file generation in the divi theme.
+
+1. Disable Dynamic CSS at **Divi** > **Theme Options** > **General** > **Performance** and click to disable Dynamic CSS.
+
+1. Create a [symlink](/plugins-known-issues#assumed-write-access) in `wp-content/et-cache`.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
-2. Disable Dynamic CSS at **Divi** > **Theme Options** > **General** > **Performance** and click to disable Dynamic CSS.
+
+1. Purge the contents of `et-cache` but not the `et-cache` file itself.
 
 **Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
 
