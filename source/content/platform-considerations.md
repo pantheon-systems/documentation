@@ -150,7 +150,7 @@ For more information about Drupal Steward, visit the [Drupal Steward FAQ](https:
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-See [the email documentation](/email) for more details and suggestions.
+See the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) doc for more details and suggestions.
 
 ## Emoji Support
 
