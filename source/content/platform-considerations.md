@@ -367,6 +367,16 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/) to run a virtualized 'nix-type environment for tools like Terminus.
 
+## Terminus Can't Delete a Site or Multidev
+
+You might encounter the following error when a site is created and then quickly deleted, or is deleted before the site creation process has completed:
+
+```shell
+[error] The environment '1234567' was not found.
+```
+
+[Contact Support](/support) and ask to have the environment deleted.
+
 ## Write Access on Environments
 
 For Dev environments in SFTP mode, the entire codebase is writable. However the platform is designed to keep only the codebase under version control.  This means that the only writable paths are `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
