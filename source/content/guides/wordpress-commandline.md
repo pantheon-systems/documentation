@@ -276,11 +276,11 @@ Now that you have WordPress installed, let's make it look a little better by add
     terminus env:clear-cache <site>.live
     ```
 
-## The Power of Terminus and WP-CLI
+## Using Terminus and WP-CLI
 
-If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and Drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the Sandbox site we've setup and explore on your own to see what else is possible.
+This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and Drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the Sandbox site we've setup and explore on your own to see what else is possible.
 
-Here are some suggestions on where to go from here:
+For more information, refer to the following documentation:
 
  - [Use the Pantheon Workflow](/pantheon-workflow)
  - [WordPress Configuration Management (WP-CFM)](/wp-cfm)
