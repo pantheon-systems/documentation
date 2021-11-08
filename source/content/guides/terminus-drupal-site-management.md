@@ -189,7 +189,13 @@ Success: Successfully committed.
 And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
 
 ```bash{promptUser: user}
-terminus env:deploy <site>.test --sync-content --cc --updatedb
+terminus env:deploy <site>.test --sync-content --updatedb
+```
+
+For successful deployment, ensure you clear the site cache:
+
+```bash{promptUser: user}
+terminus env:clear-cache <site>.test
 ```
 
 ## Congratulations!

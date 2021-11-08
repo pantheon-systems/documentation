@@ -183,10 +183,11 @@ You may have heard that some Drupal 8 developers are [using Composer](/composer)
   terminus env:commit  $TERMINUS_SITE.dev --message="export of config files"
   ```
 
-1. Deploy the changes to the Test environment:
+1. Deploy the changes to the Test environment, and clear the site cache:
 
   ```bash{promptUser: user}
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"
+  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying exported config to enable modules"
+  terminus env:clear-cache $TERMINUS_SITE.test
   ```
 
   <Alert title="Note" type="info">
@@ -215,10 +216,11 @@ You may have heard that some Drupal 8 developers are [using Composer](/composer)
 
   Now that you are signed in to all three environments you should see the development footer in Dev and Test but not Live.
 
-1. Push your code changes to the Live environment:
+1. Push your code changes to the Live environment, and clear the site cache:
 
   ```bash{promptUser: user}
-  terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying exported config to enable modules"
+  terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying exported config to enable modules"
+  terminus env:clear-cache $TERMINUS_SITE.live
   ```
 
 1. Import the configuration on the Live environment:
@@ -269,21 +271,21 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
   Visit `/glossary` and `/admin/content` in your Test environment. You should see a 404 message for the glossary page and the administrative content list should not contain the articles and pages that were made on Live. Once we deploy our code in the next step, we should see something different on both URLs.
 
-1. Deploy code and import configuration changes to Test:
+1. Deploy code, clear the site cache, and import configuration changes to Test:
 
   ```bash{outputLines: 2}
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploying glossary View"
-
+  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying glossary View"
+  terminus env:clear-cache $TERMINUS_SITE.test
   terminus drush $TERMINUS_SITE.test -- config-import -y
   ```
 
 1. Check the Test environment and visit `/glossary` and `/admin/content` again. You should see both the glossary view and a full list of content on the administrative page.
 
-1. Deploy to the Live environment and import the changes:
+1. Deploy to the Live environment, clear the site cache, and import the changes:
 
   ```bash{outputLines: 2}
-  terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploying glossary View"
-
+  terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying glossary View"
+  terminus env:clear-cache $TERMINUS_SITE.live
   terminus drush $TERMINUS_SITE.live -- config-import -y
   ```
 
