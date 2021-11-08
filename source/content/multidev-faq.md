@@ -21,10 +21,10 @@ Multidevs that are already on a site are available to all users with access to t
 
 Users have access to create a new Multidev if they:
 
-- Have been assigned a role as a member of an Organization that has the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs)).
+- Have been assigned a role as a member of an Organization that has the Multidev Feature, like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs) or a Diamond Organization or above.
 - Are a Direct Online Gold Account customer or above.
 
-If you fully meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact support](https://dashboard.pantheon.io/#support).
+If you meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact support](https://dashboard.pantheon.io/#support).
 
 ## How many Multidev environments do I get?
 
@@ -46,7 +46,7 @@ At this time, there are no permissions or access controls for managing the deplo
 
 ## What are the naming conventions for branches?
 
-Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `debug`, `multidev`, `files`, `tags`  and `billing`.
+Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `debug`, `multidev`, `files`, `tags`, and `billing`.
 
 ## Can I fork my code without using Multidev?
 
