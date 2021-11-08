@@ -187,7 +187,7 @@ You may have heard that some Drupal 8 developers are [using Composer](/composer)
 
   ```bash{promptUser: user}
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying exported config to enable modules"
-  terminus env:clear-cache <site>.test
+  terminus env:clear-cache $TERMINUS_SITE.test
   ```
 
   <Alert title="Note" type="info">
@@ -220,7 +220,7 @@ You may have heard that some Drupal 8 developers are [using Composer](/composer)
 
   ```bash{promptUser: user}
   terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying exported config to enable modules"
-  terminus env:clear-cache <site>.live
+  terminus env:clear-cache $TERMINUS_SITE.live
   ```
 
 1. Import the configuration on the Live environment:
@@ -275,7 +275,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
   ```bash{outputLines: 2}
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying glossary View"
-  terminus env:clear-cache <site>.test
+  terminus env:clear-cache $TERMINUS_SITE.test
   terminus drush $TERMINUS_SITE.test -- config-import -y
   ```
 
@@ -285,7 +285,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
   ```bash{outputLines: 2}
   terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying glossary View"
-  terminus env:clear-cache <site>.live
+  terminus env:clear-cache $TERMINUS_SITE.live
   terminus drush $TERMINUS_SITE.live -- config-import -y
   ```
 
