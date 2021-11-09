@@ -21,8 +21,8 @@ Multidevs that are already on a site are available to all users with access to t
 
 Users have access to create a new Multidev if they:
 
-- Have been assigned a role as a member of an Organization that has the Multidev Feature, like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs).
-  - Or if the organization that owns the site has a Gold Account or higher.
+- Have been assigned a role as a member of an Organization that has the Multidev Feature (Gold accounts and higher), like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs).
+- Support a Pantheon site that has the Multidev Feature.
 - Are a Direct Online Gold Account customer or above.
 
 If you meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact support](https://dashboard.pantheon.io/#support).
@@ -39,7 +39,7 @@ Elite sites can request additional Multidev environments [from support](/support
 
 ## If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
-No; each branch environment can be independently set to use either SFTP or Git mode for code changes.
+No. Each branch environment can be independently set to use either SFTP or Git mode for code changes.
 
 ## What access controls or permissions are available?
 
