@@ -124,6 +124,26 @@ This method has the advantage of being toggleable without deploying code, by act
 
 1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
 
+## Avoid WordPress Login Attacks
+
+Similar to XML-RPC, the `wp-login.php` path can be subject to abuse by bots or other spammers. Unlike XML-RPC that is not used often anymore, `wp-login.php` is the primary entry point for logging into WordPress. There are a few recommended actions you can take to protect yourself against login abuse:
+
+1. Change the `wp-login.php` path.
+
+    Using a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/), you can change the login path from `wp-login.php` to any path to your choosing, such as `/login` or `/admin`. You can then redirect all `wp-login.php` requests to another page (such as `/404`).
+
+1. Enforce complex passwords.
+
+    WordPress out-of-the-box provides password complexity guidelines, but does not require you to enforce it. You can use plugins like [Better Passwords](https://wordpress.org/plugins/better-passwords/) to set a minimum password length and let you know if the password has been collected in a previous data breach.
+
+1. Add Multi-Factor Authentication (MFA).
+
+    Two Factor Authentication (2FA) is an added layer of protection to ensure the security of your accounts beyond just a username and password. Multi-Factor only refers to the capability of having more than two factors of authentication (for example: password, SMS, and email verification). There are many [Two-Factor Authentication](https://wordpress.org/plugins/tags/two-factor-authentication/) plugins that can be used to add protection when logging into your WordPress site.
+
+1. Use Single Sign-On (SSO), if available.
+
+    If your organization makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others, it is best to utilize that as the login authority for your WordPress site. Some plugins or services can simplify the SSO integration of your IdP, such as [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) or [MiniOrange](https://plugins.miniorange.com/wordpress). Often times, a byproduct of implementing SSO is enabling MFA (if required by your organization's IdP policy).
+
 ## Security Headers
 
 Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
