@@ -21,7 +21,7 @@ In addition to your other WordPress security practices, take steps to block **br
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
 1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
-1. Protect yourself from [wp-login.php attacks](/wordpress-best-practices#avoid-wordPress-login-attacks).
+1. Protect yourself from [wp-login.php attacks](/wordpress-best-practices#avoid-wordpress-login-attacks).
 1. Consider adding a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
 
 ## Configure favicon.ico to Serve a Static Image
