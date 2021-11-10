@@ -4,7 +4,7 @@ There are a few recommended actions you can take to protect yourself against log
 
 ### Change the wp-login.php Path
 
-Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose such as `/login` or `/admin`. Then [redirect](/advanced-redirects#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
+Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose, such as `/login` or `/admin`. Then [redirect](/advanced-redirects#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
 
 ### Enforce Complex Passwords
 
