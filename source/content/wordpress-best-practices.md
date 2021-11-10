@@ -126,23 +126,29 @@ This method has the advantage of being toggleable without deploying code, by act
 
 ## Avoid WordPress Login Attacks
 
-Similar to XML-RPC, the `wp-login.php` path can be subject to abuse by bots or other spammers. Unlike XML-RPC that is not used often anymore, `wp-login.php` is the primary entry point for logging into WordPress. There are a few recommended actions you can take to protect yourself against login abuse:
+Similar to [XML-RPC](#avoid-xml-rpc-attacks), the `wp-login.php` path can be subject to abuse by bots or other spammers. Unlike XML-RPC, which is no longer used often, `wp-login.php` is the primary WordPress login.
 
-1. Change the `wp-login.php` path.
+There are a few recommended actions you can take to protect yourself against login abuse:
 
-    Using a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/), you can change the login path from `wp-login.php` to any path to your choosing, such as `/login` or `/admin`. You can then redirect all `wp-login.php` requests to another page (such as `/404`).
+### Change the wp-login.php Path
 
-1. Enforce complex passwords.
+Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose such as `/login` or `/admin`. Then [redirect](/advanced-redirects#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
 
-    WordPress out-of-the-box provides password complexity guidelines, but does not require you to enforce it. You can use plugins like [Better Passwords](https://wordpress.org/plugins/better-passwords/) to set a minimum password length and let you know if the password has been collected in a previous data breach.
+### Enforce Complex Passwords
 
-1. Add Multi-Factor Authentication (MFA).
+WordPress suggests password complexity guidelines when you create a user and password, but it does not enforce password rules. Use a plugin like [Better Passwords](https://wordpress.org/plugins/better-passwords/) to set a minimum password length and alert users if they try to use a password that has been collected in a known data breach.
 
-    Two Factor Authentication (2FA) is an added layer of protection to ensure the security of your accounts beyond just a username and password. Multi-Factor only refers to the capability of having more than two factors of authentication (for example: password, SMS, and email verification). There are many [Two-Factor Authentication](https://wordpress.org/plugins/tags/two-factor-authentication/) plugins that can be used to add protection when logging into your WordPress site.
+### Add Multi-factor Authentication (MFA)
 
-1. Use Single Sign-On (SSO), if available.
+Two Factor Authentication (2FA) and Multi-factor Authentication (MFA) are added layers of protection to ensure the security of your accounts beyond just a username and password. Multi-factor refers to the capability to have more than two factors of authentication (for example: password, SMS, and email verification). Use one of the many [Two-Factor Authentication](https://wordpress.org/plugins/tags/two-factor-authentication/) plugins to protect logins to your WordPress site.
 
-    If your organization makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others, it is best to utilize that as the login authority for your WordPress site. Some plugins or services can simplify the SSO integration of your IdP, such as [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) or [MiniOrange](https://plugins.miniorange.com/wordpress). Often times, a byproduct of implementing SSO is enabling MFA (if required by your organization's IdP policy).
+### Use Single Sign-On (SSO)
+
+If your organization makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others for [Single Sign-On](/sso-organizations), utilize that as the login authority for your WordPress site.
+
+Some plugins or services can simplify the SSO integration of your IdP, such as [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) or [MiniOrange](https://plugins.miniorange.com/wordpress).
+
+SSO often includes or requires [MFA](#add-multi-factor-authentication-mfa) as well.
 
 ## Security Headers
 
