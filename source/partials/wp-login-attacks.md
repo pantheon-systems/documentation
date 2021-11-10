@@ -1,6 +1,6 @@
 Similar to [XML-RPC](#avoid-xml-rpc-attacks), the `wp-login.php` path can be subject to abuse by bots or other spammers. Unlike XML-RPC, which is no longer used often, `wp-login.php` is the primary WordPress login.
 
-There are a few recommended actions you can take to protect yourself against login abuse:
+There are a few recommended actions you can take to protect yourself against login abuse.
 
 ### Change the wp-login.php Path
 

@@ -21,8 +21,15 @@ In addition to your other WordPress security practices, take steps to block **br
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
 1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
-1. Protect yourself from [wp-login.php attacks](/wordpress-best-practices#avoid-wordpress-login-attacks).
-1. Consider adding a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+1. Protect yourself from `wp-login.php` attacks:
+
+   <Accordion title="How to Avoid WordPress Login Attacks" id="wp-login-attacks" icon="info-sign">
+
+   <Partial file="wp-login-attacks.md" />
+
+   </Accordion>
+
+1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
 
 ## Configure favicon.ico to Serve a Static Image
 
@@ -37,16 +44,16 @@ This issue affects both WordPress and Drupal sites, but the request path will va
 
 **Cause**: Usually the issue originates when adding a custom favicon through the active theme for the site through some kind of upload form, and then the icon is deleted or unavailable, which causes the CMS to look for an alternative favicon.
 
-**Solution**: Add and commit a static `favicon.ico` into the path that is being requested. 
+**Solution**: Add and commit a static `favicon.ico` into the path that is being requested.
 
 ## WordPress: admin-ajax.php Generates Pages Served
 
 Plugins can utilize an Ajax API to make calls to custom functions and filters in the backend.
 
-There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include: 
+There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include:
 
-- fetching the stored counts for when content is shared on social networks; 
-- checking if a page or post is currently being worked on (locked); 
+- fetching the stored counts for when content is shared on social networks;
+- checking if a page or post is currently being worked on (locked);
 - adding media to a post during the editing process, such as when using Gutenberg widgets.
 
 Investigate calls to `admin-ajax.php` by looking at what script is calling the path, and what the payload is through browser developer tools. Access developer tools, filter for `admin-ajax`, then refresh the page:
