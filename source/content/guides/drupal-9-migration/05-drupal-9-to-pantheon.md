@@ -13,7 +13,7 @@ anchorid: drupal-9-migration/drupal-9-to-pantheon
 editpath: drupal-9-migration/05-drupal-9-to-pantheon.md
 ---
 
-In this doc, you'll migrate an existing Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with [Integrated Composer](/integrated-composer) on Pantheon.
+This doc shows how to migrate an existing Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with [Integrated Composer](/integrated-composer) on Pantheon.
 
 ## Overview
 
