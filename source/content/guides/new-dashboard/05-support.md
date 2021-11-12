@@ -7,7 +7,7 @@ tags: [dashboard]
 contributors: [edwardangert,joa-pan]
 reviewed: "2021-11-02"
 layout: guide
-permalink: docs/guides/dashboard
+permalink: docs/guides/new-dashboard/support
 anchorid: new-dashboard
 editpath: new-dashboard/05-support.md
 ---
