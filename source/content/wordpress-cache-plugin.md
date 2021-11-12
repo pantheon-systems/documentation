@@ -22,9 +22,9 @@ You can also enable maintenance mode for others while working on your site.
 
 1. Click **Pantheon Cache**. You'll end up at: `/wp-admin/options-general.php?page=pantheon-cache`
 
-1. Adjust the **Default Cache Time** as desired. You'll want to strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds.  If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+1. Modify the **Default Cache Time**. You'll want to strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
 
-1. Adjust the **Maintenance Mode** as desired.
+1. Modify the **Maintenance Mode**.
 A simple notice will be displayed to users who request a page that is not already cached.
 `Briefly unavailable for scheduled maintenance. Check back in a minute.`
 
