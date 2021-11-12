@@ -8,7 +8,7 @@ tags: [cache, plugins]
 
 Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages will expire from the Varnish Edge Cache after 10 minutes (600 seconds). The plugin sets a default HTTP header: `Cache-Control: public, max-age=600`
 
-You can clear the site cache using the Clear Cache button.  If you want to automatically clear cached pages when content is updated, check out the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache).
+You can clear the site cache using the Clear Cache button. If you want to automatically clear cached pages when content is updated, refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache).
 
 To increase the chances that a visitor will request a cached page, you can increase the default time to live value, which will reduce page load times.
 
@@ -38,7 +38,7 @@ Within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code,
 
 ### flush_site
 
-Flushes the site cache for the entire site. This achieves the same result as the Clear Site Cache button on the Pantheon Cache administration page.
+Flushes the site cache for the entire site. This achieves the same result as the **Clear Site Cache** button on the Pantheon Cache administration page.
 
 ```php
 /**
