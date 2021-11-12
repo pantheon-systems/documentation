@@ -38,7 +38,7 @@ Within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code,
 
 ### flush_site
 
-Flushes the site cache for the entire site. This achieves the same result as the **Clear Site Cache** button on the Pantheon Cache administration page.
+This function flushes the site cache for the entire site. This achieves the same result as the **Clear Site Cache** button on the Pantheon Cache administration page.
 
 ```php
 /**
@@ -51,7 +51,7 @@ public function flush_site()
 
 ### clean_post_cache
 
-Flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed, but if not the default value is "true".
+This function flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed, but if not the default value is "true".
 
 ```php
 /**
@@ -65,7 +65,7 @@ public function clean_post_cache( $post_id, $include_homepage = true )
 
 ### clean_term_cache
 
-Flushes the cache for an individual term or terms which are passed in an array, or for a complete taxonomy passed via a single taxonomy ID.
+This function flushes the cache for an individual term or terms which are passed in an array, or for a complete taxonomy passed via a single taxonomy ID.
 
 ```php
 /**
