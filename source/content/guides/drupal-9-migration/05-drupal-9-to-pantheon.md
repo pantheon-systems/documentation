@@ -5,7 +5,7 @@ description: Migrate a Composer-managed Drupal 9 Site from another platform to P
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
-reviewed: "2021-08-20"
+reviewed: "2021-11-12"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/drupal-9-to-pantheon
@@ -22,7 +22,7 @@ In this migration you'll do the following:
 - Using Git, clone your existing site locally
 - Create a new Drupal 9 development site on Pantheon, and clone it locally
 
-Working locally across both the existing and new site codebases, you'll: 
+Working locally across both the existing and new site codebases, you'll:
 
 - Copy selected portions of the existing site code into the new site code
 - Copy portions of `composer.json` from the existing site to the new site
@@ -38,14 +38,12 @@ Integrated Composer will break if `composer install` tries to modify any files t
 
 ## Important Notes
 
-- Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name. 
-
-  - Address the question of composer packages being committed to version control, and how we need to not do that for IC
+- Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name.
+  - Address the question of Composer packages being committed to version control, and how we need to not do that for IC
 - Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
   - Edward to adjust to alias or `former-platform`
 - `composer show` - not using this
-- have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)?  wikimedia merge plugin?
-
+- have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)? wikimedia merge plugin?
 
 ## Will This Guide Work for Your Site?
 
@@ -54,7 +52,6 @@ Before you continue, confirm that your site meets the following requirements:
 - The existing Drupal 9 site uses Composer to manage site dependencies
 - Composer-managed
 - Able to get a local copy of the existing site / access to a Git repository of it?
-
 
 ## Create a New Drupal 9 Site
 
@@ -83,7 +80,6 @@ This doc uses the following aliases:
 - **Working folder** ?
 - **Old site folder** `FORMER-PLATFORM`
 - **Pantheon site folder** `PANTHEON-D9`
-
 
 ### Create a Local Copy of the Old Site's Code
 
@@ -119,30 +115,31 @@ What makes your site code unique is your selection of contributed modules and th
 
 ### Composer packages
 
-1. Copy your package list from the "requires" section of your site's composer.json and add it to the new site's composer.json.  If your composer.json defines additional repositories or patches, copy those over too.  Take care not to overwrite the `upstream-configuration` package & repository.
+1. Copy your package list from the "requires" section of your site's composer.json and add it to the new site's composer.json. If your composer.json defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package & repository.
 
-Note: if your old site has custom patches in its codebase, make sure to copy those over as well.
+  Note: if your old site has custom patches in its codebase, make sure to copy those over as well.
 
 1. `composer update`
 
-1. `git status` to see if files have been added that aren't ignored by `.gitignore`.  If anything shows up other than `composer.*`, add it to `.gitignore` until `git status` only shows the composer files being modified.
+1. `git status` to see if files have been added that aren't ignored by `.gitignore`. If anything shows up other than `composer.*`, add it to `.gitignore` until `git status` only shows the composer files being modified.
 
 1. `git add composer.*; git commit -m "Add composer packages"`
 
-
   <Accordion title="Repositories and patches in composer.json" id="repositories-and-patches-in-composer-json" icon="info-sign">
 
-  Repository in old site's composer.json
+  Repository in old site's `composer.json`
+
   ![repository in old composer.json](https://i.imgur.com/hO0snBW.png)
 
   Copied to new composer.json without disturbing the "upstream-configuration" one that was already there:
+
   ![repository moved to new composer.json](https://i.imgur.com/T6eNnXj.png)
 
   Patches:
+
   ![repository moved to new composer.json](https://i.imgur.com/x2SYPb1.png)
 
   </Accordion>
-
 
 ### Custom Code
 
@@ -178,7 +175,6 @@ We don't recommend that you completely overwrite the `settings.php` file with th
 
 The resulting `settings.php` should have no `$databases` array.
 
-
 ### Configuration
 
 Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
@@ -189,11 +185,9 @@ Copy over exported configuration from the original site. From the Pantheon D9 si
   git commit -m "Add site configuration."
   ```
 
-
-
 ## Deploy
 
-You've now committed your code additions locally.  Push them up to Pantheon to deploy them to your dev environment.
+You've now committed your code additions locally. Push them up to Pantheon to deploy them to your dev environment:
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.dev git
@@ -232,9 +226,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    1. In the **MySQL database** field, click **File**, then **Choose File**.
 
-   2. Select your local archive file, then press **Import**.
+   1. Select your local archive file, then press **Import**.
 
-   ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+     ![Import MySQL database from file](../../../images/dashboard/import-mysql-file.png)
 
   **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
@@ -248,7 +242,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    1. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
 
-      ![Import MySQL Database from URL](../images/dashboard/import-mysql-url.png)
+      ![Import MySQL Database from URL](../../../images/dashboard/import-mysql-url.png)
 
   </Tab>
 
@@ -270,7 +264,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
 
-   3. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+   1. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 
   </Tab>
 
@@ -363,8 +357,6 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   ```bash{promptUser: user}
   terminus drush $SITE.dev cr
   ```
-
-
 
 ## Troubleshooting
 

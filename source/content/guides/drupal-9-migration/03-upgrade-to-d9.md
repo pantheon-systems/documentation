@@ -14,9 +14,9 @@ editpath: drupal-9-migration/03-upgrade-to-d9.md
 reviewed: "2021-10-24"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer, using a **Multidev** to stage changes, and then replacing the `master` branch. 
+This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer, using a **Multidev** to stage changes, and then replacing the `master` branch.
 
-## Overview 
+## Overview
 
 The goals of this upgrade are to:
 
@@ -25,7 +25,6 @@ The goals of this upgrade are to:
 - have Composer manage those dependencies in the new site instead.
 
 Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your site's existing commit history.
-
 
 ## Will This Guide Work for Your Site?
 
@@ -63,11 +62,11 @@ Before changing the Drupal core version to Drupal 9, make sure all the component
 
 Set the Drupal core version to Drupal 9:
 
-  ```
-  $ composer require --no-update drupal/core-recommended:^9.2
-  $ composer update drupal/core* -W
-  $ git add composer.*
-  $ git commit -m "upgrade to Drupal 9"
+  ```shell{promptUser: user}
+  composer require --no-update drupal/core-recommended:^9.2
+  composer update drupal/core* -W
+  git add composer.*
+  git commit -m "upgrade to Drupal 9"
   ```
 
 ## Ongoing Core Updates

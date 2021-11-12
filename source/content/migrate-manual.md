@@ -166,10 +166,8 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
   <Tab title="Drupal 9" id="d9-code">
 
   Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
-    
 
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more     
-  details.
+  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
 
   </Tab>
 
