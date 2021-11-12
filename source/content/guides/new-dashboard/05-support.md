@@ -51,7 +51,7 @@ Create a support ticket for questions or issues you are experiencing in New Dash
 
 1. Search for the site and enter the site name in the **Which Site** text field.
 
-1. Select the [Ticket Category](docs/guides/new-dashboard/support).
+1. Select the Ticket Category.
 
 1. Add the Subject Line and a description of th e issue you are encountering the Dashboard. Fully describe your problem or request. Include affected environments, the URL of where you saw the problem, and the steps to reproduce it.
 
