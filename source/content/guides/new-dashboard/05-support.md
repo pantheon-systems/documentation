@@ -72,7 +72,7 @@ Get answers, learn, and engage with other Pantheon users
 
 ## Ticket History 
 
-Search the ticket by Subject line.You can view your support ticket  and order by history, by status, Ticket ID# , or Subject, created by, last udated, or related site
+Search the [ticket](https://pantheon.io/docs/changlog/) by Subject line.You can view your support ticket  and order by history, by status, Ticket ID# , or Subject, created by, last udated, or related site
 
 
 ## Feedback
