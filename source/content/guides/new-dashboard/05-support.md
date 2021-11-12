@@ -7,7 +7,7 @@ tags: [dashboard]
 contributors: [edwardangert,joa-pan]
 reviewed: "2021-11-02"
 layout: guide
-permalink: docs/guides/new-dashboard/support
+permalink: docs/guides/dashboard
 anchorid: new-dashboard
 editpath: new-dashboard/05-support.md
 ---
@@ -51,19 +51,19 @@ Create a support ticket for questions or issues you are experiencing in New Dash
 
 1. Search for the site and enter the site name in the **Which Site** text field.
 
-1. Select the Ticket Category.
+1. Select the [Ticket Category](docs/guides/new-dashboard/support).
 
 1. Add the Subject Line and a description of th e issue you are encountering the Dashboard. Fully describe your problem or request. Include affected environments, the URL of where you saw the problem, and the steps to reproduce it.
 
 1. Check **This issue is causing site downtime**.
 
-1. Click **Open Ticket**
+1. Click **Open Ticket**.
 
 ### Live Chat
 
 Resolve Pantheon platform questions with a Customer Success Engineer in real time, with priority in the queue.
 
-You can start a chat by clicking * Start a chat* or by clicking the messgae image at the bottom of the dasboard support page. You will naviage the. the chat window and will with an available Customer Success Engineer. 
+You can start a chat by clicking **Start a chat** or by clicking the messgae image at the bottom of the dasboard support page. You will naviage the. the chat window and will with an available Customer Success Engineer. 
 
 
 ### Slack Community 
@@ -72,7 +72,7 @@ Get answers, learn, and engage with other Pantheon users
 
 ## Ticket History 
 
-Search the [ticket](https://pantheon.io/docs/changlog/) by Subject line.You can view your support ticket  and order by history, by status, Ticket ID# , or Subject, created by, last udated, or related site
+Search the ticket by Subject line.You can view your support ticket  and order by history, by status, Ticket ID#, or Subject, created by, last udated, or related site
 
 
 ## Feedback
