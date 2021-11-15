@@ -9,12 +9,6 @@ tags: [collaborate, launch, upstreams, webops, workflow]
 
 If you are a digital agency that serves clients, or if you are a reseller of Pantheon as part of a managed solution, download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
-<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs" campaign="docs-agility">
-
-How mature is your web team? Take our Web Team Agility Assessment to find out.
-
-</Enablement>
-
 For corporate or higher education customers, Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
