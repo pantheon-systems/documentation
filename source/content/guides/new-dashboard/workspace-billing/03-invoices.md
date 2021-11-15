@@ -5,7 +5,7 @@ description: List and sort invoices for your Workspace.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
-reviewed: "2021-10-29"
+reviewed: "2021-11-15"
 layout: guide
 permalink: docs/guides/new-dashboard/workspace-billing/invoices
 anchorid: workspace-billing/invoices
