@@ -1,13 +1,13 @@
 ---
-title: The Pantheon Workspace Billing Center
-subtitle: Introduction
-description: List invoices and site plan changes, and manage payment options in the New Dashboard.
+title: Workspace Billing Center
+subtitle: Invoices
+description: List and sort invoices for your Workspace.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
 reviewed: "2021-10-29"
 layout: guide
-permalink: docs/guides/new-dashboard/workspace-billing/
+permalink: docs/guides/new-dashboard/workspace-billing/invoices
 anchorid: workspace-billing/invoices
 editpath: workspace-billing/03-invoices.md
 ---
@@ -21,12 +21,12 @@ The details in the invoice include:
 
 |Invoice item| Description|
 |------------|------------|
-|Site Plan| Site for each that youhost with a custom domain|
-|Bill To| The address specified for the payment method|
+|Site Plan| Site scheme that you host with a custom domain|
 |Site Name| The primary site name of your site in the workspace|
-|Description| The account and associated usage or commitment renewal
+|Bill To| The address specified for the payment method|
+|Description| The account and associated usage or commitment renewal|
 |Amount| Cost for subscription|
-|Method| Card used|
+|Method| Credit card used|
 
 You can download the invoice as a PDF or CSV file. You can also print the PDF or import the CSV into a spreadsheet program.
 
