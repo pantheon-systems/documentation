@@ -9,7 +9,7 @@ reviewed: "2021-11-15"
 layout: guide
 permalink: docs/guides/new-dashboard/workspace-billing
 anchorid: workspace-billing
-editpath: workspace-billing/introduction.md
+editpath: workspace-billing/01-introduction.md
 ---
 
 
@@ -17,9 +17,9 @@ editpath: workspace-billing/introduction.md
 
 Workspace Billing allows you to add and manage subscription plans, change billing frequency, view the billing history for each renewal, and update payment information, all in one place.
 
-To access Workspace Billing click the **Settings** tab of the Personal Workspace from the Primary Global Navigation. The Billling page is displayed where you can access available sites, plans, payment methods, and invoices.
+To access Workspace Billing click the **Settings** tab of the Personal Workspace from the Primary Global Navigation. The Billling page is displayed where you can manage available sites, plans, payment methods, and invoices.
 
-![A screenshot of Workspace Billing homepage](../../../images/dashboard/new-dashboard/Screen Shot 2021-11-15 at 7.44.46 AM.png)
+![A screenshot of Workspace Billing homepage](../../../images/dashboard/new-dashboard/workspace-billing-home.png)
 
 
 ## Frequently Asked Questions
