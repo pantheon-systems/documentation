@@ -1,15 +1,15 @@
 ---
-title: Personal Workspace Billing
-subtitle: Personal Workspace Billing
-description: Display invoices, manage site subscriptions and features, payment methods, and billing frequency.
+title: Workspace Billing
+subtitle: Subscriptions
+description: Manage site and account subscriptions
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
 reviewed: "2021-10-29"
 layout: guide
-permalink: docs/guides/new-dashboard/billing-center/personal-workspace-billing
-anchorid: billing-center/personal-workspace-billing
-editpath: billing-center/personal-workspace-billing.md
+permalink: docs/guides/new-dashboard/workspace-billing/subscriptions
+anchorid: workspace-billing/subscriptions
+editpath: workspace-billing/subscriptions.md
 ---
 
 Navigate to the Billing Center from your Personal Workspace to manage invoices, site subscriptions, and payment methods available to your user.
