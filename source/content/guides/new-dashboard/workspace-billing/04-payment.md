@@ -1,13 +1,13 @@
 ---
-title: The Pantheon Workspace Billing Center
-subtitle: Introduction
+title: Workspace Billing Center
+subtitle: Payment Methods
 description: List invoices and site plan changes, and manage payment options in the New Dashboard.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
 reviewed: "2021-11-15"
 layout: guide
-permalink: docs/guides/new-dashboard/workspace-billing/
+permalink: docs/guides/new-dashboard/workspace-billing/payment
 anchorid: workspace-billing/payment
 editpath: workspace-billing/04-payment.md
 ---
