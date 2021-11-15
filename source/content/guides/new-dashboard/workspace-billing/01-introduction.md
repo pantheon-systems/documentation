@@ -1,5 +1,5 @@
 ---
-title: Pantheon Workspace Billing
+title: Workspace Billing
 subtitle: Introduction
 description: List invoices and site plan changes, and manage payment options in the New Dashboard.
 categories: [platform]
