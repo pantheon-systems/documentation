@@ -4,7 +4,7 @@ description: Understand how to use Object Cache as a drop-in caching mechanism f
 categories: [performance]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon]
-reviewed: "2021-03-01"
+reviewed: "2021-11-16"
 ---
 
 Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-cache) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
@@ -151,6 +151,9 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
    if (defined('PANTHEON_ENVIRONMENT')) {
      // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+     $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+
+     // If you get a Filepath Error, try the below, as you might have a nested webroot.
      $settings['container_yamls'][] = dirname(DRUPAL_ROOT).'/modules/redis/example.services.yml';
 
      //phpredis is built into the Pantheon application container.
@@ -476,10 +479,6 @@ wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
 ```
 
 This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
-
-### Filepath Error
-
-
 
 ## Frequently Asked Questions
 
