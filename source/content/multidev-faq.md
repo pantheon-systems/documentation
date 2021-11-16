@@ -21,9 +21,8 @@ Multidevs that are already on a site are available to all users with access to t
 
 Users have access to create a new Multidev if they:
 
-- Have been assigned a role as a member of an Organization that has the Multidev Feature (Gold accounts and higher), like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs).
 - Support a Pantheon site that has the Multidev Feature.
-- Are a Direct Online Gold Account customer or above.
+- Are a Direct Gold Account customer or above.
 
 If you meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact support](https://dashboard.pantheon.io/#support).
 
