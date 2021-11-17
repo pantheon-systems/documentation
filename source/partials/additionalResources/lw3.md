@@ -26,7 +26,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-If you thought that was interesting you should sign up for workshop #4: [Website Performance with Varnish, Redis, and New Relic](https://pantheon.io/workshops/website-performance-varnish-redis-and-new-relic). Or pick one of our other [Essential Workshops](https://pantheon.io/workshops).
+If you thought that was interesting, check out workshop #4: [Website Performance with Varnish, Redis, and New Relic](/workshops?c=lw4). Or pick one of our other [Essential Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 

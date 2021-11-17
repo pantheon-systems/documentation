@@ -104,7 +104,7 @@ const Footer = ({ data }) => {
                           <a href="https://pantheon.io/contact-us" className="cta docs-cta">Contact</a>
                         </li>
                         <li className="leaf menu-mlid-1152">
-                          <a href="https://pantheon.io/agencies/agency-match" className="cta docs-cta">
+                          <a href="https://directory.pantheon.io/agencies?docs" className="cta docs-cta">
                             Hire an Agency
                           </a>
                         </li>

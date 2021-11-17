@@ -122,7 +122,8 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
-        git commit -am "Create private/scripts/trello_integration.php and configure platform hooks"
+        git add .
+        git commit -m "Create private/scripts/trello_integration.php and configure platform hooks"
         git push origin master
 
 

@@ -74,7 +74,7 @@ echo "SELECT * FROM wp_users WHERE ID=1;" | terminus wp $site.$env -- db query
 
 ## Execute PHP Code Using WP-CLI on Pantheon
 
-The [`wp eval`](https://developer.wordpress.org/cli/commands/eval/) command is not supported on Pantheon, but you can still run the interactive shell [`wp shell`](https://developer.wordpress.org/cli/commands/eval/) to execute PHP commands:
+The [`wp eval`](https://developer.wordpress.org/cli/commands/eval/) command is not supported on Pantheon, but you can still run the interactive shell [`wp shell`](https://developer.wordpress.org/cli/commands/shell/) to execute PHP commands:
 
 ```bash
 terminus wp $site.$env -- shell

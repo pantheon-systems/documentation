@@ -270,7 +270,7 @@ function is_from_trusted_ip() {
         '192.0.2.38',
         '198.51.100.12',
         '208.0.113.159',
-        '2001:DB8:1C93',
+        '98b9:1da9:71f7:0953:f012:8574:3d58:9ac9',
     );
 
     return ip_in_list($trusted_ips);
@@ -335,7 +335,7 @@ function ip_in_list($ips) {
 
   function is_from_trusted_ip() {
     //Replace the IPs in this array with those you want to restrict access to
-    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
+    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','98b9:1da9:71f7:0953:f012:8574:3d58:9ac9');
     return ip_in_list($trusted_ips);
   }
   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
@@ -383,7 +383,7 @@ function ip_in_list($ips) {
 
   function is_from_trusted_ip() {
     //Replace the IPs in this array with those you want to restrict access to
-    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
+    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','98b9:1da9:71f7:0953:f012:8574:3d58:9ac9');
     return ip_in_list($trusted_ips);
   }
   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
