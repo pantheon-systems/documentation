@@ -1,4 +1,5 @@
 # The `hacktoberfest-accepted` label is added to the pull request
+# remove `.disabled` extension to reenable and then adjust this comment to match
 name: Hacktoberfest Accepted
 
 on: 
