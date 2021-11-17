@@ -13,8 +13,6 @@ Multidev is available to all Organizations and users with [Gold Accounts](/suppo
 
 Organizations with Multidev can assign unprivileged users who can access Multidev environments. Visit the [Change Management](/change-management) doc for more information about roles and permissions.
 
-Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
-
 ### Should I have access to Multidev?
 
 Multidevs that are already on a site are available to all users with access to the site.
@@ -25,8 +23,6 @@ Users have access to create a new Multidev if they:
 - Support a site that is owned by a Gold Account customer or above.
 
 Multidev environments that are already created on a Pantheon site are available to all users with access to the site.
-
-Visit the [Change Management](change-management) doc for more information about roles and permissions.
 
 Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
