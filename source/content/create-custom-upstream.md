@@ -107,7 +107,7 @@ Choose your preferred Git host:
 
 <Tab title="GitLab" id="gitlab">
 
-You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or use a self-managed GitLab installation.
+You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a self-managed GitLab installation.
 
 1. From your GitLab dashboard click **New project**.
 

@@ -64,7 +64,7 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [upgrade to Drupal 9](/guides/drupal-9-migration).
 
-If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert).
 
 ### Partial Adoption
 

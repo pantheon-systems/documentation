@@ -32,12 +32,16 @@ A CloudFront distribution is not a Drupal distribution. A CF distribution simply
 
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).
 
-3. Complete the fields to get the basic download distribution up and running.
+3. Complete the fields to get the basic download distribution up and running:
 
-   * **Origin Domain Name:** example-domain.com. The Origin Domain Name will be either an Amazon bucket hostname (if you're using a [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) to store your assets) or a web server's hostname.
-   * **Origin ID: Custom-dev-static.pantheonsupport.com**. An identifier to easily identify the distribution.
-   * **Alternate Domain Names (CNAMEs):** www.example-domain.com. Add any alternative domains that point to your site.
-   * **Distribution State:** Enabled. Be sure to enable the distribution or your assets will not be delivered through the CDN.
+   * **Origin Domain Name:** `example-domain.com`
+     * The Origin Domain Name will be either an Amazon bucket hostname (if you're using a [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) to store your assets) or a web server's hostname.
+   * **Origin ID:** `custom-dev-static.pantheonsupport.com`
+     * An identifier to easily identify the distribution.
+   * **Alternate Domain Names (CNAMEs):** `www.example-domain.com`
+     * Add any alternative domains that point to your site.
+   * **Distribution State:** `Enabled`
+     * Be sure to enable the distribution or your assets will not be delivered through the CDN.
 
 4. Click **Create Distribution**. The CloudFront distributions table now shows your new distribution with a status of "In Progress". When your distribution is ready, the status will be "Deployed".
 
