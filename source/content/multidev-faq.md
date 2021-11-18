@@ -11,8 +11,6 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 Multidev is available to all Organizations and users with [Gold Accounts](/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
 
-Organizations with Multidev can assign unprivileged users who can access Multidev environments. Visit the [Change Management](/change-management) doc for more information about roles and permissions.
-
 ### Should I have access to Multidev?
 
 Multidevs that are already on a site are available to all users with access to the site.
