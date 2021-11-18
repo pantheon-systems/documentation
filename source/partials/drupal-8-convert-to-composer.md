@@ -1,6 +1,6 @@
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
-Because of that, these steps make these codebase changes in a new branch:
+To mnimize issues, these steps make the codebase changes in a new branch:
 
 1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
