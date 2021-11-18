@@ -1,6 +1,6 @@
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
-Because of that, the steps below make these codebase changes in a new branch. 
+Because of that, these steps make these codebase changes in a new branch:
 
 1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
@@ -46,7 +46,7 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
 This step is optional; you may wait and add the Upgrade Status module to your site later.
 
-The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9. 
+The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
 
 Add the Upgrade Status module to your site with Composer:
 
@@ -56,7 +56,7 @@ Add the Upgrade Status module to your site with Composer:
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading. 
+When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading.
 
 ### Copy Existing Configuration
 
@@ -103,7 +103,7 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Once Composer is aware of all the contributed code, you'll be able to run `composer upgrade` from within the directory to have Composer upgrade all the contributed code automatically.
+Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically.
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
