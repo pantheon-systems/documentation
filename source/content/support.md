@@ -129,13 +129,11 @@ The ticket support feature is available to certain Account packages and account 
 
 Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
 
-## Premium Support Hotline
+## Premium Technical Support and On-Call Services
 
+Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
 
-
-## Pantheon On-Call
-
-Diamond and Platinum Account customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
