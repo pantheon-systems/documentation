@@ -53,8 +53,13 @@ Note that tickets and chat have tier-specific response time objectives, while em
 
 * Phone/teleconference: A phone call or teleconference can be requested for emergency support. This can be done either when filing the emergency ticket, or in the ticket thread once open.
 
-Note that tickets and chat have tier-specific response time objectives, while email, phone, and Slack channels do not. See https://pantheon.io/docs/support for details.
+	<Alert title="Note"  type="info" >
 
+	Tickets and chat have tier-specific response time objectives, while email, phone, and Slack channels do not. See https://pantheon.io/docs/support for details.
+
+	</Alert>
+
+* Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab.
 
 #### Escalation Paths
 
