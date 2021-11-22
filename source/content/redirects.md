@@ -50,6 +50,9 @@ If your site configuration prevents you from setting the primary domain from the
 
 <Partial file="_redirects.md" />
 
+### Convert Multiple `.htaccess` Redirects and Rewrites to PHP
+If you need to convert a large number of `.htaccess` redirects or rewrites to PHP, feel free to utilize our [free script](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) for both WordPress and Drupal.
+
 ## Additional Redirects
 
 For additional redirect examples to fit the custom requirements of your site, see [Advanced Redirects](/advanced-redirects).
