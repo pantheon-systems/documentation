@@ -5,13 +5,13 @@ categories: [develop]
 tags: [multidev, git, cli, workflow, collaborate]
 ---
 
-Multidevs are development environments for teams. They allow a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the main `master` site. Each forked branch will have its own separate development environment, including database and files.
+Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 
 ![Dev Test and Live icon](../images/multidev-flow.png)
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams make the most of our platform and improve their internal WebOps.
+Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
