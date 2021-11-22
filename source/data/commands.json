@@ -2,7 +2,7 @@
     "application":
     {
         "name": "Terminus",
-        "version": "2.5.0"
+        "version": "2.6.2"
     },
     "commands":
     [
@@ -844,9 +844,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -943,9 +943,10 @@
             "name": "backup:automatic:enable",
             "usage":
             [
-                "backup:automatic:enable [--day [DAY]] [--] <site>.<env>",
+                "backup:automatic:enable [--day [DAY]] [--keep-for [KEEP-FOR]] [--] <site>.<env>",
                 "backup:automatic:enable <site>.<env> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups that are retained for one month.",
-                "backup:automatic:enable <site>.<env> --day=<day> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups on <day> that are retained for one month."
+                "backup:automatic:enable <site>.<env> --day=<day> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups on <day> that are retained for one month.",
+                "backup:automatic:enable <site>.<env> --keep-for=<days> Enables automatic daily backups of <site>'s <env> environment that are retained for one week and weekly backups on <day> that are retained for <days>."
             ],
             "description": "Enables automatic daily backups that are retained for one week and weekly backups retained for one month.",
             "help": "Enables automatic daily backups that are retained for one week and weekly backups retained for one month.",
@@ -953,9 +954,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -972,6 +973,16 @@
                         "is_value_required": false,
                         "is_multiple": false,
                         "description": "Day of the week to make the month-long backup in any format recognized by PHP strtotime",
+                        "default": null
+                    },
+                    "keep-for":
+                    {
+                        "name": "--keep-for",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Retention period, in days, to retain the weekly backup. The default is 32 days.",
                         "default": null
                     },
                     "help":
@@ -1064,7 +1075,7 @@
             [
                 "backup:automatic:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
                 "backup:automatic:info <site>.<env> Displays the day when <site>'s <env> environment's weekly backup is created.",
-                "backup:automatic:info <site>.<env> --format=table Displays the hour of <site>'s <env> environment's daily backups (retained for one week) and the day on which its weekly backups (retained for one month) are made."
+                "backup:automatic:info <site>.<env> --format=table Displays the hour of <site>'s <env> environment's daily backups (retained for one week), day on which its weekly backups (retained for one month) are made, and how long it is kept for."
             ],
             "description": "Displays the hour when daily backups are created and the day of the week when weekly backups are created.",
             "help": "Displays the hour when daily backups are created and the day of the week when weekly backups are created.",
@@ -1072,9 +1083,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1100,7 +1111,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: Daily Backup Hour (daily_backup_hour), Weekly Backup Day (weekly_backup_day)",
+                        "description": "Available fields: Daily Backup Hour (daily_backup_hour), Weekly Backup Day (weekly_backup_day), Weekly Backup Expiry (expiry)",
                         "default": ""
                     },
                     "field":
@@ -1213,9 +1224,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1241,8 +1252,8 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Retention period, in days, to retain backup",
-                        "default": 365
+                        "description": "Retention period, in days, to retain backup. It defaults to 365 days.",
+                        "default": null
                     },
                     "help":
                     {
@@ -1345,9 +1356,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1485,9 +1496,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1645,9 +1656,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1795,9 +1806,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -1813,7 +1824,7 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "[filename.tgz] Name of backup file on the plaform",
+                        "description": "[filename.tgz] Name of backup file on the platform",
                         "default": null
                     },
                     "element":
@@ -2063,9 +2074,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2201,9 +2212,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment (excludes Test and Live) in the format `site-name.env`",
@@ -2308,7 +2319,7 @@
             "name": "dashboard:view",
             "usage":
             [
-                "dashboard:view [--print] [--site>.<env] [--] [<site>.<env>]",
+                "dashboard:view [--print] [--<site>.<env>] [--] [<site>.<env>]",
                 "dashboard:view Opens browser to user's account on the Pantheon Dashboard.",
                 "dashboard:view --print Prints the URL for user's account on the Pantheon Dashboard.",
                 "dashboard:view <site> Opens browser to <site> on the Pantheon Dashboard.",
@@ -2321,9 +2332,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": false,
                         "is_array": false,
                         "description": "",
@@ -2342,9 +2353,9 @@
                         "description": "Print URL only",
                         "default": false
                     },
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "--site>.<env",
+                        "name": "--<site>.<env>",
                         "shortcut": "",
                         "accept_value": false,
                         "is_value_required": false,
@@ -2449,9 +2460,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2565,9 +2576,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2704,9 +2715,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -2980,9 +2991,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3097,9 +3108,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3206,9 +3217,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3323,9 +3334,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3424,7 +3435,7 @@
             [
                 "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--] <site>.<env> <target_env>",
                 "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env>  Clones from <site>'s <env> environment to <target_env> environment and clears the cache.",
+                "env:clone-content <site>.<env> <target_env> Clones from <site>'s <env> environment to <target_env> environment and clears the cache.",
                 "env:clone-content <site>.<env> <target_env> --db-only Clones only the database from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --files-only Clones only files from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env> environment to <target_env> environment and updates the Drupal database (if applicable)."
@@ -3435,9 +3446,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Origin site & environment in the format `site-name.env`",
@@ -3591,9 +3602,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3730,9 +3741,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -3863,9 +3874,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env` (only Test or Live environment)",
@@ -4011,9 +4022,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment in the format `site-name.env`",
@@ -4149,9 +4160,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4431,9 +4442,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`. Defaults to the live environment if `.env` is not specified.",
@@ -4591,9 +4602,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4709,9 +4720,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4817,9 +4828,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -4925,9 +4936,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5065,9 +5076,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5176,9 +5187,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5420,9 +5431,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5536,9 +5547,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5769,9 +5780,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -5877,9 +5888,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -6001,9 +6012,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -6481,9 +6492,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & source environment in the format `site-name.env`",
@@ -6619,9 +6630,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & Multidev environment in the format `site-name.env`",
@@ -6878,9 +6889,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & Multidev environment in the form `site-name.env`",
@@ -6998,9 +7009,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & Multidev environment in the form `site-name.env`",
@@ -9642,7 +9653,7 @@
             "name": "remote:drush",
             "usage":
             [
-                "remote:drush [--progress] [--] <site>.<env> [<command>]...",
+                "remote:drush [--progress] [--] <site>.<env> [<drush_command>]...",
                 "remote:drush <site>.<env> -- <command> Runs the Drush command <command> remotely on <site>'s <env> environment.",
                 "remote:drush <site>.<env> --progress -- <command> Runs a Drush command with a progress bar",
                 "drush"
@@ -9653,17 +9664,17 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
                         "default": null
                     },
-                    "command":
+                    "drush_command":
                     {
-                        "name": "command",
+                        "name": "drush_command",
                         "is_required": false,
                         "is_array": true,
                         "description": "Drush command",
@@ -9770,7 +9781,7 @@
             "name": "remote:wp",
             "usage":
             [
-                "remote:wp [--progress] [--] <site>.<env> [<command>]...",
+                "remote:wp [--progress] [--] <site>.<env> [<wp_command>]...",
                 "remote:wp <site>.<env> -- <command> Runs the WP-CLI command <command> remotely on <site>'s <env> environment.",
                 "remote:wp <site>.<env> --progress -- <command> Runs a WP-CLI command with a progress bar",
                 "wp"
@@ -9781,17 +9792,17 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
                         "default": null
                     },
-                    "command":
+                    "wp_command":
                     {
-                        "name": "command",
+                        "name": "wp_command",
                         "is_required": false,
                         "is_array": true,
                         "description": "WP-CLI command",
@@ -10125,7 +10136,7 @@
             "name": "self:console",
             "usage":
             [
-                "self:console [--site>.<env] [--] [<site>.<env>]",
+                "self:console [--<site>.<env>] [--] [<site>.<env>]",
                 "self:console Opens an interactive PHP console within Terminus.",
                 "self:console <site> Opens an interactive PHP console within Terminus and loads <site> as $site.",
                 "self:console <site>.<env> Opens an interactive PHP console within Terminus and loads <site> and its <env> environment as $site and $env."
@@ -10136,9 +10147,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": false,
                         "is_array": false,
                         "description": "",
@@ -10147,9 +10158,9 @@
                 },
                 "options":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "--site>.<env",
+                        "name": "--<site>.<env>",
                         "shortcut": "",
                         "accept_value": false,
                         "is_value_required": false,
@@ -10373,8 +10384,9 @@
             "name": "self:update",
             "usage":
             [
-                "self:update",
-                "update"
+                "self:update [--stable] [--preview] [--compatible]",
+                "update",
+                "self-update"
             ],
             "description": "Updates Terminus to the latest version.",
             "help": "The <info>self-update</info> command checks github for newer\nversions of Terminus and if found, installs the latest.",
@@ -10383,6 +10395,36 @@
                 "arguments": [],
                 "options":
                 {
+                    "stable":
+                    {
+                        "name": "--stable",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Use stable releases (default)",
+                        "default": false
+                    },
+                    "preview":
+                    {
+                        "name": "--preview",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Preview unstable (e.g., alpha, beta, etc.) releases",
+                        "default": false
+                    },
+                    "compatible":
+                    {
+                        "name": "--compatible",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Stay on current major version",
+                        "default": false
+                    },
                     "help":
                     {
                         "name": "--help",
@@ -13695,9 +13737,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment",
@@ -13823,9 +13865,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & development environment",
@@ -13961,9 +14003,9 @@
             {
                 "arguments":
                 {
-                    "site>.<env":
+                    "<site>.<env>":
                     {
-                        "name": "site>.<env",
+                        "name": "<site>.<env>",
                         "is_required": true,
                         "is_array": false,
                         "description": "Site & environment in the format `site-name.env`",
@@ -14758,6 +14800,7 @@
                 "payment-methods",
                 "plans",
                 "pms",
+                "self-update",
                 "sites",
                 "ssh-keys",
                 "tags",
