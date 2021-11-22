@@ -1,7 +1,7 @@
 ---
-title: Apache Solr for Drupal
+title: Pantheon Search for Drupal
 subtitle: Using Solr on Drupal 8
-description: Detailed information on using Apache Solr with Drupal 8.
+description: Detailed information on using Pantheon Search with Drupal 8.
 cms: "Drupal 8"
 categories: [integrate]
 tags: [solr, search, modules]
@@ -33,15 +33,15 @@ Be sure that you:
 
 - Install [Composer](https://getcomposer.org/)
 
-- Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or [convert an existing Drupal site to use Composer](/guides/composer-convert) guide.
+- Create a Composer-managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or [convert an existing Drupal site to use Composer](/guides/composer-convert) guide.
 
 <Alert title="Warning" type="danger">
 
-Solr on Drupal 8 requires a Composer-managed workflow, as described in our [Build Tools](/guides/build-tools) and [Convert to Composer](/guides/composer-convert) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
+Pantheon Search on Drupal 8 requires a Composer-managed workflow, as described in our [Build Tools](/guides/build-tools) and [Convert to Composer](/guides/composer-convert) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Pantheon Search on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
 
 </Alert>
 
-## Install Solr on Drupal 8
+## Install Pantheon Search on Drupal 8
 
 ### Install the Search API Pantheon Module
 
@@ -84,7 +84,7 @@ Solr on Drupal 8 requires a Composer-managed workflow, as described in our [Buil
 
   </TabList>
 
-## Configure Solr
+## Configure Pantheon Search
 
 To configure the connection with Pantheon, set the [connection mode](/sftp/#sftp-mode) to SFTP and complete the following steps.
 
@@ -160,9 +160,9 @@ Download and install the Search API Attachments module ([search_api_attachments]
 
 If everything is working correctly, the message "Extracted data: Congratulations! The extraction seems to be working! Yay!" will be displayed.
 
-## Safely Remove Solr
+## Safely Remove Pantheon Search
 
-The following code changes are required before Solr can be safely uninstalled and disabled:
+The following code changes are required before Pantheon Search can be safely uninstalled and disabled:
 
 <Partial file="remove-addons/d8-solr.md" />
 

@@ -27,6 +27,8 @@ Choose your preferred Git host:
 
 1. [Log in to GitHub](https://github.com/login/).
 
+1. If you don't already have an [SSH key](https://github.com/settings/keys) associated with your GitHub account, [create one](/ssh-keys#generate-ssh-key) and [add it to GitHub](https://github.com/settings/ssh/new).
+
 1. If this is your first time logging in to GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New**](https://github.com/new) from the Repositories sidebar on the left.
 
 1. Name the repository.
@@ -49,20 +51,20 @@ Choose your preferred Git host:
 
 1. Click **Create Repository**.
 
-1. Copy the repository URL (HTTPS), found in the Quick setup section:
+1. Copy the repository URI (SSH), found in the **Quick setup** section:
 
-  ![GitHub Repo URL](../images/github-repo-url.png)
+  ![GitHub Repo URI](../images/github-repo-url.png)
 
-1. Clone the repository to your local from the command line (replace the URL):
+1. Clone the repository to your local from the command line (replace the URI):
 
   ```bash{promptUser: user}
-  git clone https://github.com/pantheondocs/agency-custom-upstream.git
+  git clone git@github.com:pantheon-systems/custom-upstream.git
   ```
 
 1. Navigate to the repository's root directory:
 
   ```bash{promptUser: user}
-  cd agency-custom-upstream
+  cd custom-upstream
   ```
 
 </Tab>
@@ -78,6 +80,10 @@ Choose your preferred Git host:
 1. Name the repository.
 
 1. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+
+1. Select **No** from the dropdown menu for **Include a README?**.
+
+1. Select **No** from the dropdown menu for **Include .gitignore?**.
 
 1. Click **Create Repository**.
 
@@ -101,7 +107,7 @@ Choose your preferred Git host:
 
 <Tab title="GitLab" id="gitlab">
 
-You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or use a self-managed GitLab installation.
+You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a self-managed GitLab installation.
 
 1. From your GitLab dashboard click **New project**.
 

@@ -16,15 +16,9 @@ In this guide, we'll use a Trello instance with a site on Pantheon. When changes
 Be sure that you:
 
 - Have a Drupal or WordPress site on Pantheon
-- Install [Terminus](/terminus):
-
-        curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
-
-        terminus auth:login --machine-token=‹machine-token›
-- Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
-
-        curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
+- Install [Terminus](/terminus/install#install-terminus)
+- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus
+- Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
 ## Create a Machine User in Trello
 Start by creating a new machine user in your Trello instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
@@ -128,7 +122,8 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
-        git commit -am "Create private/scripts/trello_integration.php and configure platform hooks"
+        git add .
+        git commit -m "Create private/scripts/trello_integration.php and configure platform hooks"
         git push origin master
 
 

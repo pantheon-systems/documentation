@@ -7,6 +7,16 @@ tags: [migrate, workflow]
 reviewed: "2020-07-21"
 ---
 
+<Alert title="Deprecated" type="info" icon="drupal">
+
+The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
+
+While the steps here work, Drupal 8 will not continue to receive security updates in the future.
+
+Visit the [Drupal 9 migration guide](/guides/drupal-9-migration) to find the best path to Drupal 9 for your site.
+
+</Alert>
+
 ## Overview
 
 To upgrade Drupal to a new major version (e.g. version 7 to version 8) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site into the new site.
@@ -18,8 +28,6 @@ If you have already created a site and want to upgrade it to a new major version
 </Alert>
 
 ## About Drupal 9
-
-[Drupal 9.0.0](https://www.drupal.org/about/9) was released in June of 2020. Pantheon support for live Drupal 9 sites is currently in development. See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
 
 Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first.
 
@@ -90,5 +98,4 @@ View the following [Drupal.org](https://drupal.org) resources for more informati
 - [Upgrading from Drupal 7 to Drupal 8](https://www.drupal.org/upgrade/migrate)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)
 - [Running Drupal 8 Data Migrations on Pantheon Through Drush](https://pantheon.io/blog/running-drupal-8-data-migrations-pantheon-through-drush)
-- [Drupal 8 File Migrations
-](https://pantheon.io/blog/drupal-8-file-migrations)
+- [Drupal 8 File Migrations](https://pantheon.io/blog/drupal-8-file-migrations)

@@ -1,8 +1,9 @@
 ---
-title: Email on Pantheon
+title: Email with Drupal on Pantheon
 description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
 categories: [platform]
 tags: [email]
+reviewed: "2021-11-02"
 ---
 ## Incoming Email
 
@@ -21,7 +22,7 @@ Here are some popular email services you can use on the platform and their corre
 | Mailgun   | [Drupal](https://www.drupal.org/project/mailgun) \| [WordPress](https://wordpress.org/plugins/mailgun/) |
 | Mandrill  | [Drupal](https://www.drupal.org/project/mandrill) \| [WordPress](https://wordpress.org/plugins/wpmandrill/) |
 | Postmark | [Drupal](https://www.drupal.org/project/postmark) \| [WordPress](https://wordpress.org/plugins/postmark-approved-wordpress-plugin/) |
-| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](/guides/sendgrid) |
+| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](https://wordpress.org/plugins/wp-mail-smtp/) |
 | Sendinblue | [Drupal](https://www.drupal.org/project/sendinblue) \| [WordPress](https://wordpress.org/plugins/mailin/) |
 | SparkPost | [Drupal](https://www.drupal.org/project/sparkpost) \| [WordPress](https://wordpress.org/plugins/sparkpost/) |
 
@@ -113,7 +114,7 @@ Adjust the above example record as needed for your domain:
 
 - Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
 - If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
-- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
+- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd-party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 

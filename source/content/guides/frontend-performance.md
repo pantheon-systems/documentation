@@ -361,13 +361,13 @@ Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp) to defin
 
 Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option to do so.
 
-The Pantheon Global CDN does not offer image optimization as a feature, but sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level.
+The default [Pantheon Global CDN](/global-cdn) does not offer image optimization (IO), but it is available with [Pantheon Advanced Global CDN (AGCDN)](/guides/professional-services/advanced-global-cdn) as a [Professional Services](/guides/professional-services) offering. Sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level through that provider.
 
 For images that are a part of your theme or module/plugin, you can smush them before committing them to Git with an application like [ImageOptim](https://imageoptim.com/mac).
 
 ## Deliver Efficient CSS and JavaScript
 
-Drupal and WordPress Core both allow for themes and modules/plugins to add individual CSS and JavaScript files to any given page (or every single page). To handle this norm in a way that ensures stable functionality, both systems default to serving each one of those `.css` and `.js` files separately, usually  in HTML `<head>` tag.
+Drupal and WordPress Core both allow for themes and modules/plugins to add individual CSS and JavaScript files to any given page (or every single page). To handle this norm in a way that ensures stable functionality, both systems default to serving each one of those `.css` and `.js` files separately, usually in HTML `<head>` tag.
 
 Loading everything separately and early in the page rendering process ensures that the effect of each file is taken on the first page rendering. It also nearly guarantees a slower than necessary page load because both types of resources block rendering.
 
@@ -525,6 +525,6 @@ Other considerations:
 
 ## GZIP Compression
 
-By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd party plugins/modules for gzip compression.
+By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScript files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd-party plugins/modules for gzip compression.
 
 If there are any assets that are not being gzipped, most likely they are assets loaded from outside Pantheon.

@@ -11,62 +11,45 @@ showtoc: true
 permalink: docs/guides/drupal-9-migration/upgrade-to-d9
 anchorid: drupal-9-migration/upgrade-to-d9
 editpath: drupal-9-migration/03-upgrade-to-d9.md
-reviewed: "2021-04-22"
+reviewed: "2021-10-24"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer to a Drupal 9 site with Integrated Composer.
+This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 Composer-managed site to a Drupal 9 site with Integrated Composer.
 
 Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
 
 The goals of this upgrade are to:
 
-- remove dependencies that Composer will manage from the existing site's Git repository, and
+- set the Drupal core dependency to Drupal 9, and
 
-- have Composer manage those dependencies in the new site instead.
-
-Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your site's existing commit history.
-
-<Alert title="Multidev Required" type="danger">
-
-To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
-
-Pantheon support is not available to users who avoid the Multidev steps.
-
-</Alert>
+- update any dependencies.
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-9/upgrade-site-requirements.md" />
+This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
 
-## Prepare the Local Environment
+- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-project) upstream.
 
-<Partial file="drupal-9/prepare-local-environment.md" />
+- The site uses Composer to manage Drupal core and site dependencies.
 
-### Apply All Available Upstream Updates
+- The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
 
-<Partial file="drupal-apply-upstream-updates.md" />
+To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal9` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
 
-### (Optional) Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
+## Ensure Dependencies are Drupal 9 Compatible
 
-<Partial file="drupal-9/drupal-upgrade-status.md" />
+Before changing the Drupal core version to Drupal 9, make sure all the components of your site are Drupal 9 compatible. Review the steps in drupal.org's [Upgrading a Drupal 8 site to Drupal 9](https://www.drupal.org/docs/upgrading-drupal/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/upgrading-a-drupal-8-site) for details, and use [Upgrade Status](https://www.drupal.org/project/upgrade_status) to check the compatibility of all contributed modules and themes.
 
-<Partial file="drupal-8-convert-to-composer.md" />
+## Set Drupal Core Version
 
-## Change Upstreams
+Set the Drupal core version to Drupal 9:
 
-Set the site to use the Drupal 9 Upstream:
-
-```bash{promptUser:user}
-terminus site:upstream:set $site drupal9
-```
-
-Enter `yes` when prompted:
-
-```bash
-Are you sure you want change the upstream for anita-drupal to Drupal 9? (yes/no) [no]:
-```
-
-Note that the [User in Charge](/change-management#site-level-roles-and-permissions), Site Owner, or Organization Administrator can change the Upstream.
+  ```
+  $ composer require --no-update drupal/core-recommended:^9.2
+  $ composer update drupal/core* -W
+  $ git add composer.*
+  $ git commit -m "upgrade to Drupal 9"
+  ```
 
 ## Ongoing Core Updates
 

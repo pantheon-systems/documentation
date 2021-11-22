@@ -4,7 +4,7 @@ subtitle: Introduction
 description: The new Pantheon Dashboard makes it easier to manage your WebOps from one Workspace fast.
 categories: [platform]
 tags: [dashboard, webops, workflow]
-contributors: [edwardangert]
+contributors: [edwardangert,joa-pan]
 reviewed: "2021-02-26"
 layout: guide
 permalink: docs/guides/new-dashboard
@@ -14,7 +14,6 @@ editpath: new-dashboard/01-introduction.md
 
 The new Pantheon Dashboard is WebOps in a single, fast Workspace. Easily visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and everything else to keep your developer experience smooth and uneventful.
 
-![A screenshot of the new Dashboard shows a Workspace with a list of sites](../../../images/dashboard/new-dashboard/workspace.png)
 
 ## Get Access
 
@@ -65,11 +64,30 @@ Your user icon, Gravatar, or <i className="fa fa-user-circle"></i> by default, g
 
 On the homepage, you have access to an overview of the Workspace that provides the following information:
 
+<TabList>
+
+<Tab title="Personal Workspace" id="personal-workspace">
+
 * Workspace type
 * Sites
-* Account Tier
+* Account tier
+* Sandbox sites used 
 
 ![A screenshot of the new Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
+
+
+</Tab>
+
+<Tab title="Organization Workspace" id="organization-workspace">
+
+* Workspace type
+* Team members
+* Sites
+* Account tier
+
+</Tab>
+</TabList>
+
 
 
 ### Workspaces

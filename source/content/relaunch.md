@@ -52,6 +52,12 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   You can also use Google's [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
 
+  <Alert title="Note" type="info">
+
+  [`Dig`](https://en.wikipedia.org/wiki/Dig_(command)) will not provide the correct DNS information for domains using Custom Ceterificates. If you are using a Custom Certificate, DNS records should not be changed.
+
+  </Alert>
+
 ### Roles & Permissions
 
 The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.

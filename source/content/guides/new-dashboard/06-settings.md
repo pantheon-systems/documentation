@@ -44,5 +44,5 @@ Users can purchase a site plan on a Sandbox site. Enter a site address in the **
 
 If a user attempts to update a site plan for any site that is not in a Sandbox, the user can view you administrators that can assist them. 
 
-You can enter terms and conditions that are displayed to workspace members.
+You can enter terms and conditions that are displayed to Workspace members.
 

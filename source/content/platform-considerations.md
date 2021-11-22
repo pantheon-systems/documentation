@@ -150,7 +150,7 @@ For more information about Drupal Steward, visit the [Drupal Steward FAQ](https:
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-See [the email documentation](/email) for more details and suggestions.
+See the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) doc for more details and suggestions.
 
 ## Emoji Support
 
@@ -215,7 +215,7 @@ For PDF viewer plugins that rely on Mozilla's [PDF.js](https://github.com/mozill
 
 Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
 
-Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/guides/professional-services/advanced-global-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/guides/professional-services/advanced-global-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/professional-services?docs) for more information.
 
 ## Inactive Site Freezing
 
@@ -247,7 +247,7 @@ Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file s
 |:--------------- | ------------------------------- |------------------------------------ |
 | ≤ 100MB         | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
 |   100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MB         | <span  style="color:red">❌</span>   | Must be hosted via 3rd party CDN    |
+| > 256MB         | <span  style="color:red">❌</span>   | Must be hosted via 3rd-party CDN    |
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
@@ -366,6 +366,16 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 [Terminus](/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) shells, this is not officially supported.
 
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/) to run a virtualized 'nix-type environment for tools like Terminus.
+
+## Terminus Can't Delete a Site or Multidev
+
+You might encounter the following error when a site is created and then quickly deleted, or is deleted before the site creation process has completed:
+
+```shell
+[error] The environment '1234567' was not found.
+```
+
+[Contact Support](/support) and ask to have the environment deleted.
 
 ## Write Access on Environments
 

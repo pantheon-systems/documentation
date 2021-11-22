@@ -17,7 +17,7 @@ To check for available updates, navigate to **Code** in the Dev tab of the site'
 
 Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [convert the site to Integrated Composer](/guides/composer-convert).
 
-## Non-Composer Managed WordPress and Drupal 7 / 8 Sites
+## Non-Composer-Managed WordPress and Drupal 7 / 8 Sites
 
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
