@@ -9,7 +9,7 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 ## Who has access to Multidev?
 
-Multidev is available to all Organizations and users with [Gold Accounts](/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
+Multidev is available to all organizations and users with [Gold Accounts](/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
 
 ### Should I have access to Multidev?
 
