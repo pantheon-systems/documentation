@@ -19,7 +19,7 @@ Navigate to the Billing menu from your Personal Workspace to manage invoices, si
 
 To access the Billing menu in your Personal Workpsace, click **Settings** in the Primary Global Navigation. From the Billing menu, click **Subscriptions**.
 
-When there is no current payment method associated with a user, Workspace Billing for Personal Workspaces displays the [Payment Methods](#payment-methods) screen.
+When there is no current payment method associated with a user, Workspace Billing for Personal Workspaces displays the Payment Methods screen.
 
 If a payment method is associated with a site subscription, sites will be listed in the [Site Subscriptions](#site-subscriptions) table.
 
