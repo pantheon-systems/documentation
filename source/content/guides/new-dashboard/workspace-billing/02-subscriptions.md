@@ -39,7 +39,7 @@ Subscriptions can be sorted by the following information:
 
 ### Account Subscription
 
-The account tier and cost is displayed on the Subscriptions page. You can view updates to the Personal Workspace account tier. Currently, you can not edit or manage account tiers with Workspace Billing. 
+The account tier and cost is displayed on the Subscriptions page. You can also view updates to the Personal Workspace account tier. Currently, you cannot edit or manage account tiers with Workspace Billing. 
 
 ![A screenshot of Workspace Billing Subscription homepage](../../../../images/dashboard/new-dashboard/workspace-subscription.png)
 
@@ -50,7 +50,7 @@ By default, sites are listed by name. You can sort according to your preference.
 
 ### Change Site Plan
 
-You can upgrade and change site plans. Upgrades will change your site's resources and access to features immediately. The card associated with your site will be charged a prorated amount for the remainder of the current billing period. You can view site plan changes from the actions menu
+You can upgrade and change site plans. Upgrades will change your site's resources and access to features immediately. The card associated with your site will be charged a prorated amount for the remainder of the current billing period. You can view site plan changes from the actions menu.
 
 Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan. No prorated refunds or credits will be issued for site downgrades.
 
@@ -59,11 +59,11 @@ You can view site plan changes on the Subscriptions page.
 
 ### Change Billing Cadence
 
-You can select either an annual or a monthly billing cadence. Click the [Site Billing](/site-billing) tab of the New Dashboard, to transfer site ownership and payment responsibility.
+You can select either an annual or a monthly billing cadence. Click the [Site Billing](/site-billing) tab of the New Dashboard to transfer site ownership and payment responsibility.
 
 
 #### Roles & Permissions
 
-The permission to manage a site's plan is granted only to the roles of **Site Owner**. Other roles do not have access to change the site plan. For more information, refer to [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+The permission to manage a site's plan is granted only to the role of **Site Owner**. Other roles do not have access to change the site plan. For more information, refer to [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).

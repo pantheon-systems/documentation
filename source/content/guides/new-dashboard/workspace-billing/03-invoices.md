@@ -37,7 +37,7 @@ These invoices comply with the EU requirements of the VAT Directive (Article 226
 
 You can view your invoices by clicking **Invoices** from the Billing menu. On the Invoices page, you have options on how to find the specific invoices you are looking for and how to sort them.
 
-Invoices can be sorted:
+Invoices can be sorted by:
 
 * Invoice date
 * Invoice number

@@ -36,7 +36,6 @@ To edit card details click **View Details** and then **Edit** on the displayed c
 
 To delete a payment method, navigate to the desired card on the Payment Methods page. Click **View Details** and then **Delete** on the displayed card. 
 
-You can not remove a payment method if it has subscriptions associated with it or if it is in use. Ensure you disconnect the subscriptions linked to the payment method before you attempt to delete. If you do not disconnect, an error message will be displayed. 
+You cannot remove a payment method if it has subscriptions associated with it or if it is in use. Ensure you disconnect the subscriptions linked to the payment method before you attempt to delete. If you do not disconnect, an error message will be displayed. 
 
-You will recieve an confirmation message if the card has been successfully deleted.
-
+You will recieve a confirmation message indicating that the card has been successfully deleted.
