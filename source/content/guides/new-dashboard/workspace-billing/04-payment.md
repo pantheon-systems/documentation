@@ -4,7 +4,7 @@ subtitle: Payment Methods
 description: Manage payment options in the New Dashboard.
 categories: [platform]
 tags: [dashboard, webops, workflow]
-contributors: [edwardangert]
+contributors: [edwardangert, joa-pan]
 reviewed: "2021-11-15"
 layout: guide
 permalink: docs/guides/new-dashboard/workspace-billing/payment
