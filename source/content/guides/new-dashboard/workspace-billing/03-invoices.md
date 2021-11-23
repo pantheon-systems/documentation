@@ -1,10 +1,10 @@
 ---
-title: Workspace Billing Center
+title: Workspace Billing
 subtitle: Invoices
-description: List and sort invoices for your Workspace.
+description: View, sort, and download invoices for your Workspace.
 categories: [platform]
 tags: [dashboard, webops, workflow]
-contributors: [edwardangert]
+contributors: [edwardangert, joa-pan]
 reviewed: "2021-11-15"
 layout: guide
 permalink: docs/guides/new-dashboard/workspace-billing/invoices
@@ -21,11 +21,10 @@ The details in the invoice include:
 
 |Invoice item| Description|
 |------------|------------|
-|Site Plan| Site scheme that you host with a custom domain|
-|Site Name| The primary site name of your site in the workspace|
+|Subscription Number / Site Name| The primary site name of your site in the workspace|
 |Bill To| The address specified for the payment method|
-|Description| The account and associated usage or commitment renewal|
-|Amount| Cost for subscription|
+|Product Detail| The account and associated usage or commitment renewal|
+|Unit Price| Cost for subscription|
 |Method| Credit card used|
 
 You can download the invoice as a PDF or CSV file. You can also print the PDF or import the CSV into a spreadsheet program.
@@ -33,12 +32,10 @@ You can download the invoice as a PDF or CSV file. You can also print the PDF or
 If your billing country is in the European Union (EU), your invoices may also include the value-added tax (VAT) ID.
 These invoices comply with the EU requirements of the VAT Directive (Article 226, Council Directive 2006/112/EC) and are valid for your local tax authorities. 
 
-Invoices are available immediately. If your invoice is not available but you made payments you can contact a support. 
-
 
 ## Sort Invoices
 
-You can view your invoices by clicking **Invoices** from the Billing page. In the Invoices section, you have options on how to find the specific invoice(s) you are looking for and how to sort them.
+You can view your invoices by clicking **Invoices** from the Billing menu. On the Invoices page, you have options on how to find the specific invoices you are looking for and how to sort them.
 
 Invoices can be sorted:
 
@@ -48,6 +45,3 @@ Invoices can be sorted:
 * Payment amount
 
 You can also use the search bar to find a specfic invoice. Enter keywords, methods, dates, or amounts in the search bar to yield results.
-
-
-
