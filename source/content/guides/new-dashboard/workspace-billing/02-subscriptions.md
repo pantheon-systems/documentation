@@ -1,7 +1,7 @@
 ---
 title: Workspace Billing
 subtitle: Subscriptions
-description: Manage site and account subscriptions
+description: Manage site and account subscriptions.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert]
