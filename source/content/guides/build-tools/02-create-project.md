@@ -153,7 +153,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
-- [Drupal 9](https://github.com/pantheon-upstreams/drupal-project/issues)
+- [Drupal 9](https://github.com/pantheon-upstreams/drupal-recommended/issues)
 - [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 

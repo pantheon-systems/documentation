@@ -28,7 +28,7 @@ The goals of this upgrade are to:
 
 This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
 
-- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-project) upstream.
+- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-recommended) upstream.
 
 - The site uses Composer to manage Drupal core and site dependencies.
 

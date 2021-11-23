@@ -11,7 +11,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  git remote add ic git@github.com:pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
   Switched to a new branch 'composerify'
   ```
 
@@ -24,7 +24,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
   If you continue to encounter the error, use HTTPS to add the remote:
 
    ```bash{outputLines:2}
-   git remote add ic https://github.com/pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
    Switched to a new branch 'composerify'
    ```
 
@@ -206,7 +206,7 @@ If you still want to try it:
 
 1. Say the following out loud: "Pantheon is not responsible for what I am about to do."
 
-1. Create a directory called `bin` within your repository and copy the `migrateModules.php` file from [GitHub](https://github.com/pantheon-upstreams/drupal-project/pull/8/files#diff-c68470275758ca395b98d53ed258b63519435d492dd51531c4cf372814c6593e) into that directory.
+1. Create a directory called `bin` within your repository and copy the `migrateModules.php` file from [GitHub](https://github.com/pantheon-upstreams/drupal-recommended/pull/8/files#diff-c68470275758ca395b98d53ed258b63519435d492dd51531c4cf372814c6593e) into that directory.
 
 1. To run the module migration script, `cd` to the root directory of the repository and run `bin/migrateModules.php`.
 
