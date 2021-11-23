@@ -49,13 +49,13 @@ Keep these tips in mind when opening a new support ticket or chat, to help us re
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab.
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
 
 Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
 
 ### Organization Dashboard Support Tab
 
-If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
+If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level.
 
 ![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
 
@@ -230,7 +230,7 @@ Yes. For more details, talk to your Customer Success Manager or [contact sales](
 
 ### Is there a support number we can call? If so, is this service available for every package?
 
-Diamond and Platinum customers have access to Pantheon On-Call, which has an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
+Diamond and Platinum customers have access to Pantheon On-Call, which includes an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
 
 ### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 
@@ -238,7 +238,7 @@ Diamond, Platinum and Gold customers can file a downtime ticket for outages on o
 
 ### What if I can't login to the Pantheon Dashboard?
 
-If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).
+If you are unable to log in, try [resetting your password](https://dashboard.pantheon.io/reset-password).
 
 ### How can I review my chat threads?
 
