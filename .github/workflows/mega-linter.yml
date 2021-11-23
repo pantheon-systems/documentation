@@ -45,7 +45,7 @@ jobs:
         env:
           # All available variables are described in documentation
           # https://nvuillam.github.io/mega-linter/configuration/
-          VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} # Set ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} to validate only diff with master branch / try false next
+          VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} # Set ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} to validate only diff with master branch / try false next
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # ADD YOUR CUSTOM ENV VARIABLES HERE TO OVERRIDE VALUES OF .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
           DISABLE: BASH,COPYPASTE,CREDENTIALS,CSS,HTML,JSON,YAML,XML
