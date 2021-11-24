@@ -116,9 +116,9 @@ You now have a local copy of the logs directory, which contains the following:
 
 ## Automate Downloading Logs
 
-You can automate the process of accessing and maintaining these logs with a simple script.
+You can automate the process of accessing and maintaining these logs with a simple script. 
 
-### Create a Script
+### Create a Script 
 
 Open your local terminal to create and access a new local directory:
 
@@ -127,7 +127,7 @@ mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
 
-Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the following:
+Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the script below. It provides several modifiable variables that you can read about within its comments.
 
   <TabList>
 
@@ -135,13 +135,13 @@ Using your favorite text editor, create a file within the `site-logs` directory 
 
   ```bash:title=collect-logs.sh
   #!/bin/bash
-  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  # REQUIRED: Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=
-  # dev test live multidev
+  # REQUIRED: dev test live multidev
   ENV=
 
   ########### Additional settings you don't have to change unless you want to ###########
-  # set to true if you want to aggregate nginx logs. WARNING: This will create one large file
+  # OPTIONAL: set to true if you want to aggregate nginx logs. WARNING: This will potentially create a large file
   AGGREGATE_NGINX=false
   # if you just want to aggregate the files already collected, set the parameter below to FALSE
   COLLECT_LOGS=true
