@@ -136,9 +136,9 @@ Using your favorite text editor, create a file within the `site-logs` directory 
   ```bash:title=collect-logs.sh
   #!/bin/bash
   # REQUIRED: Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-  SITE_UUID=
+  SITE_UUID=xxxxxxx
   # REQUIRED: dev test live multidev
-  ENV=
+  ENV=xxxxxxx
 
   ########### Additional settings you don't have to change unless you want to ###########
   # OPTIONAL: set to true if you want to aggregate nginx logs. WARNING: This will potentially create a large file
@@ -181,7 +181,7 @@ Using your favorite text editor, create a file within the `site-logs` directory 
       done
     done
 
-    echo "unzipping nginx-access logs in aggregate logs directory..."
+    echo "unzipping nginx-access logs in aggregate-logs directory..."
     for f in $(ls -f aggregate-logs); do
       if [[ $f =~ \.gz ]]; then
         gunzip aggregate-logs/"$f"
@@ -210,9 +210,9 @@ Using your favorite text editor, create a file within the `site-logs` directory 
   ```bash:title=collect-logs.sh
   #!/bin/bash
   # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-  SITE_UUID=
+  SITE_UUID=xxxxxxx
   # dev test live multidev
-  ENV=
+  ENV=xxxxxxx
 
   ########### Additional settings you don't have to change unless you want to ###########
   # set to true if you want to aggregate nginx logs. WARNING: This will create one large file
@@ -255,7 +255,7 @@ Using your favorite text editor, create a file within the `site-logs` directory 
       done
     done
 
-    echo "unzipping nginx-access logs in aggregate logs directory..."
+    echo "unzipping nginx-access logs in aggregate-logs directory..."
     for f in $(ls -f aggregate-logs); do
       if [[ $f =~ \.gz ]]; then
         gunzip aggregate-logs/"$f"
