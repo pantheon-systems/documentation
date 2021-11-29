@@ -53,7 +53,7 @@ Select the **Sites** tab in the left-navigation menu to search for a Site, migra
 
 You can create a new Site from the new Dashboard homepage or from the **Site** tab. 
 
-To create a Site, click **Create New Site**. You will be directed to the Classic Dashboard for Site creation. Click **Yes,Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
+To create a Site, click **Create New Site**. You will be directed to the Classic Dashboard for Site creation. Click **Yes, Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
 
 
 ## Utility Navigation
@@ -66,7 +66,7 @@ On the homepage, you have access to an overview of the Workspace that provides t
 
 <TabList>
 
-<Tab title="Personal Workspace" id="personal-workspace">
+<Tab title="Personal Workspace" id="personal-workspace" active={true}>
 
 * Workspace type
 * Sites
