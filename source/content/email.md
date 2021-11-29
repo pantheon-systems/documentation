@@ -133,3 +133,7 @@ Because we don't support SPF, it is likely that most Exchange or Office 365 serv
 To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
 
 Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
+
+## See Also
+
+- [Resetting Passwords](https://pantheon.io/docs/resetting-passwords)  
