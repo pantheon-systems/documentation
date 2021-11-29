@@ -162,63 +162,6 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     </Accordion>
 
-
-<!-- commenting out until the script has a proper place to live
-
-**Trust a robot?**
-
-One of Pantheon's engineers got tired of doing this process by hand, so he trained some robots to identify modules and put them into `composer.json`.
-
-Robots are cool, but they're not perfect, so you should understand the goal of this process as well as the limitations of automating the process.
-
-Accordion title="A script that can help add modules to composer.json" id="modules-script" icon="cogs"
-
-First, disclaimers:
-
-This script is provided without warranty or direct support. Issues and questions may be filed in GitHub but their resolution is not guaranteed.
-
-Proceed at your own risk. Automation is better when you understand what it's doing.
-
-- The script does not resolve `composer.json` version problems.
-
-  - If there's a version conflict when you run `composer install`, you will need to resolve the conflicts yourself.
-
-- The script does not check for Drupal 9 compatibility.
-
-  - Use the [Upgrade Status](https://drupal.org/project/upgrade_status) module to check for Drupal 9 compatibility.
-
-- The script does not resolve module stability.
-
-  - If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
-
-   ```none
-   [InvalidArgumentException]
-   Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-   ```
-
-   If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
-
-- The script does not resolve patches.
-
-  Many times a module will be "patched" or have a `.patch` file that fixes known issues before the fix is available in the downloaded version. This script does not attempt to resolve any patches.
-
-If you still want to try it:
-
-1. Say the following out loud: "Pantheon is not responsible for what I am about to do."
-
-1. Create a directory called `bin` within your repository and copy the `migrateModules.php` file from [GitHub](https://github.com/pantheon-upstreams/drupal-recommended/pull/8/files#diff-c68470275758ca395b98d53ed258b63519435d492dd51531c4cf372814c6593e) into that directory.
-
-1. To run the module migration script, `cd` to the root directory of the repository and run `bin/migrateModules.php`.
-
-1. To see which modules were added, run `git diff composer.json`.
-
-1. Remove the `composer.lock` file. Composer will create a new one with the modules you just added.
-
-1. Run `composer install` and resolve any remaining version conflicts.
-
- end Accordion
--->
-
 #### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
