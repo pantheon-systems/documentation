@@ -9,15 +9,7 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 ## Who has access to Multidev?
 
-<<<<<<< HEAD
-Multidev is available to all Organizations and users with [Gold Accounts](/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
-
-Organizations with Multidev can assign unprivileged users who can access Multidev environments. Visit the [Change Management](/change-management) doc for more information about roles and permissions.
-
-Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
-=======
 Multidev is available to all organizations and users with [Gold Accounts](/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
->>>>>>> 221059ca0a70894aee98b8621835a0f080703a83
 
 ### Should I have access to Multidev?
 
@@ -30,11 +22,6 @@ Users have access to create a new Multidev if they:
 
 Multidev environments that are already created on a Pantheon site are available to all users with access to the site.
 
-<<<<<<< HEAD
-Visit the [Change Management](change-management) doc for more information about roles and permissions.
-
-=======
->>>>>>> 221059ca0a70894aee98b8621835a0f080703a83
 Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
 If you meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact Support](https://dashboard.pantheon.io/#support).
