@@ -9,22 +9,28 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 ## Who has access to Multidev?
 
-Multidev is available to all [Gold Accounts](/support/#support-features-and-response-times) and above. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
-
-Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
+Multidev is available to all organizations and users with [Gold Accounts](/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
 
 ### Should I have access to Multidev?
 
-Users have access to Multidev if they:
+Multidevs that are already on a site are available to all users with access to the site.
 
-- Have been assigned a role as a member of an Organization that has the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs)).
-- Are a Direct Online Gold Account customer or above.
+Users have access to create a new Multidev if they:
 
-If you fully meet either of these conditions and still don't have access to Multidev, please [contact support](https://dashboard.pantheon.io/#support).
+- Belong to a Gold Account customer or above.
+- Support a site that is owned by a Gold Account customer or above.
+
+Multidev environments that are already created on a Pantheon site are available to all users with access to the site.
+
+Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
+
+If you meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact Support](https://dashboard.pantheon.io/#support).
 
 ## How many Multidev environments do I get?
 
 Each site has a limit of 10 Multidev environments.
+
+[Autopilot](/guides/autopilot/) creates and uses a Multidev environment that does not count towards the total limit.
 
 ## Can I buy additional Multidev environments?
 
@@ -32,7 +38,7 @@ Elite sites can request additional Multidev environments [from support](/support
 
 ## If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
-No; each branch environment can be independently set to use either SFTP or Git mode for code changes.
+No. Each branch environment can be independently set to use either SFTP or Git mode for code changes.
 
 ## What access controls or permissions are available?
 
@@ -40,7 +46,7 @@ At this time, there are no permissions or access controls for managing the deplo
 
 ## What are the naming conventions for branches?
 
-Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `debug`, `multidev`, `files`, `tags`  and `billing`.
+Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `debug`, `multidev`, `files`, `tags`, and `billing`.
 
 ## Can I fork my code without using Multidev?
 
