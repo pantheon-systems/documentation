@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [performance]
 tags: [cache]
 ---
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
+To maximize your site’s performance on Pantheon and to take advantage of our Global CDN, you'll need to configure your site's performance settings.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
