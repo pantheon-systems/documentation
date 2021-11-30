@@ -75,7 +75,7 @@ You can remove site dependencies if they are no longer needed.
 
 ## Upstream
 
-Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-project), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
+Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-recommended), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
 
 ### Upstream and Site Structure
 
@@ -214,7 +214,7 @@ Merge the changes manually:
 1. Merge in the upstream changes:
 
    ```bash{promptUser: user}
-   git pull https://github.com/pantheon-upstreams/drupal-project main
+   git pull https://github.com/pantheon-upstreams/drupal-recommended main
    ```
 
 1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
