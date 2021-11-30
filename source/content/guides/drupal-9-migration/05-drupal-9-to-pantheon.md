@@ -40,9 +40,7 @@ Integrated Composer will break if `composer install` tries to modify any files t
 
 - Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name.
   - Address the question of Composer packages being committed to version control, and how we need to not do that for IC
-- Partial `drupal-9/prepare-local-environment.md` says to install the terminus site clone plugin, but I'm not sure this is used?
-  - Edward to adjust to alias or `former-platform`
-- `composer show` - not using this
+- Edward to adjust to alias or `former-platform`
 - have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)? wikimedia merge plugin?
 
 ## Will This Guide Work for Your Site?
@@ -69,7 +67,7 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment.md" />
+<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
 Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
 
@@ -83,7 +81,7 @@ This doc uses the following aliases:
 
 ### Create a Local Copy of the Old Site's Code
 
-1. Obtain a local copy of your old site's code.  Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `sites/default/files` directory, or any other static assets you do not want tracked by version control.
+1. Obtain a local copy of your old site's code. Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `sites/default/files` directory, or any other static assets you do not want tracked by version control.
 
 1. Export the database and media files (`sites/default/files`) from the old platform, but do not add them or upload any files to Pantheon.
 
