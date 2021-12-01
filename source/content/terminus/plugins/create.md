@@ -18,7 +18,67 @@ searchboost: 100
 
 Add new commands to Terminus by creating a plugin. The following explains how to create our [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) to demonstrate how to add new commands.
 
-## Create the Example Plugin
+## Create the Example Plugin using Terminus 3
+
+This example provides a walkthrough of creating a Terminus plugin.
+
+### 1. Create Plugin
+
+Terminus 3 has a plugin manager that includes a command for scaffolding a new, empty plugin:
+
+```bash
+terminus self:plugin:create hello-world --project-name=terminus-plugin-project/hello-world
+```
+
+This will create a directory `hello-world` and populate it with an example plugin template, renamed to match the provided project name. The project name is onlyrequired if you plan to publish and distribute your plugin (e.g. on Packagist).
+
+The `self:plugin:create` command also installs your new plugin so that you can start using it immediately.
+
+### 2. Add Commands
+
+The example plugin comes with two files in the `Commands` directory, each of which contains an example command.
+
+Open up the `src/Commands/HelloCommand.php` file, and modify the output as shown below:
+
+```php
+namespace Pantheon\TerminusHello\Commands;
+
+use Pantheon\Terminus\Commands\TerminusCommand;
+
+class HelloCommand extends TerminusCommand
+{
+    /**
+     * Print the classic message to the log.
+     *
+     * @command hello
+     * @param string $name Who to say "hello" to.
+     * @option $first This is the first time we've said hello.
+     */
+    public function sayHello($name = 'World', $options = ['first' => false])
+    {
+        $this->log()->notice("Hello, {user}! THIS IS MY MODIFICATION TO THE PLUGIN.", ['user' => $name]);
+        if ($options['first']) {
+            $this->log()->notice("Pleased to meet you.");
+        }
+    }
+}
+
+```
+
+The command should now be recognized and loaded by Terminus:
+
+```bash
+terminus hello
+```
+
+The provided example command should display the following when run:
+
+```bash
+[notice] Hello, World! THIS IS MY MODIFICATION TO THE PLUGIN.
+```
+Modify the `@command` line to change the name of your command. You may rename the source file the command is in as well, as long as it ends in `Command.php`.
+
+## Create the Example Plugin using Terminus 2
 
 This example provides the structural requirements for plugins to be recognized and loaded by Terminus.
 
@@ -45,7 +105,7 @@ In order for Terminus to recognize the directory as a plugin, the directory must
   "type": "terminus-plugin",
   "extra": {
     "terminus": {
-      "compatible-version": "2.*"
+      "compatible-version": "^3"
     }
   }
 }
@@ -186,7 +246,7 @@ Update the `composer.json` file with a `require` section that lists all of the e
 
 <Alert title={"Note"} type={"info"}>
 
-In order to avoid conflicts between the dependencies of different plugins, Terminus does not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor.
+In order to avoid conflicts between the dependencies of different plugins, Terminus 1 and 2 do not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor. Terminus 3 does not have this restriction.
 
 </Alert>
 
@@ -202,15 +262,7 @@ More information on Terminus standards can be found at:
 
 ## Plugin Versioning
 
-Terminus follows [semantic versioning](http://semver.org/). We recommend adopting TERMINUS.MAJOR.MINOR for plugin versioning.
-
-Given a version number TERMINUS.MAJOR.MINOR, increment the:
-
-- TERMINUS version when the plugin is compatible with a new MAJOR version of Terminus,
-- MAJOR version when you break functionality in a backwards-compatible manner, and
-- MINOR version when you make backwards-compatible bug fixes.
-
-The first digit of a plugin version should always the Terminus MAJOR version the plugin is compatible with.
+We recommend following [semantic versioning](http://semver.org/) when versioning your plugins, just as Terminus does.
 
 If your plugin has a minimum required version of Terminus, you can specify that in the `compatible-version` section of `composer.json`. You can use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). If you do change `compatible-version`, please make sure that your constraint expression does not accidentally include the next major version of Terminus. In other words, `>=1.3 <2.0.0` is fine but `>=1.3` is not.
 
