@@ -39,16 +39,13 @@ Integrated Composer will break if `composer install` tries to modify any files t
 ## Important Notes
 
 - Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name.
-  - Address the question of Composer packages being committed to version control, and how we need to not do that for IC
 - Edward to adjust to alias or `former-platform`
-- have them remove packages from their list that we already include (drupal/core-recommended, drupal/core-composer-scaffold..)? wikimedia merge plugin?
 
 ## Will This Guide Work for Your Site?
 
 Before you continue, confirm that your site meets the following requirements:
 
 - The existing Drupal 9 site uses Composer to manage site dependencies
-- Composer-managed
 - Able to get a local copy of the existing site / access to a Git repository of it?
 
 ## Create a New Drupal 9 Site
@@ -59,7 +56,7 @@ Before you continue, confirm that your site meets the following requirements:
 
 1. Navigate to your User Dashboard and click the **Create New Site** button:
 
-  ...
+  ...INSERT SCREENSHOT HERE...
 
 1. Click **Visit your Pantheon Site Dashboard**
 
@@ -75,7 +72,6 @@ This doc uses the following aliases:
 
 - **Alias:** `SITE`
 - **Site Name:** `anita-drupal`
-- **Working folder** ?
 - **Old site folder** `FORMER-PLATFORM`
 - **Pantheon site folder** `PANTHEON-D9`
 
@@ -101,11 +97,6 @@ This doc uses the following aliases:
 
 1. Run the `git clone` command inside your working folder
 
-<!--
-### Site Structure
-
-<Partial file="ic-upstream-structure.md" />
--->
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -141,9 +132,9 @@ What makes your site code unique is your selection of contributed modules and th
 
 ### Custom Code
 
-Manually copy custom code from the old site to the corresponding Pantheon site directory.
+Manually copy custom code from the old site to the corresponding Pantheon site directory and commit them.
 
-- `web/modules/custom` and `web/libraries` are ignored, so `git add -f`
+- `web/libraries` is ignored, so `git add -f` if needed.
 
 #### Modules and Themes
 
@@ -179,7 +170,7 @@ Copy over exported configuration from the original site. From the Pantheon D9 si
 
   ```bash{promptUser: user}
   mkdir config
-  git mv sites/default/config/* config/
+  cp -R ../old-site/<config folder location> config/
   git commit -m "Add site configuration."
   ```
 
@@ -270,7 +261,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 ## Upload Your Files
 
-**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
+**Files** refer to anything within `sites/default/files`, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
@@ -358,7 +349,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 ## Troubleshooting
 
-When there are problems, you can sometimes get helpful messages about what's wrong with:
+When there are problems, you can sometimes get helpful messages about what's wrong with the following command if you have dblog module enabled:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev watchdog:show
