@@ -1,6 +1,6 @@
 ---
 title: Terminus 2.0
-description: Learn what's new with the latest Terminus major version upgrade.
+description: Learn what's new with the Terminus 2.0 release.
 contributors: [alexfornuto]
 categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
@@ -8,7 +8,7 @@ tags: [cli, drush, local, wp-cli, terminus]
 
 <Alert title="Note" type="info" >
 
-If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/terminus) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
+Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus-3.0) page as well.
 
 </Alert>
 
