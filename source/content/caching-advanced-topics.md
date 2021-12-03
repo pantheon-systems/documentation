@@ -67,6 +67,32 @@ header('Content-Type: application/json');
 echo file_get_contents("/path/to/file.json");
 ```
 
+`pantheon_clear_edge_paths` is a platform function that can be implemented in a [Quicksilver hook (like `deploy`)](https://pantheon.io/docs/quicksilver#hooks) to automatically purge a given static asset from cache, for example: 
+```
+<?php
+
+// Punch through the Pantheon edge cache.
+setcookie('NO_CACHE', '1');
+
+// Test clearing files-only path
+if (function_exists('pantheon_clear_edge_paths')) {
+    $paths = [
+      'sites/default/files/file.json'
+    ];
+
+    // Test path types.
+    foreach ($paths as $path) {
+        try {
+            pantheon_clear_edge_paths([$path]);
+        } catch (Exception $e) {
+            echo "<pre>";
+            print_r($e);
+            echo "</pre>";
+        }
+    }
+}
+```
+
 ## Using Your Own Session-Style Cookies
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
