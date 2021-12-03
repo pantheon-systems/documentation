@@ -13,7 +13,7 @@ anchorid: new-dashboard
 editpath: new-dashboard/05-support.md
 ---
 
- Support features can be accessed in a centralized location, where you can open tickets, chat with engineers or other Pantheon users, for a unified Support experience. If you click **Contact Us** in the **Support** tab, you are directed to the Support page that includes specialized support options that can be tailored to the unique needs of your Workspace. 
+Support features can be accessed in a centralized location, where you can open tickets, chat with engineers or other Pantheon users, for a unified Support experience. If you click **Contact Us** in the **Support** tab, you are directed to the Support page that includes specialized support options that can be tailored to the unique needs of your Workspace. 
 
 Support helps resolves issues, restore your operations quickly, and accelerate the path to resolution while identifying the root cause, which helps protect against recurrences in the future.
 
