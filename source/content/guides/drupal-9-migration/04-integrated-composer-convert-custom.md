@@ -257,6 +257,25 @@ When you are ready...
 
 1. If you applied any site-specific code to individual sites' `ic-test` Multidev, merge that Multidev into the Dev environment.
 
-1. Confirm that the Dev environment is working as expected.
+  <Alert title="Note"  type="info" >
 
-1. Deploy to live when ready.
+  There is currently a platform bug which prevents Integrated Composer from being enabled until a change to pantheon.yml has been pushed to **each site**. Follow the steps below to complete final deployment.
+
+  </Alert>
+
+4. After you push to Dev, you must push another change to `pantheon.yml`. You can either:
+
+    - Add a comment in `pantheon.yml` at the end of the file, and that will trigger Composer
+
+      Or
+  
+    - Use `echo` to do it for you:
+     ```bash{promptUser:user}
+     echo "\n# comment to trigger Composer\n" >> pantheon.yml
+     ```
+
+5. Make sure to push your changes up again.
+
+6. Confirm that the Dev environment is working as expected.
+
+7. Deploy to live when ready.
