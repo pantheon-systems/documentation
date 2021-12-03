@@ -143,7 +143,7 @@ As an alternative to using HTTP headers to control downstream caching, you can s
 
 <Alert title="Warning" type="danger">
 
-Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.
+Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request, open a [Support Ticket](/support#ticket-support).
 
 </Alert>
 
