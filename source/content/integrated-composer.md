@@ -214,7 +214,8 @@ Merge the changes manually:
 1. Merge in the upstream changes:
 
    ```bash{promptUser: user}
-   git pull https://github.com/pantheon-upstreams/drupal-recommended main
+   git remote add upstream <upstream_url> && git fetch upstream
+   git merge upstream/master
    ```
 
 1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
