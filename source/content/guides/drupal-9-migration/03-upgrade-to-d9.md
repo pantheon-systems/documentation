@@ -28,13 +28,13 @@ The goals of this upgrade are to:
 
 This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
 
-- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-project) upstream.
+- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-recommended) upstream.
 
 - The site uses Composer to manage Drupal core and site dependencies.
 
 - The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
 
-To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal9` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
+To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal-recommended` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
 
 ## Ensure Dependencies are Drupal 9 Compatible
 

@@ -232,7 +232,7 @@ $this->provider->login( $redirect_to );
 
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
-The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
+There is a known issue with the Drupal 7 version of the SimpleSAMLphp Authentication module. The module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. Although there are two patches you can try in an effort to improve site performance; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) is the recommended solution until the fix is accepted into an official project release.
 
 ### SimpleSAMLphp Error: can't find metadata
 

@@ -10,7 +10,7 @@ contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2021-10-23"
 ---
 
-In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal9` upstream while remaining on Drupal 8.
+In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-recommended` upstream while remaining on Drupal 8.
 
 ## Overview
 
@@ -20,9 +20,9 @@ The goals of this conversion are:
 
 1. Remove dependencies that Composer will manage from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
 
-1. Switch to the `drupal9` Integrated Composer upstream. 
+1. Switch to the `drupal-recommended` Integrated Composer upstream.
 
-The `drupal9` Integrated Composer upstream works with Drupal 8, and following the `drupal9` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. 
+The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
 
 1. Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
 
@@ -61,10 +61,10 @@ If you receive the error message "The provided host name is not valid for this s
 Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $site drupal9
+terminus site:upstream:set $SITE drupal-recommended
 ```
 
-Following the `drupal9` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
+Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
 
