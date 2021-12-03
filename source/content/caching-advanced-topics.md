@@ -52,6 +52,21 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 Dev and Multidev environments do not cache static assets.
 
+Another solution to consider when debugging issues related to stale static assets is to load the file via a custom PHP script that sets a `no-cache` header value, for example: 
+
+```php
+<?php
+
+// Punch through the Pantheon edge cache.
+header("Cache-Control: no-cache, must-revalidate");
+
+// Set JSON header
+header('Content-Type: application/json');
+
+// Echo file content
+echo file_get_contents("/path/to/file.json");
+```
+
 ## Using Your Own Session-Style Cookies
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
