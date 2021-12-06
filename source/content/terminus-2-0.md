@@ -8,7 +8,7 @@ tags: [cli, drush, local, wp-cli, terminus]
 
 <Alert title="Note" type="info" >
 
-Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus-3.0) page as well.
+Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus/terminus-3.0) page as well.
 
 </Alert>
 

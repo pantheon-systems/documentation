@@ -30,7 +30,7 @@ No commands were deprecated in the Termminus 3.0 release.
 
 ## New Commands
 
-The following commands are new to Terminus as of version 2.0:
+The following commands are new to Terminus as of version 3.0:
 
  - `self:plugin:install`: Install Terminus plugins.
  - `self:plugin:list`: List installed Terminus plugins.
