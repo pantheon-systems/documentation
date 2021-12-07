@@ -116,34 +116,38 @@ You now have a local copy of the logs directory, which contains the following:
 
 ## Automate Downloading Logs
 
-You can automate the process of accessing and maintaining these logs with a simple script. 
+Automate the process of accessing and maintaining these logs with a script.
 
-### Create a Script 
+### Create a Script
 
-Open your local terminal to create and access a new local directory:
+Open your local terminal to create and access a new local directory, then create a `collect-logs.sh` file there:
 
 ```bash{promptUser: user}
 mkdir $HOME/site-logs
 cd $HOME/site-logs
+touch collect-logs.sh
 ```
 
-Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the script below. It provides several modifiable variables that you can read about within its comments.
+Choose your preferred method from these tabs, then click the *Download* button to download the script. Use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment. The script provides several modifiable variables described in its comments:
 
   <TabList>
 
   <Tab title="Rsync version" id="rsync-ver" active={true}>
 
+  <Download file="collect-logs.sh" />
+
   ```bash:title=collect-logs.sh
   #!/bin/bash
-  # REQUIRED: Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxx
-  # REQUIRED: dev test live multidev
+  # Environment is REQUIRED: dev/test/live/or a Multidev
   ENV=xxxxxxx
 
   ########### Additional settings you don't have to change unless you want to ###########
-  # OPTIONAL: set to true if you want to aggregate nginx logs. WARNING: This will potentially create a large file
+  # OPTIONAL: Set AGGREGATE_NGINX to true if you want to aggregate nginx logs.
+  #  WARNING: If set to true, this will potentially create a large file
   AGGREGATE_NGINX=false
-  # if you just want to aggregate the files already collected, set the parameter below to FALSE
+  # if you just want to aggregate the files already collected, set COLLECT_LOGS to FALSE
   COLLECT_LOGS=true
   # CLEANUP_AGGREGATE_DIR removes all logs except combined.logs from aggregate-logs directory.
   CLEANUP_AGGREGATE_DIR=false
@@ -207,17 +211,20 @@ Using your favorite text editor, create a file within the `site-logs` directory 
 
   <Tab title="SFTP version" id="sftp-ver">
 
+  <Download file="collect-logs.sh" />
+
   ```bash:title=collect-logs.sh
   #!/bin/bash
-  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxx
-  # dev test live multidev
+  # Environment is REQUIRED: dev/test/live/or a Multidev
   ENV=xxxxxxx
 
   ########### Additional settings you don't have to change unless you want to ###########
-  # set to true if you want to aggregate nginx logs. WARNING: This will create one large file
+  # OPTIONAL: Set AGGREGATE_NGINX to true if you want to aggregate nginx logs.
+  #  WARNING: If set to true, this will potentially create a large file
   AGGREGATE_NGINX=false
-  # if you just want to aggregate the files already collected, set the parameter below to FALSE
+  # if you just want to aggregate the files already collected, set COLLECT_LOGS to FALSE
   COLLECT_LOGS=true
   # CLEANUP_AGGREGATE_DIR removes all logs except combined.logs from aggregate-logs directory.
   CLEANUP_AGGREGATE_DIR=false
