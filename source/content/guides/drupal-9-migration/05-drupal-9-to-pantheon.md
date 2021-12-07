@@ -313,37 +313,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   When using Rsync manually, the script below is useful for dealing with transfers that are interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits two minutes and picks up where it left off:
 
-  <Accordion title="Manual Rsync Script" id="manual-rsync-script" icon="hashtag">
+  <Download file="manual-rsync-script.sh" />
 
-  ```bash
-  #!/bin/bash
-
-  # manual-rsync-script.sh
-  # runs rsync and waits two minutes if it doesn't work
-
-  ENV='dev'
-  SITE='SITEID'
-
-  read -sp "Your Pantheon Password: " PASSWORD
-  if [[ -z "$PASSWORD" ]]; then
-    echo "Whoops, need password"
-  exit
-  fi
-
-  while [ 1 ]
-    do
-      sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV$SITE@appserver.$ENV.$SITE.drush.in:files/
-    if [ "$?" = "0" ] ; then
-      echo "rsync completed normally"
-    exit
-    else
-      echo "Rsync failure. Backing off and retrying..."
-      sleep 180
-    fi
-  done
-  ```
-
-  </Accordion>
+  GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/manual-rsync-script.sh.txt bash GITHUB-EMBED
 
   </Tab>
 
