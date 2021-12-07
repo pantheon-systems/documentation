@@ -50,8 +50,6 @@ Before you continue, confirm that your site meets the following requirements:
 
 1. Navigate to your User Dashboard and click the **Create New Site** button:
 
-  ...INSERT SCREENSHOT HERE...
-
 1. Click **Visit your Pantheon Site Dashboard**
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
@@ -65,9 +63,7 @@ Create a new folder to use while working on the migration. This folder will cont
 This doc uses the following aliases:
 
 - **Alias:** `SITE`
-- **Site Name:** `anita-drupal`
 - **Old site folder** `FORMER-PLATFORM`
-- **Pantheon site folder** `PANTHEON-D9`
 
 ### Create a Local Copy of the Old Site's Code
 
@@ -97,31 +93,27 @@ What makes your site code unique is your selection of contributed modules and th
 
 ### Composer packages
 
-1. Copy your package list from the "requires" section of your site's composer.json and add it to the new site's composer.json. If your composer.json defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package & repository.
+1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`. If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
 
-  Note: if your old site has custom patches in its codebase, make sure to copy those over as well.
+  If the old site has custom patches in its codebase, make sure to copy those over as well.
 
-1. `composer update`
+1. Run `composer update` to have Composer create a `composer.lock` file with all versions and dependencies:
 
-1. `git status` to see if files have been added that aren't ignored by `.gitignore`. If anything shows up other than `composer.*`, add it to `.gitignore` until `git status` only shows the composer files being modified.
+  ```shell{promptUser: user}
+  composer update
+  ```
 
-1. `git add composer.*; git commit -m "Add composer packages"`
+1. Use `git status` to confirm that all changed files are names that start with `composer.`. If there are other files, add them to `.gitignore` until `git status` only shows the Composer files being modified:
 
-  <Accordion title="Repositories and patches in composer.json" id="repositories-and-patches-in-composer-json" icon="info-sign">
+  ```shell{promptUser: user}
+  git status
+  ```
 
-  Repository in old site's `composer.json`
+1. Add and commit the changed Composer files to Git:
 
-  ![repository in old composer.json](https://i.imgur.com/hO0snBW.png)
-
-  Copied to new composer.json without disturbing the "upstream-configuration" one that was already there:
-
-  ![repository moved to new composer.json](https://i.imgur.com/T6eNnXj.png)
-
-  Patches:
-
-  ![repository moved to new composer.json](https://i.imgur.com/x2SYPb1.png)
-
-  </Accordion>
+  ```shell{promptUser: user}
+  git add composer.*; git commit -m "Add composer packages"
+  ```
 
 ### Custom Code
 
@@ -141,18 +133,18 @@ If you do not plan on adding any libraries with Composer in the future, you can 
 
 #### Modules and Themes
 
-[Pantheon site folder] Modules:
+From the local Pantheon site directory, copy modules from the local directory of the former platform site:
 
 ```bash{promptUser:user}
-cp -R ../old-site/modules/custom web/modules
+cp -R ../FORMER-PLATFORM/modules/custom web/modules
 git add web/modules/custom
 git commit -m "Copy custom modules"
 ```
 
-[Pantheon site folder] Themes:
+From the local Pantheon site directory, copy themes from the local directory of the former platform site:
 
 ```bash{promptUser:user}
-cp -R ../old-site/themes/custom web/themes
+cp -R ../FORMER-PLATFORM/themes/custom web/themes
 git add web/themes/custom
 git commit -m "Copy custom themes"
 ```
@@ -177,7 +169,7 @@ Copy over exported configuration from the original site. From the Pantheon D9 si
 
   ```bash{promptUser: user}
   mkdir config
-  cp -R ../old-site/<config folder location> config/
+  cp -R ../FORMER-PLATFORM/<config folder location> config/
   git commit -m "Add site configuration."
   ```
 
