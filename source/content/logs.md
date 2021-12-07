@@ -136,7 +136,7 @@ Choose your preferred method from these tabs, then click the *Download* button t
 
   <Download file="collect-logs.sh" />
 
-  ```bash:title=collect-logs.sh
+  ```bash
   #!/bin/bash
   # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxx
@@ -213,7 +213,7 @@ Choose your preferred method from these tabs, then click the *Download* button t
 
   <Download file="collect-logs.sh" />
 
-  ```bash:title=collect-logs.sh
+  ```bash
   #!/bin/bash
   # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxx
