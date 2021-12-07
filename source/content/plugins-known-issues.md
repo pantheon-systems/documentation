@@ -385,19 +385,19 @@ PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file 
 **Solution:** Session autostart can be disabled conditionally using `FHEE_load_EE_Session` [filter](https://developer.wordpress.org/plugins/hooks/filters/#add-filter).
 ___
 
-## Facebook for WordPress - official-facebook-pixel
+## Facebook for WordPress (official-facebook-pixel)
 
 <ReviewDate date="2021-11-22" />
 
-**Issue:** The plugin includes git submodule in `code/wp-content/plugins/official-facebook-pixel/vendor/techcrunch/wp-async-task/`
+**Issue:** The plugin includes Git submodules in `code/wp-content/plugins/official-facebook-pixel/vendor/techcrunch/wp-async-task/`
 
-which results throws a php error as the`wp-async-task/*` can't be promoted to other environment due to the git submodules
+which throws a PHP error because the`wp-async-task/*` can't be promoted to other environmentsd due to the Git submodules.
 
 ```php
 Warning: include(/code/wp-content/plugins/official-facebook-pixel/vendor/composer/../techcrunch/wp-async-task/wp-async-task.php): failed to open stream: No such file or directory in /code/wp-content/plugins/webp-converter-for-media/vendor/composer/ClassLoader.php
 ```
 
-**Solution:** Download the plugin from [https://wordpress.org/plugins/official-facebook-pixel/](https://wordpress.org/plugins/official-facebook-pixel/) and extract it to your desktop then navigate to ```official-facebook-pixel/vendor/techcrunch/wp-async-task``` delete the `.git` & `.gitignore` files before reuploading to dev.
+**Solution:** Download the plugin from [https://wordpress.org/plugins/official-facebook-pixel/](https://wordpress.org/plugins/official-facebook-pixel/) and extract it to your desktop, then navigate to ```official-facebook-pixel/vendor/techcrunch/wp-async-task``` delete the `.git` & `.gitignore` files before uploading to Dev.
 ___
 
 ## FacetWP
