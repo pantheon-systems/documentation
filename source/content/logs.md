@@ -120,15 +120,16 @@ Automate the process of accessing and maintaining these logs with a script.
 
 ### Create a Script
 
-Open your local terminal to create and access a new local directory, then create a `collect-logs.sh` file there:
+Open your local terminal to create and access a new local directory:
 
 ```bash{promptUser: user}
 mkdir $HOME/site-logs
 cd $HOME/site-logs
-touch collect-logs.sh
 ```
 
-Choose your preferred method from these tabs, then click the *Download* button to download the script. Use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment. The script provides several modifiable variables described in its comments:
+Choose your preferred method from the following tabs, then click the **Download** button to download the script. Move it to the `site-logs` directory you created, and use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+
+The script provides several modifiable variables described in its comments:
 
   <TabList>
 
