@@ -129,6 +129,8 @@ cd $HOME/site-logs
 
 Choose your preferred method from the following tabs, then click the **Download** button to download the script. Move it to the `site-logs` directory you created, and use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
 
+The resulting log file might be large.
+
 The script provides several modifiable variables described in its comments:
 
   <TabList>
@@ -317,7 +319,7 @@ The client IP for the following example is `122.248.101.126`:
 
 ### Can I log to the system logger and access syslog?
 
-No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
+No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them. You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
 
 ### Can I access Apache Solr logs?
 
