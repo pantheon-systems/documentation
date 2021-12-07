@@ -136,4 +136,4 @@ Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#pro
 
 ## See Also
 
-- [Resetting Passwords](https://pantheon.io/docs/resetting-passwords)  
+- [Resetting Passwords](/resetting-passwords)  
