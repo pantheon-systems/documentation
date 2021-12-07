@@ -30,12 +30,6 @@ Working locally across both the existing and new site codebases, you'll:
 - Make any needed customizations to `settings.php` on the new site
 - Carry over any additional code customizations from the existing site to the new Pantheon Drupal 9 site code
 
-<Alert title="Integrated Composer and existing files" type="danger">
-
-Integrated Composer will break if `composer install` tries to modify any files that are committed in Git. To avoid this, [DO THIS THING *****]
-
-</Alert>
-
 ## Important Notes
 
 - Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name.
@@ -97,7 +91,6 @@ This doc uses the following aliases:
 
 1. Run the `git clone` command inside your working folder
 
-
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
 What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
@@ -134,7 +127,17 @@ What makes your site code unique is your selection of contributed modules and th
 
 Manually copy custom code from the old site to the corresponding Pantheon site directory and commit them.
 
-- `web/libraries` is ignored, so `git add -f` if needed.
+Keep the new `.gitignore` file aligned with the current site to avoid potential issues in the future.
+
+If you plan to install libraries using Composer via a `drupal-library` project, do not add anything to `web/libraries` and use Composer to install the libraries instead.
+
+If you commit some libraries directly to `web/libraries` using `git add -f`, then add each directory to be allowed (not ignored) by `.gitignore`. For example, to commit a directory named `favorite-library`, add this to the `.gitignore`:
+
+```none
+!/web/libraries/favorite-library
+```
+
+If you do not plan on adding any libraries with Composer in the future, you can remove the `web/libraries` line from the `.gitignore` file. This might lead to builds failing in the future if at some point you or another developer use Composer to add a library.
 
 #### Modules and Themes
 
@@ -158,11 +161,15 @@ Follow suit with any other custom code you need to carry over.
 
 #### settings.php
 
-Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition.
+Your existing site may have customizations to `settings.php` or other configuration files.
 
-We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
+Copy the existing `settings.php` to the Pantheon site and remove the `$databases` array if it exists. Then ensure that everything in the [Pantheon settings.php](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/web/sites/default/settings.php) is included.
 
-The resulting `settings.php` should have no `$databases` array.
+In particular, confirm that the `settings.php` file on the Pantheon D9 site:
+
+- Has one `$settings['container_yamls'][]`
+  - And that there is only one.
+- Contains `include __DIR__ . "/settings.pantheon.php";`
 
 ### Configuration
 
@@ -312,7 +319,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   terminus rsync . my_site.dev:files
   ```
 
-  When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
+  When using Rsync manually, the script below is useful for dealing with transfers that are interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits two minutes and picks up where it left off:
+
+  <Download file="manual-rsync-script.sh" />
 
   ```bash
   ENV='dev'
