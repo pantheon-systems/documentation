@@ -90,13 +90,13 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
    - Drupal:
 
     ```bash{promptUser: user}
-    cd upstream-config
+    cd upstream-configuration
     ```
 
    - WordPress:
 
     ```bash{promptUser: user}
-    cd upstream-configuration
+    cd upstream-config
     ```
 
 1. Run `composer require` for each dependency:
