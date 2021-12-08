@@ -353,13 +353,13 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
 - Using [Terminus](/terminus):
 
  ```bash{promptUser: user}
- terminus drush <site>.<env> -- watchdog-show
+ terminus drush <site>.<env> -- watchdog-show
  ```
 
 - Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
  ```bash{promptUser: user}
- terminus drush <site>.<env> -- watchdog-show --tail
+ terminus drush <site>.<env> -- watchdog-show --tail
  ```
 
 ### My Drupal database logs are huge. Should I disable dblog?
