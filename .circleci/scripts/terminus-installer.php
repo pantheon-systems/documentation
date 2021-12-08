@@ -30,10 +30,10 @@ function downloadTerminus($installdir, $package)
             ]
     ];
     $context  = stream_context_create($opts);
-    $releases = file_get_contents("https://api.github.com/repos/pantheon-systems/" . $package . "/releases", false, $context);
-    $releases = json_decode($releases);
-    $version  = $releases[0]->tag_name;
-    $url      = $releases[0]->assets[0]->browser_download_url;
+    $release = file_get_contents("https://api.github.com/repos/pantheon-systems/" . $package . "/releases/tags/2.6.4", false, $context);
+    $release = json_decode($release);
+    $version  = $release->tag_name;
+    $url      = $release->assets[0]->browser_download_url;
     // Do the needful
     echo("\nDownloading Terminus " . $version . " from " . $url . " to /tmp \n");
     $couldDownload = file_put_contents("/tmp/" . $package . ".phar", file_get_contents($url));
