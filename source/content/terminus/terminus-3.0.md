@@ -1,5 +1,6 @@
 ---
 title: Terminus 3.0
+subtitle: Terminus 3.0
 description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [greg-1-anderson]
 categories: [platform]
