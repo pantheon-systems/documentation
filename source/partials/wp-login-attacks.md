@@ -10,6 +10,12 @@ Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/
 
 WordPress suggests password complexity guidelines when you create a user and password, but it does not enforce password rules. Use a plugin like [Better Passwords](https://wordpress.org/plugins/better-passwords/) to set a minimum password length and alert users if they try to use a password that has been collected in a known data breach.
 
+### Disable "Anyone Can Register"
+
+Some attackers or lost visitors might try to create an account via the login page.
+
+To turn off the feature, navigate to the **Settings** tab in WordPress admin and uncheck **Anyone can register** on the **Membership** line.
+
 ### Add Multi-factor Authentication (MFA)
 
 Two Factor Authentication (2FA) and Multi-factor Authentication (MFA) are added layers of protection to ensure the security of your accounts beyond just a username and password. Multi-factor refers to the capability to have more than two factors of authentication (for example: password, SMS, and email verification). Use one of the many [Two-Factor Authentication](https://wordpress.org/plugins/tags/two-factor-authentication/) plugins to protect logins to your WordPress site.
