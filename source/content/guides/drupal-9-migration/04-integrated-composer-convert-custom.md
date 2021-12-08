@@ -12,11 +12,11 @@ editpath: drupal-9-migration/04-integrated-composer-convert-custom.md
 reviewed: "2021-12-10"
 ---
 
-This doc demonstrates how to migrate your site to Integrated Composer while on Drupal 8.
+This doc demonstrates how to convert a non-Composer-managed Drupal 8 site to Integrated Composer while on Drupal 8.
 
-The process is quite similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/guides/drupal-9-migration/upgrade-to-d9) guide, except that you stay on Drupal 8 with some special considerations for Custom Upstreams, and can defer the Drupal 9 upgrade to later.
+The process is similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/guides/drupal-9-migration/upgrade-to-d9) guide, except that you stay on Drupal 8 with some special considerations for Custom Upstreams, and can defer the Drupal 9 upgrade to later.
 
-Working in a new branch, you will replace the entire site's file structure with the code from Pantheon's Integrated Composer upstream, then re-add your contrib and custom code to the new codebase. Then, you will create Multidev environments on individual sites for testing and to apply any site-specific code customizations.
+From a local clone of the site, you will replace the entire site's file structure with the code from Pantheon's Integrated Composer upstream, then re-add your contrib and custom code to the new codebase. Then, you will create Multidev environments on individual sites for testing and apply any site-specific code customizations.
 
 This doc uses [Terminus](/terminus).
 
@@ -25,8 +25,8 @@ This doc uses [Terminus](/terminus).
 1. Create a local clone of the Custom Upstream repository using the SSH URL, and `cd` into the cloned repository:
 
   ```bash{promptUser:user}
-  git clone <SSH_URL>
-  cd <REPOSITORY_NAME>
+  git clone $SSH_URL
+  cd $REPOSITORY_NAME
   ```
 
 1. Add Integrated Composer upstream as a second remote and fetch:
@@ -51,7 +51,7 @@ This doc uses [Terminus](/terminus).
 
    ```bash{promptUser:user}
    git checkout ic/master .
-   git add <FILE_NAME>
+   git add $FILE_NAME
    git commit -m "Add and commit Integrated Composer files"
    ```
 
@@ -98,72 +98,72 @@ Access the list of differences by adding the `drops-8` upstream as a second remo
 1. Run `git diff` for different lines within a specific file:
 
    ```bash{promptUser:user}
-   git diff drops-8/master <FILE>
+   git diff drops-8/master $FILENAME
    ```
 
-Assess the differences and note the ones that you will need to reapply to the Integrated Composer codebase.
+Compare the differences and note the ones that you will need to reapply to the Integrated Composer codebase.
 
 </Accordion>
 
 ### Modules
 
-1. On the `composerify` branch, make a list of the modules that will need to be re-added:
+On the `composerify` branch, make a list of the modules that will need to be re-added:
 
-    - **If you know that all the sites have the same contrib and custom modules**, get the list of modules from a single representative site. You will need this list in next steps:
+- **If you know that all the sites have the same contrib and custom modules**, get the list of modules from a single representative site. You will need this list in next steps:
 
-     ```bash{promptUser:user}
-     terminus drush $SITE.dev  -- pm-list --type=module --no-core --status=enabled
-     ```
+  ```bash{promptUser:user}
+  terminus drush $SITE.dev  -- pm-list --type=module --no-core --status=enabled
+  ```
 
-    - **If you do not know whether the sites have the same contrib and custom modules installed**, audit the modules across all sites and compile a unified list:
+- **If you do not know whether the sites have the same contrib and custom modules installed**, audit the modules across all sites and compile a unified list:
 
-    <Accordion title="Audit Contrib and Custom Modules" id="audit-contrib-custom-modules" icon="wrench">
+  <Accordion title="Audit Contrib and Custom Modules" id="audit-contrib-custom-modules" icon="wrench">
 
-    1. To audit modules on all sites, create a new file called `audit_site_modules.sh` with the following content:
+  1. To audit modules on all sites, create a new file called `audit_site_modules.sh` with the following content:
 
-      ```bash:title=audit_site_modules.sh
-      #!/usr/bin/env bash
+    ```bash:title=audit_site_modules.sh
+    #!/usr/bin/env bash
 
-      echo 'Updating site list now with site urls from the custom Drupal 8 Upstream.'
-      SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
+    echo 'Updating site list now with site urls from the custom Drupal 8 Upstream.'
+    SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
 
-      for site in $SITES
-      do
-        echo "---------- $site -----------"
-        terminus drush $site.dev  -- pm-list --type=module --no-core --status=enabled
-        echo "----------------------------"
-        echo
-      done | tee d8_upstream_sites_modules.txt
+    for site in $SITES
+    do
+      echo "---------- $site -----------"
+      terminus drush $site.dev  -- pm-list --type=module --no-core --status=enabled
+      echo "----------------------------"
+      echo
+    done | tee d8_upstream_sites_modules.txt
 
-      for site in $SITES
-      do
-        echo "---------- $site -----------"
-        terminus drush $site.dev  -- pm-list --type=theme --no-core --status=enabled
-        echo "----------------------------"
-        echo
-      done | tee d8_upstream_sites_themes.txt
-       ```
+    for site in $SITES
+    do
+      echo "---------- $site -----------"
+      terminus drush $site.dev  -- pm-list --type=theme --no-core --status=enabled
+      echo "----------------------------"
+      echo
+    done | tee d8_upstream_sites_themes.txt
+      ```
     
-    1. Make the script executable:
+  1. Make the script executable:
 
-       ```bash{promptUser:user}
-       chmod +x audit_site_modules.sh
-       ```
+      ```bash{promptUser:user}
+      chmod +x audit_site_modules.sh
+      ```
     
-    1. Run the script:
+  1. Run the script:
 
-       ```bash{promptUser:user}
-       ./audit_site_modules.sh
-       ```
+      ```bash{promptUser:user}
+      ./audit_site_modules.sh
+      ```
 
-        - This creates two new files in the same folder:
+      - This creates two new files in the same folder:
 
-          - `d8_upstream_sites_modules.txt`: list of **modules** from each site
-          - `d8_upstream_sites_themes.txt`: list of **themes** from each site
+        - `d8_upstream_sites_modules.txt`: list of **modules** from each site
+        - `d8_upstream_sites_themes.txt`: list of **themes** from each site
 
-    1. Go through these files and build a list of modules and themes you'll need to add to the codebase.
+  1. Go through these files and build a list of modules and themes you'll need to add to the codebase.
 
-    </Accordion>
+  </Accordion>
 
 ### Contrib Modules and Themes
 
@@ -189,7 +189,7 @@ Assess the differences and note the ones that you will need to reapply to the In
       git status
       ```
 
-        - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
+      - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
 
     1. Commit the change:
 
@@ -228,7 +228,7 @@ Go through the following steps for each child site you wish to test, or that has
   The command will look like the following:
 
   ```bash{promptUser:user}
-  git clone ssh://codeserver.dev.<SITE_ID>@codeserver.dev.<SITE_ID>.drush.in:2222/~/repository.git $SITE
+  git clone ssh://codeserver.dev.$SITE_ID@codeserver.dev.$SITE_ID.drush.in:2222/~/repository.git $SITE
   ```
 
 1. Change directory into the newly created folder:
@@ -283,7 +283,7 @@ Go through the following steps for each child site you wish to test, or that has
 
 ## Final Deployment
 
-When you are ready...
+Merge the code and files from the Multidev environment to the dev environment.
 
 1. Merge the `composerify` branch on the Custom Upstream into the `master` branch and push:
 
@@ -302,19 +302,20 @@ When you are ready...
 
   </Alert>
 
-4. After you push to Dev, you must push another change to `pantheon.yml`. You can either:
+1. After you push to Dev, you must push another change to `pantheon.yml`. You can either:
 
     - Add a comment in `pantheon.yml` at the end of the file, and that will trigger Composer
 
       Or
-  
+
     - Use `echo` to do it for you:
+
      ```bash{promptUser:user}
      echo "\n# comment to trigger Composer\n" >> pantheon.yml
      ```
 
-5. Make sure to push your changes up again.
+1. Make sure to push your changes up again.
 
-6. Confirm that the Dev environment is working as expected.
+1. Confirm that the Dev environment is working as expected.
 
-7. Deploy to live when ready.
+1. Deploy to live when ready.
