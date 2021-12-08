@@ -19,7 +19,7 @@ This doc shows how to migrate an existing Composer-managed Drupal 9 site from an
 
 In this migration you'll do the following:
 
-- Using Git, clone your existing site locally
+- Use Git to clone your existing site locally
 - Create a new Drupal 9 development site on Pantheon, and clone it locally
 
 Working locally across both the existing and new site codebases, you'll:
@@ -32,8 +32,7 @@ Working locally across both the existing and new site codebases, you'll:
 
 ## Important Notes
 
-- Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying over code from the existing site, be sure to retain the new site's nested docroot structure and `web` docroot name.
-- Edward to adjust to alias or `former-platform`
+Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying code from the former platform site, be sure to retain the new site's nested docroot structure and `web` docroot name.
 
 ## Will This Guide Work for Your Site?
 
@@ -81,7 +80,7 @@ This doc uses the following aliases:
 
   The command should look similar to the following:
 
-  ```bash
+  ```shell{promptUser:user}
   git clone ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
   ```
 
@@ -99,19 +98,19 @@ What makes your site code unique is your selection of contributed modules and th
 
 1. Run `composer update` to have Composer create a `composer.lock` file with all versions and dependencies:
 
-  ```shell{promptUser: user}
+  ```shell{promptUser:user}
   composer update
   ```
 
 1. Use `git status` to confirm that all changed files are names that start with `composer.`. If there are other files, add them to `.gitignore` until `git status` only shows the Composer files being modified:
 
-  ```shell{promptUser: user}
+  ```shell{promptUser:user}
   git status
   ```
 
 1. Add and commit the changed Composer files to Git:
 
-  ```shell{promptUser: user}
+  ```shell{promptUser:user}
   git add composer.*; git commit -m "Add composer packages"
   ```
 
@@ -123,10 +122,11 @@ Keep the new `.gitignore` file aligned with the current site to avoid potential 
 
 If you plan to install libraries using Composer via a `drupal-library` project, do not add anything to `web/libraries` and use Composer to install the libraries instead.
 
-If you commit some libraries directly to `web/libraries` using `git add -f`, then add each directory to be allowed (not ignored) by `.gitignore`. For example, to commit a directory named `favorite-library`, add this to the `.gitignore`:
+If you commit libraries directly to `web/libraries`, then add each directory to be allowed (not ignored) by `.gitignore`. For example, to commit a `favorite-library` directory, add it and each other directory to the `.gitignore` before you `git add`:
 
-```none
+```none:title=.gitignore
 !/web/libraries/favorite-library
+!/web/libraries/other-favorite-library
 ```
 
 If you do not plan on adding any libraries with Composer in the future, you can remove the `web/libraries` line from the `.gitignore` file. This might lead to builds failing in the future if at some point you or another developer use Composer to add a library.
@@ -135,7 +135,7 @@ If you do not plan on adding any libraries with Composer in the future, you can 
 
 From the local Pantheon site directory, copy modules from the local directory of the former platform site:
 
-```bash{promptUser:user}
+```shell{promptUser:user}
 cp -R ../FORMER-PLATFORM/modules/custom web/modules
 git add web/modules/custom
 git commit -m "Copy custom modules"
@@ -143,7 +143,7 @@ git commit -m "Copy custom modules"
 
 From the local Pantheon site directory, copy themes from the local directory of the former platform site:
 
-```bash{promptUser:user}
+```shell{promptUser:user}
 cp -R ../FORMER-PLATFORM/themes/custom web/themes
 git add web/themes/custom
 git commit -m "Copy custom themes"
@@ -160,14 +160,14 @@ Copy the existing `settings.php` to the Pantheon site and remove the `$databases
 In particular, confirm that the `settings.php` file on the Pantheon D9 site:
 
 - Has one `$settings['container_yamls'][]`
-  - And that there is only one.
+  - And that there are no duplicates.
 - Contains `include __DIR__ . "/settings.pantheon.php";`
 
 ### Configuration
 
 Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
 
-  ```bash{promptUser: user}
+  ```shell{promptUser: user}
   mkdir config
   cp -R ../FORMER-PLATFORM/<config folder location> config/
   git commit -m "Add site configuration."
