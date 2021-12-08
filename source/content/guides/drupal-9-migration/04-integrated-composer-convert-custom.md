@@ -1,15 +1,15 @@
 ---
 title: Convert a Custom Upstream to Integrated Composer
 subtitle: Convert a Custom Upstream to Integrated Composer
-description: Convert a non-Composer-managed Drupal 8-based Custom Upstream to Integrated Composer
+description: Convert a non-Composer-managed Drupal 8-based Custom Upstream to Integrated Composer, ready to upgrade to Drupal 9.
 categories: [develop]
-cms: drupal-9
+cms: drupal
 tags: [composer, workflow]
 layout: guide
 permalink: docs/guides/drupal-9-migration/integrated-composer-convert-custom
 anchorid: drupal-9-migration/integrated-composer-convert-custom
 editpath: drupal-9-migration/04-integrated-composer-convert-custom.md
-reviewed: "2021-10-22"
+reviewed: "2021-12-10"
 ---
 
 This doc demonstrates how to migrate your site to Integrated Composer while on Drupal 8.
