@@ -149,7 +149,7 @@ git add web/themes/custom
 git commit -m "Copy custom themes"
 ```
 
-Follow suit with any other custom code you need to carry over.
+Do the same for any other custom code you need to carry over.
 
 #### settings.php
 
