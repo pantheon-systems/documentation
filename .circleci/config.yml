@@ -23,7 +23,7 @@ workflows:
                 command: .circleci/scripts/set-env.sh && source $BASH_ENV
             - run:
                 name: Install PHP
-                command: sudo apt-get update && sudo apt-get install -y php-cli php-xml
+                command: sudo apt-get update && sudo apt-get install -y php php-cli php-xml php-curl
             - run:
                 name: Install Terminus
                 command: |
