@@ -1,6 +1,4 @@
-You might encounter significant issues if the site does not match these requirements.
-
-Before you continue, confirm that your site meets the following:
+Before you continue, confirm that your site meets the following requirements:
 
 - The site has the [Pantheon drops-8 repo](https://github.com/pantheon-systems/drops-8) in its Upstream.
 
