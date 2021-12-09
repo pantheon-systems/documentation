@@ -55,7 +55,7 @@
     "node-font-awesome": "^1.0.2",
     "node-sass": "^6.0.1",
     "postcss": "^8.2.15",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
