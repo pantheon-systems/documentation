@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # manual-rsync-script.sh
-# runs rsync and waits two minutes if it doesn't work
+# runs Rsync and waits two minutes if it doesn't work
 
 ENV='dev'
 SITE='SITEID'
