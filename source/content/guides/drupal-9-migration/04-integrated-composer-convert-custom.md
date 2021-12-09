@@ -9,6 +9,7 @@ layout: guide
 permalink: docs/guides/drupal-9-migration/integrated-composer-convert-custom
 anchorid: drupal-9-migration/integrated-composer-convert-custom
 editpath: drupal-9-migration/04-integrated-composer-convert-custom.md
+contributors: [michellecolon-pantheon]
 reviewed: "2021-12-10"
 ---
 
