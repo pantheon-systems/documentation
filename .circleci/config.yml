@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  pfe: pantheon-systems/front-end@0.4.0
-  queue: eddiewebb/queue@1.5.0
+  pfe: pantheon-systems/pantheon@0.6.0
+  queue: eddiewebb/queue@1.6.4
 
 workflows:
   build-preview-test-deploy:
