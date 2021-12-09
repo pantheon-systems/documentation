@@ -105,4 +105,10 @@ if (checkpath($paths, $installdir) === false) {
         " to your PATH, or execute Terminus from the full path.\n\n");
     }
 }
+
+// Ask Terminus to introduce itself
+{
+    exec("terminus self:info");
+}
+
 exit();
