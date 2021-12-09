@@ -13,7 +13,7 @@ If you're not already familiar with Terminus, we suggest you read the [Terminus 
 
 </Alert>
 
-Terminus 3.0 is the first major version release of Terminus in over two years. Following [Semantic Versioning](https://semver.org/) standards, this means there are updates in 3.0 that are incompatible with previous implementations. Before upgrading to Terminus 3.0, you should be aware of what changes could require updates to your scripting and implementation.
+Following [Semantic Versioning](https://semver.org/) standards, there are updates in 3.0 that are incompatible with previous implementations. Before upgrading to Terminus 3.0, you should be aware of what changes could require updates to your scripting and implementation.
 
 <Alert title="Warning" type="danger">
 
