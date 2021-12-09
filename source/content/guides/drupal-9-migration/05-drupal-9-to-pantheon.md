@@ -47,9 +47,9 @@ Before you continue, confirm that your site meets the following requirements:
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-1. Navigate to your User Dashboard and click the **Create New Site** button:
+1. Navigate to your User Dashboard and click **Create New Site**.
 
-1. Click **Visit your Pantheon Site Dashboard**
+1. Click **Visit your Pantheon Site Dashboard**.
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 
