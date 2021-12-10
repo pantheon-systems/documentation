@@ -5,6 +5,9 @@ description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [greg-1-anderson]
 categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
+permalink: docs/terminus/:basename
+searchboost: 100
+reviewed: "2021-12-10"
 ---
 
 <Alert title="Note" type="info" >
@@ -27,23 +30,23 @@ These commands or their output have changed in a significant way that may affect
 
 ## Deprecated Commands
 
-No commands were deprecated in the Termminus 3.0 release.
+No commands were deprecated in the Terminus 3.0 release.
 
 ## New Commands
 
 The following commands are new to Terminus as of version 3.0:
 
- - `self:plugin:install`: Install Terminus plugins.
- - `self:plugin:list`: List installed Terminus plugins.
- - `self:plugin:search` Find Terminus plugins on Packagist.
- - `self:plugin:uninstall` Uninstall Terminus plugins.
- - `self:plugin:update` Update already-installed Terminus plugins.
+- `self:plugin:install`: Install Terminus plugins.
+- `self:plugin:list`: List installed Terminus plugins.
+- `self:plugin:search` Find Terminus plugins on Packagist.
+- `self:plugin:uninstall` Uninstall Terminus plugins.
+- `self:plugin:update` Update already-installed Terminus plugins.
 
 ## Additional Changes
 
- - Support for EOL versions of PHP have been removed from Terminus 3. PHP 7.4 or later is required.
+- Support for EOL versions of PHP have been removed from Terminus 3. PHP 7.4 or later is required.
 
 ## See Also
 
- - [The Terminus Manual](/terminus)
- - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)
+- [The Terminus Manual](/terminus)
+- [Terminus on GitHub](https://github.com/pantheon-systems/terminus)
