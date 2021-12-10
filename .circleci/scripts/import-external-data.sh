@@ -6,15 +6,6 @@ set -e
 cd $BUILD_PATH
 
 ## Import Terminus releases
-echo "Generate a new Terminus commands.json file"
-touch source/data/commands.json
-terminus list --format=json > source/data/commands.json
-
-echo "Ajusting output..."
-sed -i 's/site_env/site>\.<env/g' source/data/commands.json
-sed -i 's/drush_command/command/g' source/data/commands.json
-sed -i 's/wp_command/command/g' source/data/commands.json
-
 echo "Update Terminus releases"
 curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > source/data/terminusReleases.json
 head source/data/terminusReleases.json
