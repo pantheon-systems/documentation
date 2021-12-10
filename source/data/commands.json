@@ -2511,7 +2511,7 @@
     {
       "name": "dashboard:view",
       "usage": [
-        "dashboard:view [--print] [--<site>.<env>] [--] [<site>.<env>]",
+        "dashboard:view [--print] [--] [<site>.<env>]",
         "dashboard:view Opens browser to user's account on the Pantheon Dashboard.",
         "dashboard:view --print Prints the URL for user's account on the Pantheon Dashboard.",
         "dashboard:view <site> Opens browser to <site> on the Pantheon Dashboard.",
@@ -2526,7 +2526,7 @@
             "name": "site_env",
             "is_required": false,
             "is_array": false,
-            "description": "",
+            "description": "Site & environment in the format `site-name.env`",
             "default": null
           }
         },
@@ -2538,15 +2538,6 @@
             "is_value_required": false,
             "is_multiple": false,
             "description": "Print URL only",
-            "default": false
-          },
-          "site_env": {
-            "name": "--<site>.<env>",
-            "shortcut": "",
-            "accept_value": false,
-            "is_value_required": false,
-            "is_multiple": false,
-            "description": "Site & environment in the format `site-name.env`",
             "default": false
           },
           "help": {
@@ -11623,7 +11614,7 @@
     {
       "name": "self:console",
       "usage": [
-        "self:console [--<site>.<env>]",
+        "self:console [<site>.<env>]",
         "self:console Opens an interactive PHP console within Terminus.",
         "self:console <site> Opens an interactive PHP console within Terminus and loads <site> as $site.",
         "self:console <site>.<env> Opens an interactive PHP console within Terminus and loads <site> and its <env> environment as $site and $env."
@@ -11631,17 +11622,16 @@
       "description": "Opens an interactive PHP console within Terminus. Note: This functionality is useful for debugging Terminus or prototyping Terminus plugins.",
       "help": "Opens an interactive PHP console within Terminus. Note: This functionality is useful for debugging Terminus or prototyping Terminus plugins.",
       "definition": {
-        "arguments": [],
-        "options": {
+        "arguments": {
           "site_env": {
-            "name": "--<site>.<env>",
-            "shortcut": "",
-            "accept_value": false,
-            "is_value_required": false,
-            "is_multiple": false,
+            "name": "site_env",
+            "is_required": false,
+            "is_array": false,
             "description": "Site & environment to access as `$site` and (optional) `$env`",
-            "default": false
-          },
+            "default": null
+          }
+        },
+        "options": {
           "help": {
             "name": "--help",
             "shortcut": "-h",
