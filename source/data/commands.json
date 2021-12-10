@@ -908,8 +908,8 @@
       "help": "Disables automatic backups.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1032,8 +1032,8 @@
       "help": "Enables automatic daily backups that are retained for one week and weekly backups retained for one month.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1173,8 +1173,8 @@
       "help": "Displays the hour when daily backups are created and the day of the week when weekly backups are created.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1325,8 +1325,8 @@
       "help": "Creates a backup of a specific site and environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1469,8 +1469,8 @@
       "help": "Displays the download URL for a specific backup or latest backup.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1620,8 +1620,8 @@
       "help": "Displays information about a specific backup or the latest backup.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1789,8 +1789,8 @@
       "help": "Lists backups for a specific site and environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -1949,8 +1949,8 @@
       "help": "Restores a specific backup or the latest backup.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -2240,8 +2240,8 @@
       "help": "Displays connection information for Git, SFTP, MySQL, and Redis.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -2389,8 +2389,8 @@
       "help": "Sets Git or SFTP connection mode on a development environment (excludes Test and Live).",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & development environment (excludes Test and Live) in the format `site-name.env`",
@@ -2511,7 +2511,7 @@
     {
       "name": "dashboard:view",
       "usage": [
-        "dashboard:view [--print] [--site>.<env] [--] [<site>.<env>]",
+        "dashboard:view [--print] [--<site>.<env>] [--] [<site>.<env>]",
         "dashboard:view Opens browser to user's account on the Pantheon Dashboard.",
         "dashboard:view --print Prints the URL for user's account on the Pantheon Dashboard.",
         "dashboard:view <site> Opens browser to <site> on the Pantheon Dashboard.",
@@ -2522,8 +2522,8 @@
       "help": "Displays the URL for the Pantheon Dashboard or opens the Dashboard in a browser.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": false,
             "is_array": false,
             "description": "",
@@ -2540,8 +2540,8 @@
             "description": "Print URL only",
             "default": false
           },
-          "site>.<env": {
-            "name": "--site>.<env",
+          "site_env": {
+            "name": "--<site>.<env>",
             "shortcut": "",
             "accept_value": false,
             "is_value_required": false,
@@ -2662,8 +2662,8 @@
       "help": "Associates a domain with the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -2791,8 +2791,8 @@
       "help": "Displays recommended DNS settings for the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -2941,8 +2941,8 @@
       "help": "Displays domains associated with the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -3239,8 +3239,8 @@
       "help": "Sets a domain associated to the environment as primary, causing all traffic to redirect to it.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -3369,8 +3369,8 @@
       "help": "Removes the primary designation from the primary domain in the site and environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -3492,8 +3492,8 @@
       "help": "Disassociates a domain from the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -3622,8 +3622,8 @@
       "help": "Clears caches for the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -3748,8 +3748,8 @@
       "help": "Clones database/files from one environment to another environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Origin site & environment in the format `site-name.env`",
@@ -3913,8 +3913,8 @@
       "help": "Displays the code log for the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -4063,8 +4063,8 @@
       "help": "Commits code changes on a development environment. Note: The environment connection mode must be set to SFTP.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -4208,8 +4208,8 @@
       "help": "Deploys code to the Test or Live environment. Notes: - Deploying the Test environment will deploy code from the Dev environment. - Deploying the Live environment will deploy code from the Test environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env` (only Test or Live environment)",
@@ -4366,8 +4366,8 @@
       "help": "Displays the diff of uncommitted code changes on a development environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & development environment in the format `site-name.env`",
@@ -4515,8 +4515,8 @@
       "help": "Displays environment status and configuration.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -4819,8 +4819,8 @@
       "help": "Displays the pages served and unique visit metrics for the specified site environment. The most recent data up to the current day is returned.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`. Defaults to the live environment if `.env` is not specified.",
@@ -4988,8 +4988,8 @@
       "help": "Displays the URL for the environment or opens the environment in a browser.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -5119,8 +5119,8 @@
       "help": "Wakes the environment by pinging it. Note: Development environments and Sandbox sites will automatically sleep after a period of inactivity.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -5241,8 +5241,8 @@
       "help": "Deletes all files and database content in the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -5363,8 +5363,8 @@
       "help": "Provides information for HTTPS on being used for the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -5514,8 +5514,8 @@
       "help": "Disables HTTPS and removes the SSL certificate from the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -5639,8 +5639,8 @@
       "help": "Enables HTTPS and/or updates the SSL certificate for the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -5908,8 +5908,8 @@
       "help": "Imports a database archive to the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -6037,8 +6037,8 @@
       "help": "Imports a file archive to the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -6826,8 +6826,8 @@
       "help": "Disables HTTP basic authentication on the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -6948,8 +6948,8 @@
       "help": "Enables HTTP basic authentication on the environment. Note: HTTP basic authentication username and password are stored in plaintext.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -7084,8 +7084,8 @@
       "help": "Displays HTTP basic authentication status and configuration for the environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -7618,8 +7618,8 @@
       "help": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & source environment in the format `site-name.env`",
@@ -7767,8 +7767,8 @@
       "help": "Deletes a Multidev environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & Multidev environment in the format `site-name.env`",
@@ -8050,8 +8050,8 @@
       "help": "Merges code commits from the Dev environment into a Multidev environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & Multidev environment in the form `site-name.env`",
@@ -8183,8 +8183,8 @@
       "help": "Merges code commits from a Multidev environment into the Dev environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & Multidev environment in the form `site-name.env`",
@@ -11096,8 +11096,8 @@
       "help": "Runs a Drush command remotely on a site environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -11236,8 +11236,8 @@
       "help": "Runs a WP-CLI command remotely on a site environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
@@ -11623,7 +11623,7 @@
     {
       "name": "self:console",
       "usage": [
-        "self:console [--site>.<env]",
+        "self:console [--<site>.<env>]",
         "self:console Opens an interactive PHP console within Terminus.",
         "self:console <site> Opens an interactive PHP console within Terminus and loads <site> as $site.",
         "self:console <site>.<env> Opens an interactive PHP console within Terminus and loads <site> and its <env> environment as $site and $env."
@@ -11633,8 +11633,8 @@
       "definition": {
         "arguments": [],
         "options": {
-          "site>.<env": {
-            "name": "--site>.<env",
+          "site_env": {
+            "name": "--<site>.<env>",
             "shortcut": "",
             "accept_value": false,
             "is_value_required": false,
@@ -16340,8 +16340,8 @@
       "help": "Applies upstream updates to a site development environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & development environment",
@@ -16480,8 +16480,8 @@
       "help": "Displays a cached list of new code commits available from the upstream for a site development environment. Note: To refresh the cache you will need to run site:upstream:clear-cache before running this command.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & development environment",
@@ -16629,8 +16629,8 @@
       "help": "Displays a whether there are updates available from the upstream for a site environment.",
       "definition": {
         "arguments": {
-          "site>.<env": {
-            "name": "site>.<env",
+          "site_env": {
+            "name": "site_env",
             "is_required": true,
             "is_array": false,
             "description": "Site & environment in the format `site-name.env`",
