@@ -5,7 +5,7 @@ set -e
 
 cd $BUILD_PATH
 
-## Import Terminus releases and command reference
+## Import Terminus releases
 echo "Generate a new Terminus commands.json file"
 touch source/data/commands.json
 terminus list --format=json > source/data/commands.json
