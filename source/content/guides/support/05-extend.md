@@ -8,6 +8,7 @@ tags: [composer, local, modules, site, terminus]
 buildtools: true
 anchorid: extend
 type: guide
+showtoc: true
 permalink: docs/guides/build-tools/extend/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb

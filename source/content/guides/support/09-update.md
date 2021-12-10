@@ -8,6 +8,7 @@ tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
 anchorid: update
 type: guide
+showtoc: true
 permalink: docs/guides/build-tools/update/
 image: buildToolsGuide-thumb
 getfeedbackform: default

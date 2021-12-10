@@ -6,6 +6,7 @@ categories: [develop]
 tags: [workflow, composer, continuous-integration, webops, terminus]
 anchorid: configure
 type: guide
+showtoc: true
 permalink: docs/guides/build-tools/configure/
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb

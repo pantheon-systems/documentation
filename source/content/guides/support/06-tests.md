@@ -7,6 +7,7 @@ tags: [continuous-integration, iterate, webops, workflow]
 buildtools: true
 anchorid: behat
 type: guide
+showtoc: true
 permalink: docs/guides/build-tools/tests/
 editpath: build-tools/06-tests.md
 image: buildToolsGuide-thumb
