@@ -18,7 +18,7 @@ Extend the functionality of Terminus and add commands by installing third-party 
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, ensure your your plugin is updated for Terminus 2. See [Terminus 2.0](/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2 may also be used on [Terminus 3](/terminus/terminus-3-0).
+If you are a plugin author, ensure your your plugin is updated for Terminus 2.0. See [Terminus 2.0](/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/terminus/terminus-3-0).
 
 </Alert>
 
