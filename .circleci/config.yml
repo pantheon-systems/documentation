@@ -40,9 +40,6 @@ workflows:
                 paths:
                   - ./
                   - ./public
-      - test-links:
-          requires:
-            - pfe/gatsby-build-and-deploy
       - lighthouse:
           requires:
             - pfe/gatsby-build-and-deploy
@@ -50,8 +47,6 @@ workflows:
             branches:
               ignore: main
       - deploy:
-          requires:
-            - test-links
           filters:
             branches:
               only: main
@@ -69,16 +64,15 @@ jobs:
       - run:
           name: Import Functions and Variables
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
-      - run:
-          name: Install Broken Link Checker
-          command: sudo npm install -g alexlouden/broken-link-checker
+#      - run:
+#          name: Install Broken Link Checker
+#          command: sudo npm install -g alexlouden/broken-link-checker
       - run:
           name: Check for merge conflicts
           command: .circleci/scripts/merge_conflicts.sh
-      - run:
-          name: Test links
-          command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
-
+#      - run:
+#          name: Test links
+#          command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
   lighthouse:
     docker:
       - image: circleci/php:7.2-cli-node-browsers
