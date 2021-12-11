@@ -63,7 +63,7 @@ The following is a list of plugins that assume write access, and the specific fi
 
 There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
 
-```php:title=wp-config.php
+```php:title=wp-config.phpf
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('FS_METHOD', 'direct');
 }
@@ -1018,7 +1018,7 @@ ___
 
 **Issue 2:** WP rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution 1:** WP version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
+**Solution 1:** WP Rocket version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
 define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
