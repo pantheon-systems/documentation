@@ -149,7 +149,7 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 #### Considerations
 
-The platform defaults to the MariaDB version 10.4 in the latest upstreams for WordPress and Drupal 7 through 9 in the pantheon.upstream.yml file. If your site has any older contrib modules that have issue with MariaDB 10.4, you may set the MariaDB version to 10.3 in your pantheon.yml file. This should be rare.
+The default database version for new sites is MariaDB version 10.4.  If your site has any older contrib modules that have issue with MariaDB 10.4, you may set the MariaDB version to 10.3 in your pantheon.yml file. This should be rare.
 
 Note that Drupal 9 **requires** MariaDB 10.4. If you have a Drupal 8 site that you are planning on upgrading to Drupal 9, ensure that the database has been upgraded to 10.4 in all environments before beginning the Drupal 9 upgrade.
 
