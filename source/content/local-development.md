@@ -8,23 +8,27 @@ reviewed: "2019-11-27"
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
 
-Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/guides/localdev), currently in active development.
+Pantheon's [Localdev](/guides/localdev) offers the best of developing locally — with the ability to perform critical development tasks, including editing files and code, and pushing changes to Pantheon right from your desktop.
 
 </Alert>
 
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-
-Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's WebOps training can accelerate your workflow.
-
-</Enablement>
-
-Pantheon cannot troubleshoot or [support local development](/support#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev) instead of local development.
+Pantheon cannot troubleshoot or [support local development](/support#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev).
 
 If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
 
 ## Before You Begin
+
+There are three parts to any dynamic website:
+
+1. **Code**: The application, modules or plugins, and themes.
+
+1. **Database**: The content.
+
+1. **Files**: User uploaded or application generated.
+
+You will need to transfer each one from Pantheon to your local environment.
 
 Be sure you have:
 
@@ -32,25 +36,27 @@ Be sure you have:
   - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
   - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
-- SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
+- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR rsync
 - [Terminus](/terminus)
 - [Drush](/drush) (optional)
+
+### Export Variables
+
+<Partial file="export-alias.md" />
+
+Export the environment as a variable as well:
+
+```bash{promptUser:user}
+export ENV=dev
+```
+
+### Clear Site Environment Cache
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash{promptUser: user}
-terminus env:clear-cache <site>.<env>
+terminus env:clear-cache $SITE.$ENV
 ```
-
-There are three parts to any dynamic website:
-
-1. Code (The application, modules or plugins, and themes)
-
-1. Database (content)
-
-1. Files (user uploaded or application generated)
-
-You will need to transfer each one from Pantheon to your local environment.
 
 ## Get the Code
 
@@ -58,11 +64,11 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 1. Go to Your Site Dashboard, and log in to Pantheon and load the Dashboard for the site you want to work on.
 
-2. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
+1. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
 
-    ![Copy and Paste Git Clone](../images/dashboard/git-string.png)<br />
+    ![Copy and Paste Git Clone](../images/dashboard/git-string.png)
 
-3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
+1. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
     ```bash{promptUser: user}
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -112,8 +118,8 @@ From within the Site Dashboard:
 1. Create and get the database with Terminus commands:
 
     ```bash{promptUser: user}
-    terminus backup:create <site>.<env> --element=db
-    terminus backup:get <site>.<env> --element=db
+    terminus backup:create $SITE.$ENV --element=db
+    terminus backup:get $SITE.$ENV --element=db
     ```
 
 1. Import the archive into your local MySQL database using the following command:
@@ -131,8 +137,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 Run the following Terminus commands:
 
 ```bash{promptUser: user}
-terminus backup:create <site>.<env> --element=files
-terminus backup:get <site>.<env> --element=files
+terminus backup:create $SITE.$ENV --element=files
+terminus backup:get $SITE.$ENV --element=files
 ```
 
 This will create and get a backup of the site's files.
@@ -213,7 +219,7 @@ You can also transfer a single file or a single directory at a time instead of t
 
 You'll need to configure database credentials matching your local database to develop locally. You don't want to manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`) because you could easily commit that change to version control and trigger a connection error on Dev when pushing to Pantheon.
 
-Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by git, it won't be found on Pantheon but it will be applied when you run the site locally.
+Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
 Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
@@ -231,22 +237,31 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 </Accordion>
 
-### Drupal 7
+### Drupal settings.local.php
 
-1. Drupal 7 users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
+Create the local settings file and add it to `.gitignore`.
 
-    ```php:title=setting.php
-    /**
-     * Include a local settings file if it exists. D7 only
-     */
-    $local_settings = dirname(__FILE__) . '/settings.local.php';
-    if (file_exists($local_settings)) {
-      include $local_settings;
-    }
-    ```
+1. Change to the site's directory and create the file. Change the first command in this example to fit the site's directory structure:
 
-1. You will also need to exclude the local configuration file from git, by adding the following to `.gitignore`:
+   ```bash{promptUser: user}
+   cd sites/default
+   touch settings.local.php
+   ```
 
-    ```git:title=.gitignore
-    sites/*/settings.local.php
-    ```
+1. Add the local configuration file to `.gitignore`:
+
+   ```git:title=.gitignore
+   sites/*/settings.local.php
+   ```
+
+Drupal 7 users need to add a reference to the local file from within `settings.php`:
+
+```php:title=sites/default/settings.php
+/**
+ * Drupal 7 only: Include a local settings file if it exists.
+ */
+$local_settings = dirname(__FILE__) . '/settings.local.php';
+if (file_exists($local_settings)) {
+  include $local_settings;
+}
+```

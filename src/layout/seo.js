@@ -151,12 +151,15 @@ function SEO({
         },
       ]
         .concat(
-          keywords.length > 0
+          keywords && keywords.length > 0
             ? {
                 name: `keywords`,
                 content: keywords.join(`, `),
               }
-            : []
+            : {
+                name: `keywords`,
+                content: 'documentation'
+            }
         )
         .concat(
           authorList.map(author => {

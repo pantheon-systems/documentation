@@ -3,18 +3,18 @@ title: Automate and Integrate your WebOps Workflow with Quicksilver
 description: Learn how to use Quicksilver to automate your WebOps workflow.
 categories: [automate]
 tags: [quicksilver, webops, workflow]
-reviewed: "2020-03-10"
+reviewed: "2020-03-20"
 ---
 
 Hook into platform workflows to automate your Pantheon WebOps workflow. Tell Pantheon which script you want to run, and the platform will run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
-<Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Set up existing scripts and write your own with help from our experts. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
-For example, committing a `pantheon.yml` file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
+For example, committing a [pantheon.yml](/pantheon-yml) file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
 
 ```yaml:title=pantheon.yml
 api_version: 1
@@ -49,7 +49,7 @@ Quicksilver scripts that trigger on the deploy hook operate on the state of the 
 
 Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types. The commands will run in order, and only execute the next when the previous has finished or timed out.
 
-We recommend setting up a dedicated directory in the docroot (e.g., `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the `web` subdirectory of your site's code repository (e.g., `web/private/scripts`).
+We recommend setting up a dedicated directory in the docroot (e.g., `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the `web` subdirectory of your site's code repository (e.g., `web/private/scripts`), but the script paths in your `pantheon.yml` file should not include the `web/` path prefix and should resemble the examples above.
 
 ## Hooks
 
@@ -63,6 +63,34 @@ You can hook into the following workflows:
 | `deploy_product`                       | Create site                                                         | Dev                        | `after` stage valid, `before` stage invalid |
 | `sync_code`                            | Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard | Dev or Multidev            |                                             |
 | `create_cloud_development_environment` | Create Multidev environment                                         | Multidev                   | `after` stage valid, `before` stage invalid |
+| `autopilot_vrt`                        | Autopilot Visual Regression test                                    | "Autopilot" Multidev       | `after` stage valid, `before` stage invalid |
+
+## Variables
+
+When a workflow runs, there are variables that are made available through the `$_POST` global variable, in addition to the standard `$_ENV` and `$_SERVER` objects. These variables include the following:
+
+
+|Variable Name|Description|Hooks Available|Notes|
+|--|--|--|--|
+|`trace_id`|The unique ID of the workflow|All| |
+|`site_id`|UUID of the site instance|All| |
+|`environment`|Environment name that the workflow is running on|All|Matches the `PANTHEON_ENVIRONMENT` environment variable.
+|`stage`|`before` or `after` indicator for when the workflow is running|All|| |
+|`qs_description`|Description of the workflow as defined in `pantheon.yml`|All| |
+|`wf_type`|ID of the workflow hook that is running|All| |
+|`wf_description`|Label of the workflow hook that is running|All| |
+|`user_id`|UUID of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_id` is `None`.|
+|`user_firstname`|First name of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_firstname` is `Pantheon`.|
+|`user_lastname`|Last name of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_lastname` is `Pantheon`.|
+|`user_fullname`|UUID of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_fullname` is `Pantheon`.|
+|`user_email`|Email of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_email` is `root@getpantheon.com`.|
+|`user_role`|UUID of the user that initiated the task|All| |
+|`to_environment`|Target environment where the database is being cloned to|`clone_database`| |
+|`from_environment`|Source environment where the database is being cloned from|`clone_database`| |
+|`deploy_message`|Deploy message provided as part of a test of live deployment|`deploy`|This is only available if a deploy message is provided.|
+
+For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
+
 
 ## Secrets
 
@@ -114,7 +142,11 @@ remote:
 remote:
 ```
 
+### Autopilot VRT Hook Does Not Run When Expected
+
+For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your `Autopilot` Multidev from the dashboard. Be sure to also delete the `Autopilot` branch, and then create the `Autopilot` Multidev again in the Dashboard. Once you do this, your scripts should start running after the visual regression tests complete.
+
 ## See Also
 
-- [The Pantheon.yml Configuration File](/pantheon-yml)
-- [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples/)
+- [The pantheon.yml Configuration File](/pantheon-yml)
+- [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples/)

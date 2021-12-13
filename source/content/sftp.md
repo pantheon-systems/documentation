@@ -6,9 +6,9 @@ tags: [files, sftp, code]
 reviewed: "2020-02-18"
 ---
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
@@ -100,7 +100,6 @@ This can be useful when you have many changes you wish to undo or if it would ot
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
 - PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
-- [FileZilla](/filezilla)
 - [WinSCP](/winscp)
 - [Visual Studio Code](/visual-studio-code)
 

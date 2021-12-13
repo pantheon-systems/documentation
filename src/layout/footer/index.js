@@ -18,8 +18,8 @@ const Footer = ({ data }) => {
         <div id="office-hours" className="office-hours">
           <p>Got questions? We've got answers!</p>
           <p>
-            <a href="https://pantheon.io/live-demo?docs" className="demo-cta cta docs-cta">
-              Live Weekly Demo
+            <a href="https://pantheon.io/learn-pantheon?docs" className="demo-cta cta docs-cta">
+              Learn Pantheon
             </a>{" "}
             <a
               href="https://pantheon.io/developers/office-hours?docs"
@@ -104,7 +104,7 @@ const Footer = ({ data }) => {
                           <a href="https://pantheon.io/contact-us" className="cta docs-cta">Contact</a>
                         </li>
                         <li className="leaf menu-mlid-1152">
-                          <a href="https://pantheon.io/agencies/agency-match" className="cta docs-cta">
+                          <a href="https://directory.pantheon.io/agencies?docs" className="cta docs-cta">
                             Hire an Agency
                           </a>
                         </li>
@@ -179,6 +179,10 @@ const Footer = ({ data }) => {
                         <span>|</span>{" "}
                         <a href="https://pantheon.io/pantheon-terms-service">
                           Terms of Use
+                        </a>{" "}
+                        <span>|</span>{" "}
+                        <a href="https://pantheon.io/accessibility-statement">
+                          Accessibility Statement
                         </a>
                       </div>
                     </div>

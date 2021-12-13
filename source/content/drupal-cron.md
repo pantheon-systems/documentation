@@ -20,7 +20,7 @@ Containers on Pantheon are automatically spun down following a period of inactiv
 
 ## Pantheon Cron Execution
 
-Pantheon executes cron once an hour on every environment to allow Drupal to perform scheduled tasks. This generally occurs within 5 to 10 minutes of half past each hour.
+Pantheon executes cron once an hour on every environment to allow Drupal to perform scheduled tasks. This generally occurs within 5 to 10 minutes of half past each hour. Pantheon's cron job does not run if some other mechanism has caused cron to run within the last hour.
 
 Typically cron is triggered via a browser/page request or crontab. However, Pantheon uses the following Drush command to automatically trigger cron on the platform:
 
@@ -139,4 +139,3 @@ No. You can create a custom module that uses the [`hook_cron`](https://api.drupa
 
 - [Drupal.org Community Documentation - Set up Cron](https://www.drupal.org/docs/7/setting-up-cron/overview)
 - [Elysia Cron - extends Drupal standard Cron](https://www.drupal.org/project/elysia_cron)
-- [poormanscron - Triggers Drupal Cron from site traffic (Drupal 6 only, included in Drupal 7)](https://drupal.org/project/poormanscron)

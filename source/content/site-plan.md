@@ -60,19 +60,19 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 
 ### Basic Plan
 
-[New Relic](/new-relic), [Redis](/redis), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/new-relic), [Object Cache](/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
-For Redis and Solr, the following code changes are required before the feature can be safely disabled:
+For Object Cache and Pantheon Search (Solr), the following code changes are required before the feature can be safely disabled:
 
 <TabList>
 
 <Tab title="WordPress" id="wp-id" active={true}>
 
-#### Safely Remove Redis
+#### Safely Remove Object Cache
 
 <Partial file="remove-addons/wp-redis.md" />
 
-#### Safely Remove Solr
+#### Safely Remove Pantheon Search
 
 <Partial file="remove-addons/wp-solr.md" />
 
@@ -80,11 +80,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 <Tab title="Drupal 8" id="d8-id">
 
-#### Safely Remove Redis
+#### Safely Remove Object Cache
 
 <Partial file="remove-addons/drupal-redis.md" />
 
-#### Safely Remove Solr
+#### Safely Remove Pantheon Search
 
 <Partial file="remove-addons/d8-solr.md" />
 
@@ -92,11 +92,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 <Tab title="Drupal 7" id="d7-id">
 
-#### Safely Remove Redis
+#### Safely Remove Object Cache
 
 <Partial file="remove-addons/drupal-redis.md" />
 
-#### Safely Remove Solr
+#### Safely Remove Pantheon Search
 
 <Partial file="remove-addons/d7-solr.md" />
 

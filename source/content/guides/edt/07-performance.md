@@ -28,12 +28,10 @@ All links from the video are provided below.
 
 <Youtube src="gdpGZpxdXDo" title="Essential Developer Training - Performance" />
 
-<br />
-
 **Resource Links From Video**
 
  - [Caching: Advanced Topics](/caching-advanced-topics)
- - [Redis docs](/redis)
+ - [Redis docs](/object-cache)
  - [New Relic docs](/new-relic)
  - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
  - [Troubleshooting WordPress with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)

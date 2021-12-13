@@ -1,0 +1,26 @@
+name: pantheon-docs
+services:
+  node:
+    type: node
+    command: gatsby develop -H 0.0.0.0
+    port: 8000
+    ssl: true
+    sslExpose: true
+    globals:
+      gatsby: latest
+    build:
+      - npm ci
+proxy:
+  node:
+    - pantheon-docs.lndo.site:8000
+
+tooling:
+  npm:
+    service: node
+    cmd: npm
+  gatsby:
+    service: node
+    cmd: gatsby
+
+excludes:
+  - node_modules

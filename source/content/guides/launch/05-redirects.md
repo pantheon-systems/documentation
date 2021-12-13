@@ -17,6 +17,8 @@ Choose one of the following options to configure the primary domain.
 
 <Partial file="primary-domain.md" />
 
+### Update URL References (WordPress)
+
 WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
 
 ### Ready to launch like the pros?

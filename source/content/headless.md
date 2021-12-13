@@ -56,7 +56,7 @@ Some key differences of decoupled architecture include:
 Backend APIs running on Pantheon take advantage of the following platform features for optimal performance:
 
 * [**Global CDN**](/global-cdn): Cache backend API responses from WordPress or Drupal in 40+ global POPs (points of presence).
-* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Installing Redis on Drupal or WordPress](/redis).
+* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 <!--todo: does solr belong here? help wanted describing the benefits of solr in context of decoupled site.]-->
 
 
@@ -97,7 +97,7 @@ There is a contributed module called [REST UI](https://drupal.org/project/restui
 
 Because Views is also part of core, you can make a JSON resource once REST and Serialization modules are enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
 
-* Use Filter Criterias to extract content as you like it (e.g., `/json/articles?nid=5`).
+* Use Filter Criteria to extract content as you like it (e.g., `/json/articles?nid=5`).
 * You can also use Contextual Filters if we want to just append the end of the path (e.g., `rest/views/articles/1`) for filtering results.
 
 #### Example Requests

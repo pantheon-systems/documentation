@@ -15,7 +15,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom or [Must Use](/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
 
-* Use [Redis](/redis). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to cache a lot of database queries in WordPress.
+* Use [Redis](/object-cache). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to cache a lot of database queries in WordPress.
 
 * Use [wp-cfm](/wp-cfm). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
@@ -31,6 +31,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
 
+
 ### Themes
 
 * In your theme, use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
@@ -39,6 +40,11 @@ This article provides suggestions, tips, and best practices for developing and m
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
+  
+#### Manage License Keys for Themes or Plugins
+
+There are many plugins and themes in WordPress that require license keys. Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments. 
+
 
 ## Testing
 
@@ -117,3 +123,35 @@ This method has the advantage of being toggleable without deploying code, by act
   ```
 
 1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
+
+## Avoid WordPress Login Attacks
+
+<Partial file="wp-login-attacks.md" />
+
+## Security Headers
+
+Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
+
+There are plugins for WordPress that do not require `.htaccess` to set security headers (like [GD Security Headers](https://wordpress.org/plugins/gd-security-headers/) or [HTTP headers to improve web site security](https://wordpress.org/plugins/http-security/)), but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
+
+Adding code like the example below in a plugin (or [mu-plugin](/mu-plugin)) can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
+
+The code below is only an example to get you started. You'll need to modify it to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers, and link to additional information on how to improve your security header profile.
+
+```php
+function additional_securityheaders( $headers ) {
+  if ( ! is_admin() ) {
+    $headers['Referrer-Policy']             = 'no-referrer-when-downgrade'; //This is the default value, the same as if it were not set.
+    $headers['X-Content-Type-Options']      = 'nosniff';
+    $headers['X-XSS-Protection']            = '1; mode=block';
+    $headers['Permissions-Policy']          = 'geolocation=(self "https://example.com") microphone=() camera=()';
+    $headers['Content-Security-Policy']     = 'script-src "self"';
+    $headers['X-Frame-Options']             = 'SAMEORIGIN';
+  }
+
+  return $headers;
+}
+add_filter( 'wp_headers', 'additional_securityheaders' );
+```
+
+**Note:** Because the headers are applied by PHP code when WordPress is invoked, they will not be added when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.

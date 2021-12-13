@@ -23,7 +23,7 @@ Set price for new sites created after November 15, 2018 that aren’t purchased 
 
 <dd>
 
-Preferred pricing is available via qualified [Agency Partners](https://pantheon.io/plans/partner-program?docs). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.
+Preferred pricing is available via qualified [Agency Partners](https://pantheon.io/plans/partner-program?docs). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information about pricing, or use the [Partner Agency Directory](https://directory.pantheon.io/agencies?docs) to find an agency.
 
 </dd>
 
@@ -51,17 +51,17 @@ Pantheon offers [annual billing plans at lower rates](/annual-billing), giving u
 
 ## Plan Resources
 
-|                        | Basic        | Performance Small |  Performance Medium  | Performance Large | Performance Extra Large |
-| ---------------------- | ------------ | ----------------- | -------------------- | ----------------- | ----------------------- |
-| Application Containers |      1       | 1                 |       2              | 3                 | 4                       |
-| PHP Workers            |      4       | 8                 |       16             | 24                | 32                      |
-| PHP Memory Limit       |    256MB     | 256MB             |       512MB          | 512MB             | 512MB                   |
-| Storage                |     20GB     | 30GB              |       50GB           | 100GB             | 200GB                   |
-| Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." />   | 5 | 10 | 15 | 35 | 70 |
-| Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." />                   | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                         | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                           | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                             | ❌ | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+|                                                                                                                                                | Basic                                     | Performance Small                         | Performance Medium                        | Performance Large                         | Performance Extra Large                   | Elite                                     |
+|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|
+| Application Containers                                                                                                                         | 1                                         | 1                                         | 2                                         | 3                                         | 4                                         | 4+                                        |
+| PHP Workers                                                                                                                                    | 4                                         | 8                                         | 16                                        | 24                                        | 32                                        | Managed<br />Scaling                      |
+| PHP Memory Limit                                                                                                                               | 256MB                                     | 256MB                                     | 512MB                                     | 512MB                                     | 512MB                                     | 512MB                                     |
+| Storage                                                                                                                                        | 20GB                                      | 30GB                                      | 50GB                                      | 100GB                                     | 200GB                                     | 200GB+                                    |
+| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."  />  | 5                                         | 10                                        | 15                                        | 35                                        | 70                                        | 270                                       |
+| Free and managed HTTPS <Popover   content = "For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."  />                  | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| New Relic <Popover   content = "For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."  />                                        | ❌                                         | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Object Cache <Popover   content = "For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  />     | ❌                                         | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/docs/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />                                            | ❌                                         | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
 
 <Alert title="Note" type="info">
 

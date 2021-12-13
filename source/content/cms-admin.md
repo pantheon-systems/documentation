@@ -57,7 +57,7 @@ Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click upda
 
 1. Themes can be installed directly through the admin panel as well:
 
-  ![Install a new WordPress theme](../images/wp-new-theme.png)
+  ![Install a new WordPress theme](../images/wp-newtheme.jpg)
 
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
 

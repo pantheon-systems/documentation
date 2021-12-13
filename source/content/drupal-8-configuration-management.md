@@ -47,8 +47,6 @@ You can export your configuration into that directory directly using Drush's `co
    drush config:import -y
    ```
 
-1. Profit.
-
 Using Terminus, you can complete the above process from the command line.
 
 ### Workflow Example
@@ -60,13 +58,17 @@ terminus drush <site>.dev -- config:export -y
 
 terminus env:commit <site>.dev --message="Export configuration to code"
 
-terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"
+terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy configuration to test"
+
+terminus env:clear-cache <site>.test
 
 terminus drush <site>.test -- config:import -y
 
 open https://test-mysite.pantheonsite.io
 
-terminus env:deploy <site>.live --cc --note="Deploy configuration to live"
+terminus env:deploy <site>.live --note="Deploy configuration to live"
+
+terminus env:clear-cache <site>.live
 
 terminus drush <site>.live -- config:import -y
 
@@ -89,7 +91,7 @@ Even with tools, a project needs to make a plan to manage the configuration work
 
 The [Git configuration workflow](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/git_workflow.md) describes how to use `config-merge` to export your configuration changes, commit them to Git, push them to the central repository, pull the changes locally, and then merge them with your local development site’s configuration. All of this is done in a single command.
 
-### rsync Configuration
+### Rsync Configuration
 
 The [rsync configuration workflow](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/rsync_workflow.md) allows you to use a similar workflow in situations where you cannot make commits on the remote Drupal site. In these instances, `config-merge` will export changes to a temporary directory and then rsync them to the local system, where they are committed to a temporary branch in Git and then merged with the local configuration changes.
 
@@ -134,4 +136,4 @@ Relocate the configuration directory for the default location using `git mv`:
 git mv web/sites/default/files/config .
 ```
 
-For additional details, see [this blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
+For additional details, refer to [this Pantheon blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).

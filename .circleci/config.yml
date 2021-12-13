@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  pfe: pantheon-systems/front-end@0.3.0
+  pfe: pantheon-systems/front-end@0.4.0
   queue: eddiewebb/queue@1.5.0
 
 workflows:
@@ -10,9 +10,12 @@ workflows:
       - pfe/gatsby-build-and-deploy:
           use-yarn: false
           deployment-path: docs
+          # https://circleci.com/docs/2.0/configuration-reference/#docker-executor
+          # https://github.com/pantheon-systems/frontend-orbs#parameters
+          resource-class: large
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
-          gatsby-cache-version: "v1.8.5"
+          gatsby-cache-version: "v1.8.21"
           pre-steps:
             - checkout
             - run:

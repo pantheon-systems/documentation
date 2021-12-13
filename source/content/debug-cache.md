@@ -80,7 +80,7 @@ Pantheon's platform will not cache a response that contains the `set-cookie` hea
 
 <Alert title="Note" type="info" >
 
-Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues and fixes from your browser. Ror instructions, see [Test Global CDN with Browser Headers](/test-global-cdn-caching#test-global-cdn-with-browser-headers). Curl does not handle cookie data in the same way that your browser does, and effectively misrepresents cookie and caching behavior as a result.
+Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues and fixes from your browser. For instructions, see [Test Global CDN with Browser Headers](/test-global-cdn-caching#test-global-cdn-with-browser-headers). Curl does not handle cookie data in the same way that your browser does, and effectively misrepresents cookie and caching behavior as a result.
 
 </Alert>
 
@@ -96,7 +96,7 @@ Cache-varying `STYXKEY` cookies are generally intended for use with custom code.
 
 You may want to consider an alternative module or plugin that does not set cache-busting cookies, or you may be able to implement the same functionality using JavaScript on the front-end of the site.
 
-Pantheon's [Advanced Global CDN](/advanced-global-cdn) service may also be a good option if your cookie-setting logic can be moved to the CDN layer. One common use-case for this is [geolocation](/advanced-global-cdn#geolocation-based-actions): instead of detecting a visitor's location with PHP code and setting cookies, this information can be fetched much quicker from the edge and passed to the application via an HTTP response header.
+Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service may also be a good option if your cookie-setting logic can be moved to the CDN layer. One common use-case for this is [geolocation](/guides/professional-services/advanced-global-cdn#geolocation-based-actions): instead of detecting a visitor's location with PHP code and setting cookies, this information can be fetched much quicker from the edge and passed to the application via an HTTP response header.
 
 ### Drupal Config Conflicts
 

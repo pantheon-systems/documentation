@@ -1,15 +1,18 @@
 const dotenv = require("dotenv")
 
+// load environment specific configurations.
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+// Gatsby Configuration, Options, and Plugins
 module.exports = {
+  // Puts build artifacts in a subdirectory, and updates all local links
   pathPrefix: `/docs`,
+  // Reusable global information
   siteMetadata: {
     title: `Pantheon Docs`,
     description: `Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform`,
@@ -18,21 +21,15 @@ module.exports = {
       twitter: `getpantheon`,
     },
   },
+  // Creates a shorthand for Contributor data in GraphQL
   mapping: {
     "Mdx.frontmatter.contributors": "ContributorYaml",
   },
   plugins: [
-    {
-      resolve: `gatsby-transformer-yaml-full`,
-      options: {
-        plugins: [
-          `gatsby-yaml-full-markdown`,
-        ],
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sass`,
-    {
+    `gatsby-transformer-yaml`,
+    // Supports SCSS stylesheets. Prime to be removed with a CSS refactor
+    `gatsby-plugin-sass`, //https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/
+    { // Handles inserting the GTM js blob into the site
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: process.env.GTM_ID,
@@ -40,7 +37,7 @@ module.exports = {
         defaultDataLayer: { },
       }
     },
-    {
+    { // Handles inserting the Segment js blob into the site
       resolve: "gatsby-plugin-segment-js",
       options: {
         prodKey: process.env.SEGMENT_KEY,
@@ -48,6 +45,7 @@ module.exports = {
         trackPage: false,
       },
     },
+    // Each instance of `gatsby-source-filesystem` tells Gatsby to look in a different directory for source files.
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -62,21 +60,23 @@ module.exports = {
         name: `data`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
+    { // Converts Markdown into HTML
+      resolve: `gatsby-transformer-remark`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
       options: {
-        plugins: [
+        plugins: [ // Takes additional plugins
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              destignationDir: f => `scripts/${f.name}`,
+              // Moves downloadable scripts to a subdirectory in the build artifact
+              destignationDir: f => `scripts/${f.name}`, // destignationDir is defined in gatsby-node.js
             },
           },
         ],
       },
+        // Honestly not sure why this is here.
         path: `${__dirname}/source/scripts`,
         name: `scripts`,
-      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -96,23 +96,9 @@ module.exports = {
       options: {
         path: `${__dirname}/source/content`,
         name: `content`,
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              noInlineHighlight: true,
-              aliases: {},
-              prompt: {
-                user: "user",
-                host: "localhost",
-              },
-            },
-          },
-        ]
       },
     },
+    // When running Gatsby develop, creates reporting pages
     ...(process.env.NODE_ENV === 'development' ? [
     {
       resolve: `gatsby-plugin-page-creator`,
@@ -120,8 +106,9 @@ module.exports = {
         path: `${__dirname}/src/reports`,
       },
     }, ] : []),
+    // ...? Just read the page, I dunno.
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-manifest`, // https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/
       options: {
         name: `Pantheon Documentation`,
         short_name: `Docs`,
@@ -132,17 +119,18 @@ module.exports = {
         icon: `src/layout/favicon.ico`,
       },
     },
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-plugin-mdx`,
+    // Consumes JSON files into GraphQL
+    `gatsby-transformer-json`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-json/
+    { // Allows for React components within the Markdown files.
+      resolve: `gatsby-plugin-mdx`, // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-          {
-            resolve: "gatsby-remark-grid-tables",
+          { // Allows for more complex tables
+            resolve: "gatsby-remark-grid-tables", // https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/
           },
-          {
-            resolve: "gatsby-remark-github",
+          { // Used to create code snippets from files on GitHub
+            resolve: "gatsby-remark-github", // https://www.gatsbyjs.com/plugins/gatsby-remark-github/
             options: {
               marker: 'GITHUB-EMBED',
               insertEllipsisComments: true,
@@ -152,15 +140,11 @@ module.exports = {
               token: process.env.GITHUB_API,
             }
           },
-          {
-            resolve: "gatsby-remark-responsive-iframe",
+          { // Required so the custom Youtube component can create iframes that work with Gatsby
+            resolve: "gatsby-remark-responsive-iframe", // https://www.gatsbyjs.com/plugins/gatsby-remark-responsive-iframe/
           },
-          {
-            resolve: "gatsby-remark-responsive-iframe",
-            options: {}
-          },
-          {
-            resolve: "gatsby-remark-images",
+          { // Self-explanatory
+            resolve: "gatsby-remark-images", // https://www.gatsbyjs.com/plugins/gatsby-remark-images/
             options: {
               maxWidth: 1035,
               // sizeByPixelDensity: true,
@@ -169,10 +153,10 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          {
-            resolve: `gatsby-remark-code-titles`,
+          { // Adds titles to code blocks... obvi
+            resolve: `gatsby-remark-code-titles`, // https://www.gatsbyjs.com/plugins/gatsby-remark-code-titles/
             options: {
-              className: `gatsby-remark-code-title`,
+              className: `gatsby-remark-code-title`, // Defines the CSS class it uses, for custom styling
             },
           },
           `gatsby-remark-static-images`,

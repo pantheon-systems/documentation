@@ -12,14 +12,14 @@ This technique configures an SSH client to forward a local port to a port on Pan
 Currently, there are two services on Pantheon that support SSH tunneling:
 
 - [MySQL database](/mysql-access) (dbserver)
-- [Redis cache](/redis)
+- [Redis cache](/object-cache)
 
 To restrict access to these services to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access).
 
 ## Prerequisites
 
 - Local installation of a MySQL client
-- [Redis command-line client](/redis#use-the-redis-command-line-client)
+- [Redis command-line client](/object-cache#use-the-redis-command-line-client)
 - Add an [SSH key](/ssh-keys) to your Pantheon User Dashboard
 
 ## Create Secure Connection to MySQL using TLS
@@ -69,13 +69,35 @@ From the Site Dashboard, access the environment you want to connect with, and cl
 Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
 
 ```bash{promptUser: user}
-ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
+ssh -f -N -L LOCAL_PORT:localhost:SERVER_PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
+  * Replace `<LOCAL_PORT>` with an available port on your device.
+  * Replace `<SERVER_PORT>` with the designated port found on your Site Dashboard.
+  * Often, the same input can be used for the `<LOCAL_PORT>` and `<SERVER_PORT>`.
 
-Replace `PORT` with the database port specified in the **Connection Info** tab. Do the same for `PASSWORD`, then execute the following:
+The command must include the port you are entering the tunnel from. You can replace `<LOCAL_PORT>` with the database port specified in the **Connection Info** tab. Similarly, do the same for `<PASSWORD>`, then execute the following command:
 
 ```bash{promptUser: user}
-mysql -u pantheon -h 127.0.0.1 -P PORT pantheon -pPASSWORD
+mysql -u pantheon -h 127.0.0.1 -P LOCAL_PORT pantheon -pPASSWORD
+```
+
+Assuming the specified port is the `<LOCAL_PORT>`, you can determine if the port is listening by entering the following command:
+
+```bash{promptUser: user}
+lsof -i :LOCAL_PORT
+```
+
+To test the connection to the database use the following command:
+
+```bash{promptUser: user}
+echo 'SELECT 1' | mysql -u pantheon -pPASSWORD -h 127.0.0.1 -P LOCAL_PORT pantheon`
+```
+
+It should return the output `1`. A common error you'll receive if you use the wrong port, will resemble the following output:
+
+```bash{promptUser: user}
+ssh: Could not resolve hostname dbserver.<ENV>.<SITE_ID>: nodename nor servname provided, or not known
+zsh: command not found: 5Drush.in
 ```
 
 <Alert title="Note" type="info">
@@ -84,7 +106,7 @@ Due to the nature of our platform, the connection information will change from t
 
 </Alert>
 
-You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's `<USERNAME>` in the following command:
 
 ```bash{promptUser: user}
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill

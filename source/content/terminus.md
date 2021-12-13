@@ -17,9 +17,9 @@ The Terminus command line interface provides advanced interaction with Pantheon.
 
 Install Terminus on macOS or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). For details on legacy versions of Terminus, see [Legacy Terminus Versions](/terminus/get-started/legacy/).
 
-<Enablement title="Command Line Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Command Line Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
@@ -38,7 +38,7 @@ Use Terminus to perform these and [other operations](/terminus/commands/):
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, you will need to update your plugin for Terminus 2. See [what's new in Terminus 2.x](/terminus-2-0/) to learn more.
+If you are a plugin author, you will need to update your plugin for Terminus 2. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. See [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
 
 </Alert>
 
@@ -46,6 +46,6 @@ Terminus is open source! View the project on [GitHub](https://github.com/pantheo
 
 ## Support
 
-Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus' GitHub page](https://github.com/pantheon-systems/terminus/issues/new).
+Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus's GitHub page](https://github.com/pantheon-systems/terminus/issues/new).
 
 Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).

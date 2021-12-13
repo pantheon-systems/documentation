@@ -7,7 +7,7 @@ tags: [cache, cdn, cookies]
 ## Exclude Specific Pages from Caching
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.
 
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs" campaign="webops-cache-control">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="webops-cache-control">
 
 Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
 
@@ -19,7 +19,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 <Tab title="Drupal 8" id="d8" active={true}>
 
-[Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
+[Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if its cache max age should be zero) that cacheability metadata can be set with:
 
 ```php
 // $build is a render array.
@@ -143,7 +143,9 @@ As an alternative to using HTTP headers to control downstream caching, you can s
 
 <Alert title="Warning" type="danger">
 
-Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.
+Pantheon does not support manually editing and updating the VCL on Global CDN. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request for [Global CDN](/global-cdn), open a [Support Ticket](/support#ticket-support).
+
+Note some customizations to VCL are available via [Adavanced Global CDN](/guides/professional-services/advanced-global-cdn). For more information, [Contact Sales](https://pantheon.io/contact-us).
 
 </Alert>
 

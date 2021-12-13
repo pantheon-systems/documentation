@@ -1,27 +1,33 @@
 ---
 title: Serving Sites from the Web Subdirectory
-description: Learn how to create a nested docroot to serve your Pantheon site from.
+description: Learn how to create and use a nested docroot to serve your Pantheon site.
 categories: [platform]
 tags: [code, site, terminus, workflow]
 contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
+The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
 
 <Alert title="Warning" type="danger">
 
-Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.
+Using Pantheon's one-click Dashboard updates feature depends on correctly setting the `web_docroot` property:
+
+- Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require setting the `web_docroot` property set in the `pantheon.upstream.yml` file.
+- Sites that use a [Custom Upstream](/custom-upstream) require setting the `web_docroot` property set in the `pantheon.upstream.yml` file.
+- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
 </Alert>
 
 ## Advantages and Use Cases
+
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
 
 ## Disable One-click Updates
-If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
+
+If you wish to stop using one-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
 
 <TabList>
 
@@ -61,9 +67,9 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
  terminus connection:set <site>.<env> git
  ```
 
-2. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
-3. Create a `pantheon.yml` file if it doesn't already exist.
-4. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
+1. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
+1. Create a `pantheon.yml` file if it doesn't already exist.
+1. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
 
   ```yml
     api_version: 1
@@ -71,8 +77,8 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
     web_docroot: true
   ```
 
-5. Add, commit, and push the `pantheon.yml` file with Git.
-6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
+1. Add, commit, and push the `pantheon.yml` file with Git.
+1. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
 
 ### Create a New Site
 
@@ -199,6 +205,7 @@ After using one of these commands, verify the new file locations with `git statu
 ## FAQ and Troubleshooting
 
 ### Quicksilver Script Location
+
 If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the `web` docroot and not the project root.
 
 For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php`, the file needs to be located at `web/private/scripts/my_quicksilver_script.php`. This is because `webphp` scripts are run with Nginx, which is serving from the nested docroot.

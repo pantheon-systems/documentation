@@ -32,7 +32,7 @@ It serves a use case where a domain's public traffic is delivered from a Server-
 
 ![A flow diagram of the Decoupled Bridge architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
-Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/professional-services) team.
+Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
 Each Decoupled Bridge site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
 
 We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
@@ -66,3 +66,4 @@ During Early Access and Limited Availability we will evaluate other providers wi
 - [The Five Ws of Decoupled Websites](https://2020.wpcampus.org/schedule/the-five-ws-of-decoupled-websites/)
 - [How Decoupled Architectures Can Benefit the Entire Web Team, and Drive User Engagement](https://pantheon.io/blog/decoupled-architectures-can-benefit-every-member-of-web-team)
 - [Drupal: Sometimes Headless, Never Heartless](https://pantheon.io/blog/drupal-sometimes-headless-never-heartless)
+- [Static Sites and Empty Upstreams](/static-site-empty-upstream)

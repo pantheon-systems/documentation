@@ -25,7 +25,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 
 ## Prerequisites
 
-Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed.
+Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may want to run `terminus self:plugin:update pantheon-systems/terminus-build-tools-plugin` to ensure you have the most recent version.
 
 1. Install [Composer](/composer).
    - Verify your installation with `composer --version`:
@@ -40,7 +40,7 @@ Make sure you have the latest versions of Terminus and the Terminus Build Tools 
 
     ```bash{outputLines: 2}
     terminus --version
-    Terminus 2.3.0
+    Terminus 3.0.0
     ```
 
 1. [Add an SSH key](/ssh-keys) in your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
@@ -82,6 +82,12 @@ Modify the commands in the following examples to match your project's needs.
   terminus build:project:create --git=github --team='My Agency Name' wp my-site
   ```
 
+- Start a GitHub project with Drupal 9:
+
+  ```bash{promptUser: user}
+  terminus build:project:create --git=github --team='My Agency Name' d9 my-site
+  ```
+
 - Start a GitHub project with Drupal 8:
 
   ```bash{promptUser: user}
@@ -99,6 +105,10 @@ For a list of all available command options, see the [Build Tools Project README
 As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+
+### Host a Static Site on Pantheon
+
+Use Build Tools to help [host a static site or files on Pantheon](/static-site-empty-upstream).
 
 ### Composer Content-Length Mismatch and/or Degraded Mode
 
@@ -125,6 +135,7 @@ This indicates a network-level issue. We recommend contacting your Internet Serv
 Check the output for the recommended fix. For example, PHP `7.0` is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
 
 ### The site name is already taken on Pantheon
+
 The following error occurs when running `terminus build:project-create` before authenticating your session with Terminus:
 
 ```bash
@@ -142,6 +153,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
+- [Drupal 9](https://github.com/pantheon-upstreams/drupal-recommended/issues)
 - [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 

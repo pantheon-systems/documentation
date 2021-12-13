@@ -1,21 +1,21 @@
 ---
-title: Using SendGrid To Deliver Email
-description: Detailed information on using SendGrid to deliver email through your WordPress and Drupal site.
+title: Deliver Email Through Your Drupal Site on the Pantheon Platform
+description: Detailed information on using SendGrid to deliver email through your Drupal site.
 categories: [integrate]
 tags: [code, email, modules, plugins]
 type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois]
 date: 9/8/2015
-reviewed: "2020-05-27"
+reviewed: "2021-11-02"
 ---
 Email is a necessity when running a website, whether it's used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
 
-One of the most common reasons that email gets blocked is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
+One of the most common reasons that email gets blocked, is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
 
-<Alert type="info" title="Note">
+<Alert title="Note"  type="info" >
 
-New Sendgrid account may need to wait 30 days before upgrading to a paid plan. If you're switching to Sendgrid from an existing email solution, make sure to plan for this.
+A new Sendgrid account may need to wait 30 days before upgrading to a paid plan. If you're switching to Sendgrid from an existing email solution, make sure to plan for this.
 
 </Alert>
 
@@ -37,53 +37,18 @@ New Sendgrid account may need to wait 30 days before upgrading to a paid plan. I
 
 1. From the **Settings Menu** click **Sender Authentication**. SendGrid requires accounts created after April 6th 2020 to identify their sender identity through either **Domain Authentication** or **Single Sender Verification**. A more detailed explanation of these options can be found in the [SendGrid Documentation](https://sendgrid.com/docs/for-developers/sending-email/sender-identity/).
 
-## Integrating Sendgrid With Drupal and WordPress
+## Integrating Sendgrid With Drupal
 
 Follow the procedure outlined below for your CMS:
 
 <TabList>
 
-<Tab title="WordPress" id="tab-1-anchor">
+<Tab title="Drupal 8" id="tab-1-anchor" active={true}>
 
-The [official Sendgrid plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has not been updated for the latest several major releases of WordPress. You can still use it, or consider another plugin like [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp).
-
-<Accordion title="Install the SendGrid Plugin" id="sendgrip-wp-plugin" icon="warning-sign">
-
-### Download the WordPress SendGrid Plugin
-
-The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
-
-Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
-
-### Add Your SendGrid Account Details
-
-1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
-1. Provide the API Key from the previous section.
-
-  <Alert type="info" title="Note">
-
-  There is a [known issue](https://github.com/sendgrid/wordpress/issues/40) with the SendGrid plugin for WordPress where it attempts to reload your API Key whenever there is input, which can conflict with your browser's autofill settings. You can use the **Stop** function of your browser to cancel reloading while you enter your API Key. Note that the API Key must be saved before configuring additional settings.
-
-  </Alert>
-
-1. Enter the email address to send from and provide a reply email address if you prefer replies to go to another address (optional).
-1. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
-
-![WP Settings example](../../images/guides/sendgrid/sendgrid-wpconfig.png)
-
-When you're done, click **Update Settings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
-
-</Accordion>
-
-</Tab>
-
-<Tab title="Drupal 8" id="tab-2-anchor" active={true}>
-
-When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module. While you can use the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module to send mail to SendGrid over SMTP, our testing (as of the last update) was hampered by a [known issue](https://www.drupal.org/project/smtp/issues/3135015) with the module recognizing the presence of a required PHP library.
-
+When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module.
 <Alert title="Warning" type="danger" >
 
-The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/guides/build-tools) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
+The SendGrid API Integration Module for Drupal 8 requires a Composer-managed workflow as described in our [Build Tools](/guides/build-tools) or the [Convert to Composer](/guides/composer-convert) guides. We cannot support non-Composer workflows using this module. For details, see [the module README](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
 
 </Alert>
 
@@ -108,7 +73,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 
 </Tab>
 
-<Tab title="Drupal 7" id="tab-3-anchor">
+<Tab title="Drupal 7" id="tab-2-anchor">
 
 ### Choosing an Integration Method
 
@@ -228,7 +193,7 @@ Then commit and push the symlink to Pantheon.
 
 1. Visit `/admin/config/system/smtp` once you've logged in as administrator.
 
-1. From within Install Options, select **On**.
+1. In **Install Options**, select **On**.
 
 1. Use the following within SMTP Server Settings:
 
@@ -240,7 +205,7 @@ Then commit and push the symlink to Pantheon.
 
       <Alert title="Note" type="info">
 
-      Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/email)
+      Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email with Drupal on Pantheon](/email)
 
       </Alert>
 
@@ -269,9 +234,7 @@ You can explore the Statistics and Email Reports from within your site's account
 
 You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/resource/the-email-infrastructure-guide-build-it-or-buy-it) for advanced tips on how to create and publish DNS records for increased deliverability.
 
-## Troubleshooting
-In some cases, other WordPress plugins can conflict with the Sendgrid plugin and cause it to use PHPMailer instead of SendGrid.
-
 ## See Also
 
+- [Use WP Mail SMTP to Send Email with Sendgrid](/guides/sendgrid-wordpress-wp-mail-smtp)
 - [Prevent Spamming During Drupal Debugging and Testing](/guides/rerouting-outbound-email)

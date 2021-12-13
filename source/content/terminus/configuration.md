@@ -53,6 +53,6 @@ The example above does three things:
   [warning] This environment is in read-only Git mode. If you want to make changes to the codebase of this site (e.g. updating modules or plugins), you will need to toggle into read/write SFTP mode first.
   ```
 
-  Defining `TERMINUS_HIDE_GIT_MODE_WARNING` disables that message, which is useful for those using Terminus for frequent changes to files, not code. <Popover content="See <a href='/pantheon-workflow'>Use the Pantheon WebOps Workflow</a> for more infomation on Code versus Content."/>
+  Defining `TERMINUS_HIDE_GIT_MODE_WARNING` disables that message, which is useful for those using Terminus for frequent changes to files, not code. <Popover content="See <a href='/pantheon-workflow'>Use the Pantheon WebOps Workflow</a> for more information on Code versus Content."/>
 
 - The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin) lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time, this configuration will always use Sequel Pro, unless otherwise specified.

@@ -33,26 +33,26 @@ For more information on managing teams, see the [Team Management article](/team-
 
 ### How to Add a Supporting Agency to Your Site
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency]((https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
 <Partial file="add-supporting-org.md" />
 
 ## Add-ons Available for Pantheon Sites
 
- - [Apache Solr](/solr) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
- - [Redis](/redis) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+ - [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
+ - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-Pantheon also offers [New Relic Pro](/new-relic) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+Pantheon also offers [New Relic&reg; Performance Monitoring](/new-relic) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 ### How to Enable Add-ons
 
 From the Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
 
-You can access New Relic Pro directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
+You can access New Relic&reg; Performance Monitoring directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
 
 ### Add-ons and the Basic Plan
 
-Solr and Redis are available to Sandbox plans for testings, and to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
+Pantheon Search and Object Cache are available to Sandbox plans for testings, and to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
 
 For more information about the Basic plan, see [Manage Plans in the Site Dashboard](/site-plan/#basic-plan), or see our [Site Plan FAQ](/site-plans-faq#plan-resources) to learn more about plan resources.
 

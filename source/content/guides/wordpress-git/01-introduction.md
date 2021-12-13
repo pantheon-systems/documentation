@@ -10,14 +10,14 @@ type: guide
 contributors: [scottmassey, rachelwhitton]
 anchorid: wordpress-git
 permalink: docs/guides/wordpress-git/
-editpath: wordpress-git/01-introduction.md
-image: git-sftp-wp-docs-guide
-reviewed: "2020-02-26"
+editpath: wordpress-Git/01-introduction.md
+image: Git-sftp-wp-docs-guide
+reviewed: "2021-02-26"
 ---
 
-This guide demonstrates how SFTP users can build WordPress sites on Pantheon's git-based platform. Don't use git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
+This guide demonstrates how SFTP users can build WordPress sites on Pantheon's Git-based platform. Don't use Git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
 
-Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use git, when SFTP and a text editor has been working fine? Here are a few reasons why:
+Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use Git, when SFTP and a text editor has been working fine? Here are a few reasons why:
 
 <Accordion title="Benefits of Git" id="unique-anchor" icon="lightbulb">
 
@@ -26,7 +26,7 @@ Any kind of collaboration is easier and safer with version control. You can work
 
 #### Security
 
-Version control creates a more secure way to move code around. You can lock down your production environment, because you are never touching the code directly; you're deploying it securely with git.
+Version control creates a more secure way to move code around. You can lock down your production environment, because you are never touching the code directly; you're deploying it securely with Git.
 
 #### History
 
@@ -47,10 +47,9 @@ Make sure that you have a:
 
  |                 SFTP Client                 |                      Text Editor                     |
  |:--------------------------------------------|:-----------------------------------------------------|
- | [Transmit](https://panic.com/transmit/)     | [Atom](https://atom.io/)                             |
+ | [Transmit](https://panic.com/transmit/)     | [Visual Studio Code](https://code.visualstudio.com/) |
  | [Cyberduck](https://cyberduck.io/)          |        [Sublime](https://www.sublimetext.com/)       |
- | [Filezilla](https://filezilla-project.org/) | [TextMate](https://macromates.com/)                  |
- |                                             | [Visual Studio Code](https://code.visualstudio.com/) |
+ | [WinSCP](https://winscp.net/eng/index.php)  | [Atom](https://atom.io/)              |
 
 Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
 

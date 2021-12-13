@@ -30,7 +30,6 @@ import BuildTools from "../components/buildTools.js"
 import BuildToolsChangelog from "../components/buildToolsChangelog.js"
 import Partial from "../components/partial.js"
 import Image from "../layout/image"
-import ChecklistItem from "../components/checklistItem"
 import ReviewDate from "../components/reviewDate"
 import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
@@ -57,7 +56,6 @@ const shortcodes = {
   BuildTools,
   BuildToolsChangelog,
   Partial,
-  ChecklistItem,
   Image,
   ReviewDate,
   Youtube,
@@ -111,6 +109,7 @@ class GuideTemplate extends React.Component {
         <SEO
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
+          keywords={node.frontmatter.tags}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
@@ -126,7 +125,7 @@ class GuideTemplate extends React.Component {
               <main id="docs-main" className="col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <article
-                    className={`col-xs-${contentCols} col-md-${contentCols}`}
+                    className={`col-xs-${contentCols} col-md-${contentCols} doc`}
                     id="doc"
                   >
                     <HeaderBody
@@ -145,12 +144,7 @@ class GuideTemplate extends React.Component {
                     </MDXProvider>
                   </article>
                   {node.frontmatter.showtoc && (
-                    <div
-                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-                      role="complementary"
-                    >
-                      <TOC title="Contents" />
-                    </div>
+                    <TOC title="Contents" />
                   )}
                 </div>
                 {node.frontmatter.getfeedbackform && (
@@ -205,6 +199,7 @@ export const pageQuery = graphql`
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
         getfeedbackform
+        tags
         type
       }
       fileAbsolutePath

@@ -3,15 +3,21 @@ title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
 categories: [get-started]
 tags: [dashboard, migrate, site]
+reviewed: "2021-04-01"
 ---
+
+This doc shows how to use the Pantheon Dashboard to migrate a website to Pantheon from another platform.
+
+If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
+
 ## Before You Begin
 
 To ensure a successful migration, complete the following tasks on the source site first:
 
-- Read [Platform Considerations](/platform-considerations)
+- Read [Platform Considerations](/platform-considerations) and review [manual migration considerations](/migrate#manually-migrate)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-- Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
+- Make sure your code is compatible with the latest recommended version of PHP for your CMS. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
 - Clear all caches
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
@@ -58,11 +64,11 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
  ![Successful Migration BlogVault](../images/dashboard/successful-site-migration-complete-blogvault.png)
 
-If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
+If the migration is not successful, [contact Support](/support) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 
 <Alert title="Note" type="info">
 
-The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/wordpress-sessions).
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/wordpress-sessions).
 
 </Alert>
 
@@ -104,7 +110,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 </TabList>
 
-## Manually Migrate
+## Manually Migrate a Site to Pantheon
 
 Manually migrate your site to Pantheon when any of the following apply:
 
@@ -136,7 +142,7 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 ### Migrate from Acquia
 
-Acquia uses a nested docroot directory named `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+Acquia uses a nested docroot directory called `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
@@ -291,13 +297,33 @@ If you have an existing archive (tgz) file in `sites/default/files` the `drush a
 
 Go the to files directory of your existing site and check if the site archive was generated successfully. If you're hosting the archive on a third party like Dropbox or Google Drive, confirm that it was uploaded successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command again if you can't find the site archive.
 
+### Maximum Index Size
+
+From the [MySQL reference manual](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html):
+
+> InnoDB has a maximum index length of 767 bytes for tables that use COMPACT or REDUNDANT row format, so for utf8mb3 or utf8mb4 columns, you can index a maximum of 255 or 191 characters, respectively. If you currently have utf8mb3 columns with indexes longer than 191 characters, you must index a smaller number of characters.
+
+Sites migrated from hosts using `utf8mb3` are upgraded to `utf8mb4`. If those sites have indexes larger than 191 characters MySQL will return the following error on import:
+
+```none
+Index column size too large. The maximum column size is 767 bytes
+```
+
+These tables will need to be updated. One method to update index length uses the `ALTER TABLE` command:
+
+```sql
+ALTER TABLE tableName DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));
+```
+
+This command can be used as part of a script to find and update large indexes.
+
 ## Frequently Asked Questions (FAQs)
 
 ### How do I clone an existing Pantheon site?
 
 You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
-Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
+Drupal 7, Drupal 8, Drupal 9, and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
 Replace `<source>` and `<destination>` with target [site UUIDs](/sites/#site-uuid) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 
@@ -397,7 +423,3 @@ Follow the [standard procedure for migrating WordPress sites to Pantheon](#migra
 1. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 
 1. Follow the procedure to [manually migrate](/migrate-manual) your site.
-
-### How do I migrate a Drupal 6 site to Pantheon?
-
-Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](https://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.

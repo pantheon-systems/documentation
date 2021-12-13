@@ -9,9 +9,9 @@ reviewed: "2020-08-03"
 
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like `127.0.0.1`. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs" campaign="docs-webops">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps
+Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 
@@ -49,6 +49,8 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 <Alert title="Note" type="info">
 
 Add all domains (`example.com` and `www.example.com` are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch). Automatic resolution of domains and wildcards are not supported.
+
+Note that each custom domain is counted regardless of the environment to which it's added.
 
 </Alert>
 

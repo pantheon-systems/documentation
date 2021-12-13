@@ -32,22 +32,21 @@ concurrent_users = (monthly_visits * time_on_site) / (3600 * 24 * 30)
 
 ## Current vs. Estimated Metrics
 
-If the site is live elsewhere and you have current traffic metrics, great! If not, you can estimate traffic numbers and patterns once the site goes live. Your best bet is to run the load test with more concurrent users than you expect. If you have historical data, use your previous high water mark for traffic when testing to insure your site can handle peak load.
+If the site is live elsewhere and you have current traffic metrics, great! If not, you can estimate traffic numbers and patterns once the site goes live. Your best bet is to run the load test with more concurrent users than you expect. If you have historical data, use your previous high water mark for traffic when testing to ensure your site can handle peak load.
 
 Aside from concurrent users, you’ll want to map out user behavior and time spent on the site.
-
 
 ## Your First Load Test
 
 First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/blazemetertheloadtesti/mbopgmdnpcbohhpnfglgohlbhfongabi?hl=en) on your Chrome browser and [register for a free account with Blazemeter](https://www.blazemeter.com/). Next, navigate to the site you'd like to test and click the BlazeMeter icon to open settings and begin recording. You'll have several configuration options:
 
 - Record/Follow Me: Select **Record**
-- Name of the test: Name your test configuration in a brief, client-specific way  
+- Name of the test: Name your test configuration in a brief, client-specific way
 - Concurrency: The number you calculated for concurrent users
 - Load Origin: Dependent on project and traffic as outlined by client
 - User Agent: Default
-- Filter Pattern: The default filter pattern will be set to include `http://*/*` and `https://*/*` You'll want to designate the top level domain.  
-Example: `https://livesitename.pantheonsite.io/` and add an asterisk at the end so it looks like `https://livesitename.pantheonsite.io/*` so that all pages on the top level domain are captured.
+- Filter Pattern: The default filter pattern will be set to include `http://*/*` and `https://*/*` You'll want to designate the top level domain.
+  Example: `https://livesitename.pantheonsite.io/` and add an asterisk at the end so it looks like `https://livesitename.pantheonsite.io/*` so that all pages on the top level domain are captured.
 - Advanced Options: Select **Record only Top Level Requests** and **Disable Browser Cache**
 
 Here is an example of what these settings would look like if we were to test our own site:
@@ -63,20 +62,35 @@ You can copy and paste your New Relic Pro data sharing API key into the New Reli
 1. Click the red record button in the plugin window.
 2. Navigate through the user scenario. When finished, click the **BlazeMeter icon** and click **Stop**.
 3. Select **Edit recording** to review the script.
-4. Next, select **Export to Jmeter**, designated as the file extension .jmx. This will begin an automatic download of the .jmx file which you will need to rename before executing the test.
+4. Next, select **Export to Jmeter**, designated as the file extension `.jmx`. This will begin an automatic download of the `.jmx` file which you will need to rename before executing the test.
 
-**Note:** If you will be testing authenticated users, download JMeter to your local machine, and upload the .jmx file generated with the BlazeMeter plugin.
+**Note:** If you will be testing authenticated users, download JMeter to your local machine, and upload the `.jmx` file generated with the BlazeMeter plugin.
 
 ## Executing a Test
 
-Log in to your [BlazeMeter account](https://a.blazemeter.com/user), select **Add JMeter Test**, and upload the .jmx file. Set the following options for load scenario properties and save when finished:  
+Log in to your [BlazeMeter account](https://a.blazemeter.com/user), select **Add JMeter Test**, and upload the `.jmx` file. Set the following options for load scenario properties and save when finished:
 
- Location: Virtual traffic origin, dependent on client provided metrics.  
- Ramp Up: How quickly the test will activate users, shown in seconds. The preset (300s) is usually fine.  
- Iterations: This is set to infinity by default and will allow the user behavior to loop and finish out the test.  
- Duration: 15 to 30 minutes.  
+<dl>
 
-Once you've saved your load test scenario, click the **tests icon** to select the test you want to run, and click **Start Test** (play icon).  
+<dt>Location</dt>
+
+<dd>Virtual traffic origin, dependent on client provided metrics.</dd>
+
+<dt>Ramp Up</dt>
+
+<dd>How quickly the test will activate users, shown in seconds. The preset (300s) is usually fine.</dd>
+
+<dt>Iterations</dt>
+
+<dd>This is set to infinity by default and will allow the user behavior to loop and finish out the test.</dd>
+
+<dt>Duration</dt>
+
+<dd>15 to 30 minutes.</dd>
+
+</dl>
+
+Once you've saved your load test scenario, click the **tests icon** to select the test you want to run, and click **Start Test** (play icon).
 
 ## Review and Share the Results
 
@@ -92,9 +106,7 @@ You can also view the load report directly to evaluate the number of users and t
 
 ![The BlazeMeter load report](../../images/blazemeter-load-report.png)
 
-
 Depending on the application you’re running, you can also access error and slow logs for PHP and mySQL. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). WordPress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
-
 
 ## Resolve Errors and Performance Hits
 

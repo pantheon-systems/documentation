@@ -69,7 +69,7 @@ All Partner Agencies and EDU organizations have Change Management and Custom Ups
 
 ### Multidev
 
-Partner Agencies, Enterprise accounts, and EDU organizations with [Gold support](/support/#support-features-and-response-times) and above have [Multidev](/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.
+Partner Agencies, Enterprise accounts, and [Gold Account](/support/#support-features-and-response-times) EDU organizations and above have [Multidev](/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.
 
 ### Change Management
 

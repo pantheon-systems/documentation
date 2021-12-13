@@ -27,7 +27,7 @@ In short, you get a fast, repeatable report that can help detect common problems
 
 ## What Doesn't Launch Check Address?
 
-- DOM and frontend performance - browsers and aggregating tools such as [New Relic Pro](/new-relic) are in a much better position to analyze and report
+- DOM and frontend performance - browsers and aggregating tools such as [New Relic&reg; Performance Monitoring](/new-relic) are in a much better position to analyze and report
 - Usability and site experience - in part, subjective and highly individualized to the site, not really something that can be quantified
 - Aesthetics - similarly, way out of scope
 - Content - can count the quantity and size, but we leave the actual content to the stakeholders
@@ -62,9 +62,6 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 
 The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
-### Are there plans to support Drupal 6 sites?
-
-At this time, there are no plans to support Drupal 6 with this tool.
 
 ### Can I opt out of a specific recommendation?
 

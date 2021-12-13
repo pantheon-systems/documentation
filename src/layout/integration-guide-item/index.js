@@ -16,7 +16,7 @@ function IntegrationGuideItem(props) {
 			<Link to={url}>
 				<div className="flex-panel-body-platform-integrations">
 					<div className="platform-integrations">
-						<Image alt={image} path={image} className="main-topic-info__plugin-image" />
+						<Image alt={image} path={`assets/${image}`} className="main-topic-info__plugin-image" />
 					</div>
 				</div>
 			</Link>

@@ -1,5 +1,5 @@
 ---
-title: Pantheon Site Regions and Data Residency
+title: Pantheon Global Regions and Data Residency
 description: Learn how to launch sites in Australia, Canada, or the European Union.
 categories: [get-started]
 tags: [launch, site]
@@ -13,7 +13,7 @@ There are many scenarios in which you might prefer running a site within an Inte
 * Compliance standards that require data residency within the borders of Australia, Canada, or the European Union
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
-## Available Regions
+## Available Global Regions
 
 Four regions are available when creating a new site:
 
@@ -28,7 +28,7 @@ A Pantheon site has all site resources located in the region in which it was cre
 
 Automated and manual backups of all site components (code, database, and files) are stored in the site's region and created by job workers also running in the site's region. Additionally, any database or file clones between site environments are run by job workers in the site's region.
 
-Localized, region-specific [Disaster Recovery](/disaster-recovery) is also available.
+Localized, region-specific [Multizone Failover](/multizone-failover) is also available.
 
 With this set of region-specific resources, you can run WordPress or Drupal sites on Pantheon and meet your region's legal, regulatory, or data sovereignty requirements.
 
@@ -41,30 +41,16 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 ### Create a New Site in a Specific Region using Terminus
 
 1. Install and authenticate [Terminus](/terminus). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/terminus/updates).
-1. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.
 
- - Available regions:
- 
-| Name                    |  Code   |
-|:------------------------- |:------------------------------- |
-|  Australia  | au               |
-| Canada | ca |
-| European Union | eu |
-|  United States            | us |
+1. Use Terminus to create a new site associated with your organization and include the `--region` option.
 
- For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
+<Partial file="terminus-available-regions-table.md" />
 
- ```bash
- terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
- ```
-
-  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../images/create-site-eu.png)
-
-  See `terminus site:create --help` for more information on the options and values used in this command.
+See `terminus site:create --help` for more information on the options and values used in this command.
 
 ## Migrate an Existing Site to a New Region
 
-1.  Create a new site (as described above) 
+1.  Create a new site (as described above)
 1.  Copy over the site's code, database, and files.
     * For details see [How to Manually Migrate Sites to Pantheon](/migrate-manual/#import-your-code).
 1.  Move domains and DNS to the new site.
@@ -75,7 +61,7 @@ If you'd like help migrating your site between regions, our [Professional Servic
 
 ## Review Site Region
 
-Use the Dashboard to see the Pantheon Region in which the site is hosted:
+Use the Dashboard to see the Pantheon Global Region in which the site is hosted:
 
 1.  Navigate to the Site Dashboard
 1.  Click **Settings**, then **About Site**

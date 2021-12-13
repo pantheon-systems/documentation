@@ -6,7 +6,7 @@ contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 categories: [integrate]
 tags: [sso, saml, users, security, plugins]
-reviewed: "2020-02-19"
+reviewed: "2021-03-12"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/saml-app/
 anchorid: wordpress-google-sso/saml-app
@@ -41,7 +41,7 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
   ![Values from the Google SAML App copied to the WP SAML Auth settings](../../../images/guides/wordpress-google-sso/plugin-idp-values.png)
 
-1. Download and commit the certificate file to your [`private` directory](/private-paths#private-path-for-code) so it's inaccessible from the web. You can add upload this file over [sftp](/sftp), or commit it to a local clone of the git repository, then commit and push. If the latter, you will need to first switch the connection mode to git:
+1. Download and commit the certificate file to your [`private` directory](/private-paths#private-path-for-code) so it's inaccessible from the web. You can add upload this file over [sftp](/sftp), or commit it to a local clone of the Git repository, then commit and push. If the latter, you will need to first switch the connection mode to Git:
 
   <TabList>
 
@@ -52,7 +52,7 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
   sftp> cd code/private/
   sftp> put GoogleIDPCertificate-mydomain.com.pem
   Uploading GoogleIDPCertificate-mydomain.com.pem to /srv/bindings/972dd.../code/private/GoogleIDPCertificate-mydomain.com.pem
-  GoogleIDPCertificate-alexfornuto.com.pem                                                                            100% 1253    27.6KB/s   00:00
+  GoogleIDPCertificate-mydomain.com.pem                                                                            100% 1253    27.6KB/s   00:00
   sftp> quit
   terminus env:commit --message "Added the Google IDP Certificate to a protected path" $site.$env
    [notice] Your code was committed.
@@ -79,7 +79,7 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
 1. Click **Save Changes** on the plugin settings page, and **Next** on the Google App modal.
 
-1. On the Basic Information page, add a name for your app that you'll be able to recognize in a year's time:
+1. On the Basic Information page, add a name for your app that you'll recognize in a year's time:
 
     ![Google App Name](../../../images/guides/wordpress-google-sso/google-saml-app-name.png)
 

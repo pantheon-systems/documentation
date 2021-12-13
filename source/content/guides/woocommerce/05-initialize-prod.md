@@ -3,7 +3,7 @@ title: WooCommerce Quick Start
 subtitle: Initialize Production
 description: In step five of the WooCommerce Quick Start guide, learn how to initialize your production environment.
 woocommerce: true
-anchorid: initalize-prod
+anchorid: initialize-prod
 generator: pagination
 layout: guide
 cms: "WordPress"
@@ -50,7 +50,7 @@ Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site 
 
 Our site is looking good and loading really fast! Now to show you the power of multiple environments with version control, we're going to make an order on our **<span class="glyphicons glyphicons-cardio"></span> Live** environment and pull that information back down into our **<span class="glyphicons glyphicons-equalizer"></span> Test** environment.
 
-1. When you install Storefront it prompts you to add demo products. If you don't have any dummy products you can manually create products:
+1. When you install Storefront it prompts you to add demo products. If you don't have any demo products you can manually create products:
 
     ![WooCommerce demo products on the site front end](../../../images/guides/woocommerce/22-WooCommerce-demo-products.png)
 

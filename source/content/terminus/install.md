@@ -18,7 +18,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 ## Requirements
 
-- PHP Version 5.5.38 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
+- PHP Version 7.4 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
 - [PHP-CLI](http://www.php-cli.com/)
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
@@ -28,7 +28,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 There are several ways to install Terminus, depending on your use case:
 
 - For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
-- For a Composer-managed version of Terminus that is _not_ part of your other Composer-managed project(s) and doesn't utilize global Composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
+- If you are in Mac, you could [install using homebrew](#homebrew-installation).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
 
 ### Standalone Terminus PHAR
@@ -43,27 +43,18 @@ The following commands will:
 
   ```bash{promptUser: user}
   mkdir ~/terminus && cd ~/terminus
-  curl -L https://github.com/pantheon-systems/terminus/releases/download/$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m{"tag_name": "\K.*?(?=")}g')/terminus.phar --output terminus
+  curl -L https://github.com/pantheon-systems/terminus/releases/download/`curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g'`/terminus.phar --output terminus
   chmod +x terminus
   sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
 
-<Alert type="info" title="Note">
+### Homebrew Installation
 
-There is an unofficial third-party installer script which will download `terminus.phar` and attempt to update the appropriate `rc` files, available [on GitHub](https://github.com/alexfornuto/terminus-installer). Note that this script is *not* supported directly by Pantheon.
+The Terminus application is published to Homebrew; to install, run:
 
-</Alert>
-
-### Terminus Installer PHAR
-
-The Terminus `installer.phar` can be used to install a Composer-managed version of Terminus that is not part of your other Composer-managed project(s) and doesn't utilize global Composer installations. Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
-
-```bash{promptUser: user}
-mkdir ~/terminus && cd ~/terminus
-curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+```bash
+brew install terminus
 ```
-
-See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
 
 ## Authenticate
 
@@ -91,7 +82,7 @@ Commands that execute remote instructions to tools like Drush or WP-CLI require 
 
 ### Terminus PHAR Installer: Parse error near ')'
 
-If you use ZSH and get `parse error near ')'`, ZSH is inserting escape characters (`\`) into the command on paste. You can [disable magic functions](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template#L35-L36) to eliminate this behavior.
+If you use ZSH and get a `parse error near ')'`, ZSH is inserting escape characters (`\`) into the command on paste. You can [disable magic functions](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template#L35-L36) to eliminate this behavior. For instance, if you get the following error when executing the Terminus cURL command: `zsh: parse error near ')'`, remove the `\` after the `$` and run the command again.
 
 ### Permission Denied
 

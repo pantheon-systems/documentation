@@ -50,7 +50,21 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ## Add Your SSH Key to Pantheon
 
-1. Log in to Pantheon and go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab in your User Dashboard.
+### Add SSH Key - New Dashboard
+
+1. Log in to your Pantheon Dashboard, and go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page.
+
+1. Click **Add New Key**.
+
+1. Paste the copied public key into the box, and click **Save**.
+
+  ![Adding SSH Keys](../images/dashboard/new-dashboard/add-ssh-key-new-dashboard.png)
+
+  Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
+
+### Add SSH Key - Classic Dashboard
+
+1. Log in to your Pantheon Dashboard and go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab in your User Dashboard.
 
 1. Click **SSH Keys**.
 
@@ -60,21 +74,53 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
 
+### Clone Your Site Code
+
 1. In your Terminal environment, copy the **SSH clone URL** from the **Connection Info** of any site's Dev environment to clone your site code to your workstation.
 
 1. If prompted, enter the passphrase you set above.
 
-## Delete a Key from Pantheon
+## Remove SSH Key from Pantheon
+
+### Revoke SSH Key from Pantheon - New Dashboard
+
+To revoke a key, go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page. Click the **Revoke** button next to the key you want to remove:
+
+![Revoke SSH Key](../images/dashboard/remove-ssh-key.png)
+
+### Remove SSH Key from Pantheon - Classic Dashboard
 
 To delete a key, go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**. Click the **Remove** button next to the key you want to delete:
 
 ![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
+
+### Site Access After Removing Keys
 
 If you have active sites and no keys remaining, you can still access the sites. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
 
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
+
+### Connections Fail With: no matching host key type found. Their offer: ssh-rsa
+
+[OpenSSH 8.8](https://www.openssh.com/txt/release-8.8) disables RSA signatures like the key type Pantheon uses.
+
+While we are working to remedy this on the platform, OpenSSH 8.8 will return this error for CLI commands:
+
+```shell
+Unable to negotiate with 203.0.113.123 port 2222: no matching host key type found. Their offer: ssh-rsa
+```
+
+**Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
+
+```none:title=~/.ssh/config
+Host *.drush.in
+    # The settings on the next two lines are temporary until Pantheon updates the available key types.
+    # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+```
 
 ### Control Path Error
 
@@ -125,4 +171,10 @@ To resolve, add your SSH key to the ssh-agent using the following command, repla
 
 ```bash{promptUser: user}
 ssh-add ~/.ssh/id_rsa
+```
+
+If you are using a Linux distribution such as Fedora 33 or later, make sure RSA keys are enabled in `~/.ssh/config`:
+```
+Host *.drush.in
+  PubkeyAcceptedKeyTypes=ssh-rsa
 ```

@@ -5,21 +5,15 @@ categories: [develop]
 tags: [multidev, git, cli, workflow, collaborate]
 ---
 
-Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
+Multidevs are development environments for teams. They allow a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the main `master` site. Each forked branch will have its own separate development environment, including database and files.
 
 ![Dev Test and Live icon](../images/multidev-flow.png)
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Optimize your dev team and streamline internal workflows. Pantheon delivers on-demand training to help development teams make the most of our platform and improve their internal WebOps.
 
 </Enablement>
-
-<Alert title="Note" type="info" >
-
-To support the large number of web teams whose day-to-day operations are disrupted by the COVID-19 pandemic, we are making Multidev available for no additional charge to all customers through December 31, 2020. See the [blog post for more information](https://pantheon.io/blog/why-were-making-multidev-free-through-july-1st) (note: this offer has been extended since the post was published).
-
-</Alert>
 
 ## Benefits of Multidev
 
@@ -74,7 +68,7 @@ Independent infrastructure for a site, including code, database, and files.
 
 <dd>
 
-To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
+To divide in branches, copying source code to start independent development. At Pantheon, we are also copying content (files and database) when forking.
 
 </dd>
 

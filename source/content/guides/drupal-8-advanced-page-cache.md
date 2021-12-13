@@ -73,7 +73,7 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
 
 7. Turn on full page caching by setting the **Page cache maximum age** field to "10 min", then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`:
 
-  ![Drual 8 admin screen for Performance](../../images/guides/drupal-8-advanced-page-cache/img1-config-dev-performance.png
+  ![Drupal 8 admin screen for Performance](../../images/guides/drupal-8-advanced-page-cache/img1-config-dev-performance.png
 )
 
   You can also make those same changes using Drush via Terminus:
@@ -141,7 +141,7 @@ Now we'll look at HTTP Headers.
 
 For the rest of the guide, as we make content changes and inspect the changing HTTP headers, we will just reference `curl -I` output because browser inspector tools have a lot of additional information that would distract from our purpose. But if you are more comfortable in the browser, you can continue using that incognito window.
 
-For a walk through of how some of these different headers change caching behavior, see our [Frontend Performance Guide](https://pantheon.io/docs/guides/frontend-performance/). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
+For a walk through of how some of these different headers change caching behavior, see our [Frontend Performance Guide](/guides/frontend-performance). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
 
 ### Review HTTP Headers
 
@@ -396,7 +396,7 @@ The code we added clears all references to each taxonomy term every time a node 
 
   ![Views edit screen](../../images/guides/drupal-8-advanced-page-cache/img11-view-taxonomy-term.png)
 
-4. For the custom tag, use `{% verbatim %}taxonomy-listing:{{ raw_arguments.tid }}{% endverbatim %}`. Save the View:
+4. For the custom tag, use `taxonomy-listing:{{ raw_arguments.tid }}`. Save the View:
 
  ![Views caching config form](../../images/guides/drupal-8-advanced-page-cache/img12-page-caching-option.png)
 

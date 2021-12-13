@@ -143,7 +143,8 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
   ```bash{promptUser: user}
-  git commit -am "Create private/scripts/pivotal_integration.php and configure platform hooks"
+  git add .
+  git commit -m "Create private/scripts/pivotal_integration.php and configure platform hooks"
   git push origin master
   ```
 
@@ -181,4 +182,4 @@ If code is automatically tested and deployed when pushed to the origin repositor
 
 ## Conclusion
 
-In this guide, we covered a simple but time-saving integration between [Pivotal Tracker](https://www.pivotaltracker.com) and Pantheon. There are similar ways to integrate other project management applications using [Quicksilver hooks](https://github.com/pantheon-systems/quicksilver-examples). Additionally, you can use continuous integration tools such as [CircleCI](https://pantheon.io/docs/guides/build-tools/) if you use an external repository such as GitHub. Using these integrations will give clarity into work being performed across your team, while saving time by automating your development workflow.
+In this guide, we covered a simple but time-saving integration between [Pivotal Tracker](https://www.pivotaltracker.com) and Pantheon. There are similar ways to integrate other project management applications using [Quicksilver hooks](https://github.com/pantheon-systems/quicksilver-examples). Additionally, you can use continuous integration tools such as [CircleCI](/guides/build-tools) if you use an external repository such as GitHub. Using these integrations will give clarity into work being performed across your team, while saving time by automating your development workflow.

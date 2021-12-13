@@ -6,6 +6,7 @@ tags: [git, local, webops]
 contributors: [alexfornuto]
 reviewed: "2020-10-15"
 ---
+
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
@@ -25,7 +26,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 <Tab title="Drupal 8" id="d8" active={true}>
 
   ```bash{promptUser: user}
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git default
   # resolve conflicts
   git push origin master
   ```
@@ -35,7 +36,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 <Tab title="Drupal 7" id="d7">
 
   ```bash{promptUser: user}
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git default
   # resolve conflicts
   git push origin master
   ```
@@ -45,7 +46,17 @@ This is safe to run if you don't have your own changes in any of the conflicting
 <Tab title="WordPress" id="wp">
 
   ```bash{promptUser: user}
-  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git default
+  # resolve conflicts
+  git push origin master
+  ```
+
+</Tab>
+
+<Tab title="WordPress Site Network" id="wp-network">
+
+  ```bash{promptUser: user}
+  git pull -Xtheirs git://github.com/pantheon-systems/wordpress-network.git master
   # resolve conflicts
   git push origin master
   ```

@@ -73,8 +73,8 @@ Provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## [WP Redis](https://wordpress.org/plugins/wp-redis)
 
-Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on Drupal or WordPress](/redis).
+Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 
 ## [WP Solr](https://wordpress.org/plugins/solr-power/)
 
-Enable the Apache Solr search engine for your WordPress website. For more information, see [Enabling Solr for WordPress](/wordpress-solr).
+Enable the Pantheon Search (Solr) search engine for your WordPress website. For more information, see [Enabling Pantheon Search for WordPress](/wordpress-solr).

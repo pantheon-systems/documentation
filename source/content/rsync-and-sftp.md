@@ -1,10 +1,10 @@
 ---
 title: rsync and SFTP
-description: Transfer large files using an SFTP client or rsync using Drupal 6, Drupal 7, or WordPress for Pantheon.
+description: Transfer large files using an SFTP client or rsync using Drupal or WordPress for Pantheon.
 categories: [develop]
 tags: [files, sftp, rsync]
 ---
-If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
+If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use an SFTP client or rsync to transfer.
 
 This allows you to transfer unlimited data "server-to-server", which is much faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
@@ -22,7 +22,7 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 ## SFTP
 
-There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](https://winscp.net/eng/index.php), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
+There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
 
 [Connection information](/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 

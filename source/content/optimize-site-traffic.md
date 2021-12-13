@@ -9,7 +9,7 @@ reviewed: "2020-03-03"
 
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
 
-## Review the nginx Access Log
+## Review the NGINX Access Log
 
 To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/nginx-access-log). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
 
@@ -17,11 +17,23 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
 
-In addition to your other WordPress security practices, take steps to thwart **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
+In addition to your other WordPress security practices, take steps to block **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
+
 1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
-1. Consider adding a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+
+1. Protect yourself from `wp-login.php` attacks:
+
+   <Accordion title="How to Avoid WordPress Login Attacks" id="wp-login-attacks" icon="info-sign">
+
+   <Partial file="wp-login-attacks.md" />
+
+   </Accordion>
+
+1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+
+1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
 
 ## Configure favicon.ico to Serve a Static Image
 
@@ -36,16 +48,16 @@ This issue affects both WordPress and Drupal sites, but the request path will va
 
 **Cause**: Usually the issue originates when adding a custom favicon through the active theme for the site through some kind of upload form, and then the icon is deleted or unavailable, which causes the CMS to look for an alternative favicon.
 
-**Solution**: Add and commit a static `favicon.ico` into the path that is being requested. 
+**Solution**: Add and commit a static `favicon.ico` into the path that is being requested.
 
 ## WordPress: admin-ajax.php Generates Pages Served
 
 Plugins can utilize an Ajax API to make calls to custom functions and filters in the backend.
 
-There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include: 
+There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include:
 
-- fetching the stored counts for when content is shared on social networks; 
-- checking if a page or post is currently being worked on (locked); 
+- fetching the stored counts for when content is shared on social networks;
+- checking if a page or post is currently being worked on (locked);
 - adding media to a post during the editing process, such as when using Gutenberg widgets.
 
 Investigate calls to `admin-ajax.php` by looking at what script is calling the path, and what the payload is through browser developer tools. Access developer tools, filter for `admin-ajax`, then refresh the page:
@@ -65,17 +77,17 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
 
-## DDoS Mitigation
+## DoS Attack Mitigation
 
-Pantheon doesn't count [DDoS attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DDoS attack, our [Customer Success](/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
+Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DoS or DDoS (_distributed_ denial-of-service) attack, our [Customer Success](/support) team is available to assist with identifying a DoS attempt, and take steps to mitigate it for your site.
 
 ### Block IPs in Drupal or WordPress
 
-IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php` or via Drupal module or WordPress plugin.
+IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php`, via a Drupal module, or WordPress plugin.
 
 #### Use a PHP Snippet to Block IPs
 
-Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DDoS attack, PHP can be added to the configuration file even while site performance is being affected.
+Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DoS attack, PHP can be added to the configuration file even while site performance is being affected.
 
 To block an IP, add the following to `settings.php` or `wp-config.php`. Remember to replace the example IP (`192.0.2.38`):
 
@@ -157,7 +169,7 @@ mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
 Install and use one of the following WordPress plugins:
 
 - [IP Blacklist Cloud](https://wordpress.org/plugins/ip-blacklist-cloud/)
-- [WP-Ban](https://wordpress.org/plugins/wp-ban/)
+- [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
 
 </Tab>
 
@@ -174,21 +186,29 @@ The `stripos` function implements a case-insensitive match which can be helpful 
 Remember to replace the example user agent (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
-// Either check a single bot.
-if (stripos($_SERVER['HTTP_USER_AGENT'], 'UglyBot') !== FALSE) {
+// Block a single bot.
+if (strpos($_SERVER['HTTP_USER_AGENT'], 'Bork-bot') !== FALSE) {
   header('HTTP/1.0 403 Forbidden');
+  exit;
 }
 
-// Or check against a list of bots.
-$bots = ['UglyBot', 'PetalBot'];
-foreach ($bots as $bot) {
-  if (stripos($_SERVER['HTTP_USER_AGENT'], $bot) !== FALSE) {
+// Or block a list of bots.
+$user_agents_deny_list = ['Go-http-client', 'gozilla', 'InstallShield.DigitalWizard', 'GT\:\:WWW'];
+foreach ($user_agents_deny_list as $agent) {
+  if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== FALSE) {
     header('HTTP/1.0 403 Forbidden');
     exit;
   }
 }
 ```
 
+## Block autodiscover.xml Requests
+
+To stop `autodiscover.xml` requests that cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
+
+Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 Forbidden client error status response code.
+
+
 ## Advanced Protection and Performance With Advanced Global CDN
 
-[Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
+[Advanced Global CDN](/guides/professional-services/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DoS attempts.
