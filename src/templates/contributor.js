@@ -75,7 +75,11 @@ class ContributorTemplate extends React.Component {
                     {docs.map(({ node }) => {
                       return (
                         <li key={node.id}>
-                          <Link to={`/${node.fields.slug}`}>
+                          if (`/${node.fields.slug}` !== ^.*?(?:guides/) {
+                            <Link to={`/${node.fields.slug}`}>
+                          } else {
+                            <Link to={`/docs/${node.fields.slug}`}>
+                          }
                             {node.frontmatter.title}
                           </Link>
                         </li>
