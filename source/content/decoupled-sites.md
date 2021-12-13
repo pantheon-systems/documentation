@@ -17,31 +17,32 @@ This page refers to products and features which are currently in development or 
 
 ## Pantheon's Decoupled Architecture
 
-Pantheon is enabling developers and agencies to easily create and manage decoupled sites from a single platform, by providing two new products: Decoupled Bridge and Edge Sites.
+Pantheon is enabling developers and agencies to easily create and manage decoupled sites from a single platform.
 
 <Enablement link="https://pantheon.io/decoupled-cms?docs" title="Sign up for updates!">
 
-Sign up for Edge Sites updates, or talk to Sales to participate in Early Access for Decoupled Bridge. Click the link above to get started!
+Sign up for Edge Sites updates, or talk to Sales to participate in Early Access for Decoupled Sites. Click the link above to get started!
 
 </Enablement>
 
-### Decoupled Bridge
+### Decoupled Sites
 
-**Decoupled Bridge** is a product for running a [Node.js](https://nodejs.org/) codebase in parallel with a WordPress or Drupal site.
+**Decoupled Sites** run a [Node.js](https://nodejs.org/) codebase in parallel with a WordPress or Drupal site.
 It serves a use case where a domain's public traffic is delivered from a Server-Side Rendered front-end framework such as [Frontity](https://frontity.org/), [Next.js](https://nextjs.org/), or [Nuxt.js](https://nuxtjs.org/) and administrative content editing is done in a WordPress or Drupal interface.
 
-![A flow diagram of the Decoupled Bridge architecture](../images/decoupled/decoupled-bridge-diagram.png)
+![A flow diagram of the Decoupled Sites architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
-Decoupled Bridge is presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
-Each Decoupled Bridge site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
+Decoupled Sites are presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
+
+Each Decoupled site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
 
 We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
 The monorepo structure allows for easier synchronization of changes that affect the back-end and front-end sides together.
 
-### Edge Sites
+## Improvements for Decoupled sites
 
-**Edge Sites** is a forthcoming product for running websites built to run on a Content Delivery Network (CDN).
-Edge Sites takes the results of a Node.js static site generator process and deploys it to the edge of our [Global CDN](/global-cdn).
+It is forthcoming that Pantheon Decoupled will be built to run on a Content Delivery Network (CDN).
+The Decouple Sites will take the results of a Node.js static site generator process and deploy it to the edge of our [Global CDN](/global-cdn).
 
 Edge Sites will be optimized for popular Static Site Generator (SSG) frameworks like Gatsby.
 A finalized list of supported frameworks will be developed by working with customer sites during Early Access and Limited Availability phases.
@@ -52,11 +53,11 @@ A finalized list of supported frameworks will be developed by working with custo
 
 ## FAQ
 
-### What Content Management Systems (CMS) will Decoupled Bridge and Edge Sites support?
+### What Content Management Systems (CMS) will Decoupled Sites support?
 
 WordPress and Drupal are still the CMSs of choice at Pantheon, and are the only data source available for these products.
 
-### What Git providers will Decoupled Bridge and Edge Sites support?
+### What Git providers will Decoupled Sites support?
 
 Both products are being developed with GitHub as the location of source repositories.
 During Early Access and Limited Availability we will evaluate other providers with which our customers need to integrate.
