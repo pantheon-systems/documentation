@@ -16,7 +16,6 @@ editpath: solr-drupal/02-solr-drupal.md
 
 Pantheon Search with Solr 8 gives Drupal 8 or Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/integrated-composer) one-click updates.
 
-<Partial file="pantheon-search-status.md" />
 
 ## Solr 8 Features
 
@@ -198,25 +197,7 @@ The server should respond with a `200 - OK` status for each schema file posted.
 
 If the default Drupal core Search module is still enabled for your site, you might want to uninstall it for performance reasons. Navigate to `admin/modules/uninstall` to uninstall the module.
 
-## Scope of Support
-
-Limited Availability allows Pantheon customers to set up Pantheon Search with Solr 8 on Drupal 8 or Drupal 9, and take advantage of the features of the service. During the Limited Availability term, Pantheon will provide guidance and troubleshooting support in connection with questions and issues arising from the general installation and configuration of Pantheon Search with Solr 8 on Drupal 8 or Drupal 9.
-
-Pantheon supports the installation and configuration of Pantheon Search with Solr 8 on supported Drupal site configurations on the platform. Support includes usage of workflows as defined in this documentation as well as support for the following features:
-
-- Full-text search.
-- Attachments/PDF search.
-- Multilingual support.
-- Categorization based on indexed terms and faceting.
-
-While there are limits to the scope of support, Pantheon's Customer Success Engineers can provide recommendations and suggestions for using Pantheon Search with Solr 8 on Drupal 8 or Drupal 9.
-
-Technical Support for Pantheon Search with Solr 8 on Drupal in Limited Availability does not include:
-
-- Debugging custom applications and code.
-- Customization of solutions, templates, or tools; including unsupported software functionality.
-- Issues specific to third-party add-ons or customer-developed code.
-- Consultation on administration, configuration, performance, or security.
+## Upgrade
 
 Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr 3.6 users should recreate configuration and indexing on a fresh installation of Pantheon Search with Solr 8 on a Drupal 8 or Drupal 9 site.
 
