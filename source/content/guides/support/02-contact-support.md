@@ -1,15 +1,15 @@
 ---
-title: Build Tools
-subtitle: Pull Request/Merge Request Workflow
+title: Get Support
+subtitle: Contact Support
 description: In step three of the Build Tools guide, learn how to use pull requests as part of your workflow.
 categories: [develop]
 tags: [collaborate, continuous-integration, git, webops, workflow]
 buildtools: true
-anchorid: pr-workflow
+anchorid: contact-support
 type: guide
 showtoc: true
-permalink: docs/guides/build-tools/pr-workflow/
-editpath: build-tools/03-pr-workflow.md
+permalink: docs/guides/get-support/contact-support/
+editpath: get-support/02-contact-support.md
 image: buildToolsGuide-thumb
 reviewed: "2020-05-08"
 ---
