@@ -8,7 +8,7 @@ type: guide
 showtoc: true
 anchorid: get-support
 permalink: docs/guides/get-support/
-editpath: get-support/01-introduction.md
+editpath: get-support/01-scope.md
 reviewed: "2020-12-10"
 ---
 

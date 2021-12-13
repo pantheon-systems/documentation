@@ -10,8 +10,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/get-support/contact-support/
 editpath: get-support/02-contact-support.md
-image: buildToolsGuide-thumb
-reviewed: "2020-05-08"
+reviewed: "2020-12-13"
 ---
 
 ## Pull Request/Merge Request Introduction

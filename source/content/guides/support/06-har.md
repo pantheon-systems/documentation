@@ -1,6 +1,6 @@
 ---
-title: Build Tools
-subtitle: Update Your Project
+title: Get Support
+subtitle: Generate an HAR
 description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
 cms: "Drupal"
 categories: [develop]
@@ -9,9 +9,9 @@ buildtools: true
 anchorid: update
 type: guide
 showtoc: true
-permalink: docs/guides/build-tools/update/
-image: buildToolsGuide-thumb
+permalink: docs/guides/get-support/har/
 getfeedbackform: default
+reviewed: "2020-12-13"
 ---
 
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
