@@ -1,6 +1,6 @@
 ---
-title: Migrate to Drupal 9
-subtitle: Upgrade from Drupal 8 Using Multidev
+title: Migrate to Drupal 9 on Pantheon
+subtitle: Upgrade from Drupal 8
 description: Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer
 categories: [get-started]
 cms: drupal-9
