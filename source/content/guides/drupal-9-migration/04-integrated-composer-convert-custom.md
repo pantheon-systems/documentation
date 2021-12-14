@@ -1,6 +1,6 @@
 ---
 title: Convert a Custom Upstream to Integrated Composer
-subtitle: Convert a Custom Upstream to Integrated Composer
+subtitle: Learn how to use Integrated Composer with some special considerations for Custom Upstreams
 description: Convert a non-Composer-managed Drupal 8-based Custom Upstream to Integrated Composer, ready to upgrade to Drupal 9.
 categories: [develop]
 cms: drupal
@@ -16,7 +16,7 @@ reviewed: "2021-12-10"
 
 This doc demonstrates how to convert a non-Composer-managed Drupal 8 site to Integrated Composer while on Drupal 8.
 
-The process is similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/guides/drupal-9-migration/upgrade-to-d9) guide, except that you stay on Drupal 8 with some special considerations for Custom Upstreams, and can defer the Drupal 9 upgrade to later.
+The process is similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/guides/drupal-9-migration/upgrade-to-d9) guide, except that you will stay on Drupal 8 with some special considerations for Custom Upstreams, and can defer the Drupal 9 upgrade to later.
 
 From a local clone of the site, you will replace the entire site's file structure with the code from Pantheon's Integrated Composer upstream, then re-add your contrib and custom code to the new codebase. Then, you will create Multidev environments on individual sites for testing and apply any site-specific code customizations.
 
