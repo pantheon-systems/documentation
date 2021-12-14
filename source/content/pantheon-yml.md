@@ -106,7 +106,7 @@ Override the upstream's default PHP version with the `php_version` property. PHP
 For example, to override the upstream default value at the site level to PHP 8:
 
 ```yaml:title=pantheon.yml
-php_version: 8
+php_version: 8.0
 ```
 
 #### Considerations
