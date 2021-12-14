@@ -6,6 +6,7 @@ categories: [develop]
 cms: drupal
 tags: [composer, workflow]
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-migration/integrated-composer-convert-custom
 anchorid: drupal-9-migration/integrated-composer-convert-custom
 editpath: drupal-9-migration/04-integrated-composer-convert-custom.md
@@ -30,7 +31,7 @@ This doc uses [Terminus](/terminus).
   cd $REPOSITORY_NAME
   ```
 
-1. Add Integrated Composer upstream as a second remote and fetch:
+1. Add the Integrated Composer upstream as a second remote and fetch:
 
   ```bash{promptUser:user}
   git remote add ic https://github.com/pantheon-upstreams/drupal-project.git && git fetch ic
@@ -48,7 +49,7 @@ This doc uses [Terminus](/terminus).
     git rm -rf * && git commit -m "Removing all files"
     ```
 
-1. Add and commit files from integrated-composer upstream:
+1. Add and commit files from the Integrated Composer upstream:
 
    ```bash{promptUser:user}
    git checkout ic/master .
@@ -70,7 +71,7 @@ This doc uses [Terminus](/terminus).
 
 ## Add Contrib and Custom Code
 
-This process the same as in the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
+This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
 
 <Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">
 
@@ -78,7 +79,7 @@ If you would like to audit your upstream's customizations, compare it with the `
 
 Access the list of differences by adding the `drops-8` upstream as a second remote and use Git to compare the branches:
 
-1. Change directories back to `master` branch:
+1. Change directories back to the `master` branch:
 
    ```bash{promptUser:user}
    cd master
@@ -222,9 +223,9 @@ Do the same for any other custom code that needs to be carried over.
 
 ## Test Individual Sites and Apply Site-specific Customizations
 
-Go through the following steps for each child site you wish to test, or that has site-specific code. Examples of site-specific code are: site-specific redirects and custom modules only present on a specific site.
+Go through the following steps for each child site you wish to test, or that has site-specific code. Examples of site-specific code are site-specific redirects and custom modules only present on a specific site.
 
-1. Clone the child site's repository. You can get the command from the **Clone with Git** button on the Dashboard.
+1. Clone the child site's repository. You can get the command from clicking **Clone with Git** on the Dashboard.
 
   The command will look like the following:
 
@@ -262,7 +263,7 @@ Go through the following steps for each child site you wish to test, or that has
   terminus multidev:create $SITE.dev ic-test
   ```
 
-1. Re-add, commit, and push any code customizations that were specific or unique to this site.
+1. Again, add, commit, and push any code customizations that were specific or unique to this site.
 
    Compare the site's `master` branch to your Custom Upstream's `master` branch using the following commands:
 
@@ -278,13 +279,13 @@ Go through the following steps for each child site you wish to test, or that has
     git diff origin/master upstream/master -- pantheon.yml
     ```
 
-1. View & test the Multidev
+1. View and test the Multidev environment.
 
   ![Example of Custom Upstream Git URL](../../../images/custom-upstream-git-url.png)
 
 ## Final Deployment
 
-Merge the code and files from the Multidev environment to the dev environment.
+Merge the code and files from the Multidev environment to the Dev environment.
 
 1. Merge the `composerify` branch on the Custom Upstream into the `master` branch and push:
 
@@ -299,7 +300,7 @@ Merge the code and files from the Multidev environment to the dev environment.
 
   <Alert title="Note"  type="info" >
 
-  There is currently a platform bug which prevents Integrated Composer from being enabled until a change to pantheon.yml has been pushed to **each site**. Follow the steps below to complete final deployment.
+  There is currently a platform bug which prevents Integrated Composer from being enabled until a change to `pantheon.yml` has been pushed to *each site*. Follow the steps below to complete the final deployment.
 
   </Alert>
 
