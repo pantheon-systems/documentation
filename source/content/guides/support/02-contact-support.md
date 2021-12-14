@@ -13,56 +13,35 @@ editpath: get-support/02-contact-support.md
 reviewed: "2020-12-13"
 ---
 
-## Pull Request/Merge Request Introduction
+## Real Time Chat Support
 
-This section demonstrates the Build Tools project workflow by making a code change on a Git feature branch and opening a pull request (GitHub) or merge request (GitLab) to accept that change into the `master` branch.
+Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
-As a reminder, these examples use GitHub as the code repository with CircleCI as the CI. CircleCI builds the full site artifact and deploys it to the project's Pantheon site. Substitute the Git provider and CI below with the right ones for your project.
+To receive the highest level of support available to your site or organization, remember to access the chat from the Organization Dashboard if available.
 
-Branches with an associated pull request are built and deployed to a [Pantheon Multidev environment](/multidev), with the pull request number being used to construct the Multidev name. For example, pull request `12` will be deployed to a Pantheon Multidev named `pr-12`.
+1. From your Site or User Dashboard, click **Support**.
 
-The `master` branch is automatically built and deployed to the Pantheon `dev` environment. This happens both when you commit code directly to the `master` branch and when a pull request is merged into the `master` branch.
+1. Click **Launch Chat**, then click **New Conversation**.
 
-![Continuous delivery diagram shows the Master branch going to Dev, and the PR going to a Multidev](../../../images/pr-workflow/github-circle-pantheon.png)
+1. Provide a detailed summary of your support request, such as:
+   - Steps to reproduce the issue (including URLs or paths to files).
+   - Environments affected (Multidev/Dev/Test/Live), if applicable.
+   - When the issue began.
+   - Error messages received, if applicable.
+   - Links to screenshots or screencasts of the behavior, if necessary.
 
-Deployments to the `test` and `live` environments on Pantheon must still be done manually, either through the Dashboard or via Terminus. For this reason, Continuous Delivery (CD) <Popover title="Continuous Delivery" content="Continuous Delivery is the practice of automatically deploying code all the way to production, without human intervention. This requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress." /> is not enabled.
+You can download a transcript of your chat with the <em class="fa fa-arrow-down" style="text-decoration: underline;"></em> button:
 
-## Create a Pull Request
+![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../images/chat-log-download.png)
 
-1. From your GitHub project page, click on the `config` directory. Select the file `system.site.yml` and click <span class="glyphicon glyphicon-pencil"></span> to open an editor:
+<Alert title="Note" type="info">
 
-  ![system.site.yml file open in GitHub](../../../images/pr-workflow/system-site-config.png)
+Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://www.intercom.com/help/en/articles/1200-why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
 
-1. Change the slogan to something inspiring:
+</Alert>
 
-  ![Slogan edited to say 'Making the world amazing'](../../../images/pr-workflow/edit-slogan.png)
+## Premium Technical Support and On-Call Services
 
-1. Scroll down and enter a message describing this change in the **Commit changes** area. Then click on the radio button to create a **new branch** and give it a short name, like `slogan`. Click **Propose file change**:
+Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
 
-  ![Create 'slogan' branch](../../../images/pr-workflow/create-slogan-branch.png)
-
-1. Click **Create Pull Request**:
-
-  ![Slogan Pull Request](../../../images/pr-workflow/slogan-pull-request.png)
-
-  <Accordion title="Builds" id="understand-builds" icon="watch">
-
-  As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `pr-1-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
-
-  ![Passed Pull Request has 'Visit Site' button](../../../images/pr-workflow/slogan-pr-starting.png)
-
-  ### Automated Tests
-
-  It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
-
-  </Accordion>
-
-1. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Multidev site URL. Note that the slogan you entered in your pull request branch has been imported and is visible in the site header:
-
-    ![Site initial login](../../../images/pr-workflow/pr-slogan-site.png)
-
-    This Multidev environment will persist for as long as the pull request remains open in GitHub.
-
-1. Enter the `admin` username and password you created in the `build-env:create-project` command. Click **Log in** to access the admin interface:
-
-  ![Site admin log in](../../../images/pr-workflow/admin-log-in.png)
+Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
