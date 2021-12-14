@@ -1,7 +1,7 @@
 ---
 title: Convert a Custom Upstream to Integrated Composer
 subtitle: Convert a Custom Upstream to Integrated Composer
-description: Convert a non-Composer-managed Drupal 8-based Custom Upstream to Integrated Composer. This can be used in preparation to upgrade to Drupal 9.
+description: Convert a non-Composer-managed Drupal 8-based Custom Upstream to Integrated Composer.
 categories: [develop]
 cms: drupal
 tags: [composer, workflow]
