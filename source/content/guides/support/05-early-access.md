@@ -1,7 +1,7 @@
 ---
 title: Get Support
 subtitle: Early Acess Program
-description: In step five of the Build Tools guide, learn how to add new modules to your site.
+description: 
 cms: "Drupal"
 categories: [develop]
 tags: [composer, local, modules, site, terminus]
@@ -11,6 +11,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/get-support/early-access/
 editpath: get-support/05-early-access.md
+contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
 

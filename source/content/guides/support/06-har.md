@@ -1,7 +1,7 @@
 ---
 title: Get Support
 subtitle: Generate an HAR
-description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
+description: Learn how to generate an HAR file in the affected browser.
 cms: "Drupal"
 categories: [develop]
 tags: [updates, continuous-integration, composer, workflow]
@@ -10,9 +10,12 @@ anchorid: update
 type: guide
 showtoc: true
 permalink: docs/guides/get-support/har/
+editpath: get-support/06-har.md
 getfeedbackform: default
+contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
 
-In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
+In this section, we explain what an HAR file is and how to generate an HAR file.
 
+<Partial file="generate-har-file.md" />

@@ -1,7 +1,7 @@
 ---
 title: Get Support
 subtitle: Support Ticket Best Practices
-description: Best practices for opening a support ticket.
+description: Open and write a support ticket using best practices.
 categories: [develop]
 tags: [composer, terminus, webops, workflow]
 buildtools: true

@@ -1,7 +1,7 @@
 ---
 title: Get Support
 subtitle: Contact Support
-description: In step three of the Build Tools guide, learn how to use pull requests as part of your workflow.
+description: Learn about different channels of support.
 categories: [develop]
 tags: [collaborate, continuous-integration, git, webops, workflow]
 buildtools: true
@@ -17,7 +17,7 @@ This section provides information on how to open a support ticket as well as sev
 
 ## Ticket Support
 
-The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table](/guides/get-support/#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 
