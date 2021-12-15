@@ -103,22 +103,21 @@ For more information, see [Serving Sites from the Web Subdirectory](/nested-docr
 
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
 
-For example, to override the upstream default value at the site level to PHP 7:
+For example, to override the upstream default value at the site level to PHP 8:
 
 ```yaml:title=pantheon.yml
-php_version: 7.0
+php_version: 8.0
 ```
 
 #### Considerations
 
 * [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
-* Drupal and PHP 7 require [Drush 7 or greater](/drush-versions/#configure-drush-version).
 * From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-08-05" />
+<ReviewDate date="2021-12-15" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
@@ -147,6 +146,12 @@ This table shows the recommended MariaDB version for each CMS:
 | WordPress     | 10.4                        |
 
 Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
+
+#### Considerations
+
+The default database version for new sites is MariaDB 10.4. In the event your site has any older contrib modules, that are not compatible with MariaDB 10.4, you can set the MariaDB version to `10.3` in your `pantheon.yml` file.
+
+Note that Drupal 9 requires MariaDB 10.3 or later. If you have a Drupal 8 site that you plan to upgrade to Drupal 9, ensure that the database has been upgraded to MariaDB 10.3 or 10.4 in all environments before beginning the Drupal 9 upgrade.
 
 ### Specify a Solr Version
 
