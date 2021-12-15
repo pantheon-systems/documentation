@@ -63,7 +63,7 @@ Before changing the Drupal core version to Drupal 9, make sure all the component
 Set the Drupal core version to Drupal 9:
 
   ```shell{promptUser: user}
-  composer require --no-update drupal/core-recommended:^9.2
+  composer require --update-with-dependencies --no-update 'drupal/core-recommended:^9' 'drupal/core-composer-scaffold^9'
   composer update drupal/core* -W
   git add composer.*
   git commit -m "upgrade to Drupal 9"
