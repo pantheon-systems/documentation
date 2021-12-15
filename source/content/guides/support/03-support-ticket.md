@@ -1,6 +1,6 @@
 ---
 title: Get Support
-subtitle: Open and Write a Support Ticket
+subtitle: Support Ticket Best Practices
 description: Best practices for opening a support ticket.
 categories: [develop]
 tags: [composer, terminus, webops, workflow]
@@ -13,28 +13,7 @@ editpath: get-support/03-support-ticket.md
 reviewed: "2020-12-10"
 ---
 
-In this section, we will go over the support ticket feature, and how to write a support ticket, to help us resolve your issue faster.
-
-## Ticket Support
-
-The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
-
-1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
-
-1. Choose the **ticket type**.
-
-1. Enter a subject (summary of your issue).
-
-1. Provide a detailed summary of your support request, such as:
-   - Steps to reproduce the issue (including URLs or paths to files).
-   - Environments affected (Multidev/Dev/Test/Live), if applicable.
-   - When the issue began.
-   - Error messages received, if applicable.
-   - Links to screenshots or screencasts of the behavior, if necessary.
-
-1. Click **Open Ticket**
-
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
+In this section, we go over best practices when writing a support ticket, which helps us resolve your issue faster.
 
 
 ## Best Practices

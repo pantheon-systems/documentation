@@ -13,6 +13,29 @@ editpath: get-support/02-contact-support.md
 reviewed: "2020-12-13"
 ---
 
+This section provides information on how to open a support ticket as well as several other ways to contact support.
+
+## Ticket Support
+
+The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+
+1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
+
+1. Choose the **ticket type**.
+
+1. Enter a subject (summary of your issue).
+
+1. Provide a detailed summary of your support request, such as:
+   - Steps to reproduce the issue (including URLs or paths to files).
+   - Environments affected (Multidev/Dev/Test/Live), if applicable.
+   - When the issue began.
+   - Error messages received, if applicable.
+   - Links to screenshots or screencasts of the behavior, if necessary.
+
+1. Click **Open Ticket**
+
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
+
 ## Real Time Chat Support
 
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.

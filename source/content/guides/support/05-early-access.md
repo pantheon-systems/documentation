@@ -1,6 +1,6 @@
 ---
 title: Get Support
-subtitle: Early Acess
+subtitle: Early Acess Program
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
 cms: "Drupal"
 categories: [develop]
@@ -14,5 +14,18 @@ editpath: get-support/05-early-access.md
 reviewed: "2020-12-13"
 ---
 
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request).
+EA Words
 
+## What is it?
+
+EA is product release (in a few months/next year); can try out certain features of product before it's brought to Limited Availablity, if anything goes awry, we can't help you, because it's not supported. Docs in Confluence, no public facing docs. Up to CSM on how to disseminate info.
+
+LA- gets public facing docs
+
+GA- remove banner and everyone can use and point to support doc
+
+## How do I get support for it?
+
+Pantheon does not have a scope of support for EA products. Have resources in place to have questions answered- community slack, office hours
+
+in your journey from EA to LA
