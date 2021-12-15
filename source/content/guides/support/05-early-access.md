@@ -11,13 +11,19 @@ type: guide
 showtoc: true
 permalink: docs/guides/get-support/early-access/
 editpath: get-support/05-early-access.md
-contributors: [michellecolon-pantheon]
+contributors: [carolyn-shannon, michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
 
 EA Words
 
 ## What is it?
+
+The early access program gives customers and interested users the opportunity to partner with the development team and have access to upcoming features that are still under development. This collaboration allows Pantheon to optimize the implementations before we make them widely available in the official General Availability (GA) release. 
+
+Pantheon makes decisions on features based on the feedback we receive during the early access program.
+
+The early access program also lets customers help shape the design of new product and managed services features by giving us feedback on the onboarding experience, thoughts on features, and suggestions on how it can be used. 
 
 EA is product release (in a few months/next year); can try out certain features of product before it's brought to Limited Availablity, if anything goes awry, we can't help you, because it's not supported. Docs in Confluence, no public facing docs. Up to CSM on how to disseminate info.
 
