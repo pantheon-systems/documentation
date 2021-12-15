@@ -117,7 +117,7 @@ php_version: 8.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-08-05" />
+<ReviewDate date="2021-12-15" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
@@ -151,7 +151,7 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 The default database version for new sites is MariaDB version 10.4.  If your site has any older contrib modules that have issue with MariaDB 10.4, you may set the MariaDB version to 10.3 in your pantheon.yml file. This should be rare.
 
-Note that Drupal 9 **requires** MariaDB 10.4. If you have a Drupal 8 site that you are planning on upgrading to Drupal 9, ensure that the database has been upgraded to 10.4 in all environments before beginning the Drupal 9 upgrade.
+Note that Drupal 9 requires MariaDB 10.3 or later. If you have a Drupal 8 site that you are planning on upgrading to Drupal 9, ensure that the database has been upgraded to 10.3 or 10.4 in all environments before beginning the Drupal 9 upgrade.
 
 ### Specify a Solr Version
 
