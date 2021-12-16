@@ -53,7 +53,7 @@ End-of-life (**EOL**) versions are available on the platform but no longer under
 
 </dl>
 
-* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment. 
+\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment. 
 
 
 ### CMS Version Requirements
