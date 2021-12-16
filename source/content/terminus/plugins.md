@@ -24,7 +24,7 @@ If you are a plugin author, ensure your your plugin is updated for Terminus 2.0.
 
 ## Install Plugins
 
-Depending on your Terminus version, the plugin installation process is different. Please refer to the appropiate section below.
+Depending on your Terminus version, the plugin installation process is different. Please refer to the appropriate section below.
 
 ### Terminus 3
 
@@ -90,7 +90,7 @@ Delete the plugin from the `$HOME/.terminus/plugins` directory. Download the lat
 
 ## Uninstall Plugins
 
-Depending on your Terminus version, the plugin uninstallation process is different. Please refer to the appropiate section below.
+Depending on your Terminus version, the plugin uninstallation process is different. Please refer to the appropriate section below.
 
 ### Terminus 3
 
