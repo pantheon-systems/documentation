@@ -37,7 +37,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 | [7.0](https://v70-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL |
 | [5.5](https://v55-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | EOL ♱ |
+| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | EOL * |
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
@@ -53,7 +53,7 @@ End-of-life (**EOL**) versions are available on the platform but no longer under
 
 </dl>
 
-♱ Sites using these versions of PHP will continue to serve pages, but new development cannot be done. To resume development on a site using a retired version of PHP, first upgrade the PHP version on the development environment. The behavior of the development environment is undefined and not supported.
+* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment. 
 
 
 ### CMS Version Requirements
