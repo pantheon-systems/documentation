@@ -6,9 +6,11 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 ### How do I generate and HAR file?
 
-#### Google Chrome
+<TabList>
 
-1. Open **Developer Tools** in Chrome
+<Tab title="Chrome" id="chrome" active={true}>
+
+1. Open **Developer Tools** in Google Chrome
 
 1. Select **Network** tab
 
@@ -22,9 +24,11 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Once you have reproduced the issue, click on the **Export HAR (pic of icon)** symbol and save the file
 
-#### Mozilla Firefox
+</Tab>
 
-1. Open **Developer Tools** in Firefox
+<Tab title="Firefox" id="firefox">
+
+1. Open **Developer Tools** in Mozilla Firefox
 
 1. Select **Network** tab
 
@@ -36,9 +40,11 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Right-click on any file, in any column, and navigate to **Save All As HAR**
 
-#### Microsoft Edge
+</Tab>
 
-1. Open **Developer Tools** in Edge
+<Tab title="Edge" id="edge">
+
+1. Open **Developer Tools** in Microsoft Edge
 
 1. Select **Network** tab
 
@@ -52,9 +58,11 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Once you have reproduced the issue, click on the **Export HAR (pic of button)** symbol and save the file
 
-#### Internet Explorer
+</Tab>
 
-1. Open **Developer Tools** in Explorer
+<Tab title="Explorer" id="explorer">
+
+1. Open **Developer Tools** in Internet Explorer
 
 1. Select **Network** tab
 
@@ -68,7 +76,9 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Once you have reproduced the issue, click on the **Export (pic of button)** symbol and save the file
 
-#### Safari
+</Tab>
+
+<Tab title="Safari" id="safari">
 
 1. Open **Web Inspector** in Safari
 
@@ -81,3 +91,8 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
 1. Once you have reproduced the issue, click on the **Export (pic of button)** symbol and save the file
+
+</Tab>
+
+</TabList>
+
