@@ -28,7 +28,9 @@ Pantheon Search with Solr 8 includes multiple built-in features to make scalable
 - Multiple language support
   - Use Solr’s stemming and language identification libraries that allow for the searching of multiple languages using separate fields, the same field (separate Solr cores), or the same field and Solr core.
 
-- Drupal Views integration for building search results pages and custom search forms
+- Drupal Views integration for building search results pages and custom search forms.
+
+- Partial string search.
 
 For more information on Solr 8 features, refer to the [Drupal Search API Solr](https://www.drupal.org/project/search_api_solr) documentation.
 
