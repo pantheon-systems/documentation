@@ -19,7 +19,7 @@ EA Words
 
 ## What is it?
 
-The early access program gives customers and interested users the opportunity to partner with the development team and have access to upcoming features that are still under development. This collaboration allows Pantheon to optimize the implementations before we make them widely available in the official General Availability (GA) release. 
+The early access program gives customers and interested users the opportunity to partner with the development team and have access to upcoming features that are still under development. This collaboration allows Pantheon to optimize the implementations before we make them widely available in the official General Availibility (GA) release. 
 
 Pantheon makes decisions on features based on the feedback we receive during the early access program.
 
