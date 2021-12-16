@@ -28,7 +28,7 @@ Sign up for Edge Sites updates, or talk to Sales to participate in Early Access 
 ### Decoupled Sites
 
 **Decoupled Sites** run a [Node.js](https://nodejs.org/) codebase in parallel with a WordPress or Drupal site.
-It serves a use case where a domain's public traffic is delivered from a Server-Side Rendered front-end framework such as [Frontity](https://frontity.org/), [Next.js](https://nextjs.org/), or [Nuxt.js](https://nuxtjs.org/) and administrative content editing is done in a WordPress or Drupal interface.
+It serves a use case where a domain's public traffic is delivered from a server-side rendered front-end framework such as [Next.js](https://nextjs.org/) or [Gatsby]() and administrative content editing is done in a WordPress or Drupal interface.
 
 ![A flow diagram of the Decoupled Sites architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
@@ -38,8 +38,6 @@ Each Decoupled site requires connecting continuous integration and infrastructur
 
 We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
 The monorepo structure allows for easier synchronization of changes that affect the back-end and front-end sides together.
-
-## Improvements for Decoupled sites
 
 It is forthcoming that Pantheon Decoupled will be built to run on a Content Delivery Network (CDN).
 The Decouple Sites will take the results of a Node.js static site generator process and deploy it to the edge of our [Global CDN](/global-cdn).
