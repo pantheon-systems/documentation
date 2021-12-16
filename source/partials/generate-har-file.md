@@ -14,15 +14,15 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Look for a **Record 🔴** button; it should be red, if it is gray, click to begin recording
+1. Locate a **Record 🔴** button; it should be red, if it is gray, click to begin recording
 
-1. Check the **☑️ Preserve log** box to enable
+1. Check the **<i class="fa fa-check-square"></i> Preserve log** box to enable
 
 1. Click the **Clear 🚫** symbol to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
-1. Once you have reproduced the issue, click on the **Export HAR (pic of icon)** symbol and save the file
+1. Once you have reproduced the issue, click on the **Export HAR <i class="fa fa-download"></i>** symbol and save the file
 
 </Tab>
 
@@ -32,9 +32,9 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Click **Cog <i class="fa fa-gear"></i>** icon, then on **Persist Logs**
+1. Locate and click the **Cog <i class="fa fa-gear"></i>** icon on the right side of the panel, then select **Persist Logs**
 
-1. Look for a **Trash (pic of icon)** icon and click to clear all current network requests
+1. Locate a **Trash<i class="far fa-trash-alt"></i>** icon and click to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
@@ -48,15 +48,15 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Look for a **Record 🔴** button; it should be red, if it is gray, click to begin recording
+1. Locate a **Record 🔴** button; it should be red, if it is gray, click to begin recording
 
-1. Check the **☑️ Preserve log** box to enable
+1. Check the **<i class="fa fa-check-square"></i> Preserve log** box to enable
 
 1. Click the **Clear 🚫** symbol to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
-1. Once you have reproduced the issue, click on the **Export HAR <i class="fas fa-download"></i>** symbol and save the file
+1. Once you have reproduced the issue, click on the **Export HAR <i class="fa fa-download"></i>** symbol and save the file
 
 </Tab>
 
@@ -66,9 +66,9 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Look for, and click, a green **Record (pic of icon)** button; once clicked, there will be a red square to indicate it is recording
+1. Locate, and click, a green **Record <i class="fa fa-caret-right"></i>** button; once clicked, there will be a red square to indicate it is recording
 
-1. Next, look for an **X** and click to clear all current network requests
+1. Next, locate an **<i class="fa fa-times"></i>** and click to clear all current network requests
 
 1. Check the **Preserve (pic of icon)** icon to preserve your console logs
 
@@ -86,7 +86,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Check the **Preserve Log** box to enable
 
-1. Look for a **Trash (pic of icon)** icon and click to clear all current network requests
+1. Locate a **Trash (pic of icon)** icon and click to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 

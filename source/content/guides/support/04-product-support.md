@@ -16,5 +16,3 @@ reviewed: "2020-12-13"
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site. Continuing from the previous step, we'll be working in the feature branch environment, not Dev.
 
 product end of life support questions both for Pantheon products (how do I know something is EOL or unsupported) and CMS versions, libraries, etc.
-
-test
