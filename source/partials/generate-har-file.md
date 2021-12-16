@@ -32,7 +32,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Click **Cog ⚙️** icon, then on **Persist Logs**
+1. Click **Cog <i class="fa fa-gear"></i>** icon, then on **Persist Logs**
 
 1. Look for a **Trash (pic of icon)** icon and click to clear all current network requests
 
@@ -56,7 +56,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
-1. Once you have reproduced the issue, click on the **Export HAR (pic of button)** symbol and save the file
+1. Once you have reproduced the issue, click on the **Export HAR <i class="fas fa-download"></i>** symbol and save the file
 
 </Tab>
 

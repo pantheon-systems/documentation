@@ -9,7 +9,7 @@ showtoc: true
 anchorid: get-support
 permalink: docs/guides/get-support/
 editpath: get-support/01-scope.md
-reviewed: "2020-12-10"
+reviewed: "2020-12-16"
 ---
 
 ![Screenshot of the Support Tab](../../images/dashboard/support-tab.png)
