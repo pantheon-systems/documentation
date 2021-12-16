@@ -141,7 +141,7 @@ We love helping developers succeed!
 
 Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager.
 
-While we have limits to the scope support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
+While we have limits to the scope of support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
 
 [Contact Sales](https://pantheon.io/contact-us?docs) if your requirements fall outside the scope outlined below.
 
