@@ -28,7 +28,7 @@ Contacting Support from your User Dashboard will not provide the same support le
 
 If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level.
 
-![Select Support from the Organization's Dashboard](../../images/dashboard/support-from-org-dash.gif)
+![Select Support from the Organization's Dashboard](../../../images/dashboard/support-from-org-dash.gif)
 
 ### One Ticket Per Issue
 

@@ -55,7 +55,7 @@ To receive the highest level of support available to your site or organization, 
 
 You can download a transcript of your chat with the <em class="fa fa-arrow-down" style="text-decoration: underline;"></em> button:
 
-![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../../images/chat-log-download.png)
+![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../../../images/chat-log-download.png)
 
 <Alert title="Note" type="info">
 
