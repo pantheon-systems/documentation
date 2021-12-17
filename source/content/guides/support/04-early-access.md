@@ -21,7 +21,7 @@ The early access program gives customers and interested users the opportunity to
 
 Pantheon makes decisions on features based on the feedback we receive during the early access program.
 
-The early access program also lets customers help shape the design of new product and managed services features by giving us feedback on the onboarding experience, thoughts on features, and suggestions on how it can be used. 
+The program also lets customers help shape the design of new product and managed services features by giving us feedback on the onboarding experience, thoughts on features, and suggestions on how it can be used. 
 
 ## How Do I Get Support for Early Access Features?
 

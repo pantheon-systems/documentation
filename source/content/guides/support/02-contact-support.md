@@ -13,11 +13,11 @@ editpath: support/02-contact-support.md
 reviewed: "2020-12-13"
 ---
 
-This section provides information on how to open a support ticket as well as several other ways to contact support.
+This section provides information on how to open a support ticket as well as other ways to contact support.
 
 ## Ticket Support
 
-The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table](/guides/get-support/#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table](/guides/support/#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 

@@ -1,7 +1,7 @@
 ---
 title: Get Support
 subtitle: Generate an HAR
-description: Learn how to generate an HAR file in the affected browser.
+description: Learn how to generate an HAR file in the browser.
 cms: "Drupal"
 categories: [develop]
 tags: [updates, continuous-integration, composer, workflow]
@@ -16,6 +16,6 @@ contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
 
-In this section, we explain what an HAR file is and how to generate an HAR file.
+In this section, we explain what an HAR file is and how to generate an HAR file in the affected browser.
 
 <Partial file="generate-har-file.md" />
