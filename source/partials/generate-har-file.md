@@ -70,7 +70,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Next, locate the **<i class="fa fa-times"></i>** icon and click to clear all current network requests
 
-1. Check the **Preserve <i class="far fa-arrow-alt-circle-right"></i>** icon to preserve your console logs
+1. Check the **Preserve <i class="fa fa-arrow-alt-circle-right"></i>** icon to preserve your console logs
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
