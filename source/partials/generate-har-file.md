@@ -34,7 +34,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Locate and click the **Cog <i class="fa fa-gear"></i>** icon on the right side of the panel, then select **Persist Logs**
 
-1. Locate a **Trash<i class="far fa-trash-alt"></i>** icon on the left side of the panel and click to clear all current network requests
+1. Locate a **Trash** icon on the left side of the panel and click to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
@@ -70,7 +70,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Next, locate the **<i class="fa fa-times"></i>** icon and click to clear all current network requests
 
-1. Check the **Preserve <i class="far fa-arrow-alt-circle-right"></i>** icon to preserve your console logs
+1. Check the **Preserve** icon (arrow with a red x) to preserve your console logs
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
@@ -86,7 +86,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Check the **<i class="fa fa-check-square"></i> Preserve Log** box to enable
 
-1. Locate a **Trash <i class="far fa-trash-alt"></i>** icon on the right side of the panel and click to clear all current network requests
+1. Locate a **Trash** icon on the right side of the panel and click to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
