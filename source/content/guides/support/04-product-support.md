@@ -7,8 +7,8 @@ tags: [workflow, composer, continuous-integration, webops, terminus]
 anchorid: product-support
 type: guide
 showtoc: true
-permalink: docs/guides/get-support/product-support/
-editpath: get-support/04-product-support.md
+permalink: docs/guides/support/product-support/
+editpath: support/04-product-support.md
 contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---

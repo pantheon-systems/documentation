@@ -8,8 +8,8 @@ buildtools: true
 anchorid: support-ticket
 type: guide
 showtoc: true
-permalink: docs/guides/get-support/support-ticket/
-editpath: get-support/03-support-ticket.md
+permalink: docs/guides/support/support-ticket/
+editpath: support/03-support-ticket.md
 reviewed: "2020-12-10"
 ---
 

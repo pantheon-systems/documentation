@@ -8,8 +8,8 @@ buildtools: true
 anchorid: contact-support
 type: guide
 showtoc: true
-permalink: docs/guides/get-support/contact-support/
-editpath: get-support/02-contact-support.md
+permalink: docs/guides/support/contact-support/
+editpath: support/02-contact-support.md
 reviewed: "2020-12-13"
 ---
 

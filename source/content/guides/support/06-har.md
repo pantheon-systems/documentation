@@ -9,8 +9,8 @@ buildtools: true
 anchorid: update
 type: guide
 showtoc: true
-permalink: docs/guides/get-support/har/
-editpath: get-support/06-har.md
+permalink: docs/guides/support/har/
+editpath: support/06-har.md
 getfeedbackform: default
 contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"

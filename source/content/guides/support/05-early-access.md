@@ -9,8 +9,8 @@ buildtools: true
 anchorid: extend
 type: guide
 showtoc: true
-permalink: docs/guides/get-support/early-access/
-editpath: get-support/05-early-access.md
+permalink: docs/guides/support/early-access/
+editpath: support/05-early-access.md
 contributors: [carolyn-shannon, michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
