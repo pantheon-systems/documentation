@@ -34,7 +34,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Locate and click the **Cog <i class="fa fa-gear"></i>** icon on the right side of the panel, then select **Persist Logs**
 
-1. Locate a **Trash<i class="far fa-trash-alt"></i>** icon and click to clear all current network requests
+1. Locate a **Trash<i class="fa fa-trash-alt"></i>** icon on the left side of the panel and click to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
@@ -48,7 +48,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Locate a **Record 🔴** button; it should be red, if it is gray, click to begin recording
+1. On the left side of the panel, locate a **Record 🔴** button; it should be red, if it is gray, click to begin recording
 
 1. Check the **<i class="fa fa-check-square"></i> Preserve log** box to enable
 
@@ -66,15 +66,15 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Locate, and click, a green **Record <i class="fa fa-caret-right"></i>** button; once clicked, there will be a red square to indicate it is recording
+1. On the left side of the panel, locate, and click, a green **Record <i class="fa fa-caret-right"></i>** button; once clicked, there will be a red square to indicate it is recording
 
-1. Next, locate an **<i class="fa fa-times"></i>** and click to clear all current network requests
+1. Next, locate the **<i class="fa fa-times"></i>** icon and click to clear all current network requests
 
-1. Check the **Preserve (pic of icon)** icon to preserve your console logs
+1. Check the **Preserve <i class="far fa-arrow-alt-circle-right"></i>** icon to preserve your console logs
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
-1. Once you have reproduced the issue, click on the **Export (pic of button)** symbol and save the file
+1. Once you have reproduced the issue, click on the **Export <i class="fa fa-save"></i>** symbol and save the file
 
 </Tab>
 
@@ -84,13 +84,13 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select **Network** tab
 
-1. Check the **Preserve Log** box to enable
+1. Check the **<i class="fa fa-check-square"></i> Preserve Log** box to enable
 
-1. Locate a **Trash (pic of icon)** icon and click to clear all current network requests
+1. Locate a **Trash <i class="fa fa-trash-alt"></i>** icon on the right side of the panel and click to clear all current network requests
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue
 
-1. Once you have reproduced the issue, click on the **Export (pic of button)** symbol and save the file
+1. Once you have reproduced the issue, click on the **<i class="fa fa-upload"></i> Export** symbol and save the file
 
 </Tab>
 
