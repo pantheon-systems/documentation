@@ -10,7 +10,7 @@ anchorid: generate-har
 type: guide
 showtoc: true
 permalink: docs/guides/support/har/
-editpath: support/06-har.md
+editpath: support/05-har.md
 getfeedbackform: default
 contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"

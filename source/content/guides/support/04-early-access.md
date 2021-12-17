@@ -10,7 +10,7 @@ anchorid: early-success
 type: guide
 showtoc: true
 permalink: docs/guides/support/early-access/
-editpath: support/05-early-access.md
+editpath: support/04-early-access.md
 contributors: [carolyn-shannon, michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
