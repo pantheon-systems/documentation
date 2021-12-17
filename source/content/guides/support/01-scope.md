@@ -6,7 +6,7 @@ categories: [develop]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 type: guide
 showtoc: true
-anchorid: get-support
+anchorid: support
 permalink: docs/guides/support/
 editpath: support/01-scope.md
 reviewed: "2020-12-16"

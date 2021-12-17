@@ -6,7 +6,7 @@ cms: "Drupal"
 categories: [develop]
 tags: [composer, local, modules, site, terminus]
 buildtools: true
-anchorid: extend
+anchorid: early-success
 type: guide
 showtoc: true
 permalink: docs/guides/support/early-access/

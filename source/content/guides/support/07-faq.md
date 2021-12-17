@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [develop]
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
-anchorid: update
+anchorid: support-faq
 type: guide
 showtoc: true
 permalink: docs/guides/support/faq/
