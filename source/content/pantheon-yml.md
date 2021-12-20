@@ -147,17 +147,29 @@ This table shows the recommended MariaDB version for each CMS:
 
 Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
 
-#### Considerations
+#### Considerations - Drupal 9
 
 The default database version for new sites is MariaDB 10.4. In the event your site has any older contrib modules, that are not compatible with MariaDB 10.4, you can set the MariaDB version to `10.3` in your `pantheon.yml` file.
 
-Note that Drupal 9 requires MariaDB 10.3 or later. If you have a Drupal 8 site that you plan to upgrade to Drupal 9, ensure that the database has been upgraded to MariaDB 10.3 or 10.4 in all environments before beginning the Drupal 9 upgrade.
+Note that Drupal 9 requires MariaDB 10.3 or later. If you have a Drupal 8 site that you plan to upgrade to Drupal 9, ensure that the database has been upgraded to MariaDB 10.3 or 10.4 in all environments before you begin the Drupal 9 upgrade.
+
+#### Considerations - InnoDB Row Size Too Large
+
+MariaDB 10.4 runs with `innodb_strict_mode=ON`.
+
+Before you push the change to `pantheon.yml` to upgrade MariaDB to 10.4, modify your tables to use `row_format=DYNAMIC` to avoid `Row size too large` errors:
+
+```sql
+returned non-zero exit status 1: ERROR 1118 (42000) at line 1296: Row size too large (> 8126). Changing some columns to TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.
+```
+
+For more information on how to diagnose tables and troubleshoot potential issues, visit the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
 
 ### Specify a Solr Version
 
 Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal 9 sites:
 
-```
+```yaml:title=pantheon.yml
 search:
   version: 8
 ```
