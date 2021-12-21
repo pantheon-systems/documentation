@@ -131,7 +131,7 @@ The best way to use cookies on Pantheon is to have the cookie name match the `ST
 
 The VCL cookie pattern is a platform wide setting and cannot be overridden on an individual site basis. Pantheon maintains the list of cache-busting cookies. On very rare occasions, Pantheon can modify the list if there are new use cases for login or authorization that are common and affect many users. 
 
-For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Refer to the code example in the [Cache-Varying Cookies]](#cache-varying-cookies) section, for more information on properly caching. 
+For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Refer to the code example in the [Cache-Varying Cookies](#cache-varying-cookies) section, for more information on properly caching. 
 
 ## See Also
 
