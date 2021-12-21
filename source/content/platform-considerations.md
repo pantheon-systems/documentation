@@ -264,13 +264,48 @@ Uploading large files over a slow local internet connection can cause the proces
 
 ## Large (>100GB) File Backups
 
-Large backups take longer, use more resources, and have a higher likelihood of failing. Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone. For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal). Despite the lack of backups, file content is highly durable and stored on multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing. Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone. For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal). Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
 ## Maintenance Mode
 
 Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
+
+## MariaDB 10.4 and innodb_strict_mode=ON: Row Size Too Large Errors
+
+MariaDB 10.4 on Pantheon has `innodb_strict_mode` set to `ON`. This leads to `Row size too large` errors that are not present on earlier versions of MariaDB:
+
+```sql
+ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.
+```
+
+To avoid this error, modify your tables to use `row_format=DYNAMIC`.
+
+<Accordion title="How to update all tables to row_format=DYNAMIC" id="row-size-too-large">
+
+1. Log in with [Terminus](/terminus) and [find the site UUID](https://pantheon.io/docs/terminus/commands/site-list):
+
+   ```shell{promptUser: user}
+   terminus auth:login --email <email>
+   terminus site:list
+   ```
+
+1. Optionally, set the UUID from step 1 as local alias (replace `site-uuid` in this example):
+
+   ```shell{promptUser: user}
+   export SITE=site-uuid
+   ```
+
+1. Run a SQL command to set `ROW_FORMAT=DYNAMIC`. Replace `$ENV` with the Multidev or environment and `$SITE` with the site UUID:
+
+   ```shell{promptUser: user}
+   echo "SELECT CONCAT('ALTER TABLE \`', table_name, '\` ROW_FORMAT=DYNAMIC;') AS aQuery FROM information_schema.tables WHERE table_schema = 'pantheon';" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string) | grep -vE 'aQuery|_pt_heartbeat|_pantheon_heartbeat' | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
+   ```
+
+</Accordion>
+
+For more information on how to diagnose tables and troubleshoot potential issues, visit the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
 
 ## Modules and Plugins with Known Issues
 
