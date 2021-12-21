@@ -155,13 +155,19 @@ Note that Drupal 9 requires MariaDB 10.3 or later. If you have a Drupal 8 site t
 
 #### Considerations - InnoDB Row Size Too Large
 
-MariaDB 10.4 runs with `innodb_strict_mode=ON`.
-
-Before you push the change to `pantheon.yml` to upgrade MariaDB to 10.4, modify your tables to use `row_format=DYNAMIC` to avoid `Row size too large` errors:
+MariaDB 10.4 on Pantheon has `innodb_strict_mode` set to `ON`. This leads to `Row size too large` errors that are not present on earlier versions of MariaDB:
 
 ```sql
 returned non-zero exit status 1: ERROR 1118 (42000) at line 1296: Row size too large (> 8126). Changing some columns to TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.
 ```
+
+Before you push the change to `pantheon.yml` to upgrade MariaDB to 10.4, modify your tables to use `row_format=DYNAMIC` to avoid `Row size too large` errors:
+
+<Accordion title="How to update all tables to row_format=DYNAMIC" id="row-size-too-large">
+
+<Partial file="row-size-too-large-alter-table.md" />
+
+</Accordion>
 
 For more information on how to diagnose tables and troubleshoot potential issues, visit the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
 
