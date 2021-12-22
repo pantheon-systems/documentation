@@ -21,7 +21,7 @@ Pantheon is enabling developers and agencies to easily create and manage decoupl
 
 <Enablement link="https://pantheon.io/decoupled-cms?docs" title="Sign up for updates!">
 
-Sign up for Edge Sites updates, or talk to Sales to participate in Early Access for Decoupled Sites. Click the link above to get started!
+Sign up for Decoupled Sites updates, or talk to Sales to participate in Early Access for Decoupled Sites. Click the link above to get started!
 
 </Enablement>
 
