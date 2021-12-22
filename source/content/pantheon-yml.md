@@ -119,26 +119,28 @@ php_version: 8.0
 
 <ReviewDate date="2021-12-22" />
 
-Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
+Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
-1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected. 
+1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
 
   Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
-1.  Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
+1. Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
   ```yaml:title=pantheon.yml
   database:
     version: 10.4
   ```
 
-1. Once the changes are pushed, wait for confirmation that the `change_database_version` Workflow successfully completed in the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard.
+1. Once the changes are pushed the Workflow can take up to ten minutes to complete. To confirm that the Workflow completed successfully:
 
-  To confirm that the Workflow has completed successfully using Terminus:
+   - Using Terminus (recommended):
 
-  ```shell{promptUser:user}
-  echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
-  ```
+     ```shell{promptUser:user}
+     echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
+     ```
+
+   - From the Site Dashboard, find the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard and confirm that the `change_database_version` Workflow completed successfully.
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
