@@ -1,5 +1,5 @@
 ---
-title: Site Multizone Failover (formerly Disaster Recovery)
+title: Site Multizone Failover
 description: Learn how mission-critical websites can stay online in the event of a total zone failure
 categories: [platform]
 tags: [backup, professional-services, site, webops]
