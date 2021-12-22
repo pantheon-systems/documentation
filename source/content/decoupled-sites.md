@@ -3,6 +3,7 @@ title: Decoupled Sites
 description: Pantheon is working to bring you the latest tools to build decoupled sites.
 contributors: [stevector, alexfornuto]
 categories: [get-started]
+showtoc: [true]
 tags: [site, webops, workflow]
 reviewed: "2020-10-27"
 ---
@@ -36,9 +37,7 @@ Decoupled Sites are presently in Early Access, where we are engaging with a smal
 
 Pantheon Decoupled Sites will be built to run on a content delivery network (CDN) and optimized for popular static site generator (SSG) frameworks like Gatsby. Decoupled Sites will take the results of a Node.js static site generator process and deploy it to the edge of the [Global CDN](/global-cdn).
 
-[Sign up for email updates to hear the latest on Decoupled Sites development](https://pantheon.io/decoupled-cms?docs).
 
-![A flow diagram of the Decoupled Sites architecture](../images/decoupled/edge-sites-diagram.png)
 
 ## FAQ
 
