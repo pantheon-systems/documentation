@@ -1,6 +1,6 @@
 ---
 title: Decoupled Sites
-description: Pantheon is working to bring you the latest tools to build decoupled sites.
+description: Pantheon is working to bring you the latest tools to build Decoupled Sites.
 contributors: [stevector, alexfornuto]
 categories: [get-started]
 showtoc: true
@@ -18,7 +18,7 @@ This page refers to products and features which are currently in development or 
 
 ## Pantheon's Decoupled Architecture
 
-Pantheon is enabling developers and agencies to easily create and manage decoupled sites from a single platform.
+Pantheon is enabling developers and agencies to easily create and manage Decoupled Sites from a single platform.
 
 <Enablement link="https://pantheon.io/decoupled-cms?docs" title="Sign up for updates!">
 
@@ -29,7 +29,7 @@ Sign up for Decoupled Sites updates, or talk to Sales to participate in Early Ac
 ### Decoupled Sites
 
 **Decoupled Sites** run a [Node.js](https://nodejs.org/) codebase in parallel with a WordPress or Drupal site.
-It serves a use case where a domain's public traffic is delivered from a server-side rendered front-end framework such as [Next.js](https://nextjs.org/) or [Gatsby]() and administrative content editing is done in a WordPress or Drupal interface.
+It can be used where a domain's public traffic is delivered from a server-side rendered front-end framework such as [Next.js](https://nextjs.org/) or [Gatsby](https://www.https://www.gatsbyjs.com/) and administrative content editing is done in a WordPress or Drupal interface.
 
 ![A flow diagram of the Decoupled Sites architecture](../images/decoupled/decoupled-bridge-diagram.png)
 
