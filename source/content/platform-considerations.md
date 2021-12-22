@@ -144,7 +144,7 @@ Be sure to encode URLs that use ampersands with `%26` in place of `&`.
 
 The Pantheon platform includes [Drupal Steward](https://www.drupal.org/drupal-security-team/steward), a platform-level mitigation of certain highly-critical vulnerabilities that are identified in Drupal core, as a feature for all Drupal sites on Pantheon. All Pantheon sites are protected by Drupal Steward.
 
-For more information about Drupal Steward, visit the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq).
+For more information about Drupal Steward, refer to the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq).
 
 ## Email and Deliverability
 
@@ -221,7 +221,7 @@ Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional
 
 Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
-You can easily reactivate a site by visiting your Pantheon User Dashboard, select the frozen site there, then click **Unfreeze site**. Within a few minutes, the site will be ready for development again.
+You can easily reactivate a site by visiting your Pantheon User Dashboard, select the frozen site in the Dashboard, then click **Unfreeze site**. Within a few minutes, the site will be ready for development again.
 
 If you experience any issues, like missing static assets, a [backup](/restore-environment-backup#restore-an-environment-from-its-own-backup) of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
 
@@ -288,7 +288,7 @@ To avoid this error, modify your tables to use `row_format=DYNAMIC`.
 
 </Accordion>
 
-For more information on how to diagnose tables and troubleshoot potential issues, visit the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
+For more information on how to diagnose tables and troubleshoot potential issues, refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
 
 ## Modules and Plugins with Known Issues
 
