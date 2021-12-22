@@ -171,7 +171,7 @@ Before you push the change to `pantheon.yml` to upgrade MariaDB to 10.4, modify 
 
 </Accordion>
 
-For more information on how to diagnose tables and troubleshoot potential issues, visit the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
+For more information on how to diagnose tables and troubleshoot potential issues, refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
 
 ### Specify a Solr Version
 
