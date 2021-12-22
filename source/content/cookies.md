@@ -38,7 +38,7 @@ As an alternative to setting a `NO_CACHE` cookie within the response, you can [m
 ## Disable Page Caching in The Dev Environment
 
 In Dev and Multidev environments, 
-will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
+you will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
 
 If you need to work around your CMS to bypass caching for pages in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
