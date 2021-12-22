@@ -234,13 +234,13 @@ This message can safely be ignored. It resolves once a search index has been cre
 
 ### Running Composer with a Lenient Endpoint
 
-If you are using the Lenient endpoint, you may encounter an error when running Composer, that resembles the following text:
+If you are using the Lenient endpoint, you may encounter an error when running Composer that resembles the following text:
 
 > Package drupal/search_api_pantheon exists in composer repo (https://packages.drupal.org/8) and composer repo (https://packages.drupal.org/lenient) which has a higher repository priority. The packages with higher priority do not match your constraint and are therefore not installable. See https://getcomposer.org/repoprio for details and assistance.
 
-This occurs because both repos contain a package called `drupal/search_api_pantheon` and Composer can not discern which package is being requested. 
+This occurs because both repos contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. 
 
-Change the repositories definition by adding a definition for the Lenient repo in the site's `packages.json` file with an explicit `exclude` argument:
+Change the `repositories` definition by adding a definition for the Lenient repo in the site's `packages.json` file with an explicit `exclude` argument:
 
 ```
 "repositories": {
