@@ -132,7 +132,7 @@ Specify the site's version of MariaDB to keep the software your site uses curren
     version: 10.4
   ```
 
-1. Once the changes are pushed, wait for confirmation that the **Deploy** Workflow successfully completed in the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard.
+1. Once the changes are pushed, wait for confirmation that the `change_database_version` Workflow successfully completed in the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard.
 
   To confirm that the Workflow has completed successfully using Terminus:
 
