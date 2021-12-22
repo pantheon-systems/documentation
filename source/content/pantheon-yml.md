@@ -121,22 +121,24 @@ php_version: 8.0
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
-Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected. 
+1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected. 
 
-Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
+  Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
-Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
+1.  Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
-```yaml:title=pantheon.yml
-database:
-  version: 10.4
-```
+  ```yaml:title=pantheon.yml
+  database:
+    version: 10.4
+  ```
 
-Once the changes are pushed, please wait for confirmation that the Deploy Workflow has successfully completed in your Site Dashboard, in the **Workflows** <Icon icon="chevron-down" /> dropdown. To confirm that the Workflow has completed successfully using Terminus:
+1. Once the changes are pushed, wait for confirmation that the **Deploy** Workflow successfully completed in the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard.
 
-```shell{promptUser:user}
-echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
-```
+  To confirm that the Workflow has completed successfully using Terminus:
+
+  ```shell{promptUser:user}
+  echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
+  ```
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
