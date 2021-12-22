@@ -132,7 +132,11 @@ database:
   version: 10.4
 ```
 
-Once the changes are pushed, please wait for confirmation that the Workflow has successfully completed in your Site Dashboard, in the **Workflows** <Icon icon="chevron-down" /> dropdown.
+Once the changes are pushed, please wait for confirmation that the Deploy Workflow has successfully completed in your Site Dashboard, in the **Workflows** <Icon icon="chevron-down" /> dropdown. To confirm that the Workflow has completed successfully using Terminus:
+
+```shell{promptUser:user}
+echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
+```
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
