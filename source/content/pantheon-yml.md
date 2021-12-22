@@ -132,7 +132,7 @@ database:
   version: 10.4
 ```
 
-Once the changes are pushed, please wait for confirmation that the Workflow has successfully completed.
+Once the changes are pushed, please wait for confirmation that the Workflow has successfully completed in your Site Dashboard, in the **Workflows** <Icon icon="chevron-down" /> dropdown.
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
