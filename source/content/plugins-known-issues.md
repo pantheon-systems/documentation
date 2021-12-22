@@ -1030,9 +1030,9 @@ ___
 
 1. **Optional on writable environments:** The WP Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
 
-**Issue 2:** WP rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
+**Issue 2:** WP Rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution 1:** WP version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
+**Solution 1:** WP Rocket version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
 define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
