@@ -131,8 +131,10 @@ Specify the site's version of MariaDB to keep the software your site uses curren
   database:
     version: 10.4
   ```
+  
+  This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
-1. Once the changes are pushed the Workflow can take up to ten minutes to complete. To confirm that the Workflow completed successfully:
+1. Once the changes are pushed the Workflow can take ten minutes or more to complete. To confirm that the database upgrade completed successfully:
 
    - Using Terminus (recommended):
 
@@ -140,7 +142,7 @@ Specify the site's version of MariaDB to keep the software your site uses curren
      echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
      ```
 
-   - From the Site Dashboard, find the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard and confirm that the `change_database_version` Workflow completed successfully.
+   - From the Site Dashboard, find the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard and confirm that the Workflows completed successfully.
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
