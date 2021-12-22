@@ -391,13 +391,13 @@ ___
 
 **Issue:** The plugin includes Git submodules in `code/wp-content/plugins/official-facebook-pixel/vendor/techcrunch/wp-async-task/`
 
-which throws a PHP error because the`wp-async-task/*` can't be promoted to other environmentsd due to the Git submodules.
+which returns a PHP error because the`wp-async-task/*` can't be promoted to other environments due to the Git submodules.
 
 ```php
 Warning: include(/code/wp-content/plugins/official-facebook-pixel/vendor/composer/../techcrunch/wp-async-task/wp-async-task.php): failed to open stream: No such file or directory in /code/wp-content/plugins/webp-converter-for-media/vendor/composer/ClassLoader.php
 ```
 
-**Solution:** Download the plugin from [https://wordpress.org/plugins/official-facebook-pixel/](https://wordpress.org/plugins/official-facebook-pixel/) and extract it to your desktop, then navigate to ```official-facebook-pixel/vendor/techcrunch/wp-async-task``` delete the `.git` & `.gitignore` files before uploading to Dev.
+**Solution:** Download the plugin from [https://wordpress.org/plugins/official-facebook-pixel/](https://wordpress.org/plugins/official-facebook-pixel/) and extract it to your desktop. Then navigate to ```official-facebook-pixel/vendor/techcrunch/wp-async-task``` and delete the `.git` & `.gitignore` files before uploading to Dev.
 ___
 
 ## FacetWP
