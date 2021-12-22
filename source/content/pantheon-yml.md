@@ -117,11 +117,11 @@ php_version: 8.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-12-15" />
+<ReviewDate date="2021-12-22" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities.
 
-Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
+Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected. 
 
 Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
@@ -131,6 +131,8 @@ Use the `database` directive in `pantheon.yml` to choose a specific version of M
 database:
   version: 10.4
 ```
+
+Once the changes are pushed, please wait for confirmation that the Workflow has successfully completed.
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
