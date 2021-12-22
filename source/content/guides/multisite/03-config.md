@@ -85,7 +85,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and comment out the line that sets `DOMAIN_CURRENT_SITE`. For example:
+1. Locate the configuration added by WP-CLI, and ***comment out*** the line that sets `DOMAIN_CURRENT_SITE`. We are going to replace this variable on the next step. For example:
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
