@@ -34,20 +34,15 @@ It serves a use case where a domain's public traffic is delivered from a server-
 
 Decoupled Sites are presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
 
-Each Decoupled site requires connecting continuous integration and infrastructure tooling to a GitHub repository.
-
-We recommend, but do not require, that repositories be structured as "monorepos" with back-end CMS code and front-end framework code managed together.
-The monorepo structure allows for easier synchronization of changes that affect the back-end and front-end sides together.
-
-It is forthcoming that Pantheon Decoupled will be built to run on a Content Delivery Network (CDN).
+It is forthcoming that Pantheon Decoupled Sites will be built to run on a Content Delivery Network (CDN).
 The Decouple Sites will take the results of a Node.js static site generator process and deploy it to the edge of our [Global CDN](/global-cdn).
 
-Edge Sites will be optimized for popular Static Site Generator (SSG) frameworks like Gatsby.
+Decoupled Sites will be optimized for popular Static Site Generator (SSG) frameworks like Gatsby.
 A finalized list of supported frameworks will be developed by working with customer sites during Early Access and Limited Availability phases.
 
-[Sign up for email updates to hear the latest on Edge Sites development](https://pantheon.io/decoupled-cms?docs).
+[Sign up for email updates to hear the latest on Decoupled Sites development](https://pantheon.io/decoupled-cms?docs).
 
-![A flow diagram of the Edge Sites architecture](../images/decoupled/edge-sites-diagram.png)
+![A flow diagram of the Decoupled Sites architecture](../images/decoupled/edge-sites-diagram.png)
 
 ## FAQ
 
