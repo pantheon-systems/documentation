@@ -224,8 +224,36 @@ Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
+### Deploy an Updated `config.zip` to your Solr Server
+
 If the Search API Solr displays the following after the Search module is installed:
 
 > It is advisable to download and deploy an updated `config.zip` to your Solr server.
 
 This message can safely be ignored. It resolves once a search index has been created and the schema files have been posted.
+
+### Running Composer with a Lenient Endpoint
+
+If you are using the Lenient endpoint, you may encounter an error when running Composer, that resembles the following text:
+
+> Package drupal/search_api_pantheon exists in composer repo (https://packages.drupal.org/8) and composer repo (https://packages.drupal.org/lenient) which has a higher repository priority. The packages with higher priority do not match your constraint and are therefore not installable. See https://getcomposer.org/repoprio for details and assistance.
+
+This occurs because both repos contain a package called `drupal/search_api_pantheon` and Composer can not discern which package is being requested. 
+
+Change the repositories definition by adding a definition for the Lenient repo in the site's `packages.json` file with an explicit `exclude` argument:
+
+```
+"repositories": {
+    "lenient": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/lenient",
+        "exclude": [
+            "drupal/search_api_pantheon"
+        ]
+    },
+    "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }
+}
+```
