@@ -3,7 +3,7 @@ title: Decoupled Sites
 description: Pantheon is working to bring you the latest tools to build decoupled sites.
 contributors: [stevector, alexfornuto]
 categories: [get-started]
-showtoc: [true]
+showtoc: true
 tags: [site, webops, workflow]
 reviewed: "2020-10-27"
 ---
