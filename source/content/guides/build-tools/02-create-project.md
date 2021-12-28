@@ -10,7 +10,7 @@ type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
-reviewed: "2020-05-08"
+reviewed: "2021-12-28"
 ---
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, a Continuous Integration service, and a Pantheon site.
@@ -32,7 +32,7 @@ Make sure you have the latest versions of Terminus and the Terminus Build Tools 
 
     ```bash{outputLines: 2}
     composer --version
-    Composer version 1.10.6 2020-05-06 10:28:10
+    Composer version 2.1.8 2021-09-15 13:55:14
     ```
 
 1. Install the most recent release of [Terminus](/terminus/).
@@ -40,23 +40,17 @@ Make sure you have the latest versions of Terminus and the Terminus Build Tools 
 
     ```bash{outputLines: 2}
     terminus --version
-    Terminus 3.0.0
+    Terminus 3.0.1
     ```
 
 1. [Add an SSH key](/ssh-keys) in your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus.
 
-1. Create the `$HOME/.terminus/plugin` directory if it does not already exist:
-
-  ```bash{promptUser: user}
-  mkdir -p ~/.terminus/plugins
-  ```
-
 1. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
    ```bash{promptUser: user}
-   composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0
+   terminus self:plugin:install terminus-build-tools-plugin
    ```
 
 ### Access Tokens (Optional)
