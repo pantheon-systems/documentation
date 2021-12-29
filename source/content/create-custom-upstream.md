@@ -89,11 +89,14 @@ Choose your preferred Git host:
 
   <Alert type="info" title="Note">
 
-  As of January 27th, 2021, all new repositories on Bitbucket are initialized with the default branch name `main`.
+  As of January 27th, 2021, all new repositories on Bitbucket are initialized with `main` as the default branch name.
+ 
+  Pantheon intends to remove harmful language from our code and documentation. Please refer to our documentation on [more inclusive language in our      
+  repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs) for more information. 
 
-  As a company, Pantheon is trying to use [more inclusive language in our repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs). While our team works to make Custom Upstreams less reliant on older naming conventions, new Custom Upstreams currently default to using the `master` branch name.
+  As we strive to make Custom Upstreams less reliant on older naming conventions, new Custom Upstreams currently default to using the `master` branch name.
 
-  Git's default naming convention differs from GitHub's. If you don't initialize the repository on Bitbucket, Git will assign the default branch name as `master` when you clone the repository locally.
+  Please note that Git's default naming convention differs from GitHub's. If you do not initialize the repository on Bitbucket, Git will assign the default branch name as `master` when you clone the repository locally.
 
   </Alert>
 
