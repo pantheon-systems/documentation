@@ -4,7 +4,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess to gathe
 categories: [performance]
 tags: [logs, measure]
 contributors: [albertcausing, sarahg]
-reviewed: "2020-08-29"
+reviewed: "2022-01-02"
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
@@ -29,12 +29,11 @@ This guide is written for the latest stable release of GoAccess as of this writi
 
 ## Edit GoAccess Configuration
 
-To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats. 
+To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats.
 
 1. Check where your configuration file is located with this command: `goaccess --dcf`
-2. Copy this configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this: 
-3. `cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc`
-4. Add the following lines to the configuration file:
+2. Copy this configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this: `cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc`
+3. Add the following lines to the configuration file:
 
 ```none:title=.goaccessrc
 time-format %H:%M:%S
