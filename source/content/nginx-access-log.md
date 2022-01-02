@@ -25,21 +25,24 @@ Be sure that you have:
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.4 ([release notes](https://goaccess.io/release-notes)).
+This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.5 ([release notes](https://goaccess.io/release-notes)).
 
 ## Edit GoAccess Configuration
 
-To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats.
+To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats. 
 
-The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goaccess.conf` where `%sysconfdir%` is either `/etc/`, `/usr/etc/` or `/usr/local/etc/` ([read more](https://goaccess.io/faq#configuration)).
+1. Check where your configuration file is located with this command: `goaccess --dcf`
+2. Copy this configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this: 
+3. `cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc`
+4. Add the following lines to the configuration file:
 
-Add the following lines to the `goaccess.conf` file:
-
-```none:title=goaccess.conf
+```none:title=.goaccessrc
 time-format %H:%M:%S
 date-format %d/%b/%Y
 log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
 ```
+
+Note that when providing configuration from your home directory, the file needs to be named `.goaccessrc`. If you're storing this file elsewhere, it should be named `goaccess.conf`. [Read more about the configuration file](https://goaccess.io/faq#configuration).
 
 ## Create a report
 
@@ -105,7 +108,6 @@ You can navigate the `nginx-access.log` file using the CLI, without GoAccess. Th
 * Locate the most frequent URLs
 
   ```cat nginx-access.log | awk -F '\"' '{print $2}' | sort | uniq -c | sort -nr | head```
-
 
 * Identify the most frequent User Agents
 
