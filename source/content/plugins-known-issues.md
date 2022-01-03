@@ -1004,6 +1004,7 @@ if (file_exists('/includes/prepend.php')) {
 	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
 	define('WFWAF_DB_CHARSET', 'utf8mb4');
 	define('WFWAF_DB_COLLATE', '');
+  // note - this table prefix should reflect your WordPress application's table prefix. Update accordingly.
 	define('WFWAF_TABLE_PREFIX', 'wp_');
 
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
