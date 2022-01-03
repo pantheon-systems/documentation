@@ -31,7 +31,7 @@ This guide is written for the latest stable release of GoAccess as of this writi
 
 To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats.
 
-1. Check where your configuration file is located with this command: `goaccess --dcf`
+1. Use the command `goaccess --dcf` to check where your configuration file is located.
 2. Copy this configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this: `cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc`
 3. Add the following lines to the configuration file:
 
