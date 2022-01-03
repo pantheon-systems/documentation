@@ -62,8 +62,8 @@ releases.
 For Composer-managed Terminus installations, if the update command above returns output indicating that no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the install command:
 
 ```bash{promptUser: user}
-rm -rf $HOME/terminus mkdir $HOME/terminus cd $HOME/terminus curl -O
-https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+rm -rf $HOME/terminus; mkdir $HOME/terminus; cd $HOME/terminus
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
 php installer.phar install
 ```
 
