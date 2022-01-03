@@ -967,7 +967,7 @@ Complete this step in Dev, Test, and Live Environments.
 
 **Issue:** Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error Connecting to the Database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. The problem  can be twofold.
 
-- __DIR__ is not providing the proper path for WordFence
+- __DIR__ is not providing the proper path for Wordfence
 - Wordfence cannot find your database credentials.
 
 **Solution:** To address the first problem you can modify wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP 
