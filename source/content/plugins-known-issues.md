@@ -988,7 +988,7 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 }
 ```
 
-Next, add the following [Wordfence Constants](https://www.wordfence.com/help/advanced/constants/) in between both conditions within `wordfence.php`. This is what the complete file will look like...
+Next, add the following [Wordfence Constants](https://www.wordfence.com/help/advanced/constants/) in between both conditions within `wordfence-waf.php`. This is what the complete file will look like...
 
 ```
 // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
