@@ -2,13 +2,13 @@
 title: Pantheon Migration Tool
 subtitle: PMT Changelog
 description: Recent changes to the Pantheon Migration Tool.
-categories: [automate]
-tags: [webops]
+categories: [develop]
+tags: [agencies]
 type: guide
 layout: guide
 showtoc: false
 anchorid: pmt-changelog
-permalink: docs/guides/pantheon-migration-tools/changelog
+permalink: docs/guides/pantheon-migration-tool
 editpath: pantheon-migration-tool/pmt-changelog.md
 reviewed: "2022-01-05"
 ---
