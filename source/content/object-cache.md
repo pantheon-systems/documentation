@@ -126,11 +126,11 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 </Tab>
 
-<Tab title="Drupal 8 or Drupal 9" id="d8-d9-install">
+<Tab title="Drupal 8" id="d8-install">
 
 1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
-1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
   <Alert title="Note" type="info">
 
@@ -146,7 +146,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
-   ```php:title=settings.php
+   ```php:title=sites/default/settings.php
    // Configure Redis
 
    if (defined('PANTHEON_ENVIRONMENT')) {
@@ -200,7 +200,58 @@ TRUNCATE TABLE `<tablename>`;
 
 </Tab>
 
-<Tab title="Drupal 7" id={"d7-install"}>
+<Tab title="Drupal 9 / Composer-managed" id="d9-install">
+
+1. This:
+
+   ```shell{promptUser: user}
+   terminus build:project:create d9 $SITE
+   terminus connection:set $SITE.dev sftp
+   terminus redis:enable $SITE
+   git clone https://github.com/user/site
+   cd $SITE
+   composer require drupal/redis
+   terminus drush $SITE.dev -- en redis -y
+   terminus drush $SITE.dev -- config:export -y
+   terminus env:commit $SITE.dev --message="Enable Redis, export configuration"
+   git push origin master
+   ```
+
+1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site:
+
+   ```php:title=sites/default/settings.php
+   // Configure Redis
+
+   if (defined('PANTHEON_ENVIRONMENT')) {
+     // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+     $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+
+     //phpredis is built into the Pantheon application container.
+     $settings['redis.connection']['interface'] = 'PhpRedis';
+     // These are dynamic variables handled by Pantheon.
+     $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
+     $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
+     $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+
+     $settings['redis_compress_length'] = 100;
+     $settings['redis_compress_level'] = 1;
+
+     $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+     $settings['cache_prefix']['default'] = 'pantheon-redis';
+
+     $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
+   }
+   ```
+
+   <Alert title="Note" type="info">
+
+   The above Redis cache configuration should be placed in `sites/default/settings.php` rather than `settings.pantheon.php` to avoid conflicts with future upstream updates.
+
+   </Alert>
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-install">
 
 <Alert title="Note" type="info">
 
@@ -210,7 +261,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
+1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus remote:drush <site>.<env> -- en redis -y
