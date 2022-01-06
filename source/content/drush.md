@@ -235,6 +235,14 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
+Newer versions of Drush fail with a message `[warning] Drush command terminated abnormally.`, for example: 
+
+```bash
+[warning] Drush command terminated abnormally.
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
+
 Redirects kill the PHP process before Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
 
 ```php:title=settings.php
