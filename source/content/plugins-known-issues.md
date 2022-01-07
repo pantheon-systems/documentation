@@ -1016,7 +1016,7 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 
 #### Further Considerations with Wordfence: Utilizing data storage over files
 
-If you experience degraded performance with Wordfence active, utilizing [Wordfence's data storage option](https://www.wordfence.com/help/firewall/mysqli-storage-engine/) might be appropriate. To do so, you will modify `wordfence-waf.php` to include the mysqli storage engine within `wordfence-waf.php`. Combined with the constants above, the plugin will write to your Database instead of your file system. If you do this, we recommend wrapping the constants in a condition that checks wp-config.php for a conflicting constant. The end result of your modified `wordfence-waf.php` will be this...
+If you experience degraded performance with Wordfence active, utilizing [Wordfence's data storage option](https://www.wordfence.com/help/firewall/mysqli-storage-engine/) might be appropriate. To do so, you will modify `wordfence-waf.php` to include the mysqli storage engine constant. Combined with the constants above, the plugin will write to your Database instead of your file system. If you do this, we recommend wrapping the constants in a condition that checks wp-config.php for a conflicting constant. The end result of your modified `wordfence-waf.php` will be this...
 
 ```
 <?php
@@ -1048,7 +1048,7 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 
 **Advantages:** Customers have reported improved file system performance, while not having to compromise on Wordfence's features
 
-**Disadvantages:** Due to the nature of the plugin, binary logs and insertion queries will increase. Performance gains in one area may be sacrificed for another.
+**Disadvantages:** Due to the nature of the plugin, binary logs and insertion queries will increase. Performance gains in one area may be sacrificed in another.
 
 ___
 
