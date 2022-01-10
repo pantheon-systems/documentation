@@ -25,4 +25,4 @@ The program also lets customers help shape the design of new product and managed
 
 ## How Do I Get Support for Early Access Features?
 
-While Pantheon does not have a scope of support for early access products, you may take advantage of the resources in the [community slack](/pantheon-community), or during [office hours](/developers/office-hours).
+While Pantheon does not have a scope of support for early access products, you may take advantage of the resources in the [community slack](/pantheon-community), or during [office hours](https://pantheon.io/developers/office-hours).
