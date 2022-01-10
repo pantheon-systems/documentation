@@ -9,7 +9,7 @@ buildtools: true
 anchorid: generate-har
 type: guide
 showtoc: true
-permalink: docs/guides/support/har/
+permalink: docs/support/har/
 editpath: support/05-har.md
 getfeedbackform: default
 contributors: [michellecolon-pantheon]

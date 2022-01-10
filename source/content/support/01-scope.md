@@ -1,12 +1,18 @@
 ---
 title: Get Support
+subtitle: Scope of Support
 description: Learn how to access Pantheon's expert team and what your Account tier includes.
-categories: [platform]
-tags: [dashboard, support]
-reviewed: "2021-05-27"
+categories: [develop]
+tags: [collaborate, composer, continuous-integration, webops, workflow]
+type: guide
+showtoc: true
+anchorid: support
+permalink: docs/support/
+editpath: support/01-scope.md
+reviewed: "2020-12-16"
 ---
 
-![Screenshot of the Support Tab](../images/dashboard/support-tab.png)
+![Screenshot of the Support Tab](../../images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
 
@@ -41,107 +47,16 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Advanced Workflows
    - Complex Caching Use Cases
    - Terminus
-- **Dedicated**: Bespoke site debugging.
+- **Dedicated**: 
+   - Bespoke site debugging
 
-## Best Practices
-
-Keep these tips in mind when opening a new support ticket or chat, to help us resolve your issue faster.
-
-### Open the Ticket in the Right Place
-
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
-
-Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
-
-### Organization Dashboard Support Tab
-
-If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level.
-
-![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
-
-### One Ticket Per Issue
-
-Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
-
-### Replication Steps
-
-One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
-
-### Specifics
-
-Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
-
-### Custom Access
-
-If your site uses nonstandard admin URLs, custom logins, etc., please let us know.
-
-### Clarification
-
-We're all real humans. We always try our best to understand the situation, but we may not always get it right the first time.
-
-At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us (kindly), or to ask for clarification if we don't seem to understand the issue.
-
-## Real Time Chat Support
-
-Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
-
-To receive the highest level of support available to your site or organization, remember to access the chat from the Organization Dashboard if available.
-
-1. From your Site or User Dashboard, click **Support**.
-
-1. Click **Launch Chat**, then click **New Conversation**.
-
-1. Provide a detailed summary of your support request, such as:
-   - Steps to reproduce the issue (including URLs or paths to files).
-   - Environments affected (Multidev/Dev/Test/Live), if applicable.
-   - When the issue began.
-   - Error messages received, if applicable.
-   - Links to screenshots or screencasts of the behavior, if necessary.
-
-You can download a transcript of your chat with the <em class="fa fa-arrow-down" style="text-decoration: underline;"></em> button:
-
-![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../images/chat-log-download.png)
-
-<Alert title="Note" type="info">
-
-Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://www.intercom.com/help/en/articles/1200-why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
-
-</Alert>
-
-## Ticket Support
-
-The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
-
-1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
-
-1. Choose the **ticket type**.
-
-1. Enter a subject (summary of your issue).
-
-1. Provide a detailed summary of your support request, such as:
-   - Steps to reproduce the issue (including URLs or paths to files).
-   - Environments affected (Multidev/Dev/Test/Live), if applicable.
-   - When the issue began.
-   - Error messages received, if applicable.
-   - Links to screenshots or screencasts of the behavior, if necessary.
-
-1. Click **Open Ticket**
-
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
-
-## Premium Technical Support and On-Call Services
-
-Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
-
-Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
-
-## Scope of Support
+## Range of Support
 
 We love helping developers succeed!
 
 Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager.
 
-While we have limits to the scope support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
+While we have limits to the scope of support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
 
 [Contact Sales](https://pantheon.io/contact-us?docs) if your requirements fall outside the scope outlined below.
 
@@ -215,43 +130,8 @@ The Pantheon Professional Services (PS) team works closely with partners to prov
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 - [Custom SSL Certificate](/custom-certificates)
 - [Decoupled CMS](/decoupled-sites)
-- Dedicated Database
 - [Managed Updates](/guides/professional-services/managed-updates)
 - [Multizone Failover](/multizone-failover)
 - [Site Migrations](/guides/professional-services/website-migration-service)
 
 For more information, refer to the [Professional Services guide](/guides/professional-services).
-
-## FAQs
-
-### Can I request a feature be added to the platform?
-
-Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us).
-
-### Is there a support number we can call? If so, is this service available for every package?
-
-Diamond and Platinum customers have access to Pantheon On-Call, which includes an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
-
-### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
-
-Diamond, Platinum and Gold customers can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting Diamond and Platinum customers.
-
-### What if I can't login to the Pantheon Dashboard?
-
-If you are unable to log in, try [resetting your password](https://dashboard.pantheon.io/reset-password).
-
-### How can I review my chat threads?
-
-Access support history for chats in the User or Site Dashboards by selecting **Support** > **Launch Chat**.
-
-### Can I start a chat session via email?
-
-No. Initiate chats via the Pantheon User or Site Dashboards.
-
-### Can I respond to an existing chat message via email?
-
-Yes. Reply directly to the email thread to continue an existing chat session and update the chat history on the Dashboard.
-
-### Who do I talk to about billing questions?
-
-The best way to get help with your billing questions is to contact our support team [via chat](#real-time-chat-support) or through a [ticket](#ticket-support).
