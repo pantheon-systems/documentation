@@ -163,7 +163,7 @@ Refer to our documentation for details about configuring Pantheon Search (Solr) 
 
 ### What support is available for Pantheon?
 
-Refer to [Getting Support](/support) and explore our [support features](https://pantheon.io/support).
+Refer to [Get Support](/guides/support) and explore our [support features](https://pantheon.io/support).
 
 ## Security
 

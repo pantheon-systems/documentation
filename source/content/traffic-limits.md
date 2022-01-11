@@ -30,7 +30,7 @@ Each site is provisioned for optimal performance based on the traffic load it is
 
 **Measurement**. Pantheon defines “visits” in the Site Dashboard as set out above under “Site Visits.”
 
-**Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback. [Contact support](/support) to request that Pantheon consider additional exclusions if you experience issues with your site and any of the following:
+**Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site and any of the following:
 
 - **Static Assets**: Static requests (images, PDFs, CSS, JS, etc) are not included in traffic metrics reporting on the Site Dashboard.
 - **Excessive Bandwidth Usage**: Individual sites consuming excessive bandwidth may be contacted separately by Pantheon for monitoring and actions required to address any plan abuse.
@@ -43,7 +43,7 @@ Each site is provisioned for optimal performance based on the traffic load it is
 
 Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
 
-If there are specific cases that create traffic spikes or events for your site, we encourage you to [contact Pantheon support](/support) for more tailored tools to support those issues unique to your site.
+If there are specific cases that create traffic spikes or events for your site, we encourage you to [contact Pantheon support](/guides/support/contact-support) for more tailored tools to support those issues unique to your site.
 
 <Partial file="traffic-limits-overages.md" />
 
@@ -74,7 +74,7 @@ Content pre-fetching increasingly plays a role in driving up traffic metrics wit
 
 ### What traffic is excluded from Pantheon's metrics?
 
-Certain activities are generally excluded from the calculation of visits and pages served on a case-by-case basis at Pantheon’s discretion, and subject to Pantheon’s [Acceptable Usage Policy](https://legal.pantheon.io) (AUP). Customers may request that Pantheon consider excluding traffic sources by [contacting support](/support) if they experience particular issues with configuring their site for any of the following: Static Assets; 404 and other Client Errors; Bots and Crawlers.
+Certain activities are generally excluded from the calculation of visits and pages served on a case-by-case basis at Pantheon’s discretion, and subject to Pantheon’s [Acceptable Usage Policy](https://legal.pantheon.io) (AUP). Customers may request that Pantheon consider excluding traffic sources by [contacting support](/guides/support/contact-support) if they experience particular issues with configuring their site for any of the following: Static Assets; 404 and other Client Errors; Bots and Crawlers.
 
 <Partial file="traffic-overages-faq.md" />
 

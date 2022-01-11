@@ -71,4 +71,4 @@ Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus dru
 
 ### Where can I report an issue?
 
-[Contact support](/support) to report any issues that you encounter.
+[Contact support](/guides/support/contact-support) to report any issues that you encounter.

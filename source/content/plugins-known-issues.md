@@ -649,7 +649,7 @@ ___
 
 <Alert title="Note"  type="info" >
 
-This section exists for reference purposes, as SendGrid for WordPress has been [deprecated](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)  as of July 13, 2021. [Support](/support) can continue to help with platform issues, but may not be able to troubleshoot SendGrid-specific issues.
+This section exists for reference purposes, as SendGrid for WordPress has been [deprecated](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)  as of July 13, 2021. [Support](/guides/support/contact-support/) can continue to help with platform issues, but may not be able to troubleshoot SendGrid-specific issues.
 
 </Alert>
 

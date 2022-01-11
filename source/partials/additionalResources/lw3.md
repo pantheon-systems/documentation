@@ -32,6 +32,6 @@ If you thought that was interesting, check out workshop #4: [Website Performance
 
 - [Discuss this workshop and ask questions](https://discuss.pantheon.io/c/pantheon-training/automate-integrate-quicksilver/54)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

@@ -375,7 +375,7 @@ You might encounter the following error when a site is created and then quickly 
 [error] The environment '1234567' was not found.
 ```
 
-[Contact Support](/support) and ask to have the environment deleted.
+[Contact Support](/guides/support/contact-support/) and ask to have the environment deleted.
 
 ## Write Access on Environments
 

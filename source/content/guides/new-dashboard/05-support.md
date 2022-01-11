@@ -19,7 +19,7 @@ Support helps resolve issues, restore operations quickly, and accelerate the pat
 
 ## Get Support
 
-Click the **Support** tab in the Primary Global Navigation to obtain support resources, view existing tickets, or to create a new support ticket, depending on the [support available for your account](/support). 
+Click the **Support** tab in the Primary Global Navigation to obtain support resources, view existing tickets, or to create a new support ticket, depending on the [support available for your account](/guides/support/#support-features-and-response-times). 
 
 You can contact Support using the following methods:
 * On-call help 

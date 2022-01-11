@@ -42,6 +42,6 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 ### Additional Resources
 
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

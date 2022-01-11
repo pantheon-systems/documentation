@@ -96,7 +96,7 @@ If your site is slow or modules aren't working, please see our [performance arti
 
 ### Intermittent Issues
 
-Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses) in your Development environment. If you [contact support](/support), include your findings and attach screenshots whenever possible.
+Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses) in your Development environment. If you [contact support](/guides/support/contact-support/), include your findings and attach screenshots whenever possible.
 
 ### Isolated Issues
 

@@ -81,7 +81,7 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 
 #### Issue: A Let's Encrypt Certificate is being served instead of the custom certificate
 
-If a Let's Encrypt Certificate is deployed before the CAA record preventing it, [contact Pantheon Support](/support) for assistance. Please allow at least 3 business days for Pantheon to resolve the Let's Encrypt Certificate.
+If a Let's Encrypt Certificate is deployed before the CAA record preventing it, [contact Pantheon Support](/guides/support/contact-support/) for assistance. Please allow at least 3 business days for Pantheon to resolve the Let's Encrypt Certificate.
 
 ### Update A and AAAA Records
 
@@ -91,7 +91,7 @@ Update `A` and `AAAA` records provided by Pantheon Support. Note that even for s
 
 About 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
 
-To update a certificate with additional domains, [contact Pantheon Support](/support) with the following details:
+To update a certificate with additional domains, [contact Pantheon Support](/guides/support/contact-support/) with the following details:
 
 - The current common name (CN) and any SANs
 - A colon-separated list of domains the certificate is valid for

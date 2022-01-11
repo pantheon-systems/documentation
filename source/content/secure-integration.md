@@ -16,7 +16,7 @@ Secure Integration uses TLS encryption to create a tunnel from the application c
 
 ## Create a Secure Tunnel
 
-[Contact support](/support) and provide the following for each of your remote services:
+[Contact support](/guides/support/contact-support/) and provide the following for each of your remote services:
 
 - IP address
 - Port number

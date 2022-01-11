@@ -57,7 +57,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 ### Support
 
-Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/support).
+Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/guides/support/contact-support/).
 
 ### Settings
 
