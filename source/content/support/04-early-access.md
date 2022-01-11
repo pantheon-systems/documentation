@@ -9,7 +9,7 @@ buildtools: true
 anchorid: early-success
 type: guide
 showtoc: true
-permalink: docs/support/early-access/
+permalink: docs/guides/support/early-access/
 editpath: support/04-early-access.md
 contributors: [carolyn-shannon, michellecolon-pantheon]
 reviewed: "2020-12-13"

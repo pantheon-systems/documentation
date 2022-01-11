@@ -8,7 +8,7 @@ buildtools: true
 anchorid: support-faq
 type: guide
 showtoc: true
-permalink: docs/support/faq/
+permalink: docs/guides/support/faq/
 editpath: support/06-faq.md
 getfeedbackform: default
 reviewed: "2020-12-13"

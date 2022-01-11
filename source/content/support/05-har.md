@@ -9,13 +9,13 @@ buildtools: true
 anchorid: generate-har
 type: guide
 showtoc: true
-permalink: docs/support/har/
+permalink: docs/guides/support/har/
 editpath: support/05-har.md
 getfeedbackform: default
 contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
 
-In this section, we explain what an HAR file is and how to generate an HAR file in the affected browser.
+In this section, we explain what an HTTP Archive Format (HAR) file is and how to generate an HAR file in the affected browser.
 
 <Partial file="generate-har-file.md" />

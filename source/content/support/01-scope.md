@@ -7,12 +7,12 @@ tags: [collaborate, composer, continuous-integration, webops, workflow]
 type: guide
 showtoc: true
 anchorid: support
-permalink: docs/support/
+permalink: docs/guides/support/
 editpath: support/01-scope.md
 reviewed: "2020-12-16"
 ---
 
-![Screenshot of the Support Tab](../../images/dashboard/support-tab.png)
+![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
 
