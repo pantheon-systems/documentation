@@ -28,11 +28,9 @@ The following is a list of plugins that assume write access, and the specific fi
 
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------
-+--------------------------------------------------------------------------------------------------+
-| [AccessAlly WordPress LMS](https://accessally.com/)                                 | wp-content/accessally-protected-content                                  | PROTECTED_CONTENT_FOLDER variable within the plugin assumes access to the mentioned PATH. |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------
-+--------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               |  ROTECTED_CONTENT_FOLDER variable within the plugin assumes access to the mentioned PATH.        |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 |                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause                   |
 |                                                                                               |                                                       | your deployment workflows to break. You can download full backups                                |
 | [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)             +-------------------------------------------------------+  [from the Site Dashboard](/backups). See [below](#all-in-one-wp-migration)                      |
@@ -50,7 +48,7 @@ The following is a list of plugins that assume write access, and the specific fi
 | [Nitropack](https://wordpress.org/plugins/nitropack/)                                         | wp-content/nitropack and `advanced.cache.php`         | Allows for the caching feature to be disabled so that other features, such as                    |
 |                                                                                               |                                                       | optimization, can be used side-by-side.                                                          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                                                                                                                         |
+| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                      |                                                                                                  |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verify the target directory, which will return                      |
 |                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when                         |
@@ -61,8 +59,7 @@ The following is a list of plugins that assume write access, and the specific fi
 |                                                                                               | wp-content/cache                                                                                                                                         |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WPML - The WordPress Multilingual Plugin](https://wpml.org/)                                 | wp-content/languages                                  | Alternate solutions are listed in the [WPML section](#wpml---the-wordpress-multilingual-plugin). |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------
-+--------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 
 ### Define FS_METHOD
 
