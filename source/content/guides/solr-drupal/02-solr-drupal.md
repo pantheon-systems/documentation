@@ -121,7 +121,7 @@ To install and enable the Search API Pantheon Module, access to Solr 8 must be e
 
 ### Dependencies
 
-Composer automatically installs dependencies as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon`.
+Composer automatically installs dependencies as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon:^8@beta`.
 
 The commands specified in the next section install the following dependencies:
 
@@ -147,7 +147,7 @@ To install the Search API Pantheon module, switch to your local machine.
 1. Add the Search API Pantheon module as a required dependency:
 
    ```shell{promptUser:user}
-   composer require pantheon-systems/search_api_pantheon ^8 --prefer-dist
+  composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
    ```
 
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
@@ -155,10 +155,10 @@ To install the Search API Pantheon module, switch to your local machine.
 
 #### Enable Pantheon Search
 
-To enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command, replacing `$ENV` with the environment:
+To enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command, replacing `$ENV` with the environment:
 
 ```shell{promptUser:user}
-terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
 ```
 
 You may also enable the modules from the site’s Extend page located in `/admin/modules`.
