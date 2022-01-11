@@ -26,7 +26,7 @@ Before contacting Support, review the [support request best practices](/support#
 
 1. Report the error:
 
-   - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/support/#real-time-chat-support) and include the steps you took to reproduce the error.
+   - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/guides/support/contact-support/#real-time-chat-support) and include the steps you took to reproduce the error.
 
 ## Provide Feedback or Feature Requests
 
