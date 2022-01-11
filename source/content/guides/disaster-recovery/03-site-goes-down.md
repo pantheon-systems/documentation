@@ -42,7 +42,7 @@ Because incidents are declared when a platform issue meets a minimal downtime or
 
 Although filing an emergency on-call ticket will escalate your downtime incident within the support team and ensure you receive the fastest response, you may also want to alert your broader Pantheon account team. Depending on the situation, your escalation path may differ.
 
-Note that tickets and chat have tier-specific response time objectives, while email, phone, and Slack channels do not. Refer to [Support Features and Response Times](https://pantheon.io/docs/support#support-features-and-response-times) for details.
+Note that tickets and chat have tier-specific response time objectives, while email, phone, and Slack channels do not. Refer to [Support Features and Response Times](https://pantheon.io/docs/guides/support#support-features-and-response-times) for details.
 
 
 #### Support Channels
