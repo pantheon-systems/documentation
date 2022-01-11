@@ -76,6 +76,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 Plugins and Themes with issues resolved (at least partially) by this include:
 
+- [AccessAlly WordPress LMS](https://accessally.com/)
 - [Blabber Theme](https://themeforest.net/item/blabber-allinone-elementor-blog-news-magazine-wordpress-theme/24305542/)
 - [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 - [Event Espresso](https://eventespresso.com/)
