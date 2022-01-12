@@ -74,12 +74,16 @@ To confirm the source of the error, log in to the Drupal Admin and click **Repor
 
 If you encounter this error, remove the offending `quotes` property from the CSS.
 
-## PhantomJS
+## PhantomJS (Unsupported)
 
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
+However, PhantomJS development [has been suspended until further notice](https://github.com/ariya/phantomjs/issues/15344). While Pantheon continues to include the following binaries, they may be removed in the future.
+
 - PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application container.
 - PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application container.
+
+Recently, PhantomJS started erroring on domains with Let's Encrypt. A known workaround for this is to ignore SSL certificate errors using the following option: `--ignore-ssl-errors=yes`
 
 ### Drupal PhantomJS Configuration
 

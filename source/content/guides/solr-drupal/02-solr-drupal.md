@@ -28,7 +28,9 @@ Pantheon Search with Solr 8 includes multiple built-in features to make scalable
 - Multiple language support
   - Use Solr’s stemming and language identification libraries that allow for the searching of multiple languages using separate fields, the same field (separate Solr cores), or the same field and Solr core.
 
-- Drupal Views integration for building search results pages and custom search forms
+- Drupal Views integration for building search results pages and custom search forms.
+
+- Partial string search.
 
 For more information on Solr 8 features, refer to the [Drupal Search API Solr](https://www.drupal.org/project/search_api_solr) documentation.
 
@@ -119,7 +121,7 @@ To install and enable the Search API Pantheon Module, access to Solr 8 must be e
 
 ### Dependencies
 
-Composer automatically installs dependencies as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon`.
+Composer automatically installs dependencies as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon:^8@beta`.
 
 The commands specified in the next section install the following dependencies:
 
@@ -145,7 +147,7 @@ To install the Search API Pantheon module, switch to your local machine.
 1. Add the Search API Pantheon module as a required dependency:
 
    ```shell{promptUser:user}
-   composer require pantheon-systems/search_api_pantheon ^8 --prefer-dist
+  composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
    ```
 
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
@@ -153,10 +155,10 @@ To install the Search API Pantheon module, switch to your local machine.
 
 #### Enable Pantheon Search
 
-To enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command, replacing `$ENV` with the environment:
+To enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command, replacing `$ENV` with the environment:
 
 ```shell{promptUser:user}
-terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
 ```
 
 You may also enable the modules from the site’s Extend page located in `/admin/modules`.
@@ -222,8 +224,36 @@ Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
+### Deploy an Updated `config.zip` to your Solr Server
+
 If the Search API Solr displays the following after the Search module is installed:
 
 > It is advisable to download and deploy an updated `config.zip` to your Solr server.
 
 This message can safely be ignored. It resolves once a search index has been created and the schema files have been posted.
+
+### Running Composer with a Lenient Endpoint
+
+If you are using the Lenient endpoint, you may encounter an error when running Composer that resembles the following text:
+
+> Package drupal/search_api_pantheon exists in composer repo (https://packages.drupal.org/8) and composer repo (https://packages.drupal.org/lenient) which has a higher repository priority. The packages with higher priority do not match your constraint and are therefore not installable. See https://getcomposer.org/repoprio for details and assistance.
+
+This occurs because both repos contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. 
+
+Change the `repositories` definition by adding a definition for the Lenient repo in the site's `packages.json` file with an explicit `exclude` argument:
+
+```
+"repositories": {
+    "lenient": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/lenient",
+        "exclude": [
+            "drupal/search_api_pantheon"
+        ]
+    },
+    "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }
+}
+```
