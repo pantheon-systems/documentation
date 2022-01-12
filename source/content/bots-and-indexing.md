@@ -74,7 +74,7 @@ To support pre-launch SEO and site search testing, we allow the following bots a
 - [PowerMapper](https://www.powermapper.com/products/mapper/)
 - [Swiftbot](https://swiftype.com/swiftbot) by Swiftype
 
-Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/support#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
+Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/guides/support/faq/#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
 If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon:
 

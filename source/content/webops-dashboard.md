@@ -31,4 +31,4 @@ Merges from Test to Live are considered Deploys.
 
 ### How to Request a Feature
 
-Yes! Click the **Leave Feedback** button from the WebOps Dashboard or let our team know in [chat](/support#real-time-chat-support).
+Yes! Click the **Leave Feedback** button from the WebOps Dashboard or let our team know in [chat](/guides/support/contact-support/#real-time-chat-support).
