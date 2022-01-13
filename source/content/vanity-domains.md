@@ -66,6 +66,8 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 </Alert>
 
+- In the wp-config, if using a custom domain instead of a platform domain edit the wp-config to reflect the custom domain.
+
 ## Security Considerations
 
 If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.com`), you should be aware of some security considerations:
