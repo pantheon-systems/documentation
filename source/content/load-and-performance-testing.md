@@ -89,6 +89,37 @@ Finally, review the **Error analytics** tab in New Relic. PHP errors often indic
 
 After launch, you can establish a baseline that `X` response time will let you handle `Y` traffic. If `X` degrades in Dev/Test, that will impact how much traffic Live can handle.
 
+### Determing the Number of Concurrent Users in Google Analytics
+
+Pantheon offers [Pre-launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) to newly purchased Elite plans. For the Professional Services team to proceed with executing the load test, a [load test questionnaire form](https://implem.ps-pantheon.com/load-test/new) needs to be filled out with required information. The required information includes **Peak Page Views**, **Peak Sessions**, **Peak Users** and **Average Session Duration** which can be retrieved from your site's Google Analytics data.
+
+The following procedure guides you on how to retrieve load test information from your site's Google Analytics data. Ensure you have been invited or have access to the correct account as well as the correct views and properties.
+
+1. In the top left corner of the page, click the dropdown menu.
+
+    ![loadtest-step-2](https://user-images.githubusercontent.com/38076987/145598557-fc677b69-78af-4f38-9ba9-c88f660050e2.png)
+
+1. Find the correct Analytics Account, property and view of the site.
+
+    ![loadtest-step-3](https://user-images.githubusercontent.com/38076987/145598652-f144a5f6-988c-4d3d-8ea6-0b76ce9e96c9.png)
+
+1. Click **Audience > Overview**.
+
+1. Set the date filter to a year, set the metric filter to “Sessions“, set the range to “Day“. Then take note of the day with highest sessions. 
+
+    ![loadtest-step-5](https://user-images.githubusercontent.com/38076987/145598717-0e259030-80fe-4808-a9c9-8ac61d1e0668.png)
+
+1. Set the date filter to the day with the highest sessions from step #6. Set the range to “Hourly“. Find the highest peak.
+	* **Average Session Duration**: Located below the chart.
+	* **Peak Sessions**: Find the highest hourly peak.
+
+    ![loadtest-step-6](https://user-images.githubusercontent.com/38076987/145598737-aca6989e-25c6-45f3-ad72-8b1dff4c947b.png)
+
+1. Change the metric filter to “Users“. Set another metric filter (vs) to “Pageviews“. Then find again the highest peak and hover. You should already see the **Peak Users** and Peak **Pageviews**.
+
+    ![loadtest-step-8](https://user-images.githubusercontent.com/38076987/145598772-0249a815-cbc5-4188-8ea2-eb398003ad1d.png)
+
+
 ## See Also
 
 * [Load Testing Drupal and WordPress with BlazeMeter](/guides/load-testing-with-blazemeter)
