@@ -53,9 +53,9 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 Drush 8 is compatible with Drupal 7 and 8.
 
-Always use Drush 8 with Drupal 7 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 and later.
+Always use Drush 8 with Drupal 7 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 up to Drupal 9.
 
-While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
+[Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
 
 Drush 10 is available with the [addition to your pantheon.yml file](#configure-drush-version) shown above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/composer/), and PHP 7.1 or higher.
 
@@ -64,6 +64,10 @@ Drush 10 is available with the [addition to your pantheon.yml file](#configure-d
 When running Drush locally, we highly recommend running Drush version 8.3.2 or higher.
 
 </Alert>
+
+### Drush 5 and Drush 7
+
+While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
 
 #### PHP Requirements
 
