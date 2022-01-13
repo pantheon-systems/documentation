@@ -209,10 +209,14 @@ $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesam
 
 ```php:title=settings.php
 # Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/vendor/simplesamlphp/simplesamlphp';
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
-
-</Tab>
+ 
+Alternatively, you can set the `$settings['simplesamlphp_dir']` to the following:
+```
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/vendor/simplesamlphp/simplesamlphp'
+```
+ </Tab>
 
 </TabList>
 
