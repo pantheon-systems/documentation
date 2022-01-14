@@ -6,6 +6,12 @@ tags: [agencies, collaborate, dashboard, organizations, teams]
 ---
 The Organization Dashboard is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
 
+<Alert title="Looking for info about the New Dashboard?" type="info">
+
+ This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard Workspaces guide](/guides/new-dashboard/workspaces) for information on teams and organization workspaces in the New Pantheon Dashboard.
+</Alert>
+
+
 ## Add Sites to Your Organization
 
 ### New Sites
