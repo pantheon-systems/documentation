@@ -211,7 +211,7 @@ $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesam
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
-If you receive an error message, use the command `composer update` instead of `composer update drupal/core* -W`.
+If you receive and error message, set the `$settings['simplesamlphp_dir']` to the following:
   
 ```
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/vendor/simplesamlphp/simplesamlphp'
