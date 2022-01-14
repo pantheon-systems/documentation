@@ -128,7 +128,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
   
-The astute programmer will notice the `test` and `dev` cases are redundant. Feel free to remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, the key idea is that you're conditionally defining the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
+The astute programmer will notice the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, the key idea is that you're conditionally defining the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment once edits are complete.
 
