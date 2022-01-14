@@ -18,13 +18,9 @@ This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without 
 
 ## Overview
 
-The goals of this upgrade are to:
+The goals of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
 
-- set the Drupal core dependency to Drupal 9, and
-
-- have Composer manage those dependencies in the new site, instead.
-
-Note that since you are effectively migrating your site using these upgrade steps, the new site will not maintain your site's existing commit history.
+Note that this upgrade migrates your existing site to a new site. The new site will not maintain your site's existing commit history.
 
 ## Will This Guide Work for Your Site?
 
@@ -68,6 +64,8 @@ Set the Drupal core version to Drupal 9:
   git add composer.*
   git commit -m "upgrade to Drupal 9"
   ```
+ If you receive the error message "Your requirements could not be resolved to an installable set of packages", use the command `composer update` instead of `composer update drupal/core* -W`.
+
 ## Ongoing Core Updates
 
 One-click core updates can be made through the Dashboard.
