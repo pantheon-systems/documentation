@@ -16,7 +16,7 @@ You can use this doc if you have new WordPress Site Network created for you by a
 
 <Alert title="Note" type="info">
 
-Adjust placeholders in code snippets as needed throughout this guide. This includes placeholders such as `<site>` and `<env>` in Terminus commands, in addition to placeholders in `<>` brackets in larger code blocks.
+Adjust placeholders in code snippets as needed throughout this guide. This includes placeholders such as `<site>` and `<env>` in Terminus commands, in addition to placeholders in brackets `<>` in larger code blocks.
 
 </Alert>
 
@@ -128,7 +128,7 @@ If your site uses a custom domain instead of a platform domain, edit the `wp-con
   
 You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
 
-1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after editing.
+1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after you edit.
 
 <Alert title="Note" type="info">
 
