@@ -66,7 +66,7 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 </Alert>
 
-- If your site is using a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
+- If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
 
 ## Security Considerations
 
