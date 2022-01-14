@@ -73,17 +73,24 @@ class ContributorTemplate extends React.Component {
                   <h4>Contributions</h4>
                   <ul>
                     {docs.map(({ node }) => {
-                      return (
-                        <li key={node.id}>
-                          if (`/${node.fields.slug}` !== ^.*?(?:guides/) {
+                      // Guides URLs are already absolute urls.
+                      if (/^\/guides\/.*$/.test(node.fields.slug)) {
+                        return (
+                          <li key={node.id}>
+                            <Link to={`${node.fields.slug}`}>
+                              {node.frontmatter.title}
+                            </Link>
+                          </li>
+                        )
+                      } else {
+                        return (
+                          <li key={node.id}>
                             <Link to={`/${node.fields.slug}`}>
-                          } else {
-                            <Link to={`/docs/${node.fields.slug}`}>
-                          }
-                            {node.frontmatter.title}
-                          </Link>
-                        </li>
-                      )
+                              {node.frontmatter.title}
+                            </Link>
+                          </li>
+                        )
+                      }
                     })}
                   </ul>
                 </div>
