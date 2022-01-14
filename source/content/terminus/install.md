@@ -53,7 +53,7 @@ The following commands will:
 The Terminus application is published to Homebrew; to install, run:
 
 ```bash
-brew install pantheon-systems/external/terminus
+brew install pantheon-systems/terminus
 ```
 
 ## Authenticate
