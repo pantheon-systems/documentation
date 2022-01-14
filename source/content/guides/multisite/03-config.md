@@ -136,7 +136,7 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 
 </Alert>
 
-## Developing the Site Network
+## Develop the Site Network
 
 Congratulations on setting up your first WordPress Site Network. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
 
@@ -146,7 +146,7 @@ You will have one site and you can create another if needed. If you chose to use
 
 <Accordion title="Mapping Custom Hostnames"  id="map-cust-hostname" icon="wrench">
 
-### Mapping Custom Hostnames (subdomain configurations only)
+### Map Custom Hostnames (subdomain configurations only)
 
 Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new-sub-site>.dev-<example>.pantheonsite.io`). WordPress Site Networks using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
 
