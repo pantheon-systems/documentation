@@ -65,8 +65,7 @@ Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/gu
 For sites:
 - **Up to (not including) Drupal 9**: Drush 8
 - **Drupal 9 with Integrated Composer**: Any. Autopilot will use Composer instead of Drush.
-- **Drupal 9 without Integrated Composer**: Drush 8*
-  - *Drupal 9 requires Drush 10 or higher, but Autopilot is not yet compatible with Drush 10. You might encounter other incompatibilities if you attempt to use Drush 8 with Drupal 9.
+- **Drupal 9 without Integrated Composer**: Is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not compatible with Drush 10 yet.
 
 Currently, Autopilot only supports Drush 8 for all sites up to Drupal 9.
 
