@@ -68,6 +68,7 @@ Set the Drupal core version to Drupal 9:
   git add composer.*
   git commit -m "upgrade to Drupal 9"
   ```
+If you receive the error message "Your requirements could not be resolved to an installable set of packages", use the command `composer update` instead of `composer update drupal/core* -W`.
 
 ## Ongoing Core Updates
 
