@@ -210,7 +210,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 <Alert title="Note" type="info">
 
-The current version of the Redis module for Drupal 7 does not work with PHP 7.4 which uses the `php-redis 5.x` library. <a href="#drupal-7-and-php-7-4">More about this issue</a>.
+The current version of the Redis module for Drupal 7 does not work with PHP 7.4 which uses the `php-redis 5.x` library. <a href="#drupal-7-and-php-74">More about this issue</a>.
 
 </Alert>
 
@@ -382,7 +382,7 @@ The current version of the <a href="https://www.drupal.org/project/redis">Drupal
 Deprecated function: Function Redis::delete() is deprecated in Redis_Lock_PhpRedis->lockRelease() (line 111 of /web/sites/all/modules/contrib/redis/lib/Redis/Lock/PhpRedis.php).
 ```
 
-To patch the Redis module, please <a href="https://www.drupal.org/project/redis/issues/3074189">visit this page on Drupal.org</a>, download the latest patch and add it to your site's code.
+To patch the Redis module, please <a href="https://www.drupal.org/project/redis/issues/3074189">visit this page on Drupal.org</a>, download the latest patch and patch the module in the site's code with these changes.
 
 ### RedisException: Redis server went away
 
