@@ -194,7 +194,7 @@ If using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simpl
 
 <Alert title="Note" type="info">
 
-If using Composer, the `setting.php` is already configired to locate the SimpleSAMLphp file. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+If using Composer, the `setting.php` is already configured to locate the SimpleSAMLphp file. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
 
 <TabList>
 
