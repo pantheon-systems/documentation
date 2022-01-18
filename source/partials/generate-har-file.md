@@ -4,7 +4,7 @@ An HAR file is a JSON file that you generate to track all logs of a web browser'
 
 It is recommended that you generate multiple HAR files, for comparison. For example, you can generate an HAR file for a page that is performing normally, as well as for the page that is having issues.
 
-### How do I generate and HAR file?
+### How do I generate an HAR file?
 
 <TabList>
 
