@@ -38,9 +38,11 @@ Opening multiple tickets on the same issue will only impede our ability to provi
 
 One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
 
+To help troubleshoot issues you encounter within a browser, [generate an HAR file](/guides/support/har) and share it with our team.
+
 ### Specifics
 
-Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
+When discussing an issue, provide timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
 
 ### Custom Access
 
