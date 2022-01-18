@@ -91,10 +91,13 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 
  ```json:title=composer.json
    "scripts": {
-       "post-install-cmd": [
-           "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
-       ]
-   },
+      "post-update-cmd": [
+        "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+    ],
+      "post-install-cmd": [
+        "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+    ]
+},
  ```
 
 1. You may also need to repeat the steps for a Metadata folder, depending on your requirements.
