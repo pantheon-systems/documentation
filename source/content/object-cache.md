@@ -126,7 +126,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-install">
+<Tab title="Drupal 8 or Drupal 9" id="d8-d9-install">
 
 1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
@@ -165,7 +165,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
      $settings['cache_prefix']['default'] = 'pantheon-redis';
-     
+
      $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
    }
    ```

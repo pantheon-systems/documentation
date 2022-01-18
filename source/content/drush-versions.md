@@ -33,7 +33,7 @@ terminus drush <site>.<env> -- status | grep "Drush version"
 
 Before you modify a site's Drush version, remember that not all versions of Drush are compatible with all versions of Drupal. See [Available Drush Versions](#available-drush-versions) and the [requirements below](#compatibility-and-requirements).
 
-Change a site's Drush version via the [pantheon.yml file](/pantheon-yml/):
+Change a site's Drush version via the [`pantheon.yml` file](/pantheon-yml/):
 
 ```yaml:title=pantheon.yml
 api_version: 1
@@ -53,17 +53,21 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 Drush 8 is compatible with Drupal 7 and 8.
 
-Always use Drush 8 with Drupal 7 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 and later.
+Always use Drush 8 with Drupal 7 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 to Drupal 9.
 
-While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
+[Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
 
-Drush 10 is available with the [addition to your pantheon.yml file](#configure-drush-version) shown above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/composer/), and PHP 7.1 or higher.
+Drush 10 is available with the [addition to your `pantheon.yml` file](#configure-drush-version) shown above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/composer/), and PHP 7.1 or higher.
 
 <Alert title="Note" type="info">
 
 When running Drush locally, we highly recommend running Drush version 8.3.2 or higher.
 
 </Alert>
+
+### Drush 5 and Drush 7
+
+While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
 
 #### PHP Requirements
 
@@ -121,4 +125,4 @@ Configure a newer version of Drush as [documented above](#configure-drush-versio
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
 - [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)
 - [Drupal Drush Command-Line Utility](/drush/)
-- [The pantheon.yml Configuration File](/pantheon-yml)
+- [The `pantheon.yml` Configuration File](/pantheon-yml)

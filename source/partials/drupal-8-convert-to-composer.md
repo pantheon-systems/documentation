@@ -1,6 +1,6 @@
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
-Because of that, the steps below make these codebase changes in a new branch. 
+To minimize issues, these steps make the codebase changes in a new branch:
 
 1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
@@ -11,7 +11,7 @@ Because of that, the steps below make these codebase changes in a new branch.
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  git remote add ic git@github.com:pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
   Switched to a new branch 'composerify'
   ```
 
@@ -24,7 +24,7 @@ Because of that, the steps below make these codebase changes in a new branch.
   If you continue to encounter the error, use HTTPS to add the remote:
 
    ```bash{outputLines:2}
-   git remote add ic https://github.com/pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
    Switched to a new branch 'composerify'
    ```
 
@@ -36,7 +36,7 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
   ```bash{promptUser:user}
   composer require --no-update drupal/core-recommended:^8.9
-  composer update drupal/core* -W
+  composer require --dev drupal/core-dev:^8.9
   git add composer.*
   git commit -m "Remain on Drupal 8"
   ```
@@ -45,17 +45,17 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
 This step is optional; you may wait and add the Upgrade Status module to your site later.
 
-The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9. 
+The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
 
 Add the Upgrade Status module to your site with Composer:
 
   ```bash{promptUser:user}
-  composer require drupal/upgrade-status
+  composer require drupal/upgrade_status
   git add composer.*
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading. 
+When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading.
 
 ### Copy Existing Configuration
 
@@ -102,19 +102,17 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Once Composer is aware of all the contributed code, you'll be able to run `composer upgrade` from within the directory to have Composer upgrade all the contributed code automatically.
+Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically.
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. Review the site and make a list of exactly what versions of modules and themes you depend on. One way to do this is to run the `pm:list` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
 
   This will list each module followed by the version of that module that is installed:
 
   ```bash{promptUser:user}
-  terminus drush $SITE.dev pm:projectinfo -- --fields=name,version --format=table
+  terminus drush $SITE.dev pm:list -- --no-core --fields=name,version  --format=table
   ```
-
-  The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/drush-versions) before you continue.
 
 1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
 
@@ -160,63 +158,6 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
         ```
 
     </Accordion>
-
-
-<!-- commenting out until the script has a proper place to live
-
-**Trust a robot?**
-
-One of Pantheon's engineers got tired of doing this process by hand, so he trained some robots to identify modules and put them into `composer.json`.
-
-Robots are cool, but they're not perfect, so you should understand the goal of this process as well as the limitations of automating the process.
-
-Accordion title="A script that can help add modules to composer.json" id="modules-script" icon="cogs"
-
-First, disclaimers:
-
-This script is provided without warranty or direct support. Issues and questions may be filed in GitHub but their resolution is not guaranteed.
-
-Proceed at your own risk. Automation is better when you understand what it's doing.
-
-- The script does not resolve `composer.json` version problems.
-
-  - If there's a version conflict when you run `composer install`, you will need to resolve the conflicts yourself.
-
-- The script does not check for Drupal 9 compatibility.
-
-  - Use the [Upgrade Status](https://drupal.org/project/upgrade_status) module to check for Drupal 9 compatibility.
-
-- The script does not resolve module stability.
-
-  - If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
-
-   ```none
-   [InvalidArgumentException]
-   Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-   ```
-
-   If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
-
-- The script does not resolve patches.
-
-  Many times a module will be "patched" or have a `.patch` file that fixes known issues before the fix is available in the downloaded version. This script does not attempt to resolve any patches.
-
-If you still want to try it:
-
-1. Say the following out loud: "Pantheon is not responsible for what I am about to do."
-
-1. Create a directory called `bin` within your repository and copy the `migrateModules.php` file from [GitHub](https://github.com/pantheon-upstreams/drupal-project/pull/8/files#diff-c68470275758ca395b98d53ed258b63519435d492dd51531c4cf372814c6593e) into that directory.
-
-1. To run the module migration script, `cd` to the root directory of the repository and run `bin/migrateModules.php`.
-
-1. To see which modules were added, run `git diff composer.json`.
-
-1. Remove the `composer.lock` file. Composer will create a new one with the modules you just added.
-
-1. Run `composer install` and resolve any remaining version conflicts.
-
- end Accordion
--->
 
 #### Libraries
 

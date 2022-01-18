@@ -33,7 +33,7 @@ In this guide, you'll learn how to:
 - Use separate Dev, Test, and Live environments in a best-practice development workflow
 - Perform on-server development via our SFTP Connection Mode
 
-All you need before you begin is a Pantheon account. If you don't have one, <a href="https://pantheon.io/register" target="_blank">sign up now for free <span class="glyphicons glyphicons-new-window-alt"></span></a>.
+All you need before you begin is a Pantheon account. If you don't have one, [sign up now for free](https://pantheon.io/register?docs).
 
 <Alert title="Note" type="info">
 

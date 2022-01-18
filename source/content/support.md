@@ -49,13 +49,13 @@ Keep these tips in mind when opening a new support ticket or chat, to help us re
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab.
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
 
 Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
 
 ### Organization Dashboard Support Tab
 
-If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
+If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level.
 
 ![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
 
@@ -129,9 +129,11 @@ The ticket support feature is available to certain Account packages and account 
 
 Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
 
-## Pantheon On-Call
+## Premium Technical Support and On-Call Services
 
-Diamond and Platinum Account customers can directly page Pantheon's operations response team, either via the Pantheon Dashboard or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
+
+Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
@@ -139,7 +141,7 @@ We love helping developers succeed!
 
 Our Account packages feature a range of support features including basic platform support to more comprehensive support and a dedicated Customer Success Manager.
 
-While we have limits to the scope support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
+While we have limits to the scope of support we can provide, our [Professional Services](/guides/professional-services) team can be contracted to help unblock you in areas that fall outside of support scope.
 
 [Contact Sales](https://pantheon.io/contact-us?docs) if your requirements fall outside the scope outlined below.
 
@@ -228,7 +230,7 @@ Yes. For more details, talk to your Customer Success Manager or [contact sales](
 
 ### Is there a support number we can call? If so, is this service available for every package?
 
-Diamond and Platinum customers have access to Pantheon On-Call, which has an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
+Diamond and Platinum customers have access to Pantheon On-Call, which includes an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
 
 ### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 
@@ -236,7 +238,7 @@ Diamond, Platinum and Gold customers can file a downtime ticket for outages on o
 
 ### What if I can't login to the Pantheon Dashboard?
 
-If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).
+If you are unable to log in, try [resetting your password](https://dashboard.pantheon.io/reset-password).
 
 ### How can I review my chat threads?
 

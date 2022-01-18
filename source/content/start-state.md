@@ -16,7 +16,7 @@ We base our Drupal repositories on the canonical source from [Drupal.org](https:
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
 - [Drupal 9](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789) <Popover content="Defaults to SFTP Mode" />
-- [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) <Popover content="Install Requires SFTP Mode" />
+- [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) - [EoL](https://www.drupal.org/psa-2021-06-29) <Popover title="No longer supported by Drupal" content="Drupal 8 reached end-of-life status in November 2021. This means it is no longer supported by the Drupal community. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29)" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ### Empty Upstream
@@ -74,4 +74,4 @@ terminus dashboard:view my-new-panopoly-site
 
 ## Import an Existing Site
 
-Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/migrate).
+Your site migration has four phases. You’ll package your site, import it, test it out, then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/migrate).

@@ -33,7 +33,7 @@ Be sure that you:
 
 - Install [Composer](https://getcomposer.org/)
 
-- Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or [convert an existing Drupal site to use Composer](/guides/composer-convert) guide.
+- Create a Composer-managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or [convert an existing Drupal site to use Composer](/guides/composer-convert) guide.
 
 <Alert title="Warning" type="danger">
 

@@ -1,5 +1,5 @@
 ---
-title: Migrate to Drupal 9
+title: Migrate to Drupal 9 on Pantheon
 subtitle: Upgrade from Drupal 8
 description: Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer
 categories: [get-started]
@@ -14,27 +14,41 @@ editpath: drupal-9-migration/03-upgrade-to-d9.md
 reviewed: "2021-10-24"
 ---
 
-This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 Composer-managed site to a Drupal 9 site with Integrated Composer.
+This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer, to a Drupal 9 site with Integrated Composer, using a **Multidev** to stage changes, and then replace the `master` branch.
 
-Drupal 9 sites on Pantheon have Composer built-in to manage site dependencies.
+## Overview
 
-The goals of this upgrade are to:
+The goals of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
 
-- set the Drupal core dependency to Drupal 9, and
-
-- update any dependencies.
+Note that this upgrade migrates your existing site to a new site. The new site will not maintain your site's existing commit history.
 
 ## Will This Guide Work for Your Site?
 
-This guide is for Pantheon-hosted Drupal 8 sites that meet the following:
+<Alert title="Multidev Required" type="danger">
 
-- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-project) upstream.
+To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
+
+Pantheon support is not available to users who avoid the Multidev steps.
+
+</Alert>
+
+<Partial file="drupal-9/upgrade-site-requirements.md" />
+
+## Prepare the Local Environment
+
+<Partial file="drupal-9/prepare-local-environment.md" />
+
+### Apply All Available Upstream Updates
+
+<Partial file="drupal-apply-upstream-updates.md" />
+
+- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-recommended) upstream.
 
 - The site uses Composer to manage Drupal core and site dependencies.
 
 - The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
 
-To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal9` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
+To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal-recommended` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
 
 ## Ensure Dependencies are Drupal 9 Compatible
 
@@ -44,12 +58,13 @@ Before changing the Drupal core version to Drupal 9, make sure all the component
 
 Set the Drupal core version to Drupal 9:
 
+  ```shell{promptUser: user}
+  composer require --no-update drupal/core-recommended:^9.2
+  composer update drupal/core* -W
+  git add composer.*
+  git commit -m "upgrade to Drupal 9"
   ```
-  $ composer require --no-update drupal/core-recommended:^9.2
-  $ composer update drupal/core* -W
-  $ git add composer.*
-  $ git commit -m "upgrade to Drupal 9"
-  ```
+ If you receive the error message "Your requirements could not be resolved to an installable set of packages", use the command `composer update` instead of `composer update drupal/core* -W`.
 
 ## Ongoing Core Updates
 

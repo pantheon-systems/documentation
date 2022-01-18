@@ -22,14 +22,6 @@ Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://s
 
 On the Pantheon Platform, Drupal 9 sites use [Integrated Composer](/integrated-composer), letting you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-<Alert title="A note about Limited Availability" type="info" icon="leaf">
-
-Drupal 9 with Integrated Composer is available on Pantheon as a Limited Availability feature release while additional features are in active development.
-
-Pantheon engineers are rolling out changes often.
-
-</Alert>
-
 ### Site Structure
 
 <Partial file="ic-upstream-structure.md" />
