@@ -10,7 +10,9 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 <Tab title="Chrome" id="chrome" active={true}>
 
-1. Open **Developer Tools** in Google Chrome.
+1. In the **View** menu, go to **Developer** and open **Developer Tools**.
+  
+   - Refer to [Google Chrome's official documentation](https://developer.chrome.com/docs/devtools/open/) for more options.
 
 1. Select the **Network** tab.
 
