@@ -192,7 +192,9 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 If using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in their [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
 
-For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+<Alert title="Note" type="info">
+
+If using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
 
 <TabList>
 
@@ -211,10 +213,12 @@ $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesam
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
-
 </Tab>
 
 </TabList>
+
+</Alert>
+
 
 ## WordPress Multisite Issues
 
