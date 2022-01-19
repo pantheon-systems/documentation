@@ -9,15 +9,13 @@ tags: [cache, cdn]
 
 1. Open a terminal.
 1. Enter the following command with your full Pantheon domain URL.
+    - The `-L` flag tells curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
     - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
     - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
     - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
 
   ```bash{outputLines: 2-7}
-  curl -I -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
-    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0 14801    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  curl -L -Is -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
   HTTP/2 200
   cache-control: public, max-age=86400
   age: 65772
