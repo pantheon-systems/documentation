@@ -161,7 +161,7 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 #### Considerations - Drupal 9
 
-<Partial file="drupal-9-mariadb-considerations.md" />
+<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
 
 #### Considerations - InnoDB Row Size Too Large
 
