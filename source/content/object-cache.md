@@ -202,11 +202,13 @@ TRUNCATE TABLE `<tablename>`;
 
 <Tab title="Drupal 7" id={"d7-install"}>
 
-<Alert title="Note" type="info">
+#### Before You Begin
 
-This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis module version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
+Please note:
 
-</Alert>
+* This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis module version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
+
+* The version of Redis for Drupal 7 isn’t compatible with PHP 7.4, as PHP 7.4 uses php-redis 5. We recommend that you upgrade your version of PHP to avoid any errors, or you may consider using [this patch](https://www.drupal.org/project/redis/issues/3074189) as a workaround.
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
