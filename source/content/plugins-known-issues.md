@@ -1050,6 +1050,14 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 
 **Disadvantages:** Due to the nature of the plugin, binary logs and insertion queries will increase. Performance gains in one area may be sacrificed in another.
 
+#### How do I confirm I am utilizing data storage with Wordfence?
+
+Here are some ways to confirm...
+
+- Traverse to Wordfence Menu within your WordPress dashboard. Select 'Tools' page, which contains a Diagnostic tab. Within the diagnostic tab, underneath the "Wordfence Firewall" section, search for the "Active Storage Engine". This will show either "File System" or "MySQLi". In this instance, we want the latter.
+- An additional table will be added called wp_wfwafconfig (assuming your table prefix is wp_).
+- Queries will increase based on blocked traffic
+
 ___
 
 ## WordPress Social Login
