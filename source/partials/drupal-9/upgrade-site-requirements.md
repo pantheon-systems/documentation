@@ -32,6 +32,4 @@ Before you continue, confirm that your site meets the following requirements:
 
    - See [Serving Sites from the Web Subdirectory](/nested-docroot) for information about nested docroots.
 
-- The site does not use [Pantheon Search](/solr).
-
 - The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
