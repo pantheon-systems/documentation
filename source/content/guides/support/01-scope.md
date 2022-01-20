@@ -16,7 +16,7 @@ reviewed: "2022-01-20"
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and integrated pre-launch load testing for Diamond Elite sites.
+Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
