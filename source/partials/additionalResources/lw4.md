@@ -36,6 +36,6 @@ Speed ahead to the next class! Check out the video for [Going Live Best Practice
 
 - [Discuss this workshop and ask questions](https://discuss.pantheon.io/c/pantheon-training/performance-varnish-redis-new-relic/55)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

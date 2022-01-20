@@ -16,7 +16,7 @@ The Site Team generally consists of one Site Owner and any necessary Team Member
 | Connect to the site's database via MySQL          | ✓         | ✓               |
 | Clone Database/Files between all environments     | ✓         | ✓               |
 | Deploy changes to Test and Live                   | ✓         | ✓               |
-| Access [Pantheon Support](/support) | ✓         | ✓               |
+| Access [Pantheon Support](/guides/support) | ✓         | ✓               |
 | Enable New Relic                                  | ✓         | ✓               |
 | Add/remove team members                           | ✓         |                 |
 | Transfer Ownership                                | ✓         |                 |

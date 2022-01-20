@@ -18,7 +18,7 @@ The internet can make any website famous overnight, and this may not be under yo
 
 ### What about load tests or penetration tests?
 
-Load tests and other performance reviews of the Pantheon platform are generally prohibited by our [AUP](https://legal.pantheon.io). Although it may result in significant traffic spikes, Pantheon fully supports customers choosing to load test their site (excluding the platform). Contact [Pantheon Support](/support) prior to performing such tests to make them aware there will be an extraordinary event that should be considered.
+Load tests and other performance reviews of the Pantheon platform are generally prohibited by our [AUP](https://legal.pantheon.io). Although it may result in significant traffic spikes, Pantheon fully supports customers choosing to load test their site (excluding the platform). Contact [Pantheon Support](/guides/support/contact-support/) prior to performing such tests to make them aware there will be an extraordinary event that should be considered.
 
 If you identify an underlying issue that may affect the platform, please let us know. If an issue is identified with your codebase, Pantheon can [recommend a Partner](https://directory.pantheon.io/agencies?docs) or connect you with our [Professional Services](/guides/professional-services) team to help you with remediation.
 

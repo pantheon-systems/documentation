@@ -8,7 +8,7 @@ contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
 reviewed: "2021-09-13"
 ---
 
-This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support).
+This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
 
 We do not prevent you from installing and using these plugins or themes. However, we cannot provide support for incompatible plugins and themes, or if they are used against the guidance provided here.
 
@@ -663,7 +663,7 @@ ___
 
 <Alert title="Note"  type="info" >
 
-This section exists for reference purposes, as SendGrid for WordPress has been [deprecated](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)  as of July 13, 2021. [Support](/support) can continue to help with platform issues, but may not be able to troubleshoot SendGrid-specific issues.
+This section exists for reference purposes, as SendGrid for WordPress has been [deprecated](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)  as of July 13, 2021. [Support](/guides/support/contact-support/) can continue to help with platform issues, but may not be able to troubleshoot SendGrid-specific issues.
 
 </Alert>
 

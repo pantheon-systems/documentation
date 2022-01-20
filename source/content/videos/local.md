@@ -14,7 +14,7 @@ type: video
 
 <Partial file="deprecate-kalabox.md" />
 
-Pantheon [encourages on-server development](/support#local-development). However, many developers prefer the speed and convenience of [local development](/local-development) where sites run in virtual machines and don’t require Internet access.
+Pantheon [encourages on-server development](/guides/support/#local-development). However, many developers prefer the speed and convenience of [local development](/local-development) where sites run in virtual machines and don’t require Internet access.
 
 ### Sync from Pantheon to local
 

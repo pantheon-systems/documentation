@@ -78,7 +78,7 @@ More complex issues with code may necessitate using debugging tools beyond your 
 
 ## Pantheon Dashboard
 
-In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/support/).
+In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/guides/support/contact-support/).
 
 ### Check status.pantheon.io
 

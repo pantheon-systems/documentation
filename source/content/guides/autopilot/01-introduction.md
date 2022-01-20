@@ -89,7 +89,7 @@ For Autopilot to compare updates to the Live environment, keep the Dev environme
 
 ### Does the Autopilot Multidev count towards the Multidev limit?
 
-No. If you encounter any issues about Multidev limits, [contact Support](/support).
+No. If you encounter any issues about Multidev limits, [contact Support](/guides/support/contact-support).
 
 ### Does Autopilot perform tests on authenticated pages?
 

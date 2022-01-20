@@ -63,7 +63,7 @@ If you experience this error, it will likely be at the end of the flow, at which
 
 <Accordion title="Autopilot ran into an unexpected error. Contact Support for assistance." id="unexpected-error" icon="info-sign">
 
-Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
+Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
 </Accordion>
 
@@ -128,7 +128,7 @@ To determine which plugin is causing the issue:
 
 1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
 
-If you need assistance, [contact Support](/support).
+If you need assistance, [contact Support](/guides/support/contact-support).
 
 ### Solution
 
@@ -142,6 +142,6 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 <Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
 
-Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/support) via chat or ticket.
+Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
 </Accordion>

@@ -48,7 +48,7 @@
         - text: 'Generate and Add SSH Keys'
           url: '/ssh-keys'
         - text: 'Get Support'
-          url: '/support'
+          url: '/guides/support'
         - text: 'User Dashboard and Account'
           url: '/user-dashboard'
         - text: 'Visualize Site Activity with the WebOps Dashboard'
@@ -66,11 +66,11 @@
         - title: 'Upgrade and Migrate to Drupal 9'
           links:
             - text: 'Drupal 9'
-              url: '/drupal-9'          
+              url: '/drupal-9'
             - text: 'Drupal 9 Migration Guide'
               url: '/guides/drupal-9-migration'
             - text: 'Pantheon Search with Solr 8 for Drupal 9'
-              url: '/guides/solr-drupal/solr-drupal-9'      
+              url: '/guides/solr-drupal/solr-drupal-9'
         - title: 'Guided Migrations'
           links:
             - text: 'Guided WordPress Migrations'

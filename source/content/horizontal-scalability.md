@@ -58,7 +58,7 @@ Elite sites have the added benefit of managed resource provisioning, both for an
 
 When an Elite site encounters massive sudden or unexpected increases in traffic, the Pantheon platform alerts Pantheon Support, who ensure that the most appropriate level of platform resources are provisioned for the site to handle the traffic spike.
 
-For an anticipated increase in traffic, open a [Support ticket](/support#ticket-support) with the following information:
+For an anticipated increase in traffic, open a [Support ticket](/guides/support/contact-support/#ticket-support) with the following information:
 
 - **How much extra traffic?**
 
