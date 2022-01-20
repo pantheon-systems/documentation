@@ -40,7 +40,7 @@ If you are an administrator for a Pantheon organization, [contact support](/supp
 
 ### Site-Level: Roles and Permissions
 
-| Permissions                                       | User in Charge / Owner <Popover title="Owner" content="Partner organizations only" /> | Team Member | Developer <Popover content="Enterprise organizations only" /> |
+| Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner organizations only" /> | Team Member | Developer <Popover content="Enterprise organizations only" /> |
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |:----------------------------------- |
 | Access the site Dashboard                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
 | Work in Dev environments                          | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
