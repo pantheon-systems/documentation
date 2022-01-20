@@ -233,6 +233,22 @@ Merge the changes manually:
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
+### Changes Lost When Uploading or Committing Module/Plugin or Theme Files
+Module/Plugin and Theme files should not be committed, when using Git mode, or uploaded, when using SFTP mode, directly to your site.  The `.gitignore` file in your upstream respository has several paths defined causing files in those directories to be ignored.  These directories are:
+```none:title=code/web/
+code/web
+└─ sites/ for Drupal
+   └─ core/
+   └─ libraries/
+   └─ modules/
+└─ wp-content/ for WordPress
+   └─ mu-plugins/
+   └─ plugins/
+   └─ themes/
+```
+
+See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
+
 ### Changes Lost During Upstream Updates
 
 When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
