@@ -240,7 +240,9 @@ code/web
 └─ sites/ for Drupal
    └─ core/
    └─ libraries/
-   └─ modules/
+   └─ modules/custom/
+   └─ sites/*/files/
+   └─ sites/*/private/
 └─ wp-content/ for WordPress
    └─ mu-plugins/
    └─ plugins/
