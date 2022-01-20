@@ -247,6 +247,8 @@ code/web
    └─ themes/
 ```
 
+See the `.gitignore` file for Drupal [here](https://github.com/pantheon-upstreams/drupal-project/blob/master/.gitignore) and for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+
 See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
 
 ### Changes Lost During Upstream Updates
