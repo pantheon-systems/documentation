@@ -1,4 +1,4 @@
-1. Use this link to create a new Drupal 9 Integrated Composer site from the Upstream: [https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789](https://dashboard.pantheon.io/sites/create?upstream_id=e96c6794-77fe-4931-9a20-48a2fe1a3789). On the **Create Your Pantheon Site** page:
+1. Use this link to create a new Drupal 9 Integrated Composer site from the Upstream: [https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03). On the **Create Your Pantheon Site** page:
 
    - Enter a name for the site.
 
