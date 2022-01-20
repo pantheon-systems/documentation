@@ -9,14 +9,14 @@ showtoc: true
 anchorid: support
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2020-12-16"
+reviewed: "2022-01-20"
 ---
 
 ![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and even bundled [Professional Services](/guides/professional-services) with our Diamond Accounts.
+Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and integrated pre-launch load testing for Diamond Elite sites.
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
@@ -35,7 +35,7 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Find appropriate documentation
 - **Technical**: Adds support for:
    - Autopilot
-   - Drupal and WordPress application-level and site support
+   - Identifying application-level (like Drupal or WordPress) versus platform-level issues
    - Identifying problematic modules and plugins
    - Multidev
    - Assistance with basic caching issues, Terminus, Localdev, and Custom Upstreams
