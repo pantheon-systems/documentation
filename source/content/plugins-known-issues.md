@@ -479,6 +479,15 @@ ___
 
 ___
 
+## Hummingbird
+
+<ReviewDate date="2022-01-20" />
+
+**Issue:** When using the [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/) plugin on a locked site, the user may encounter a 400-level response.
+
+**Solution:** Flush the Hummingbird cache.
+___
+
 ## InfiniteWP
 
 <ReviewDate date="2019-10-01" />
