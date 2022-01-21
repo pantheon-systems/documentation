@@ -147,7 +147,9 @@ Always use the `temp-dir flag` when using rsync for uploads. Removing the flag w
 </Alert>
 
 ```bash{promptUser: user}
-rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync --ignore-existing -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+
+
 ```
 
 ### Upload a Single File to Pantheon
