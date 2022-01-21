@@ -47,8 +47,8 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Advanced Workflows
    - Complex Caching Use Cases
    - Terminus
-- **Dedicated**: 
-   - Bespoke site debugging
+- **Dedicated**:
+   - A dedicated Diamond team for bespoke site debugging
 
 ## Range of Support
 
@@ -114,11 +114,11 @@ We provide technical support for all user interfaces of the Pantheon product, as
 
 We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and we have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques.
 
-### Dedicated Support
+### Dedicated Support Team
 
-Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's Diamond team can investigate misbehaving sites slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
 
-Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
+Our team has access to internal logging and monitoring, and is experienced with using New Relic to diagnose whether an issue is platform or site related.
 
 Diamond Accounts are intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://directory.pantheon.io/agencies?docs) from Pantheon’s network of trusted partners.
 
