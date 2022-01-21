@@ -35,7 +35,7 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Find appropriate documentation
 - **Technical**: Adds support for:
    - Autopilot
-   - Identifying application-level (like Drupal or WordPress) versus platform-level issues
+   - Identifying application-level (Drupal or WordPress) versus platform-level issues
    - Identifying problematic modules and plugins
    - Multidev
    - Assistance with basic caching issues, Terminus, Localdev, and Custom Upstreams
