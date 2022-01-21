@@ -31,6 +31,6 @@ You're on a roll! Check out Workshop #3: [Integrate and Automate with Quicksilve
 
 - [Discuss this class and ask questions](https://discuss.pantheon.io/c/pantheon-training/command-line-interface-terminus/53)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

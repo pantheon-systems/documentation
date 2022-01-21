@@ -48,7 +48,7 @@ All links from the video are provided below.
 <Callout title="Need more help? Get in touch:">
 
  - [Pantheon Community](/pantheon-community)
- - [Pantheon Support](/support)
+ - [Pantheon Support](/guides/support)
  - [Office Hours](https://pantheon.io/agencies/office-hours)
 
 </Callout>

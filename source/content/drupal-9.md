@@ -60,7 +60,7 @@ See the [Drupal 9 Migration Guide](/guides/drupal-9-migration/troubleshoot) for 
 
 ### Where can I report an issue?
 
-[Contact support](/support) to report any issues that you encounter.
+[Contact support](/guides/support) to report any issues that you encounter.
 
 ### Can I Use Lando or Localdev for Drupal 9?
 

@@ -9,7 +9,7 @@ Pantheon Custom Upstreams are a self-serve feature available to anyone with acce
 
 <Alert title="Note" type="info">
 
-Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/support/#custom-upstreams).
+Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/guides/support/#custom-upstreams).
 
 </Alert>
 
@@ -146,7 +146,7 @@ You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a s
 
 Other Git hosting providers (like Azure DevOps or a self-hosted Bitbucket server) can be used, but we cannot detail specific instructions for each and every provider. You will need to create a new project in that system.
 
-As detailed below, [Pantheon Support](/support) will need to add this Custom Upstream for you from a support ticket.
+As detailed below, [Pantheon Support](/guides/support/contact-support/) will need to add this Custom Upstream for you from a support ticket.
 
 </Tab>
 
@@ -378,7 +378,7 @@ A Custom Upstream from a GitLab repository must be set up for you by Pantheon Su
 
 1. After you click **Create deploy token**, save the token immediately to provide to Pantheon Support. GitLab will not show it again.
 
-1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
+1. [Contact support](/guides/support/contact-support/) to add the Custom Upstream to your org. You must provide:
 
    - A name for the Custom Upstream,
    - The `https` clone URL (ending in `.git`),
@@ -396,7 +396,7 @@ These are common steps needed for most Git Providers:
 
 1. This new account will need to be accessible via API for Pantheon, it must also have access to the repository created in the earlier step.
 
-1. [Contact support](/support) to add the Custom Upstream to your org. You must provide:
+1. [Contact support](/guides/support/contact-support/) to add the Custom Upstream to your org. You must provide:
 
     - A name for the Custom Upstream,
 

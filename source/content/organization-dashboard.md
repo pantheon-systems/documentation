@@ -20,7 +20,7 @@ From the Site Dashboard, the Site Owner will want to:
 
 <Alert title="Note" type="info">
 
- If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/support) to transfer sites to your Organization.
+ If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/guides/support/contact-support/) to transfer sites to your Organization.
 
 </Alert>
 

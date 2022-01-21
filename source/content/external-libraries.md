@@ -136,8 +136,8 @@ After you've installed the [ImageMagick Engine Plugin](https://wordpress.org/plu
 
 ### How do I request the addition of a new library or a newer version of an existing library?
 
-Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
+Please [contact support](/guides/support/contact-support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 ### Will you set up and configure the module/plugin for me?
 
-No. This is not within our [scope of support](/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
+No. This is not within our [scope of support](/guides/support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.

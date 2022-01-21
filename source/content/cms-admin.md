@@ -39,7 +39,7 @@ WordPress' admin interface has built in tools to manage plugins and themes, allo
 
 <Alert title="Warning" type="danger">
 
-Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/support/#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
+Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 </Alert>
 
@@ -109,7 +109,7 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 <Alert title="Warning" type="danger">
 
-Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/support#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
+Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 </Alert>
 

@@ -112,7 +112,7 @@ const Footer = ({ data }) => {
                           <a href="https://status.pantheon.io/">Status</a>
                         </li>
                         <li className="last leaf menu-mlid-1154">
-                          <Link to="/support/">
+                          <Link to="/guides/support/">
                             Support
                           </Link>
                         </li>

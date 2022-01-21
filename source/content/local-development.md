@@ -14,7 +14,7 @@ Pantheon's [Localdev](/guides/localdev) offers the best of developing locally â€
 
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
-Pantheon cannot troubleshoot or [support local development](/support#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev).
+Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev).
 
 If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
 

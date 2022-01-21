@@ -8,7 +8,7 @@ Error messages in the cloud are served when Pantheon is unable to fulfill a requ
 
 There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.
 
-If you feel that you reached one of these messages in error, [contact support](/support) and provide the full URL and circumstances which led to the error.
+If you feel that you reached one of these messages in error, [contact support](/guides/support/contact-support/) and provide the full URL and circumstances which led to the error.
 
 ## Error Messages
 

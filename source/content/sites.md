@@ -59,7 +59,7 @@ Here you can select or change your plan and payment method. For more information
 
 ## Support
 
-If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/support) from your Dashboard.
+If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/guides/support/contact-support/) from your Dashboard.
 
 ## Environment Specific Options
 

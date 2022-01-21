@@ -64,7 +64,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
  ![Successful Migration BlogVault](../images/dashboard/successful-site-migration-complete-blogvault.png)
 
-If the migration is not successful, [contact Support](/support) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
+If the migration is not successful, [contact Support](/guides/support/contact-support/) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 
 <Alert title="Note" type="info">
 

@@ -30,6 +30,6 @@ Keep a good thing going! Learn more about Terminus in our on-demand [Command Lin
 ### Additional Resources
 
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)
