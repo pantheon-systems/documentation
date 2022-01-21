@@ -479,6 +479,15 @@ ___
 
 ___
 
+## Hummingbird
+
+<ReviewDate date="2022-01-20" />
+
+**Issue:** When using the [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/) plugin on a locked site, the user may encounter an HTTP 400-level (client error) response.
+
+**Solution:** To resolve this issue flush the Hummingbird cache. Note that flushing the cache purges the cache storage, which might affect other processes that use the same storage.
+___
+
 ## InfiniteWP
 
 <ReviewDate date="2019-10-01" />
