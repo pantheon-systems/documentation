@@ -4,7 +4,7 @@ Before you continue, confirm that your site meets the following requirements:
 
   <Accordion title="Use Terminus to Confirm the drops-8 Upstream" id="drops-8-framework" icon="info-sign">
 
-  Run `terminus site:info $SITE` to find the site's `Framework`. The result should be `drupal8` and `Upstream` value should include `git://github.com/pantheon-systems/drops-8.git`.
+  Run `terminus site:info $SITE` to find the site's `Framework`. The result should be `drupal8` and `Upstream` value should include `https://github.com/pantheon-systems/drops-8.git`.
 
   This example shows a shortened version of the output:
 
@@ -17,7 +17,7 @@ Before you continue, confirm that your site meets the following requirements:
   Created            2019-12-02 18:28:14
   Framework          drupal8
   ...
-  Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: git://github.com/pantheon-systems/drops-8.git
+  Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: https://github.com/pantheon-systems/drops-8.git
   ...
   ------------------ -------------------------------------------------------------------------------------
   ```

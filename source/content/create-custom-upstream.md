@@ -163,7 +163,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash{promptUser: user}
-    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
     ```
 
     </Tab>
@@ -171,7 +171,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 9" id="d91">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-9 git://github.com/pantheon-upstreams/drupal-recommended.git
+    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-recommended.git
     ```
 
     </Tab>
@@ -179,7 +179,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 8" id="d81">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+    git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
     ```
 
     </Tab>
@@ -187,7 +187,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title=" Drupal 7" id="d71">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+    git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
     ```
 
     </Tab>
