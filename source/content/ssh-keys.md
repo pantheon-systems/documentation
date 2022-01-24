@@ -30,7 +30,7 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
   This command works on Linux, MacOS, and Windows 10.
 
-1. Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa`. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
+  Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa`. If the command says the key already exists, you can either overwrite it or     continue onto the next step with your existing key.
 
 1. A passphrase is recommended to provide greater security, but can conflict with tools that cannot handle them.
 
