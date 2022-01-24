@@ -43,17 +43,16 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 
 ### Sandbox Resources
 
-| Sandbox         | Support  |
-| ------------- | -------------------------------------- |
-| Application Containers | 1 |
-| PHP Workers            | 4 |
-| PHP Memory Limit       | 256 MB|
-| Storage                | 20 GB|
-| Custom Domains (per site) <Popover content="For details, see <a href='https://pantheon.io/docs/domains#custom-domains/'> Domains and Redirects.</a>."  /> | 0 |
-| Free and managed HTTPS <Popover content="For details, see <a href='https://pantheon.io/docs/https/'>HTTPS on Pantheon's Global CDN.</a>."  /> | <span style="color:green">✔</span> |
-| New Relic <Popover content="For details, see <a href='https://pantheon.io/docs/new-relic'>New Relic APM Pro</a>."  />  | <span style="color:green">✔</span>   |
-| Object Cache <Popover content="For details, see <a href='https://pantheon.io/docs/object-cache'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  />|<span style="color:green">✔</span>  |
-| Pantheon Search (Solr) <Popover content="For details, see <a href='https://pantheon.io/docs/solr'>Pantheon Search (formerly Solr)</a>." /> |<span style="color:green">✔</span>  |
+| **Sandbox**                                    | **Support**         | 
+|------------------------------------------------|---------------------|
+| Application Containers                     | 1                       | 
+| PHP Workers                                | 4                       |         
+| PHP Memory Limit                           | 256MB             |                              |Storage                                     | 20 GB    |
+| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."  />  | 0                                         | 
+| Free and managed HTTPS <Popover   content = "For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."  />                  | <span  style= " color:green " > ✔ </span> |  
+| New Relic <Popover   content = "For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."  />                                        |                                     | <span  style= " color:green " > ✔ </span> |
+| Object Cache <Popover   content = "For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  />     |                                 | <span  style= " color:green " > ✔ </span> | 
+| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/docs/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />                                    |                 | <span  style= " color:green " > ✔ </span> | 
 
 ## Your Pantheon Account
 
