@@ -49,10 +49,10 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 | PHP Workers                                | 4                       |         
 | PHP Memory Limit                           | 256MB             |                              |Storage                                     | 20 GB    |
 | Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."  />  | 0                                         | 
-| Free and managed HTTPS <Popover   content = "For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."  />                  | <span  style= " color:green " > ✔ </span> |  
-| New Relic <Popover   content = "For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."  />                                        |                                     | <span  style= " color:green " > ✔ </span> |
-| Object Cache <Popover   content = "For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  />     |                                 | <span  style= " color:green " > ✔ </span> | 
-| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/docs/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />                                    |                 | <span  style= " color:green " > ✔ </span> | 
+| Free and managed HTTPS <Popover   content = "For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."  />   | <span  style= " color:green " > ✔ </span> |  
+| New Relic <Popover   content = "For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."  />  | <span  style= " color:green " > ✔ </span> |
+| Object Cache <Popover   content = "For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  /> | <span  style= " color:green " > ✔ </span> | 
+| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/docs/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />  | <span  style= " color:green " > ✔ </span> | 
 
 ## Your Pantheon Account
 
