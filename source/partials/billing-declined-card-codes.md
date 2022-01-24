@@ -1,1 +1,1 @@
-Understand <a href = "https://stripe.com/docs/declines/codes>decline code meanings</a> and how you can resolve a declined payment.
+Understand <a href = "https://stripe.com/docs/declines/codes">decline code meanings </a> and how you can resolve a declined payment.
