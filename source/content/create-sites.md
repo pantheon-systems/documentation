@@ -39,7 +39,22 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
 ## Sandbox Sites
 
-Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. A Sandbox has the equivalent resources of a Performance Small site. We allocate two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
+Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. We allocate two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
+
+### Sandbox Resources
+
+| Sandbox         | Support  |
+| ------------- | -------------------------------------- |
+| Application Containers | 1 |
+| PHP Workers            | 4 |
+| PHP Memory Limit       | 256 MB|
+| Storage                | 20 GB|
+| Custom Domains 
+  (per site) <Popover content="For details, see <a href='https://pantheon.io/docs/domains#custom-domains/'> Domains and Redirects.</a>."  />            | 0 |
+| Free and managed HTTPS <Popover content="For details, see <a href='https://pantheon.io/docs/https/'>HTTPS on Pantheon's Global CDN.</a>."  /> | | <span style="color:green">✔</span> |
+| New Relic <Popover content="For details, see <a href='https://pantheon.io/docs/new-relic'>New Relic APM Pro</a>."  /> |  | <span style="color:green">✔</span>   |
+| Object Cache <Popover content="For details, see <a href='https://pantheon.io/docs/object-cache'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  />         |<span style="color:green">✔</span>  |
+| Pantheon Search (Solr) <Popover content="For details, see <a href='https://pantheon.io/docs/solr'>Pantheon Search (formerly Solr)</a>." /> |<span style="color:green">✔</span>  |
 
 ## Your Pantheon Account
 
