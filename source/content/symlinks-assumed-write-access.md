@@ -107,13 +107,13 @@ Follow the optional steps below to verify that your symlink is correct.
 1. `cd` to the symlinked path from the previous steps, for example: `cd/code/wp-content/cache`
 1. `pwd` to confirm you are in the following path: `/files/cache`
    
-   If the folder is symlinked correctly, an arrow will appear on the left side of the folder that is symlinked in your FTP or SFTP. 
+ If the folder is symlinked correctly, an arrow will appear on the left side of the folder that is symlinked in your FTP or SFTP.   
 
-   If the symlink is incorrect, you will receive an error.
+ If the symlink is incorrect, you will receive an error.  
 
 1. Click the arrow next to the folder.
    
-   If you are taken to the `files/cache` folder, the symlink is correct.
+ If you are taken to the `files/cache` folder, the symlink is correct.  
 
 ## Examples
 
