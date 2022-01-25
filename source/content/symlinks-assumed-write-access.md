@@ -20,7 +20,7 @@ Extensions that create files within the codebase (e.g.,`wp-content/plugins/plugi
 
 Custom configurations that use non-standard file paths (e.g.,`sites/default/blogfiles`) are also incompatible with Pantheon.
 
-The best solution is to communicate with the maintainer of the module, plugin, or custom code/configuration and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
+The best solution is to communicate with the maintainer of the module, plugin, or custom code/configuration and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link (symlink) as a workaround to avoid failures on Test and Live.
 
 ## Create a Symbolic Link
 
@@ -99,6 +99,17 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 1. Deploy to Test and confirm results.
 1. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
+
+### Verify Your Symlink is Correct
+
+Follow the optional steps below to verify that your symlink is correct.
+
+1. `cd` to the symlinked path from the previous steps, for example: `cd/code/wp-content/cache`
+1. `pwd` to confirm you are in the following path: `/files/cache`
+   If the folder is symlinked correctly, an arrow will appear on the left side of the folder that is symlinked in your FTP or SFTP. 
+   If the symlink is incorrect, you will receive an error.
+1. Click the arrow next to the folder.
+   If you are taken to the `files/cache` folder, the symlink is correct.
 
 ## Examples
 
