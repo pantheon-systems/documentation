@@ -1063,6 +1063,14 @@ You can confirm usage by navigating to the Wordfence menu within your WordPress 
 
 ___
 
+## WordPress Download Manager
+
+**Issue 1:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
+
+**Solution:** Use an alternative download manager plugin.
+
+___
+
 ## WordPress Social Login
 
 **Issue 1:** The [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/) plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/), which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
