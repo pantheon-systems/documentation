@@ -141,6 +141,20 @@ Dynamic Entity Reference provides a field combination for Drupal 8 that allows f
 
 ___
 
+## [Feeds](https://www.drupal.org/project/feeds)
+
+<ReviewDate date="2022-01-25" />
+
+**Issue:** The error message below displays when attempting to manually import using Feeds in cron:
+
+`RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
+
+The [Persistent Temporary Path Workaround](https://pantheon.io/docs/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration.
+
+**Solution:** There is no solution at this time. We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130).
+
+___
+
 ## [Front](https://www.drupal.org/project/front)
 
 <ReviewDate date="2018-01-03" />
