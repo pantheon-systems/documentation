@@ -235,7 +235,7 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Newer versions of Drush fail with a message `[warning] Drush command terminated abnormally.`, for example: 
+Newer versions of Drush fail with a message `[warning] Drush command terminated abnormally.`. For example: 
 
 ```bash
 [warning] Drush command terminated abnormally.
