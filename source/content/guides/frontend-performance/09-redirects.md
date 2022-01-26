@@ -12,8 +12,6 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-Redirection.
-
 ## Avoid Redirects
 A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/guides/launch/redirects) using HTTPS with or without the WWW.
 

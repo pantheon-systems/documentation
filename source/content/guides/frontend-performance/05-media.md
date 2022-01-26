@@ -12,13 +12,15 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-Optimizing media including images, iframes.
+This pages includes information on optimizing media, such as images and iframes.
 
 ## Lazy-loading images
 
-Lazy-loading of media elements, especially images, is a powerful way to increase perceived performance, reduce time-to-first-render. 
+Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. Lazy-loading media elements, especially images, is a powerful way to increase perceived performance and reduce time-to-first-render. 
 
 Lazy-loading images is default behavior in WordPress 5.5 and Drupal 9.1. 
+
+Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/) plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader) module for Drupal.
 
 ### WordPress 
 
@@ -39,11 +41,6 @@ Many design elements on a page are best loaded as SVGs (Scalable Vector Graphics
 Ask the designers on your team if any of the elements intended to be loaded as images were created in Adobe Illustrator, Sketch, or any another application that can easily export SVGs.
 
 Social sharing links are often good candidates here and are freely available in packs, such as Ridiculously Responsive Social Sharing Buttons for [WordPress](https://wordpress.org/plugins/rrssb/) or [Drupal](https://www.drupal.org/project/rrssb).
-
-### Lazy Load Images
-Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport.
-
-Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/) plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader) module for Drupal.
 
 ### Send Only as Many Pixels as Needed
 Images might be expected to grow and shrink by large amounts according to device and browser size, but it's overkill to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.

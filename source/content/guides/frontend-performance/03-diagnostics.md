@@ -12,15 +12,15 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-Diagnostics and tools for evaluating performance issues.
+This page includes information on diagnostics and tools for evaluating performance issues.
 
 ## Lighthouse
 
-Google's [Lighthouse](https://github.com/GoogleChrome/lighthouse) 
+Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provides automated audits for performance, accessibility, progressive web apps, and SEO. 
 
 ## New Relic
 
-Pantheon's New Relic One.
+[New Relic® Performance Monitoring] (https://pantheon.io/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
 
 ### Monitor Performance with New Relic
 If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic) for help identifying bottlenecks.
@@ -59,7 +59,7 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 
 The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel) and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
-![Devel Drupal](../../images/drupal8-commandline--webprofiler.png)
+![Devel Drupal](../../images/guides/front-end-performance/drupal8-commandline--webprofiler.png)
 
 </Tab>
 

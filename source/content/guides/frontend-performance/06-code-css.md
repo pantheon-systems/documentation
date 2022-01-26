@@ -12,12 +12,11 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-Optimizing code and CSS
+This page provides information on optimizing code and CSS.
 
 ## Reduce Code Size
 
-Tools and techniques to reduce code size.
-
+This section provides an overview of avaiable tools and techniques to reduce code size.
 
 ## GZIP Compression
 

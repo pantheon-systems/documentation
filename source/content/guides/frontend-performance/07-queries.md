@@ -1,7 +1,7 @@
 ---
 title: Frontend Performance 
 subtitle: Queries and Databases
-description: Optimizing queries and database optimization.
+description: Optimizing queries and databases.
 anchorid: queries
 categories: [performance]
 tags: [measure, traffic]
@@ -12,15 +12,15 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-Optimizing queries, query caching (and when not to), and database optimization.
+This page provides information on optimizing queries, query caching (when you should, and shouldn't use it), and database optimization techniques.
 
 ## Optimize Queries
 
-Tools and techniques to optimize queries.
+This section provides information on available tools and techniques to optimize queries.
 
 ## Query Caching
 
-When and how to cache queries (and when not to).
+Query caching can improve optimization. Read the sections below to learn more about whe you should, and shouldn't use query caching. 
 
 ### Bust Cache with Query Parameter
 Include static files with [cache-busting query strings](https://stackoverflow.com/a/9692722). This prevents the long `Cache-Control` lifetime for static files from breaking pages when the CSS and Javascript change.
@@ -34,5 +34,5 @@ The new filename will cause clients to get the new file, even if they have a cac
 
 ## Optimize Databases
 
-How to optimize databases for performance increases.
+Optimizing your database can increase site performance. Learn more about [Drupal]((https://www.drupal.org/docs/7/managing-site-performance-and-scalability/optimizing-drupal-to-load-faster-server-mysql)) and [WordPress](https://wordpress.org/support/article/optimization/) guidelines for improving database optimization.
 

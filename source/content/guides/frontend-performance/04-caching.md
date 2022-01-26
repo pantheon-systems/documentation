@@ -13,11 +13,11 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-Caching topics.
+This page includes information on how to improve optimization with caching.
 
 ## Page Caching
 
-Varnish and page caching.
+[Varnish](https://varnish-cache.org/intro/index.html#intro) is a web application accelerator that speeds up page delivery by caching contents to a configured HTTP server.
 
 ### Pantheon's Global CDN
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN.
