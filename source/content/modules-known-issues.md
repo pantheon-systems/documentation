@@ -145,7 +145,7 @@ ___
 
 <ReviewDate date="2022-01-25" />
 
-**Issue:** The error message below displays when attempting to manually import using Feeds in cron:
+**Issue:** When attempting to manually import using the Feeds plugin in cron, the following error message is displayed:
 
 `RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
 
