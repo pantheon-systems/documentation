@@ -22,7 +22,7 @@ Some plugins and themes are built on the assumption that the CMS has write acces
 
 See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
-The solution to these issues is usually to create a symlink from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). This process is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 The following is a list of plugins that assume write access, and the specific file or folder that needs to be symlinked to resolve:
 
