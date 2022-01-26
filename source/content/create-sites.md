@@ -39,7 +39,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
 ## Sandbox Sites
 
-Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. We allocate two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
+Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. Pantheon allocates two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live, or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more Sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
 
 ### Sandbox Resources
 
