@@ -108,6 +108,7 @@ You can follow the _optional_ steps below to verify that your symlink is correct
 1. Enter `pwd` to confirm you are in the path `/files/cache`.
    
     If the folder is symlinked correctly, an arrow will be displayed on the left side of the folder that is symlinked in your FTP or SFTP.   
+    
     If the symlink is incorrect, you will receive an error message.  
 
 1. Click the arrow next to the folder.
