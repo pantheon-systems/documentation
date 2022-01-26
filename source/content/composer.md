@@ -54,9 +54,11 @@ To maintain a Composer-based workflow with one-click updates through the Dashboa
 
 Use [Integrated Composer](/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream).
 
-A Custom Upstream based off Pantheon's example repositories would need to commit all dependencies. Updates via Composer would only happen at the Custom Upstream repository level by a single repository maintainer. Those updates would then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard.
+Updates made using Integrated Composer are only committed at the Custom Upstream level by a single repository maintainer. Updates then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard. Custom Upstreams using Integrated Composer with dependencies in `upstream-configuration/composer.json` can have their own site-specific dependencies added in the top-level `composer.json` file. Custom Upstreams using Integrated Composer should avoid changing the top-level `composer.json` file after sites have been created from the Custom Upstream to avoid merge conflicts.
 
-This workflow has one very serious shortcoming, that is site-specific dependencies are likely to cause a lot of conflicts. The practical use case for this WebOps workflow is for a large group of sites that require a single set of dependencies. You should only use this method if you don’t intend to use site specific themes, modules, or plugins downstream.
+All dependencies must be committed if you are not using Integrated Composer to update your Custom Upstream.
+
+A shortcoming of the Custom Upstream workflow is that site-specific dependencies are likely to cause a lot of conflicts. This workflow is most practical for a large group of sites that require a single set of dependencies. You should only use this workflow if you don’t intend to use site-specific themes, modules, or plugins downstream.
 
 You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and User in Charge roles.
 
