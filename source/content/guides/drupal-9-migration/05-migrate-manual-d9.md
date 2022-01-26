@@ -35,6 +35,12 @@ This doc uses the following aliases:
 
 <Partial file="drupal-9/drupal-9-upstream-install.md" />
 
+<Accordion title="How to Confirm MariaDB Version Change" id="confirm-mariadb">
+
+<Partial file="confirm-db-upgrade-workflow.md" />
+
+</Accordion>
+
 ## Migrate the Drupal 8 Code to the Drupal 9 Site
 
 1. From the local Drupal 9 site's directory, use Terminus to retrieve the D8 site's Git URL:

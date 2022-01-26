@@ -131,18 +131,12 @@ Specify the site's version of MariaDB to keep the software your site uses curren
   database:
     version: 10.4
   ```
-  
+
   This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 1. Once the changes are pushed the Workflow can take ten minutes or more to complete. To confirm that the database upgrade completed successfully:
 
-   - Using Terminus (recommended):
-
-     ```shell{promptUser:user}
-     echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
-     ```
-
-   - From the Site Dashboard, find the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard and confirm that the Workflows completed successfully.
+   <Partial file="confirm-db-upgrade-workflow.md" />
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
@@ -162,6 +156,8 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 #### Considerations - Drupal 9
 
 <Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+
+Confirm that the database upgrade completed successfully using the steps at the beginning of this section.
 
 #### Considerations - InnoDB Row Size Too Large
 
