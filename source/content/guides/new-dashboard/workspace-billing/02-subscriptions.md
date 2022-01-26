@@ -67,3 +67,8 @@ You can select either an annual or a monthly billing cadence. Click the [Site Bi
 The permission to manage a site's plan is granted only to the role of **Site Owner**. Other roles do not have access to change the site plan. For more information, refer to [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
+
+### Troubleshooting a Declined Credit Card
+
+<Partial file="billing-declined-card-codes.md" />
+

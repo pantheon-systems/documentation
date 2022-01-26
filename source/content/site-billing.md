@@ -94,6 +94,10 @@ After downgrading from a paid plan to Sandbox, remove the card as a payment meth
 
 <Partial file="replace-credit-card.md" />
 
+### Troubleshooting a Declined Credit Card
+
+<Partial file="billing-declined-card-codes.md" />
+
 ## Frequently Asked Questions
 
 ### What forms of payment are accepted?

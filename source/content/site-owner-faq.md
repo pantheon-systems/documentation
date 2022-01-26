@@ -81,6 +81,10 @@ Self-serve sites are billable via recurring monthly or [annual](/annual-billing)
 <Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
 
+### Troubleshooting a Declined Credit Card
+
+<Partial file="billing-declined-card-codes.md" />
+
 ## See Also
 
 - [Billing in the Site Dashboard](/site-billing)
