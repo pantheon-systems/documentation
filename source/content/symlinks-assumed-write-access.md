@@ -112,7 +112,7 @@ You can follow the _optional_ steps below to verify that your symlink is correct
 
 1. Click the arrow next to the folder.
     
-    If you are taken to the `files/cache` folder, the symlink is correct.  
+    If you are directed to the `files/cache` folder, the symlink is correct.  
 
 ## Examples
 
