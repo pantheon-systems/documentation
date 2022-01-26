@@ -35,7 +35,9 @@ This doc uses the following aliases:
 
 <Partial file="drupal-9/drupal-9-upstream-install.md" />
 
-<Accordion title="How to Confirm MariaDB Version Change" id="confirm-mariadb">
+<Accordion title="If your existing site has modules incompatible with MariaDB 10.4" id="consider-confirm-mariadb">
+
+<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
 
 <Partial file="confirm-db-upgrade-workflow.md" />
 
