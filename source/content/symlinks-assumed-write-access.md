@@ -102,18 +102,18 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 ### Verify Your Symlink is Correct
 
-Follow the optional steps below to verify that your symlink is correct.
+You can follow the _optional_ steps below to verify that your symlink is correct.
 
-1. `cd` to the symlinked path from the previous steps, for example: `cd/code/wp-content/cache`
-1. `pwd` to confirm you are in the following path: `/files/cache`
+1. Change directory to the symlinked path. Enter the command `cd/code/wp-content/cache`.
+1. Enter `pwd` to confirm you are in the path `/files/cache`.
    
- If the folder is symlinked correctly, an arrow will appear on the left side of the folder that is symlinked in your FTP or SFTP.   
+    If the folder is symlinked correctly, an arrow will be displayed on the left side of the folder that is symlinked in your FTP or SFTP.   
 
- If the symlink is incorrect, you will receive an error.  
+    If the symlink is incorrect, you will receive an error message.  
 
 1. Click the arrow next to the folder.
    
- If you are taken to the `files/cache` folder, the symlink is correct.  
+    If you are taken to the `files/cache` folder, the symlink is correct.  
 
 ## Examples
 
