@@ -24,7 +24,6 @@ By default, gzip compression is already enabled server-side. The response header
 
 If there are any assets that are not being gzipped, most likely they are assets loaded from outside Pantheon.
 
-
 ## Deliver Efficient CSS and JavaScript
 
 Drupal and WordPress Core both allow for themes and modules/plugins to add individual CSS and JavaScript files to any given page (or every single page). To handle this norm in a way that ensures stable functionality, both systems default to serving each one of those `.css` and `.js` files separately, usually  in HTML `<head>` tag.
@@ -106,9 +105,11 @@ If you want to make the number of files as low as possible, try [Advanced Aggreg
 
 <Alert title="Note" type="info">
 
-The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
-The web community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than one big inline CSS statement that's been aggregated.)<br/><br/>
-In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.<br/><br/>
+The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.
+
+The web community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than one big inline CSS statement that's been aggregated.)
+
+In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.
 
 </Alert>
 

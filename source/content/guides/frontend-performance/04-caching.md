@@ -20,6 +20,7 @@ This page includes information on how to improve optimization with caching.
 [Varnish](https://varnish-cache.org/intro/index.html#intro) is a web application accelerator that speeds up page delivery by caching contents to a configured HTTP server.
 
 ### Pantheon's Global CDN
+
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN.
 
 <TabList>
@@ -81,6 +82,7 @@ Each POP caches all the resources (e.g., CSS and JavaScript) needed to render th
 Pantheon is designed to store cached copies of the full HTML pages coming out of Drupal and WordPress core by default. If non-logged in visitors to your site are not getting a near-instant delivery of HTML from the cache in our Global CDN, something is wrong. Full page cache depends on the HTTP Headers coming out of your site.
 
 ### Review Response Caching
+
 The following describes the expected cache behavior for sites running the Pantheon Advanced Page Cache [WordPress plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [Drupal module](https://www.drupal.org/project/pantheon_advanced_page_cache). If you find that your page is not served from cache with similar headers and values, examine the response using Google's Developer tools and consult the next section for common cache busters and potential culprits.
 
 <dt>age</dt>
@@ -90,7 +92,7 @@ The following describes the expected cache behavior for sites running the Panthe
 <dd >This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.</dd>
 <br />
 <dt>surrogate-key-raw</dt>
-<dd>Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again. This header is only present when you specifically add a debugging header (`Pantheon-Debug:1`) to your request. You can use a browser extension to add the debugging header (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header)).</dd>
+<dd>Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again. This header is only present when you specifically add a debugging header (`Pantheon-Debug:1`) to your request. You can use a browser extension to add the debugging header. Here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header).</dd>
 <br />
 <dt>x-served-by</dt>
 <dd>This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
@@ -114,6 +116,7 @@ Examine the HTTP headers for the response using Chrome's Developer tools:
 ## Troubleshoot Caching Issues
 
 ### Cookies
+
 Cookies are included in the response headers we examined previously. They can include sessions for authenticated traffic to logged in users, which can invalidate cache. For WordPress, it's common for plugins to add their own cookies in such a way that breaks full-page caching.
 
 For reference, here are all the cookie patterns configured to bust cache across Pantheon's Global CDN:
@@ -138,6 +141,7 @@ wp-resetpass-[A-Za-z0-9_]+
 You can see the cookies used on your site under the **Application** tab in Chrome's Developer Tools.
 
 ### Unintentional Cache Invalidation
+
 Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
 
 <TabList>
@@ -181,6 +185,7 @@ See the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cach
 </TabList>
 
 ### Incorrect Configuration
+
 Working across many environments presents opportunities for configuration changes to get lost or for configurations to never be set correctly in the first place. Using tools like [WP-CFM](https://wordpress.org/plugins/wp-cfm/) and Drupal 8's [Configuration Management System](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration) to track configuration alongside code will mitigate these issues, but mistakes do happen. Double-check your site's default caching configurations:
 
 
@@ -213,13 +218,16 @@ The Drupal 8 default setting is 10 minutes. You can set much higher cache max ag
 
 </TabList>
 
-## Optimize Non-Cached Responses
+## Optimize Non-Cached 
+
 Improve performance on longer trips to and from the browser for instances you _want_ to bypass cache and go straight to the application:
 
-### Upgrade to PHP7
-If you haven't done so already, [make the switch to PHP7](/php-versions). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
+### Upgrade You PHP
+
+If you haven't done so already, [updated your PHP to the latest version](https://pantheon.io/docs/php-versions). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
-### Enable Redis Object Caching
-Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/redis).
+### Enable Object Caching
+
+Sites loading a lot of content can benefit from an object caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](https://pantheon.io/docs/object-cache).

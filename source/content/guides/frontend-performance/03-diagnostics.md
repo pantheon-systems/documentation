@@ -20,11 +20,11 @@ Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provid
 
 ## New Relic
 
-[New Relic® Performance Monitoring] (https://pantheon.io/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
+[New Relic® Performance Monitoring](https://pantheon.io/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
 
 ### Monitor Performance with New Relic
 
-If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic) for help identifying bottlenecks.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](https://pantheon.io/docs/new-relic) for help identifying bottlenecks.
 
 #### Helper Tools
 
