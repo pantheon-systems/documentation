@@ -71,7 +71,7 @@ If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In tha
 
 ### Find a Site's Upstream URL
 
-The upstream URL is provided within the Site Dashboard, under **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/terminus):
+Enter the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
 ```bash{promptUser: user}
 terminus site:info <site> --field=upstream
@@ -79,7 +79,7 @@ terminus site:info <site> --field=upstream
 
 ## Manually Resolve Conflicts
 
-How you resolve a merge conflict depends on what type of conflict you're faced with.
+Steps to reslove merge conflicts vary by the type of conflict, such as delete/modify conflicts, content conflicts, and multidev conflicts. Read the sections below for more information.
 
 ### Resolve delete/modify Conflicts
 
