@@ -26,48 +26,48 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 
 <Tab title="Global" id="globaltab1" active={true}>
 
-![Global CDN Map](../../images/guides/front-end-performance/CDN-map.png)
+![Global CDN Map](../../../images/guides/front-end-performance/CDN-map.png)
 
 </Tab>
 
 <Tab title="N. America" id="natab1">
 
-![North America CDN Map](../../images/guides/front-end-performance/CDN-map-NA.png)
+![North America CDN Map](../../../images/guides/front-end-performance/CDN-map-NA.png)
 <p class="pop-desc">Ashburn (x2), Atlanta (x2), Boston, Chicago (x2), Dallas, Denver, Los Angeles (x2), Miami, Minneapolis, Montreal, New York (x2), San Jose (x2), Seattle, Toronto</p>
 
 </Tab>
 
 <Tab title="S. America" id="satab1">
 
-![South America CDN Map](../../images/guides/front-end-performance/CDN-map-SA.png)
+![South America CDN Map](../../../images/guides/front-end-performance/CDN-map-SA.png)
 <p class="pop-desc">São Paulo, Rio de Janeiro</p>
 
 </Tab>
 
 <Tab title="Africa" id="aftab1">
 
-![Africa CDN Map](../../images/guides/front-end-performance/CDN-map-AF.png)
+![Africa CDN Map](../../../images/guides/front-end-performance/CDN-map-AF.png)
 <p class="pop-desc">Cape Town, Johannesburg</p>
 
 </Tab>
 
 <Tab title="Europe" id="eutab1">
 
-![Europe CDN Map](../../images/guides/front-end-performance/CDN-map-EU.png)
+![Europe CDN Map](../../../images/guides/front-end-performance/CDN-map-EU.png)
 <p class="pop-desc">Amsterdam, Frankfurt (x2), London (x2), Madrid, Paris, Stockholm</p>
 
 </Tab>
 
 <Tab title="Asia" id="asiatab1">
 
-![Asia CDN Map](../../images/guides/front-end-performance/CDN-map-Asia.png)
+![Asia CDN Map](../../../images/guides/front-end-performance/CDN-map-Asia.png)
 <p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo (x2)</p>
 
 </Tab>
 
 <Tab title="Australia & New Zealand" id="austab1">
 
-![Australia CDN Map](../../images/guides/front-end-performance/CDN-map-AUZ.png)
+![Australia CDN Map](../../../images/guides/front-end-performance/CDN-map-AUZ.png)
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 
 </Tab>
@@ -95,19 +95,19 @@ The following describes the expected cache behavior for sites running the Panthe
 <dt>x-served-by</dt>
 <dd>This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
 
-![Chrome network headers](../../images/guides/front-end-performance/chrome-network-headers.png)
+![Chrome network headers](../../../images/guides/front-end-performance/chrome-network-headers.png)
 
 <Accordion title="Google's Developer Tools" id="dev-tools" icon="lightbulb">
 
 Examine the HTTP headers for the response using Chrome's Developer tools:
 
-![Check headers in chrome](../../images/guides/front-end-performance/inspect-network.gif)
+![Check headers in chrome](../../../images/guides/front-end-performance/inspect-network.gif)
 
 1. Right click somewhere on the page.
-2. Select **Inspect**.
-3. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
-4. Select the first row, which is a request for the initial HTML file.
-5. Look for the **Age** header. Any number greater than zero indicates that this response was served to the browser from cache.
+1. Select **Inspect**.
+1. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
+1. Select the first row, which is a request for the initial HTML file.
+1. Look for the **Age** header. Any number greater than zero indicates that this response was served to the browser from cache.
 
 </Accordion>
 
@@ -118,7 +118,7 @@ Cookies are included in the response headers we examined previously. They can in
 
 For reference, here are all the cookie patterns configured to bust cache across Pantheon's Global CDN:
 
-```
+```none
 NO_CACHE
 S+ESS[a-z0-9]+
 fbs[a-z0-9_]+
@@ -191,10 +191,10 @@ Working across many environments presents opportunities for configuration change
 The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
-2. Review the Time to Live, which translates to `max-age`.
-3. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
+1. Review the Time to Live, which translates to `max-age`.
+1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
-![Pantheon Cache Plugin](../../images/guides/front-end-performance/pantheon-page-cache.png)
+![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
 
 </Tab>
 
@@ -203,9 +203,9 @@ The Pantheon Page Cache plugin is already included by our upstream as a Must-Use
 In Drupal it is very easy to turn off page caching and forget to turn it back on.
 
 1. Navigate to **Configuration** > **Development** > **Performance** within Drupal's Admin Interface.
-2. Review **Page cache maximum age**:
+1. Review **Page cache maximum age**:
 
-![Drupal Performance settings](../../images/guides/front-end-performance/d8-cache.png)
+![Drupal Performance settings](../../../images/guides/front-end-performance/d8-cache.png)
 
 The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 

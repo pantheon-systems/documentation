@@ -15,6 +15,7 @@ reviewed: "2020-10-10"
 This pages provides information on static sites and static page generation, including AMP.
 
 ## Decoupled and Headless sites
+
 Decoupled and headless site strategies offer more flexibility for development teams to build high-performance sites that let editors work where they prefer.  
 
 ## AMP

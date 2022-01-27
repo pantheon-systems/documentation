@@ -23,9 +23,11 @@ Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provid
 [New Relic® Performance Monitoring] (https://pantheon.io/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
 
 ### Monitor Performance with New Relic
+
 If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic) for help identifying bottlenecks.
 
 #### Helper Tools
+
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
 
 <TabList>
@@ -48,10 +50,10 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 ```
 
 1. Navigate to a development environment's site URL that has the plugin installed and enabled, with the above configuration in place.
-2. From the WordPress dashboard, click **Debug** towards the top right.
-3. Review the request and object cache data for potential red flags.
+1. From the WordPress dashboard, click **Debug** towards the top right.
+1. Review the request and object cache data for potential red flags.
 
-![Debug Bar WordPress](../../images/guides/front-end-performance/debug-bar.png)
+![Debug Bar WordPress](../../../images/guides/front-end-performance/debug-bar.png)
 
 </Tab>
 
@@ -59,7 +61,7 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 
 The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel) and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
-![Devel Drupal](../../images/guides/front-end-performance/drupal8-commandline--webprofiler.png)
+![Devel Drupal](../../../images/guides/front-end-performance/drupal8-commandline--webprofiler.png)
 
 </Tab>
 
