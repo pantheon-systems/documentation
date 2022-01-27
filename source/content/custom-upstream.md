@@ -35,7 +35,7 @@ New features and functionality can be continuously developed in the Custom Upstr
 
 ![Custom upstream update strategy](../images/update-diagram.png)
 
-> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
+> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-edu-drupal-case-study).
 
 ### Scale Client Services
 
