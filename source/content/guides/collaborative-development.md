@@ -103,8 +103,6 @@ This guide will show you the basics for collaborating with others if your site:
   Writing objects: 100% (120046/120046), 31.88 MiB | 3.26 MiB/s, done.
   Total 120046 (delta 89679), reused 120039 (delta 89679)
   To git@github.com:pantheon-learning/d7-ci.git
-  * [new branch]      master -> master
-  Branch master set up to track remote branch master from github.
   ```
 
  The repository on GitHub now has all of the same code as the existing site.
@@ -282,7 +280,6 @@ This guide will show you the basics for collaborating with others if your site:
   remote: Skipping code sync, no multidev environments were found for branch "configs".
   remote:
   To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
-  * [new branch]      configs -> configs
   ```
 
   The platform found no Multidev environments associated with the Git branch. 
