@@ -71,23 +71,27 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
 1. Add `patch` to your `composer.json` file:
 
-  {
+    ```bash 
+    {
     "require": {
       "cweagans/composer-patches": "~1.0",
       "drupal/core-recommended": "^8.8",
     },
+    ```
 
 1. Add a `patches` folder to the root of your `composer.json` file.
 
 1. Add an `extras` section inside your `composer.json` file:
 
+    ```bassh
     "extra": {
       "patches-file": "local/path/to/your/composer.patches.json"
     }
+    ```
 
 1. Run `composer install`.
 
-  This remove the core version, including libraries and dependencies, before re-downloading the core (plus libraries and dependencies), and applying the patch.
+  This removes the core version, including libraries and dependencies, before re-downloading the core (plus libraries and dependencies), and applying the patch.
 
 ## Apply and Manage Drupal Module Patches with Composer
 
