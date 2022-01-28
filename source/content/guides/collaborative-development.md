@@ -285,7 +285,7 @@ This guide will show you the basics for collaborating with others if your site:
   * [new branch]      configs -> configs
   ```
 
- The platform found no Multidev environments associated with the Git branch. 
+ The platform found no Multidev environments associated with the Git branch. Follow the steps below to create a Multideve environment.
 
 1. Create a Multidev environment in Terminus:
 
@@ -340,4 +340,4 @@ This guide will show you the basics for collaborating with others if your site:
 
  [Starting with Git](/git)
 
- [Git FAQs](/git-faq)
+[Git FAQs](/git-faq)
