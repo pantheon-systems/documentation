@@ -154,17 +154,17 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
  <Alert title="Note" type="info">
 
-If `query cache` is turned on within the MySQL service (an obsolete setting), you may notice a severe performance drop on Pantheon during the User Acceptance Testing stage of an active migration from Acquia. We recommend that you move to a modern service to avoid this issue. 
+  If `query cache` is turned on within the MySQL service (an obsolete setting), you may notice a severe performance drop on Pantheon during the User Acceptance Testing stage of an active migration from Acquia. We recommend that you move to a modern service to avoid this issue. 
 
-If you would like to confirm that your performance drop is caused by the obsolete `query cache` MySQL service setting, connect to the MySQL service in Acquia’s production environment and run the following: 
+  If you would like to confirm that your performance drop is caused by the obsolete `query cache` MySQL service setting, connect to the MySQL service in Acquia’s production environment and run the following: 
 
-```bash
-SHOW VARIABLES LIKE 'query_cache_%';
-```
+  ```bash
+  SHOW VARIABLES LIKE 'query_cache_%';
+  ```
 
-High values for the `query_cache_limit` and `query_cache_size` variables will confirm that performance degradation is related to the MySQL `query cache` service setting.
+  High values for the `query_cache_limit` and `query_cache_size` variables will confirm that performance degradation is related to the MySQL `query cache` service setting.
 
-</Alert>
+  </Alert>
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
