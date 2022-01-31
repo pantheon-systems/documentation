@@ -142,7 +142,42 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 ### Migrate from Acquia
 
-Acquia uses a nested docroot directory called `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+1. Choose to either move the contents of of Aquia's nested directory `docroot` up and remove the folder, or rename the folder to `web` and set `web_docroot: true` in your `pantheon.yml` file.
+
+ For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+
+ 1. Remove all Acquia-specific modules.
+ 
+ 1. Adjust any special Acquia env-related configurations for compatibility with Pantheon's platform.
+
+ 1. Uninstall any Acquia Search modules and the default Drupal core Search module (if still enabled for your site) by navigating to `admin/modules/uninstall`, if you plan on using [Pantheon Search](https://pantheon.io/docs/solr).
+
+ <Alert title="Note" type="info">
+
+If `query cache` is turned on within the MySQL service (an obsolete setting), you may notice a severe performance drop on Pantheon during the User Acceptance Testing stage of an active migration from Acquia. We recommend that you move to a modern service to avoid this issue. 
+
+If you would like to confirm that your performance drop is caused by the obsolete `query cache` MySQL service setting, connect to the MySQL service in Acquia’s production environment and run the following: 
+
+```bash
+SHOW VARIABLES LIKE 'query_cache_%';
+```
+
+Results similar to those below will confirm that performance degradation is related to the MySQL `query cache`:
+
+mysql> SHOW VARIABLES LIKE 'query_cache_%';
++------------------------------+----------+
+| Variable_name                | Value    |
++------------------------------+----------+
+| query_cache_limit            | 5242880  |
+| query_cache_min_res_unit     | 1024     |
+| query_cache_size             | 41943040 |
+| query_cache_strip_comments   | ON       |
+| query_cache_type             | ON       |
+| query_cache_wlock_invalidate | OFF      |
++------------------------------+----------+
+6 rows in set (0.00 sec)
+
+</Alert>
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
