@@ -164,6 +164,8 @@ SHOW VARIABLES LIKE 'query_cache_%';
 
 Results similar to those below will confirm that performance degradation is related to the MySQL `query cache`:
 
+
+```bash
 mysql> SHOW VARIABLES LIKE 'query_cache_%';
 +------------------------------+----------+
 | Variable_name                | Value    |
@@ -176,6 +178,7 @@ mysql> SHOW VARIABLES LIKE 'query_cache_%';
 | query_cache_wlock_invalidate | OFF      |
 +------------------------------+----------+
 6 rows in set (0.00 sec)
+```
 
 </Alert>
 
