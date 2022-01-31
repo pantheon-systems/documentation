@@ -162,23 +162,7 @@ If you would like to confirm that your performance drop is caused by the obsolet
 SHOW VARIABLES LIKE 'query_cache_%';
 ```
 
-Results similar to those below will confirm that performance degradation is related to the MySQL `query cache`:
-
-
-```bash
-mysql> SHOW VARIABLES LIKE 'query_cache_%';
-+------------------------------+----------+
-| Variable_name                | Value    |
-+------------------------------+----------+
-| query_cache_limit            | 5242880  |
-| query_cache_min_res_unit     | 1024     |
-| query_cache_size             | 41943040 |
-| query_cache_strip_comments   | ON       |
-| query_cache_type             | ON       |
-| query_cache_wlock_invalidate | OFF      |
-+------------------------------+----------+
-6 rows in set (0.00 sec)
-```
+High values for the `query_cache_limit` and `query_cache_size` variables will confirm that performance degradation is related to the MySQL `query cache` service setting.
 
 </Alert>
 
