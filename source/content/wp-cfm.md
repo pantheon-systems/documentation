@@ -12,13 +12,15 @@ The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant m
 
 <Alert title="Note" type="info">
 
-WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
+WP-CFM should only be used to write changes to code in Dev and Multidev environments where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
 
 </Alert>
 
 ## Install and Deploy WP-CFM
 
-Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/terminus):
+Each of the following steps can be done using the Pantheon and WordPress Dashboards or through the command line using Pantheon's CLI, [Terminus](/terminus).
+
+The command syntax you use in Terminus will vary depending on the version you are using. The example commands below use the correct syntax for Terminus 3. For other Terminus version command examples, see the [Install Plugins](https://pantheon.io/docs/terminus/plugins#install-plugins) and [Command Structure](https://pantheon.io/docs/terminus/examples#command-structure) sections of the [Terminus Manual](https://pantheon.io/docs/terminus).
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
 
@@ -29,7 +31,7 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 1. Install the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin on the Dev Environment using the WordPress Dashboard or with Terminus:
 
     ```bash{promptUser: user}
-    terminus wp <site>.<env> -- plugin install --activate wp-cfm
+    terminus self:plugin:install pantheon-systems/terminus-wp-cfm
     ```
 
 1. Commit this change using the Site Dashboard or with Terminus:
