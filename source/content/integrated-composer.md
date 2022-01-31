@@ -235,21 +235,38 @@ Merge the changes manually:
 
 ### Changes Lost When Uploading or Committing Module/Plugin or Theme Files
 Module/Plugin and Theme files should not be committed, when using Git mode, or uploaded, when using SFTP mode, directly to your site.  The `.gitignore` file in your upstream respository has several paths defined causing files in those directories to be ignored.  These directories are:
-```none:title=code/web/
-code/web
-└─ sites/ for Drupal
-   └─ core/
-   └─ libraries/
-   └─ modules/custom/
-   └─ sites/*/files/
-   └─ sites/*/private/
-└─ wp-content/ for WordPress
-   └─ mu-plugins/
-   └─ plugins/
-   └─ themes/
-```
+<TabList>
 
-See the `.gitignore` file for Drupal [here](https://github.com/pantheon-upstreams/drupal-project/blob/master/.gitignore) and for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+<Tab title="Drupal" id="drupal-gitignore" active={true}>
+```none:title=code/web/sites
+code/web/
+└─ core/
+└─ drush/Commands/contrib/
+└─ libraries/
+└─ modules/contrib/
+└─ private/scripts/quicksilver
+└─ profiles/contrib/
+└─ sites/*/files/
+└─ sites/*/private/
+└─ themes/contrib/
+```
+See the `.gitignore` file for Drupal [here](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/.gitignore).
+
+The `contrib` folders are where community contributed modules, profiles, and themes would reside.
+The `custom` folders, which are not ignored, are where modules, profiles, and themes created by you would reside.
+</Tab>
+
+<Tab title="WordPress" id="wp-gitignore">
+```none:title=code/web/
+code/web/wp-content/
+└─ mu-plugins/
+└─ plugins/
+└─ themes/
+```
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+</Tab>
+
+</TabList>
 
 See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
 
