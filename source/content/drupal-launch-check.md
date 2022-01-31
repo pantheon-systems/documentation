@@ -58,15 +58,26 @@ Follow the resolution steps below if you have a high number of options being aut
 
 1. Enter the code below to run `onSave()` whenever a configuration is saved.
 
- ```bash 
- <?php public static function getSubscribedEvents() { $events[ConfigEvents::SAVE][] = ['onSave']; return $events; } ?> 
- ```
+    ```bash
+    <?php
+    public static function getSubscribedEvents() {
+    $events[ConfigEvents::SAVE][] = ['onSave'];
+    return $events;
+    }
+    ?>
+    ```
 
  Using the `onSave()` callback invalidates the cache when the appropriate configuration keys change. For example, if `system.theme` or `system.theme.global` change, the code will call the appropriate function to invalidate the cache:
- 
- ```bash
-  <?php public function onSave(ConfigCrudEvent $event) { if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) { // Invalidate the cache here. } } ?> 
-  ```
+
+    ```bash 
+    <?php
+    public function onSave(ConfigCrudEvent $event) {
+        if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) {
+            // Invalidate the cache here.
+        }
+    }
+    ?>
+    ```
 
 ## What Doesn't Launch Check Address?
 
