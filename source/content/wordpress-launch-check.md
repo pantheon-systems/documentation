@@ -47,7 +47,7 @@ Launch Check displays database stats such as the number of rows in the options t
 
 Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
 
-1. Navigate to the module root folder.
+1. Navigate to the module root folder. 
 
 1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
 

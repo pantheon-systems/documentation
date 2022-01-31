@@ -44,7 +44,7 @@ Launch Check looks at at users, including reports on number of users, roles, etc
 
 ### Database
 
-Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
+Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. 
 
 Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
 
