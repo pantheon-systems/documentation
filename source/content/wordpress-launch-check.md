@@ -43,7 +43,40 @@ This check verifies that Cron is enabled and what jobs are scheduled. It is enab
 
 ### Database
 
-This displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
+Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
+
+Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
+
+1. Navigate to the module root folder.
+
+1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
+
+1. Locate the `getSubscribedEvents()` function.
+
+   This is the only member function required by the  `EventSubscriberInterface`. 
+
+1. Enter the code below to run `onSave()` whenever a configuration is saved.
+
+    ```bash
+    <?php
+    public static function getSubscribedEvents() {
+    $events[ConfigEvents::SAVE][] = ['onSave'];
+    return $events;
+    }
+    ?>
+    ```
+
+  Using the `onSave()` callback invalidates the cache when the appropriate configuration keys change. For example, if `system.theme` or `system.theme.global` change, the code will call the appropriate function to invalidate the cache:
+
+    ```bash 
+    <?php
+    public function onSave(ConfigCrudEvent $event) {
+        if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) {
+            // Invalidate the cache here.
+        }
+    }
+    ?>
+    ```
 
 #### What issues will I experience if I don't use InnoDB?
 

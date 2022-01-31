@@ -18,12 +18,51 @@ In short, you get a fast, repeatable report that can help detect common problems
 
 ## What Does Launch Check Evaluate?
 
-- Drupal caching settings for optimal settings that will leverage both internal and reverse proxy caches
-- Modules, including duplicate modules in the codebase, missing modules which damage performance, development modules in live environments and unrecommended modules with compatibility problems
-- Views caching for each view display, both result and query caching
-- Watchdog logs, including overall count, 404 entries, PHP errors
-- Drupal site status report
-- Users, including reports on number of users, roles, etc.
+### Cache Settings
+
+Launch Check evaluates Drupal caching settings for optimal settings that will leverage both internal and reverse proxy caches.
+
+### Modules
+
+Launch Check looks at modules, including duplicate modules in the codebase, missing modules which damage performance, development modules in live environments, and unrecommended modules with compatibility problems.
+
+### View Display Caching
+
+Launch Check looks at caching for each view display, both result and query caching.
+
+### Watchdog Logs
+
+Watchdog logs are evaluated, including overall count, 404 entries, and PHP errors.
+
+### Status Report
+
+Launch Check evaluates the Drupal site status report.
+
+### Users
+
+Launch Check looks at at users, including reports on number of users, roles, etc.
+
+### Database
+
+Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
+
+Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
+
+1. Navigate to the module root folder.
+
+1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
+
+1. Locate the `getSubscribedEvents()` function.
+
+ This is the only member function required by the `EventSubscriberInterface`.
+
+1. Enter the code below to run `onSave()` whenever a configuration is saved.
+
+ ```bash <?php public static function getSubscribedEvents() { $events[ConfigEvents::SAVE][] = ['onSave']; return $events; } ?> ```
+
+ Using the `onSave()` callback invalidates the cache when the appropriate configuration keys change. For example, if `system.theme` or `system.theme.global` change, the code will call the appropriate function to invalidate the cache:
+ 
+ ```bash <?php public function onSave(ConfigCrudEvent $event) { if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) { // Invalidate the cache here. } } ?> ```
 
 ## What Doesn't Launch Check Address?
 
