@@ -88,6 +88,21 @@ See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you are having trouble sending mail and are using SES, confirm you are not in sandbox mode. For more information, [see AWS documentation on sandbox mode](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html).
 
+### WordPress Password Reset Emails Are Not Delivered
+
+This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Password reset emails will not be sent if the URLs do not match. This also applies to any email sent by WordPress, such as when a new user is added.
+
+current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpassword`
+
++-----------+--------------------+-------------------------------------------------+----------+
+| option_id | option_name        | option_value                                    | autoload |
++-----------+--------------------+-------------------------------------------------+----------+
+|         1 | siteurl            | https://www.example.com | yes      |
+|         2 | home               | https://www.example.com | yes      |
+|         3 | blogname           | CSE WP AGCDN Practice                           | yes      |
+|         4 | blogdescription    | Just another WordPress site                     | yes      |
+|         5 | users_can_register | 0                                               | yes      |`
+
 ## Frequently Asked Questions
 
 ### Can I use Pantheon's local MTA (postfix)?
