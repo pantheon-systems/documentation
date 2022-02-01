@@ -63,7 +63,6 @@ Launch Check displays database stats, the number of rows in a given table, which
 
 If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [WordPress wp_options Table Autoloading Cache](/wordpress-wp-options-table-autoload-cache).
 
- 
 #### What issues will I experience if I don't use InnoDB?
 
 InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
