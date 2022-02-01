@@ -55,13 +55,13 @@ Launch Check displays database stats, the number of rows in a given table, which
 
  The `wp_options` table stores several types of data for your site, including:
 
-    - settings for your plugins, widgets, and themes
-    - temporarily cached data
-    - site URL and home URL
-    - category settings
-    - autoloaded data
+- settings for your plugins, widgets, and themes
+- temporarily cached data
+- site URL and home URL
+- category settings
+- autoloaded data
 
- If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [WordPress wp_options Table Autoloading Cache](/wordpress-wp-options-table-autoload-cache)
+ If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [WordPress wp_options Table Autoloading Cache](/wordpress-wp-options-table-autoload-cache).
 
  
 #### What issues will I experience if I don't use InnoDB?
