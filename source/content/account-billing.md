@@ -64,6 +64,10 @@ Deleting a card profile from your account will also delete its associated billin
 1. Once the card reports **This card is not paying for any sites.**, click **Delete Card**.
 1. Check the box next to **Yes, delete my card.** and click **Delete Card**.
 
+## Troubleshooting a Declined Credit Card
+
+<Partial file="billing-declined-card-codes.md" />
+
 ## See Also
 
 - [Billing in the Site Dashboard](/site-billing)

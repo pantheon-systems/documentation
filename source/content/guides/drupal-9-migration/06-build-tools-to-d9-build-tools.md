@@ -179,6 +179,10 @@ brew install jq rsync
 
 ### Upgrade MariaDB in All Environments
 
+#### Drupal 9 Considerations
+
+<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+
 Once you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
 
 The possible risks associated with the time it takes for the platform to upgrade the database are minimal, but you can use the following command to mitigate potential errors:

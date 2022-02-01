@@ -47,6 +47,10 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 
 <Partial file="transfer-ownership-billing-steps.md" />
 
+## Troubleshooting a Declined Credit Card
+
+<Partial file="billing-declined-card-codes.md" />
+
 <Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">
 
 ## Ready to launch like the pros?

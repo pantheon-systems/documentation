@@ -22,12 +22,14 @@ Some plugins and themes are built on the assumption that the CMS has write acces
 
 See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
-The solution to these issues is usually to create a symlink from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). This process is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 The following is a list of plugins that assume write access, and the specific file or folder that needs to be symlinked to resolve:
 
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                      |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 |                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause                   |
 |                                                                                               |                                                       | your deployment workflows to break. You can download full backups                                |
@@ -46,7 +48,7 @@ The following is a list of plugins that assume write access, and the specific fi
 | [Nitropack](https://wordpress.org/plugins/nitropack/)                                         | wp-content/nitropack and `advanced.cache.php`         | Allows for the caching feature to be disabled so that other features, such as                    |
 |                                                                                               |                                                       | optimization, can be used side-by-side.                                                          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                                                                                                                         |
+| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                      |                                                                                                  |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verify the target directory, which will return                      |
 |                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when                         |
@@ -71,6 +73,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 Plugins and Themes with issues resolved (at least partially) by this include:
 
+- [AccessAlly WordPress LMS](https://accessally.com/)
 - [Blabber Theme](https://themeforest.net/item/blabber-allinone-elementor-blog-news-magazine-wordpress-theme/24305542/)
 - [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 - [Event Espresso](https://eventespresso.com/)
@@ -352,10 +355,7 @@ ___
 
 **Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
 
-**Solution:**  When the `wp-content/uploads/et-cache` directory gets too full, it tends to slow down. Clear the cache from **Theme Options** > **Builder** > **Advanced** > **Static CSS File Generation**:
-
-  ![A screenshot highlighting the option to clear the Divi cache](../images/plugins-known-issues/divi-clear-cache.png)
-
+**Solution:**  When the `wp-content/uploads/et-cache` directory gets too full, it tends to slow down. Large lists of files will slow down the admin area even when Static CSS file generation is disabled. Clear the cache by accessing the site's files [via SFTP](/sftp#sftp-connection-information). Empty the contents inside the  `files/et-cache` folder, but do not remove the folder. Some files will be regenerated within the `files/et-cache` folder; this is expected behavior. Over time the files can grow too large, especially if Static CSS generation is still enabled, and you may need to repeat the steps to empty the folder.
 ___
 
 ## Elementor
