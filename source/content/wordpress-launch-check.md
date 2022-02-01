@@ -43,40 +43,57 @@ This check verifies that Cron is enabled and what jobs are scheduled. It is enab
 
 ### Database
 
-Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
+The database stores your site's data including:
 
-Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
+- pages and other content
+- user data
+- plugins and themes
+- categories, tags, and system-wide settings
+- tables 
 
-1. Navigate to the module root folder. 
+Launch Check displays database stats, the number of rows in a given table, which tables are using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. [Transients](https://developer.wordpress.org/apis/handbook/transients/) are cached data temporarily stored in the `wp-options` table (see the section below for more details about the `wp-options` table, including troubleshooting tips).
 
-1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
+#### `wp-options` Table
 
-1. Locate the `getSubscribedEvents()` function.
+The `wp-options` table stores several types of data for your site, including:
 
-   This is the only member function required by the  `EventSubscriberInterface`. 
+- settings for your plugins, widgets, and themes
+- temporarily cached data
+- site URL and home URL
+- category settings
+- autoloaded data
 
-1. Enter the code below to run `onSave()` whenever a configuration is saved.
+Follow the resolution steps below if your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`.
 
-    ```bash
-    <?php
-    public static function getSubscribedEvents() {
-    $events[ConfigEvents::SAVE][] = ['onSave'];
-    return $events;
-    }
-    ?>
-    ```
+First, start by checking the size of your autoloaded data.
 
-  Using the `onSave()` callback invalidates the cache when the appropriate configuration keys change. For example, if `system.theme` or `system.theme.global` change, the code will call the appropriate function to invalidate the cache:
+1. Log in to `phpMyAdmin`.
 
-    ```bash 
-    <?php
-    public function onSave(ConfigCrudEvent $event) {
-        if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) {
-            // Invalidate the cache here.
-        }
-    }
-    ?>
-    ```
+1. Select your database and then click the `SQL` tab.
+
+1. Run the following code:
+
+```bash
+SELECT SUM(LENGTH(option_value)) as autoload_size FROM example_options WHERE autoload='yes';
+```
+
+If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
+
+1. Run the following code to see the top items with autoloaded data:
+
+```bash
+SELECT option_name, length(option_value) AS option_value_length FROM example_options WHERE autoload='yes' ORDER BY option_value_length DESC LIMIT 10;
+```
+
+1. Run the following code if you want to turn off autoload for an item:
+
+```bash
+update_option( 'example_option', 'value' ); to be update_option( 'example_option', 'value', 'no' );
+```
+
+You must specify `no` in the third parameter (if left blank it will default to `yes`). 
+
+For additional troubleshooting resources, see [How to Clean up Your wp_options Table and Autoloaded Data](https://kinsta.com/knowledgebase/wp-options-autoloaded-data/) and [A Quick Summary of WP Options, Autoload, and Cleanup](https://wpshout.com/wp-option-autoload/_)
 
 #### What issues will I experience if I don't use InnoDB?
 
