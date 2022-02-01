@@ -90,7 +90,7 @@ SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you
 
 ### WordPress Password Reset Emails Are Not Delivered
 
-This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Password reset emails will not be sent if the URLs do not match. This also applies to any email sent by WordPress, such as when a new user is added.
+This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Emails will only be sent if the URLs match. This also applies to any email sent by WordPress, such as when a new user is added.
 
 current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpassword`
 
