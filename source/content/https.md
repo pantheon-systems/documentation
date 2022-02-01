@@ -93,6 +93,12 @@ You can pre-provision HTTPS via DNS records, or the Let's Encrypt ACME challenge
 
 Verifying with the provided DNS record is the preferred method for customers who can make new DNS records for their domain(s).
 
+In some cases, such as when the custom domain has an existing third-party CAA, you must manually add the Let's Encrypt CAA.
+ 
+Let’s Encrypt’s identifying domain name for CAA is letsencrypt.org. For more official information, read Let's Encrypt's [Certification Practice Statement CPS, section 4.2.1.](https://letsencrypt.org/repository/).
+
+This tool can be used to gather more info on how pass the custom domain verification https://letsdebug.net/
+
 If you do not already have HTTPS, you don't need to pre-provision, but doing so will allow you to launch your Pantheon site with HTTPS already enabled, and is recommended.
 
 </Alert>
