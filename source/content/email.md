@@ -94,14 +94,16 @@ This happens when the current URL does not match the URL that is stored in the e
 
 current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpassword`
 
-+-----------+--------------------+-------------------------------------------------+----------+
-| option_id | option_name        | option_value                                    | autoload |
-+-----------+--------------------+-------------------------------------------------+----------+
-|         1 | siteurl            | https://www.example.com | yes      |
-|         2 | home               | https://www.example.com | yes      |
-|         3 | blogname           | CSE WP AGCDN Practice                           | yes      |
-|         4 | blogdescription    | Just another WordPress site                     | yes      |
-|         5 | users_can_register | 0                                               | yes      |`
+ ```bash
+ +-----------+--------------------+-------------------------------------------------+----------+
+ | option_id | option_name        | option_value                                    | autoload |
+ +-----------+--------------------+-------------------------------------------------+----------+
+ |         1 | siteurl            | https://www.example.com | yes      |
+ |         2 | home               | https://www.example.com | yes      |
+ |         3 | blogname           | CSE WP AGCDN Practice                           | yes      |
+ |         4 | blogdescription    | Just another WordPress site                     | yes      |
+ |         5 | users_can_register | 0                                               | yes      |
+ ```
 
 ## Frequently Asked Questions
 
