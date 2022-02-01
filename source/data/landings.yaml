@@ -830,6 +830,8 @@
               url: '/object-cache'
             - text: 'WordPress Pantheon Cache Plugin Configuration'
               url: '/wordpress-cache-plugin'
+            - text: 'WordPress wp_options Table Autoloading Cache'
+              url: '/wordpress-wp-options-table-autoload-cache'
 - title: 'Manage Teams & Organizations'
   path: 'manage'
   video_id: '8bsPxcnffYM'

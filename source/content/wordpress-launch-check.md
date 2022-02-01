@@ -51,11 +51,9 @@ The database stores your site's data including:
 - categories, tags, and system-wide settings
 - tables 
 
-Launch Check displays database stats, the number of rows in a given table, which tables are using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. [Transients](https://developer.wordpress.org/apis/handbook/transients/) are cached data temporarily stored in the `wp-options` table (see the section below for more details about the `wp-options` table, including troubleshooting tips).
+Launch Check displays database stats, the number of rows in a given table, which tables are using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. [Transients](https://developer.wordpress.org/apis/handbook/transients/) are cached data temporarily stored in the `wp_options` table.  
 
-#### `wp-options` Table
-
- The `wp-options` table stores several types of data for your site, including:
+ The `wp_options` table stores several types of data for your site, including:
 
     - settings for your plugins, widgets, and themes
     - temporarily cached data
@@ -63,38 +61,9 @@ Launch Check displays database stats, the number of rows in a given table, which
     - category settings
     - autoloaded data
 
- Follow the resolution steps below if your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`.
+ If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [WordPress wp_options Table Autoloading Cache](/wordpress-wp-options-table-autoload-cache)
 
- First, start by checking the size of your autoloaded data.
-
-1. Log in to `phpMyAdmin`.
-
-1. Select your database and then click the `SQL` tab.
-
-1. Run the following code:
-
-    ```bash
-    SELECT SUM(LENGTH(option_value)) as autoload_size FROM example_options WHERE autoload='yes';
-    ```
-
-    If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
-
-1. Run the following code to see the top items with autoloaded data:
-
-    ```bash
-    SELECT option_name, length(option_value) AS option_value_length FROM example_options WHERE autoload='yes' ORDER BY option_value_length DESC LIMIT 10;
-    ```
-
-1. Run the following code if you want to turn off autoload for an item:
-
-    ```bash
-    update_option( 'example_option', 'value' ); to be update_option( 'example_option', 'value', 'no' );
-    ```
-
-    You must specify `no` in the third parameter (if left blank it will default to `yes`). 
-
- For additional troubleshooting resources, see [How to Clean up Your wp_options Table and Autoloaded Data](https://kinsta.com/knowledgebase/wp-options-autoloaded-data/) and [A Quick Summary of WP Options, Autoload, and Cleanup](https://wpshout.com/wp-option-autoload/_)
-
+ 
 #### What issues will I experience if I don't use InnoDB?
 
 InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
