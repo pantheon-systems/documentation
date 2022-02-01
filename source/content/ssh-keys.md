@@ -50,10 +50,10 @@ Pantheon does not provide access to a shell environment over SSH. These directio
    
 1. Add the newly created key to the ssh-agent:
    
-      ```bash{promptUser: user}
-      eval `ssh-agent`
-      ssh-add ~/.ssh/id_rsa
-      ```
+   ```bash{promptUser: user}
+   eval `ssh-agent`
+   ssh-add ~/.ssh/id_rsa
+   ```
    
 ## Add Your SSH Key to Pantheon
 
