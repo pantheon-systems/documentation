@@ -11,6 +11,7 @@ permalink: docs/guides/frontend-performance
 editpath: frontend-performance/01-introduction.md
 image: CDN-speedTest-docs-guide
 ---
+
 In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.
 
-Slow websites are **bad**. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/). 
+Slow websites are bad for a user's experience. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/).

@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Diagnostic Tools
 description: Tools for evaluating performance issues.
 anchorid: diagnostics
@@ -16,15 +16,15 @@ This page includes information on diagnostics and tools for evaluating performan
 
 ## Lighthouse
 
-Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provides automated audits for performance, accessibility, progressive web apps, and SEO. 
+Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provides automated audits for performance, accessibility, progressive web apps, and SEO.
 
 ## New Relic
 
-[New Relic® Performance Monitoring](https://pantheon.io/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
+[New Relic® Performance Monitoring](/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
 
 ### Monitor Performance with New Relic
 
-If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](https://pantheon.io/docs/new-relic) for help identifying bottlenecks.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with New Relic to help identify bottlenecks.
 
 #### Helper Tools
 
@@ -50,7 +50,9 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 ```
 
 1. Navigate to a development environment's site URL that has the plugin installed and enabled, with the above configuration in place.
+
 1. From the WordPress dashboard, click **Debug** towards the top right.
+
 1. Review the request and object cache data for potential red flags.
 
 ![Debug Bar WordPress](../../../images/guides/front-end-performance/debug-bar.png)
@@ -68,4 +70,3 @@ The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/d
 </TabList>
 
 For debugging deep and complex server-side performance problems you might need to run your site locally with profiler like [Blackfire](https://blackfire.io/).
-

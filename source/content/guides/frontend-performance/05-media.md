@@ -16,9 +16,9 @@ This pages includes information on optimizing media, such as images and iframes.
 
 ## Lazy-loading images
 
-Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. Lazy-loading media elements, especially images, is a powerful way to increase perceived performance and reduce time-to-first-render. 
+Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. Lazy-loading media elements, especially images, is a powerful way to increase perceived performance and reduce time-to-first-render.
 
-Lazy-loading images is default behavior in WordPress 5.5 and Drupal 9.1. 
+Lazy-loading images is default behavior in WordPress 5.5 and Drupal 9.1.
 
 Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/) plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader) module for Drupal.
 

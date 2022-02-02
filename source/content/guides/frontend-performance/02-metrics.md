@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Performance Metrics
 description: Overview of how and what to measure when optimizing your site for performance.
 anchorid: metrics
@@ -12,7 +12,7 @@ image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 ---
 
-There are many different ways to measure page speed and performance. This guide will help you tune your site for the metrics in Google's [Core Web Vitals](https://web.dev/vitals/#core-web-vitals), which focus on three aspects of the user experience—loading, interactivity, and visual stability. 
+There are many different ways to measure page speed and performance. This guide will help you tune your site for the metrics in Google's [Core Web Vitals](https://web.dev/vitals/#core-web-vitals), which focus on three aspects of the user experience—loading, interactivity, and visual stability.
 
 These metrics include:
 
@@ -28,11 +28,11 @@ The amount of time it takes for a site to respond, **Time To First Byte** (TTFB)
 
 ## Visual Stability
 
-**CLS (Cumulative Layout Shift)** measures visual stability, and helps quantify how often users experience unexpected layout shifts. Pages should maintain a CLS of less than 0.1. 
+**CLS (Cumulative Layout Shift)** measures visual stability, and helps quantify how often users experience unexpected layout shifts. Pages should maintain a CLS of less than 0.1.
 
 To tune your site for these metrics, focus on these key areas:
 
-- Reduce Server Response Time
-- Compress Images
-- Deliver Efficient CSS and JavaScript
-- Avoid Redirects
+- [Reduce Server Response Time](/guides/frontend-performance/caching)
+- [Compress Images](/guides/frontend-performance/media#compress-images)
+- [Deliver Efficient CSS and JavaScript](/guides/frontend-performance/code-css#deliver-efficient-css-and-javascript)
+- [Avoid Redirects](/guides/frontend-performance/redirects)

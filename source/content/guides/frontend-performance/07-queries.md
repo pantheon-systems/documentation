@@ -20,7 +20,7 @@ This section provides information on available tools and techniques to optimize 
 
 ## Query Caching
 
-Query caching can improve optimization. Read the sections below to learn more about whe you should, and shouldn't use query caching. 
+Query caching can improve optimization. Read the sections below to learn more about when you should, and when you shouldn't use query caching.
 
 ### Bust Cache with Query Parameter
 
@@ -37,4 +37,3 @@ The new filename will cause clients to get the new file, even if they have a cac
 ## Optimize Databases
 
 Optimizing your database can increase site performance. Learn more about [Drupal](https://www.drupal.org/docs/7/managing-site-performance-and-scalability/optimizing-drupal-to-load-faster-server-mysql) and [WordPress](https://wordpress.org/support/article/optimization/) guidelines for improving database optimization.
-
