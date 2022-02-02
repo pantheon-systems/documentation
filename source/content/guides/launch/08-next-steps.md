@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Final Review
-description: Part seven of our Launch Essentials guide covers the next steps to take after your site goes live.
+description: Part eight of our Launch Essentials guide covers the next steps to take after your site goes live.
 launch: true
 survey: true
 anchorid: launch-check
@@ -17,7 +17,7 @@ use:
 permalink: docs/guides/launch/next-steps/
 previousurl: guides/launch/launch-check/
 previouspage: Final Launch Check
-editpath: launch/07-next-steps.md
+editpath: launch/08-next-steps.md
 image: getting-started-Largethumb
 getfeedbackform: default
 ---
