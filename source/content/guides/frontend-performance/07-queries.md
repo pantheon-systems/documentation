@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Queries and Databases
 description: Optimizing queries and databases.
 anchorid: queries

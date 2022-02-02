@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Caching
 description: Caching strategies for improved performance.
 anchorid: caching
@@ -87,7 +87,7 @@ The following describes the expected cache behavior for sites running the Panthe
 
 <dl>
 
-<dt>Cache Age</dt>
+<dt>age</dt>
 
 <dd>
 
@@ -170,7 +170,7 @@ You can see the cookies used on your site under the **Application** tab in Chrom
 
 ### Unintentional Cache Invalidation
 
-Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
+Walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
 
 <TabList>
 
@@ -207,7 +207,7 @@ There could be an existing snippet assumed to disable caching for a single block
 $form['#cache'] = ['max-age' => 0];
 ```
 
-Visit the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays) for more details. You can search your custom code for `#cache` to find places where you've interacted with the Cache API.
+Visit the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays) for more details. To find places where you've interacted with the Cache API, search your custom code for `#cache`.
 
 </Tab>
 
@@ -221,10 +221,12 @@ Working across many environments presents opportunities for configuration change
 
 <Tab title="WordPress" id="wp-config-get" active={true}>
 
-The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
+The [Pantheon Page Cache plugin](/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
+
 1. Review the Time to Live, which translates to `max-age`.
+
 1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
   ![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
@@ -249,11 +251,11 @@ The Drupal 8 default setting is 10 minutes. You can set much higher cache max ag
 
 ## Optimize Non-Cached
 
-Improve performance on longer trips to and from the browser for instances you _want_ to bypass cache and go straight to the application:
+Improve performance on longer trips to and from the browser for instances you want to bypass cache and go straight to the application.
 
 ### Upgrade Your Site's PHP
 
-If you haven't done so already, [updated your PHP to the latest version](/php-versions). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
+[Upgrade your site's PHP version](/php-versions) to improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 

@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Code and CSS
 description: Optimizing code and CSS.
 anchorid: code
@@ -16,7 +16,7 @@ This page provides information on optimizing code and CSS.
 
 ## Reduce Code Size
 
-This section provides an overview of avaiable tools and techniques to reduce code size.
+This section provides an overview of available tools and techniques to reduce code size.
 
 ## GZIP Compression
 
@@ -32,7 +32,7 @@ Loading everything separately and early in the page rendering process ensures th
 
 Fully optimizing all of the JavaScript and CSS on an already-built site is usually more work than can be done in one sitting. Though there are some easy wins that you should make sure you are getting.
 
-### Load Only What is Needed
+### Load Only What Is Needed
 
 Many sites load CSS and JavaScript files not used on the given page and not used on any page. Look at your theme and remove unused scripts or styles.
 
@@ -63,7 +63,7 @@ function contextual_page_attachments(array &$page) {
 }
 ```
 
-[See the Drupal core documentation where this example was taken from for more details.](https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module)
+Refer to the [Drupal core documentation](https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module) from which this example was taken for more details.
 
 </Tab>
 
@@ -79,7 +79,6 @@ Once you have eliminated code that is not needed, make sure the code being loade
 
 Use the [Autoptimize](https://wordpress.org/plugins/autoptimize/) plugin and the following configuration in your site's `wp-config.php` file:
 
-
 ```php
 // Configure directory & filename of cached autoptimize files
 define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
@@ -89,6 +88,7 @@ define('AUTOPTIMIZE_CACHEFILE_PREFIX','aggregated_');
 The following blog post walks through how to use results from the [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/) with the Autoptimize plugin so that you have inline critical styles with a deferred stylesheet: [How to Use the Autoptimize “Inline and Defer CSS” Option](https://www.wpfaster.org/blog/how-to-use-autoptimize-inline-and-defer-css-option)
 
 </Tab>
+
 <Tab title="Drupal" id="drupal-requests">
 
 Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at `admin/config/development/performance`:
@@ -158,5 +158,3 @@ Use externally hosted Javascript libraries and fonts. While some speed tests wil
 #### Set Long Cache Lifetimes
 
 Deliver static files with long cache lifetimes (via `Cache-Control` headers). Pantheon automatically uses a one-year lifetime for static files.
-
-

@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Static Sites and Pages
 description: Static sites and static page generation, including AMP.
 anchorid: static
@@ -16,7 +16,7 @@ This pages provides information on static sites and static page generation, incl
 
 ## Decoupled and Headless sites
 
-Decoupled and headless site strategies offer more flexibility for development teams to build high-performance sites that let editors work where they prefer.  
+Decoupled and headless site strategies offer more flexibility for development teams to build high-performance sites that let editors work where they prefer.
 
 ## AMP
 
@@ -24,7 +24,7 @@ Accelerated Mobile Pages, created by Google in 2015, are an HTML framework desig
 
 ## AMP Templates
 
-[AMP Templates](https://amp.dev/documentation/templates/) offer one way to get the benefits of static page delivery. 
+[AMP Templates](https://amp.dev/documentation/templates/) offer one way to get the benefits of static page delivery.
 
 ### AMP with Drupal
 

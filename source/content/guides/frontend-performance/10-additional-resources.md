@@ -1,5 +1,5 @@
 ---
-title: Frontend Performance 
+title: Frontend Performance
 subtitle: Additional Resources
 description: Additional resources for frontend performance
 anchorid: additional-resources
@@ -13,4 +13,3 @@ reviewed: "2020-10-10"
 ---
 
 Learn more about improving Frontend Performance by reviewing resources available on [Drupal](https://www.drupal.org/docs/mobile-drupal-sites/front-end-performance) and [WordPress](https://wordpress.org/support/article/optimization/).
-
