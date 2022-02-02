@@ -85,16 +85,41 @@ Pantheon is designed to store cached copies of the full HTML pages coming out of
 
 The following describes the expected cache behavior for sites running the Pantheon Advanced Page Cache [WordPress plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [Drupal module](https://www.drupal.org/project/pantheon_advanced_page_cache). If you find that your page is not served from cache with similar headers and values, examine the response using Google's Developer tools and consult the next section for common cache busters and potential culprits.
 
-[<dfn id="cache-age">Age</dfn>](/guides/frontend-performance/caching) The number of seconds cache has been available to serve the request. Any number greater than zero indicates that this response was served to the browser from cache.
+<dl>
+
+<dt>Cache Age</dt>
+
+<dd>
+
+The number of seconds cache has been available to serve the request. Any number greater than zero indicates that this response was served to the browser from cache.
+
+</dd>
 
 <dt>cache-control</dt>
-<dd >This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.</dd>
+
+<dd>
+
+This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.
+
+</dd>
 
 <dt>surrogate-key-raw</dt>
-<dd>Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again. This header is only present when you specifically add a debugging header (`Pantheon-Debug:1`) to your request. You can use a browser extension to add the debugging header. Here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header).</dd>
+
+<dd>
+
+Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again. This header is only present when you specifically add a debugging header (`Pantheon-Debug:1`) to your request. You can use a browser extension to add the debugging header. Here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header).
+
+</dd>
 
 <dt>x-served-by</dt>
-<dd>This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
+
+<dd>
+
+This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.
+
+</dd>
+
+</dl>
 
 ![Chrome network headers](../../../images/guides/front-end-performance/chrome-network-headers.png)
 
@@ -165,7 +190,7 @@ function add_header_maxage() {
 }
 ```
 
-See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers) for more details.
+Visit the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers) for more details.
 
 </Tab>
 
@@ -181,7 +206,8 @@ There could be an existing snippet assumed to disable caching for a single block
 // some logic that accidentally invalidates full-page cache
 $form['#cache'] = ['max-age' => 0];
 ```
-See the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays) for more details. You can search your custom code for `#cache` to find places where you've interacted with the Cache API.
+
+Visit the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays) for more details. You can search your custom code for `#cache` to find places where you've interacted with the Cache API.
 
 </Tab>
 
@@ -190,7 +216,6 @@ See the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cach
 ### Incorrect Configuration
 
 Working across many environments presents opportunities for configuration changes to get lost or for configurations to never be set correctly in the first place. Using tools like [WP-CFM](https://wordpress.org/plugins/wp-cfm/) and Drupal 8's [Configuration Management System](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration) to track configuration alongside code will mitigate these issues, but mistakes do happen. Double-check your site's default caching configurations:
-
 
 <TabList>
 
@@ -202,7 +227,7 @@ The Pantheon Page Cache plugin is already included by our upstream as a Must-Use
 1. Review the Time to Live, which translates to `max-age`.
 1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
-![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
+  ![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
 
 </Tab>
 
@@ -211,9 +236,10 @@ The Pantheon Page Cache plugin is already included by our upstream as a Must-Use
 In Drupal it is very easy to turn off page caching and forget to turn it back on.
 
 1. Navigate to **Configuration** > **Development** > **Performance** within Drupal's Admin Interface.
+
 1. Review **Page cache maximum age**:
 
-![Drupal Performance settings](../../../images/guides/front-end-performance/d8-cache.png)
+  ![Drupal Performance settings](../../../images/guides/front-end-performance/d8-cache.png)
 
 The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 
@@ -221,16 +247,16 @@ The Drupal 8 default setting is 10 minutes. You can set much higher cache max ag
 
 </TabList>
 
-## Optimize Non-Cached 
+## Optimize Non-Cached
 
 Improve performance on longer trips to and from the browser for instances you _want_ to bypass cache and go straight to the application:
 
-### Upgrade You PHP
+### Upgrade Your Site's PHP
 
-If you haven't done so already, [updated your PHP to the latest version](https://pantheon.io/docs/php-versions). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
+If you haven't done so already, [updated your PHP to the latest version](/php-versions). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 ### Enable Object Caching
 
-Sites loading a lot of content can benefit from an object caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](https://pantheon.io/docs/object-cache).
+Sites loading a lot of content can benefit from Object Caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](/object-cache).
