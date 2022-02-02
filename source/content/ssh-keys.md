@@ -47,14 +47,20 @@ Pantheon does not provide access to a shell environment over SSH. These directio
    ```bash{promptUser: winshell}
    type .ssh\id_rsa.pub
    ```
-   
-1. Add the newly created key to the ssh-agent:
-   
-   ```bash{promptUser: user}
+
+1. Run `eval` to start the agent. The `Agent pid` output confirms it has started:
+
+   ```bash{outputLines: 2}
    eval `ssh-agent`
+   Agent pid 86810
+   ```
+
+1. Add the newly created key to the ssh-agent:
+
+   ```bash{promptUser: user}
    ssh-add ~/.ssh/id_rsa
    ```
-   
+
 ## Add Your SSH Key to Pantheon
 
 ### Add SSH Key - New Dashboard
