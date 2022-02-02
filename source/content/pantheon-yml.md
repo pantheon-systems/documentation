@@ -30,12 +30,11 @@ For reference implementations see [example.pantheon.yml](https://github.com/pant
 
 The first step in creating your `pantheon.yml` file is to define the `api_version` .
 
-<Alert title="Required Step" type="note">
+<Alert title="Required Step"  type="info" >
 
 The `api_version` property is required for the `pantheon.yml` file to be valid.
 
 </Alert>
-
 
 ```yaml:title=pantheon.yml
 api_version: 1
