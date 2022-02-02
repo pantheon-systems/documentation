@@ -18,13 +18,13 @@ The `wp_options` table stores several types of data for your site, including:
 
  First, start by checking the size of your autoloaded data.
 
-1. Log in to your [MySQL client](https://pantheon.io/docs/mysql-access).
+1. Log in to your [MySQL client](/mysql-access).
 
 1. Select your database and then click the `SQL` tab.
 
 1. Run the following code:
 
-    ```bash
+    ```sql
     SELECT SUM(LENGTH(option_value)) as autoload_size FROM example_options WHERE autoload='yes';
     ```
 
@@ -32,13 +32,13 @@ The `wp_options` table stores several types of data for your site, including:
 
 1. Run the following code to see the top items with autoloaded data:
 
-    ```bash
+    ```sql
     SELECT option_name, length(option_value) AS option_value_length FROM example_options WHERE autoload='yes' ORDER BY option_value_length DESC LIMIT 10;
     ```
 
 1. Run the following code if you want to turn off autoload for an item:
 
-    ```bash
+    ```sql
     update_option( 'example_option', 'value' ); to be update_option( 'example_option', 'value', 'no' );
     ```
 
