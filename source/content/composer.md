@@ -56,7 +56,7 @@ Use [Integrated Composer](/integrated-composer) to preserve the functionality of
 
 Updates made using Integrated Composer are only committed at the Custom Upstream level by a single repository maintainer. Updates then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard. Custom Upstreams using Integrated Composer with dependencies in `upstream-configuration/composer.json` can have their own site-specific dependencies added in the top-level `composer.json` file. Custom Upstreams using Integrated Composer should avoid changing the top-level `composer.json` file after sites have been created from the Custom Upstream to avoid merge conflicts.
 
-All dependencies must be committed if you are not using Integrated Composer to update your Custom Upstream.
+If you are not using Integrated Composer to update your Custom Upstream, all dependencies must be committed.
 
 A shortcoming of the Custom Upstream workflow is that site-specific dependencies are likely to cause a lot of conflicts. This workflow is most practical for a large group of sites that require a single set of dependencies. You should only use this workflow if you don’t intend to use site-specific themes, modules, or plugins downstream.
 
