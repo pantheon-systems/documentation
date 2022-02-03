@@ -1067,7 +1067,7 @@ ___
 
 **Issue 1:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
 
-**Solution:** Use an alternative download manager plugin.
+**Solution:** We recommend that you research an alternative download manager plugin that fits your needs.
 
 ___
 
