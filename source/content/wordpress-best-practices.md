@@ -145,7 +145,7 @@ function additional_securityheaders( $headers ) {
     $headers['X-Content-Type-Options']      = 'nosniff';
     $headers['X-XSS-Protection']            = '1; mode=block';
     $headers['Permissions-Policy']          = 'geolocation=(self "https://example.com") microphone=() camera=()';
-    $headers['Content-Security-Policy']     = 'script-src 'self';
+    $headers['Content-Security-Policy']     = "script-src 'self'";
     $headers['X-Frame-Options']             = 'SAMEORIGIN';
   }
 
