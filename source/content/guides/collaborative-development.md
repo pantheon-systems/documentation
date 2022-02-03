@@ -55,7 +55,7 @@ This guide will show you the basics for collaborating with others if your site:
 
 ### Create a Repository on GitHub
 
-1. Configure your GitHub respository to match the settings in the image below.
+Configure your GitHub respository to match the settings in the image below.
 
  ![Create a Repository on GitHub](../../images/create-git-repo.png)
 
@@ -63,7 +63,7 @@ This guide will show you the basics for collaborating with others if your site:
 
 The option for adding code to your repository is available if you keep **Initialize this repository with a README** unchecked. 
 
-1. Replace the word `origin` with the name you want for your remote. 
+Replace the word `origin` with the name you want for your remote. 
 
   The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
 
@@ -82,9 +82,9 @@ The option for adding code to your repository is available if you keep **Initial
 
 #### Configure Origin as a Multi-Remote Destination (Optional)
 
-  Another option is to add another push URL for origin.
+Another option is to add another push URL for origin.
 
-1. Add a push URL within `.git/config`:
+Add a push URL within `.git/config`:
 
   ```none:title=.git/config
   [remote "origin"]
@@ -96,7 +96,7 @@ The option for adding code to your repository is available if you keep **Initial
 
 ### Push the Pantheon Site's Codebase to GitHub
 
-1. Enter the code below:
+In your terminal:
 
   ```bash{outputLines: 2-6}
   git push -u github master
@@ -117,7 +117,7 @@ The option for adding code to your repository is available if you keep **Initial
 
  For this example, you'll create the `settings.php` file.
 
-1. Enter the code below:
+1. First, `cd` into `sites/default` and create the file:
 
   ```bash{promptUser: user}
   cd sites/default
@@ -304,9 +304,9 @@ The option for adding code to your repository is available if you keep **Initial
 
  You're now ready to create a pull request on GitHub. The pull request can include: 
 
- - links to the Multidev environment where the team can view the effects of the commits
+ - Links to the Multidev environment where the team can view the effects of the commits
  - @-mentions of team members
- - a list of tasks for team members to perform before merging
+ - A list of tasks for team members to perform before merging
 
  ![Pull request for configs branch](../../images/configuration-pull-request-1.png)
 
@@ -316,7 +316,7 @@ The option for adding code to your repository is available if you keep **Initial
 
 ## Deploy to Pantheon
 
-1. Checkout the master branch locally, then pull from github master, and then push to pantheon master:
+Checkout the master branch locally, then pull from github master, and then push to pantheon master:
 
   ```bash{promptUser: user}
   git checkout master
