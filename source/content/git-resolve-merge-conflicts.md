@@ -79,9 +79,9 @@ terminus site:info <site> --field=upstream
 
 ## Manually Resolve Conflicts
 
-Steps to reslove merge conflicts vary by the type of conflict, such as delete/modify conflicts, content conflicts, and multidev conflicts. Read the sections below for more information.
+Steps to reslove merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
 
-### Resolve delete/modify Conflicts
+### Resolve Delete/Modify Conflicts
 
 A delete/modify conflict occurs when one commit deletes a file and another modifies it. To resolve such a conflict from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 
