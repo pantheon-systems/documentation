@@ -8,17 +8,19 @@ reviewed: "2021-04-13"
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
 
-## Find Your pantheon.yml File
+## Create a pantheon.yml File
 
-Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory.
-
-If the `pantheon.yml` file is not present, you may create one by following the configuration steps outlined in the section below.
+If a `pantheon.yml` file is not present in the root of your site's code repository, you can create one by following the configuration steps outlined below.
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/learn-pantheon?docs">
 
 Set up existing scripts and write your own with help from our experts. Pantheon delivers on-demand training to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
+
+## Find Your pantheon.yml File
+
+Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory.
 
 ## Configure Your Site's pantheon.yml File
 
