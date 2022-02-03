@@ -8,7 +8,7 @@ permalink: docs/guides/:basename
 contributors: [bmackinney, jessifischer, mrfelton]
 date: 4/3/2015
 ---
-Pantheon provides Git repositories for all sites on the platform. Some teams may need an external repository hosted by a provider, like GitHub or Bitbucket, to function as the canonical version of the site's codebase. This guide shows you how to get started using Pantheon with an external respository. The example below uses a GitHub account, however, the steps should be similar for any provider.
+Pantheon provides Git repositories for all sites on the platform. Some teams may need an external repository hosted by a provider, like GitHub or Bitbucket, to function as the canonical version of the site's codebase. This guide shows you how to get started using Pantheon with an external respository. The example below uses a GitHub account. However, the steps should be similar for any provider.
 
 ## Git Repositories on Pantheon
 
@@ -21,10 +21,10 @@ These repositories control the common codebase for several sites. The most commo
 
 This guide will show you the basics for collaborating with others if your site:
 
-- is only on Pantheon and you’re moving development to GitHub
-- exists on GitHub and you want to deploy to Pantheon
-- isn’t using Git
-- doesn’t yet exist
+- Is only on Pantheon and you’re moving development to GitHub
+- Exists on GitHub and you want to deploy to Pantheon
+- Isn’t using Git
+- Doesn’t yet exist
 
 ## Synchronizing Existing Pantheon Sites to GitHub
 
