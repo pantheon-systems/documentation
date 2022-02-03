@@ -196,6 +196,12 @@ To save and post the schema information, select the **Pantheon Search Admin** ta
 
 The server should respond with a `200 - OK` status for each schema file posted.
 
+<Alert title="Note" type="info">
+
+You must be logged in as the SuperAdmin(user/1) account in order to access the **Pantheon Search Admin** tab.
+
+</Alert>
+
 ## Uninstall Core Search
 
 If the default Drupal core Search module is still enabled for your site, you might want to uninstall it for performance reasons. Navigate to `admin/modules/uninstall` to uninstall the module.
