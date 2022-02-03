@@ -544,7 +544,7 @@ ___
 
 ## Monarch Social Sharing
 
-**Issue:** The[Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/) plugin appears to break WP-CLI, which is used by many of our workflows (clone, clear cache).
+**Issue:** The [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/) plugin appears to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 
 ___
 
