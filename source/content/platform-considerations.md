@@ -152,6 +152,10 @@ Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure
 
 See the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) doc for more details and suggestions.
 
+## ffmpeg Transcoding Support
+
+We do not support ffmpeg transcoding, and we do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service or multimedia platform that lets you create streaming-optimized videos. Those providers have optimized the highly complex process of transcoding and serving video content, and leveraging their infrastructure is often preferable to a custom solution.
+
 ## Emoji Support
 
 Emoji support is available out of the box on WordPress and Drupal 8. Drupal 7 sites can enable Emoji support by following this procedure:
@@ -341,6 +345,10 @@ While you are able to import an additional database to an environment, only the 
 
 Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Secure Integration](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
 
+## Pantheon URL Search Engine Indexing
+
+This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/wp-cli) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/) blog post to exchange the platform domains with your custom domain, and then [add a redirect to the primary domain](/guides/launch/redirects).
+
 ## PHP Configuration
 
 `php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/phpinfo) for more information on PHP configuration.
@@ -348,6 +356,22 @@ Pantheon does not currently support directly connecting to Oracle databases. Cus
 ## PHP/Java Bridge
 
 Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
+
+## PHP Maximum Execution Time Limit
+
+The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/timeouts) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
+
+## PHP Sessions with WordPress
+
+If you need to use PHP's native session handling, please install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin, which we maintain for this purpose. This provides a horizontally scalable storage mechanism for sessions.
+
+You'll need the plugin if you are seeing errors like this:
+
+```php
+Warning: session_start(): user session functions not defined
+```
+
+[More information on sessions](/wordpress-sessions).
 
 ## PHP Short Tags
 
@@ -404,6 +428,10 @@ Any modules for Drupal or plugins for WordPress that need to write to the codeba
 ## UDP
 
 Pantheon's platform security controls include blocking most [UDP traffic](https://en.wikipedia.org/wiki/User_Datagram_Protocol) originating from website containers, in order to prevent platform abuse.
+
+## Xdebug Support
+
+Xdebug is not available on the platform. Local development tools such as [Lando](/guides/lando-wordpress) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic&reg; Performance Monitoring](/new-relic).
 
 ## XML-RPC
 
