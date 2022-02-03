@@ -6,6 +6,8 @@ anchorid: metrics
 categories: [performance]
 tags: [measure, traffic]
 type: guide
+layout: guide
+showtoc: true
 permalink: docs/guides/frontend-performance/metrics
 editpath: frontend-performance/02-metrics.md
 image: CDN-speedTest-docs-guide
