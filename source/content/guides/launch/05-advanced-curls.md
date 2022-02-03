@@ -35,4 +35,88 @@ This will show differences between the two sites line-by-line, while only resolv
 
 ## Use the Pantheon Debugger
 
+You can use the Pantheon Debug header to see additional information about a request.
+
+ ```bash
+ curl -I -H “Pantheon-Debug” https://myexamplesite.com
+ ```
+
+Using this command would show the following information:
+
+ ```bash
+ HTTP/2 200
+ cache-control: public, max-age=3600
+ content-language: en
+ content-type: text/html; charset=utf-8
+ etag: W/"1620823485-0"
+ expires: Sun, 19 Nov 1978 05:00:00 GMT
+ last-modified: Wed, 12 May 2021 12:44:45 GMT        
+ link: <https://pantheon.io/>; rel="canonical"       
+ server: nginx
+ strict-transport-security: max-age=31622400
+ surrogate-key-raw:
+ x-drupal-cache: HIT
+ x-frame-options: SAMEORIGIN
+ x-pantheon-styx-hostname: styx-fe2-b-d65d59d6b-s7n8b
+ x-styx-req-id: e415f5fd-b31f-11eb-b9b0-0a6939d335f4 
+ date: Wed, 12 May 2021 13:17:50 GMT
+ x-served-by: cache-mdw17325-MDW, cache-fty21371-FTY 
+ x-cache: HIT, HIT
+ x-cache-hits: 1, 1
+ x-timer: S1620825471.689334,VS0,VE1
+ policy-doc-cache: HIT
+ policy-doc-surrogate-key: pantheon.io
+ pcontext-pdocclustering: on
+ pcontext-enforce-https: full
+ pcontext-request-restarts: 1
+ vary: Accept-Encoding, Cookie, Cookie, Cookie
+ age: 1959
+ accept-ranges: bytes
+ via: 1.1 varnish, 1.1 varnish
+ content-length: 156572
+ ```
+
+ ### Understanding Additional Header Information
+
+<dl>
+
+<dt>Cache-control:</dt> 
+
+<dd>This header tells the browser how long it should cache the URL. </dd>
+
+<dt>Etag, Expires, last-modified:</dt> 
+
+<dd>This shows more information about the cache control mechanism, primarily for browser side.</dd>
+
+<dt>Surrogate-key-raw:</dt>
+
+<dd>This is the cache key that Fastly is using to cache the content if it’s different from just the URL path. If you’re using Pantheon’s Advanced Page Cache module/plugin, you’ll see values here, such as the Posts or Nodes that are included in a page, so that modifying those can easily clear the cache for any URLs that include those items.</dd>
+
+<dt>X-served-by:</dt>
+
+<dd> This indicates the Fastly data centers that your request traveled through to reach the `appserver`. </dd>
+
+<dt> X-cache:</dt>
+
+<dd>This generally has the same number of values as served-by, and indicates a HIT or MISS for each point. </dd>
+
+<dt>Age:</dt> 
+
+<dd> This shows how long the content has been cached. This generally will reflect cache clears from the Pantheon dashboard, as well as being limited by the above cache control mechanisms. In some cases this value may exceed your expected max value. This is the result of the `appserver` responding with a 304 not modified when Fastly checked for new content.</dd>
+
+<dt>Via:</dt>
+
+<dd>This indicates services in the response chain, and the HTTPS protocol (not the version of the service) that was used to respond.</dd>
+
+
 ## Suppress Certificate Errors
+
+cURL uses a bundle of Certificate Authority (CA) public keys (CA certificates) to verify the SSL certificate by default.
+
+The `-k` option tells cURL to skip certificate verification, including the server’s TLS certificate and CA certificates. If your SSL certificate is not yet provisioned, using the `-k` flag will suppress errors and allow you to get results from your cURL commands.
+
+If you are using SCP and SFTP for transfers, the `-k` option instructs cURL to skip the known hosts verification. 
+
+ ```bash
+ curl -k https://myexamplesite.com
+ ```
