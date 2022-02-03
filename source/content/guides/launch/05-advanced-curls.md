@@ -108,6 +108,7 @@ Using this command would show the following information:
 
 <dd>This indicates services in the response chain, and the HTTPS protocol (not the version of the service) that was used to respond.</dd>
 
+</dl>
 
 ## Suppress Certificate Errors
 
