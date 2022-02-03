@@ -61,15 +61,15 @@ This guide will show you the basics for collaborating with others if your site:
 
 ### Add the GitHub Repository as a Remote
 
-  As long as you keep “Initialize this repository with a README” unchecked, you will see options for adding code to your repository. 
+The option for adding code to your repository is available if you keep **Initialize this repository with a README** unchecked. 
 
-1. Replace the word "origin" with the name you want for your remote. 
+1. Replace the word `origin` with the name you want for your remote. 
 
-  The remote in this case cannot be named “origin” because your local clone is already tracking the Pantheon site repository as origin.
+  The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
 
   ![Push an existing repo to GitHub](../../images/push-existing-repo.png)
 
-  In the example below, the remote is named "github".
+  In the example below, the remote is named `github`.
 
   ```bash{outputLines: 3-6}
   git remote add github git@github.com:pantheon-learning/d7-ci.git
