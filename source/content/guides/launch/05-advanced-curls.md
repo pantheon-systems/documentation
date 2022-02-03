@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Advanced cURLs
-description: Part five of our Launch Essentials guide covers guidelines for using advanced cURL techniques to prepare a site for launch.
+description: Part five of our Launch Essentials guide covers using advanced cURL techniques to prepare a site for launch.
 anchorid: advanced-curls
 layout: guide
 showtoc: true
@@ -25,23 +25,23 @@ For example, if you wanted to request `myexamplesite.com` from `23.185.0.1`:
 curl https://www.myexamplesite.com --resolve www.myexamplesite.com:443:23.185.0.1
 ```
 
-If you want to compare the old site with the new site without DNS changes:
+If you want to compare your old site with your new site without making DNS changes:
 
 ```bash
 diff <(curl -s https://myexamplesite.com) <(curl -s --resolve myexamplesite.com:443:23.185.0.1 https://mycoolwebsite.com)
 ```
 
-This will show differences between the two sites line-by-line, while only resolving the second site from Pantheon’s platform using that domain.
+This will show line-by-line differences between the two sites while only resolving the second site from Pantheon’s platform using that domain.
 
 ## Use the Pantheon Debugger
 
-You can use the Pantheon Debug header to see additional information about a request.
+You can use the cURL `-I -H` option with Pantheon's Debug header to see additional information about a request.
 
  ```bash
  curl -I -H “Pantheon-Debug” https://myexamplesite.com
  ```
 
-Using this command would show the following information:
+This command shows the following information:
 
  ```bash
  HTTP/2 200
@@ -86,11 +86,11 @@ Using this command would show the following information:
 
 <dt>Etag, Expires, last-modified:</dt> 
 
-<dd>This shows more information about the cache control mechanism, primarily for browser side.</dd>
+<dd>This shows more information about the cache control mechanism, primarily for the browser side.</dd>
 
 <dt>Surrogate-key-raw:</dt>
 
-<dd>This is the cache key that Fastly is using to cache the content if it’s different from just the URL path. If you’re using Pantheon’s Advanced Page Cache module/plugin, you’ll see values here, such as the Posts or Nodes that are included in a page, so that modifying those can easily clear the cache for any URLs that include those items.</dd>
+<dd>This is the cache key that Fastly uses to cache the content if it’s different from the URL path. If you’re using Pantheon’s Advanced Page Cache module/plugin, you’ll see values here, such as the Posts or Nodes that are included in a page. Modifying such values can easily clear the cache for any URLs that include those items.</dd>
 
 <dt>X-served-by:</dt>
 
@@ -98,15 +98,15 @@ Using this command would show the following information:
 
 <dt> X-cache:</dt>
 
-<dd>This generally has the same number of values as served-by, and indicates a HIT or MISS for each point. </dd>
+<dd>This generally has the same number of values as `served-by`, and indicates a HIT or MISS for each point. </dd>
 
 <dt>Age:</dt> 
 
-<dd> This shows how long the content has been cached. This generally will reflect cache clears from the Pantheon dashboard, as well as being limited by the above cache control mechanisms. In some cases this value may exceed your expected max value. This is the result of the `appserver` responding with a 304 not modified when Fastly checked for new content.</dd>
+<dd> This shows how long the content has been cached. This generally reflects cache cleared from the Pantheon dashboard, as well as the cache limited by the cache control mechanisms listed above. In some cases this value may exceed your expected max value. This is the result of the `appserver` responding with a `304 not modified` error when Fastly checked for new content.</dd>
 
 <dt>Via:</dt>
 
-<dd>This indicates services in the response chain, and the HTTPS protocol (not the version of the service) that was used to respond.</dd>
+<dd>This indicates services in the response chain and the HTTPS protocol (not the version of the service) that was used to respond.</dd>
 
 </dl>
 
@@ -114,7 +114,7 @@ Using this command would show the following information:
 
 cURL uses a bundle of Certificate Authority (CA) public keys (CA certificates) to verify the SSL certificate by default.
 
-The `-k` option tells cURL to skip certificate verification, including the server’s TLS certificate and CA certificates. If your SSL certificate is not yet provisioned, using the `-k` flag will suppress errors and allow you to get results from your cURL commands.
+The `-k` option tells cURL to skip certificate verification, including the server’s TLS certificate and CA certificates. If your SSL certificate is not yet provisioned, using the `-k` option will suppress errors and allow you to get results from your cURL commands.
 
 If you are using SCP and SFTP for transfers, the `-k` option instructs cURL to skip the known hosts verification. 
 
