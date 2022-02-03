@@ -63,13 +63,13 @@ Configure your GitHub respository to match the settings in the image below.
 
 The option for adding code to your repository is available if you keep **Initialize this repository with a README** unchecked. 
 
-Replace the word `origin` with the name you want for your remote. 
+To add the GithHub repository as a remote, replace the word `origin` with the name you want for your remote. 
 
-  The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
+The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
 
   ![Push an existing repo to GitHub](../../images/push-existing-repo.png)
 
-  In the example below, the remote is named `github`.
+In the example below, the remote is named `github`.
 
   ```bash{outputLines: 3-6}
   git remote add github git@github.com:pantheon-learning/d7-ci.git
@@ -82,9 +82,7 @@ Replace the word `origin` with the name you want for your remote.
 
 #### Configure Origin as a Multi-Remote Destination (Optional)
 
-Another option is to add another push URL for origin.
-
-Add a push URL within `.git/config`:
+Another option is to add another push URL for origin. To do this, add a push URL within `.git/config`:
 
   ```none:title=.git/config
   [remote "origin"]
@@ -115,7 +113,7 @@ In your terminal:
 
 ## Developing in Sync
 
- For this example, you'll create the `settings.php` file.
+In this instance, you'll create the `settings.php` file.
 
 1. First, `cd` into `sites/default` and create the file:
 
@@ -124,7 +122,7 @@ In your terminal:
   touch settings.php
   ```
 
-1. Add the file to version control and Push to both remotes:
+1. Add the file to version control and push to both remotes:
 
   ```bash{outputLines: 2-9, 12-18, 20-22}
   git status
@@ -213,9 +211,9 @@ In your terminal:
 
  The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
- We recommend renaming the remote to something more specific than origin, such as Pantheon. 
+ We recommend renaming the remote repository to something more specific than `origin`, such as `pantheon`. 
 
- Enter the code below to rename the remote.
+ To rename the remote repository:
 
   ```bash{outputLines: 3-8}
   git remote rename origin pantheon
