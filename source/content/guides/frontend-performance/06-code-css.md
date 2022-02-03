@@ -6,6 +6,8 @@ anchorid: code
 categories: [performance]
 tags: [measure, traffic]
 type: guide
+layout: guide
+showtoc: true
 permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
 image: CDN-speedTest-docs-guide

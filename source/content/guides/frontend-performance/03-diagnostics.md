@@ -6,6 +6,8 @@ anchorid: diagnostics
 categories: [performance]
 tags: [measure, traffic]
 type: guide
+layout: guide
+showtoc: true
 permalink: docs/guides/frontend-performance/diagnostics
 editpath: frontend-performance/03-diagnostics.md
 image: CDN-speedTest-docs-guide
