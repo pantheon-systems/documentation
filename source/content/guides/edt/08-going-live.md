@@ -32,7 +32,7 @@ All links from the video are provided below.
 
  - [Pricing Comparison](https://pantheon.io/plans/pricing-comparison)
  - [Performance and load testing](/load-and-performance-testing)
- - [Performance guide](/guides/frontend-performance)
+ - [Frontend Performance Guide](/guides/frontend-performance)
  - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/)
  - [Webpagetest.org](https://www.webpagetest.org)
  - [SiteSpeed](https://www.sitespeed.io/)

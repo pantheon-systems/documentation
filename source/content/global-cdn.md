@@ -153,12 +153,12 @@ In your log report, you want to look for:
 - Disproportionate patterns of requests and 404s indicate possible exploits.
 - Too many requests to the index paths may indicate a volumetric attack against the domain.
 - Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
-- Known exploit and excess traffic paths. 
+- Known exploit and excess traffic paths.
 
 Please refer to the following docs for common caching issues:
 
 - [Caching: Advanced Topics](/caching-advanced-topics)
-- [Debug Common Cache Busters](/guides/frontend-performance#debug-common-cache-busters)
+- [Debug Common Cache Busters](/guides/frontend-performance/caching#troubleshoot-caching-issues)
 - [Traffic Limits and Overages](/traffic-limits)
 
 ## Frequently Asked Questions
