@@ -142,7 +142,7 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 ### Migrate from Acquia
 
-1. Choose to either move the contents of of Aquia's nested directory `docroot` up and remove the folder, or rename the folder to `web` and set `web_docroot: true` in your `pantheon.yml` file.
+1. Choose to either move the contents of Aquia's nested directory `docroot` up and remove the folder, or rename the folder to `web` and set `web_docroot: true` in your `pantheon.yml` file.
 
  For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
