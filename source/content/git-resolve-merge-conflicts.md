@@ -71,7 +71,7 @@ If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In tha
 
 ### Find a Site's Upstream URL
 
-The upstream URL is provided within the Site Dashboard, under **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/terminus):
+Enter the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
 ```bash{promptUser: user}
 terminus site:info <site> --field=upstream
@@ -79,9 +79,9 @@ terminus site:info <site> --field=upstream
 
 ## Manually Resolve Conflicts
 
-How you resolve a merge conflict depends on what type of conflict you're faced with.
+Steps to reslove merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
 
-### Resolve delete/modify Conflicts
+### Resolve Delete/Modify Conflicts
 
 A delete/modify conflict occurs when one commit deletes a file and another modifies it. To resolve such a conflict from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 
