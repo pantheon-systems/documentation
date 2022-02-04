@@ -68,5 +68,6 @@ Serving anonymous traffic from virtual memory allows a cached response to be ret
 
 ### [Test Cache](/test-global-cdn-caching)
 
-Learn how to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
+Follow the steps below to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
 
+<Partial file="global-cdn-test-cache.md" />
