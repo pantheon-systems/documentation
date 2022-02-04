@@ -54,7 +54,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   <Alert title="Note" type="info">
 
-  [`Dig`](https://en.wikipedia.org/wiki/Dig_(command)) will not provide the correct DNS information for domains using Custom Ceterificates. If you are using a Custom Certificate, DNS records should not be changed.
+  [`Dig`](https://en.wikipedia.org/wiki/Dig_(command)) will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
 
   </Alert>
 
