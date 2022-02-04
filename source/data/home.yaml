@@ -48,6 +48,12 @@
       icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
+  disasterrecovery:
+    call-to-action:
+      title: 'Disaster Recovery Playbook'
+      sub-title: 'Be ready to act if your site goes. Check for platform incident reports at [https://status.pantheon.io/](https://status.pantheon.io/).'
+      url: '/guides/disaster-recovery/site-goes-down'
+      type: 'guide'
   fourohfourlinks:
     title: 'Popular Documentation'
     links:
