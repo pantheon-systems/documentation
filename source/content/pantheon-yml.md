@@ -8,13 +8,9 @@ reviewed: "2021-04-13"
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
 
-## Find or Create pantheon.yml
+## Create a pantheon.yml File
 
-Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory.
-
-If the `pantheon.yml` file is not present, you may create one.
-
-For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+If a `pantheon.yml` file is not already present in the root of your site's code repository, you can create one by following the configuration steps outlined below.
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -22,11 +18,25 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 
 </Enablement>
 
-## Advanced Site Configuration
+## Find Your pantheon.yml File
 
-### Include api_version
+Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When accessing the site over an SFTP connection, look in the `code` directory.
 
-Define the `api_version` property in order for `pantheon.yml` to be valid:
+## Configure Your Site's pantheon.yml File
+
+Review each of the sections below to make sure that you create and configure your `pantheon.yml` file correctly.
+
+For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+
+### Add api_version
+
+The first step in creating your `pantheon.yml` file is to define the `api_version` .
+
+<Alert title="Required Step"  type="info" >
+
+The `api_version` property is required for the `pantheon.yml` file to be valid.
+
+</Alert>
 
 ```yaml:title=pantheon.yml
 api_version: 1
@@ -131,18 +141,12 @@ Specify the site's version of MariaDB to keep the software your site uses curren
   database:
     version: 10.4
   ```
-  
+
   This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 1. Once the changes are pushed the Workflow can take ten minutes or more to complete. To confirm that the database upgrade completed successfully:
 
-   - Using Terminus (recommended):
-
-     ```shell{promptUser:user}
-     echo "SELECT @@version;" | $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string)
-     ```
-
-   - From the Site Dashboard, find the **Workflows** <Icon icon="chevron-down" /> dropdown on the Site Dashboard and confirm that the Workflows completed successfully.
+   <Partial file="confirm-db-upgrade-workflow.md" />
 
 Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
@@ -161,9 +165,9 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 #### Considerations - Drupal 9
 
-The default database version for new sites is MariaDB 10.4. In the event your site has any older contrib modules, that are not compatible with MariaDB 10.4, you can set the MariaDB version to `10.3` in your `pantheon.yml` file.
+<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
 
-Note that Drupal 9 requires MariaDB 10.3 or later. If you have a Drupal 8 site that you plan to upgrade to Drupal 9, ensure that the database has been upgraded to MariaDB 10.3 or 10.4 in all environments before you begin the Drupal 9 upgrade.
+Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](#specify-a-version-of-mariadb).
 
 #### Considerations - InnoDB Row Size Too Large
 
