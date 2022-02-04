@@ -1,11 +1,11 @@
 - id: home
   title: 'Documentation Topics'
-  call-to-action: 
+  call-to-action:
     title: 'Quick Start Guide'
     sub-title: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart/'
     type: 'guide'
-  topics: 
+  topics:
     - title: 'Get Started'
       summary: 'Migrate existing sites or spin up a new site, then learn how to manage your projects on Pantheon.'
       icon: 'icon-start.svg'
@@ -48,14 +48,13 @@
       icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
-  disasterrecovery:
+  fourohfourlinks:
+    title: 'Popular Documentation'
     call-to-action:
       title: 'Disaster Recovery Playbook'
       sub-title: 'Be ready to act if your site goes. Check for platform incident reports at [https://status.pantheon.io/](https://status.pantheon.io/).'
       url: '/guides/disaster-recovery/site-goes-down'
       type: 'guide'
-  fourohfourlinks:
-    title: 'Popular Documentation'
     links:
       - text: 'Terminus Manual'
         url: '/terminus/'
@@ -71,7 +70,12 @@
         url: '/ssh-keys/'
   three-column-links:
     title: 'Popular Documentation'
-    links: 
+    call-to-action:
+      title: 'Disaster Recovery Playbook'
+      sub-title: 'Be ready to act if your site goes. Check for platform incident reports at [https://status.pantheon.io/](https://status.pantheon.io/).'
+      url: '/guides/disaster-recovery/site-goes-down'
+      type: 'guide'
+    links:
       - text: 'Terminus Manual'
         url: '/terminus/'
       - text: 'Upgrade to Drupal 9'
