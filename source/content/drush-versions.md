@@ -73,7 +73,7 @@ While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed a
 
 | Drush Version  | PHP Version | End of Life     | Drupal 7| Drupal 8 | Drupal 9
 | ------------- |:-------------:|:-------------:|:-------------:   |:-------------: |:-------------:  |        
-| 11      | 7.4+     | TBD      |  <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span>| |<span style="color:green">✔</span>  |
+| 11      | 7.4+     | TBD      |  <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |
 | 10      | 7.1+     | Jan. 2022| ❌      |compatible but no longer supported | supported but not recommended| 
 | 9      | 5.6+     | May 2020  | ❌      |compatible but no longer supported |<span style="color:red">❌ </span>|
 | 8     | 5.4.5+     | Nov. 2022| <span style="color:green">✔</span>    |supported but not recommended|<span style="color:red">❌ </span>|
