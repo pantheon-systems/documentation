@@ -57,7 +57,7 @@ This guide will show you the basics for collaborating with others if your site:
 
 1. Configure your GitHub respository to match the settings in the image below.
 
- ![Create a Repository on GitHub](../../images/create-git-repo.png)
+ ![Create a Repository on GitHub](../../images/create-git-reponew.png)
 
 ### Add the GitHub Repository as a Remote
 
@@ -67,7 +67,7 @@ This guide will show you the basics for collaborating with others if your site:
 
   The remote in this case cannot be named “origin” because your local clone is already tracking the Pantheon site repository as origin.
 
-  ![Push an existing repo to GitHub](../../images/push-existing-repo.png)
+  ![Push an existing repo to GitHub](../../images/push-existing-reponew.png)
 
   In the example below, the remote is named "github".
 
@@ -107,7 +107,7 @@ This guide will show you the basics for collaborating with others if your site:
 
  The repository on GitHub now has all of the same code as the existing site.
 
- ![GitHub repo same as site](../../images/github-repo-origin-sameas-remote.png)
+ ![GitHub repo same as site](../../images/github-repo-origin-sameas-remotenew.png)
 
 ## Migrate Existing Site Repositories to Pantheon
 
