@@ -162,13 +162,13 @@ Non-CMS applications can easily integrate with Lockr after their credentials are
 
 #### How is Lockr different from other key management systems?
 
-Lockr encrypts the keys before leaving the site or application with a process called key wrapping. Key wrapping takes one value, and encrypts (wraps) it using a second key. Lockr places the second key, usually termed the KEK (key encryption key)  in the website in place of the original value. This prevents keys stored in Lockr from being viewed or compromised by adding another layer of security to the process.Lockr then  sends encrypted value over a secure, encrypted connection to the Lockr servers, where the value is stored inside an HSM (Hardware Security Module), provided by Townsend Security.
+Lockr encrypts the keys before leaving the site or application with a process called key wrapping. Key wrapping takes one value, and encrypts (wraps) it using a second key. Lockr places the second key, usually termed the KEK (key encryption key) in the website in place of the original value. This prevents keys stored in Lockr from being viewed or compromised by adding another layer of security to the process. Lockr then sends encrypted a value over a secure, encrypted connection to the Lockr servers, where the value is stored inside an HSM (Hardware Security Module), provided by Townsend Security.
 
 #### Is Lockr Safe?
 
 Yes! Lockr can be used to secure any API key, application secret, and other types of credentials. Once enabled in the CMS, keys entered are sent over an encrypted connection to the Lockr system. The credentials used to access Lockr are provided by the site host or application platform to prevent hijacking and tampering. This credentialed methodology enables the separation of development and production environments. Using key wrapping, keys are rendered useless from being used outside the website or application environment. Lockr is unable to see the values of your key.
 
-Lockr manages keys on a “per environment" basis, which helps eliminate the potential of keys being shared from production to development environments. No longer will you have to worry about sending a test notification from development to production users, or having production data decrypted in development environments. Leveraging proven enterprise-grade key management technology from Townsend Security, Lockr’s off-site key management delivers best-practice security to protect against critical vulnerabilities within your CMS solution.
+Lockr manages keys on a “per environment" basis, which helps eliminate the potential of keys being shared from production to development environments. You no longer will have to worry about sending a test notification from development to production users, or have production data decrypted in development environments. Leveraging proven enterprise-grade key management technology from Townsend Security, Lockr’s off-site key management delivers best-practice security to protect against critical vulnerabilities within your CMS solution.
 
 #### Will developers be able to access my keys?
 
