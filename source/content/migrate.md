@@ -146,11 +146,11 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
  For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
- 1. Remove all Acquia-specific modules.
+ 1. In your Acquia dashboard, navigate to **Manage > Extend**. Click on the **Uninstall** tab to uninstall Acquia-specific modules.
  
- 1. Adjust any special Acquia env-related configurations for compatibility with Pantheon's platform.
+ 1. For compatibility with Pantheon's platform, adjust any special Acquia configurations related to `env`.
 
- 1. Uninstall any Acquia Search modules and the default Drupal core Search module (if still enabled for your site) by navigating to `admin/modules/uninstall`, if you plan on using [Pantheon Search](https://pantheon.io/docs/solr).
+ 1. If you plan on using [Pantheon Search](https://pantheon.io/docs/solr), uninstall any Acquia Search modules and the default Drupal core Search module (if still enabled for your site) by navigating to `admin/modules/uninstall`.
 
  <Alert title="Note" type="info">
 
