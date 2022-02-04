@@ -7,15 +7,15 @@ type: guide
 permalink: docs/guides/:basename
 contributors: [cteitzel]
 featuredcontributor: true
-date: 8/11/2016
+Reviewed: "02-04-2022"
 ---
-[Lockr](https://lockr.io) is an easy-to-use plugin for WordPress or Drupal to manage your site’s API and encryption keys in a secure offsite hosted environment. Lockr removes the key from your site code and database and stores it in a secure and certified key manager. When your site needs the key for an encryption/decryption or API request, Lockr uses the Pantheon server’s certificate to authenticate on your behalf and release the key.
+[Lockr](https://lockr.io) works with [Pantheon's Secure Integration](https://pantheon.io/docs/secure-integration) to provide an additional layer of security to your site. Lockr is an easy-to-use plugin for WordPress or Drupal to manage your site’s API and encryption keys in a secure off-site hosted environment. Lockr removes the key from your site code and database and stores it in a secure and certified key manager. When your site needs the key for an encryption/decryption or API request, Lockr uses the Pantheon server’s certificate to authenticate on your behalf and release the key.
 
 Site administrators have the ability to control how and where their sensitive keys are stored, thus improving the overall security of the site and allowing it to meet specific regulatory and compliance requirements for key management. Lockr also separately stores development and production specific keys to create an additional layer of security between environments.
 
 ## Benefits of Lockr
 
-By combining a simple-to-use developer interface with a managed scalable cloud key management system, Lockr allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite modules and plugins. Offsite API and encryption key management delivers best-practice security to help sites comply with HIPAA, FERPA, and FISMA. Development use of Lockr in the Dev, Test, and Multidev environments is always free.
+Lockr provides a simple-to-use developer interface with a managed scalable cloud key management system. This allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite modules and plugins. Lockr's off-site API and encryption key management delivers best-practice security to help sites comply with HIPAA, FERPA, and FISMA. Using Lockr to develop in Dev, Test, and Multidev environments is always free.
 
 ## Install Lockr via the Lockr Terminus Plugin
 
@@ -162,13 +162,13 @@ Non-CMS applications can easily integrate with Lockr after their credentials are
 
 #### How is Lockr different from other key management systems?
 
-Lockr encrypts the keys prior to leaving the site or application with a process called key wrapping. This prevents keys stored in Lockr from being viewed or compromised by adding another layer of security to the process. Backed by Townsend Security’s FIPS 140-2 compliant key manager, keys are secured to the highest of industry standards.
+Lockr encrypts the keys before leaving the site or application with a process called key wrapping. Key wrapping takes one value, and encrypts (wraps) it using a second key. Lockr places the second key, usually termed the KEK (key encryption key)  in the website in place of the original value. This prevents keys stored in Lockr from being viewed or compromised by adding another layer of security to the process.Lockr then  sends encrypted value over a secure, encrypted connection to the Lockr servers, where the value is stored inside an HSM (Hardware Security Module), provided by Townsend Security.
 
 #### Is Lockr Safe?
 
 Yes! Lockr can be used to secure any API key, application secret, and other types of credentials. Once enabled in the CMS, keys entered are sent over an encrypted connection to the Lockr system. The credentials used to access Lockr are provided by the site host or application platform to prevent hijacking and tampering. This credentialed methodology enables the separation of development and production environments. Using key wrapping, keys are rendered useless from being used outside the website or application environment. Lockr is unable to see the values of your key.
 
-Lockr manages keys on a “per environment" basis, which helps eliminate the potential of keys being shared from production to development environments. No longer will you have to worry about sending a test notification from development to production users, or having production data decrypted in development environments. Leveraging proven enterprise-grade key management technology from Townsend Security, Lockr’s offsite key management delivers best-practice security to protect against critical vulnerabilities within your CMS solution.
+Lockr manages keys on a “per environment" basis, which helps eliminate the potential of keys being shared from production to development environments. No longer will you have to worry about sending a test notification from development to production users, or having production data decrypted in development environments. Leveraging proven enterprise-grade key management technology from Townsend Security, Lockr’s off-site key management delivers best-practice security to protect against critical vulnerabilities within your CMS solution.
 
 #### Will developers be able to access my keys?
 
