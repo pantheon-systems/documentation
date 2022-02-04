@@ -16,6 +16,6 @@ contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---
 
-In this section, we explain what an HTTP Archive format (HAR) file is and how to generate a HAR file in the affected browser.
+In this section, we explain what an HTTP Archive (HAR) format file is and how to generate a HAR file in the affected browser.
 
 <Partial file="generate-har-file.md" />
