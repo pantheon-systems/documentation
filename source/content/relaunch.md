@@ -5,11 +5,11 @@ categories: [go-live]
 tags: [dns, https, launch, migrate]
 reviewed: "2020-09-08"
 ---
-Sites are considered launched on Pantheon once traffic is routed through a custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
+Sites are considered to have launched on Pantheon after traffic is routed through a custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 
 <Alert title="Note" type="info">
 
-The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/guides/launch).
+The relaunch process applies exclusively to live sites already hosted on Pantheon. For more information on launching a site that is not already on the Pantheon platform, refer to [Launch Essentials](/guides/launch).
 
 </Alert>
 
@@ -17,9 +17,9 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
 1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/change-management#roles-and-permissions).
 
-1. Open a second tab for the old Pantheon Site Dashboard.
+1. Open a new tab for the old Pantheon Site Dashboard.
 
-1. In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.).
+1. In another tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.).
 
 1. Examine existing records pointing to Pantheon.
 
@@ -43,18 +43,18 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Accordion>
 
-1. Use [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) from your terminal to obtain the new site's A and AAAA records:
+1. In your terminal, use [`dig`](https://en.wikipedia.org/wiki/Dig_(command) to obtain the new site's A and AAAA records:
 
   ```bash{promptUser: user}
   dig +short live-site-name.pantheonsite.io
   dig +short AAAA live-site-name.pantheonsite.io
   ```
 
-  You can also use Google's [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
+  You can also use the Google [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
 
   <Alert title="Note" type="info">
 
-  [`Dig`](https://en.wikipedia.org/wiki/Dig_(command)) will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
+The [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) command will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
 
   </Alert>
 
@@ -94,7 +94,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   </Alert>
   
-1. On the Live environment tab of the Site Dashboard for the old site, click the "Clear Caches" button.
+1. In the Live environment tab of the Site Dashboard for the old site, click **Clear Caches**.
 
 1. Repeat on the Live environment of the new site.
 
@@ -140,7 +140,7 @@ Finally, the relaunch procedure should be done as a single process, as quickly a
 
 ### Why do I need to lower my DNS TTL?
 
-DNS records propagate across many different servers and aren't refreshed until the record on *each server* up the tree expires. This means that a record with a 24 hour TTL can take several days to be updated across DNS servers globally. That's why we recommend lowering the TTL well before a site relaunch.
+DNS records propagate across many different servers and aren't refreshed until the record on *each server* expires. This means that a record with a 24 hour TTL can take several days to be updated across DNS servers globally. We recommend lowering the TTL before a site relaunch.
 
 Best practices during normal operation (e.g. not during a site relaunch) suggest a longer TTL (for example, 86400 seconds, or one day) because a long TTL helps reduce the number of DNS lookups that visitors' browsers need to perform. During a site relaunch, a long TTL can extend the time frame that return visitors are pointed to the old site, while new visitors are pointed to the new site.
 
