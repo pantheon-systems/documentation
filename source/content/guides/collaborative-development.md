@@ -300,7 +300,7 @@ In this instance, you'll create the `settings.php` file.
 
 ### Create Pull Request
 
- You're now ready to create a pull request on GitHub. The pull request can include: 
+ You are now ready to create a pull request on GitHub. The pull request can include: 
 
  - Links to the Multidev environment where the team can view the effects of the commits
  - @-mentions of team members
@@ -335,6 +335,6 @@ Checkout the master branch locally, then pull from github master, and then push 
 
 ## Additional Resources
 
- [Starting with Git](/git)
+- [Starting with Git](/git)
 
-[Git FAQs](/git-faq)
+- [Git FAQs](/git-faq)
