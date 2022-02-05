@@ -238,6 +238,7 @@ Module/Plugin and Theme files should not be committed, when using Git mode, or u
 <TabList>
 
 <Tab title="Drupal" id="drupal-gitignore" active={true}>
+
 ```none:title=code/web/sites
 code/web/
 └─ core/
@@ -257,6 +258,7 @@ The `custom` folders, which are not ignored, are where modules, profiles, and th
 </Tab>
 
 <Tab title="WordPress" id="wp-gitignore">
+
 ```none:title=code/web/
 code/web/wp-content/
 └─ mu-plugins/
