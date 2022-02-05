@@ -17,6 +17,8 @@ Site administrators have the ability to control how and where their sensitive ke
 
 Lockr provides a simple-to-use developer interface with a managed scalable cloud key management system. This allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite modules and plugins. Lockr's off-site API and encryption key management delivers best-practice security to help sites comply with HIPAA, FERPA, and FISMA. Using Lockr to develop in Dev, Test, and Multidev environments is always free.
 
+Note that Lockr for Drupal 8 and Drupal 9 depends on a connection library installed using Composer. If the Lockr module is not installed using Composer, the dependency must be installed manually with `composer require 'lockr/lockr:^1.0.0'`.
+
 ## Install Lockr via the Lockr Terminus Plugin
 
 [The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/terminus) command. To enable the Terminus plugin, complete these steps in your local environment:
@@ -37,7 +39,7 @@ Lockr provides a simple-to-use developer interface with a managed scalable cloud
 
 1. Select the site for the install. It will now detect the CMS, download and install all necessary components, register the site, and patch all relevant plugins in your site.
 
-It's that simple! One command and your site is set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for site's that have been registered. Alternatively, you can follow the steps below for the CMS your site uses to install and configure Lockr.
+With one command your site will be set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for registered sites. Alternatively, you can follow the steps below for the CMS your site uses to install and configure Lockr.
 
 ## WordPress Installation
 
