@@ -164,7 +164,7 @@ Non-CMS applications can easily integrate with Lockr after their credentials are
 
 #### How is Lockr different from other key management systems?
 
-Lockr encrypts the keys before leaving the site or application with a process called key wrapping. Key wrapping takes one value, and encrypts (wraps) it using a second key. Lockr places the second key, usually termed the KEK (key encryption key) in the website in place of the original value. This prevents keys stored in Lockr from being viewed or compromised by adding another layer of security to the process. Lockr then sends encrypted a value over a secure, encrypted connection to the Lockr servers, where the value is stored inside an HSM (Hardware Security Module), provided by Townsend Security.
+Lockr encrypts the keys before leaving the site or application with a process called key wrapping. Key wrapping takes one value, and encrypts (wraps) it using a second key. Lockr places the second key, usually termed the KEK (key encryption key) in the website in place of the original value. This prevents keys stored in Lockr from being viewed or compromised by adding another layer of security to the process. Lockr then sends an encrypted value over a secure, encrypted connection to Lockr servers. The value is stored inside an HSM (Hardware Security Module) provided by Townsend Security, which uses FIPS 140-2 compliant key management technology.
 
 #### Is Lockr Safe?
 
