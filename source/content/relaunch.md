@@ -43,7 +43,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Accordion>
 
-1. In your terminal, use [`dig`](https://en.wikipedia.org/wiki/Dig_(command) to obtain the new site's A and AAAA records:
+1. In your terminal, use [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) to obtain the new site's A and AAAA records:
 
   ```bash{promptUser: user}
   dig +short live-site-name.pantheonsite.io
@@ -54,7 +54,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   <Alert title="Note" type="info">
 
-The [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) command will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
+  The `dig` command will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
 
   </Alert>
 
