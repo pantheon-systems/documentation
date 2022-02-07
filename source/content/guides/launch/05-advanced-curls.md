@@ -7,6 +7,7 @@ layout: guide
 showtoc: true
 categories: [go-live]
 tags: [backup, launch, webops]
+contributors: [whitneymeredith]
 type: guide
 permalink: docs/guides/launch/advanced-curls/
 editpath: launch/05-advanced-curls.md
