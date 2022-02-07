@@ -13,7 +13,8 @@ editpath: launch/05-advanced-curls.md
 image: getting-started-Largethumb
 ---
 
-In this lesson, we’ll use advanced cURL techniques to Test a domain not resolved to Pantheon yet, use the Pantheon Debugger, and suppress certificate errors.
+In this lesson, we'll review essential commands for the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
+Using the commands below, we’ll use advanced cURL techniques to Test a domain not resolved to Pantheon yet, use the Pantheon Debugger, and suppress certificate errors.
 
 ## Test a Domain not Resolved to Pantheon
 
