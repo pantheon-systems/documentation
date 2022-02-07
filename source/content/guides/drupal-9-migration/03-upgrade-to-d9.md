@@ -11,7 +11,7 @@ showtoc: true
 permalink: docs/guides/drupal-9-migration/upgrade-to-d9
 anchorid: drupal-9-migration/upgrade-to-d9
 editpath: drupal-9-migration/03-upgrade-to-d9.md
-reviewed: "2021-10-24"
+reviewed: "2022-02-07"
 ---
 
 This doc shows how to upgrade an existing Pantheon-hosted Drupal 8 site without Composer, to a Drupal 9 site with Integrated Composer, using a **Multidev** to stage changes, and then replace the `master` branch.
@@ -34,6 +34,10 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
 
+## Convert to Composer
+
+To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal-recommended` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
+
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment.md" />
@@ -41,14 +45,6 @@ Pantheon support is not available to users who avoid the Multidev steps.
 ### Apply All Available Upstream Updates
 
 <Partial file="drupal-apply-upstream-updates.md" />
-
-- The site uses the [Pantheon Drupal 9](https://github.com/pantheon-systems/drupal-recommended) upstream.
-
-- The site uses Composer to manage Drupal core and site dependencies.
-
-- The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
-
-To convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal-recommended` upstream, follow the steps in the [Composer Conversion Guide](/guides/composer-convert).
 
 ## Ensure Dependencies are Drupal 9 Compatible
 
@@ -64,7 +60,8 @@ Set the Drupal core version to Drupal 9:
   git add composer.*
   git commit -m "upgrade to Drupal 9"
   ```
- If you receive the error message "Your requirements could not be resolved to an installable set of packages", use the command `composer update` instead of `composer update drupal/core* -W`.
+
+If you receive the error message "Your requirements could not be resolved to an installable set of packages", use the command `composer update` instead of `composer update drupal/core* -W`.
 
 ## Ongoing Core Updates
 
