@@ -81,7 +81,7 @@ While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed a
 | 6      | 5.3.0+     | Dec. 2015| compatible but no longer supported    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span>|
 | 5     | 5.2.0+    | May 2015 | compatible but no longer supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span> |
 
-See our guide on [Upgrading PHP Versions](/php-versions).
+For more information, refer to our guide on [Upgrading PHP Versions](/php-versions).
 
 ## Troubleshooting
 
