@@ -16,7 +16,7 @@ Using Pantheon's one-click Dashboard updates feature depends on a correctly set 
 
 - Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that use a [Custom Upstream](/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
-- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if you desire one-click Dashboard updates.
+- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
 
 </Alert>
@@ -79,12 +79,12 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
     web_docroot: true
   ```
 
-1. Add, commit, and push the `pantheon.yml` file with Git.
+1. Add, commit, and push the `pantheon.yml` file using Git.
 1. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
 
 ### Create a New Site
 
-If your site utilizes a [Custom Upstream](/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
+Your site should use a [Custom Upstream](/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
 
 ### Convert an Existing Site
 
