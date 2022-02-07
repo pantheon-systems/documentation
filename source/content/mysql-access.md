@@ -32,15 +32,15 @@ As each database server is in the cloud, the credentials will occasionally be up
 
 There's a wide array of MySQL clients that can be used, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
-- [Sequel Pro](https://www.sequelpro.com/download),
+- [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/),
 - [Navicat](https://www.navicat.com/download),
 - [PHPMyAdmin](https://www.phpmyadmin.net/),
 
 and others. See the documentation or issue queue of your software to learn more about how to configure a connection.
 
-### Open Sequel Pro Database Connection
+### Open Sequel Ace Database Connection
 
-Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Pro via [Terminus](/terminus) and [Drush](/drush):
+Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Ace via [Terminus](/terminus) and [Drush](/drush):
 
 ```bash:title=establish-db-connection.sh
 #!/bin/bash
@@ -79,9 +79,9 @@ PORT=`echo $CONNECTION_STRING | sed -e 's/.*--port=\([^\\ ]*\).*/\1/g'`
 PASSWORD=`echo $CONNECTION_STRING | sed -e 's/.*--password=\([^\\ ]*\).*/\1/g'`
 USER=`echo $CONNECTION_STRING | sed -e 's/.*--user=\([^\\ ]*\).*/\1/g'`
 
-# This is for Sequel Pro:
+# This is for Sequel Ace:
 eval "echo \"$(< $TEMPLATE)\""
-# For some reason, Sequel Pro or Open do not behave the same way given the -f
+# For some reason, Sequel Ace or Open do not behave the same way given the -f
 # flag compared to opening a file from file system. So, we write to a tmp file.
 eval "echo \"$(< $TEMPLATE)\"" > $TMP_SPF
 
