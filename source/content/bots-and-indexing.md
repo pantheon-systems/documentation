@@ -84,11 +84,11 @@ You can index your site under your production domain once it's added to the Live
 
 ## Robots.txt with Composer and Drupal
 
-When using Drupal scaffolding, the root `web/robots.txt` file will be overwritten on each `composer install`, whether that is managed locally or on Pantheon using Integrated Composer. For more background, see [Using Drupal's Composer Scaffold](https://www.drupal.org/docs/develop/using-composer/using-drupals-composer-scaffold).
+When using Drupal scaffolding, the root `web/robots.txt` file will be overwritten on each `composer install`, whether it is managed locally or on Pantheon using Integrated Composer. For more information, refer to [Using Drupal's Composer Scaffold](https://www.drupal.org/docs/develop/using-composer/using-drupals-composer-scaffold).
 
-Modifications are made in a separate file that is appended to the existing `robots.txt`. The path and name of that file are arbitrary, in this example we are creating a new file under an assets folder at the root.
+Modifications are made in a separate file that is appended to the existing `robots.txt`. The path and name of the file are arbitrary. In the example below, we'll create a new file in an assets folder located at the root of the website host to which it applies.
 
-These commands are to be run in your terminal in the root directory of your local git repository.
+Run the following command in the terminal, in the root directory of your local Git repository:
 
 ```bash{promptUser: user}
 touch assets/my-robots-additions.txt
@@ -96,7 +96,7 @@ touch assets/my-robots-additions.txt
 
 You can now add your changes into that newly created file using a text editor.
 
-Next, modify the site's root `composer.json` file to append this new file when copying Drupal's scaffolding. The `...` here represents existing content. If you already have `"file-mapping"`, this content can be added to that section.
+Modify the site's root `composer.json` file to append this new file when copying Drupal's scaffolding. The `...` represents existing content. If you already have `"file-mapping"`, content can be added to the section.
 
 ```json:title=composer.json
 "file-mapping": {
@@ -107,7 +107,7 @@ Next, modify the site's root `composer.json` file to append this new file when c
 }
 ```
 
-You may choose to test this locally first, with a `composer install`. If that is successful, these changes can be committed:
+You can test this locally using `composer install`. If successful, use the following commands to commit changes:
 
 ```bash{promptUser: user}
 git add assets/my-robots-additions.txt composer.json
@@ -118,9 +118,9 @@ git commit -m "Append robots.txt changes via composer"
 
 ### Robots.txt conflicting with Composer
 
-The default Drupal upstream includes a line in .gitignore to exclude tracking `web/robots.txt` due to it being automatically generated during `composer install`. Occasionally this is removed and modifications to robots.txt are committed, this will cause a merge conflict on attempting to run composer, and will cause builds to fail on Integrated Composer.
+The default Drupal upstream includes a line in `.gitignore` to exclude tracking `web/robots.txt` due to it being automatically generated during `composer install`. Occasionally this is removed and modifications to robots.txt are committed, this will cause a merge conflict on attempting to run composer, and will cause builds to fail on Integrated Composer.
 
-The first step is to get that accidentally tracked file out of the repository and back into `.gitignore`. You may want to pull any changes you needed out of this file to a temporary text file for later use.
+First, get that accidentally tracked file out of the repository and back into `.gitignore`. You may want to pull any changes you needed out of this file to a temporary text file for later use.
 
 These commands are to be run in your terminal in the root directory of your local git repository.
 
