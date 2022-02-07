@@ -35,14 +35,12 @@ The `wp_options` table stores several types of data for your site, including:
 1. Run the following code to see the total autoloaded data and data count:
 
     ```sql
-    SELECT 'autoloaded data in KiB' as name, ROUND(SUM(LENGTH(option_value))/ 1024) as value FROM wp_options WHERE autoload='yes' UNION 
-    
-    SELECT 'autoloaded data count', count(*) FROM wp_options WHERE autoload='yes';
+    SELECT 'autoloaded data in KiB' as name, ROUND(SUM(LENGTH(option_value))/ 1024) as value FROM wp_options WHERE autoload='yes' UNION  SELECT 'autoloaded data count', count(*) FROM wp_options WHERE autoload='yes';
     ```
  
  The response will look similar to the example below.
 
-![wp_options Table Example Code](../images/wp_options-table-example-code.png)
+ ![wp_options Table Example Code](../images/wp_options-table-example-code.png)
 
  If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
 
@@ -55,7 +53,7 @@ The `wp_options` table stores several types of data for your site, including:
     ```
  The response will look similar to the example below.
 
-![wp_options Top Autoloaded Data](../images/wp_options-top-autoloaded-data-example.png)
+ ![wp_options Top Autoloaded Data](../images/wp_options-top-autoloaded-data-example.png)
 
 1. Run the following code if you want to turn off autoload for an item:
 
@@ -71,7 +69,7 @@ The `wp_options` table stores several types of data for your site, including:
 
 ### Redirect Your Site with PHP
 
-Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](https://pantheon.io/docs/redirects#redirect-with-php).
+Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](docs/redirects#redirect-with-php).
 
 ### Clean up Transient Data
 
@@ -85,8 +83,8 @@ SELECT * FROM wp_optionsWHEREautoload= 'yes' ANDoption_nameLIKE '%transient%';
 
 ### Avoid Using Transient Data
 
-You can use Pantheon's [Object Cache](https://pantheon.io/docs/object-cache) to completely avoid using transient data for the `wp_options` table.
+You can use Pantheon's [Object Cache](/docs/object-cache) to completely avoid using transient data for the `wp_options` table.
 
 ### Use Pantheon's Professional Services
 
-You can also use [Pantheon's Professional Services](https://pantheon.io/docs/guides/professional-services/advanced-global-cdn#edge-redirects) to reduce requests to your CMS by moving page redirects to the edge.
+You can also use [Pantheon's Professional Services](/guides/professional-services/advanced-global-cdn#edge-redirects) to reduce requests to your CMS by moving page redirects to the edge.
