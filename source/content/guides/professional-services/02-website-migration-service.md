@@ -36,7 +36,7 @@ Premium Migrations are designed for larger and more complex sites - and include 
 
 - For older WP Network sites, conversion from `blogs.dir` to `wp-content/uploads` format
 
-- One additional Code/Content resync
+- One additional Content resync
 
 - One Performance Report, with estimates for recommended work
 
