@@ -88,7 +88,7 @@ When using Drupal scaffolding, the root `web/robots.txt` file will be overwritte
 
 Modifications are made in a separate file that is appended to the existing `robots.txt`. The path and name of the file are arbitrary. In the example below, we'll create a new file in an assets folder located at the root of the website host to which it applies.
 
-Run the following command in the terminal, in the root directory of your local Git repository:
+In the terminal, run the following command in the root directory of your local Git repository:
 
 ```bash{promptUser: user}
 touch assets/my-robots-additions.txt
@@ -118,11 +118,11 @@ git commit -m "Append robots.txt changes via composer"
 
 ### Robots.txt conflicting with Composer
 
-The default Drupal upstream includes a line in `.gitignore` to exclude tracking `web/robots.txt` due to it being automatically generated during `composer install`. Occasionally this is removed and modifications to robots.txt are committed, this will cause a merge conflict on attempting to run composer, and will cause builds to fail on Integrated Composer.
+The default Drupal upstream includes a line in `.gitignore` to exclude tracking `web/robots.txt` because it is automatically generated during `composer install`. Occasionally, this is removed and modifications to `robots.txt` are committed. This will cause a merge conflict when attempting to run composer, and will cause builds to fail on Integrated Composer.
 
-First, get that accidentally tracked file out of the repository and back into `.gitignore`. You may want to pull any changes you needed out of this file to a temporary text file for later use.
+Move the accidentally tracked file out of the repository and into `.gitignore`. You may want to pull any changes you need out of this file and in to a temporary text file for later use.
 
-These commands are to be run in your terminal in the root directory of your local git repository.
+In the terminal, run the following commands in the root directory of your local Git repository:
 
 ```bash{promptUser: user}
 git rm --cached web/robots.txt
@@ -134,7 +134,7 @@ In your text editor add the following to `.gitignore`:
 /web/robots.txt
 ```
 
-Now commit that change:
+Commit that change using the following command:
 
 ```bash{promptUser: user}
 git add .gitignore
