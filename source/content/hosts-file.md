@@ -1,10 +1,10 @@
 ---
 title: Modify the Local Hosts File
-description: How to find and modify a local hosts file.
+description: How to find and modify a local hosts file. Host mapping a platform domain before going Live.
 categories: [go-live]
 tags: [cli, dns, local]
 contributors: [alexfornuto]
-reviewed: "2020-11-16"
+reviewed: "2022-02-06"
 ---
 
 The `hosts` file exists on all major operating systems. It's a list of IP addresses and domains that takes precedence over DNS assigned values. You can modify your `hosts` file to test domain-specific settings leading up to a migration, before DNS records have been updated, or to help with [local development](/local-development).
@@ -17,11 +17,11 @@ The `hosts` file exists on all major operating systems. It's a list of IP addres
 
  ```bash{outputLines:2}
  dig +short dev-example.pantheonsite.io
- 203.0.113.42
+ 23.185.0.1
  ```
 
 1. Edit the `hosts` file as shown below to map the result to an alias for easier local development:
 
  ```none
- 203.0.113.42    dev-example
+ 23.185.0.1    dev-example.pantheonsite.io
  ```
