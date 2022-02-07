@@ -24,6 +24,12 @@ See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) do
 
 ## Migrate or Upgrade an Existing Site to Drupal 9 With Integrated Composer on Pantheon
 
+<TabList>
+
+<Tab title="On Pantheon" id="on-pantheon" active={true}>
+
+Utilize the info on this tab if your site is currently on pantheon.
+
 - Existing Site on Pantheon
   - With Build Tools (assumes Composer?)
     - [CI](/guides/drupal-9-migration/build-tools-to-d9-build-tools)
@@ -33,6 +39,13 @@ See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) do
     - [In Place](/guides/drupal-9-migration/upgrade-to-d9)
     - [New Site](/guides/drupal-9-migration/migrate-manual-d9)
   - Custom Upstream
+
+</Tab>
+
+<Tab title="Not on Pantheon" id="not-on-pantheon">
+
+Utilize the info on this tab if your site is not currently on pantheon.
+
 - Existing Site on Another Platform
   - D8
     - Composer
@@ -42,3 +55,8 @@ See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) do
     - Composer
       - Yes
       - No
+
+
+</Tab>
+
+</TabList>
