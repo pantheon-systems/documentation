@@ -3,6 +3,7 @@ title: WordPress wp_options Table Autoloading Cache
 description: Learn more about checking and configuring autoloading cache in the wp_options table.
 cms: "WordPress"
 categories: [performance]
+contributors: [carlalberto, whitneymeredith]
 tags: [cache]
 ---
 
