@@ -77,6 +77,39 @@ Once the test is running, execute common tasks done by editors and administrator
 * Run any scripts that could be triggered while users are on the site
 * Flush Redis cache (if Redis is running)
 
+### Determing the Number of Concurrent Users in Google Analytics
+
+Pantheon offers [Pre-launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) to newly purchased Elite plans. For the Professional Services team to proceed with executing the load test, a [load test questionnaire form](https://implem.ps-pantheon.com/load-test/new) needs to be filled out with required information. The required information includes **Peak Page Views**, **Peak Sessions**, **Peak Users** and **Average Session Duration** which can be retrieved from your site's Google Analytics data.
+
+The following procedure guides you on how to retrieve load test information from your site's Google Analytics data. Ensure you have been invited or have access to the correct account as well as the correct views and properties.
+
+1. In the top left corner of the page, click the **All Web Site Data** dropdown menu.
+
+1. Select the correct **Analytics Account**, **Properties & Apps** and **Views** of the site.
+
+1. Click **Audience > Overview**.
+
+1. In the top right corner, use the dropdown menu to set the date range filter to a specific year.
+
+1. In the **Overview tab**, use the dropdown menu to set the metric filter to **Sessions**
+
+1. Click **Day** in the **Overview** tab to set the range to “Day“. Then take note of the day with the highest sessions. 
+
+1. Set the date filter to the day with the highest sessions. Set the range to “Hourly“ and find the highest peak. The following information is displayed below the main graph:
+
+	* **Users**: Users who have initiated at least one session during the date range.      
+	* **New Users**: The number of first-time users during the selected date range.       
+	* **Sessions**: Total number of sessions within the date range. 
+	* **Number of Sessions per User**: The average number of sessions per user.
+	* **Pageviews**: The total number of pages viewed. Repeated views of a single page are counted.
+	* **Pages / Session**: The average number of pages viewed during a session; it is also known as the Average Page Depth. Repeated views of a single page are counted.
+	* **Avg. Session Duration**: The average length of a session.
+	* **Bounce Rate**: The percentage of single-page sessions in which there was no interaction with the page.
+	
+1. The highest hourly peak denotes the peak sessions. Click the peak to display the date, time, and number of sessions. 
+
+1. In the **Overview tab**, click the dropdown menu and click **Users** to change the metric filter to "Users". Set another metric filter to “Pageviews“. Then find the highest peak and use your mouse to hover over the peak. The **Peak Users** and Peak **Pageviews** should now be displayed.
+
 ## Assess Results
 
 Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
@@ -88,6 +121,7 @@ Finally, review the **Error analytics** tab in New Relic. PHP errors often indic
 ### Calculating Load Capacity After Launch
 
 After launch, you can establish a baseline that `X` response time will let you handle `Y` traffic. If `X` degrades in Dev/Test, that will impact how much traffic Live can handle.
+
 
 ## See Also
 
