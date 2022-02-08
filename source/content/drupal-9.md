@@ -84,10 +84,10 @@ Some users have reported success using [Lando](https://docs.lando.dev/basics/) w
 
 Manually update the [landofile](https://docs.lando.dev/config/lando.html#base-file) in the project folder, and set `drupal9` as the framework:
 
-```yml:title=lando.yml
-# Lando issue 2831 workaround for D9
-framework: drupal9
-```
+  ```yml:title=lando.yml
+  # Lando issue 2831 workaround for D9
+  framework: drupal9
+  ```
 
 When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal8` for a Drupal 8 or Drupal 9 site.
 
