@@ -79,21 +79,44 @@ Each major and minor version of Terminus is fully supported for one year from th
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We strongly encourage you to update Terminus well ahead of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 
-| Version           | EOL Date  |
-| ----------------- | --------- |
-| 2.6.2             |           |
-| 2.6.1             | 10/18/2022|
-| 2.6.0             | 8/04/2022 |
-| 2.5.0             | 6/04/2022 |
-| 2.4.1             | 1/20/2022 |
-| 2.4.0             | 9/08/2021 |
-| 2.3.0             | 6/20/2021 |
-| 2.2.0             | 1/11/2021 |
-| 2.1.0             | 9/26/2020 |
-| 2.0.0             | 9/03/2020 |
-| 1.9.0             | 2/20/2020 |
-| 1.8.1             | 9/11/2019 |
-| 1.8.0  or earlier | 8/26/2019 |
+<TabList>
+
+<Tab title="Version 3.x" id="terminus-version-3" active={true}>
+
+| Version           | EOL Date   |
+| ----------------- | ---------- |
+| 3.0.5             |  |
+| 3.0.4             | 02/08/2023 |
+| 3.0.3             | 01/18/2023 |
+| 3.0.2             | 12/17/2022 |
+| 3.0.1             | 12/17/2022 |
+| 3.0.0             | 12/08/2022 |
+</Tab>
+
+<Tab title="Version 2.x" id="terminus-version-3">
+
+| Version           | EOL Date   |
+| ----------------- | ---------- |
+| 2.6.6             |  |
+| 2.6.5             | 02/07/2023 |
+| 2.6.4             | 12/17/2022 |
+| 2.6.3             | 12/08/2022 |
+| 2.6.2             | 12/03/2022 |
+| 2.6.1             | 10/18/2022 |
+| 2.6.0             | 08/04/2022 |
+| 2.5.0             | 06/04/2022 |
+| 2.4.1             | 01/20/2022 |
+| 2.4.0             | 09/08/2021 |
+| 2.3.0             | 06/20/2021 |
+| 2.2.0             | 01/11/2021 |
+| 2.1.0             | 09/26/2020 |
+| 2.0.0             | 09/03/2020 |
+| 1.9.0             | 02/20/2020 |
+| 1.8.1             | 09/11/2019 |
+| 1.8.0  or earlier | 08/26/2019 |
+</Tab>
+
+</TabList>
 
 ## Changelog
 
