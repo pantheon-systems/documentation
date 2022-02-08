@@ -5,7 +5,7 @@ categories: [get-started]
 tags: [site]
 cms: drupal-9
 contributors: [populist, edwardangert]
-reviewed: "2022-02-8"
+reviewed: "2022-02-08"
 ---
 
 Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
