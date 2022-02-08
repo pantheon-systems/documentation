@@ -28,33 +28,39 @@ See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) do
 
 <Tab title="On Pantheon" id="on-pantheon" active={true}>
 
-Utilize the info on this tab if your site is currently on pantheon.
+Utilize the info on this tab if your site is currently on Pantheon.
 
-- Existing Site on Pantheon
-  - With Build Tools (assumes Composer?)
-    - [CI](/guides/drupal-9-migration/build-tools-to-d9-build-tools)
-    - No CI
-  - With Composer
-  - No Composer
-    - [In Place](/guides/drupal-9-migration/upgrade-to-d9)
+Here's how to migrate your site if you are using:
+
+- Build Tools (assumes Composer?)
+  - [Continuous Integration](/guides/drupal-9-migration/build-tools-to-d9-build-tools)
+  - No Continuous Integration
+
+- Composer
+  - With [Integrated Composer](//guides/drupal-9-migration/upgrade-to-d9)
+  - Without Composer
+    - [On an Existing Site](/guides/drupal-9-migration/upgrade-to-d9)
     - [New Site](/guides/drupal-9-migration/migrate-manual-d9)
-  - Custom Upstream
+
+- Custom Upstream
+  - With Custom Upstream
+  - [Without Custom Upstream](/migrate#migrate-existing-sites)
 
 </Tab>
 
 <Tab title="Not on Pantheon" id="not-on-pantheon">
 
-Utilize the info on this tab if your site is not currently on pantheon.
+Utilize the info on this tab if your site is not currently on Pantheon.
 
-- Existing Site on Another Platform
-  - D8
-    - Composer
-      - Yes
-      - [No](/guides/drupal-9-migration/migrate-manual-d9)
-  - D9
-    - Composer
-      - Yes
-      - No
+- Drupal 8
+  - Composer
+    - [Yes](/guides/composer-convert)
+    - [No](/guides/drupal-9-migration/migrate-manual-d9)
+
+- Drupal 9
+  - Composer
+    - Yes
+    - No
 
 
 </Tab>
