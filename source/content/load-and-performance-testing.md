@@ -77,6 +77,14 @@ Once the test is running, execute common tasks done by editors and administrator
 * Run any scripts that could be triggered while users are on the site
 * Flush Redis cache (if Redis is running)
 
+## Assess Results
+
+Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
+
+Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to find the performance bottleneck.
+
+Finally, review the **Error analytics** tab in New Relic. PHP errors often indicate huge performance bottlenecks. If you have errors, fix them.
+
 ### Determing the Number of Concurrent Users in Google Analytics
 
 Pantheon offers [Pre-launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) to newly purchased Elite plans. For the Professional Services team to proceed with executing the load test, a [load test questionnaire form](https://implem.ps-pantheon.com/load-test/new) needs to be filled out with required information. The required information includes **Peak Page Views**, **Peak Sessions**, **Peak Users** and **Average Session Duration** which can be retrieved from your site's Google Analytics data.
@@ -110,13 +118,6 @@ The following procedure guides you on how to retrieve load test information from
 
 1. In the **Overview tab**, click the dropdown menu and click **Users** to change the metric filter to "Users". Set another metric filter to “Pageviews“. Then find the highest peak and use your mouse to hover over the peak. The **Peak Users** and Peak **Pageviews** should now be displayed.
 
-## Assess Results
-
-Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
-
-Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to find the performance bottleneck.
-
-Finally, review the **Error analytics** tab in New Relic. PHP errors often indicate huge performance bottlenecks. If you have errors, fix them.
 
 ### Calculating Load Capacity After Launch
 
