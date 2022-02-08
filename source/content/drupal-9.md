@@ -5,7 +5,7 @@ categories: [get-started]
 tags: [site]
 cms: drupal-9
 contributors: [populist, edwardangert]
-reviewed: "2021-06-18"
+reviewed: "2022-02-8"
 ---
 
 Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
@@ -53,6 +53,20 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/guides/drupal-9-migration).
 
 To check an existing site's compatibility to upgrade, visit our [Prepare for Drupal 9 section](/guides/drupal-9-migration/prepare).
+
+## A Better Authoring Experience
+
+The upgrade to Drupal 9 is a good time to consider upgrading the authoring experience for your content creators as well. We recommend using [Gutenberg](https://www.drupal.org/project/gutenberg) for a better user experience, including;
+
+- creating, saving, and reusing content blocks
+- easier build process for landing pages
+- scalable performance
+
+You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal 9: An Opportunity](https://pantheon.io/blog/gutenberg-drupal-9).
+
+You can also read more about the installation process on [Drupal's site](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
+
+We recommend monitoring your site's traffic using [Metrics in the Site Dashboard](/metrics) to check for increased traffic after installing Gutenberg.
 
 ## Troubleshooting and Support
 
