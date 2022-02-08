@@ -58,9 +58,9 @@ To check an existing site's compatibility to upgrade, visit our [Prepare for Dru
 
 The upgrade to Drupal 9 is a good time to consider upgrading the authoring experience for your content creators as well. We recommend using [Gutenberg](https://www.drupal.org/project/gutenberg) for a better user experience, including;
 
-- creating, saving, and reusing content blocks
-- easier build process for landing pages
-- scalable performance
+ - creating, saving, and reusing content blocks
+ - easier build process for landing pages
+ - scalable performance
 
 You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal 9: An Opportunity](https://pantheon.io/blog/gutenberg-drupal-9).
 
