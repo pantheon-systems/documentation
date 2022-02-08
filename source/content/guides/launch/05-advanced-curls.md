@@ -15,11 +15,13 @@ image: getting-started-Largethumb
 ---
 
 In this lesson, we'll review essential commands for the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
-Using the commands below, we’ll use advanced cURL techniques to Test a domain not resolved to Pantheon yet, use the Pantheon Debugger, and suppress certificate errors.
+Using the commands below, we’ll use advanced cURL techniques to test a domain not resolved to Pantheon yet, use the Pantheon Debugger, and suppress certificate errors.
 
-## Test a Domain not Resolved to Pantheon
+## Test a Domain Not Resolved to Pantheon
 
-When you’re migrating a site, you may want to ensure that the site responds correctly to the given host name, but if the DNS is not yet pointed at Pantheon, you won’t be able to do this. A common way around this is to use the `/etc/hosts` file to change your local DNS resolution. Another way is to use cURL’s `--resolve` option, which provides a custom address for a specific host and port pair. cURL `--resolve` requests inserts the specified address into cURL's DNS cache. This overrides the DNS lookup and prevents the normally resolved IP address from being used. 
+When you’re migrating a site, you may want to ensure that the site responds correctly to the given host name, but if the DNS is not yet pointed at Pantheon, you won’t be able to do this. 
+
+A common way around this is to use the `/etc/hosts` file to change your local DNS resolution. Another way is to use cURL’s `--resolve` option, which provides a custom address for a specific host and port pair. The cURL `--resolve` request inserts the specified address into cURL's DNS cache. This overrides the DNS lookup and prevents the normally resolved IP address from being used. 
 
 For example, if you wanted to request `myexamplesite.com` from `23.185.0.1`:
 
@@ -37,13 +39,13 @@ This will show line-by-line differences between the two sites while only resolvi
 
 ## Use the Pantheon Debugger
 
-You can use the cURL `-I -H` option with Pantheon's Debug header to see additional information about a request.
+You can use the cURL `-I -H` option with Pantheon's Debug header to get additional information about a request.
 
  ```bash
  curl -I -H “Pantheon-Debug” https://myexamplesite.com
  ```
 
-This command shows the following information:
+This command shows the following header information:
 
  ```bash
  HTTP/2 200
@@ -82,31 +84,31 @@ This command shows the following information:
 
 <dl>
 
-<dt>Cache-control:</dt> 
+<dt>cache-control:</dt> 
 
 <dd>This header tells the browser how long it should cache the URL. </dd>
 
-<dt>Etag, Expires, last-modified:</dt> 
+<dt>etag, expires, last-modified:</dt> 
 
-<dd>This shows more information about the cache control mechanism, primarily for the browser side.</dd>
+<dd>Provides more information about the cache control mechanism, primarily for the browser side.</dd>
 
-<dt>Surrogate-key-raw:</dt>
+<dt>surrogate-key-raw:</dt>
 
-<dd>This is the cache key that Fastly uses to cache the content if it’s different from the URL path. If you’re using Pantheon’s Advanced Page Cache module/plugin, you’ll see values here, such as the Posts or Nodes that are included in a page. Modifying such values can easily clear the cache for any URLs that include those items.</dd>
+<dd>This is the cache key that Fastly uses to cache the content if it’s different from the URL path. If you’re using Pantheon’s Advanced Page Cache module/plugin, there will be values here, such as the Posts or Nodes that are included in a page. Modifying such values can easily clear the cache for any URLs that include those items.</dd>
 
-<dt>X-served-by:</dt>
+<dt>x-served-by:</dt>
 
-<dd> This indicates the Fastly data centers that your request traveled through to reach the `appserver`. </dd>
+<dd> Displays the Fastly data centers that your request traveled through to reach the <code> appserver</code>. </dd>
 
-<dt> X-cache:</dt>
+<dt> x-cache:</dt>
 
-<dd>This generally has the same number of values as `served-by`, and indicates a HIT or MISS for each point. </dd>
+<dd>This generally has the same number of values as <code>served-by</code>, and indicates a HIT or MISS for each point. </dd>
 
-<dt>Age:</dt> 
+<dt>age:</dt> 
 
-<dd> This shows how long the content has been cached. This generally reflects cache cleared from the Pantheon dashboard, as well as the cache limited by the cache control mechanisms listed above. In some cases this value may exceed your expected max value. This is the result of the `appserver` responding with a `304 not modified` error when Fastly checked for new content.</dd>
+<dd> This shows how long the content has been cached. This generally reflects cache cleared from the Pantheon dashboard, as well as the cache limited by the cache control mechanisms listed above. In some cases this value may exceed your expected max value. This is the result of the <code> appserver</code> responding with a <code>304 not modified</code> error when Fastly checked for new content.</dd>
 
-<dt>Via:</dt>
+<dt>via:</dt>
 
 <dd>This indicates services in the response chain and the HTTPS protocol (not the version of the service) that was used to respond.</dd>
 
