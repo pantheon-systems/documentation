@@ -544,7 +544,7 @@ ___
 
 ## Monarch Social Sharing
 
-**Issue:** The[Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/) plugin appears to break WP-CLI, which is used by many of our workflows (clone, clear cache).
+**Issue:** The [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/) plugin appears to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 
 ___
 
@@ -1060,6 +1060,14 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 #### How do I confirm I am using data storage with Wordfence?
 
 You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is wp_) and queries will increase based on blocked traffic.
+
+___
+
+## WordPress Download Manager
+
+**Issue 1:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
+
+**Solution:** We recommend that you research an alternative download manager plugin that fits your needs.
 
 ___
 

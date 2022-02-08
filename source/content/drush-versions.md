@@ -51,13 +51,16 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 ## Compatibility and Requirements
 
-Drush 8 is compatible with Drupal 7 and 8.
+Drush only supports one install method; it requires that your Drupal site be built with Composer and that Drush be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
 
-Always use Drush 8 with Drupal 7 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 to Drupal 9.
+* [Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
+Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version) displayed above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/composer/), and PHP 7.1 or higher.
 
-[Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
+* [Drush 9](https://docs.drush.org/en/9.x/) and Drush 10 only work on Drupal 8.4 to Drupal 9.
 
-Drush 10 is available with the [addition to your `pantheon.yml` file](#configure-drush-version) shown above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/composer/), and PHP 7.1 or higher.
+* [Drush 8](https://docs.drush.org/en/8.x/) is compatible with Drupal 7 and Drupal 8. You should use Drush 8 with Drupal 7 sites.
+
+* While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
 
 <Alert title="Note" type="info">
 
@@ -65,21 +68,19 @@ When running Drush locally, we highly recommend running Drush version 8.3.2 or h
 
 </Alert>
 
-### Drush 5 and Drush 7
+### PHP Requirements and Compatibility
 
-While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
+| Drush Version  | PHP Version | End of Life     | Drupal 7| Drupal 8 | Drupal 9
+| ------------- |:-------------:|:-------------:|:-------------:   |:-------------: |:-------------:  |        
+| 11      | 7.4+     | TBD      |  <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |
+| 10      | 7.1+     | January 2022| ❌      |Compatible but no longer supported | Compatible but no longer supported| 
+| 9      | 5.6+     | May 2020  | ❌      |Compatible but no longer supported |<span style="color:red">❌ </span>|
+| 8     | 5.4.5+     | November 2022| <span style="color:green">✔</span>    |Supported but not recommended|<span style="color:red">❌ </span>|
+| 7      | 5.3.0+     | July 2017| Compatible but no longer supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span>|
+| 6      | 5.3.0+     | December 2015| Compatible but no longer supported    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span>|
+| 5     | 5.2.0+    | May 2015 | Compatible but no longer supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span> |
 
-#### PHP Requirements
-
-| Drush Version | Minimum PHP Version |
-|:------------- |:------------------- |
-| Drush 5       | PHP 5.2.0+          |
-| Drush 7       | PHP 5.3.0+          |
-| Drush 8       | PHP 5.4.5+          |
-| Drush 9       | PHP 5.6.0+          |
-| Drush 10      | PHP 7.1.+           |
-
-See our guide on [Upgrading PHP Versions](/php-versions).
+For more information, refer to our guide on [Upgrading PHP Versions](/php-versions).
 
 ## Troubleshooting
 

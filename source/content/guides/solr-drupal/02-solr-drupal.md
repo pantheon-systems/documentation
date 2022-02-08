@@ -192,9 +192,10 @@ Click **Search API** to return to the Search API overview page located in `admin
 ### Post the Schema
 
 Click on the server’s name to view the server. The **View** tab displays server connection information, schema version, and indices.
-To save and post the schema information, select the **Pantheon Search Admin** tab, and click **Post Solr Schema** to send your custom schema to the Solr 8 server.
+To save and post the schema information, select the **Pantheon Search Admin** tab. To access the **Pantheon Search Admin** tab, the **Execute Pantheon Search admin task** permission must be enabled for the user.
 
-The server should respond with a `200 - OK` status for each schema file posted.
+Click **Post Solr Schema** to send your custom schema to the Solr 8 server. The server responds with a `200 - OK` status for each schema file posted.
+
 
 ## Uninstall Core Search
 

@@ -89,7 +89,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 <Tab title="Drupal 8" id="d8" active={true}>
 
 ```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+git pull -Xtheirs https://github.com/pantheon-systems/drops-8.git master
 # resolve conflicts
 git push origin master
 ```
@@ -99,7 +99,7 @@ git push origin master
 <Tab title="Drupal 7" id="d7">
 
 ```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git master
 # resolve conflicts
 git push origin master
 ```
@@ -109,7 +109,7 @@ git push origin master
 <Tab title="WordPress" id="wp">
 
 ```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git master
 # resolve conflicts
 git push origin master
 ```
@@ -175,7 +175,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="WordPress" id="wp-1conflict" active={true}>
 
   ```bash{promptUser: user}
-  git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
   ```
 
   </Tab>
@@ -183,7 +183,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal 8" id="d8-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+  git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
   ```
 
   </Tab>
@@ -191,17 +191,17 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal 7" id="d7-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+  git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
   ```
 
   </Tab>
 
   <Tab title="Custom Upstream" id="custom-1conflict">
 
-  Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
+  Replace the remote name (`custom-upstream-example`) and repository URL (`https://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
 
   ```bash{promptUser: user}
-  git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git
+  git remote add  custom-upstream-example https://github.com/example-org/custom-upsream-example.git
   ```
 
   </Tab>
