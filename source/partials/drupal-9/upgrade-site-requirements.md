@@ -1,8 +1,8 @@
-Before you continue, confirm that your site meets the following requirements:
+You must confirm that your site meets the following requirements before you continue:
 
-- The site has the [Pantheon drops-8 repo](https://github.com/pantheon-systems/drops-8) in its Upstream.
+- Make sure that your site has the [Pantheon drops-8 repo](https://github.com/pantheon-systems/drops-8) in its Upstream.
 
-  <Accordion title="Use Terminus to Confirm the drops-8 Upstream" id="drops-8-framework" icon="info-sign">
+  ### Use Terminus to Confirm the drops-8 Upstream
 
   Run `terminus site:info $SITE` to find the site's `Framework`. The result should be `drupal8` and `Upstream` value should include `https://github.com/pantheon-systems/drops-8.git`.
 
@@ -21,8 +21,6 @@ Before you continue, confirm that your site meets the following requirements:
   ...
   ------------------ -------------------------------------------------------------------------------------
   ```
-
-  </Accordion>
 
   - The site can not be set to use an empty Upstream.
 
