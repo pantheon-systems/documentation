@@ -83,30 +83,32 @@ Pantheon offers [Pre-launch Load Testing](/guides/professional-services/onboardi
 
 The following procedure guides you on how to retrieve load test information from your site's Google Analytics data. Ensure you have been invited or have access to the correct account as well as the correct views and properties.
 
-1. In the top left corner of the page, click the dropdown menu.
+1. In the top left corner of the page, click the **All Web Site Data** dropdown menu.
 
-    ![loadtest-step-2](https://user-images.githubusercontent.com/38076987/145598557-fc677b69-78af-4f38-9ba9-c88f660050e2.png)
-
-1. Find the correct Analytics Account, property and view of the site.
-
-    ![loadtest-step-3](https://user-images.githubusercontent.com/38076987/145598652-f144a5f6-988c-4d3d-8ea6-0b76ce9e96c9.png)
+1. Select the correct **Analytics Account**, **Properties & Apps** and **Views** of the site.
 
 1. Click **Audience > Overview**.
 
-1. Set the date filter to a year, set the metric filter to "Sessions“, set the range to “Day“. Then take note of the day with the highest sessions. 
+1. In the top right corner, use the dropdown menu to set the date range filter to a specific year.
 
-    ![loadtest-step-5](https://user-images.githubusercontent.com/38076987/145598717-0e259030-80fe-4808-a9c9-8ac61d1e0668.png)
+1. In the **Overview tab**, use the dropdown menu to set the metric filter to **Sessions**
 
-1. Set the date filter to the day with the highest sessions. Set the range to “Hourly“ and find the highest peak.
-	* **Average Session Duration**: Located below the chart.
-	* **Peak Sessions**: Find the highest hourly peak.
+1. Click **Day** in the **Overview** tab to set the range to “Day“. Then take note of the day with the highest sessions. 
 
-    ![loadtest-step-6](https://user-images.githubusercontent.com/38076987/145598737-aca6989e-25c6-45f3-ad72-8b1dff4c947b.png)
+1. Set the date filter to the day with the highest sessions. Set the range to “Hourly“ and find the highest peak. The following information is displayed below the main graph:
 
-1. Change the metric filter to “Users“. Set another metric filter (vs) to “Pageviews“. Then find the highest peak and use your mouse to hover over it. The **Peak Users** and Peak **Pageviews** should be displayed.
+	* **Users**: Users who have initiated at least one session during the date range.      
+	* **New Users**: The number of first-time users during the selected date range.       
+	* **Sessions**: Total number of sessions within the date range. 
+	* **Number of Sessions per User**: The average number of sessions per user.
+	* **Pageviews**: The total number of pages viewed. Repeated views of a single page are counted.
+	* **Pages / Session**: The average number of pages viewed during a session; it is also known as the Average Page Depth. Repeated views of a single page are counted.
+	* **Avg. Session Duration**: The average length of a session.
+	* **Bounce Rate**: The percentage of single-page sessions in which there was no interaction with the page.
+	
+1. The highest hourly peak denotes the peak sessions. Click the peak to display the date, time, and number of sessions. 
 
-    ![loadtest-step-8](https://user-images.githubusercontent.com/38076987/145598772-0249a815-cbc5-4188-8ea2-eb398003ad1d.png)
-
+1. In the **Overview tab**, click the dropdown menu and click **Users** to change the metric filter to "Users". Set another metric filter to “Pageviews“. Then find the highest peak and use your mouse to hover over the peak. The **Peak Users** and Peak **Pageviews** should now be displayed.
 
 ## Assess Results
 
