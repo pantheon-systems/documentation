@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Launch Checks
-description: Part six of our Launch Essentials guide covers launch checks to perform before going live.
+description: Part seven of our Launch Essentials guide covers launch checks to perform before going live.
 anchorid: launch-check
 layout: guide
 showtoc: true
@@ -9,7 +9,7 @@ categories: [go-live]
 tags: [backup, launch, webops]
 type: guide
 permalink: docs/guides/launch/launch-check/
-editpath: launch/06-launch-check.md
+editpath: launch/07-launch-check.md
 image: getting-started-Largethumb
 ---
 
