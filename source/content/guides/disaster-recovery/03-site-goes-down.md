@@ -1,6 +1,6 @@
 ---
 title: Pantheon Disaster Recovery Playbook
-subtitle: What to Do When Your Site Goes Down
+subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 generator: pagination
 layout: guide
@@ -94,7 +94,7 @@ Incidents may involve managed services like the Advanced Global CDN, Signal Scie
 
 ### Executive Escalation
 
-In cases where regular emergency support is not resolving the issues,  and the incident is causing significant customer business impact, Pantheon executive involvement may become necessary. Note that these parties may already be notified and involved through internal escalation by the Account team.
+In cases where regular emergency support is not resolving the issues and the incident is causing significant customer business impact, Pantheon executive involvement may become necessary. Note that these parties may already be notified and involved through internal escalation by the Account team.
 
 ## Ongoing Diagnosis
 
