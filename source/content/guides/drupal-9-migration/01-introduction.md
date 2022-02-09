@@ -59,8 +59,8 @@ Utilize the info on this tab if your site is not currently on Pantheon.
 
 - Drupal 9
   - Composer
-    - Yes
-    - No
+    - [Yes](/guides/drupal-9-migration/drupal-9-to-pantheon)
+    - [No](/guides/drupal-9-migration/upgrade-to-d9)
 
 
 </Tab>
