@@ -52,6 +52,8 @@ Here's how to migrate your site if you are using:
 
 Utilize the info on this tab if your site is not currently on Pantheon.
 
+Here's how to migrate your site if you are using:
+
 - Drupal 8
   - Composer
     - [Yes](/guides/composer-convert)
