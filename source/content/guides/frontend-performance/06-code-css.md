@@ -11,7 +11,7 @@ showtoc: true
 permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
 image: CDN-speedTest-docs-guide
-reviewed: "2020-10-10"
+reviewed: "2020-02-09"
 ---
 
 This page provides information on optimizing code and CSS.
@@ -33,6 +33,12 @@ Drupal and WordPress Core both allow for themes and modules/plugins to add indiv
 Loading everything separately and early in the page rendering process ensures that the effect of each file is taken on the first page rendering. It also nearly guarantees a slower than necessary page load because both types of resources block rendering.
 
 Fully optimizing all of the JavaScript and CSS on an already-built site is usually more work than can be done in one sitting. Though there are some easy wins that you should make sure you are getting.
+
+### Precompile Your CSS and Javascript
+
+Precompiling your CSS and Javascript files requires you to become better acquainted with the stylesheets and Javascript data waiting to be processed in your plugins. Many of these assets are unused by your site and can be removed entirely. 
+
+We recommend using [Webpack](https://webpack.js.org/) to optimize scripts into smaller sizes that fit into packets better. Webpack can also allows you to bundle your Javascript  to only call certain chunks on pages where they are needed, instead of loading them site wide.
 
 ### Load Only What Is Needed
 

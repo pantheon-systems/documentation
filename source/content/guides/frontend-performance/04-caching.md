@@ -263,3 +263,9 @@ See our blog post for an example of [62% performance gains after upgrading](http
 ### Enable Object Caching
 
 Sites loading a lot of content can benefit from Object Caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](/object-cache).
+
+### Enable OPcache
+
+[OPcache](https://www.php.net/manual/en/book.opcache.php) is a caching engine built into PHP. OPcache improves PHP performance by storing precompiled script bytecode in shared memory. OPcache is essential for improving speed in modern PHP applications. OPcache is always enabled on Pantheon, however, many users disable the feature for security reasons when working in shared hosting environments.
+
+ OPcache is a transparent resource, and for most, simply turning it on will improve your site's performance.[Object caching](/object-cache) is another back-end optimization resource that can greatly improve the performance of your site. 
