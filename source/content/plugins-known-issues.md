@@ -828,7 +828,7 @@ ___
  ln -s ./uploads/webp-express ./webp-express
 ```
 
-Refer to the the documentation on [Using Extensions That Assume Write Access](https://pantheon.io/docs/symlinks-assumed-write-access) for more information.
+Refer to the documentation on [Using Extensions That Assume Write Access](https://pantheon.io/docs/symlinks-assumed-write-access) for more information.
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 
