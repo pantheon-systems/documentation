@@ -48,12 +48,13 @@
       icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
-  fourohfourlinks:
-    call-to-action:
-      title: 'Disaster Recovery Playbook'
-      sub-title: 'Be ready to act if your site stops responding. Check for platform incident reports at [https://status.pantheon.io/](https://status.pantheon.io/).'
+    - title: 'DISASTER RECOVERY PLAYBOOK'
+      summary: 'Be ready to act if your site stops responding.'
       url: '/guides/disaster-recovery/site-goes-down/'
-      type: 'guide'
+    - title: 'PLATFORM STATUS'
+      summary: 'Check for platform incident reports.'
+      url: 'https://status.pantheon.io/'
+  fourohfourlinks:
     title: 'Popular Documentation'
     links:
       - text: 'Terminus Manual'
@@ -69,11 +70,6 @@
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
   three-column-links:
-    call-to-action:
-      title: 'Disaster Recovery Playbook'
-      sub-title: 'Be ready to act if your site stops responding. Check for platform incident reports at [https://status.pantheon.io/](https://status.pantheon.io/).'
-      url: '/guides/disaster-recovery/site-goes-down/'
-      type: 'guide'
     title: 'Popular Documentation'
     links:
       - text: 'Terminus Manual'
