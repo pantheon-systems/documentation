@@ -42,7 +42,7 @@ We provide detailed steps on how to convert a standard Pantheon Drupal 8 site to
 
 <Alert title="Note"  type="info" >
 
-Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) closely to ensure that your site is ready for migration to Drupal 9.
+Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to Drupal 9.
 
 </Alert>
 
