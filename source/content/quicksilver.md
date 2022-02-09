@@ -47,9 +47,15 @@ Quicksilver scripts that trigger on the deploy hook operate on the state of the 
 
 ## Script Type and Location
 
-Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types. The commands will run in order, and only execute the next when the previous has finished or timed out.
+Quicksilver currently supports `webphp` scripting, which runs a PHP script through the same runtime environment as the website. PHP scripts are subject to the same limits as any code on the platform, such as [timeouts](/timeouts). PHP scripts cannot be batched, and run continuously and sequentially. Each command executes after the previous command has finished or timed out.
 
-We recommend setting up a dedicated directory in the docroot (e.g., `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the `web` subdirectory of your site's code repository (e.g., `web/private/scripts`), but the script paths in your `pantheon.yml` file should not include the `web/` path prefix and should resemble the examples above.
+We recommend setting the `web_docroot` to `true` to create a dedicated directory in the docroot (for example, `private/scripts`). This tracks files by instructing Quicksilver to look for the files inside the `web` folder. If your site uses this [nested docroot](/nested-docroot) setting, the scripts directory must be located in the `web` subdirectory of your site's code repository (for example, `web/private/scripts`). 
+
+<Alert type="info" title="Note">
+
+If your site uses a [nested docroot](/nested-docroot), the script paths in your `pantheon.yml` file should not include the `web/` path prefix. Scripts in your `pantheon.yml` file should match the following path examples: `private/scripts/new_relic_deploy.php` or `private/scripts/slack_deploy_notification.php`
+
+</Alert>
 
 ## Hooks
 
