@@ -41,7 +41,7 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
 
 ### Update Terminus Homebrew Installation
 
-If you used the [Homebrew installation](/terminus/install#homebrew-installation) installation, update to the newest version withthe following command:
+If you used the [Homebrew installation](/terminus/install#homebrew-installation) installation, update to the newest version with the following command:
 
 ```bash
 brew upgrade pantheon-systems/external/terminus
