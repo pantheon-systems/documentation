@@ -45,15 +45,16 @@
       secondary: true
     - title: 'GUIDES'
       summary: 'Need some help leveling up your dev skills? Try one of our guides.'
-      icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
     - title: 'DISASTER RECOVERY PLAYBOOK'
       summary: 'Be ready to act if your site stops responding.'
       url: '/guides/disaster-recovery/site-goes-down/'
+      secondary: true
     - title: 'PLATFORM STATUS'
       summary: 'Check for platform incident reports.'
       url: 'https://status.pantheon.io/'
+      secondary: true
   fourohfourlinks:
     title: 'Popular Documentation'
     links:
