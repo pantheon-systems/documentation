@@ -38,7 +38,7 @@ Fully optimizing all of the JavaScript and CSS on an already-built site is usual
 
 Precompiling your CSS and Javascript files requires you to become better acquainted with the stylesheets and Javascript data waiting to be processed in your plugins. Many of these assets are unused by your site and can be removed entirely. 
 
-We recommend using [Webpack](https://webpack.js.org/) to optimize scripts into smaller sizes that fit into packets better. Webpack can also allows you to bundle your Javascript  to only call certain chunks on pages where they are needed, instead of loading them site wide.
+We recommend using [Webpack](https://webpack.js.org/) to optimize scripts into smaller sizes that fit into packets better. Webpack also allows you to bundle your Javascript to call certain chunks on pages only where they are needed, instead of loading them site wide.
 
 ### Load Only What Is Needed
 

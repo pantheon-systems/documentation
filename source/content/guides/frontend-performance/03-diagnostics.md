@@ -20,7 +20,7 @@ This page includes information on diagnostics and tools for evaluating performan
 
 Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provides automated audits for performance, accessibility, progressive web apps, and SEO. Lighthouse audit reports can have a big impact on your frontend performance.
 
-You can configure the audit reports to produce consistent measurements of how your site is experienced by users. The audit reports will also highlight areas on your site that can be improved for optimal user experience.
+You can configure the audit reports to produce consistent measurements of how your site is experienced by users. The audit reports will also highlight areas on your site that can be improved to provide a better user experience.
 
 ## New Relic
 
