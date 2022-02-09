@@ -18,7 +18,7 @@ This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site without
 
 ## Overview
 
-The goals of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
+The goal of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
 
 Note that this upgrade migrates your existing site to a new site. The new site will not maintain your site's existing commit history.
 
@@ -26,7 +26,7 @@ Note that this upgrade migrates your existing site to a new site. The new site w
 
 <Alert title="Multidev Required" type="danger">
 
-To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
+To maintain best practices and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
 
 Pantheon support is not available to users who avoid the Multidev steps.
 
