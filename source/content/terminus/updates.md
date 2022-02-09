@@ -93,7 +93,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 3.0.0             | 12/08/2021   | 12/08/2022 |
 </Tab>
 
-<Tab title="Version 2.x" id="terminus-version-3">
+<Tab title="Version 2.x" id="terminus-version-2">
 
 | Version           | Release Date | EOL Date   |
 | ----------------- | ------------ | ---------- |
