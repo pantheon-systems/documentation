@@ -113,6 +113,6 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 </TabList>
 
-<## Changelog />
+
 
 <Releases />
