@@ -4,18 +4,22 @@ description: Understand how to use Object Cache as a drop-in caching mechanism f
 categories: [performance]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon]
-reviewed: "2021-03-01"
+reviewed: "2022-02-10"
 ---
 
 Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-cache) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Object Cache
 
-Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
+Most website frameworks like Drupal and WordPress use databases to cache internal application "objects" along with queries for normal page requests, causing increased load-times.
+
+For example, the first time a Drupal or WordPress page is loaded, a database query is performed on the server. Object Cache remembers, or caches, this query so that when another user loads the page, the results are provided from Object Cache and from memory without needing to query the database.
+
+Object Cache does this by caching the SQL queries needed to load a page in memory. When a page loads, the resulting SQL query results are provided from memory by Object Cache, so the query does not have to hit the database. This results in much faster page load times, and less server impact on database resources.
 
 ### Scalable Performance
 
-Object Cache provides an alternative caching backend to take that work off the database, improving performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+Object Cache provides an alternative caching backend that resides in-memory, in contrast to databases that store data on disk or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
 ## Enable Object Cache
 
@@ -342,7 +346,9 @@ englash english
 
 ### Clear Cache
 
-Pass the `flushall` command to clear all keys from the cache.
+You can clear the Object Cache through the [Pantheon Dashboard](https://pantheon.io/docs/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated. 
+
+Alternatively, you can use the `flushall` command to clear all keys from the cache.
 
 ```bash
 redis> flushall
@@ -367,6 +373,75 @@ redis> config get *memory*
 maxmemory
 52428800
 ```
+
+### Hit/Miss Ratio
+
+You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency as most of the requests are fetching data from the disk. You should reconsider the data you have stored and increase the size of Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
+
+Run the following code to view your Hit/Miss ratio:
+
+```bash
+  >info stats
+  #Stats
+  keyspace_hits:4
+  keyspace_misses:15
+  ```
+
+### Continuous Stats Mode
+
+Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
+
+Run the following command to view stat mode: 
+
+  ```bash
+  > --stat
+  ------- data ------ --------------------- load -------------------- - child -
+  keys       mem      clients blocked requests            connections
+  506        1015.00K 1       0       24 (+0)             7
+  506        1015.00K 1       0       25 (+1)             7
+  506        3.40M    51      0       60461 (+60436)      57
+  506        3.40M    51      0       146425 (+85964)     107
+  507        3.40M    51      0       233844 (+87419)     157
+  507        3.40M    51      0       321715 (+87871)     207
+  508        3.40M    51      0       408642 (+86927)     257
+  508        3.40M    51      0       497038 (+88396)     257
+  ```
+
+You can also use the `-i` <interval> option in this mode to change the frequency at which new lines are printed. 
+
+### Big Keys Mode
+
+Redis works as a key space analyzer when using `--bigkeys` mode. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
+
+Run the following command to search for big keys:
+
+  ```bash
+  $ redis-cli --bigkeys
+
+  # Scanning the entire keyspace to find biggest keys as well as
+  # average sizes per key type.  You can use -i 0.01 to sleep 0.01 sec
+  # per SCAN command (not usually needed).
+
+  [00.00%] Biggest string found so far 'key-419' with 3 bytes
+  [05.14%] Biggest list   found so far 'mylist' with 100004 items
+  [35.77%] Biggest string found so far 'counter:__rand_int__' with 6 bytes
+  [73.91%] Biggest hash   found so far 'myobject' with 3 fields
+
+  -------- summary -------
+
+  Sampled 506 keys in the keyspace!
+  Total key length in bytes is 3452 (avg len 6.82)
+
+  Biggest string found 'counter:__rand_int__' has 6 bytes
+  Biggest   list found 'mylist' has 100004 items
+  Biggest   hash found 'myobject' has 3 fields
+
+  504 strings with 1403 bytes (99.60% of keys, avg size 2.78)
+  1 lists with 100004 items (00.20% of keys, avg size 100004.00)
+  0 sets with 0 members (00.00% of keys, avg size 0.00)
+  1 hashs with 3 fields (00.20% of keys, avg size 3.00)
+  0 zsets with 0 members (00.00% of keys, avg size 0.00)
+  ```
 
 ## Troubleshooting
 
@@ -396,13 +471,13 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 
 ### RedisException: Redis is busy running a script.
 
-This usually occurs on higher traffic Drupal sites. In the PHP logs:
+This error usually occurs on Drupal sites with high traffic. It looks like this in the PHP logs:
 
 ```php
 RedisException: BUSY Redis is busy running a script.
 ```
 
-To resolve, set or increase the `redis_perm_ttl` value in `settings.php`. This example is set to six hours:
+You must increase the permanent time to live (TTL) or `redis_perm_ttl` value in `settings.php`. This example is set to six hours:
 
 ```php:title=settings.php
 $conf['redis_perm_ttl'] = 21600;
@@ -410,7 +485,7 @@ $conf['redis_perm_ttl'] = 21600;
 
 <Alert title="Warning" type="danger">
 
-The object cache needs to be flushed with 'flushall' in the Redis terminal connection afterwards, in order for this to have any effect.
+The object cache must be flushed using the `flushall` command in the Redis terminal connection after increasing the TTL. If the cache is not flushed, the change will have no effect. 
 
 </Alert>
 
@@ -492,6 +567,23 @@ wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
 ```
 
 This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
+
+### Out of Memory Errors
+
+You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than you declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an eviction policy. Without an eviction police, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
+
+Run the following command to view your site's memory usage metrics: 
+
+  ```bash
+    > info memory
+    # Memory
+    used_memory:1007280
+    used_memory_human:983.67K
+    used_memory_rss:2002944
+    used_memory_rss_human:1.91M
+    used_memory_peak:1008128
+    used_memory_peak_human:984.50K
+  ```
 
 ## Frequently Asked Questions
 
