@@ -233,8 +233,9 @@ Merge the changes manually:
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
-### Changes Lost When Uploading or Committing Module/Plugin or Theme Files
-Module/Plugin and Theme files should not be committed, when using Git mode, or uploaded, when using SFTP mode, directly to your site.  The `.gitignore` file in your upstream respository has several paths defined causing files in those directories to be ignored.  These directories are:
+### Changes Lost During Upload or Commit of Module/Plugin or Theme Files
+
+Do not commit module/plugin or theme files directly to your site when in Git mode. You also should not upload module/plugin or theme files directly to your site when in SFTP mode. Direct commits and uploads will be lost because the `.gitignore` file in your upstream respository has several defined paths, which causes files in those directories to be ignored.  These directories are:
 <TabList>
 
 <Tab title="Drupal" id="drupal-gitignore" active={true}>
