@@ -233,7 +233,7 @@ Merge the changes manually:
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
-### Changes Lost During Upload or Commit of Module/Plugin or Theme Files
+### Changes Lost During Direct Upload or Commit 
 
 Do not commit module/plugin or theme files directly to your site when in Git mode. You also should not upload module/plugin or theme files directly to your site when in SFTP mode. Direct commits and uploads will be lost because the `.gitignore` file in your upstream respository has several defined paths, which causes files in those directories to be ignored.  These directories are:
 <TabList>
