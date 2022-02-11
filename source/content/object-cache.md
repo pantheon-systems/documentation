@@ -441,7 +441,7 @@ Run the following command to search for big keys:
       0 sets with 0 members (00.00% of keys, avg size 0.00)
       1 hashs with 3 fields (00.20% of keys, avg size 3.00)
       0 zsets with 0 members (00.00% of keys, avg size 0.00)
-  ```
+   ```
 
 ## Troubleshooting
 
