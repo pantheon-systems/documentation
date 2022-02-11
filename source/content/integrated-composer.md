@@ -233,6 +233,46 @@ Merge the changes manually:
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
+### Changes Lost During Direct Upload or Commit 
+
+Do not commit module/plugin or theme files directly to your site when in Git mode. You also should not upload module/plugin or theme files directly to your site when in SFTP mode. Direct commits and uploads will be lost because the `.gitignore` file in your upstream respository has several defined paths, which causes files in those directories to be ignored.  These directories are:
+<TabList>
+
+<Tab title="Drupal" id="drupal-gitignore" active={true}>
+
+```none:title=code/web/sites
+code/web/
+└─ core/
+└─ drush/Commands/contrib/
+└─ libraries/
+└─ modules/contrib/
+└─ private/scripts/quicksilver
+└─ profiles/contrib/
+└─ sites/*/files/
+└─ sites/*/private/
+└─ themes/contrib/
+```
+See the `.gitignore` file for Drupal [here](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/.gitignore).
+
+The `contrib` folders are where community contributed modules, profiles, and themes would reside.
+The `custom` folders, which are not ignored, are where modules, profiles, and themes created by you would reside.
+</Tab>
+
+<Tab title="WordPress" id="wp-gitignore">
+
+```none:title=code/web/
+code/web/wp-content/
+└─ mu-plugins/
+└─ plugins/
+└─ themes/
+```
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+</Tab>
+
+</TabList>
+
+See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
+
 ### Changes Lost During Upstream Updates
 
 When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
