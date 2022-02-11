@@ -381,7 +381,7 @@ You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss rat
 Run the following code to view your Hit/Miss ratio:
 
 ```bash
-  >info stats
+  redis> info stats
   #Stats
   keyspace_hits:4
   keyspace_misses:15
@@ -394,7 +394,7 @@ Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances
 Run the following command to view stat mode: 
 
   ```bash
-  > --stat
+  redis> --stat
   ------- data ------ --------------------- load -------------------- - child -
   keys       mem      clients blocked requests            connections
   506        1015.00K 1       0       24 (+0)             7
@@ -416,7 +416,7 @@ Object Cache works as a key space analyzer when using the `--bigkeys` option. It
 Run the following command to search for big keys:
 
     ```bash
-      > --bigkeys
+      redis> --bigkeys
 
       # Scanning the entire keyspace to find biggest keys as well as
       # average sizes per key type.  You can use -i 0.01 to sleep 0.01 sec
@@ -575,7 +575,7 @@ You can use the `info memory` option to view your site's memory metrics. Object 
 Run the following command to view your site's memory usage metrics: 
 
   ```bash
-    > info memory
+    redis> info memory
     # Memory
     used_memory:1007280
     used_memory_human:983.67K
