@@ -13,13 +13,13 @@ Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-c
 
 Most website frameworks like Drupal and WordPress use databases to cache internal application "objects" along with queries for normal page requests, causing increased load-times.
 
-For example, the first time a Drupal or WordPress page is loaded, a database query is performed on the server. Object Cache remembers, or caches, this query so that when another user loads the page, the results are provided from Object Cache and from memory without needing to query the database.
+For example, the first time a Drupal or WordPress page is loaded, a database query is performed on the server. Object Cache remembers, or caches, this query so that when another user loads the page, the results are provided from the Object Cache stored in memory without needing to query the database.
 
-Object Cache does this by caching the SQL queries needed to load a page in memory. When a page loads, the resulting SQL query results are provided from memory by Object Cache, so the query does not have to hit the database. This results in much faster page load times, and less server impact on database resources.
+Object Cache does this by caching the SQL queries needed to load a page in memory. When a page loads, the resulting SQL query results are provided from memory by Object Cache without the query hitting the database. This results in much faster page load times, and less server impact on database resources.
 
 ### Scalable Performance
 
-Object Cache provides an alternative caching backend that resides in-memory, in contrast to databases that store data on disk or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+Object Cache provides an alternative caching backend that resides in memory rather than databases that store data on disk or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or perform custom caching of their own.
 
 ## Enable Object Cache
 
@@ -376,7 +376,7 @@ maxmemory
 
 ### Hit/Miss Ratio
 
-You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency as most of the requests are fetching data from the disk. You should reconsider the data you have stored and increase the size of Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
+You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency since most of the requests are fetching data from the disk. You should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
 
 Run the following code to view your Hit/Miss ratio:
 
@@ -389,7 +389,7 @@ Run the following code to view your Hit/Miss ratio:
 
 ### Continuous Stats Mode
 
-Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
+Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
 
 Run the following command to view stat mode: 
 
@@ -411,7 +411,7 @@ You can also use the `i` (interval) option in this mode to change the frequency 
 
 ### Big Keys Mode
 
-Object Cache works as a key space analyzer when using the `bigkeys` options. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
+Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
 
 Run the following command to search for big keys:
 
@@ -570,7 +570,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ### Out of Memory Errors
 
-You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than you declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an eviction policy. Without an eviction police, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
+You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/eviction-policy/). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
 
 Run the following command to view your site's memory usage metrics: 
 
