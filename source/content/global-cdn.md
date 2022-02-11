@@ -10,7 +10,7 @@ Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platf
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps. 
 
 </Enablement>
 
