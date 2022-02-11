@@ -1,12 +1,12 @@
 ---
 title: Pantheon Global CDN
 description: Improve Site Performance and Security with Pantheon's Global CDN.
-reviewed: "2020-02-27"
+reviewed: "2022-02-11"
 categories: [performance]
 tags: [cache, cdn, launch, security]
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering, with improved performance and security for customer sites. Tap into powerful and strategically distributed Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Tap into powerful and strategically distributed Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -14,9 +14,15 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 </Enablement>
 
+## Benefits of Pantheon's Global CDN
+
+Global CDN is SOC 2 compliant and offers protection against DDoS attacks that target network layers (layer3/4) or application layers (layer7). DDoS attacks vary in method, but all have the same goal of interfering with content on your site.
+
+Pantheon's Global CDN also uses origin shields for additional protection. Origin shields protect sites from traffic overloads while maintaining high availability and redundancy in your setup. Origin shields help reduce the risk of DDoS attacks.
+
 ## How Does It Work?
 
-Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
+Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary data center, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
 - The Global CDN cache strategy eliminates "cache sharding," in which the same content needs to be cached in separate edge cache instances. This results in higher cache hit rates.
 
