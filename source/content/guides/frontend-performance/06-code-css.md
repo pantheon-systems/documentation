@@ -11,7 +11,7 @@ showtoc: true
 permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
 image: CDN-speedTest-docs-guide
-reviewed: "2020-02-09"
+reviewed: "2022-02-09"
 ---
 
 This page provides information on optimizing code and CSS.
@@ -36,9 +36,9 @@ Fully optimizing all of the JavaScript and CSS on an already-built site is usual
 
 ### Precompile Your CSS and Javascript
 
-Precompiling your CSS and Javascript files requires you to become better acquainted with the stylesheets and Javascript data waiting to be processed in your plugins. Many of these assets are unused by your site and can be removed entirely. 
+Precompiling your CSS and Javascript files requires that you become better acquainted with the style sheets and Javascript data waiting to be processed in your plugins. Many of assets are unused by your site and can be removed. 
 
-We recommend using [Webpack](https://webpack.js.org/) to optimize scripts into smaller sizes that fit into packets better. Webpack also allows you to bundle your Javascript to call certain chunks on pages only where they are needed, instead of loading them site wide.
+We recommend using [Webpack](https://webpack.js.org/) to optimize scripts into smaller sizes, that fit into packets more efficiently. You can also use Webpack to bundle your Javascript to call certain chunks on pages only where they are needed, instead of loading them site wide.
 
 ### Load Only What Is Needed
 
