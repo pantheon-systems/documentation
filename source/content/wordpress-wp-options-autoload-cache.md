@@ -76,6 +76,7 @@ contributors: [carlalberto, whitneymeredith]
 
  Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/redirects#redirect-with-php).
 
+
  ### Clean up Transient Data
 
  Transients cache data for a set amount of time in WordPress. Although transients are only stored temporarily, they can become excessively large and slow down your site.
