@@ -79,7 +79,6 @@ Follow the resolution steps below if you have a high number of options being aut
     ?>
     ```
 
-
 For more resources on troubleshooting autoloaded data in Drupal, see [Hard Things Are Possible: Configuration Management in Drupal](https://pantheon.io/blog/hard-things-are-possible-configuration-management-drupal-8)
 
 ## What Doesn't Launch Check Address?
