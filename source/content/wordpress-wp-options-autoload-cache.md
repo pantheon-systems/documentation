@@ -62,7 +62,7 @@ The `wp_options` table stores several types of data for your site, including:
     update_option( 'wp_option', 'value' ); to be update_option( 'wp_option', 'value', 'no' );
     ```
 
-    You must specify `no` in the third parameter (if left blank it will default to `yes`). 
+   You must specify `no` in the third parameter (if left blank it will default to `yes`). 
 
  ## Tips to Minimize Autoloaded Data
 
