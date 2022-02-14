@@ -170,7 +170,7 @@ The following code changes are required before Pantheon Search can be safely uni
 
 ### Solr Verification Check
 
-Because we are posting the 4.x schema to a 3.x Solr instance, the schema verification check can fail and prevent indexing. You can disable the schema check by checking the **Skip schema verification** box in the UI, or pulling [this patch](https://www.drupal.org/project/search_api_solr/issues/3037213#comment-12996162) to the module.
+Because we are posting the 4.x schema to a 3.x Solr instance, the schema verification check can fail and prevent indexing. You can disable the schema check by checking the **Skip schema verification** box in the UI.
 
 ## See Also
 
