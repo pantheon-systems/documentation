@@ -20,7 +20,7 @@ If your work is already updated but still listed here, let us know so we can rem
 
 Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
-See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
+Refer to documentaton on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
 The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
@@ -697,7 +697,7 @@ ___
 
 <ReviewDate date="2021-10-20" />
 
-**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site in order to monitor various functions and stability. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
+**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
 
 **Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
@@ -1094,7 +1094,7 @@ ___
 
 <ReviewDate date="2021-11-04" />
 
-**Issue 1:** Some features of the [WP Reset](https://wordpress.org/plugins/wp-reset/) plugin can not be used on the Pantheon platform. Features such a file reset and restore do not work because Staging and Production environments are immutable and backups help with restore and data rollbacks.
+**Issue 1:** Some features of the [WP Reset](https://wordpress.org/plugins/wp-reset/) plugin can not be used on the Pantheon platform. Features such a file reset and restore do not work because staging and production environments are immutable, and backups help with restore and data rollbacks.
 
 **Solution:** Use an alternate plugin that resets the WordPress database to the default installation.
 
