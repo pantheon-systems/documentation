@@ -106,7 +106,7 @@ terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=panth
 
 The release of Drupal 8.8.0 introduced a change in the temporary files path, which prompts the following warning:
 
-> You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
+You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
 
 You can safely ignore this warning.
 
