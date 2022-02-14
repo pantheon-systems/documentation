@@ -52,6 +52,7 @@ The `wp_options` table stores several types of data for your site, including:
     ```sql
     SELECT option_name, length(option_value) FROM wp_options WHERE autoload='yes' ORDER BY length(option_value) DESC LIMIT 20;
     ```
+    
  The response will look similar to the example below.
 
    ![wp_options Top Autoloaded Data](../images/wp_options-top-autoloaded-data-example.png)
