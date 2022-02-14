@@ -63,7 +63,7 @@ The following is a list of plugins that assume write access, and the specific fi
 
 ### Define FS_METHOD
 
-By default, WordPress tests each directory before uploading a file by writing a small temporary file. There are several plugins and themes that have issues on Pantheon due to this write access test. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues and skip the test of writing a small file. The successful write of that temporary file results in `direct` in the end, so this makes operations slightly faster as well.
+By default, WordPress tests each directory before uploading a file by writing a small temporary file. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the test of writing a small file) by defining the `FS_METHOD` as `direct` in the `wp-config.php` file above the line `/* That's all, stop editing! Happy Pressing. */`. The successful write of the temporary file results in the addition of `direct` at the end of the file, which allows operations to run slightly faster. To resolve the issue, configure the `wp-config.php` to resemble the following code sample:
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -71,7 +71,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-Plugins and Themes with issues resolved (at least partially) by this include:
+Plugins and themes with issues resolved (at least partially) by this include the following:
 
 - [AccessAlly WordPress LMS](https://accessally.com/)
 - [Blabber Theme](https://themeforest.net/item/blabber-allinone-elementor-blog-news-magazine-wordpress-theme/24305542/)
