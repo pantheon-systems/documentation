@@ -50,7 +50,7 @@ reviewed: "2020-05-27"
 
  1. Navigate to the module root folder.
 
- 1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
+ 1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`.
 
  1. Locate the `getSubscribedEvents()` function.
 

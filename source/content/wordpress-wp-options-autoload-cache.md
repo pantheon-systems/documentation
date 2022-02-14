@@ -61,7 +61,7 @@ contributors: [carlalberto, whitneymeredith]
 
  1. Run the following code if you want to turn off autoload for an item:
 
-    ```sql
+    ```bash
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
 
@@ -83,7 +83,7 @@ contributors: [carlalberto, whitneymeredith]
 
  Run the following code to clean up your transient data:
 
-    ```sql
+    ```bash
       SELECT * FROM wp_optionsWHEREautoload= 'yes' ANDoption_nameLIKE '%transient%';
     ```
  
