@@ -325,7 +325,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Over 500MBs" id="500mbsplus">
 
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
 

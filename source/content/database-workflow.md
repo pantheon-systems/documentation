@@ -16,7 +16,7 @@ Pushing content up to Live should almost never be done to a launched site, as it
 </Alert>
 
 ## MySQL Clients
-You can use any number of MySQL clients such as [MySQL Workbench](https://dev.mysql.com/downloads/workbench/), [Sequel Pro](https://www.sequelpro.com/download), [Navicat](https://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others to  administer your site's database
+You can use any number of MySQL clients such as [MySQL Workbench](https://dev.mysql.com/downloads/workbench/), [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/), [Navicat](https://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others to  administer your site's database
 and [manage configurations](/pantheon-workflow/#configuration-management) as needed.
 
 ## Cloning the Database
