@@ -66,7 +66,7 @@ The `wp_options` table stores several types of data for your site, including:
 
  ## Tips to Minimize Autoloaded Data
 
- We recommend minimizing your autoloaded data to increase to your site's performance. We've provided a few tips for reducing your autoloaded cache below.
+ We recommend minimizing your autoloaded data to increase to your site's performance. We've provided a few tips for reducing your autoloaded data below.
 
  ### Redirect Your Site with PHP
 
