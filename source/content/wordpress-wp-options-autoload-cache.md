@@ -41,7 +41,7 @@ The `wp_options` table stores several types of data for your site, including:
  
  The response will look similar to the example below.
 
- ![wp_options Table Example Code](../images/wp_options-table-example-code.png)
+   ![wp_options Table Example Code](../images/wp_options-table-example-code.png)
 
  If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
 
@@ -54,7 +54,7 @@ The `wp_options` table stores several types of data for your site, including:
     ```
  The response will look similar to the example below.
 
- ![wp_options Top Autoloaded Data](../images/wp_options-top-autoloaded-data-example.png)
+   ![wp_options Top Autoloaded Data](../images/wp_options-top-autoloaded-data-example.png)
 
 1. Run the following code if you want to turn off autoload for an item:
 
@@ -62,7 +62,7 @@ The `wp_options` table stores several types of data for your site, including:
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
 
-   You must specify `no` in the third parameter (if left blank it will default to `yes`). 
+ You must specify `no` in the third parameter (if left blank it will default to `yes`). 
 
 ## Tips to Minimize Autoloaded Data
 
