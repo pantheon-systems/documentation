@@ -7,7 +7,7 @@ tags: [cache]
 contributors: [carlalberto, whitneymeredith]
 ---
 
- ## wp_options Table
+## wp_options Table
 
 The `wp_options` table stores several types of data for your site, including:
 
@@ -50,7 +50,7 @@ The `wp_options` table stores several types of data for your site, including:
 1. Run the following code to see the top items with autoloaded data:
 
     ```sql
-    SELECT option_name, length(option_value) FROM wp_options WHERE autoload='yes' ORDER BY length(option_value) DESC LIMIT 20
+    SELECT option_name, length(option_value) FROM wp_options WHERE autoload='yes' ORDER BY length(option_value) DESC LIMIT 20;
     ```
  The response will look similar to the example below.
 
@@ -59,20 +59,20 @@ The `wp_options` table stores several types of data for your site, including:
 1. Run the following code if you want to turn off autoload for an item:
 
     ```sql
-    update_option( 'wp_option', 'value' ); to be update_option( 'wp_option', 'value', 'no' );
+    update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
 
    You must specify `no` in the third parameter (if left blank it will default to `yes`). 
 
- ## Tips to Minimize Autoloaded Data
+## Tips to Minimize Autoloaded Data
 
  We recommend minimizing your autoloaded data to increase to your site's performance. We've provided a few tips for reducing your autoloaded data below.
 
- ### Redirect Your Site with PHP
+### Redirect Your Site with PHP
 
  Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/redirects#redirect-with-php).
 
- ### Clean up Transient Data
+### Clean up Transient Data
 
  Transients cache data for a set amount of time in WordPress. Although transients are only stored temporarily, they can become excessively large and slow down your site.
 
@@ -82,10 +82,10 @@ The `wp_options` table stores several types of data for your site, including:
     SELECT * FROM wp_options WHERE autoload= 'yes' AND option_name LIKE '%transient%';
     ```
  
- ### Avoid Using Transient Data
+### Avoid Using Transient Data
 
  You can use Pantheon's [Object Cache](/object-cache) to minimize the use of transient data inside the `wp_options` table.
 
- ### Use Pantheon's Professional Services
+### Use Pantheon's Professional Services
 
  You can also use [Pantheon's Professional Services](/guides/professional-services/advanced-global-cdn#edge-redirects) to reduce requests to your CMS by moving page redirects to the edge.
