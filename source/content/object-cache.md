@@ -209,6 +209,7 @@ TRUNCATE TABLE `<tablename>`;
    terminus redis:enable $SITE
    composer require drupal/redis
    git commit --am "Add drupal/redis dependency"
+   git push origin master
    ```
 
 1. Enable the new module and export configuration:  
