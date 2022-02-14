@@ -83,7 +83,7 @@ contributors: [carlalberto, whitneymeredith]
  Run the following code to clean up your transient data:
 
     ```sql
-    SELECT * FROM wp_options WHERE autoload= 'yes' AND option_name LIKE '%transient%';
+      SELECT * FROM wp_optionsWHEREautoload= 'yes' ANDoption_nameLIKE '%transient%';
     ```
  
 
