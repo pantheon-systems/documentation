@@ -217,7 +217,6 @@ TRUNCATE TABLE `<tablename>`;
    terminus drush $SITE.dev -- en redis -y
    terminus drush $SITE.dev -- config:export -y
    terminus env:commit $SITE.dev --message="Enable Redis, export configuration"
-   git push origin master
    ```
 
 1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site:
