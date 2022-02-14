@@ -87,46 +87,50 @@ reviewed: "2020-05-27"
  - Aesthetics - similarly, way out of scope
  - Content - can count the quantity and size, but we leave the actual content to the stakeholders
 
- ## How Does it Work?
+## How Does it Work?
 
- To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of Drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
+To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of Drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
 
- ## Run Site Audit Manually
+## Run Site Audit Manually
 
- You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
+You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
 
  ```bash 
  {promptUser: user}
  terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
  ```
 
- ## Frequently Asked Questions
+## Frequently Asked Questions
 
- ### Deprecated Configuration for the Temporary Files Path Warning on Drupal 8.8.0
+### Deprecated Configuration for the Temporary Files Path Warning on Drupal 8.8.0
 
- The release of Drupal 8.8.0 introduced a change in the temporary files path, which prompts the following warning:
+The release of Drupal 8.8.0 introduced a change in the temporary files path, which prompts the following warning:
 
- You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
+You are using a deprecated configuration for the temporary files path. Remove the configuration and add the following code to `settings.php`:
 
- You can safely ignore this warning.
+```php 
+$settings["file_temp_path"] = "/srv/bindings/.../tmp"
+```
 
- ### Trusted Host Setting for Drupal 8
+You can safely ignore this warning.
 
- A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
+### Trusted Host Setting for Drupal 8
 
-
- ### Why does site audit have more reports than what's shown in the Dashboard?
-
- The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
+A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
 
 
- ### Can I opt out of a specific recommendation?
+### Why does site audit have more reports than what's shown in the Dashboard?
 
- If you want to permanently opt out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7 and `$config` in Drupal 8.
+The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
- #### Examples
 
- Drupal 7 — permanently opt out of the PageCompression check in the Cache report:
+### Can I opt out of a specific recommendation?
+
+If you want to permanently opt out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7 and `$config` in Drupal 8.
+
+#### Examples
+
+Drupal 7 — permanently opt out of the PageCompression check in the Cache report:
 
  ```php:title=settings.php
  $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;

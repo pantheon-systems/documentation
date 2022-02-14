@@ -86,7 +86,7 @@ First, start by checking the size of your autoloaded data.
  Run the following code to clean up your transient data:
 
     ```sql
-      SELECT * FROM wp_optionsWHEREautoload= 'yes' ANDoption_nameLIKE '%transient%';
+      SELECT * FROM wp_options WHERE autoload= 'yes' AND option_name LIKE '%transient%';
     ```
  
 
