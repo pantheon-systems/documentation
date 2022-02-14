@@ -202,15 +202,18 @@ TRUNCATE TABLE `<tablename>`;
 
 <Tab title="Drupal 9 / Composer-managed" id="d9-install">
 
-1. This:
+1. Clone the code repository and from the project root, run the following:
 
    ```shell{promptUser: user}
-   terminus build:project:create d9 $SITE
-   terminus connection:set $SITE.dev sftp
+   terminus connection:set $SITE.dev git
    terminus redis:enable $SITE
-   git clone https://github.com/user/site
-   cd $SITE
    composer require drupal/redis
+   git commit --am "Add drupal/redis dependency"
+   ```
+
+1. Enable the new module and export configuration:  
+   ```shell{promptUser: user}
+   terminus connection:set $SITE.dev git
    terminus drush $SITE.dev -- en redis -y
    terminus drush $SITE.dev -- config:export -y
    terminus env:commit $SITE.dev --message="Enable Redis, export configuration"
