@@ -69,7 +69,7 @@ Follow the resolution steps below if you have a high number of options being aut
 
  Using the `onSave()` callback invalidates the cache when the appropriate configuration keys change. For example, if `system.theme` or `system.theme.global` change, the code will call the appropriate function to invalidate the cache:
 
-    ```php 
+     
     <?php
     public function onSave(ConfigCrudEvent $event) {
         if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) {
@@ -77,7 +77,7 @@ Follow the resolution steps below if you have a high number of options being aut
         }
     }
     ?>
-    ```
+    
 
 For more resources on troubleshooting autoloaded data in Drupal, see [Hard Things Are Possible: Configuration Management in Drupal](https://pantheon.io/blog/hard-things-are-possible-configuration-management-drupal-8)
 

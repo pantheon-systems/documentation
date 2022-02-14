@@ -78,10 +78,10 @@ This tells you if Object Caching and Redis are enabled.
 
 If you receive an error similar to the example below, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 
-    ```bash
-    Cannot redeclare class WP_Object_Cache in
-    /srv/bindings/0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php
-    ```
+Example error:
+    
+Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php
+    
 
 ### Plugins
 
