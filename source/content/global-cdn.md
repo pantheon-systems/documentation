@@ -16,9 +16,11 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 ## Benefits of Pantheon's Global CDN
 
-Global CDN is SOC 2 compliant and offers protection against DDoS attacks that target network layers (layer3/4) or application layers (layer7). DDoS attacks vary in method, but all have the same goal of interfering with content on your site.
+Global CDN is SOC 2 compliant and offers protection against DDoS attacks that target network layers (layer 3/4) or application layers (layer 7). DDoS attacks vary in method, but all have the same goal of interfering with content on your site.
 
-Pantheon's Global CDN also uses origin shields for additional protection. Origin shields protect sites from traffic overloads while maintaining high availability and redundancy in your setup. Origin shields help reduce the risk of DDoS attacks.
+Pantheon's Global CDN also uses origin shields for additional protection. Origin shields protect sites from traffic overloads while maintaining high availability and redundancy in your setup. Origin shields also help reduce the risk of DDoS attacks.
+
+Refer to [DoS Attack Mitigation](/optimize-site-traffic#dos-attack-mitigation) for more information.
 
 ## How Does It Work?
 
