@@ -72,12 +72,11 @@ Follow the resolution steps below if you have a high number of options being aut
     ```php 
     <?php
     public function onSave(ConfigCrudEvent $event) {
-        if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) {
-            // Invalidate the cache here.
-        }
+    if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) 
     }
     ?>
     ```
+
 
  For more resources on troubleshooting autoloaded data in Drupal, see [Hard Things Are Possible: Configuration Management in Drupal](https://pantheon.io/blog/hard-things-are-possible-configuration-management-drupal-8)
 
