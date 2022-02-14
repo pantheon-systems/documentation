@@ -79,12 +79,12 @@ The `wp_options` table stores several types of data for your site, including:
  Run the following code to clean up your transient data:
 
     ```sql
-    SELECT * FROM wp_optionsWHEREautoload= 'yes' ANDoption_nameLIKE '%transient%';
+    SELECT * FROM wp_options WHERE autoload= 'yes' AND option_name LIKE '%transient%';
     ```
-
+ 
  ### Avoid Using Transient Data
 
- You can use Pantheon's [Object Cache](/object-cache) to completely avoid using transient data for the `wp_options` table.
+ You can use Pantheon's [Object Cache](/object-cache) to minimize the use of transient data inside the `wp_options` table.
 
  ### Use Pantheon's Professional Services
 
