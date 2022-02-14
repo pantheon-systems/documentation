@@ -213,7 +213,7 @@ TRUNCATE TABLE `<tablename>`;
 
 1. Enable the new module and export configuration:  
    ```shell{promptUser: user}
-   terminus connection:set $SITE.dev git
+   terminus connection:set $SITE.dev sftp
    terminus drush $SITE.dev -- en redis -y
    terminus drush $SITE.dev -- config:export -y
    terminus env:commit $SITE.dev --message="Enable Redis, export configuration"
