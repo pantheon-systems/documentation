@@ -6,57 +6,57 @@ categories: [go-live]
 tags: [launch, site, webops]
 reviewed: "2020-05-27"
 ---
-Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
+ Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
-![status tab on live environment](../images/dashboard/status-tab.png)
+ ![status tab on live environment](../images/dashboard/status-tab.png)
 
-Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.
+ Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.
 
-This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.
+ This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.
 
-In short, you get a fast, repeatable report that can help detect common problems and provide insights into your site.
+ In short, you get a fast, repeatable report that can help detect common problems and provide insights into your site.
 
-## What Does Launch Check Evaluate?
+ ## What Does Launch Check Evaluate?
 
-### Cache Settings
+ ### Cache Settings
 
-Launch Check evaluates Drupal caching settings for optimal settings that will leverage both internal and reverse proxy caches.
+ Launch Check evaluates Drupal caching settings for optimal settings that will leverage both internal and reverse proxy caches.
 
-### Modules
+ ### Modules
 
-Launch Check looks at modules, including duplicate modules in the codebase, missing modules which damage performance, development modules in live environments, and unrecommended modules with compatibility problems.
+ Launch Check looks at modules, including duplicate modules in the codebase, missing modules which damage performance, development modules in live environments, and unrecommended modules with compatibility problems.
 
-### View Display Caching
+ ### View Display Caching
 
-Launch Check looks at caching for each view display, both result and query caching.
+ Launch Check looks at caching for each view display, both result and query caching.
 
-### Watchdog Logs
+ ### Watchdog Logs
 
-Watchdog logs are evaluated, including overall count, 404 entries, and PHP errors.
+ Watchdog logs are evaluated, including overall count, 404 entries, and PHP errors.
 
-### Status Report
+ ### Status Report
 
-Launch Check evaluates the Drupal site status report.
+ Launch Check evaluates the Drupal site status report.
 
-### Users
+ ### Users
 
-Launch Check looks at at users, including reports on number of users, roles, etc.
+ Launch Check looks at at users, including reports on number of users, roles, etc.
 
-### Database
+ ### Database
 
-Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. 
+ Launch Check displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. 
 
-Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
+ Follow the resolution steps below if you have a high number of options being autoloaded, and receive the following message in the database stats: `consider autoloading only necessary options`.
 
-1. Navigate to the module root folder.
+ 1. Navigate to the module root folder.
 
-1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
+ 1. Open `example.info.yml` > `example.services.yml` > `src/` > `EventSubscriber` > `ConfigExample.php`
 
-1. Locate the `getSubscribedEvents()` function.
+ 1. Locate the `getSubscribedEvents()` function.
 
  This is the only member function required by the `EventSubscriberInterface`.
 
-1. Enter the code below to run `onSave()` whenever a configuration is saved.
+ 1. Enter the code below to run `onSave()` whenever a configuration is saved.
 
     ```php
     <?php

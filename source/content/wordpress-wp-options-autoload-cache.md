@@ -11,15 +11,15 @@ contributors: [carlalberto, whitneymeredith]
 
  The `wp_options` table stores several types of data for your site, including:
 
-    - settings for your plugins, widgets, and themes
-    - temporarily cached data
-    - site URL and home URL
-    - category settings
-    - autoloaded data
+   - settings for your plugins, widgets, and themes
+   - temporarily cached data
+   - site URL and home URL
+   - category settings
+   - autoloaded data
 
  <Alert title="Note"  type="info" >
 
- `wp_` is the default prefix of the `options` table. The prefix of the `options` table may vary if you are using a custom prefix, such as `customexample_options`.
+  The default prefix of the `options` table is `wp_`. The prefix of the `options` table may vary if you are using a custom prefix, such as `customexample_options`.
 
  </Alert>
  
