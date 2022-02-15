@@ -63,13 +63,15 @@ The following is a list of plugins that assume write access, and the specific fi
 
 ### Define FS_METHOD
 
-By default, WordPress tests each directory before uploading a file by writing a small temporary file. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the test of writing a small file) by defining the `FS_METHOD` as `direct` in the `wp-config.php` file above the line `/* That's all, stop editing! Happy Pressing. */`. The successful write of the temporary file results in the addition of `direct` at the end of the file, which allows operations to run slightly faster. To resolve the issue, configure the `wp-config.php` to resemble the following code sample:
+By default, WordPress tests each directory before uploading a file by writing a small temporary file. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the test of writing a small file) by defining the `FS_METHOD` as `direct` in the `wp-config.php` file above the line `/* That's all, stop editing! Happy Pressing. */`. To resolve the issue, configure the `wp-config.php` to resemble the following code sample:
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('FS_METHOD', 'direct');
 }
 ```
+
+The successful write of the temporary file returns "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use Direct File I/O requests from within PHP, which can open up security issues on poorly configured hosts.
 
 Plugins and themes with issues resolved (at least partially) by this include the following:
 
