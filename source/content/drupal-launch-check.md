@@ -95,7 +95,7 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
 
- ```bash 
+ ```json
  {promptUser: user}
  terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
  ```

@@ -1,6 +1,6 @@
 ---
-title: WordPress wp_options Table Autoloading Cache
-description: Learn more about checking and configuring autoloading cache in the wp_options table.
+title: WordPress wp_options Table Autoload Cache
+description: Learn more about checking and configuring autoload cache in the wp_options table.
 cms: "WordPress"
 categories: [performance]
 tags: [cache]
@@ -60,7 +60,7 @@ First, start by checking the size of your autoloaded data.
 
  1. Run the following code if you want to turn off autoload for an item:
 
-    ```bash
+    ```sql
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
 
