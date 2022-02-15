@@ -1,7 +1,7 @@
 ---
-title: Create a Drupal 8 Site From the Command Line Using Terminus and Drush
+title: Create a Drupal Site From the Command Line Using Terminus and Drush
 description: Learn how to add modules, and manage configuration between Pantheon environments.
-cms: "Drupal 8"
+cms: "Drupal"
 categories: [get-started]
 tags: [terminus, site, cli]
 type: guide
@@ -10,9 +10,9 @@ contributors: [stevector]
 date: 2/15/2017
 ---
 
-[Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for using the command line to develop on Pantheon.
+[Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. Terminus allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
 
-This guide will walk through using the command line to create a new Drupal 8 site, add modules, create content, and move configurations between Pantheon environments.
+This guide will walk you through using Drush and Terminus in the command line to create a new Drupal site, add modules, create content, and move configurations between Pantheon environments.
 
 ## Before You Begin
 
@@ -53,14 +53,14 @@ If you see your Pantheon sites, then installation and authentication were succes
 
 <Alert title="Note" type="info">
 
-The next few sections of this guide use the example variables `steve-site-d8` and `"Steve's Site D8"` as the site name and label. Make sure to replace each instance, as well as other variables, with your desired values.
+The next few sections of this guide use the example variables `steve-site-new` and `"Steve's Site New"` as the site name and label. Make sure to replace each instance, as well as other variables, with your desired values.
 
 </Alert>
 
-1. Create a new Drupal 8 site on Pantheon:
+1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create steve-site-d8 "My Site D8" "Drupal 8"
+  terminus site:create steve-site-new "My Site New" "Drupal"
   ```
 
   If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organization name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
@@ -68,15 +68,15 @@ The next few sections of this guide use the example variables `steve-site-d8` an
 1. Open your new Site Dashboard in a browser:
 
   ```bash{promptUser: user}
-  terminus dashboard:view steve-site-d8
+  terminus dashboard:view steve-site-new
   ```
 
   Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 8 on the Dev environment:
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-9x/) command to install Drupal on the Dev environment:
 
   ```bash{promptUser: user}
-  terminus drush steve-site-d8.dev -- site-install -y
+  terminus drush steve-site-new.dev -- site-install -y
   ```
   
   If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
@@ -84,32 +84,32 @@ The next few sections of this guide use the example variables `steve-site-d8` an
   Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
 
    ```bash{promptUser: user}
-   terminus drush  steve-site-d8.dev  -- user-login
+   terminus drush  steve-site-new.dev  -- user-login
   ```
 
 1. Create the Test environment:
 
   ```bash{promptUser: user}
-  terminus env:deploy steve-site-d8.test
+  terminus env:deploy steve-site-new.test
   ```
 
 1. Create the Live environment:
 
   ```bash{promptUser: user}
-  terminus env:deploy steve-site-d8.live
+  terminus env:deploy steve-site-new.live
   ```
 
 ### Export the Site Name as a Variable
 
-At this point you are probably tired of replacing `steve-site-d8` in every command.
+At this point you are probably tired of replacing `steve-site-new` in every command.
 
 1. Instead of typing the site name, let's set our site name to a variable so we can copy/paste the remainder of our commands:
 
   ```bash{promptUser: user}
-  export TERMINUS_SITE=steve-site-d8
+  export TERMINUS_SITE=steve-site-new
   ```
 
-  This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `steve-site-d8`. Anytime we use the variable name it's replaced in the executed command with the value.
+  This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `steve-site-new`. Anytime we use the variable name it's replaced in the executed command with the value.
 
 1. We can test this by echoing our variable:
 
@@ -133,7 +133,7 @@ You may want to remove these modules after you launch your site, or use more adv
 
 <Alert title="Note" type="info">
 
-You may have heard that some Drupal 8 developers are [using Composer](/guides/composer) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
+You may have heard that some Drupal developers are [using Composer](/composer) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
 
 </Alert>
 
@@ -169,7 +169,6 @@ You may have heard that some Drupal 8 developers are [using Composer](/guides/co
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-  ![The webprofiler toolbar](../../images/drupal8-commandline--webprofiler.png)
 
 1. Export the configuration in the Dev environment:
 
@@ -237,7 +236,7 @@ You may have heard that some Drupal 8 developers are [using Composer](/guides/co
 
 In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment. That content needs to be brought down into the Test and Dev environments from time to time so you can build and test features with fresh material from Live.
 
-1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
+1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `devel-generate:content` command](https://www.drupal.org/docs/contributed-modules/devel/drush-commands#s-devel-generate):
 
   ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.live -- generate-content 25
