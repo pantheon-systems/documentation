@@ -4,7 +4,7 @@ description: Determine and address the causes of unexpected traffic
 categories: [troubleshoot]
 tags: [billing, logs, measure, traffic]
 contributors: [edwardangert]
-reviewed: "2020-03-03"
+reviewed: "2022-02-15"
 ---
 
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
@@ -166,9 +166,8 @@ mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-Install and use one of the following WordPress plugins:
+Install and use the following WordPress plugin:
 
-- [IP Blacklist Cloud](https://wordpress.org/plugins/ip-blacklist-cloud/)
 - [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
 
 </Tab>
