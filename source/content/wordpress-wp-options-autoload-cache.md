@@ -7,44 +7,43 @@ tags: [cache]
 contributors: [carlalberto, whitneymeredith]
 ---
 
- ## wp_options Table
+## wp_options Table
 
- The `wp_options` table stores several types of data for your site, including:
+The `wp_options` table stores several types of data for your site, including:
 
-   - settings for your plugins, widgets, and themes
-   - temporarily cached data
-   - site URL and home URL
-   - category settings
-   - autoloaded data
+- settings for your plugins, widgets, and themes
+- temporarily cached data
+- site URL and home URL
+- category settings
+- autoloaded data
 
- <Alert title="Note"  type="info" >
+<Alert title="Note" type="info" >
 
-  The default prefix of the `options` table is `wp_`. The prefix of the `options` table may vary if you are using a custom prefix, such as `customexample_options`.
+The default prefix of the `options` table is `wp_`. The prefix of the `options` table may vary if you are using a custom prefix, such as `customexample_options`.
 
- </Alert>
- 
+</Alert>
+
 ## Check the Size of Your Autoloaded Data
 
 If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, follow the steps below.
 
-First, start by checking the size of your autoloaded data.
+Check the size of your autoloaded data:
 
- 1. Log in to your [MySQL client](/mysql-access).
+1. Log in to your [MySQL client](/mysql-access).
 
- 1. Select your database (by default `pantheon`) and then click the `SQL` tab.
+1. Select your database (by default `pantheon`) and then click the `SQL` tab.
 
- 1. Run the following code to see the total autoloaded data and data count:
+1. Run the following code to see the total autoloaded data and data count:
 
-   ```sql
-   SELECT 'autoloaded data in KiB' as name, ROUND(SUM(LENGTH(option_value))/ 1024) as value FROM wp_options WHERE autoload='yes' UNION  SELECT 'autoloaded data count', count(*) FROM wp_options WHERE autoload='yes';
+  ```sql
+  SELECT 'autoloaded data in KiB' as name, ROUND(SUM(LENGTH(option_value))/ 1024) as value FROM wp_options WHERE autoload='yes' UNION SELECT 'autoloaded data count', count(*) FROM wp_options WHERE autoload='yes';
   ```
-  
 
- The response will look similar to the example below.
+The response will look similar to the example below.
 
- ![wp_options Table Example Code](../images/wp_options-table-example-code.png)
+![wp_options Table Example Code](../images/wp_options-table-example-code.png)
 
- If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
+If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
 
 ## Check Your Top Autoloaded Items
 
@@ -66,24 +65,23 @@ First, start by checking the size of your autoloaded data.
 
  <Alert title="Note"  type="info" >
 
- You must specify `no` in the third parameter or it will automatically default to `yes`. 
+ You must specify `no` in the third parameter or it will automatically default to `yes`.
 
  </Alert>
 
 ## Tips to Minimize Autoloaded Data
 
- We recommend minimizing your autoloaded data to increase to your site's performance. We've provided a few tips for reducing your autoloaded data below.
+We recommend minimizing your autoloaded data to increase to your site's performance. We've provided a few tips for reducing your autoloaded data below.
 
 ### Redirect Your Site with PHP
 
- Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/redirects#redirect-with-php).
-
+Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/redirects#redirect-with-php).
 
 ### Clean up Transient Data
 
- Transients cache data for a set amount of time in WordPress. Although transients are only stored temporarily, they can become excessively large and slow down your site.
+Transients cache data for a set amount of time in WordPress. Although transients are only stored temporarily, they can become excessively large and slow down your site.
 
- Run the following code to clean up your transient data:
+Run the following code to clean up your transient data:
 
    ```sql
       SELECT * 
@@ -91,7 +89,6 @@ First, start by checking the size of your autoloaded data.
       WHERE `autoload` = 'yes'
       AND `option_name` LIKE '%transient%'
    ```
-
 
  ### Avoid Using Transient Data
 
