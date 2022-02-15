@@ -1,14 +1,14 @@
 ---
-title: Edge Personalization
+title: Edge Integration
 subtitle: Install WordPress Plugin
-description: Install, configure, and use the Edge Personalization WordPress plugin.
+description: Install, configure, and use the Edge Integration WordPress plugin.
 categories: [develop]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
-contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask, dgorton]
+contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
 anchorid: plugin-install
-permalink: docs/guides/edge-personalization/plugin-install/
-editpath: edge-personalization/04-plugin-install.md
+permalink: docs/guides/edge-integration/plugin-install/
+editpath: edge-integratioin/04-plugin-install.md
 reviewed: "2021-11-10"
 ---
 
