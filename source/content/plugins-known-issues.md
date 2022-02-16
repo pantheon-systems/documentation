@@ -71,7 +71,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-The successful write of the temporary file returns "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use Direct File I/O requests from within PHP, which can open up security issues on poorly configured hosts.
+The successful write of the temporary file returns "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use direct file I/O requests from within PHP, which can open up security issues on poorly configured hosts.
 
 Plugins and themes with issues resolved (at least partially) by this include the following:
 
