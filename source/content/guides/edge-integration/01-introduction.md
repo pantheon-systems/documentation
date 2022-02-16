@@ -16,7 +16,11 @@ reviewed: "2021-11-10"
 
 Edge Integration is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. It is a modern approach to audience-based content personalization which presents an alternative to most personalization engines. Our approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, with fewer moving parts. Rather than a painful "crawl, walk, run" process, you can skip straight to walking in 90 days or less.
 
-The benefits of Edge Integration:
+### How does Edge Integration work?
+
+
+
+## Benefits of Edge Integration/Is Edge Integration Right for You?
 
 - Unified Experience
 	- You can improve productivity by using existing content, style guides, media, and CMS integrations. No need to manage assets in multiple places.
@@ -34,14 +38,5 @@ The benefits of Edge Integration:
 - Paywall: The site showcases a scalable Paywall capability which kicks in after three free articles; after login (password: 1234), the visitor is still receiving cached content, but from a "subscriber audience" with access to full articles.
 
 There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Our approach is to focus on getting immediate lift for existing sites, and building from there.
-
-### How does Edge Integration work?
-
-
-
-## Is Edge Integration Right For You?
-
-Edge Personalization is right for you if...
-
 
 ## More Resources
