@@ -1,6 +1,6 @@
 ---
-title: WordPress wp_options Table Autoload Cache
-description: Learn more about checking and configuring autoload cache in the wp_options table.
+title: Optimize Your wp-options Table and Autoloaded Data
+description: Learn how to check and configure the autoloaded data in your wp_options table.
 cms: "WordPress"
 categories: [performance]
 tags: [cache]
@@ -39,10 +39,6 @@ Check the size of your autoloaded data:
   SELECT 'autoloaded data in KiB' as name, ROUND(SUM(LENGTH(option_value))/ 1024) as value FROM wp_options WHERE autoload='yes' UNION SELECT 'autoloaded data count', count(*) FROM wp_options WHERE autoload='yes';
   ```
 
-The response will look similar to the example below.
-
-![wp_options Table Example Code](../images/wp_options-table-example-code.png)
-
 If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data is slowing down your site. If your data is higher than 1 MB, you have a high number of options being autoloaded, and it is most likely slowing down your site.
 
 ## Check Your Top Autoloaded Items
@@ -52,10 +48,6 @@ If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data i
     ```sql
     SELECT option_name, length(option_value) FROM wp_options WHERE autoload='yes' ORDER BY length(option_value) DESC LIMIT 20;
     ```
-
-    The response will look similar to the example below.
-
-    ![wp_options Top Autoloaded Data](../images/wp_options-top-autoloaded-data-example.png)
 
  1. Run the following code if you want to turn off autoload for an item:
 
