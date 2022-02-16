@@ -61,7 +61,7 @@ Launch Check displays database stats, the number of rows in a given table, which
 - category settings
 - autoloaded data
 
-If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [WordPress wp_options Table Autoload Cache](/wordpress-wp-options-autoload-cache).
+If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data).
 
 #### What issues will I experience if I don't use InnoDB?
 
