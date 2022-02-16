@@ -210,7 +210,7 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ### Reading the Pantheon Environment from Drush
 
-Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-_server).
+Since Drush does not run using the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, refer to our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-_server).
 
 ### Terminus Drush Silent Failure
 
@@ -229,7 +229,7 @@ Newer versions of Drush fail with a message `[warning] Drush command terminated 
 [error]
 ```
 
-Redirects kill the PHP process before Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
+Redirects terminate the PHP process before the Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
 
 ```php:title=settings.php
 // Require HTTPS, www.
