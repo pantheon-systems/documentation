@@ -1,6 +1,6 @@
 ---
 title: Edge Integration
-subtitle: Broswer Plugin
+subtitle: Troubleshoot
 description: How to use the browser plugin in conjunction with Edge Integration.
 categories: [develop]
 tags: [collaborate, composer, continuous-integration, webops, workflow]

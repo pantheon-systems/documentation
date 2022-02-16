@@ -27,6 +27,14 @@ The benefits of Edge Integration:
 - Cost-effective
 	- Increase business impact by instrumenting and measuring success with your current analytics products. No need for new segmentation tooling.
 
+- Geographic targeting: Based on the location of the visitor, the site will deliver a different homepage here for Canadian visitors vs US (Poutine vs Pizza).
+
+- Interest fingerprinting: Repeated engagement with types of content — e.g. looking at multiple vegan recipes — will put a visitor in an interest cohort, which will  reorganize the recipes landing page.
+
+- Paywall: The site showcases a scalable Paywall capability which kicks in after three free articles; after login (password: 1234), the visitor is still receiving cached content, but from a "subscriber audience" with access to full articles.
+
+There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Our approach is to focus on getting immediate lift for existing sites, and building from there.
+
 ### How does Edge Integration work?
 
 
@@ -35,12 +43,5 @@ The benefits of Edge Integration:
 
 Edge Personalization is right for you if...
 
-- Geographic targeting: Based on the location of the visitor, the site will deliver a different homepage here for Canadian visitors vs US (Poutine vs Pizza).
-
-- Interest fingerprinting: Repeated engagement with types of content — e.g. looking at multiple vegan recipes — will put a visitor in an interest cohort, which will  reorganize the recipes landing page.
-
-- Paywall: The site showcases a scalable Paywall capability which kicks in after three free articles; after login (password: 1234), the visitor is still receiving cached content, but from a "subscriber audience" with access to full articles.
-
-There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Our approach is to focus on getting immediate lift for existing sites, and building from there.
 
 ## More Resources

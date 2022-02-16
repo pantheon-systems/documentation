@@ -23,3 +23,7 @@ Overview-type stuff here.
 
 
 ## How do I know if it's working?
+
+
+
+## How to build a WordPress Widget that uses the Edge Integrations SDK
