@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [get-started]
 tags: [terminus, site, cli]
 type: guide
-permalink: docs/guides/:basename
+permalink: docs/guides/drupal-commandline
 contributors: [stevector]
 date: 2/15/2017
 ---
