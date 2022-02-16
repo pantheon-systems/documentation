@@ -20,7 +20,7 @@ If your work is already updated but still listed here, let us know so we can rem
 
 Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
-See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
+Refer to documentaton on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
 The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
@@ -63,7 +63,7 @@ The following is a list of plugins that assume write access, and the specific fi
 
 ### Define FS_METHOD
 
-There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
+By default, WordPress tests each directory before uploading a file by writing a small temporary file. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the test of writing a small file) by defining the `FS_METHOD` as `direct` in the `wp-config.php` file above the line `/* That's all, stop editing! Happy Pressing. */`. To resolve the issue, configure the `wp-config.php` to resemble the following code sample:
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -71,7 +71,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-Plugins and Themes with issues resolved (at least partially) by this include:
+The successful write of the temporary file returns "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use direct file I/O requests from within PHP, which can open up security issues on poorly configured hosts.
+
+Plugins and themes with issues resolved (at least partially) by this include the following:
 
 - [AccessAlly WordPress LMS](https://accessally.com/)
 - [Blabber Theme](https://themeforest.net/item/blabber-allinone-elementor-blog-news-magazine-wordpress-theme/24305542/)
@@ -83,6 +85,7 @@ Plugins and Themes with issues resolved (at least partially) by this include:
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+- [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 
 ## All-in-One WP Migration
 
@@ -259,9 +262,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 **Issue 2:** In order to attach or upload files, local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
 
 
-**Solution:** You can customize the upload path for the temporary folder using the following:  
+**Solution:** You can customize the upload path for the temporary folder using the following:
 
-`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`  
+`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`
 
 Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
 
@@ -696,9 +699,9 @@ ___
 
 <ReviewDate date="2021-10-20" />
 
-**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site in order to monitor various functions and stability. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon. 
+**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
 
-**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents. 
+**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
 ___
 
@@ -940,8 +943,8 @@ export ENV=dev
   touch /tmp/wordfence-waf.php /tmp/.user.ini
   ```
 
-1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**.  
-Complete this step in Dev, Test, and Live Environments. 
+1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**.
+Complete this step in Dev, Test, and Live Environments.
 
   ```bash{promptUser: user}
   sftp -o Port=2222 env.UUID@appserver.env.UUID.drush.in
@@ -952,10 +955,10 @@ Complete this step in Dev, Test, and Live Environments.
   mkdir files/private/wflogs
   put /tmp/wordfence-waf.php /files/private
   Uploading /tmp/wordfence-waf.php to /files/private/wordfence-waf.php
-  /tmp/wordfence-waf.php                           100%    0     0.0KB/s   00:00    
+  /tmp/wordfence-waf.php                           100%    0     0.0KB/s   00:00
   put /tmp/.user.ini /files/private/
   Uploading /tmp/.user.ini to /files/private/.user.ini
-  /tmp/.user.ini                                   100%    0     0.0KB/s   00:00    
+  /tmp/.user.ini                                   100%    0     0.0KB/s   00:00
   exit
   ```
 
@@ -992,14 +995,14 @@ Complete this step in Dev, Test, and Live Environments.
 * __DIR__ is not providing the proper path for Wordfence
 * Wordfence cannot find your database credentials
 
-**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP 
+**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP
 from:
 
 ```
 if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
     define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
     include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
-} 
+}
 ```
 to:
 
@@ -1106,7 +1109,7 @@ ___
 
 <ReviewDate date="2021-11-04" />
 
-**Issue 1:** Some features of the [WP Reset](https://wordpress.org/plugins/wp-reset/) plugin can not be used on the Pantheon platform. Features such a file reset and restore do not work because Staging and Production environments are immutable and backups help with restore and data rollbacks. 
+**Issue 1:** Some features of the [WP Reset](https://wordpress.org/plugins/wp-reset/) plugin can not be used on the Pantheon platform. Features such a file reset and restore do not work because staging and production environments are immutable, and backups help with restore and data rollbacks.
 
 **Solution:** Use an alternate plugin that resets the WordPress database to the default installation.
 
@@ -1314,12 +1317,15 @@ ___
   define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');
   ```
 
-2. Create the `languages` directory inside `/files` for each environment.
+1. Create the `languages` directory inside `/files` for each environment.
+
+1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 
 **Solution 2:**
 
-Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
+1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 ___
 
 ## Yoast SEO
