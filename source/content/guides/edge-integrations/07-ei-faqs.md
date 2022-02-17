@@ -5,9 +5,9 @@ description: This is a description
 cms: "Drupal"
 categories: [develop]
 tags: [updates, continuous-integrations, composer, workflow]
-buildtools: true
-anchorid: update
 type: guide
+showtoc: true
+anchorid: faqs
 permalink: docs/guides/edge-integrations/faqs/
 editpath: edge-integrations/07-ei-faqs.md
 getfeedbackform: default
