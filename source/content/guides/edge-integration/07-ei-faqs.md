@@ -1,15 +1,15 @@
 ---
-title: Edge Integration
+title: Edge Integrations
 subtitle: Frequently Asked Questions
 description: This is a description
 cms: "Drupal"
 categories: [develop]
-tags: [updates, continuous-integration, composer, workflow]
+tags: [updates, continuous-integrations, composer, workflow]
 buildtools: true
 anchorid: update
 type: guide
-permalink: docs/guides/edge-integration/faqs/
-editpath: edge-integratioin/10-ei-faqs.md
+permalink: docs/guides/edge-integrations/faqs/
+editpath: edge-integrations/07-ei-faqs.md
 getfeedbackform: default
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: Edge Integration
+title: Edge Integrations
 subtitle: Install Drupal Module
-description: Install, configure, and use the Edge Integration Drupal module.
+description: Install, configure, and use the Edge Integrations Drupal module.
 categories: [develop]
-tags: [collaborate, composer, continuous-integration, webops, workflow]
+tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
 anchorid: module-install
-permalink: docs/guides/edge-integration/module-install/
-editpath: edge-integratioin/03-module-install.md
+permalink: docs/guides/edge-integrations/module-install/
+editpath: edge-integrations/03-module-install.md
 reviewed: "2021-11-10"
 ---
 

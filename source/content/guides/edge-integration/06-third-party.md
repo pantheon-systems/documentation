@@ -1,15 +1,15 @@
 ---
-title: Edge Integration
+title: Edge Integrations
 subtitle: Third Party somethingorother
 description: This is a description
 cms: "Drupal"
 categories: [develop]
-tags: [updates, continuous-integration, composer, workflow]
+tags: [updates, continuous-integrations, composer, workflow]
 buildtools: true
 anchorid: update
 type: guide
-permalink: docs/guides/edge-integration/third-party/
-editpath: edge-integratioin/09-third-party.md
+permalink: docs/guides/edge-integrations/third-party/
+editpath: edge-integrations/06-third-party.md
 getfeedbackform: default
 ---
 

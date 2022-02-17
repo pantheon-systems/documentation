@@ -1,14 +1,14 @@
 ---
-title: Edge Integration
+title: Edge Integrations
 subtitle: Install WordPress Plugin
-description: Install, configure, and use the Edge Integration WordPress plugin.
+description: Install, configure, and use the Edge Integrations WordPress plugin.
 categories: [develop]
-tags: [collaborate, composer, continuous-integration, webops, workflow]
+tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
 anchorid: plugin-install
-permalink: docs/guides/edge-integration/plugin-install/
-editpath: edge-integratioin/04-plugin-install.md
+permalink: docs/guides/edge-integrations/plugin-install/
+editpath: edge-integrations/04-plugin-install.md
 reviewed: "2021-11-10"
 ---
 

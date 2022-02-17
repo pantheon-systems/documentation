@@ -1,26 +1,26 @@
 ---
-title: Edge Integration
+title: Edge Integrations
 subtitle: Introduction
 description: A starter kit for teams that are looking to make the leap to more advanced workflows.
 categories: [develop]
-tags: [collaborate, composer, continuous-integration, webops, workflow]
+tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
-anchorid: edge-integration
-permalink: docs/guides/edge-integration/
-editpath: edge-integratioin/01-introduction.md
+anchorid: edge-integrations
+permalink: docs/guides/edge-integrations/
+editpath: edge-integrations/01-introduction.md
 reviewed: "2021-11-10"
 ---
 
-## What Is Edge Integration?
+## What Is Edge Integrations?
 
-Edge Integration is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. It is a modern approach to audience-based content personalization which presents an alternative to most personalization engines. Our approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, with fewer moving parts. Rather than a painful "crawl, walk, run" process, you can skip straight to walking in 90 days or less.
+Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. It is a modern approach to audience-based content personalization which presents an alternative to most personalization engines. Our approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, with fewer moving parts. Rather than a painful "crawl, walk, run" process, you can skip straight to walking in 90 days or less.
 
-### How does Edge Integration work?
+### How does Edge Integrations work?
 
 
 
-## Benefits of Edge Integration/Is Edge Integration Right for You?
+## Benefits of Edge Integrations/Is Edge Integrations Right for You?
 
 - Unified Experience
 	- You can improve productivity by using existing content, style guides, media, and CMS integrations. No need to manage assets in multiple places.
@@ -36,9 +36,6 @@ Edge Integration is a Software Development Kit (SDK) that allows users to person
 
 - Interest fingerprinting
 	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes — will put a visitor in an interest cohort, which will  reorganize the recipes landing page.
-
-- Paywall
-	- The site showcases a scalable Paywall capability which kicks in after three free articles; after login (password: 1234), the visitor is still receiving cached content, but from a "subscriber audience" with access to full articles.
 
 There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Our approach is to focus on getting immediate lift for existing sites, and building from there.
 
