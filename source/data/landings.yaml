@@ -60,7 +60,7 @@
         - title: 'Integrated Composer'
           links:
             - text: 'Integrated Composer Overview'
-              url: 'guides/integrated-composer'
+              url: '/guides/integrated-composer'
             - text: 'Get Started with Composer'
               url: '/guides/composer'
         - title: 'Upgrade and Migrate to Drupal 9'
