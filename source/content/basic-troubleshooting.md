@@ -98,7 +98,7 @@ If changes to your code don't appear to be showing:
   git check-ignore -v path/to/file)
   ```
 
-Check [Composer](/composer) dependencies as well. When a Composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
+Check [Composer](guides/composer) dependencies as well. When a Composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
 
 ### Conflicts
 

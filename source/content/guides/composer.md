@@ -48,11 +48,11 @@ We recommend the Pull Request workflow for single site use cases, and for most u
 
 However, this method does not support one-click updates in the Site Dashboard. Adopting this WebOps workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling, or at the very least require additional training for your development team.
 
-To maintain a Composer-based workflow with one-click updates through the Dashboard, consider using [Integrated Composer](/integrated-composer).
+To maintain a Composer-based workflow with one-click updates through the Dashboard, consider using [Integrated Composer](guides/integrated-composer).
 
 ## Custom Upstream Workflow
 
-Use [Integrated Composer](/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream).
+Use [Integrated Composer](guides/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream).
 
 Updates made using Integrated Composer are only committed at the Custom Upstream level by a single repository maintainer. Updates then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard. Custom Upstreams using Integrated Composer with dependencies in `upstream-configuration/composer.json` can have their own site-specific dependencies added in the top-level `composer.json` file. Custom Upstreams using Integrated Composer should avoid changing the top-level `composer.json` file after sites have been created from the Custom Upstream to avoid merge conflicts.
 

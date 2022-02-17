@@ -83,4 +83,4 @@ Navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](guides/composer)

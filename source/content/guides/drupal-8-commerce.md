@@ -16,7 +16,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 This process uses Composer to manage modules and dependencies. Before proceeding, you may wish to consult the following docs:
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](guides/composer)
 - [Build Tools](/guides/build-tools)
 
 <Alert title="Note" type="info">
@@ -119,7 +119,7 @@ In addition to Pantheon, you will need accounts at:
 
 ## Conclusion
 
-What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/composer) doc for more information.
+What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](guides/composer) doc for more information.
 
 ## See Also
 
