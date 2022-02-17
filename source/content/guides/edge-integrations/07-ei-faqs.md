@@ -12,8 +12,6 @@ editpath: edge-integrations/07-ei-faqs.md
 getfeedbackform: default
 ---
 
-Titlecase!
-
 ## How can my site implement personalization in a way that doesn’t violate the GDPR or other legal frameworks?
 
 
