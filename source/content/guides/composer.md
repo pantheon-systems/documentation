@@ -1,6 +1,8 @@
 ---
 title: Composer Fundamentals and WebOps Workflows
 description: Start with Composer basics then explore suggested WebOps workflows for WordPress and Drupal sites on Pantheon.
+type: guide
+permalink: docs/guides/:basename
 categories: [develop]
 tags: [composer, workflow, updates, webops]
 ---
