@@ -62,7 +62,7 @@
             - text: 'Integrated Composer Overview'
               url: 'guides/integrated-composer'
             - text: 'Get Started with Composer'
-              url: 'guides/composer'
+              url: '/guides/composer'
         - title: 'Upgrade and Migrate to Drupal 9'
           links:
             - text: 'Drupal 9'
@@ -244,7 +244,7 @@
       subtitle: 'Use Composer to manage some or all of your dependencies.'
       links:
         - text: 'Composer Fundamentals and Workflows'
-          url: 'guides/composer'
+          url: '/guides/composer'
         - text: 'Build Tools'
           url: '/guides/build-tools'
         - text: 'Convert a Standard Drupal 8 Site to a Composer-Managed Site'
@@ -293,7 +293,7 @@
           url: '/guides/rerouting-outbound-email'
           icon: 'fa fa-book'
         - text: 'Composer Fundamentals and Workflows'
-          url: 'guides/composer'
+          url: '/guides/composer'
         - text: 'Create a Custom Upstream'
           url: '/create-custom-upstream'
         - text: 'Introduction to Custom Upstreams'
@@ -682,7 +682,7 @@
         - title: ''
           links:
             - text: 'Composer Fundamentals and WebOps Workflows'
-              url: 'guides/composer'
+              url: '/guides/composer'
             - text: 'Convert a Standard Drupal 8 Site to a Composer-Managed Site'
               url: '/guides/composer-convert'
         - title: ''

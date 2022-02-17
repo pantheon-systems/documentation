@@ -70,7 +70,7 @@ From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, cl
 
 The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-If the Site uses [Integrated Composer](guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 Click **Save** for each section of the configuration in which you make changes.
 
