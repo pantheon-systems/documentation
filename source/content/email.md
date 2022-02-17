@@ -15,7 +15,7 @@ For outgoing emails, we recommend integrating a third-party service provider tha
 
 ### REST API Providers
 
-Here are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration method:
+The following are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration methods:
 
 | Provider  | Integration |
 |:--------- |:----------- |
@@ -90,7 +90,9 @@ SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you
 
 ### WordPress Password Reset Emails Are Not Delivered
 
-This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Emails will only be sent if the URLs match. This also applies to any email sent by WordPress, such as when a new user is added.
+The password reset email may not be delivered. This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Emails will only be sent if the URLs match. This applies to all emails sent by WordPress, including instances when a new user is added. 
+
+In the following example, a password reset email will not be sent because the URL is not listed in the table:
 
 current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpassword`
 
