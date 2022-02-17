@@ -6,7 +6,6 @@ categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
-showtoc: true
 anchorid: ei-troubleshooting
 permalink: docs/guides/edge-integrations/troubleshooting/
 editpath: edge-integrations/05-troubleshooting.md

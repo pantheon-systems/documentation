@@ -6,7 +6,6 @@ categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
-showtoc: true
 anchorid: plugin-install
 permalink: docs/guides/edge-integrations/plugin-install/
 editpath: edge-integrations/04-plugin-install.md
@@ -19,7 +18,11 @@ Overview-type stuff here.
 
 
 
-## How to configure the thing
+## How to configure Geolocation
+
+
+
+## How to configure Interests
 
 
 

@@ -6,7 +6,6 @@ cms: "Drupal"
 categories: [develop]
 tags: [updates, continuous-integrations, composer, workflow]
 type: guide
-showtoc: true
 anchorid: faqs
 permalink: docs/guides/edge-integrations/faqs/
 editpath: edge-integrations/07-ei-faqs.md
