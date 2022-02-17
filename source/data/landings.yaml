@@ -688,7 +688,7 @@
         - title: ''
           links:
             - text: 'Integrated Composer'
-              url: 'guides/integrated-composer'
+              url: '/guides/integrated-composer'
             - text: 'PhpStorm for Composer-Managed Drupal 8 Sites'
               url: '/guides/phpstorm-composer'
             

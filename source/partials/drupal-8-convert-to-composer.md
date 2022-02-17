@@ -239,7 +239,7 @@ If the site is not working, try this Composer command on the local `composerify`
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
 
 ### Move composerify to the Main Dev Branch
 

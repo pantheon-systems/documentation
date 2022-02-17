@@ -48,7 +48,7 @@ Pantheon Search with Solr 8 can be used on Drupal 8 or Drupal 9 sites. You can s
 
 ### Prepare the Local Environment
 
-Review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/integrated-composer#pantheon-supports-composer-2) at a minimum.
+Review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
 
 - Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 

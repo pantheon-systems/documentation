@@ -229,7 +229,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      composer require drupal/pkg-name --no-update
      ```
 
-       Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
+       Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
 
     1. Commit and push the changes:
 
