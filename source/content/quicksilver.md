@@ -67,9 +67,15 @@ You can hook into the following workflows:
 | `clone_database`                       | Clone database between environments                                 | target (to_env)            |                                             |
 | `deploy`                               | Deploy code to Test or Live                                         | target                     |                                             |
 | `deploy_product`                       | Create site                                                         | Dev                        | `after` stage valid, `before` stage invalid |
-| `sync_code`                            | Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard | Dev or Multidev            |                                             |
+| `sync_code`                            | Changed code due to git push, commit via Pantheon Dashboard, upstream update, or multidev merge | Dev or Multidev            |                                             |
 | `create_cloud_development_environment` | Create Multidev environment                                         | Multidev                   | `after` stage valid, `before` stage invalid |
 | `autopilot_vrt`                        | Autopilot Visual Regression test                                    | "Autopilot" Multidev       | `after` stage valid, `before` stage invalid |
+
+<Alert type="info" title="Note">
+
+On sites using [Integrated Composer](/integrated-composer), the `sync_code` hook will run after the build runs, once the artifacts have been completely deployed to the application server.
+
+</Alert>
 
 ## Variables
 
