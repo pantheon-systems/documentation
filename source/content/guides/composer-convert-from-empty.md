@@ -30,6 +30,8 @@ The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and f
 
 <Partial file="drupal-9/upgrade-site-requirements-from-empty.md" />
 
+- You have no Continous Integration setup or you don't need it anymore.
+
 ## Before You Begin
 
 - This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the Upstream.
