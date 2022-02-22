@@ -46,7 +46,7 @@ The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and f
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment.md" />
+<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
 ## Add the Integrated Composer Upstream in a New Local Branch
 
