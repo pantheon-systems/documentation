@@ -10,9 +10,9 @@ There are some scenarios when an external library is required. The Pantheon plat
 
 ## wkhtmltopdf
 
-[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, please read the wkhtmltopdf [explanation](https://wkhtmltopdf.org/status.html). 
+[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html). 
 
-wkhtmltopdf can be found on your application container at `/srv/bin/wkhtmltopdf`. To use it, install or create a compatible plugin or module:
+Note that wkhtmltopdf can be found in your application container at `/srv/bin/wkhtmltopdf`. To use it, install or create a compatible plugin or module complete the procedure outlined:
 
 <TabList>
 
