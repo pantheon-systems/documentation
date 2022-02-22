@@ -67,7 +67,7 @@ You can hook into the following workflows:
 | `clone_database`                       | Clone database between environments                                 | target (to_env)            |                                             |
 | `deploy`                               | Deploy code to Test or Live                                         | target                     |                                             |
 | `deploy_product`                       | Create site                                                         | Dev                        | `after` stage valid, `before` stage invalid 
-| `sync_code`                            | Change code with `git push`, commit via the Pantheon Dashboard, upstream update, or Multidev merge | Dev or Multidev            |                                             |
+| `sync_code`                            | Use the command `git push` to change the code; commit via the Pantheon Dashboard, upstream update, or Multidev merge | Dev or Multidev            |                                             |
 | `create_cloud_development_environment` | Create Multidev environment                                         | Multidev                   | `after` stage valid, `before` stage invalid |
 | `autopilot_vrt`                        | Autopilot Visual Regression test                                    | "Autopilot" Multidev       | `after` stage valid, `before` stage invalid |
 
