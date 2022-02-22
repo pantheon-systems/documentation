@@ -1,38 +1,78 @@
 ---
 title: Cron for WordPress
-description: Configuring and optimizing the WP-Cron feature on your Pantheon WordPress site.
+description: Learn how to configure and optimize the Cron for WordPress or the WP-Cron feature on your Pantheon WordPress site.
 cms: "WordPress"
 categories: [automate]
 tags: [cron]
 ---
 
+## Cron for WordPress Overview
+
+Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as "Cron Jobs". The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more. 
+
 ## WP-Cron Overview
 
-WP-Cron executes specific tasks for WordPress powered sites. The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Whether it's routine maintenance or scheduled alerts, any command that can be executed on Unix without user intervention can be scheduled as a Cron task.
+WP-Cron is a WordPress feature that only executes tasks when the page is loaded. WP-Cron is first loaded by WordPress when a page is requested on the front or backend of a site, at which point WP-Cron displays the necessary page to the site visitor. 
 
-WP-Cron is similar in nature to Cron, but differs in a couple of very important ways. This feature is designed solely to handle WordPress routine tasks:
+Plugins and themes can add tasks to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job. WP-Cron opens up a whole new world of things that a WordPress powered site can do.
+
+## Understanding the Differences Between Cron and WP-Cron
+
+There are a few major differences between Cron for WordPress and WP-Cron.
+
+### When Tasks are Executed
+
+Cron is a system process that continuously searches for configured tasks to execute. In contrast, WP-Cron only runs when [someone visits the site](https://stackoverflow.com/questions/12895706/when-does-wp-cron-php-run-in-wordpress) because it is a web-based system. When someone navigates to your WordPress site, WP-Cron checks for tasks that need to be executed.
+
+<Alert title="Note" type="info">
+Cron will not execute tasks on inactive environments, including sleeping development environments and test environments.
+</Alert>
+
+### Types of Tasks Executed
+
+The WP-Cron feature is designed solely to handle WordPress routine tasks:
 
  - Check for new version of the WordPress core, themes, and plugins
  - Clean up spam
 
-Plugins and themes can add tasks to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.  WP-Cron opens up a whole new world of things that a WordPress powered site can do.
+In contrast, any command that can be executed on Unix without user intervention can be scheduled as a Cron Job.
 
-### How is WP-Cron triggered?
+### Security
 
-The major difference between Cron and WP-Cron is how WP-Cron is triggered. Cron is a system process that runs every minute and looks for tasks to execute. WP-Cron, because it is a web-based system, can only run when [someone visits the site](https://stackoverflow.com/questions/12895706/when-does-wp-cron-php-run-in-wordpress). Therefore, when someone navigates to your WordPress site, WP-Cron checks to see if anything needs to be done. Thanks to the WordPress core developers, it does this in a way that does not adversely affect the performance of your site.
+WP-Cron is a PHP file that is usually located in the root directory of your WordPress installation. The wp-cron.php file is subject to DDoS attacks, but generally, `wp-cron.php` is secure. 
 
-### Problems With Low Traffic Sites
+There is only one parameter you can pass in that will affect the script (`doing_wp_cron`). This `$_GET` value is not filtered; it is only used as a flag and not as input for a process or variable. Beyond that, all input is ignored. While no script on a server attached to the Internet is 100% secure, `wp-cron.php` currently does not have any known vulnerabilities or exploits.
 
-Low traffic WordPress sites may experience skipped tasks when this feature is triggered by visitors. If people aren't visiting your site, WP-Cron can't execute. This doesn't mean your page will be slow from previous jobs when someone eventually does visit your site. Regardless of how many tasks WP-Cron has to execute, they are run in the background so your site's performance is not adversely affected.
+## Manage Tasks with Cron
 
-### Problems With High Traffic Sites
+Follow the steps below to schedule tasks with Cron.
 
-If your WordPress powered site is high traffic, you may run into problems with WP-Cron. The main issues that come up are **race conditions** and **long running processes**.
+1. Disable WP-Cron by adding following code to your `wp-config.php` file:
 
-- **Race condition**: When more than one user visits your site and triggers WP-Cron to execute the same task. WP-Cron works hard to eliminate race conditions, but they can still happen, especially on high traffic sites.
-- **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between tasks, then you can end up with more than one copy of `wp-cron.php` executing.
+```php:title=wp-config.php
+define('DISABLE_WP_CRON', true);
+```
 
-Both of these issues are addressed within WP-Cron's internal [ locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) and are not common problems; however, they can still occasionally happen.
+1. Run the following code to edit or create your own crontab file:
+
+```bash
+$ crontab -e
+```
+
+1. Create a task.
+
+This this example, the task will run `/path/to/command` five minutes after midnight, every day:
+
+```bash
+5 0 * * * /path/to/command
+```
+
+In this example, the task will run `/scripts/phpscript.php` at 10 pm on weekdays:
+
+```bash
+0 22 * * 1-5 /scripts/phpscript.php
+```
+
 
 ## Manage WP-Cron Internally
 
@@ -82,11 +122,11 @@ If you want to keep an eye on WP-Cron but don't like the command line, there are
 
 ## Manage WP-Cron Externally
 
-If you're looking for more control over your site's cron jobs, or you don't want WP-Cron to handle tasks internally, you can use external crons instead. This will solve the problems discussed above for high traffic and low traffic sites.
+If you're looking for more control over your site's cron jobs, or you don't want WP-Cron to handle tasks internally, you can use external crons instead. This will solve the problems with high traffic and low traffic sites discussed in the Troubleshooting section.
 
 ### Disable WP-Cron
 
-The first thing you'll need to do is disable WP-Cron's internal processing. Add the following line to your `wp-config.php` file:
+Disable WP-Cron's internal processing by adding following code to your `wp-config.php` file:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', true);
@@ -119,14 +159,27 @@ It's important that you do not add a value to the `doing_wp_cron` query variable
 
 ### Using Your Own Server
 
-If you administer your own server, you can use the cron service to make a call to the `wp-cron.php` script. You will have to learn how to properly set up a Cron job and use something like `wget` or `curl` to fetch a web page. Unless you take special precautions, it is not any safer to use your own server vs. a web-based cron service; however, it does give you more control.
+If you administer your own server, you can use the Cron service to make a call to the `wp-cron.php` script. You will have to learn how to properly set up a Cron job and use something like `wget` or `curl` to fetch a web page. Unless you take special precautions, it is not any safer to use your own server vs. a web-based Cron service; however, it does give you more control.
 
 ### Security
 
-For the most part, `wp-cron.php` is secure. There is only one parameter you can pass in that will affect the script (`doing_wp_cron`). This `$_GET` value is not filtered; it is only used as a flag and not as input for a process or variable. Beyond that, all input is ignored.
 
-While no script on a server attached to the Internet is 100% secure, `wp-cron.php` currently does not have any known vulnerabilities or exploits.
 
 ### WordPress Cron Plugins
 
 WordPress has many plugins that control both internal WP-Cron tasks and external Cron jobs. Since Pantheon does not provide Cron services, we do not recommend or discourage the use of any given plugin. We encourage you to check out the list of [WordPress Cron Plugins](https://wordpress.org/plugins/search.php?q=cron "List of WordPress plugins that help manage cron jobs") and experiment in your Dev environment to find the one that best suits your needs.
+
+### Troubleshooting WP-Cron
+
+#### Problems With Low Traffic Sites
+
+Low traffic WordPress sites may experience skipped tasks when this feature is triggered by visitors. If people aren't visiting your site, WP-Cron can't execute tasks. This doesn't mean your page will be slow from previous jobs when someone eventually does visit your site. Regardless of how many tasks WP-Cron has to execute, all tasks are run in the background so your site's performance is not adversely affected.
+
+#### Problems With High Traffic Sites
+
+If your WordPress powered site is high traffic, you may run into problems with WP-Cron. The main issues that come up are **race conditions** and **long running processes**.
+
+- **Race condition**: When more than one user visits your site and triggers WP-Cron to execute the same task. WP-Cron works hard to eliminate race conditions, but they can still happen, especially on high traffic sites.
+- **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between tasks, then you can end up with more than one copy of `wp-cron.php` executing.
+
+Both of these issues are addressed within WP-Cron's internal [ locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) and are not common problems; however, they can still occasionally happen.
