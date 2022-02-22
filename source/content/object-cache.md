@@ -3,7 +3,7 @@ title: "Object Cache (formerly Redis)"
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 categories: [performance]
 tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon]
+contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
 reviewed: "2022-02-10"
 ---
 
@@ -344,7 +344,7 @@ $15
 englash english
 ```
 
-### Clear Cache
+### Clear Cache in Pantheon Dashboard
 
 You can clear the Object Cache through the [Pantheon Dashboard](https://pantheon.io/docs/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated. 
 
@@ -354,6 +354,25 @@ Alternatively, you can use the `flushall` command to clear all keys from the cac
 redis> flushall
 OK
 ```
+
+### Clear Cache with WP Redis
+
+You can use [WP Redis](https://wordpress.org/plugins/wp-redis/) to manage your cache if you are using WordPress. WP Redis is an object cache drop-in that lets you use Redis as a persistent storage backend. WP Redis v0.3.0 and higher provides enhanced support for cache groups. You can use Redis's native [hash data](https://redis.io/commands/HSET) to maintain a structured representation your cache.
+
+`wp_cache_set()` supports four parameters: 
+
+- $key
+- $data
+- $group
+- $expire
+
+Follow the steps below to download and configure WP Redis:
+
+1. Download the latest version of [WP Redis](https://wordpress.org/plugins/wp-redis/).
+
+1. Enable native cache groups in WP Redis by adding `define( 'WP_REDIS_USE_CACHE_GROUPS', true );` to your `wp-config.php`file. 
+
+1. Use the `wp_cache_delete_group( $group )` function to purge all keys of a given cache group. 
 
 ### Check the Number of Keys in Cache
 
