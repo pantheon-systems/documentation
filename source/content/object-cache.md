@@ -361,10 +361,10 @@ You can use [WP Redis](https://wordpress.org/plugins/wp-redis/) to manage your c
 
 `wp_cache_set()` supports four parameters: 
 
-- $key
-- $data
-- $group
-- $expire
+- `$key`
+- `$data`
+- `$group`
+- `$expire`
 
 Follow the steps below to download and configure WP Redis:
 
