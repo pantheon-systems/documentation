@@ -1,12 +1,12 @@
 You must confirm that your site meets the following requirements before you continue:
 
-- Ensure your site has the [Pantheon empty repo](https://github.com/pantheon-systems/empty) in its upstream.
+- Ensure your site has the [Pantheon empty repository](https://github.com/pantheon-systems/empty) in its upstream.
 
   ### Use Terminus to Confirm the empty Upstream
 
   Run the command `terminus site:info $SITE` to display the site's basic information and properties.
  
- The following values indicate that a site is using a `empty` upstream: 
+ The following values indicate that a site is using an `empty` upstream: 
   * The `Framework` is `drupal8`
   * The `Upstream` includes `https://github.com/pantheon-systems/empty.git`
   
