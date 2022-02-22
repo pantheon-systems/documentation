@@ -16,7 +16,7 @@ In this guide, we'll convert an empty upstream Drupal 8 site to use Composer to 
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies.
 
-The goals of this conversion are: 
+The goals of this conversion include the following: 
 
 1. Remove dependencies that Composer will manage from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
 
@@ -30,7 +30,7 @@ The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and f
 
 <Partial file="drupal-9/upgrade-site-requirements-from-empty.md" />
 
-- You have no Continous Integration setup or you don't need it anymore.
+- You have not set up Continous Integration or you no longer need it. 
 
 ## Before You Begin
 
