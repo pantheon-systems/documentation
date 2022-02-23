@@ -159,6 +159,10 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     </Accordion>
 
+#### Other Composer Packages
+
+If you have added non Drupal packages to your site via Composer, you should also bring them over by running the corresponding `composer require` commands for each of those packages.
+
 #### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
@@ -202,6 +206,13 @@ rm web/sites/default/original-settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
+
+### Additional Composer Configuration
+
+Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This may include:
+
+- repositories configuration
+- extra section
 
 ## Deploy
 
