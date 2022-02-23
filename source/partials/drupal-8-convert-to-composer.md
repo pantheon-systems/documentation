@@ -161,7 +161,11 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
 #### Other Composer Packages
 
-If you have added non Drupal packages to your site via Composer, you should also bring them over by running the corresponding `composer require` commands for each of those packages.
+If you have added non Drupal packages to your site via Composer, you should also bring them over by running the corresponding `composer require` commands for each of those packages. You can use the following command to get the differences between the master's and your current `composer.json`. Pay special attention to the stuff marked as delete in the diff output:
+
+```
+git diff master:composer.json composer.json
+```
 
 #### Libraries
 
@@ -212,7 +216,15 @@ The resulting `settings.php` should have no `$databases` array.
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This may include:
 
 - repositories configuration
+- minimum-stability
 - extra section
+- etc
+
+You can use the same diff command from above to find out the stuff that you need to copy:
+
+```
+git diff master:composer.json composer.json
+```
 
 ## Deploy
 
