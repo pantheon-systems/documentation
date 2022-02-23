@@ -57,7 +57,7 @@ Follow the steps below to schedule jobs with Cron.
  <Alert title="Note" type="info">
  You can re-enable WP-cron, if needed, by running the following code:
 
-    ```bash
+    ```php
     define('DISABLE_WP_CRON', false);
     ```
 
@@ -69,17 +69,17 @@ Follow the steps below to schedule jobs with Cron.
     $ crontab -e
     ```
 
-1. Create job.
+1. Create a job.
 
 In this example, the job will run `/path/to/command` five minutes after midnight, every day:
 
-```bash
+```php
 5 0 * * * /path/to/command
 ```
 
 In this example, the job will run `/scripts/phpscript.php` at 10 pm on weekdays:
 
-```bash
+```php
 0 22 * * 1-5 /scripts/phpscript.php
 ```
 
