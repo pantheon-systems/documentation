@@ -1,6 +1,6 @@
 ---
 title: Cron for WordPress
-description: Learn how to configure and optimize the Cron for WordPress or the WP-Cron feature on your Pantheon WordPress site.
+description: Learn how to create and run jobs using Cron or WordPress's WP-Cron feature on your Pantheon site.
 cms: "WordPress"
 categories: [automate]
 tags: [cron]
