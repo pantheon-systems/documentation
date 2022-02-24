@@ -91,10 +91,13 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 
  ```json:title=composer.json
    "scripts": {
-       "post-install-cmd": [
-           "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
-       ]
-   },
+      "post-update-cmd": [
+        "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+    ],
+      "post-install-cmd": [
+        "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+    ]
+},
  ```
 
 1. You may also need to repeat the steps for a Metadata folder, depending on your requirements.
@@ -192,7 +195,9 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 If using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in their [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
 
-For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+<Alert title="Note" type="info">
+
+If using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
 
 <TabList>
 
@@ -211,10 +216,12 @@ $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesam
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
-
 </Tab>
 
 </TabList>
+
+</Alert>
+
 
 ## WordPress Multisite Issues
 
@@ -232,7 +239,7 @@ $this->provider->login( $redirect_to );
 
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
-The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
+There is a known issue with the Drupal 7 version of the SimpleSAMLphp Authentication module. The module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. Although there are two patches you can try in an effort to improve site performance; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) is the recommended solution until the fix is accepted into an official project release.
 
 ### SimpleSAMLphp Error: can't find metadata
 

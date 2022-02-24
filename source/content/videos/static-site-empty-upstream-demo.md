@@ -24,7 +24,7 @@ Get Files to your site using SFTP Mode - 02:23
 Commit Files Using Dashboard - 03:46  
 Get Files to your site using Git - 04:05  
 Commit Files Using Git - 05:12  
-Add Static Landing Page to an Exsiting WordPress or Drupal site - 06:14  
+Add Static Landing Page to an Existing WordPress or Drupal site - 06:14  
 Add Static Files to Create a Path - 06:29  
 
 ## See Also

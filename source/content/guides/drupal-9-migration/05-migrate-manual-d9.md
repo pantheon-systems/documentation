@@ -11,7 +11,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/migrate-manual-d9
 anchorid: drupal-9-migration/migrate-manual-d9
-editpath: drupal-9-migration/04-migrate-manual-d9.md
+editpath: drupal-9-migration/05-migrate-manual-d9.md
 ---
 
 In this doc, you'll create a new Drupal 9 site and migrate the code from an existing Drupal 8 site to it.
@@ -34,6 +34,14 @@ This doc uses the following aliases:
 ## Create a New Drupal 9 Site
 
 <Partial file="drupal-9/drupal-9-upstream-install.md" />
+
+<Accordion title="If your existing site has modules incompatible with MariaDB 10.4" id="consider-confirm-mariadb">
+
+<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+
+<Partial file="confirm-db-upgrade-workflow.md" />
+
+</Accordion>
 
 ## Migrate the Drupal 8 Code to the Drupal 9 Site
 
@@ -81,8 +89,10 @@ This doc uses the following aliases:
 1. List contrib modules and themes on your D8 site:
 
   ```bash{promptUser: user}
-  terminus drush $D8_SITE.dev -- pm:projectinfo --status=enabled --fields=name,version --format=table
+  terminus drush $D8_SITE.dev pm:projectinfo -- --fields=name,version --format=table
   ```
+
+  The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/drush-versions) before you continue.
 
 1. Then use Composer on your D9 site to add these there:
 

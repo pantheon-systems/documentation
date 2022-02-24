@@ -21,4 +21,4 @@ Before opening a support ticket based on an alert, take the following actions:
     - Error messages received
     - Links to screenshots or screencasts of the behavior, if necessary
 
-  If the issue creating the alert stems from the Pantheon Platform, we will investigate and resolve. Alerts triggered by the site's code are not within Pantheon's scope of support. For details, see [Getting Support](/support/#code).
+  If the issue creating the alert stems from the Pantheon Platform, we will investigate and resolve. Alerts triggered by the site's code are not within Pantheon's scope of support. For details, see [Getting Support](/guides/support/#code).

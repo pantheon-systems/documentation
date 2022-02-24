@@ -27,7 +27,7 @@ Pantheon eliminates these risks entirely by running sites on a web-scale infrast
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Redis](/object-cache) and/or [Apache Solr](/solr).
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Object Cache](/object-cache) and/or [Pantheon Search](/solr).
 
 For more information on containers, see [All About Application Containers](/application-containers).
 
@@ -58,7 +58,7 @@ Elite sites have the added benefit of managed resource provisioning, both for an
 
 When an Elite site encounters massive sudden or unexpected increases in traffic, the Pantheon platform alerts Pantheon Support, who ensure that the most appropriate level of platform resources are provisioned for the site to handle the traffic spike.
 
-For an anticipated increase in traffic, open a [Support ticket](/support#ticket-support) with the following information:
+For an anticipated increase in traffic, open a [Support ticket](/guides/support/contact-support/#ticket-support) with the following information:
 
 - **How much extra traffic?**
 

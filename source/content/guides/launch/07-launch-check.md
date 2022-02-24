@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Launch Checks
-description: Part six of our Launch Essentials guide covers launch checks to perform before going live.
+description: Part seven of our Launch Essentials guide covers launch checks to perform before going live.
 anchorid: launch-check
 layout: guide
 showtoc: true
@@ -9,7 +9,7 @@ categories: [go-live]
 tags: [backup, launch, webops]
 type: guide
 permalink: docs/guides/launch/launch-check/
-editpath: launch/06-launch-check.md
+editpath: launch/07-launch-check.md
 image: getting-started-Largethumb
 ---
 
@@ -68,5 +68,6 @@ Serving anonymous traffic from virtual memory allows a cached response to be ret
 
 ### [Test Cache](/test-global-cdn-caching)
 
-Learn how to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
+Follow the steps below to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
 
+<Partial file="global-cdn-test-cache.md" />

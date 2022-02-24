@@ -53,4 +53,4 @@ When a failed test requires review, no new tests can be run on the site until th
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+Yes. Depending on your [Account](/guides/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.

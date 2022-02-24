@@ -14,7 +14,7 @@ The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not on
 
 <Alert title="Note" type="info">
 
-The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
+The following does **not** pertain to Composer-managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
 
 </Alert>
 
@@ -175,7 +175,7 @@ dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a246
 Project bootstrap (7.x-3.0) downloaded to                              [success]
 /srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/themes/bootstrap.
 $ terminus env:commit <site>.<env> --message="Adding bootstrap"
-Success: Successfully commited.
+Success: Successfully committed.
 +---------------------+---------+-----------+------------------------------------------+-------------------+
 | Time                | Author  | Labels    | Hash                                     | Message           |
 +---------------------+---------+-----------+------------------------------------------+-------------------+
@@ -189,7 +189,13 @@ Success: Successfully commited.
 And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
 
 ```bash{promptUser: user}
-terminus env:deploy <site>.test --sync-content --cc --updatedb
+terminus env:deploy <site>.test --sync-content --updatedb
+```
+
+For successful deployment, ensure you clear the site cache:
+
+```bash{promptUser: user}
+terminus env:clear-cache <site>.test
 ```
 
 ## Congratulations!

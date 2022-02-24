@@ -80,7 +80,7 @@ Pantheon's platform will not cache a response that contains the `set-cookie` hea
 
 <Alert title="Note" type="info" >
 
-Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues and fixes from your browser. Ror instructions, see [Test Global CDN with Browser Headers](/test-global-cdn-caching#test-global-cdn-with-browser-headers). Curl does not handle cookie data in the same way that your browser does, and effectively misrepresents cookie and caching behavior as a result.
+Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues and fixes from your browser. For instructions, see [Test Global CDN with Browser Headers](/test-global-cdn-caching#test-global-cdn-with-browser-headers). Curl does not handle cookie data in the same way that your browser does, and effectively misrepresents cookie and caching behavior as a result.
 
 </Alert>
 

@@ -47,9 +47,15 @@ Quicksilver scripts that trigger on the deploy hook operate on the state of the 
 
 ## Script Type and Location
 
-Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types. The commands will run in order, and only execute the next when the previous has finished or timed out.
+Quicksilver currently supports `webphp` scripting, which runs a PHP script through the same runtime environment as the website. PHP scripts are subject to the same limits as any code on the platform, such as [timeouts](/timeouts). PHP scripts cannot be batched, and run continuously and sequentially. Each command executes after the previous command has finished or timed out.
 
-We recommend setting up a dedicated directory in the docroot (e.g., `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the `web` subdirectory of your site's code repository (e.g., `web/private/scripts`), but the script paths in your `pantheon.yml` file should not include the `web/` path prefix and should resemble the examples above.
+We recommend setting the `web_docroot` to `true` to create a dedicated directory in the docroot (for example, `private/scripts`). This tracks files by instructing Quicksilver to look for the files inside the `web` folder. If your site uses this [nested docroot](/nested-docroot) setting, the scripts directory must be located in the `web` subdirectory of your site's code repository (for example, `web/private/scripts`). 
+
+<Alert type="info" title="Note">
+
+If your site uses a [nested docroot](/nested-docroot), the script paths in your `pantheon.yml` file should not include the `web/` path prefix. Scripts in your `pantheon.yml` file should match the following path examples: `private/scripts/new_relic_deploy.php` or `private/scripts/slack_deploy_notification.php`
+
+</Alert>
 
 ## Hooks
 
@@ -74,22 +80,25 @@ When a workflow runs, there are variables that are made available through the `$
 |--|--|--|--|
 |`trace_id`|The unique ID of the workflow|All| |
 |`site_id`|UUID of the site instance|All| |
-|`environment`|Environment name that the workflow is running on|All|Matches the `PANTHEON_ENVIRONMENT` environment variable.
+|`environment`|Environment name that the workflow is running on|All|Matches the `PANTHEON_ENVIRONMENT` environment variable
 |`stage`|`before` or `after` indicator for when the workflow is running|All|| |
 |`qs_description`|Description of the workflow as defined in `pantheon.yml`|All| |
 |`wf_type`|ID of the workflow hook that is running|All| |
 |`wf_description`|Label of the workflow hook that is running|All| |
-|`user_id`|UUID of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_id` is `None`.|
-|`user_firstname`|First name of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_firstname` is `Pantheon`.|
-|`user_lastname`|Last name of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_lastname` is `Pantheon`.|
-|`user_fullname`|UUID of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_fullname` is `Pantheon`.|
-|`user_email`|Email of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_email` is `root@getpantheon.com`.|
+|`user_id`|UUID of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_id` is `None`|
+|`user_firstname`|First name of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_firstname` is `Pantheon`|
+|`user_lastname`|Last name of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_lastname` is `Pantheon`|
+|`user_fullname`|UUID of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_fullname` is `Pantheon`|
+|`user_email`|Email of the user account that initiated the task|All|If the task is initiated by Pantheon, `user_email` is `root@getpantheon.com`|
 |`user_role`|UUID of the user that initiated the task|All| |
 |`to_environment`|Target environment where the database is being cloned to|`clone_database`| |
 |`from_environment`|Source environment where the database is being cloned from|`clone_database`| |
-|`deploy_message`|Deploy message provided as part of a test of live deployment|`deploy`|This is only available if a deploy message is provided.|
+|`deploy_message`|Deploy message provided as part of a test of live deployment|`deploy`|This is only available if a deploy message is provided|
+|`vrt_status`|Result of the visual regression test|`autopilot_vrt`| |
+|`vrt_result_url`|Page URL associated with an Autopilot VRT result|`autopilot_vrt`|[Autopilot](/guides/autopilot) is only available in the new Pantheon Dashboard|
+|`updates_info`|List of the plugins/modules/themes that were updated prior to the VRT|`autopilot_vrt`|Returns JSON data structure|
 
-For examples on how to use these variables, see the [Quicksilver Examples](https://pantheon.io/docs/quicksilver-examples) repository.
+For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
 
 
 ## Secrets

@@ -4,18 +4,20 @@ description: Learn how to deploy a site with Integrated Composer
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2021-05-28"
+reviewed: "2021-08-30"
 ---
 
-Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and [Composer](/composer) dependencies, while still receiving upstream updates.
+Integrated Composer is a Pantheon platform feature that extends Composer <Popover content="A widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site." /> functionality to WordPress and Drupal's core files, and treats them as a managed dependency. Integrated Composer enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
 
-## Create a New Site With Integrated Composer
+## Get Started With Integrated Composer
 
 ### Drupal 9 with Integrated Composer
 
-- To convert an existing Drupal 8 site to a Composer-managed site, visit the [Composer Convert](/guides/composer-convert) doc.
+- Follow the [Drupal 9](/drupal-9) doc to create a new Drupal 9 site with Integrated Composer built in.
 
 - To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
+
+- To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
 ### WordPress with Integrated Composer
 
@@ -73,7 +75,7 @@ You can remove site dependencies if they are no longer needed.
 
 ## Upstream
 
-Upstream refers to the source code that is hosted in the [Pantheon code repository](https://github.com/pantheon-upstreams/drupal-project) and includes the core code for Drupal, WordPress, and some customizations for the Pantheon platform.
+Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-recommended), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
 
 ### Upstream and Site Structure
 
@@ -83,19 +85,27 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 1. Clone the Git repository from the Pantheon site's Dashboard.
 
-1. Change into the `upstream-config` directory:
+1. Change into the Upstream's configuration directory:
+
+   - Drupal:
 
     ```bash{promptUser: user}
-    cd upstream-config
+    cd upstream-configuration
     ```
 
-1. Run:
+   - WordPress:
+
+    ```bash{promptUser: user}
+    cd upstream-config 
+    ```
+
+1. Run `composer require` for each dependency:
 
     ```bash{promptUser: user}
     composer require drupal/pkg-name --no-update
     ```
 
-     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. 
+     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
      - `--no-update` should not be included when adding dependencies to a site.
 
 1. Set or increment the current configuration version:
@@ -109,7 +119,7 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
         1.0.0
         ```
 
-     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies. 
+     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies.
      - Replace `1.0.1` in this example with another number:
 
        ```bash{promptUser: user}
@@ -124,7 +134,7 @@ Upstream refers to the source code that is hosted in the [Pantheon code reposito
 
 The version of Composer on the platform is Composer 2.
 
-Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
+Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/guides/support/contact-support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
 
 ### Pantheon's Scope of Support for Composer
 
@@ -135,6 +145,27 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 ### Site-local Drush Is Required for Drupal 9 Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
+
+### Build Step Affected Files That Are Not Ignored by Git
+
+Some users have encountered an error when Git recognizes an unexpected change in `composer.json`:
+
+```bash
+The build step affected files that are not ignored by git:
++ echo M composer.json M composer.lock
+M composer.json M composer.lock
++ exit 1
+```
+
+To resolve this error:
+
+1. Add an empty new line to the end of `composer.json`:
+
+  ```shell
+  echo "" >> composer.json
+  ```
+
+1. Commit and push the changes
 
 ### View the Output of the Commit Log First
 
@@ -183,7 +214,8 @@ Merge the changes manually:
 1. Merge in the upstream changes:
 
    ```bash{promptUser: user}
-   git pull https://github.com/pantheon-upstreams/drupal-project main
+   git remote add upstream <upstream_url> && git fetch upstream
+   git merge upstream/master
    ```
 
 1. You will get a message that there are conflicts in `composer.json` that cannot be merged automatically:
@@ -201,6 +233,46 @@ Merge the changes manually:
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
+### Changes Lost During Direct Upload or Commit 
+
+Do not commit module/plugin or theme files directly to your site when in Git mode. You also should not upload module/plugin or theme files directly to your site when in SFTP mode. Direct commits and uploads will be lost because the `.gitignore` file in your upstream respository has several defined paths, which causes files in those directories to be ignored.  These directories are:
+<TabList>
+
+<Tab title="Drupal" id="drupal-gitignore" active={true}>
+
+```none:title=code/web/sites
+code/web/
+└─ core/
+└─ drush/Commands/contrib/
+└─ libraries/
+└─ modules/contrib/
+└─ private/scripts/quicksilver
+└─ profiles/contrib/
+└─ sites/*/files/
+└─ sites/*/private/
+└─ themes/contrib/
+```
+See the `.gitignore` file for Drupal [here](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/.gitignore).
+
+The `contrib` folders are where community contributed modules, profiles, and themes would reside.
+The `custom` folders, which are not ignored, are where modules, profiles, and themes created by you would reside.
+</Tab>
+
+<Tab title="WordPress" id="wp-gitignore">
+
+```none:title=code/web/
+code/web/wp-content/
+└─ mu-plugins/
+└─ plugins/
+└─ themes/
+```
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+</Tab>
+
+</TabList>
+
+See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
+
 ### Changes Lost During Upstream Updates
 
 When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
@@ -210,6 +282,18 @@ To resolve, there are two potential solutions:
 - If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
 - Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+
+### Issues using `wikimedia/composer-merge-plugin`
+
+Use of the `wikimedia/composer-merge-plugin` is deprecated within [Drupal](https://www.drupal.org/node/3069730).
+
+When using Pantheon's Integrated Composer, this plugin often tries to run a "composer update" during the "composer install," which is not allowed and will cause errors. We recommend removing `composer-merge-plugin` from your Composer toolchain.
+
+### Patches containing binary diffs fail in Pantheon
+
+If your site contains a binary patch, such as https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the Composer build step will fail. This is because [cweagans/composer-patches](https://github.com/cweagans/composer-patches) use the patch utility to apply patches. The most recent version of this utility does not support binary patches and fails when deployed.
+
+A workaround for this issue, is to reconfigure the patch to exclude the binary contents in it.
 
 ## FAQ
 

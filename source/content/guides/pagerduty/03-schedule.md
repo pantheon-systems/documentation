@@ -49,7 +49,7 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 Users can have different roles, allowing them, for example, to administrate schedules or alert policies. For team members with the Developer job title, we suggest the **Responder** role. Each member then can set up their own alert policies, or you can for them.
 
 ## Create Schedule
-Next, we'll create an on-call Schedule, to configure a scaleable custom alert workflow:
+Next, we'll create an on-call Schedule, to configure a scalable custom alert workflow:
 
 1. Login to your PagerDuty account and go to **Configuration** > **Schedules**, then click **+ Add Schedules**.
 

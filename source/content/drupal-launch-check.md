@@ -62,9 +62,6 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 
 The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
-### Are there plans to support Drupal 6 sites?
-
-At this time, there are no plans to support Drupal 6 with this tool.
 
 ### Can I opt out of a specific recommendation?
 

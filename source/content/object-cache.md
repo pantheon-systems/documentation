@@ -126,7 +126,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-install">
+<Tab title="Drupal 8 or Drupal 9" id="d8-d9-install">
 
 1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
@@ -165,7 +165,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
      $settings['cache_prefix']['default'] = 'pantheon-redis';
-     
+
      $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
    }
    ```
@@ -205,6 +205,12 @@ TRUNCATE TABLE `<tablename>`;
 <Alert title="Note" type="info">
 
 This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis module version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
+
+</Alert>
+
+<Alert title="Note" type="info">
+
+The current version of the Redis module for Drupal 7 does not work with PHP 7.4, which uses the `php-redis 5.x` library. Refer to [Drupal 7 and PHP 7.4](/object-cache#drupal-7-and-php-74) for more information.
 
 </Alert>
 
@@ -368,6 +374,16 @@ maxmemory
 
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 
+### Drupal 7 and PHP 7.4
+
+The current version of the [Drupal 7 Redis module](https://www.drupal.org/project/redis) is not compatible with PHP 7.4, which uses the `php-redis 5.x` library. You may get errors like this:
+
+```php
+Deprecated function: Function Redis::delete() is deprecated in Redis_Lock_PhpRedis->lockRelease() (line 111 of /web/sites/all/modules/contrib/redis/lib/Redis/Lock/PhpRedis.php).
+```
+
+To patch the Redis module, visit [Drupal.org](https://www.drupal.org/project/redis/issues/3074189), download the latest patch, and patch the module in the site's code with these changes.
+
 ### RedisException: Redis server went away
 
 The following error occurs when Redis has not been enabled within the Site Dashboard:
@@ -455,22 +471,6 @@ Fatal error: require_once(): Failed opening required
 '/srv/bindings/xxxxxxxxx/code/sites/all/modules/redis/redis.autoload.inc'
 ```
 
-### Drupal 6 Cache Backport
-
-If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](https://git.drupalcode.org/project/cache_backport/blob/master/INSTALL.txt) for how to configure Cache Backport.
-
-If you see the following message:
-
-```bash
-File not found:
-'sites/all/modules/cache_backport/system.admin.inc'
-```
-
-You skipped a step; `settings.php` must include the cache\_backport files. Add the following to `settings.php` before the Redis configuration:
-
-```php:title=settings.php
-$conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
-```
 
 ### You have requested a non-existent service
 

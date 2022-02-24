@@ -42,18 +42,6 @@ Pantheon uses Pressflow to automatically read the environmental configuration. I
 extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 ```
 
-## Drupal 6
-
-```php
-<?php
-$settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-$db = $settings['databases']['default']['default'];
-// You can do the following on one line. It's broken in two here for readability.
-$db_url = $db['driver'] . '://' . $db['username'] . ':' . $db['password'];
-$db_url .= '@' . $db['host'] . ':' . $db['port'] . '/' . $db['database'];
-$conf = $settings['conf'];
-```
-
 ## Domain Access
 
 Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, for Drupal 7:

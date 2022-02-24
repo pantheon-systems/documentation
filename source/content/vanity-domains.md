@@ -16,7 +16,7 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Dashboard and [submit a support request](/support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+From your Organization Dashboard, go to Dashboard and [open a support ticket](/guides/support/contact-support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
 
 <Alert title="Note" type="info">
 
@@ -65,6 +65,8 @@ If the domain in question is already in use, be sure to configure your vanity do
 ![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
+
+- If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
 
 ## Security Considerations
 

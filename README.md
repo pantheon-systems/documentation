@@ -29,7 +29,7 @@ Read [our Style Guide](https://pantheon.io/docs/style-guide) for our guidelines 
     npm install -g gatsby-cli
     ```
 
-  - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine. Lando requires a Docker version in the `2.1.0.0` - `3.1.99` range. 
+  - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine. Lando requires a Docker version in the `2.1.0.0` - `3.1.99` range.
 
 ### Get the Code
 

@@ -15,7 +15,7 @@ workflows:
           resource-class: large
           incremental-build: true
           gcp-bucket: "static.pantheonfrontend.website"
-          gatsby-cache-version: "v1.8.21"
+          gatsby-cache-version: "v1.8.22"
           pre-steps:
             - checkout
             - run:

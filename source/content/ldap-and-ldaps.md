@@ -66,7 +66,7 @@ Users do not have access to make modifications to `ldap.conf`. Instead, use `put
 
 ### Is ldap_sso supported?
 
-The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
+The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not web server-based.
 
 ### Does Secure Integration work with LDAP?
 
@@ -81,12 +81,11 @@ $config['ldap_servers.server.MACHINE_NAME']['port'] = PANTHEON_SOIP_CONSTANT_NAM
 
 In the snippet above, replace the `PANTHEON_SOIP_CONSTANT_NAME` with name given to you by Pantheon, and the LDAP machine name in place of `MACHINE_NAME`. When you return to the server configuration page, verify that both the server address and the server port show as `overridden`.
 
-
 ## Troubleshooting
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
-Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Secure Integration, use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/terminus) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors. If you are connecting via a Pantheon Secure Integration, use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/terminus) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php

@@ -112,9 +112,9 @@ You can destroy the tunnel by using the port value found within the **Connection
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
 
-## Use Sequel Pro to SSH Tunnel to a MySQL Database
+## Use Sequel Ace to SSH Tunnel to a MySQL Database
 
-[Sequel Pro](https://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. You can configure other MySQL clients in a similar manner.
+[Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. You can configure other MySQL clients in a similar manner.
 
 ## Manually Create an SSH Tunnel to a Redis Cache Server
 

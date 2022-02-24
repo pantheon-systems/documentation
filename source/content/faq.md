@@ -4,6 +4,11 @@ description: Frequently asked questions about Drupal or WordPress sites on Panth
 categories: [platform]
 tags: [support]
 ---
+
+This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.
+
+Review [Platform Considerations](https://pantheon.io/docs/platform-considerations) for more technical information. 
+
 ## Getting Started
 
 ### Can I put production sites on Pantheon?
@@ -93,25 +98,9 @@ Yes. [Local development](/local-development) is a great best practice, and Panth
 
 The platform will use Drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and Drush aliases. For more information, refer to [Cron for Drupal](/drupal-cron).
 
-### How do I correct Pantheon URLs being indexed by search engines?
-
-This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/wp-cli) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/) blog post to exchange the platform domains with your custom domain, and then [add a redirect to the primary domain](/guides/launch/redirects).
-
 ### How does cron work with WordPress on Pantheon?
 
 WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/wordpress-cron).
-
-### Do you support ffmpeg transcoding?
-
-No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service or multimedia platform that lets you create streaming-optimized videos. Those providers have optimized the highly complex process of transcoding and serving video content, and leveraging their infrastructure is often preferable to a custom solution.
-
-### Do you support Xdebug?
-
-No. Xdebug is not available on the platform. Local development tools such as [Lando](/guides/lando-wordpress) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic&reg; Performance Monitoring](/new-relic).
-
-### How do I increase the maximum execution time limit for a PHP script?
-
-The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/timeouts) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
 
 ### Can I host a multilingual site?
 
@@ -131,18 +120,6 @@ Each of these configurations is possible with Drupal’s built-in language switc
 
 You can associate multiple domains with a single site environment. Refer to [Launch Essentials](/guides/launch/domains) for details.
 
-### Can I use PHP Sessions with WordPress?
-
-If you need to use PHP's native session handling, please install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin, which we maintain just for this purpose. This provides a horizontally scalable storage mechanism for sessions.
-
-If you are seeing errors like this:
-
-```php
-Warning: session_start(): user session functions not defined
-```
-
-You'll need the plugin. [More information on sessions](/wordpress-sessions).
-
 ### Can I install a new Panopoly distribution?
 
 Yes. Refer to [Public Distributions](/start-state/#public-distributions) for details.
@@ -153,17 +130,17 @@ Yes. Refer to [Public Distributions](/start-state/#public-distributions) for det
 
 Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS. Pantheon also provides advanced caching addons for WordPress & Drupal.
 
-### What version of Apache Solr does Pantheon run?
+### What version of Apache Solr does Pantheon Search run?
 
 <Partial file="solr-version.md" />
 
-Refer to our documentation for details about configuring Solr for [WordPress](/wordpress-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7) and [Drupal 8](/guides/solr-drupal/solr-drupal-8).
+Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/wordpress-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7) and [Drupal 8](/guides/solr-drupal/solr-drupal-8).
 
 ## Support
 
 ### What support is available for Pantheon?
 
-Refer to [Getting Support](/support) and explore our [support features](https://pantheon.io/support).
+Refer to [Get Support](/guides/support) and explore our [support features](https://pantheon.io/support).
 
 ## Security
 

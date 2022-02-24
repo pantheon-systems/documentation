@@ -22,7 +22,7 @@ Get involved by:
 
 ## Edit and Build Locally
 
-If you would like to work on documentation locally and see your work, we offer a Docker containerized solution. For information on how to use this solution see our [README](https://github.com/pantheon-systems/documentation#local-setup-optional).
+If you would like to work on documentation locally and see your work, we offer a Docker containerized solution. For information on how to use this solution see our [README](https://github.com/pantheon-systems/documentation#local-installation).
 
 ## Code of Conduct
 

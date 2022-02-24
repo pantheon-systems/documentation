@@ -37,7 +37,7 @@ To upgrade and pay for the site now, add your payment method:
    - If you've chosen a **Basic Plan**, click **Continue**.
 1. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information.
 1. Click **Continue** and if everything looks right, click **Place Your Order** to confirm your purchase.
-   - [Contact Support](/support) if you need any help.
+   - [Contact Support](/guides/support/contact-support) if you need any help.
 
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
@@ -46,6 +46,10 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 <Partial file="transfer-ownership-billing-intro.md" />
 
 <Partial file="transfer-ownership-billing-steps.md" />
+
+## Troubleshooting a Declined Credit Card
+
+<Partial file="billing-declined-card-codes.md" />
 
 <Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">
 

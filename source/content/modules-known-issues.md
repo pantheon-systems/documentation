@@ -6,7 +6,7 @@ categories: [troubleshoot]
 tags: [modules]
 ---
 
-This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/support).
+This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/guides/support/contact-support/).
 
 We do not prevent you from installing and using these plugins/modules. However, we cannot provide support for incompatible modules, or if they are used against the guidance provided here.
 
@@ -161,7 +161,7 @@ ___
 
 <ReviewDate date="2019-07-10" />
 
-**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
+**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx web servers and Apache modules are not compatible with the Platform.
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 <ReviewDate date="2019-10-17" />
 
-**Issue**: ImageAPI Optimize supports 3rd party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
+**Issue**: ImageAPI Optimize supports 3rd-party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
 
 **Solution**: Use a 3rd-party module like [reSmush.It](https://www.drupal.org/project/resmushit) or a local application like [ImageOptim.](https://imageoptim.com) or [OptiPNG](http://optipng.sourceforge.net/).
 

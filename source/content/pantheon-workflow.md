@@ -30,7 +30,7 @@ Content refers to your site's files and the database. In this context, files are
 
 ## Code Moves Up, Content Moves Down
 
-![Dev Test and Live icon](../images/workflow.png)
+![Dev Test and Live icon](../images/code-workflow.png)
 
 The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 

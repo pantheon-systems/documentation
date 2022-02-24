@@ -35,10 +35,11 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.$env -- plugin install pantheon-hud --activate
  ```
 
-1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
+1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
- terminus env:deploy $site.test --sync-content --cc --updatedb --note="Install Pantheon HUD plugin"
+ terminus env:deploy $site.test --sync-content --updatedb --note="Install Pantheon HUD plugin"
+ terminus env:clear-cache <site>.test
  ```
 
   If you're working from a Multidev environment, merge to Dev first.
@@ -49,10 +50,11 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.test -- plugin activate pantheon-hud
  ```
 
-1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
+1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
- terminus env:deploy $site.live --cc --note="Install Pantheon HUD plugin"
+ terminus env:deploy $site.live --note="Install Pantheon HUD plugin"
+ terminus env:clear-cache <site>.live
  ```
 
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
@@ -61,7 +63,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.live -- plugin activate pantheon-hud
  ```
 
-All environments will now show the following indicator for logged-in users with the `manage_options` capability:
+All environments will now show the following indicator for users who are logged in with the `manage_options` capability:
 
 ![Pantheon HUD](../images/pantheon-hud.png)
 
@@ -107,7 +109,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
     if (!defined('PANTHEON_ENVIRONMENT')) {
         $config['environment_indicator.indicator']['name'] = 'Local';
-        $config['environment_indicator.indicator']['bg_color'] = '#808080';
+        $config['environment_indicator.indicator']['bg_color'] = '#505050';
         $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
       }
       // Pantheon Env Specific Config
@@ -115,28 +117,28 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
         switch ($_ENV['PANTHEON_ENVIRONMENT']) {
           case 'lando': // Localdev or Lando environments
             $config['environment_indicator.indicator']['name'] = 'Local Dev';
-            $config['environment_indicator.indicator']['bg_color'] = '#808080';
+            $config['environment_indicator.indicator']['bg_color'] = '#990055';
             $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
             break;
           case 'dev':
             $config['environment_indicator.indicator']['name'] = 'Dev';
-            $config['environment_indicator.indicator']['bg_color'] = '#d25e0f';
+            $config['environment_indicator.indicator']['bg_color'] = '#307b24';
             $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
             break;
           case 'test':
             $config['environment_indicator.indicator']['name'] = 'Test';
-            $config['environment_indicator.indicator']['bg_color'] = '#c50707';
+            $config['environment_indicator.indicator']['bg_color'] = '#b85c00';
             $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
             break;
           case 'live':
             $config['environment_indicator.indicator']['name'] = 'Live!';
-            $config['environment_indicator.indicator']['bg_color'] = '#4C742C';
+            $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
             $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
             break;
           default:
             // Multidev catchall
             $config['environment_indicator.indicator']['name'] = 'Multidev';
-            $config['environment_indicator.indicator']['bg_color'] = '#efd01b';
+            $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
             $config['environment_indicator.indicator']['fg_color'] = '#000000';
             break;
         }
@@ -159,7 +161,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
       if (!defined('PANTHEON_ENVIRONMENT')) {
           $conf['environment_indicator_overwritten_name'] = 'Local';
-          $conf['environment_indicator_overwritten_color'] = '#808080';
+          $conf['environment_indicator_overwritten_color'] = '#505050';
           $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
       }
       // Pantheon Env Specific Config
@@ -167,28 +169,28 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
           switch ($_ENV['PANTHEON_ENVIRONMENT']) {
             case 'lando': // Localdev or Lando environments
               $config['environment_indicator.indicator']['name'] = 'Local Dev';
-              $config['environment_indicator.indicator']['bg_color'] = '#808080';
+              $config['environment_indicator.indicator']['bg_color'] = '#990055';
               $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
               break;
             case 'dev':
               $conf['environment_indicator_overwritten_name'] = 'Dev';
-              $conf['environment_indicator_overwritten_color'] = '#d25e0f';
+              $conf['environment_indicator_overwritten_color'] = '#307b24';
               $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             case 'test':
               $conf['environment_indicator_overwritten_name'] = 'Test';
-              $conf['environment_indicator_overwritten_color'] = '#c50707';
+              $conf['environment_indicator_overwritten_color'] = '#b85c00';
               $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             case 'live':
               $conf['environment_indicator_overwritten_name'] = 'Live!';
-              $conf['environment_indicator_overwritten_color'] = '#4C742C';
+              $conf['environment_indicator_overwritten_color'] = '#e7131a';
               $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             default:
               //Multidev catchall
               $conf['environment_indicator_overwritten_name'] = 'Multidev';
-              $conf['environment_indicator_overwritten_color'] = '#efd01b';
+              $conf['environment_indicator_overwritten_color'] = '#e7131a';
               $conf['environment_indicator_overwritten_text_color'] = '#000000';
               break;
           }
@@ -199,18 +201,20 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   </TabList>
 
-1. Deploy the module to the Test environment within the Site Dashboard or with Terminus:
+1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
- terminus env:deploy $site.test --sync-content --cc --updatedb --note="Install and configure Environment Indicator"
+ terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
+ terminus env:clear-cache <site>.test
  ```
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
-1. Deploy the module to the Live environment within the Site Dashboard or with Terminus:
+1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
   ```bash{promptUser: user}
-  terminus env:deploy $site.live --cc --updatedb --note="Install and configure Environment Indicator"
+  terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
+  terminus env:clear-cache <site>.live
   ```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.

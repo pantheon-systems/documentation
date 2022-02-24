@@ -340,7 +340,7 @@
   date: 2019-02-14
   url: https://github.com/pantheon-systems/localdev/releases/tag/v0.3.0
   instructions: >
-    You will _likely_ although not neccesarily want to take the following actions after updating to this version:
+    You will _likely_ although not necessarily want to take the following actions after updating to this version:
 
     * Go into Localdev's Configuration pane and initiate a _Factory Reset_
     * Remove the _entire_ Pantheon Localdev config directory `rm -rf ~/.pantheonlocaldev/`
@@ -410,7 +410,7 @@
 
     * Added some basic from-the-internet screenshots to the site list [#20](https://github.com/pantheon-systems/localdev/issues/20)
     * Added a stubbed out loading screen with content TBD [#30](https://github.com/pantheon-systems/localdev/issues/30)
-    * Changed search to be case insensitive, white-space agnositc and inclusive [#48](https://github.com/pantheon-systems/localdev/issues/48)
+    * Changed search to be case insensitive, white-space agnostic and inclusive [#48](https://github.com/pantheon-systems/localdev/issues/48)
     * Improved default site screen to be got-sites aware [#27](https://github.com/pantheon-systems/localdev/issues/27)
     * Set a minimum screen size for the app window [#64](https://github.com/pantheon-systems/localdev/issues/64)
     * Updated autoupdate UX to use Bootstrap modals instead of nasty native JS alerts dialogs [#58](https://github.com/pantheon-systems/localdev/issues/58)

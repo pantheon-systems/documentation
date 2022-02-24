@@ -39,7 +39,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/.gitignore).
 
 #### Local Drupal configurations
 
@@ -51,7 +51,7 @@ mv sites/default/{settings.php,settings.local.php}
 chmod u-w sites/default/{settings.local.php,.}
 ```
 
-Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
 
 </Accordion>
 
@@ -61,7 +61,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, or WordPress,), and click **Continue**:
+1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, Drupal 9, or WordPress,), and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 
@@ -159,7 +159,15 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
    - `vendor`
    - `sites`, excluding `sites/default/files`.
 
-  Refer to the "Base-Level Directories" section of [Drupal 8 Directory Structure](https://www.drupal.org/docs/8/understanding-drupal-8/directory-structure) for more details.
+  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+
+  </Tab>
+
+  <Tab title="Drupal 9" id="d9-code">
+
+  Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
+
+  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
 
   </Tab>
 
@@ -317,7 +325,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Over 500MBs" id="500mbsplus">
 
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
 

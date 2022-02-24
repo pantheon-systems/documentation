@@ -22,15 +22,20 @@ There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're buildin
 
 See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) docs to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.
 
+<<<<<<< HEAD
 ## Migrate or Upgrade an Existing Site to Drupal 9 With Integrated Composer
+=======
+## Migrate or Upgrade an Existing Site to Drupal 9 With Integrated Composer on Pantheon
+>>>>>>> 26c3c896701bf299182c1f49e3daac23f55c953a
 
 <TabList>
 
 <Tab title="On Pantheon" id="on-pantheon" active={true}>
 
-If you are using:
+If you use:
 
-- Build Tools
+- Build Tools (assumes Composer?)
+>>>>>>> 26c3c896701bf299182c1f49e3daac23f55c953a
   - [Continuous Integration](/guides/drupal-9-migration/build-tools-to-d9-build-tools)
   - No Continuous Integration
 
@@ -46,13 +51,11 @@ If you are using:
 
 - [Drops-8](/guides/drupal-9-migration/migrate-manual-d9)
 
-
-
 </Tab>
 
 <Tab title="Not on Pantheon" id="not-on-pantheon">
 
-If you are using:
+If you use:
 
 - Drupal 8
   - Composer
@@ -63,7 +66,6 @@ If you are using:
   - Composer
     - [Yes](/guides/drupal-9-migration/drupal-9-to-pantheon)
     - [No](/guides/drupal-9-migration/upgrade-to-d9)
-
 
 </Tab>
 

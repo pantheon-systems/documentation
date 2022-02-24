@@ -30,7 +30,7 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
   This command works on Linux, MacOS, and Windows 10.
 
-1. Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa`. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
+  Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa` as is. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
 1. A passphrase is recommended to provide greater security, but can conflict with tools that cannot handle them.
 
@@ -46,6 +46,19 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
    ```bash{promptUser: winshell}
    type .ssh\id_rsa.pub
+   ```
+
+1. Run `eval` to start the agent. The `Agent pid` output confirms it has started:
+
+   ```bash{outputLines: 2}
+   eval `ssh-agent`
+   Agent pid 86810
+   ```
+
+1. Add the newly created key to the ssh-agent:
+
+   ```bash{promptUser: user}
+   ssh-add ~/.ssh/id_rsa
    ```
 
 ## Add Your SSH Key to Pantheon
@@ -101,6 +114,26 @@ If you have active sites and no keys remaining, you can still access the sites. 
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
+
+### Connections Fail With: no matching host key type found. Their offer: ssh-rsa
+
+[OpenSSH 8.8](https://www.openssh.com/txt/release-8.8) disables RSA signatures like the key type Pantheon uses.
+
+While we are working to remedy this on the platform, OpenSSH 8.8 will return this error for CLI commands:
+
+```shell
+Unable to negotiate with 203.0.113.123 port 2222: no matching host key type found. Their offer: ssh-rsa
+```
+
+**Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
+
+```none:title=~/.ssh/config
+Host *.drush.in
+    # The settings on the next two lines are temporary until Pantheon updates the available key types.
+    # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+```
 
 ### Control Path Error
 

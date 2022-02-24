@@ -31,6 +31,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
 
+
 ### Themes
 
 * In your theme, use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
@@ -39,6 +40,11 @@ This article provides suggestions, tips, and best practices for developing and m
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
+  
+#### Manage License Keys for Themes or Plugins
+
+There are many plugins and themes in WordPress that require license keys. Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments. 
+
 
 ## Testing
 
@@ -118,11 +124,15 @@ This method has the advantage of being toggleable without deploying code, by act
 
 1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
 
+## Avoid WordPress Login Attacks
+
+<Partial file="wp-login-attacks.md" />
+
 ## Security Headers
 
 Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
 
-There are plugins for WordPress that do not require `.htaccess` to set security headers (like [GD Security Headers](https://wordpress.org/plugins/gd-security-headers/) or [HTTP headers to improve web site security](https://wordpress.org/plugins/http-security/)), but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
+There are plugins for WordPress that do not require `.htaccess` to set security headers (like [GD Security Headers](https://wordpress.org/plugins/gd-security-headers/)), but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 
 Adding code like the example below in a plugin (or [mu-plugin](/mu-plugin)) can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
 
@@ -135,7 +145,7 @@ function additional_securityheaders( $headers ) {
     $headers['X-Content-Type-Options']      = 'nosniff';
     $headers['X-XSS-Protection']            = '1; mode=block';
     $headers['Permissions-Policy']          = 'geolocation=(self "https://example.com") microphone=() camera=()';
-    $headers['Content-Security-Policy']     = 'script-src "self"';
+    $headers['Content-Security-Policy']     = "script-src 'self'";
     $headers['X-Frame-Options']             = 'SAMEORIGIN';
   }
 

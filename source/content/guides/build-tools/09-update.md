@@ -84,4 +84,4 @@ repositories": [
 
   ![Composer update pr](../../../images/pr-workflow/composer-update-pr.png)
 
-Use this process to update any dependency required by your project's `composer.json` file. The site should *never* receive Pantheon's One-click updates in the Pantheon Site Dashboard, Drupal's Admin interface, or Drush to update core, as none of these techniques modify the `composer.json` file. You must update core using Composer exclusively.
+Use this process to update any dependency required by your project's `composer.json` file. The site should *never* receive Pantheon's one-click updates in the Pantheon Site Dashboard, Drupal's Admin interface, or Drush to update core, as none of these techniques modify the `composer.json` file. You must update core using Composer exclusively.
