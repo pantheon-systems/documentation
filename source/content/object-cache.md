@@ -357,8 +357,7 @@ OK
 
 ### Clear Cache with WP Redis
 
-When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache
-](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin or the Pantheon dashboard.
+When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin or the Pantheon dashboard.
 
 ### Check the Number of Keys in Cache
 
