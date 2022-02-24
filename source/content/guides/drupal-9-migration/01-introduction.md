@@ -22,37 +22,37 @@ There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're buildin
 
 See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) docs to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.
 
-## Migrate or Upgrade an Existing Site to Drupal 9 With Integrated Composer on Pantheon
+## Migrate or Upgrade an Existing Site to Drupal 9 With Integrated Composer
 
 <TabList>
 
 <Tab title="On Pantheon" id="on-pantheon" active={true}>
 
-Utilize the info on this tab if your site is currently on Pantheon.
+If you are using:
 
-Here's how to migrate your site if you are using:
-
-- Build Tools (assumes Composer?)
+- Build Tools
   - [Continuous Integration](/guides/drupal-9-migration/build-tools-to-d9-build-tools)
   - No Continuous Integration
 
 - Composer
-  - With [Integrated Composer](//guides/drupal-9-migration/upgrade-to-d9)
+  - [With Integrated Composer](/guides/drupal-9-migration/upgrade-to-d9)
   - Without Composer
     - [On an Existing Site](/guides/drupal-9-migration/upgrade-to-d9)
     - [New Site](/guides/drupal-9-migration/migrate-manual-d9)
 
 - Custom Upstream
-  - With Custom Upstream
+  - [With Custom Upstream](/guides/drupal-9-migration/integrated-composer-convert-custom)
   - [Without Custom Upstream](/migrate#migrate-existing-sites)
+
+- [Drops-8](/guides/drupal-9-migration/migrate-manual-d9)
+
+
 
 </Tab>
 
 <Tab title="Not on Pantheon" id="not-on-pantheon">
 
-Utilize the info on this tab if your site is not currently on Pantheon.
-
-Here's how to migrate your site if you are using:
+If you are using:
 
 - Drupal 8
   - Composer
