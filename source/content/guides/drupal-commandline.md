@@ -1,6 +1,6 @@
 ---
 title: Create a Drupal Site From the Command Line Using Terminus and Drush
-description: Learn how to add modules, and manage configuration between Pantheon environments.
+description: Learn how to manage configuration between Pantheon environments using the command line.
 cms: "Drupal"
 categories: [get-started]
 tags: [terminus, site, cli]
@@ -12,7 +12,7 @@ date: 2/23/2022
 
 [Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
 
-This guide will walk you through using Drush and Terminus in the command line to create a new Drupal site, add modules, create content, and move configurations between Pantheon environments.
+This guide walks you through using Drush and Terminus in the command line to create a new Drupal site and move configurations between Pantheon environments.
 
 ## Before You Begin
 
@@ -63,7 +63,7 @@ The next few sections of this guide use the example variables `steve-new-site` a
   terminus site:create steve-new-site "Steve's New Site" 
   ```
 
-  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organization name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
+   Add the `--org` option to the command above and pass the Organization name, label, or ID to associate this site with an Organization. Use the `site:org:add` command to associate an existing site with an Organization.
 
 1. Open your new Site Dashboard in a browser:
 
@@ -71,7 +71,7 @@ The next few sections of this guide use the example variables `steve-new-site` a
   terminus dashboard:view steve-new-site
   ```
 
-  Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard.
+  Keep this window open to see the changes you are making in Terminus appear almost immediately in your Site Dashboard.
 
 1. Use the Drush [`site-install`](https://drushcommands.com/drush-9x/) command to install Drupal on the Dev environment:
 
@@ -103,21 +103,21 @@ The next few sections of this guide use the example variables `steve-new-site` a
 
 At this point you are probably tired of replacing `steve-new-site` in every command.
 
-1. Instead of typing the site name, set your site name to a variable that you can copy/paste for the remainder of the commands:
+1. Set your site name to a variable to copy/paste it for the remainder of the commands:
 
   ```bash{promptUser: user}
   export TERMINUS_SITE=steve-new-site
   ```
 
-  This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `steve-new-site`. Anytime we use the variable name it's replaced in the executed command with the value.
+  This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `steve-new-site`. The variable name is replaced in the executed command with the value whenever you use the variable name.
 
-1. You can test this by echoing your variable:
+1. Test this by echoing your variable:
 
   ```bash{promptUser: user}
   echo $TERMINUS_SITE
   ```
 
-  You can now copy and paste the remainder of these commands without replacing the site name, as they use the `$TERMINUS_SITE` variable.
+  Copy and paste the remainder of these commands without replacing the site name, as they use the `$TERMINUS_SITE` variable.
 
 1. Run the code below to get the connection information for the Dev environment:
 
@@ -129,13 +129,13 @@ At this point you are probably tired of replacing `steve-new-site` in every comm
 
 We recommend that you use [Integrated Composer](/integrated-composer) to install and manage your modules. Integrated Composer is a Pantheon platform feature that extends Composer functionality to Drupal's core files, and treats them as a managed dependency. Integrated Composer let's you perform one-click updates from the Dashboard for upstream updates and Composer dependencies.
 
-You can also manage all modules with [Composer](/composer), or with Pantheon's [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin), which runs Composer commands in your development environment. 
+You can also manage all modules with [Composer](/composer), or with Pantheon's [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin), which runs Composer commands in your development environment.
 
 ## Managing Content, Configuration, and Code Across Environments
 
 [Configuration management is a complex topic with its own detailed recommendations](/drupal-9-configuration-management). For this guide, all you need to know is that by default, Drupal 9 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to Git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
 
-In the lifecycle of managing a site, you can expect content editors to add new material to the live environment. That content needs to be brought down into the test and development environments from time to time so you can build and test features with fresh material from the live environment.
+In the lifecycle of managing a site, content editors will add new material to the Live environment. Move updated content into the Test and Dev environments from time to time to build and test features with fresh material from the Live environment.
 
 ## See Also
 
