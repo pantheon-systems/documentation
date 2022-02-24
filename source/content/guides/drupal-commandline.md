@@ -6,7 +6,7 @@ categories: [get-started]
 tags: [terminus, site, cli]
 type: guide
 permalink: docs/guides/drupal-commandline
-contributors: [stevector]
+contributors: [stevector, whitneymeredith]
 date: 2/23/2022
 ---
 
@@ -127,173 +127,15 @@ At this point you are probably tired of replacing `steve-new-site` in every comm
 
 ## Install Drupal Modules
 
-This section provides steps on how to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel).
+We recommend that you use [Integrated Composer](/integrated-composer) to install and manage your modules. Integrated Composer is a Pantheon platform feature that extends Composer functionality to Drupal's core files, and treats them as a managed dependency. Integrated Composer let's you perform one-click updates from the Dashboard for upstream updates and Composer dependencies.
 
-You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module running in the Dev environment and off in Test and Live environments. For this exercise on a Sandbox site, you can have the modules installed in all three environments.
-
-<Alert title="Note" type="info">
-
-Some Drupal developers use [Composer](/composer) to manage all modules. You can also use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, this guide only provides steps for downloading modules with Drush.
-
-</Alert>
-
-1. Download and install the latest stable release of the `devel` package from [drupal.org](https://www.drupal.org/):
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- pm-download devel
-  ```
-
-1. Review the file changes:
-
-  ```bash{promptUser: user}
-  terminus env:diffstat $TERMINUS_SITE.dev
-  ```
-
-1. Commit your changes to the Dev environment:
-
-  ```bash{promptUser: user}
-  terminus env:commit  $TERMINUS_SITE.dev --message="Adding devel module"
-  ```
-
-1. Enable the modules:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate webprofiler -y
-  ```
-
-  All of these modules are helpful during active development. Devel Generate is used in this walkthrough to create nodes on the Live environment.
-
-1. Sign in to your Dev environment using the following code: 
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- user-login
-  ```
-
-  The footer displays helpful development information through the newly installed `webprofiler` module.
-
-1. Export the configuration in the Dev environment:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- config-export -y
-  ```
-
-1. Commit the changes:
-
-  ```bash{promptUser: user}
-  terminus env:commit  $TERMINUS_SITE.dev --message="export of config files"
-  ```
-
-1. Deploy the changes to the Test environment, and clear the site cache:
-
-  ```bash{promptUser: user}
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying exported config to enable modules"
-  terminus env:clear-cache $TERMINUS_SITE.test
-  ```
-
-  <Alert title="Note" type="info">
-
-  The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added content and files in the Live environment. For thorough testing, ensure those updates are present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
-
-  </Alert>
-
-1. Import the  `yml` configuration files now present in the Test environment to the  database with the following command: 
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.test -- config-import -y
-  ```
-
-1. Sign in to Drupal in the Test environment to see the enabled modules:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.test -- user-login
-  ```
-
-1. Sign in to Drupal in the Live environment to see the modules that aren't there yet:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.live -- user-login
-  ```
-
-  Now that you are signed in to all three environments you should see the development footer in Dev and Test but not Live.
-
-1. Push your code changes to the Live environment, and clear the site cache:
-
-  ```bash{promptUser: user}
-  terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying exported config to enable modules"
-  terminus env:clear-cache $TERMINUS_SITE.live
-  ```
-
-1. Import the configuration on the Live environment:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.live -- config-import -y
-  ```
-
-  Once this command completes you will be able to refresh the Live environment in your browser and see the development footer.
+You can also manage all modules with [Composer](/composer), or with Pantheon's [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin), which runs Composer commands in your development environment. 
 
 ## Managing Content, Configuration, and Code Across Environments
 
-[Configuration management is a complex topic with its own detailed recommendations](/drupal-8-configuration-management). For this guide, all you need to know is that by default, Drupal configuration is stored in the database and can be cleanly exported to `yml` files. After you export to files and commit to Git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
+[Configuration management is a complex topic with its own detailed recommendations](/drupal-8-configuration-management). For this guide, all you need to know is that by default, Drupal configuration is stored in the database and can be cleanly exported to `yml` files. After you export to files and commit to Git, these configuration changes can be deployed to different environments (like test and live) where they can then be imported to the database.
 
-In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment. That content needs to be brought down into the Test and Dev environments from time to time so you can build and test features with fresh material from Live.
-
-1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `devel-generate:content` command](https://www.drupal.org/docs/contributed-modules/devel/drush-commands#s-devel-generate):
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.live -- generate-content 25
-  ```
-
-1. Copy the database and media files from Live in to the Dev environment:
-
-  ```bash{promptUser: user}
-  terminus env:clone-content $TERMINUS_SITE.live dev
-  ```
-
-1. Make some configuration change on the Dev environment, such as enabling the [Views Glossary](https://www.drupal.org/project/views_glossary) module:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- views-enable glossary
-  ```
-
-1. Export the configuration change so it can be managed in code:
-
-  ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- config-export -y
-  ```
-
-1. Commit your code changes to the Dev environment:
-
-  ```bash{promptUser: user}
-  terminus env:commit $TERMINUS_SITE.dev --message="Enabling glossary View"
-  ```
-
-1. Check the Test environment before you deploy to get a deeper understanding of this workflow.
-
-  Visit `/glossary` and `/admin/content` in your Test environment. You should see a 404 message for the glossary page and the administrative content list should not contain the articles and pages that were made on Live. After you deploy the code in the next step, you should see something different on both URLs.
-
-1. Deploy code, clear the site cache, and import configuration changes to Test:
-
-  ```bash{outputLines: 2}
-  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying glossary View"
-  terminus env:clear-cache $TERMINUS_SITE.test
-  terminus drush $TERMINUS_SITE.test -- config-import -y
-  ```
-
-1. Check the Test environment and visit `/glossary` and `/admin/content` again. You should see both the glossary view and a full list of content on the administrative page.
-
-1. Deploy to the Live environment, clear the site cache, and import the changes:
-
-  ```bash{outputLines: 2}
-  terminus env:deploy $TERMINUS_SITE.live --updatedb --note="Deploying glossary View"
-  terminus env:clear-cache $TERMINUS_SITE.live
-  terminus drush $TERMINUS_SITE.live -- config-import -y
-  ```
-
-  With the change to the glossary View deployed and imported on the environment, you should be able to see the glossary page (`/glossary`).
-
-## The Power of Terminus and Drush
-
-If you're a developer who lives in the command line, you now see the power of Terminus and Drush. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like Drush (and WP-CLI for WordPress) give you the power to manage the inner workings of your Drupal-powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
+In the lifecycle of managing a site, you can expect content editors to add new material to the live environment. That content needs to be brought down into the test and development environments from time to time so you can build and test features with fresh material from the live environment.
 
 ## See Also
 
