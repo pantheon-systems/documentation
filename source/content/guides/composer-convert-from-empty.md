@@ -42,7 +42,12 @@ The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and f
 
 - Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, **you should prepend the paths in this document with "web" as needed**.
 
-Note: The steps in this process migrate a site, so the new site will no longer maintain the site's existing commit history.
+<Alert title="Note" type="info">
+
+  The steps in this process migrate a site and it's content, but not the commit history. The new site will not maintain the site's existing commit history.
+
+</Alert>
+
 
 ## Prepare the Local Environment
 
