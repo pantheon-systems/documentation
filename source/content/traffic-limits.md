@@ -55,7 +55,7 @@ Website traffic is an important indicator of a successful website. Analytics sui
 
 <Alert title="Note"  type="info" >
 
-Because it's a metric of visitors and not data transfer, Google Analytics doesn’t count most bots and search engines. In addition, Google Analytics only counts actual pages loaded in a browser; if there are AJAX requests, or the requests aren't from a browser, they may not get counted by Google Analytics.
+Google Analytics doesn’t count most bots and search engines because it's a metric of visitors and not data transfer. AJAX requests and other requests that aren't from a browser may not be counted because Google Analytics only counts actual pages loaded in a browser.
 
 </Alert>
 
