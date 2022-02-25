@@ -2,7 +2,7 @@ You must confirm that your site meets the following requirements before you cont
 
 - Ensure your site has the [Pantheon empty repository](https://github.com/pantheon-systems/empty) in its upstream.
 
-  ### Use Terminus to Confirm the empty Upstream
+  ### Use Terminus to Confirm the Empty Upstream
 
   Run the command `terminus site:info $SITE` to display the site's basic information and properties.
  
@@ -26,4 +26,4 @@ You must confirm that your site meets the following requirements before you cont
   ------------------ -------------------------------------------------------------------------------------
   ```
 
-- The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
+- The site does not use another package and library manager, such as [Ludwig](https://www.drupal.org/project/ludwig).
