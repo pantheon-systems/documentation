@@ -177,7 +177,7 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 #### Modules and Themes
 
-Modules:
+To move modules, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master modules/custom
@@ -185,7 +185,7 @@ git mv modules/custom web/modules/
 git commit -m "Copy custom modules"
 ```
 
-Themes:
+To move themes, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master themes/custom
@@ -193,7 +193,7 @@ git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 
-Use with any other custom code you need to .
+Use the above commands with any of the custom code.
 
 #### settings.php
 
@@ -213,14 +213,9 @@ The resulting `settings.php` should have no `$databases` array.
 
 ### Additional Composer Configuration
 
-Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This may include:
+Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 
-- repositories configuration
-- minimum-stability
-- extra section
-- etc
-
-You can use the same diff command from above to find out the stuff that you need to copy:
+You can use the diff command to get the information you need to copy:
 
 ```
 git diff master:composer.json composer.json
