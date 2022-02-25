@@ -57,7 +57,9 @@ The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and f
 
 <Partial file="drupal-8-convert-to-composer-from-empty.md" />
 
-### Troubleshooting: Provided host name not valid
+### Troubleshooting
+
+#### Provided host name not valid
 
 If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
