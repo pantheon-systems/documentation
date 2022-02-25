@@ -43,7 +43,7 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
 ### Add Upgrade Status Module
 
-This step is optional; you may wait and add the Upgrade Status module to your site later.
+This step is optional. You can wait and add the Upgrade Status module to your site later.
 
 The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
 
@@ -55,7 +55,7 @@ Add the Upgrade Status module to your site with Composer:
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading.
+When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
 
 ### Copy Existing Configuration
 
