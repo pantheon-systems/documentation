@@ -159,6 +159,14 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     </Accordion>
 
+#### Other Composer Packages
+
+If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
+
+```
+git diff master:composer.json composer.json
+```
+
 #### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
@@ -169,7 +177,7 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 #### Modules and Themes
 
-Modules:
+To move modules, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master modules/custom
@@ -177,7 +185,7 @@ git mv modules/custom web/modules/
 git commit -m "Copy custom modules"
 ```
 
-Themes:
+To move themes, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master themes/custom
@@ -185,7 +193,7 @@ git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 
-Follow suit with any other custom code you need to carry over.
+Use the above commands with any of the custom code.
 
 #### settings.php
 
@@ -202,6 +210,16 @@ rm web/sites/default/original-settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
+
+### Additional Composer Configuration
+
+Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
+
+You can use the diff command to get the information you need to copy:
+
+```
+git diff master:composer.json composer.json
+```
 
 ## Deploy
 
