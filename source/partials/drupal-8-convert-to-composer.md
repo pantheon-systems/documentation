@@ -161,7 +161,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
 #### Other Composer Packages
 
-If you have added non Drupal packages to your site via Composer, you should also bring them over by running the corresponding `composer require` commands for each of those packages. You can use the following command to get the differences between the master's and your current `composer.json`. Pay special attention to the stuff marked as delete in the diff output:
+If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
 
 ```
 git diff master:composer.json composer.json
@@ -193,7 +193,7 @@ git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 
-Follow suit with any other custom code you need to carry over.
+Use with any other custom code you need to .
 
 #### settings.php
 
