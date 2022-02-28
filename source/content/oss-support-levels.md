@@ -17,7 +17,7 @@ A project in this support level is a product or feature set that is complete and
 
 ## Actively Maintained
 
-A project in this support level has been publicly launched and has several eyes over it ensuring that everything works as expected. Anyone could use this project and create issues and Pull Requests in the repository as needed and we will respond to them in a timely manner. Support in this stage is provided by the Customer Success Engineering team.
+A project in this support level has been publicly launched and has several eyes over it ensuring that everything works as expected. Anyone could use this project and create issues and Pull Requests in the repository as needed and we will respond to them in a timely manner. Support in this stage is available through regular Pantheon channels.
 
 ## Minimal Support
 
