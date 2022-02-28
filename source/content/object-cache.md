@@ -202,7 +202,7 @@ TRUNCATE TABLE `<tablename>`;
 
 <Tab title="Drupal 9 / Composer-managed" id="d9-install">
 
-1. Clone the code repository and from the project root, run the following:
+1. Clone the code repository and, from the project root, run the following:
 
    ```shell{promptUser: user}
    terminus connection:set $SITE.dev git
@@ -220,7 +220,7 @@ TRUNCATE TABLE `<tablename>`;
    terminus env:commit $SITE.dev --message="Enable Redis, export configuration"
    ```
 
-1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site:
+1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are **mandatory**, required Redis configurations for every site:
 
    ```php:title=sites/default/settings.php
    // Configure Redis
@@ -248,7 +248,7 @@ TRUNCATE TABLE `<tablename>`;
 
    <Alert title="Note" type="info">
 
-   The above Redis cache configuration should be placed in `sites/default/settings.php` rather than `settings.pantheon.php` to avoid conflicts with future upstream updates.
+   The above Redis cache configuration should be placed in `sites/default/settings.php`, rather than `settings.pantheon.php`, to avoid conflicts with future upstream updates.
 
    </Alert>
 
