@@ -37,4 +37,4 @@ A project in this support level is usually a Pantheon employee initiative. It pr
 
 ## Deprecated
 
-A project in this support level is no longer supported by Pantheon. This means it was either retired or replaced by another project. There may be details about this in the project README.md or you could try asking us in Slack if you are in a need for the replacement or guidance about where to go.
+A project in this support level is no longer supported by Pantheon. This means it was either retired or replaced by another project. There may be details about this in the project README.md or you could try asking us in the [Community Slack](https://slackin.pantheon.io/) if you are in a need for the replacement or guidance about where to go.
