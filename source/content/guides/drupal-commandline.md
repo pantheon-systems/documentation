@@ -19,7 +19,7 @@ This guide walks you through using Drush and Terminus in the command line to cre
 Be sure that you:
 
 - Are familiar with your operating system's command line.
-- Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
+- Are using a Unix-based system (Linux or Mac OS X). Windows commands will vary slightly.
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 - Have an [SSH key](/ssh-keys) generated, added to your Pantheon dashboard, and loaded in to your local SSH agent.
 
@@ -47,7 +47,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
   terminus site:list
   ```
 
-If you see your Pantheon sites, then installation and authentication were successful! When you are comfortable with Terminus, you may find it faster to use than the browser.
+If you see your Pantheon sites, then installation and authentication were successful! When you are comfortable with Terminus, you will find it faster to use than the browser.
 
 ## Create Your Site and Initialize Environments
 
@@ -60,10 +60,10 @@ The next few sections of this guide use the example variables `steve-new-site` a
 1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create steve-new-site "Steve's New Site" 
+  terminus site:create steve-new-site "Steve's New Site" "897fdf15-992e-4fa1-beab-89e2b5027e" -- org "Example Organization"
   ```
 
-   Add the `--org` option to the command above and pass the Organization name, label, or ID to associate this site with an Organization. Use the `site:org:add` command to associate an existing site with an Organization.
+   The `--org` option in the command above passes the Organization name, label, or ID to associate the site with an Organization. Use the `site:org:add` command to associate an existing site with an Organization.
 
 1. Open your new Site Dashboard in a browser:
 
@@ -79,9 +79,9 @@ The next few sections of this guide use the example variables `steve-new-site` a
   terminus drush steve-new-site.dev -- site-install -y
   ```
   
-  If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
+   You will need to [update your SSH configuration](/ssh-keys#control-path-error) if you get the `ControlPath too long` error message.
 
-  Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
+1. Use the password included in the output of the command above to sign in to the site with your browser, or run the following command to get a one-time login link:
 
    ```bash{promptUser: user}
    terminus drush  steve-new-site.dev  -- user-login
@@ -103,7 +103,7 @@ The next few sections of this guide use the example variables `steve-new-site` a
 
 At this point you are probably tired of replacing `steve-new-site` in every command.
 
-1. Set your site name to a variable to copy/paste it for the remainder of the commands:
+1. Set your site name to a variable to copy and paste it for the remainder of the commands:
 
   ```bash{promptUser: user}
   export TERMINUS_SITE=steve-new-site
