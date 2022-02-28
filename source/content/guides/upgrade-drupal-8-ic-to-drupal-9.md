@@ -1,6 +1,6 @@
 ---
-title: Upgrade from Drupal 8 with Integrated Composer to Drupal 9
-description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to Drupal
+title: Upgrade Drupal 8 with Integrated Composer to Drupal 9
+description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to Drupal 9.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -10,7 +10,7 @@ contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2022-02-25"
 ---
 
-This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site with Integrated Composer, to a Drupal 9 site with Integrated Composer.
+This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a Drupal 9 site using Integrated Composer.
 
 ## Overview
 
@@ -24,17 +24,22 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## Will This Guide Work for Your Site?
 
-You must confirm that your site meets the following requirements before you continue:
+This guide will work for your site as long as you confirm that your site meets the following requirements before you continue:
 
-- Ensure your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
+### Verify the Repository
 
-  ### Use Terminus to Confirm the drupal-recommended Upstream
+1. Check that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
 
-  Run the command `terminus site:info $SITE` to display the site's basic information and properties.
+1. Use Terminus to Confirm the drupal-recommended Upstream:
 
- The following values indicate that a site is using a `drupal-recommended` upstream:
-  * The `Framework` is `drupal8`
-  * The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended`
+  ```bash
+  terminus site:info $SITE 
+  ```
+
+  The following values indicate that a site is using the `drupal-recommended` upstream:
+
+  - The `Framework` is `drupal8`
+  - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended`
 
   The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `drupal-recommended`:
 
@@ -51,7 +56,6 @@ You must confirm that your site meets the following requirements before you cont
   ...
   ------------------ -------------------------------------------------------------------------------------
   ```
-
 
 ## Prepare the Local Environment
 
