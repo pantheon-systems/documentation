@@ -27,14 +27,14 @@ A project in this support level has been publicly launched and has several eyes 
 
 A project in this support level rarely receives updates but if there is an important bug or security update we will make our best effort to address it in a timely manner.
 
-## Unsupported
-
-A project in this support level rarely receives updates and people should not expect replies to issues or pull requests. You are encouraged to NOT use a project in this support level.
-
 ## Unofficial
 
 A project in this support level is usually a Pantheon employee initiative. It probably does not have any resource allocated for maintenance and support is not guaranteed for this project because it depends on the project maintainer available time if they are still in the company.
 
+## Unsupported
+
+A project in this support level may be in active use internally by Pantheon; although the source code is provided, use is at your own risk, and support is not available.
+
 ## Deprecated
 
-A project in this support level is no longer supported by Pantheon. This means it was either retired or replaced by another project. There may be details about this in the project README.md or you could try asking us in the [Community Slack](https://slackin.pantheon.io/) if you are in a need for the replacement or guidance about where to go.
+A project in this support level is no longer supported by Pantheon. This means it was either retired or replaced by another project. There may be details about this in the project README.md or you could try asking us in the [Community Slack](https://slackin.pantheon.io/) if you are in a need for the replacement or guidance about where to go. You are encouraged to NOT use a project in this support level.
