@@ -7,13 +7,9 @@ tags: [collaborate]
 
 At Pantheon we love Open Source, we have created lots of public repositories in our [Github account](https://github.com/orgs/pantheon-systems/repositories) and we have started tagging them with support level badges. This page describes each of those levels and what should you expect when using those repositories.
 
-## Pilot
-
-A project in Pilot support level is a new product or feature set that we are working on. The code is publicly available but if there are any accompaning platform components you will need an invite through the project pilot program. Even though we make our best effort, there may be bugs and we need your help to identify them so that we can fix them. The product or feature set may not be feature complete and development is still going on. Support in this stage is provided by the Engineering team, and is only available to members of the program.
-
 ## Early Acess
 
-Early Access projects are similar to Pilot projects, but are a little more mature, and have been opened up for use by a larger number of users. An invitation is still necessary to join an Early Access program.
+A project in Pilot support level is a new product or feature set that we are working on. The code is publicly available but if there are any accompaning platform components you will need an invite through the project pilot program. Even though we make our best effort, there may be bugs and we need your help to identify them so that we can fix them. The product or feature set may not be feature complete and development is still going on. Support in this stage is provided by the Engineering team, and is only available to members of the program.
 
 ## Limited Availability
 
