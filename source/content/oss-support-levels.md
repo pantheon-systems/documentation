@@ -9,15 +9,15 @@ At Pantheon we love Open Source, we have created lots of public repositories in 
 
 ## Pilot
 
-A project in Pilot support level is a new product or feature set that we are working on. The code is publicly available but if there are any accompaning platform components you will need an invite through the project pilot program. Even though we make our best effort, there may be bugs and we need your help to identify them so that we can fix them. The product or feature set may not be feature complete and development is still going on. Support in this stage is provided by the Engineering team.
+A project in Pilot support level is a new product or feature set that we are working on. The code is publicly available but if there are any accompaning platform components you will need an invite through the project pilot program. Even though we make our best effort, there may be bugs and we need your help to identify them so that we can fix them. The product or feature set may not be feature complete and development is still going on. Support in this stage is provided by the Engineering team, and is only available to members of the program.
 
 ## Early Acess
 
-A project in Early Access has the key use cases ready and we are ready to get some (more) customers in to continue the testing. In this stage, the code is publicly available but if there is any accompaning platform components you will need an invite through the project Early Access program. Even though we make our best effort, there may be bugs and we need your help to identify them so that we can fix them. The full product or feature set may not be feature complete. Support in this stage is provided by the Engineering team.
+Early Access projects are similar to Pilot projects, but are a little more mature, and have been opened up for use by a larger number of users. An invitation is still necessary to join an Early Access program.
 
 ## Limited Availability
 
-A project in this support level is a product or feature set that is complete and can be used in all environments including production. Clients can use the new functionality without requiring an invite but it is an opt-in process. You are highly encouraged to report any bug you may find so that we can make a better product for everyone. Support in this stage is provided by the Customer Success Engineering team.
+A project in this support level is a product or feature set that is complete and can be used in all environments including production. Clients can use the new functionality without requiring an invite but it is an opt-in process. You are highly encouraged to report any bug you may find so that we can make a better product for everyone. Support in this stage is available through regular Pantheon channels.
 
 ## Actively Maintained
 
