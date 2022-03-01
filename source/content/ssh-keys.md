@@ -77,7 +77,11 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ### Add SSH Key - Classic Dashboard
 
-1. Log in to your Pantheon Dashboard and go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab in your User Dashboard.
+1. Log in to your Pantheon site.
+
+1. Click your username in the top right, then select **My Dashboard**.
+
+1. Open the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab in your User Dashboard.
 
 1. Click **SSH Keys**.
 
