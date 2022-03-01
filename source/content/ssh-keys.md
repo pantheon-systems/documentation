@@ -87,6 +87,8 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 1. Paste the copied public key into the **Add Key** box.
 
+1. Click the **Add Key** button.
+
   ![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
