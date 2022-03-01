@@ -18,7 +18,7 @@ Pantheon Cron runs WP-Cron jobs as an hourly task or on demand through Terminus.
 
 ## WP-Cron Overview
 
-WP-Cron is a WordPress feature that only executes jobs when the page is loaded. Jobs are executed before site content is served to the site visitor. Plugins and themes can add jobs to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.
+WP-Cron is a WordPress feature that executes jobs when the page is loaded. Jobs are executed before site content is served to the site visitor. Plugins and themes can add jobs to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.
 
 The WP-Cron feature is designed solely to handle WordPress routine jobs as part of a page load:
 
@@ -35,7 +35,7 @@ Pantheon Cron runs WP-Cron as an hourly task or on demand through Terminus. In c
 
 <Alert title="Note" type="info">
 
-Pantheon Cron will not execute jobs on inactive environments, including [sleeping development environments](/application-containers#idle-containers) and test environments.
+Pantheon Cron will not execute jobs on inactive environments, including [sleeping development](/application-containers#idle-containers) and test environments.
 
 </Alert>
 
@@ -68,7 +68,7 @@ You can also use Terminus and WP-CLI to:
 We recommend that you test WP-Cron to make sure everything is working correctly. Replace SITE_NAME with your site's name and replace ENV_NAME with the desired environment ("dev", "test", "live", or multidev branch name) when you execute the command below. 
 
 ```bash{promptUser: user}
-terminus wp <site>.<env> -- cron test
+terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 ```
 
 The result should look like this:
@@ -109,15 +109,9 @@ Disable WP-Cron's internal processing by adding following code to your `wp-confi
 define('DISABLE_WP_CRON', true);
 ```
 
-<Alert title="Note" type="info">
-
-WP-Cron executes many important jobs. Be sure to complete all the steps below.
-
-</Alert>
-
 ### Free Services
 
-You will need a service that calls a URL at regular intervals after disabling WP-Cron. The easiest way to do this is to set up an account with a free cron service:
+You will need a service that calls a URL at regular intervals after disabling WP-Cron, if you want more granular control over when Cron runs. The easiest way to do this is to set up an account with a free cron service:
 
 - [EasyCron](https://www.easycron.com/)
 - [Set Cron Job](https://www.setcronjob.com/)
@@ -152,7 +146,7 @@ Do not add a value to the `doing_wp_cron` query variable. This variable must be 
 
 Low traffic WordPress sites may experience skipped jobs because WP-Cron can't execute jobs if people are not visiting your site. This doesn't mean your page will be slow from previous jobs when someone eventually does visit your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so your site's performance is not adversely affected.
 
-Low traffic WordPress sites using Pantheon Cron may also experience skipped jobs. For example, a site that receives no traffic for twelve hours might be put to sleep, which will stop Pantheon Cron jobs. Pantheon Cron will continue to run every hour regardless of traffic for twelve hours.
+Low traffic WordPress sites are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers)for more information). Pantheon Cron jobs do not run in a sleeping environment. 
 
 ### Problems With High Traffic Sites
 
@@ -162,3 +156,5 @@ Low traffic WordPress sites using Pantheon Cron may also experience skipped jobs
 - **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between jobs, then you can end up with more than one copy of `wp-cron.php` executing.
 
 Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc. 
+
+You can also review the [Disable WP-Cron](### Disable WP-Cron) section of this doc to limit the occurrences of the above issues.
