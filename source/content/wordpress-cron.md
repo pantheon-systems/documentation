@@ -144,9 +144,9 @@ Do not add a value to the `doing_wp_cron` query variable. This variable must be 
 
 ### Problems With Low Traffic Sites
 
-Low traffic WordPress sites may experience skipped jobs because WP-Cron can't execute jobs if people are not visiting your site. This doesn't mean your page will be slow from previous jobs when someone eventually does visit your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so your site's performance is not adversely affected.
+WP-Cron will skip jobs in WordPress sites with low traffic. This doesn't mean your page will be slow from previous jobs when someone eventually visits your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so your site's performance is not adversely affected.
 
-Low traffic WordPress sites are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in a sleeping environment. 
+Low traffic WordPress sites on Pantheon are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in sleeping environments. 
 
 ### Problems With High Traffic Sites
 
