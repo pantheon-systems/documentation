@@ -125,7 +125,7 @@ A full list of the devices and their support for HTML5 is available on [https://
 
 The Global CDN only passes through an allowlisted set of cookies. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
-For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
+For example, you could set a cookie named `STYXKEY_country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
 
 In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, the Global CDN will not cache that page at all, as it cannot cache a response that contains a `Set-Cookie:` header.
 
@@ -137,21 +137,21 @@ In your code, remember to first check whether the incoming request has the `STYX
 
 **Examples of `STYXKEY` cookie names:**
 
-- `STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
+- `STYXKEY_mobile-ios`: Delivers different stylesheets and content for iOS devices
 
 - `STYXKEY_european_user`: Presents different privacy options to E.U. users
 
-- `STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
+- `STYXKEY_under21`: Part of your site markets alcohol and you want to change the content for minors
 
-- `STYXKEY-school`: Your site changes content depending on the user's school affiliation
+- `STYXKEY_school`: Your site changes content depending on the user's school affiliation
 
 **Invalid names that won't work:**
 
 - `STYXKEY`: Needs something after the `STYXKEY` text
 
-- `styxkey-android`: The text `STYXKEY` must be uppercase
+- `styxkey_android`: The text `STYXKEY` must be uppercase
 
-- `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
+- `STYX-KEY_android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
 
 - `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
