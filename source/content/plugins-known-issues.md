@@ -1035,7 +1035,7 @@ if (file_exists('/includes/prepend.php')) {
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
 	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-
+}
 ```
 
 #### Further Considerations with Wordfence: Utilizing data storage over files
