@@ -99,7 +99,7 @@ There are several plugins you can use if you want to keep an eye on WP-Cron but 
 
 ## Manage WP-Cron Externally
 
-You can use external Crons if you want more control over your site's Cron jobs, or if you don't want WP-Cron to handle jobs internally. This will solve the problems with high traffic and low traffic sites discussed in the Troubleshooting section.
+You can use external Crons if you want more control over your site's Cron jobs, or if you don't want WP-Cron or Pantheon Cron to handle jobs internally. This will solve the problems with high traffic and low traffic sites discussed in the Troubleshooting section.
 
 ### Disable WP-Cron
 
@@ -146,7 +146,7 @@ Do not add a value to the `doing_wp_cron` query variable. This variable must be 
 
 Low traffic WordPress sites may experience skipped jobs because WP-Cron can't execute jobs if people are not visiting your site. This doesn't mean your page will be slow from previous jobs when someone eventually does visit your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so your site's performance is not adversely affected.
 
-Low traffic WordPress sites are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers)for more information). Pantheon Cron jobs do not run in a sleeping environment. 
+Low traffic WordPress sites are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in a sleeping environment. 
 
 ### Problems With High Traffic Sites
 
@@ -157,4 +157,4 @@ Low traffic WordPress sites are put to sleep after either one or twelve hours pa
 
 Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc. 
 
-You can also review the [Disable WP-Cron](### Disable WP-Cron) section of this doc to limit the occurrences of the above issues.
+You can also review the [Disable WP-Cron](###disable-wp-cron) section of this doc to limit the occurrences of the above issues.
