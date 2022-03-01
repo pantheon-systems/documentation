@@ -35,7 +35,7 @@ Pantheon Cron runs WP-Cron as an hourly task or on demand through Terminus. In c
 
 <Alert title="Note" type="info">
 
-Pantheon Cron will not execute jobs on inactive environments, including [sleeping development environments](/docs/application-containers#idle-containers) and test environments.
+Pantheon Cron will not execute jobs on inactive environments, including [sleeping development environments](/application-containers#idle-containers) and test environments.
 
 </Alert>
 
