@@ -3,7 +3,7 @@ title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 categories: [get-started]
 tags: [security, dashboard, ssh]
-reviewed: "2022-03-0"
+reviewed: "2022-03-01"
 ---
 
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
