@@ -107,7 +107,7 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
 ### Rate Limiting
 
-Rate Limiting with Advanced Global CDN lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting guards critical assets including login, form, and promotional pages by adding another layer of security to your site.
+Rate Limiting with Advanced Global CDN lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
 
 The benefits of Rate Limiting include:
 
