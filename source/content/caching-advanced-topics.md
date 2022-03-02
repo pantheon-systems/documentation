@@ -155,7 +155,7 @@ In your code, remember to first check whether the incoming request has the `STYX
 
 - `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
-- `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
+- `tablet_STYXKEY`: The cookie name must start with `STYXKEY`
 
 ## Public Files and Cookies
 
