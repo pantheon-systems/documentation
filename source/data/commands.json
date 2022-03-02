@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.0.4"
+        "version": "3.0.6"
     },
     "commands": [
         {
@@ -163,24 +163,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -285,24 +267,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -415,24 +379,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -554,24 +500,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -703,24 +631,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -838,24 +748,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -953,24 +845,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -1012,7 +886,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "string"
                     },
                     "fields": {
@@ -1095,24 +969,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -1217,24 +1073,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -1360,24 +1198,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -1426,7 +1246,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "string"
                     },
                     "fields": {
@@ -1510,24 +1330,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -1558,7 +1360,7 @@
                 "backup:create <site>.<env> Creates a backup of <site>'s <env> environment.",
                 "backup:create <site>.<env> --element=<element> Creates a backup of <site>'s <env> environment's <element>.",
                 "backup:create <site>.<env> --keep-for=<days> Creates a backup of <site>'s <env> environment and retains it for <days> days.",
-                "backup:create <site>.<env> --keep-for=<days> Creates a backup of <site>'s <env> environment's <element> and retains it for <days> days."
+                "backup:create <site>.<env> --element=<element> --keep-for=<days> Creates a backup of <site>'s <env> environment's <element> and retains it for <days> days."
             ],
             "help": "Creates a backup of a specific site and environment.",
             "definition": {
@@ -1652,24 +1454,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -1806,24 +1590,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -1891,7 +1657,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -1975,24 +1741,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -2051,7 +1799,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -2134,24 +1882,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -2277,24 +2007,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -2343,7 +2055,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -2427,24 +2139,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -2493,7 +2187,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -2576,24 +2270,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -2705,24 +2381,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -2841,24 +2499,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -2970,24 +2610,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -3035,7 +2657,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -3119,24 +2741,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -3185,7 +2789,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -3269,24 +2873,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -3334,7 +2920,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -3417,24 +3003,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -3547,24 +3115,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -3669,24 +3219,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -3800,24 +3332,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -3922,24 +3436,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -4092,24 +3588,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -4157,7 +3635,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -4240,24 +3718,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -4381,24 +3841,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -4545,24 +3987,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -4610,7 +4034,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -4694,24 +4118,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -4759,7 +4165,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -4843,24 +4249,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -4909,7 +4297,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -4993,24 +4381,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -5081,7 +4451,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -5164,24 +4534,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -5298,24 +4650,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -5419,24 +4753,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -5542,24 +4858,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -5607,7 +4905,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -5690,24 +4988,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -5814,24 +5094,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -5963,24 +5225,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -6085,24 +5329,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -6216,24 +5442,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -6344,24 +5552,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -6474,24 +5664,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -6616,24 +5788,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -6738,24 +5892,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -6872,24 +6008,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -7005,24 +6123,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -7126,24 +6226,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -7263,24 +6345,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -7328,7 +6392,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -7411,24 +6475,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -7535,24 +6581,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -7650,24 +6678,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -7710,7 +6720,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -7793,24 +6803,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -7944,24 +6936,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -8077,24 +7051,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -8143,7 +7099,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -8226,24 +7182,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -8360,24 +7298,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -8493,24 +7413,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -8614,24 +7516,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -8737,24 +7621,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -8802,7 +7668,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -8886,24 +7752,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -8944,7 +7792,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -9027,24 +7875,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -9165,24 +7995,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -9231,7 +8043,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -9314,24 +8126,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -9446,24 +8240,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -9584,24 +8360,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -9680,7 +8438,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -9763,24 +8521,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -9894,24 +8634,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -9990,7 +8712,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -10073,24 +8795,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -10202,24 +8906,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -10333,24 +9019,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -10393,7 +9061,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -10476,24 +9144,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -10601,24 +9251,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -10666,7 +9298,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -10750,24 +9382,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -10816,7 +9430,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -10899,24 +9513,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -11029,24 +9625,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -11151,24 +9729,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -11272,24 +9832,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -11413,24 +9955,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -11553,24 +10077,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -11668,24 +10174,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -11725,7 +10213,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "yaml"
                     },
                     "fields": {
@@ -11808,24 +10296,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -11933,24 +10403,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -11990,7 +10442,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -12073,24 +10525,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -12208,24 +10642,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -12333,24 +10749,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -12393,7 +10791,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -12476,24 +10874,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -12590,24 +10970,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -12707,24 +11069,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -12777,7 +11121,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -12860,24 +11204,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -12990,24 +11316,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -13115,24 +11423,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -13266,24 +11556,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -13394,24 +11666,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -13550,24 +11804,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -13672,24 +11908,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -13737,7 +11955,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -13820,24 +12038,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -13941,7 +12141,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -14025,24 +12225,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -14090,7 +12272,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "string"
                     },
                     "fields": {
@@ -14173,24 +12355,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -14303,24 +12467,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -14369,7 +12515,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -14452,24 +12598,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -14582,24 +12710,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -14720,24 +12830,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -14785,7 +12877,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -14868,24 +12960,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -14998,24 +13072,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -15135,24 +13191,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -15259,24 +13297,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -15389,24 +13409,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -15510,24 +13512,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -15633,24 +13617,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -15755,24 +13721,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -15813,7 +13761,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -15896,24 +13844,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -16019,24 +13949,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -16156,24 +14068,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -16229,7 +14123,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "yaml"
                     },
                     "fields": {
@@ -16312,24 +14206,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -16450,24 +14326,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -16515,7 +14373,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -16599,24 +14457,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -16696,7 +14536,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -16779,24 +14619,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -16922,24 +14744,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -16987,7 +14791,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -17070,24 +14874,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -17192,24 +14978,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -17325,24 +15093,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -17400,7 +15150,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -17484,24 +15234,6 @@
                         "description": "Do not ask any interactive question",
                         "default": false
                     },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
-                    },
                     "define": {
                         "name": "--define",
                         "shortcut": "-D",
@@ -17559,7 +15291,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -17642,24 +15374,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -17709,7 +15423,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_export,xml,yaml",
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
                         "default": "table"
                     },
                     "fields": {
@@ -17792,24 +15506,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
@@ -17923,24 +15619,6 @@
                         "is_multiple": false,
                         "description": "Do not ask any interactive question",
                         "default": false
-                    },
-                    "simulate": {
-                        "name": "--simulate",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Run in simulated mode (show what would have happened).",
-                        "default": false
-                    },
-                    "progress-delay": {
-                        "name": "--progress-delay",
-                        "shortcut": "",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": false,
-                        "description": "Number of seconds before progress bar is displayed in long-running task collections. Default: 2s.",
-                        "default": 2
                     },
                     "define": {
                         "name": "--define",
