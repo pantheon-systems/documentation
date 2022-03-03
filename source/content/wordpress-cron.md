@@ -4,7 +4,7 @@ description: Learn how to create and run jobs using Pantheon Cron or WordPress's
 cms: "WordPress"
 categories: [automate]
 tags: [cron]
-contributors: [whitneymeredith]
+contributors: [greg-1-anderson, whitneymeredith]
 ---
 
 ## Cron Overview
@@ -80,7 +80,7 @@ Success: WP-Cron spawning is working as expected.
 This lets you know that WP-Cron is working correctly on your site. You can run any Cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is as follows:
 
 ```bash{promptUser: user}
-terminus wp <site>.<env> -- cron <your wp-cron command and switches here>
+terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your wp-cron command and switches here>
 ```
 
 All `terminus wp` commands require a site name and environment to operate.
@@ -103,7 +103,9 @@ You can use external Crons if you want more control over your site's Cron jobs, 
 
 ### Disable WP-Cron
 
-Disable WP-Cron's internal processing by adding following code to your `wp-config.php` file:
+You will need to disable WP-Cron if your upstream does not have the definition below.
+
+Add the code below to your `wp-config.php` file to disable WP-Cron's internal processing:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', true);
