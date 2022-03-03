@@ -44,7 +44,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
    - Weekly
    - Daily ([Contact Sales](https://pantheon.io/contact-sales?docs))
 
-   Then use the dropdown menu to choose the deployment destination:
+1. Use the dropdown menu to choose the deployment destination:
 
    - Dev
    - Test
@@ -60,7 +60,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
-  Click **Save** to initialize Autopilot on the Site.
+1. Click **Save** to initialize Autopilot on the Site.
 
 1. Click **Status** in the Autopilot sidebar for the current status of the testing. This process might take a while:
 
