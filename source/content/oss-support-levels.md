@@ -27,12 +27,16 @@ A project in this support level rarely receives updates but if there is an impor
 
 ## Unofficial Support
 
-A project in this support level is usually a Pantheon employee initiative. It probably does not have any resource allocated for maintenance and support is not guaranteed for this project because it depends on the project maintainer available time if they are still in the company.
+A project that has unofficial support level is usually a Pantheon employee initiative. It typically does not have resources allocated for maintenance. Support is not guaranteed for the project because it depends on the availability and afffiliation of the project maintainer.
 
 ## Unsupported 
 
-An unsupported project may be in active use internally at Pantheon. Although the source code is provided, use unsupported projects at your own risk, as support is not available.
+An unsupported project is typically only for internal use at Pantheon. Although the source code is available, use these projects at your own risk, as support is not available.
 
 ## Deprecated 
 
 A deprecated project is no longer supported by Pantheon. This means it was either retired or replaced by another project. There may be details about this in the project `README.md` or you could try asking us in the [Community Slack](https://slackin.pantheon.io/) if you are in a need for the replacement or guidance about where to go. You are encouraged to NOT use a project in this support level.
+
+
+## See Also
+- [Get Support](https://pantheon.io/docs/guides/support/)
