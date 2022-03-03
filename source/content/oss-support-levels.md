@@ -35,7 +35,7 @@ An unsupported project is typically only for internal use at Pantheon. Although 
 
 ## Deprecated 
 
-A deprecated project is no longer supported by Pantheon. This means it was either retired or replaced by another project. There may be details about this in the project `README.md` or you could try asking us in the [Community Slack](https://slackin.pantheon.io/) if you are in a need for the replacement or guidance about where to go. You are encouraged to NOT use a project in this support level.
+A deprecated project is a project that has been retired or replaced by a code base that is no longer supported by Pantheon. Details about the project can be found in the `README.md` or you could try asking us in the [Community Slack](https://slackin.pantheon.io/) if you are in a need for the replacement or guidance about where to go. Using a project that has been deprecated is not encouraged. 
 
 
 ## See Also
