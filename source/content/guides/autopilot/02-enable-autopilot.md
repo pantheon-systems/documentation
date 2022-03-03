@@ -10,7 +10,7 @@ showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2021-08-10"
+reviewed: "2022-03-01"
 ---
 
 ## Enable Autopilot
@@ -150,3 +150,9 @@ Configure Autopilot for each individual premium and paid plugins and modules. De
 ## Enable Autopilot Email Notifications
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
+
+## Turn off Autopilot
+
+Select **Never (update manually)** to turn off Autopilot for a site.
+
+![Turn off Autopilot](../../images/autopilot/Turn-off-autopilot.png)
