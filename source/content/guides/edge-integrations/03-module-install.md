@@ -126,4 +126,9 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 1. The users that have a Subscriber role can log in using the Drupal login form
 1. Editors and administrators can use the Smart CDN Preview module to masquerade as a subscribed user.
 
+Role/Subscriber use case requires a JWT module and a private key. It also requires additional configuration on the AGCDN side. It’s currently under active development and will be delivered in future phases.
 -->
+
+## Conclusion
+
+The Smart CDN and Smart CDN preview modules extend the Smart Content module's functionality, and leverage the Pantheon Edge Integrations PHP library. The above setups provide two use cases: Geolocation, and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, see the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
