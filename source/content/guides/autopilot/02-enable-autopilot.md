@@ -52,9 +52,11 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
    ![Autopilot Setup - Schedule screen. Select how frequently Autopilot should run and where successful updates should be applied.](../../../images/autopilot/autopilot-setup-schedule.png)
 
-   Click **Continue** to choose pages for screenshot comparison tests.
+1. Click **Continue** to choose pages for screenshot comparison tests.
 
-1. Add pages to track for visual regression testing. Autopilot automatically suggests up to ten URL paths during setup:
+1. Add pages to track for visual regression testing. 
+
+  Autopilot automatically suggests up to ten URL paths during setup:
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
@@ -66,13 +68,13 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
-From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, then **Manage Autopilot Settings**.
+1. From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, then **Manage Autopilot Settings**.
 
-The Autopilot Configuration page shows all the steps from the initial setup on one page.
+ The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-If the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+ Autopilot will show warnings in the sections where Composer manages updates, if the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites).
 
-Click **Save** for each section of the configuration in which you make changes.
+1. Click **Save** for each section of the configuration in which you make changes.
 
 ### Update Scope
 
@@ -84,19 +86,19 @@ Use the **On**/**Off** toggles to choose which features and elements should be t
 
 ![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-configuration-destination-frequency.png)
 
-Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
+1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
 
-- Dev
-- Test
-- Live
+  - Dev
+  - Test
+  - Live
 
-Set the **Update Frequency** to schedule Autopilot to run:
+1. Set the **Update Frequency** to schedule Autopilot to run:
 
-- Never (Update Manually)
-- Weekly
-- Monthly
+  - Never (Update Manually)
+  - Weekly
+  - Monthly
 
-Click **Save** to save the changes.
+1. Click **Save** to save the changes.
 
 ### Visual Test Screenshots
 
@@ -104,9 +106,9 @@ Add pages to track for visual regression testing, along with a percent of accept
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
-Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
+1. Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
 
-Click **Save** to save changes.
+1. Click **Save** to save changes.
 
 #### Acceptable Change
 
@@ -129,30 +131,29 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
-Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
+1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates.
 
-Select any that should be excluded, then click **Save**.
+1. Select any that should be excluded from Autopilot, then click **Save**.
 
 ### Excluded Web Elements
 
-Add any CSS selectors that you want to exclude from the visual regression tests.
+1. Add any CSS selectors that you want to exclude from the visual regression tests.
 
-![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
+  ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
-List the CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
+1. List the CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
 
-Click **Save**.
+1. Click **Save**.
 
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
-Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+Configure Autopilot for each individual premium and paid plugins and modules. You may need to provide Autopilot with access or configure the plugin or module to work with Autopilot, Depending on the plugin. 
 
 ## Enable Autopilot Email Notifications
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
 
 ## Turn off Autopilot
-
-Select **Never (update manually)** to turn off Autopilot for a site.
+Sites must be turned off individually. Select **Never (update manually)** to turn off Autopilot for a site. 
 
 ![Turn off Autopilot](../../../images/autopilot/Turn-off-autopilot.png)
