@@ -39,7 +39,7 @@ For more information about WP-CLI, visit their [GitHub page](https://github.com/
 
 This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following message:
 
-> Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php.
+`Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php.`
 
 ### Database
 
@@ -76,9 +76,9 @@ This check will display a list of exploited patterns in code, the file name that
 
 This tells you if Object Caching and Redis are enabled.
 
-If you receive an error similar to the example below, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+If you receive an error message similar to the example below, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
     
-> Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php
+`Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`
     
 ### Plugins
 
