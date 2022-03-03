@@ -155,4 +155,4 @@ Configure Autopilot for each individual premium and paid plugins and modules. De
 
 Select **Never (update manually)** to turn off Autopilot for a site.
 
-![Turn off Autopilot](../../images/autopilot/Turn-off-autopilot.png)
+![Turn off Autopilot](../../../images/autopilot/Turn-off-autopilot.png)
