@@ -3,10 +3,10 @@ title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 categories: [get-started]
 tags: [security, dashboard, ssh]
-reviewed: "2022-03-01"
+reviewed: "2022-03-04"
 ---
 
-To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
+ You should load your public SSH key into your account to take full advantage of Pantheon. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
 
 <Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
 
@@ -22,6 +22,14 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ## Generate SSH Key
 
+Follow the steps below to generate your SSH Key.
+
+<Alert title="Note"  type="info" >
+
+We don't currently support `ed25519` keys.
+
+</Alert>
+
 1. Open your terminal and enter the following command to generate a key:
 
    ```bash{promptUser: user}
@@ -30,11 +38,13 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
   This command works on Linux, MacOS, and Windows 10.
 
-  Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa` as is. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
+  Leave the default location of `~/.ssh/id_rsa` as is, unless you have reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
-1. A passphrase is recommended to provide greater security, but can conflict with tools that cannot handle them.
+1. Set a passphrase for better security.
+  
+   We recommend using a passphrase, but it can conflict with some tools.
 
-1. Once the files are created, copy the contents of `~/.ssh/id_rsa.pub` to your clipboard.
+1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created. 
 
    Linux and Mac users can `cat`the file to the terminal and copy the output:
 
@@ -95,27 +105,33 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ### Clone Your Site Code
 
-1. In your Terminal environment, copy the **SSH clone URL** from the **Connection Info** of any site's Dev environment to clone your site code to your workstation.
+You can use your Dev environment to clone your site code to your workstation:
 
-1. If prompted, enter the passphrase you set above.
+1. Use Terminal to copy the **SSH clone URL** from the site's **Connection Info**. 
+
+1. Enter the passphrase you set above, if prompted.
 
 ## Remove SSH Key from Pantheon
 
 ### Revoke SSH Key from Pantheon - New Dashboard
 
-To revoke a key, go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page. Click the **Revoke** button next to the key you want to remove:
+1. Go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page to revoke a key. 
+ 
+1. Click the **Revoke** button next to the key you want to remove:
 
 ![Revoke SSH Key](../images/dashboard/remove-ssh-key.png)
 
 ### Remove SSH Key from Pantheon - Classic Dashboard
 
-To delete a key, go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**. Click the **Remove** button next to the key you want to delete:
+1. Go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**.
+ 
+1. Click the **Remove** button next to the key you want to delete:
 
 ![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
 ### Site Access After Removing Keys
 
-If you have active sites and no keys remaining, you can still access the sites. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
+ You can still access the sites if you have active sites and no keys remaining. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
 
 ## Troubleshooting
 
