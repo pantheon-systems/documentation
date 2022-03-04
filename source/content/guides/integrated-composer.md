@@ -63,16 +63,14 @@ This GitHub token will be added to your code repository, and allows those in pos
 
 1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) and generate a new token with `repo` scope.
 
-1. Use your newly generated token to create or add to `auth.json` at the root of your project.
-   ```php:title=auth.json
-   {
-      "github-oauth": {
-         "github.com": "your-token"
-      }
-   }
+1. Create a new `auth.json` file by opening a terminal at the root of your project and issuing the following command
+   ```bash{promptUser: user}
+   composer config github-oauth.github.com token
    ```
 
-1. Add the repository to `composer.json`
+1. Edit `auth.json` and add your newly generated token.
+
+1. Add the private GitHub repository to `composer.json`
    ```json:title=composer.json
    "repositories": [
         {
