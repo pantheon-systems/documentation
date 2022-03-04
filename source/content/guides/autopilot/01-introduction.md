@@ -54,6 +54,9 @@ Autopilot requires the following:
 - [Multidev](/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
 
+### Autopilot Drush, Integrated Composer, and Multisite Compatibility 
+
+![Autopilot Drush and Integrated Composer Compatibility and Requirements](../../../images/autopilot/autopilot-drush-and-ic-compatibility.jpg)
 
 ## FAQ
 
