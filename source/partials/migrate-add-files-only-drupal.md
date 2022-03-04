@@ -1,23 +1,8 @@
-**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
+**Files** refer to anything within `sites/default/files`, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 1. Export a `tar.gz` or `.zip` file of your files directory:
-
-  <TabList>
-
-  <Tab title="WordPress" id="files-wp-anchor" active={true}>
-
-  Navigate to your WordPress site's root directory to run this command, which will create an archive file in your user's home directory:
-
-  ```bash{promptUser: user}
-  cd wp-content/uploads
-  tar -czf ~/files.tar.gz .
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal" id="files-drops-anchor">
 
   Navigate to your Drupal site's root directory to run this command, which will create an archive file in your user's home directory:
 
@@ -25,10 +10,6 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   cd sites/default/files
   tar -czf ~/files.tar.gz .
   ```
-
-  </Tab>
-
-  </TabList>
 
 1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.

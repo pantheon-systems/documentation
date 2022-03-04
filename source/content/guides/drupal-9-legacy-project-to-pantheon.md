@@ -33,8 +33,6 @@ You must confirm that you meet the following requirements before continuing:
 
 - You are able to checkout your existing site codebase into your local machine.
 
-- You have a database and files dump from your existing site.
-
 - The site does not use a nested docroot.
 
 - The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
@@ -55,7 +53,7 @@ You must confirm that you meet the following requirements before continuing:
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
-1. Have a local copy of both: your new Pantheon site and your existing codebase
+2. Get a local copy of both: your new Pantheon site and your existing codebase
 
 1. This doc uses several commands that depend on the locations of both your existing and new site codebases.
 To make this easier set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
@@ -70,7 +68,8 @@ export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
 Copy any existing configuration from the source site. Update the source path as needed to match your configuration folder. If no files are copied through this step, that's ok:
 
   ```bash{promptUser:user}
-  cp -r $SOURCE/sites/default/files/config/sync/* $DESTINATION/config
+  cp -r $SOURCE/sites/default/files/config/sync/* $DESTINATION/config/
+  # From $DESTINATION:
   git add config
   git commit -m "Pull in configuration from source site"
   ```
@@ -167,6 +166,7 @@ To move modules, use the following commands:
 ```bash{promptUser:user}
 mkdir -p $DESTINATION/web/modules/custom
 cp -r $SOURCE/modules/custom $DESTINATION/web/modules/custom
+# From $DESTINATION:
 git add web/modules/
 git commit -m "Copy custom modules"
 ```
@@ -176,6 +176,7 @@ To move themes, use the following commands:
 ```bash{promptUser:user}
 mkdir -p $DESTINATION/web/themes/custom
 cp -r $SOURCE/themes/custom $DESTINATION/web/themes/custom
+# From $DESTINATION:
 git add web/themes/
 git commit -m "Copy custom themes"
 ```
@@ -222,7 +223,7 @@ git push origin master
 
 ## Upload Your Files
 
-<Partial file="migrate-add-files.md" />
+<Partial file="migrate-add-files-only-drupal.md" />
 
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go!
