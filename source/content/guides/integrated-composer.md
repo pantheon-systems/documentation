@@ -59,6 +59,8 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 These steps outline a working method with a private GitHub repository. For more information, see [Handling private packages](https://getcomposer.org/doc/articles/handling-private-packages.md) in Composer's documentation.
 
+This GitHub token will be added to your code repository, and allows those in possession of it to read and write to any private repositories associated with the issuing account. This is a current limitation of GitHub tokens. In order to limit that scope, you may wish to create a new GitHub user and give that user permission to only the private repositories needed for your composer packages, as well as ensuring your site repository code is not published publicly. 
+
 1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) and generate a new token with `repo` scope.
 
 1. Use your newly generated token to create or add to `auth.json` at the root of your project.
@@ -89,32 +91,7 @@ These steps outline a working method with a private GitHub repository. For more 
 
 1. Run `composer update` to install the new package.
 
-At this stage if the package installed successfully you may commit these changes to Git and push them. If you would prefer not to have your token stored in your Git repository, you may opt to create a symlink from `auth.json` to a [Private Path](https://pantheon.io/docs/private-paths) and maintain the file via SFTP. To create this symlink, you can use these commands from the project root in terminal:
-
-1. Move the existing `auth.json` file
-   ```bash{promptUser: user
-   mv auth.json ./web/sites/default/files/private/auth.json
-   ```
-
-1. Create a symlink
-   ```bash{promptUser: user
-   ln -s ./web/sites/default/files/private/auth.json ./auth.json
-   ```
-
-1. Create the same file on *every target environment* [via SFTP](/sftp#sftp-connection-information)
-  ```bash{promptUser: user}
-  sftp -o Port=2222 env.UUID@appserver.env.UUID.drush.in
-  ```
-
-  ```bash{promptUser: sftp}{outputLines: 3-4}
-  mkdir files/private
-  put ./web/sites/default/files/private/auth.json /files/private
-  Uploading ./web/sites/default/files/private/auth.json to /files/private/auth.json
-  ./web/sites/default/files/private/auth.json        100%   97     2.0KB/s   00:00
-  exit
-  ```
-
-1. Commit the newly created symlink and updated composer files
+1. If the above update works locally, commit the newly created symlink and updated composer files and add them to your environment
    ```bash{promptUser: user
    git add auth.json composer.json composer.lock
    git commit -m "Adding private package <your-package>"
