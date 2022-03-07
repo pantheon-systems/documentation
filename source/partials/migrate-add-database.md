@@ -32,11 +32,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
 
-<Alert title="Note"  type="info" >
 
-If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+   **Note**: If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
   
-</Alert>
   </Tab>
 
   <Tab title="Up to 500MBs" id="500mbs">
