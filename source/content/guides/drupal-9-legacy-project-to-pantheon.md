@@ -78,15 +78,21 @@ Copy any existing configuration from the source sitem and update the source path
   git commit -m "Pull in configuration from source site"
   ```
 
+It is possible that the Drupal site might have relocated the configuration path to a different location. You can find out where your config yaml files are via:
+
+```bash{promptUser:user}
+drush status --fields=config-sync
+```
+
 If no files are copied through this step, that's acceptable.
 
 ## Add Contributed and Custom Code
 
-In your new project structure, replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created.
+This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 ### Contributed Code
 
-The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as _contributed code_). The only things that should be migrated from the existing site are custom code, custom themes, and custom modules that are specific to the existing site.
+The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as _contributed code_). The only things from the existing site that should remain in the git repository are custom code, custom themes, and custom modules that are specific to the existing site.
 
 
 #### Modules and Themes
@@ -94,7 +100,7 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically.
+Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically. The Pantheon dashboard will also update Composer dependencies in addition to updating the files from the upstream.
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
@@ -103,7 +109,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   This will list each module followed by the version of that module that is installed:
 
   ```bash{promptUser:user}
-  drush pm:list --no-core --fields=name,version  --format=table
+  drush pm:list --no-core --fields=name,project,version  --format=table
   ```
 
 1. Add these modules to your new codebase using Composer by running the following for each module in the `$DESTINATION` directory:
@@ -112,7 +118,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   composer require drupal/MODULE_NAME:^VERSION
   ```
 
-  Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+  Where `MODULE_NAME` is the project name from the **Project** field, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
 
   Some modules use different version formats.
 
