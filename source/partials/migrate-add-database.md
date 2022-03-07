@@ -32,7 +32,6 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
 
-
    **Note**: If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
   
   </Tab>
