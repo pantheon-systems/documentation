@@ -9,7 +9,7 @@ tags: [composer, site, workflow]
 reviewed: "2022-03-03"
 ---
 
-In this guide, we will migrate a non-composer managed Drupal 9 site (drupal/legacy-project) to the Pantheon Platform by creating a new site and copying the important bits from the existing site to it.
+In this guide, we will migrate a non-composer managed Drupal 9 site (drupal/legacy-project) to the Pantheon Platform by creating a new site and copying the existing codebase, database, etc., to it.
 
 
 ## Overview
@@ -47,7 +47,12 @@ You must confirm that you meet the following requirements before continuing:
 
 - Clone your site to your local environment following the `git clone` command from the dashboard.
 
-- **Commit history note**: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+
+<Alert title="Note"  type="info" >
+
+Commit history note: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+
+</Alert>
 
 ## Prepare the Local Environment
 
@@ -55,17 +60,16 @@ You must confirm that you meet the following requirements before continuing:
 
 2. Get a local copy of both: your new Pantheon site and your existing codebase
 
-1. This doc uses several commands that depend on the locations of both your existing and new site codebases.
-To make this easier set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
+1. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
 
-```bash
-export SOURCE=/absolute/path/to/source/site/codebase
-export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
-```
+   ```bash
+   export SOURCE=/absolute/path/to/source/site/codebase
+   export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
+   ```
 
 ## Copy Existing Configuration
 
-Copy any existing configuration from the source site. Update the source path as needed to match your configuration folder. If no files are copied through this step, that's ok:
+Copy any existing configuration from the source sitem and update the source path as needed to match your configuration folder:
 
   ```bash{promptUser:user}
   cp -r $SOURCE/sites/default/files/config/sync/* $DESTINATION/config/
@@ -74,15 +78,19 @@ Copy any existing configuration from the source site. Update the source path as 
   git commit -m "Pull in configuration from source site"
   ```
 
-## Add in the Custom and Contrib Code Needed to Run Your Site
+If no files are copied through this step, that's acceptable.
 
-What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
+## Add Custom and Contrib Code
+
+In your new project structure, replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created.
 
 ### Contributed Code
 
+The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as _contributed code_). The only things that should be migrated from the existing site are custom code, custom themes, and custom modules that are specific to the existing site.
+
+
 #### Modules and Themes
 
-The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (we'll call this _contributed code_). The only things that should be migrated from the existing site are custom code, custom themes, and custom modules that are specific to the existing site.
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
@@ -98,7 +106,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   drush pm:list --no-core --fields=name,version  --format=table
   ```
 
-1. You can add these modules to your new codebase using Composer by running the following for each module in the `$DESTINATION` directory:
+1. Add these modules to your new codebase using Composer by running the following for each module in the `$DESTINATION` directory:
 
   ```bash{promptUser:user}
   composer require drupal/MODULE_NAME:^VERSION
@@ -153,7 +161,7 @@ diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
 
 #### Libraries
 
-Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
+Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that it functions properly.
 
 ### Custom Code
 
@@ -211,7 +219,7 @@ Commit your changes as needed.
 
 ### Push to the dev environment
 
-Your code should be ready now so it is time to push to Pantheon:
+Now push to the Pantheon dev environment:
 
 ```
 git push origin master
