@@ -1,6 +1,6 @@
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, compress the resulting archive with gzip:
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql
@@ -32,8 +32,11 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
 
-  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+<Alert title="Note"  type="info" >
 
+If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+  
+</Alert>
   </Tab>
 
   <Tab title="Up to 500MBs" id="500mbs">
