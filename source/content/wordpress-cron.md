@@ -35,7 +35,7 @@ Pantheon Cron runs WP-Cron as an hourly task or on demand through Terminus. In c
 
 <Alert title="Note" type="info">
 
-Pantheon Cron will not execute jobs on inactive environments, including [sleeping development](/application-containers#idle-containers) and test environments.
+Pantheon Cron will not execute jobs on inactive environments, including [sleeping development](/application-containers#idle-containers) environments.
 
 </Alert>
 
@@ -61,9 +61,9 @@ Use [Terminus](/terminus) to see job details in WP-Cron. Terminus, through WP-CL
 
 You can also use Terminus and WP-CLI to:
 
- - schedule your own jobs
- - execute existing jobs
- - manage just about everything WP-Cron related
+ - Schedule your own jobs
+ - Execute existing jobs
+ - Manage just about everything WP-Cron related
 
 We recommend that you test WP-Cron to make sure everything is working correctly. Replace SITE_NAME with your site's name and replace ENV_NAME with the desired environment ("dev", "test", "live", or multidev branch name) when you execute the command below. 
 
@@ -121,14 +121,9 @@ You will need a service that calls a URL at regular intervals after disabling WP
 
 Any of the above services will get the job done. Disabling WP-Cron turns off the automatic checking and calling of the `wp-cron.php` script. You will now have to call that URL yourself using one of the services above. Most services only require the following setup:
 
-1. Set up an account
-1. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron`
+1. Set up an account.
 
-<Alert title="Note" type="info">
-
-Replace `yourdomain.tld` with your domain.
-
-</Alert>
+1. Set up a job that calls `https://exampledomain.tld/wp-cron.php?doing_wp_cron`.
 
 You might have the ability to set up multiple jobs at different times depending on the service you use. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. You will need to adjust your job if you create new schedules that need to run more frequently than every 15 minutes.
 
