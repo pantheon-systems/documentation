@@ -100,7 +100,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 },
  ```
 
-1. You may also need to repeat the steps for a Metadata folder, depending on your requirements.
+1. Repeat the steps for the Metadata folder (depending on your requirements).
 
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
@@ -155,7 +155,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
   );
   ```
 
-1. With the basic variables defined, set up the base config:
+1. Set up the base config with the basic variables defined:
 
   ```php:title=config.php
   $config = [
@@ -174,7 +174,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
   ]
   ```
 
-  For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required.
+   A custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required for persistent and centralized logging.
 
   <Alert title="Note" type="info">
 
@@ -182,7 +182,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
   </Alert>
 
-1. With configuration completed, commit the changes to your SimpleSAMLphp files:
+1. Commit the changes to your SimpleSAMLphp files:
 
   ```bash
   git add private/simplesamlphp
@@ -243,13 +243,13 @@ There is a known issue with the Drupal 7 version of the SimpleSAMLphp Authentica
 
 ### SimpleSAMLphp Error: can't find metadata
 
-Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_2).
+Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp)).
 
-If using Composer, these will need to be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, similar to the config setup using Composer.
+The files must be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, if you are using Composer. This is similar to the config setup for Composer.
 
 ## Alternatives
 
-Other plugins and modules can provide SSO provider services with less configuration. Note that Pantheon does not officially endorse any third party plugins or modules.
+Other plugins and modules can provide SSO provider services with less configuration. Note that Pantheon does not officially endorse any third-party plugins or modules.
 
 ### SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider
 
