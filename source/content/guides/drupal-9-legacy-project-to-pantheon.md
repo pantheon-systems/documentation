@@ -50,7 +50,7 @@ You must confirm that you meet the following requirements before continuing:
 
 <Alert title="Note"  type="info" >
 
-Commit history note: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+Commit history: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
 
 </Alert>
 
@@ -58,7 +58,7 @@ Commit history note: The steps in this process migrate a site, so the new site w
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
-2. Get a local copy of both: your new Pantheon site and your existing codebase
+2. Get a local copy of both your new Pantheon site and your existing codebase.
 
 1. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
 
@@ -80,7 +80,7 @@ Copy any existing configuration from the source sitem and update the source path
 
 If no files are copied through this step, that's acceptable.
 
-## Add Custom and Contrib Code
+## Add Contributed and Custom Code
 
 In your new project structure, replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created.
 
@@ -195,7 +195,7 @@ Use the above commands with any of the custom code.
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
-We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
+We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory, as well as platform-specific customizations.
 
 ```bash{promptUser:user}
 git status # Ensure working tree is clean
