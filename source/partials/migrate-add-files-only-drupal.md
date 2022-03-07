@@ -1,4 +1,4 @@
-**Files** refer to anything within `sites/default/files`, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
+**Files** refer to anything within `sites/default/files`, which typically includes uploaded images, generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
