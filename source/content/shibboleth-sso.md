@@ -8,7 +8,7 @@ contributors: [kyletaylored]
 
 This doc covers the installation and configuration of [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. For a simpler SSO service provider solution, jump to [Alternatives](#alternatives).
 
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/latest/simplesamlphp-sp.html). This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
 
