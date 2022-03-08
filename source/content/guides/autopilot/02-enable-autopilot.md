@@ -149,7 +149,7 @@ Configure Autopilot for each individual premium and paid plugins and modules. De
 
 ## Enable Autopilot Cloning Feature
 
-Cloning feature content goes here.
+Cloning feature content goes here. This will be located under settings.
 
 ## Enable Autopilot Email Notifications
 
