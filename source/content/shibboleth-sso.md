@@ -46,7 +46,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
   git commit -am "Adding SimpleSAML symlink"
   ```
 
-1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp/cert`.
+1. [Generate or install certs](https://simplesamlphp.org/docs/latest/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp/cert`.
 
 </Tab>
 
@@ -100,11 +100,11 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 },
  ```
 
-1. Repeat the steps for the Metadata folder (depending on your requirements).
+1. Repeat the steps for the metadata folder (depending on your requirements).
 
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
-1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
+1. [Generate or install certificates](https://simplesamlphp.org/docs/latest/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
 By the end of these steps, you should have a docroot structure similar to the output below:
 
@@ -178,7 +178,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
   <Alert title="Note" type="info">
 
-  Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. Remove `:443` from this line as a troubleshooting step.
+  Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. To troubleshoot, remove `:443` from the line.
 
   </Alert>
 
@@ -193,11 +193,11 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 ## Drupal Configuration
 
-If using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in their [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
+If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
 
 <Alert title="Note" type="info">
 
-If using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+If you are using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
 
 <TabList>
 
@@ -243,7 +243,7 @@ There is a known issue with the Drupal 7 version of the SimpleSAMLphp Authentica
 
 ### SimpleSAMLphp Error: can't find metadata
 
-Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp)).
+Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp).
 
 The files must be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, if you are using Composer. This is similar to the config setup for Composer.
 
