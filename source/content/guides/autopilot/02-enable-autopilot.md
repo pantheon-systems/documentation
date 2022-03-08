@@ -149,6 +149,10 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 Configure Autopilot for each individual premium and paid plugins and modules. You may need to provide Autopilot with access or configure the plugin or module to work with Autopilot, Depending on the plugin. 
 
+## Enable Autopilot Clone Feature
+
+Clone feature content will go here.
+
 ## Enable Autopilot Email Notifications
 
 <Partial file="autopilot/autopilot-email-notifications.md" />

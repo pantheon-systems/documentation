@@ -37,11 +37,11 @@ If an error is detected during an update attempt, the **Autopilot Status** shows
 
 ![Autopilot Status shows a Needs Attention notice and prompt to Review Test Results](../../../images/autopilot/autopilot-status-failed-screenshots.png)
 
-Click **View Update Details** for details:
+1. Click **View Update Details** for details:
 
-![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
+ ![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
 
-Click **Review Test Results** to compare changes.
+1. Click **Review Test Results** to compare changes.
 
 If you accept the changes, click **Approve**. Otherwise, click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to choose whether to see the Multidev, or adjust the threshold for acceptable changes.
 
