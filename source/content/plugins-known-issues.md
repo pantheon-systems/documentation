@@ -529,7 +529,7 @@ ___
 
 **Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with Automattic servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and sees lots of invalid traffic.
 
-**Solution:** Modify your site's `pantheon.yml` to [allow access](/pantheon-yml#protected-web-paths-override) to the `xmlrpc.php` path:
+**Solution:** Modify your site's `pantheon.yml` file to [allow access](/pantheon-yml#protected-web-paths-override) to the `xmlrpc.php` path:
 
 ```yml:title=pantheon.yml
 protected_web_paths_override: true
@@ -539,6 +539,12 @@ protected_web_paths:
 ```
 
 This will maintain the normal security settings for other paths, but allows access for XMLRPC.
+
+<Alert title="Note"  type="info" >
+
+Pantheon does not support XML-RPC if it is enabled.
+
+</Alert>
 
 ___
 

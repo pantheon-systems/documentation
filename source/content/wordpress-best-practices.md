@@ -4,7 +4,7 @@ description: A list of suggestions for developing WordPress sites on Pantheon.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow, security, composer]
-reviewed: "2020-10-15"
+reviewed: "2022-03-09"
 ---
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
@@ -80,9 +80,15 @@ Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 cor
 
 ### Enable XML-RPC via Pantheon.yml
 
-If you need to re-enable access to XML-RPC for tools or plugins that require it (like [Jetpack](/plugins-known-issues#jetpack) or the WordPress mobile app), modify your [`pantheon.yml`](/pantheon-yml) file to override the default protected web paths, and manually protect the other paths normally protected by default:
+<Alert title="Note"  type="info" >
 
-Add the following configuration to your :
+Pantheon does not support XML-RPC if it is enabled.
+
+</Alert>
+
+You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](/plugins-known-issues#jetpack) or the WordPress mobile app) by modifying your [`pantheon.yml`](/pantheon-yml) file. 
+
+Add the following configuration to override the default protected web paths, and manually protect the other paths normally protected by default:
 
 ```yml:title=pantheon.yml
 protected_web_paths_override: true
