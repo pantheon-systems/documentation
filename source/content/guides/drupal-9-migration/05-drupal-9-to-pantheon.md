@@ -1,5 +1,5 @@
 ---
-title: Migrate to Drupal 9 on Pantheon (Composer-managed)
+title: Migrate to Drupal 9 on Pantheon
 subtitle: Migrate a Drupal 9 Site to Pantheon (Composer-managed)
 description: Migrate a Composer-managed Drupal 9 Site from another platform to Pantheon.
 categories: [develop]

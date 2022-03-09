@@ -2,9 +2,7 @@
 title: Migrate to Drupal 9 on Pantheon
 subtitle: Migrate a Drupal 9 Site to Pantheon (non-Composer-managed)
 description: Migrate a non-Composer-managed Drupal 9 Site from another platform to Pantheon.
-type: guide
-permalink: docs/guides/:basename
-cms: "Drupal"
+cms: drupal-9
 categories: [develop]
 tags: [composer, site, workflow]
 reviewed: "2022-03-03"
