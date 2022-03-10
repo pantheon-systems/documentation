@@ -22,11 +22,11 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ## Generate SSH Key
 
-Follow the steps below to generate your SSH Key.
+Use the following steps to generate your SSH Key:
 
 <Alert title="Note"  type="info" >
 
-We don't currently support `ed25519` keys.
+Currently, we do not support `ed25519` keys.
 
 </Alert>
 
