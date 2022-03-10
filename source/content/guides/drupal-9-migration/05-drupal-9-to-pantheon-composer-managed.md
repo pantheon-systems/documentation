@@ -299,9 +299,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   If your archive is less than 500MB, you can import it from URL:
 
-  1. In the **Archive of site files** field, click **URL**.
+   1. In the **Archive of site files** field, click **URL**.
 
-  1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
+   1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
 
   </Tab>
 
