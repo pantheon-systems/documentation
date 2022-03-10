@@ -36,7 +36,7 @@ Before you continue, confirm that your site meets the following criteria:
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-Install the [jq](https://formulae.brew.sh/formula/jq) JSON processor and [rsync](https://formulae.brew.sh/formula/rsync) on your local environment if they aren't already installed. On MacOS with Homebrew, run:
+4. Install the [jq](https://formulae.brew.sh/formula/jq) JSON processor and [rsync](https://formulae.brew.sh/formula/rsync) on your local environment if they aren't already installed. Install with Homebrew, if using MacOS:
 
 ```bash{promptUser: user}
 brew install jq rsync
