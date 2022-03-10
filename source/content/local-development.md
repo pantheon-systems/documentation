@@ -3,12 +3,12 @@ title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
 categories: [develop]
 tags: [git, lando, local, sftp, workflow]
-reviewed: "2019-11-27"
+reviewed: "2022-03-10"
 ---
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
 
-Pantheon's [Localdev](/guides/localdev) offers the best of developing locally — with the ability to perform critical development tasks, including editing files and code, and pushing changes to Pantheon right from your desktop.
+Pantheon's [Localdev](/guides/localdev) offers the best of developing locally, including the ability to perform critical development tasks, such as editing files and code, and pushing changes to Pantheon right from your desktop.
 
 </Alert>
 
@@ -60,15 +60,21 @@ terminus env:clear-cache $SITE.$ENV
 
 ## Get the Code
 
-The first step is to get a `git clone` of your code from Pantheon to your local computer.
+The first step is to get a `git clone` of your code from Pantheon on your local computer.
 
-1. Go to Your Site Dashboard, and log in to Pantheon and load the Dashboard for the site you want to work on.
+1. Log in to Pantheon and load the Dashboard for the site you want to work on.
 
-1. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
+1. Locate the `git clone` command at the top of the development panel, and copy and paste it in your terminal. 
+
+ It will look something like this:
 
     ![Copy and Paste Git Clone](../images/dashboard/git-string.png)
 
-1. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
+1. Go to where you want the code to reside in your local environment. 
+
+ Git will create a directory as part of the clone, so you don't need to create one. 
+ 
+1. Run the command you copied in step 2:
 
     ```bash{promptUser: user}
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -134,16 +140,16 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 
 ### Via Terminus
 
-Run the following Terminus commands:
+1. Run the following Terminus commands:
 
 ```bash{promptUser: user}
 terminus backup:create $SITE.$ENV --element=files
 terminus backup:get $SITE.$ENV --element=files
 ```
 
-This will create and get a backup of the site's files.
+ This will create and get a backup of the site's files.
 
-Move the resulting backup to the proper directory on your local file system:
+1. Move the resulting backup to the proper directory on your local file system:
 
 - **Drupal**: `sites/default/files`
 - **WordPress**: `wp-content/uploads`
@@ -152,9 +158,11 @@ Move the resulting backup to the proper directory on your local file system:
 
 SFTP is slower, but easier for some to use:
 
-1. Get your SFTP login credentials by clicking **Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
+1. Get your SFTP login credentials by clicking **Connection Info**. 
 
-1. From the terminal, navigate to the proper directory on your local file system:
+ You will see your connection credentials and a link to connect directly with your preferred client.
+
+1. Use the terminal to navigate to the correct directory on your local file system:
 
     - **Drupal**: `sites/default`
     - **WordPress**: `wp-content/uploads`
@@ -167,33 +175,33 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Code
 
-Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
+1. Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
 
-```bash{promptUser: user}
-git commit -am "enter a summary of the changes"
-```
+  ```bash{promptUser: user}
+  git commit -am "enter a summary of the changes"
+  ```
 
-Next, push the changes:
+1. Push the changes:
 
-```bash{promptUser: user}
-git push origin master
-```
+  ```bash{promptUser: user}
+  git push origin master
+  ```
 
 ### Send the Database
 
-Create an archive using the MySQL utility mysqldump:
+1. Create an archive using the MySQL utility mysqldump:
 
-```bash{promptUser: user}
-mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
-```
+  ```bash{promptUser: user}
+  mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
+  ```
 
-Upload and import the file by going to your Pantheon Dashboard and selecting **Database / Files** > **Import**.
+1. Upload and import the file by going to your Pantheon Dashboard and selecting **Database / Files** > **Import**.
 
 ### Send the Files
 
 #### Upload files to Drupal Via Drush
 
-Drush and rsync is by far the easiest way to send files for Drupal sites:
+Drush and rsync are the easiest ways to send files for Drupal sites:
 
 ```bash{promptUser: user}
 drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
@@ -203,21 +211,24 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-1. [Copy the SFTP CLI command](/sftp#sftp-connection-information)
-1. From the terminal, navigate to the proper directory on your local file system:
+1. [Copy the SFTP CLI command](/sftp#sftp-connection-information).
+
+1. Use the terminal to navigate to the correct directory on your local file system:
 
     - **Drupal**: `sites/default/files`
     - **WordPress**: `wp-content/uploads`
 
-1. Paste the CLI command copied from your Dashboard
+1. Paste the CLI command copied from your Dashboard.
+
 1. Navigate to the correct remote directory by running `cd files`
-1. Run `put -r ./*` to transfer the files up
+
+1. Run `put -r ./*` to transfer the files up.
 
 You can also transfer a single file or a single directory at a time instead of transferring every file, every time.
 
 ## Local Configuration Files
 
-You'll need to configure database credentials matching your local database to develop locally. You don't want to manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`) because you could easily commit that change to version control and trigger a connection error on Dev when pushing to Pantheon.
+You'll need to configure database credentials matching your local database to develop locally. Do not manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`), as this could commit changes to version control and trigger a connection error on Dev when pushing to Pantheon.
 
 Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
@@ -239,9 +250,11 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 ### Drupal settings.local.php
 
-Create the local settings file and add it to `.gitignore`.
+1. Create the local settings file and add it to `.gitignore`.
 
-1. Change to the site's directory and create the file. Change the first command in this example to fit the site's directory structure:
+1. Change to the site's directory and create the file. 
+
+1. Change the first command in this example to fit the site's directory structure:
 
    ```bash{promptUser: user}
    cd sites/default
