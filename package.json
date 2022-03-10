@@ -53,7 +53,7 @@
     "jest": "^27.0.6",
     "new-github-issue-url": "^0.2.1",
     "node-font-awesome": "^1.0.2",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "postcss": "^8.2.15",
     "prismjs": "^1.27.0",
     "react": "^17.0.2",
