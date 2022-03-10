@@ -104,17 +104,19 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically. The Pantheon dashboard will also update Composer dependencies in addition to updating the files from the upstream.
+After Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory. Composer will upgrade all the contributed code automatically. The Pantheon dashboard will also update Composer dependencies in addition to updating the files from the upstream.
 
-Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
+1. Review the existing site's code and check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. Review the site and make a list of the versions of modules and themes you depend on. One way to do this is to run the `pm:list` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. Run the `pm:list` Drush command within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
 
   This will list each module followed by the version of that module that is installed:
 
   ```bash{promptUser:user}
   drush pm:list --no-core --fields=name,project,version  --format=table
   ```
+  
+1. Review the list and note the versions of modules and themes you depend on.
 
 1. Add these modules to your new codebase using Composer by running the following for each module in the `$DESTINATION` directory:
 
