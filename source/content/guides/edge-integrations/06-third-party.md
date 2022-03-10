@@ -1,35 +1,39 @@
 ---
 title: Edge Integrations
-subtitle: Third Party (working title)
-description: This is a description
+subtitle: Third Party Integration
+description: How to use Edge Integrations with third party website builders, templates, and Drupal modules.
 cms: "Drupal"
 categories: [develop]
 tags: [updates, continuous-integrations, composer, workflow]
 type: guide
+layout: guide
+showtoc: true
 anchorid: third-party
 permalink: docs/guides/edge-integrations/third-party/
 editpath: edge-integrations/06-third-party.md
 getfeedbackform: default
 ---
 
-## How to Use Edge Integrations with Elementor
+This section will cover how to use Edge Integrations with different website builders, templates, and Drupal modules.
+
+## Elementor
 
 
 
-## How to Use the Edge Integrations SDK Within Twig Templates
+## Twig Templates
 
 
 
-## How to Use the Edge Integrations SDK Within Alter Hooks and Preprocessing
+## Alter Hooks and Preprocessing
 
 
 
-## How to Use the Edge Integrations SDK with Paragraphs Module
+## Paragraphs Module
 
 
 
-## How to Use the Edge Integrations SDK with Layout Builder Module
+## Layout Builder Module
 
 
 
-## How to Use the Edge Integrations SDK with the Core Block System
+## Core Block System

@@ -6,6 +6,8 @@ categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
+layout: guide
+showtoc: true
 anchorid: module-install
 permalink: docs/guides/edge-integrations/module-install/
 editpath: edge-integrations/03-module-install.md
