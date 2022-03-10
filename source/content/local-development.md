@@ -101,7 +101,7 @@ The first step is to get a `git clone` of your code from Pantheon on your local 
 
 ### Via Dashboard
 
-From within the Site Dashboard:
+1. Navigate to the Site Dashboard.
 
 1. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
 
@@ -142,10 +142,10 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 
 1. Run the following Terminus commands:
 
-```bash{promptUser: user}
-terminus backup:create $SITE.$ENV --element=files
-terminus backup:get $SITE.$ENV --element=files
-```
+  ```bash{promptUser: user}
+  terminus backup:create $SITE.$ENV --element=files
+  terminus backup:get $SITE.$ENV --element=files
+  ```
 
  This will create and get a backup of the site's files.
 
