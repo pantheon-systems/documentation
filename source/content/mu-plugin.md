@@ -161,17 +161,30 @@ function add_header_nocache() {
 
 ### Cross-Origin Resource Sharing (CORS)
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), this sample code will add the proper header and enable requests from assigned URLs.
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), this sample code will add the proper header and enable requests from specific URLs.
 
 ```php
-function additional_securityheaders( $headers ) {
-  if ( ! is_admin() ) {
-    $headers['Access-Control-Allow-Origin'] = 'https://example.com';
-  }
-
-  return $headers;
+function dynamic_cors_headers( $headers ) {
+	// Caching must vary based on the origin of requests
+	$headers['Vary'] = 'Origin';
+	// If no origin supplied, no further checks are needed
+	if ( ! array_key_exists( 'HTTP_ORIGIN', $_SERVER ) ) {
+		return $headers;
+	}
+	// Each of the domains in this array will be given an allow header
+	// Note that http or https and the www subdomain are each different origins
+	$allowed_domains = array(
+		'https://dev-exampleallowedurl.pantheonsite.io',
+		'http://localhost:8084',
+		'http://example.com',
+		'https://www.example.com',
+	);
+	if ( in_array( $_SERVER['HTTP_ORIGIN'], $allowed_domains ) ) {
+		$headers['Access-Control-Allow-Origin'] = $_SERVER['HTTP_ORIGIN'];
+	}
+	return $headers;
 }
-add_filter( 'wp_headers', 'additional_securityheaders' );
+add_filter( 'wp_headers', 'dynamic_cors_headers' );
 ```
 
 ### Custom Cookies

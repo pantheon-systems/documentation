@@ -105,7 +105,7 @@ For sites that need to provide services with Cross-Origin Resource Sharing (COR
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
-For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/), or enable CORS for selected domains [in an MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
+WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains [in a MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
 
 ## CSS Preprocessors
 
