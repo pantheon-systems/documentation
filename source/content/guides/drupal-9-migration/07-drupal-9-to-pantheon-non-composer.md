@@ -5,7 +5,7 @@ description: Migrate a non-Composer-managed Drupal 9 Site from another platform 
 cms: drupal-9
 categories: [develop]
 tags: [composer, site, workflow]
-reviewed: "2022-03-03"
+reviewed: "2022-03-10"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/05-drupal-9-to-pantheon-non-composer
@@ -22,9 +22,9 @@ Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) buil
 
 The goals of this migration are to:
 
-1. Create a new Drupal site in Pantheon
+- Create a new Drupal site in Pantheon.
 
-1. Import your existing codebase, database and files into it
+- Import your existing codebase, database and files into it.
 
 
 ## Will This Guide Work for Your Site?
@@ -100,7 +100,6 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 
 #### Modules and Themes
-
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 

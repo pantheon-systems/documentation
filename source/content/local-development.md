@@ -167,27 +167,27 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Code
 
-Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
+1. Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
 
-```bash{promptUser: user}
-git commit -am "enter a summary of the changes"
-```
+  ```bash{promptUser: user}
+  git commit -am "enter a summary of the changes"
+  ```
 
-Next, push the changes:
+1. Push the changes:
 
-```bash{promptUser: user}
-git push origin master
-```
+  ```bash{promptUser: user}
+  git push origin master
+  ```
 
 ### Send the Database
 
-Create an archive using the MySQL utility mysqldump:
+1. Create an archive using the MySQL utility mysqldump:
 
-```bash{promptUser: user}
-mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
-```
+  ```bash{promptUser: user}
+  mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
+  ```
 
-Upload and import the file by going to your Pantheon Dashboard and selecting **Database / Files** > **Import**.
+1. Upload and import the file by going to your Pantheon Dashboard and selecting **Database / Files** > **Import**.
 
 ### Send the Files
 
@@ -203,15 +203,18 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-1. [Copy the SFTP CLI command](/sftp#sftp-connection-information)
+1. [Copy the SFTP CLI command](/sftp#sftp-connection-information).
+
 1. From the terminal, navigate to the proper directory on your local file system:
 
     - **Drupal**: `sites/default/files`
     - **WordPress**: `wp-content/uploads`
 
-1. Paste the CLI command copied from your Dashboard
+1. Paste the CLI command copied from your Dashboard.
+
 1. Navigate to the correct remote directory by running `cd files`
-1. Run `put -r ./*` to transfer the files up
+
+1. Run `put -r ./*` to transfer the files.
 
 You can also transfer a single file or a single directory at a time instead of transferring every file, every time.
 
@@ -239,7 +242,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 ### Drupal settings.local.php
 
-Create the local settings file and add it to `.gitignore`.
+1. Create the local settings file and add it to `.gitignore`.
 
 1. Change to the site's directory and create the file. Change the first command in this example to fit the site's directory structure:
 
@@ -254,7 +257,7 @@ Create the local settings file and add it to `.gitignore`.
    sites/*/settings.local.php
    ```
 
-Drupal 7 users need to add a reference to the local file from within `settings.php`:
+Note that Drupal 7 users need to add a reference to the local file from within `settings.php`:
 
 ```php:title=sites/default/settings.php
 /**

@@ -5,7 +5,7 @@ description: Migrate a Composer-managed Drupal 9 Site from another platform to P
 categories: [develop]
 cms: drupal-9
 tags: [code, launch, migrate, site, updates]
-reviewed: "2021-11-12"
+reviewed: "2022-03-10"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/drupal-9-to-pantheon-composer-managed
@@ -155,9 +155,11 @@ Do the same for any other custom code you need to carry over.
 
 Your existing site may have customizations to `settings.php` or other configuration files.
 
-Copy the existing `settings.php` to the Pantheon site and remove the `$databases` array if it exists. Then ensure that everything in the [Pantheon settings.php](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/web/sites/default/settings.php) is included.
+1. Copy the existing `settings.php` to the Pantheon site and remove the `$databases` array if it exists.
 
-In particular, confirm that the `settings.php` file on the Pantheon D9 site:
+1. Ensure that everything in the [Pantheon settings.php](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/web/sites/default/settings.php) is included.
+
+1. Confirm that the `settings.php` file on the Pantheon D9 site:
 
 - Has one `$settings['container_yamls'][]`
   - And that there are no duplicates.
@@ -281,11 +283,11 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
 
-  If your archive is under 100MB, you can upload the file directly:
+If your archive is under 100MB, you can upload the file directly:
 
-   1. In the **Archive of site files** field, click **File**, then **Choose File**.
+1. In the **Archive of site files** field, click **File**, then **Choose File**.
 
-   1. Select your local archive file, then press **Import**.
+1. Select your local archive file, then press **Import**.
 
   </Tab>
 
@@ -293,9 +295,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   If your archive is less than 500MB, you can import it from URL:
 
-   1. In the **Archive of site files** field, click **URL**.
+  1. In the **Archive of site files** field, click **URL**.
 
-   1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
+  1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
 
   </Tab>
 
@@ -321,7 +323,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   </TabList>
 
-  You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with terminus like so:
+You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with terminus like so:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev cr
@@ -335,7 +337,7 @@ When there are problems, you can sometimes get helpful messages about what's wro
   terminus drush $SITE.dev watchdog:show
   ```
 
-When you make changes to fix a problem, don't forget to rebuild cache:
+When you make changes to fix a problem, don't forget to rebuild the cache:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev cr
