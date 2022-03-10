@@ -281,13 +281,17 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   <TabList>
 
-  <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
+  <Tab title="Up to 100MBs" id="100mbs" active={true}>
 
   If your archive is under 100MB, you can upload the file directly:
 
-  1. In the **Archive of site files** field, click **File**, then **Choose File**.
+   1. In the **MySQL database** field, click **File**, then **Choose File**.
 
-  1. Select your local archive file, then press **Import**.
+   1. Select your local archive file, then press **Import**.
+
+     ![Import MySQL database from file](../../../images/dashboard/import-mysql-file.png)
+
+  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
   </Tab>
 
