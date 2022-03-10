@@ -58,7 +58,7 @@ To configure geolocation segments:
 1. Navigate to `/admin/structure/smart_content_segment_set`.
 
 1. Click **+Add Global Segment Set**.
-    ![Add Segment](../../../images/guides/edge-integrations/segementsetentities.png)
+    ![Segment Set entities](../../../images/guides/edge-integrations/segementsetentities.png)
 
 1. Provide a label (e.g. Geo).
 
@@ -115,7 +115,8 @@ In this section, we identify the content type where you want to use personalizat
 1. Navigate to `/admin/structure/smart_content_segment_set,` to configure geolocation segments. 
 
 1. Click **+Add Global Segment Set**.
-    ![Add Segment](../../../images/guides/edge-integrations/segementsetentities.png)
+
+    ![Add Global Segment Set](../../../images/guides/edge-integrations/segmentsetentities.png)
 
 1. Provide a label (e.g. Interest) - the name isn't critical.
 
