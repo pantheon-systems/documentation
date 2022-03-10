@@ -96,7 +96,7 @@ This section describes how to replicate your selection of contributed modules an
 
 ### Contributed Code
 
-The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as *contributed code*). The only things from the existing site that should remain in the Git repository are custom code, custom themes, and custom modules that are specific to the existing site.
+The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as *contributed code*). The only items from the existing site that should remain in the Git repository are custom code, custom themes, and custom modules that are specific to the existing site.
 
 
 #### Modules and Themes
