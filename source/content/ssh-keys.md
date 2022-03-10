@@ -6,7 +6,7 @@ tags: [security, dashboard, ssh]
 reviewed: "2022-03-04"
 ---
 
- You should load your public SSH key into your account to take full advantage of Pantheon. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
+Load your public SSH key into your account to take full advantage of Pantheon. SSH keys allow you to stay secure and compliant with security regulations, provided that you use best practice to generate, store, manage, and remove them. Using SSH keys are a best practice for authentication, offering more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
 
 <Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
 
