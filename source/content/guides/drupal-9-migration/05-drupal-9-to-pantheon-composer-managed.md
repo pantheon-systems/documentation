@@ -283,11 +283,11 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
 
-If your archive is under 100MB, you can upload the file directly:
+  If your archive is under 100MB, you can upload the file directly:
 
-1. In the **Archive of site files** field, click **File**, then **Choose File**.
+  1. In the **Archive of site files** field, click **File**, then **Choose File**.
 
-1. Select your local archive file, then press **Import**.
+  1. Select your local archive file, then press **Import**.
 
   </Tab>
 
