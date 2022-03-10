@@ -83,35 +83,6 @@ Switch to Drush 8 in the `pantheon.yml` file.
 
 </Accordion>
 
-## Element Exclusions
-
-<Accordion title="We didn’t detect any plugins, modules or themes that were eligible for exclusion." id="no-eligible-available" icon="info-sign">
-
-### Issue
-
-The list of elements is unavailable when Autopilot is started for the first time; it is only set after Autopilot is initialized.
-
-Refresh the extensions list used for exclusions when Autopilot is started for the first time.
-
-### Solution
-
-Trigger a workflow to refresh extensions with the following code change:
-
-```graphql
-mutation {
-  refreshAvailableExtensions(
-    args: { id: "SITE_UUID"}
-  ) {
-    id
-    description
-  }
-}
-```
-
-After the workflow completes, refresh the Autopilot settings or restart the initialization wizard. The extension options should be present.
-
-</Accordion>
-
 ## Modified Plugin or Theme Name
 
 <Accordion title="Ran into an issue with a WordPress update and did not proceed with deployment." id="wp-update-issue" icon="info-sign">
