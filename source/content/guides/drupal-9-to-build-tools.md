@@ -61,6 +61,7 @@ terminus build:project:create --git=github --team='My Agency Name' d9 my-site
    ```bash
    export SOURCE=/absolute/path/to/source/site/codebase
    export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
+   export SOURCE_SITE_NAME=my-site
    ```
 
 ## Copy Existing Configuration
@@ -77,7 +78,7 @@ Copy any existing configuration from the source sitem and update the source path
 It is possible that the Drupal site might have relocated the configuration path to a different location. You can find out where your config yaml files are via:
 
 ```bash{promptUser:user}
-terminus drush SOURCE_SITE_NAME.dev -- status --fields=config-sync
+terminus drush $SOURCE_SITE_NAME.dev -- status --fields=config-sync
 ```
 
 If no files are copied through this step, that's acceptable.
@@ -198,7 +199,7 @@ You can use sftp `get` command to download the file to your local directory if u
 Here is a single command that downloads the file to the current local directory:
 
 ```bash{promptUser:user}
-echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
+echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info $SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
 ```
 
 ## Upload Your Files
@@ -222,7 +223,7 @@ You can use sftp `put` command to upload the file from your local directory if u
 Below is a single command which does this. This needs to be run from the directory where the `tokens.json` backup was downloaded:
 
 ```bash{promptUser:user}
-echo "put files/private/.build-tools/tokens.json" | $(terminus connection:info SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
+echo "put files/private/.build-tools/tokens.json" | $(terminus connection:info $SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
 ```
 
 
