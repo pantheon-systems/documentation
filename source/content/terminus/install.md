@@ -42,11 +42,11 @@ The following commands will:
 - add a symlink to your local `bin` directory for the Terminus executable.
 
   ```bash{promptUser: user}
-  mkdir ~/terminus && cd ~/terminus
-  TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g')
-  curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
-  chmod +x terminus
-  sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+mkdir -p ~/terminus && cd ~/terminus
+curl -L https://github.com/pantheon-systems/terminus/releases/download/3.0.6/terminus.phar --output terminus
+chmod +x terminus
+./terminus self:update
+sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
 
 ### Homebrew Installation

@@ -413,3 +413,19 @@
   avatar: //github.com/whitneymeredith.png?size=460
   bio: Technical Writer, Pantheon
   github: //github.com/whitneymeredith
+- id: jazzsequence
+  name: Chris Reynolds
+  avatar: //github.com/jazzsequence.png?size=460
+  github: //github.com/jazzsequence
+  twitter: //twitter.com/jazzs3quence
+  wordpress: //profiles.wordpress.org/jazzs3quence
+  linkedin: //www.linkedin.com/in/chrissreynolds
+  url: //chrisreynolds.io
+  bio: Software Engineer, Pantheon
+- id: jspellman814
+  name: John Spellman
+  avatar: //github.com/jspellman814.png?size=460
+  github: //github.com/jspellman814
+  wordpress: //profiles.wordpress.org/jspellman
+  linkedin: //www.linkedin.com/in/john-spellman-86039262
+  bio: Software Engineer, Pantheon
