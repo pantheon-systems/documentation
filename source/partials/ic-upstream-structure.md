@@ -23,3 +23,5 @@ code/
 When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file, and commits it back to the site’s code repository.  To avoid potential merge conflicts when applying an upstream update, do not commit the `composer.lock` file to the upstream repository.
 
 Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNAME`, where `$BRANCHNAME` is the name of the environment or Multidev feature branch.
+
+It is a requirement that all build artifacts should be ignored in the `.gitignore` file. Ensure you add entries to the `.gitignore` any time you modify the build to move installation files to a new locations.
