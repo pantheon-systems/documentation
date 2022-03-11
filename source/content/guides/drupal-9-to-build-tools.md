@@ -149,7 +149,7 @@ Use the above commands with any of the custom code.
 Your existing site may have customizations to `settings.php` or other configuration files. Given that both sites (`$SOURCE` and `$DESTINATION`) have been created from the same upstream, it is ok to replace the `$DESTINATION` `settings.php` with the one coming from the `$SOURCE` site:
 
 ```bash{promptUser:user}
-cp $SOURCE/sites/default/settings.php $DESTINATION/web/sites/default/settings.php
+cp $SOURCE/web/sites/default/settings.php $DESTINATION/web/sites/default/settings.php
 # Review changes and commit as needed
 ```
 
