@@ -67,7 +67,7 @@ To unlock a site:
 terminus lock:disable <site>:<env>
 ```
 
-### Pass Credentials Using CI scripting 
+### Pass Credentials Using CI Scripting 
 
 If you are using CI scripting, you must configure your CI tool to pass the username and password on every request to allow tests to run in a locked site environment. Configuration steps will vary depending on your chosen CI tool. To help you get started, we've included a CI authentication example:
 
