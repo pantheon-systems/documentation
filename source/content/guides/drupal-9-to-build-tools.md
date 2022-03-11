@@ -44,9 +44,9 @@ Commit history: The steps in this process migrate a site, so the new site will n
 
 1. Follow the [Terminus Build Tools Documentation](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
 
-```bash
-terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site
-```
+  ```bash
+  terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site
+  ```
 
 1. Wait for the site to be created and the first build finishes.
 
@@ -56,7 +56,7 @@ terminus build:project:create --git=github --team='My Agency Name' d9 my-buildto
 
 2. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
-1. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
+1. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the following temporary variables in your terminal session to match your folders location and sites names.
 
    ```bash
    export SOURCE=/absolute/path/to/source/site/codebase
@@ -72,7 +72,7 @@ Copy any existing configuration from the source sitem and update the source path
   ```bash{promptUser:user}
   rsync -avz $SOURCE/config/ $DESTINATION/config/ --delete --delete-after
   # From $DESTINATION:
-  git add config
+  git add config -A
   git commit -m "Pull in configuration from source site"
   ```
 
@@ -192,7 +192,7 @@ And wait for Continuous Integration workflow to succeed so that it commits your 
 Connect to your site using SFTP command or credentials from your dashboard and get a backup of the following file:
 
 ```
-files/private/.build-tools/tokens.json
+files/private/.build-secrets/tokens.json
 ```
 
 You can use sftp `get` command to download the file to your local directory if using SFTP command line.  
@@ -200,7 +200,7 @@ You can use sftp `get` command to download the file to your local directory if u
 Here is a single command that downloads the file to the current local directory:
 
 ```bash{promptUser:user}
-echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
+echo "get files/private/.build-secrets/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
 ```
 
 ## Upload Your Files
@@ -216,7 +216,7 @@ echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info $
 Connect to your site using SFTP command or credentials from your dashboard and restore the backup of the tokens.json file:
 
 ```
-files/private/.build-tools/tokens.json
+files/private/.build-secrets/tokens.json
 ```
 
 You can use sftp `put` command to upload the file from your local directory if using SFTP command line.
@@ -224,7 +224,7 @@ You can use sftp `put` command to upload the file from your local directory if u
 Below is a single command which does this. This needs to be run from the directory where the `tokens.json` backup was downloaded:
 
 ```bash{promptUser:user}
-echo "put files/private/.build-tools/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
+echo "put files/private/.build-secrets/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
 ```
 
 
