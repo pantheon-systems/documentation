@@ -18,4 +18,4 @@ core/
 
 When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file and commits it back to the site’s code repository.
 
-Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNAME` (where `$BRANCHNAME` is the name of the environment or Multidev feature branch).
+Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNAME`, where `$BRANCHNAME` is the name of the environment or Multidev feature branch.
