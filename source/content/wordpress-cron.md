@@ -9,18 +9,17 @@ contributors: [greg-1-anderson, CdrMarks, whitneymeredith]
 
 ## Cron Overview
 
-Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as Cron Jobs. The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more. 
+Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year. Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more. 
 
 ## Pantheon Cron Overview
 
-Pantheon Cron runs WP-Cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. 
-
+Pantheon Cron runs WordPress cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. 
 
 ## WP-Cron Overview
 
 WP-Cron is a WordPress feature that executes jobs when the page is loaded. Jobs are executed before site content is served to the site visitor. Plugins and themes can add jobs to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.
 
-The WP-Cron feature is designed solely to handle WordPress routine jobs as part of a page load:
+The WP-Cron feature is designed solely to handle WordPress routine jobs as part of a page load, allowing you to do the following:
 
  - Check for new version of the WordPress core, themes, and plugins
  - Clean up spam
@@ -49,27 +48,29 @@ There is only one parameter you can pass in that will affect the script (`doing_
 
 WP-Cron comes preconfigured and ready to run, so you don't need to do anything to enable it on your WordPress sites.
 
-Several jobs are automatically configured during the initial installation of WordPress.  Use a few simple commands from the command line, or one of several plugins, to find the exact jobs that WP-Cron runs.
+Several jobs are automatically configured during the installation of WordPress. Use a few simple commands from the command line, or one of several plugins, to find the exact jobs that WP-Cron runs.
 
 ### WP-Cron From the CLI
 
 Use [Terminus](/terminus) to see job details in WP-Cron. Terminus, through WP-CLI, provides details, such as:
 
- - What's scheduled to run
+ - What is scheduled to run
  - What will run next
- - The event hooks that are set up
+ - What event hooks are configured
 
 You can also use Terminus and WP-CLI to:
 
  - Schedule your own jobs
  - Execute existing jobs
- - Manage just about everything WP-Cron related
+ - Manage WP-Cron related features
 
-We recommend that you test WP-Cron to make sure everything is working correctly. Replace SITE_NAME with your site's name and replace ENV_NAME with the desired environment ("dev", "test", "live", or multidev branch name) when you execute the command below. 
+We recommend that you use the following command to test WP-Cron and ensure everything is working correctly:
 
 ```bash{promptUser: user}
 terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 ```
+* Replace `<SITE_NAME>` with your site's name
+* Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name) 
 
 The result should look like this:
 
@@ -77,7 +78,7 @@ The result should look like this:
 Success: WP-Cron spawning is working as expected.
 ```
 
-This lets you know that WP-Cron is working correctly on your site. You can run any Cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is as follows:
+This lets you know that WP-Cron is working correctly on your site. You can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is as follows:
 
 ```bash{promptUser: user}
 terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your wp-cron command and switches here>
