@@ -77,7 +77,7 @@ Copy any existing configuration from the source sitem and update the source path
 It is possible that the Drupal site might have relocated the configuration path to a different location. You can find out where your config yaml files are via:
 
 ```bash{promptUser:user}
-terminus drush SOURCE-SITE-NAME.dev -- status --fields=config-sync
+terminus drush SOURCE_SITE_NAME.dev -- status --fields=config-sync
 ```
 
 If no files are copied through this step, that's acceptable.
