@@ -1,7 +1,7 @@
 ---
-title: Create a Drupal 8 Site From the Command Line Using Terminus and Drush
+title: Create a Drupal Site From the Command Line Using Terminus and Drush
 description: Learn how to add modules, and manage configuration between Pantheon environments.
-cms: "Drupal 8"
+cms: "Drupal 9"
 categories: [get-started]
 tags: [terminus, site, cli]
 type: guide
@@ -12,7 +12,7 @@ date: 2/15/2017
 
 [Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for using the command line to develop on Pantheon.
 
-This guide will walk through using the command line to create a new Drupal 8 site, add modules, create content, and move configurations between Pantheon environments.
+This guide will walk through using the command line to create a new Drupal site, add modules, create content, and move configurations between Pantheon environments.
 
 ## Before You Begin
 
@@ -54,7 +54,7 @@ The next few sections of this guide use the example variables `my-d9-site` and `
 
 </Alert>
 
-1. Create a new Drupal 8 site on Pantheon:
+1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
   terminus site:create my-d9-site "My D9 Site" "drupal-recommended"
@@ -98,7 +98,7 @@ The next few sections of this guide use the example variables `my-d9-site` and `
 
 ### Export the Site Name as a Variable
 
-At this point you are probably tired of replacing `steve-site-d8` in every command.
+At this point you are probably tired of replacing `my-d9-site` in every command.
 
 1. Instead of typing the site name, let's set our site name to a variable so we can copy/paste the remainder of our commands:
 
@@ -247,7 +247,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
   terminus env:clone-content $TERMINUS_SITE.live dev
   ```
 
-1. Make some configuration change on the Dev environment, such as enabling the [Views Glossary](https://www.drupal.org/project/views_glossary) module:
+1. Make some configuration change on the Dev environment, such as enabling the glossary that comes with Views module in Drupal core:
 
   ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- views-enable glossary
