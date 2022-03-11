@@ -193,7 +193,13 @@ Connect to your site using SFTP command or credentials from your dashboard and g
 files/private/.build-tools/tokens.json
 ```
 
-(You can use sftp `get` command to download the file to your local directory if using SFTP command line)
+You can use sftp `get` command to download the file to your local directory if using SFTP command line.  
+
+Here is a single command that downloads the file to the current local directory:
+
+```bash{promptUser:user}
+echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
+```
 
 ## Upload Your Files
 
@@ -211,7 +217,13 @@ Connect to your site using SFTP command or credentials from your dashboard and r
 files/private/.build-tools/tokens.json
 ```
 
-(You can use sftp `put` command to upload the file from your local directory if using SFTP command line)
+You can use sftp `put` command to upload the file from your local directory if using SFTP command line.
+
+Below is a single command which does this. This needs to be run from the directory where the `tokens.json` backup was downloaded:
+
+```bash{promptUser:user}
+echo "put files/private/.build-tools/tokens.json" | $(terminus connection:info SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
+```
 
 
 You should now have all three of the major components of your site imported into your new site and CI should be working. Clear your caches on the the Pantheon Dashboard, and you are good to go!
