@@ -20,7 +20,7 @@ Edge Integrations is a Software Development Kit (SDK) that allows users to perso
 
 ### How does Edge Integrations work?
 
-Edge Integrations can personalize content by Geolocation or by Interests.
+Edge Integrations uses configuration at the "edge" or the CDN to enable personalization options for Geolocation or Interests. This is done by using [HTTP vary headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary) that tell the CDN return cached variations of content based on values identified by the user browsing the site.
 
 ## Is Edge Integrations Right for You?
 
