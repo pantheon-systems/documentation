@@ -3,6 +3,7 @@ title: Email on Pantheon
 description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
 categories: [platform]
 tags: [email]
+reviewed: "2021-11-02"
 ---
 ## Incoming Email
 
@@ -14,14 +15,14 @@ For outgoing emails, we recommend integrating a third-party service provider tha
 
 ### REST API Providers
 
-Here are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration method:
+The following are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration methods:
 
 | Provider  | Integration |
 |:--------- |:----------- |
 | Mailgun   | [Drupal](https://www.drupal.org/project/mailgun) \| [WordPress](https://wordpress.org/plugins/mailgun/) |
 | Mandrill  | [Drupal](https://www.drupal.org/project/mandrill) \| [WordPress](https://wordpress.org/plugins/wpmandrill/) |
 | Postmark | [Drupal](https://www.drupal.org/project/postmark) \| [WordPress](https://wordpress.org/plugins/postmark-approved-wordpress-plugin/) |
-| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](/guides/sendgrid) |
+| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](https://wordpress.org/plugins/wp-mail-smtp/) |
 | Sendinblue | [Drupal](https://www.drupal.org/project/sendinblue) \| [WordPress](https://wordpress.org/plugins/mailin/) |
 | SparkPost | [Drupal](https://www.drupal.org/project/sparkpost) \| [WordPress](https://wordpress.org/plugins/sparkpost/) |
 
@@ -87,6 +88,25 @@ See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you are having trouble sending mail and are using SES, confirm you are not in sandbox mode. For more information, [see AWS documentation on sandbox mode](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html).
 
+### WordPress Password Reset Emails Are Not Delivered
+
+The password reset email may not be delivered. This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Emails will only be sent if the URLs match. This applies to all emails sent by WordPress, including instances when a new user is added. 
+
+In the following example, a password reset email will not be sent because the URL is not listed in the table:
+
+current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpassword`
+
+ ```bash
+ +-----------+--------------------+-------------------------------------------------+----------+
+ | option_id | option_name        | option_value                                    | autoload |
+ +-----------+--------------------+-------------------------------------------------+----------+
+ |         1 | siteurl            | https://www.example.com | yes      |
+ |         2 | home               | https://www.example.com | yes      |
+ |         3 | blogname           | CSE WP AGCDN Practice                           | yes      |
+ |         4 | blogdescription    | Just another WordPress site                     | yes      |
+ |         5 | users_can_register | 0                                               | yes      |
+ ```
+
 ## Frequently Asked Questions
 
 ### Can I use Pantheon's local MTA (postfix)?
@@ -113,7 +133,7 @@ Adjust the above example record as needed for your domain:
 
 - Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
 - If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
-- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
+- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd-party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 
@@ -132,3 +152,7 @@ Because we don't support SPF, it is likely that most Exchange or Office 365 serv
 To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
 
 Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
+
+## See Also
+
+- [Resetting Passwords](/resetting-passwords)  

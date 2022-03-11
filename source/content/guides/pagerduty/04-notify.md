@@ -37,12 +37,12 @@ Now we'll hookup our PagerDuty service as a notification channel for our alert p
 
 1. Go to **Alerts & AI** from the top menu, then **Notification Channels** from the right.
 
-1. Select **New notification channel**
+1. Select **New notification channel**.
 
 1. Select **PagerDuty** from the dropdown menu, enter a service name and paste the integration key copied in the previous section:
 
   ![New Relic notification channel](../../../images/pagerduty/new-relic-notification-channels.png)
 
-1. Select the **Alert policies** tab, and **Add alert policies**
+1. Select the **Alert policies** tab, and **Add alert policies**.
 
-1. Select the policy created in the [monitoring](/guides/pagerduty/monitor) part of this guide, and **Save changes**
+1. Select the policy created in the [monitoring](/guides/pagerduty/monitor) part of this guide, and **Save changes**.

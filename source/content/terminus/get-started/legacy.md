@@ -15,10 +15,8 @@ searchboost: 50
 
 The legacy version of Terminus is no longer supported. We strongly recommend that you use the <a href="/docs/terminus/install/">current version</a>. If your use case temporarily requires you to use this unsupported version, you may install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:
 
-```bash
-curl -O
-https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-&& php installer.phar install --install-version=0.13.6
+```bash{promptUser: user}
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install --install-version=0.13.6
 ```
 
 ## Compare Legacy Commands with Terminus 1.0

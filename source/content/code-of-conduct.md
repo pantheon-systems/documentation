@@ -55,8 +55,7 @@ Community maintainers who do not follow or enforce the Code of Conduct in good f
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], [version 1.4][version], and from the [Open Source Bridge Code of Conduct][opensourcebridge].
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], [version 1.4][version], and from the Open Source Bridge Code of Conduct.
 
-[homepage]: https://github.com/ContributorCovenant/contributor_covenant
+[homepage]: https://github.com/EthicalSource/contributor_covenant
 [version]: https://github.com/ContributorCovenant/contributor_covenant/tree/v1_4
-[opensourcebridge]: http://opensourcebridge.org/about/code-of-conduct/

@@ -7,12 +7,6 @@ reviewed: "2020-02-07"
 ---
 Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. If you like to [develop locally](/local-development), it's a good way to streamline your website operations: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
-<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs">
-
-How mature is your web team? Take our Web Team Agility Assessment to find out.
-
-</Enablement>
-
 ## Before You Begin
 
 This page assumes that you've:

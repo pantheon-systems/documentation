@@ -114,7 +114,7 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 - [Update PHP version](/php-versions)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 
-Please note that memory issues caused by custom code fall outside our [scope of support](/support/#scope-of-support).
+Please note that memory issues caused by custom code fall outside our [scope of support](/guides/support).
 
 ### Drupal
 Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler) module can help troubleshoot issues by logging peak memory usage.

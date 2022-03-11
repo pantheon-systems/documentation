@@ -4,7 +4,7 @@ subtitle: Navigating Workspaces
 description: Workspaces are a home base for your WebOps.
 categories: [platform]
 tags: [dashboard, webops, workflow]
-contributors: [edwardangert]
+contributors: [edwardangert,joa-pan]
 reviewed: "2021-02-26"
 layout: guide
 showtoc: true
@@ -17,12 +17,15 @@ editpath: new-dashboard/02-workspaces.md
 
 ## What is a Workspace?
 
-[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the old Dashboards, with Pantheon features and actions that are conveniently available in one place.
+[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the Legacy Dashboards, with Pantheon features and actions that are conveniently available in one place.
 
 
 ### Create a New Workspace
 
-To create a new Workspace from the Dashboard, click the Organization’s name and icon in the upper left, and select **Create New Workspace** from the drop-down menu. 
+
+#### Organization Workspace
+
+To create a new Workspace from the Dashboard, click the Organization’s name and icon in the upper left of the Global Primary Navigation, and select **Create New Workspace** from the drop-down menu. 
 
 ![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
 
@@ -61,7 +64,20 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 ## Upstreams
 
-Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository.
+Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
+
+1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab. 
+1. On the Custom Upstreams page click **Add New Upstream**. The Create New Custom Upstream page is displayed. 
+1. Enter the URL of your GitHub or Bitbucket repository. URLs from the pantheon-systems GitHub workspace will not work.
+1. Select the **Framework** and **Initial Connection Mode**.
+1. Add the desired name and a description. Adding a description is optional.
+1. Click **Save**.
+
+After the Upstream has been added to your Dashboard, select from the list of available Custom Upstreams and click **Create Site From Upstream**. 
+
+Click **More** in the Custom Upstream to edit or delete. After you click **Edit Settings** you are directed to the Upstream Settings page. Modify the page and click **Save**.
+
+To delete, click **Delete Upstream** from the **More** drop-down menu. 
 
 ## Support
 

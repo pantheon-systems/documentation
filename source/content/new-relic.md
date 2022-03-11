@@ -233,7 +233,7 @@ App server response time measures how the page was built on Pantheon, including 
 
 ### Can I use my existing New Relic license with my Pantheon site?
 
-Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic&reg; Performance Monitoring license. [Activate New Relic&reg; Performance Monitoring](#activate-new-relic-performance-monitoring) for your site, then [contact support](/support). Be sure to provide:
+Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic&reg; Performance Monitoring license. [Activate New Relic&reg; Performance Monitoring](#activate-new-relic-performance-monitoring) for your site, then [contact support](/guides/support/contact-support/). Be sure to provide:
 
 * The Site ID
 * Your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding)
@@ -261,6 +261,4 @@ See [Log Files on Pantheon](/logs) for more information on accessing your logs.
 * [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 * [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 * [New Relic University: Intro to New Relic APM](https://learn.newrelic.com/get-started-with-apm)
-* [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui)
-* [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
 * [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance)

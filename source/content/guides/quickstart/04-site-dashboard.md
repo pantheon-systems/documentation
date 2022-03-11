@@ -46,7 +46,7 @@ This environment is for reviewing the changes made in your Dev environment with 
 
 To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
 
-![Pantheon Workflow](../../../images/workflow.png)
+![Pantheon Workflow](../../../images/code-workflow.png)
 
 ## <span class="glyphicons glyphicons-cardio"> </span> Live
 

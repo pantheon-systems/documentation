@@ -9,19 +9,19 @@ This doc includes instructions to make core updates to WordPress and Drupal site
 
 ## Drupal 9
 
-Drupal 9 sites on Pantheon use Integrated Composer to allow one-click core updates through the Dashboard.
+Drupal 9 sites on Pantheon use [Integrated Composer](/integrated-composer) to allow one-click core updates through the Dashboard.
 
 To check for available updates, navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
 
 ## Drupal 8 Composer-Managed Sites
 
-Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [convert the site to Integrated Composer](/guides/composer-convert).
 
-## Non-Composer Managed WordPress and Drupal 7 / 8 Sites
+## Non-Composer-Managed WordPress and Drupal 7 / 8 Sites
 
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
-Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support).
+Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
 
 
 ## Apply Upstream Updates via the Site Dashboard
@@ -89,7 +89,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 <Tab title="Drupal 8" id="d8" active={true}>
 
 ```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+git pull -Xtheirs https://github.com/pantheon-systems/drops-8.git master
 # resolve conflicts
 git push origin master
 ```
@@ -99,17 +99,7 @@ git push origin master
 <Tab title="Drupal 7" id="d7">
 
 ```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
-# resolve conflicts
-git push origin master
-```
-
-</Tab>
-
-<Tab title="Drupal 6" id="d6">
-
-```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git master
 # resolve conflicts
 git push origin master
 ```
@@ -119,7 +109,7 @@ git push origin master
 <Tab title="WordPress" id="wp">
 
 ```bash{promptUser: user}
-git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git master
 # resolve conflicts
 git push origin master
 ```
@@ -185,7 +175,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="WordPress" id="wp-1conflict" active={true}>
 
   ```bash{promptUser: user}
-  git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
   ```
 
   </Tab>
@@ -193,7 +183,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal 8" id="d8-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+  git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
   ```
 
   </Tab>
@@ -201,17 +191,17 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal 7" id="d7-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+  git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
   ```
 
   </Tab>
 
   <Tab title="Custom Upstream" id="custom-1conflict">
 
-  Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
+  Replace the remote name (`custom-upstream-example`) and repository URL (`https://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
 
   ```bash{promptUser: user}
-  git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git
+  git remote add  custom-upstream-example https://github.com/example-org/custom-upsream-example.git
   ```
 
   </Tab>

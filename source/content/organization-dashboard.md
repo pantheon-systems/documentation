@@ -6,11 +6,17 @@ tags: [agencies, collaborate, dashboard, organizations, teams]
 ---
 The Organization Dashboard is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
 
+<Alert title="For info on the New Dashboard?" type="info">
+
+This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard Workspaces guide](/guides/new-dashboard/workspaces) for information on teams and organization workspaces in the New Pantheon Dashboard.
+</Alert>
+
+
 ## Add Sites to Your Organization
 
 ### New Sites
 
-While creating a new site, any user in your [organization](/organizations) will see an "Organization Affiliation" select field containing any organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
+While creating a new site, the **Organization Affiliation** field that lists the organizations to which a user belongs, is displayed to any user in your [organization](/organizations). New sites that are affiliated with an organization are automatically added to your Organization Dashboard, and the user who creates the site is designated as the owner.
 
 ### Existing Sites
 
@@ -20,7 +26,7 @@ From the Site Dashboard, the Site Owner will want to:
 
 <Alert title="Note" type="info">
 
- If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/support) to transfer sites to your Organization.
+ If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/guides/support/contact-support/) to transfer sites to your Organization.
 
 </Alert>
 

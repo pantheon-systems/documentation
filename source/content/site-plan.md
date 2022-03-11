@@ -60,9 +60,9 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 
 ### Basic Plan
 
-[New Relic&reg; Performance Monitoring](/new-relic), [Object Cache](/object-cache) (formerly Redis), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/new-relic), [Object Cache](/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
-For Object Cache and Solr, the following code changes are required before the feature can be safely disabled:
+For Object Cache and Pantheon Search (Solr), the following code changes are required before the feature can be safely disabled:
 
 <TabList>
 
@@ -72,7 +72,7 @@ For Object Cache and Solr, the following code changes are required before the fe
 
 <Partial file="remove-addons/wp-redis.md" />
 
-#### Safely Remove Solr
+#### Safely Remove Pantheon Search
 
 <Partial file="remove-addons/wp-solr.md" />
 
@@ -84,7 +84,7 @@ For Object Cache and Solr, the following code changes are required before the fe
 
 <Partial file="remove-addons/drupal-redis.md" />
 
-#### Safely Remove Solr
+#### Safely Remove Pantheon Search
 
 <Partial file="remove-addons/d8-solr.md" />
 
@@ -96,7 +96,7 @@ For Object Cache and Solr, the following code changes are required before the fe
 
 <Partial file="remove-addons/drupal-redis.md" />
 
-#### Safely Remove Solr
+#### Safely Remove Pantheon Search
 
 <Partial file="remove-addons/d7-solr.md" />
 

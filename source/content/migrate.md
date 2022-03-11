@@ -64,11 +64,11 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
  ![Successful Migration BlogVault](../images/dashboard/successful-site-migration-complete-blogvault.png)
 
-If the migration is not successful, [contact Support](/support) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
+If the migration is not successful, [contact Support](/guides/support/contact-support/) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 
 <Alert title="Note" type="info">
 
-The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/wordpress-sessions).
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/wordpress-sessions).
 
 </Alert>
 
@@ -142,7 +142,29 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 ### Migrate from Acquia
 
-Acquia uses a nested docroot directory called `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+1. Choose to either move the contents of Aquia's nested directory `docroot` up and remove the folder, or rename the folder to `web` and set `web_docroot: true` in your `pantheon.yml` file.
+
+ For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+
+ 1. In your Acquia dashboard, navigate to **Manage > Extend**. Click on the **Uninstall** tab to uninstall Acquia-specific modules.
+ 
+ 1. For compatibility with Pantheon's platform, adjust any special Acquia configurations related to `env`.
+
+ 1. If you plan on using [Pantheon Search](https://pantheon.io/docs/solr), uninstall any Acquia Search modules and the default Drupal core Search module (if still enabled for your site) by navigating to `admin/modules/uninstall`.
+
+ <Alert title="Note" type="info">
+
+  If `query cache` is turned on within the MySQL service (an obsolete setting), you may notice a severe performance drop on Pantheon during the User Acceptance Testing stage of an active migration from Acquia. We recommend that you move to a modern service to avoid this issue. 
+
+  If you would like to confirm that your performance drop is caused by the obsolete `query cache` MySQL service setting, connect to the MySQL service in Acquia’s production environment and run the following: 
+
+  ```bash
+  SHOW VARIABLES LIKE 'query_cache_%';
+  ```
+
+  High values for the `query_cache_limit` and `query_cache_size` variables will confirm that performance degradation is related to the MySQL `query cache` service setting.
+
+  </Alert>
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
@@ -323,7 +345,7 @@ This command can be used as part of a script to find and update large indexes.
 
 You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
-Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
+Drupal 7, Drupal 8, Drupal 9, and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
 Replace `<source>` and `<destination>` with target [site UUIDs](/sites/#site-uuid) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 
@@ -423,7 +445,3 @@ Follow the [standard procedure for migrating WordPress sites to Pantheon](#migra
 1. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 
 1. Follow the procedure to [manually migrate](/migrate-manual) your site.
-
-### How do I migrate a Drupal 6 site to Pantheon?
-
-Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](https://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.

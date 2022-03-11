@@ -29,30 +29,13 @@ If you don't see that, look in to recent changes and revert or remove whatever o
 
 ### WordPress Core
 
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 ## Drupal Non-Standard Bootstraps
 
 Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
 
-However, because the Pantheon environment data is not loaded at this time, any bootstrap to the database level will fail since there is no valid connection information. In this case, include a snippet in your `settings.php` _before_ the module's include call. For example:
-
-### Drupal 6 Style
-
-```php
-$settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-  $info = $settings['databases']['default']['default'];
-  $db_url = sprintf("%s://%s:%s@%s:%s/%s",
-                    $info['driver'],
-                    $info['username'],
-                    $info['password'],
-                    $info['host'],
-                    $info['port'],
-                    $info['database']);
-  $conf = $settings['conf'];
-  # Include any other settings.php magic here.
-  include './sites/all/modules/domain/settings.inc';
-```
+However, because the Pantheon environment data is not loaded at this time, any bootstrap to the database level will fail since there is no valid connection information. In this case, include a snippet in your `settings.php` before the module's include call.
 
 ### Drupal 7 Style
 
@@ -66,7 +49,7 @@ You can also use the above to develop Drupal 8 on Pantheon.
 
 <Alert title="Warning" type="danger">
 
-If you use any other advanced `settings.php` tricks (e.g. enabling Object Cache), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent `$conf` array.
+If you use any other advanced `settings.php` tricks (e.g. enabling Object Cache), you will need to do this <em>before</em> the snippet in D7 to ensure you have a consistent `$conf` array.
 
 </Alert>
 

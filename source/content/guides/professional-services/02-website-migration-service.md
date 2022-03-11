@@ -16,7 +16,7 @@ The Managed Migration Service offered by [Pantheon Professional Services](/guide
 
 [Contact us](https://pantheon.io/professional-services/website-migrations?docs) to get started.
 
-The Migrations Team's goal is to migrate your site to our WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
+The goal of the Migrations Team is to migrate your site to the Pantheon WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
 
 For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate).
 
@@ -36,9 +36,9 @@ Premium Migrations are designed for larger and more complex sites - and include 
 
 - For older WP Network sites, conversion from `blogs.dir` to `wp-content/uploads` format
 
-- One additional Code/Content resync
+- One additional content resync
 
-- One Performance Report, with estimates for recommended work
+- One performance report, with estimates for recommended work
 
 - Cron configurations that require a custom module
 
@@ -90,7 +90,7 @@ Throughout the process, you'll have access to the Migrations Team through a dedi
 
 ### Implement Solutions to Known Existing Incompatibilities
 
-Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues) to incompatibilities that have already been identified by our Success teams.
+Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues) to incompatibilities that have been identified by our Success teams.
 
 These hours are tracked by the Migrations Team and do not roll over for use on other sites.
 

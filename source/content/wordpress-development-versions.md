@@ -51,7 +51,7 @@ Development versions and beta releases are not supported and should not be run o
 
  ```bash{promptUser: user}
  git checkout -b "wpcore"
- git remote add WordPress git://github.com/WordPress/WordPress.git
+ git remote add WordPress https://github.com/WordPress/WordPress.git
  git fetch WordPress
  ```
 

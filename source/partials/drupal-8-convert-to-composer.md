@@ -1,23 +1,6 @@
-## Apply All Available Upstream Updates
+This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
-[Update the site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8) Upstream and apply all available updates.
-
-1. Use Terminus to list all available updates:
-
-  ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE
-  [warning] There are no available updates for this site.
-  ```
-
-1. If any updates are available, apply them using the command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
-
-  ```bash{promptUser: user}
-  terminus upstream:updates:apply $SITE.dev --updatedb
-  ```
-
-## Add the Pantheon Integrated Composer Upstream in a New Local Branch
-
-This process involves significant changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back changes can be complicated:
+To minimize issues, these steps make the codebase changes in a new branch:
 
 1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
@@ -25,16 +8,58 @@ This process involves significant changes to the codebase. We recommend you to d
   cd ~/projects/$SITE/
   ```
 
-1. Add the Pantheon Drupal Upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
+1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-project.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  git remote add ic git@github.com:pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
   Switched to a new branch 'composerify'
   ```
 
   If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
-1. Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
+  <Accordion title="Troubleshoot: Permission denied (publickey)" id="permission-denied-publickey" icon="question-sign">
+
+  If you encounter a `Permission denied (publickey)` error, check that your [SSH keys](/ssh-keys) are set up correctly.
+
+  If you continue to encounter the error, use HTTPS to add the remote:
+
+   ```bash{outputLines:2}
+   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   Switched to a new branch 'composerify'
+   ```
+
+  </Accordion>
+
+### Set Drupal Core Version
+
+Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
+
+  ```bash{promptUser:user}
+  composer require --no-update drupal/core-recommended:^8.9
+  composer require --dev drupal/core-dev:^8.9
+  git add composer.*
+  git commit -m "Remain on Drupal 8"
+  ```
+
+### Add Upgrade Status Module
+
+This step is optional; you may wait and add the Upgrade Status module to your site later.
+
+The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
+
+Add the Upgrade Status module to your site with Composer:
+
+  ```bash{promptUser:user}
+  composer require drupal/upgrade_status
+  git add composer.*
+  git commit -m "Add Upgrade Status module"
+  ```
+
+When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading.
+
+### Copy Existing Configuration
+
+Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
 
   ```bash{promptUser:user}
   git checkout master sites/default/config
@@ -42,6 +67,8 @@ This process involves significant changes to the codebase. We recommend you to d
   git rm -f sites/default/config/.htaccess
   git commit -m "Pull in configuration from default branch"
   ```
+
+### Copy pantheon.yml
 
 1. Compare the old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 
@@ -59,9 +86,9 @@ This process involves significant changes to the codebase. We recommend you to d
   git commit -m 'Copy my pantheon.yml'
   ```
 
- Remove any values from `pantheon.yml` that you prefer to keep as listed in `pantheon.upstream.yml`.
+  Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then add `build_step: true` to `pantheon.yml` if it is not already included.
 
- Both `pantheon.yml` and the `api_version: 1` value in it are required.
+ In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
 
 ## Add in the Custom and Contrib Code Needed to Run Your Site
 
@@ -75,17 +102,17 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Once Composer is aware of all the contributed code, you'll be able to run `composer upgrade` from within the directory to have Composer upgrade all the contributed code automatically.
+Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically.
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. When reviewing the site, take stock of exactly what versions of modules and themes you depend on. One way to do this is to change to run the `pm:projectinfo` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. Review the site and make a list of exactly what versions of modules and themes you depend on. One way to do this is to run the `pm:list` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+
+  This will list each module followed by the version of that module that is installed:
 
   ```bash{promptUser:user}
-  terminus drush $SITE.dev -- pm:projectinfo --fields=name,version --format=table
+  terminus drush $SITE.dev pm:list -- --no-core --fields=name,version  --format=table
   ```
-
-  This will list each module followed by the version of that module that is installed.
 
 1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
 
@@ -113,76 +140,32 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     Use the version directly, e.g. `^4.1.1`
 
-  If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
+    <Accordion title="Troubleshoot: Could not find a version of MODULE_NAME" id="tr-minmodule" icon="question-sign">
 
-   ```none
-   [InvalidArgumentException]
-   Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-   ```
+      If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
 
-   If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or `dev` (not recommended). You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
+      ```none
+      [InvalidArgumentException]
+      Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
+      ```
 
-     - If a dev version of a module fails because it requires a dev version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
+      If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or `dev` (not recommended). You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
 
-     ```bash{promptUser:user}
-     composer require drupal/some-module:^1@dev org/some-dependency:^2@dev
-     ```
+        - If a dev version of a module fails because it requires a development version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
 
-<!-- commenting out until the script has a proper place to live
+        ```bash{promptUser:user}
+        composer require drupal/some-module:^1@dev org/some-dependency:^2@dev
+        ```
 
-**Trust a robot?**
+    </Accordion>
 
-One of Pantheon's engineers got tired of doing this process by hand, so he trained some robots to identify modules and put them into `composer.json`.
+#### Other Composer Packages
 
-Robots are cool, but they're not perfect, so you should understand the goal of this process as well as the limitations of automating the process.
+If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
 
-<Accordion title="A script that can help add modules to composer.json" id="modules-script" icon="cogs">
-
-First, disclaimers:
-
-This script is provided without warranty or direct support. Issues and questions may be filed in GitHub but their resolution is not guaranteed.
-
-Proceed at your own risk. Automation is better when you understand what it's doing.
-
-- The script does not resolve `composer.json` version problems.
-
-  - If there's a version conflict when you run `composer install`, you will need to resolve the conflicts yourself.
-
-- The script does not check for Drupal 9 compatibility.
-
-  - Use the [Upgrade Status](https://drupal.org/project/upgrade_status) module to check for Drupal 9 compatibility.
-
-- The script does not resolve module stability.
-
-  - If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
-
-   ```none
-   [InvalidArgumentException]
-   Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-   ```
-
-   If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
-
-- The script does not resolve patches.
-
-  Many times a module will be "patched" or have a `.patch` file that fixes known issues before the fix is available in the downloaded version. This script does not attempt to resolve any patches.
-
-If you still want to try it:
-
-1. Say the following out loud: "Pantheon is not responsible for what I am about to do."
-
-1. Create a directory called `bin` within your repository and copy the `migrateModules.php` file from [GitHub](https://github.com/pantheon-upstreams/drupal-project/pull/8/files#diff-c68470275758ca395b98d53ed258b63519435d492dd51531c4cf372814c6593e) into that directory.
-
-1. To run the module migration script, `cd` to the root directory of the repository and run `bin/migrateModules.php`.
-
-1. To see which modules were added, run `git diff composer.json`.
-
-1. Remove the `composer.lock` file. Composer will create a new one with the modules you just added.
-
-1. Run `composer install` and resolve any remaining version conflicts.
-
-</Accordion>
--->
+```
+git diff master:composer.json composer.json
+```
 
 #### Libraries
 
@@ -194,7 +177,7 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 #### Modules and Themes
 
-Modules:
+To move modules, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master modules/custom
@@ -202,7 +185,7 @@ git mv modules/custom web/modules/
 git commit -m "Copy custom modules"
 ```
 
-Themes:
+To move themes, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master themes/custom
@@ -210,9 +193,9 @@ git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 
-Follow suit with any other custom code you need to carry over.
+Use the above commands with any of the custom code.
 
-#### Settings.php
+#### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
@@ -227,6 +210,16 @@ rm web/sites/default/original-settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
+
+### Additional Composer Configuration
+
+Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
+
+You can use the diff command to get the information you need to copy:
+
+```
+git diff master:composer.json composer.json
+```
 
 ## Deploy
 
@@ -286,9 +279,9 @@ Once you have confirmed that the site works in the Multidev, replace the `master
    git push --force origin master
    ```
 
-Now the site's Dev environment has a Drupal 9 codebase.
+Your site's Dev environment is now set up to use the Drupal 9 Integrated Composer upstream. 
 
-### Inspect Site Logs to Troubleshoot
+### Troubleshooting: Inspect Site Logs
 
 If the site doesn't load properly, before you do too much work to investigate issues, clear the cache and try again.
 

@@ -138,7 +138,7 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 
 ### Upload a Directory to Pantheon
 
-If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
+If you need to upload the file directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the command below. If you are migrating a site or otherwise overwriting an existing site, remove `--ignore-existing` before running the command.
 
 <Alert title="Warning" type="danger">
 
@@ -147,7 +147,8 @@ Always use the `temp-dir flag` when using rsync for uploads. Removing the flag w
 </Alert>
 
 ```bash{promptUser: user}
-rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync --ignore-existing -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ 
+$ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 
 ### Upload a Single File to Pantheon

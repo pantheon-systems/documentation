@@ -8,7 +8,7 @@ reviewed: "2020-02-06"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/settings-php).
+Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/settings-php).
 
 ## Terminus Drush and Local Drush
 
@@ -126,7 +126,7 @@ Drupal's list of PHP classes and files can get corrupted or out-of-date, typical
 terminus drush <site>.<env> -- rr
 ```
 
-Note that the Registry Rebuild command is only ever necessary on Drupal 7 and Drupal 6 sites. The command `drush cache:rebuild` for Drupal 8 serves the same function that `registry rebuild` does for older versions of Drupal.
+Note that the Registry Rebuild command is only necessary on Drupal 7 sites. The command `drush cache:rebuild` for Drupal 8 serves the same function that `registry rebuild` does for older versions of Drupal.
 
 ## Run SQL Queries Using Drush on Pantheon
 
@@ -141,20 +141,6 @@ echo 'SELECT * FROM users WHERE uid=1;' | terminus drush SITENAME.ENV sql:cli
 Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed."
 
 Note that the trailing `;` in the SQL query is optional in this context.
-
-## Execute PHP Code Using Drush on Pantheon
-
-The `drush php-eval` command is not supported on Pantheon. You can run PHP commands after bootstrapping Drupal on Pantheon via the following workaround:
-
-```bash{promptUser: user}
-echo 'print "hello world";' | drush @pantheon.SITENAME.ENV php-script -
-```
-
-Also, the interactive PHP shell works as well:
-
-```bash{promptUser: user}
-terminus drush <site>.<env> -- core-cli
-```
 
 ## Filter Drush Responses
 
@@ -224,7 +210,7 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ### Reading the Pantheon Environment from Drush
 
-Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-_server).
+Since Drush does not run using the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, refer to our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-_server).
 
 ### Terminus Drush Silent Failure
 
@@ -235,7 +221,15 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Redirects kill the PHP process before Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
+Newer versions of Drush fail with a message `[warning] Drush command terminated abnormally.`. For example: 
+
+```bash
+[warning] Drush command terminated abnormally.
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
+
+Redirects terminate the PHP process before the Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
 
 ```php:title=settings.php
 // Require HTTPS, www.
@@ -429,7 +423,6 @@ This indicates that the vendor directory contains Drush binaries that should be 
 - The following Drush commands are not supported and will not work on Pantheon sites:
   - `sql-sync-pipe`. Use `sql-sync` instead.
   - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
-  - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
 - Due to our highly available architecture, Drush `sql-sync` cannot currently be executed on the live environment with more than 1 application container. We recommend you use terminus or `sql-sync` a multidev, dev or test environment which only has 1 application container.
 - Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 

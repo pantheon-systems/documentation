@@ -39,7 +39,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-recommended/blob/master/.gitignore).
 
 #### Local Drupal configurations
 
@@ -51,7 +51,7 @@ mv sites/default/{settings.php,settings.local.php}
 chmod u-w sites/default/{settings.local.php,.}
 ```
 
-Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
 
 </Accordion>
 
@@ -61,7 +61,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, or WordPress,), and click **Continue**:
+1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, Drupal 9, or WordPress,), and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 
@@ -159,7 +159,15 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
    - `vendor`
    - `sites`, excluding `sites/default/files`.
 
-  Refer to the "Base-Level Directories" section of [Drupal 8 Directory Structure](https://www.drupal.org/docs/8/understanding-drupal-8/directory-structure) for more details.
+  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+
+  </Tab>
+
+  <Tab title="Drupal 9" id="d9-code">
+
+  Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
+
+  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
 
   </Tab>
 
@@ -265,79 +273,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
-The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
-
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
-
-  ```bash{promptUser: user}
-  mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql
-  gzip ~/db.sql
-  ```
-
-   - Replace `USERNAME` with a MySQL user with permissions to access your site's database.
-   - Replace `PASSWORD` with the MySQL user's password. You can also move `-p` to the end of the command and leave it blank, to be prompted for your password. This prevents your MySQL password from being visible on your terminal.
-   - Replace `DATABASE` with the name of your site database within MySQL.
-   - `~/db.sql` defines the output target to a file named `db.sql` in your user's home directory. Adjust to match your desired location.
-
-  The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
-
-1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
-
-1. Click **Import** and add your archive accordingly (based on file size):
-
-  <TabList>
-
-  <Tab title="Up to 100MBs" id="100mbs" active={true}>
-
-  If your archive is under 100MB, you can upload the file directly:
-
-   1. In the **MySQL database** field, click **File**, then **Choose File**.
-
-   2. Select your local archive file, then press **Import**.
-
-   ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
-
-  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
-
-  </Tab>
-
-  <Tab title="Up to 500MBs" id="500mbs">
-
-  If your archive is less than 500MB, you can import it from URL:
-
-   1. In the **MySQL database** field, click **URL**.
-
-   1. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
-
-      ![Import MySQL Database from URL](../images/dashboard/import-mysql-url.png)
-
-  </Tab>
-
-  <Tab title="Over 500MBs" id="500mbsplus">
-
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
-
-   1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
-
-    ```bash{promptUser: user}
-    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
-    ```
-
-   1. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with: `< database.sql`. Your command will look like:
-
-    ```bash{promptUser: user}
-    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
-    ```
-
-    If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
-
-   3. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-
-  </Tab>
-
-  </TabList>
+<Partial file="migrate-add-database.md" />
 
 ## Upload Your Files
 
@@ -439,6 +375,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   </Tab>
 
   </TabList>
+
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
 

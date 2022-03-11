@@ -6,7 +6,7 @@ categories: [troubleshoot]
 tags: [modules]
 ---
 
-This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/support).
+This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/guides/support/contact-support/).
 
 We do not prevent you from installing and using these plugins/modules. However, we cannot provide support for incompatible modules, or if they are used against the guidance provided here.
 
@@ -112,6 +112,17 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 ___
 
+## [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+
+<ReviewDate date="2021-08-13" />
+
+This plugin is [deprecated](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
+
+**Issue**: The `wikimedia/composer-merge-plugin` package plugin automatically runs `composer update` during `composer install`, causing conflicts with Pantheon's Integrated Composer framework. 
+
+**Solution**: Sites managing dependencies for a custom project should move to the recommended [path repository method](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
+___
+
 ## [DropzoneJS](https://www.drupal.org/project/dropzonejs)
 
 <ReviewDate date="2020-06-30" />
@@ -127,6 +138,20 @@ ___
 Dynamic Entity Reference provides a field combination for Drupal 8 that allows for the reference of more than one entity type.
 
 **Issue**: The Dynamic Entity Reference module is an alpha version contributor module, and the MySQL queries it creates cannot be controlled or regulated. MySQL triggers are not well supported in Drupal or WordPress applications. On Pantheon, when cloning the database between environments, these triggers may not work or may cause errors when used.
+
+___
+
+## [Feeds](https://www.drupal.org/project/feeds)
+
+<ReviewDate date="2022-01-25" />
+
+**Issue:** When attempting to manually import using the Feeds plugin in cron, the following error message is displayed:
+
+`RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
+
+**Solution:** The [Persistent Temporary Path Workaround](https://pantheon.io/docs/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
+
+We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130) and requesting that the module maintainer fix the module.
 
 ___
 
@@ -150,7 +175,7 @@ ___
 
 <ReviewDate date="2019-07-10" />
 
-**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
+**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx web servers and Apache modules are not compatible with the Platform.
 
 ___
 
@@ -201,7 +226,7 @@ ___
 
 <ReviewDate date="2019-10-17" />
 
-**Issue**: ImageAPI Optimize supports 3rd party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
+**Issue**: ImageAPI Optimize supports 3rd-party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
 
 **Solution**: Use a 3rd-party module like [reSmush.It](https://www.drupal.org/project/resmushit) or a local application like [ImageOptim.](https://imageoptim.com) or [OptiPNG](http://optipng.sourceforge.net/).
 
@@ -336,7 +361,7 @@ ___
 
 <ReviewDate date="2020-03-12" />
 
-**Issue**: This module overrides a class from the [Pantheon Apache Solr module](/solr-drupal-7) responsible for connecting to Pantheon's Apache Solr service. As a result, Solr connection is lost.
+**Issue**: This module overrides a class from the [Pantheon Apache Solr module](/guides/solr-drupal/solr-drupal-7) responsible for connecting to Pantheon's Apache Solr service. As a result, Solr connection is lost.
 
 **Solution**: Instead of patching the module, you can fix the issue with a custom module:
 

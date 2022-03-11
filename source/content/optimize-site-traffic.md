@@ -4,7 +4,7 @@ description: Determine and address the causes of unexpected traffic
 categories: [troubleshoot]
 tags: [billing, logs, measure, traffic]
 contributors: [edwardangert]
-reviewed: "2020-03-03"
+reviewed: "2022-02-15"
 ---
 
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
@@ -20,8 +20,20 @@ Consult our doc for a list of [WordPress best practices](/wordpress-best-practic
 In addition to your other WordPress security practices, take steps to block **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
+
 1. Use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
-1. Consider adding a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+
+1. Protect yourself from `wp-login.php` attacks:
+
+   <Accordion title="How to Avoid WordPress Login Attacks" id="wp-login-attacks" icon="info-sign">
+
+   <Partial file="wp-login-attacks.md" />
+
+   </Accordion>
+
+1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+
+1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
 
 ## Configure favicon.ico to Serve a Static Image
 
@@ -36,16 +48,16 @@ This issue affects both WordPress and Drupal sites, but the request path will va
 
 **Cause**: Usually the issue originates when adding a custom favicon through the active theme for the site through some kind of upload form, and then the icon is deleted or unavailable, which causes the CMS to look for an alternative favicon.
 
-**Solution**: Add and commit a static `favicon.ico` into the path that is being requested. 
+**Solution**: Add and commit a static `favicon.ico` into the path that is being requested.
 
 ## WordPress: admin-ajax.php Generates Pages Served
 
 Plugins can utilize an Ajax API to make calls to custom functions and filters in the backend.
 
-There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include: 
+There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include:
 
-- fetching the stored counts for when content is shared on social networks; 
-- checking if a page or post is currently being worked on (locked); 
+- fetching the stored counts for when content is shared on social networks;
+- checking if a page or post is currently being worked on (locked);
 - adding media to a post during the editing process, such as when using Gutenberg widgets.
 
 Investigate calls to `admin-ajax.php` by looking at what script is calling the path, and what the payload is through browser developer tools. Access developer tools, filter for `admin-ajax`, then refresh the page:
@@ -67,7 +79,7 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 ## DoS Attack Mitigation
 
-Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DoS or DDoS (_distributed_ denial-of-service) attack, our [Customer Success](/support) team is available to assist with identifying a DoS attempt, and take steps to mitigate it for your site.
+Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.org/wiki/Denial-of-service_attack) towards site traffic under any circumstances. If you do experience a DoS or DDoS (_distributed_ denial-of-service) attack, our [Customer Success](/guides/support/contact-support/) team is available to assist with identifying a DoS attempt, and take steps to mitigate it for your site.
 
 ### Block IPs in Drupal or WordPress
 
@@ -154,9 +166,8 @@ mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-Install and use one of the following WordPress plugins:
+Install and use the following WordPress plugin:
 
-- [IP Blacklist Cloud](https://wordpress.org/plugins/ip-blacklist-cloud/)
 - [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
 
 </Tab>

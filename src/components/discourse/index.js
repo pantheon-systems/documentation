@@ -2,7 +2,7 @@ import React from "react"
 import "./style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-import { faDiscourse } from "@fortawesome/fontawesome-free-brands"
+import { faDiscourse } from "@fortawesome/free-brands-svg-icons"
 
 const Discourse = ({ pageTitle, path, cms }) => {
   const ifCms =  cms ? `&tags=${cms}` : null

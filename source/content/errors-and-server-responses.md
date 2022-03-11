@@ -8,7 +8,7 @@ Error messages in the cloud are served when Pantheon is unable to fulfill a requ
 
 There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.
 
-If you feel that you reached one of these messages in error, [contact support](/support) and provide the full URL and circumstances which led to the error.
+If you feel that you reached one of these messages in error, [contact support](/guides/support/contact-support/) and provide the full URL and circumstances which led to the error.
 
 ## Error Messages
 
@@ -21,7 +21,7 @@ In some circumstances, a 401 can be triggered inadvertently if a site environmen
 ### Pantheon 403 Forbidden
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.
 
-Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
+Pantheon also prevents public access via the web server to private files, `.htaccess`, and directory listings.
 
 ### Pantheon 404 Unknown Site
 "The hostname ... is unknown. Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.

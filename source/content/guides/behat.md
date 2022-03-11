@@ -51,7 +51,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 ## Configure Behat
 
-1. Behat is configured with the file `behat.yml`. If you haven't used [**YAML**](https://yaml.org/) before, there is a good [YAML quickstart guide](https://yaml.org/start.html). Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
+1. Behat is configured with the file `behat.yml`. If you haven't used **YAML** before, visit [yaml.org](https://yaml.org/) for more information. Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
 
    ```yml:title=behat.yml
    default:

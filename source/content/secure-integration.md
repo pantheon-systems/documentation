@@ -16,7 +16,7 @@ Secure Integration uses TLS encryption to create a tunnel from the application c
 
 ## Create a Secure Tunnel
 
-[Contact support](/support) and provide the following for each of your remote services:
+[Contact support](/guides/support/contact-support/) and provide the following for each of your remote services:
 
 - IP address
 - Port number
@@ -25,6 +25,12 @@ Secure Integration uses TLS encryption to create a tunnel from the application c
   - Used for [PHP Constant](https://secure.php.net/manual/en/language.constants.php) that will replace the numeric port number in your code
 
 Once setup is complete on our end, we'll provide you with the information you need to use Secure Integration, including a PHP constant in the format `PANTHEON_SOIP_EXAMPLE`, where `EXAMPLE` is replaced with the service name you specify.
+
+<Alert title="Note" type="info" >
+
+At a minimum, allow one business day to fulfill this implementation request. Provide complete information to ensure timely and efficient processesing, and to minimize any issues that may arise.
+
+</Alert>
 
 ## Configure Your Site
 

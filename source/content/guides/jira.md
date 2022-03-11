@@ -9,7 +9,7 @@ date: 5/4/2017
 contributors: [scottmassey]
 ---
 
-Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a larger suite of tools which includes [Bitbucket](https://bitbucket.org/), a code repository platform, and [HipChat](https://www.hipchat.com/), a team messaging and collaboration application. Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
+Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a [larger suite of tools](https://www.atlassian.com/legal/privacy-policy/product-family). Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
 
 In this guide, we'll connect a Jira instance to a site on Pantheon. When changes are pushed to Pantheon that reference a Jira issue ID, the commit message will appear in the Jira issue's activity log.
 ## Before You Begin
@@ -132,7 +132,8 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
-        git commit -am "Create private/jira_integration.php and configure platform hooks"
+        git add .
+        git commit -m "Create private/jira_integration.php and configure platform hooks"
         git push origin master
 
 

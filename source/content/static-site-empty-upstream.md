@@ -9,13 +9,13 @@ reviewed: "2021-08-12"
 
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
 
-The usual [Scope of Support](/support#scope-of-support) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
+The usual [Scope of Support](/guides/support/) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
 
 This process assumes you already have a static site developed and that you have access to the files. For more information about dependencies and which files to upload, consult the documentation for the static site generator you use.
 
 ## What is an Empty Upstream?
 
-An empty Upstream is a [Custom Upstream](/custom-upstream) repository (a [Start State](/start-state) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
+An empty Upstream is a [Custom Upstream](/custom-upstream) repository (a [Start State](/start-state)) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
 
 Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-tools) setup. In this doc, we use it to host static HTML or PHP sites.
 
@@ -94,4 +94,3 @@ For other Decoupled configurations, please refer to our [Decoupled Sites](/decou
 - [Choosing Your Start State](/start-state)
 - [Switch Upstreams](/terminus/examples#switch-upstreams)
 - [Introduction to Custom Upstreams](/custom-upstream)
-- [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci#creating-the-pantheon-site)

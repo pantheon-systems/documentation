@@ -63,7 +63,7 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Gandi Docs
 
-[Gandi's domain documentation.<span class="glyphicons glyphicons-new-window-alt"></span>](https://docs.gandi.net/en/domain_names/index.html" target="blank)
+[Gandi's domain documentation](https://docs.gandi.net/en/domain_names/).
 
 ## Next Steps
 

@@ -30,6 +30,8 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <DNSProviderDocs />
 
+If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org) certificate you can run diagnostics at [Let's Debug](https://letsdebug.net/). This tool can identify an array of issues specifically for [Let's Encrypt](https://letsencrypt.org) certificates including problems with DNS, nameservers, networking issues, common website misconfigurations, and CA policy issues.
+
 </Accordion>
 
 <Partial file="enable-https.md" />
@@ -39,6 +41,8 @@ For more detailed instructions pertaining to your specific DNS host, click below
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically provisions a Let's Encrypt certificate for your site, and always renews it automatically, for no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them 30 days before expiration.
 
 <Partial file="https-requirements.md" />
+
+## Technical Specifications
 
 <Partial file="tables/https-specs.md" />
 
@@ -68,7 +72,7 @@ But you shouldn't need to buy a custom certificate or worry about renewals in mo
 
 Some customers have purchased expensive certificates, often through an upsell from the certificate authority. Unfortunately, an expensive certificate does not mean increased security. If in doubt, we encourage you to test your site with SSL Labs, compare it to this [A+ report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io), and share it with your client.
 
-If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](/support) to discuss your case.
+If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](/guides/support/contact-support/) to discuss your case.
 
 ### Is HTTPS encryption end-to-end?
 
@@ -88,6 +92,12 @@ You can pre-provision HTTPS via DNS records, or the Let's Encrypt ACME challenge
  - Your current server doesn't support files without extension names (like IIS with .NET)
 
 Verifying with the provided DNS record is the preferred method for customers who can make new DNS records for their domain(s).
+
+In some cases, such as when the custom domain has an existing third-party CAA, you must manually add the Let's Encrypt CAA.
+ 
+Let’s Encrypt’s identifying domain name for CAA is letsencrypt.org. For more official information, read Let's Encrypt's [Certification Practice Statement CPS, section 4.2.1.](https://letsencrypt.org/repository/).
+
+This tool can be used to gather more info on how pass the custom domain verification https://letsdebug.net/
 
 If you do not already have HTTPS, you don't need to pre-provision, but doing so will allow you to launch your Pantheon site with HTTPS already enabled, and is recommended.
 

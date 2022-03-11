@@ -130,7 +130,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
-1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
   <Alert title="Note" type="info">
 
@@ -146,7 +146,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
-   ```php:title=settings.php
+   ```php:title=sites/default/settings.php
    // Configure Redis
 
    if (defined('PANTHEON_ENVIRONMENT')) {
@@ -165,7 +165,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
      $settings['cache_prefix']['default'] = 'pantheon-redis';
-     
+
      $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
    }
    ```
@@ -200,7 +200,61 @@ TRUNCATE TABLE `<tablename>`;
 
 </Tab>
 
-<Tab title="Drupal 7" id={"d7-install"}>
+<Tab title="Drupal 9 / Composer-managed" id="d9-install">
+
+1. Clone the code repository and, from the project root, run the following:
+
+   ```shell{promptUser: user}
+   terminus connection:set $SITE.dev git
+   terminus redis:enable $SITE
+   composer require drupal/redis
+   git commit --am "Add drupal/redis dependency"
+   git push origin master
+   ```
+
+1. Enable the new module and export configuration:  
+   ```shell{promptUser: user}
+   terminus connection:set $SITE.dev sftp
+   terminus drush $SITE.dev -- en redis -y
+   terminus drush $SITE.dev -- config:export -y
+   terminus env:commit $SITE.dev --message="Enable Redis, export configuration"
+   ```
+
+1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are **mandatory**, required Redis configurations for every site:
+
+   ```php:title=sites/default/settings.php
+   // Configure Redis
+
+   if (defined('PANTHEON_ENVIRONMENT')) {
+     // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+     $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+
+     //phpredis is built into the Pantheon application container.
+     $settings['redis.connection']['interface'] = 'PhpRedis';
+     // These are dynamic variables handled by Pantheon.
+     $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
+     $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
+     $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+
+     $settings['redis_compress_length'] = 100;
+     $settings['redis_compress_level'] = 1;
+
+     $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+     $settings['cache_prefix']['default'] = 'pantheon-redis';
+
+     $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
+   }
+   ```
+
+   <Alert title="Note" type="info">
+
+   The above Redis cache configuration should be placed in `sites/default/settings.php`, rather than `settings.pantheon.php`, to avoid conflicts with future upstream updates.
+
+   </Alert>
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-install">
 
 <Alert title="Note" type="info">
 
@@ -208,9 +262,15 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 </Alert>
 
+<Alert title="Note" type="info">
+
+The current version of the Redis module for Drupal 7 does not work with PHP 7.4, which uses the `php-redis 5.x` library. Refer to [Drupal 7 and PHP 7.4](/object-cache#drupal-7-and-php-74) for more information.
+
+</Alert>
+
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
+1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus remote:drush <site>.<env> -- en redis -y
@@ -368,6 +428,16 @@ maxmemory
 
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 
+### Drupal 7 and PHP 7.4
+
+The current version of the [Drupal 7 Redis module](https://www.drupal.org/project/redis) is not compatible with PHP 7.4, which uses the `php-redis 5.x` library. You may get errors like this:
+
+```php
+Deprecated function: Function Redis::delete() is deprecated in Redis_Lock_PhpRedis->lockRelease() (line 111 of /web/sites/all/modules/contrib/redis/lib/Redis/Lock/PhpRedis.php).
+```
+
+To patch the Redis module, visit [Drupal.org](https://www.drupal.org/project/redis/issues/3074189), download the latest patch, and patch the module in the site's code with these changes.
+
 ### RedisException: Redis server went away
 
 The following error occurs when Redis has not been enabled within the Site Dashboard:
@@ -455,22 +525,6 @@ Fatal error: require_once(): Failed opening required
 '/srv/bindings/xxxxxxxxx/code/sites/all/modules/redis/redis.autoload.inc'
 ```
 
-### Drupal 6 Cache Backport
-
-If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](https://git.drupalcode.org/project/cache_backport/blob/master/INSTALL.txt) for how to configure Cache Backport.
-
-If you see the following message:
-
-```bash
-File not found:
-'sites/all/modules/cache_backport/system.admin.inc'
-```
-
-You skipped a step; `settings.php` must include the cache\_backport files. Add the following to `settings.php` before the Redis configuration:
-
-```php:title=settings.php
-$conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
-```
 
 ### You have requested a non-existent service
 
