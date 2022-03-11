@@ -54,7 +54,9 @@ In either case, the last step is activating the plugin from your WordPress dashb
 
 ## Configure Geolocation
 
-Geotargeting is a method that delivers different content to visitors based on their geographic location. This includes country, continent, region, city, and other criteria (for example connection speed and connection type). The specific header data sent to your site will depend on the settings configured for your AGCDN instance.
+Geotargeting is a method that delivers different content to visitors based on their geographic location. This includes country, continent, region, city, and other criteria (for example connection speed and connection type). The specific header data sent to your site will depend on the settings configured for your AGCDN instance. 
+
+You can read more about how to use or manipulate the geolocation data in the [Geolocation SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md).
 
 ## Test Geolocation
 
@@ -71,6 +73,8 @@ If the plugin is installed and configured correctly, you should also see either 
 ## Configure Interests
 
 Interests are much easier to set up in the edge configuration. In this case, we're telling the CDN to vary cache for specific taxonomy terms. In Drupal, these are tags and configured in the admin. In WordPress, categories are used by default (but any taxonomy can be used). When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
+
+You can read more about how to use or manipulate the interest data in the [Interest SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md).
 
 ## Test Interests
 
