@@ -45,7 +45,7 @@ Commit history: The steps in this process migrate a site, so the new site will n
 1. Follow the [Terminus Build Tools Documentation](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
 
 ```bash
-terminus build:project:create --git=github --team='My Agency Name' d9 my-site
+terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site
 ```
 
 1. Wait for the site to be created and the first build finishes.
@@ -61,7 +61,8 @@ terminus build:project:create --git=github --team='My Agency Name' d9 my-site
    ```bash
    export SOURCE=/absolute/path/to/source/site/codebase
    export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
-   export SOURCE_SITE_NAME=my-site
+   export SOURCE_SITE_NAME=my-source-site
+   export DESTINATION_SITE_NAME=my-buildtools-site
    ```
 
 ## Copy Existing Configuration
@@ -199,7 +200,7 @@ You can use sftp `get` command to download the file to your local directory if u
 Here is a single command that downloads the file to the current local directory:
 
 ```bash{promptUser:user}
-echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info $SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
+echo "get files/private/.build-tools/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
 ```
 
 ## Upload Your Files
@@ -223,7 +224,7 @@ You can use sftp `put` command to upload the file from your local directory if u
 Below is a single command which does this. This needs to be run from the directory where the `tokens.json` backup was downloaded:
 
 ```bash{promptUser:user}
-echo "put files/private/.build-tools/tokens.json" | $(terminus connection:info $SOURCE_SITE_NAME.dev --format=string --field=sftp_command)
+echo "put files/private/.build-tools/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
 ```
 
 
