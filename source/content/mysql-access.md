@@ -16,6 +16,8 @@ Due to the nature of our platform, the connection information will change from t
 
 ## Database Connection Information
 
+### Accessing the Database Directly
+
 MySQL credentials for each site environment are located in the Dashboard:
 
 ![MySQL Credentials](../images/dashboard/mysql-info.png)
@@ -23,7 +25,7 @@ MySQL credentials for each site environment are located in the Dashboard:
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
-- **Port**: The TCP/IP port number to use for the connection. There is no default and will differ for every environment on each site.
+- **Port**: The TCP/IP port number to use for the connection. There is no default and will differ for every environment on each site. The port that the platform chooses is randomized and may not be what you expect or what php reports.
 - **Username**: MySQL user name to use when connecting to server.
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database to use; the value will always be pantheon and cannot be altered.
@@ -38,7 +40,7 @@ There's a wide array of MySQL clients that can be used, including:
 
 and others. See the documentation or issue queue of your software to learn more about how to configure a connection.
 
-### Open Sequel Ace Database Connection
+#### Open Sequel Ace Database Connection
 
 Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Ace via [Terminus](/terminus) and [Drush](/drush):
 
@@ -90,6 +92,36 @@ open $TMP_SPF
 ```
 
 Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c)!
+
+### Accessing the Database via Your Application using PHP
+
+Use the following parameters in your application to access the database:
+- DB_HOST=Name of the MySQL server.
+- DB_PORT=Database port used.
+- DB_USER=Database username.
+- DB_PASSWORD=Database password
+- DB_NAME=Name of your database.
+- REPLICA_DB_HOST=Database IP address.
+- REPLICA_DB_PORT=Replica database port.
+- REPLICA_DB_USER=Replica database user name.
+- REPLICA_DB_PASSWORD=Replica database password.
+- REPLICA_DB_NAME: Name of your replica database.
+
+<Alert title="Note" type="info" >REPLICA_DB_HOST will be changing to have the same value as DB_HOST, and route to a proxy server.  We will no longer support connections via IP Address.</Alert>
+
+For example:
+```
+DB_HOST=dbhost
+DB_PORT=6033
+DB_USER=21b24cbb5bb44b9988a6112f46558b06
+DB_PASSWORD=e064b4a6223149c3812810e232b88eb5
+DB_NAME=pantheon
+REPLICA_DB_HOST=10.73.1.226
+REPLICA_DB_PORT=14097
+REPLICA_DB_USER=59e14dd2cedd4188848b6b4aed6fb5f5
+REPLICA_DB_PASSWORD=e35eff3a5a9f4c29b9044df35ad004e7
+REPLICA_DB_NAME=pantheon
+```
 
 ## SSH Tunneling
 
