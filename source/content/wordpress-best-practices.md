@@ -86,16 +86,9 @@ Pantheon does not support XML-RPC if it is enabled.
 
 </Alert>
 
-You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](/plugins-known-issues#jetpack) or the WordPress mobile app) by modifying your [`pantheon.yml`](/pantheon-yml) file. 
+You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](https://jetpack.com/) or the WordPress mobile app. 
 
-Add the following configuration to override the default protected web paths, and manually protect the other paths normally protected by default:
-
-```yml:title=pantheon.yml
-protected_web_paths_override: true
-protected_web_paths:
-  - /private
-  - /wp-content/uploads/private
-```
+<Partial file="jetpack-enable-xmlrpc.md" />
 
 ### Disable XML-RPC via a Custom Plugin
 

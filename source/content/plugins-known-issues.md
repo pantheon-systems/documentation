@@ -5,7 +5,7 @@ cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
-reviewed: "2021-09-13"
+reviewed: "2022-03-14"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -527,32 +527,11 @@ ___
 
 <ReviewDate date="2022-03-09" />
 
-**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with Automattic servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and sees lots of invalid traffic.
+**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with Automattic servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
 **Solution:** 
 
-1. Modify your site's `pantheon.yml` file to [allow access](/pantheon-yml#protected-web-paths-override) to the `xmlrpc.php` path:
-
-  ```yml:title=pantheon.yml
-  protected_web_paths_override: true
-  protected_web_paths:
-    - /private
-    - /wp-content/uploads/private
-  ```
-
- This will maintain the normal security settings for other paths, but allows access for XMLRPC. Follow the remaining steps below to block all requests to the `xmlrpc.php` file EXCEPT those added to your IP address allowlist. 
-
-1. Add [Jetpack IP addresses](https://jetpack.com/support/how-to-add-jetpack-ips-allowlist/) to the [is_from_trusted_ip function](/advanced-redirects#restrict-access-to-paths-based-on-ip) of your `wp-config.php` file.
-
-1. Change your `disallow_uri` array to:
-
-  ```php
-  $disallow_uri = array(
-          '/wp-login.php',
-          '/wp-admin/',
-          '/xmlrpc.php',
-      ); 
-  ```
+<Partial file="jetpack-enable-xmlrpc.md" />
 
 <Alert title="Note"  type="info" >
 
