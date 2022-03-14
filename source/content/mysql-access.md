@@ -95,7 +95,8 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 
 ### Accessing the Database via Your Application using PHP
 
-Use the following parameters in your application to access the database:
+Use the following variables in your application to access the database:
+
 - DB_HOST=Name of the MySQL server.
 - DB_PORT=Database port used.
 - DB_USER=Database username.
