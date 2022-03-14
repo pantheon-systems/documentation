@@ -1,6 +1,6 @@
 ---
-title: Migrating a Drupal with Composer site to a Build Tools site
-description: Migrate a Drupal 9 site created via Pantheon Dashboard (or Terminus) to a Build Tools based site
+title: Migrate a Composer-based Drupal Site to a Build Tools Site
+description: Migrate a Drupal 9 site created via Pantheon Dashboard (or Terminus) to a Build Tools-based site.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -9,18 +9,18 @@ tags: [composer, site, workflow]
 reviewed: "2022-03-10"
 ---
 
-In this guide, we will migrate a Drupal with Composer site (site created via Pantheon dashboard or Terminus) to a Build Tools based site.
+This guides shows you how to migrate a Composer-based Drupal site (site created via Pantheon dashboard or Terminus) to a Build Tools-based site.
 
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies. A Build Tools based Drupal 9 site has besides that, an external repository and a Continuous Integration workflow setup.
+Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies. A Drupal 9 site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
 
 The goals of this migration are:
 
-1. Create a new Drupal site in Pantheon using Terminus Build Tools plugin
+1. Create a new Drupal site in Pantheon using the [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
-1. Import your existing codebase, database and files into it
+1. Import your existing codebase, database, and files into your new site
 
 
 ## Will This Guide Work for Your Site?
@@ -42,13 +42,13 @@ Commit history: The steps in this process migrate a site, so the new site will n
 
 ## Create a new Terminus Build Tools Drupal 9 site
 
-1. Follow the [Terminus Build Tools Documentation](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
+1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
 
   ```bash
   terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site
   ```
 
-1. Wait for the site to be created and the first build finishes.
+1. Wait for the site to be created and for the first build to complete.
 
 ## Prepare the Local Environment
 
@@ -56,7 +56,7 @@ Commit history: The steps in this process migrate a site, so the new site will n
 
 2. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
-1. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the following temporary variables in your terminal session to match your folders location and sites names.
+1. Set the following temporary variables in your terminal session to match your folders location and sites names:
 
    ```bash
    export SOURCE=/absolute/path/to/source/site/codebase
@@ -67,7 +67,7 @@ Commit history: The steps in this process migrate a site, so the new site will n
 
 ## Copy Existing Configuration
 
-Copy any existing configuration from the source sitem and update the source path as needed to match your configuration folder:
+Copy any existing configuration from the source site and update the source path as needed to match your configuration folder:
 
   ```bash{promptUser:user}
   rsync -avz $SOURCE/config/ $DESTINATION/config/ --delete --delete-after
@@ -76,7 +76,7 @@ Copy any existing configuration from the source sitem and update the source path
   git commit -m "Pull in configuration from source site"
   ```
 
-It is possible that the Drupal site might have relocated the configuration path to a different location. You can find out where your config yaml files are via:
+It is possible that the Drupal site might have relocated the configuration path to a different location. You can find your `config.yaml` files are via:
 
 ```bash{promptUser:user}
 terminus drush $SOURCE_SITE_NAME.dev -- status --fields=config-sync
@@ -90,13 +90,15 @@ This section describes how to replicate your selection of contributed modules an
 
 ### Contributed Code
 
-The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as _contributed code_). The only things from the existing site that should remain in the git repository are custom code, custom themes, and custom modules that are specific to the existing site.
-
+The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as _contributed code_). The only items from the existing site that should remain in the Git repository are custom code, custom themes, and custom modules that are specific to the existing site.
 
 #### Modules and Themes
 
+Your site should already be managing contributed modules and themes through Composer. Follow the steps below to migrate these items to a new site.
 
-Your site should already be managing contributed modules and themes through composer. To migrate them to the new site, look at the source site `composer.json` and run a `composer require` command for each of those modules and themes in the `$DESTINATION` directory:
+1. Open the source site `composer.json`.
+
+1. Run a `composer require` command for each module and theme in the `$DESTINATION` directory:
 
 ```bash
 composer require drupal/PROJECT_NAME:^VERSION
@@ -106,7 +108,11 @@ You can require multiple packages in the same commands if you prefer so.
 
 #### Other Composer Packages
 
-If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
+Follow the steps below, if you added non-Drupal packages to your site via Composer. 
+
+1. Run the command `composer require` to migrate each package. 
+
+1. Use the following command to display the differences between the master and current `composer.json`:
 
 ```
 diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
@@ -124,27 +130,27 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 #### Modules and Themes
 
-To move modules, use the following commands:
+1. Run the following commands to move modules:
 
-```bash{promptUser:user}
-mkdir -p $DESTINATION/web/modules/custom
-cp -r $SOURCE/web/modules/custom $DESTINATION/web/modules/custom
-# From $DESTINATION:
-git add web/modules/
-git commit -m "Copy custom modules"
-```
+  ```bash{promptUser:user}
+  mkdir -p $DESTINATION/web/modules/custom
+  cp -r $SOURCE/web/modules/custom $DESTINATION/web/modules/custom
+  # From $DESTINATION:
+  git add web/modules/
+  git commit -m "Copy custom modules"
+  ```
 
-To move themes, use the following commands:
+1. Run the following commands to move themes:
 
-```bash{promptUser:user}
-mkdir -p $DESTINATION/web/themes/custom
-cp -r $SOURCE/web/themes/custom $DESTINATION/web/themes/custom
-# From $DESTINATION:
-git add web/themes/
-git commit -m "Copy custom themes"
-```
+  ```bash{promptUser:user}
+  mkdir -p $DESTINATION/web/themes/custom
+  cp -r $SOURCE/web/themes/custom $DESTINATION/web/themes/custom
+  # From $DESTINATION:
+  git add web/themes/
+  git commit -m "Copy custom themes"
+  ```
 
-Use the above commands with any of the custom code.
+1. Use the above commands to move custom code (if any) to your new site.
 
 #### settings.php
 
@@ -161,17 +167,17 @@ The resulting `settings.php` should have no `$databases` array.
 
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 
-You can use the diff command to get the information you need to copy:
+1. Use the diff command to get the information you need to copy:
 
-```
-diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
-```
+  ```
+  diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
+  ```
 
-Commit your changes as needed.
+1. Commit your changes as needed.
 
 ### Push to the external repository master branch
 
-Now push to the master branch in the external repository:
+Push to the master branch in the external repository:
 
 ```
 git push origin master
@@ -181,60 +187,61 @@ And wait for Continuous Integration workflow to succeed so that it commits your 
 
 ## Add Your Database
 
-@TODO This could be redacted better to use the export functionality in dashboard to get the URL and put it into the new site.
-
 <Partial file="migrate-add-database.md" />
 
 ## Backup tokens.json file
 
-@TODO: REDACT THIS SECTION BETTER.
+1. Connect to your site using SFTP command or credentials from your dashboard and get a backup of the following file:
 
-Connect to your site using SFTP command or credentials from your dashboard and get a backup of the following file:
+  ```bash
+  files/private/.build-secrets/tokens.json
+  ```
 
-```
-files/private/.build-secrets/tokens.json
-```
+1. Use the SFTP `get` command to download the file to your local directory (this is only for SFTP command line use): 
 
-You can use sftp `get` command to download the file to your local directory if using SFTP command line.  
-
-Here is a single command that downloads the file to the current local directory:
-
-```bash{promptUser:user}
-echo "get files/private/.build-secrets/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
-```
+  ```bash{promptUser:user}
+  echo "get files/private/.build-secrets/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
+  ```
 
 ## Upload Your Files
-
-@TODO This could be redacted better to use the export functionality in dashboard to get the URL and put it into the new site.
 
 <Partial file="migrate-add-files-only-drupal.md" />
 
 ## Restore tokens.json file
 
-@TODO: REDACT THIS SECTION BETTER.
+1. Connect to your site using SFTP command or credentials from your dashboard to restore the backup of the `tokens.json` file:
 
-Connect to your site using SFTP command or credentials from your dashboard and restore the backup of the tokens.json file:
+  ```bash
+  files/private/.build-secrets/tokens.json
+  ```
 
-```
-files/private/.build-secrets/tokens.json
-```
+1. Use the SFTP `put` command to upload the file from your local directory (only if using the SFTP command line):
 
-You can use sftp `put` command to upload the file from your local directory if using SFTP command line.
+ <Alert title="Note"  type="info" >
 
-Below is a single command which does this. This needs to be run from the directory where the `tokens.json` backup was downloaded:
+ You must run this from the directory where the `tokens.json` backup was downloaded.
 
-```bash{promptUser:user}
-echo "put files/private/.build-secrets/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
-```
+ </Alert>
 
+  ```bash{promptUser:user}
+  echo "put files/private/.build-secrets/tokens.json" | $(terminus connection:info $DESTINATION_SITE_NAME.dev --format=string --field=sftp_command)
+  ```
 
-You should now have all three of the major components of your site imported into your new site and CI should be working. Clear your caches on the the Pantheon Dashboard, and you are good to go!
+ You should now have all three of the major components of your site imported into your new site and CI should be working. 
+
+1. Clear the caches on the Pantheon Dashboard, and you are good to go!
 
 ## Troubleshooting
 
-### Provided host name not valid
+### Provided Host Name Not Valid
 
-If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+Update your `settings.php` file with a trusted host setting, if you receive the following error message:
+
+```none
+ The provided host name is not valid for this server
+ ```
+
+Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
 ### Working With Dependency Versions
 
