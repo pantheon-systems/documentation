@@ -72,7 +72,7 @@ Manage PHP versions by committing a `pantheon.yml` configuration file to the roo
 ```yaml
 api_version: 1
 
-php_version: 7.0
+php_version: 8.0
 ```
 
 You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
