@@ -30,7 +30,7 @@ There are some major differences between Pantheon Cron and WP-Cron.
 
 ### When Jobs are Executed
 
-Pantheon Cron runs WP-Cron as an hourly task or on demand through Terminus. In contrast, WP-Cron only runs when [someone visits the site](https://stackoverflow.com/questions/12895706/when-does-wp-cron-php-run-in-wordpress) because it is a web-based system. 
+Pantheon Cron runs WP-Cron as an hourly task or on demand through Terminus. In contrast, WP-Cron script values are checked and executed (if overdue) only when someone visits the site.
 
 <Alert title="Note" type="info">
 
