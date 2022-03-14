@@ -109,10 +109,26 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 </Accordion>
 
-## Unexpected Error Preventing Autopilot From Taking Screenshots of Your Website
+## Preventing Autopilot From Taking Screenshots of Your Website
 
 <Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
 
 Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
 </Accordion>
+
+## 
+<Accordion title="Multidev converge failed. Reach out to our support team for assistance." id="cannot-converge-multidev" icon="info-sign">
+
+### Issue
+
+Most often, this is because of Drush/WP-CLI failing following db pull. Could be Autopilot workflow specific (most of the time - due to site-level CMS issue), could also be due to platform-wide event. 
+ 
+### Solution
+
+Check that CLI cache clear steps work in dev env, see whether creating other multidevs works, delete the autopilot env and branch (branch is important because branch is left in git if only delete multidev) and try again. If any of this works, try running AP again.
+
+If these steps fail, reach out to Support.
+  
+</Accordion>
+
