@@ -116,7 +116,7 @@ In this section, we identify the content type where you want to use personalizat
 
 1. Click **+Add Global Segment Set**.
 
-    ![Add Global Segment Set](../../../images/guides/edge-integrations/segmentsetentities.png)
+    ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities2.png)
 
 1. Provide a label (e.g. Interest) - the name isn't critical.
 
