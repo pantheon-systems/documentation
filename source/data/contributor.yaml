@@ -25,6 +25,11 @@
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
+- id: whitneymeredith
+  name: Whitney Meredith
+  avatar: //github.com/whitneymeredith.png?size=460
+  bio: Technical Writer, Pantheon
+  github: //github.com/whitneymeredith
 - id: eabquina
   name: Eladio Abquina
   bio: Manager of Implementation Services, Pantheon
@@ -63,7 +68,7 @@
   url: https://handbuilt.co/
 - id: caitybishop
   name: Caity Bishop
-  bio: Manager of Content, Pantheon
+  bio: Community contributor
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/IMG_2047.jpg
   linkedin: https://www.linkedin.com/in/caitlin-lee-bishop/
 - id: clintonPantheon
@@ -141,7 +146,7 @@
 - id: dgorton
   name: Drew Gorton
   twitter: https://twitter.com/dgorton
-  bio: Director of Developer Relations, Pantheon
+  bio: Community contributor
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Drew.jpg
   github: //github.com/dgorton
 - id: masonjames
@@ -158,7 +163,7 @@
   linkedin: //www.linkedin.com/in/fatimasarahkhalid/
   github: //github.com/sugaroverflow
   drupal: https://www.drupal.org/u/sugaroverflow
-  bio: Developer Programs Engineer, Pantheon
+  bio: Community contributor
 - id: sparklingrobots
   name: Tara King
   avatar: //avatars.githubusercontent.com/u/2217845
@@ -306,6 +311,15 @@
   github: //github.com/BFTrick
   linkedin: https://www.linkedin.com/learning/instructors/patrick-rauland?u=2125562
   url: https://www.speakinginbytes.com/
+- id: jazzsequence
+  name: Chris Reynolds
+  avatar: //github.com/jazzsequence.png?size=460
+  github: //github.com/jazzsequence
+  twitter: //twitter.com/jazzs3quence
+  wordpress: //profiles.wordpress.org/jazzs3quence
+  linkedin: //www.linkedin.com/in/chrissreynolds
+  url: //chrisreynolds.io
+  bio: Software Engineer, Pantheon
 - id: LukasRos
   name: Lukas Rosenstock
   twitter: https://twitter.com/LukasRosenstock
@@ -313,6 +327,13 @@
   bio: API, Cloud & Integration Expert
   avatar: //avatars3.githubusercontent.com/u/192050
   github: //github.com/LukasRos
+- id: jspellman814
+  name: John Spellman
+  avatar: //github.com/jspellman814.png?size=460
+  github: //github.com/jspellman814
+  wordpress: //profiles.wordpress.org/jspellman
+  linkedin: //www.linkedin.com/in/john-spellman-86039262
+  bio: Software Engineer, Pantheon
 - id: peter-pantheon
   name: Peter Sawczynec
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
@@ -408,24 +429,3 @@
   github: //github.com/szipfel
   twitter: https://twitter.com/szipfel
   bio: Community contributor
-- id: whitneymeredith
-  name: Whitney Meredith
-  avatar: //github.com/whitneymeredith.png?size=460
-  bio: Technical Writer, Pantheon
-  github: //github.com/whitneymeredith
-- id: jazzsequence
-  name: Chris Reynolds
-  avatar: //github.com/jazzsequence.png?size=460
-  github: //github.com/jazzsequence
-  twitter: //twitter.com/jazzs3quence
-  wordpress: //profiles.wordpress.org/jazzs3quence
-  linkedin: //www.linkedin.com/in/chrissreynolds
-  url: //chrisreynolds.io
-  bio: Software Engineer, Pantheon
-- id: jspellman814
-  name: John Spellman
-  avatar: //github.com/jspellman814.png?size=460
-  github: //github.com/jspellman814
-  wordpress: //profiles.wordpress.org/jspellman
-  linkedin: //www.linkedin.com/in/john-spellman-86039262
-  bio: Software Engineer, Pantheon
