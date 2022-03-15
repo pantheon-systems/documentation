@@ -16,11 +16,11 @@ This guides shows you how to migrate a Composer-based Drupal site (site created 
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies. A Drupal 9 site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
 
-The goals of this migration are:
+The goals of this migration are to:
 
-1. Create a new Drupal site in Pantheon using the [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
+- Create a new Drupal site in Pantheon using the [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
-1. Import your existing codebase, database, and files into your new site
+- Import your existing codebase, database, and files into your new site
 
 
 ## Will This Guide Work for Your Site?
@@ -36,7 +36,7 @@ The goals of this migration are:
 
 <Alert title="Note"  type="info" >
 
-Commit history: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+The existing site's commit history will no longer exist after migrating to the new site.
 
 </Alert>
 
@@ -82,7 +82,7 @@ It is possible that the Drupal site might have relocated the configuration path 
 terminus drush $SOURCE_SITE_NAME.dev -- status --fields=config-sync
 ```
 
-If no files are copied through this step, that's acceptable.
+In some cases no files are copied through this step. This is not cause for concern.
 
 ## Add Contributed and Custom Code
 
@@ -104,7 +104,7 @@ Your site should already be managing contributed modules and themes through Comp
 composer require drupal/PROJECT_NAME:^VERSION
 ```
 
-You can require multiple packages in the same commands if you prefer so.
+You can require multiple packages in the same commands if desired.
 
 #### Other Composer Packages
 
@@ -150,7 +150,7 @@ Manually copy custom code from the existing site repository to the Composer-mana
   git commit -m "Copy custom themes"
   ```
 
-1. Use the above commands to move custom code (if any) to your new site.
+Use the above commands to move custom code (if any) to your new site.
 
 #### settings.php
 
@@ -167,7 +167,7 @@ The resulting `settings.php` should have no `$databases` array.
 
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 
-1. Use the diff command to get the information you need to copy:
+1. Use the `diff` command to get the information you need to copy:
 
   ```
   diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
@@ -177,13 +177,13 @@ Any additional Composer configuration that you have added to your site should be
 
 ### Push to the external repository master branch
 
-Push to the master branch in the external repository:
+1. Push to the master branch in the external repository:
 
-```
-git push origin master
-```
+  ```
+  git push origin master
+  ```
 
-And wait for Continuous Integration workflow to succeed so that it commits your code changes to the Pantheon site.
+1. Confirm that the Continuous Integration workflow to succeeds in committing your code changes to the Pantheon site.
 
 ## Add Your Database
 

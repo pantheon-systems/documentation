@@ -2,7 +2,7 @@
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
-Follow the steps below to export a `tar.gz` or `.zip` file of the files in your directory.
+Follow the steps below to export a `tar.gz` or `.zip` file of your directory files.
 
 1. Navigate to your Drupal site's root directory to run this command: 
 
@@ -13,7 +13,7 @@ Follow the steps below to export a `tar.gz` or `.zip` file of the files in your 
 
   Now you have created an archive file in your user's home directory.
 
-1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in Site Dashboard.
+1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
 
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 
@@ -49,7 +49,7 @@ Follow the steps below to export a `tar.gz` or `.zip` file of the files in your 
 
   <Tab title="Over 500MBs" id="500mbsplusfiles">
 
-   We recommend using the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to transfer a large number of files. This avoids using numerous command line arguments and specific directory structures, which make it easy to introduce mistakes.
+   We recommend using the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to transfer a large number of files. This allows you to avoid using multiple command line arguments and specific directory structures, which make it easy to introduce mistakes.
 
    Rsync only transfers the new changes to the directory after the initial rsync runs. This minimizes the time a site is in an unpredictable state (or offline) during the final step of migration, and allows you to bring over only new content rather than re-copying every single file.
 
