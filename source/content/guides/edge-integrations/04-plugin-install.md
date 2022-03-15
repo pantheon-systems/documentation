@@ -42,7 +42,7 @@ If you do not use Composer on your project, you can still get started with the W
 
 * Download the Source Code (zip) file associated with the most recent version.
 
-![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets.png)
+![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets2.png)
 
 * Extract the plugin in your `wp-content/plugins` directory and you will have all of the compiled assets and included dependencies, which inclue a global CMS-agnostic [PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations), and a [WordPress plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations).
 
@@ -63,7 +63,7 @@ You can learn more about how to use or manage the geolocation data in the [Geolo
 
 To validate that geolocation is working, open your browser inspector tools, click the Network tab (in Chrome and Firefox), and reload the page so that new data can be recorded and displayed. When you click on the page URL- usually listed first- and inspect the Response Headers, the relevant geolocation data will appear.
 
-![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/geo-audience-values.png)
+![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/geo-audience-values2.png)
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
@@ -81,7 +81,7 @@ You can read more about how to use or manipulate the interest data in the [Inter
 
 You can validate that the interest tracking is working by clicking on multiple pages tagged with the same term 3 (or more, depending on your configuration) times, then going to the same Network tab in your browser inspector tools. This time, you should see a value for `interest` that matches the pages you navigated to.
 
-![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value.png)
+![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
 
 ## Interests Use Case
 
