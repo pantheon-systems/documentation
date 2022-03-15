@@ -1,6 +1,6 @@
 ---
 title: Accessing MySQL Databases
-description: Configure and troubleshoot your Pantheon website's MySQL database connections.
+description: CConfigure and Troubleshoot Your Pantheon Website's MySQL Database Connections
 categories: [develop]
 tags: [database, local, ssh]
 reviewed: "2021-07-16"
@@ -96,16 +96,16 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 ### Accessing the Database via Your Application using PHP
 
 Use the following variables in your application to access the database:
-- DB_HOST: Name of the MySQL server.
-- DB_PORT: Database port used.
-- DB_USER: MySQL user name to use when connecting to server.  This will be changing to have the same value as DB_HOST, and route to a proxy server.  We will no longer support connections via IP Address.
-- DB_PASSWORD: The password to use when connecting to the server.
-- DB_NAME: The database to use; the value will always be pantheon and cannot be altered.
-- REPLICA_DB_HOST: Database IP address.
-- REPLICA_DB_PORT: Replica database port.
-- REPLICA_DB_USER: MySQL replica user name to use when connecting to server.
-- REPLICA_DB_PASSWORD: The password to use when connecting to the server.
-- REPLICA_DB_NAME: The replica database to use; the value will always be pantheon and cannot be altered.
+- **DB_HOST**: Name of the MySQL server.
+- **DB_PORT**: Database port used.
+- **DB_USER**: MySQL user name to use when connecting to server.  This will be changing to have the same value as DB_HOST, and route to a proxy server.  We will no longer support connections via IP Address.
+- **DB_PASSWORD**: The password to use when connecting to the server.
+- **DB_NAME**: The database to use; the value will always be pantheon and cannot be altered.
+- **REPLICA_DB_HOST**: Database IP address.
+- **REPLICA_DB_PORT**: Replica database port.
+- **REPLICA_DB_USER**: MySQL replica user name to use when connecting to server.
+- **REPLICA_DB_PASSWORD**: The password to use when connecting to the server.
+- **REPLICA_DB_NAME**: The replica database to use; the value will always be pantheon and cannot be altered.
 
 
 For example:
