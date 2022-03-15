@@ -113,9 +113,9 @@ The benefits of Rate Limiting include:
 
 - Volumetric Attack Mitigation - Reduce the effectiveness of malicious traffic, including brute-force login and denial-of-service attacks.
 
-- Policy-based Control - Rate Limiting supports adjustable configurations that can be adjusted on a per policy basis, including requests per second, and detection window.
+- Policy-based Control - Rate Limiting supports adjustable configurations for your policy, including requests per second, and detection window.
 
-- Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for each policy.
+- Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
 
 <Alert title="Note"  type="info" >
 
