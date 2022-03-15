@@ -4,6 +4,7 @@ description: Learn how to create and run jobs using Pantheon Cron or WordPress's
 cms: "WordPress"
 categories: [automate]
 tags: [cron]
+showtoc:[true]
 contributors: [greg-1-anderson, CdrMarks, whitneymeredith]
 ---
 
@@ -42,7 +43,7 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 
 WP-Cron is a PHP file that is usually located in the root directory of your WordPress installation. The `wp-cron.php` file is subject to DDoS attacks, but generally, `wp-cron.php` is secure. 
 
-There is only one parameter you can pass in that will affect the script (`doing_wp_cron`). The `$_GET` value is not filtered, and is only used as a flag (not as input for a process or variable). All input is ignored outside this. `wp-cron.php` currently does not have any known vulnerabilities or exploits, although no script on a server attached to the Internet is 100% secure.
+There is only one parameter you can pass that will affect the script, `doing_wp_cron`. The `$_GET` value is not filtered, and is only used as a flag (not as an input for a process or variable). All inputs are ignored outside this. Currently, `wp-cron.php` does not have any known vulnerabilities or exploits, although it shoule be noted that no script on a server attached to the Internet is 100% secure.
 
 ## Manage WP-Cron Internally
 
