@@ -58,7 +58,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
-  Click **Save** to initialize Autopilot on the Site.
+1. Click **Save** to initialize Autopilot on the Site.
 
 1. Click **Status** in the Autopilot sidebar for the current status of the testing. This process might take a while:
 
@@ -70,7 +70,7 @@ From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, cl
 
 The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-If the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+Autopilot will show warnings in the sections where Composer manages updates, if the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites). 
 
 Click **Save** for each section of the configuration in which you make changes.
 
@@ -104,9 +104,9 @@ Add pages to track for visual regression testing, along with a percent of accept
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
-Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
+1. Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
 
-Click **Save** to save changes.
+1. Click **Save** to save changes.
 
 #### Acceptable Change
 
@@ -129,9 +129,9 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
-Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
+1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
 
-Select any that should be excluded, then click **Save**.
+1. Select updates that should be excluded, then click **Save**.
 
 ### Excluded Web Elements
 
@@ -139,13 +139,17 @@ Add any CSS selectors that you want to exclude from the visual regression tests.
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
-List the CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
+1. List the CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
 
-Click **Save**.
+1. Click **Save**.
 
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+
+## Enable Autopilot Cloning Feature
+
+Cloning feature content goes here. This will be located under settings.
 
 ## Enable Autopilot Email Notifications
 

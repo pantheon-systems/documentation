@@ -3,7 +3,7 @@
 1. Use Terminus to list all available updates:
 
   ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE
+  terminus upstream:updates:list $SITE.dev
   [warning] There are no available updates for this site.
   ```
 

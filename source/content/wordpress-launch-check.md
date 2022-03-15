@@ -27,7 +27,7 @@ WP Launch Check is a site audit extension for WP-CLI designed for Pantheon custo
 
 To manually perform a site audit using WP Launch Check from the command line (using [Terminus](/terminus)), run:
 
-```bash{promptUser: user}
+```php{promptUser: user}
 terminus wp <site>.<env> -- launchcheck <subcommand>
 ```
 
@@ -39,11 +39,29 @@ For more information about WP-CLI, visit their [GitHub page](https://github.com/
 
 This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following message:
 
-> Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php.
+`Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php.`
 
 ### Database
 
-This displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
+The database stores your site's data including:
+
+- pages and other content
+- user data
+- plugins and themes
+- categories, tags, and system-wide settings
+- tables 
+
+Launch Check displays database stats, the number of rows in a given table, which tables are using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. [Transients](https://developer.wordpress.org/apis/handbook/transients/) are cached data temporarily stored in the `wp_options` table.  
+
+ The `wp_options` table stores several types of data for your site, including:
+
+- settings for your plugins, widgets, and themes
+- temporarily cached data
+- site URL and home URL
+- category settings
+- autoloaded data
+
+If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data).
 
 #### What issues will I experience if I don't use InnoDB?
 
@@ -58,11 +76,10 @@ This check will display a list of exploited patterns in code, the file name that
 
 This tells you if Object Caching and Redis are enabled.
 
-If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
-
-> Cannot redeclare class WP_Object_Cache in
-/srv/bindings/0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php
-
+If you receive an error message similar to the example below, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+    
+`Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`
+    
 ### Plugins
 
 This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.
