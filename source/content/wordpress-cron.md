@@ -4,7 +4,6 @@ description: Learn how to create and run jobs using Pantheon Cron or WordPress's
 cms: "WordPress"
 categories: [automate]
 tags: [cron]
-showtoc:[true]
 contributors: [greg-1-anderson, CdrMarks, whitneymeredith]
 ---
 
