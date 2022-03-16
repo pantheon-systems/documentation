@@ -151,8 +151,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 
 1. Move the resulting backup to the correct directory on your local file system:
 
-- **Drupal**: `sites/default/files`
-- **WordPress**: `wp-content/uploads`
+    - **Drupal**: `sites/default/files`
+    - **WordPress**: `wp-content/uploads`
 
 ### Via SFTP CLI
 
