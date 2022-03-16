@@ -28,7 +28,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
-| 8.1 | ➖ | In development |
+| 8.1 | ➖ | Available <Popover title="New Relic" content="New Relic is not supported in PHP 8.1." /> |
 | [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active  |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
 | [7.3](https://v73-php-info.pantheonsite.io/) | ❌          | EOL     |
@@ -72,7 +72,7 @@ Manage PHP versions by committing a `pantheon.yml` configuration file to the roo
 ```yaml
 api_version: 1
 
-php_version: 7.0
+php_version: 8.0
 ```
 
 You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.

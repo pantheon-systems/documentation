@@ -1,6 +1,6 @@
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, compress the resulting archive with gzip:
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, compress the resulting archive with Gzip:
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql
@@ -24,7 +24,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Up to 100MBs" id="100mbs" active={true}>
 
-  If your archive is under 100MB, you can upload the file directly:
+  If your archive is under 100MB, upload the file directly:
 
    1. In the **MySQL database** field, click **File**, then **Choose File**.
 
@@ -38,7 +38,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Up to 500MBs" id="500mbs">
 
-  If your archive is less than 500MB, you can import it from URL:
+  If your archive is less than 500MB, import it from URL:
 
    1. In the **MySQL database** field, click **URL**.
 
