@@ -28,15 +28,15 @@ There are three parts to any dynamic website:
 
 1. **Files**: User uploaded or application generated.
 
-You will need to transfer each one from Pantheon to your local environment.
+You will need to transfer each file from Pantheon to your local environment.
 
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
+- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) are compatible.
   - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
   - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR rsync
+- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
 - [Terminus](/terminus)
 - [Drush](/drush) (optional)
 
@@ -62,11 +62,11 @@ terminus env:clear-cache $SITE.$ENV
 
 The first step is to get a `git clone` of your code from Pantheon on your local computer.
 
-1. Log in to Pantheon and load the Dashboard for the site you want to work on.
+1. Log in to Pantheon > open the Site Dashboard.
 
-1. Locate the `git clone` command at the top of the development panel, and copy and paste it in your terminal. 
+1. Locate the `git clone` command at the top of the development panel > copy and paste it into your terminal. 
 
- It will look something like this:
+ It will look similar to this:
 
     ![Copy and Paste Git Clone](../images/dashboard/git-string.png)
 
@@ -107,7 +107,7 @@ The first step is to get a `git clone` of your code from Pantheon on your local 
 
 1. Download the scheduled or on-demand backup by selecting **Backups** > **Backup Log** > **Database download link**.
 
-1. Import the database into your local environment using a MySQL client:
+1. Import the database into your local environment using your MySQL client:
 
   ```bash{promptUser: user}
   gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
@@ -149,7 +149,7 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 
  This will create and get a backup of the site's files.
 
-1. Move the resulting backup to the proper directory on your local file system:
+1. Move the resulting backup to the correct directory on your local file system:
 
 - **Drupal**: `sites/default/files`
 - **WordPress**: `wp-content/uploads`
@@ -158,7 +158,7 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 
 SFTP is slower, but easier for some to use:
 
-1. Get your SFTP login credentials by clicking **Connection Info**. 
+1. Click **Connection Info** to get your SFTP login credentials. 
 
  You will see your connection credentials and a link to connect directly with your preferred client.
 
@@ -189,19 +189,19 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Database
 
-1. Create an archive using the MySQL utility mysqldump:
+1. Create an archive using the MySQL utility `mysqldump`:
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
   ```
 
-1. Upload and import the file by going to your Pantheon Dashboard and selecting **Database / Files** > **Import**.
+1. Open your Pantheon Dashboard and select **Database / Files** > **Import** to upload and import the file.
 
 ### Send the Files
 
 #### Upload files to Drupal Via Drush
 
-Drush and rsync are the easiest ways to send files for Drupal sites:
+Drush and Rsync are the easiest ways to send files for Drupal sites:
 
 ```bash{promptUser: user}
 drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
@@ -220,9 +220,9 @@ Send files using SFTP:
 
 1. Paste the CLI command copied from your Dashboard.
 
-1. Navigate to the correct remote directory by running `cd files`
+1. Navigate to the correct remote directory by running `cd files`.
 
-1. Run `put -r ./*` to transfer the files up.
+1. Run `put -r ./*` to transfer the files.
 
 You can also transfer a single file or a single directory at a time instead of transferring every file, every time.
 
@@ -230,7 +230,7 @@ You can also transfer a single file or a single directory at a time instead of t
 
 You'll need to configure database credentials matching your local database to develop locally. Do not manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`), as this could commit changes to version control and trigger a connection error on Dev when pushing to Pantheon.
 
-Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
+We recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
 Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
