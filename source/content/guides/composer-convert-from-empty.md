@@ -81,4 +81,4 @@ Note that only the [User in Charge](/change-management#site-level-roles-and-perm
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)

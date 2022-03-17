@@ -242,4 +242,4 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)
