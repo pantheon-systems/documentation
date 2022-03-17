@@ -97,3 +97,4 @@ You can validate that the interest tracking is working by clicking on multiple p
 - [Pantheon Geolocation Shortcodes](https://github.com/pantheon-systems/pantheon-geolocation-shortcodes)
 - [Geo: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md)
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
+- [Integrate Cookie Consent](TBD- CR)
