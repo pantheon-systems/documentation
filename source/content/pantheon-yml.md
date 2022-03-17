@@ -198,8 +198,8 @@ search:
 
 #### Considerations
 
-* The valid values for the versions are `3` and `8`.
-* Currently, Solr 8 is only supported for [Drupal 9](https://pantheon.io/docs/guides/solr-drupal/solr-drupal-9) sites.
+- The valid values for the versions are `3` and `8`.
+- Currently, Solr 8 is only supported for [Drupal 9](https://pantheon.io/docs/guides/solr-drupal/solr-drupal-9) sites.
 
 ### Drush Version
 
@@ -221,7 +221,7 @@ We recommend *only* changing this setting when needed for [Custom Upstream Confi
 
 </Alert>
 
-The only valid filemount path other than the default path for each CMS is `/files` relative to your docroot:
+The only valid `filemount` path other than the default path for each CMS is `/files` relative to your docroot:
 
 ```yaml:title=pantheon.yml
 filemount: /files
@@ -231,9 +231,9 @@ Complete the following before deploying `filemount` (**required**):
 
 1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://wordpress.org/support/article/editing-wp-config-php/#moving-uploads-folder) to use the new path
 
-1. Add path to the `.gitignore` file
+1. Add path to the `.gitignore` file.
 
-1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
+1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths).
 
 ## Quicksilver Platform Integration Hooks
 
