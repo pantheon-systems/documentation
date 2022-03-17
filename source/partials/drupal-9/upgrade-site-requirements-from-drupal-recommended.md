@@ -7,8 +7,8 @@ You must confirm that your site meets the following requirements before you cont
   Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
  The following values indicate that a site is using an `drupal-recommended` upstream:
-  * The `Framework` is `drupal8`
-  * The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended.git`
+  - The `Framework` is `drupal8`
+  - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended.git`
 
   The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `empty`:
 
