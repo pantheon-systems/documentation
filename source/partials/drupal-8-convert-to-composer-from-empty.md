@@ -43,7 +43,7 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
 ### Add Upgrade Status Module
 
-This step is optional; you may wait and add the Upgrade Status module to your site later.
+This step is optional. You can wait and add the Upgrade Status module to your site later.
 
 The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
 
@@ -55,11 +55,11 @@ Add the Upgrade Status module to your site with Composer:
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to Drupal 9, you may enable this module and view the status report it provides to find things that need to be done before upgrading.
+When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
 
 ### Copy Existing Configuration
 
-Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
+Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
 
   ```bash{promptUser:user}
   git checkout master sites/default/config
@@ -114,6 +114,8 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   terminus drush $SITE.dev pm:list -- --no-core --fields=name,version  --format=table
   ```
 
+  If you were already using composer to manage your site dependencies, you could just look at your source site `composer.json` file and get the package names and version from there.
+
 1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
 
   ```bash{promptUser:user}
@@ -159,14 +161,6 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     </Accordion>
 
-#### Other Composer Packages
-
-If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
-
-```
-git diff master:composer.json composer.json
-```
-
 #### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
@@ -177,7 +171,7 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 #### Modules and Themes
 
-To move modules, use the following commands:
+Modules:
 
 ```bash{promptUser:user}
 git checkout master modules/custom
@@ -185,7 +179,7 @@ git mv modules/custom web/modules/
 git commit -m "Copy custom modules"
 ```
 
-To move themes, use the following commands:
+Themes:
 
 ```bash{promptUser:user}
 git checkout master themes/custom
@@ -193,7 +187,7 @@ git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 
-Use the above commands with any of the custom code.
+Follow suit with any other custom code you need to carry over.
 
 #### settings.php
 
@@ -210,16 +204,6 @@ rm web/sites/default/original-settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
-
-### Additional Composer Configuration
-
-Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
-
-You can use the diff command to get the information you need to copy:
-
-```
-git diff master:composer.json composer.json
-```
 
 ## Deploy
 
@@ -257,7 +241,7 @@ If the site is not working, try this Composer command on the local `composerify`
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
 
 ### Move composerify to the Main Dev Branch
 
