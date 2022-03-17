@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Install Drupal Module
+subtitle: Drupal SDK
 description: Install, configure, and use Edge Integrations with Drupal.
 categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
