@@ -13,11 +13,11 @@ anchorid: drupal-9-migration/drupal-9-to-pantheon-non-composer
 editpath: drupal-9-migration/drupal-9-to-pantheon-non-composer.md
 ---
 
-This doc shows how to migrate an existing non-Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with [Integrated Composer](/integrated-composer) on Pantheon.
+This doc shows how to migrate an existing non-Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with [Integrated Composer](/guides/integrated-composer) on Pantheon.
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies.
+Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
 The goals of this migration are to:
 
@@ -242,4 +242,4 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)
