@@ -59,7 +59,7 @@ Geotargeting is a method that delivers different content to visitors based on th
 
 You can learn more about how to use or manage the geolocation data in the [Geolocation SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md).
 
-## Test Geolocation
+### Test Geolocation
 
 To validate that geolocation is working, open your browser inspector tools, click the Network tab (in Chrome and Firefox), and reload the page so that new data can be recorded and displayed. When you click on the page URL- usually listed first- and inspect the Response Headers, the relevant geolocation data will appear.
 
@@ -67,7 +67,7 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
-## Geolocation Use Case
+### Geolocation Use Case
 
 
 
@@ -77,13 +77,13 @@ Interests are much easier to set up in the edge configuration. In this case, we'
 
 You can read more about how to use or manipulate the interest data in the [Interest SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md).
 
-## Test Interests
+### Test Interests
 
 You can validate that the interest tracking is working by clicking on multiple pages tagged with the same term 3 (or more, depending on your configuration) times, then going to the same Network tab in your browser inspector tools. This time, you should see a value for `interest` that matches the pages you navigated to.
 
 ![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
 
-## Interests Use Case
+### Interests Use Case
 
 
 
