@@ -14,6 +14,8 @@ editpath: edge-integrations/01-introduction.md
 reviewed: "2021-03-07"
 ---
 
+This guide is made to facilitate the onboarding process for developers who are implementing content personalization via Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) into their own Drupal or WordPress website. 
+
 ## What Is Edge Integrations?
 
 Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. It is a modern approach to audience-based content personalization which presents an alternative to most personalization engines. Pantheon's approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, and with fewer moving parts. 
