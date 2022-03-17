@@ -20,6 +20,7 @@ module.exports = {
     social: {
       twitter: `getpantheon`,
     },
+    plugins: [`gatsby-plugin-sitemap`],
   },
   // Creates a shorthand for Contributor data in GraphQL
   mapping: {
@@ -202,4 +203,3 @@ module.exports = {
     `gatsby-plugin-fontawesome-css`,
   ],
 }
-
