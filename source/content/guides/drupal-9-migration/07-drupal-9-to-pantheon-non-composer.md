@@ -8,13 +8,12 @@ tags: [composer, site, workflow]
 reviewed: "2022-03-10"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-migration/05-drupal-9-to-pantheon-non-composer
-anchorid: drupal-9-migration/05-drupal-9-to-pantheon-non-composer
-editpath: drupal-9-migration/05-drupal-9-to-pantheon-non-composer.md
+permalink: docs/guides/drupal-9-migration/drupal-9-to-pantheon-non-composer
+anchorid: drupal-9-migration/drupal-9-to-pantheon-non-composer
+editpath: drupal-9-migration/drupal-9-to-pantheon-non-composer.md
 ---
 
 This doc shows how to migrate an existing non-Composer-managed Drupal 9 site from another platform to a new Drupal 9 site with [Integrated Composer](/integrated-composer) on Pantheon.
-
 
 ## Overview
 
