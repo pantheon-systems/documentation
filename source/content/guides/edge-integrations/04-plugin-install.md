@@ -18,6 +18,8 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
+**ADD NOTE ABOUT NEEDING AGCDN- REITERATE**
+
 You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 
 ### Install with Composer
