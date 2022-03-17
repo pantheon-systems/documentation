@@ -69,7 +69,7 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
-### Geolocation Use Case
+### Geolocation Code Samples
 
 
 
@@ -85,7 +85,7 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 ![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
 
-### Interests Use Case
+### Interests Code Samples
 
 
 
