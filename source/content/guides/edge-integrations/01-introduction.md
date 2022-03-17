@@ -44,3 +44,5 @@ The benefits of Edge Integrations:
 There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Pantheon's focus is to focus get immediate lift for existing sites, and build from there.
 
 ## More Resources
+
+Support for Edge Integrations is available through the Pantheon Community slack channel `#edge-integrations`. If you're not already a member, [join the community here](https://slackin.pantheon.io/)!
