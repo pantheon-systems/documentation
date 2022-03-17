@@ -11,7 +11,7 @@ showtoc: true
 anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
-reviewed: "2021-11-10"
+reviewed: "2021-03-07"
 ---
 
 ## What Is Edge Integrations?
@@ -20,7 +20,7 @@ Edge Integrations is a Software Development Kit (SDK) that allows users to perso
 
 ### How does Edge Integrations work?
 
-Edge Integrations uses configuration at the "edge" or the CDN to enable personalization options for Geolocation or Interests. This is done by using [HTTP vary headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary) that tell the CDN return cached variations of content based on values identified by the user browsing the site.
+Edge Integrations uses configuration at the "edge" or the CDN to enable personalization options for Geolocation or Interests. This is done by using HTTP vary headers that tell the CDN return cached variations of content based on values identified by the user browsing the site.
 
 ## Is Edge Integrations Right for You?
 
@@ -43,4 +43,38 @@ The benefits of Edge Integrations:
 
 There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Pantheon's focus is to focus get immediate lift for existing sites, and build from there.
 
-## More Resources
+## Glossary
+
+<dl>
+
+<dt>Vary Header</dt>
+
+<dd>
+
+The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (page, Drupal node)  to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
+
+Example: `Vary: <header-name>, <header-name>`
+
+- `<header-name>` corresponds to the personalization property or condition
+
+</dd>
+
+<dt>Segmentation (Drupal)</dt>
+
+<dd>
+
+Each segment corresponds to a different value within the personalization property/condition.
+
+Example: `US,` `CA,` `ES,` `UK` 
+
+- Used within the Geolocation condition, where each segment is a country. 
+
+- Within the Interest condition, we may have segments that correspond to particular terms in the Interest taxonomy vocabulary. 
+
+Every segment is defined through the Smart Content module UI, and is connected to the block content that will show up when the condition is met and the user is placed within the segment. For example, when the user is in Canada, the condition for the Geolocation is met and the user is placed into a `CA` segment. Then, blocks that respond to the `CA` segment will be rendered instead of generic blocks.
+
+The combination of rendered segmented blocks creates a page variant that is later on stored inside the AGCDN cache and shown to the user without the need for CMS engagement.
+
+</dd>
+
+</dl>

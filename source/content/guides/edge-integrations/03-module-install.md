@@ -16,7 +16,8 @@ reviewed: "2021-03-07"
 
 This guide is made to facilitate the onboarding process for developers who are implementing content personalization via Pantheon's Advanced Global CDN into their own Drupal website. The personalization system consists of two main parts:
 
-- Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set VARY headers to be recognized by Pantheon Advanced Global CDN.
+- Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set vary headers to be recognized by Pantheon Advanced Global CDN.
+
 - A collection of Drupal 8+ modules in the [Smart Content](https://www.drupal.org/project/smart_content) ecosystem that provide Smart Personalization blocks and preview functionality.
 
 
