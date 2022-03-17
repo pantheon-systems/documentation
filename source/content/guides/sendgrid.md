@@ -82,7 +82,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 #### Considerations
 
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/guides/composer). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
 <Accordion title="API Integration" id="d7-api" icon="wrench" active={true}>
 

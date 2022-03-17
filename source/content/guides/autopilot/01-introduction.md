@@ -54,7 +54,7 @@ Yes. Configure [Autopilot activity digests and notifications](/guides/autopilot/
 
 ### Does Autopilot work with Integrated Composer?
 
-Yes. If your site is using [Integrated Composer](/integrated-composer) (`build_step` is `true` in the `pantheon.yml` [file](/pantheon-yml)), Autopilot will be able to update it.
+Yes. If your site is using [Integrated Composer](/guides/integrated-composer) (`build_step` is `true` in the `pantheon.yml` [file](/pantheon-yml)), Autopilot will be able to update it.
 
 ### Does Autopilot work with Build Tools?
 
