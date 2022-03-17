@@ -83,9 +83,9 @@ For a list of standard protected paths, see the `pantheon.upstream.yml` for:
 
 ### Enforce HTTPS + HSTS
 
-HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
+HTTPS adds a layer of encryption that prevents others from seeing or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
 
-Pantheon sites (using the default Pantheon upstreams) created or updated on or after September 30 2019 default to enforcing HTTPS via a redirect and a short, 5-minute duration, HSTS header. You can override the default with the `enforce_https` directive in a site-specific `pantheon.yml` file.
+Pantheon sites (using the default Pantheon upstreams) created or updated on or after September 30, 2019 default to enforcing HTTPS via a redirect and a short, 5-minute duration, HSTS header. You can override the default with the `enforce_https` directive in a site-specific `pantheon.yml` file.
 
 <Partial file="hsts.md" />
 
@@ -93,9 +93,9 @@ Pantheon sites (using the default Pantheon upstreams) created or updated on or a
 
 [SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
 
-1. To test your configuration, select a short-duration HSTS header (`transitional` or `transitional+subdomains`), before committing to the long-duration HSTS header.
+1. Select a short-duration HSTS header (`transitional` or `transitional+subdomains`) to test your configuration before committing to the long-duration HSTS header.
 
-1. When you're comfortable that HSTS works as expected in the Live environment, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
+1. Send the long-duration HSTS header by moving to `full` or `full+subdomains` after you confirm that the HSTS works as expected in the Live environment.
 
 ### Nested Docroot
 
