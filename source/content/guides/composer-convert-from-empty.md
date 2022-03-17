@@ -14,7 +14,7 @@ Use this guide to convert an empty upstream Drupal 8 site to use Composer to man
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies.
+Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
 By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following: 
 
