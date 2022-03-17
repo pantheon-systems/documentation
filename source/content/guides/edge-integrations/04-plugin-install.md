@@ -14,7 +14,7 @@ editpath: edge-integrations/04-plugin-install.md
 reviewed: "2022-03-09"
 ---
 
-This doc will help you personalize, and provide custom experiences for visitors to your website, based on Geotargeting (geo) and Interest targeting.
+This doc will help you personalize, and provide custom experiences for visitors to your website, based on Geotargeting and Interest targeting.
 
 ## Before You Begin
 
