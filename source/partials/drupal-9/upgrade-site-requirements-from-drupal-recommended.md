@@ -1,6 +1,6 @@
 You must confirm that your site meets the following requirements before you continue:
 
-- Verify your site has the [Pantheon drupal-recommended repository](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
+- Ensure your site has the [Pantheon drupal-recommended repository](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
 
   ### Use Terminus to Confirm the Drupal Recommended Upstream
 
