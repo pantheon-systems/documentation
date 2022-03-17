@@ -127,7 +127,7 @@ php_version: 8.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-12-22" />
+<ReviewDate date="2022-03-17" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
