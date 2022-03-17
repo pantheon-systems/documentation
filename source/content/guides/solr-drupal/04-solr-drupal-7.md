@@ -136,7 +136,7 @@ Once you have downloaded and installed the ApacheSolr Attachments module ([apach
 
     - **Extract Using:** Tika (local java application)
     - **Tika Directory Path:** `/srv/bin`
-    - **Tika jar file:** `tika-app-1.18.jar`
+    - **Tika jar file:** `tika-app-1.21.jar`
 
 1. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
 
