@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Install Drupal Module
+subtitle: Drupal SDK
 description: Install, configure, and use Edge Integrations with Drupal.
 categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
@@ -8,9 +8,9 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, eno
 type: guide
 layout: guide
 showtoc: true
-anchorid: module-install
-permalink: docs/guides/edge-integrations/module-install/
-editpath: edge-integrations/03-module-install.md
+anchorid: drupal-sdk
+permalink: docs/guides/edge-integrations/drupal-sdk/
+editpath: edge-integrations/03-drupal-sdk.md
 reviewed: "2021-03-07"
 ---
 
@@ -43,7 +43,7 @@ This guide is made to facilitate the onboarding process for developers who are i
 
 1. Enable the Vary Header toggle.
 
-1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/module-install/#geolocation) section.
+1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/drupal-sdk/#geolocation) section.
 
 1. Save the configuration.
 
