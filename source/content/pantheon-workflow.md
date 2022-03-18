@@ -63,7 +63,7 @@ After changes are pushed to Dev, the Deploys panel in the Test tab will prompt y
 
  - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
- - Workflow log entries are visible on the site for 14 days. Log entries visible for longer than 14 days include:
+ - We provide a rolling view of typical workflow log entries on the site for 14 days. Log entries are no longer visible on the site after 14 days, but are kept for internal auditing. Log entries visible for longer than 14 days include:
 
     - `deploy`
     - `create_environment` (this only applies to Test and Live environments)
