@@ -1,6 +1,8 @@
 ---
 title: Integrated Composer
 description: Learn how to deploy a site with Integrated Composer
+type: guide
+permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]

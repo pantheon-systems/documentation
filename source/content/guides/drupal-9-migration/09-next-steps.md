@@ -16,6 +16,6 @@ If you are migrating an existing Pantheon Drupal site to Drupal 9, get ready to 
 
 ## Additional Resources
 
-- [Integrated Composer Overview](/integrated-composer)
-- [Composer Fundamentals and WebOps Workflows](/composer)
+- [Integrated Composer Overview](/guides/integrated-composer)
+- [Composer Fundamentals and WebOps Workflows](/guides/composer)
 - [Pantheon YAML Configuration Files](/pantheon-yml)

@@ -19,6 +19,8 @@ All plans except for a Basic plan can use New Relic&reg; Performance Monitoring.
 | Performance   | ✓       |
 | Elite         | ✓       |
 
+<Alert title="Note" type="info" >New Relic&reg; is not supported on sites using PHP 8.1. </Alert>
+
 ## Activate New Relic&reg; Performance Monitoring
 
 Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**:

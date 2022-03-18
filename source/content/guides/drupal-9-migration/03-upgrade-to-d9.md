@@ -62,4 +62,4 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)

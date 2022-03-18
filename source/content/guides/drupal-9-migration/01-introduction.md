@@ -18,4 +18,4 @@ Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://s
 
 There are a number of ways to upgrade to Drupal 9 on Pantheon, and we're building out the documentation within this guide to try to help you through your adventure.
 
-See our [Drupal 9](/drupal-9) and [Integrated Composer](/integrated-composer) docs to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.
+See our [Drupal 9](/drupal-9) and [Integrated Composer](/guides/integrated-composer) docs to learn more about Drupal 9 on Pantheon, and to get started with a fresh new site.

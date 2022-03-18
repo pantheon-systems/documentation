@@ -14,7 +14,7 @@ The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the direct
   
 Using Pantheon's one-click Dashboard updates feature depends on a correctly set the `web_docroot` property.
 
-- Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
+- Composer-managed sites, including [Integrated Composer](/guides/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that use a [Custom Upstream](/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
@@ -25,7 +25,7 @@ Using Pantheon's one-click Dashboard updates feature depends on a correctly set 
 
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
-This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
+This is especially useful for third party dependencies, such as those installed and managed via [Composer](/guides/composer).
 
 ## Disable One-click Updates
 
