@@ -3,7 +3,7 @@ title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 categories: [platform]
 tags: [https, launch, code, workflow]
-reviewed: "2021-04-13"
+reviewed: "2022-03-16"
 ---
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
@@ -121,17 +121,19 @@ php_version: 8.0
 
 #### Considerations
 
-* [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
-* From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
-* You'll always be able to test new default PHP version in Dev and Test before deploying Live.
+- [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
+- From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
+- You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2021-12-22" />
+<ReviewDate date="2022-03-17" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
-1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
+1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. 
+
+1. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
 
   Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
@@ -139,16 +141,16 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
   ```yaml:title=pantheon.yml
   database:
-    version: 10.4
+    version: 10.6
   ```
 
   This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
-1. Once the changes are pushed the Workflow can take ten minutes or more to complete. To confirm that the database upgrade completed successfully:
+1. Confirm that the database upgrade completed successfully:
 
    <Partial file="confirm-db-upgrade-workflow.md" />
 
-Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
+   Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
 This table shows the recommended MariaDB version for each CMS:
 
@@ -158,8 +160,8 @@ This table shows the recommended MariaDB version for each CMS:
 | Drupal ≥ 7.76 | 10.4                        |
 | Drupal < 8.5  | 10.3                        |
 | Drupal ≥ 8.6  | 10.4                        |
-| Drupal ≥ 9.0  | 10.4                        |
-| WordPress     | 10.4                        |
+| Drupal ≥ 9.0  | 10.4 or 10.6                |
+| WordPress     | 10.4 or 10.6                |
 
 Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
 
