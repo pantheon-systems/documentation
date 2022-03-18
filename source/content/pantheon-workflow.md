@@ -57,17 +57,24 @@ While you are able to update the Dev environment via Git, if you would like to d
 
 </Alert>
 
-Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
+After changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
 ![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
 
  - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
+ - We provide a rolling view of typical workflow log entries on the site for 14 days. Log entries are no longer visible on the site after 14 days, but are kept for internal auditing. Log entries visible for longer than 14 days include:
+
+    - `deploy`
+    - `create_environment` (this only applies to Test and Live environments)
+    - `freeze_site`
+    - `unfreeze_site`
+
  - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
  - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
 
-   On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
+ - On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
 After running this operation, be sure that:
 
