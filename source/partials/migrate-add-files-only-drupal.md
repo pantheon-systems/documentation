@@ -23,11 +23,7 @@ Follow the steps below to export a `tar.gz` or `.zip` file of your directory fil
 
   <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
 
-<<<<<<< HEAD
   If your archive is under 100MB, upload the file directly:
-=======
-   You can upload the file directly, if your archive is under 100MB.
->>>>>>> cms-578-migrate-to-bt
 
    1. Navigate to the **Archive of site files** field > click **File** > **Choose File**.
 
@@ -37,11 +33,7 @@ Follow the steps below to export a `tar.gz` or `.zip` file of your directory fil
 
   <Tab title="Up to 500MBs" id="500mbsfiles">
 
-<<<<<<< HEAD
   If your archive is less than 500MB, import it from URL:
-=======
-  You can import your archive from URL, if your archive is less than 500MB.
->>>>>>> cms-578-migrate-to-bt
 
    1. Navigate to the **Archive of site files** field > click **URL**.
 

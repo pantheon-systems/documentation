@@ -1,12 +1,8 @@
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-<<<<<<< HEAD
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, compress the resulting archive with Gzip:
-=======
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. 
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility.
 
 1. Compress the resulting archive with gzip to reduce the size for a faster transfer:
->>>>>>> cms-578-migrate-to-bt
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql
