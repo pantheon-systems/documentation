@@ -92,7 +92,13 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 
 
-## How to build a WordPress Widget that uses the Edge Integrations SDK
+## How to integrate with cookie consent management plugins
+
+It's possible to integrate with cookie consent management plugins to disallow user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you won't want to store any tracking information until the user consents to it.
+
+We've built an [example plugin](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management) that can help get you started on what needs to be done to integrate with cookie consent management. The plugin uses the [WP Consent API](https://github.com/rlankhorst/wp-consent-level-api) proposed feature plugin to manage consent levels and cookie categories. Our plugin adds a cookie consent banner and disables the functionality of the Pantheon WordPress Edge Integrations plugin when the user has not accepted cookies.
+
+You can read more about it in the [plugin's README file](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management#description).
 
 ## Additional Resources
 
