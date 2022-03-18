@@ -80,3 +80,7 @@ The combination of rendered segmented blocks creates a page variant that is late
 </dd>
 
 </dl>
+
+## More Resources
+
+Support for Edge Integrations is available through the Pantheon Community slack channel `#edge-integrations`. If you're not already a member, [join the community here](https://slackin.pantheon.io/)!
