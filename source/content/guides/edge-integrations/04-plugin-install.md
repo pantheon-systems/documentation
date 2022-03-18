@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Install WordPress Plugin
+subtitle: WordPress SDK
 description: Install, configure, and use the Edge Integrations with WordPress.
 categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
@@ -8,8 +8,8 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
 layout: guide
 showtoc: true
-anchorid: plugin-install
-permalink: docs/guides/edge-integrations/plugin-install/
+anchorid: wordpress-sdk
+permalink: docs/guides/edge-integrations/wordpress-sdk/
 editpath: edge-integrations/04-plugin-install.md
 reviewed: "2022-03-09"
 ---
