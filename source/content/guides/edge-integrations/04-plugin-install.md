@@ -52,24 +52,11 @@ In either case, the last step is activating the plugin from your WordPress dashb
 
 ![WP Plugin Active](../../../images/guides/edge-integrations/ei-wp-plugin-active.png)
 
-If you do not use Composer on your project, you can still get started with the WordPress Edge Integrations plugin. Instead of installing the SDK package, go to the [Pantheon WordPress Edge Integrations Releases page](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/releases).
+## Geolocation
 
-* Download the Source Code (zip) file associated with the most recent version.
+### Configure Geolocation
 
-![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets2.png)
-
-* Extract the plugin in your `wp-content/plugins` directory and you will have all of the compiled assets and included dependencies, which inclue a global CMS-agnostic [PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations), and a [WordPress plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations).
-
-### Activate the Plugin
-
-Whether you install with Composer or manually, the last step is to activate the plugin from your WordPress dashboard Plugins page. There is no other admin interface for the WordPress plugin, all features and components are handled in the code itself, with hooks that developers can use to interact with the geolocation and interest tracking features.
-
-![WP Plugin Active](../../../images/guides/edge-integrations/ei-wp-plugin-active.png)
-
-
-## Configure Geolocation
-
-Geotargeting is a method that delivers different content to visitors based on their geographic location. This includes country, continent, region, city, and other criteria (e.g. connection speed and connection type). The specific header data sent to your site depends on the settings you configure for your AGCDN instance. 
+Geotargeting is a method that delivers different content to visitors based on their geographic location. This includes country, continent, region, city and connection information (connection speed and connection type). The specific header data sent to your site depends on the settings configured for your specific AGCDN instance. 
 
 You can learn more about how to use or manage the geolocation data in the [Geolocation SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md).
 
