@@ -18,6 +18,8 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
+**ADD NOTE ABOUT NEEDING AGCDN- REITERATE**
+
 You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 
 ### Install with Composer
@@ -68,7 +70,7 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
-### Geolocation Use Case
+### Geolocation Code Samples
 
 
 
@@ -86,7 +88,7 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 ![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
 
-### Interests Use Case
+### Interests Code Samples
 
 
 
@@ -98,3 +100,4 @@ You can validate that the interest tracking is working by clicking on multiple p
 - [Pantheon Geolocation Shortcodes](https://github.com/pantheon-systems/pantheon-geolocation-shortcodes)
 - [Geo: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md)
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
+- [Integrate Cookie Consent](TBD- CR)

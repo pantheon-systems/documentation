@@ -14,11 +14,11 @@ editpath: edge-integrations/03-drupal-sdk.md
 reviewed: "2021-03-07"
 ---
 
-This guide is made to facilitate the onboarding process for developers who are implementing content personalization via Pantheon's Advanced Global CDN into their own Drupal website. The personalization system consists of two main parts:
+The Edge Integrations personalization system for Drupal consists of two main parts:
 
-- Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set VARY headers to be recognized by Pantheon Advanced Global CDN.
+- Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set vary headers to be recognized by Pantheon Advanced Global CDN.
+
 - A collection of Drupal 8+ modules in the [Smart Content](https://www.drupal.org/project/smart_content) ecosystem that provide Smart Personalization blocks and preview functionality.
-
 
 ## Before You Begin
 
@@ -51,9 +51,7 @@ This guide is made to facilitate the onboarding process for developers who are i
 
 There are a few different ways to use Smart Content CDN. In this doc, we will cover targeting via Geolocation, and Interest via Taxonomy.
 
-### Geolocation
-
-To configure geolocation segments:
+### Configure Geolocation Segments
 
 1. Navigate to `/admin/structure/smart_content_segment_set`.
 
@@ -101,7 +99,7 @@ To configure geolocation segments:
 
 The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview, anonymous users will not have access.
 
-### Interest via Taxonomy
+### Configure Interest via Taxonomy
 
 In this section, we identify the content type where you want to use personalization by Interest,  add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
 
@@ -190,6 +188,45 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 1. Editors and administrators can use the Smart CDN Preview module to masquerade as a subscribed user.
 -->
 
-## Conclusion
+## Recap
 
-The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).    
+The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
+
+## More Resources (Working title)
+
+Pantheon Edge Integrations is a CMS-agnostic PHP library. Pantheon Edge Integrations uses header data to provide a personalization object that is utilized for personalizing content for each user. To make use of the PHP library, ensure PHP can use the class:
+
+`use Pantheon\EI\HeaderData;`
+
+### Class Methods
+
+In order to use the class methods, you need to create a HeaderData object:
+- `$headerData = new HeaderData();`
+
+<Accordion title="$headerData->getHeader(key)" id="getHeader" icon="wrench">
+
+### Uses header key to return raw header data.
+
+Examples:
+
+- `key: “Audience” => return: “geo:US”`
+
+- `key: “Interest” => return: “27”`
+
+- `key: “Role” => return: “subscriber”`
+
+</Accordion>
+
+<Accordion title="$headerData->parseHeader(key)" id="parseHeader" icon="wrench">
+
+### Uses header key to return parsed header data array.
+
+Examples:
+
+- `key: “Audience” => return: “geo:US”`
+
+- `key: “Interest” => return: “27”`
+
+- `key: “Role” => return: “subscriber”`
+
+</Accordion>
