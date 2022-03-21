@@ -208,3 +208,43 @@ After you test your new event, make sure to **Publish** your changes.
 Based on this information, enter the value of `label` into the Label field. Ensure that you change the default “Equals to” condition to “Regular expression,” which makes the matching more flexible.
 ![Goal Details](../../../images/guides/edge-integrations/ei-analytics-23-goal-details.png)
 4. Save the goal.
+
+## Reporting
+
+To find your new data, login to Google Analytics. Go to Behavior > Events > Top Events. 
+
+![Top Events menu](../../../images/guides/edge-integrations/ei-analytics-24-top-events.png)
+
+You should now see a similar view to the Total Events analytics screenshot below.
+
+![Event Analytics view](../../../images/guides/edge-integrations/ei-analytics-25-events-analytics-view.png)
+
+Click on the “Secondary dimension” button, right below the Event Category. You should now see the custom dimensions you created earlier. Clicking on any of them, will display the associated data.
+
+![Secondary Dimension](../../../images/guides/edge-integrations/ei-analytics-26-secondary-dimension.png)
+
+You are able to toggle between the different custom dimensions by clicking on the same area and switching them.
+
+![List of events by dimension](../../../images/guides/edge-integrations/ei-analytics-27-event-list.png)
+
+### Segmentation
+
+You are able to create segments based on your custom dimensions to slice and dice your data.  Most reports in Google Analytics will allow you to  segment your data by clicking on the “+ Add Segment” button.
+
+![Add Segment](../../../images/guides/edge-integrations/ei-analytics-28-add-segment.png)
+
+You may see a list of existing segments. Create a new segment by clicking on the “+New Segment” button.
+
+![New Segment](../../../images/guides/edge-integrations/ei-analytics-29-new-segment.png)
+
+Under Advanced, choose “Conditions” and select the kind of segment you want to create. In this example, we want to see how Canadian session behavior differs from all other visitors.  In the dimension field, find the appropriate dimension and click on it – in this case: “audience geo.”
+
+![New segment custom dimensions](../../../images/guides/edge-integrations/ei-analytics-30-segment-dimensions.png)
+
+We are looking for Canadian visitors, so the custom dimension should contain a value of “ca”. Name and save your segment. We’ll call ours “Audience Geo - Canada.”
+
+![Audience Geo - Canada](../../../images/guides/edge-integrations/ei-analytics-31-geo-segment.png)
+
+Create additional segments in your reports, like a US geo audience, to compare outcomes.  
+
+![Compare Segments](../../../images/guides/edge-integrations/ei-analytics-32-compare-segments.png)
