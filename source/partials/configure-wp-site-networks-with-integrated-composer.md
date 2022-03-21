@@ -8,7 +8,7 @@ The solution outlined below has worked for select customers, and may not work fo
 
 </Alert>
 
-Move your WordPress core files from `/code/web/wp` to `web/` root by using the [example WordPress Composer script](https://github.com/pantheon-systems/example-wordpress-composer/blob/f73fe27153ba6a772e7b316edd3442ed1de7c29d/scripts/composer/cleanup-composer).
+Move your WordPress core files from `/code/web/wp` to the `/code/web` root by using the [example WordPress Composer script](https://github.com/pantheon-systems/example-wordpress-composer/blob/f73fe27153ba6a772e7b316edd3442ed1de7c29d/scripts/composer/cleanup-composer).
 
  Note that this script is only intended as an example to help you get started. You will most likely need to make changes to match your current configuration.
 
