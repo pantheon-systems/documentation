@@ -1,6 +1,6 @@
 ---
 title: Accessing MySQL Databases
-description: CConfigure and Troubleshoot Your Pantheon Website's MySQL Database Connections
+description: Configure and Troubleshoot Your Pantheon Website's MySQL Database Connections
 categories: [develop]
 tags: [database, local, ssh]
 reviewed: "2021-07-16"
@@ -17,6 +17,8 @@ Due to the nature of our platform, the connection information will change from t
 ## Database Connection Information
 
 ### Accessing the Database Directly
+
+<Alert title="Note" type="info" >This option is not available if you have purchased Secure Runtime Access.  [Learn more](/docs/secure-runtime-access)</Alert>
 
 MySQL credentials for each site environment are located in the Dashboard:
 
@@ -95,13 +97,14 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 
 ### Accessing the Database via Your Application using PHP
 
-Use the following variables in your application to access the database:
+The application connects using our internal network. Use the following variables in your application to access the database:
+
 - **DB_HOST**: Name of the MySQL server.
 - **DB_PORT**: Database port used.
-- **DB_USER**: MySQL user name to use when connecting to server.  This will be changing to have the same value as DB_HOST, and route to a proxy server.  We will no longer support connections via IP Address.
+- **DB_USER**: MySQL user name to use when connecting to server.
 - **DB_PASSWORD**: The password to use when connecting to the server.
 - **DB_NAME**: The database to use; the value will always be pantheon and cannot be altered.
-- **REPLICA_DB_HOST**: Database IP address.
+- **REPLICA_DB_HOST**: Database IP address. This will be changing to have the same value as DB_HOST, and route to a proxy server. We will no longer support connections via IP Address.
 - **REPLICA_DB_PORT**: Replica database port.
 - **REPLICA_DB_USER**: MySQL replica user name to use when connecting to server.
 - **REPLICA_DB_PASSWORD**: The password to use when connecting to the server.
