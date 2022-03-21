@@ -18,7 +18,7 @@ Due to the nature of our platform, the connection information will change from t
 
 ### Accessing the Database Directly
 
-<Alert title="Note" type="info" >This option is not available if you have purchased Secure Runtime Access.  [Learn more](/docs/secure-runtime-access)</Alert>
+<Alert title="Note" type="info" >This option is not available if you have purchased Secure Runtime Access.  [Learn more](/secure-runtime-access)</Alert>
 
 MySQL credentials for each site environment are located in the Dashboard:
 
@@ -97,7 +97,7 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 
 ### Accessing the Database via Your Application using PHP
 
-The application connects using our internal network. Use the following variables in your application to access the database:
+In this scenario, the application connects using our internal network. Use the following variables in your application to access the database:
 
 - **DB_HOST**: Name of the MySQL server.
 - **DB_PORT**: Database port used.
@@ -112,7 +112,7 @@ The application connects using our internal network. Use the following variables
 
 
 For example:
-```
+```sql
 DB_HOST=dbhost
 DB_PORT=6033
 DB_USER=21b24cbb5bb44b9988a6112f46558b06
