@@ -213,3 +213,9 @@ If you are using a Linux distribution such as Fedora 33 or later, make sure RSA 
 Host *.drush.in
   PubkeyAcceptedKeyTypes=ssh-rsa
 ```
+
+<Alert title="Note"  type="info" >
+
+ Ensure that your keys and, if applicable, your key agent are made available to the application running in the container, if you're using Lando, Docksal, or DDEV. Pantheon does not have access to keys that only exist on the host machine.
+
+</Alert>
