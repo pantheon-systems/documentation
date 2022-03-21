@@ -80,7 +80,7 @@ For sites using [Integrated Composer](/guides/integrated-composer), the `sync_co
 
 ## Variables
 
-When a workflow runs, there are variables that are made available through the `$_POST` global variable, in addition to the standard `$_ENV` and `$_SERVER` objects. These variables include the following:
+ Variables are made available through the `$_POST` global variable, and the `$_ENV` and `$_SERVER` objects. These variables include the following:
 
 
 |Variable Name|Description|Hooks Available|Notes|
