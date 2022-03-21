@@ -22,20 +22,26 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 ## Before You Begin
 
+1. As per the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), ensure that your site's vary headers have been provisioned by Professional Services.
+
 1. Ensure you have a working Drupal 8+ installation ready.
 
-1. Install [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) and its dependencies, which can be pulled with [Composer](https://getcomposer.org/) from their corresponding Pantheon repositories. This includes:
+1. Install [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) and its dependencies, which can be pulled with [Composer](https://getcomposer.org/) from their corresponding Pantheon repositories.
+    - ```composer require pantheon-systems/smart_content_cdn```
     - [Pantheon Edge Integrations PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations)
+    ```
+    composer require pantheon-systems/pantheon-edge-integrations
+    ```
     - [Smart Content](https://www.drupal.org/project/smart_content)
     ```
-    composer require pantheon-systems/smart_content_cdn
+    composer require pantheon-systems/smart_content
     ```
 
 ## Configure Smart Content CDN
 
 1. Enable the Smart Content CDN module.
 
-1. Enable Smart Content and Smart Content Blocks module.
+1. Enable Smart Content and Smart Content Block module.
 
 1. Enable the Smart Content Preview.
 
