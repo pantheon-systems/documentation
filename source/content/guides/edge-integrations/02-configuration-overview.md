@@ -32,9 +32,9 @@ Your CMS processes the original content, makes a determination, and displays a f
 
 ## Cache Overview
 
-A `Vary` response header tells caches that a particular header (or headers) from the request should be used to construct a secondary cache key that must match in order to use the cached response to answer subsequent requests.
+A `Vary` response header tells Pantheon's AGCDN cache that a particular header (or headers) from the request should be used to construct a secondary cache key that must match in order to use the cached response to answer subsequent requests.
 
-For example, when the Vary header is set for Interest, the a server produces versions of the same webpage with different Interests and serves them to visitor's browsers based on their locally defined interests.
+For example, when the Vary header is set for Interest, the a server produces versions of the same webpage with different Interests and serves them to visitor's browsers based on their locally-defined interests.
 
 If the Interest object is not in the cache, a request is sent to your website's origin server. Your website sees that the request does not include an Interest header, so your Interest-personalized code won't fire and you can serve visitors the default content.
 
