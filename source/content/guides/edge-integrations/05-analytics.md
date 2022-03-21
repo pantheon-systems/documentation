@@ -153,3 +153,46 @@ In your Google Tag Manager implementation, click “Preview” in your Workspace
 Use the [DataSlayer Chrome extension](https://chrome.google.com/webstore/detail/dataslayer/ikbablmmjldhamhcldjjigniffkkjgpo) to verify data is accurately being sent to Analytics. You should see Data Layer properties correspond directly to what is pushed to Google Analytics. And, you should see your personalization values with the Custom Dimension Index numbers you previously set up. 
 
 ![DataSlayer Personalization Values](../../../images/guides/edge-integrations/ei-analytics-10-data-layer-properties.png)
+
+## Click Tracking & Goal Setup
+
+This section will cover how to capture clicks on a particular link and set up a goal with Google Analytics. For this example, we will use Google Tag Manager to capture the “View recipe” click as an event, and set it up as a goal in Google Analytics.
+
+![Vegan Poutine recipe example](../../../images/guides/edge-integrations/ei-analytics-11-vegan-poutine.png)
+
+With dataSlayer, we can observe the dataLayer push that happens when we click on the “View recipe” button. It's a link click and has a unique Click Text – namely, “View recipe.” These are the values you will use in Google Tag Manager:
+
+![DataSlayer View Recipe values](../../../images/guides/edge-integrations/ei-analytics-12-dataslayer-view-recipe.png)
+
+### Create New Tag in GTM
+
+1. Create a tag that will capture the information you are looking for;  in this example, you want to know how often  people click on the “View recipe” button. Our recommended configuration is below. There are no best practices at this time, so feel free to make modifications as needed. 
+![GA Event View Recipe Click](../../../images/guides/edge-integrations/ei-analytics-13-ga-event-recipe-click.png)
+Create a trigger that lets GTM know when it should fire. Access the ____ menu and, in the Triggering section, click on the gray circle.
+![Create a Trigger](../../../images/guides/edge-integrations/ei-analytics-14-triggering.png)
+2. Click on the + in the upper right hand corner to create a new trigger
+![Choose a Trigger](../../../images/guides/edge-integrations/ei-analytics-15-choose-a-trigger.png)
+3. Select “Just Links.”
+![Choose trigger type, Just Links](../../../images/guides/edge-integrations/ei-analytics-16-just-links.png)
+4. Fill out the details for the trigger. Ensure you give it a name that is  easy to understand for anyone who refers to it in the future. Here, it is called “Link Click - View Recipe.” To make the trigger specific to the “View recipe” button, select Some Link Clicks, instead of All Link Clicks. Be sure to specify that Click Text needs to match RegEx of “View recipe, which is  the value we got from the dataSlayer extension. Save the trigger.
+![Link Click - View Recipe](../../../images/guides/edge-integrations/ei-analytics-17-link-click-view-recipe.png)
+
+You now have a fully working Tag and corresponding Trigger.
+
+![GA - Event - View Recipe Click, tag and trigger](../../../images/guides/edge-integrations/ei-analytics-18-ga-event-view-recipe-click.png)
+
+To test that the Tag and Trigger are functioning as expected, you will use “Preview” mode. In GTM, you will see your tag firing when you click on the link.
+
+![GA Tags Fired](../../../images/guides/edge-integrations/ei-analytics-19-tag-fired.png)
+
+In dataSlayer you will see your event firing with the expected values that you previously set up in your tag. 
+
+In this case:
+
+* category: internal link click
+* action: (your URL)
+* label: View recipe 
+
+![DataSlayer Event Firing](../../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
+
+After you test your new event, make sure to **Publish** your changes.
