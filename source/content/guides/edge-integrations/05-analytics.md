@@ -130,4 +130,16 @@ Create Variables following these best practices:
   b. interest
   c. role
 
+#### Append Variables to Your Google Analytics Settings in Tag Manager
 
+Now that you have your variables, you can attach them to your Google Analytics Settings Variable. Yours might be called something different but the “Type” will be the same. If you do not have this kind of variable and instead are using a “Constant” or have hardcoded the UA ID in each tag, you will need to clean up your implementation. Your Settings should appear in the list of Custom Variables.
+
+![Custom Variables List](../../../images/guides/edge-integrations/ei-analytics-7-custom-variables.png)
+
+1. Edit the Google Analytics Variable settings
+2. Expand the “More Settings” fieldset
+3. Expand Custom Dimensions.
+4. Click “Add More Dimensions”
+5. Create an entry for each of your custom dimensions, ensuring your Index and Dimension Values are correct
+
+![Custom Dimensions List](../../../images/guides/edge-integrations/ei-analytics-8-custom-dimensions.png)
