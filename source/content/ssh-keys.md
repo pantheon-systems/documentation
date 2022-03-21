@@ -216,6 +216,6 @@ Host *.drush.in
 
 <Alert title="Note"  type="info" >
 
- Ensure that your keys and, if applicable, your key agent are made available to the application running in the container, if you're using Lando, Docksal, or DDEV. Pantheon does not have access to keys that only exist on the host machine.
+ Pantheon does not have access to keys that only exist on the host machine. You must ensure that your keys and, if applicable, your key agent are made available to the application running in the container, if you're using Lando, Docksal, or DDEV. 
 
 </Alert>
