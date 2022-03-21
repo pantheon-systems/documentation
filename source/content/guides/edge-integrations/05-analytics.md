@@ -1,7 +1,7 @@
 ---
 title: Edge Integrations
 subtitle: Analytics
-description: Integrate Edge Integrations with Google Tag Manager.
+description: Integrate Edge Integrations with Google Tag Manager and Google Analytics.
 categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -101,3 +101,33 @@ Add new Custom Dimensions that correspond to the identifiers. Most dimensions wi
 Take note of the Index for each of your new Custom Dimensions, as you will need them to configure your Variables in Google Tag Manager. Your indexes will differ from this example if you have pre-existing configurations.
 
 At this time, you can verify that the identifiers are accurately pushing data into the dataLayer, if you like. Refer to  the [Test and Debug](#test-and-debug) section for more info. 
+
+### Configure Google Tag Manager
+
+#### Create Variables in GTM
+
+WIthin Google Tag Manager, create User-Defined Variables to capture each of your personalization identifiers.
+
+![User Defined Variables](../../../images/guides/edge-integrations/ei-analytics-3-user-defined-variables.png)
+
+Select Data Layer Variable 
+
+![Choose Variable Type](../../../images/guides/edge-integrations/ei-analytics-4-choose-variable-type.png)
+
+Create Variables following these best practices:
+
+![Data Layer Variable, Variable Configuration](../../../images/guides/edge-integrations/ei-analytics-5-geo-variable-config.png)
+
+1. Use a common prefix for each of your variable names to help group and identify them. In this example, we use “dlv” to signify “data layer variable”.
+2. Include the Custom Dimension Index ID in your variable name, so it's easy to reference.
+3. Don't forget the actual name of the variable.
+4. When you create new variables that include text, we highly recommend that you format the value and force it to be lowercase.
+![Data Layer Variable, Change Case to Lowercase](../../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
+5. Keep the data Layer at Version 2.
+6. Do not set a Default Value.
+7. The Data Layer Variable Name is the most important, so ensure you spell everything identically to what the DataLayer is pushing. In our case, these names are:
+  a. audience.geo
+  b. interest
+  c. role
+
+
