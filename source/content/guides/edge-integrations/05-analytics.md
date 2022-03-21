@@ -40,7 +40,7 @@ Confirm which identifiers you will use to personalize a user’s experience. You
 1. Geography
 2. Interest
 
-We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via` Drupal.behaviors`. Here’s the relevant gtm_headers.js file we’re attaching:
+We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. Here’s the relevant `gtm_headers.js` file we’re attaching:
 
 ```javascript
 /**
