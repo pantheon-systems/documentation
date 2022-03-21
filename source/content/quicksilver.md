@@ -69,7 +69,7 @@ You can hook into the following workflows:
 | `create_cloud_development_environment`                       | Create Multidev environment                                             | Multidev               | `after` stage valid, `before` stage invalid
 | `deploy`                            | Deploy code to Test or Live | Dev or Multidev            | target                                            |
 | `deploy_product` | Create site                                         | Dev                   | `after` stage valid, `before` stage invalid |
-| `sync_code`                        | Use the command git push to change the code; commit via the Pantheon Dashboard, upstream update, or Multidev merge                                    | Dev or Multidev      |   |
+| `sync_code`                        | Use the command git push command to change the code; commit via the Pantheon Dashboard, upstream update, Multidev, or automated workflows merge                                    | Dev or Multidev      |   |
  
 
 <Alert type="info" title="Note">
