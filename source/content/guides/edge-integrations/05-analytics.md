@@ -143,3 +143,13 @@ Now that you have your variables, you can attach them to your Google Analytics S
 5. Create an entry for each of your custom dimensions, ensuring your Index and Dimension Values are correct
 
 ![Custom Dimensions List](../../../images/guides/edge-integrations/ei-analytics-8-custom-dimensions.png)
+
+## Test and Debug
+
+In your Google Tag Manager implementation, click “Preview” in your Workspace to debug. If you are new to using Preview, please refer to the [Preview and debug containers](https://support.google.com/tagmanager/answer/6107056?hl=en) support documentation on Google Tag Manager Support.
+
+![Preview Workspace](../../../images/guides/edge-integrations/ei-analytics-9-preview-workspace.png)
+
+Use the [DataSlayer Chrome extension](https://chrome.google.com/webstore/detail/dataslayer/ikbablmmjldhamhcldjjigniffkkjgpo) to verify data is accurately being sent to Analytics. You should see Data Layer properties correspond directly to what is pushed to Google Analytics. And, you should see your personalization values with the Custom Dimension Index numbers you previously set up. 
+
+![DataSlayer Personalization Values](../../../images/guides/edge-integrations/ei-analytics-10-data-layer-properties.png)
