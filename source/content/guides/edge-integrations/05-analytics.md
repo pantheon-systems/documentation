@@ -196,3 +196,15 @@ In this case:
 ![DataSlayer Event Firing](../../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
 
 After you test your new event, make sure to **Publish** your changes.
+
+### Goal Setup in Google Analytics
+
+1. Navigate to the Goal section of your view and click + **New Goal**
+![New Goal](../../../images/guides/edge-integrations/ei-analytics-21-ga-new-goal.png)
+2. Name your goal and select “Event” as the type. Click Continue.
+![Goal Description](../../../images/guides/edge-integrations/ei-analytics-22-ga-goal-description.png)
+3. Input the condition of the goal. In this case, you need the label value that was generated in the previous section:
+  * label: View recipe 
+Based on this information, enter the value of `label` into the Label field. Ensure that you change the default “Equals to” condition to “Regular expression,” which makes the matching more flexible.
+![Goal Details](../../../images/guides/edge-integrations/ei-analytics-23-goal-details.png)
+4. Save the goal.
