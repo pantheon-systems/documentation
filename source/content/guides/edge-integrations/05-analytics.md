@@ -31,7 +31,7 @@ Consider the desired goals and objectives for your users. Define success for you
 
 <TabList>
 <Tab title="WordPress" id="wp-analytics-config" active={true}>
-
+The fastest way to add Google Tag Manager or Google Analytics to your WordPress site is to copy the code from your Google Tag Manager or Google Analytics account after creating a container. However, no-code options exist allowing you to simply copy your UA code and paste it into the appropriate field. The [Google Tag Manager](https://wordpress.org/plugins/duracelltomi-google-tag-manager/) plugin is one such option, but there are [many others](https://wordpress.org/plugins/search/google+tag+manager/).
 </Tab>
 <Tab title="Drupal" id="drupal-analytics-config">
 Install the Drupal [Google Tag](https://www.drupal.org/project/google_tag/) contributed module and configure it to reference your GTM (Google Tag Manager) container ID.
