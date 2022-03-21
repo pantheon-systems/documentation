@@ -74,7 +74,7 @@ You can hook into the following workflows:
 
 <Alert type="info" title="Note">
 
-On sites using [Integrated Composer](/guides/integrated-composer), the `sync_code` hook runs after the build runs, once the artifacts have been completely deployed to the application server.
+For sites using [Integrated Composer](/guides/integrated-composer), the `sync_code` hook runs after the build finishes and the artifacts have been completely deployed to the application server.
 
 </Alert>
 
