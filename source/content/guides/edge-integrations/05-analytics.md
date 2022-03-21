@@ -80,3 +80,24 @@ We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK shi
 ```
 </Tab>
 </Tablist>
+
+## Track Implementation
+
+This section will cover the configuration of Google Tag Manager and Google Analytics. 
+<!-- Video here? -->
+
+### Configure Google Analytics
+
+#### Track Personalization properties as Custom Dimensions in GA
+
+Navigate to the Admin > Property area of Google Analytics. Expand Custom Definitions and select Custom Dimensions: 
+
+![Custom Dimensions](../../../images/guides/edge-integrations/ei-analytics-1-custom-dimensions.png)
+
+Add new Custom Dimensions that correspond to the identifiers. Most dimensions will be set to “hit,” as they change based on user behavior. We will set the scope of our geotargeting to be session-based, assuming the user isn’t actively crossing borders while they visit our site. 
+
+![New Custom Dimension](../../../images/guides/edge-integrations/ei-analytics-2-new-custom-dimension.jpg)
+
+Take note of the Index for each of your new Custom Dimensions, as you will need them to configure your Variables in Google Tag Manager. Your indexes will differ from this example if you have pre-existing configurations.
+
+At this time, you can verify that the identifiers are accurately pushing data into the dataLayer, if you like. Refer to  the [Test and Debug](#test-and-debug) section for more info. 
