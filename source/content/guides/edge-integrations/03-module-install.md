@@ -205,7 +205,7 @@ In order to use the class methods, you need to create a HeaderData object:
 
 <Accordion title="$headerData->getHeader(key)" id="getHeader" icon="wrench">
 
-### Uses header key to return raw header data.
+Use header key to return raw header data.
 
 Examples:
 
@@ -219,7 +219,21 @@ Examples:
 
 <Accordion title="$headerData->parseHeader(key)" id="parseHeader" icon="wrench">
 
-### Uses header key to return parsed header data array.
+### Use header key to return parsed header data array.
+
+Examples:
+
+- `key: “Audience” => return: “geo:US”`
+
+- `key: “Interest” => return: “27”`
+
+- `key: “Role” => return: “subscriber”`
+
+</Accordion>
+
+<Accordion title="$headerData->returnPersonalizationObject()" id="headerData" icon="wrench">
+
+### Return an array with personalization data.
 
 Examples:
 
