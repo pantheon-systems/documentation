@@ -11,10 +11,10 @@ reviewed: "2022-03-22"
 
 [Apollo Client](https://www.apollographql.com/docs/react/) is a Javascript management library that is frequently used with GraphQL. You can manage local and remote data when using Apollo Client with GraphQL. Management features include:
 
-    - Fetch
-    - Cache
-    - Modify application data
-    - Automatic updating of your UI
+- Fetch
+- Cache
+- Modify application data
+- Automatic updating of your UI
 
 Pantheon cannot troubleshoot or provide GraphQL solutions, but we can provide some suggestions for best practices and known working solutions for common errors. 
 
@@ -56,3 +56,7 @@ Here is an example of an error returned for a workspace that requires multi-fact
 
 ![GraphQL Error Example](../images/graphql-error-example.png)
 
+## See Also
+
+[Local Development](/local-development)
+[Pantheon Professional Services](/guides/professional-services)
