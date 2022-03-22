@@ -20,7 +20,7 @@ Your website must be connected to [Pantheon’s Advanced Global CDN](/guides/pro
 
 Edge Integrations setup for Drupal requires intermediate site-building skills. If you plan to extend the conditions beyond the ones that are provided by the modules, back-end Drupal module development skills are required.
 
-For WordPress, back-end WordPress development skills and familiarity with [WordPress hooks](https://developer.wordpress.org/plugins/hooks/) (making use of existing [actions](https://developer.wordpress.org/plugins/hooks/actions/) and [filters](https://developer.wordpress.org/plugins/hooks/filters/)) is required.
+For WordPress setup, back-end WordPress development skills and familiarity with [WordPress hooks](https://developer.wordpress.org/plugins/hooks/) (making use of existing [actions](https://developer.wordpress.org/plugins/hooks/actions/) and [filters](https://developer.wordpress.org/plugins/hooks/filters/)) is required.
 
 ### Why AGCDN?
 
@@ -32,10 +32,10 @@ Your CMS processes the original content, makes a determination, and displays a f
 
 ## Cache Overview
 
-A `Vary` response header tells Pantheon's AGCDN cache that a particular header (or headers) from the request should be used to construct a secondary cache key that must match in order to use the cached response to answer subsequent requests.
+A `Vary` response header tells Pantheon's AGCDN cache that a particular header, or headers, from the request should be used to construct a secondary cache key. This secondary cache key must match the primary cache key in order to use the cached response to answer subsequent requests.
 
-For example, when the Vary header is set for Interest, the a server produces versions of the same webpage with different Interests and serves them to visitor's browsers based on their locally-defined interests.
+For example, when the Vary header is set for Interest, the server produces versions of the same webpage with different Interests and serves them to visitors' browsers based on their locally-defined interests.
 
-If the Interest object is not in the cache, a request is sent to your website's origin server. Your website sees that the request does not include an Interest header, so your Interest-personalized code won't fire and you can serve visitors the default content.
+If the Interest object is not in the cache, a request is sent to your website's origin server. Your website sees that the request does not include an Interest header, which stops your Interest-personalized code from firing, and you will serve visitors the default content.
 
-We have a few options to Vary: `Audience-Set`, `Audience`, and `Interest`. These headers need to be configured by Professional Services, so please reach out to your Account Manager for more information.
+There are a few header options for Vary: `Audience-Set`, `Audience`, and `Interest`. If you need to configure these headers, please reach out to your Account Manager for more information.
