@@ -253,3 +253,18 @@ There are global methods that mirror the class methods in order to ease the API 
 
 For more information, on what these methods expect and return, refer to [Pantheon's API documentation](https://github.com/pantheon-systems/pantheon-edge-integrations/#pantheon-edge-integrations).
 
+### Obtain Header Within a Custom Module
+
+The follow can be used in any class context, or procedural context in any hook.
+
+To include the library, run:
+
+`use Pantheon\EI\HeaderData;`
+
+Use the following snippet to obtain the header data object:
+
+```bash
+    #Get header data.
+    $smart_content_cdn = new HeaderData();
+    $p_obj = $smart_content_cdn->returnPersonalizationObject();
+```
