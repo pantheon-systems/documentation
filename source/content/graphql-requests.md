@@ -18,7 +18,7 @@ reviewed: "2022-03-22"
 
 Pantheon cannot troubleshoot or provide GraphQL solutions, but we can provide some suggestions for best practices and known working solutions for common errors. 
 
-## GraphQL Best Practices
+## Best Practices
 
 ### Always Request an ID
 
@@ -32,7 +32,7 @@ All operations should be named, for example:
  
 Names should be in PascalCase, and should be descriptive of the operation’s use case. This is especially important if you use an API mocking library, such as Mock Service Worker, that uses the operation name for routing request and response handlers to test GraphQL operations.
 
-## Troubleshooting GraphQL 
+## Troubleshooting  
 
 ### Request Errors
 
