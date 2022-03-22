@@ -213,27 +213,23 @@ Examples:
 
 - `key: “Interest” => return: “27”`
 
-- `key: “Role” => return: “subscriber”`
-
 </Accordion>
 
 <Accordion title="$headerData->parseHeader(key)" id="parseHeader" icon="wrench">
 
-### Use header key to return parsed header data array.
+Use header key to return parsed header data array.
 
 Examples:
 
 - `key: “Audience” => return: “geo:US”`
 
 - `key: “Interest” => return: “27”`
-
-- `key: “Role” => return: “subscriber”`
 
 </Accordion>
 
 <Accordion title="$headerData->returnPersonalizationObject()" id="headerData" icon="wrench">
 
-### Return an array with personalization data.
+Return an array with personalization data.
 
 Examples:
 
@@ -241,6 +237,19 @@ Examples:
 
 - `key: “Interest” => return: “27”`
 
-- `key: “Role” => return: “subscriber”`
-
 </Accordion>
+
+### Global Methods
+
+There are global methods that mirror the class methods in order to ease the API usage. These include:
+
+- `HeaderData::personalizationObject()`
+
+- `HeaderData::parse()`
+
+- `HeaderData::header()`
+
+- `HeaderData::returnVaryHeader()`
+
+For more information, on what these methods expect and return, refer to [Pantheon's API documentation](https://github.com/pantheon-systems/pantheon-edge-integrations/#pantheon-edge-integrations).
+
