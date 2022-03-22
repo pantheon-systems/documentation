@@ -1,1 +1,2 @@
-  Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+Composer might pull in a newer version than what is specified (depending on version availability), if the machine name for the module is `MODULE_NAME`, and the version of that module is `VERSION`. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+  
