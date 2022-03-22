@@ -58,6 +58,5 @@ Here is an example of an error returned for a workspace that requires multi-fact
 
 ## See Also
 
-[Local Development](/local-development)
-
-[Pantheon Professional Services](/guides/professional-services)
+- [Local Development](/local-development)
+- [Pantheon Professional Services](/guides/professional-services)
