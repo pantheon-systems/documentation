@@ -20,7 +20,7 @@ Your website must be connected to [Pantheon’s Advanced Global CDN](/guides/pro
 
 Edge Integrations setup for Drupal requires intermediate site-building skills. If you plan to extend the conditions beyond the ones that are provided by the modules, back-end Drupal module development skills are required.
 
-For WordPress setup, back-end WordPress development skills and familiarity with [WordPress hooks](https://developer.wordpress.org/plugins/hooks/) (making use of existing [actions](https://developer.wordpress.org/plugins/hooks/actions/) and [filters](https://developer.wordpress.org/plugins/hooks/filters/)) is required.
+To set up WordPress, back-end WordPress development skills and familiarity with [WordPress hooks](https://developer.wordpress.org/plugins/hooks/) (making use of existing [actions](https://developer.wordpress.org/plugins/hooks/actions/) and [filters](https://developer.wordpress.org/plugins/hooks/filters/)) is required.
 
 ### Why AGCDN?
 
