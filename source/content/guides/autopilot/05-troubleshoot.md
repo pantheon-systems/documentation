@@ -117,7 +117,7 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 </Accordion>
 
-## Upstream Updates Could Not Be Applied
+## Failed Upstream Updates 
 
 <Accordion title="We could not apply the upstream updates." id="failed-upstream-updates" icon="info-sign">
 
