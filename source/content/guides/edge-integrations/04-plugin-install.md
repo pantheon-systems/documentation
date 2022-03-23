@@ -18,11 +18,11 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-**ADD NOTE ABOUT NEEDING AGCDN - REITERATE**
-
-You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
+As per the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/) your website must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn), and ensure that your site's vary headers have been provisioned by Professional Services.
 
 ### Install with Composer
+
+You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 
 Adding Edge Integrations support to your Integrated Composer project is simple and is the recommended means of adding the Edge Integrations WordPress SDK.
 
@@ -88,8 +88,6 @@ You can validate that the interest tracking is working by clicking on multiple p
 ### Interests Code Samples
 
 
-
-## How to build a WordPress Widget that uses the Edge Integrations SDK
 
 ## Additional Resources
 
