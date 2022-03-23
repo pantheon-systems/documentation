@@ -141,11 +141,11 @@ If the error is diplayed due to a failed Composer build, use `git diff` to view 
 </Accordion>
 
 ## Redirects
-<Accordion title="Visual regression tests could not be completed due to a redirect error" id="too-many-redirects" icon="info-sign">
+<Accordion title="" id="too-many-redirects" icon="info-sign">
 
 ### Issue
 
-We could not complete the visual regression test (VRT) due to a redirect error on one or more pages.
+The visual regression test (VRT) could not be completed due to a redirect error on one or more pages.
   
 ### Diagnosis 
 
@@ -159,7 +159,30 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
   
 </Accordion>
 
+## Extension Updates are Missing
+<Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
 
+### Issue
+
+This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
+  
+### Diagnosis
+
+To determine which plugin is causing the issue:
+
+1. Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added.
+
+1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
+
+If you need assistance, [contact Support](/guides/support/contact-support).
+
+### Solution
+
+Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
+
+Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
+ 
+</Accordion>
 
 ## 
 <Accordion title="Multidev converge failed. Reach out to our support team for assistance." id="cannot-converge-multidev" icon="info-sign">
