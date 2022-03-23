@@ -325,6 +325,11 @@
   linkedin: //www.linkedin.com/in/chrissreynolds
   url: //chrisreynolds.io
   bio: Software Engineer, Pantheon
+- id: jrastaban
+  name: John Richards II
+  avatar: //github.com/jrastaban.png?size=460
+  bio: Manager of Developer Advocacy, Pantheon
+  github: //github.com/jrastaban
 - id: LukasRos
   name: Lukas Rosenstock
   twitter: https://twitter.com/LukasRosenstock
