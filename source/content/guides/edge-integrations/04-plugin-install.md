@@ -14,7 +14,7 @@ editpath: edge-integrations/04-plugin-install.md
 reviewed: "2022-03-23"
 ---
 
-This doc will help you personalize, and provide custom experiences for visitors to your website, based on Geotargeting(geo) and Interest targeting.
+This doc will help you personalize, and provide custom experiences for visitors to your website, based on Geotargeting and Interest targeting.
 
 ## Before You Begin
 
@@ -71,11 +71,18 @@ If the plugin is installed and configured correctly, the `Audience` or `Audience
 
 ### Geolocation Code Samples
 
+Edge Integrations can easily integrate with various WordPress plugins.
 
+[Advanced Custom Fields (ACF)](https://www.advancedcustomfields.com/) is a popular WordPress plugin that allows developers to turn sites into a fully-fledged content management system. [CMB2](https://github.com/CMB2/CMB2) is a developer's toolkit for building metaboxes, custom fields, and forms for WordPress. 
+
+We've created example plugins to integrate with each of these third-party plugins, where the given solution is used to render content based on a visitor's location.
+
+- [Geo ACF example plugin](https://github.com/pantheon-systems/wp13n/tree/master/wp-content/plugins/geo-acf)
+- [Geo CMB2 example plugin](https://github.com/pantheon-systems/wp13n/tree/master/wp-content/plugins/geo-cmb2)
 
 ## Configure Interests
 
-Interests are much easier to set up in the edge configuration. In this case, we're telling the CDN to vary cache for specific taxonomy terms. In Drupal, these are tags and configured in the admin. In WordPress, categories are used by default (but any taxonomy can be used). When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
+Interests are much easier to set up using edge configuration. In this case, we're telling the CDN to vary cache for specific taxonomy terms. The category taxonomy is, by default, used to determine a visitor's interest. When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
 
 You can read more about how to use or manipulate the interest data in the [Interest SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md).
 
