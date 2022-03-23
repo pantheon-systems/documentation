@@ -18,7 +18,7 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-As per the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/) your website must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn), and your site's vary headers must have been provisioned by Professional Services.
+As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn) and your site's vary headers must have been provisioned by Professional Services in order for your Edge Integrations setup to function properly.
 
 ### Install with Composer
 
