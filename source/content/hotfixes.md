@@ -94,11 +94,15 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
 <Alert title="Warning" type="danger">
 
-Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
+Because we use caching on our Git logs, you may not see your hotfix commit listed in the Test commit log. However, if you've pushed it up, you should be able to test your changes. After you've verified that your code hotfix is there, pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
 
 </Alert>
 
-If your tests pass, a message that that there is a pending change that needs to be deployed will appear in the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, under **<span class="glyphicons glyphicons-refresh"></span> Deploys**.  To deploy, push the change to live by creating a _new_ tag:
+You will see a message that there is a pending change that needs to be deployed if your tests pass.
+
+1. Open **<span class="glyphicons glyphicons-refresh"></span> Deploys** and click the **<span class="glyphicons glyphicons-cardio"></span> Live** tab to see changes pending deployment.
+
+1. Create a `_new_` tag to deploy changes to Live:
 
 ```bash{promptUser: user}
 git tag -a pantheon_live_2 -m "Deploying my hotfix"
