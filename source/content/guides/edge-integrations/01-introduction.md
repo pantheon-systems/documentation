@@ -32,16 +32,16 @@ The benefits of Edge Integrations:
 	- You can improve productivity by using existing content, style guides, media, and CMS integrations. No need to manage assets in multiple places.
 
 - Performance-forward
-	- Improve credibility with a fast, seamless customer experience- distribute personalized content across dozens of global and US points of presence.
+	- Improve credibility with a fast, seamless customer experience and distribute personalized content across dozens of global and US points of presence.
 
 - Cost-effective
 	- Increase business impact by instrumenting and measuring success with your current analytics products. No need for new segmentation tooling.
 
 - Geographic targeting
-	- Based on the location of the visitor, the site will deliver a different homepage here for Canadian visitors vs US (Poutine vs Pizza).
+	- Based on the location of the visitor, the site can deliver a different homepage — e.g. Canadian visitors vs US (Poutine vs Pizza).
 
 - Interest fingerprinting
-	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes — will put a visitor in an interest cohort, which will  reorganize the recipes landing page.
+	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes — will put a visitor in an Interest threshold, which could reorganize a landing page to highlight content that matches the visitor's interest.
 
 There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Pantheon's focus is to get immediate lift for existing sites, and build from there.
 
@@ -53,7 +53,7 @@ There are many more potential ways to leverage content variation to identify val
 
 <dd>
 
-The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (page, Drupal node)  to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
+The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (WordPress Post, Drupal node) to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
 
 Example: `Vary: <header-name>, <header-name>`
 
