@@ -67,7 +67,7 @@ Example: `Vary: <header-name>, <header-name>`
 
 Each segment corresponds to a different value within the personalization property/condition.
 
-Example: `US,` `CA,` `ES,` `UK` 
+Example: `US` `CA` `ES` `UK` 
 
 - Used within the Geolocation condition, where each segment is a country. 
 
