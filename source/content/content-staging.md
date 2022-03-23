@@ -6,9 +6,9 @@ contributors: [jrastaban, whitneymeredith]
 tags: [content, workflow, webops]
 ---
 
-Content staging workflow between test and live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment (check out [WebOps workflow](/pantheon-workflow#content)for an explanation of why we do this). However, the default workflow doesn’t work for some configurations.
+Content staging workflow between test and live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment (check out [WebOps workflow](/pantheon-workflow#content) for an explanation of why we do this). 
 
-Review the sections below to find content staging solutions that match your current WordPress or Drupal configuration. Keep in mind that while these solutions have worked for others, they might not work for your specific configuration.
+The default configuration doesn't work for some configurations. Review the sections below to find content staging solutions that match your current WordPress or Drupal configuration. Keep in mind that while these solutions have worked for others, they might not work for your specific configuration.
 
 ## Content Staging in WordPress
 
