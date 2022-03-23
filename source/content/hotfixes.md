@@ -8,7 +8,7 @@ For Experts only. You should not need to attempt this if you use [Multidev](/mul
 
 <Alert title="Warning" type="danger">
 
-We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user and should be avoided whenever possible.
+We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user, and should be avoided whenever possible.
 
 </Alert>
 
@@ -18,7 +18,7 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 - A working knowledge of Git tools.
 - An up-to-date clone of your Pantheon Git repository.
 
-## Get Into the Right Tag
+## Get into the Right Tag
 
 1. From within your Git clone, get a quick list of the existing Git tags:
 
@@ -94,11 +94,11 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
 <Alert title="Warning" type="danger">
 
-Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
+Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
 
 </Alert>
 
-If your tests pass, you will need to repeat the process to deploy your changes to the Live environment. Currently, the deploys interface does not enable hotfix tags on test to be deployed directly to live.
+If your tests pass, a message that that there is a pending change that needs to be deployed will appear in the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, under **<span class="glyphicons glyphicons-refresh"></span> Deploys**.  To deploy, push the change to live by creating a _new_ tag:
 
 ```bash{promptUser: user}
 git tag -a pantheon_live_2 -m "Deploying my hotfix"
@@ -107,7 +107,7 @@ git push origin pantheon_live_2
 
 ## Orphan Commits
 
-On Pantheon an orphan commit is any commit that exists on the Test or Live environment, but not in the master branch.
+On Pantheon, an orphan commit is any commit that exists on the Test or Live environment, but not in the master branch.
 
 Even when making hotfixes, your workflow should push those changes into the master branch. Since we have no way of knowing which future commit will contain those changes, we want you to be aware of potential code loss.
 
