@@ -53,7 +53,7 @@ There are many more potential ways to leverage content variation to identify val
 
 <dd>
 
-The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (page, Drupal node)  to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
+The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (Post, Drupal node) to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
 
 Example: `Vary: <header-name>, <header-name>`
 
@@ -67,7 +67,7 @@ Example: `Vary: <header-name>, <header-name>`
 
 Each segment corresponds to a different value within the personalization property/condition.
 
-Example: `US,` `CA,` `ES,` `UK` 
+Example: `US` `CA` `ES` `UK` 
 
 - Used within the Geolocation condition, where each segment is a country. 
 
