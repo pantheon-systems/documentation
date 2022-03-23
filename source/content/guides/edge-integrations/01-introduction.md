@@ -1,7 +1,7 @@
 ---
 title: Edge Integrations
 subtitle: Introduction
-description: A starter kit for teams that are looking to make the leap to more advanced workflows.
+description: A modern approach to audience-based content personalization.
 categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -18,7 +18,7 @@ This guide is made to facilitate the onboarding process for developers who are i
 
 ## What Is Edge Integrations?
 
-Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. It is a modern approach to audience-based content personalization which presents an alternative to most personalization engines. Pantheon's approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, and with fewer moving parts. 
+Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. Pantheon's approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, and with fewer moving parts. 
 
 ### How does Edge Integrations work?
 
