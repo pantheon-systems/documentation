@@ -109,6 +109,31 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 </Accordion>
 
+## Extension Updates are Missing
+<Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
+
+### Issue
+
+This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
+  
+### Diagnosis
+
+To determine which plugin is causing the issue:
+
+1. Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added.
+
+1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
+
+If you need assistance, [contact Support](/guides/support/contact-support).
+
+### Solution
+
+Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
+
+Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
+ 
+</Accordion>
+
 ## Preventing Autopilot From Taking Screenshots of Your Website
 
 <Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
@@ -159,29 +184,23 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
   
 </Accordion>
 
-## Extension Updates are Missing
-<Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
+## Failed Deployment 
+<Accordion title="We could not deploy the updates to the Test or Live] environment due to an unexpected error." id="deploy-failed" icon="info-sign">
 
 ### Issue
 
-This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
-  
-### Diagnosis
+Autopilot failed to deploy to Test or Live. Deploying to Dev (from Multidev) was successful. Most common reason is running clear cache or update db using drush or wp-cli failed after the code was deployed. Ensure Drush and WP CLI “clear-cache” work on the target environment.
 
-To determine which plugin is causing the issue:
-
-1. Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added.
-
-1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
-
-If you need assistance, [contact Support](/guides/support/contact-support).
-
+CSE can see in “Debug” tab why the workflow failed.
+   
 ### Solution
 
-Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
+- If Drush/WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS
 
-Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
- 
+- Run the deploy to test or live manually (the new code is already on master/dev env if we’ve made it this far). Autopilot will also attempt deploy again when the next round of updates is tested, but immediately running updates again will likely result in “UP TO DATE”, as the dev env already has the changes.
+
+If these steps fail, reach out to [Support](/support).
+  
 </Accordion>
 
 ## 
