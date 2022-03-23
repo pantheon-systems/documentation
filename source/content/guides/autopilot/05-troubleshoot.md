@@ -225,10 +225,12 @@ If these steps fail, reach out to [Support](/suuport).
 
 </Accordion>
 
-## 
-<Accordion title="Multidev converge failed. Reach out to our support team for assistance." id="cannot-converge-multidev" icon="info-sign">
+## Autopilot Multidev
+<Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
 
 ### Issue
+
+### Diagnosis
 
 Most often, this is because of Drush/WP-CLI failing following db pull. Could be Autopilot workflow specific (most of the time - due to site-level CMS issue), could also be due to platform-wide event. 
  
