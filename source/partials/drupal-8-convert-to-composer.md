@@ -120,7 +120,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   composer require drupal/MODULE_NAME:^VERSION
   ```
 
-  Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+<Partial file="module-name.md" />
 
   Some modules use different version formats.
 
