@@ -11,14 +11,14 @@ showtoc: true
 anchorid: plugin-install
 permalink: docs/guides/edge-integrations/plugin-install/
 editpath: edge-integrations/04-plugin-install.md
-reviewed: "2022-03-09"
+reviewed: "2022-03-23"
 ---
 
 This doc will help you personalize, and provide custom experiences for visitors to your website, based on Geotargeting(geo) and Interest targeting.
 
 ## Before You Begin
 
-**ADD NOTE ABOUT NEEDING AGCDN- REITERATE**
+**ADD NOTE ABOUT NEEDING AGCDN - REITERATE**
 
 You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 

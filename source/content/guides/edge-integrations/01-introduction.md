@@ -11,7 +11,7 @@ showtoc: true
 anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
-reviewed: "2021-03-07"
+reviewed: "2022-03-23"
 ---
 
 This guide is made to facilitate the onboarding process for developers who are implementing content personalization via Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) into their own Drupal or WordPress website. 
