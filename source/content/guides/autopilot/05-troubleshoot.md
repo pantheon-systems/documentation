@@ -117,6 +117,32 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 </Accordion>
 
+## Upstream Updates Could Not Be Applied
+
+<Accordion title="We could not apply the upstream updates." id="failed-upstream-updates" icon="info-sign">
+
+### Issue
+ 
+Applying upstream updates failed and changes cannot be automatically merged by Git. 
+
+### Diagnosis
+
+This error message most likely results from a merge conflict when applying upstream updates to the site. For sites that use Composer, this could be caused by a failed Composer build.
+  
+### Solution
+
+Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation. 
+  
+If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
+
+If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
+](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream). 
+
+</Accordion>
+
+
+
+
 ## 
 <Accordion title="Multidev converge failed. Reach out to our support team for assistance." id="cannot-converge-multidev" icon="info-sign">
 
