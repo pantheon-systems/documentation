@@ -1,9 +1,9 @@
 ---
 title: Accessing MySQL Databases
-description: Configure and Troubleshoot Your Pantheon Website's MySQL Database Connections
+description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 categories: [develop]
 tags: [database, local, ssh]
-reviewed: "2021-07-16"
+reviewed: "2022-03-23"
 ---
 
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
@@ -31,7 +31,7 @@ MySQL credentials for each site environment are located in the Dashboard:
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
-- **Port**: The TCP/IP port number to use for the connection. There is no default and will differ for every environment on each site. The port that the platform chooses is randomized and may not be what you expect or what PHP reports.
+- **Port**: The TCP/IP port number to use for the connection. The platform randomly selects the port number. Port numbers will differ in every environment for each site, and might not match what PHP reports.
 - **Username**: MySQL user name to use when connecting to server.
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database to use; the value will always be pantheon and cannot be altered.
