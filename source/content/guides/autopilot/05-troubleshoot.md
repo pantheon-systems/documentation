@@ -140,6 +140,24 @@ If the error is diplayed due to a failed Composer build, use `git diff` to view 
 
 </Accordion>
 
+## Redirects
+<Accordion title="Visual regression tests could not be completed due to a redirect error" id="too-many-redirects" icon="info-sign">
+
+### Issue
+
+We could not complete the visual regression test (VRT) due to a redirect error on one or more pages.
+  
+### Diagnosis 
+
+Autopilot fails when a VRT page redirects more than 8 times or is stuck in an infinite loop.
+
+### Solution
+
+Real-time email notifications are sent for failed VRTs for a site. If an error is detected during an update attempt, the Autopilot Status displays **Needs Attention**  with two options to **Review Test Results** or to **View Update Details**. When a failed test requires review, new tests cannot be run on the site until the results have been approved or discarded through Autopilot.
+
+To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for that page.
+  
+</Accordion>
 
 
 
