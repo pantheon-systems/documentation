@@ -203,6 +203,28 @@ If these steps fail, reach out to [Support](/support).
   
 </Accordion>
 
+## Unreachable Site 
+
+<Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Autopilot Multidev or Dev environment." id="unreachable-site" icon="info-sign">
+
+### Issue
+
+Failed to get a `200 OK` reponse from the homepage of the Dev environment.
+ 
+### Diagnosis
+  
+Autopilot environment site might be overloaded or in maintenance mode.
+  
+### Solution
+
+Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
+
+If these steps fail, reach out to [Support](/suuport).
+  
+</Accordion>
+
+</Accordion>
+
 ## 
 <Accordion title="Multidev converge failed. Reach out to our support team for assistance." id="cannot-converge-multidev" icon="info-sign">
 
