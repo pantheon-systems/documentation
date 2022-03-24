@@ -11,7 +11,7 @@ showtoc: true
 anchorid: module-install
 permalink: docs/guides/edge-integrations/module-install/
 editpath: edge-integrations/03-module-install.md
-reviewed: "2021-03-07"
+reviewed: "2022-03-23"
 ---
 
 The Edge Integrations personalization system for Drupal consists of two main parts:
