@@ -33,7 +33,6 @@ You can output the size of your repository by running [`git count-objects -vH`](
 
 ## Prune and Optimize Large Repositories
 
-<Alert title="Note" type="info" >For sites using custom upstream, apply the following steps directly to the custom upstream repository. Force push the updated custom upstream repository branch to the existing sites' Pantheon repository origin.</Alert>
 
 1. [Clone the site's codebase](/git#clone-your-site-codebase), if you haven't already.
 
@@ -112,3 +111,4 @@ You can output the size of your repository by running [`git count-objects -vH`](
   git reflog expire --expire=now --all
   git gc --prune=now
   ```
+<Alert title="Note" type="info" >For sites using custom upstream, check the custom upstream to see if it contains large files that can be pruned.</Alert>
