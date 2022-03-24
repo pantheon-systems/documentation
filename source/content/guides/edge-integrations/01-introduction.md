@@ -32,7 +32,7 @@ The benefits of Edge Integrations:
 	- You can improve productivity by using existing content, style guides, media, and CMS integrations. No need to manage assets in multiple places.
 
 - Performance-forward
-	- Improve credibility with a fast, seamless customer experience and distribute personalized content across dozens of global and US points of presence.
+	- Improve credibility with a fast, seamless customer experience, and distribute personalized content across dozens of global and US points of presence.
 
 - Cost-effective
 	- Increase business impact by instrumenting and measuring success with your current analytics products. No need for new segmentation tooling.

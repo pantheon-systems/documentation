@@ -18,13 +18,13 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn) and your site's vary headers must have been provisioned by Professional Services in order for your Edge Integrations setup to function properly.
+As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn) and your site's vary headers must have been provisioned by Professional Services in order for your Edge Integrations setup to function properly. If you have completed these steps, you can move on to the next sections of this doc. 
+
+To use Edge Integrations with WordPress, can either install it into a project with Composer, or manually install the plugin.
+
+The simplest and recommended means of adding Edge Integrations WordPress SDK is to add Edge Integrations support to your Integrated Composer project.
 
 ### Install with Composer
-
-You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
-
-Adding Edge Integrations support to your Integrated Composer project is simple and is the recommended means of adding the Edge Integrations WordPress SDK.
 
 #### Require the Composer Package
 
@@ -73,16 +73,18 @@ If the plugin is installed and configured correctly, the `Audience` or `Audience
 
 Edge Integrations can easily integrate with various WordPress plugins.
 
-[Advanced Custom Fields (ACF)](https://www.advancedcustomfields.com/) is a popular WordPress plugin that allows developers to turn sites into a fully-fledged content management system. [CMB2](https://github.com/CMB2/CMB2) is a developer's toolkit for building metaboxes, custom fields, and forms for WordPress. 
+- [Advanced Custom Fields (ACF)](https://www.advancedcustomfields.com/) is a popular WordPress plugin that allows developers to turn sites into a fully-fledged content management system.
 
-We've created example plugins to integrate with each of these third-party plugins, where the given solution is used to render content based on a visitor's location.
+- [CMB2](https://github.com/CMB2/CMB2) is a developer's toolkit for building metaboxes, custom fields, and forms for WordPress. 
+
+Pantheon has created example plugins to integrate with each of these third-party plugins, where the given solution is used to render content based on a visitor's location.
 
 - [Geo ACF example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/geo-acf)
 - [Geo CMB2 example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/geo-cmb2)
 
 ## Configure Interests
 
-Interests are much easier to set up using edge configuration. In this case, we're telling the CDN to vary cache for specific taxonomy terms. The category taxonomy is, by default, used to determine a visitor's interest. When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
+With Interests, we want the CDN to vary cache for specific taxonomy terms. The category taxonomy is, by default, used to determine a visitor's interest. When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
 
 You can read more about how to use or manipulate the interest data in the [Interest SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md).
 
@@ -102,4 +104,4 @@ You can validate that the interest tracking is working by clicking on multiple p
 - [Pantheon Geolocation Shortcodes](https://github.com/pantheon-systems/pantheon-geolocation-shortcodes)
 - [Geo: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md)
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
-- [Integrate Cookie Consent](TBD- CR)
+- **[Integrate Cookie Consent](TBD- CR)**
