@@ -47,25 +47,15 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
     
    You are in 'detached HEAD' state. You can make experimental
    changes and commit them, and you can discard any commits you make without impacting any branches by performing another checkout.
-    
-    
-   If you want to create a new branch to retain commits you create, you can
-   do so by using -b with the checkout command again. Example:
-    
-    
-     git checkout -b new_branch_name
-    
-   
-   HEAD is now at ....
+   ...
    ```
 
    You are now ready to start work based on the state of the live site.
 
-3. Create new branch and start working:
+3. Create a new branch and start working:
 
-   ```bash{outputLines: 2}
+   ```bash{promptUser: user}
    git checkout -b hotfix
-
    git commit -a -m "Hotfix issue xyz"
    ```
 
@@ -104,10 +94,10 @@ You will see a message that there is a pending change that needs to be deployed 
 
 1. Create a `_new_` tag to deploy changes to Live:
 
-```bash{promptUser: user}
-git tag -a pantheon_live_2 -m "Deploying my hotfix"
-git push origin pantheon_live_2
-```
+   ```bash{promptUser: user}
+   git tag -a pantheon_live_2 -m "Deploying my hotfix"
+   git push origin pantheon_live_2
+   ```
 
 ## Orphan Commits
 
