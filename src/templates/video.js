@@ -83,7 +83,7 @@ class VideoTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"/assets/images/default-thumb-doc.png"}
+          image={"/images/assets/default-thumb-doc.png"}
           type={node.frontmatter.type}
         />
         <div className="">
