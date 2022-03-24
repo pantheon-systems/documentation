@@ -46,7 +46,7 @@ The [Elementor export kit](https://elementor.com/help/export-kit/) allows you to
 
 ### Staging Content for Approvals
 
-A publishing workflow plugin like [PublishPress](https://wordpress.org/plugins/publishpress/) provides extra approval features without requiring you to work in a separate environment to stage changes. This is a useful solution if the primary reason for a staging workflow process is to get approvals and time content releases.
+Publishing workflow plugins like [PublishPress](https://wordpress.org/plugins/publishpress/) or [Oasis Workflow](https://wordpress.org/plugins/oasis-workflow/) provide extra approval features without requiring you to work in a separate environment to stage changes. This is a useful solution if the primary reason for a staging workflow process is to get approvals and time content releases. The [CoSchedule](https://wordpress.org/plugins/coschedule-by-todaymade/) plugin is another resource that allows you to schedule posts.
 
 ### Staging Content for Complex Use Cases
 
