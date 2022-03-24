@@ -198,7 +198,7 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 
 The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
 
-## More Resources (Working title)
+## More Information
 
 Pantheon Edge Integrations is a CMS-agnostic PHP library. Pantheon Edge Integrations uses header data to provide a personalization object that is utilized for personalizing content for each user. To make use of the PHP library, ensure PHP can use the class:
 
