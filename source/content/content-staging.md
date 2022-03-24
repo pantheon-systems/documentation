@@ -12,7 +12,7 @@ The default configuration doesn't work for some configurations. Review the secti
 
 ## Content Staging in WordPress
 
-Most people find that using the standard [WordPress CMS Draft / Publish workflow](https://wordpress.org/support/article/post-status/#workflow) meets their content needs. However, this workflow might not meet the needs of groups that require content to be staged in a non-live environment first. Content staging is a difficult process in WordPress because page content and configuration are often intertwined. There are a few common ways to accomplish this, depending on the workflow you want to use. 
+Most people find that using the standard [WordPress Draft / Publish workflow](https://wordpress.org/support/article/post-status/#workflow) meets their content needs. However, this workflow might not meet the needs of groups that require content to be staged in a non-live environment first. Content staging is a difficult process in WordPress because page content and configuration are often intertwined. There are a few common ways to accomplish this, depending on the workflow you want to use. 
 
 The core challenge that the solutions below try to deal with is keeping the staging content version from becoming obsolete while the live environment’s content continues to change. The key to this challenge is finding a way to realign your staging content with your live content.
 
