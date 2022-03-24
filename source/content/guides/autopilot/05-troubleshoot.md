@@ -21,7 +21,7 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. Autopilot will not allow updates to be queued until all errors have been reviewed and acknowledged.
 
-  If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
+If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
 1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
 
@@ -189,7 +189,7 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
 
 ### Issue
 
-Autopilot failed to deploy to Test or Live. Deploying to Dev (from Multidev) was successful. Most common reason is running clear cache or update db using drush or wp-cli failed after the code was deployed. Ensure Drush and WP CLI “clear-cache” work on the target environment.
+Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using drush or wp-cli failed after the code was deployed. Ensure that clearing the cache using Drush or the WP CLI works on the target environment.
 
 CSE can see in “Debug” tab why the workflow failed.
    
