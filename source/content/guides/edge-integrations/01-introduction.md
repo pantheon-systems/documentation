@@ -38,7 +38,7 @@ The benefits of Edge Integrations:
 	- Increase business impact by instrumenting and measuring success with your current analytics products. No need for new segmentation tooling.
 
 - Geographic targeting
-	- Based on the location of the visitor, the site can deliver a different homepage — e.g. Canadian visitors might see poutine, where US visitors would see pizza.
+	- Based on the location of the visitor, the site can deliver a different homepage — e.g. Canadian visitors might see poutine where US visitors would see pizza.
 
 - Interest fingerprinting
 	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes will put a visitor in a specific Interest threshold, which will reorganize a landing page to highlight content that matches the visitor's interest.
