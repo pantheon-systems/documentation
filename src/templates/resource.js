@@ -91,7 +91,7 @@ class ResourceTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"/assets/images/default-thumb-doc.png"}
+          image={"/images/assets/default-thumb-doc.png"}
           categories={node.frontmatter.categories}
           tags={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
