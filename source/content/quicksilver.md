@@ -67,7 +67,7 @@ You can hook into the following workflows:
 | `clear_cache`                       | Clear CMS and Edge Cache                                 |             |                                             |
 | `clone_database`                               | Clone database between environments                                         | target (to_env)                    |                                             |
 | `create_cloud_development_environment`                       | Create Multidev environment                                             | Multidev               | `after` stage valid, `before` stage invalid
-| `deploy`                            | Deploy code to Test or Live | Dev or Multidev            | target                                            |
+| `deploy`                            | Deploy code to Test or Live | target            |                                             |
 | `deploy_product` | Create site                                         | Dev                   | `after` stage valid, `before` stage invalid |
 | `sync_code`                        | Use the command git push command to change the code; commit via the Pantheon Dashboard, upstream update, Multidev merge, or automated workflows                                    | Dev or Multidev      |   |
  
