@@ -30,7 +30,7 @@ This solution requires low-level effort, but can be risky. Keep in mind that a c
 
 The [WP-CFM plugin](https://wordpress.org/plugins/wp-cfm/) provides a simple solution for configuration management in code. WP-CFM is a good option if you want to deploy configuration changes without copying the entire database. This plugin exports the WordPress site configuration from the SQL database's wp_options table to a .json file stored in private/config. After deploying the file to a new environment for the same site, it can then import the configuration from the .json file into the second wp_options table. 
 
-Learn how to install and use the [WordPress Configuration Management plugin on your Pantheon WordPress site](/wp-cfm).
+Learn how to install and use the [WordPress Configuration Management plugin](/wp-cfm) on your Pantheon WordPress site.
 
 ### Staging Content with WP Migrate DB Pro
 
