@@ -740,6 +740,16 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 
 ___
 
+## Smush Pro
+
+<ReviewDate date="2022-03-24" />
+
+**Issue:** The [Smush Pro](https://wpmudev.com/docs/wpmu-dev-plugins/smush/) plugin requires NGINX configuration for WebP image support. This results in issues with assuming write access. In some cases, there is also an issue with the image library processing using a temporary filesystem. 
+
+**Solution:** Consider using Pantheon's [AGCDN](/guides/professional-services/advanced-global-cdn) as an alternative. AGCDN provides image optimization that saves PHP resources without the need for a plugin.
+
+___
+
 ## Timthumb
 
 **Issue:** [Timthumb](https://code.google.com/p/timthumb/) is no longer supported or maintained.
