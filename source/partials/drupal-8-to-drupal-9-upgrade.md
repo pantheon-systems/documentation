@@ -13,9 +13,13 @@
   git commit -m "upgrade to Drupal 9"
   ```
 
-1. Use the command `composer update` instead of `composer update drupal/core* -W` if you receive the error message below:
+<Alert title="Note"  type="info" >
+
+Use the command `composer update` instead of `composer update drupal/core* -W` if you receive the error message below:
 
  `Your requirements could not be resolved to an installable set of packages.`
+
+</Alert>
 
 ## Ongoing Core Updates
 
