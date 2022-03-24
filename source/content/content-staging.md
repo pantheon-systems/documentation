@@ -50,7 +50,7 @@ Publishing workflow plugins like [PublishPress](https://wordpress.org/plugins/pu
 
 ### Staging Content for Complex Use Cases
 
-You are likely dealing with a complex use case where data is changing regularly in the live environment while content is being created in the stage environment, if the above options don’t work for you. 
+The above options might not work for you, if you are dealing with a complex use case where data is changing regularly in the live environment while content is being created in the stage environment.
 
 In this case, you might need to script your own solution. You can [access your database](/mysql-access) and set up a way to export only the new data from one environment and add it to the live database. This is a fairly complex task that might change regularly, depending on your use case.
 
