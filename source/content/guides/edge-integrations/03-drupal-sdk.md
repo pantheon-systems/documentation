@@ -8,10 +8,10 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, eno
 type: guide
 layout: guide
 showtoc: true
-anchorid: module-install
-permalink: docs/guides/edge-integrations/module-install/
-editpath: edge-integrations/03-module-install.md
-reviewed: "2022-03-23"
+anchorid: drupal-sdk
+permalink: docs/guides/edge-integrations/drupal-sdk/
+editpath: edge-integrations/03-drupal-sdk.md
+reviewed: "2021-03-23"
 ---
 
 The Edge Integrations personalization system for Drupal consists of two main parts:
@@ -43,7 +43,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Enable the Vary Header toggle.
 
-1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/module-install/#geolocation) section.
+1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/drupal-sdk/#geolocation) section.
 
 1. Save the configuration.
 
