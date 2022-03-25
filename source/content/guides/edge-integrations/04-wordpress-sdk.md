@@ -94,20 +94,20 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 
 
-## How to integrate with cookie consent management plugins
+## How to Integrate with Cookie Consent Management Plugins
 
-It's possible to integrate with cookie consent management plugins to disallow user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you won't want to store any tracking information until the user consents to it.
+Integrating cookie consent management plugins disallows user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you cannot store any tracking information unless the user consents to it.
 
-We've built an [example plugin](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management) that can help get you started on what needs to be done to integrate with cookie consent management. The plugin uses the [WP Consent API](https://github.com/rlankhorst/wp-consent-level-api) proposed feature plugin to manage consent levels and cookie categories. Our plugin adds a cookie consent banner and disables the functionality of the Pantheon WordPress Edge Integrations plugin when the user has not accepted cookies.
+There is an [example plugin](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management) that will help you get started on with integrating with cookie consent management. The plugin uses the [WP Consent API](https://github.com/rlankhorst/wp-consent-level-api) proposed feature plugin to manage consent levels and cookie categories. This plugin adds a cookie consent banner and disables the functionality of the Pantheon WordPress Edge Integrations plugin when the user has not accepted cookies.
 
 You can read more about it in the [plugin's README file](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management#description).
 
-If you choose to use a third-party cookie consent management solution, the cookies and local storage information added by the Pantheon WordPress Edge Integrations plugin is listed below. This information can be used to help write and define your site's Cookie or Privacy Policy.
+If you choose to use a third-party cookie consent management solution, the cookies and local storage information added by the Pantheon WordPress Edge Integrations plugin is listed below. This information can be used to help write and define your site's cookie or privacy policy.
 
 | Name | Type | Purpose | Expiration | Category |
 |------|------|---------|------------|----------|
 | `interest` | Cookie | Interest-tracking | 14 days (default) | marketing/targeting |
-| `pantheon_ei.interest` | Browser Local Storage | Interest-tracking | no expiration | marketing/targeting |
+| `pantheon_ei.interest` | Browser Local Storage | Interest-tracking | Never expires | marketing/targeting |
 
 ## Additional Resources
 
