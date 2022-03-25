@@ -18,7 +18,7 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-**ADD NOTE ABOUT NEEDING AGCDN- REITERATE**
+Before you can use Pantheon Edge Integrations, you must have Pantheon Advanced Global CDN enabled and your custom VCL rules added. Talk to your Account Manager if you have questions about how to add and configure this for your site.
 
 You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 
