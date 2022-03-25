@@ -50,7 +50,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
-You should [clear the site cache](/clear-caches) after deleting static files.[Clear the Global CDN cache](/global-cdn#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
+You should [clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/global-cdn#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
 ## Using Your Own Session-Style Cookies
 
