@@ -121,9 +121,9 @@ PHP Fatal error: Uncaught exception 'ReflectionException' with message 'Class DO
 
 To resolve this error, install the [`php-xml` extension](https://secure.php.net/manual/en/dom.setup.php).
 
-### PHP Deprecated
+### PHP Deprecated Error
 
-You might see the error below if you are trying to upgrade Terminus 3 from an older version of Terminus, such as Terminus 2.6. 
+You might see the error below if you are upgrading Terminus 3 from an older version of Terminus, such as Terminus 2.6. 
 
 ```php
 PHP Deprecated:  Return type of Symfony\Component\Finder\Finder::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /Users/username/terminus/vendor/symfony/finder/Finder.php on line 566
