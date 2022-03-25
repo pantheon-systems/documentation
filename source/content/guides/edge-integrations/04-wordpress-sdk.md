@@ -100,6 +100,13 @@ We've built an [example plugin](https://github.com/pantheon-systems/pantheon-edg
 
 You can read more about it in the [plugin's README file](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management#description).
 
+If you choose to use a third-party cookie consent management solution, the cookies and local storage information added by the Pantheon WordPress Edge Integrations plugin is listed below. This information can be used to help write and define your site's Cookie or Privacy Policy.
+
+| Name | Type | Purpose | Expiration | Category |
+|------|------|---------|------------|----------|
+| `interest` | Cookie | Interest-tracking | 14 days (default) | marketing/targeting |
+| `pantheon_ei.interest` | Browser Local Storage | Interest-tracking | no expiration | marketing/targeting |
+
 ## Additional Resources
 
 - [Pantheon Edge Integrations Global Library](https://github.com/pantheon-systems/pantheon-edge-integrations)
