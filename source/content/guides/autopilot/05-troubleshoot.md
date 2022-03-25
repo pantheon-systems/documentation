@@ -205,7 +205,7 @@ If these steps fail, reach out to [Support](/support).
 
 ## Unreachable Site 
 
-<Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Autopilot Multidev or Dev environment." id="unreachable-site" icon="info-sign">
+<Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment." id="unreachable-site" icon="info-sign">
 
 ### Issue
 
