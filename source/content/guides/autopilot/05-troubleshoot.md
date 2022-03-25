@@ -230,15 +230,16 @@ If these steps fail, reach out to [Support](/suuport).
 
 ### Issue
 
+
 ### Diagnosis
 
-Most often, this is because of Drush/WP-CLI failing following db pull. Could be Autopilot workflow specific (most of the time - due to site-level CMS issue), could also be due to platform-wide event. 
+This might be due to Drush or WP-CLI failing following a `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to platform-wide event. 
  
 ### Solution
 
-Check that CLI cache clear steps work in dev env, see whether creating other multidevs works, delete the autopilot env and branch (branch is important because branch is left in git if only delete multidev) and try again. If any of this works, try running AP again.
+Check that CLI cache clear steps work in the Dev env. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
-If these steps fail, reach out to Support.
+If these steps fail, contact [Support](/support).
   
 </Accordion>
 
