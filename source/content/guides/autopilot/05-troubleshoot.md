@@ -128,7 +128,7 @@ If you need assistance, [contact Support](/guides/support/contact-support).
 
 ### Solution
 
-Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
+Remove the plugin or theme from the site if it is not being used, or revert the plugin or theme to the original name.
 
 Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
  
