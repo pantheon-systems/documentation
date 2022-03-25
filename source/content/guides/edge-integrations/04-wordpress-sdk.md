@@ -18,7 +18,9 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-Before you can use Pantheon Edge Integrations, you must have Pantheon Advanced Global CDN enabled and your custom VCL rules added. Talk to your Account Manager if you have questions about how to add and configure this for your site.
+Before you can use Pantheon Edge Integrations, you must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn), and your site's vary headers and custom VCL rules must have been provisioned by Professional Services. Contact your Account Manager if you have questions about how to add and configure this for your site.
+
+As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must  If you have completed these steps, you can move on to the next sections of this doc.
 
 You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 
@@ -38,7 +40,7 @@ This command will add the repository to your `/vendor` directory, as well as all
 
 Alternately, you can add `pantheon-systems/edge-integrations-wordpress-sdk` as a dependency to your project's existing `composer.json` file and run `composer install`.
 
-### Install manually
+### Install Manually
 
 If you do not use Composer on your project at all, you can still get started with the WordPress Edge Integrations plugin without any hassle. In this case, you won't be installing the SDK package, instead, go to the [Pantheon WordPress Edge Integrations Releases page](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/releases).
 
@@ -48,7 +50,7 @@ If you do not use Composer on your project at all, you can still get started wit
 
 * Extract the plugin in your `wp-content/plugins` directory. You will get all of the compiled assets and included dependencies, including the CMS-agnostic, [global PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations) in the package.
 
-### Activate the plugin
+### Activate the Plugin
 
 In either case, the last step is activating the plugin from your WordPress dashboard Plugins page. There is no other admin interface for the WordPress plugin -- all the features and components are handled in the code itself, with hooks that developers can use to interact with the geolocation and interest tracking features.
 
