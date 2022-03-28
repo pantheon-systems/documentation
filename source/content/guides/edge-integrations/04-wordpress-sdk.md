@@ -18,7 +18,7 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-Before you can use Pantheon Edge Integrations, you must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn), and your site's vary headers and custom VCL rules must have been provisioned by Professional Services. Contact your Account Manager if you have questions about how to add and configure this for your site.
+<Partial file="before-you-begin-config.md" />
 
 As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must  If you have completed these steps, you can move on to the next sections of this doc.
 

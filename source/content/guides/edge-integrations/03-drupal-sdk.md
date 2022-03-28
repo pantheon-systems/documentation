@@ -22,6 +22,8 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 ## Before You Begin
 
+<Partial file="before-you-begin-config.md" />
+
 1. Ensure you have a working Drupal 8+ installation ready.
 
 1. Install [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) and its dependencies, which can be pulled with [Composer](https://getcomposer.org/) from their corresponding Pantheon repositories. This includes:
