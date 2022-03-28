@@ -109,7 +109,7 @@ The content corresponding to this segment will display. Please note that only us
 
 ### Configure Interest via Taxonomy
 
-In this section, we identify the content type where you want to use personalization by Interest,  add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
+In this section, we identify the content type where you want to use personalization by Interest, add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
 
 1. Navigate to *Admin > Config > System > Smart Content CDN* at `/admin/config/system/smart-content-cdn`. In the configuration form for Smart CDN, select the checkbox for Tags. The form automatically reads all available taxonomy reference terms for all content types and allows you to select them.
     ![Interest Fields](../../../images/guides/edge-integrations/interestfields.png)
@@ -121,8 +121,7 @@ In this section, we identify the content type where you want to use personalizat
 1. Navigate to `/admin/structure/smart_content_segment_set,` to configure geolocation segments. 
 
 1. Click **+Add Global Segment Set**.
-
-    ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities2.png)
+    ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities.png)
 
 1. Provide a label (e.g. Interest) - the name isn't critical.
 
@@ -198,11 +197,11 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 
 ## Recap
 
-The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
+The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) a CMS-agnostic PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
 
 ## More Information
 
-Pantheon Edge Integrations is a CMS-agnostic PHP library. Pantheon Edge Integrations uses header data to provide a personalization object that is utilized for personalizing content for each user. To make use of the PHP library, ensure PHP can use the class:
+Pantheon Edge Integrations uses header data to provide a personalization object that is utilized for personalizing content for each user. To make use of the PHP library, ensure PHP can use the class:
 
 `use Pantheon\EI\HeaderData;`
 
