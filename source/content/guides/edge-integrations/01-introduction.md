@@ -43,7 +43,7 @@ The benefits of Edge Integrations:
 - Interest fingerprinting
 	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes - will create a specific Interest-based cache, which will reorganize a landing page to highlight content that matches the visitor's interest.
 
-There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Pantheon's focus is to get immediate lift for existing sites, and build from there.
+There are many more ways to leverage content variation to identify valuable audience segments or variants. Contact your Account Manager to learn more about Edge Integrations and get started.
 
 ## Glossary
 
