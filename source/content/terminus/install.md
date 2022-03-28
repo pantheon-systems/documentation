@@ -129,7 +129,7 @@ You might see the error below if you are upgrading Terminus 3 from an older vers
 PHP Deprecated:  Return type of Symfony\Component\Finder\Finder::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /Users/username/terminus/vendor/symfony/finder/Finder.php on line 566
 ```
 
-Delete the existing Terminus folder, and then complete the [Terminus install](/terminus/install#install-terminus) steps to resolve this error. 
+Delete the existing Terminus folder, then complete the [Terminus install](/terminus/install#install-terminus) steps to resolve this error. 
 
 ### curl: (60) SSL certificate problem
 
