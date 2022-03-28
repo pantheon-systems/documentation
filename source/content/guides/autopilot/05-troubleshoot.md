@@ -211,9 +211,6 @@ If these steps fail, reach out to [Support](/support).
 
 Failed to get a `200 OK` reponse from the homepage of the Dev environment.
  
-### Diagnosis
-  
-Autopilot environment site might be overloaded or in maintenance mode.
   
 ### Solution
 
