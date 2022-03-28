@@ -18,7 +18,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 - Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set vary headers to be recognized by Pantheon Advanced Global CDN.
 
-- A collection of Drupal 8+ modules in the [Smart Content](https://www.drupal.org/project/smart_content) ecosystem that provide Smart Personalization blocks and preview functionality.
+- A collection of Drupal 8+ modules in the [Edge Integrations Drupal SDK](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) ecosystem that provide Smart Personalization blocks and preview functionality. Should you decide to forgo using the SDK, installing the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) will give you everything you need to get up and running with personalization.
 
 ## Before You Begin
 
@@ -26,16 +26,15 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Ensure you have a working Drupal 8+ installation ready.
 
-1. Install [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) and its dependencies, which can be pulled with [Composer](https://getcomposer.org/) from their corresponding Pantheon repositories.
-    - ```composer require pantheon-systems/smart_content_cdn```
-    - [Pantheon Edge Integrations PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations)
-    ```
-    composer require pantheon-systems/pantheon-edge-integrations
-    ```
-    - [Smart Content](https://www.drupal.org/project/smart_content)
-    ```
-    composer require pantheon-systems/smart_content
-    ```
+1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
+
+```
+composer require pantheon-systems/edge-integrations-drupal-sdk
+```
+OR
+```
+composer require pantheon-systems/smart_content_cdn
+```
 
 1. [Smart Content Preview](https://www.drupal.org/project/smart_content_preview) is an optional package to preview your personalized content. This can also be installed with Composer:
     ```
