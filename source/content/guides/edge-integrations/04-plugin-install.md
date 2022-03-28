@@ -46,7 +46,7 @@ If you do not use Composer on your project, you can still get started with the W
 
 ![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets2.png)
 
-* Extract the plugin in your `wp-content/plugins` directory and you will have all of the compiled assets and included dependencies, which inclue a global CMS-agnostic [PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations), and a [WordPress plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations).
+* Extract the plugin in your `wp-content/plugins` directory and you will have all of the compiled assets and included dependencies, which include a global CMS-agnostic [PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations), and a [WordPress plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations).
 
 ### Activate the Plugin
 
