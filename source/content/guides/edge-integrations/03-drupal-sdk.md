@@ -8,10 +8,10 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, eno
 type: guide
 layout: guide
 showtoc: true
-anchorid: module-install
-permalink: docs/guides/edge-integrations/module-install/
-editpath: edge-integrations/03-module-install.md
-reviewed: "2021-03-07"
+anchorid: drupal-sdk
+permalink: docs/guides/edge-integrations/drupal-sdk/
+editpath: edge-integrations/03-drupal-sdk.md
+reviewed: "2021-03-23"
 ---
 
 The Edge Integrations personalization system for Drupal consists of two main parts:
@@ -51,7 +51,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Enable the Vary Header toggle.
 
-1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/module-install/#geolocation) section.
+1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/drupal-sdk/#geolocation) section.
 
 1. Save the configuration.
 
@@ -212,21 +212,19 @@ In order to use the class methods, you need to create a HeaderData object:
 
 <Accordion title="$headerData->getHeader(key)" id="getHeader" icon="wrench">
 
-### Uses header key to return raw header data.
+Use header key to return raw header data.
 
 Examples:
 
 - `key: “Audience” => return: “geo:US”`
 
 - `key: “Interest” => return: “27”`
-
-- `key: “Role” => return: “subscriber”`
 
 </Accordion>
 
 <Accordion title="$headerData->parseHeader(key)" id="parseHeader" icon="wrench">
 
-### Uses header key to return parsed header data array.
+Use header key to return parsed header data array.
 
 Examples:
 
@@ -234,6 +232,46 @@ Examples:
 
 - `key: “Interest” => return: “27”`
 
-- `key: “Role” => return: “subscriber”`
+</Accordion>
+
+<Accordion title="$headerData->returnPersonalizationObject()" id="headerData" icon="wrench">
+
+Return an array with personalization data.
+
+Examples:
+
+- `key: “Audience” => return: “geo:US”`
+
+- `key: “Interest” => return: “27”`
 
 </Accordion>
+
+### Global Methods
+
+There are global methods that mirror the class methods in order to ease the API usage. These include:
+
+- `HeaderData::personalizationObject()`
+
+- `HeaderData::parse()`
+
+- `HeaderData::header()`
+
+- `HeaderData::returnVaryHeader()`
+
+For more information, on what these methods expect and return, refer to [Pantheon's API documentation](https://github.com/pantheon-systems/pantheon-edge-integrations/#pantheon-edge-integrations).
+
+### Obtain Header Within a Custom Module
+
+The follow can be used in any class context, or procedural context in any hook.
+
+To include the library, run:
+
+`use Pantheon\EI\HeaderData;`
+
+Use the following snippet to obtain the header data object:
+
+```bash
+    #Get header data.
+    $smart_content_cdn = new HeaderData();
+    $p_obj = $smart_content_cdn->returnPersonalizationObject();
+```
