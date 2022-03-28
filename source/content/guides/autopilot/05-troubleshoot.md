@@ -185,7 +185,7 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
 </Accordion>
 
 ## Failed Deployment 
-<Accordion title="We could not deploy the updates to the Test or Live] environment due to an unexpected error." id="deploy-failed" icon="info-sign">
+<Accordion title="We could not deploy the updates to the Test or Live environment due to an unexpected error." id="deploy-failed" icon="info-sign">
 
 ### Issue
 
@@ -243,3 +243,112 @@ If these steps fail, contact [Support](/support).
   
 </Accordion>
 
+
+## Merge to Dev
+<Accordion title="We could not merge the updates to the Dev environment due to an unexpected isssue. ." id="merge-to-dev" icon="info-sign">
+
+### Issue
+
+### Diagnosis
+Most common reason for failure is that the user deployed changes in the dev environment after Autopilot ran that introduced a merge conflict. Could also be because of clear-cache or update.php failing following merge (site-level PHP issue)
+  
+### Solution
+If failed because of a merge conflict, re-run Autopilot with latest changes (i.e. just run Autopilot again)
+
+If failed because of PHP/CMS issue, resolve any issues causing cache clear or update.php step to fail, and manually merge again, or re-run a fresh round of Autopilot.
+
+</Accordion>
+
+## Cloned Content Failed
+<Accordion title="We could not clone the environments due to an unexpected error." id="merge-to-dev" icon="info-sign">
+
+### Diagnosis
+the most common reason for clone content to fail is that drush/wr-cli clear cache failed at the end of a workflow.
+
+### Solution
+the first step would be to check that those commands work. The customer won’t be able to see if the workflow failed because of that on their own (CSE would be able to see it), but we can remark that that is the case, suggest confirming if its an issue with drush/wpcli by replicating the step with terminus.
+
+WordPress:
+
+wp cache flush
+
+Drupal:
+
+drush cache-rebuild
+
+</Accordion>
+  
+## Uncommitted Changes 
+<Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommited-changes" icon="info-sign">
+  
+### Diagnosis
+  
+### Solution
+
+</Accordion>
+
+## CMS Missing
+<Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="cms-missing" icon="info-sign">
+  
+### Diagnosis
+
+### Solution 
+  
+https://pantheon.io/docs/create-sites
+
+ </Accordion>
+
+### Frozen Site
+<Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="frozen-site" icon="info-sign">
+
+### Diagnosis
+A Sandbox site is frozen due to inactivity.
+  
+### Solution
+Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
+
+</Accordion>
+
+### Framework is Not Supported
+<Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="framework-is-not-supported" icon="info-sign">
+
+### Diagnosis
+Site is running a framework that is not drupal, drupal8, or wordpress.
+  
+### Solution
+Contact support for assistance if running a framework other than above. Note: Autopilot is trying to to add wordpress_network support ASAP. Any other framework is likely an edge case Autopilot cannot or will not support. Can customers change the framework themselves to or from something other than above with Terminus or otherwise?
+
+</Accordion>
+
+### Converge Timeout
+<Accordion title="We could not run Autopilot because the Autopilot Multidev creation timed out." id="comverge-timeout" icon="info-sign">
+
+### Diagnosis
+Multidev creation timed out. Try creating another multidev and ensure it succeeds. If it takes an exceptionally long time, Autopilot might need to be adjusted to handle sites with this many files or large db.
+  
+### Solution
+Likely needs engineering work/adjustment to update converge step parameters.
+
+</Accordion>
+
+### No VRT Scenarios
+<Accordion title="We could not run Autopilot because no pages are defined for visual regression testing. " id="no-vrt-scenarios" icon="info-sign">
+
+### Diagnosis
+There are not VRT pages in autopilot settings.
+  
+### Solution
+Add at least one site to Autopilot’s VRT settings.
+
+</Accordion>
+
+### Invalid Drush Version
+<Accordion title="We could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
+
+### Diagnosis
+
+  
+### Solution
+To continue, switch to Drush 8 or use Integrated Composer. Add at least one site to Autopilot’s VRT settings. ****
+
+</Accordion>
