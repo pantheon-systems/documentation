@@ -11,15 +11,13 @@ Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-c
 
 ## Benefits of Object Cache
 
-Most website frameworks like Drupal and WordPress use databases to cache internal application "objects" along with queries for normal page requests, causing increased load-times.
+Most website frameworks like Drupal and WordPress use databases to cache internal application "objects" along with queries for normal page requests, which causes increased load-times.
 
-For example, the first time a Drupal or WordPress page is loaded, a database query is performed on the server. Object Cache remembers, or caches, this query so that when another user loads the page, the results are provided from the Object Cache stored in memory without needing to query the database.
-
-Object Cache does this by caching the SQL queries needed to load a page in memory. When a page loads, the resulting SQL query results are provided from memory by Object Cache without the query hitting the database. This results in much faster page load times, and less server impact on database resources.
+Object Cache remembers, or caches, any queries to the server after the first time a Drupal or WordPress page is loaded. When another user loads the page, the results are provided from the Object Cache stored in memory without needing to query the database again. This results in much faster page load times, and less server impact on database resources.
 
 ### Scalable Performance
 
-Object Cache provides an alternative caching backend that resides in memory rather than databases that store data on disk or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or perform custom caching of their own.
+Object Cache provides an alternative caching backend that resides in memory rather than databases that store data on disks or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other features for developers looking to use it to manage queues, or perform custom caching of their own.
 
 ## Enable Object Cache
 
@@ -380,9 +378,9 @@ maxmemory
 
 ### Hit/Miss Ratio
 
-You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency since most of the requests are fetching data from the disk. You should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
+You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency since most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
 
-Run the following code to view your Hit/Miss ratio:
+Run the following code to access your Hit/Miss ratio:
 
 ```bash
   redis> info stats
@@ -395,7 +393,7 @@ Run the following code to view your Hit/Miss ratio:
 
 Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
 
-Run the following command to view stat mode: 
+Run the following command to access stat mode: 
 
   ```bash
   redis> --stat
@@ -446,8 +444,6 @@ Run the following command to search for big keys:
       1 hashs with 3 fields (00.20% of keys, avg size 3.00)
       0 zsets with 0 members (00.00% of keys, avg size 0.00)
     ```
-   
-
 
 ## Troubleshooting
 
@@ -559,7 +555,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/eviction-policy/). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
 
-Run the following command to view your site's memory usage metrics: 
+Run the following command to access your site's memory usage metrics: 
 
   ```bash
     redis> info memory
