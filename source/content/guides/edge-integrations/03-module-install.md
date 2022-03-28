@@ -37,6 +37,8 @@ The Edge Integrations personalization system for Drupal consists of two main par
     composer require pantheon-systems/smart_content
     ```
 
+1. Install the [Smart Content Preview](https://www.drupal.org/project/smart_content_preview) module.
+
 ## Configure Smart Content CDN
 
 1. Enable the Smart Content CDN module.
