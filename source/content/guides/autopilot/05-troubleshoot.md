@@ -358,10 +358,10 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 ### Issue
 
-There are no visual regression testing (VRT) pages in the Autopilot settings.
-  
+There are no visual regression testing pages in the Autopilot settings.
+
 ### Solution
 
-Add at least one site to the Autopilot VRT settings.
+Add, at a minimum, one site to the Autopilot VRT settings.
 
 </Accordion>
