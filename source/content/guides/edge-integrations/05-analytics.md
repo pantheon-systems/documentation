@@ -31,7 +31,35 @@ Consider the desired goals and objectives for your users. Define success for you
 
 <TabList>
 <Tab title="WordPress" id="wp-analytics-config" active={true}>
-The fastest way to add Google Tag Manager or Google Analytics to your WordPress site is to copy the code from your Google Tag Manager or Google Analytics account after creating a container. However, no-code options exist allowing you to simply copy your UA code and paste it into the appropriate field. The [Google Tag Manager](https://wordpress.org/plugins/duracelltomi-google-tag-manager/) plugin is one such option, but there are [many others](https://wordpress.org/plugins/search/google+tag+manager/).
+
+### Add GTM code
+The [Pantheon WordPress Edge Integrations plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations) natively supports Google Analytics via Google Tag Manager. Simply navigate to the General Settings page in your WordPress admin and scroll to the **Google Tag Manager Code** field.
+
+![Google Tag Manager Code admin setting](../../../images/guides/edge-integrations/ei-analytics-wp-1-gtm-code.png)
+
+Alternately, you can use the `pantheon.ei.gtm_code` filter. This filter can be used to either override the above setting in the admin, or to define a GTM code in your codebase.
+
+To override the GTM code option and prevent the built-in Google Analytics code from being displayed on your site, use the `__return_true` built-in callback on the filter, e.g.:
+
+```php
+add_filter( 'pantheon.ei.gtm_code', '__return_true' );
+```
+
+This is helpful if you are using another plugin to add Google Analytics/Google Tag Manager code snippets or you have hard-coded those code snippets into your site already, and you do not need them to be added for you.
+
+If you would like to define the GTM code in the codebase and use the built-in integration, you would use something like the following:
+
+```php
+function override_gtm_code( $gtm_code ) {
+  return 'GTM-XXXXXXXX';
+}
+add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
+```
+
+If the filter is set in this way, the option in the admin will be suppressed and the GTM code added via the filter will be used instead. 
+
+**Note:** Universal Analytics (UA-) or Google Analytics (G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
+
 </Tab>
 <Tab title="Drupal" id="drupal-analytics-config">
 Install the Drupal [Google Tag](https://www.drupal.org/project/google_tag/) contributed module and configure it to reference your GTM (Google Tag Manager) container ID.
