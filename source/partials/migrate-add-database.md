@@ -10,7 +10,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
   ```
 
    - Replace `USERNAME` with a MySQL user with permissions to access your site's database.
-   - Replace `PASSWORD` with the MySQL user's password. You can also move `-p` to the end of the command and leave it blank, to be prompted for your password. This prevents your MySQL password from being visible on your terminal.
+   - Replace `PASSWORD` with the MySQL user's password. To force a password prompt, move `-p` to the end of the command and leave it blank. This prevents your MySQL password from being visible on your terminal.
    - Replace `DATABASE` with the name of your site database within MySQL.
    - `~/db.sql` defines the output target to a file named `db.sql` in your user's home directory. Adjust to match your desired location.
 
