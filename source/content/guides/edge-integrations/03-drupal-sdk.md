@@ -18,7 +18,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 - Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set vary headers to be recognized by Pantheon Advanced Global CDN.
 
-- A collection of Drupal 8+ modules in the [Edge Integrations Drupal SDK](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) ecosystem that provide Smart Personalization blocks and preview functionality. Should you decide to forgo using the SDK, installing the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) will give you everything you need to get up and running with personalization.
+- A collection of Drupal 8+ modules in the [Edge Integrations Drupal SDK](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) ecosystem that provide Smart Personalization blocks and preview functionality. If you decide to forgo using the SDK, installing the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) will give you everything you need to get up and running with personalization.
 
 ## Before You Begin
 
@@ -28,10 +28,14 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
 
+Drupal SDK: 
+
 ```
 composer require pantheon-systems/edge-integrations-drupal-sdk
 ```
-OR
+
+Smart Content CDN module:
+
 ```
 composer require pantheon-systems/smart_content_cdn
 ```
@@ -43,11 +47,11 @@ composer require pantheon-systems/smart_content_cdn
 
 ## Configure Smart Content CDN
 
-1. Enable the Smart Content CDN module.
+1. Enable the Smart Content module.
 
-1. Enable Smart Content and Smart Content Block module.
+1. Enable the Smart Content CDN and Smart Content Block modules.
 
-1. Enable the Smart Content Preview.
+1. Enable the Smart Content Preview module.
 
 1. Navigate to the Smart Content CDN configuration page at *Configuration > System > Smart Content CDN configuration* at `/admin/config/system/smart-content-cdn`.
 
@@ -199,7 +203,7 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 
 ## Recap
 
-The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) a CMS-agnostic PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
+The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations), a CMS-agnostic PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
 
 ## More Information
 
