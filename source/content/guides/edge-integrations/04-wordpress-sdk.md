@@ -18,7 +18,7 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-Before you can use Pantheon Edge Integrations, you must be connected to [Pantheon’s Advanced Global CDN](/guides/professional-services/advanced-global-cdn), and your site's vary headers and custom VCL rules must have been provisioned by Professional Services. Contact your Account Manager if you have questions about how to add and configure this for your site.
+<Partial file="before-you-begin-config.md" />
 
 As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must  If you have completed these steps, you can move on to the next sections of this doc.
 
@@ -72,10 +72,6 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
-### Geolocation Code Samples
-
-
-
 ## Interests
 
 ### Configure Interests
@@ -114,5 +110,7 @@ If you choose to use a third-party cookie consent management solution, the cooki
 - [Pantheon Edge Integrations Global Library](https://github.com/pantheon-systems/pantheon-edge-integrations)
 - [Pantheon Geolocation Shortcodes](https://github.com/pantheon-systems/pantheon-geolocation-shortcodes)
 - [Geo: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md)
+- [Edge Integrations Code Snippets](https://github.com/pantheon-systems/edge-integrations-snippets)
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
 - [Pantheon Edge Integrations Consent Management](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management)
+- [WordPress SDK API](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/api.md)

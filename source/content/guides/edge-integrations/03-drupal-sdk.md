@@ -22,7 +22,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 ## Before You Begin
 
-1. As per the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), ensure that your site's vary headers have been provisioned by Professional Services.
+<Partial file="before-you-begin-config.md" />
 
 1. Ensure you have a working Drupal 8+ installation ready.
 
