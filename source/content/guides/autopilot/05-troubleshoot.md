@@ -212,15 +212,15 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
 
 ### Issue
 
-Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or `update db` using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP CLI works on the target environment.
+Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
  
 ### Solution
 
 If the Drush or WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS.
 
-Run the deploy to Test or Live manually. Autopilot will also attempt to deploy again when the updates are tested, but immediately running updates again will likely result in “UP TO DATE”, as the Dev environment already has the changes.
+Run the deploy to Test or Live manually. Autopilot will also attempt to deploy again when the updates are tested, but immediately running updates again will likely result in a current response, as the Dev environment already has the changes.
 
-If these steps fail, [contact Support](/guides/support/contact-support).
+If these steps fail, contact [Support](/guides/support/contact-support).
   
 </Accordion>
 
@@ -340,7 +340,7 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Framework is Not Supported
 
-<Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="framework-is-not-supported" icon="info-sign">
+<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-is-not-supported" icon="info-sign">
 
 ### Diagnosis
 
@@ -353,7 +353,8 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 </Accordion>
 
 ### No VRT Scenarios
-<Accordion title="Could not run Autopilot because no pages are defined for visual regression testing. " id="no-vrt-scenarios" icon="info-sign">
+
+<Accordion title="Could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
 
 ###  Issue
 
@@ -361,6 +362,6 @@ There are no visual regression testing (VRT) pages in the Autopilot settings.
   
 ### Solution
 
-Add at least one site to Autopilot’s VRT settings.
+Add at least one site to the Autopilot VRT settings.
 
 </Accordion>
