@@ -25,9 +25,9 @@ If there are errors that require attention, in the **Needs Review** section of t
 
 1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
 
-1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <em class="fa fa-refresh"></em> **Refresh Updates** to force Autopilot to check for new components.
+1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components.
 
-1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates**.
+1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates**.
 
 ### Re-run Autopilot If Tests Have Already Passed
 
@@ -227,7 +227,7 @@ Add at least one site to the Autopilot VRT settings.
 ### Issue
 
 Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
- 
+
 ### Solution
 
 If the Drush or WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS.
@@ -238,13 +238,13 @@ If these steps fail, contact [Support](/guides/support/contact-support).
   
 </Accordion>
 
-## Unreachable Site 
+## Unreachable Site
 
 <Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment." id="unreachable-site" icon="info-sign">
 
 ### Issue
 
-Failed to get a `200 OK` reponse from the homepage of the Dev environment.
+Failed to get a `200 OK` response from the homepage of the Dev environment.
  
 ### Solution
 
