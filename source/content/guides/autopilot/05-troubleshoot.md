@@ -297,7 +297,7 @@ Use the following steps:
   
 ## Uncommitted Changes 
 
-<Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommited-changes" icon="info-sign">
+<Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommitted-changes" icon="info-sign">
   
 ### Issue
 
