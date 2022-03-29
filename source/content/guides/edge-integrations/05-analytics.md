@@ -112,7 +112,6 @@ We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK shi
 ## Track Implementation
 
 This section will cover the configuration of Google Tag Manager and Google Analytics. 
-<!-- Video here? -->
 
 ### Configure Google Analytics
 
