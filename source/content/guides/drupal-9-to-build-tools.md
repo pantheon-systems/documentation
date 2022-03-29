@@ -9,7 +9,7 @@ tags: [composer, site, workflow]
 reviewed: "2022-03-10"
 ---
 
-This guides shows you how to migrate a Composer-based Drupal site (site created via Pantheon dashboard or Terminus) to a Build Tools-based site.
+This guide shows you how to migrate a Composer-based Drupal site (site created via Pantheon dashboard or Terminus) to a Build Tools-based site.
 
 
 ## Overview
@@ -40,7 +40,7 @@ The existing site's commit history will no longer exist after migrating to the n
 
 </Alert>
 
-## Create a new Terminus Build Tools Drupal 9 site
+## Create a New Terminus Build Tools Drupal 9 Site
 
 1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
 
@@ -54,7 +54,7 @@ The existing site's commit history will no longer exist after migrating to the n
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
-2. Get a local copy of both your new site (from the external repository) and your existing site codebase.
+1. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
 1. Set the following temporary variables in your terminal session to match your folders location and sites names:
 
@@ -175,7 +175,7 @@ Any additional Composer configuration that you have added to your site should be
 
 1. Commit your changes as needed.
 
-### Push to the external repository master branch
+### Push to the External Repository Master Branch
 
 1. Push to the master branch in the external repository:
 
@@ -189,7 +189,7 @@ Any additional Composer configuration that you have added to your site should be
 
 <Partial file="migrate-add-database.md" />
 
-## Backup tokens.json file
+## Back Up the tokens.json file
 
 1. Connect to your site using SFTP command or credentials from your dashboard and get a backup of the following file:
 
