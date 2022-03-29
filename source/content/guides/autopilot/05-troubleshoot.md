@@ -143,6 +143,14 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 </Accordion>
 
+## Failed Extemsion Updates
+
+We could not apply the upstream updates. Try merging the updates into the [link 1]Dev environment[/link], resolve any conflicts, and run Autopilot again
+
+"Apply Upstream Updates" failed. This is most likely a merge conflict applying upstream updates to the site, but for Composer-driven sites, this could be caused by a failed composer build (conflict in dependencies).
+
+Doc exists for merge conflicts. Maybe want to link to that and/or add a specific instance for this in the Autopilot doc. Composer could be an additional reason it failed as well as a merge conflict. Consider saying something like "this could also be caused by a failed Composer build" which may cover it - check accuracy with Greg. Should expand here on best practice of doing work in a feature branch in multidev, then merging to dev [link to multidev best practices]. 
+
 ## Failed Upstream Updates 
 
 <Accordion title="We could not apply the upstream updates." id="failed-upstream-updates" icon="info-sign">
