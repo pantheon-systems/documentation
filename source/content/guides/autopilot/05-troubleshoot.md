@@ -73,13 +73,16 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ### Issue
 
-
+An error occurred becuase your site is currently running an unsupported version of Drush.
   
 ### Diagnosis
 
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported.Composer-managed sites should use Drush 10 and will not display the Drush version error. Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error. 
+  
+Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
   
 ### Solution
+
 To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
 </Accordion>
@@ -90,7 +93,7 @@ To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integr
 
 ### Issue
 
-This error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepancy between the plugin name and the URL disables the plugin, and the Autopilot deployment cannot continue.
+This error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepancy between the plugin name and the URL disables the plugin, and Autopilot deployment cannot continue.
 
 ### Diagnosis
 
@@ -112,7 +115,7 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 ## Extension Updates are Missing
 
-<Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
+<Accordion title="Could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
 
 ### Issue
 
@@ -146,11 +149,19 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## Failed Extension Updates
 
-We could not apply the upstream updates. Try merging the updates into the [link 1]Dev environment[/link], resolve any conflicts, and run Autopilot again
+<Accordion title="Could not apply the upstream updates." id="failed-extension-updates" icon="info-sign">
 
-"Apply Upstream Updates" failed. This is most likely a merge conflict applying upstream updates to the site, but for Composer-driven sites, this could be caused by a failed composer build (conflict in dependencies).
+### Issue
 
-Doc exists for merge conflicts. Maybe want to link to that and/or add a specific instance for this in the Autopilot doc. Composer could be an additional reason it failed as well as a merge conflict. Consider saying something like "this could also be caused by a failed Composer build" which may cover it - check accuracy with Greg. Should expand here on best practice of doing work in a feature branch in multidev, then merging to dev [link to multidev best practices]. 
+Applying upstream updates failed. 
+
+### Diagnosis
+  
+This is most likely due to a merge conflict when applying upstream updates to the sites. For Composer sites, this could be caused by a failed Composer build or dependency conflicts.
+
+### Solution
+  
+Resolve conflicts to apply updates. If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
 
 ## Failed Upstream Updates 
 
@@ -197,17 +208,17 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
 
 ## Failed Deployment 
 
-<Accordion title="We could not deploy the updates to the Test or Live environment due to an unexpected error." id="deploy-failed" icon="info-sign">
+<Accordion title="Could not deploy the updates to the Test or Live environment due to an unexpected error." id="deploy-failed" icon="info-sign">
 
 ### Issue
 
-Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using drush or wp-cli failed after the code was deployed. Ensure that clearing the cache using Drush or the WP CLI works on the target environment.
+Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or `update db` using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP CLI works on the target environment.
  
 ### Solution
 
-- If Drush/WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS
+If the Drush or WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS.
 
-- Run the deploy to test or live manually (the new code is already on master/dev env if we’ve made it this far). Autopilot will also attempt deploy again when the next round of updates is tested, but immediately running updates again will likely result in “UP TO DATE”, as the dev env already has the changes.
+Run the deploy to Test or Live manually. Autopilot will also attempt to deploy again when the updates are tested, but immediately running updates again will likely result in “UP TO DATE”, as the Dev environment already has the changes.
 
 If these steps fail, [contact Support](/guides/support/contact-support).
   
@@ -224,67 +235,63 @@ Failed to get a `200 OK` reponse from the homepage of the Dev environment.
 ### Solution
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
-
-If these steps fail, [contact Support](/guides/support/contact-support).
   
 </Accordion>
-
 
 ## Autopilot Multidev
 
 <Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
 
-### Issue
-
-
 ### Diagnosis
 
-This might be due to Drush or WP-CLI failing following a `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to platform-wide event. 
+This can result from Drush or WP-CLI failing after `db pull` is run. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event. 
  
 ### Solution
 
-Check that CLI cache clear steps work in the Dev env. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
+Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
-If these steps fail, [contact Support](/guides/support/contact-support).
-  
 </Accordion>
-
 
 ## Merge to Dev
 
-<Accordion title="We could not merge the updates to the Dev environment due to an unexpected isssue. ." id="merge-to-dev" icon="info-sign">
+<Accordion title="We could not merge the updates to the Dev environment due to an unexpected issue." id="merge-to-dev" icon="info-sign">
 
 ### Issue
+  
+Updates could not be merged to the Dev environment. 
 
 ### Diagnosis
 
-Most common reason for failure is that the user deployed changes in the dev environment after Autopilot ran that introduced a merge conflict. Could also be because of clear-cache or update.php failing following merge (site-level PHP issue)
+The most common reason for failure is due to a merge conflict. Changes were deployed in the Dev environment after Autopilot ran that resulted in a merge conflict. This error could also be because of a site-level PHP issue with `clear-cache` or `update.php` failing following a merge.
   
 ### Solution
 
-If failed because of a merge conflict, re-run Autopilot with latest changes (i.e. just run Autopilot again)
+If failure is because of a merge conflict, run Autopilot again with latest changes.
 
-If failed because of PHP/CMS issue, resolve any issues causing cache clear or update.php step to fail, and manually merge again, or re-run a fresh round of Autopilot.
+If the issue is because of a PHP or CMS issue, resolve any issues causing `clear-cache` or `update.php` steps to fail, and manually merge again, or re-run Autopilot.
 
 </Accordion>
 
 ## Cloned Content Failed
 
-<Accordion title="We could not clone the environments due to an unexpected error." id="merge-to-dev" icon="info-sign">
+<Accordion title="We could not clone the environments due to an unexpected error." id="cloned-content-failed" icon="info-sign">
 
 ### Diagnosis
-the most common reason for clone content to fail is that drush/wr-cli clear cache failed at the end of a workflow.
+
+The most common reason for clone content to fail is that drush/wr-cli clear cache failed at the end of a workflow.
 
 ### Solution
-the first step would be to check that those commands work. The customer won’t be able to see if the workflow failed because of that on their own (CSE would be able to see it), but we can remark that that is the case, suggest confirming if its an issue with drush/wpcli by replicating the step with terminus.
 
-WordPress:
+Ensure the commands work. You will not be able to see if the workflow failed, but CSEs will be able to confirm if there was an issue with Drush or WP-CLI by replicating the step with Terminus.
 
-wp cache flush
+Use the following steps: 
+* For WordPress:
 
-Drupal:
+`wp cache flush`
 
-drush cache-rebuild
+* Drupal:
+
+`drush cache-rebuild`
 
 </Accordion>
   
@@ -292,9 +299,13 @@ drush cache-rebuild
 
 <Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommited-changes" icon="info-sign">
   
-### Diagnosis
-  
+### Issue
+
+Unsaved work in th development environment has preveneted Autopilot from running. 
+
 ### Solution
+  
+Commit or discard the change, and run Autopilot again. 
 
 </Accordion>
 
@@ -302,21 +313,27 @@ drush cache-rebuild
 
 <Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="cms-missing" icon="info-sign">
   
-### Diagnosis
+### Issue
+  
+A CMS was not detected. 
 
 ### Solution 
-  
-https://pantheon.io/docs/create-sites
+
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to 
+the [documentation](https://pantheon.io/docs/create-sites).
 
 </Accordion>
 
 ### Frozen Site
+
 <Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="frozen-site" icon="info-sign">
 
-### Diagnosis
+### Issue
+
 A Sandbox site is frozen due to inactivity.
   
 ### Solution
+
 Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
 
 </Accordion>
@@ -326,21 +343,12 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 <Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="framework-is-not-supported" icon="info-sign">
 
 ### Diagnosis
-Site is running a framework that is not drupal, drupal8, or wordpress.
+
+Site is running a framework that is not Drupal, Drupal 8, or Wordpress.
   
 ### Solution
-Contact support for assistance if running a framework other than above. Note: Autopilot is trying to to add wordpress_network support ASAP. Any other framework is likely an edge case Autopilot cannot or will not support. Can customers change the framework themselves to or from something other than above with Terminus or otherwise?
 
-</Accordion>
-
-### Converge Timeout
-<Accordion title="We could not run Autopilot because the Autopilot Multidev creation timed out." id="comverge-timeout" icon="info-sign">
-
-### Diagnosis
-Multidev creation timed out. Try creating another multidev and ensure it succeeds. If it takes an exceptionally long time, Autopilot might need to be adjusted to handle sites with this many files or large db.
-  
-### Solution
-Likely needs engineering work/adjustment to update converge step parameters.
+Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is likely not supported. 
 
 </Accordion>
 
@@ -348,9 +356,11 @@ Likely needs engineering work/adjustment to update converge step parameters.
 <Accordion title="Could not run Autopilot because no pages are defined for visual regression testing. " id="no-vrt-scenarios" icon="info-sign">
 
 ###  Issue
+
 There are no visual regression testing (VRT) pages in the Autopilot settings.
   
 ### Solution
+
 Add at least one site to Autopilot’s VRT settings.
 
 </Accordion>
