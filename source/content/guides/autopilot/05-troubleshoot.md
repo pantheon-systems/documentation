@@ -188,7 +188,7 @@ If the error is diplayed due to a failed Composer build, use `git diff` to view 
 
 ## Redirects
 
-<Accordion title="" id="too-many-redirects" icon="info-sign">
+<Accordion title="We could not complete the visual regression test due to a redirect error on one or more pages." id="too-many-redirects" icon="info-sign">
 
 ### Issue
 
