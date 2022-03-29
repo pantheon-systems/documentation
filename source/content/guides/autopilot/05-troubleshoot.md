@@ -111,6 +111,7 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 </Accordion>
 
 ## Extension Updates are Missing
+
 <Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
 
 ### Issue
@@ -143,7 +144,7 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 </Accordion>
 
-## Failed Extemsion Updates
+## Failed Extension Updates
 
 We could not apply the upstream updates. Try merging the updates into the [link 1]Dev environment[/link], resolve any conflicts, and run Autopilot again
 
@@ -175,6 +176,7 @@ If the error is diplayed due to a failed Composer build, use `git diff` to view 
 </Accordion>
 
 ## Redirects
+
 <Accordion title="" id="too-many-redirects" icon="info-sign">
 
 ### Issue
@@ -194,14 +196,13 @@ To resolve this issue remove the page from VRT settings or fix the redirect in t
 </Accordion>
 
 ## Failed Deployment 
+
 <Accordion title="We could not deploy the updates to the Test or Live environment due to an unexpected error." id="deploy-failed" icon="info-sign">
 
 ### Issue
 
 Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using drush or wp-cli failed after the code was deployed. Ensure that clearing the cache using Drush or the WP CLI works on the target environment.
-
-CSE can see in “Debug” tab why the workflow failed.
-   
+ 
 ### Solution
 
 - If Drush/WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS
@@ -220,7 +221,6 @@ If these steps fail, [contact Support](/guides/support/contact-support).
 
 Failed to get a `200 OK` reponse from the homepage of the Dev environment.
  
-  
 ### Solution
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
@@ -229,9 +229,9 @@ If these steps fail, [contact Support](/guides/support/contact-support).
   
 </Accordion>
 
-</Accordion>
 
 ## Autopilot Multidev
+
 <Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
 
 ### Issue
@@ -251,14 +251,17 @@ If these steps fail, [contact Support](/guides/support/contact-support).
 
 
 ## Merge to Dev
+
 <Accordion title="We could not merge the updates to the Dev environment due to an unexpected isssue. ." id="merge-to-dev" icon="info-sign">
 
 ### Issue
 
 ### Diagnosis
+
 Most common reason for failure is that the user deployed changes in the dev environment after Autopilot ran that introduced a merge conflict. Could also be because of clear-cache or update.php failing following merge (site-level PHP issue)
   
 ### Solution
+
 If failed because of a merge conflict, re-run Autopilot with latest changes (i.e. just run Autopilot again)
 
 If failed because of PHP/CMS issue, resolve any issues causing cache clear or update.php step to fail, and manually merge again, or re-run a fresh round of Autopilot.
@@ -266,6 +269,7 @@ If failed because of PHP/CMS issue, resolve any issues causing cache clear or up
 </Accordion>
 
 ## Cloned Content Failed
+
 <Accordion title="We could not clone the environments due to an unexpected error." id="merge-to-dev" icon="info-sign">
 
 ### Diagnosis
@@ -285,6 +289,7 @@ drush cache-rebuild
 </Accordion>
   
 ## Uncommitted Changes 
+
 <Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommited-changes" icon="info-sign">
   
 ### Diagnosis
@@ -294,6 +299,7 @@ drush cache-rebuild
 </Accordion>
 
 ## CMS Missing
+
 <Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="cms-missing" icon="info-sign">
   
 ### Diagnosis
@@ -302,7 +308,7 @@ drush cache-rebuild
   
 https://pantheon.io/docs/create-sites
 
- </Accordion>
+</Accordion>
 
 ### Frozen Site
 <Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="frozen-site" icon="info-sign">
@@ -316,6 +322,7 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 </Accordion>
 
 ### Framework is Not Supported
+
 <Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="framework-is-not-supported" icon="info-sign">
 
 ### Diagnosis
