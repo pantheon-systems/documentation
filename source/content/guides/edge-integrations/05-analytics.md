@@ -58,6 +58,13 @@ add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
 
 If the filter is set in this way, the option in the admin will be suppressed and the GTM code added via the filter will be used instead. 
 
+Confirm which identifiers you will use to personalize a user’s experience. You can use:
+
+1. Geography
+2. Interest
+
+We need to push the data from WordPress to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom WordPress Edge Integratiosn plugin that does this by implementing `wp_localize_script` to push the values from our header to the DataLayer object via the `eiGtm` JavaScript global. The relevant `gtm_headers.js` file we’re attaching can be found in the [`pantheon-wordpress-edge-integrations` repository](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/blob/main/assets/js/gtm-headers.js).
+
 **Note:** Universal Analytics (UA-) or Google Analytics (G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
 
 </Tab>
