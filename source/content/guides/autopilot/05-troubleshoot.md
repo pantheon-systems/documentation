@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
-editpath: autopilot/04-troubleshoot.md
+editpath: autopilot/05-troubleshoot.md
 reviewed: "2021-07-30"
 ---
 
