@@ -86,6 +86,10 @@ This section will cover the configuration of Google Tag Manager and Google Analy
 
 ### Configure Google Analytics
 
+Before you start, if you are setting up a brand new site/property, you must select the "Create a Universal Analytics property" under Advanced Options. While you can choose either the "Create both a Google Analytics 4 and a Universal Analytics property" or the "Create a Universal Analytics property only" option, all of the additional settings described here refer to the Universal Analytics property, specifically. Google Analytics 4 is not currently supported.
+
+![Google Analytics Property Setup](../../../images/guides/edge-integrations/ei-analytics-0-ua-property.png)
+
 #### Track Personalization properties as Custom Dimensions in GA
 
 Navigate to the Admin > Property area of Google Analytics. Expand Custom Definitions and select Custom Dimensions: 
