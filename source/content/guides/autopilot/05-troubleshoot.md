@@ -324,7 +324,7 @@ the [documentation](https://pantheon.io/docs/create-sites).
 
 </Accordion>
 
-### Frozen Site
+## Frozen Site
 
 <Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="frozen-site" icon="info-sign">
 
@@ -338,7 +338,7 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 </Accordion>
 
-### Framework is Not Supported
+## Framework is Not Supported
 
 <Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-is-not-supported" icon="info-sign">
 
@@ -352,11 +352,11 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 </Accordion>
 
-### No VRT Scenarios
+## VRT Scenarios
 
-<Accordion title="Could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
+<Accordion title="We could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
 
-###  Issue
+### Issue
 
 There are no visual regression testing (VRT) pages in the Autopilot settings.
   
