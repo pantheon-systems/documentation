@@ -10,7 +10,7 @@ showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/05-troubleshoot.md
-reviewed: "2021-07-30"
+reviewed: "2022-03-30"
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -205,6 +205,20 @@ Real-time email notifications are sent for failed VRTs for a site. If an error i
 To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for that page.
   
 </Accordion>
+  
+## VRT Scenarios
+
+<Accordion title="We could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
+
+### Issue
+
+There are no visual regression testing pages in the Autopilot settings.
+
+### Solution
+
+Add at least one site to the Autopilot VRT settings.
+
+</Accordion>
 
 ## Failed Deployment 
 
@@ -349,19 +363,5 @@ Site is running a framework that is not Drupal, Drupal 8, or Wordpress.
 ### Solution
 
 Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is likely not supported. 
-
-</Accordion>
-
-## VRT Scenarios
-
-<Accordion title="We could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
-
-### Issue
-
-There are no visual regression testing pages in the Autopilot settings.
-
-### Solution
-
-Add at least one site to the Autopilot VRT settings.
 
 </Accordion>
