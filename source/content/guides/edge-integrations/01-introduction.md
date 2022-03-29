@@ -1,7 +1,7 @@
 ---
 title: Edge Integrations
 subtitle: Introduction
-description: A starter kit for teams that are looking to make the leap to more advanced workflows.
+description: A modern approach to audience-based content personalization.
 categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -11,14 +11,14 @@ showtoc: true
 anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
-reviewed: "2021-03-07"
+reviewed: "2022-03-23"
 ---
 
 This guide is made to facilitate the onboarding process for developers who are implementing content personalization via Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) into their own Drupal or WordPress website. 
 
-## What Is Edge Integrations?
+## What Is Edge Integrations? (Pilot)
 
-Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. It is a modern approach to audience-based content personalization which presents an alternative to most personalization engines. Pantheon's approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, and with fewer moving parts. 
+Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. Pantheon's approach leverages tight integration between the CMS and our Global CDN with Edge Computing capabilities to deliver the right content to the right audience directly, and with fewer moving parts. 
 
 ### How does Edge Integrations work?
 
@@ -32,18 +32,18 @@ The benefits of Edge Integrations:
 	- You can improve productivity by using existing content, style guides, media, and CMS integrations. No need to manage assets in multiple places.
 
 - Performance-forward
-	- Improve credibility with a fast, seamless customer experience- distribute personalized content across dozens of global and US points of presence.
+	- Improve credibility with a fast, seamless customer experience, and distribute personalized content across dozens of global and US points of presence.
 
 - Cost-effective
 	- Increase business impact by instrumenting and measuring success with your current analytics products. No need for new segmentation tooling.
 
 - Geographic targeting
-	- Based on the location of the visitor, the site will deliver a different homepage here for Canadian visitors vs US (Poutine vs Pizza).
+	- Based on the location of the visitor, the site can deliver a different homepage — for example, Canadian visitors might see poutine, whereas US visitors would see pizza.
 
 - Interest fingerprinting
-	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes — will put a visitor in an interest cohort, which will  reorganize the recipes landing page.
+	- Repeated engagement with types of content — e.g. looking at multiple vegan recipes - will create a specific Interest-based cache, which will reorganize a landing page to highlight content that matches the visitor's interest.
 
-There are many more potential ways to leverage content variation to identify valuable audience segments or variants. Pantheon's focus is to get immediate lift for existing sites, and build from there.
+There are many more ways to leverage content variation to identify valuable audience segments or variants. Contact your Account Manager to learn more about Edge Integrations and get started.
 
 ## Glossary
 
@@ -53,7 +53,7 @@ There are many more potential ways to leverage content variation to identify val
 
 <dd>
 
-The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (page, Drupal node)  to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
+The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (for example, a WordPress Post or Drupal node) to the same URI to help the user agent specify which representation is best suited for the user (e.g. which document language, which personalization blocks, which content-encoding, which version of the content).
 
 Example: `Vary: <header-name>, <header-name>`
 
@@ -67,7 +67,7 @@ Example: `Vary: <header-name>, <header-name>`
 
 Each segment corresponds to a different value within the personalization property/condition.
 
-Example: `US,` `CA,` `ES,` `UK` 
+Example: `US` `CA` `ES` `UK` 
 
 - Used within the Geolocation condition, where each segment is a country. 
 
@@ -80,3 +80,7 @@ The combination of rendered segmented blocks creates a page variant that is late
 </dd>
 
 </dl>
+
+## More Resources
+
+Support for Edge Integrations is available through the Pantheon Community slack channel `#edge-integrations`. If you're not already a member, [join the community here](https://slackin.pantheon.io/)!

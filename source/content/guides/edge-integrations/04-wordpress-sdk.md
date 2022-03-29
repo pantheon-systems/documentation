@@ -18,7 +18,9 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 ## Before You Begin
 
-**ADD NOTE ABOUT NEEDING AGCDN- REITERATE**
+<Partial file="before-you-begin-config.md" />
+
+As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must  If you have completed these steps, you can move on to the next sections of this doc.
 
 You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
 
@@ -38,7 +40,7 @@ This command will add the repository to your `/vendor` directory, as well as all
 
 Alternately, you can add `pantheon-systems/edge-integrations-wordpress-sdk` as a dependency to your project's existing `composer.json` file and run `composer install`.
 
-### Install manually
+### Install Manually
 
 If you do not use Composer on your project at all, you can still get started with the WordPress Edge Integrations plugin without any hassle. In this case, you won't be installing the SDK package, instead, go to the [Pantheon WordPress Edge Integrations Releases page](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/releases).
 
@@ -48,7 +50,7 @@ If you do not use Composer on your project at all, you can still get started wit
 
 * Extract the plugin in your `wp-content/plugins` directory. You will get all of the compiled assets and included dependencies, including the CMS-agnostic, [global PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations) in the package.
 
-### Activate the plugin
+### Activate the Plugin
 
 In either case, the last step is activating the plugin from your WordPress dashboard Plugins page. There is no other admin interface for the WordPress plugin -- all the features and components are handled in the code itself, with hooks that developers can use to interact with the geolocation and interest tracking features.
 
@@ -70,10 +72,6 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
-### Geolocation Code Samples
-
-
-
 ## Interests
 
 ### Configure Interests
@@ -92,18 +90,27 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 
 
-## How to integrate with cookie consent management plugins
+## How to Integrate with Cookie Consent Management Plugins
 
-It's possible to integrate with cookie consent management plugins to disallow user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you won't want to store any tracking information until the user consents to it.
+Integrating cookie consent management plugins disallows user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you cannot store any tracking information unless the user consents to it.
 
-We've built an [example plugin](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management) that can help get you started on what needs to be done to integrate with cookie consent management. The plugin uses the [WP Consent API](https://github.com/rlankhorst/wp-consent-level-api) proposed feature plugin to manage consent levels and cookie categories. Our plugin adds a cookie consent banner and disables the functionality of the Pantheon WordPress Edge Integrations plugin when the user has not accepted cookies.
+There is an [example plugin](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management) that will help you get started on with integrating with cookie consent management. The plugin uses the [WP Consent API](https://github.com/rlankhorst/wp-consent-level-api) proposed feature plugin to manage consent levels and cookie categories. This plugin adds a cookie consent banner and disables the functionality of the Pantheon WordPress Edge Integrations plugin when the user has not accepted cookies.
 
 You can read more about it in the [plugin's README file](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management#description).
+
+If you choose to use a third-party cookie consent management solution, the cookies and local storage information added by the Pantheon WordPress Edge Integrations plugin is listed below. This information can be used to help write and define your site's cookie or privacy policy.
+
+| Name | Type | Purpose | Expiration | Category |
+|------|------|---------|------------|----------|
+| `interest` | Cookie | Interest-tracking | 14 days (default) | marketing/targeting |
+| `pantheon_ei.interest` | Browser Local Storage | Interest-tracking | Never expires | marketing/targeting |
 
 ## Additional Resources
 
 - [Pantheon Edge Integrations Global Library](https://github.com/pantheon-systems/pantheon-edge-integrations)
 - [Pantheon Geolocation Shortcodes](https://github.com/pantheon-systems/pantheon-geolocation-shortcodes)
 - [Geo: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md)
+- [Edge Integrations Code Snippets](https://github.com/pantheon-systems/edge-integrations-snippets)
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
-- [Integrate Cookie Consent](TBD- CR)
+- [Pantheon Edge Integrations Consent Management](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management)
+- [WordPress SDK API](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/api.md)

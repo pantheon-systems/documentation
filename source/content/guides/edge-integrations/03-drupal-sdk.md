@@ -11,7 +11,7 @@ showtoc: true
 anchorid: drupal-sdk
 permalink: docs/guides/edge-integrations/drupal-sdk/
 editpath: edge-integrations/03-drupal-sdk.md
-reviewed: "2021-03-07"
+reviewed: "2021-03-23"
 ---
 
 The Edge Integrations personalization system for Drupal consists of two main parts:
@@ -21,6 +21,8 @@ The Edge Integrations personalization system for Drupal consists of two main par
 - A collection of Drupal 8+ modules in the [Smart Content](https://www.drupal.org/project/smart_content) ecosystem that provide Smart Personalization blocks and preview functionality.
 
 ## Before You Begin
+
+<Partial file="before-you-begin-config.md" />
 
 1. Ensure you have a working Drupal 8+ installation ready.
 
@@ -205,21 +207,19 @@ In order to use the class methods, you need to create a HeaderData object:
 
 <Accordion title="$headerData->getHeader(key)" id="getHeader" icon="wrench">
 
-### Uses header key to return raw header data.
+Use header key to return raw header data.
 
 Examples:
 
 - `key: “Audience” => return: “geo:US”`
 
 - `key: “Interest” => return: “27”`
-
-- `key: “Role” => return: “subscriber”`
 
 </Accordion>
 
 <Accordion title="$headerData->parseHeader(key)" id="parseHeader" icon="wrench">
 
-### Uses header key to return parsed header data array.
+Use header key to return parsed header data array.
 
 Examples:
 
@@ -227,6 +227,46 @@ Examples:
 
 - `key: “Interest” => return: “27”`
 
-- `key: “Role” => return: “subscriber”`
+</Accordion>
+
+<Accordion title="$headerData->returnPersonalizationObject()" id="headerData" icon="wrench">
+
+Return an array with personalization data.
+
+Examples:
+
+- `key: “Audience” => return: “geo:US”`
+
+- `key: “Interest” => return: “27”`
 
 </Accordion>
+
+### Global Methods
+
+There are global methods that mirror the class methods in order to ease the API usage. These include:
+
+- `HeaderData::personalizationObject()`
+
+- `HeaderData::parse()`
+
+- `HeaderData::header()`
+
+- `HeaderData::returnVaryHeader()`
+
+For more information, on what these methods expect and return, refer to [Pantheon's API documentation](https://github.com/pantheon-systems/pantheon-edge-integrations/#pantheon-edge-integrations).
+
+### Obtain Header Within a Custom Module
+
+The follow can be used in any class context, or procedural context in any hook.
+
+To include the library, run:
+
+`use Pantheon\EI\HeaderData;`
+
+Use the following snippet to obtain the header data object:
+
+```bash
+    #Get header data.
+    $smart_content_cdn = new HeaderData();
+    $p_obj = $smart_content_cdn->returnPersonalizationObject();
+```
