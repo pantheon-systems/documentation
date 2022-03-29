@@ -96,7 +96,7 @@ Navigate to the Admin > Property area of Google Analytics. Expand Custom Definit
 
 ![Custom Dimensions](../../../images/guides/edge-integrations/ei-analytics-1-custom-dimensions.png)
 
-Add new Custom Dimensions that correspond to the identifiers. Most dimensions will be set to “hit,” as they change based on user behavior. We will set the scope of our geotargeting to be session-based, assuming the user isn’t actively crossing borders while they visit our site. 
+Add new Custom Dimensions that correspond to the identifiers. Most dimensions will be set to “hit,” as they change based on user behavior. For geotargeting, you will want to set the scope to "Session" to allow the setting to persist.
 
 ![New Custom Dimension](../../../images/guides/edge-integrations/ei-analytics-2-new-custom-dimension.jpg)
 
@@ -108,11 +108,11 @@ At this time, you can verify that the identifiers are accurately pushing data in
 
 #### Create Variables in GTM
 
-WIthin Google Tag Manager, create User-Defined Variables to capture each of your personalization identifiers.
+Within Google Tag Manager, create User-Defined Variables to capture each of your personalization identifiers.
 
 ![User Defined Variables](../../../images/guides/edge-integrations/ei-analytics-3-user-defined-variables.png)
 
-Select Data Layer Variable 
+Select **Data Layer Variable**
 
 ![Choose Variable Type](../../../images/guides/edge-integrations/ei-analytics-4-choose-variable-type.png)
 
@@ -134,7 +134,7 @@ Create Variables following these best practices:
 
 #### Append Variables to Your Google Analytics Settings in Tag Manager
 
-Now that you have your variables, you can attach them to your Google Analytics Settings Variable. Yours might be called something different but the “Type” will be the same. If you do not have this kind of variable and instead are using a “Constant” or have hardcoded the UA ID in each tag, you will need to clean up your implementation. Your Settings should appear in the list of Custom Variables.
+Now that you have your variables, you can attach them to your Google Analytics Settings Variable. Yours might be called something different but the “Type” will be the same. If you do not have this kind of variable and instead are using a “Constant” or have hardcoded the UA ID in each tag, you will want to change that in favor of GTM tags to ensure future usability. Your Settings should appear in the list of Custom Variables.
 
 ![Custom Variables List](../../../images/guides/edge-integrations/ei-analytics-7-custom-variables.png)
 
@@ -168,15 +168,15 @@ With dataSlayer, we can observe the dataLayer push that happens when we click on
 
 ### Create New Tag in GTM
 
-1. Create a tag that will capture the information you are looking for;  in this example, you want to know how often  people click on the “View recipe” button. Our recommended configuration is below. There are no best practices at this time, so feel free to make modifications as needed. 
+1. In the workspace for your GTM account, visit the "Tags" menu. Click the "New" button to create a Tag that will capture the information you are looking for;  in this example, you want to know how often  people click on the “View recipe” button. Our recommended Tag configuration is below. There are no best practices at this time, so feel free to make modifications as needed. 
 ![GA Event View Recipe Click](../../../images/guides/edge-integrations/ei-analytics-13-ga-event-recipe-click.png)
-Create a trigger that lets GTM know when it should fire. Access the ____ menu and, in the Triggering section, click on the gray circle.
+2. Scroll beyond the "Tag Configuration" section below it and click the gray circle.
 ![Create a Trigger](../../../images/guides/edge-integrations/ei-analytics-14-triggering.png)
 2. Click on the + in the upper right hand corner to create a new trigger
 ![Choose a Trigger](../../../images/guides/edge-integrations/ei-analytics-15-choose-a-trigger.png)
-3. Select “Just Links.”
+3. Click on the gray circle again and select the “Just Links” trigger type from the fly-out menu.
 ![Choose trigger type, Just Links](../../../images/guides/edge-integrations/ei-analytics-16-just-links.png)
-4. Fill out the details for the trigger. Ensure you give it a name that is  easy to understand for anyone who refers to it in the future. Here, it is called “Link Click - View Recipe.” To make the trigger specific to the “View recipe” button, select Some Link Clicks, instead of All Link Clicks. Be sure to specify that Click Text needs to match RegEx of “View recipe, which is  the value we got from the dataSlayer extension. Save the trigger.
+4. Fill out the form details for the trigger. Ensure you give it a name that is  easy to understand for anyone who refers to it in the future. In the example below, we've called it “Link Click - View Recipe.” To make the trigger specific to the “View recipe” button, select **Some Link Clicks**, instead of Al**l Link Clicks**. Be sure to specify that **Click Text** needs to **match RegEx** of “View recipe, which is  the value we got from the dataSlayer extension. Save the trigger.
 ![Link Click - View Recipe](../../../images/guides/edge-integrations/ei-analytics-17-link-click-view-recipe.png)
 
 You now have a fully working Tag and corresponding Trigger.
@@ -197,27 +197,27 @@ In this case:
 
 ![DataSlayer Event Firing](../../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
 
-After you test your new event, make sure to **Publish** your changes.
+After you test your new event, make sure to **Publish** your changes by pressing the "Submit" button in your Workspace.
+
+![Submit changes](../../../images/guides/edge-integrations/ei-analytics-33-submit.png)
 
 ### Goal Setup in Google Analytics
 
 1. Navigate to the Goal section of your view and click + **New Goal**
 ![New Goal](../../../images/guides/edge-integrations/ei-analytics-21-ga-new-goal.png)
-2. Name your goal and select “Event” as the type. Click Continue.
+2. Name your goal and select “Event” as the type. Click **Continue**.
 ![Goal Description](../../../images/guides/edge-integrations/ei-analytics-22-ga-goal-description.png)
 3. Input the condition of the goal. In this case, you need the label value that was generated in the previous section:
   * label: View recipe 
-Based on this information, enter the value of `label` into the Label field. Ensure that you change the default “Equals to” condition to “Regular expression,” which makes the matching more flexible.
+Based on this information, enter the value of “label” into the Label field. Ensure that you change the default “Equals to” condition to “Regular expression,” which makes the matching more flexible.
 ![Goal Details](../../../images/guides/edge-integrations/ei-analytics-23-goal-details.png)
 4. Save the goal.
 
 ## Reporting
 
-To find your new data, login to Google Analytics. Go to Behavior > Events > Top Events. 
-
 ![Top Events menu](../../../images/guides/edge-integrations/ei-analytics-24-top-events.png)
 
-You should now see a similar view to the Total Events analytics screenshot below.
+To find your new data, login to Google Analytics. In the main navigation, go to Behavior > Events > Top Events. 
 
 ![Event Analytics view](../../../images/guides/edge-integrations/ei-analytics-25-events-analytics-view.png)
 
@@ -250,3 +250,11 @@ We are looking for Canadian visitors, so the custom dimension should contain a v
 Create additional segments in your reports, like a US geo audience, to compare outcomes.  
 
 ![Compare Segments](../../../images/guides/edge-integrations/ei-analytics-32-compare-segments.png)
+
+Adding audiences to your Goals is particularly useful. Tying this back to our previous Recipe Click goal, if we add our US and Canadian audiences, we can compare outcomes. If we're more interested to see click-through rates based on audience interest, we could do that, too!
+
+![Compare audiences](../../../images/guides/edge-integrations/ei-analytics-34-comparative-audiences.png)
+
+Below, we can see how different audiences convert towards the same Goal.
+
+![Compared goals](../../../images/guides/edge-integrations/ei-analytics-35-compared-goals.png)
