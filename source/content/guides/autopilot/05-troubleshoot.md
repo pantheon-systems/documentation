@@ -364,5 +364,3 @@ There are no visual regression testing (VRT) pages in the Autopilot settings.
 Add at least one site to Autopilot’s VRT settings.
 
 </Accordion>
-
-
