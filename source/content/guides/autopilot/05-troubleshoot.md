@@ -73,14 +73,14 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ### Issue
 
-An error occurred becuase your site is currently running an unsupported version of Drush.
+An error occurred because your site is currently running an unsupported version of Drush.
   
 ### Diagnosis
 
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error. 
-  
+Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error.
+
 Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
-  
+
 ### Solution
 
 To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
@@ -120,7 +120,7 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 ### Issue
 
 This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
-  
+
 ### Diagnosis
 
 To determine which plugin is causing the issue:
@@ -136,7 +136,7 @@ If you need assistance, [contact Support](/guides/support/contact-support).
 Remove the plugin or theme from the site if it is not being used, or revert the plugin or theme to the original name.
 
 Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
- 
+
 </Accordion>
 
 ## Preventing Autopilot From Taking Screenshots of Your Website
@@ -153,36 +153,38 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ### Issue
 
-Applying upstream updates failed. 
+Applying upstream updates failed.
 
 ### Diagnosis
-  
+
 This is most likely due to a merge conflict when applying upstream updates to the sites. For Composer sites, this could be caused by a failed Composer build or dependency conflicts.
 
 ### Solution
-  
+
 Resolve conflicts to apply updates. If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
 
-## Failed Upstream Updates 
+</Accordion>
+
+## Failed Upstream Updates
 
 <Accordion title="We could not apply the upstream updates." id="failed-upstream-updates" icon="info-sign">
 
 ### Issue
- 
-Applying upstream updates failed and changes cannot be automatically merged by Git. 
+
+Applying upstream updates failed and changes cannot be automatically merged by Git.
 
 ### Diagnosis
 
 This error message most likely results from a merge conflict when applying upstream updates to the site. For sites that use Composer, this could be caused by a failed Composer build.
-  
+
 ### Solution
 
-Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation. 
-  
+Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation.
+
 If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
 
 If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
-](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream). 
+](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
 
 </Accordion>
 
@@ -193,8 +195,8 @@ If the error is diplayed due to a failed Composer build, use `git diff` to view 
 ### Issue
 
 The visual regression test (VRT) could not be completed due to a redirect error on one or more pages.
-  
-### Diagnosis 
+
+### Diagnosis
 
 Autopilot fails when a VRT page redirects more than 8 times or is stuck in an infinite loop.
 
@@ -203,9 +205,9 @@ Autopilot fails when a VRT page redirects more than 8 times or is stuck in an in
 Real-time email notifications are sent for failed VRTs for a site. If an error is detected during an update attempt, the Autopilot Status displays **Needs Attention**  with two options to **Review Test Results** or to **View Update Details**. When a failed test requires review, new tests cannot be run on the site until the results have been approved or discarded through Autopilot.
 
 To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for that page.
-  
+
 </Accordion>
-  
+
 ## VRT Scenarios
 
 <Accordion title="We could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
@@ -220,7 +222,7 @@ Add at least one site to the Autopilot VRT settings.
 
 </Accordion>
 
-## Failed Deployment 
+## Failed Deployment
 
 <Accordion title="Could not deploy the updates to the Test or Live environment due to an unexpected error." id="deploy-failed" icon="info-sign">
 
@@ -235,7 +237,7 @@ If the Drush or WP-CLI steps failed during diagnosis, resolve any errors thrown 
 Run the deploy to Test or Live manually. Autopilot will also attempt to deploy again when the updates are tested, but immediately running updates again will likely result in a current response, as the Dev environment already has the changes.
 
 If these steps fail, contact [Support](/guides/support/contact-support).
-  
+
 </Accordion>
 
 ## Unreachable Site
@@ -245,11 +247,11 @@ If these steps fail, contact [Support](/guides/support/contact-support).
 ### Issue
 
 Failed to get a `200 OK` response from the homepage of the Dev environment.
- 
+
 ### Solution
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
-  
+
 </Accordion>
 
 ## Autopilot Multidev
@@ -258,8 +260,8 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 ### Diagnosis
 
-This can result from Drush or WP-CLI failing after `db pull` is run. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event. 
- 
+This can result from Drush or WP-CLI failing after `db pull` is run. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
+
 ### Solution
 
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
@@ -271,13 +273,13 @@ Check that CLI cache clear steps work in the Dev environment. See if creating ot
 <Accordion title="We could not merge the updates to the Dev environment due to an unexpected issue." id="merge-to-dev" icon="info-sign">
 
 ### Issue
-  
-Updates could not be merged to the Dev environment. 
+
+Updates could not be merged to the Dev environment.
 
 ### Diagnosis
 
 The most common reason for failure is due to a merge conflict. Changes were deployed in the Dev environment after Autopilot ran that resulted in a merge conflict. This error could also be because of a site-level PHP issue with `clear-cache` or `update.php` failing following a merge.
-  
+
 ### Solution
 
 If failure is because of a merge conflict, run Autopilot again with latest changes.
@@ -298,7 +300,8 @@ The most common reason for clone content to fail is that drush/wr-cli clear cach
 
 Ensure the commands work. You will not be able to see if the workflow failed, but CSEs will be able to confirm if there was an issue with Drush or WP-CLI by replicating the step with Terminus.
 
-Use the following steps: 
+Use the following steps:
+
 * For WordPress:
 
 `wp cache flush`
@@ -308,33 +311,32 @@ Use the following steps:
 `drush cache-rebuild`
 
 </Accordion>
-  
-## Uncommitted Changes 
+
+## Uncommitted Changes
 
 <Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommitted-changes" icon="info-sign">
-  
+
 ### Issue
 
-Unsaved work in th development environment has preveneted Autopilot from running. 
+Unsaved work in th development environment has prevented Autopilot from running.
 
 ### Solution
-  
-Commit or discard the change, and run Autopilot again. 
+
+Commit or discard the change, and run Autopilot again.
 
 </Accordion>
 
 ## CMS Missing
 
 <Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="cms-missing" icon="info-sign">
-  
+
 ### Issue
-  
-A CMS was not detected. 
 
-### Solution 
+A CMS was not detected.
 
-Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to 
-the [documentation](https://pantheon.io/docs/create-sites).
+### Solution
+
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the [documentation](https://pantheon.io/docs/create-sites).
 
 </Accordion>
 
@@ -345,7 +347,7 @@ the [documentation](https://pantheon.io/docs/create-sites).
 ### Issue
 
 A Sandbox site is frozen due to inactivity.
-  
+
 ### Solution
 
 Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
@@ -359,11 +361,11 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 ### Diagnosis
 
 Site is running a framework that is not Drupal, Drupal 8, or Wordpress.
-  
+
 ### Solution
 
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is most likely not supported. 
-  
+Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is most likely not supported.
+
 </Accordion>
 
-You can contact [Support](https://pantheon.io/docs/guides/support/contact-support/) for additional assistance. 
+You can contact [Support](https://pantheon.io/docs/guides/support/contact-support/) for additional assistance.
