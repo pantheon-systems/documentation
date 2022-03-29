@@ -72,10 +72,6 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
-### Geolocation Code Samples
-
-
-
 ## Interests
 
 ### Configure Interests
@@ -114,6 +110,7 @@ If you choose to use a third-party cookie consent management solution, the cooki
 - [Pantheon Edge Integrations Global Library](https://github.com/pantheon-systems/pantheon-edge-integrations)
 - [Pantheon Geolocation Shortcodes](https://github.com/pantheon-systems/pantheon-geolocation-shortcodes)
 - [Geo: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md)
+- [Edge Integrations Code Snippets](https://github.com/pantheon-systems/edge-integrations-snippets)
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
 - [Pantheon Edge Integrations Consent Management](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management)
-- [API Code Snippets](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/api.md)
+- [WordPress SDK API](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/api.md)
