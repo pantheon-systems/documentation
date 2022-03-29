@@ -147,10 +147,6 @@ Add any CSS selectors that you want to exclude from the visual regression tests.
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
 
-## Enable Autopilot Cloning Feature
-
-Cloning feature content goes here. This will be located under settings.
-
 ## Enable Autopilot Email Notifications
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
