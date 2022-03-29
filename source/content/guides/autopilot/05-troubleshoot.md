@@ -69,17 +69,18 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## Drush Version
 
-<Accordion title="Drush version 8 required." id="drush-8-required" icon="info-sign">
+<Accordion title="Could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
 
 ### Issue
 
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported.
 
-Composer-managed sites should use Drush 10 and will not display the Drush version error. Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+  
+### Diagnosis
 
+Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported.Composer-managed sites should use Drush 10 and will not display the Drush version error. Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+  
 ### Solution
-
-Switch to Drush 8 in the `pantheon.yml` file.
+To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
 </Accordion>
 
@@ -199,7 +200,7 @@ CSE can see in “Debug” tab why the workflow failed.
 
 - Run the deploy to test or live manually (the new code is already on master/dev env if we’ve made it this far). Autopilot will also attempt deploy again when the next round of updates is tested, but immediately running updates again will likely result in “UP TO DATE”, as the dev env already has the changes.
 
-If these steps fail, reach out to [Support](/support).
+If these steps fail, [contact Support](/guides/support/contact-support).
   
 </Accordion>
 
@@ -216,7 +217,7 @@ Failed to get a `200 OK` reponse from the homepage of the Dev environment.
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
 
-If these steps fail, reach out to [Support](/suuport).
+If these steps fail, [contact Support](/guides/support/contact-support).
   
 </Accordion>
 
@@ -236,7 +237,7 @@ This might be due to Drush or WP-CLI failing following a `db pull`. This might b
 
 Check that CLI cache clear steps work in the Dev env. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
-If these steps fail, contact [Support](/support).
+If these steps fail, [contact Support](/guides/support/contact-support).
   
 </Accordion>
 
@@ -329,23 +330,14 @@ Likely needs engineering work/adjustment to update converge step parameters.
 </Accordion>
 
 ### No VRT Scenarios
-<Accordion title="We could not run Autopilot because no pages are defined for visual regression testing. " id="no-vrt-scenarios" icon="info-sign">
+<Accordion title="Could not run Autopilot because no pages are defined for visual regression testing. " id="no-vrt-scenarios" icon="info-sign">
 
-### Diagnosis
-There are not VRT pages in autopilot settings.
+###  Issue
+There are no visual regression testing (VRT) pages in the Autopilot settings.
   
 ### Solution
 Add at least one site to Autopilot’s VRT settings.
 
 </Accordion>
 
-### Invalid Drush Version
-<Accordion title="We could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
 
-### Diagnosis
-
-  
-### Solution
-To continue, switch to Drush 8 or use Integrated Composer. Add at least one site to Autopilot’s VRT settings. ****
-
-</Accordion>
