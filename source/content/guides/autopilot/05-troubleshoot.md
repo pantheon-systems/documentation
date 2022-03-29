@@ -362,6 +362,5 @@ There are no visual regression testing pages in the Autopilot settings.
 
 ### Solution
 
-Add, at a minimum, one site to the Autopilot VRT settings.
-
+Add at least one site to the Autopilot VRT settings.
 </Accordion>
