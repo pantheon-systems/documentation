@@ -68,44 +68,8 @@ Confirm which identifiers you will use to personalize a user’s experience. You
 1. Geography
 2. Interest
 
-We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. Here’s the relevant `gtm_headers.js` file we’re attaching:
+We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. The relevant `gtm_headers.js` file we’re attaching can be found in the [`smart_content_cdn` repository](https://github.com/pantheon-systems/smart_content_cdn/blob/main/js/gtm_headers.js).
 
-```javascript
-/**
- * @file
- * Set content personalization headers for Google Tag Manager.
- */
-
- (function ($, Drupal,) {
-  Drupal.behaviors.gtmBehavior = {
-    attach: function (context, settings){
-      if ('gtmHeaders' in settings && 'pObj' in settings.gtmHeaders) {
-        // Get geo value.
-        let geo = 'Audience' in settings.gtmHeaders.pObj && 'geo' in settings.gtmHeaders.pObj.Audience ?
-          settings.gtmHeaders.pObj.Audience.geo : null;
-
-        // Get interest value labels.
-        let interest = 'InterestLabels' in settings.gtmHeaders.pObj ? settings.gtmHeaders.pObj.InterestLabels : null;
-
-        // Get role value.
-        let role = 'Role' in settings.gtmHeaders.pObj ? settings.gtmHeaders.pObj.Role : 'none';
-
-        // Push header values in dataLayer object.
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          'event': 'pzn',
-          'audience': {
-            'geo': geo,
-          },
-          'interest': interest,
-          'role': role,
-        });
-      }
-    }
-  };
-
-})(jQuery, Drupal);
-```
 </Tab>
 </Tablist>
 
