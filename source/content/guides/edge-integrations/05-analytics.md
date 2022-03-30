@@ -161,79 +161,96 @@ To append the variables:
 
 ## Test and Debug
 
-In your Google Tag Manager implementation, click “Preview” in your Workspace to debug. If you are new to using Preview, please refer to the [Preview and debug containers](https://support.google.com/tagmanager/answer/6107056?hl=en) support documentation on Google Tag Manager Support.
+1. In Google Tag Manager, click **Preview** in your Workspace to debug. If you are new to using **Preview**, please refer to the [Preview and debug containers](https://support.google.com/tagmanager/answer/6107056?hl=en) support documentation on Google Tag Manager Support.
 
 ![Preview Workspace](../../../images/guides/edge-integrations/ei-analytics-9-preview-workspace.png)
 
-Use the [DataSlayer Chrome extension](https://chrome.google.com/webstore/detail/dataslayer/ikbablmmjldhamhcldjjigniffkkjgpo) to verify data is accurately being sent to Analytics. You should see Data Layer properties correspond directly to what is pushed to Google Analytics. And, you should see your personalization values with the Custom Dimension Index numbers you previously set up. 
+1. Use the [DataSlayer Chrome extension](https://chrome.google.com/webstore/detail/dataslayer/ikbablmmjldhamhcldjjigniffkkjgpo) to verify data is accurately being sent to Analytics. The Data Layer properties displayed should correspond directly to what is pushed to Google Analytics. Additionally, your personalization values with the Custom Dimension Index numbers you previously set up should also display. 
 
 ![DataSlayer Personalization Values](../../../images/guides/edge-integrations/ei-analytics-10-data-layer-properties.png)
 
-## Click Tracking & Goal Setup
+## Click Tracking and Goal Setup
 
-This section will cover how to capture clicks on a particular link and set up a goal with Google Analytics. For this example, we will use Google Tag Manager to capture the “View recipe” click as an event, and set it up as a goal in Google Analytics.
+This section will cover how to capture clicks on a particular link and set up a goal with Google Analytics. For this example, we will use Google Tag Manager to capture a “View recipe” button click as an event, and set it up as a goal in Google Analytics.
 
-![Vegan Poutine recipe example](../../../images/guides/edge-integrations/ei-analytics-11-vegan-poutine.png)
+<!-- ![Vegan Poutine recipe example](../../../images/guides/edge-integrations/ei-analytics-11-vegan-poutine.png)
+ -->
+With dataSlayer, there is a dataLayer push that happens when you click on the “View recipe” button because it is a link click and has a unique Click Text – namely, “View recipe.” The values you will use in Google Tag Manager are:
 
-With dataSlayer, we can observe the dataLayer push that happens when we click on the “View recipe” button. It's a link click and has a unique Click Text – namely, “View recipe.” These are the values you will use in Google Tag Manager:
-
-![DataSlayer View Recipe values](../../../images/guides/edge-integrations/ei-analytics-12-dataslayer-view-recipe.png)
+- `event`
+- `gtm.event`
+- *Click Text*
+- `gtm.elementClasses`
+- `gtm.elementId`
+- `gtm.elementTarget`
+- `gtm.linkClick`
+- *element*
+- View recipe
 
 ### Create New Tag in GTM
 
-1. In the workspace for your GTM account, visit the "Tags" menu. Click the "New" button to create a Tag that will capture the information you are looking for;  in this example, you want to know how often  people click on the “View recipe” button. Our recommended Tag configuration is below. There are no best practices at this time, so feel free to make modifications as needed. 
+1. In the workspace for your GTM account, visit the **Tags** menu and click the **New** button to create a Tag that will capture the information you are looking for. In this example, we want to know how often people click on the “View recipe” button. There are no best practices at this time, so feel free to make modifications as needed. 
+
+Our recommended Tag Configuration is as follows:
+
+- Track Type: Event
+- Category: Internal link click
+- Action: {{Page Hostname}}{{Page Path}}
+- Label: {{Click Text}}
+- Google Analytics Settings: {{GA ID}}
 
 ![GA Event View Recipe Click](../../../images/guides/edge-integrations/ei-analytics-13-ga-event-recipe-click.png)
 
-1. Scroll beyond the "Tag Configuration" section below it and click the gray circle.
+1. Scroll beyond the **Tag Configuration** section. In the **Triggering** section, click the gray circle to choose a trigger that will make the tag fire.
 
 ![Create a Trigger](../../../images/guides/edge-integrations/ei-analytics-14-triggering.png)
 
-1. Click on the + in the upper right hand corner to create a new trigger
+1. Click on the + in the upper right-hand corner to create a new trigger.
 
 ![Choose a Trigger](../../../images/guides/edge-integrations/ei-analytics-15-choose-a-trigger.png)
 
-1. Click on the gray circle again and select the “Just Links” trigger type from the fly-out menu.
+1. Click on the gray circle again and select the **Just Links** trigger type from the fly-out menu.
+
 ![Choose trigger type, Just Links](../../../images/guides/edge-integrations/ei-analytics-16-just-links.png)
 
-1. Fill out the form details for the trigger. Ensure you give it a name that is  easy to understand for anyone who refers to it in the future. In the example below, we've called it “Link Click - View Recipe.” To make the trigger specific to the “View recipe” button, select **Some Link Clicks**, instead of Al**l Link Clicks**. Be sure to specify that **Click Text** needs to **match RegEx** of “View recipe, which is  the value we got from the dataSlayer extension. Save the trigger.
+1. Fill out the form details for the trigger. Ensure you give it a name that is  easy to understand for anyone who refers to it in the future. In the example below, we've called it “Link Click - View Recipe.” To make the trigger specific to the “View recipe” button, select **Some Link Clicks**, instead of **All Link Clicks**. Be sure to specify that **Click Text** should be set to **matches RegEx** for “View recipe," which is the value we got from the dataSlayer extension. Save the trigger.
 
-![Link Click - View Recipe](../../../images/guides/edge-integrations/ei-analytics-17-link-click-view-recipe.png)
+![Link Click - View Recipe Example](../../../images/guides/edge-integrations/ei-analytics-17-link-click-view-recipe.png)
 
 You now have a fully working Tag and corresponding Trigger.
 
-![GA - Event - View Recipe Click, tag and trigger](../../../images/guides/edge-integrations/ei-analytics-18-ga-event-view-recipe-click.png)
+![Tag and Trigger, successful configuration](../../../images/guides/edge-integrations/ei-analytics-18-ga-event-view-recipe-click.png)
 
-To test that the Tag and Trigger are functioning as expected, you will use “Preview” mode. In GTM, you will see your tag firing when you click on the link.
+To test that the Tag and Trigger function as expected, use Preview mode. In GTM, your tag will fire when you click on the link.
 
 ![GA Tags Fired](../../../images/guides/edge-integrations/ei-analytics-19-tag-fired.png)
 
-In dataSlayer you will see your event firing with the expected values that you previously set up in your tag. 
+In dataSlayer your event will fire with the values that you previously set up in your tag. 
 
-In this case:
+In this example case:
 
 * category: internal link click
-* action: (your URL)
+* action: (site URL)
 * label: View recipe 
 
-![DataSlayer Event Firing](../../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
+<!-- ![DataSlayer Event Firing](../../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
+ -->
+After you test your new event, make sure to publish your changes by pressing the **Submit** button in your Workspace.
 
-After you test your new event, make sure to **Publish** your changes by pressing the "Submit" button in your Workspace.
-
-![Submit changes](../../../images/guides/edge-integrations/ei-analytics-33-submit.png)
+![Submit Button](../../../images/guides/edge-integrations/ei-analytics-33-submit.png)
 
 ### Goal Setup in Google Analytics
 
-1. Navigate to the Goal section of your view and click + **New Goal**
+1. Navigate to the Goal section and click **+ New Goal**.
 
-![New Goal](../../../images/guides/edge-integrations/ei-analytics-21-ga-new-goal.png)
+![New Goal Button](../../../images/guides/edge-integrations/ei-analytics-21-ga-new-goal.png)
 
-1. Name your goal and select “Event” as the type. Click **Continue**.
+1. Name your goal and select **Event** as the type. Click **Continue**.
 
 ![Goal Description](../../../images/guides/edge-integrations/ei-analytics-22-ga-goal-description.png)
 
 1. Input the condition of the goal. In this case, you need the label value that was generated in the previous section:
-  * label: View recipe 
+  - label: View recipe 
 
 Based on this information, enter the value of “label” into the Label field. Ensure that you change the default “Equals to” condition to “Regular expression,” which makes the matching more flexible.
 
@@ -243,17 +260,19 @@ Based on this information, enter the value of “label” into the Label field. 
 
 ## Reporting
 
+To find your new data, log into Google Analytics. In the main navigation, go to Behavior > Events > Top Events.
+
 ![Top Events menu](../../../images/guides/edge-integrations/ei-analytics-24-top-events.png)
 
-To find your new data, login to Google Analytics. In the main navigation, go to Behavior > Events > Top Events. 
+Click on the **Secondary dimension** button, right below the **Event Category** label. This will display the custom dimensions you created earlier. 
 
 ![Event Analytics view](../../../images/guides/edge-integrations/ei-analytics-25-events-analytics-view.png)
 
-Click on the “Secondary dimension” button, right below the Event Category. You should now see the custom dimensions you created earlier. Clicking on any of them, will display the associated data.
+You can click on any label in the list to display the associated data.
 
 ![Secondary Dimension](../../../images/guides/edge-integrations/ei-analytics-26-secondary-dimension.png)
 
-You are able to toggle between the different custom dimensions by clicking on the same area and switching them.
+You can also toggle between the different custom dimensions by clicking in the list of events to switch views.
 
 ![List of events by dimension](../../../images/guides/edge-integrations/ei-analytics-27-event-list.png)
 
