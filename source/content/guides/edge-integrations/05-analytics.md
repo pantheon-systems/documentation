@@ -29,11 +29,9 @@ Consider the desired goals and objectives for your users. Define success for you
 
 ## Configure Your Website
 
-<TabList>
-
-<Tab title="WordPress" id="wp-analytics-config" active={true}>
-
 ### Add Google Tag Manger(GTM) Code
+
+<Accordion title="WordPress" id="wp-analytics-config" icon="wrench">
 
 The [Pantheon WordPress Edge Integrations plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations) natively supports Google Analytics via Google Tag Manager. 
 
@@ -74,39 +72,7 @@ Universal Analytics(UA-) or Google Analytics(G-) codes are not currently support
 
 </Alert>
 
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-example">
-
-Here's our Drupal 7 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 7 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-</TabList>
+</Accordion>
 
 ## Track Implementation
 
