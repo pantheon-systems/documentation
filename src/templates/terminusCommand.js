@@ -173,7 +173,7 @@ class CommandsTemplate extends React.Component {
         <SEO
           title={command.name + " | Terminus Commands"}
           description={command.description}
-          image={"/assets/images/terminus-thumbLarge.png"}
+          image={"/images/assets/terminus-thumbLarge.png"}
         />
         <div className="">
           <div className="container-fluid">

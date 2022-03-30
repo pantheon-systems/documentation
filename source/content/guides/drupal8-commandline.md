@@ -133,7 +133,7 @@ You may want to remove these modules after you launch your site, or use more adv
 
 <Alert title="Note" type="info">
 
-You may have heard that some Drupal 8 developers are [using Composer](/composer) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
+You may have heard that some Drupal 8 developers are [using Composer](/guides/composer) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
 
 </Alert>
 

@@ -3,19 +3,21 @@ title: "Object Cache (formerly Redis)"
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 categories: [performance]
 tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon]
-reviewed: "2021-03-01"
+contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
+reviewed: "2022-02-10"
 ---
 
 Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-cache) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Object Cache
 
-Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
+Most website frameworks like Drupal and WordPress use databases to cache internal application "objects" along with queries for normal page requests, which causes increased load-times.
+
+Object Cache remembers, or caches, any queries to the server after the first time a Drupal or WordPress page is loaded. When another user loads the page, the results are provided from the Object Cache stored in memory without needing to query the database again. This results in much faster page load times, and less server impact on database resources.
 
 ### Scalable Performance
 
-Object Cache provides an alternative caching backend to take that work off the database, improving performance for dynamic pages and logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+Object Cache provides an alternative caching backend that resides in memory rather than databases that store data on disks or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other features for developers looking to use it to manage queues, or perform custom caching of their own.
 
 ## Enable Object Cache
 
@@ -394,14 +396,20 @@ $15
 englash english
 ```
 
-### Clear Cache
+### Clear Cache in Pantheon Dashboard
 
-Pass the `flushall` command to clear all keys from the cache.
+You can clear the Object Cache through the [Pantheon Dashboard](https://pantheon.io/docs/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated. 
+
+Alternatively, you can use the `flushall` command to clear all keys from the cache.
 
 ```bash
 redis> flushall
 OK
 ```
+
+### Clear Cache with WP Redis
+
+When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin or the Pantheon dashboard.
 
 ### Check the Number of Keys in Cache
 
@@ -421,6 +429,75 @@ redis> config get *memory*
 maxmemory
 52428800
 ```
+
+### Hit/Miss Ratio
+
+You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency since most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
+
+Run the following code to access your Hit/Miss ratio:
+
+```bash
+  redis> info stats
+  #Stats
+  keyspace_hits:4
+  keyspace_misses:15
+  ```
+
+### Continuous Stats Mode
+
+Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
+
+Run the following command to access stat mode: 
+
+  ```bash
+  redis> --stat
+  ------- data ------ --------------------- load -------------------- - child -
+  keys       mem      clients blocked requests            connections
+  506        1015.00K 1       0       24 (+0)             7
+  506        1015.00K 1       0       25 (+1)             7
+  506        3.40M    51      0       60461 (+60436)      57
+  506        3.40M    51      0       146425 (+85964)     107
+  507        3.40M    51      0       233844 (+87419)     157
+  507        3.40M    51      0       321715 (+87871)     207
+  508        3.40M    51      0       408642 (+86927)     257
+  508        3.40M    51      0       497038 (+88396)     257
+  ```
+
+You can also use the `i` (interval) option in this mode to change the frequency at which new lines are printed. 
+
+### Big Keys Mode
+
+Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
+
+Run the following command to search for big keys:
+
+    ```bash
+      redis> --bigkeys
+
+      # Scanning the entire keyspace to find biggest keys as well as
+      # average sizes per key type.  You can use -i 0.01 to sleep 0.01 sec
+      # per SCAN command (not usually needed).
+
+      [00.00%] Biggest string found so far 'key-419' with 3 bytes
+      [05.14%] Biggest list   found so far 'mylist' with 100004 items
+      [35.77%] Biggest string found so far 'counter:__rand_int__' with 6 bytes
+      [73.91%] Biggest hash   found so far 'myobject' with 3 fields
+
+      -------- summary -------
+
+      Sampled 506 keys in the keyspace!
+      Total key length in bytes is 3452 (avg len 6.82)
+
+      Biggest string found 'counter:__rand_int__' has 6 bytes
+      Biggest   list found 'mylist' has 100004 items
+      Biggest   hash found 'myobject' has 3 fields
+
+      504 strings with 1403 bytes (99.60% of keys, avg size 2.78)
+      1 lists with 100004 items (00.20% of keys, avg size 100004.00)
+      0 sets with 0 members (00.00% of keys, avg size 0.00)
+      1 hashs with 3 fields (00.20% of keys, avg size 3.00)
+      0 zsets with 0 members (00.00% of keys, avg size 0.00)
+    ```
 
 ## Troubleshooting
 
@@ -448,29 +525,10 @@ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bi
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
 
-### RedisException: Redis is busy running a script.
-
-This usually occurs on higher traffic Drupal sites. In the PHP logs:
-
-```php
-RedisException: BUSY Redis is busy running a script.
-```
-
-To resolve, set or increase the `redis_perm_ttl` value in `settings.php`. This example is set to six hours:
-
-```php:title=settings.php
-$conf['redis_perm_ttl'] = 21600;
-```
-
-<Alert title="Warning" type="danger">
-
-The object cache needs to be flushed with 'flushall' in the Redis terminal connection afterwards, in order for this to have any effect.
-
-</Alert>
 
 ### No Keys Found
 
-When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results.
+This is a cache-based error that sometimes occurs in Drupal. When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results.
 
 Example of a block that will result in an **incorrectly configured cache backend**:
 
@@ -546,6 +604,23 @@ wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
 ```
 
 This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
+
+### Out of Memory Errors
+
+You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/eviction-policy/). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
+
+Run the following command to access your site's memory usage metrics: 
+
+  ```bash
+    redis> info memory
+    # Memory
+    used_memory:1007280
+    used_memory_human:983.67K
+    used_memory_rss:2002944
+    used_memory_rss_human:1.91M
+    used_memory_peak:1008128
+    used_memory_peak_human:984.50K
+  ```
 
 ## Frequently Asked Questions
 
