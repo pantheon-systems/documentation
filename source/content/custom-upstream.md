@@ -25,8 +25,6 @@ Custom Upstreams act as a scaffold for new sites, allowing developers and site o
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
-
 ### Efficient Update Strategy
 
 Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updates across massive site portfolios.
