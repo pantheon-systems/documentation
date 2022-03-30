@@ -88,9 +88,11 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 ### Interests Code Samples
 
-A company using Edge Integration might like to use query strings to define a visitor's interest so that they can run targeted ads and create a site-wide personalized experience for the customer persona. Using our custom wrapper function, `set_interest`, WordPress engineers can check for a set an interest using a query string.
+**Example**
 
-The WordPress SDK repository contains [an example](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md#example-1) of how this could be implemented.
+A company using Edge Integrations might want to use query strings to define a visitor's interest in order to run targeted ads and create a sitewide personalized experience for the customer. With the custom wrapper function, `set_interest`, you can check for a set interest using a query string.
+
+To implement this, refer to the [example](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md#set_interest) in our WordPress SDK repository.
 
 ## How to Integrate with Cookie Consent Management Plugins
 
