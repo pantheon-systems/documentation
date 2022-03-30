@@ -364,7 +364,7 @@ Site is running a framework that is not Drupal, Drupal 8, or Wordpress.
 
 ### Solution
 
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is most likely not supported.
+Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework is most likely not supported.
 
 </Accordion>
 
