@@ -86,6 +86,14 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 ![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
 
+### Interests Code Samples
+
+**Example**
+
+A company using Edge Integrations might want to use query strings to define a visitor's interest in order to run targeted ads and create a sitewide personalized experience for the customer. With the custom wrapper function, `set_interest`, you can check for a set interest using a query string.
+
+To implement this, refer to the [example](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md#set_interest) in our WordPress SDK repository.
+
 ## How to Integrate with Cookie Consent Management Plugins
 
 Integrating cookie consent management plugins disallows user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you cannot store any tracking information unless the user consents to it.
