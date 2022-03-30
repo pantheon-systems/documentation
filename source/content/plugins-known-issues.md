@@ -363,11 +363,17 @@ ___
 
 ## Elementor
 
-<ReviewDate date="2020-10-08" />
+<ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) Uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. This path cannot be changed via the WP-CLI search-replace function, or any other search & replace plugin.
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
 
-**Solution:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+**Solution 1:** Use any find/replace option to update the paths in Elementor. You must account for escaped `json` URLs for this solution to work.
+
+For example: www.example.com
+Find/replace must handle test.example.com -> www.example.com and 
+test.example.com -> www.example.com
+
+**Solution 2:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
