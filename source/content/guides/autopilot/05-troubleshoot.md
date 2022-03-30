@@ -113,11 +113,13 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 </Accordion>
 
-<Accordion title="Could not apply the updates because a plugin or theme was not found while attempting the update." id="extension-updates-are-missing" icon="info-sign">
+## Extension Updates are Missing
+
+<Accordion title="Could not apply the updates because a plugin or theme was not found while attempting the update." id="missing-extension-updates" icon="info-sign">
 
 ### Issue
 
-This error message is displayed because a WordPress plugin or theme was not found when updates were attempted.
+This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
 
 ### Diagnosis
 
@@ -137,9 +139,17 @@ Alternatively, you can add the plugin or theme to the **Excluded Updates** list 
 
 </Accordion>
 
-## Upstream Updates
+## Preventing Autopilot From Taking Screenshots of Your Website
 
-<Accordion title="We could not apply the upstream updates." id="failed-extension-updates" icon="info-sign">
+<Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
+
+Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
+
+</Accordion>
+
+## Failed Extension Updates
+
+<Accordion title="Could not apply the upstream updates." id="extension-updates-failed" icon="info-sign">
 
 ### Issue
 
@@ -155,7 +165,9 @@ Resolve conflicts to apply updates. If a merge conflict is preventing you from m
 
 </Accordion>
 
-<Accordion title="We could not apply the upstream updates." id="failed-upstream-updates" icon="info-sign">
+## Failed Upstream Updates
+
+<Accordion title="We could not apply the upstream updates." id="upstream-updates-failed" icon="info-sign">
 
 ### Issue
 
@@ -173,14 +185,6 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 
 If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
 ](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
-
-</Accordion>
-
-## Preventing Autopilot From Taking Screenshots of Your Website
-
-<Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
-
-Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
 </Accordion>
 
@@ -236,37 +240,9 @@ If these steps fail, contact [Support](/guides/support/contact-support).
 
 </Accordion>
 
-## Framework is Not Supported
-
-<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-is-not-supported" icon="info-sign">
-
-### Diagnosis
-
-Site is running a framework that is not Drupal, Drupal 8, or Wordpress.
-
-### Solution
-
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is most likely not supported.
-
-</Accordion>
-
-## Frozen Site
-
-<Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="frozen-site" icon="info-sign">
-
-### Issue
-
-A Sandbox site is frozen due to inactivity.
-
-### Solution
-
-Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
-
-</Accordion>
-
 ## Unreachable Site
 
-<Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment." id="unreachable-site" icon="info-sign">
+<Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment." id="site-unreachable" icon="info-sign">
 
 ### Issue
 
@@ -275,20 +251,6 @@ Failed to get a `200 OK` response from the homepage of the Dev environment.
 ### Solution
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
-
-</Accordion>
-
-## CMS Missing
-
-<Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="cms-missing" icon="info-sign">
-
-### Issue
-
-A CMS was not detected.
-
-### Solution
-
-Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the [documentation](https://pantheon.io/docs/create-sites).
 
 </Accordion>
 
@@ -308,7 +270,7 @@ Check that CLI cache clear steps work in the Dev environment. See if creating ot
 
 ## Merge to Dev
 
-<Accordion title="We could not merge the updates to the Dev environment due to an unexpected issue." id="merge-to-dev" icon="info-sign">
+<Accordion title="We could not merge the updates to the Dev environment due to an unexpected issue." id="merge-dev" icon="info-sign">
 
 ### Issue
 
@@ -326,7 +288,7 @@ If the issue is because of a PHP or CMS issue, resolve any issues causing `clear
 
 </Accordion>
 
-## Cloned Content Failed
+## Cloned Content
 
 <Accordion title="We could not clone the environments due to an unexpected error." id="cloned-content-failed" icon="info-sign">
 
@@ -352,7 +314,7 @@ Use the following steps:
 
 ## Uncommitted Changes
 
-<Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="uncommitted-changes" icon="info-sign">
+<Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="changes-uncommitted" icon="info-sign">
 
 ### Issue
 
@@ -363,3 +325,47 @@ Unsaved work in th development environment has prevented Autopilot from running.
 Commit or discard the change, and run Autopilot again.
 
 </Accordion>
+
+## CMS Missing
+
+<Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="missing-cms" icon="info-sign">
+
+### Issue
+
+A CMS was not detected.
+
+### Solution
+
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the [documentation](https://pantheon.io/docs/create-sites).
+
+</Accordion>
+
+## Frozen Site
+
+<Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="site-frozen" icon="info-sign">
+
+### Issue
+
+A Sandbox site is frozen due to inactivity.
+
+### Solution
+
+Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
+
+</Accordion>
+
+## Framework is Not Supported
+
+<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-not-supported" icon="info-sign">
+
+### Diagnosis
+
+Site is running a framework that is not Drupal, Drupal 8, or Wordpress.
+
+### Solution
+
+Contact support for assistance if running a framework that is not Drupal, Drupal 8, or Wordpress. Any other framework is most likely not supported.
+
+</Accordion>
+
+You can contact [Support](https://pantheon.io/docs/guides/support/contact-support/) for additional assistance.
