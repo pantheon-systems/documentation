@@ -68,11 +68,11 @@ add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
 You will need to push the data from WordPress to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom WordPress Edge Integratiosn plugin that does this by implementing `wp_localize_script` to push the values from our header to the DataLayer object via the `eiGtm` JavaScript global. The relevant `gtm_headers.js` file can be found in the [Pantheon Wordpress Edge Integrations repository](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/blob/main/assets/js/gtm-headers.js).
 
 
-<!-- <Alert title="Note"  type="info">
+<Alert title="Note"  type="info">
 
 Universal Analytics(UA-) or Google Analytics(G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
 
-</Alert> -->
+</Alert>
 
 </Tab>
 
@@ -85,6 +85,21 @@ Confirm which identifiers you will use to personalize a user’s experience. You
 2. Interest
 
 We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. The relevant `gtm_headers.js` file we’re attaching can be found in the [`smart_content_cdn` repository](https://github.com/pantheon-systems/smart_content_cdn/blob/main/js/gtm_headers.js).
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-example">
+
+Here's our Drupal 7 specific copy, and an example snippet:
+
+```php
+/**
+  * Some Drupal 7 specific thing
+  *
+  */
+
+Some code.
+```
 
 </Tab>
 
