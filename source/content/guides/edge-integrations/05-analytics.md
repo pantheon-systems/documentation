@@ -74,6 +74,19 @@ Universal Analytics(UA-) or Google Analytics(G-) codes are not currently support
 
 </Accordion>
 
+<Accordion title="Drupal" id="drupal-analytics-config" icon="wrench">
+
+1. Install the Drupal [Google Tag](https://www.drupal.org/project/google_tag/) contributed module and configure it to reference your GTM (Google Tag Manager) container ID.
+
+2. Confirm which identifiers you will use to personalize a user’s experience. You can use:
+
+  - Geography
+  - Interest
+
+You will need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. The relevant `gtm_headers.js` file can be found in the [Smart Content CDN repository](https://github.com/pantheon-systems/smart_content_cdn/blob/main/js/gtm_headers.js).
+
+</Accordion>
+
 ## Track Implementation
 
 This section will cover the configuration of Google Tag Manager and Google Analytics. 
