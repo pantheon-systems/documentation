@@ -559,6 +559,19 @@ ___
 
 ___
 
+
+## One Click Demo Import
+
+
+<ReviewDate date="2022-03-30" />
+
+**Issue:** The [One Click Demo Import](https://wordpress.org/plugins/one-click-demo-import/) plugin returns 502 error while trying to automatically import the demo files and pages for a theme. This generally happens because the process hit the php max-execution time of our system. 
+
+**Solution:** The best workaround for this is to import the demo files, like content.xml, widgets.wie etc files, by clicking "Switch to Manual Import"
+
+___
+
+
 ## Popup Builder – Responsive WordPress Pop up – Subscription & Newsletter
 
 <ReviewDate date="2019-12-06" />
