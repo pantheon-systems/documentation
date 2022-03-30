@@ -8,42 +8,56 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, eno
 type: guide
 layout: guide
 showtoc: true
-anchorid: module-install
-permalink: docs/guides/edge-integrations/module-install/
-editpath: edge-integrations/03-module-install.md
-reviewed: "2021-03-07"
+anchorid: drupal-sdk
+permalink: docs/guides/edge-integrations/drupal-sdk/
+editpath: edge-integrations/03-drupal-sdk.md
+reviewed: "2021-03-23"
 ---
 
 The Edge Integrations personalization system for Drupal consists of two main parts:
 
 - Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set vary headers to be recognized by Pantheon Advanced Global CDN.
 
-- A collection of Drupal 8+ modules in the [Smart Content](https://www.drupal.org/project/smart_content) ecosystem that provide Smart Personalization blocks and preview functionality.
+- A collection of Drupal 8+ modules in the [Edge Integrations Drupal SDK](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) ecosystem that provide Smart Personalization blocks and preview functionality. If you decide to forgo using the SDK, installing the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) will give you everything you need to get up and running with personalization.
 
 ## Before You Begin
 
+<Partial file="before-you-begin-config.md" />
+
 1. Ensure you have a working Drupal 8+ installation ready.
 
-1. Install [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) and its dependencies, which can be pulled with [Composer](https://getcomposer.org/) from their corresponding Pantheon repositories. This includes:
-    - [Pantheon Edge Integrations PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations)
-    - [Smart Content](https://www.drupal.org/project/smart_content)
+1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
+
+Drupal SDK: 
+
+```
+composer require pantheon-systems/edge-integrations-drupal-sdk
+```
+
+Smart Content CDN module:
+
+```
+composer require pantheon-systems/smart_content_cdn
+```
+
+1. [Smart Content Preview](https://www.drupal.org/project/smart_content_preview) is an optional package to preview your personalized content. This can also be installed with Composer:
     ```
-    composer require pantheon-systems/smart_content_cdn
+    composer require drupal/smart_content_preview
     ```
 
 ## Configure Smart Content CDN
 
-1. Enable the Smart Content CDN module.
+1. Enable the Smart Content module.
 
-1. Enable Smart Content and Smart Content Blocks module.
+1. Enable the Smart Content CDN and Smart Content Block modules.
 
-1. Enable the Smart Content Preview.
+1. Enable the Smart Content Preview module.
 
 1. Navigate to the Smart Content CDN configuration page at *Configuration > System > Smart Content CDN configuration* at `/admin/config/system/smart-content-cdn`.
 
 1. Enable the Vary Header toggle.
 
-1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/module-install/#geolocation) section.
+1. Set default Geo value to a 2-letter country code in all uppercase (e.g. US). This should match the default segment in Step 8 of the [Geolocation](/guides/edge-integrations/drupal-sdk/#geolocation) section.
 
 1. Save the configuration.
 
@@ -101,7 +115,7 @@ The content corresponding to this segment will display. Please note that only us
 
 ### Configure Interest via Taxonomy
 
-In this section, we identify the content type where you want to use personalization by Interest,  add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
+In this section, we identify the content type where you want to use personalization by Interest, add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
 
 1. Navigate to *Admin > Config > System > Smart Content CDN* at `/admin/config/system/smart-content-cdn`. In the configuration form for Smart CDN, select the checkbox for Tags. The form automatically reads all available taxonomy reference terms for all content types and allows you to select them.
     ![Interest Fields](../../../images/guides/edge-integrations/interestfields.png)
@@ -113,8 +127,7 @@ In this section, we identify the content type where you want to use personalizat
 1. Navigate to `/admin/structure/smart_content_segment_set,` to configure geolocation segments. 
 
 1. Click **+Add Global Segment Set**.
-
-    ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities2.png)
+    ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities.png)
 
 1. Provide a label (e.g. Interest) - the name isn't critical.
 
@@ -190,11 +203,11 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 
 ## Recap
 
-The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations) PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
+The Smart Content CDN module extends Smart Content's functionality, and leverages the [Pantheon Edge Integrations](https://github.com/pantheon-systems/pantheon-edge-integrations), a CMS-agnostic PHP library. The setup steps above provide two use cases: Geolocation and Interest, but there is much more you can accomplish with Smart Content and content personalization. For more information about the module, and other possible use cases, refer to the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn).
 
-## More Resources (Working title)
+## More Information
 
-Pantheon Edge Integrations is a CMS-agnostic PHP library. Pantheon Edge Integrations uses header data to provide a personalization object that is utilized for personalizing content for each user. To make use of the PHP library, ensure PHP can use the class:
+Pantheon Edge Integrations uses header data to provide a personalization object that is utilized for personalizing content for each user. To make use of the PHP library, ensure PHP can use the class:
 
 `use Pantheon\EI\HeaderData;`
 
