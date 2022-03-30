@@ -52,7 +52,6 @@ add_filter( 'pantheon.ei.gtm_code', '__return_true' );
 This is helpful if you are using another plugin to add Google Analytics or GTM code snippets, or if you have hard-coded those code snippets into your site and do not need them to be added for you.
 
 Use the following example if you want to define the GTM code in the codebase and use the built-in integration. If the filter is set this way, the option in the admin setting will be suppressed and the GTM code added via the filter will be used:
-:
 
 ```php
 function override_gtm_code( $gtm_code ) {
@@ -71,13 +70,14 @@ You will need to push the data from WordPress to Tag Manager via a DataLayer. Th
 
 <Alert title="Note"  type="info" >
 
-Universal Analytics (UA-) or Google Analytics (G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
+Universal Analytics(UA-) or Google Analytics(G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
 
 </Alert>
 
 </Tab>
 
 <Tab title="Drupal" id="drupal-analytics-config">
+
 Install the Drupal [Google Tag](https://www.drupal.org/project/google_tag/) contributed module and configure it to reference your GTM (Google Tag Manager) container ID.
 Confirm which identifiers you will use to personalize a user’s experience. You can use:
 
@@ -87,6 +87,7 @@ Confirm which identifiers you will use to personalize a user’s experience. You
 We need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. The relevant `gtm_headers.js` file we’re attaching can be found in the [`smart_content_cdn` repository](https://github.com/pantheon-systems/smart_content_cdn/blob/main/js/gtm_headers.js).
 
 </Tab>
+
 </Tablist>
 
 ## Track Implementation
