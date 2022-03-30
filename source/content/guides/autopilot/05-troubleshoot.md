@@ -87,35 +87,9 @@ To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integr
 
 </Accordion>
 
-## Modified Plugin or Theme Name
-
-<Accordion title="Ran into an issue with a WordPress update and did not proceed with deployment." id="wp-update-issue" icon="info-sign">
-
-### Issue
-
-This error message is displayed when a plugin is renamed or WordPress updates a plugin or theme and the URL for the corresponding plugin or theme cannot be found. The discrepancy between the plugin name and the URL disables the plugin, and Autopilot deployment cannot continue.
-
-### Diagnosis
-
-To determine which plugin is causing the issue:
-
-1. Check the uncommitted changes for Autopilot Multidev. It is likely a plugin has been deleted and another plugin has been added.
-
-1. Compare the list of plugins for Autopilot and Dev to the WordPress plugin list and determine if there are any discrepancies. Ensure no entries are missing. If there is variance between the lists, such as a plugin that has been omitted or not updated on one of the lists, the plugin will be disabled on the Autopilot branch.
-
-If you need assistance, [contact Support](/guides/support/contact-support).
-
-### Solution
-
-Remove the plugin or theme from the site if it is not being used. Revert the plugin or theme to the original name and correct the URL.
-
-Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
-
-</Accordion>
-
 ## Extension Updates are Missing
 
-<Accordion title="Could not apply the updates because a plugin or theme was not found while attempting the update." id="missing-extension-updates" icon="info-sign">
+<Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="missing-extension-updates" icon="info-sign">
 
 ### Issue
 
@@ -149,19 +123,21 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## Failed Extension Updates
 
-<Accordion title="Could not apply the upstream updates." id="extension-updates-failed" icon="info-sign">
+<Accordion title="Could not apply the extension updates." id="extension-updates-failed" icon="info-sign">
 
 ### Issue
 
-Applying upstream updates failed.
+Applying extension updates failed.
 
 ### Diagnosis
 
-This is most likely due to a merge conflict when applying upstream updates to the sites. For Composer sites, this could be caused by a failed Composer build or dependency conflicts.
+This is most likely due to a merge conflict when applying updates to the sites. For Composer sites, this could be caused by a failed Composer build or dependency conflicts.
 
 ### Solution
 
 Resolve conflicts to apply updates. If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
+  
+If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails.
 
 </Accordion>
 
@@ -180,8 +156,6 @@ This error message most likely results from a merge conflict when applying upstr
 ### Solution
 
 Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation.
-
-If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
 
 If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
 ](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
@@ -202,9 +176,7 @@ Autopilot fails when a VRT page redirects more than 8 times or is stuck in an in
 
 ### Solution
 
-Real-time email notifications are sent for failed VRTs for a site. If an error is detected during an update attempt, the Autopilot Status displays **Needs Attention**  with two options to **Review Test Results** or to **View Update Details**. When a failed test requires review, new tests cannot be run on the site until the results have been approved or discarded through Autopilot.
-
-To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for that page.
+To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for the page.
 
 </Accordion>
 
@@ -234,7 +206,7 @@ Autopilot failed to deploy to Test or Live, however deploying to Dev from Multid
 
 If the Drush or WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS.
 
-Run the deploy to Test or Live manually. Autopilot will also attempt to deploy again when the updates are tested, but immediately running updates again will likely result in a current response, as the Dev environment already has the changes.
+Run the deploy to Test or Live manually. Autopilot will also attempt to deploy again when the updates are tested, but immediately running updates again will likely result in the response that Autopilot has no new updates to apply, because the Dev environment already has changes.
 
 If these steps fail, contact [Support](/guides/support/contact-support).
 
@@ -367,5 +339,3 @@ Site is running a framework that is not Drupal, Drupal 8, or WordPress. WordPess
 Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework is most likely not supported.
 
 </Accordion>
-
-You can contact [Support](https://pantheon.io/docs/guides/support/contact-support/) for additional assistance.
