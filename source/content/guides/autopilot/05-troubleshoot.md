@@ -133,13 +133,15 @@ Applying extension updates failed.
 
 ### Diagnosis
 
-This is most likely due to a merge conflict when applying updates to the sites. For Composer sites, this could be caused by a failed Composer build or dependency conflicts.
+Applying updates with Drush or WP-CLI failed. This could be because of a read/write error, PHP fatal error thrown by the CMS, or another site-level error.
 
 ### Solution
 
-Resolve conflicts to apply updates. If a merge conflict is preventing you from merging a Multidev environment, follow the steps in the documentation for [Resolving Conflicts from Multidevs](/git-resolve-merge-conflicts#resolve-content-conflicts) and learn how to [Compare Multidev Environments Locally](/multidev#compare-multidev-environments-locally).
-  
-If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails.
+Ensure Drush or the WP-CLI works as expected on the Dev and Multidev environments.
+
+Apply  the plugin or theme updates either in the UI or with Terminus Drush or WP-CLI. Resolve any issues or errors that arise. After conflicts are  resolved, the updates should be committed to the `master` branch.
+
+If possible, manually edit or update the plugins required to resolve the update failure and allow Autopilot to run its subsequent round of updates.
 
 </Accordion>
 
