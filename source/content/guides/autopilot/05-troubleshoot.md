@@ -318,7 +318,7 @@ Use the following steps:
 
 ### Issue
 
-Unsaved work in th development environment has prevented Autopilot from running.
+Unsaved work in the development environment has prevented Autopilot from running.
 
 ### Solution
 
