@@ -89,11 +89,13 @@ To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integr
 
 ## Extension Updates are Missing
 
-<Accordion title="We could not apply the updates because a plugin or theme was not found while attempting the update." id="missing-extension-updates" icon="info-sign">
+<Accordion title="We could not apply the updates because a plugin, theme, or module was not found while attempting the update." id="missing-extension-updates" icon="info-sign">
 
 ### Issue
 
-This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
+* **WordPress**: This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
+  
+* **Drupal**: This error message is displayed when a Drupal module or theme update could not be applied.
 
 ### Diagnosis
 
