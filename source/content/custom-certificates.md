@@ -41,7 +41,8 @@ Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-c
 1. Intermediate Certificate
 1. Private Key
 
-Please allow two business days for your Account Team to load the certificate.
+Please allow two business days for your Account Team to load the certificate. 
+Please note: The key file upload tool currently only accepts 2048-bit RSA keys. 
 
 </Tab>
 
