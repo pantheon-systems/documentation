@@ -68,11 +68,11 @@ add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
 You will need to push the data from WordPress to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom WordPress Edge Integratiosn plugin that does this by implementing `wp_localize_script` to push the values from our header to the DataLayer object via the `eiGtm` JavaScript global. The relevant `gtm_headers.js` file can be found in the [Pantheon Wordpress Edge Integrations repository](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/blob/main/assets/js/gtm-headers.js).
 
 
-<Alert title="Note"  type="info" >
+<!-- <Alert title="Note"  type="info">
 
 Universal Analytics(UA-) or Google Analytics(G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
 
-</Alert>
+</Alert> -->
 
 </Tab>
 
