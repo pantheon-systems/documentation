@@ -31,18 +31,48 @@ Consider the desired goals and objectives for your users. Define success for you
 
 <TabList>
 
-<Tab title="WordPress" id="wp-example" active={true}>
+<Tab title="WordPress" id="wp-analytics-config" active={true}>
 
-Here's our WordPress specific copy, and an example snippet:
+### Add Google Tag Manger(GTM) Code
+
+The [Pantheon WordPress Edge Integrations plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations) natively supports Google Analytics via Google Tag Manager. 
+
+1. Navigate to the General Settings page in your WordPress admin and scroll to the **Google Tag Manager Code** field.
+
+![Google Tag Manager Code field in admin settings](../../../images/guides/edge-integrations/ei-analytics-wp-1-gtm-code.png)
+
+Alternately, you can use the `pantheon.ei.gtm_code` filter. This filter can be used to either override the above setting in the admin, or to define a GTM code in your codebase.
+
+To override the GTM code option and prevent the built-in Google Analytics code from being displayed on your site, use the `__return_true` built-in callback on the filter:
 
 ```php
-/**
-  * Some WordPress specific thing
-  *
-  */
-
-Some code.
+add_filter( 'pantheon.ei.gtm_code', '__return_true' );
 ```
+
+This is helpful if you are using another plugin to add Google Analytics or GTM code snippets, or if you have hard-coded those code snippets into your site and do not need them to be added for you.
+
+Use the following example if you want to define the GTM code in the codebase and use the built-in integration. If the filter is set this way, the option in the admin setting will be suppressed and the GTM code added via the filter will be used:
+
+```php
+function override_gtm_code( $gtm_code ) {
+  return 'GTM-XXXXXXXX';
+}
+add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
+```
+
+2. Confirm which identifiers you will use to personalize a user’s experience. You can use:
+
+  - Geography
+  - Interest
+
+You will need to push the data from WordPress to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom WordPress Edge Integratiosn plugin that does this by implementing `wp_localize_script` to push the values from our header to the DataLayer object via the `eiGtm` JavaScript global. The relevant `gtm_headers.js` file can be found in the [Pantheon Wordpress Edge Integrations repository](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/blob/main/assets/js/gtm-headers.js).
+
+
+<Alert title="Note"  type="info">
+
+Universal Analytics(UA-) or Google Analytics(G-) codes are not currently supported. The Edge Integrations plugin only supports Google Tag Manager (GTM-) codes.
+
+</Alert>
 
 </Tab>
 
