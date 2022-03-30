@@ -60,8 +60,8 @@ add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
 
 2. Confirm which identifiers you will use to personalize a user’s experience. You can use:
 
-  - Geography
-  - Interest
+    - Geography
+    - Interest
 
 You will need to push the data from WordPress to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom WordPress Edge Integratiosn plugin that does this by implementing `wp_localize_script` to push the values from our header to the DataLayer object via the `eiGtm` JavaScript global. The relevant `gtm_headers.js` file can be found in the [Pantheon Wordpress Edge Integrations repository](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/blob/main/assets/js/gtm-headers.js).
 
@@ -80,8 +80,8 @@ Universal Analytics(UA-) or Google Analytics(G-) codes are not currently support
 
 2. Confirm which identifiers you will use to personalize a user’s experience. You can use:
 
-  - Geography
-  - Interest
+    - Geography
+    - Interest
 
 You will need to push the data from Drupal to Tag Manager via a DataLayer. The SDK ships with a preconfigured custom `smart_content_cdn` module that does this by implementing `hook_page_attachments()` to push the values from our header to the DataLayer object via `Drupal.behaviors`. The relevant `gtm_headers.js` file can be found in the [Smart Content CDN repository](https://github.com/pantheon-systems/smart_content_cdn/blob/main/js/gtm_headers.js).
 
@@ -91,54 +91,52 @@ You will need to push the data from Drupal to Tag Manager via a DataLayer. The S
 
 This section will cover the configuration of Google Tag Manager and Google Analytics. 
 
-### Configure Google Analytics
+### Configure Google Analytics(GA)
 
-Before you start, if you are setting up a brand new site/property, you must select the "Create a Universal Analytics property" under Advanced Options. While you can choose either the "Create both a Google Analytics 4 and a Universal Analytics property" or the "Create a Universal Analytics property only" option, all of the additional settings described here refer to the Universal Analytics property, specifically. Google Analytics 4 is not currently supported.
+Before you start, if you are setting up a brand new site/property, you must select "Create a Universal Analytics property" under **Advanced Options**. While you can choose either the "Create both a Google Analytics 4 and a Universal Analytics property" or the "Create a Universal Analytics property only" options, all of the additional settings described here refer to the Universal Analytics property, specifically. Google Analytics 4 is not currently supported.
 
 ![Google Analytics Property Setup](../../../images/guides/edge-integrations/ei-analytics-0-ua-property.png)
 
-#### Track Personalization properties as Custom Dimensions in GA
+#### Track Personalization Properties as Custom Dimensions in GA
 
-Navigate to the Admin > Property area of Google Analytics. Expand Custom Definitions and select Custom Dimensions: 
+1. Navigate to the Admin > Property area of Google Analytics. Expand Custom Definitions and select **Custom Dimensions**: 
 
 ![Custom Dimensions](../../../images/guides/edge-integrations/ei-analytics-1-custom-dimensions.png)
 
-Add new Custom Dimensions that correspond to the identifiers. Most dimensions will be set to “hit,” as they change based on user behavior. For geotargeting, you will want to set the scope to "Session" to allow the setting to persist.
+2. Add **New Custom Dimensions** that correspond to the identifiers. Most dimensions will be set to “Hit,” as they change based on user behavior. For geotargeting, you have to set the scope to "Session" to allow the setting to persist.
 
 ![New Custom Dimension](../../../images/guides/edge-integrations/ei-analytics-2-new-custom-dimension.jpg)
 
 Take note of the Index for each of your new Custom Dimensions, as you will need them to configure your Variables in Google Tag Manager. Your indexes will differ from this example if you have pre-existing configurations.
 
-At this time, you can verify that the identifiers are accurately pushing data into the dataLayer, if you like. Refer to  the [Test and Debug](#test-and-debug) section for more info. 
+You now have the option to verify that the identifiers are accurately pushing data into the dataLayer. Refer to  the [Test and Debug](/guides/edge-integrations/analytics/#test-and-debug) section for more info. 
 
-### Configure Google Tag Manager
+### Configure Google Tag Manager(GTM)
 
 #### Create Variables in GTM
 
-Within Google Tag Manager, create User-Defined Variables to capture each of your personalization identifiers.
+1. Navigate to **User -Defined Variables** and click **New** in the upper right-hand corner.
 
 ![User Defined Variables](../../../images/guides/edge-integrations/ei-analytics-3-user-defined-variables.png)
 
-Select **Data Layer Variable**
+2. From the list, select **Data Layer Variable**.
 
 ![Choose Variable Type](../../../images/guides/edge-integrations/ei-analytics-4-choose-variable-type.png)
 
-Create Variables following these best practices:
+3. Create Variables following these best practices:
 
-![Data Layer Variable, Variable Configuration](../../../images/guides/edge-integrations/ei-analytics-5-geo-variable-config.png)
+  - Use a common prefix for each of your variable names to help group and identify them. In the example below, we use `dlv` to signify “data layer variable.” Please make sure to note the actual name of the variable.
+  - Include the Custom Dimension Index ID in your variable name, so that it's easy to reference.
+  - When you create new variables that include text, we highly recommend that the **Format Value** is Lowercase.
+  ![Change Case to Lowercase and Data Layer Variable](../../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
+  - Keep the **Data Layer Version** at Version 2.
+  - Leave the **Set a Default Value** box unchecked.
+  - The **Data Layer Variable Name** is the most important, so ensure you spell everything identically to what the DataLayer is pushing. In our case, these names are:
+    - audience.geo
+    - interest
 
-1. Use a common prefix for each of your variable names to help group and identify them. In this example, we use “dlv” to signify “data layer variable”.
-2. Include the Custom Dimension Index ID in your variable name, so it's easy to reference.
-3. Don't forget the actual name of the variable.
-4. When you create new variables that include text, we highly recommend that you format the value and force it to be lowercase.
-![Data Layer Variable, Change Case to Lowercase](../../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
-5. Keep the data Layer at Version 2.
-6. Do not set a Default Value.
-7. The Data Layer Variable Name is the most important, so ensure you spell everything identically to what the DataLayer is pushing. In our case, these names are:
-  a. audience.geo
-  b. interest
-  c. role
-
+<!-- ![Data Layer Variable, Variable Configuration](../../../images/guides/edge-integrations/ei-analytics-5-geo-variable-config.png)
+ -->
 #### Append Variables to Your Google Analytics Settings in Tag Manager
 
 Now that you have your variables, you can attach them to your Google Analytics Settings Variable. Yours might be called something different but the “Type” will be the same. If you do not have this kind of variable and instead are using a “Constant” or have hardcoded the UA ID in each tag, you will want to change that in favor of GTM tags to ensure future usability. Your Settings should appear in the list of Custom Variables.
