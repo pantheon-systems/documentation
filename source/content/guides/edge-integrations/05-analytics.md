@@ -260,15 +260,15 @@ Based on this information, enter the value of “label” into the Label field. 
 
 ## Reporting
 
-To find your new data, log into Google Analytics. In the main navigation, go to Behavior > Events > Top Events.
+1. To find your new data, log into Google Analytics. In the main navigation, go to Behavior > Events > Top Events.
 
 ![Top Events menu](../../../images/guides/edge-integrations/ei-analytics-24-top-events.png)
 
-Click on the **Secondary dimension** button, right below the **Event Category** label. This will display the custom dimensions you created earlier. 
+1. Click on the **Secondary dimension** button, right below the **Event Category** label. This will display the custom dimensions you created earlier. 
 
 ![Event Analytics view](../../../images/guides/edge-integrations/ei-analytics-25-events-analytics-view.png)
 
-You can click on any label in the list to display the associated data.
+1. Click on any label in the list to display the associated data.
 
 ![Secondary Dimension](../../../images/guides/edge-integrations/ei-analytics-26-secondary-dimension.png)
 
@@ -278,30 +278,30 @@ You can also toggle between the different custom dimensions by clicking in the l
 
 ### Segmentation
 
-You are able to create segments based on your custom dimensions to slice and dice your data.  Most reports in Google Analytics will allow you to  segment your data by clicking on the “+ Add Segment” button.
+1. You can create segments based on your custom dimensions in order to slice and dice your data. Most reports in Google Analytics allow you to  segment your data by clicking on the **+ Add Segment** button in the **Pages** section.
 
 ![Add Segment](../../../images/guides/edge-integrations/ei-analytics-28-add-segment.png)
 
-You may see a list of existing segments. Create a new segment by clicking on the “+New Segment” button.
+1. Create a new segment by clicking on the **+ New Segment** button. If you have any existing segments, they will be listed.
 
 ![New Segment](../../../images/guides/edge-integrations/ei-analytics-29-new-segment.png)
 
-Under Advanced, choose “Conditions” and select the kind of segment you want to create. In this example, we want to see how Canadian session behavior differs from all other visitors.  In the dimension field, find the appropriate dimension and click on it – in this case: “audience geo.”
+1. Under **Advanced** choose **Conditions** and select the kind of segment you want to create. For example, if you want to see how Canadian session behavior differs from all other visitors, go to the dimension field, find the appropriate dimension and click on it. In this case, it is **audience geo**.
 
 ![New segment custom dimensions](../../../images/guides/edge-integrations/ei-analytics-30-segment-dimensions.png)
 
-We are looking for Canadian visitors, so the custom dimension should contain a value of “ca”. Name and save your segment. We’ll call ours “Audience Geo - Canada.”
+1. In this example, we want data for Canadian visitors, so the custom dimension should contain a value of `ca`. Name and save your segment, for example: `Audience Geo - Canada`.
 
 ![Audience Geo - Canada](../../../images/guides/edge-integrations/ei-analytics-31-geo-segment.png)
 
-Create additional segments in your reports, like a US geo audience, to compare outcomes.  
+1. Follow the same steps to create additional segments in your reports, like a US geo audience, to compare outcomes.  
 
 ![Compare Segments](../../../images/guides/edge-integrations/ei-analytics-32-compare-segments.png)
 
-Adding audiences to your Goals is particularly useful. Tying this back to our previous Recipe Click goal, if we add our US and Canadian audiences, we can compare outcomes. If we're more interested to see click-through rates based on audience interest, we could do that, too!
+It is useful to add audiences to your Goals. Tying this back to our previous Recipe Click goal, if we add US and Canadian audiences, we can compare outcomes. If we're more interested to see click-through rates based on audience interest, we can do that, too!
 
-![Compare audiences](../../../images/guides/edge-integrations/ei-analytics-34-comparative-audiences.png)
+![Compare Audiences](../../../images/guides/edge-integrations/ei-analytics-34-comparative-audiences.png)
 
-Below, we can see how different audiences convert towards the same Goal.
+You can also observe how different audiences convert towards the same Goal.
 
 ![Compared goals](../../../images/guides/edge-integrations/ei-analytics-35-compared-goals.png)
