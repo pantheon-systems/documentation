@@ -14,7 +14,7 @@ editpath: edge-integrations/05-analytics.md
 reviewed: "2022-03-09"
 ---
 
-Pantheon’s Edge Integrations offers advanced and powerful features for content personalization. At this time, 2 key primary features are supported: Geo and Interest. These features allow us to serve different content to each user at given URLs. Google Analytics won’t differentiate between the personalized versions of a page unless you instruct it otherwise. This section aims to help you enhance your configuration to track personalization experiences via Google Tag Manager.
+Pantheon’s Edge Integrations offers advanced and powerful features for content personalization. At this time, two key primary features are supported: Geo and Interest. These features allow us to serve different content to each user at given URLs. Google Analytics won’t differentiate between the personalized versions of a page unless you instruct it otherwise. This section aims to help you enhance your configuration to track personalization experiences via Google Tag Manager.
 
 ## Requirements
 
@@ -37,26 +37,26 @@ The [Pantheon WordPress Edge Integrations plugin](https://github.com/pantheon-sy
 
 1. Navigate to the General Settings page in your WordPress admin and scroll to the **Google Tag Manager Code** field.
 
-![Google Tag Manager Code field in admin settings](../../../images/guides/edge-integrations/ei-analytics-wp-1-gtm-code.png)
+    ![Google Tag Manager Code field in admin settings](../../../images/guides/edge-integrations/ei-analytics-wp-1-gtm-code.png)
 
-Alternately, you can use the `pantheon.ei.gtm_code` filter. This filter can be used to either override the above setting in the admin, or to define a GTM code in your codebase.
+    Alternately, you can use the `pantheon.ei.gtm_code` filter. This filter can be used to either override the above setting in the admin, or to define a GTM code in your codebase.
 
-To override the GTM code option and prevent the built-in Google Analytics code from being displayed on your site, use the `__return_true` built-in callback on the filter:
+    To override the GTM code option and prevent the built-in Google Analytics code from being displayed on your site, use the `__return_true` built-in callback on the filter:
 
-```php
-add_filter( 'pantheon.ei.gtm_code', '__return_true' );
-```
+    ```php
+    add_filter( 'pantheon.ei.gtm_code', '__return_true' );
+    ```
 
-This is helpful if you are using another plugin to add Google Analytics or GTM code snippets, or if you have hard-coded those code snippets into your site and do not need them to be added for you.
+    This is helpful if you are using another plugin to add Google Analytics or GTM code snippets, or if you have hard-coded those code snippets into your site and do not need them to be added for you.
 
-Use the following example if you want to define the GTM code in the codebase and use the built-in integration. If the filter is set this way, the option in the admin setting will be suppressed and the GTM code added via the filter will be used:
+    Use the following example if you want to define the GTM code in the codebase and use the built-in integration. If the filter is set this way, the option in the admin setting will be suppressed and the GTM code added via the filter will be used:
 
-```php
-function override_gtm_code( $gtm_code ) {
-  return 'GTM-XXXXXXXX';
-}
-add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
-```
+    ```php
+    function override_gtm_code( $gtm_code ) {
+      return 'GTM-XXXXXXXX';
+    }
+    add_filter( 'pantheon.ei.gtm_code', 'override_gtm_code' );
+    ```
 
 1. Confirm which identifiers you will use to personalize a user’s experience. You can use:
 
@@ -125,15 +125,15 @@ You now have the option to verify that the identifiers are accurately pushing da
 
 1. Create Variables following these best practices:
 
-  - Use a common prefix for each of your variable names to help group and identify them. In the example below, we use `dlv` to signify “data layer variable.” Please make sure to note the actual name of the variable.
-  - Include the Custom Dimension Index ID in your variable name, so that it's easy to reference.
-  - When you create new variables that include text, we highly recommend that the **Format Value** is Lowercase.
-  ![Change Case to Lowercase and Data Layer Variable](../../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
-  - Keep the **Data Layer Version** at Version 2.
-  - Leave the **Set a Default Value** box unchecked.
-  - The **Data Layer Variable Name** is the most important, so ensure you spell everything identically to what the DataLayer is pushing. In our case, these names are:
-    - audience.geo
-    - interest
+    - Use a common prefix for each of your variable names to help group and identify them. In the example below, we use `dlv` to signify “data layer variable.” Please make sure to note the actual name of the variable.
+    - Include the Custom Dimension Index ID in your variable name, so that it's easy to reference.
+    - When you create new variables that include text, we highly recommend that the **Format Value** is Lowercase.
+    ![Change Case to Lowercase and Data Layer Variable](../../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
+    - Keep the **Data Layer Version** at Version 2.
+    - Leave the **Set a Default Value** box unchecked.
+    - The **Data Layer Variable Name** is the most important, so ensure you spell everything identically to what the DataLayer is pushing. In our case, these names are:
+      - audience.geo
+      - interest
 
 <!-- ![Data Layer Variable, Variable Configuration](../../../images/guides/edge-integrations/ei-analytics-5-geo-variable-config.png)
  -->
