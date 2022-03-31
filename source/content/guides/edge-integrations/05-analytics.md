@@ -21,7 +21,7 @@ Pantheon’s Edge Integrations offers advanced and powerful features for content
 * Access to your site’s Google Analytics and Tag Manager accounts, and basic knowledge of these products. 
 * You have the Smart CDN module enabled and a personalization use case active and working on your Pantheon-hosted, Advanced Global CDN-enabled website. 
 
-Personalization strategy and implementation are outside the scope of this page. For more information on that, refer to the [Introduction](/guides/edge-integrations/introduction/) part of the guide.
+Personalization strategy and implementation are outside the scope of this page. For more information on that, refer to the [Introduction](/guides/edge-integrations) part of the guide.
 
 ### Before You Begin
 
