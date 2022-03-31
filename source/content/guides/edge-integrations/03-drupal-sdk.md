@@ -28,17 +28,17 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
 
-Drupal SDK: 
+    Drupal SDK: 
 
-```
-composer require pantheon-systems/edge-integrations-drupal-sdk
-```
+    ```
+    composer require pantheon-systems/edge-integrations-drupal-sdk
+    ```
 
-Smart Content CDN module:
+    Smart Content CDN module:
 
-```
-composer require pantheon-systems/smart_content_cdn
-```
+    ```
+    composer require pantheon-systems/smart_content_cdn
+    ```
 
 1. [Smart Content Preview](https://www.drupal.org/project/smart_content_preview) is an optional package to preview your personalized content. This can also be installed with Composer:
     ```
@@ -93,7 +93,7 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 
 1. Click **Save**.
 
-1. Navigate to the **Structure > Block layout > Add custom block** at `/block/add`.
+1. Navigate to **Structure > Block layout > Add custom block** at `/block/add`.
 
 1. Add content blocks for each segment. For instance "Hello Canada!", "Hello US!", etc.
 
