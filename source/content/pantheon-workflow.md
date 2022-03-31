@@ -97,6 +97,10 @@ After testing your changes in the Test environment you can move them to the Live
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
 
+### Content Staging
+
+Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions. 
+
 ## Configuration Management
 
 Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it will overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
