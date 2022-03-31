@@ -23,7 +23,7 @@ Follow the steps below to request and send the appropriate certificate, and priv
 
 Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). 
 
-Please allow two business days for your Account Team to load the certificate.
+Allow two business days for your Account Team to load the certificate.
 
 #### CSR Notes
 
@@ -41,7 +41,8 @@ Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-c
 1. Intermediate Certificate
 1. Private Key
 
-Please allow two business days for your Account Team to load the certificate.
+Allow two business days for your Account Team to load the certificate. 
+Note: The key file upload tool currently only accepts 2048-bit RSA keys. 
 
 </Tab>
 
