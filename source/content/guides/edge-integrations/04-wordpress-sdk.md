@@ -45,7 +45,7 @@ Alternately, you can add `pantheon-systems/edge-integrations-wordpress-sdk` as a
 
 If you do not use Composer on your project, you can still get started with the WordPress Edge Integrations plugin. Instead of installing the SDK package, go to the [Pantheon WordPress Edge Integrations Releases page](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/releases).
 
-* Download the Source Code (zip) file associated with the most recent version.
+* Download the most recent version of the Source Code (zip) file.
 
 ![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets.png)
 
