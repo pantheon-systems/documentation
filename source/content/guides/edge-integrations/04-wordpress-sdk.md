@@ -14,7 +14,7 @@ editpath: edge-integrations/04-wordpress-sdk.md
 reviewed: "2022-03-09"
 ---
 
-This doc will help you personalize, and provide custom experiences for visitors to your website, based on Geotargeting and Interest targeting.
+This doc will help you personalize and provide custom experiences for visitors to your website, based on Geotargeting and Interest targeting.
 
 ## Before You Begin
 
@@ -33,7 +33,8 @@ Adding Edge Integrations support to your Composer-based project is simple and is
 To get started, add the [Edge Integrations WordPress SDK repository](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) as a dependency:
 
 ```bash
-composer require pantheon-systems/edge-integrations-wordpress-sdk
+composer require pantheon-systems/
+-integrations-wordpress-sdk
 ```
 
 This command will add the repository to your `/vendor` directory, as well as all of the compiled assets and included dependencies, which include a global CMS-agnostic [PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations), a [WordPress plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations), and all of the documentation for the SDK.
@@ -76,7 +77,7 @@ If the plugin is installed and configured correctly, the `Audience` or `Audience
 
 ### Configure Interests
 
-Interests are much more straightforward to set up in the edge configuration. In this case, we're telling the CDN to vary cache for specific taxonomy terms. In WordPress, categories are used to define user interests by default (but any taxonomy can be used). When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
+Interests are much more straightforward to set up in the Edge configuration. In this case, we're telling the CDN to vary cache for specific taxonomy terms. In WordPress, categories are used to define user interests by default (but any taxonomy can be used). When a visitor clicks on multiple pages that are tagged with the same term, it will set that term as an "interest" for that visitor (by default, the threshold is 3 pages tagged with the same term). Like geolocation, this configuration needs to be enabled on your AGCDN instance.
 
 You can read more about how to use or manipulate the interest data in the [Interest SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md).
 
