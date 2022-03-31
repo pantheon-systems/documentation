@@ -20,9 +20,9 @@ This doc will help you personalize, and provide custom experiences for visitors 
 
 <Partial file="before-you-begin-config.md" />
 
-As mentioned in the [Configuration Overview](https://pantheon.io/docs/guides/edge-integrations/configuration-overview/), your website must  If you have completed these steps, you can move on to the next sections of this doc.
+To use Edge Integrations with WordPress, can either install it into a project with Composer, or manually install the plugin. 
 
-You can use Edge Integrations with WordPress by installing it into a project with Composer, or by manually installing the plugin.
+The simplest and recommended means of adding Edge Integrations WordPress SDK is to add Edge Integrations support to your Integrated Composer project.
 
 ### Install with Composer
 
@@ -42,7 +42,7 @@ Alternately, you can add `pantheon-systems/edge-integrations-wordpress-sdk` as a
 
 ### Install Manually
 
-If you do not use Composer on your project at all, you can still get started with the WordPress Edge Integrations plugin without any hassle. In this case, you won't be installing the SDK package, instead, go to the [Pantheon WordPress Edge Integrations Releases page](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/releases).
+If you do not use Composer on your project, you can still get started with the WordPress Edge Integrations plugin. Instead of installing the SDK package, go to the [Pantheon WordPress Edge Integrations Releases page](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations/releases).
 
 * Download the Source Code (zip) file associated with the most recent version.
 
@@ -60,7 +60,7 @@ In either case, the last step is activating the plugin from your WordPress dashb
 
 ### Configure Geolocation
 
-Geotargeting is a method that delivers different content to visitors based on their geographic location. This includes country, continent, region, city and connection information (connection speed and connection type). The specific header data sent to your site depends on the settings configured for your specific AGCDN instance. 
+Geotargeting is a method that delivers different content to visitors based on their geographic location. This includes country, continent, region, city, and other criteria (e.g. connection speed and connection type). The specific header data sent to your site depends on the settings you configure for your AGCDN instance. 
 
 You can learn more about how to use or manage the geolocation data in the [Geolocation SDK documentation](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/geo.md).
 
@@ -86,10 +86,6 @@ You can validate that the interest tracking is working by clicking on multiple p
 
 ![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
 
-### Interests Code Samples
-
-
-
 ## How to Integrate with Cookie Consent Management Plugins
 
 Integrating cookie consent management plugins disallows user tracking if the user has not accepted cookies or other forms of local storage. This might be required based on the privacy laws of your region. In those cases, you cannot store any tracking information unless the user consents to it.
@@ -114,3 +110,13 @@ If you choose to use a third-party cookie consent management solution, the cooki
 - [Interest: Function Reference](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/interest.md)
 - [Pantheon Edge Integrations Consent Management](https://github.com/pantheon-systems/pantheon-edge-integrations-consent-management)
 - [WordPress SDK API](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk/blob/main/docs/api.md)
+
+Pantheon has created example plugins to integrate with each of these third-party plugins, where the given solution is used to render content based on a visitor's location.
+
+- [Geo ACF example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/geo-acf)
+- [Geo CMB2 example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/geo-cmb2)
+
+Edge Integrations can easily integrate with various WordPress plugins.
+
+- [Advanced Custom Fields (ACF)](https://www.advancedcustomfields.com/) is a popular WordPress plugin that allows developers to turn sites into a fully-fledged content management system.
+- [CMB2](https://github.com/CMB2/CMB2) is a developer's toolkit for building metaboxes, custom fields, and forms for WordPress. 
