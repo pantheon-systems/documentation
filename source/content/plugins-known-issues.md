@@ -374,7 +374,9 @@ For example: my.example.com
 Find/replace must handle test.example.com -> my.example.com and 
 test.example.com -> my.example.com
 
-**Solution 2:** Use the search-replace feature in Elementor at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+**Solution 2:** Use the search-replace feature in Elementor:
+ 
+`/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
