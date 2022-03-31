@@ -146,8 +146,11 @@
 - id: CdrMarks
   name: Ryan Marks
   avatar: //github.com/CdrMarks.png?size=460
-  bio: Software Engineer, Pantheon
-  github: //github.com/CdrMarks 
+  bio: Manager of Engineering, Pantheon
+  github: //github.com/CdrMarks
+  wordpress: //profiles.wordpress.org/rmarks
+  drupal: //www.drupal.org/user/cdrmarks
+  linkedin: //www.linkedin.com/in/cdrmarks
 - id: dgorton
   name: Drew Gorton
   twitter: https://twitter.com/dgorton
