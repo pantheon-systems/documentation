@@ -559,6 +559,16 @@ ___
 
 ___
 
+## One Click Demo Import
+
+<ReviewDate date="2022-03-30" />
+
+**Issue:** The [One Click Demo Import](https://wordpress.org/plugins/one-click-demo-import/) plugin returns a `502` error when automatically importing the demo files and pages for a theme. This generally happens when the process reaches the configured `max-execution` time in the Pantheon system `php` file.
+
+**Solution:** Select the **Switch to Manual Import** option to import the demo files, including, `content.xml`, `widgets.wie`, etc.
+
+___
+
 ## Popup Builder – Responsive WordPress Pop up – Subscription & Newsletter
 
 <ReviewDate date="2019-12-06" />
