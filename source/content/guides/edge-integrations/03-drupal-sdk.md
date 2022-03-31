@@ -53,7 +53,7 @@ composer require pantheon-systems/smart_content_cdn
 
 1. Enable the Smart Content Preview module.
 
-1. Navigate to the Smart Content CDN configuration page at *Configuration > System > Smart Content CDN configuration* at `/admin/config/system/smart-content-cdn`.
+1. Navigate to the **Configuration > System > Smart Content CDN Configuration** page at `/admin/config/system/smart-content-cdn`.
 
 1. Enable the Vary Header toggle.
 
@@ -93,11 +93,11 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 
 1. Click **Save**.
 
-1. Navigate to the *Structure > Block layout > Add custom block* at `/block/add`.
+1. Navigate to the **Structure > Block layout > Add custom block** at `/block/add`.
 
 1. Add content blocks for each segment. For instance "Hello Canada!", "Hello US!", etc.
 
-1. Navigate to the **Block Layout** section of the site `/admin/structure/block`.
+1. Navigate to the **Block Layout** section of the site at `/admin/structure/block`.
 
 1. Click **Place block** in the region you want the geo-block to appear, and search for **SSR Decision Block**.
 
@@ -109,22 +109,22 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 
 1. Navigate to the page with the block and you will see the personalization you configured.
 
-1. If you don’t have a VPN client, navigate to the Segments Sets admin page `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
+1. If you don’t have a VPN client, navigate to the **Segments Sets Admin** page at `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
 
-The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview, anonymous users will not have access.
+The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview; anonymous users will not have access.
 
 ### Configure Interest via Taxonomy
 
 In this section, we identify the content type where you want to use personalization by Interest, add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
 
-1. Navigate to *Admin > Config > System > Smart Content CDN* at `/admin/config/system/smart-content-cdn`. In the configuration form for Smart CDN, select the checkbox for Tags. The form automatically reads all available taxonomy reference terms for all content types and allows you to select them.
+1. Navigate to **Admin > Config > System > Smart Content CDN** at `/admin/config/system/smart-content-cdn`. In the configuration form for Smart CDN, select the checkbox for Tags. The form automatically reads all available taxonomy reference terms for all content types and allows you to select them.
     ![Interest Fields](../../../images/guides/edge-integrations/interestfields.png)
 
 1. Create tags for your Tags vocabulary.
 
 1. Review your content and tag it using the Tags vocabulary (e.g. "Biking").
 
-1. Navigate to `/admin/structure/smart_content_segment_set,` to configure geolocation segments. 
+1. Navigate to `/admin/structure/smart_content_segment_set` to configure geolocation segments. 
 
 1. Click **+Add Global Segment Set**.
     ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities.png)
@@ -151,9 +151,9 @@ In this section, we identify the content type where you want to use personalizat
 
 1. Navigate to the page with the block and you will see the personalization you configured.
 
-1. If you don’t have a VPN client, navigate to the Segments Sets admin page `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
+1. If you don’t have a VPN client, navigate to the **Segments Sets Admin** page at `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
 
-The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview, anonymous users will not have access.
+The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview; anonymous users will not have access.
 
 ## Additional Configuration
 
@@ -161,7 +161,7 @@ There is some additional configuration that you can apply to Smart Content. The 
 
 To set up the threshold after which the user will be placed in the particular Interest segment:
 
-1. Navigate to the *Configuration > System > Smart Content CDN* configuration at `/admin/config/system/smart-content-cdn`.
+1. Navigate to the **Configuration > System > Smart Content CDN Configuration** page at `/admin/config/system/smart-content-cdn`.
     ![configform](../../../images/guides/edge-integrations/smartcdnconfiguration.png)
 
 1. Update the Interest threshold value.
@@ -188,7 +188,7 @@ The custom key you create is automatically stored in the `subscriberToken` cooki
 
 1. Install and enable the [JWT module](https://www.drupal.org/project/jwt).
 
-1. Navigate to *Configuration > System > Smart Content CDN configuration* at `/admin/config/system/smart-content-cdn`.
+1. Navigate to the **Configuration > System > Smart Content CDN Configuration** page at `/admin/config/system/smart-content-cdn`.
 
 1. Update subscriber threshold, which is the number of free articles the anonymous user can view.
 
@@ -264,7 +264,7 @@ There are global methods that mirror the class methods in order to ease the API 
 
 - `HeaderData::returnVaryHeader()`
 
-For more information, on what these methods expect and return, refer to [Pantheon's API documentation](https://github.com/pantheon-systems/pantheon-edge-integrations/#pantheon-edge-integrations).
+For more information on what these methods expect and return, refer to [Pantheon's API documentation](https://github.com/pantheon-systems/pantheon-edge-integrations/#pantheon-edge-integrations).
 
 ### Obtain Header Within a Custom Module
 
