@@ -367,13 +367,12 @@ ___
 
 **Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
 
-**Solution 1:** Use any find/replace option to update the paths in Elementor. You must account for escaped `json` URLs for this solution to work.
+**Solution 1:** Use any find/replace option to update the paths in Elementor. You must account for escaped `json` URLs for this solution to work. For example: my.example.com
 
-For example: www.example.com
-Find/replace must handle test.example.com -> www.example.com and 
-test.example.com -> www.example.com
+Find/replace must handle test.example.com -> my.example.com and 
+test.example.com -> my.example.com
 
-**Solution 2:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+**Solution 2:** Use the search-replace feature in Elementor at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
