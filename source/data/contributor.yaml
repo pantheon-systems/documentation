@@ -143,11 +143,6 @@
   github: //github.com/ari-gold
   drupal: //www.drupal.org/user/329006/
   bio: Product Manager, Pantheon
-- id: CdrMarks
-  name: Ryan Marks
-  avatar: //github.com/CdrMarks.png?size=460
-  bio: Software Engineer, Pantheon
-  github: //github.com/CdrMarks 
 - id: dgorton
   name: Drew Gorton
   twitter: https://twitter.com/dgorton
@@ -238,6 +233,14 @@
   twitter: https://twitter.com/andrew_mallis
   drupal: https://www.drupal.org/user/72871
   bio: A Bay Area-based polymedia artist & technologist | Co-founder @kalamuna
+- id: CdrMarks
+  name: Ryan Marks
+  avatar: //github.com/CdrMarks.png?size=460
+  bio: Manager of Engineering, Pantheon
+  github: //github.com/CdrMarks
+  wordpress: //profiles.wordpress.org/rmarks
+  drupal: //www.drupal.org/u/cdrmarks
+  linkedin: https://www.linkedin.com/in/cdrmarks
 - id: ccjjmartin
   name: Chris Martin
   github: //github.com/ccjjmartin
