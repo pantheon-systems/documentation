@@ -69,7 +69,7 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## Drush Version
 
-<Accordion title="Could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
+<Accordion title="We could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
 
 ### Issue
 
@@ -83,7 +83,7 @@ Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot
 
 ### Solution
 
-To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
+To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
 </Accordion>
 
@@ -93,9 +93,9 @@ To resolve the issue, switch to Drush 8 in the `pantheon.yml` file or use Integr
 
 ### Issue
 
-* **WordPress**: This error message is displayed when a WordPress plugin or theme is not found when updates were attempted.
+* **WordPress**: This error message is displayed if a WordPress plugin or theme is not found after updates were attempted.
   
-* **Drupal**: This error message is displayed when a Drupal module or theme update could not be applied.
+* **Drupal**: This error message is displayed if a Drupal module or theme update could not be applied.
 
 ### Diagnosis
 
@@ -109,9 +109,9 @@ If you need assistance, [contact Support](/guides/support/contact-support).
 
 ### Solution
 
-Remove the plugin or theme from the site if it is not being used, or revert the plugin or theme to the original name.
+Remove the plugin, theme, or module from the site if it is not being used. You can also revert the plugin, theme, or module to the original name.
 
-Alternatively, you can add the plugin or theme to the **Excluded Updates** list in Autopilot settings.
+Alternatively, you can add the plugin, theme, or module to the **Excluded Updates** list in Autopilot settings.
 
 </Accordion>
 
@@ -139,7 +139,7 @@ Applying updates with Drush or WP-CLI failed. This could be because of a read/wr
 
 Ensure Drush or the WP-CLI works as expected on the Dev and Multidev environments.
 
-Apply  the plugin or theme updates either in the UI or with Terminus Drush or WP-CLI. Resolve any issues or errors that arise. After conflicts are  resolved, the updates should be committed to the `master` branch.
+Apply the plugin or theme updates either in the UI or with Drush or WP-CLI using Terminus. Resolve any issues or errors that arise. After conflicts are  resolved, the updates should be committed to the `master` branch.
 
 If possible, manually edit or update the plugins required to resolve the update failure and allow Autopilot to run its subsequent round of updates.
 
@@ -236,7 +236,7 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 ### Diagnosis
 
-This can result from Drush or WP-CLI failing after `db pull` is run. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
+This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
 ### Solution
 
@@ -336,7 +336,7 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Diagnosis
 
-Site is running a framework that is not Drupal, Drupal 8, or WordPress. WordPess Multisite (`wordpress_network`) is currently unsupported.
+Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currently, WordPess Multisite (`wordpress_network`) is not supported.
 
 ### Solution
   
