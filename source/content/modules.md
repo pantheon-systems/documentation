@@ -5,13 +5,13 @@ contributors: [eabquina]
 cms: "Drupal"
 categories: [platform]
 tags: [cache, libraries, modules, site]
-reviewdate: "2020-02-04"
+reviewdate: "2022-04-01"
 ---
 Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/pantheon-community) Slack channel.
 
 <Alert title="Note" type="info">
 
-WordPress users, see [Pantheon Plugins](/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+WordPress users should review [Pantheon Plugins](/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
 
 </Alert>
 
@@ -28,7 +28,7 @@ This module is meant to simplify the usage of [Search API](https://www.drupal.or
 
 ## [Drupal 8 Cache Backport (Drupal 7)](https://www.drupal.org/project/d8cache)
 
-Drupal 8 Cache Backport is a module that brings Drupal 8 cache tags and cache max-age back to Drupal 7 (If there is interest, cache contexts will follow).
+Drupal 8 Cache Backport is a module that brings Drupal 8 cache tags and cache `max-age` back to Drupal 7.
 
 ## [Generate Errors (Drupal 7)](https://www.drupal.org/project/generate_errors)
 
@@ -40,11 +40,11 @@ This module provides general methods your site needs to access aspects of the in
 
 The code for the API module is available within our upstream repositories, in the `modules/pantheon` directory. The functionality of this module is provided in three parts: Apache Solr, Pantheon Platform API, and Login.
 
-## [Pantheon Platform API](https://github.com/pantheon-systems/drops-7/blob/master/modules/pantheon/pantheon_api/pantheon_api.info) (Drupal 7)
+## [Pantheon Platform API (Drupal 7)](https://github.com/pantheon-systems/drops-7/blob/master/modules/pantheon/pantheon_api/pantheon_api.info) (Drupal 7)
 
 This module provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches and other common workflows on the platform in Drupal 7.
 
-The API module is not needed for Drupal 8.
+The API module is not needed for Drupal 8 or 9.
 
 **Note:** It is not necessary to use the API module directly. Use [Terminus](/terminus) to interact with your Pantheon site programmatically.
 
