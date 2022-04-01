@@ -33,6 +33,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
+
 ## Add a Dependency to an Individual Site
 
 1. Clone the Git repository from the Pantheon site's dashboard.
@@ -142,7 +143,7 @@ Some packages are not compatible with Composer 2. If you encounter a build error
 
 <Partial file="composer-support-scope.md"/>
 
-## Troubleshooting Code Syncs and Upstream Updates
+## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
 ### Site-local Drush Is Required for Drupal 9 Sites
 
@@ -296,6 +297,8 @@ When using Pantheon's Integrated Composer, this plugin often tries to run a "com
 If your site contains a binary patch, such as https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the Composer build step will fail. This is because [cweagans/composer-patches](https://github.com/cweagans/composer-patches) use the patch utility to apply patches. The most recent version of this utility does not support binary patches and fails when deployed.
 
 A workaround for this issue, is to reconfigure the patch to exclude the binary contents in it.
+
+<Partial file="configure-wp-site-networks-with-integrated-composer.md" />
 
 ## FAQ
 
