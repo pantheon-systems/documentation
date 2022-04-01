@@ -46,7 +46,11 @@ This module provides general methods your site needs to access aspects of the in
 
 The API module is not needed for Drupal 8 or 9.
 
-**Note:** It is not necessary to use the API module directly. Use [Terminus](/terminus) to interact with your Pantheon site programmatically.
+<Alert title="Note" type="info">
+
+It is not necessary to use the API module directly. Use [Terminus](/terminus) to interact with your Pantheon site programmatically.
+
+</Alert>
 
 ### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
 
