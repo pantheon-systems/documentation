@@ -68,7 +68,13 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, file a support ticket requesting that the support engineers re-provision Solr for you.
 
-1. Once Solr has been re-provisioned you will be notified via this support ticket and you will then need to manually re-index Solr after failover.
+<Alert title="Note"  type="info" >
+
+ The failover state becomes the new default when a site fails over. This means that Solr re-provisioning is done in the failover state.
+
+</Alert>
+
+1. You will be notified via the support ticket when Solr has been re-provisioned. You will then need to manually re-index Solr after failover.
 
 The reindexing process is application-side, and depending on your site the process may be different.
 
