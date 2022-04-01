@@ -81,11 +81,11 @@ h4.info > a.external[href]::after {
   opacity: 1;
 }
 h1.main-headline {
-  font-family: 'TabletGothic';
+  font-family: 'Comic+Neue';
   font-weight: 700;
 }
 h1.title {
-  font-family: 'TabletGothic';
+  font-family: 'Comic+Neue';
   font-weight: 700;
   font-size: 50px;
   color: #313945;
@@ -124,7 +124,7 @@ p{
 
 h1{
   margin-top: 35px;
-  font-family: 'TabletGothic';
+  font-family: 'Comic+Neue';
   color: #313945;
   font-size: 50px;
   font-weight: 700;
