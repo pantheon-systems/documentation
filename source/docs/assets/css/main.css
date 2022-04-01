@@ -87,7 +87,7 @@ h1.main-headline {
 h1.title {
   font-family: 'Comic+Neue';
   font-weight: 700;
-  font-size: 50px;
+  font-size: 100px;
   color: #313945;
   line-height: 46px;
   margin-bottom: 30px;
@@ -123,7 +123,7 @@ p{
 }
 
 h1{
-  margin-top: 35px;
+  margin-top: 100px;
   font-family: 'Comic+Neue';
   color: #313945;
   font-size: 50px;

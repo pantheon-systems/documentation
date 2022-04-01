@@ -191,7 +191,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Comic Neue"],
+          families: ["Comic+Neue"],
         },
       },
     },
