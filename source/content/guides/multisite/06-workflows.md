@@ -16,8 +16,8 @@ use:
     - multisitepages
 permalink: docs/guides/multisite/workflows/
 nexturl: guides/multisite/debug/
-previousurl: guides/multisite/config/
-editpath: multisite/04-workflows.md
+previousurl: guides/multisite/workflows/
+editpath: multisite/06-workflows.md
 image: multisite
 ---
 Now that you're up and running with a WordPress Site Network on Pantheon, there are some important fundamentals to know.
