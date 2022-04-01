@@ -1,14 +1,14 @@
 ---
 title: WordPress Site Networks
-subtitle: Multisite Goverance
+subtitle: Multisite Governance
 description: Overview of WordPress multisite support on the Pantheon Platform.
 layout: guide
 type: guide
 cms: "WordPress"
 categories: [develop]
 tags: [multisite]
-permalink: docs/guides/multisite/multisite-goverance/
-editpath: multisite/04-multisite-goverance.md
+permalink: docs/guides/multisite/multisite-governance/
+editpath: multisite/04-multisite-governance.md
 image: multisite
 ---
 
@@ -58,9 +58,9 @@ Each WordPress site is owned or maintained by a different group at the Pantheon 
 
     - Manger Y manages WordPress
 
-![Site Goverance](../images/site-goverance-multisite.png)
+![Site Governance](../../images/site-governance-multisite.png)
 
-## Multisite Goverance
+## Multisite Governance
 
 A multisite setup setup can be more efficient for teams as long as roles and responsibilities are defined.
 
@@ -77,4 +77,4 @@ A multisite setup setup can be more efficient for teams as long as roles and res
 
 - Manages content and plugin settings for an individual multisite. 
 
-![Multisite Goverance Example](../images/multisite-goverance-example.png)
+![Multisite Governance Example](../../images/multisite-governance-example.png)
