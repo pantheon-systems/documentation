@@ -58,7 +58,7 @@ Each WordPress site is owned or maintained by a different group at the Pantheon 
 
     - Manger Y manages WordPress
 
-![Site Governance](../../images/site-governance-multisite.png)
+![Site Governance](../../../images/site-governance-multisite.png)
 
 ## Multisite Governance
 
@@ -77,4 +77,4 @@ A multisite setup setup can be more efficient for teams as long as roles and res
 
 - Manages content and plugin settings for an individual multisite. 
 
-![Multisite Governance Example](../../images/multisite-governance-example.png)
+![Multisite Governance Example](../../../images/multisite-governance-example.png)
