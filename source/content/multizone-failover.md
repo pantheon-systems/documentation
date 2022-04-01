@@ -74,9 +74,8 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 </Alert>
 
-1. Manually re-index Solr after you are notified through the support ticket that Pantheon is done re-provisioning Solr. 
+1. Manually re-index Solr after you are notified through the support ticket that Pantheon is done re-provisioning Solr. The re-indexing process is application-side, and varies by site.
 
-The reindexing process is application-side, and varies by site.
 
 <TabList>
 
