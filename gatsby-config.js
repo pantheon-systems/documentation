@@ -191,7 +191,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Open Sans"],
+          families: ["Comic Sans"],
         },
       },
     },
