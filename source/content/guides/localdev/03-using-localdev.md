@@ -60,7 +60,7 @@ From the **<i className="fa fa-wrench"></i> Develop** tab, you can:
 
 - View your local site files from **Open Finder**.
 
-- SSH into the local site container to run [Composer](/composer) [Drush](/drush), [WP-CLI](/wp-cli), or [Terminus](/terminus) commands from **Launch Terminal**. Note that this will connect into the container shell, not the terminal environment for your local computer.
+- SSH into the local site container to run [Composer](/guides/composer) [Drush](/drush), [WP-CLI](/wp-cli), or [Terminus](/terminus) commands from **Launch Terminal**. Note that this will connect into the container shell, not the terminal environment for your local computer.
 
 - View the database container information and access [phpMyAdmin](https://www.phpmyadmin.net/) if enabled from the [Config](#Config) tab.
 

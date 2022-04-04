@@ -1,5 +1,5 @@
 ---
-title: Drupal 8 with Build Tools to D9 with Build Tools
+title: Migrate to Drupal 9 on Pantheon
 subtitle: "Upgrade-in-place: Drupal 8 with Build Tools"
 description: Upgrade a Pantheon Drupal 8 site with Build Tools to a Drupal 9 site with Build Tools
 categories: [develop]
@@ -36,11 +36,11 @@ Before you continue, confirm that your site meets the following criteria:
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-Install the [jq](https://formulae.brew.sh/formula/jq) JSON processor and [rsync](https://formulae.brew.sh/formula/rsync) on your local environment if they aren't already installed. On MacOS with Homebrew, run:
+4. Install the [jq](https://formulae.brew.sh/formula/jq) JSON processor and [rsync](https://formulae.brew.sh/formula/rsync) on your local environment if they aren't already installed. Install with Homebrew, if using MacOS:
 
-```bash{promptUser: user}
-brew install jq rsync
-```
+  ```bash{promptUser: user}
+  brew install jq rsync
+  ```
 
 ## Prepare a Local Copy of the Site for Upgrade
 

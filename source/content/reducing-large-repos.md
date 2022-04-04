@@ -16,7 +16,7 @@ git clone --depth 1 ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/
 
 </Alert>
 
-Repositories that exceed 2GB may experience failures or degraded performance when interacting with code via Git on Pantheon. We recommend reducing the repository size by removing objects that are no longer referenced using [`git prune`](https://git-scm.com/docs/git-prune) in addition to optimizing via [`git gc`](https://git-scm.com/docs/git-gc). You may also want to review the repository for large files, then exclude them as needed.
+Repositories that exceed 2GB may experience failures or degraded performance when interacting with code via Git on Pantheon. We recommend reducing the repository size by removing objects that are no longer referenced using [`git prune`](https://git-scm.com/docs/git-prune), in addition to optimizing via [`git gc`](https://git-scm.com/docs/git-gc). You may also want to review the repository for large files, then exclude them as needed.
 
 
 <Alert title="Note" type="info">
@@ -32,6 +32,7 @@ If your default shell is something other than Bash (Zsh, for example), switch to
 You can output the size of your repository by running [`git count-objects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.
 
 ## Prune and Optimize Large Repositories
+
 
 1. [Clone the site's codebase](/git#clone-your-site-codebase), if you haven't already.
 
@@ -110,3 +111,4 @@ You can output the size of your repository by running [`git count-objects -vH`](
   git reflog expire --expire=now --all
   git gc --prune=now
   ```
+<Alert title="Note" type="info" >For sites using custom upstream, check the custom upstream to see if it contains large files that can be pruned.</Alert>

@@ -43,7 +43,7 @@ If an error is detected during an update attempt, the **Autopilot Status** shows
 
 1. Click **Review Test Results** to compare changes.
 
-If you accept the changes, click **Approve**. Otherwise, click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to choose whether to see the Multidev, or adjust the threshold for acceptable changes.
+1. Click **Approve** to accept the changes or click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to view the Multidev, or adjust the threshold for acceptable changes.
 
 ### Acknowledge All Failed Test Results Before You Run Another Test
 

@@ -14,7 +14,7 @@ anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 
-Pantheon Search with Solr 8 gives Drupal 8 or Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/integrated-composer) one-click updates.
+Pantheon Search with Solr 8 gives Drupal 8 or Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
 
 <Partial file="pantheon-search-status.md" />
 
@@ -48,7 +48,7 @@ Pantheon Search with Solr 8 can be used on Drupal 8 or Drupal 9 sites. You can s
 
 ### Prepare the Local Environment
 
-Review our documentation on [Git](/git), [Composer](/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/integrated-composer#pantheon-supports-composer-2) at a minimum.
+Review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
 
 - Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
@@ -101,7 +101,7 @@ search:
   version: 8
 ```
 
-After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/integrated-composer) to update your site modules.
+After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/guides/integrated-composer) to update your site modules.
 
 For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
 

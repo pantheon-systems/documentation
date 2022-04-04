@@ -10,7 +10,7 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
     <script key="twitter" src="https://platform.twitter.com/widgets.js" />,
     <script type="text/plain" class="optanon-category-2" src="https://crometrics-assets.s3.us-east-2.amazonaws.com/ATP/1.1.5/atp.pantheon.min.js" async></script>,
     // OneTrust Banner
-    <script src="https://cdn.cookielaw.org/langswitch/1e0d58d8-3a15-4544-a10a-efd792ffe07f.js" type="text/javascript" charSet="UTF-8" />,
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="086499a2-34e7-4e84-9fb1-0efb316b53bb" />,
       function OptanonWrapper() {
         window.dataLayer.push({event:'OneTrustGroupsUpdated'})
       }
