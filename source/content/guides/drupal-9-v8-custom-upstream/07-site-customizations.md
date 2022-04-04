@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v8/site-customizations
+permalink: docs/guides/drupal-9-v8-custom-upstream/site-customizations
 anchorid: site-customizations
-editpath: drupal-9-v8/07-site-customizations.md
+editpath: drupal-9-v8-custom-upstream/07-site-customizations.md
 ---
 Go through the following steps for each child site you wish to test, or that has site-specific code. Examples of site-specific code are site-specific redirects and custom modules only present on a specific site.
 

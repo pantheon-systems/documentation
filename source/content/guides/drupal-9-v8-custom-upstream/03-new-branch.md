@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v8/new-branch
+permalink: docs/guides/drupal-9-v8-custom-upstream/new-branch
 anchorid: new-branch
-editpath: drupal-9-v8/03-new-branch.md
+editpath: drupal-9-v8-custom-upstream/03-new-branch.md
 ---
 1. Create a local clone of the Custom Upstream repository using the SSH URL, and `cd` into the cloned repository:
 

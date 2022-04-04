@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v8/deploy
+permalink: docs/guides/drupal-9-v8-custom-upstream/deploy
 anchorid: deploy
-editpath: drupal-9-v8/09-deploy.md
+editpath: drupal-9-v8-custom-upstream/09-deploy.md
 ---
 Merge the code and files from the Multidev environment to the Dev environment.
 

@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v8/contrib-custom
+permalink: docs/guides/drupal-9-v8-custom-upstream/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9-v8/05-contrib-custom.md
+editpath: drupal-9-v8-custom-upstream/05-contrib-custom.md
 ---
 
 This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
