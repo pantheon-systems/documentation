@@ -25,11 +25,10 @@ If there are errors that require attention, in the **Needs Review** section of t
 
 1. Navigate to the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
 
-<<<<<<< HEAD
 1. Click **Autopilot Configuration** > click <em class="fa fa-refresh"></em> **Refresh Updates** to force Autopilot to check for new components if there are new components that Autopilot should check for (like plugins, modules, or themes).
 
 1. Click **Status** in Autopilot's side bar, then **Queue Updates** under <em class="fa fa-wrench"></em> **Available Updates** to manually run Autopilot.
-=======
+
 1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components.
 
 1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates**.
@@ -167,7 +166,7 @@ This error message most likely results from a merge conflict when applying upstr
 
 Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation.
 
-If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
+If the error is displayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
 ](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
 
 </Accordion>
