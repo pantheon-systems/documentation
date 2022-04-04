@@ -73,7 +73,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
  The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
 
- Autopilot will show warnings in the sections where Composer manages updates, if the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites).
+ Autopilot will show warnings in the sections where Composer manages updates, if the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites).
 
 1. Click **Save** for each section of the configuration in which you make changes.
 
@@ -161,7 +161,7 @@ Enabling the **Sync Environment** feature allows you to sync your Live environme
 
 Select the **Sync Live Environment** checkbox to sync your Live and Dev environments.
 
-![Enable Sync Environment](../../../images/autopilot-sync-environment.png)
+![Enable Sync Environment](../../../images/autopilot/autopilot-sync-environment.png)
 
 ## Enable Autopilot Email Notifications
 
