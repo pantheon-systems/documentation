@@ -11,3 +11,5 @@ permalink: docs/guides/drupal-9-v8/dependencies
 anchorid: dependencies
 editpath: drupal-9-v8/05-dependencies.md
 ---
+
+<Partial file="drupal-9/dependencies-compatible.md" />

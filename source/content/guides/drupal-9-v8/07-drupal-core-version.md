@@ -11,3 +11,5 @@ permalink: docs/guides/drupal-9-v8/drupal-core-version
 anchorid: drupal-core-version
 editpath: drupal-9-v8/07-drupal-core-version.md
 ---
+
+<Partial file="drupal-9/core-version.md" />

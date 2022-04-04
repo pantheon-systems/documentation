@@ -11,3 +11,8 @@ permalink: docs/guides/drupal-9-v8/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9-v8/13-troubleshooting.md
 ---
+<Partial file="composer-updating.md" />
+
+## See Also
+
+- [Composer Fundamentals and Workflows](/guides/composer)

@@ -11,3 +11,4 @@ permalink: docs/guides/drupal-9-v8/core-updates
 anchorid: core-updates
 editpath: drupal-9-v8/09-core-updates.md
 ---
+<Partial file="drupal-9/core-updates.md" />
