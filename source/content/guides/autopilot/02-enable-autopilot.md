@@ -135,7 +135,6 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
-<<<<<<< HEAD
 1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates.
 
 1. Select any that should be excluded from Autopilot, then click **Save**.
@@ -143,7 +142,7 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
 
 1. Select updates that should be excluded, then click **Save**.
->>>>>>> 45e53217d170ecb1f878425dfbef2043c1c075d5
+
 
 ### Excluded Web Elements
 
