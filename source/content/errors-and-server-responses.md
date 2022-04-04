@@ -45,9 +45,11 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 "Page Could Not Be Loaded. We're very sorry, but the page could not be loaded properly. This should be fixed very soon, and we apologize for any inconvenience." This error message will be accompanied by a page title of "503 First Byte Timeout". This means that the request has exceeded the platform web request timeout of 60 seconds (see our [timeouts documentation](/timeouts) for more information). See our [documentation on debugging](/debug-slow-performance) for some helpful insights on how to handle these cases.
 
 ### 503 Header Overflow
-"Header overflow" The new Pantheon Global Edge size limit for cookies (as sent in the request `"Cookie: .."` header) is 10K. If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
+"Header overflow." The new Pantheon Global Edge size limit for cookies, sent in the request `"Cookie: .."` header, is 10KB. If more than 10KB are sent, all cookies are dropped and the request is processed as if no cookies were sent. The header `"X-Cookies-Dropped: 1"` is added to truncated requests and responses. You can ignore this scenario in your PHP code or handle it by displaying a custom error page.
 
-This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For details, see [Environment-Specific Configurations for Drupal 8](/environment-specific-config-d8/#troubleshoot-503-response-header-overflow).
+This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For more information, refer to [Environment-Specific Configurations for Drupal 8](/environment-specific-config-d8/#troubleshoot-503-response-header-overflow).
+
+Try reducing the number of set-cookie headers in the response, if you receive a 503 error and your cookie size is smaller than 10KB.
 
 ### Pantheon 503 Target in Maintenance
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.

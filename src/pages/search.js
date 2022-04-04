@@ -7,7 +7,7 @@ class Search extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO image={"/assets/images/default-thumb-doc.png"} title="Search" />
+        <SEO image={"/images/assets/default-thumb-doc.png"} title="Search" />
         <div style={{ marginTop: "-20px" }} className="container">
           <main className=" doc-content-well" id="docs-main">
             <div className="">

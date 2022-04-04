@@ -65,4 +65,4 @@ Pantheon's Developer Advocacy team holds trainings and Office Hours, and monitor
 
 ## More Resources
 
-- [Integrated Composer](/integrated-composer) for another way to manage deployments and dependencies if you don't need a CI.
+- [Integrated Composer](/guides/integrated-composer) for another way to manage deployments and dependencies if you don't need a CI.

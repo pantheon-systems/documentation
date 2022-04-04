@@ -5,7 +5,7 @@ cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
-reviewed: "2021-09-13"
+reviewed: "2022-03-24"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -363,11 +363,22 @@ ___
 
 ## Elementor
 
-<ReviewDate date="2020-10-08" />
+<ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) Uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. This path cannot be changed via the WP-CLI search-replace function, or any other search & replace plugin.
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
 
-**Solution:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+
+For example: my.example.com
+
+Find or replace must handle `test.example.com` -> `my.example.com` and 
+`my.example.com` -> `test.example.com`.
+
+Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
+
+**Solution 2:** Use the search and replace feature in Elementor to enter the following:
+ 
+`/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
@@ -559,6 +570,16 @@ ___
 
 ___
 
+## One Click Demo Import
+
+<ReviewDate date="2022-03-30" />
+
+**Issue:** The [One Click Demo Import](https://wordpress.org/plugins/one-click-demo-import/) plugin returns a `502` error when automatically importing the demo files and pages for a theme. This generally happens when the process reaches the configured `max-execution` time in the Pantheon system `php` file.
+
+**Solution:** Select the **Switch to Manual Import** option to import the demo files, including, `content.xml`, `widgets.wie`, etc.
+
+___
+
 ## Popup Builder – Responsive WordPress Pop up – Subscription & Newsletter
 
 <ReviewDate date="2019-12-06" />
@@ -737,6 +758,16 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 
 - [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/)
 - [Yoast](https://wordpress.org/plugins/wordpress-seo/)
+
+___
+
+## Smush Pro
+
+<ReviewDate date="2022-03-24" />
+
+**Issue:** The [Smush Pro](https://wpmudev.com/docs/wpmu-dev-plugins/smush/) plugin requires NGINX configuration for WebP image support. This results in issues with assuming write access. In some cases, there is also an issue with the image library processing using a temporary filesystem. Both scenarios are incompatible with Pantheon's platform.
+
+**Solution:** Consider using Pantheon's [AGCDN](/guides/professional-services/advanced-global-cdn) as an alternative. AGCDN provides image optimization that saves PHP resources without the need for a plugin.
 
 ___
 
@@ -1413,7 +1444,7 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 
 ### wp_filesystem->get_contents()
 
-**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail when an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
+**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail wFhen an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
 
 **Solution:** As described in [this StackExchange answer](https://wordpress.stackexchange.com/questions/166161/why-cant-the-wp-filesystem-api-read-googlefonts-json/166172#166172), for cases where file ownership doesn't matter this function could be replaced with `file_get_contents()`. This is true of most cases where the file in question is only being read, not written to.
 

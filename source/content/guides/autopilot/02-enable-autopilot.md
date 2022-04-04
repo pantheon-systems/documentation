@@ -72,7 +72,11 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
  The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
+<<<<<<< HEAD
  Autopilot will show warnings in the sections where Composer manages updates, if the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites).
+=======
+If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+>>>>>>> 45e53217d170ecb1f878425dfbef2043c1c075d5
 
 1. Click **Save** for each section of the configuration in which you make changes.
 
@@ -131,9 +135,15 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
+<<<<<<< HEAD
 1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates.
 
 1. Select any that should be excluded from Autopilot, then click **Save**.
+=======
+1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
+
+1. Select updates that should be excluded, then click **Save**.
+>>>>>>> 45e53217d170ecb1f878425dfbef2043c1c075d5
 
 ### Excluded Web Elements
 

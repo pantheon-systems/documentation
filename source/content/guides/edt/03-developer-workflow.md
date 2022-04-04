@@ -34,7 +34,7 @@ All links from the video are provided below.
  - [Use the Pantheon Development Workflow](/pantheon-workflow)
  - [Pantheon Platform Considerations](/platform-considerations)
  - [Pantheon YAML Configuration Files](/pantheon-yml)
- - [Composer Fundamentals and Workflows](/composer)
+ - [Composer Fundamentals and Workflows](/guides/composer)
  - [Quick Start guide](/guides/quickstart)
 
 **CHALLENGE:**
