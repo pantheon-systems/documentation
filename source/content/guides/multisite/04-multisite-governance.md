@@ -21,7 +21,7 @@ There are two primary layers involved in the governance system when you own a mu
 - Organization admin (full portfolio)
 
     - Site owner (specific WP site)
-    
+
 **WordPress**
 
 - Network site admin (all sites)
@@ -75,7 +75,7 @@ A multisite setup can be more efficient for teams as long as roles and responsib
 - Manages the core WP site
 - Assigns users to country-specific subsites
 
-**3 - 5 Individual Network Site Owners**
+**Individual Network Site Owners**
 
 - 3 - 5 people in this role
 - Manages content and plugin settings for an individual multisite
