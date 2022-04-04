@@ -104,7 +104,7 @@ You can use external Crons if you want more control over your site's Cron jobs, 
 
 ### Disable WP-Cron
 
-By default, Pantheon's WordPress upstreams have WP_CRON disabled. If you wish to continue using WP_CRON, you will need to add the code below to your `wp-config.php` file to enable WP-Cron's internal processing. This line needs to be above the `require_once` expression that pulls in `wp-config-pantheon.php`.
+By default, Pantheon's WordPress upstreams have WP-CRON disabled. If you wish to continue using WP-CRON, you will need to add the code below to your `wp-config.php` file to enable WP-Cron's internal processing. This line needs to be above the `require_once` expression that pulls in `wp-config-pantheon.php`.
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', false);
