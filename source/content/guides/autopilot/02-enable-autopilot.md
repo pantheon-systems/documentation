@@ -155,13 +155,13 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 Configure Autopilot for each individual premium and paid plugins and modules. You may need to provide Autopilot with access or configure the plugin or module to work with Autopilot, Depending on the plugin. 
 
-## Enable Autopilot Sync Environment Feature
+## Enable Autopilot Sync Environment 
 
 Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code in the Dev Environment does not match the code in the Live environment.
 
 Select the **Sync Live Environment** checkbox to sync your Live and Dev environments.
 
-![Enable Sync Environment](../../../images/autopilot/autopilot-sync-environment.png)
+![Enable Sync Environment](../../images/autopilot-sync-environment.png)
 
 ## Enable Autopilot Email Notifications
 
