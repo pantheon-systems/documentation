@@ -21,22 +21,22 @@ There are two primary layers involved in the governance system when you own a mu
 - Organization admin (full portfolio)
 
     - Site owner (specific WP site)
-
+    
 **WordPress**
 
 - Network site admin (all sites)
 
     - Site admin (individual site)
 
-This means that both Pantheon and you manage your multisite.
+This means that both Pantheon and your team manage different aspects of your multisite.
 
-Pantheon's responsibilities:
+Pantheon's responsibilities include:
 
 - Managing themes
 - Administration
 - Other technical aspects
 
-Your responsibilities:
+Your team's responsibilities include:
 
 - Content creation and editing
 - Content accessibility
@@ -48,7 +48,7 @@ Your responsibilities:
 
 ## Multiple, Single Site Governance
 
-Each WordPress site is owned or maintained by a different group at the Pantheon level. There is a management difference between who owns the Pantheon account and can update code versus who manages the application with content and site-specific configuration.
+Each WordPress site is owned or maintained by a different group at the Pantheon level. There is a management difference between who owns the Pantheon account and can update code versus who manages the application with content and site-specific configuration. For example:
 
 - Site Owner US owns the US Pantheon site
 
@@ -62,19 +62,22 @@ Each WordPress site is owned or maintained by a different group at the Pantheon 
 
 ## Multisite Governance
 
-A multisite setup setup can be more efficient for teams as long as roles and responsibilities are defined.
+A multisite setup can be more efficient for teams as long as roles and responsibilities are defined.
 
-**1 Pantheon Owner**
+**Pantheon Owner**
+- 1 person in this role
 - Pays for account
 - Manages users who manage the platform, such as adding plugins, running backups, etc.
 
-**2 WordPress Network Administrator**
+**WordPress Network Administrator**
 
+- 2 people in this role
 - Manages the core WP site
-- Assigns users to country-specific subsites.
+- Assigns users to country-specific subsites
 
 **3 - 5 Individual Network Site Owners**
 
-- Manages content and plugin settings for an individual multisite. 
+- 3 - 5 people in this role
+- Manages content and plugin settings for an individual multisite
 
 ![Multisite Governance Example](../../../images/multisite-governance-example.png)
