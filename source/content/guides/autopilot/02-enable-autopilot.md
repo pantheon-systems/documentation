@@ -162,7 +162,7 @@ Enabling the **Sync Environment** feature allows you to sync your Live environme
 
 Select the **Sync Live Environment** checkbox to sync your Live and Dev environments.
 
-![Enable Sync Environment](../../../images/autopilot-sync-environment.png)
+![Enable Sync Environment](../../../images/autopilot/autopilot-sync-environment.png)
 
 ## Enable Autopilot Email Notifications
 
