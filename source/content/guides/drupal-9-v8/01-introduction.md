@@ -39,3 +39,7 @@ To maintain best practices and to avoid difficult, time-consuming repairs to the
 Pantheon support is not available to users who avoid the Multidev steps.
 
 </Alert>
+
+## See Also
+
+- [Composer Fundamentals and Workflows](/guides/composer)
