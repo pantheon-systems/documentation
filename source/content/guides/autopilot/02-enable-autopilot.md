@@ -98,7 +98,7 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
- Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code does not match the code in the Live environment.
+  Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code does not match the code in the Live environment.
 
 1. Click **Save** to save the changes.
 
@@ -150,10 +150,6 @@ You can add any CSS selectors that you want to exclude from the visual regressio
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
-
-## 
-
-![Autopilot Enable Environment Sync](../../../images/autopilot-sync-environment.png)
 
 ## Enable Autopilot Email Notifications
 
