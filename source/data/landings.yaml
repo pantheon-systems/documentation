@@ -1075,7 +1075,7 @@
 - title: 'Drupal 9 Migration Guides'
   subtitle: 'What is your starting environment?'
   path: 'drupal9'
- guides:
+  guides:
     - title: 'What is your starting environment?'
       type: 'normal'
       links:
