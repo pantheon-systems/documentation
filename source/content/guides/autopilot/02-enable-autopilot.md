@@ -10,7 +10,7 @@ showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2021-08-10"
+reviewed: "2022-04-05"
 ---
 
 ## Enable Autopilot
@@ -44,7 +44,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
    - Weekly
    - Daily ([Contact Sales](https://pantheon.io/contact-sales?docs))
 
-   Then use the dropdown menu to choose the deployment destination:
+1. Use the dropdown menu to choose the deployment destination:
 
    - Dev
    - Test
@@ -52,7 +52,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
    ![Autopilot Setup - Schedule screen. Select how frequently Autopilot should run and where successful updates should be applied.](../../../images/autopilot/autopilot-setup-schedule.png)
 
-   Click **Continue** to choose pages for screenshot comparison tests.
+1. Click **Continue** to choose pages for screenshot comparison tests.
 
 1. Add pages to track for visual regression testing. Autopilot automatically suggests up to ten URL paths during setup:
 
@@ -66,17 +66,17 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
-From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, then **Manage Autopilot Settings**.
+1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace > click **Actions** <i className="fa fa-chevron-down fa-w-14"></i> > **Manage Autopilot Settings**.
 
-The Autopilot Configuration page shows all the steps from the initial setup on one page.
+ The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+ If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
 
-Click **Save** for each section of the configuration in which you make changes.
+1. Click **Save** for each section of the configuration in which you make changes.
 
 ### Update Scope
 
-Use the **On**/**Off** toggles to choose which features and elements should be tracked for updates then click **Save**.
+Use the **On**/**Off** toggle to choose which features and elements should be tracked for updates then click **Save**.
 
 ![Autopilot Configuration screen - Customize the type of updates included in the automated updates.](../../../images/autopilot/autopilot-configuration-update-scope.png)
 
@@ -84,23 +84,23 @@ Use the **On**/**Off** toggles to choose which features and elements should be t
 
 ![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-configuration-destination-frequency.png)
 
-Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
+1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
 
-- Dev
-- Test
-- Live
+  - Dev
+  - Test
+  - Live
 
-Set the **Update Frequency** to schedule Autopilot to run:
+1. Set the **Update Frequency** to schedule Autopilot to run:
 
-- Never (Update Manually)
-- Weekly
-- Monthly
+  - Never (Update Manually)
+  - Weekly
+  - Monthly
 
-Click **Save** to save the changes.
+1. Click **Save** to save the changes.
 
 ### Visual Test Screenshots
 
-Add pages to track for visual regression testing, along with a percent of acceptable change.
+You can add pages to track for visual regression testing, along with a percent of acceptable change.
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
@@ -135,7 +135,7 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ### Excluded Web Elements
 
-Add any CSS selectors that you want to exclude from the visual regression tests.
+You can add any CSS selectors that you want to exclude from the visual regression tests.
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
@@ -146,6 +146,14 @@ Add any CSS selectors that you want to exclude from the visual regression tests.
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+
+## Enable Autopilot Sync Environment 
+
+Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code in the Dev Environment does not match the code in the Live environment.
+
+Select the **Sync Live Environment** checkbox under **Destination & Frequency** to sync your Live and Dev environments.
+
+![Autopilot Enable Environment Sync](../../../images/autopilot-sync-environment.png)
 
 ## Enable Autopilot Email Notifications
 

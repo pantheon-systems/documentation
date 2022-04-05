@@ -12,10 +12,10 @@ showtoc: true
 anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
-reviewed: "2021-08-17"
+reviewed: "2022-04-05"
 ---
 
-[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
+[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
 ## What Autopilot Does
 
@@ -30,17 +30,35 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-Autopilot is available to Gold Accounts and higher. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
+utopilot is available for the following accounts:
+
+ - Gold
+ - Platinum
+ - Diamond
+
+Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to discuss which plan is best for your needs.
 
 ## Who is Autopilot For?
 
-If you build or maintain WordPress and Drupal sites, Autopilot is for you.
+Autopilot is for you if you build or maintain WordPress and Drupal sites.
 
 Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
 Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Accounts or higher.
 
 Autopilot is enabled for Pantheon sites at the organization level.
+
+## Autopilot Requirements
+
+Autopilot requires the following:
+
+- A Gold, Platinum, or Diamond account
+- [Multidev](/multidev)
+- A compatible version of Drush (if you are not using Integrated Composer)
+
+### Autopilot Drush, Integrated Composer, and Multisite Compatibility 
+
+![Autopilot Drush and Integrated Composer Compatibility and Requirements](../../../images/autopilot/autopilot-drush-and-ic-compatibility.jpg)
 
 ## FAQ
 
