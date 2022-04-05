@@ -86,19 +86,19 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 1. Set the **Deployment Destination** to the desired environment: 
 
-  - Dev
-  - Test
-  - Live
+    - Dev
+    - Test
+    - Live
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
-  - Never (Update Manually)
-  - Weekly
-  - Monthly
+    - Never (Update Manually)
+    - Weekly
+    - Monthly
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
-  Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code does not match the code in the Live environment.
+   Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code does not match the code in the Live environment.
 
 1. Click **Save** to save the changes.
 
