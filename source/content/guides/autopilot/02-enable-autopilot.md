@@ -98,7 +98,7 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
-   Enabling the **Sync Environment** feature allows you to sync your Live environment to your Dev environment. This feature only syncs databases and files. Code is not synced between environments. Autopilot will use the code in the Dev environment if the code does not match the code in the Live environment.
+   The **Sync Environment** feature syncs your Live environment to your Dev environment. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
 
 1. Click **Save** to save the changes.
 
