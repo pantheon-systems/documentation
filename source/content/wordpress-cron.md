@@ -4,7 +4,7 @@ description: Learn how to create and run jobs using Pantheon Cron or WordPress's
 cms: "WordPress"
 categories: [automate]
 tags: [cron]
-contributors: [greg-1-anderson, CdrMarks, whitneymeredith]
+contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814]
 ---
 
 ## Cron Overview
@@ -104,12 +104,10 @@ You can use external Crons if you want more control over your site's Cron jobs, 
 
 ### Disable WP-Cron
 
-You will need to disable WP-Cron if your upstream does not have the definition below.
-
-Add the code below to your `wp-config.php` file to disable WP-Cron's internal processing:
+Pantheon's WordPress upstreams disable WP-Cron by default. You must add the code below to your `wp-config.php` file to enable WP-Cron's internal processing if you want to continue using WP-Cron. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`.
 
 ```php:title=wp-config.php
-define('DISABLE_WP_CRON', true);
+define('DISABLE_WP_CRON', false);
 ```
 
 ### Free Services
