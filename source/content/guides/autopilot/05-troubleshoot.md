@@ -19,21 +19,21 @@ This page helps troubleshoot common issues that you may encounter when using Aut
 
 If you have already attempted to troubleshoot an error, or if you want to confirm that the error is consistent, try running Autopilot on the site again:
 
-1. Autopilot will not allow updates to be queued until all errors have been reviewed and acknowledged.
+1. Review and acknowledge any errors to allow Autopilot to queue updates. 
 
-If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
+   If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
-1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
+1. Click **Sites** > **Actions** >  **Manage Autopilot Settings**.
 
-1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components.
+1. Navigate to the **Autopilot Configuration** screen > click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
-1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates**.
+1. Click **Status** in Autopilot's side bar > click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually. 
 
 ### Re-run Autopilot If Tests Have Already Passed
 
-Manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence.
+You must manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence. To start an update manually:
 
-To manually start an update, click **Actions** in the site's row on the Autopilot screen, and click **Start Applying Updates**.
+Click **Actions** in the site's row on the Autopilot screen > click **Start Applying Updates**.
 
 ### Re-run Autopilot If Tests Were Approved After Dev Changes
 
