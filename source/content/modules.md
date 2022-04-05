@@ -20,7 +20,7 @@ WordPress users should review [Pantheon Plugins](/plugins) for details on WordPr
 The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/global-cdn) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
 
 ## [Site Audit](https://www.drupal.org/project/site_audit)
-Static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
+Static site analysis is a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
 
 ## [Search API Pantheon (Drupal 8)](https://www.drupal.org/project/search_api_pantheon)
 
