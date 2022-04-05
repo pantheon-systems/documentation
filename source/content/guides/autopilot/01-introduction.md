@@ -30,7 +30,7 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-utopilot is available for the following accounts:
+Autopilot is available for the following accounts:
 
  - Gold
  - Platinum
@@ -66,7 +66,7 @@ Autopilot requires the following:
 
 ### Is Autopilot configurable per site?
 
-Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/autopilot/enable-autopilot)
+Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/autopilot/enable-autopilot).
 
 ### Will Autopilot email VRT results?
 
@@ -85,9 +85,9 @@ Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/gu
 The version(s) of Drush that are supported by Autopilot for sites:
 - **Up to (not including) Drupal 9**: Drush 8
 - **Drupal 9 with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
-- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not currently compatible with Drush 10.
+- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
 
-Currently, Autopilot only supports Drush 8 for all sites up to Drupal 9.
+Autopilot only supports Drush 8 for all sites up to Drupal 9.
 
 All Drupal 9 sites that use Integrated Composer are compatible with Autopilot.
 
