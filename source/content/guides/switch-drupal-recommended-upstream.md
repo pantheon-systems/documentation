@@ -7,7 +7,7 @@ cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
 contributors: [kporras07]
-reviewed: "2022-02-22"
+reviewed: "2022-04-03"
 ---
 
 In this guide, we will convert an existing site from the Drupal 9 (`drupal9`) upstream to the new Drupal with Composer (`drupal-recommended`) upstream.
@@ -82,13 +82,13 @@ After you complete the upstream change, you need to apply the available upstream
 
 ### Solving Merge Conflicts When Applying Upstream Updates
 
-Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
+Conflicts can occur when a modified file within your site's codebase does not align with changes made to the same file in the site's upstream.
 
-> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
+> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to resolve the merge.
 >
 > \- [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflict with a preference for upstream changes.
 
 This is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
@@ -100,10 +100,10 @@ git push origin master
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
-If you modified upstream files, the `-Xtheirs` flag will drop your changes. In that case you should [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts). 
+If you modified upstream files, the `-Xtheirs` flag will drop your changes. You should [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
 
 
-Once you applied the upstream updates (either via the dashboard or after solving merge conflicts) you are now in the Drupal with Composer upstream.
+After you apply the upstream updates, either using the Dashboard or after solving merge conflicts, you are will be in the Drupal with Composer upstream.
 
 ## See Also
 
