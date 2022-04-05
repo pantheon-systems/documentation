@@ -1,5 +1,5 @@
 ---
-title: Switch from Drupal 9 to Drupal with Composer upstream
+title: Switch from Drupal 9 to Drupal with Composer Upstream
 description: Switch to the new Pantheon upstream to take advantage of the new structure and future updates.
 type: guide
 permalink: docs/guides/:basename
@@ -10,7 +10,7 @@ contributors: [kporras07]
 reviewed: "2022-02-22"
 ---
 
-In this guide, we will convert an existing site from the Drupal 9 (drupal9) upstream to the new Drupal with Composer (drupal-recommended) upstream.
+In this guide, we will convert an existing site from the Drupal 9 (`drupal9`) upstream to the new Drupal with Composer (`drupal-recommended`) upstream.
 
 ## Overview
 
@@ -26,11 +26,11 @@ The goals of this conversion are:
 
 You must confirm that your site meets the following requirements before you continue:
 
-- Ensure your site has the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream.
+- Ensure your site uses the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream.
 
-  ### Use Terminus to Confirm the drupal9 Upstream
+### Use Terminus to Confirm the drupal9 Upstream
 
-  Run the command `terminus site:info $SITE` to display the site's basic information and properties.
+Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
  The following values indicate that a site is using a `drupal9` upstream:
   * The `Framework` is `drupal8`
@@ -54,7 +54,7 @@ You must confirm that your site meets the following requirements before you cont
 
 ## Before You Begin
 
-- This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the Upstream.
+- This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the upstream.
 
 ## Prepare the Local Environment
 
@@ -72,13 +72,13 @@ Change the upstream your site is tracking with the following command:
 terminus site:upstream:set $SITE drupal-recommended
 ```
 
-Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
+Following the `drupal-recommended` upstream will help keep your site current with any general configuration changes recommended by Pantheon.
 
-Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
+Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the upstream.
 
 ## Apply New Upstream Updates
 
-Once you did the upstream change, you need to apply the available upstream updates. You could first try to do this from the Pantheon Dashboard in the dev environment. If it works then you are ready; otherwise, continue to the next section about merge conflicts.
+After you complete the upstream change, you need to apply the available upstream updates. Try to do this from the Pantheon Dashboard in the Dev environment. If this is not successful, continue to the next section about merge conflicts.
 
 ### Solving Merge Conflicts When Applying Upstream Updates
 
