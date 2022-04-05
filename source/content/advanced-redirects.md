@@ -243,9 +243,7 @@ Alternatively, you can remove the file entirely from the old location. In this c
 
 ## Redirects and Rewrites with PHP
 
-Pantheon uses Nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on Pantheon using the code in the following repository: 
-
-[PHP Redirects and Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites)
+Pantheon uses Nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on the Pantheon platform using the code in the [Pantheon htacess Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) repository.
 
 The file must be included at the very beginning of your Drupal `settings.php` or Wordpress `wp-config.php` file. The code will perform rewrites and redirects prior to full Wordpress or Drupal bootstrap.
 
