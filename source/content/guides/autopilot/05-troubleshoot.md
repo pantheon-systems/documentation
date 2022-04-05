@@ -79,7 +79,7 @@ An error occurred because your site is currently running an unsupported version 
 
 Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error.
 
-Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
 
 ### Solution
 
@@ -159,7 +159,7 @@ This error message most likely results from a merge conflict when applying upstr
 
 ### Solution
 
-Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation.
+Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
 ](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
@@ -180,7 +180,7 @@ Autopilot fails when a VRT page redirects more than 8 times or is stuck in an in
 
 ### Solution
 
-To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for the page.
+To resolve this issue, remove the page from VRT settings or fix the redirect in the Dev environment for the page.
 
 </Accordion>
 
@@ -204,7 +204,7 @@ Add at least one site to the Autopilot VRT settings.
 
 ### Issue
 
-Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
+Autopilot failed to deploy to Test or Live; however, deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
 
 ### Solution
 
@@ -280,11 +280,11 @@ Use the following steps:
 
 * For WordPress:
 
-`wp cache flush`
+  `wp cache flush`
 
 * Drupal:
 
-`drush cache-rebuild`
+  `drush cache-rebuild`
 
 </Accordion>
 
@@ -312,7 +312,7 @@ A CMS was not detected.
 
 ### Solution
 
-Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the [documentation](https://pantheon.io/docs/create-sites).
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](https://pantheon.io/docs/create-sites).
 
 </Accordion>
 
@@ -336,7 +336,7 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Diagnosis
 
-Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currently, WordPess Multisite (`wordpress_network`) is not supported.
+Site is running a framework that is not Drupal, Drupal 8, or WordPress. WordPess Multisite (`wordpress_network`) is not supported.
 
 ### Solution
   
