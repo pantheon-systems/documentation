@@ -1074,8 +1074,16 @@
           url: '/guides/sendgrid'
 - title: 'Drupal 9 Migration Guides'
   path: 'drupal9'
-  subtitle: this is a subtitle
-  text: What is your starting environment?
+  cta:
+    title: 'Terminus Manual'
+    type: 'reference'
+    subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
+    url: '/terminus'
+  cta_alt:
+    type: 'Essential Developer Training'
+    title: 'Command Line Interface with Terminus'
+    subtitle: "An introduction to Terminus: Pantheon's command line interface."
+    url: 'https://pantheon.io/docs/guides/edt/terminus-cli/'
   subtopics:
     - title: 'I am hosted on Pantheon, running Drupal version 8'
       subtopic-lists:
