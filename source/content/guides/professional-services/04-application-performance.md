@@ -18,7 +18,7 @@ The Application Performance and Architecture team provides targeted help with yo
 
 The Application Performance and Architecture team provides packaged services to audit and recommend remediation for your site performance. In some cases, we may be able to provide custom code solutions for your specific issues.
 
-Our CMS architects are experts on the Pantheon platform and offer targeted solutions for:
+Our architects are CMS and Pantheon platform experts and offer targeted solutions for:
  
 - Database performance
 - Frontend / Core Web Vitals
