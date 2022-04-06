@@ -1073,21 +1073,25 @@
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
 - title: 'Drupal 9 Migration Guides'
-  subtitle: 'What is your starting environment?'
   path: 'drupal9'
-  guides:
-    - title: 'What is your starting environment?'
-      type: 'normal'
-      links:
-        - text: 'Quick Start'
-          url: '/guides/quickstart'
-        - text: 'Launch Essentials'
-          url: '/guides/launch'
-        - text: 'Frontend Performance'
-          url: '/guides/frontend-performance'
-        - text: 'Terminus Manual'
-          url: '/terminus'
-        - text: 'GitHub Pull Request Workflow'
-          url: '/guides/build-tools'
-        - text: 'Using Git with SFTP & WordPress'
-          url: '/guides/wordpress-git'
+  subtopics:
+    - title: 'I am hosted on Pantheon, running Drupal version 8'
+      subtopic-lists:
+        - title: 'I am migrating a Custom Upstream'
+          links:
+            - text: 'Migrate a Drupal 8 Custom Upstream'
+              url: '/guides/drupal-9-v8-custom-upstream'
+        - title: 'I am using a package and dependency manager'
+          links:
+            - text: 'Migrate from a Build Tools Managed Drupal 8 Site'
+              url: '/guides/drupal-9-v8-custom-upstream'
+            - text: 'Migrate a Composer Managed Drupal 8 Site'
+              url: '/guides/drupal-9-v8-composer'
+        - title: 'My site has a drops-8 Repository'
+          links:
+            - text: 'Migrate a Site with a Drops-8 Repository'
+              url: '/guides/drupal-9-v8-drops'
+        - title: 'My scenario is not listed here'
+          links:
+            - text: 'Migrate a Drupal 8 Site'
+              url: '/guides/drupal-9-v8'
