@@ -1,7 +1,7 @@
 ---
 title: Migrate a Drupal 9 Site from Another Platform to Drupal 9
 subtitle: Introduction
-description: 
+description: Learn how to migrate a site that's hosted on another platform to Drupal 9
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]

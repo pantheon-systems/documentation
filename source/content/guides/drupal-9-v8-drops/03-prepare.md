@@ -14,9 +14,3 @@ editpath: drupal-9-v8-drops/03-prepare.md
 
 <Partial file="drupal-9/prepare-local-environment.md" />
 
-This doc uses the following aliases:
-
-- **Alias:** `D8_SITE`
-  - **Site Name:** `best-drupal8-site-ever`
-- **Alias:** `D9_SITE`
-  - **Site Name:** `best-drupal9-site-ever`

@@ -1,7 +1,7 @@
 ---
 title: Migrate from a Build tools Managed Drupal 8 Site to Drupal 9
 subtitle: Introduction
-description: 
+description: Learn how to migrate a Drupal 8 Site to Drupal 9
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]

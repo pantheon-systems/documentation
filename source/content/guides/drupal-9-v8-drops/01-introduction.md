@@ -21,5 +21,13 @@ This guide will show you how to migrate a site that meets the following criteria
 |Dependency Manager| None
 |Custom Upstream| No
 
+This doc uses the following aliases:
+
+- **Alias:** `D8_SITE`
+  - **Site Name:** `best-drupal8-site-ever`
+- **Alias:** `D9_SITE`
+  - **Site Name:** `best-drupal9-site-ever`
+
 ## Requirements
+
 <Partial file="drupal-9/upgrade-site-requirements.md" />

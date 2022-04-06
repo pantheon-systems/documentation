@@ -20,7 +20,7 @@ This guide will show you how to migrate a site that meets the following criteria
 |Dependency Manager| None
 |Custom Upstream| Yes
 
-The process is similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/guides/drupal-9-migration/upgrade-to-d9) guide, except that you will stay on Drupal 8 with some special considerations for Custom Upstreams, and can defer the Drupal 9 upgrade to later.
+The process is similar to the [Upgrade Pantheon Drupal 8 Sites to Drupal 9 With Integrated Composer](/guides/drupal-9-v8-composer) guide, except that you will stay on Drupal 8 with some special considerations for Custom Upstreams, and can defer the Drupal 9 upgrade to later.
 
 From a local clone of the site, you will replace the entire site's file structure with the code from Pantheon's Integrated Composer upstream, then re-add your contrib and custom code to the new codebase. Then, you will create Multidev environments on individual sites for testing and apply any site-specific code customizations.
 

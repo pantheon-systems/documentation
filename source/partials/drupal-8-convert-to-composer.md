@@ -140,7 +140,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="could-not-find-version-module_name.md" />	  
+    <Partial file="module_name.md" />	  
 
 
 #### Other Composer Packages

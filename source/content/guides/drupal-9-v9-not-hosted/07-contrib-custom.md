@@ -13,12 +13,12 @@ editpath: drupal-9-v9-not-hosted/07-contrib-custom.md
 ---
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
-### Contributed Code
+## Contributed Code
 
 The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as *contributed code*). The only items from the existing site that should remain in the Git repository are custom code, custom themes, and custom modules that are specific to the existing site.
 
 
-#### Modules and Themes
+### Modules and Themes
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
@@ -131,9 +131,3 @@ diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
 
 Commit your changes as needed.
 
-### Push to the dev environment
-
-Now push to the Pantheon dev environment:
-
-```bash{promptUser:user}
-git push origin master

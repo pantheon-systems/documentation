@@ -18,4 +18,3 @@ editpath: drupal-9-v8/03-prepare.md
 
 <Partial file="drupal-apply-upstream-updates.md" />
 
-<Partial file="drupal-8-to-drupal-9-upgrade.md" />

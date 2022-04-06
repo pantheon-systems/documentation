@@ -1,7 +1,7 @@
 ---
 title: Migrate a Composer Managed Drupal 8 Site to Drupal 9
 subtitle: Introduction
-description: 
+description: Learn how to migrate a Drupal 8 Site to Drupal 9
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
@@ -19,15 +19,12 @@ This guide will show you how to migrate a site that meets the following criteria
 |Drupal Version| 8
 |Dependency Manager| Composer
 |Custom Upstream| No
-<Alert title="Note"  type="info" >
-
-Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to Drupal 9.
-
-</Alert>
-
 ## Requirements
 
 You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream. 
+
+
+
 
 ## See Also
 

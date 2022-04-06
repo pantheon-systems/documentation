@@ -1,7 +1,7 @@
 ---
 title: Migrate a Drupal 9 Site from Another Platform to Drupal 9
 subtitle: Prepare
-description: 
+description: Learn how to migrate a Drupal 8 Site to Drupal 9
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
@@ -11,7 +11,6 @@ permalink: docs/guides/drupal-9-v9-not-hosted/prepare
 anchorid: 
 editpath: drupal-9-v9-not-hosted/03-prepare.md
 ---
-## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 

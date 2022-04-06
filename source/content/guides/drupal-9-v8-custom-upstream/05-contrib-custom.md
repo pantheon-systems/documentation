@@ -11,8 +11,7 @@ permalink: docs/guides/drupal-9-v8-custom-upstream/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9-v8-custom-upstream/05-contrib-custom.md
 ---
-
-This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
+This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 <Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">
 
@@ -26,19 +25,19 @@ Access the list of differences by adding the `drops-8` upstream as a second remo
    cd master
    ```
 
-1. Add `drops-8` as a second remote:
+2. Add `drops-8` as a second remote:
 
    ```bash{promptUser:user}
    git remote add drops-8 https://github.com/pantheon-systems/drops-8.git && git fetch drops-8
    ```
 
-1. Return a list of the differing files:
+3. Return a list of the differing files:
 
    ```bash{promptUser:user}
    git diff --stat drops-8/master
    ```
 
-1. Run `git diff` for different lines within a specific file:
+4. Run `git diff` for different lines within a specific file:
 
    ```bash{promptUser:user}
    git diff drops-8/master $FILENAME
@@ -48,7 +47,7 @@ Compare the differences and note the ones that you will need to reapply to the I
 
 </Accordion>
 
-### Modules
+## Modules
 
 On the `composerify` branch, make a list of the modules that will need to be re-added:
 
@@ -108,7 +107,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 
   </Accordion>
 
-### Contrib Modules and Themes
+## Contrib Modules and Themes
 
 1. In your terminal, from the `composerify` branch, `cd` to `upstream-configuration`:
 
@@ -140,7 +139,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
       git commit -am "Adding MODULE_NAME"
       ```
 
-### Custom Modules and Themes
+## Custom Modules and Themes
 
 For custom modules and themes, the process is the same as in [Upgrade to Drupal 9](/guides/drupal-9-migration/upgrade-to-d9#modules-and-themes-1).
 
