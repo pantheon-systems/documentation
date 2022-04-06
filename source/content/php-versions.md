@@ -28,8 +28,8 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
-| 8.1 | ➖ | Available <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0 or 8.1. New Relic is not supported in PHP 8.1." /> |
-| [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active  |
+| 8.1 | ➖ | Available <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.1. New Relic is not supported in PHP 8.1." /> |
+| [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0." /> |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
 | [7.3](https://v73-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [7.2](https://v72-php-info.pantheonsite.io/) | ❌          | EOL     |
@@ -55,13 +55,13 @@ End-of-life (**EOL**) versions are available on the platform but no longer under
 
 \* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment. 
 
-<Alert title="Note" type="info">
+#### Compatibility Considerations
 
-New Relic is not supported in PHP 8.1 and WordPress is not fully compatible with PHP 8.0 or 8.1. 
-  
-All remaining known PHP 8.1 issues are deprecation notices. With a deprecation notice, the PHP code will continue to work for supported entities.
+New Relic is not supported in PHP 8.1
 
-</Alert>
+WordPress is not fully compatible with PHP 8.0 or PHP 8.1 and deprecation notices remain in WordPress 5.9. With a deprecation notice, the PHP code will continue to work for supported entities until a future release. 
+
+You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on the [WordPress core](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) site.
 
 ### CMS Version Requirements
 
