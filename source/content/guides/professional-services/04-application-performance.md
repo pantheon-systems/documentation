@@ -1,0 +1,27 @@
+---
+title: Pantheon Professional Services
+subtitle: Application Performance and Architecture
+description: Frontend and backend help with your WordPress and Drupal sites.
+categories: [performance]
+tags: [cdn, security, professional-services]
+reviewed: "2022-04-06"
+layout: guide
+showtoc: true
+permalink: docs/guides/professional-services/application-performance
+anchorid: application-performance
+editpath: professional-services/04-application-performance.md
+---
+
+The Application Performance and Architecture team provides targeted help with your WordPress and Drupal applications. The Professional Services' software architects are particularly qualified to help with frontend and backend performance challenges, as well as your workflow automations. 
+
+## Packaged Services
+
+The Application Performance and Architecture team provides packaged services to audit and recommend remediation for your site performance. In some cases, we may be able to provide custom code solutions for your specific issues.
+
+Our CMS architects are experts on the Pantheon platform and offer targeted solutions for:
+ 
+- Database performance
+- Frontend / Core Web Vitals
+- Advanced WebOps workflows
+
+Talk with your Account Manager or Sales Engineer for more details.
