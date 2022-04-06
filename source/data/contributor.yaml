@@ -340,14 +340,6 @@
   bio: API, Cloud & Integration Expert
   avatar: //avatars3.githubusercontent.com/u/192050
   github: //github.com/LukasRos
-- id: jspellman814
-  name: John Spellman
-  avatar: //github.com/jspellman814.png?size=460
-  github: //github.com/jspellman814
-  wordpress: //profiles.wordpress.org/jspellman
-  drupal: //www.drupal.org/u/jspellman
-  linkedin: //www.linkedin.com/in/john-spellman-86039262
-  bio: Software Engineer, Pantheon
 - id: peter-pantheon
   name: Peter Sawczynec
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
@@ -361,6 +353,14 @@
   github: //github.com/eeeschwartz/
   linkedin: //www.linkedin.com/in/eeeschwartz
   bio: Civic developer, human centered!
+- id: jspellman814
+  name: John Spellman
+  avatar: //github.com/jspellman814.png?size=460
+  github: //github.com/jspellman814
+  wordpress: //profiles.wordpress.org/jspellman
+  drupal: //www.drupal.org/u/jspellman
+  linkedin: //www.linkedin.com/in/john-spellman-86039262
+  bio: Software Engineer, Pantheon
 - id: stovak
   name: Tom Stovall
   github: //github.com/stovak
