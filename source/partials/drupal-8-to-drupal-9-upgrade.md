@@ -4,7 +4,7 @@
 
 ## Set Drupal Core Version
 
-1. Run the code below to set the Drupal core version to Drupal 9:
+1. Set the Drupal core version to Drupal 9:
 
   ```shell{promptUser: user}
   composer require --update-with-dependencies --no-update 'drupal/core-recommended:^9' 'drupal/core-composer-scaffold:^9'
