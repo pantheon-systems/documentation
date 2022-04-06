@@ -37,16 +37,13 @@ It means you have some code (plugin or theme) that's using PHP Sessions, which r
 
 ### PHP Version Compatibility
 
-WordPress is not fully compatible with PHP 8.0 or 8.1. All remaining known PHP 8.1 issues are deprecation notices.
+WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issues with PHP 8.1 are deprecation notices. A deprecation notice is not an error, but an indicator of the compatibility work that is needed before PHP 9 is released and notices become fatal errors. The PHP code will continue to work with the deprecation notices. 
 
-A deprecation notice is not an error, but an indicator of where additional work is needed for compatibility before PHP 9 is released and notices become fatal errors. With a deprecation notice, the PHP code will continue to work and nothing is broken.
-
-For more information, refer to the [PHP versions](/php-versions) documentation. 
+For more information, refer to the [PHP Versions](/php-versions) documentation. 
 
 ## Site Networks / Multisite
 
 Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
-
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
