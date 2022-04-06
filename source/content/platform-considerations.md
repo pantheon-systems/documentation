@@ -71,7 +71,7 @@ Note that within the home directory, only `/code`, `/files`, and `/tmp` are writ
 
 Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/nginx`.
 
-External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
+External scripts that access your PHP or NGINX logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
 
 See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
 
