@@ -4,7 +4,7 @@ description: Learn more about the checks we automatically run on your Pantheon W
 cms: "WordPress"
 categories: [go-live]
 tags: [webops, launch]
-reviewed: "2020-05-27"
+reviewed: "2021-04-06"
 ---
 
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
@@ -22,6 +22,24 @@ In short, you get a fast, repeatable report that can help detect common problems
 ## How Does it Work?
 
 WP Launch Check is a site audit extension for WP-CLI designed for Pantheon customers. While designed initially for the Pantheon Dashboard it is intended to be fully usable outside of Pantheon.
+
+## WPScan Dependency
+
+WP Launch Check utilizes the [WPScan plugin](https://wordpress.org/plugins/wpscan/) to check for outdated or vulnerable plugins. If you wish to use this service to receive an alerts when your plugins need to be updated, you'll need to obtain an [API token](https://wpscan.com/pricing) from their website and configure your site to use your token.
+
+### Configuring WPScan
+
+Configuring WPScan is easy. Once you've obtain your API token, add it to your site's `wp-config.php` file using the following PHP code: 
+
+```php:title=wp-config.php
+define( 'WPSCAN_API_TOKEN', '$your_api_token' );
+```
+
+Alternatively, you could use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to add you API token at the platform level. The API token is [accessed from WP Launch Check](https://github.com/pantheon-systems/wp_launch_check/blob/9ddfd899b80ff42fa3ab060c2f44b930e8278069/php/pantheon/checks/plugins.php#L80) via `getenv('PANTHEON_WPVULNDB_API_TOKEN')`. To set this environment variable, follow the steps to install the Terminus Secrets Plugin, and add your token to your chosen environment:
+
+```bash
+terminus secrets:set <site>.<env> PANTHEON_WPVULNDB_API_TOKEN <value>
+```
 
 ## Run Launch Check Manually
 
