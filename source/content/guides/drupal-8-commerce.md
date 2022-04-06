@@ -123,7 +123,7 @@ In addition to Pantheon, you will need accounts at:
   terminus drush $SITENAME.dev -- site-install commerce
   ```
 
-1.Review the last two lines of output to identify the username and password created:
+1. Review the last two lines of output to identify the username and password created:
 
   ```bash
   Installation complete.  User name: admin  User password: jTHD8hd85U         [ok]
@@ -134,7 +134,7 @@ In addition to Pantheon, you will need accounts at:
 
     ![Drupal Commerce in the Toolbar](../../images/guides/drupal-8-commerce/commerce-button.png)
 
-## Conclusion
+## Next Steps
 
 What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/guides/composer) doc for more information.
 
