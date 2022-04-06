@@ -82,20 +82,20 @@ In addition to Pantheon, you will need accounts at:
 
 1. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
 
-```bash[prompt}
+  ```bash[prompt}
   git status
-On branch master
-Your branch is up to date with ‘origin/master’
+  On branch master
+  Your branch is up to date with ‘origin/master’
 
-Changes not staged for commit:
+  Changes not staged for commit:
   (use “git add <filename>...” to update what will be committed)
   (use “git checkout <filename>...” to discard changes in working directory
 
-    modified:    composer.json
-    modified:    composer.lock
+      modified:    composer.json
+      modified:    composer.lock
 
-no changes added to commit (use “git add” and/or “git commit -a”)
-```
+    no changes added to commit (use “git add” and/or “git commit -a”)
+  ```
 
 1. Commit the new files and push them to GitHub:
 
