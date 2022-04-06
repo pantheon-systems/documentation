@@ -12,11 +12,11 @@ anchorid: application-performance
 editpath: professional-services/04-application-performance.md
 ---
 
-The Application Performance and Architecture team provides targeted help with your WordPress and Drupal applications. The Professional Services' software architects are particularly qualified to help with frontend and backend performance challenges, as well as your workflow automation. 
+Pantheon's Application Performance and Architecture team provides targeted help with your WordPress and Drupal applications. Our software architects are particularly qualified to help with frontend and backend performance challenges, as well as your workflow automation. 
 
 ## Packaged Services
 
-The Application Performance and Architecture team provides packaged services to audit and recommend remediation for your site performance. In some cases, we may be able to provide custom code solutions for your specific issues.
+Our Application Performance and Architecture team provides packaged services to audit and recommend remediation for your site performance. In some cases, we may be able to provide custom code solutions for your specific issues.
 
 Our architects are CMS and Pantheon platform experts and offer targeted solutions for:
  
