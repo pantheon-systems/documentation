@@ -12,7 +12,7 @@ anchorid: application-performance
 editpath: professional-services/04-application-performance.md
 ---
 
-The Application Performance and Architecture team provides targeted help with your WordPress and Drupal applications. The Professional Services' software architects are particularly qualified to help with frontend and backend performance challenges, as well as your workflow automations. 
+The Application Performance and Architecture team provides targeted help with your WordPress and Drupal applications. The Professional Services' software architects are particularly qualified to help with frontend and backend performance challenges, as well as your workflow automation. 
 
 ## Packaged Services
 
