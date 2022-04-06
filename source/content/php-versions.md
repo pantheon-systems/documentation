@@ -57,11 +57,9 @@ End-of-life (**EOL**) versions are available on the platform but no longer under
 
 <Alert title="Note" type="info">
 
-PHP 8.1 contains new features, performance improvements, deprecations, and backward compatibility breaks and was released November 25, 2021. 
-
-New Relic is not supported in PHP 8.1 WordPress is not fully compatible with PHP 8.0 or 8.1 
+New Relic is not supported in PHP 8.1 and WordPress is not fully compatible with PHP 8.0 or 8.1. 
   
-All remaining known PHP 8.1 issues are deprecation notices. A deprecation notice is an indicator of where additional work is needed for compatibility before the release of PHP 9. With a deprecation notice, the PHP code will continue to work for supported entities.
+All remaining known PHP 8.1 issues are deprecation notices. With a deprecation notice, the PHP code will continue to work for supported entities.
 
 </Alert>
 
