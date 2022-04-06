@@ -14,7 +14,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 ## Before You Begin
 
-This process uses Composer to manage modules and dependencies. Before proceeding, you may wish to consult the following docs:
+Although this process uses Composer to manage modules and dependencies, Composer is not required by default. Before proceeding, you may wish to consult the following docs:
 
 - [Composer Fundamentals and Workflows](/guides/composer)
 - [Build Tools](/guides/build-tools)
@@ -82,7 +82,20 @@ In addition to Pantheon, you will need accounts at:
 
 1. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
 
-  ![Git Status showing updated Composer files](../../images/guides/drupal-8-commerce/git-status.png)
+```bash[prompt}
+  git status
+On branch master
+Your branch is up to date with ‘origin/master’
+
+Changes not staged for commit:
+  (use “git add <filename>...” to update what will be committed)
+  (use “git checkout <filename>...” to discard changes in working directory
+
+    modified:    composer.json
+    modified:    composer.lock
+
+no changes added to commit (use “git add” and/or “git commit -a”)
+```
 
 1. Commit the new files and push them to GitHub:
 
