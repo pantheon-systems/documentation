@@ -1073,7 +1073,7 @@
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
 - title: 'Drupal 9 Migration Guides'
-  path: 'drupal-9'
+  path: 'drupal9migration'
   subtopics:
     - title: 'I am hosted on Pantheon, running Drupal version 8'
       subtopic-lists:
