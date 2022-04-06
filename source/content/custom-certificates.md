@@ -6,7 +6,7 @@ tags: [cdn, https, professional-services]
 reviewed: "2021-10-23"
 ---
 
-This article provides an overview of the steps to set up and work with manually managed, custom certificates through Pantheon's Global CDN and Advanced Global CDN, available through Pantheon's Custom Certificates concerge service.
+This article provides an overview of the steps to set up and work with manually managed, custom certificates through Pantheon's Global CDN and Advanced Global CDN, available through Pantheon's Custom Certificates concierge service.
 
 Custom Certificates service is available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. To get started, contact your account manager or our [Sales Team](https://pantheon.io/contact-us?docs).
 
@@ -23,7 +23,7 @@ Follow the steps below to request and send the appropriate certificate, and priv
 
 Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). 
 
-Please allow two business days for your Account Team to load the certificate.
+Allow two business days for your Account Team to load the certificate.
 
 #### CSR Notes
 
@@ -41,7 +41,8 @@ Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-c
 1. Intermediate Certificate
 1. Private Key
 
-Please allow two business days for your Account Team to load the certificate.
+Allow two business days for your Account Team to load the certificate. 
+Note: The key file upload tool currently only accepts 2048-bit RSA keys. 
 
 </Tab>
 

@@ -11,7 +11,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 
 ## Before You Begin
 
-- Read [Composer Fundamentals and Workflows](/composer)
+- Read [Composer Fundamentals and Workflows](/guides/composer)
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 

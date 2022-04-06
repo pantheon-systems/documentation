@@ -3,7 +3,7 @@ title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 categories: [performance]
 tags: [cache, cookies, security, webops]
-reviewed: "2020-10-15"
+reviewed: "2022-03-25"
 ---
 ## Allow a User to Bypass the Cache
 
@@ -39,7 +39,7 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache:
+Pantheon sets a cache lifetime of one year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Dev and Multidev environments do not cache static assets. Select one of the options below to ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
 - Rename the file
 - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
@@ -50,7 +50,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
-Dev and Multidev environments do not cache static assets.
+[Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/global-cdn#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
 ## Using Your Own Session-Style Cookies
 
@@ -80,7 +80,7 @@ For additional details and examples on how to set cookie lifetimes and garbage c
 
 #### Drupal 7
 
-Session cookie lifetime and session garbage collection can be overridden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
+Session cookie lifetime and session garbage collection can be overridden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
 #### Drupal 8
 
@@ -106,9 +106,9 @@ We recommend handling mobile detection using Responsive Web Design (RWD) techniq
 Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
 
 **Recommended Solution**
-While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**
+While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site, and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**
 
-More information on mobile site best practices can be found in the Google official developer documentation:
+More information on mobile site best practices can be found in Google's official developer documentation:
 
 - [Why make a website mobile-friendly?](https://developers.google.com/search/mobile-sites/#why)
 - [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/search/mobile-sites/get-started#key)

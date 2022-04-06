@@ -75,4 +75,4 @@ Confirm the site requirements in the sections below before upgrading to Drupal 9
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)

@@ -5611,7 +5611,7 @@ width: 100% !important;
   }
 }
 .upstreams-regular {
-  content: url('/docs/assets/images/upstreams-regular.svg');
+  content: url('../static/images/upstreams-regular.svg');
   display: inline-block;
   font-style: normal;
   font-weight: normal;

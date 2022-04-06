@@ -64,13 +64,18 @@ If your site requires highly available search, do not use Pantheon's Search serv
 
 ### Using Pantheon Search on Sites With Multizone Failover
 
-Pantheon Search requires additional considerations when used on sites with Multizone Failover. In its default state, if a site with Pantheon Search and Multizone Failover fails over to the backup, Solr will not automatically rebuild the search index. In that case:
+Pantheon Search requires additional considerations when used on sites with Multizone Failover. Solr will not automatically rebuild the search index for sites using Pantheon Search and Multizone Failover. You will need to:
 
-1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, file a support ticket requesting that the support engineers re-provision Solr for you.
+1. Create a support ticket requesting that Pantheon manually re-provision Solr for you if your site fails over.
 
-1. Once Solr has been re-provisioned you will be notified via this support ticket and you will then need to manually re-index Solr after failover.
+    <Alert title="Note"  type="info" >
 
-The reindexing process is application-side, and depending on your site the process may be different.
+    The failover state becomes the new default when a site fails over. This means that Solr re-provisioning is done in the failover state.
+
+    </Alert>
+
+1. Manually re-index Solr after you are notified through the support ticket that Pantheon is done re-provisioning Solr. The re-indexing process is application-side, and varies by site.
+
 
 <TabList>
 

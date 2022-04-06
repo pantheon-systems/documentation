@@ -16,7 +16,7 @@ Be sure that you:
 
 * Install [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/)
 * Install [Composer](https://getcomposer.org/)
-* Create a Composer-managed following the [Build Tools](/guides/build-tools) guide, which describes how to use build tools such as [GitHub](https://github.com/) and [CircleCI](https://circleci.com/) with [Composer](/composer) on Pantheon.
+* Create a Composer-managed following the [Build Tools](/guides/build-tools) guide, which describes how to use build tools such as [GitHub](https://github.com/) and [CircleCI](https://circleci.com/) with [Composer](/guides/composer) on Pantheon.
 
 ## Create A New Project
 

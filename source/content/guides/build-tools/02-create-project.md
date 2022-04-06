@@ -27,7 +27,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 
 Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may want to run `terminus self:plugin:update pantheon-systems/terminus-build-tools-plugin` to ensure you have the most recent version.
 
-1. Install [Composer](/composer).
+1. Install [Composer](/guides/composer).
    - Verify your installation with `composer --version`:
 
     ```bash{outputLines: 2}

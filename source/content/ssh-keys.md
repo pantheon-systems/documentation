@@ -115,7 +115,7 @@ You can use your Dev environment to clone your site code to your workstation:
 
 ### Revoke SSH Key from Pantheon - New Dashboard
 
-1. Go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page to revoke a key. 
+1. Navigate to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page to revoke a key. 
  
 1. Click the **Revoke** button next to the key you want to remove:
 
@@ -123,7 +123,7 @@ You can use your Dev environment to clone your site code to your workstation:
 
 ### Remove SSH Key from Pantheon - Classic Dashboard
 
-1. Go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**.
+1. Navigate to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**.
  
 1. Click the **Remove** button next to the key you want to delete:
 
@@ -131,7 +131,7 @@ You can use your Dev environment to clone your site code to your workstation:
 
 ### Site Access After Removing Keys
 
- You can still access the sites if you have active sites and no keys remaining. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
+You can still access the sites if you have active sites and no keys remaining. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
 
 ## Troubleshooting
 
@@ -213,3 +213,9 @@ If you are using a Linux distribution such as Fedora 33 or later, make sure RSA 
 Host *.drush.in
   PubkeyAcceptedKeyTypes=ssh-rsa
 ```
+
+<Alert title="Note"  type="info" >
+
+ Pantheon does not have access to keys that only exist on the host machine. You must ensure that your keys and, if applicable, your key agent are made available to the application running in the container, if you're using Lando, Docksal, or DDEV. 
+
+</Alert>

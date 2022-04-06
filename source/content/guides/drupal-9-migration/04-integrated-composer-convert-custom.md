@@ -1,5 +1,5 @@
 ---
-title: Convert a Custom Upstream to Integrated Composer
+title: Migrate to Drupal 9 on Pantheon
 subtitle: Convert a Custom Upstream to Integrated Composer
 description: Convert a non-Composer-managed Drupal 8-based Custom Upstream to Integrated Composer.
 categories: [develop]

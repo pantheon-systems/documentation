@@ -29,4 +29,4 @@ Track the update status from the site's Autopilot **Activity** page.
 
 ### Autopilot and Drupal 9 with Integrated Composer
 
-Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/integrated-composer).
+Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer).

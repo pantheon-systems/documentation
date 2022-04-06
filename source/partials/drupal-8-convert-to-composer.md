@@ -120,7 +120,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   composer require drupal/MODULE_NAME:^VERSION
   ```
 
-  Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+<Partial file="module-name.md" />
 
   Some modules use different version formats.
 
@@ -140,24 +140,8 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Accordion title="Troubleshoot: Could not find a version of MODULE_NAME" id="tr-minmodule" icon="question-sign">
+    <Partial file="could-not-find-version-module_name.md" />	  
 
-      If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
-
-      ```none
-      [InvalidArgumentException]
-      Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-      ```
-
-      If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or `dev` (not recommended). You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
-
-        - If a dev version of a module fails because it requires a development version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
-
-        ```bash{promptUser:user}
-        composer require drupal/some-module:^1@dev org/some-dependency:^2@dev
-        ```
-
-    </Accordion>
 
 #### Other Composer Packages
 
@@ -257,7 +241,7 @@ If the site is not working, try this Composer command on the local `composerify`
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
 
 ### Move composerify to the Main Dev Branch
 
