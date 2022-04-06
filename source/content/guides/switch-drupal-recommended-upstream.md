@@ -14,21 +14,21 @@ In this guide, we will convert an existing site from the Drupal 9 (`drupal9`) up
 
 ## Overview
 
-Drupal 9 sites created in the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Based on some needs we detected from the community, we released a new upstream with a slightly different structure. The [Drupal with Composer](https://github.com/pantheon-upstreams/drupal-recommended) is now the default Drupal 9 upstream in the platform and users are encouraged to switch to it to take advantage of the improved structure and future updates.
+Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Based on community needs, we have released a new upstream. [Drupal with Composer](https://github.com/pantheon-upstreams/drupal-recommended) is now the default Drupal 9 upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
 
-The goals of this conversion are:
+The goals of this conversion doc include the following:
 
-1. Set the site to use the new upstream
-1. Apply the upstream changes
-1. Resolve any merge conflicts that may appear during this process.
+* Configure the site to use the new upstream.
+* Apply the upstream changes.
+* Resolve any merge conflicts that might arise during the conversion process.
 
 ## Will This Guide Work for Your Site?
 
-You must confirm that your site meets the following requirements before you continue:
+You must confirm that your site meets the following requirement before you continue:
 
 - Ensure your site uses the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream.
 
-### Use Terminus to Confirm the drupal9 Upstream
+### Use Terminus to Confirm the Drupal 9 Upstream
 
 Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
@@ -66,44 +66,42 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
 
 ## Switch to Drupal with Composer Upstream
 
-Change the upstream your site is tracking with the following command:
+Change the upstream that your site is tracking with the following command:
 
 ```bash{promptUser:user}
 terminus site:upstream:set $SITE drupal-recommended
 ```
 
-Following the `drupal-recommended` upstream will help keep your site current with any general configuration changes recommended by Pantheon.
+Follow the `drupal-recommended` upstream to keep your site current with any general configuration changes recommended by Pantheon.
 
 Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the upstream.
 
 ## Apply New Upstream Updates
 
-After you complete the upstream change, you need to apply the available upstream updates. Try to do this from the Pantheon Dashboard in the Dev environment. If this is not successful, continue to the next section about merge conflicts.
+After you complete the upstream change, you need to apply the available upstream updates. Use the Pantheon Dashboard in the Dev environment to apply updates. If this is not successful, continue to the next section for help resolving with merge conflicts.
 
 ### Solving Merge Conflicts When Applying Upstream Updates
 
-Conflicts can occur when a modified file within your site's codebase does not align with changes made to the same file in the site's upstream.
+Conflicts can occur when a modified file in your site's codebase does not align with changes made to the same file in the site's upstream.
 
-> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to resolve the merge.
+> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a state that provides the information you need to resolve the merge.
 >
 > \- [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflict with a preference for upstream changes.
+If you receive an error that you have conflicts while updating, resolve using the `-Xtheirs` flag. This will automatically resolve the conflict with a preference for upstream changes.
 
-This is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
+This is safe to run if you don't have your own changes in any of the conflicting files, such as problems with `.gitignore`.
 
 ```bash{promptUser: user}
 git pull -Xtheirs https://github.compantheon-upstreams/drupal-recommended.git master
 # resolve conflicts
 git push origin master
 ```
+Check that the files are correct before going forward to ensure no bugs are introduced.
 
-Double-check the files before going forward to make sure no bugs were introduced.
+If you modified upstream files, the `-Xtheirs` flag will drop your changes. You can [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
 
-If you modified upstream files, the `-Xtheirs` flag will drop your changes. You should [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
-
-
-After you apply the upstream updates, either using the Dashboard or after solving merge conflicts, you are will be in the Drupal with Composer upstream.
+You will be in the Drupal with Composer upstream after you apply the upstream updates.
 
 ## See Also
 
