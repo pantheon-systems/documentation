@@ -868,7 +868,7 @@ Refer to the documentation on [Using Extensions That Assume Write Access](https:
 
 **Solution 1:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
 
-**Solution 2:** Use our [Advanced Global CDN Image Optimization](/guides/professional-services/advanced-global-cdn#additional-features-from-wafio) feature. This addon has WebP auto-conversion at the edge, and is more performant than a plugin relying on PHP/WP.
+**Solution 2:** Use the [Advanced Global CDN Image Optimization](/guides/professional-services/advanced-global-cdn#additional-features-from-wafio) feature. This add-on has WebP auto-conversion at the edge, and is more performant than a plugin relying on PHP or WordPress.
 
 ___
 
