@@ -852,7 +852,7 @@ ___
 
 ## WebP Express
 
-<ReviewDate date="2022-01-22" />
+<ReviewDate date="2022-04-07" />
 
 **Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
@@ -866,7 +866,9 @@ Refer to the documentation on [Using Extensions That Assume Write Access](https:
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 
-**Solution:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+**Solution 1:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+
+**Solution 2:** Use our [Advanced Global CDN Image Optimization](/guides/professional-services/advanced-global-cdn#additional-features-from-wafio) feature. This addon has WebP auto-conversion at the edge, and is more performant than a plugin relying on PHP/WP.
 
 ___
 
