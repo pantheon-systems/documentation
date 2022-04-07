@@ -25,7 +25,7 @@ WP Launch Check is a site audit extension for WP-CLI designed for Pantheon custo
 
 ## WPScan Dependency
 
-WP Launch Check utilizes the [WPScan plugin](https://wordpress.org/plugins/wpscan/) to check for outdated or vulnerable plugins. If you wish to use this service to receive an alerts when your plugins need to be updated, you'll need to obtain an [API token](https://wpscan.com/pricing) from their website and configure your site to use your token.
+WP Launch Check utilizes the [WPScan API](https://wpscan.com/api) to check for outdated or vulnerable plugins. If you wish to use this service to receive an alerts when your plugins need to be updated, you'll need to obtain an [API token](https://wpscan.com/pricing) from their website and configure your site to use your token.
 
 ### Configuring WPScan
 
