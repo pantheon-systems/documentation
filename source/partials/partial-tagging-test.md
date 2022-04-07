@@ -1,9 +1,3 @@
----
-categories: [get-started]
-published: "2021-03-21"
-tags: [code, launch, migrate, site, updates]
-reviewed: "2021-03-31"
----
 
 This is an example of a partial.
 
