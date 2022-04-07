@@ -62,13 +62,13 @@ terminus env:clear-cache $SITE.$ENV
 
 The first step is to get a `git clone` of your code from Pantheon on your local computer.
 
-1. Log in to Pantheon > open the Site Dashboard.
+1. Log in to Pantheon > Open the Site Dashboard.
 
-1. Locate the `git clone` command at the top of the development panel > copy and paste it into your terminal. 
+1. Locate the `git clone` command at the top of the development panel > Copy and paste it into your terminal. 
 
  It will look similar to this:
 
-    ![Copy and Paste Git Clone](../images/dashboard/git-string.png)
+    ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../images/dashboard/git-string.png)
 
 1. Go to where you want the code to reside in your local environment. 
 
