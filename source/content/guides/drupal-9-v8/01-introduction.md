@@ -8,7 +8,7 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-v8
-anchorid: introduction
+anchorid: drupal-9-v8
 editpath: drupal-9-v8/01-introduction.md
 ---
 
@@ -30,7 +30,9 @@ This upgrade migrates your existing site to a new site. The new site will not ma
 ## Requirements
 
 <Partial file="drupal-9/upgrade-site-requirements.md" />
-- If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to Drupal 9.
+
+
+
 
 <Alert title="Multidev Required" type="danger">
 
@@ -39,6 +41,9 @@ To maintain best practices and to avoid difficult, time-consuming repairs to the
 Pantheon support is not available to users who avoid the Multidev steps.
 
 </Alert>
+
+If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to Drupal 9.
+
 
 ## See Also
 

@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform to Drupal 9
+title: Migrate a Drupal 9 Site from Another Platform
 subtitle: Prepare
 description: Learn how to migrate a Drupal 8 Site to Drupal 9
 categories: [develop]

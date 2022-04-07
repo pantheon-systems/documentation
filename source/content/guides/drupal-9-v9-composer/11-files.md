@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform to Drupal 9
+title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Upload Your Files
 description: 
 categories: [develop]
@@ -7,7 +7,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-v9-composer/files
 anchorid: files
 editpath: drupal-9-v9-composer/11-files.md
@@ -77,8 +76,3 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   </TabList>
 
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with terminus like so:
-
-  ```bash{promptUser: user}
-  terminus drush $SITE.dev cr
-  ```

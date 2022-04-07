@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform to Drupal 9
+title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Troubleshooting
 description:  Troubleshoot common issues when migrating.
 categories: [develop]

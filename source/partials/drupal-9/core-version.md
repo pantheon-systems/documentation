@@ -1,5 +1,3 @@
-## Set Drupal Core Version
-
 Run the code below to set the Drupal core version to Drupal 9:
 
   ```shell{promptUser: user}

@@ -8,7 +8,7 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-v8-drops
-anchorid: drupal-9-v8
+anchorid: drupal-9-v8-drops
 editpath: drupal-9-v8-drops/01-introduction.md
 ---
 

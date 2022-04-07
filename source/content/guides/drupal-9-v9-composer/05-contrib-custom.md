@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform to Drupal 9
+title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
 categories: [develop]
@@ -15,7 +15,7 @@ editpath: drupal-9-v9-composer/05-contrib-custom.md
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 
-## Composer packages
+# Composer packages
 
 1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`. If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
 
@@ -39,7 +39,7 @@ This section describes how to replicate your selection of contributed modules an
   git add composer.*; git commit -m "Add composer packages"
   ```
 
-## Custom Code
+# Custom Code
 
 Manually copy custom code from the old site to the corresponding Pantheon site directory and commit them.
 
@@ -56,7 +56,7 @@ If you commit libraries directly to `web/libraries`, then add each directory to 
 
 If you do not plan on adding any libraries with Composer in the future, you can remove the `web/libraries` line from the `.gitignore` file. This might lead to builds failing in the future if at some point you or another developer use Composer to add a library.
 
-### Modules and Themes
+## Modules and Themes
 
 From the local Pantheon site directory, copy modules from the local directory of the former platform site:
 
@@ -76,7 +76,7 @@ git commit -m "Copy custom themes"
 
 Do the same for any other custom code you need to carry over.
 
-### settings.php
+## settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files.
 
@@ -90,7 +90,7 @@ Your existing site may have customizations to `settings.php` or other configurat
   - And that there are no duplicates.
 - Contains `include __DIR__ . "/settings.pantheon.php";`
 
-## Configuration
+# Configuration
 
 Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
 
