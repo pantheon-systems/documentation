@@ -29,7 +29,7 @@ Consider the desired goals and objectives for your users. Define success for you
 
 ## Configure Your Website
 
-### Add Google Tag Manger(GTM) Code
+### Add Google Tag Manager(GTM) Code
 
 <Accordion title="WordPress" id="wp-analytics-config" icon="wrench">
 
