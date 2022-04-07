@@ -35,12 +35,6 @@ Configuring WPScan is easy. Once you've obtain your API token, add it to your si
 define( 'WPSCAN_API_TOKEN', '$your_api_token' );
 ```
 
-Alternatively, you could use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to add you API token at the platform level. The API token is [accessed from WP Launch Check](https://github.com/pantheon-systems/wp_launch_check/blob/9ddfd899b80ff42fa3ab060c2f44b930e8278069/php/pantheon/checks/plugins.php#L80) via `getenv('PANTHEON_WPVULNDB_API_TOKEN')`. To set this environment variable, follow the steps to install the Terminus Secrets Plugin, and add your token to your chosen environment:
-
-```bash
-terminus secrets:set <site>.<env> PANTHEON_WPVULNDB_API_TOKEN <value>
-```
-
 ## Run Launch Check Manually
 
 To manually perform a site audit using WP Launch Check from the command line (using [Terminus](/terminus)), run:
