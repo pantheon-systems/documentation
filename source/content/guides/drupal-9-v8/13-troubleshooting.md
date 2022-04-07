@@ -1,7 +1,7 @@
 ---
 title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Troubleshooting
-description: Troubleshoot common issues when migrating.
+description: Troubleshoot common issues when migrating
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
