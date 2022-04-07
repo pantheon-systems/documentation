@@ -164,7 +164,7 @@ For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detecte
 
 ### Clear Cloudflare Cache
 
-You can clear your Cloudflare cache by following the steps in the Pantheon-maintained Cloudflare Cache repository.
+You can clear your Cloudflare cache by following the steps in the [Pantheon-maintained Cloudflare Cache](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) repository.
 
 <Alert title="Note"  type="info" >
 
