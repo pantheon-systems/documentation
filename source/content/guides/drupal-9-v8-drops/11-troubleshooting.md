@@ -15,6 +15,4 @@ editpath: drupal-9-v8-composer/11-troubleshooting.md
 
 ## Troubleshooting
 
-<Partial file="composer-updating.md" />
-
 <Partial file="drupal-9/troubleshooting.md" />

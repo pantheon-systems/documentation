@@ -7,7 +7,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-v8-drops/code
 anchorid: code
 editpath: drupal-9-v8-drops/07-code.md

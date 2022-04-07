@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v9-composer
 anchorid: drupal-9-v9-composer
 editpath: drupal-9-v9-composer/01-introduction.md
@@ -21,11 +22,10 @@ This guide will show you how to migrate a site that meets the following criteria
 |Dependency Manager| Composer
 |Custom Upstream| No
 
-## Important Notes
+# Requirements
 
 Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying code from the former platform site, be sure to retain the new site's nested docroot structure and `web` docroot name.
 
-## Requirements
 
 Before you continue, confirm that your site meets the following requirements:
 

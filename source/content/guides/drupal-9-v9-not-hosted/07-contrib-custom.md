@@ -14,12 +14,12 @@ editpath: drupal-9-v9-not-hosted/07-contrib-custom.md
 ---
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
-# Contributed Code
+## Contributed Code
 
 The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as *contributed code*). The only items from the existing site that should remain in the Git repository are custom code, custom themes, and custom modules that are specific to the existing site.
 
 
-## Modules and Themes
+### Modules and Themes
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
@@ -65,7 +65,7 @@ After Composer is aware of all the contributed code, you'll be able to run `comp
 
     <Partial file="could-not-find-version-module_name.md" />	  
 
-## Other Composer Packages
+### Other Composer Packages
 
 If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
 
@@ -73,15 +73,15 @@ If you have added non-Drupal packages to your site via Composer, use the command
 diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
 ```
 
-## Libraries
+### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that it functions properly.
 
-# Custom Code
+## Custom Code
 
 Manually copy custom code from the existing site repository to the Composer-managed directory.
 
-## Modules and Themes
+### Modules and Themes
 
 To move modules, use the following commands:
 
@@ -105,7 +105,7 @@ git commit -m "Copy custom themes"
 
 Use the above commands with any of the custom code.
 
-## settings.php
+### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
@@ -120,7 +120,7 @@ Then edit web/sites/default/settings.php and commit as needed.
 
 The resulting `settings.php` should have no `$databases` array.
 
-# Additional Composer Configuration
+## Additional Composer Configuration
 
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 

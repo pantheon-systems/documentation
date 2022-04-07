@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v8-build-tools
 anchorid: drupal-9-v8-build-tools
 editpath: drupal-9-v8-build-tools/01-introduction.md
