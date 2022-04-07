@@ -153,4 +153,4 @@ Low traffic WordPress sites on Pantheon are put to sleep after either one or twe
 
 Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc. 
 
-You can also review the [Disable WP-Cron](###disable-wp-cron) section of this doc to limit the occurrences of the above issues.
+You can also review the [Disable WP-Cron](#disable-wp-cron) section of this doc to limit the occurrences of the above issues.
