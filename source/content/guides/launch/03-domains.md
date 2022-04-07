@@ -91,6 +91,8 @@ Once you begin this process, you have:
    The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
 
    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin) to generate DNS TXT records to validate domain ownership.
+   
+    A misconfiguration invalidates these records and the Dashboard does not provide any feedback. 
 
    </Alert>
 
