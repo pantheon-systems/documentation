@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/managed-updates
 anchorid: managed-updates
-editpath: professional-services/05-managed-updates.md
+editpath: professional-services/06-managed-updates.md
 ---
 
 [Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/guides/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)
