@@ -189,7 +189,7 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Database
 
-1. Create an archive using the MySQL utility `mysqldump`:
+1. Create an archive using the MySQL utility mysqldump:
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
@@ -220,7 +220,7 @@ Send files using SFTP:
 
 1. Paste the CLI command copied from your Dashboard.
 
-1. Navigate to the correct remote directory by running `cd files`.
+1. Navigate to the correct remote directory by running `cd files`
 
 1. Run `put -r ./*` to transfer the files.
 
@@ -267,7 +267,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
    sites/*/settings.local.php
    ```
 
-Drupal 7 users need to add a reference to the local file from within `settings.php`:
+Note that Drupal 7 users need to add a reference to the local file from within `settings.php`:
 
 ```php:title=sites/default/settings.php
 /**

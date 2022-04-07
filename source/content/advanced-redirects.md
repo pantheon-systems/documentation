@@ -241,6 +241,12 @@ Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images,
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 
+## Redirects and Rewrites with PHP
+
+Pantheon uses Nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on the Pantheon platform using the code in the [Pantheon htacess Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) repository.
+
+The file must be included at the very beginning of your Drupal `settings.php` or Wordpress `wp-config.php` file. The code will perform rewrites and redirects prior to full Wordpress or Drupal bootstrap.
+
 ## Restrict Access to Paths Based on IP
 
 If you want to restrict access to files based on the source IP address of the request, you can do so with PHP.

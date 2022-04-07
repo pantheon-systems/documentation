@@ -60,7 +60,7 @@ Running a WordPress Site Network requires a special configuration that is only a
 The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/migrate).
 
 ## Drupal 8 and Composer
-Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. For details, see [Composer Fundamentals and Workflows](/composer).
+Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. For details, see [Composer Fundamentals and Workflows](/guides/composer).
 
 ## Advanced Tools
 

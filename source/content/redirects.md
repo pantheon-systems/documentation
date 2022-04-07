@@ -46,7 +46,7 @@ This is the preferred method of setting HTTPS & HSTS for your site. Find the `en
 
 ## Redirect with PHP
 
-If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. Note that redirecting the platform domain will break the screenshot of your site in the User Dashboard, and may complicating troubleshooting for our [Support](/guides/support/contact-support/) team.
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. Note that redirecting the platform domain will break the screenshot of your site in the User Dashboard, and may complicate troubleshooting for our [Support](/guides/support/contact-support/) team.
 
 <Partial file="_redirects.md" />
 

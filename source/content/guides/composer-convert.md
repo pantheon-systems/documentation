@@ -14,7 +14,7 @@ In this guide, we'll convert a standard Drupal 8 site to use Composer to manage 
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies.
+Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
 The goals of this conversion are: 
 
@@ -74,4 +74,4 @@ Note that only the [User in Charge](/change-management#site-level-roles-and-perm
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)

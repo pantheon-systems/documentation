@@ -70,7 +70,7 @@ From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, cl
 
 The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-Autopilot will show warnings in the sections where Composer manages updates, if the Site uses [Integrated Composer](/integrated-composer) (including all Drupal 9 sites). 
+If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 Click **Save** for each section of the configuration in which you make changes.
 
@@ -146,10 +146,6 @@ Add any CSS selectors that you want to exclude from the visual regression tests.
 ## Configure Autopilot for Premium and Paid Plugins and Modules
 
 Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
-
-## Enable Autopilot Cloning Feature
-
-Cloning feature content goes here. This will be located under settings.
 
 ## Enable Autopilot Email Notifications
 

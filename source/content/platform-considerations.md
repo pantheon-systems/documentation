@@ -105,24 +105,7 @@ For sites that need to provide services with Cross-Origin Resource Sharing (COR
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
-### WordPress
-
-Add the following to the active theme's `function.php`:
-
-```php:title=function.php
-add_filter('allowed_http_origins', 'pantheon_allowed_origins');
-
-function pantheon_allowed_origins($urls) {
-    $urls[] = 'https://www.example.com';
-    return $urls;
-}
-```
-
-In the example above, `$urls[]` is defined as a URL for which cross-domain requests are allowed. Note that the protocol (`http` or `https`) and any subdomains (like `www`) are relevant. Here's an example of a larger array allowing requests from multiple URLS:
-
-```php
-$urls[] = array( 'https://www.example.com', 'http://www.example.com', 'https://example.com', 'http://example.com' ) ;
-```
+WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains [in a MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
 
 ## CSS Preprocessors
 

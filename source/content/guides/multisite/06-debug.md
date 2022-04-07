@@ -11,7 +11,7 @@ cms: "WordPress"
 categories: [troubleshoot]
 tags: [multisite]
 permalink: docs/guides/multisite/debug/
-editpath: multisite/05-debug.md
+editpath: multisite/06-debug.md
 image: multisite
 getfeedbackform: default
 ---
@@ -56,3 +56,5 @@ Because it's a confusing error, it's helpful to understand how it's caused. This
 When you visit `mstest.dev` in your browser, you'll see the “Error establishing database connection” message. Essentially, WordPress displays an error message because it couldn't find the requested site in the `wp_blogs` table.
 
 Check out the [open WordPress.org Trac ticket](https://core.trac.wordpress.org/ticket/41424) where this message is being discussed, and will hopefully be improved in the future.
+
+<Partial file="configure-wp-site-networks-with-integrated-composer.md" />
