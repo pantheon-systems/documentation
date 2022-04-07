@@ -28,7 +28,7 @@ We recommend using a separate domain from your production site. This prevents an
 
 ### AGCDN Vanity Domains
 
-You must provide a custom certificate if you would like to use a vanity domain on your [Advanced Global CDN](guides/professional-services#advanced-global-cdn) site.
+You must provide a custom certificate if you want to use a vanity domain on your [Advanced Global CDN](guides/professional-services#advanced-global-cdn) site.
 
 Our [Custom Certificate](/custom-certificates#add-a-custom-certificate) service is only available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. 
 
