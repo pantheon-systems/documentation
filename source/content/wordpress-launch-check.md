@@ -35,6 +35,28 @@ Configuring WPScan is easy. Once you've obtain your API token, add it to your si
 define( 'WPSCAN_API_TOKEN', '$your_api_token' );
 ```
 
+You'll also need to define which environment you'd like WPScan to run on using the `PANTHEON_WPSCAN_ENVIRONMENTS` constant. This constant is required to use the WPScan functionality, and allows users to decide whether or not scans are done on multiple environments, or just one.
+
+To scan one environment:
+
+```php:title=wp-config.php
+define( 'PANTHEON_WPSCAN_ENVIRONMENTS', 'live' );
+```
+
+To scan multiple environments:
+
+```php:title=wp-config.php
+define( 'PANTHEON_WPSCAN_ENVIRONMENTS', ['dev', 'test', 'live'] );
+```
+
+To scan all environments:
+
+```php:title=wp-config.php
+define( 'PANTHEON_WPSCAN_ENVIRONMENTS', * );
+```
+
+**Note:** Scanning multiple or all environments at will more rapidly exhaust your daily API request quota.
+
 ## Run Launch Check Manually
 
 To manually perform a site audit using WP Launch Check from the command line (using [Terminus](/terminus)), run:
