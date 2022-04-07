@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v8/core-updates
 anchorid: core-updates
 editpath: drupal-9-v8/09-core-updates.md

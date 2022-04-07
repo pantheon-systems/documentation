@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v8-custom-upstream/new-branch
 anchorid: new-branch
 editpath: drupal-9-v8-custom-upstream/03-new-branch.md

@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v8-build-tools/mariadb
 anchorid: mariadb
 editpath: drupal-9-v8/09-mariadb.md

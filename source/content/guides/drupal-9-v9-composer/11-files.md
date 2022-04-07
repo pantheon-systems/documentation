@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v9-composer/files
 anchorid: files
 editpath: drupal-9-v9-composer/11-files.md

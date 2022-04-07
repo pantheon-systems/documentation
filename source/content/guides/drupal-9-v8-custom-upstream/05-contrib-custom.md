@@ -7,6 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v8-custom-upstream/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9-v8-custom-upstream/05-contrib-custom.md
@@ -127,11 +128,11 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 
     1. Confirm that only `composer.json` has been modified:
 
-      ```bash{promptUser:user}
-      git status
-      ```
+       ```bash{promptUser:user}
+       git status
+       ```
 
-      - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
+       - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
 
     1. Commit the change:
 

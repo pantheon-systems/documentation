@@ -1,17 +1,18 @@
 ---
 title: Migrate a Drupal 8 Custom Upstream to Drupal 9
 subtitle: Test Sites and Apply Customizations
-description: Go through the following steps for each child site you wish to test, or that has site-specific code. Examples of site-specific code are site-specific redirects and custom modules only present on a specific site.
+description: 
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
+showtoc: true
 permalink: docs/guides/drupal-9-v8-custom-upstream/site-customizations
 anchorid: site-customizations
 editpath: drupal-9-v8-custom-upstream/07-site-customizations.md
 ---
-
+Go through the following steps for each child site you wish to test, or that has site-specific code. Examples of site-specific code are site-specific redirects and custom modules only present on a specific site.
 
 1. Clone the child site's repository. You can get the command from clicking **Clone with Git** on the Dashboard.
 
