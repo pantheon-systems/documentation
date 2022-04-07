@@ -1084,7 +1084,7 @@
         - title: 'I am using a package and dependency manager'
           links:
             - text: 'Migrate from a Build Tools Managed Drupal 8 Site'
-              url: '/guides/drupal-9-v8-custom-upstream'
+              url: '/guides/drupal-9-v8-build-tools'
             - text: 'Migrate a Composer Managed Drupal 8 Site'
               url: '/guides/drupal-9-v8-composer'
         - title: 'My site has a drops-8 Repository'

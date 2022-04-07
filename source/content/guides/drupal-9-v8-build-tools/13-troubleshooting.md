@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-v8-composer/troubleshooting
+permalink: docs/guides/drupal-9-v8-build-tools/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9-v8-composer/1113-troubleshooting.md
+editpath: drupal-9-v8-build-tools/13-troubleshooting.md
 ---
 
 <Partial file="drupal-9/troubleshooting.md" />
