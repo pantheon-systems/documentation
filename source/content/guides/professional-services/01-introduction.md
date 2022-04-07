@@ -58,7 +58,7 @@ Load tests can be critical steps in ensuring a successful launch. See [Onboardin
 
 ## Application Performance and Architecture
 
-The Application Performance and Architecture team provides frontend and backend help with your WordPress and Drupal applications. See [Application Performance and Architecture](/guides/professional-services/application-performance) for details.
+The Application Performance and Architecture team provides frontend and backend assistance with your WordPress and Drupal applications. Refer to [Application Performance and Architecture](/guides/professional-services/application-performance) for details.
 
 ## Professional Service Hours (formerly CAS)
 
