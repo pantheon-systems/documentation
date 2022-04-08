@@ -79,6 +79,10 @@ The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksil
 
 The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides steps on using Drush to commands to revert specific features.
 
+### Enable Development Modules
+
+The [Pantheon Enable Development Module repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/enable_dev_modules) provides steps on how to use Drush within a Quicksilver script.
+
 ## Hooks
 
 You can hook into the following workflows:
