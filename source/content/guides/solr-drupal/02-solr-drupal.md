@@ -225,6 +225,13 @@ Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
+### Diagnose Issues
+
+`drush search_api_pantheon:diagnose` (sapd) The diagnose command checks the various pieces of the Search API install and throw errors on the pieces that are not working. This command will develop further as the module nears general availability.
+
+`drush search_api_pantheon:select` (saps) This command will run the given query against Solr server. It's recommended to use ?debug=true in any Solr page to get a good query to pass to this command to debug results.
+
+
 ### Deploy an Updated `config.zip` to your Solr Server
 
 If the Search API Solr displays the following after the Search module is installed:
