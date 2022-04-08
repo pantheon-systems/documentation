@@ -91,6 +91,14 @@ The [Pantheon Enable Development Module repository](https://github.com/pantheon-
 
 Use the [Pantheon Generate Development Content repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/generate_dev_content) to learn how to integrate Drush devel generate commands into your Quicksilver operations. This allows you to generate development content on each database clone operation.
 
+### New Relic Custom Apdex T Values Multidev Environments
+
+Use the [Pantheon New Relic Apdex T Values repository](https://github.com/pantheon-quicksilver/new-relic-apdex-t) to set custom T values for Multidev environments. Each environment will use the default values of 0.5 and 7 for your server and browser, respectively, if you don't set a custom value. 
+
+### New Relic Deploy Markers
+
+Use the [Pantheon New Relic Deploy Markers repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/new_relic_deploy) to automatically log changes to your site into New Relic's Deployments Page. This can be useful for keeping track of performance improvements.
+
 ## Hooks
 
 You can hook into the following workflows:
