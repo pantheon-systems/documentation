@@ -99,6 +99,14 @@ Use the [Pantheon New Relic Apdex T Values repository](https://github.com/panthe
 
 Use the [Pantheon New Relic Deploy Markers repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/new_relic_deploy) to automatically log changes to your site into New Relic's Deployments Page. This can be useful for keeping track of performance improvements.
 
+### Search and Replace URLs on WordPress Sites
+
+Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace) automatically find and replace URLs in the database of a WordPress website. This is helpful for sites that have multiple domains in an environment.
+
+### Slack Integration
+
+Use the [Pantheon Slack Integration repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) to integrate Slack notifications from your Pantheon project using Quicksilver. This script also shows you how to manage API keys outside of your site repository.
+
 ## Hooks
 
 You can hook into the following workflows:
