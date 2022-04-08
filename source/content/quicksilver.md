@@ -59,7 +59,7 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 ## Composer Script Installs
 
-You can use Terminus to install Quicksilver scripts with Composer if you have Composer-managed sites. The sections below provide links to the Pantheon-maintained repositories.
+You can use Terminus to install Quicksilver Composer scripts if you have a Composer-managed site. The sections below provide links to Pantheon-maintained repositories with install scripts.
 
 ### Clear Cloudflare Cache
 
