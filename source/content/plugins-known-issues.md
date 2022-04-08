@@ -1361,6 +1361,28 @@ ___
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 ___
 
+## YITH WooCommerce Request a Quote
+
+<ReviewDate date="2022-04-8" />
+
+**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library stating in v4.0+ which assumes write access to the site's codebase within it's `wp-content/plugins` directory for caching of PDFs, which is not granted on Test and Live environments on Pantheon by design. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+
+**Solution:** Configure YITH WooCommerce Request a Quote to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following to `functions.php`:
+
+```php:title=wp-config.php
+/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
+add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
+if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
+   function ywraq_mpdf_change_tmp_dir( $args ) {
+      $upload_dir      = wp_upload_dir();
+      $upload_dir      = $upload_dir['basedir'];
+      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+
+      return $args;
+   }
+}
+```
+___
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
