@@ -71,6 +71,10 @@ Always clear your CDN cache using the `after` timing option to avoid requests re
 
 </Alert>
 
+### Debugging with Quicksilver
+
+Use the script in the [Pantheon Quicksilver Debugging repository](https://github.com/pantheon-quicksilver/debugging-example) to explore Quicksilver as a workflow improvement tool.
+
 ### Drush CMI
 
 The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations, with the practical outcome of importing configuration changes from `.yml files`. 
