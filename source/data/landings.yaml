@@ -1007,6 +1007,8 @@
         - text: 'Using Git with SFTP & WordPress'
           image: 'git-sftp-wp-docs-guide.png'
           url: '/guides/wordpress-git'
+        - text: 'Edge Integrations'
+          url: '/guides/edge-integrations'  
     - title: 'Ecommerce Guides'
       links:
         - image: 'logos/woocommerce.png'
