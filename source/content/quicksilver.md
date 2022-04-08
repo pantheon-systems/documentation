@@ -107,6 +107,14 @@ Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https:/
 
 Use the [Pantheon Slack Integration repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) to integrate Slack notifications from your Pantheon project using Quicksilver. This script also shows you how to manage API keys outside of your site repository.
 
+### URL Checker
+
+Use the [Pantheon URL Checker repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/url_checker) to check specific URLs after a live deployment. This script also notifies of failures by email.
+
+### Webhooks
+
+Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to learn how to post workflow data to an external URL for a generic Webhook implementation.
+
 ## Hooks
 
 You can hook into the following workflows:
