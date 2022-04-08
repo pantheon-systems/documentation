@@ -57,6 +57,20 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 </Alert>
 
+## Composer-managed Script Installs
+
+You can use Terminus to install Quicksilver scripts with Composer if you have Composer-managed sites. The sections below provide links to the Pantheon-maintained scripts.
+
+### Clear Cloudflare Cache
+
+You can clear your Cloudflare cache by following the steps in the [Pantheon-maintained Cloudflare Cache](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) repository.
+
+<Alert title="Note"  type="info" >
+
+Always clear your CDN cache using the `after` timing option to avoid requests re-caching stale content. Caches should generally be cleared "bottom up".
+
+</Alert>
+
 ## Hooks
 
 You can hook into the following workflows:
@@ -162,15 +176,6 @@ remote:
 
 For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your `Autopilot` Multidev from the dashboard. Be sure to also delete the `Autopilot` branch, and then create the `Autopilot` Multidev again in the Dashboard. Once you do this, your scripts should start running after the visual regression tests complete.
 
-### Clear Cloudflare Cache
-
-You can clear your Cloudflare cache by following the steps in the [Pantheon-maintained Cloudflare Cache](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) repository.
-
-<Alert title="Note"  type="info" >
-
-Always clear your CDN cache using the `after` timing option to avoid requests re-caching stale content. Caches should generally be cleared "bottom up".
-
-</Alert>
 
 ## See Also
 
