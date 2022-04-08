@@ -82,3 +82,6 @@ yarn-error.log
 /.env
 /.env.development
 /.env.production
+
+# mega-linter creates reports
+report/

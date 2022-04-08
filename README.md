@@ -1,7 +1,6 @@
 Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
 [![Actively Maintained](https://img.shields.io/badge/Pantheon-Actively_Maintained-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#actively-maintained)
-
-
+[![Mega-Linter](https://github.com/pantheon-systems/documentation/workflows/Mega-Linter/badge.svg?branch=main)](https://github.com/pantheon-systems/documentation/actions?query=workflow%3AMega-Linter+branch%3Amain)
 
 Pantheon Documentation
 ======================
