@@ -47,6 +47,8 @@ workflows:
             branches:
               ignore: main
       - deploy:
+          requires:
+            - pfe/gatsby-build-and-deploy
           filters:
             branches:
               only: main
