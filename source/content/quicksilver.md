@@ -57,13 +57,13 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 </Alert>
 
-## Composer-managed Script Installs
+## Composer Script Installs
 
-You can use Terminus to install Quicksilver scripts with Composer if you have Composer-managed sites. The sections below provide links to the Pantheon-maintained scripts.
+You can use Terminus to install Quicksilver scripts with Composer if you have Composer-managed sites. The sections below provide links to the Pantheon-maintained repositories.
 
 ### Clear Cloudflare Cache
 
-You can clear your Cloudflare cache by following the steps in the [Pantheon-maintained Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache).
+Use the [Pantheon Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) to clear your Cloudflare cache. 
 
 <Alert title="Note"  type="info" >
 
@@ -73,15 +73,15 @@ Always clear your CDN cache using the `after` timing option to avoid requests re
 
 ### Debugging with Quicksilver
 
-Use the script in the [Pantheon Quicksilver Debugging repository](https://github.com/pantheon-quicksilver/debugging-example) to explore Quicksilver as a workflow improvement tool.
+Use the [Pantheon Quicksilver Debugging repository](https://github.com/pantheon-quicksilver/debugging-example) to explore Quicksilver as a workflow improvement tool.
 
 ### Drush CMI
 
-The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations, with the practical outcome of importing configuration changes from `.yml files`. 
+The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations. This allows you to import configuration changes from `.yml` files. 
 
 ### Drush Revert Features
 
-The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides steps on using Drush to commands to revert specific features.
+The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides information on using Drush to commands to revert specific features.
 
 ### Enable Development Modules
 
@@ -89,7 +89,7 @@ The [Pantheon Enable Development Module repository](https://github.com/pantheon-
 
 ### Generate Development Content
 
-Use the [Pantheon Generate Development Content repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/generate_dev_content) to learn how to integrate Drush devel generate commands into your Quicksilver operations. This allows you to generate development content on each database clone operation.
+Use the [Pantheon Generate Development Content repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/generate_dev_content) to integrate Drush devel generate commands into your Quicksilver operations. This allows you to generate development content on each database clone operation.
 
 ### New Relic Custom Apdex T Values Multidev Environments
 
@@ -97,23 +97,23 @@ Use the [Pantheon New Relic Apdex T Values repository](https://github.com/panthe
 
 ### New Relic Deploy Markers
 
-Use the [Pantheon New Relic Deploy Markers repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/new_relic_deploy) to automatically log changes to your site into New Relic's Deployments Page. This can be useful for keeping track of performance improvements.
+Use the [Pantheon New Relic Deploy Markers repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/new_relic_deploy) to automatically log changes to your site into New Relic's Deployments page. This can be useful for keeping track of performance improvements.
 
 ### Search and Replace URLs on WordPress Sites
 
-Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace) automatically find and replace URLs in the database of a WordPress website. This is helpful for sites that have multiple domains in an environment.
+Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace) to automatically find and replace URLs in the database of a WordPress website. This is helpful for sites that have multiple domains in an environment.
 
 ### Slack Integration
 
-Use the [Pantheon Slack Integration repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) to integrate Slack notifications from your Pantheon project using Quicksilver. This script also shows you how to manage API keys outside of your site repository.
+Use the [Pantheon Slack Integration repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) to integrate Slack notifications from your Pantheon project using Quicksilver. This integration overview also provides information on how to manage API keys outside of your site repository.
 
 ### URL Checker
 
-Use the [Pantheon URL Checker repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/url_checker) to check specific URLs after a live deployment. This script also notifies of failures by email.
+Use the [Pantheon URL Checker repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/url_checker) to check specific URLs after a live deployment. This script also notifies you of failures by email.
 
 ### Webhooks
 
-Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to learn how to post workflow data to an external URL for a generic Webhook implementation.
+Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to post workflow data to an external URL for a generic Webhook implementation.
 
 ## Hooks
 
