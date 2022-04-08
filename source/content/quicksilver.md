@@ -87,6 +87,10 @@ The [Pantheon Drush Revert Features repository](https://github.com/pantheon-syst
 
 The [Pantheon Enable Development Module repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/enable_dev_modules) provides steps on how to use Drush within a Quicksilver script.
 
+### Generate Development Content
+
+Use the [Pantheon Generate Development Content repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/generate_dev_content) to learn how to integrate Drush devel generate commands into your Quicksilver operations. This allows you to generate development content on each database clone operation.
+
 ## Hooks
 
 You can hook into the following workflows:
