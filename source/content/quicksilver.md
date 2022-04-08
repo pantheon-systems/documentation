@@ -63,7 +63,7 @@ You can use Terminus to install Quicksilver scripts with Composer if you have Co
 
 ### Clear Cloudflare Cache
 
-You can clear your Cloudflare cache by following the steps in the [Pantheon-maintained Cloudflare Cache](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) repository.
+You can clear your Cloudflare cache by following the steps in the [Pantheon-maintained Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache).
 
 <Alert title="Note"  type="info" >
 
@@ -74,6 +74,10 @@ Always clear your CDN cache using the `after` timing option to avoid requests re
 ### Drush CMI
 
 The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations, with the practical outcome of importing configuration changes from `.yml files`. 
+
+### Drush Revert Features
+
+The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides steps on using Drush to commands to revert specific features.
 
 ## Hooks
 
