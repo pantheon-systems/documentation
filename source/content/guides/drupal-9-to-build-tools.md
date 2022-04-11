@@ -95,21 +95,21 @@ Your site should already be managing contributed modules and themes through Comp
 
 1. Open the source site `composer.json`.
 
-1. Run a `composer require` command for each module and theme in the `$DESTINATION` directory:
+1. Run the `composer require` command for each module and theme in the `$DESTINATION` directory:
 
 ```bash{promptUser: user}
 composer require drupal/PROJECT_NAME:^VERSION
 ```
 
-You can require multiple packages in the same commands if desired.
+You can require multiple packages in the same command if desired.
 
 #### Other Composer Packages
 
-Follow the steps below, if you added non-Drupal packages to your site via Composer.
+If you added non-Drupal packages to your site via Composer, use the following steps:
 
 1. Run the command `composer require` to migrate each package.
 
-1. Use the following command to display the differences between the master and current `composer.json`:
+1. Use the following command to display the differences between the versions of `composer.json`:
 
 ```bash{promptUser: user}
 diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
@@ -158,7 +158,7 @@ cp $SOURCE/web/sites/default/settings.php $DESTINATION/web/sites/default/setting
 # Review changes and commit as needed
 ```
 
-The resulting `settings.php` should have no `$databases` array.
+The resulting `settings.php` should not have a `$databases` array.
 
 ### Additional Composer Configuration
 
@@ -180,7 +180,7 @@ Any additional Composer configuration that you have added to your site should be
   git push origin master
   ```
 
-1. Confirm that the Continuous Integration workflow to succeeds in committing your code changes to the Pantheon site.
+1. Confirm that the Continuous Integration workflow succeeds in committing your code changes to the Pantheon site.
 
 ## Add Your Database
 
@@ -226,7 +226,7 @@ Any additional Composer configuration that you have added to your site should be
 
  You should now have all three of the major components of your site imported into your new site and CI should be working.
 
-1. Clear the caches on the Pantheon Dashboard, and you are good to go!
+1. Clear the caches on the Pantheon Dashboard.
 
 ## Troubleshooting
 
