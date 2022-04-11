@@ -75,7 +75,7 @@ terminus drush <site>.live -- config:import -y
 open https://live-mysite.pantheonsite.io
 ```
 
-## Configuration Tools for Drupal 8
+## Configuration Tools for Drupal 9
 
 With [Drupal 9](/drupal-9), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
 
