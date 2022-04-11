@@ -19,7 +19,7 @@ In this lesson, we'll use the Configuration Management system within the Drupal 
 
 #### Configuration Management
 
-While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal Admin interface](/drupal-8-configuration-management).
+While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal Admin interface](/drupal-9-configuration-management).
 
 After making configuration changes in the Admin interface, settings are updated in the database. The Configuration Management system allows you to commit settings stored in the database to code so they can be easily tracked and applied to other environments.
 

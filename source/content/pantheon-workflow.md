@@ -115,7 +115,7 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 * [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
-* Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management).
+* Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 9 Sites](/drupal-9-configuration-management).
 
 ## Understanding Write Permissions in Test and Live
 
