@@ -42,7 +42,7 @@ The details of executing an upgrade/migration to Drupal 8 have continued to shif
 
 ### Content and configuration
 
-Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 8 site](/drupal-8-configuration-management)).
+Drupal 9 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 9 site](/drupal-9-configuration-management)).
 
 ### Customizing migrations
 
