@@ -52,7 +52,7 @@ define( 'PANTHEON_WPSCAN_ENVIRONMENTS', ['dev', 'test', 'live'] );
 To scan all environments:
 
 ```php:title=wp-config.php
-define( 'PANTHEON_WPSCAN_ENVIRONMENTS', * );
+define( 'PANTHEON_WPSCAN_ENVIRONMENTS', '*' );
 ```
 
 **Note:** Scanning multiple or all environments at will more rapidly exhaust your daily API request quota.
