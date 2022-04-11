@@ -91,11 +91,7 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 
 ## See Also
 
-View the following [Drupal.org](https://drupal.org) resources for more information:
-
+- [Drupal 9](/drupal-9)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
-- [Executing a Drupal 7 to Drupal 8 upgrade](https://www.drupal.org/node/2257723)
-- [Upgrading from Drupal 7 to Drupal 8](https://www.drupal.org/upgrade/migrate)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)
-- [Running Drupal 8 Data Migrations on Pantheon Through Drush](https://pantheon.io/blog/running-drupal-8-data-migrations-pantheon-through-drush)
 - [Drupal 8 File Migrations](https://pantheon.io/blog/drupal-8-file-migrations)
