@@ -38,7 +38,11 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep 
 
 - The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
-- **Commit history note**: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+<Alert title="Note" type="info" >
+  
+The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+
+</Alert>
 
 ## Prepare the Local Environment
 
