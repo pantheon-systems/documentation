@@ -40,7 +40,7 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 We provide detailed steps on how to convert a standard Pantheon Drupal 8 site to a Composer-managed Drupal 8 site on the `drupal-recommended` upstream.
 
-<Alert title="Note"  type="info" >
+<Alert title="Note" type="info" >
 
 Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to Drupal 9.
 

@@ -17,16 +17,18 @@ Confirm that your site meets the following requirements before you continue:
      Created            2019-12-02 18:28:14
      Framework          drupal8
      ...
+     //highlight-start
      Upstream           8a129104-9d37-4082-aaf8-e6f31154644e: https://github.com/pantheon-systems/drops-8.git
+     //highlight-end
      ...
      ------------------ -------------------------------------------------------------------------------------
      ```
 
     The following values indicate that a site is using a `drops-8` upstream:
 
-     * The `Framework` is `drupal8`
+     - The `Framework` is `drupal8`
 
-     * The `Upstream` includes `https://github.com/pantheon-systems/drops-8.git`
+     - The `Upstream` includes `https://github.com/pantheon-systems/drops-8.git`
 
   - The site cannot be set to use an empty upstream.
 

@@ -24,7 +24,7 @@ By converting an empty upstream Drupal 8 site to a Composer-managed site you wil
 
 The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
 
-1. Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 ## Will This Guide Work for Your Site?
 
