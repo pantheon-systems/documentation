@@ -80,7 +80,7 @@ In addition to Pantheon, you will need accounts at:
   composer require "drupalcommerce/commerce_base dev-8.x-1.x"
   ```
 
-1. Run `git status` confirm that the `composer.json` and `composer.lock` files have changed:
+1. Run `git status` and confirm that the `composer.json` and `composer.lock` files have changed:
 
   ```bash{promptUser: user}
   git status
@@ -114,7 +114,7 @@ In addition to Pantheon, you will need accounts at:
 
 ## Reinstall Drupal
 
- The Build Tools Plugin command we used earlier automatically installed Drupal's standard profile in the Dev environment for us. Now that we've installed the Commerce profile, we want that installed instead.
+The Build Tools Plugin command you used earlier automatically installed Drupal's standard profile in the Dev environment. Now that you have the Commerce profile, you need to install that instead.
 
 1. Run the Drush command `site-install` to clear the database of the Standard profile before installing Commerce. This Drush command requires that the system be in writable (SFTP) mode:
 
