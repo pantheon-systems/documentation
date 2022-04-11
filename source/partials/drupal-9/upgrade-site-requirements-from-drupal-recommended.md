@@ -1,8 +1,8 @@
 Confirm that your site meets the following requirements before you continue:
 
-- Ensure your site has the [Pantheon drupal-recommended repository](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
+- Ensure your site has the [Pantheon `drupal-recommended` repository](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
 
-   - Use Terminus to Confirm the Drupal Recommended Upstream
+   - Use Terminus to confirm the `drupal-recommended` Upstream
 
      Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
@@ -25,7 +25,7 @@ Confirm that your site meets the following requirements before you continue:
      ------------------ -------------------------------------------------------------------------------------
      ```
 
-    The following values indicate that a site is using an `drupal-recommended` upstream:
+    The following values indicate that a site is using a `drupal-recommended` upstream:
 
      - The `Framework` is `drupal8`
 
