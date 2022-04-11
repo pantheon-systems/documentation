@@ -230,7 +230,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal 9" id="d9-2conflict">
 
   ```bash{promptUser: user}
-  git fetch pantheon-drops-8
+  git fetch pantheon-drupal-9
   git rebase pantheon-drupal-9/master
   ```
 
@@ -371,9 +371,9 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal 9" id="d9-2conflict-merge">
 
-  GITHUB-EMBED https://github.com/pantheon-systems/drupal-9-with-circleci-orb/blob/master/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
+  GITHUB-EMBED https://github.com/pantheon-systems/drupal-9-with-circleci-orb/blob/master/pantheon.yml yaml:title=pantheon.yml GITHUB-EMBED
 
- [View on GitHub](https://github.com/pantheon-systems/drupal-9-with-circleci-orb/blob/default/pantheon.yml)
+ [View on GitHub](https://github.com/pantheon-systems/drupal-9-with-circleci-orb/blob/master/pantheon.yml)
 
  </Tab>
 
