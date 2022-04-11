@@ -91,6 +91,16 @@ The [Pantheon Enable Development Module repository](https://github.com/pantheon-
 
 Use the [Pantheon Generate Development Content repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/generate_dev_content) to integrate Drush devel generate commands into your Quicksilver operations. This allows you to generate development content on each database clone operation.
 
+### Import WP-CFM Configuration Settings into a Cloned Database
+
+Use the [Pantheon WP-CFM Import repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_cfm_import) to automatically import WP-CFM configuration settings into a cloned database. This is useful for development environments that have slightly different settings than the production environment.
+
+<Alert title="Note" type="info">
+
+WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
+
+</Alert>
+
 ### New Relic Custom Apdex T Values Multidev Environments
 
 Use the [Pantheon New Relic Apdex T Values repository](https://github.com/pantheon-quicksilver/new-relic-apdex-t) to set custom T values for Multidev environments. Each environment will use the default values of 0.5 and 7 for your server and browser, respectively, if you don't set a custom value. 
