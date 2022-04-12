@@ -72,7 +72,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 1. Run `git status` to see the `composer.json` and `composer.lock` files have changed:
 
-  ![Git Status showing updated Composer files](../../images/guides/drupal-9-commerce/git-status.png)
+  ![Git Status showing updated Composer files](../../../images/guides/drupal-9-commerce/git-status.png)
 
 1. Commit the new files and push them to GitHub:
 
@@ -86,7 +86,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 1. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span> **Code**, then **install later**. 
   You should now see your commit history. After CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 
-  ![Build Assets on Dev](../../images/guides/drupal-9-commerce/build-assets.png)
+  ![Build Assets on Dev](../../../images/guides/drupal-9-commerce/build-assets.png)
 
 ## Reinstall Drupal
 
@@ -110,7 +110,7 @@ The Build Tools Plugin command you used earlier automatically installed Drupal's
 
 1. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a successful install:
 
-    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-9-commerce/commerce-button.png)
+    ![Drupal Commerce in the Toolbar](../../../images/guides/drupal-9-commerce/commerce-button.png)
 
 ## Conclusion
 
