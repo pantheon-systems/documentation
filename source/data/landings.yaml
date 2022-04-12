@@ -624,8 +624,8 @@
     - title: ''
       subtitle: ''
       links:
-        - text: 'Drupal Commerce on Drupal 8'
-          url: '/guides/drupal-8-commerce'
+        - text: 'Drupal Commerce on Drupal 9'
+          url: '/guides/drupal-9-commerce'
           icons: 'fa fa-book'
         - text: 'Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server'
           url: '/guides/jenkins'
