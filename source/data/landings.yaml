@@ -1012,7 +1012,7 @@
         - image: 'logos/woocommerce.png'
           url: '/guides/woocommerce'
         - image: 'logos/drupalcommerce.png'
-          url: '/guides/drupal-8-commerce'
+          url: '/guides/drupal-9-commerce'
     - title: 'Platform Integration Guides'
       links:
         - image: 'logos/asana.png'
