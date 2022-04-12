@@ -10,13 +10,9 @@ reviewed: "2020-10-21"
 
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
-## Drupal 8
+## Drupal 9
 
-Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
-
-### Drupal 8.8
-
-<Partial file="drupal-8-8-warning.md" />
+Drupal 9 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
 
 ## Drupal 7 and Earlier
 
@@ -42,24 +38,18 @@ You should never put the database connection information for a Pantheon database
 
 Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
-### Drupal 8
+### Drupal 9
 
-Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-recommended). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
 ```php
-// Local development configuration.
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  // Database.
-  $databases['default']['default'] = array(
-    'database' => 'DATABASE',
-    'username' => 'USERNAME',
-    'password' => 'PASSWORD',
-    'host' => 'localhost',
-    'driver' => 'mysql',
-    'port' => 3306,
-    'prefix' => '',
-  );
-}
+  /**
+   * If there is a local settings file, then include it
+   */
+  $local_settings = __DIR__ . "/settings.local.php";
+  if (file_exists($local_settings)) {
+    include $local_settings;
+  }
 ```
 
 The `HASH_SALT` value should also be set within `settings.local.php`. See Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
@@ -70,7 +60,7 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
-Drupal 8 will not run locally without a hash salt, but it need not be the same one set on the Pantheon platform; any sufficiently long random string will do. Make sure to set one in `settings.local.php` :
+Drupal 9 will not run locally without a hash salt, but it need not be the same one set on the Pantheon platform; any sufficiently long random string will do. Make sure to set one in `settings.local.php` :
 
 ```php:title=settings.local.php
 $settings['hash_salt'] = '$HASH_SALT';
@@ -82,7 +72,7 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 
 <Alert title="Note" type="info">
 
-Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
+Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 9 redirects from our [Configure Redirects](/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
 
 </Alert>
 
@@ -226,7 +216,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I get a copy of a default.settings.php?
 
-- Drupal 8 - [https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php)
+- Drupal 9 - [https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml](https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml)
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 
 ### Where can I find examples of Pantheon settings.php?
@@ -281,7 +271,7 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
-### Error: "The provided host name is not valid for this server."
+### Drupal 8 Error: "The provided host name is not valid for this server."
 
 This error comes from a feature in Drupal 8 designed to protect against [HTTP HOST Header attacks](https://www.drupal.org/node/1992030). Drupal 8 allows you to specify "trusted host patterns," which specify a set of domains that incoming requests must match.
 
@@ -290,3 +280,7 @@ If you see this error, you need to update your [trusted host patterns](#trusted-
 By default, Pantheon's environment is configured to not allow any non-trusted hosts. Trusted hosts are added via the `PANTHEON_ENVIRONMENT` variable in `settings.php` [here](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L184):
 
 GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php php:title=settings.php 179-187 GITHUB-EMBED
+
+### Drupal 8.8
+
+<Partial file="drupal-8-8-warning.md" />
