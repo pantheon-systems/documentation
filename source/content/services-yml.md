@@ -49,6 +49,5 @@ View the following [Drupal.org](https://drupal.org) resources for more informati
 
 - [Structure of a service file](https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/structure-of-a-service-file)
 - [Issue: Use container parameters instead of settings](https://www.drupal.org/node/2251113)
-- [Services and dependency injection in Drupal 8](https://www.drupal.org/node/2133171)
 - [Service Tags](https://www.drupal.org/node/2239393)
 - [Structure of a service file](https://www.drupal.org/node/2194463)
