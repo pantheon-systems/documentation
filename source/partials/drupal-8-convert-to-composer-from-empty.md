@@ -151,7 +151,7 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 
 ### Custom Code
 
-Manually copy custom code from the existing site repository to the Composer-managed directory.
+Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
 #### Modules and Themes
 

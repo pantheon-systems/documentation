@@ -19,3 +19,9 @@ editpath: drupal-9-v8/03-prepare.md
 
 <Partial file="drupal-apply-upstream-updates.md" />
 
+<Partial file="drupal-9/upgrade-site-requirements.md" />
+
+## Convert to Composer
+
+If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to Drupal 9.
+

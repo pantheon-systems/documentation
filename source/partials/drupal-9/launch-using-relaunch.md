@@ -1,0 +1,1 @@
+Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.

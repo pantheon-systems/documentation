@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Deploy to Dev
 description: 
 categories: [develop]
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide

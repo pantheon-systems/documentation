@@ -31,7 +31,7 @@ editpath: drupal-9-v8-custom-upstream/03-new-branch.md
    git checkout -b composerify
    ```
 
-1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. This is because you're going to completely replace the file structure and re-add customizations:
+1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. We do this because you're going to completely replace the file structure and re-add customizations:
 
    ```bash{promptUser:user}
     git rm -rf * && git commit -m "Removing all files"

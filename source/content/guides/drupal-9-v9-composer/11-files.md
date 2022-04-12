@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Upload Your Files
 description: 
 categories: [develop]
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
@@ -56,7 +56,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   <Tab title="Over 500MBs" id="500mbsplusfiles">
 
-  Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of migration, as it allows you to bring over only new content rather than re-copying every single file.
+  Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of migration, as it allows you to bring over only new content, rather than re-copying every single file.
 
   We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
 

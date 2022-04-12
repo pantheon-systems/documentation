@@ -116,7 +116,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
   cd upstream-configuration
   ```
 
-1. For each contrib module and theme in the list you've gathered, go through the following steps:
+2. For each contrib module and theme in the list you've gathered
 
     1. Add the package and version with Composer. If the version starts with `8.x-`, remove that and only include the version number after `8.x-`.
 
@@ -126,7 +126,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
       composer require drupal/MODULE_NAME:^VERSION --no-update
       ```
 
-    1. Confirm that only `composer.json` has been modified:
+    2. Confirm that only `composer.json` has been modified:
 
        ```bash{promptUser:user}
        git status
@@ -134,15 +134,13 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 
        - If anything other than `composer.json` has been modified, add the modified file to `.gitignore`.
 
-    1. Commit the change:
+    3. Commit the change:
 
       ```bash{promptUser:user}
       git commit -am "Adding MODULE_NAME"
       ```
 
 ## Custom Modules and Themes
-
-For custom modules and themes, the process is the same as in [Upgrade to Drupal 9](/guides/drupal-9-migration/upgrade-to-d9#modules-and-themes-1).
 
 Modules:
 
@@ -159,5 +157,4 @@ git checkout master themes/custom
 git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
-
-Do the same for any other custom code that needs to be carried over.
+Follow suit with any other custom code you need to carry over.

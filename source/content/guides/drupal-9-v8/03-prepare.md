@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site with a drops-8 Repo to Drupal 9
+title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Prepare
 description: 
 categories: [develop]

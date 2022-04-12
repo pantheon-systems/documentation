@@ -8,7 +8,7 @@ After you set up Drupal 9, the following error might be displayed in the **Best 
 >
 > *Create services.yml file inside sites/default directory by copying default/services.yml file. Refer to https://www.drupal.org/documentation/install/settings-file for details.*
 
-Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is set to **Git**, then use the terminal on the local machine where you cloned the site, and from the project's root directory:
+Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is set to **Git**, use the terminal on the local machine where you cloned the site, and from the project's root directory:
 
 1. Copy `default.services.yml` to `services.yml`:
 

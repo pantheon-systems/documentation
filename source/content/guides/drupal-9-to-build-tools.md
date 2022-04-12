@@ -126,7 +126,7 @@ Do not forget to commit your changes during these steps.
 
 ### Custom Code
 
-Manually copy custom code from the existing site repository to the Composer-managed directory.
+Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
 #### Modules and Themes
 

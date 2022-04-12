@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
 categories: [develop]
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
@@ -86,9 +86,10 @@ Your existing site may have customizations to `settings.php` or other configurat
 
 1. Confirm that the `settings.php` file on the Pantheon D9 site:
 
-- Has one `$settings['container_yamls'][]`
-  - And that there are no duplicates.
-- Contains `include __DIR__ . "/settings.pantheon.php";`
+   - Has one `$settings['container_yamls'][]`
+     
+   And that there are no duplicates.
+   - Contains `include __DIR__ . "/settings.pantheon.php";`
 
 ## Configuration
 

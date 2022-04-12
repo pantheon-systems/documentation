@@ -1,6 +1,6 @@
 One-click core updates can be made through the Dashboard:
 
-1. Navigate to **Code** in the Dev tab of the site's Dashboard. 
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
 1. Click **Check Now**. 
 

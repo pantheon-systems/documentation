@@ -11,4 +11,4 @@ permalink: docs/guides/drupal-9-v8/deploy
 anchorid: deploy
 editpath: drupal-9-v8/11-deploy.md
 ---
-Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.
+<Partial file="drupal-9/deploy-using-relaunch.md" />

@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site with a drops-8 Repo to Drupal 9
+title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Create the Drupal 9 Site
 description: 
 categories: [develop]
@@ -12,7 +12,7 @@ anchorid: create-site
 editpath: drupal-9-v8-drops/05-create-site.md
 ---
 
-1. Use this link to create a new Drupal 9 Integrated Composer site from the Upstream: [https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03). On the **Create Your Pantheon Site** page:
+1. Create a new Drupal 9 Integrated Composer site from the Upstream using the: [Create Your Pantheon Site](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) page. On the this page:
 
    - Enter a name for the site.
 

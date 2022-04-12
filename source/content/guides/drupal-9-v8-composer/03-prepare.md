@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal 8 Site to Drupal 9
 subtitle: Prepare
 description: 
 categories: [develop]
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
@@ -24,7 +24,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 1. Check that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
 
-1. Use Terminus to Confirm the drupal-recommended Upstream:
+1. Use Terminus to confirm the drupal-recommended upstream:
 
   ```bash
   terminus site:info $SITE 
@@ -57,19 +57,4 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ### Apply All Available Upstream Updates
 
-[Update the site](/core-updates) to the latest [Pantheon Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) Upstream and apply all available updates.
-
-1. Use Terminus to list all available updates:
-
-  ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE.dev
-  [warning] There are no available updates for this site.
-  ```
-
-1. Run the following code to apply available updates:
-
-  ```bash{promptUser: user}
-  terminus upstream:updates:apply $SITE.dev --updatedb
-  ```
-
-You can also use the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard) to apply upstream updates.
+<Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />

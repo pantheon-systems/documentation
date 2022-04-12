@@ -96,7 +96,7 @@ editpath: drupal-9-v8-build-tools/05-upgrade.md
 
 1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment** Multidev. This is called `$ENV` in the next steps.
 
-1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference to your pull request.
+1. After the build has finished without error, you will see a new environment in the Dashboard under **<span class="glyphicons glyphicons-cloud"></span> Multidev**, named in reference to your pull request.
 
    ```bash{promptUser: user}
    terminus env:info $SITE.$ENV
@@ -110,9 +110,9 @@ editpath: drupal-9-v8-build-tools/05-upgrade.md
 
 1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
 
-### Upgrade MariaDB in All Environments
+## Upgrade MariaDB in All Environments
 
-#### Drupal 9 Considerations
+### Drupal 9 Considerations
 
 <Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
 

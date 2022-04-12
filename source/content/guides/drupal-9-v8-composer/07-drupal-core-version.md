@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal 8 Site to Drupal 9
 subtitle: Set Drupal Core Version
 description: 
 categories: [develop]
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide

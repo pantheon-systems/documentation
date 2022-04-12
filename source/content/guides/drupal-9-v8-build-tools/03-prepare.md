@@ -24,7 +24,7 @@ editpath: drupal-9-v8-build-tools/03-prepare.md
 
 ## Prepare a Local Copy of the Site for Upgrade
 
-1. In the **Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
+1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
 
 1. Change into the `$SITE` directory, then create a new branch based on the default:
 

@@ -63,7 +63,7 @@ After Composer is aware of all the contributed code, you'll be able to run `comp
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="could-not-find-version-module_name.md" />	  
+    <Partial file="module-name.md" />	  
 
 ### Other Composer Packages
 
@@ -79,7 +79,7 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 
 ## Custom Code
 
-Manually copy custom code from the existing site repository to the Composer-managed directory.
+Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
 ### Modules and Themes
 
@@ -124,7 +124,7 @@ The resulting `settings.php` should have no `$databases` array.
 
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 
-You can use the diff command to get the information you need to copy:
+Use the diff command to get the information you need to copy:
 
 ```bash{promptUser:user}
 diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json

@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Prepare
 description: 
 categories: [develop]
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
@@ -18,7 +18,7 @@ editpath: drupal-9-v9-composer/03-prepare.md
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-1. Navigate to your User Dashboard and click **Create New Site**.
+1. Navigate to your User Dashboard and click <Icon icon={"more-windows"} text={"Sites:"}/> **Create New Site**.
 
 1. Click **Visit your Pantheon Site Dashboard**.
 
@@ -29,11 +29,6 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
 Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
-
-This doc uses the following aliases:
-
-- **Alias:** `SITE`
-- **Old site folder** `FORMER-PLATFORM`
 
 ### Create a Local Copy of the Old Site's Code
 
