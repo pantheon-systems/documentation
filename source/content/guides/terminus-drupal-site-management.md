@@ -7,16 +7,10 @@ tags: [terminus, drush]
 type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy]
-date: 2/25/2015
+
 ---
 ## Create Sites Faster and More Efficiently
 The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
-
-<Alert title="Note" type="info">
-
-The following does **not** pertain to Composer-managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
-
-</Alert>
 
 ## Installing Terminus
 Installing Terminus is a fairly straight forward process. Just follow [these instructions](/terminus/install).
@@ -41,7 +35,7 @@ terminus site:list
 +--------------------------+-----------+---------------+--------------------------+
 | Site                     | Framework | Service Level | UUID                     |
 +--------------------------+-----------+---------------+--------------------------+
-| terminus-create          | drupal8   | free          | terminus-create          |
+| terminus-create          | drupal9   | free          | terminus-create          |
 | git-import-example       | drupal    | free          | git-import-example       |
 +--------------------------+-----------+---------------+--------------------------+
 ```
@@ -78,7 +72,7 @@ Now let's create a new site.
  | Site                     | Framework | Service Level | UUID                     |
  +--------------------------+-----------+---------------+--------------------------+
  | terminus-cli-create      | drupal    | free          | terminus-cli-create      |
- | terminus-create          | drupal8   | free          | terminus-create          |
+ | terminus-create          | drupal9   | free          | terminus-create          |
  | git-import-example       | drupal    | free          | git-import-example       |
  +--------------------------+-----------+---------------+--------------------------+
  ```
