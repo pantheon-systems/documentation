@@ -20,7 +20,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 ## Installing Terminus
 
-1.[Install Terminus](/terminus/install).
+1. [Install Terminus](/terminus/install).
 
 1. Check the status to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
