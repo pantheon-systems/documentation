@@ -329,7 +329,7 @@
           url: '/nested-docroot'
         - text: 'Use the Pantheon Workflow'
           url: '/pantheon-workflow'
-        - text: 'Creating a services.yml File for Drupal 8'
+        - text: 'Creating a services.yml File for Drupal 9'
           url: '/services-yml'
         - text: 'WordPress Best Practices'
           url: '/wordpress-best-practices'
