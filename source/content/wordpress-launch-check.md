@@ -29,13 +29,13 @@ WP Launch Check utilizes the [WPScan API](https://wpscan.com/api) to check for o
 
 ### Configuring WPScan
 
-Configuring WPScan is easy. Once you've obtain your API token, add it to your site's `wp-config.php` file using the following PHP code: 
+After you've obtained your API token, add it to your site's `wp-config.php` file using the following PHP code: 
 
 ```php:title=wp-config.php
 define( 'WPSCAN_API_TOKEN', '$your_api_token' );
 ```
 
-You'll also need to define which environment you'd like WPScan to run on using the `PANTHEON_WPSCAN_ENVIRONMENTS` constant. This constant is required to use the WPScan functionality, and allows users to decide whether or not scans are done on multiple environments, or just one.
+You'll also need to define which environment you want WPScan to run on using the `PANTHEON_WPSCAN_ENVIRONMENTS` constant. This constant is required to use the WPScan functionality, and allows users to decide whether or not scans are done on multiple environments, or just one.
 
 To scan one environment:
 
@@ -55,7 +55,11 @@ To scan all environments:
 define( 'PANTHEON_WPSCAN_ENVIRONMENTS', '*' );
 ```
 
-**Note:** Scanning multiple or all environments at will more rapidly exhaust your daily API request quota.
+<Alert title="Note"  type="info" >
+
+Scanning multiple or all environments will more rapidly exhaust your daily API request quota.
+
+</Alert>
 
 ## Run Launch Check Manually
 
