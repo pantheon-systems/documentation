@@ -19,7 +19,9 @@ This guide will show you how to migrate a site that meets the following criteria
 |---|---
 |Pantheon Hosted| No
 |Drupal Version| 9
-|Dependency Manager| Composer
+|Multi-Dev Environment | No
+|Build Tools| No
+|Composer Managed| Yes
 |Custom Upstream| No
 
 # Requirements

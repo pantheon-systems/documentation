@@ -19,7 +19,9 @@ This guide will show you how to migrate a site that meets the following criteria
 |---|---
 |Pantheon Hosted| No
 |Drupal Version| 9
-|Dependency Manager| None
+|Multi-Dev Environment | No
+|Build Tools| No
+|Composer Managed| No
 |Custom Upstream| No
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.

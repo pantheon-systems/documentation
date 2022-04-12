@@ -19,8 +19,11 @@ This guide will show you how to migrate a site that meets the following criteria
 |---|---
 |Pantheon Hosted| Yes
 |Drupal Version| 8
-|Dependency Manager| Build Tools
+|Multi-Dev Environment | No
+|Build Tools| Yes
+|Composer Managed| No
 |Custom Upstream| No
+
 
 <Alert title="About Build Tools" type="info" icon="info-sign">
 

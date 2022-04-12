@@ -17,8 +17,11 @@ This guide will show you how to migrate a site that meets the following criteria
 |---|---
 |Pantheon Hosted| Yes
 |Drupal Version| 8
-|Dependency Manager| Composer
+|Multi-Dev Environment | No
+|Build Tools| No
+|Composer Managed| Yes
 |Custom Upstream| No
+
 ## Requirements
 
 You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream. 
