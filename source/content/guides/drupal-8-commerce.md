@@ -110,7 +110,7 @@ In addition to Pantheon, you will need accounts at:
 
  You should now see your commit history. CircleCI will commit the build assets and push them to Dev after the automated tests built into our repository complete:
 
-  ![Build Assets on Dev](../../images/guides/drupal-8-commerce/build-assets.png)
+  ![Build Assets on Dev](../../images/guides/drupal-9-commerce/build-assets.png)
 
 ## Reinstall Drupal
 
@@ -132,7 +132,7 @@ The Build Tools Plugin command you used earlier automatically installed Drupal's
 
 1. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a successful install:
 
-    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-8-commerce/commerce-button.png)
+    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-9-commerce/commerce-button.png)
 
 ## Next Steps
 
