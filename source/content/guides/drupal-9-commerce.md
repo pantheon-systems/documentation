@@ -10,7 +10,11 @@ permalink: docs/guides/:basename
 multidev: true
 ---
 
-This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a Drupal Commerce site, GitHub repository, and Circle CI configuration for testing.
+This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a:
+
+- Drupal Commerce site
+- GitHub repository
+- Circle CI configuration for testing
 
 ## Before You Begin
 
@@ -44,7 +48,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
  terminus build:project:create pantheon-systems/example-drupal-recommended $SITENAME
  ```
 
- At this point *do not* go to the web interface to continue installation. You now have a repository on GitHub containing your new site.
+ *Do not* go to the web interface to continue installation. You now have a repository on GitHub containing your new site.
 
 1. Clone a local copy to your `projects` folder:
 
