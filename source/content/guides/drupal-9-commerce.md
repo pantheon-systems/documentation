@@ -74,7 +74,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
   composer require "drupalcommerce/commerce_base dev-9"
   ```
 
-1. Run `git status` to see the `composer.json` and `composer.lock` files have changed:
+1. Run `git status` to see that the `composer.json` and `composer.lock` files have changed:
 
   ![Git Status showing updated Composer files](../../images/guides/drupal-8-commerce/git-status.png)
 
