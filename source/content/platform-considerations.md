@@ -46,59 +46,6 @@ Running the export from the command line using tools like [Terminus](/terminus),
 
 Most often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
-## Compute Optimized Environments (COE)
-
-<ReviewDate date="2020-11-02" />
-
-Compute Optimized Environments (COE) improves CPU performance over the previous infrastructure by up to 40%. COE includes changes to the runtime operating system, file structure, and binary content of Pantheon’s Site Environments. While these changes are transparent to most sites on the platform, there is the potential for custom code to interact with these components in a way that may need to be adjusted or optimized.
-
-### Is my site on COE?
-
-Yes. All sites are on COE.
-
-### Home Directory
-
-The site environment home directory is in the root `/`.
-
-Pantheon has provided backward compatibility for site code that references the previous home directory by adding a symlink `/srv/bindings/[UUID]` to `/`.
-
-External scripts that reference `/srv/bindings/[UUID]` should check that the path exists. If the prior home directory does not exist, then your scripts should write to the new home directory location.
-
-Note that within the home directory, only `/code`, `/files`, and `/tmp` are writable. The environment variable `[HOME]` (`$_ENV[‘HOME’]`) remains the recommended way to target this location within your code. See [Hard-coded Directory References and $_ENV['HOME']
-](/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
-
-### Logs Directory
-
-Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/nginx`.
-
-External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
-
-See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
-
-### Updated Plugins
-
-#### ImageMagick
-
-[ImageMagick](/external-libraries#imagemagick) has been updated from 6.8.8 to 6.9.10.
-
-#### OpenSSL
-
-OpenSSL has been updated from 1.0.2 to 1.1.1.
-
-If you see the following error, update the TLS version used for SSO:
-
-```none
-Error when validating ticket: Error with request to validate ticket: cURL error 35: error:141A318A:SSL routines:tls_process_ske_dhe:dh key too small (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
-```
-
-See https://www.openssl.org/news/changelog.html for a full list of changes.
-
-#### wkhtmltopdf
-
-[wkhtmltopdf](/external-libraries#wkhtmltopdf) has been updated from 0.12.0 to 0.12.5.
-
-See https://wkhtmltopdf.org/downloads.html for a full list of changes.
-
 ## CORS
 
 For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
