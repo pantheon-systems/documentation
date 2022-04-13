@@ -62,6 +62,33 @@ Manage team members and assign [roles and permissions](/change-management#roles-
 
 Once it's enabled, use it to visually compare changes to the site. Visit the [Autopilot documentation](/guides/autopilot) for more information.
 
+### Webhooks
+
+Webhooks allows you to set up integrations and subscribe to specific events in the Phoebe Dashboard. When an event is triggered, you will receive a notification. This feature is workspace-specific, so anyone who has Admin permissions has access.
+
+#### Create A Webhook
+
+1. Navigate to the workspace where you want to set up a webhook > Click <span class="glyphicons glyphicons-cogwheel"></span> **Settings** > Click **Webhooks**.
+
+1. Click **+ Create New Webhook**.
+
+1. Name your Webhook.
+
+1. Provide a Callback URL. This is _______.
+
+1. **Optional** For added security, you may choose to add a Secret Token. You would get this from ____.
+
+1. Choose a webhook event. Please note that if you want to set up both webhook events, you need to repeat the process for both options. Namely, set up a webhook for Visual Regression Tests and one for Site Deployments.
+
+1. Click **Create Webhook**.
+
+On the Webhooks page, you have the options to enable or disanle your Webhook, edit your Webhook, or delete it.
+
+Additionally, you can subscribe to the Visual Regression Testing (VRT) result. (idk how a user would do this). After you subscribe, you will have access the output of the payload; this can be modified in a specific way that would allow a user to:
+    * Hook into a slack channel; get a notification whenever a site was deployed or a vrt result came back
+    * Email a specific person when the vrt result comes through
+    * Trigger an alert every time autopilot runs
+
 ## Upstreams
 
 Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
