@@ -64,7 +64,7 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 ### Webhooks
 
-Webhooks allows you to set up integrations and subscribe to specific events in the Phoebe Dashboard. When an event is triggered, you will receive a notification. This feature is workspace-specific, so anyone who has Admin permissions has access.
+Webhooks allows you to set up integrations from third-party applications and subscribe to different events in the Phoebe Dashboard. When an event is triggered, you will receive a notification. This feature is workspace-specific, so anyone who has Admin permissions has access.
 
 #### Create A Webhook
 
@@ -74,20 +74,23 @@ Webhooks allows you to set up integrations and subscribe to specific events in t
 
 1. Name your Webhook.
 
-1. Provide a Callback URL. This is _______.
+1. Provide a Callback URL. This is provided by whichever third-party app you are using to create your webhook.
 
-1. **Optional** For added security, you may choose to add a Secret Token. You would get this from ____.
+1. **Optional** Add a Secret Token. Some applications will require this, and some will not.
 
 1. Choose a webhook event. Please note that if you want to set up both webhook events, you need to repeat the process for both options. Namely, set up a webhook for Visual Regression Tests and one for Site Deployments.
 
 1. Click **Create Webhook**.
 
-On the Webhooks page, you have the options to enable or disanle your Webhook, edit your Webhook, or delete it.
+On the Webhooks page, you have the options to enable or disable your Webhook, edit your Webhook, or delete it.
 
-Additionally, you can subscribe to the Visual Regression Testing (VRT) result. (idk how a user would do this). After you subscribe, you will have access the output of the payload; this can be modified in a specific way that would allow a user to:
-    * Hook into a slack channel; get a notification whenever a site was deployed or a vrt result came back
-    * Email a specific person when the vrt result comes through
-    * Trigger an alert every time autopilot runs
+After you create your webhook, the app you used is automatically subscribed to it and you now have access to the output of the payload. The payload can be modified in several ways. For example, you can:
+	
+	- Hook into a Slack channel and get a notification whenever a site was deployed or a VRT result comes back
+    - Email a specific person when the VRT result comes through
+    - Trigger an alert every time Autopilot runs
+
+SUMMARY SENTENCE.
 
 ## Upstreams
 
