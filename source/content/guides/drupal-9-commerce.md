@@ -78,7 +78,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
   ![Git Status showing updated Composer files](../../images/guides/drupal-9-commerce/git-status.png)
 
-1. Commit the new files and push them to GitHub:
+1. Commit the new files and then push them to GitHub:
 
   ```bash{promptUser: user}
   git commit -am "add commerce_base to project"
