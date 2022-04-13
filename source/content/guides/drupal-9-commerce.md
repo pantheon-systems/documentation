@@ -48,7 +48,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
  terminus build:project:create pantheon-systems/example-drupal-recommended $SITENAME
  ```
 
- At this point *do not* go to the web interface to continue installation. You now have a repository on GitHub containing your new site.
+ *Do not* go to the web interface to continue installation. You now have a repository on GitHub containing your new site.
 
 1. Clone a local copy to your `projects` folder:
 
