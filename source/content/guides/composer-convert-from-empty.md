@@ -16,7 +16,7 @@ Use this guide to convert an empty upstream Drupal 8 site to use Composer to man
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
-By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following: 
+By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following:
 
 1. Remove dependencies that Composer manages from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
 
@@ -24,13 +24,13 @@ By converting an empty upstream Drupal 8 site to a Composer-managed site you wil
 
 The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
 
-1. Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 ## Will This Guide Work for Your Site?
 
 <Partial file="drupal-9/upgrade-site-requirements-from-empty.md" />
 
-- You have not set up Continous Integration or you no longer need it. 
+- You have not set up Continuous Integration or you no longer need it.
 
 ## Before You Begin
 
@@ -47,7 +47,6 @@ The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and f
   The steps in this process migrate a site and its content, but not the commit history. The new site will not maintain the site's existing commit history.
 
 </Alert>
-
 
 ## Prepare the Local Environment
 
