@@ -8,7 +8,7 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/available-updates.md
+permalink: docs/guides/drupal-9-hosted-pre112021/available-updates
 anchorid: available-updates
 editpath: drupal-9/drupal-9-hosted-pre112021/05-available-updates.md
 ---
