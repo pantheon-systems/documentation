@@ -1,0 +1,107 @@
+---
+title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+subtitle: Add the Integrated Composer Upstream in a New Local Branch
+description: 
+categories: [develop]
+tags: [code, launch, migrate, site, updates]
+contributors: [wordsmither]
+reviewed: "2021-03-31"
+layout: guide
+showtoc: true
+permalink: docs/guides/drupal-9-hosted-pre112021/composer-upstream
+anchorid: composer-upstream
+editpath: drupal-9/drupal-9-hosted-pre112021/05-composer-upstream.md
+---
+This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
+
+To minimize issues, these steps make the codebase changes in a new branch:
+
+1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
+
+  ```bash{promptUser:user}
+  cd ~/projects/$SITE/
+  ```
+
+1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
+
+  ```bash{outputLines:2}
+  git remote add ic git@github.com:pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  Switched to a new branch 'composerify'
+  ```
+
+  If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
+
+  <Accordion title="Troubleshoot: Permission denied (publickey)" id="permission-denied-publickey" icon="question-sign">
+
+  If you encounter a `Permission denied (publickey)` error, check that your [SSH keys](/ssh-keys) are set up correctly.
+
+  If you continue to encounter the error, use HTTPS to add the remote:
+
+   ```bash{outputLines:2}
+   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   Switched to a new branch 'composerify'
+   ```
+
+  </Accordion>
+
+### Set Drupal Core Version
+
+Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
+
+  ```bash{promptUser:user}
+  composer require --no-update drupal/core-recommended:^8.9
+  composer require --dev drupal/core-dev:^8.9
+  git add composer.*
+  git commit -m "Remain on Drupal 8"
+  ```
+
+### Add Upgrade Status Module
+
+This step is optional. You can wait and add the Upgrade Status module to your site later.
+
+The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
+
+Add the Upgrade Status module to your site with Composer:
+
+  ```bash{promptUser:user}
+  composer require drupal/upgrade_status
+  git add composer.*
+  git commit -m "Add Upgrade Status module"
+  ```
+
+When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
+
+### Copy Existing Configuration
+
+Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
+
+  ```bash{promptUser:user}
+  git checkout master sites/default/config
+  git mv sites/default/config/* config
+  git rm -f sites/default/config/.htaccess
+  git commit -m "Pull in configuration from default branch"
+  ```
+
+### Copy pantheon.yml
+
+1. Compare the old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
+
+  ```bash{promptUser:user}
+  git diff master:pantheon.yml pantheon.upstream.yml
+  ```
+
+  Press `q` on your keyboard to exit the diff display.
+
+1. Copy the old `pantheon.yml` to preserve settings:
+
+  ```bash{promptUser:user}
+  git checkout master pantheon.yml
+  git add pantheon.yml
+  git commit -m 'Copy my pantheon.yml'
+  ```
+
+  Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then add `build_step: true` to `pantheon.yml` if it is not already included.
+
+ In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
+
+
