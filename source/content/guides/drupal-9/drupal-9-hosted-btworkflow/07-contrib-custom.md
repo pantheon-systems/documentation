@@ -24,6 +24,3 @@ This guide will show you how to migrate a site that meets the following criteria
 |Drupal version set to 8| n/a
 |Site created before November 2021| n/a
 
-## See Also
-
-- [Composer Fundamentals and Workflows](/composer)
