@@ -23,7 +23,12 @@ This guide will show you how to migrate a site that meets the following criteria
 |Build Tools Workflow Needed | Yes
 |Drupal version set to 8| n/a
 |Site created before November 2021| n/a
+## Requirements
 
+<Partial file="drupal-9/upgrade-site-requirements-from-drupal-recommended.md" />
+
+- You are able to [create a new Drupal 9 site using Terminus Build Tools](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project)
+  
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)

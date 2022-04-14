@@ -13,9 +13,7 @@ anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-btworkflow/03-prepare.md
 ---
 
-<Partial file="drupal-9/upgrade-site-requirements-from-drupal-recommended.md" />
 
-- You are able to [create a new Drupal 9 site using Terminus Build Tools](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project)
 
 ## Before You Begin
 
