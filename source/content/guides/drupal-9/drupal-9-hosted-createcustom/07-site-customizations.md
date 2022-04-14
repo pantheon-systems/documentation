@@ -69,4 +69,4 @@ Go through the following steps for each child site you wish to test, or that has
 
 1. View and test the Multidev environment.
 
-  ![Example of Custom Upstream Git URL](../../../images/custom-upstream-git-url.png)
+  ![Example of Custom Upstream Git URL](../../../../images/custom-upstream-git-url.png)

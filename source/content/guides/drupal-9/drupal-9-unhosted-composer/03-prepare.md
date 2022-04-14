@@ -40,7 +40,7 @@ Create a new folder to use while working on the migration. This folder will cont
 
 1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
-  ![Git connection mode](../../../images/dashboard/connection-mode-git.png)
+  ![Git connection mode](../../../../images/dashboard/connection-mode-git.png)
 
 1. Copy the `git clone` command for the site repository.
 

@@ -43,7 +43,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    1. Select your local archive file, then press **Import**.
 
-     ![Import MySQL database from file](../../../images/dashboard/import-mysql-file.png)
+     ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
   **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
@@ -57,7 +57,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    1. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
 
-      ![Import MySQL Database from URL](../../../images/dashboard/import-mysql-url.png)
+      ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
 
   </Tab>
 
