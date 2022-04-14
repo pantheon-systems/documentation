@@ -1080,7 +1080,7 @@
         - title: 'I am migrating a Custom Upstream'
           links:
             - text: 'Migrate a Drupal 8 Custom Upstream'
-              url: '/guides/drupal-9-v8-custom-upstream'
+              url: '/guides/drupal-9-hosted-createcustom'
         - title: 'I am using a package and dependency manager'
           links:
             - text: 'Migrate from a Build Tools Managed Drupal 8 Site'
