@@ -34,7 +34,7 @@ You will need to enter the following:
 
 1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name` 
 
-    Note that the single sign-on URL is case sensitive.
+    Note that the single sign-on URL is **case sensitive**.
 
 2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
