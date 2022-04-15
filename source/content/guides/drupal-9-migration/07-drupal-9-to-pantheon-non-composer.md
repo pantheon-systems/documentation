@@ -5,7 +5,7 @@ description: Migrate a non-Composer-managed Drupal 9 Site from another platform 
 cms: drupal-9
 categories: [develop]
 tags: [composer, site, workflow]
-reviewed: "2022-02-10"
+reviewed: "2022-03-10"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-migration/drupal-9-to-pantheon-non-composer
