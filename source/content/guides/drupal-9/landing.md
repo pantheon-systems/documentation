@@ -19,20 +19,16 @@ This upgrade migrates your existing site to a new site.  The new site will not m
 
 Answer these questions to determine which migration path to follow:
 
-<Accordion title="Is your site currently hosted on pantheon" id="hosted">
 
-    <Accordion title="Yes" id="hosted-yes">
+Is your site currently hosted on Pantheon?
 
-
-If yes
-
-    </Accordion>
-
-   <Accordion title="No" id="hosted-no">
-
-If no
+<Accordion title="Yes" id="hosted">
+Yes
 
 
-    </Accordion>
+</Accordion>
+<Accordion title="No" id="unhosted">
+No
+
 
 </Accordion>
