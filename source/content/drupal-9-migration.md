@@ -31,6 +31,9 @@ How did you create your Drupal site?
 - Using an Empty Upstream:
 
   Do you have access to the Multidev?
+  |Yes|No
+  ---
+  |[Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)|[Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
   - Yes: [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
   - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
 - From the dashboard on Drupal 8
