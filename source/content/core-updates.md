@@ -19,7 +19,13 @@ To check for available updates:
 
 ## Drupal 8 Composer-Managed Sites
 
-Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates. You will need to convert to [Drupal 9](/drupal-9) which uses [Integrated Composer](/guides/integrated-composer).
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates. To be compatible with One-Click updates, you must do **one** of the following:
+
+- Update core to use Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update)
+
+- [Convert the site to Integrated Composer](/guides/composer-convert)
+
+- Update to [Drupal 9](/drupal-9) which has [Integrated Composer](/guides/integrated-composer) built-in
 
 ## Non-Composer-Managed WordPress and Drupal 7 Sites
 
