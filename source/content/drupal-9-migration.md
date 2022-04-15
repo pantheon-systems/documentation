@@ -29,15 +29,15 @@ Yes
 <Accordion title="No" id="unhosted">
 No
 
-    Okay, here's the next question:
-    <Accordion title="Yes" id="hosted1">
-    Yes
+Okay, here's the next question:
+<Accordion title="Yes" id="hosted1">
+Yes
 
 
-    </Accordion>
-    <Accordion title="No" id="unhosted2">
-    No
-    </Accordian>
+</Accordion>
+<Accordion title="No" id="unhosted2">
+No
+</Accordian>
 
 
 </Accordion>
