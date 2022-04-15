@@ -16,8 +16,13 @@ This upgrade migrates your existing site to a new site.  The new site will not m
 
 </Alert>
 
-## My site is currently hosted on Pantheon
+Answer the following questions to determine your upgrade path.
 
+Is the site currently hosted on Pantheon?
+
+<TabList>
+
+<Tab title="Yes" id="hosted-yes" active={true}>
 - How did you create your Drupal site?
   - Using Build Tools: [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
   - Using a Custom Upstream: [Migrate a Site That Was Created with a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
@@ -45,7 +50,27 @@ This upgrade migrates your existing site to a new site.  The new site will not m
         - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
         - No: No additional work required.
 
+
+</Tab>
+<Tab title="No" id="hosted-yes" active={true}>
 ## My site is not hosted with Pantheon
 
 - If your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
 - If your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
+Is your site Composer-managed?
+
+<Accordion title="Yes" id="composer-yes">
+
+This Panel contains additional context, or advanced instructions.
+
+</Accordion>
+
+<Accordion title="No" id="composer-no">
+
+This Panel contains additional context, or advanced instructions.
+
+</Accordion>
+</Tab>
+</TabList>
+
+
