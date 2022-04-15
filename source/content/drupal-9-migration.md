@@ -24,6 +24,18 @@ Is the site currently hosted on Pantheon?
 
 <Tab title="Yes" id="hosted-yes" active={true}>
 
+testing tabs
+
+
+</Tab>
+
+<Tab title="No" id="hosted-no">
+testing second tab
+
+
+</Tab>
+</TabList>
+
 How did you create your Drupal site?
 
 - Using Build Tools: [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
@@ -52,18 +64,8 @@ How did you create your Drupal site?
       - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
       - No: No additional work required.
 
-
-</Tab>
-
-<Tab title="No" id="hosted-no">
-
 Is your site Composer-managed?
 
 - Yes: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
 - No: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 Is your site Composer-managed?
-
-</Tab>
-</TabList>
-
-
