@@ -55,7 +55,7 @@ How did you create your Drupal site?
 
 </Tab>
 
-<Tab title="No" id="hosted-yes">
+<Tab title="No" id="hosted-no">
 
 Is your site Composer-managed?
 
