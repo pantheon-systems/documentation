@@ -12,3 +12,9 @@ anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-md/11-deploy.md
 ---
 <Partial file="drupal-9/deploy-using-relaunch.md" />
+
+## Next Steps
+
+Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
+- Yes: Continue with [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
+- No: No additional work required.
