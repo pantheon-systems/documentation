@@ -20,6 +20,12 @@ This guide will show you how to migrate a site that meets the following criteria
 |Pantheon Hosted| No
 |Composer Managed| No
 
+<Alert title="Note" type="info" >
+
+The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
+
+</Alert>
+
 ## Requirements
 
 You must confirm that you meet the following requirements before continuing:

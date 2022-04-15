@@ -23,6 +23,14 @@ This guide will show you how to migrate a site that meets the following criteria
 |Build Tools Workflow Needed | Yes
 |Drupal version set to 8| n/a
 |Site created before November 2021| n/a
+
+
+<Alert title="Note" type="info" >
+
+The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
+
+</Alert>
+
 ## Requirements
 
 <Partial file="drupal-9/upgrade-site-requirements-from-drupal-recommended.md" />

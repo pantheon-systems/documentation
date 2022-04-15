@@ -45,14 +45,5 @@ editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
    git commit -m "Add and commit Integrated Composer files"
    ```
 
-1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8:
 
-  ```json:title=upstream-configuration/composer.json
-  "drupal/core-recommended": "^8.8"
-  ```
-
-1. Commit the change:
-
-  ```bash{promptUser:user}
-  git commit -am "Setting Drupal core version to ^8.8"
   ```

@@ -26,14 +26,6 @@ editpath: drupal-9/drupal-9-hosted-pre112021/03-prepare.md
 
 - The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
-- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, **you should prepend the paths in this document with "web" as needed**.
-
-<Alert title="Note" type="info">
-
-  The steps in this process migrate a site and its content, but not the commit history. The new site will not maintain the site's existing commit history.
-
-</Alert>
-
 
 ## Prepare the Local Environment
 
