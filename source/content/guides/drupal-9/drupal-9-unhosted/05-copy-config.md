@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v9-not-hosted/copy-config
+permalink: docs/guides/drupal-9-unhosted/copy-config
 anchorid: copy-config
-editpath: drupal-9/drupal-9-v9-not-hosted/05-copy-config.md
+editpath: drupal-9/drupal-9-unhosted/05-copy-config.md
 ---
 Copy any existing configuration from the source site and update the source path as needed to match your configuration folder:
 

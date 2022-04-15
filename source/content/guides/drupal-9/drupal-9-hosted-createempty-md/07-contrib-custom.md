@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/contrib-custom
+permalink: docs/guides/drupal-9-hosted-createempty-md/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9/drupal-9-hosted-pre112021/07-contrib-custom.md
+editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
 ---
 
 

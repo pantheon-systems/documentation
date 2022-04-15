@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v9-not-hosted/prepare
+permalink: docs/guides/drupal-9-unhosted/prepare
 anchorid: 
-editpath: drupal-9/drupal-9-v9-not-hosted/03-prepare.md
+editpath: drupal-9/drupal-9-unhosted/03-prepare.md
 ---
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />

@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/deploy-dev
+permalink: docs/guides/drupal-9-hosted-createempty-md/deploy-dev
 anchorid: deploy-dev
-editpath: drupal-9/drupal-9-hosted-pre112021/09-deploy-dev.md
+editpath: drupal-9/drupal-9-hosted-createempty-md/09-deploy-dev.md
 ---
 You've now committed the code to the local branch. Deploy that branch directly to a new Multidev (called `composerify` in the steps below) and test the site in the browser.
 

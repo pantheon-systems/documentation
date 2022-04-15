@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v9-not-hosted/deploy
+permalink: docs/guides/drupal-9-unhosted/deploy
 anchorid: deploy
-editpath: drupal-9/drupal-9-v9-not-hosted/11-deploy.md
+editpath: drupal-9/drupal-9-unhosted/11-deploy.md
 ---
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with terminus like so:
 

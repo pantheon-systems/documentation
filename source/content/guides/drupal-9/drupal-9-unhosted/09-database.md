@@ -7,9 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-v9-not-hosted/add-database
+permalink: docs/guides/drupal-9-unhosted/add-database
 anchorid: add-database
-editpath: drupal-9/drupal-9-v9-not-hosted/09-database.md
+editpath: drupal-9/drupal-9-unhosted/09-database.md
 ---
 
 <Partial file="migrate-add-database.md" />

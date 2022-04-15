@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/deploy-live
+permalink: docs/guides/drupal-9-hosted-createempty-md/deploy-live
 anchorid: deploy-live
-editpath: drupal-9/drupal-9-hosted-pre112021/15-deploy-live.md
+editpath: drupal-9/drupal-9-hosted-createempty-md/15-deploy-live.md
 ---
 
 <Partial file="drupal-9/deploy-using-relaunch.md" />

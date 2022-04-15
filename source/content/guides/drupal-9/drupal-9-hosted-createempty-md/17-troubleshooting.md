@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/troubleshooting
+permalink: docs/guides/drupal-9-hosted-createempty-md/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9/drupal-9-hosted-pre112021/17-troubleshooting.md
+editpath: drupal-9/drupal-9-hosted-createempty-md/17-troubleshooting.md
 ---
 
 

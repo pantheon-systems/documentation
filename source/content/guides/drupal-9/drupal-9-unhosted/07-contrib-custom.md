@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-v9-not-hosted/contrib-custom
+permalink: docs/guides/drupal-9-unhosted/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9/drupal-9-v9-not-hosted/07-contrib-custom.md
+editpath: drupal-9/drupal-9-unhosted/07-contrib-custom.md
 ---
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 

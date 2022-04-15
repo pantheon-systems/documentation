@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-v9-not-hosted/troubleshooting
+permalink: docs/guides/drupal-9-unhosted/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9/drupal-9-v9-not-hosted/15-troubleshooting.md
+editpath: drupal-9/drupal-9-unhosted/15-troubleshooting.md
 ---
 
 ### Provided host name not valid

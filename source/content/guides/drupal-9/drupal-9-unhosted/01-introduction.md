@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-v9-not-hosted
-anchorid: drupal-9-v9-not-hosted
-editpath: drupal-9/drupal-9-v9-not-hosted/01-introduction.md
+permalink: docs/guides/drupal-9-unhosted
+anchorid: drupal-9-unhosted
+editpath: drupal-9/drupal-9-unhosted/01-introduction.md
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

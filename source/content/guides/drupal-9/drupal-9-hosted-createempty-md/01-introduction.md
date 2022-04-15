@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021
-anchorid: drupal-9-hosted-pre112021
-editpath: drupal-9/drupal-9-hosted-pre112021/01-introduction.md
+permalink: docs/guides/drupal-9-hosted-createempty-md
+anchorid: drupal-9-hosted-createempty-md
+editpath: drupal-9/drupal-9-hosted-createempty-md/01-introduction.md
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

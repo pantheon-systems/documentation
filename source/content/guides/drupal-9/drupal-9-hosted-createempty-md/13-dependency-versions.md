@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/dependency-versions
+permalink: docs/guides/drupal-9-hosted-createempty-md/dependency-versions
 anchorid: dependency-versions
-editpath: drupal-9/drupal-9-hosted-pre112021/13-dependency-versions.md
+editpath: drupal-9/drupal-9-hosted-createempty-md/13-dependency-versions.md
 ---
 <Partial file="composer-updating.md" />
 

@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/composer-upstream
+permalink: docs/guides/drupal-9-hosted-createempty-md/composer-upstream
 anchorid: composer-upstream
-editpath: drupal-9/drupal-9-hosted-pre112021/05-composer-upstream.md
+editpath: drupal-9/drupal-9-hosted-createempty-md/05-composer-upstream.md
 ---
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
