@@ -3,6 +3,7 @@ title: Drupal 9 Migration
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
+permalink: docs/guides/drupal-9
 reviewed: "2021-03-31"
 
 ---
@@ -23,6 +24,13 @@ Answer these questions to determine which migration path to follow:
     <Accordion title="Yes" id="hosted-yes">
 
 
+If yes
+
+    </Accordion>
+
+   <Accordion title="No" id="hosted-no">
+
+If no
 
 
     </Accordion>
