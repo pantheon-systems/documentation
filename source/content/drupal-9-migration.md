@@ -23,32 +23,34 @@ Is the site currently hosted on Pantheon?
 <TabList>
 
 <Tab title="Yes" id="hosted-yes" active={true}>
-- How did you create your Drupal site?
-  - Using Build Tools: [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
-  - Using a Custom Upstream: [Migrate a Site That Was Created with a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
-  - Using an Empty Upstream:
 
-    Do you have access to the Multidev?
-    - Yes: [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
-    - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
-  - From the dashboard on Drupal 8
+How did you create your Drupal site?
 
-    Do you have access to the Multidev?
-    - Yes: [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
-    - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
-  - From the dashboard on Drupal 9
+- Using Build Tools: [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
+- Using a Custom Upstream: [Migrate a Site That Was Created with a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+- Using an Empty Upstream:
 
-    Did you create the site prior to November 2021?
-    - Yes: [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) (temp note: the following version 8 set flow will be added to the deploy page of this guide)
+  Do you have access to the Multidev?
+  - Yes: [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
+  - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+- From the dashboard on Drupal 8
+
+  Do you have access to the Multidev?
+  - Yes: [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
+  - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+- From the dashboard on Drupal 9
+
+  Did you create the site prior to November 2021?
+  - Yes: [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) (temp note: the following version 8 set flow will be added to the deploy page of this guide)
+  - No: 
+
+    Did you set Drupal version to 8?
+    - Yes: [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8) (temp note: the following build tools flow will be added to the deploy page of this guide)
     - No: 
 
-      Did you set Drupal version to 8?
-      - Yes: [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8) (temp note: the following build tools flow will be added to the deploy page of this guide)
-      - No: 
-
-        Do you need a Build Tools workflow?
-        - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
-        - No: No additional work required.
+      Do you need a Build Tools workflow?
+      - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
+      - No: No additional work required.
 
 
 </Tab>
