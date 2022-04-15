@@ -22,22 +22,31 @@ Answer these questions to determine which migration path to follow:
 Is your site currently hosted on Pantheon?
 
 <Accordion title="Yes" id="hosted">
-Yes
+How did you create your Drupal site?
+- Using Build Tools: [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
+- Using a Custom Upstream: [Migrate a Site That Was Created with a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+- Using an Empty Upstream
+  - Do you have access to the Multidev?
+    - Yes: [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
+    - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+- From the dashboard on Drupal 8
+  - Do you have access to the Multidev?
+    - Yes: [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
+    - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+- From the dashboard on Drupal 9
+  - Did you create the site prior to November 2021?
+    - Yes: [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) (temp note: the following version 8 set flow will be added to the deploy page of this guide)
+    - No: Did you set Drupal version to 8?
+      - Yes: [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8) (temp note: the following build tools flow will be added to the deploy page of this guide)
+      - No: Do you need a Build Tools workflow?
+        - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
+        - No: No additional work required.
 
 
 </Accordion>
 <Accordion title="No" id="unhosted">
-No
 
-Okay, here's the next question:
-<Accordion title="Yes" id="hosted1">
-Yes
-
-
-</Accordion>
-<Accordion title="No" id="unhosted2">
-No
-</Accordian>
-
+- If your site is Composer-managed: Migrate a Drupal 9 Site to Pantheon, Composer Managed
+- If your site is not Composer-managed: Migrate a Drupal 9 Site to Pantheon, Non Composer Managed
 
 </Accordion>
