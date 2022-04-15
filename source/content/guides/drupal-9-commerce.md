@@ -10,11 +10,7 @@ permalink: docs/guides/:basename
 multidev: true
 ---
 
-This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a:
-
-- Drupal Commerce site
-- GitHub repository
-- Circle CI configuration for testing
+This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a Drupal Commerce site, GitHub repository, and Circle CI configuration for testing.
 
 ## Before You Begin
 
