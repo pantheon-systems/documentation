@@ -142,7 +142,7 @@ After Composer is aware of all the contributed code, you'll be able to run `comp
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="module-name.md" />	  
+    <Partial file="could-not-find-version-module_name.md" />	  
 
 #### Other Composer Packages
 
@@ -158,7 +158,7 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 
 ### Custom Code
 
-Next, manually copy custom code from the existing site repository to the Composer-managed directory.
+Manually copy custom code from the existing site repository to the Composer-managed directory.
 
 #### Modules and Themes
 
