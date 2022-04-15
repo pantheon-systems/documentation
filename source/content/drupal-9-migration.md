@@ -54,10 +54,13 @@ How did you create your Drupal site?
 
 
 </Tab>
+
 <Tab title="No" id="hosted-yes">
 
-- If your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-- If your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
+Is your site Composer-managed?
+
+- Yes: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
+- No: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 Is your site Composer-managed?
 
 </Tab>
