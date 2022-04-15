@@ -34,4 +34,4 @@ The code samples in this document assume you are not using a [nested docroot](ht
 
 ## See Also
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)

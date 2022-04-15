@@ -24,11 +24,6 @@ Answer these questions to determine which migration path to follow:
 
 
 
-    </Accordion>
-
-    <Accordion title="No" id="hosted--no">
-
-
 
     </Accordion>
 
