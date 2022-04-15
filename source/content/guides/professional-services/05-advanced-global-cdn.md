@@ -101,7 +101,10 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
 [See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
+<<<<<<< HEAD
 <<<<<<< HEAD:source/content/guides/professional-services/05-advanced-global-cdn.md
+=======
+>>>>>>> 9acfa4e99 ('broken link' fixed in PS guide)
 ### Rate Limiting (Early Access)
 
 Rate Limiting, a feature of Advanced Global CDN, lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
@@ -119,6 +122,7 @@ The benefits of Rate Limiting include:
 This feature is currently in Early Access; for more information, reach out to your account manager.
 
 </Alert>
+<<<<<<< HEAD
 
 ### Fastly on Pantheon
 
@@ -142,6 +146,8 @@ The benefits of this feature include:
 
 - Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for each policy.
 >>>>>>> e75d533f0 (added rate limiting section to agcdn page):source/content/guides/professional-services/04-advanced-global-cdn.md
+=======
+>>>>>>> 9acfa4e99 ('broken link' fixed in PS guide)
 
 ## Frequently Asked Questions
 
