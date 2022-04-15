@@ -52,24 +52,12 @@ Is the site currently hosted on Pantheon?
 
 
 </Tab>
-<Tab title="No" id="hosted-yes" active={true}>
-## My site is not hosted with Pantheon
+<Tab title="No" id="hosted-yes">
 
 - If your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
 - If your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 Is your site Composer-managed?
 
-<Accordion title="Yes" id="composer-yes">
-
-This Panel contains additional context, or advanced instructions.
-
-</Accordion>
-
-<Accordion title="No" id="composer-no">
-
-This Panel contains additional context, or advanced instructions.
-
-</Accordion>
 </Tab>
 </TabList>
 
