@@ -216,8 +216,8 @@ After enabling Redis via this method, there are cache tables in the database tha
    git push origin master
    ```
 
-1. Enable the new module and export configuration: 
- 
+1. Enable the new Redis module and export configuration: 
+
    ```shell{promptUser: user}
    terminus connection:set $SITE.dev sftp
    terminus drush $SITE.dev -- en redis -y
