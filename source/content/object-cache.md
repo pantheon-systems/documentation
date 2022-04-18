@@ -126,7 +126,85 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 </Accordion>
 
-</Tab>
+<Tab title="Drupal 7" id="d7-install">
+
+<Alert title="Note" type="info">
+
+This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis module version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
+
+</Alert>
+
+<Alert title="Note" type="info">
+
+The current version of the Redis module for Drupal 7 does not work with PHP 7.4, which uses the `php-redis 5.x` library. Refer to [Drupal 7 and PHP 7.4](/object-cache#drupal-7-and-php-74) for more information.
+
+</Alert>
+
+1. Enable the Redis cache server from your Pantheon Site Dashboard under **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+
+1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
+
+  ```bash{promptUser: user}
+  terminus remote:drush <site>.<env> -- en redis -y
+  ```
+
+1. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
+   - `redis_client_host`
+   - `redis_client_port`
+   - `redis_client_password`
+
+1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
+
+  ```php:title=settings.php
+  // All Pantheon Environments.
+  if (defined('PANTHEON_ENVIRONMENT')) {
+    // Use Redis for caching.
+    $conf['redis_client_interface'] = 'PhpRedis';
+
+    // Point Drupal to the location of the Redis plugin.
+    $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+    // If you've installed your plugin in a contrib directory, use this line instead:
+    // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
+
+    $conf['cache_default_class'] = 'Redis_CacheCompressed';
+    $conf['cache_prefix'] = array('default' => 'pantheon-redis');
+
+    // Do not use Redis for cache_form (no performance difference).
+    $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+
+    // Use Redis for Drupal locks (semaphore).
+    $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
+    // Or if you've installed the redis module in a contrib subdirectory, use:
+    // $conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
+
+  }
+  ```
+
+1. Enable the module via from `/admin/modules` if you haven't already done so with Terminus.
+
+1. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
+
+1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
+
+<Accordion title="Database Cleanup (optional)" id="database-cleanup-d7" icon="lightbulb">
+
+After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
+
+1. [Connect directly to MySQL](/mysql-access) and run the command below to view the cache:
+
+  ```sql
+  SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
+  ```
+
+ This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+
+1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
+
+  ```sql
+  TRUNCATE TABLE `<tablename>`;
+  ```
+
+</Accordion>
 
 <Tab title="Drupal 8" id="d8-install">
 
@@ -256,88 +334,6 @@ After enabling Redis via this method, there are cache tables in the database tha
    The above Redis cache configuration should be placed in `sites/default/settings.php`, rather than `settings.pantheon.php`, to avoid conflicts with future upstream updates.
 
    </Alert>
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-install">
-
-<Alert title="Note" type="info">
-
-This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis module version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
-
-</Alert>
-
-<Alert title="Note" type="info">
-
-The current version of the Redis module for Drupal 7 does not work with PHP 7.4, which uses the `php-redis 5.x` library. Refer to [Drupal 7 and PHP 7.4](/object-cache#drupal-7-and-php-74) for more information.
-
-</Alert>
-
-1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
-
-1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
-
-  ```bash{promptUser: user}
-  terminus remote:drush <site>.<env> -- en redis -y
-  ```
-
-1. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
-   - `redis_client_host`
-   - `redis_client_port`
-   - `redis_client_password`
-
-1. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
-
-  ```php:title=settings.php
-  // All Pantheon Environments.
-  if (defined('PANTHEON_ENVIRONMENT')) {
-    // Use Redis for caching.
-    $conf['redis_client_interface'] = 'PhpRedis';
-
-    // Point Drupal to the location of the Redis plugin.
-    $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
-    // If you've installed your plugin in a contrib directory, use this line instead:
-    // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
-
-    $conf['cache_default_class'] = 'Redis_CacheCompressed';
-    $conf['cache_prefix'] = array('default' => 'pantheon-redis');
-
-    // Do not use Redis for cache_form (no performance difference).
-    $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-
-    // Use Redis for Drupal locks (semaphore).
-    $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
-    // Or if you've installed the redis module in a contrib subdirectory, use:
-    // $conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
-
-  }
-  ```
-
-1. Enable the module via from `/admin/modules` if you haven't already done so with Terminus.
-
-1. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
-
-1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
-
-<Accordion title="Database Cleanup (optional)" id="database-cleanup-d7" icon="lightbulb">
-
-After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
-
-1. [Connect directly to MySQL](/mysql-access) and run the command below to view the cache:
-
-  ```sql
-  SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
-  ```
-
- This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
-
-1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
-
-  ```sql
-  TRUNCATE TABLE `<tablename>`;
-  ```
-
-</Accordion>
 
 </Tab>
 
