@@ -13,5 +13,5 @@ anchorid: new-updates
 editpath: drupal-9/drupal-9-hosted-pre112021/09-new-updates.md
 ---
 
-After you complete the upstream change, you need to apply the available upstream updates. Use the Pantheon Dashboard in the Dev environment to apply updates. If this is not successful, see [Troubleshooting](guides/drupal-9-hosted-pre112021/troubleshooting)
+After you complete the upstream change, you need to apply the available upstream updates. Use the Pantheon Dashboard in the Dev environment to apply updates. If this is not successful, see [Troubleshooting](/guides/drupal-9-hosted-pre112021/troubleshooting)
 

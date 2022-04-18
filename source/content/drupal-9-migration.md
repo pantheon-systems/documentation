@@ -3,6 +3,7 @@ title: Drupal 9 Migration
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
+showtoc: false
 reviewed: "2021-03-31"
 
 ---
