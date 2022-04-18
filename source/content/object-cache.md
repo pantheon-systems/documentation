@@ -126,6 +126,8 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 </Accordion>
 
+</Tab>
+
 <Tab title="Drupal 7" id="d7-install">
 
 <Alert title="Note" type="info">
