@@ -142,7 +142,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 1. Run `composer require drupal/redis` in the local command line to install Redis.
 
-1. Enable the module from the command line using [Terminus](/terminus):
+1. Enable the Redis module from the command line using [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus remote:drush <site>.<env> -- en redis -y
@@ -216,7 +216,8 @@ After enabling Redis via this method, there are cache tables in the database tha
    git push origin master
    ```
 
-1. Enable the new module and export configuration:  
+1. Enable the new module and export configuration: 
+ 
    ```shell{promptUser: user}
    terminus connection:set $SITE.dev sftp
    terminus drush $SITE.dev -- en redis -y
