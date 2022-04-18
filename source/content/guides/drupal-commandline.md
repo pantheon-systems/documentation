@@ -127,9 +127,9 @@ At this point you are probably tired of replacing `steve-new-site` in every comm
 
 ## Install Drupal Modules
 
-We recommend that you use [Integrated Composer](/integrated-composer) to install and manage your modules. Integrated Composer is a Pantheon platform feature that extends Composer functionality to Drupal's core files, and treats them as a managed dependency. Integrated Composer let's you perform one-click updates from the Dashboard for upstream updates and Composer dependencies.
+We recommend that you use [Integrated Composer](/guides/integrated-composer) to install and manage your modules. Integrated Composer is a Pantheon platform feature that extends Composer functionality to Drupal's core files, and treats them as a managed dependency. Integrated Composer let's you perform one-click updates from the Dashboard for upstream updates and Composer dependencies.
 
-You can also manage all modules with [Composer](/composer), or with Pantheon's [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin), which runs Composer commands in your development environment.
+You can also manage all modules with [Composer](/guides/composer), or with Pantheon's [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin), which runs Composer commands in your development environment.
 
 ## Managing Content, Configuration, and Code Across Environments
 
