@@ -130,9 +130,9 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
 <Tab title="Drupal 8" id="d8-install">
 
-1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
+1. Enable Object Cache in your Pantheon Site Dashboard under **Settings** > **Add Ons** > **Add**. It may take a couple minutes for Object Cache to come online.
 
-1. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+1. Download and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
   <Alert title="Note" type="info">
 
@@ -140,7 +140,9 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
   </Alert>
 
-  You can install and enable the module from the command line using [Terminus](/terminus):
+1. Run `composer require drupal/redis` in the local command line to install Redis.
+
+1. Enable the module from the command line using [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus remote:drush <site>.<env> -- en redis -y
@@ -178,25 +180,25 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
 
    </Alert>
 
-1. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
+1. Navigate to `/admin/reports/status` on your dev site and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
 <Accordion title="Database Cleanup (optional)" id="database-cleanup-d8" icon="lightbulb">
 
 After enabling Redis via this method, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
 
-To do this, [connect directly to MySQL](/mysql-access) and run the command:
+1. [Connect directly to MySQL](/mysql-access) and run the command below to view the cache data.
 
-```sql
-SHOW TABLES LIKE 'cache%';
-```
+  ```sql
+  SHOW TABLES LIKE 'cache%';
+  ```
 
-This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+ This returns a list of all the cache tables in the database. It is safe to empty this cache, but don't remove the tables themselves in case Redis is disabled in the future.
 
-To empty them, run this command on each table, replacing `<tablename>` with the name of the cache table:
+1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
 
-```sql
-TRUNCATE TABLE `<tablename>`;
-```
+  ```sql
+  TRUNCATE TABLE `<tablename>`;
+  ```
 
 </Accordion>
 
@@ -204,7 +206,7 @@ TRUNCATE TABLE `<tablename>`;
 
 <Tab title="Drupal 9 / Composer-managed" id="d9-install">
 
-1. Clone the code repository and, from the project root, run the following:
+1. Clone the code repository and run the following from the project root:
 
    ```shell{promptUser: user}
    terminus connection:set $SITE.dev git
@@ -320,19 +322,19 @@ The current version of the Redis module for Drupal 7 does not work with PHP 7.4,
 
 After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
 
-To do this, [connect directly to MySQL](/mysql-access) and run the command:
+1. [Connect directly to MySQL](/mysql-access) and run the command below to view the cache:
 
-```sql
-SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
-```
+  ```sql
+  SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
+  ```
 
-This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+ This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
 
-To empty them, run this command on each table, replacing `<tablename>` with the name of the cache table:
+1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
 
-```sql
-TRUNCATE TABLE `<tablename>`;
-```
+  ```sql
+  TRUNCATE TABLE `<tablename>`;
+  ```
 
 </Accordion>
 
@@ -346,11 +348,11 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
 
 1. Download Redis at [https://redis.io/download](https://redis.io/download) and install it on your local computer. Mac users may prefer to install Redis using [Homebrew](https://brew.sh/) (`brew install redis`).
 
-1. From the Site Dashboard, select the desired environment (Dev, Test, or Live).
+1. Select the desired environment (Dev, Test, or Live) from the Site Dashboard.
 
 1. Click the **Connection Info** button, copy the Redis connection string, and run the command in your local terminal.
 
-1. To verify that Redis is working, use the Redis Connection Info from the Dashboard. Once you've logged in, execute the following command:
+1. Use the Redis Connection Info from the Dashboard to verify that Redis is working. Execute the following command after you log in:
 
   ```bash
   redis> keys *
@@ -368,7 +370,7 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
 
   If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](#troubleshooting) section below.
 
-1. To check if a specific key exists, you can pass the `exists` command. For example:
+1. Pass the `exists` command to check if a specific key exists. For example:
 
   ```bash
   redis> SET key1 "Hello"
