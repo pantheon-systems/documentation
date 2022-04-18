@@ -203,8 +203,9 @@ After enabling Redis, there are cache tables in the database that are no longer 
   ```sql
   TRUNCATE TABLE `<tablename>`;
   ```
-
 </Accordion>
+
+</Tab>
 
 <Tab title="Drupal 8" id="d8-install">
 
