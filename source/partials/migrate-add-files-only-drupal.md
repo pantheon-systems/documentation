@@ -5,6 +5,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 Follow the steps below to export a `tar.gz` or `.zip` file of your directory files.
 
 1. Navigate to your Drupal site's root directory to run this command: 
+<!-- do we need to add another sample with web/  ? -->
 
   ```bash{promptUser: user}
   cd sites/default/files

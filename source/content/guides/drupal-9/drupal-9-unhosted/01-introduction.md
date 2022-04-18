@@ -17,14 +17,8 @@ This guide will show you how to migrate a site that meets the following criteria
 
 |Criteria|Value
 |---|---
-|Pantheon Hosted| No
-|Composer Managed| No
-
-<Alert title="Note" type="info" >
-
-The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
-
-</Alert>
+|Pantheon Hosted| **No**
+|Composer Managed| **No**
 
 ## Requirements
 
@@ -35,8 +29,6 @@ You must confirm that you meet the following requirements before continuing:
 - You are able to run `drush` commands in the existing site.
 
 - You are able to check out your existing site codebase into your local machine.
-
-- The site does not use a nested docroot.
 
 - The site does not use another package and library manager, like [Ludwig](https://www.drupal.org/project/ludwig).
 

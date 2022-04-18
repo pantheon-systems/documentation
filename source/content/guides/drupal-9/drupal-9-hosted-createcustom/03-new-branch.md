@@ -7,7 +7,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-hosted-createcustom/new-branch
 anchorid: new-branch
 editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
@@ -31,7 +30,7 @@ editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
    git checkout -b composerify
    ```
 
-1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. We do this because you're going to completely replace the file structure and re-add customizations:
+1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. This is because you're going to completely replace the file structure and re-add customizations:
 
    ```bash{promptUser:user}
     git rm -rf * && git commit -m "Removing all files"
@@ -45,5 +44,14 @@ editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
    git commit -m "Add and commit Integrated Composer files"
    ```
 
+1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8:
 
+  ```json:title=upstream-configuration/composer.json
+  "drupal/core-recommended": "^8.8"
+  ```
+
+1. Commit the change:
+
+  ```bash{promptUser:user}
+  git commit -am "Setting Drupal core version to ^8.8"
   ```

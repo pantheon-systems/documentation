@@ -14,9 +14,9 @@ editpath: drupal-9/drupal-9-unhosted/03-prepare.md
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
-1. Get a local copy of both your new Pantheon site and your existing codebase.
+2. Get a local copy of both your new Pantheon site and your existing codebase.
 
-2. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
+3. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
 
    ```bash
    export SOURCE=/absolute/path/to/source/site/codebase

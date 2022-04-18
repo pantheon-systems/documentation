@@ -13,6 +13,18 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-createempty-md/17-troubleshooting.md
 ---
 
+## Permission denied (publickey)
+
+If you encounter a `Permission denied (publickey)` error, check that your [SSH keys](/ssh-keys) are set up correctly.
+
+If you continue to encounter the error, use HTTPS to add the remote:
+
+```bash{outputLines:2}
+git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+Switched to a new branch 'composerify'
+```
+
+
 
 ## Provided host name not valid
 

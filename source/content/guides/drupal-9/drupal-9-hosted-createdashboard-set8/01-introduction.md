@@ -15,18 +15,12 @@ This guide will show you how to migrate a site that meets the following criteria
 
 |Criteria|Value
 |---|---
-|Pantheon Hosted| Yes
-|Site created using:| Pantheon Dashboard
+|**Pantheon Hosted**| **Yes**
+|**Site created using**| **Pantheon Dashboard**
 |Multi-Dev Environment | n/a
 |Build Tools Workflow Needed | n/a
-|Drupal version set to 8| Yes
+|**Drupal version set to 8**| **Yes**
 |Site created before November 2021| n/a
-
-<Alert title="Note" type="info" >
-
-The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
-
-</Alert>
 
 ## See Also
 

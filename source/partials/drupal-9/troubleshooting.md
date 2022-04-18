@@ -17,7 +17,7 @@ Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is s
  ```
 
 1. Commit and push:
-
+<!-- need to provide example w/out web? -->
  ```bash{promptUser: user}
  git add web/sites/default/services.yml && git commit -m "init services.yml"
  git push origin master

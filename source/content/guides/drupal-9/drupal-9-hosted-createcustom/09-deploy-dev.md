@@ -1,15 +1,15 @@
 ---
 title: Migrate a Site That Was Created with a Custom Upstream to Drupal 9
-subtitle: Deploy
+subtitle: Deploy to Dev
 description: 
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createcustom/deploy
-anchorid: deploy
-editpath: drupal-9/drupal-9-hosted-createcustom/09-deploy.md
+permalink: docs/guides/drupal-9-hosted-createcustom/deploy-dev
+anchorid: deploy-dev
+editpath: drupal-9/drupal-9-hosted-createcustom/09-deploy-dev.md
 ---
 Merge the code and files from the Multidev environment to the Dev environment.
 

@@ -27,6 +27,8 @@ editpath: hosted/07-code.md
 
 1. Copy over exported configuration from the original site. From your D9 site, run the following commands:
 
+<!-- do we need to add example w/web? -->
+
   ```bash{promptUser: user}
   git checkout existing-8/master -- sites/default/config
   git mv sites/default/config/* config/
@@ -71,6 +73,8 @@ editpath: hosted/07-code.md
 
 1. Copy over any custom modules or themes from your D8 site:
 
+<!-- need a /web example? -->
+
   ```bash{promptUser: user}
   git checkout existing-8/master -- modules/custom themes/custom
   git mv themes/* web/themes
@@ -79,6 +83,8 @@ editpath: hosted/07-code.md
   ```
 
 1. Check `settings.php` for any customizations to copy over:
+
+<!-- /web example? -->
 
   ```bash{promptUser: user}
   # Fetch your D8 settings file.

@@ -1,6 +1,6 @@
 ---
 title: Migrate a Site That Was Created with a Custom Upstream to Drupal 9
-subtitle: Create a New Branch with Integrated Composer Code
+subtitle: Add Dependencies
 description: 
 categories: [develop]
 tags: [code, launch, migrate, site, updates]

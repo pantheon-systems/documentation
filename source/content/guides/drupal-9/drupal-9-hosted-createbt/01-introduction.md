@@ -17,21 +17,15 @@ This guide will show you how to migrate a site that meets the following criteria
 
 |Criteria|Value
 |---|---
-|Pantheon Hosted| Yes
-|Site created using:| Build Tools
-|Multi-Dev Environment | n/a
+|**Pantheon Hosted**| **Yes**
+|**Site created using**:| **Build Tools**
+|**Multi-Dev Environment** | n/a
 |Build Tools Workflow Needed | n/a
 |Drupal version set to 8| n/a
 |Site created before November 2021| n/a
 
 Build Tools connects Pantheon with your CI service and external Git provider. See the [Build Tools Guide](/guides/build-tools#a-build-tools-projects-components) for details on supported Git and CI services combinations.
 
-
-<Alert title="Note" type="info" >
-
-The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
-
-</Alert>
 
 ## Requirements
 

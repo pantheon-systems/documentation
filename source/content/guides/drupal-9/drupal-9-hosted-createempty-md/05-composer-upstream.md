@@ -31,18 +31,6 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
   If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
-  <Accordion title="Troubleshoot: Permission denied (publickey)" id="permission-denied-publickey" icon="question-sign">
-
-  If you encounter a `Permission denied (publickey)` error, check that your [SSH keys](/ssh-keys) are set up correctly.
-
-  If you continue to encounter the error, use HTTPS to add the remote:
-
-   ```bash{outputLines:2}
-   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
-   Switched to a new branch 'composerify'
-   ```
-
-  </Accordion>
 
 ## Set Drupal Core Version
 
@@ -74,6 +62,8 @@ When you are ready to begin upgrading your site to Drupal 9, you can enable this
 ## Copy Existing Configuration
 
 Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
+
+<!-- need to provide nested docroot example? -->
 
   ```bash{promptUser:user}
   git checkout master sites/default/config

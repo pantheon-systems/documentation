@@ -7,7 +7,6 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-unhosted-composer
 anchorid: drupal-9-unhosted-composer
 editpath: drupal-9/drupal-9-unhosted-composer/01-introduction.md
@@ -17,14 +16,9 @@ This guide will show you how to migrate a site that meets the following criteria
 
 |Criteria|Value
 |---|---
-|Pantheon Hosted| No
-|Composer Managed| Yes
+|Pantheon Hosted| **No**
+|Composer Managed| **Yes**
 
-<Alert title="Note" type="info" >
-
-The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
-
-</Alert>
 
 This doc uses the following aliases:
 
@@ -33,11 +27,4 @@ This doc uses the following aliases:
 
 ## Requirements
 
-Integrated Composer sites require a [nested docroot](/nested-docroot) architecture. When copying code from the former platform site, be sure to retain the new site's nested docroot structure and `web` docroot name.
-
-Before you continue, confirm that your site meets the following requirements:
-
-- The existing Drupal 9 site uses Composer to manage site dependencies
 - You can get a local copy of the existing site / access to a Git repository of it
-
-
