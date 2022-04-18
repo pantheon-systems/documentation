@@ -77,6 +77,8 @@ diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that it functions properly.
 
+Do not forget to commit your changes during these steps.
+
 ## Custom Code
 
 Next, manually copy custom code from the existing site repository to the Composer-managed directory.

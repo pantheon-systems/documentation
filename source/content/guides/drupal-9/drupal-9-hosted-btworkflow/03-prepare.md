@@ -17,24 +17,18 @@ editpath: drupal-9/drupal-9-hosted-btworkflow/03-prepare.md
 
 ## Before You Begin
 
-- Clone your existing site to your local environment following the `git clone` command from the dashboard.
+Clone your existing site to your local environment following the `git clone` command from the dashboard.
 
-
-<Alert title="Note"  type="info" >
-
-The existing site's commit history will no longer exist after migrating to the new site.
-
-</Alert>
 
 ## Create a New Terminus Build Tools Drupal 9 Site
 
-1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
+2. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
 
   ```bash
   terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site
   ```
 
-1. Wait for the site to be created and for the first build to complete.
+3. Wait for the site to be created and for the first build to complete.
 
 ## Prepare the Local Environment
 
