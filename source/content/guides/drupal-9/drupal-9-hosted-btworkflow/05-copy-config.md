@@ -7,10 +7,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
-permalink: docs/guides/drupal-9-hosted-btworkflow
-anchorid: drupal-9-hosted-btworkflow
-editpath: drupal-9/drupal-9-hosted-btworkflow/01-introduction.md
+permalink: docs/guides/drupal-9-hosted-btworkflow/copy-config
+anchorid: copy-config
+editpath: drupal-9/drupal-9-hosted-btworkflow/05-copy-config.md
 ---
 
 Copy any existing configuration from the source site and update the source path as needed to match your configuration folder:

@@ -8,9 +8,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-btworkflow
-anchorid: drupal-9-hosted-btworkflow
-editpath: drupal-9/drupal-9-hosted-btworkflow/01-introduction.md
+permalink: docs/guides/drupal-9-hosted-btworkflow/contrib-custom
+anchorid: contrib-custom
+editpath: drupal-9/drupal-9-hosted-btworkflow/07-contrib-custom.md
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
