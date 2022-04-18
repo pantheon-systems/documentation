@@ -7,7 +7,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-hosted-btworkflow/backup-token
 anchorid: backup-token
 editpath: drupal-9/drupal-9-hosted-btworkflow/09-backup-token.md

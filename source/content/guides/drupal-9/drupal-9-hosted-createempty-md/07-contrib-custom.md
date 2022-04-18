@@ -17,9 +17,9 @@ editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
 
 What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
 
-### Contributed Code
+## Contributed Code
 
-#### Modules and Themes
+### Modules and Themes
 
 The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (we'll call this _contributed code_). The only things that should be migrated from the existing site are custom code, custom themes, and custom modules that are specific to the existing site.
 
@@ -68,15 +68,15 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
     <Partial file="module_name.md" />	  
 
 
-#### Libraries
+### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that library functions properly.
 
-### Custom Code
+## Custom Code
 
 Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
-#### Modules and Themes
+### Modules and Themes
 
 Modules:
 
@@ -96,7 +96,7 @@ git commit -m "Copy custom themes"
 
 Follow suit with any other custom code you need to carry over.
 
-#### settings.php
+### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 

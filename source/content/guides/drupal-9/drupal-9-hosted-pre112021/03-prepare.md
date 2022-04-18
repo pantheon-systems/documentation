@@ -12,8 +12,10 @@ permalink: docs/guides/drupal-9-hosted-pre112021/prepare
 anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-pre112021/03-prepare.md
 ---
+  
 
-### Use Terminus to Confirm the Drupal 9 Upstream
+
+## Use Terminus to Confirm the Drupal 9 Upstream
 
 Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
@@ -36,10 +38,6 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
   ...
   ------------------ -------------------------------------------------------------------------------------
   ```
-
-## Before You Begin
-
-- This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the upstream.
 
 ## Prepare the Local Environment
 

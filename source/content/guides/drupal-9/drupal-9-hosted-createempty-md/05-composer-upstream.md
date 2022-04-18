@@ -44,7 +44,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
   </Accordion>
 
-### Set Drupal Core Version
+## Set Drupal Core Version
 
 Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
@@ -55,7 +55,7 @@ Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
   git commit -m "Remain on Drupal 8"
   ```
 
-### Add Upgrade Status Module
+## Add Upgrade Status Module
 
 This step is optional. You can wait and add the Upgrade Status module to your site later.
 
@@ -71,7 +71,7 @@ Add the Upgrade Status module to your site with Composer:
 
 When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
 
-### Copy Existing Configuration
+## Copy Existing Configuration
 
 Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
 
@@ -82,7 +82,7 @@ Copy any existing configuration from the default branch. Adjust the source folde
   git commit -m "Pull in configuration from default branch"
   ```
 
-### Copy pantheon.yml
+## Copy pantheon.yml
 
 1. Compare the old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 

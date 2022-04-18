@@ -29,3 +29,14 @@ This guide will show you how to migrate a site that meets the following criteria
 The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
 
 </Alert>
+
+## Requirements
+
+<Partial file="drupal-9/upgrade-site-requirements-from-empty.md" />
+
+- You have not set up Continous Integration or you no longer need it. 
+
+- This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the Upstream.
+
+- Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+

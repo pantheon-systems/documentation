@@ -7,7 +7,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-hosted-pre112021
 anchorid: drupal-9-hosted-pre112021
 editpath: drupal-9/drupal-9-hosted-pre112021/01-introduction.md
@@ -31,6 +30,10 @@ Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupa
 The code samples in this document assume you are not using a [nested docroot](https://pantheon.io/docs/nested-docroot). If are, **you should prepend the paths in this document with "web" as needed**.
 
 </Alert>
+
+## Requirements
+This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the upstream.
+
 
 ## See Also
 
