@@ -19,7 +19,7 @@ This guide will show you how to migrate a site that meets the following criteria
 |---|---
 |**Pantheon Hosted**| **Yes**
 |**Site created using**:| **Build Tools**
-|**Multi-Dev Environment** | n/a
+|Multi-Dev Environment | n/a
 |Build Tools Workflow Needed | n/a
 |Drupal version set to 8| n/a
 |Site created before November 2021| n/a

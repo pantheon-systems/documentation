@@ -46,4 +46,3 @@ Merge the code and files from the Multidev environment to the Dev environment.
 
 1. Confirm that the Dev environment is working as expected.
 
-<Partial file="drupal-9/deploy-using-relaunch.md" />
