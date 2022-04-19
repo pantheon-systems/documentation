@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build Tools
 subtitle: Restore the tokens.json File
 description: 
 categories: [develop]
