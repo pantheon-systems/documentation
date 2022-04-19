@@ -11,6 +11,8 @@ anchorid: localdev/changelog
 editpath: localdev/05-changelog.md
 ---
 
+## Changelog
+
 You can view the most recent Localdev release and changelogs in [Pantheon's Localdev repository](https://github.com/pantheon-systems/localdev/releases).
 
 ## Download and Test Beta Versions
