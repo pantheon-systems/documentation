@@ -142,19 +142,6 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 
 ## Custom Modules and Themes
 
-To move modules, use the following commands:
+<Partial file="drupal-9/custom-modules-themes.md" />
 
-```bash{promptUser:user}
-git checkout master modules/custom
-git mv modules/custom web/modules/
-git commit -m "Copy custom modules"
-```
-
-To move themes, use the following commands:
-
-```bash{promptUser:user}
-git checkout master themes/custom
-git mv themes/custom web/themes/
-git commit -m "Copy custom themes"
-```
-Follow suit with any other custom code you need to carry over.
+Commit your changes as needed.

@@ -56,47 +56,16 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 ### Modules and Themes
 
-To move modules, use the following commands:
-
-  ```bash{promptUser:user}
-  mkdir -p $DESTINATION/web/modules/custom
-  cp -r $SOURCE/web/modules/custom $DESTINATION/web/modules/custom
-  # From $DESTINATION:
-  git add web/modules/
-  git commit -m "Copy custom modules"
-  ```
-To move themes, use the following commands:
-
-  ```bash{promptUser:user}
-  mkdir -p $DESTINATION/web/themes/custom
-  cp -r $SOURCE/web/themes/custom $DESTINATION/web/themes/custom
-  # From $DESTINATION:
-  git add web/themes/
-  git commit -m "Copy custom themes"
-  ```
-
-Use the above commands with any of the custom code.
+<Partial file="drupal-9/custom-modules-themes.md" />
 
 ### settings.php
 
-Your existing site may have customizations to `settings.php` or other configuration files. Given that both sites (`$SOURCE` and `$DESTINATION`) have been created from the same upstream, it is ok to replace the `$DESTINATION` `settings.php` with the one coming from the `$SOURCE` site:
+<Partial file="drupal-9/custom-settings.md" />
 
-```bash{promptUser:user}
-cp $SOURCE/web/sites/default/settings.php $DESTINATION/web/sites/default/settings.php
-# Review changes and commit as needed
-```
-
-The resulting `settings.php` should have no `$databases` array.
 
 ## Additional Composer Configuration
 
-Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
-
-Use the `diff` command to get the information you need to copy:
-
-  ```
-  diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
-  ```
+<Partial file="drupal-9/composer-config.md" />
 
 Commit your changes as needed.
 

@@ -85,52 +85,15 @@ Next, manually copy custom code from the existing site repository to the Compose
 
 ### Modules and Themes
 
-To move modules, use the following commands:
-
-```bash{promptUser:user}
-mkdir -p $DESTINATION/web/modules/custom
-cp -r $SOURCE/modules/custom $DESTINATION/web/modules/custom
-cd $DESTINATION
-git add web/modules/
-git commit -m "Copy custom modules"
-```
-
-To move themes, use the following commands:
-
-```bash{promptUser:user}
-mkdir -p $DESTINATION/web/themes/custom
-cp -r $SOURCE/themes/custom $DESTINATION/web/themes/custom
-cd $DESTINATION
-git add web/themes/
-git commit -m "Copy custom themes"
-```
-
-Use the above commands with any of the custom code.
+<Partial file="drupal-9/custom-modules-themes.md" />
 
 ### settings.php
 
-Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
-
-We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory, as well as platform-specific customizations.
-
-```bash{promptUser:user}
-git status # Ensure working tree is clean
-diff -Nup --ignore-all-space $SOURCE/sites/default/settings.php $DESTINATION/web/sites/default/settings.php
-```
-
-Then edit web/sites/default/settings.php and commit as needed.
-
-The resulting `settings.php` should have no `$databases` array.
+<Partial file="drupal-9/custom-settings.md" />
 
 ## Additional Composer Configuration
 
-Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
-
-Use the diff command to get the information you need to copy:
-
-```bash{promptUser:user}
-diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
-```
+<Partial file="drupal-9/composer-config.md" />
 
 Commit your changes as needed.
 

@@ -78,36 +78,10 @@ Next, manually copy custom code from the existing site repository to the Compose
 
 ### Modules and Themes
 
-To move modules, use the following commands:
-
-```bash{promptUser:user}
-git checkout master modules/custom
-git mv modules/custom web/modules/
-git commit -m "Copy custom modules"
-```
-
-To move themes, use the following commands:
-
-```bash{promptUser:user}
-git checkout master themes/custom
-git mv themes/custom web/themes/
-git commit -m "Copy custom themes"
-```
-
-Follow suit with any other custom code you need to carry over.
+<Partial file="drupal-9/custom-modules-themes.md" />
 
 ### settings.php
 
-Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
+<Partial file="drupal-9/custom-settings.md" />
 
-We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
-
-```bash{promptUser:user}
-git status # Ensure working tree is clean
-git show master:sites/default/settings.php > web/sites/default/original-settings.php
-diff -Nup --ignore-all-space web/sites/default/settings.php web/sites/default/original-settings.php
-# edit web/sites/default/settings.php and commit as needed
-rm web/sites/default/original-settings.php
-```
-
-The resulting `settings.php` should have no `$databases` array.
+Commit your changes as needed.
