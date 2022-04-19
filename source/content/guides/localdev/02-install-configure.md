@@ -43,5 +43,5 @@ Once Localdev is installed and synced, a list of your sites is displayed in a co
 
 ### Changelog
 
-You can view the most recent Build Tools release and changelogs in [Pantheon's Build Tools repository](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases).
+You can view the most recent Localdev release and changelogs in [Pantheon's Localdev repository](https://github.com/pantheon-systems/localdev/releases).
 
