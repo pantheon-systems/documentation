@@ -10,7 +10,7 @@ anchorid: build-tools
 permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
-reviewed: "2020-05-08"
+reviewed: "2022-04-19"
 ---
 
 ## What Is Build Tools?
@@ -57,11 +57,7 @@ Pantheon's Developer Advocacy team holds trainings and Office Hours, and monitor
 
 </Enablement>
 
-<Accordion title="Build Tools Changelog" id="changelog" icon="newspaper">
 
-<BuildToolsChangelog />
-
-</Accordion>
 
 ## More Resources
 
