@@ -57,7 +57,7 @@ Pantheon's Developer Advocacy team holds trainings and Office Hours, and monitor
 
 </Enablement>
 
-### Changelog
+## Changelog
 
 You can view the most recent Build Tools release and changelogs in [Pantheon's Build Tools repository](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases).
 

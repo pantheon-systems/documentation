@@ -41,7 +41,3 @@ Once Localdev is installed and synced, a list of your sites is displayed in a co
 
 ![Localdev's dashboard shows a list of sites](../../../images/localdev/localdev-dashboard.png)
 
-### Changelog
-
-You can view the most recent Localdev release and changelogs in [Pantheon's Localdev repository](https://github.com/pantheon-systems/localdev/releases).
-
