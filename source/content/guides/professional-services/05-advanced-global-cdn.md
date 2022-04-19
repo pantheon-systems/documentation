@@ -125,7 +125,7 @@ Pantheon's partnership with [Fastly](https://www.fastly.com/) offers many benefi
 
 - **Enhanced Caching** at the edge, including API responses. This allows you to see  traffic and deployment changes, and improves continuous integration / continuous delivery (CI/CD).
 
-- **Image Optimization (IO)** is an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
+- **Image Optimizer (IO)** is an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
 
 You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works)
 
