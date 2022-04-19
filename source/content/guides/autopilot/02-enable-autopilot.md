@@ -90,15 +90,15 @@ Some selection options are grayed out for customers with Gold plans. Only custom
 
 1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
 
-  - Dev
-  - Test
-  - Live
+    - Dev
+    - Test
+    - Live
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
-  - Never (Update Manually)
-  - Weekly
-  - Monthly
+    - Never (Update Manually)
+    - Weekly
+    - Monthly
 
 1. Click **Save** to save the changes.
 
