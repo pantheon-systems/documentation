@@ -141,7 +141,6 @@ On the `composerify` branch, make a list of the modules that will need to be re-
       ```
 
 ## Custom Modules and Themes
-<!-- do we need to add another sample with web/ added modules/custom ? -->
 
 To move modules, use the following commands:
 
@@ -152,7 +151,6 @@ git commit -m "Copy custom modules"
 ```
 
 To move themes, use the following commands:
-<!-- do we need to add another sample with web/ added modules/custom ? -->
 
 ```bash{promptUser:user}
 git checkout master themes/custom

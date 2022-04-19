@@ -79,7 +79,6 @@ Next, manually copy custom code from the existing site repository to the Compose
 ### Modules and Themes
 
 To move modules, use the following commands:
-<!-- do we need to add another sample with web/ added modules/custom ? -->
 
 ```bash{promptUser:user}
 git checkout master modules/custom
@@ -88,7 +87,6 @@ git commit -m "Copy custom modules"
 ```
 
 To move themes, use the following commands:
-<!-- do we need to add another sample with web/ added modules/custom ? -->
 
 ```bash{promptUser:user}
 git checkout master themes/custom
@@ -103,7 +101,6 @@ Follow suit with any other custom code you need to carry over.
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
 We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
-<!-- do we need to add another sample with web/sites/default/settings.php ? -->
 
 ```bash{promptUser:user}
 git status # Ensure working tree is clean

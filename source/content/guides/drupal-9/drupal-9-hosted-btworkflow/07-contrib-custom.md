@@ -57,8 +57,6 @@ Manually copy custom code from the existing site repository to the Composer-mana
 ### Modules and Themes
 
 To move modules, use the following commands:
-<!-- do we need to add another sample with web/ added modules/custom ? -->
-
 
   ```bash{promptUser:user}
   mkdir -p $DESTINATION/web/modules/custom
@@ -67,8 +65,6 @@ To move modules, use the following commands:
   git add web/modules/
   git commit -m "Copy custom modules"
   ```
-<!-- do we need to add another sample with web/ added modules/custom ? -->
-
 To move themes, use the following commands:
 
   ```bash{promptUser:user}
@@ -84,7 +80,6 @@ Use the above commands with any of the custom code.
 ### settings.php
 
 Your existing site may have customizations to `settings.php` or other configuration files. Given that both sites (`$SOURCE` and `$DESTINATION`) have been created from the same upstream, it is ok to replace the `$DESTINATION` `settings.php` with the one coming from the `$SOURCE` site:
-<!-- do we need to add another sample with web/  ? -->
 
 ```bash{promptUser:user}
 cp $SOURCE/web/sites/default/settings.php $DESTINATION/web/sites/default/settings.php

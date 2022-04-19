@@ -57,8 +57,6 @@ editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
 
 1. If the site doesn't already have a [pantheon.yml](/pantheon-yml#find-or-create-pantheonyml) file, create one with the following values (the comments `#` are optional):
 
-<!-- do we need to provide a second version that omits the web_docroot line (because it's already in a docroot)? -->
-
    ```yaml:title=pantheon.yml
    api_version: 1
    

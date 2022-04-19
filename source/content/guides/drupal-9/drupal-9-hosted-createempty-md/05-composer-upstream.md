@@ -63,7 +63,6 @@ When you are ready to begin upgrading your site to Drupal 9, you can enable this
 
 Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
 
-<!-- need to provide nested docroot example? -->
 
   ```bash{promptUser:user}
   git checkout master sites/default/config

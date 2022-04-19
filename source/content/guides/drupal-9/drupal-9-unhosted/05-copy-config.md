@@ -12,7 +12,6 @@ anchorid: copy-config
 editpath: drupal-9/drupal-9-unhosted/05-copy-config.md
 ---
 Copy any existing configuration from the source site and update the source path as needed to match your configuration folder:
-<!-- do we need to add another sample with web/  ? -->
 
   ```bash{promptUser:user}
   cp -r $SOURCE/sites/default/files/config/sync/* $DESTINATION/config/

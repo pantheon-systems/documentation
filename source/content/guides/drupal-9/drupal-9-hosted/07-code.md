@@ -27,13 +27,11 @@ editpath: hosted/07-code.md
 
 1. Copy over exported configuration from the original site. From your D9 site, run the following commands:
 
-<!-- do we need to add example w/web? -->
-
-  ```bash{promptUser: user}
-  git checkout existing-8/master -- sites/default/config
-  git mv sites/default/config/* config/
-  git commit -m "Add site configuration."
-  ```
+   ```bash{promptUser: user}
+   git checkout existing-8/master -- sites/default/config
+   git mv sites/default/config/* config/
+   git commit -m "Add site configuration."
+   ```
 
 1. Compare your current `pantheon.yml` file with the new D9 `pantheon.upstream.yml`:
 
@@ -73,44 +71,40 @@ editpath: hosted/07-code.md
 
 1. Copy over any custom modules or themes from your D8 site:
 
-<!-- need a /web example? -->
-
-  ```bash{promptUser: user}
-  git checkout existing-8/master -- modules/custom themes/custom
-  git mv themes/* web/themes
-  git mv modules/* web/modules
-  git commit -m "Add custom projects."
-  ```
+    ```bash{promptUser: user}
+    git checkout existing-8/master -- modules/custom themes/custom
+    git mv themes/* web/themes
+    git mv modules/* web/modules
+    git commit -m "Add custom projects."
+    ```
 
 1. Check `settings.php` for any customizations to copy over:
 
-<!-- /web example? -->
-
-  ```bash{promptUser: user}
-  # Fetch your D8 settings file.
-  git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
-  # Check for any customizations (if this returns nothing, you can move on to the next step).
-  # Copy what you need over to web/sites/default/settings.php, and commit as needed.
-  diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-  # Remove the original copy.
-  rm web/sites/default/original-settings.php
-  ```
+    ```bash{promptUser: user}
+    # Fetch your D8 settings file.
+    git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
+    # Check for any customizations (if this returns nothing, you can move on to the next step).
+    # Copy what you need over to web/sites/default/settings.php, and commit as needed.
+    diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
+    # Remove the original copy.
+    rm web/sites/default/original-settings.php
+    ```
 
 1. Copy your files and database from your D8 site to the D9 site:
 
-  ```bash{promptUser: user}
-  terminus site:clone $D8_SITE.live $D9_SITE.dev --no-code --no-destination-backup --no-source-backup
-  ```
+    ```bash{promptUser: user}
+    terminus site:clone $D8_SITE.live $D9_SITE.dev --no-code --no-destination-backup --no-source-backup
+    ```
 
 1. Push the D9 codebase from your local machine up to Pantheon:
 
-  ```bash{promptUser: user}
-  terminus connection:set $D9_SITE.dev git
-  git push origin master
+    ```bash{promptUser: user}
+    terminus connection:set $D9_SITE.dev git
+    git push origin master
   ```
 
 1. Run database updates:
 
-  ```bash{promptUser: user}
-  terminus drush $D9_SITE.dev -- updatedb
-  ```
+    ```bash{promptUser: user}
+    terminus drush $D9_SITE.dev -- updatedb
+    ```
