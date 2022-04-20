@@ -90,7 +90,7 @@ After you create your webhook, the app you used is automatically subscribed to i
     - Email a specific person when the VRT result comes through.
     - Trigger an alert every time Autopilot runs.
 
-
+Access to Webhooks deployment alerts is available to all tiers. Gold Accounts and higher can subscribe to Autopilot events. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
 
 ## Upstreams
 
