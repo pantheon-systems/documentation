@@ -5,20 +5,34 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 Follow the steps below to export a `tar.gz` or `.zip` file of your directory files.
 
 1. Navigate to your Drupal site's root directory to run this command: 
-<!-- do we need to add another sample with web/  ? -->
 
-  ```bash{promptUser: user}
-  cd sites/default/files
-  tar -czf ~/files.tar.gz .
-  ```
+<TabList>
+
+<Tab title="With Nested Docroot" id="code-docroot" active={true}>
+```bash{promptUser:user}
+cd web/sites/default/files
+tar -czf ~/files.tar.gz .
+```
+</Tab>
+
+
+<Tab title="Without Nested Docroot" id="code-nodocroot">
+```bash{promptUser:user}
+cd sites/default/files
+tar -czf ~/files.tar.gz .
+```
+</Tab>
+
+</TabList>
+
 
   Now you have created an archive file in your user's home directory.
 
 1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
 
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+2. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 
-1. Click **Import** and then add your archive (based on file size) by following the steps below.
+3. Click **Import** and then add your archive (based on file size) by following the steps below.
 
   <TabList>
 

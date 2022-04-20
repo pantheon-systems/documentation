@@ -63,13 +63,31 @@ When you are ready to begin upgrading your site to Drupal 9, you can enable this
 
 Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
 
+<TabList>
 
-  ```bash{promptUser:user}
-  git checkout master sites/default/config
-  git mv sites/default/config/* config
-  git rm -f sites/default/config/.htaccess
-  git commit -m "Pull in configuration from default branch"
-  ```
+<Tab title="With Nested Docroot" id="code-docroot" active={true}>
+
+This is a common location for the config file; if this isn't where your config file is located, replace 'config' with the full path, such as `web/sites/default/config`.
+
+```bash{promptUser:user}
+git checkout master config
+git mv config/* config
+git rm -f web/sites/default/config/.htaccess
+git commit -m "Pull in configuration from default branch"
+```
+</Tab>
+
+
+<Tab title="Without Nested Docroot" id="code-nodocroot">
+```bash{promptUser:user}
+git checkout master sites/default/config
+git mv sites/default/config/* config
+git rm -f sites/default/config/.htaccess
+git commit -m "Pull in configuration from default branch"
+```
+</Tab>
+
+</TabList>
 
 ## Copy pantheon.yml
 

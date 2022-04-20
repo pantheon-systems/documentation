@@ -71,32 +71,47 @@ editpath: hosted/07-code.md
 
 1. Copy over any custom modules or themes from your D8 site:
 
-    ```bash{promptUser: user}
-    git checkout existing-8/master -- modules/custom themes/custom
-    git mv themes/* web/themes
-    git mv modules/* web/modules
-    git commit -m "Add custom projects."
-    ```
+<Partial file="drupal-9/custom-modules-themes.md" />
+
 
 1. Check `settings.php` for any customizations to copy over:
 
-    ```bash{promptUser: user}
-    # Fetch your D8 settings file.
-    git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
-    # Check for any customizations (if this returns nothing, you can move on to the next step).
-    # Copy what you need over to web/sites/default/settings.php, and commit as needed.
-    diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-    # Remove the original copy.
-    rm web/sites/default/original-settings.php
-    ```
+<TabList>
 
-1. Copy your files and database from your D8 site to the D9 site:
+<Tab title="With Nested Docroot" id="code-docroot" active={true}>
+```bash{promptUser:user}
+# Fetch your D8 settings file.
+git show existing-8/master:web/sites/default/settings.php > web/sites/default/original-settings.php
+# Check for any customizations (if this returns nothing, you can move on to the next step).
+# Copy what you need over to web/sites/default/settings.php, and commit as needed.
+diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
+# Remove the original copy.
+rm web/sites/default/original-settings.php
+```
+</Tab>
+
+
+<Tab title="Without Nested Docroot" id="code-nodocroot">
+```bash{promptUser:user}
+# Fetch your D8 settings file.
+git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
+# Check for any customizations (if this returns nothing, you can move on to the next step).
+# Copy what you need over to web/sites/default/settings.php, and commit as needed.
+diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
+# Remove the original copy.
+rm web/sites/default/original-settings.php
+```
+</Tab>
+
+</TabList>
+
+2. Copy your files and database from your D8 site to the D9 site:
 
     ```bash{promptUser: user}
     terminus site:clone $D8_SITE.live $D9_SITE.dev --no-code --no-destination-backup --no-source-backup
     ```
 
-1. Push the D9 codebase from your local machine up to Pantheon:
+3. Push the D9 codebase from your local machine up to Pantheon:
 
     ```bash{promptUser: user}
     terminus connection:set $D9_SITE.dev git

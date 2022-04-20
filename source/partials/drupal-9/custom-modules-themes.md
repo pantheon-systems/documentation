@@ -2,7 +2,7 @@ To move modules, use the following commands:
 
 <TabList>
 
-<Tab title="Code for a Nested Docroot" id="code-docroot" active={true}>
+<Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
 ```bash{promptUser:user}
 git checkout master web/modules/custom
@@ -13,7 +13,7 @@ git commit -m "Copy custom modules"
 </Tab>
 
 
-<Tab title="Code if No Nested Docroot" id="code-nodocroot">
+<Tab title="Without Nested Docroot" id="code-nodocroot">
 
 ```bash{promptUser:user}
 git checkout master modules/custom
