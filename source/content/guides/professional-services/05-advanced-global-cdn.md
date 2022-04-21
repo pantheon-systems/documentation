@@ -101,10 +101,6 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
 [See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
-<<<<<<< HEAD
-<<<<<<< HEAD:source/content/guides/professional-services/05-advanced-global-cdn.md
-=======
->>>>>>> 9acfa4e99 ('broken link' fixed in PS guide)
 ### Rate Limiting (Early Access)
 
 Rate Limiting, a feature of Advanced Global CDN, lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
@@ -122,7 +118,6 @@ The benefits of Rate Limiting include:
 This feature is currently in Early Access; for more information, reach out to your account manager.
 
 </Alert>
-<<<<<<< HEAD
 
 ### Fastly on Pantheon
 
@@ -133,21 +128,6 @@ Pantheon's partnership with [Fastly](https://www.fastly.com/) offers many benefi
 - **Image Optimizer (IO)** is an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
 
 You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
-=======
-### Rate Limiting
-
-Rate Limiting with Advanced Global CDN lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. With Rate Limiting, guard critical assets including login, form, and promotional pages, with an added layer of security.
-
-The benefits of this feature include:
-
-- Volumetric Attack Mitigation - Reduce the effectiveness of malicious traffic, including brute-force login and denial-of-service attacks.
-
-- Granular Control - Rate Limiting supports adjustable configurations that can be adjusted on a per policy basis, including requests per second, and detection window.
-
-- Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for each policy.
->>>>>>> e75d533f0 (added rate limiting section to agcdn page):source/content/guides/professional-services/04-advanced-global-cdn.md
-=======
->>>>>>> 9acfa4e99 ('broken link' fixed in PS guide)
 
 ## Frequently Asked Questions
 
