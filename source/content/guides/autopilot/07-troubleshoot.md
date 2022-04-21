@@ -367,7 +367,7 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 ## CLI Tool Failed
 
-<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="failed-cli-tool" icon="info-sign">
+<Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
 
 ### Diagnosis
 
