@@ -365,17 +365,19 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
 =======
 
-## Failed CLI Tool
+## CLI Tool Failed
 
-<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-not-supported" icon="info-sign">
+<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="failed-cli-tool" icon="info-sign">
 
 ### Diagnosis
+
+There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
 
 Drush or WP-CLI unable to execute on the “dev” or “autopilot” environment. To Run `terminus remote:drush $SITE.dev -- pml or terminus remote:wp $SITE.dev -- plugin list and check for unexpected output or errors. (or $SITE.autopilot for the autopilot env)
 
   
 ### Solution
   
-After diagnosing the problem, resolve the issue that is causing on the Dev environment causing a fatal error.
+After diagnosing the problem, resolve the issue that is causing the fatal error on the Dev environment, then retry Autopilot. For additional help contact Support[/support] for assistance if the issue persists.
   
 </Accordion>
