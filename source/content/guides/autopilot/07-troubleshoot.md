@@ -10,7 +10,7 @@ showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/05-troubleshoot.md
-reviewed: "2022-03-30"
+reviewed: "2022-04-21"
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -363,3 +363,19 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+=======
+
+## Failed CLI Tool
+
+<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-not-supported" icon="info-sign">
+
+### Diagnosis
+
+Drush or WP-CLI unable to execute on the “dev” or “autopilot” environment. To Run `terminus remote:drush $SITE.dev -- pml or terminus remote:wp $SITE.dev -- plugin list and check for unexpected output or errors. (or $SITE.autopilot for the autopilot env)
+
+  
+### Solution
+  
+After diagnosing the problem, resolve the issue that is causing on the Dev environment causing a fatal error.
+  
+</Accordion>
