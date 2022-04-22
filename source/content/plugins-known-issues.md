@@ -1365,9 +1365,9 @@ ___
 
 <ReviewDate date="2022-04-8" />
 
-**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. The plugin is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon by design. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
-**Solution:** Configure YITH WooCommerce Request a Quote to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following to `functions.php`:
+**Solution:** Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
 
 ```php:title=wp-config.php
 /** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
