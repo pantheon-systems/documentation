@@ -122,8 +122,8 @@ If you choose to use a third-party cookie consent management solution, the cooki
 
 Pantheon has created example plugins to integrate with each of these third-party plugins, where the given solution is used to render content based on a visitor's location.
 
-- [Geo ACF example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/geo-acf)
-- [Geo CMB2 example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/geo-cmb2)
+- [Geo ACF example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/wordpress/geo-acf)
+- [Geo CMB2 example plugin](https://github.com/pantheon-systems/edge-integrations-snippets/tree/main/wordpress/geo-cmb2)
 
 Edge Integrations can easily integrate with various WordPress plugins.
 

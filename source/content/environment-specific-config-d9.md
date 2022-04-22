@@ -1,7 +1,7 @@
 ---
-title: Environment-Specific Configurations for Drupal 8
-description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal 8's configuration override system.
-cms: "Drupal 8"
+title: Environment-Specific Configurations for Drupal 9
+description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal 9's configuration override system.
+cms: "Drupal 9"
 categories: [develop]
 tags: [workflow]
 contributors: [peter-pantheon, rachelwhitton]
@@ -9,7 +9,7 @@ contributors: [peter-pantheon, rachelwhitton]
 The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev & Multidevs). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
 ## Enable Twig Debugging on Dev & Multidevs
-Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything you need, so enabling Twig debugging is simple:
+Pantheon handles the inclusion of service configuration files. The [default file provided](https://github.com/pantheon-systems/drupal-recommended/tree/default/web/sites/default) has everything you need, so enabling Twig debugging is simple:
 
 1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/git/#clone-your-site-codebase) or via [Terminus](/terminus):
 
@@ -53,15 +53,15 @@ Pantheon handles the inclusion of service configuration files for pre-production
         <div class="section layout-container clearfix">
  ```
 
-For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/services-yml).
+For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 9](/services-yml).
 
 ## Enable Cacheability Debugging on Dev & Multidevs
 
-1. Add the [`sites/default/services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) file to your project if you have not done so already.
+1. Add the `sites/default/services.pantheon.preproduction.yml` file to your project if you have not done so already.
 
  This service file is used to manage settings across Pantheon's development environments, like Dev and Multidevs. Settings in this file are not applied to production environments, like Test and Live.
 
-2. Enable Drupal 8's [CacheableResponseInterface](https://www.drupal.org/docs/8/api/responses/cacheableresponseinterface#debugging) to help debug cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
+2. Enable Drupal 9's [CacheableResponseInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableResponseInterface.php/function/CacheableResponseInterface%3A%3AaddCacheableDependency/9.0.x) to help debug cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
 
     ```yaml
     parameter:
@@ -83,22 +83,22 @@ For more information on Pantheon's service configuration files for Drupal, refer
   X-Drupal-Cache-Tags: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.frontpage http_response node_list rendered
   ```
 
-For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/services-yml).
+For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 9](/services-yml).
 
 ### Troubleshoot 503 Response: Header Overflow
 
-Responses with HTTP headers that exceed 10k return 503 Header Overflow errors. If you get this error after enabling cacheability debugging, disable it in the appropriate service file (e.g. `sites/default/services.pantheon.preproduction.yml`):
+Responses with HTTP headers that exceed 10k return 503 Header Overflow errors. If you get this error after enabling cacheability debugging, disable it in the appropriate service file.
 
 ```yaml
 parameter:
   http.response.debug_cacheability_headers: false
 ```
 
-This issue can be caused by a number of scenarios related to cache tags, such as many fields on a content type causing Drupal to generate really long HTTP headers. For more information on cache tags, see [Cache tags](https://www.drupal.org/docs/8/api/cache-api/cache-tags).
+This issue can be caused by a number of scenarios related to cache tags, such as many fields on a content type causing Drupal to generate really long HTTP headers. For more information on cache tags, see [Cache tags](https://www.drupal.org/docs/drupal-apis/cache-api/cache-tags).
 
 ## Override System Performance Settings Per Environment
 
-1. Use the `PANTHEON_ENVIRONMENT` constant and Drupal 8's override system within `settings.php` to enforce performance configurations based on the current Pantheon server environment:
+1. Use the `PANTHEON_ENVIRONMENT` constant and Drupal's override system within `settings.php` to enforce performance configurations based on the current Pantheon server environment:
 
   ```php
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -150,7 +150,7 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
    <Alert title="Note" type="info">
 
-   Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see [Configuration override system](https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system).
+   Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional.
 
    </Alert>
 
@@ -160,13 +160,8 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
 | Settings File         | Inclusions |
 |:--------------------- |:---------- |
-| settings.php          | services.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> settings.pantheon.php <br /> settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
+| settings.php          | services.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> settings.pantheon.php <br /> settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
 | settings.pantheon.php | services.pantheon.preproduction.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /> <br /> services.pantheon.production.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /> <br /> |
-| settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /> |
+| settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not included by default on any Pantheon environment." /> |
 
-## See Also
 
-- [Debugging Twig templates](https://www.drupal.org/docs/8/theming/twig/debugging-twig-templates)
-- [Debugging compiled Twig templates](https://www.drupal.org/docs/8/theming/twig/debugging-compiled-twig-templates)
-- [Locating Template Files with Debugging](https://www.drupal.org/docs/8/theming/twig/locating-template-files-with-debugging)
-- [Configuration Override System](https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system)

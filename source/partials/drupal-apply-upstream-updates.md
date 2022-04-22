@@ -7,7 +7,7 @@
   [warning] There are no available updates for this site.
   ```
 
-1. If any updates are available, apply them using the command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
+1. Run the code below or use the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard) to apply any available updates:
 
   ```bash{promptUser: user}
   terminus upstream:updates:apply $SITE.dev --updatedb

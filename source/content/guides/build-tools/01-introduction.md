@@ -10,7 +10,7 @@ anchorid: build-tools
 permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
-reviewed: "2020-05-08"
+reviewed: "2022-04-19"
 ---
 
 ## What Is Build Tools?
@@ -57,11 +57,9 @@ Pantheon's Developer Advocacy team holds trainings and Office Hours, and monitor
 
 </Enablement>
 
-<Accordion title="Build Tools Changelog" id="changelog" icon="newspaper">
+## Changelog
 
-<BuildToolsChangelog />
-
-</Accordion>
+You can view the most recent Build Tools release and changelogs in [Pantheon's Build Tools repository](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases).
 
 ## More Resources
 
