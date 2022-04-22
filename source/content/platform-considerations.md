@@ -69,7 +69,7 @@ Note that within the home directory, only `/code`, `/files`, and `/tmp` are writ
 
 ### Logs Directory
 
-Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/nginx`.
+Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/`.
 
 External scripts that access your PHP or NGINX logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
 
@@ -418,4 +418,4 @@ Xdebug is not available on the platform. Local development tools such as [Lando]
 
 ## XML-RPC
 
-The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, as of this doc's last update, listed as experimental, and not included on the Platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.
+The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, as of the last update to this document, listed as experimental and not included on the platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.
