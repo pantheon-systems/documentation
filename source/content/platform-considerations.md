@@ -12,7 +12,7 @@ This page is used to keep track of common platform considerations, mostly derive
 
 ## Browser Support for Pantheon's Dashboard
 
-In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
+In an effort to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
 +------------------------+--------+---------+-------+------+---------------------+
 |                        | Chrome | Firefox | Opera | Edge | Safari              |
