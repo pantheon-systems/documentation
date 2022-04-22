@@ -1,20 +1,22 @@
 ---
-title: Switch from Drupal 9 to Drupal with Composer Upstream
+title: Switch from Drupal 9 to Drupal (Composer Managed) Upstream
 description: Switch to the new Pantheon upstream to take advantage of the new structure and future updates.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
-contributors: [kporras07]
-reviewed: "2022-04-03"
+contributors: [kporras07, jspellman814]
+reviewed: "2022-04-22"
 ---
 
 In this guide, we will convert an existing site from the Drupal 9 (`drupal9`) upstream to the new Drupal Composer Managed (`drupal-composer-managed`) upstream.
 
 ## Overview
 
-Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Based on community needs, we have released a new upstream. [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) is now the default Drupal 9 upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
+Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Drupal 9 sites created on the platform prior to April 27, 2021 use the [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
+
+Based on community needs, we have released a new upstream. [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) is now the default Drupal 9 upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
 
 The goals of this conversion doc include the following:
 
@@ -26,7 +28,7 @@ The goals of this conversion doc include the following:
 
 You must confirm that your site meets the following requirement before you continue:
 
-- Ensure your site uses the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream.
+- Ensure your site uses the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) or [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
 
 ### Use Terminus to Confirm the Drupal 9 Upstream
 
@@ -34,7 +36,7 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
 
  The following values indicate that a site is using a `drupal9` upstream:
   * The `Framework` is `drupal8`
-  * The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-project`
+  * The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-project` or `https://github.com/pantheon-upstreams/drupal-recommended`
 
   The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `drupal9`:
 
