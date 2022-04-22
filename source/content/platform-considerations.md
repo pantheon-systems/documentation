@@ -44,7 +44,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 Running the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
 
-Most often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
+Often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
 ## Compute Optimized Environments (COE)
 
@@ -119,9 +119,9 @@ MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Eve
 
 ## Drupal 7 and Ampersands
 
-A Drupal 7 site given a URL with an ampersand (`&`) in it, excluding query parameter separation, will return a 404, regardless of the presence of a matching path.
+A Drupal 7 site with an ampersand (`&`) in the site URL (excluding instances of query parameter separation) will return a 404, regardless of the presence of a matching path.
 
-Be sure to encode URLs that use ampersands with `%26` in place of `&`.
+Ensure you encode URLs that use ampersands with `%26` instead of `&`.
 
 ## Drupal Steward
 
@@ -133,7 +133,7 @@ For more information about Drupal Steward, refer to the [Drupal Steward FAQ](htt
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-See the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) doc for more details and suggestions.
+For suggestions or more information refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) documentation.
 
 ## ffmpeg Transcoding Support
 
