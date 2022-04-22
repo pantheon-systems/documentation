@@ -71,7 +71,7 @@ Note that within the home directory, only `/code`, `/files`, and `/tmp` are writ
 
 Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs/`.
 
-External scripts that access your PHP or NGINX logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
+External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
 
 See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
 
@@ -79,11 +79,11 @@ See [Automate Downloading Logs](/logs#automate-downloading-logs) for more inform
 
 #### ImageMagick
 
-[ImageMagick](/external-libraries#imagemagick) has been updated from 6.8.8 to 6.9.10.
+[ImageMagick](/external-libraries#imagemagick) has been updated from v6.8.8 to v6.9.10.
 
 #### OpenSSL
 
-OpenSSL has been updated from 1.0.2 to 1.1.1.
+OpenSSL has been updated from v1.0.2 to v1.1.1.
 
 If you see the following error, update the TLS version used for SSO:
 
@@ -178,7 +178,7 @@ Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths
 
 ## .htaccess
 
-Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
+Pantheon sites use nginx to concurrently serve requests. The nginx web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
 For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
