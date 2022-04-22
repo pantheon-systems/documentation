@@ -3,10 +3,10 @@ title: Platform Considerations
 description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
 categories: [platform]
 tags: [files, libraries, security, webops]
-reviewed: "2020-10-16"
+reviewed: "2022-04-22"
 ---
 
-This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
+This page is used to keep track of common platform considerations, derived from Pantheon's distributed nature. Check back often, as we are keeping it current as we make improvements to address these limitations.
 
 <Partial file="auth.md" />
 
