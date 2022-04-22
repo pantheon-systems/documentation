@@ -48,7 +48,7 @@ This is the preferred method of setting HTTPS & HSTS for your site. Find the `en
 
 If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. Note that redirecting the platform domain will break the screenshot of your site in the User Dashboard, and may complicate troubleshooting for our [Support](/guides/support/contact-support/) team.
 
-For AGCDN the site will not be fully protected under WAF if it is using the platform domain. A platform domain redirect to the main domain is recommended. 
+AGCDN only works with custom domains and `.pantheonsite.io` domains are not covered. For AGCDN the site will not be fully protected under WAF if it is using the platform domain. A platform domain redirect to the main domain is recommended. 
 
 <Partial file="_redirects.md" />
 
