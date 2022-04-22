@@ -227,9 +227,9 @@ Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr
 
 ### Diagnose Issues
 
-`drush search_api_pantheon:diagnose` (sapd) The diagnose command checks the various pieces of the Search API install and throw errors on the pieces that are not working. This command will develop further as the module nears general availability.
+The diagnose command `drush search_api_pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working. 
 
-`drush search_api_pantheon:select` (saps) This command will run the given query against Solr server. It's recommended to use ?debug=true in any Solr page to get a good query to pass to this command to debug results.
+The `drush search_api_pantheon:select` (saps) command runs the query against the Solr server. It is recommended that you use `?debug=true` on any Solr page to allow a query to pass.
 
 
 ### Deploy an Updated `config.zip` to your Solr Server
