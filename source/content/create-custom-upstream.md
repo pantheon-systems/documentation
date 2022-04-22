@@ -171,7 +171,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 9" id="d91">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-recommended.git
+    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-composer-managed.git
     ```
 
     </Tab>

@@ -10,11 +10,11 @@ contributors: [kporras07]
 reviewed: "2022-04-03"
 ---
 
-In this guide, we will convert an existing site from the Drupal 9 (`drupal9`) upstream to the new Drupal with Composer (`drupal-recommended`) upstream.
+In this guide, we will convert an existing site from the Drupal 9 (`drupal9`) upstream to the new Drupal Composer Managed (`drupal-composer-managed`) upstream.
 
 ## Overview
 
-Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Based on community needs, we have released a new upstream. [Drupal with Composer](https://github.com/pantheon-upstreams/drupal-recommended) is now the default Drupal 9 upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
+Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Based on community needs, we have released a new upstream. [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) is now the default Drupal 9 upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
 
 The goals of this conversion doc include the following:
 
@@ -69,10 +69,10 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
 Change the upstream that your site is tracking with the following command:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $SITE drupal-recommended
+terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Follow the `drupal-recommended` upstream to keep your site current with any general configuration changes recommended by Pantheon.
+Follow the `drupal-composer-managed` upstream to keep your site current with any general configuration changes recommended by Pantheon.
 
 Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the upstream.
 
@@ -93,7 +93,7 @@ If you receive an error that you have conflicts while updating, resolve using th
 This is safe to run if you don't have your own changes in any of the conflicting files, such as problems with `.gitignore`.
 
 ```bash{promptUser: user}
-git pull -Xtheirs https://github.compantheon-upstreams/drupal-recommended.git master
+git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed.git master
 # resolve conflicts
 git push origin master
 ```

@@ -99,7 +99,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 <Tab title="Drupal 9" id="d9" active={true}>
 
 ```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-systems/drupal-recommended master
+git pull -Xtheirs https://github.com/pantheon-systems/drupal-composer-managed master
 # resolve conflicts
 git push origin master
 ```
@@ -195,7 +195,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal 9" id="d9-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drupal-9 https://github.com/pantheon-systems/drupal-recommended
+  git remote add pantheon-drupal-9 https://github.com/pantheon-systems/drupal-composer-managed
   ```
 
   </Tab>
@@ -377,9 +377,9 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal 9" id="d9-2conflict-merge">
 
-  GITHUB-EMBED https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
+  GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 
- [View on GitHub](https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml)
+ [View on GitHub](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml)
 
  </Tab>
 

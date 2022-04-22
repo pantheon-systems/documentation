@@ -42,10 +42,10 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 ## Create a New Drupal 9 Site
 
-1. Use the Terminus Build Tools plugin to create a new Drupal 9 site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-recommended) repository on GitHub:
+1. Use the Terminus Build Tools plugin to create a new Drupal 9 site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-composer-managed) repository on GitHub:
 
  ```bash{promptUser: user}
- terminus build:project:create pantheon-systems/example-drupal-recommended $SITENAME
+ terminus build:project:create pantheon-systems/drupal-composer-managed $SITENAME
  ```
 
 *Do not* go to the web interface to continue installation. You now have a repository on GitHub containing your new site.
