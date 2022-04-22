@@ -73,7 +73,7 @@ Log output has changed from `/srv/bindings/[UUID]/logs`to `/logs/php` and `/logs
 
 External scripts that access your PHP or nginx logs should check that the path exists. If the prior home directory does not exist, then your scripts should access logs within to the new location.
 
-See [Automate Downloading Logs](/logs#automate-downloading-logs) for more information.
+For more information, refer to [Automate Downloading Logs](/logs#automate-downloading-logs).
 
 ### Updated Plugins
 
@@ -105,7 +105,7 @@ For sites that need to provide services with Cross-Origin Resource Sharing (COR
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
-WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains [in a MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
+WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
 
 ## CSS Preprocessors
 
@@ -119,7 +119,7 @@ MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Eve
 
 ## Drupal 7 and Ampersands
 
-A Drupal 7 site with an ampersand (`&`) in the site URL (excluding instances of query parameter separation) will return a 404, regardless of the presence of a matching path.
+A Drupal 7 site with an ampersand (`&`) in the site URL (excluding instances of query parameter separation) will return a 404 error, regardless of the presence of a matching path.
 
 Ensure you encode URLs that use ampersands with `%26` instead of `&`.
 
