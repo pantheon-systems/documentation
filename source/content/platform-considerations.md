@@ -131,7 +131,7 @@ For more information about Drupal Steward, refer to the [Drupal Steward FAQ](htt
 
 ## Email and Deliverability
 
-Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
+Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure the high deliverability of emails originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (for example SendGrid) in production to ensure that your email is delivered.
 
 For suggestions or more information refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) documentation.
 
@@ -143,7 +143,7 @@ We do not support ffmpeg transcoding, and we do not have plans to add this featu
 
 Emoji support is available out of the box on WordPress and Drupal 8. Drupal 7 sites can enable Emoji support by following this procedure:
 
-For new _or_ existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
+For new or existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
 
 ```php:title=sites/default/settings.php
 $databases['default']['default']['charset'] = 'utf8mb4';
