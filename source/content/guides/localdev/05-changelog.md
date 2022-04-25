@@ -20,7 +20,7 @@ You can view the most recent Localdev release and changelogs in [Pantheon's Loca
 Download Edge versions to get the latest features, bug fixes, instructions, and help test Localdev.
 
 Note that some versions of Localdev are not compatible with some versions of Docker. For more information, refer to GitHub.
-You can turn off the compatibility check in the Localdev's settings to continue with an untested version of Docker, although this in not recommended. 
+You can turn off the compatibility check in the Localdev's settings to continue with an untested version of Docker, however, this in not recommended. 
 
 1. Select **Settings** in the left menu within your Localdev installation.
 
