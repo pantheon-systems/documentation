@@ -363,7 +363,6 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
-=======
 
 ## CLI Tool Failed
 
@@ -374,10 +373,37 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
 
 Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin` to list and check for unexpected output or errors. Alternatively you can use the command `$SITE.autopilot` for the Autopilot environment
-
   
 ### Solution
   
 After diagnosing the problem, resolve the issue that is causing the fatal error on the Dev environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Quicksilver is Unavailable
+
+<Accordion title="We could not execute some Quicksilver scripts on this site." id="no-quicksilver" icon="info-sign">
+
+### Issue
+
+Quicksilver scripts could not be execute on the site. 
+  
+### Solution
+  
+Contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Database Could Not Be Updated
+
+<Accordion title="We ran into an issue with Autopilot because the database could not be updated." id="no-database-updates" icon="info-sign">
+
+### Issue
+
+An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated. 
+  
+### Solution
+  
+Try updating the database locally, and then retry Autopilot. Contact Support[/link] for assistance if the issue persists.
   
 </Accordion>
