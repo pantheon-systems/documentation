@@ -28,7 +28,7 @@ Follow the steps below to export a `tar.gz` or `.zip` file of your directory fil
   </TabList>
 
 
-  Now you have created an archive file in your user's home directory.
+   Now you have created an archive file in your user's home directory.
 
 1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
 
