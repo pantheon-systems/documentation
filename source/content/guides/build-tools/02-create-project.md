@@ -55,7 +55,7 @@ Make sure you have the latest versions of Terminus and the Terminus Build Tools 
 
 ### Access Tokens (Optional)
 
-The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens) and [CircleCI](https://circleci.com/account/api), which are stored as environment variables. The GitHub token needs the **repo** (required) and **delete-repo** (optional) scopes. Optionally, you may generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens) and [CircleCI](https://circleci.com/account/api), which are stored as environment variables. The GitHub token needs the **repo** (required), **delete-repo** (optional) and **workflow** (required if using Github Actions) scopes. Optionally, you may generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
 
 ```bash{promptUser: user}
 export GITHUB_TOKEN=yourGitHubToken
@@ -66,7 +66,7 @@ If you need to replace a token, navigate to your [project settings page in Circl
 
 ## Create a Build Tools Project
 
-Scaffold a new project from a template repository and perform a one-time setup to connect an external Git provider and CI service with Pantheon. This setup also configures SSH keys and environment variables. To use your own template repository see [Customization](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#customization) in the Build Tools Plugin documentation.
+Scaffold a new project from a template repository and perform a one-time setup to connect an external Git provider and CI service with Pantheon. This setup also configures SSH keys and environment variables. To use your own template repository see [Customization](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/3.x/README.md#customization) in the Build Tools Plugin documentation.
 
 Modify the commands in the following examples to match your project's needs.
 
@@ -90,7 +90,7 @@ Modify the commands in the following examples to match your project's needs.
 
 The script will ask for additional information such as tokens/credentials for GitHub and the associated CI.
 
-For a list of all available command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
+For a list of all available command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/3.x/README.md#buildprojectcreate)
 
 ### Troubleshooting
 
