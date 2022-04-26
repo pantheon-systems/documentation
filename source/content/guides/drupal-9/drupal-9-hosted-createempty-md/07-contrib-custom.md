@@ -15,7 +15,7 @@ editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
 
 
 
-What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
+This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 ## Contributed Code
 
@@ -84,4 +84,3 @@ Next, manually copy custom code from the existing site repository to the Compose
 
 <Partial file="drupal-9/custom-settings.md" />
 
-Commit your changes as needed.

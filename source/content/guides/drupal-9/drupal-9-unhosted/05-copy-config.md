@@ -44,4 +44,4 @@ It is possible that the Drupal site might have moved the configuration path to a
 drush status --fields=config-sync
 ```
 
-It is also possible that no files will be copied during this step.
+In some cases no files are copied through this step. This is not cause for concern.

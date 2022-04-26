@@ -19,3 +19,6 @@ editpath: drupal-9-hosted-createdashboard-set8/13-troubleshooting.md
 <Partial file="composer-updating.md" />
 
 <Partial file="drupal-9/troubleshooting.md" />
+## Your requirements could not be resolved to an installable set of packages
+
+When setting the [Drupal core version](07-drupal-core-version.md), use the command `composer update` instead of `composer update drupal/core* -W` if you receive the error message "Your requirements could not be resolved to an installable set of packages." 

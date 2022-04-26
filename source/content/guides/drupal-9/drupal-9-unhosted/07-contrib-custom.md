@@ -37,7 +37,7 @@ After Composer is aware of all the contributed code, you'll be able to run `comp
   
 1. Review the list and note the versions of modules and themes you depend on.
 
-1. Add these modules to your new codebase using Composer by running the following for each module in the `$DESTINATION` directory:
+1. Add these modules to your new codebase by running the following for each module in the `$DESTINATION` directory:
 
   ```bash{promptUser:user}
   composer require drupal/PROJECT_NAME:^VERSION
@@ -94,6 +94,4 @@ Next, manually copy custom code from the existing site repository to the Compose
 ## Additional Composer Configuration
 
 <Partial file="drupal-9/composer-config.md" />
-
-Commit your changes as needed.
 

@@ -33,6 +33,7 @@ To maintain best practices and to avoid difficult, time-consuming repairs to the
 Pantheon support is not available to users who avoid the Multidev steps.
 
 </Alert>
+<Partial file="drupal-9/upgrade-site-requirements-new.md" />
 
 ## See Also
 

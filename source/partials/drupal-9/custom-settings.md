@@ -38,3 +38,5 @@ rm web/sites/default/original-settings.php
 
 
 The resulting `settings.php` should have no `$databases` array.
+
+Commit your changes as needed.

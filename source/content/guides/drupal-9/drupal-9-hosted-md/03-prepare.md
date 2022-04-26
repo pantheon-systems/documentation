@@ -19,7 +19,6 @@ editpath: drupal-9/drupal-9-hosted-md/03-prepare.md
 
 <Partial file="drupal-apply-upstream-updates.md" />
 
-<Partial file="drupal-9/upgrade-site-requirements.md" />
 
 ## Convert to Composer
 

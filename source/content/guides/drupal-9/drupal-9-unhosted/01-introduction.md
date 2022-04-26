@@ -42,13 +42,6 @@ You must confirm that you meet the following requirements before continuing:
 
 - Clone your site to your local environment using the `git clone` command from the dashboard.
 
-
-<Alert title="Note"  type="info" >
-
-Commit history: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
-
-</Alert>
-
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)

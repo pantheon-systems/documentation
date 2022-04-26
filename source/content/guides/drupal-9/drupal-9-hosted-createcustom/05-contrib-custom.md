@@ -143,5 +143,3 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 ## Custom Modules and Themes
 
 <Partial file="drupal-9/custom-modules-themes.md" />
-
-Commit your changes as needed.

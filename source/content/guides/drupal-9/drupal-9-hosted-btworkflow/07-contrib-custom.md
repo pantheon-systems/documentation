@@ -35,7 +35,7 @@ You can require multiple packages in the same commands if desired.
 
 ### Other Composer Packages
 
-Follow the steps below, if you added non-Drupal packages to your site via Composer. 
+If you added non-Drupal packages to your site via Composer:
 
 1. Run the command `composer require` to migrate each package. 
 
@@ -66,8 +66,6 @@ Manually copy custom code from the existing site repository to the Composer-mana
 ## Additional Composer Configuration
 
 <Partial file="drupal-9/composer-config.md" />
-
-Commit your changes as needed.
 
 ## Push to the External Repository Master Branch
 
