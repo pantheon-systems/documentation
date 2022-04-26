@@ -115,7 +115,7 @@ When a certificate is ready you can switch DNS destinations from your existing s
 
   1. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
 
-          192.123.456.789 example.com
+          `192.123.456.789 example.com`
 
     This will tell your computer to look for ‘example.com’ at the new Pantheon address.
 
