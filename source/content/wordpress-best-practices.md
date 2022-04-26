@@ -128,6 +128,30 @@ This method has the advantage of being toggleable without deploying code, by act
 
 <Partial file="wp-login-attacks.md" />
 
+## Disable WordPress Users Rest API
+
+The WordPress REST API is enabled for all users by default. To improve the security of a Wordpress site, you can disable the WordPress Rest API for anonymous requests. This action improves site safety and reduces instances of unexpected errors or compromised WordPress core functionalities.
+
+The following script ensures that anonymous access to your site's REST API is disabled and that only authenticated requests will work:
+
+```
+{
+	if ( true === $result || is_wp_error( $result ) ) {
+		return $result;
+	}
+
+	if ( ! is_user_logged_in() ) {
+		return new WP_Error(
+			'rest_not_logged_in',
+			__( 'You are not currently logged in.' ),
+			array( 'status' => 401 )
+		);
+	}
+
+	return $result;
+});
+```
+
 ## Security Headers
 
 Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
