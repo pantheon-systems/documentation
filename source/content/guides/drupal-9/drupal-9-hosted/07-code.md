@@ -79,6 +79,7 @@ editpath: hosted/07-code.md
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>
+
 ```bash{promptUser:user}
 # Fetch your D8 settings file.
 git show existing-8/master:web/sites/default/settings.php > web/sites/default/original-settings.php
@@ -88,10 +89,12 @@ diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
 # Remove the original copy.
 rm web/sites/default/original-settings.php
 ```
+
 </Tab>
 
 
 <Tab title="Without Nested Docroot" id="code-nodocroot">
+
 ```bash{promptUser:user}
 # Fetch your D8 settings file.
 git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
@@ -101,6 +104,7 @@ diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
 # Remove the original copy.
 rm web/sites/default/original-settings.php
 ```
+
 </Tab>
 
 </TabList>

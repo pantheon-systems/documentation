@@ -16,6 +16,7 @@ Copy any existing configuration from the source site and update the source path 
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>
+
 This is a common location for the config file; if this isn't where your config file is located, replace 'config' with the full path, such as `web/sites/default/config`.
 
 ```bash{promptUser:user}
@@ -24,16 +25,19 @@ cd $DESTINATION
 git add config
 git commit -m "Pull in configuration from source site"
 ```
+
 </Tab>
 
 
 <Tab title="Without Nested Docroot" id="code-nodocroot">
+
 ```bash{promptUser:user}
 cp -r $SOURCE/sites/default/files/config/sync/* $DESTINATION/config/
 cd $DESTINATION
 git add config
 git commit -m "Pull in configuration from source site"
 ```
+
 </Tab>
 
 </TabList>

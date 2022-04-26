@@ -75,16 +75,19 @@ git mv config/* config
 git rm -f web/sites/default/config/.htaccess
 git commit -m "Pull in configuration from default branch"
 ```
+
 </Tab>
 
 
 <Tab title="Without Nested Docroot" id="code-nodocroot">
+
 ```bash{promptUser:user}
 git checkout master sites/default/config
 git mv sites/default/config/* config
 git rm -f sites/default/config/.htaccess
 git commit -m "Pull in configuration from default branch"
 ```
+
 </Tab>
 
 </TabList>
