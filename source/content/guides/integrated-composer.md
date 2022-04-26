@@ -63,19 +63,12 @@ This GitHub token will be added to your code repository, and allows those in pos
 
 1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) and generate a new token with `repo` scope.
 
-1. Create a new `auth.json` file by opening a terminal at the root of your project and issuing the following command
-   ```bash{promptUser: user}
-   composer config github-oauth.github.com token
-   ```
-
-1. Edit `auth.json` and add your newly generated token.
-
-1. Add the private GitHub repository to `composer.json`
+1. Add the private GitHub repository to `composer.json`, replacing `<token>` with your newly generated token.
    ```json:title=composer.json
    "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/mycompany/my-private-repo"
+            "url": "https://<token>@github.com/mycompany/my-private-repo"
         }
     ],
     ```
@@ -89,9 +82,9 @@ This GitHub token will be added to your code repository, and allows those in pos
 
 1. Run `composer update` to install the new package.
 
-1. If the above update works locally, commit the newly created symlink and updated composer files and add them to your environment
+1. If the above update works locally, commit the updated composer files and add them to your environment
    ```bash{promptUser: user
-   git add auth.json composer.json composer.lock
+   git add composer.json composer.lock
    git commit -m "Adding private package <your-package>"
    git push
    ```
