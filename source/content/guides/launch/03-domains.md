@@ -86,12 +86,14 @@ Once you begin this process, you have:
 
 1. Serve the file from your existing live site. Drupal 7 users can use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
 
-   <Alert title="Note" type="info">
+    <Alert title="Note" type="info">
 
-   The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
-   
-    A misconfiguration invalidates these records and the Dashboard does not provide any feedback. 
-
+    The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
+    
+    It is recommeneded that you use the Dashboard to get the DNS record instead of the Terminus plugin. A misconfiguration of the validation file invalidates these records and the Dashboard does not provide any feedback. 
+    
+    If the DNS validation fails you will receive an error message. This only applies to the DNS validation.
+    
    </Alert>
 
 1. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
