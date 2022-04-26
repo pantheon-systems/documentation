@@ -130,11 +130,11 @@ This method has the advantage of being toggleable without deploying code, by act
 
 ## Disable WordPress Users Rest API
 
-The WordPress REST API is enabled for all users by default. To improve the security of a Wordpress site, you can disable the WordPress Rest API for anonymous requests to avoid exposing admin users. This action improves site safety and reduces instances of unexpected errors that result in compromised WordPress core functionalities.
+The WordPress REST API is enabled for all users by default. To improve the security of a Wordpress site, you can disable the WordPress Rest API for anonymous requests, to avoid exposing admin users. This action improves site safety and reduces instances of unexpected errors that result in compromised WordPress core functionalities.
 
-The following function ensures that anonymous access to your site's REST API is disabled and that only authenticated requests will work, you can add this to a theme's functions.php file or to an mu-plugin:
+The following function ensures that anonymous access to your site's REST API is disabled and that only authenticated requests will work. You can add this code sample to a theme's `functions.php` file or to a must-use plugin:
 
-```
+```php
 // Disable WP Users REST API for non-authenticated users (allows anyone to see username list at /wp-json/wp/v2/users)
 add_filter( 'rest_authentication_errors', function( $result ) {
 	if ( true === $result || is_wp_error( $result ) ) {
