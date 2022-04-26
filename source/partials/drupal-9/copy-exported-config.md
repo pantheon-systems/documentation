@@ -2,6 +2,8 @@
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
+This is a common location for the config file; if this isn't where your config file is located, replace 'config' with the full path, such as `web/sites/default/config`.
+
 ```bash{promptUser:user}
 git checkout existing-8/master -- config
 git mv config/* config/
