@@ -2,6 +2,7 @@
 title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9
 subtitle: Introduction
 description: Learn how to migrate a Drupal 8 Site to Drupal 9
+cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]

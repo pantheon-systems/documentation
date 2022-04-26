@@ -2,6 +2,7 @@
 title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9
 subtitle: Configure Ongoing Core Updates
 description: 
+cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]

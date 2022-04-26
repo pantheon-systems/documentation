@@ -2,6 +2,7 @@
 title: Migrate a Site That Was Created with Build Tools to Drupal 9
 subtitle: Update Drupal Core Using Composer
 description: 
+cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]

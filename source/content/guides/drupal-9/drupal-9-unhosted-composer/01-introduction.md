@@ -2,6 +2,7 @@
 title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform to Drupal 9
+cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
