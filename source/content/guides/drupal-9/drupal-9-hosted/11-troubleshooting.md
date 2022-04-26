@@ -14,6 +14,4 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted/11-troubleshooting.md
 ---
 
-## Troubleshooting
-
 <Partial file="drupal-9/troubleshooting.md" />

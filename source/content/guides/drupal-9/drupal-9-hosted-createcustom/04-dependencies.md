@@ -8,7 +8,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
+showtoc: false
 permalink: docs/guides/drupal-9-hosted-createcustom/dependencies
 anchorid: dependencies
 editpath: drupal-9/drupal-9-hosted-createcustom/04-dependencies.md

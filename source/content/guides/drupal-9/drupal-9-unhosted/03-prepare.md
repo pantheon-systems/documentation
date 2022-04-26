@@ -23,3 +23,9 @@ editpath: drupal-9/drupal-9-unhosted/03-prepare.md
    export SOURCE=/absolute/path/to/source/site/codebase
    export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
    ```
+4. Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+
+5. Set the dev environment site mode to Git to be able to perform Git operations on this environment.
+
+6. Clone your site to your local environment using the `git clone` command from the dashboard.
+

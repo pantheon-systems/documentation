@@ -32,7 +32,6 @@ This doc uses the following aliases:
 - **Alias:** `D9_SITE`
   - **Site Name:** `best-drupal9-site-ever`
 
-
 ## Requirements
 
 <Partial file="drupal-9/upgrade-site-requirements-new.md" />

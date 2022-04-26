@@ -3,14 +3,6 @@ Your existing site may have customizations to `settings.php` or other configurat
 
 We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
 
-```bash{promptUser:user}
-git status # Ensure working tree is clean
-git show master:sites/default/settings.php > web/sites/default/original-settings.php
-diff -Nup --ignore-all-space web/sites/default/settings.php web/sites/default/original-settings.php
-# edit web/sites/default/settings.php and commit as needed
-rm web/sites/default/original-settings.php
-```
-
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>

@@ -3,7 +3,6 @@ title: Drupal 9 Migration
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-showtoc: false
 reviewed: "2021-03-31"
 
 ---
@@ -21,9 +20,7 @@ Answer the following questions to determine your upgrade path.
 
 ## Is the site currently hosted on Pantheon?
 
-### Yes
-
-#### How did you create your Drupal site?
+### Yes: How did you create your Drupal site?
 
 <TabList>
 
@@ -47,27 +44,29 @@ Do you have access to the Multidev?
   
 </Tab>
 
-<Tab title="Dashboard on Drupal 8" id="dashboard-8">
+<Tab title="Dashboard" id="dashboard">
 
-Do you have access to the Multidev?
-- Yes: [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
-- No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+What version of Drupal are you on?
 
-</Tab>
+- Version 8: 
 
-<Tab title="Dashboard on Drupal 9" id="dashboard-9">
+  Do you have access to the Multidev?
+  - Yes: [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
+  - No: [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
 
-Did you create the site prior to November 2021?
-- Yes: [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) 
-- No: 
+- Version 9: 
 
-  Did you set Drupal version to 8?
-  - Yes: [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8)
+  Did you create the site prior to November 2021?
+  - Yes: [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) 
   - No: 
 
-    Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
-    - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9 + Build Tools](/guides/drupal-9-hosted-btworkflow)
-    - No: No additional work required.
+    Did you set Drupal version to 8?
+    - Yes: [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8)
+    - No: 
+
+      Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
+      - Yes: [Migrate a Site That Needs a Build Tools Workflow to Drupal 9 + Build Tools](/guides/drupal-9-hosted-btworkflow)
+      - No: No additional work required.
 
 </Tab>
 

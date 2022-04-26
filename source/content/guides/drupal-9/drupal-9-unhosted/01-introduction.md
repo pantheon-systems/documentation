@@ -37,12 +37,6 @@ You must confirm that you meet the following requirements before continuing:
 
 ## Before You Begin
 
-- Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
-
-- Set the dev environment site mode to Git to be able to perform Git operations on this environment.
-
-- Clone your site to your local environment using the `git clone` command from the dashboard.
-
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)

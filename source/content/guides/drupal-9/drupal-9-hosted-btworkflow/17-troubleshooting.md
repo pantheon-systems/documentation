@@ -14,7 +14,7 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-btworkflow/17-troubleshooting.md
 ---
 
-### Provided Host Name Not Valid
+## Provided Host Name Not Valid
 
 Update your `settings.php` file with a trusted host setting, if you receive the following error message:
 
@@ -24,6 +24,10 @@ Update your `settings.php` file with a trusted host setting, if you receive the 
 
 Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
-### Working With Dependency Versions
+## Working With Dependency Versions
 
 <Partial file="composer-updating.md" />
+
+## Where can I report an issue?
+
+[Contact support](/guides/support/contact-support) to report any issues that you encounter.
