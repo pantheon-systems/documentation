@@ -10,11 +10,13 @@ reviewed: "2022-04-27"
 
 ## Cron Overview
 
-Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year. Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more.
+Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year.
+
+Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more.
 
 ## Pantheon Cron Overview
 
-Pantheon Cron runs WordPress cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. Running Cron on the platform provides a more reliable schedule and ensures visitors are not interrupted by a script triggered by WordPress cron.
+Pantheon Cron runs WordPress cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. Running cron on the platform provides a more reliable schedule and ensures visitors are not interrupted by a script triggered by WordPress cron.
 
 ## WP-Cron Overview
 
@@ -41,7 +43,7 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 
 ### WordPress Site Networks
 
-Pantheon Cron cannot support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Site Networks will continue to use WP Cron.
+Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Site Networks use WP-Cron.
 
 ### Security
 
@@ -59,33 +61,34 @@ Several jobs are automatically configured during the installation of WordPress. 
 
 Use [Terminus](/terminus) to see job details in WP-Cron. Terminus, through WP-CLI, provides details, such as:
 
- - What is scheduled to run
- - What will run next
- - What event hooks are configured
+- What is scheduled to run
+- What will run next
+- What event hooks are configured
 
 You can also use Terminus and WP-CLI to:
 
- - Schedule your own jobs
- - Execute existing jobs
- - Manage WP-Cron related features
+- Schedule your own jobs
+- Execute existing jobs
+- Manage WP-Cron related features
 
-We recommend that you use the following command to test WP-Cron and ensure everything is working correctly:
+Use the following command to test WP-Cron and ensure everything is working correctly:
 
 ```bash{promptUser: user}
 terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 ```
-* Replace `<SITE_NAME>` with your site's name
-* Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name)
 
-If this is a WordPress site on the Pantheon upstream it will now be running on Pantheon Cron, so you should expect to see the following:
+- Replace `<SITE_NAME>` with your site's name
+- Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name)
+
+If this is a WordPress site on the Pantheon upstream it will now be running on Pantheon Cron, and you should see:
 
 ```bash
 Error: The DISABLE_WP_CRON constant is set to true. WP-Cron spawning is disabled.
 ```
 
-This is not an error, but indicates that WordPress' internal cron scheduler has been deactivated and that the site will now rely on Pantheon cron.
+This is not an error, but indicates that WordPress's internal cron scheduler has been deactivated and that the site will now rely on Pantheon Cron.
 
-If this is a WordPress Site Network or has WordPress cron overridden to be enabled, the result should be:
+If this is a WordPress Site Network or has WordPress cron overridden, the result should be:
 
 ```bash{promptUser: user}
 Success: WP-Cron spawning is working as expected.
@@ -101,13 +104,17 @@ All `terminus wp` commands require a site name and environment to operate. WordP
 
 <Alert title="Note" type="info">
 
-Terminus cannot execute Cron Jobs if you enable the Security setting on your Dashboard. You may see status report errors on the Dashboard as a result.
+Terminus cannot execute cron jobs if you enable the Security setting on your Dashboard. You may see status report errors on the Dashboard as a result.
 
 </Alert>
 
 ### Enable WP-Cron
 
-Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon Cron. You must add the code below to your `wp-config.php` file to enable WP-Cron's internal processing if you want to instead use WP-Cron. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`.
+Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon Cron.
+
+If you want to use WP-Cron instead, add the following code to your `wp-config.php` file to enable WP-Cron's internal processing.
+
+This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', false);
@@ -121,11 +128,13 @@ There are several plugins you can use if you want to keep an eye on WP-Cron but 
 
 ## Manage WP-Cron Externally
 
-You can use external Crons if you want more control over your site's Cron jobs, or if you don't want WP-Cron or Pantheon Cron to handle jobs internally. This will solve the problems with high traffic and low traffic sites discussed in the Troubleshooting section.
+You can use external crons if you want more control over your site's cron jobs, or if you don't want WP-Cron or Pantheon Cron to handle jobs internally. This will solve the problems with high traffic and low traffic sites discussed in the [Troubleshooting](#troubleshooting) section.
 
 ### Disable WP-Cron
 
-Pantheon's WordPress upstream disables WP-Cron by default. If you are on a Custom Upstream that does not have this setting, or the site is a WordPress Multisite, you must add the code below to your `wp-config.php` file to ensure WP-Cron is disabled. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`.
+Pantheon's WordPress upstream disables WP-Cron by default.
+
+If you are on a Custom Upstream that does not have this setting, or the site is a WordPress Multisite, add the following code to your `wp-config.php` file to ensure WP-Cron is disabled. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', true);
@@ -161,7 +170,7 @@ You can use the Cron service to make a call to the `wp-cron.php` script if you a
 
 ### Problems With Low Traffic Sites
 
-On WordPress Multisite installations that do not have Pantheon Cron, WP-Cron will skip jobs in WordPress sites with low traffic. This doesn't mean your page will be slow from previous jobs when someone eventually visits your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so your site's performance is not adversely affected.
+On WordPress Multisite installations that do not have Pantheon Cron, WP-Cron will skip jobs in WordPress sites with low traffic. This doesn't mean your page will be slow from previous jobs when someone eventually visits your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so that your site's performance is not adversely affected.
 
 Low traffic WordPress sites on Pantheon are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in sleeping environments.
 
