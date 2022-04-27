@@ -60,7 +60,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 2. Edit `composer.json` and define the library repository:
 
 ```json
-   repositories": [
+ repositories": [
 {
            "type": "package",
            "package": {
