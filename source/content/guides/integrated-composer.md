@@ -57,7 +57,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 ## Add Drupal Libraries
 
 1. Clone the Git repository from the Pantheon site's dashboard.
-2. Edit composer.json and define the library repository
+2. Edit `composer.json` and define the library repository:
 
 ```json
    repositories": [
@@ -79,11 +79,11 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
  ],
 ```
 
-3. Open a terminal and require the package
-```
+3. Open the terminal and require the package:
+
+```bash{promptUser: user}
 composer require vendor/pkg-name
 ```
-
 
 ### Remove Individual Site Dependencies
 
