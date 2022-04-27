@@ -8,15 +8,16 @@ Drupal 9 includes many of the features and layout that Drupal 8 users are famili
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
-## Commit History
-
+<Alert title="Note" type="info" >
 This upgrade migrates your existing site to a new site.  The new site will not maintain your site’s commit history.
+</Alert>
+
 
 ## Choose Your Upgrade Path
 
 Answer the following questions to determine your upgrade path.
 
-### Is the site currently hosted on Pantheon?
+**Is the site currently hosted on Pantheon?**
 
 - **Yes**
 
