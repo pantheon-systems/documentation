@@ -1,5 +1,5 @@
 ---
-title: Switch from Drupal 9 to Drupal (Composer Managed) Upstream
+title: Switch from Drupal 9 to Drupal Composer Managed Upstream
 description: Switch to the new Pantheon upstream to take advantage of the new structure and future updates.
 type: guide
 permalink: docs/guides/:basename
