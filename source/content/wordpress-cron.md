@@ -5,15 +5,16 @@ cms: "WordPress"
 categories: [automate]
 tags: [cron]
 contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814]
+reviewed: "2022-04-27"
 ---
 
 ## Cron Overview
 
-Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year. Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more. 
+Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year. Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more.
 
 ## Pantheon Cron Overview
 
-Pantheon Cron runs WordPress cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. Running Cron on the platform provides a more reliable schedule and ensures visitors are not interrupted by a script triggered by WordPress cron. 
+Pantheon Cron runs WordPress cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. Running Cron on the platform provides a more reliable schedule and ensures visitors are not interrupted by a script triggered by WordPress cron.
 
 ## WP-Cron Overview
 
@@ -40,11 +41,11 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 
 ### WordPress Site Networks
 
-Pantheon Cron cannot support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Site Networks will continue to use WP Cron. 
+Pantheon Cron cannot support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Site Networks will continue to use WP Cron.
 
 ### Security
 
-WP-Cron is a PHP file that is usually located in the root directory of your WordPress installation. The `wp-cron.php` file is subject to DDoS attacks, but generally, `wp-cron.php` is secure. 
+WP-Cron is a PHP file that is usually located in the root directory of your WordPress installation. The `wp-cron.php` file is subject to DDoS attacks, but generally, `wp-cron.php` is secure.
 
 There is only one parameter you can pass that will affect the script, `doing_wp_cron`. The `$_GET` value is not filtered, and is only used as a flag (not as an input for a process or variable). All inputs are ignored outside this. Currently, `wp-cron.php` does not have any known vulnerabilities or exploits, although it should be noted that no script on a server attached to the Internet is 100% secure.
 
@@ -74,7 +75,7 @@ We recommend that you use the following command to test WP-Cron and ensure every
 terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 ```
 * Replace `<SITE_NAME>` with your site's name
-* Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name) 
+* Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name)
 
 If this is a WordPress site on the Pantheon upstream it will now be running on Pantheon Cron, so you should expect to see the following:
 
@@ -155,14 +156,14 @@ Do not add a value to the `doing_wp_cron` query variable. This variable must be 
 ### Using Your Own Server
 
 You can use the Cron service to make a call to the `wp-cron.php` script if you administer your own server. You will have to learn how to correctly set up a Cron job and use something like `wget` or `curl` to fetch a web page. Using your own server is not safer than using a web-based Cron service.
- 
-## Troubleshooting 
+
+## Troubleshooting
 
 ### Problems With Low Traffic Sites
 
 On WordPress Multisite installations that do not have Pantheon Cron, WP-Cron will skip jobs in WordPress sites with low traffic. This doesn't mean your page will be slow from previous jobs when someone eventually visits your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so your site's performance is not adversely affected.
 
-Low traffic WordPress sites on Pantheon are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in sleeping environments. 
+Low traffic WordPress sites on Pantheon are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in sleeping environments.
 
 ### Problems With High Traffic Sites
 
@@ -171,6 +172,6 @@ You might run into problems with WP-Cron if your WordPress-powered site is high 
 - **Race condition**: When more than one user visits your site and triggers WP-Cron to execute the same job. WP-Cron works hard to eliminate race conditions, but they can still happen, especially on high traffic sites.
 - **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between jobs, then you can end up with more than one copy of `wp-cron.php` executing.
 
-Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc. 
+Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc.
 
 Pantheon Cron limits the occurrences of the above issues.
