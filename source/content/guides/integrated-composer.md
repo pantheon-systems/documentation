@@ -76,7 +76,7 @@ repositories: [
                }
            }
        },
- ],
+ ]
 ```
 
 3. Open the terminal and require the package:
