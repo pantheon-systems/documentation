@@ -59,32 +59,30 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 1. Clone the Git repository from the Pantheon Site Dashboard.
 1. Edit `composer.json` and define the library repository:
-
-```json
-"repositories": [
-    {
-           "type": "package",
-           "package": {
-               "name": "vendor/pkg-name",
-               "version": "1.0.0",
-               "type": "drupal-library",
-               "extra": {
-                   "installer-name": "pkg-name"
-               },
-               "dist": {
-                   "url": "https://github.com/vendor/directfileurl.tar.gz",
-                   "type": "tar"
-               }
-           }
-       },
- ],
-```
-
+   ```json
+   "repositories": [
+       {
+              "type": "package",
+              "package": {
+                  "name": "vendor/pkg-name",
+                  "version": "1.0.0",
+                  "type": "drupal-library",
+                  "extra": {
+                      "installer-name": "pkg-name"
+                  },
+                  "dist": {
+                      "url": "https://github.com/vendor/directfileurl.tar.gz",
+                      "type": "tar"
+                  }
+              }
+          },
+    ],
+   ```
 1. Open the terminal and require the package:
 
-```bash{promptUser: user}
-composer require vendor/pkg-name
-```
+   ```bash{promptUser: user}
+   composer require vendor/pkg-name
+   ```
 
 ### Remove Individual Site Dependencies
 
