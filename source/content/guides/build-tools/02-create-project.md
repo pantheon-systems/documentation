@@ -19,13 +19,13 @@ In this section, we will use the Terminus Build Tools Plugin to create a new pro
 
 These instructions are written with GitHub as the Git provider repository, CircleCI as the CI, and a Pantheon site.
 
-Substitute your chosen Git Provider and CI service in these instructions with the options of your choice. See [A Build Tools Project's Components](/guides/build-tools#a-build-tools-projects-components) for the supported combinations.
+Substitute your chosen Git Provider and CI service in these instructions with the options of your choice. Refer to [A Build Tools Project's Components](/guides/build-tools#a-build-tools-projects-components) for the supported combinations.
 
 </Alert>
 
 ## Prerequisites
 
-Make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may want to run `terminus self:plugin:update pantheon-systems/terminus-build-tools-plugin` to ensure you have the most recent version.
+Ensure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. You may want to run `terminus self:plugin:update pantheon-systems/terminus-build-tools-plugin` to ensure you have the most recent version.
 
 1. Install [Composer](/guides/composer).
    - Verify your installation with `composer --version`:
