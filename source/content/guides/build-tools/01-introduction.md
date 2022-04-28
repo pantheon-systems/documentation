@@ -35,6 +35,8 @@ Build Tools currently supports the following combinations of Git and CI services
 
 1. [<em class="fa fa-github" /> GitHub](https://github.com) and [CircleCI](https://circleci.com/)
 
+1. [<em class="fa fa-github" /> GitHub](https://github.com) and [Github Actions](https://github.com/features/actions)
+
 1. [<em class="fa fa-gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
 
 1. [<em class="fa fa-bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
