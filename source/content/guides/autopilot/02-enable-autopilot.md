@@ -17,13 +17,13 @@ reviewed: "2022-04-05"
 
 Autopilot can be enabled for individual sites within each eligible Workspace.
 
-[Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
+1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 
-![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
+   ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
 1. [Commit any staged changes](/sftp#committing-sftp-changes) that have not been committed before you continue if the site is in [SFTP mode](/sftp).
 
-1. Click the <i className="fa fa-robot"></i> **Autopilot** icon in the Global Primary Navigation.
+1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
 1. View the list of sites for which Autopilot is available in the **All Sites** column of the **Sites** table.
 
@@ -66,7 +66,7 @@ The Autopilot setup wizard automatically displays after you activate Autopilot f
    The **Sync Environment** feature syncs your Live environment to your Dev environment. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
 
    ![Autopilot Setup Wizard Schedule](../../../images/autopilot/autopilot-setup-wizard-schedule-step.png)
-   
+
 1. Click **Continue** to choose pages for screenshot comparison tests.
 
 ### Visual Review
