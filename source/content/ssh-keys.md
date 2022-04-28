@@ -58,32 +58,32 @@ Currently, we do not support `ed25519` keys.
    type .ssh\id_rsa.pub
    ```
 
-1. Start the SSH agent
+1. Start the SSH agent.
    
-   Linux & Mac users: run `eval` to start the agent. The `Agent pid` output confirms it has started:
+   * For Linux and Mac users, run `eval` to start the agent. The `Agent pid` output confirms it's started:
 
-   ```bash{outputLines: 2}
-   eval `ssh-agent`
-   Agent pid 86810
-   ```
+      ```bash{outputLines: 2}
+      eval `ssh-agent`
+      Agent pid 86810
+      ```
    
-   Windows users: `start-ssh-agent`. The output confirms agent is started. Enter passphrase (if set), identity will be added
+   * For Windows users, run `start-ssh-agent`. The output confirms that the agent has started. Enter the passphrase, if it has previously been set.
    
-   ```bash{promptUser: user}
-   start-ssh-agent
-   ```
-   
-   ```bash{outputLines: 2}
-   Removing old ssh-agent sockets
-   Starting ssh-agent:  done
-   ```
-   
-   ```bash{promptUser: user}
-   Enter passphrase for /c/Users/[user]/.ssh/id_rsa:
-   Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
-   ```
+      ```bash{promptUser: user}
+      start-ssh-agent
+      ```
 
-1. Linux & Mac users: add the newly created key to the ssh-agent:
+      ```bash{outputLines: 2}
+      Removing old ssh-agent sockets
+      Starting ssh-agent:  done
+      ```
+
+      ```bash{promptUser: user}
+      Enter passphrase for /c/Users/[user]/.ssh/id_rsa:
+      Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
+      ```
+
+1. For Linux and Mac users, add the newly created key to the ssh-agent:
 
    ```bash{promptUser: user}
    ssh-add ~/.ssh/id_rsa
