@@ -54,9 +54,10 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
 
+
 ## Add Drupal Libraries
 
-1. Clone the Git repository from the Pantheon site's dashboard.
+1. Clone the Git repository from the Pantheon Site Dashboard.
 2. Edit `composer.json` and define the library repository:
 
 ```json
