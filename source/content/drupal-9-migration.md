@@ -4,7 +4,6 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 reviewed: "2021-03-31"
 ---
-Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
 
 Drupal 9 includes many of the familiar features and layout introduced in Drupal 8, and removes deprecated code to help improve future Drupal development.
 
