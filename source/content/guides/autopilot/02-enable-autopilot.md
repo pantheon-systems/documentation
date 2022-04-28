@@ -63,7 +63,7 @@ The Autopilot setup wizard automatically displays after you activate Autopilot f
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
-   The **Sync Environment** feature syncs your Live environment to your Dev environment. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
+   The **Sync Environment** feature syncs your Live environment to your Dev environment before Autopilot performs updates. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
 
    ![Autopilot Setup Wizard Schedule](../../../images/autopilot/autopilot-setup-wizard-schedule-step.png)
 
