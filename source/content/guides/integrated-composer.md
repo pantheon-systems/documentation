@@ -61,23 +61,23 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 2. Edit `composer.json` and define the library repository:
 
 ```json
-repositories": [
-{
-           "type": "package",
-           "package": {
-               "name": "vendor/pkg-name",
-               "version": "1.0.0",
-               "type": "drupal-library",
-               "extra": {
-                   "installer-name": "pkg-name"
-               },
-               "dist": {
-                   "url": "https://github.com/vendor/directfileurl.tar.gz",
-                   "type": "tar"
-               }
-           }
-       },
- ],
+   repositories": [
+   {
+              "type": "package",
+              "package": {
+                  "name": "vendor/pkg-name",
+                  "version": "1.0.0",
+                  "type": "drupal-library",
+                  "extra": {
+                      "installer-name": "pkg-name"
+                  },
+                  "dist": {
+                      "url": "https://github.com/vendor/directfileurl.tar.gz",
+                      "type": "tar"
+                  }
+              }
+          },
+    ],
 ```
 
 3. Open the terminal and require the package:
