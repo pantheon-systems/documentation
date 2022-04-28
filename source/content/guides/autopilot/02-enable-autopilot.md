@@ -17,44 +17,63 @@ reviewed: "2022-04-05"
 
 Autopilot can be enabled for individual sites within each eligible Workspace.
 
-To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization before you continue.
+[Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 
 ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
-1. If the site is in [SFTP mode](/sftp) with staged changes that haven't been committed yet, [commit those changes](/sftp#committing-sftp-changes) first.
+1. [Commit any staged changes](/sftp#committing-sftp-changes) that have not been committed before you continue if the site is in [SFTP mode](/sftp).
 
-1. In the Global Primary Navigation, click the <i className="fa fa-robot"></i> **Autopilot** icon.
+1. Click the <i className="fa fa-robot"></i> **Autopilot** icon in the Global Primary Navigation.
 
-1. Sites for which Autopilot is available are listed in the **All Sites** column of the **Sites** table.
+1. View the list of sites for which Autopilot is available in the **All Sites** column of the **Sites** table.
 
 1. Click **Activate** in the Site's row.
 
-   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
+   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
-1. In the **Configuration** step, use the **On**/**Off** toggles to choose which features and elements should be tracked for, or excluded from, updates then click **Continue** to set a schedule and deployment destination for Autopilot.
+## Autopilot Setup Wizard   
 
-   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes). Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
+The Autopilot setup wizard automatically displays after you activate Autopilot for a site. You must complete all items in the Configuration, Schedule, and Visual Review steps. 
+
+### Configuration
+
+1. Use the **On**/**Off** toggles to choose which features and elements should be tracked or excluded from updates.
+
+   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes). 
+
+1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
+
+1. Click **Continue**.
   
    ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
 
-1. Schedule Autopilot to run:
+### Schedule
 
-   - Never (Update Manually)
-   - Monthly
-   - Weekly
-   - Daily ([Contact Sales](https://pantheon.io/contact-sales?docs))
+1. Set the **Deployment Destination** to the desired environment: 
 
-1. Use the dropdown menu to choose the deployment destination:
+    - Dev
+    - Test
+    - Live
 
-   - Dev
-   - Test
-   - Live
+1. Set the **Update Frequency** to schedule Autopilot to run:
 
-   ![Autopilot Setup - Schedule screen. Select how frequently Autopilot should run and where successful updates should be applied.](../../../images/autopilot/autopilot-setup-schedule.png)
+    - Never (Update Manually)
+    - Weekly
+    - Monthly
+
+1. Select the **Sync Live Environment** checkbox to sync environments.
+
+   The **Sync Environment** feature syncs your Live environment to your Dev environment. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
+
+   ![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot-sync-environment.png)
 
 1. Click **Continue** to choose pages for screenshot comparison tests.
 
-1. Add pages to track for visual regression testing. Autopilot automatically suggests up to ten URL paths during setup:
+### Visual Review
+
+1. Add pages to track for visual regression testing. 
+
+   Autopilot automatically suggests up to ten URL paths during setup:
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
@@ -80,7 +99,7 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 ![Autopilot Configuration screen - Customize the type of updates included in the automated updates.](../../../images/autopilot/autopilot-configuration-update-scope.png)
 
-### Destination & Frequency
+### Update Destination & Frequency
 
 ![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot-sync-environment.png)
 
@@ -102,7 +121,7 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 1. Click **Save** to save the changes.
 
-### Visual Test Screenshots
+### Update Visual Test Screenshots
 
 You can add pages to track for visual regression testing, along with a percent of acceptable change.
 
@@ -129,13 +148,13 @@ Additional DOM element exclusion is in active development.
 
 ### Excluded Updates
 
-Autopilot checks for plugins, modules, and themes that are eligible for exclusion. Choose which should be excluded.
+Autopilot checks for plugins, modules, and themes that are eligible for exclusion. You can choose what you would like to be excluded.
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
 1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
 
-1. Select updates that should be excluded, then click **Save**.
+1. Select updates that should be excluded and then click **Save**.
 
 ### Excluded Web Elements
 
