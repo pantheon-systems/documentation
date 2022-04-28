@@ -27,7 +27,7 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
 1. View the list of sites for which Autopilot is available in the **All Sites** column of the **Sites** table.
 
-1. Click **Activate** in the Site's row.
+1. Click **Activate** in the row of the desired site.
 
    During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
