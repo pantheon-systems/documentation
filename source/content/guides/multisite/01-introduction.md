@@ -7,7 +7,7 @@ type: guide
 cms: "WordPress"
 categories: [develop]
 tags: [multisite]
-contributors: [danielbachhuber]
+contributors: [danielbachhuber, whitneymeredith]
 anchorid: multisite
 multisite: true
 generator: pagination

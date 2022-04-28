@@ -1,6 +1,6 @@
-This doc uses several commands that depend on the site name in the local command line environment.
+Set the temporary variable `$SITE` in your terminal session to match the site name. 
 
-To make this easier, set the temporary variable `$SITE` in your terminal session to match the site name. Read the steps further in this doc to see which sites should be aliased (it may be more than one), then replace `anita-drupal` in this example:
+This doc uses several commands that depend on the site name in the local command line environment. Read the steps further in this doc to see which sites should be aliased (it may be more than one), then replace `anita-drupal` in this example:
 
 ```bash{promptUser:user}
 export SITE=anita-drupal && echo "New alias set as $SITE"
@@ -19,6 +19,6 @@ anita-drupal                abdc80ce-286c-1234-   Sandbox       drupal8         
 anita-wordpres              abdc9954-fab2-1234-   Sandbox       wordpress           United States    c96ddb25-336a-1234   2020-09-02 07:18:51   d3ecc20c-395a false
 ```
 
-The site name is listed under `Name`. In this example, `anita-drupal`.
+The site name is listed under `Name`. In this example, the site name is `anita-drupal`.
 
 </Accordion>

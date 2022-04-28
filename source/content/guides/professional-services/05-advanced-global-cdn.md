@@ -4,12 +4,12 @@ subtitle: Advanced Global CDN
 description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 categories: [performance]
 tags: [cdn, security, professional-services]
-reviewed: "2021-10-07"
+reviewed: "2022-04-19"
 layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/advanced-global-cdn
 anchorid: advanced-global-cdn
-editpath: professional-services/04-advanced-global-cdn.md
+editpath: professional-services/05-advanced-global-cdn.md
 ---
 
 [<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn?docs) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
@@ -75,11 +75,7 @@ Reduce requests to your CMS by moving page redirects to the edge. We can do path
 
 Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment workflows and always ready disaster recovery.
 
-### Additional Features from WAF/IO
-
-- Efficient <abbr title="Image Optimization">IO</abbr> at the edge
-
-  With **Image Optimization (IO)** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
+### Additional Features from WAF
 
 - Layer 7/Enterprise WAF rules
 
@@ -122,6 +118,16 @@ The benefits of Rate Limiting include:
 This feature is currently in Early Access; for more information, reach out to your account manager.
 
 </Alert>
+
+### Fastly on Pantheon
+
+Pantheon's partnership with [Fastly](https://www.fastly.com/) offers many benefits to our customers, including:
+
+- **Enhanced Caching** at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration / continuous delivery (CI/CD).
+
+- **Image Optimizer (IO)** is an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
+
+You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
 
 ## Frequently Asked Questions
 

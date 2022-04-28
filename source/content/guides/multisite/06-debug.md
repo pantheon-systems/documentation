@@ -11,7 +11,7 @@ cms: "WordPress"
 categories: [troubleshoot]
 tags: [multisite]
 permalink: docs/guides/multisite/debug/
-editpath: multisite/05-debug.md
+editpath: multisite/06-debug.md
 image: multisite
 getfeedbackform: default
 ---

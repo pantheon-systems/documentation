@@ -6,7 +6,13 @@ tags: [upstreams, site]
 reviewed: "2021-04-23"
 ---
 
-Select the site's framework during the [site creation process](/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, Drupal 8, and Drupal 7.
+Select the site's framework during the [site creation process](/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, and Drupal 7.
+
+<Alert title="Note"  type="info" >
+
+Drupal 8 reached end-of-life status in November 2021, and is no longer supported by Drupal. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29).
+
+</Alert>
 
 [Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
 
@@ -16,7 +22,6 @@ We base our Drupal repositories on the canonical source from [Drupal.org](https:
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
 - [Drupal 9](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" />
-- [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) - [EoL](https://www.drupal.org/psa-2021-06-29) <Popover title="No longer supported by Drupal" content="Drupal 8 reached end-of-life status in November 2021. This means it is no longer supported by the Drupal community. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29)" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ### Empty Upstream
@@ -29,7 +34,7 @@ Use an empty Upstream to [host a static site or files on Pantheon](/static-site-
 
 ## Public Distributions
 
-We include a growing number of "Drupal products" as available Upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
+We make a growing number of Drupal products available in Upstreams on Pantheon. These products are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
 
 <Alert title="Note" type="info">
 

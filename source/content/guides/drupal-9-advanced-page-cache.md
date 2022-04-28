@@ -1,5 +1,5 @@
 ---
-title: Setting and Clearing Custom Cache Tags in Drupal 8
+title: Setting and Clearing Custom Cache Tags in Drupal 9
 description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
 tags: [moreguides]
 categories: [caching]
@@ -8,20 +8,20 @@ permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
 ---
 
-[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/global-cdn).
+[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/9.0) and the [Pantheon Global CDN](/global-cdn).
 
 When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 
 This module has no configuration settings of its own, just enable it and it will pass along information already present in Drupal 8 to the Global CDN.
 
-To take finer grain control of how Drupal handles its cache data on both the Global CDN and internal Drupal caches, you can set and clear your own custom tags. This guide will show you how to do this using a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag).
+To take finer grain control of how Drupal handles its cache data on both the Global CDN and internal Drupal caches, you can set and clear your own custom tags. This guide will show you how to do this using a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/docs/drupal-apis/cache-api/cache-tags).
 
 ## Before You Begin
 
 Before starting this guide, you should:
 
 - Install and authenticate [Terminus](/terminus)
-- Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 8 site. You could use a pre-existing Drupal 8 site, but some of the details would change.
+- Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 9 site. You could use a pre-existing Drupal 9 site, but some of the details would change.
 - So that you can easily copy and paste the example commands in this guide, define your site name with a local environment variable. Replace `cache-tags-demo` with a unique site name:
 
     ```bash{promptUser: user
@@ -30,9 +30,9 @@ Before starting this guide, you should:
 
 ## Set up a new Drupal site
 
-First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache module.
+First, set up a new Drupal 9 site and add the Pantheon Advanced Page Cache module.
 
-1. Start by making a new Drupal 8 site from your local command line environment using Terminus:
+1. Create a new Drupal 9 site from your local command line environment using Terminus:
 
   ```bash{promptUser: user
   terminus site:create $TERMINUS_SITE $TERMINUS_SITE "Drupal 8"
@@ -46,7 +46,9 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
   terminus drush $TERMINUS_SITE.dev -- site-install -y
   ```
 
-3. The command above modifies the `settings.php` file on the Dev environment. You could commit this change in the Pantheon Dashboard, but we’ll do it from the command line:
+  The command above modifies the `settings.php` file on the Dev environment. 
+
+1. Commit this change in the Pantheon Dashboard or through the command line:
 
   ```bash{promptUser: user
   terminus env:commit $TERMINUS_SITE.dev --message="Installing Drupal"
@@ -85,7 +87,7 @@ First, set up a new Drupal 8 site and add the Pantheon Advanced Page Cache modul
 
 ## View HTTP Headers
 
-Now we'll look at HTTP Headers.
+You can now look at HTTP Headers with the steps above completed.
 
 1. Make a new article node complete with at least one taxonomy term in the **tags** field:
 
@@ -135,11 +137,11 @@ Now we'll look at HTTP Headers.
 
     You can also view headers in a web browser, if you have a browser extension to add the HTTP debugging request header, `Pantheon-Debug`, with a value of `1` (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header)). In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464) or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window)), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
 
-    By clicking on the first request we can see more detailed information like the HTTP headers.
+    By clicking on the first request you can see more detailed information like the HTTP headers.
 
     ![node/add/article](../../images/guides/drupal-8-advanced-page-cache/img4-node-1-dev-console.png)
 
-For the rest of the guide, as we make content changes and inspect the changing HTTP headers, we will just reference `curl -I` output because browser inspector tools have a lot of additional information that would distract from our purpose. But if you are more comfortable in the browser, you can continue using that incognito window.
+The rest of this guide will show you how to make content changes and inspect the changing HTTP headers, referencing `curl -I` output because browser inspector tools have a lot of additional information that would distract from this demonstration. But if you are more comfortable in the browser, you can continue using that incognito window.
 
 For a walk through of how some of these different headers change caching behavior, see our [Frontend Performance Guide](/guides/frontend-performance). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
 
@@ -155,9 +157,9 @@ surrogate-key-raw: block_view config:block.block.bartik_account_menu config:bloc
 age: 40
 ```
 
-From this point on, we'll trim the output of the `curl` commands to only show the relevant data.
+The remaining steps in this guide trim the output of the `curl` commands to only show the relevant data.
 
-1. Let's look at some of the headers on the listing page for the taxonomy term we made (`/taxonomy/term/1`):
+1. View some of the headers on the listing page for the taxonomy term (`/taxonomy/term/1`):
 
    ![Drupal 8 taxonomy screen](../../images/guides/drupal-8-advanced-page-cache/img5-taxonomy-term-1.png)
 
@@ -167,20 +169,20 @@ From this point on, we'll trim the output of the `curl` commands to only show th
    Age: 0
    ```
 
-  Again we see `node:1` and `taxonomy_term:1` and because this is the first time we have requested the listing page from curl, we see an age of 0, meaning the response wasn't cached.
+  You will see `node:1` and `taxonomy_term:1` again because this is the first time we have requested the listing page from curl. The age is 0 because the response wasn't cached.
 
-2. Curl again and the age will go up:
+2. Curl again to make the age will go up:
 
   ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 15
   ```
 
-3. Let's now make a page node (`/node/add/page`).
+3. Make a page node (`/node/add/page`).
 
    ![Drupal 8 node add page](../../images/guides/drupal-8-advanced-page-cache/img6-node-add-page-2.png)
 
-4. And look at its headers:
+4. View the headers:
 
     ```bash{outputLines:2-3}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
@@ -188,18 +190,18 @@ From this point on, we'll trim the output of the `curl` commands to only show th
     age: 0
     ```
 
-5. The age will go up if you curl again.
+5. Run curl again and the age will increase.
 
     ```bash{outputLines:2}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
     age: 18
     ```
 
-6. Now what if our article node, Node 1, were saved again? What caching behavior do we want across these three pages: `/node/1`, `/node/2`, and `/taxonomy/term/1`? Load up the edit screen but don't save yet (`node/1/edit`):
+6. Open the edit screen and decide what caching behavior you want for `/node/1`, `/node/2`, and `/taxonomy/term/1`. (`node/1/edit`):
 
   ![Node edit form](../../images/guides/drupal-8-advanced-page-cache/img7-node-edit-admin.png)
 
-7. Check the age on our three pages:
+7. Check the age on the three pages:
 
   ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
@@ -216,7 +218,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
   age: 165
   ```
 
-8. Now click the button to save node 1 in your browser. And then curl those three pages again:
+8. Click the button to save node 1 in your browser and then curl the three pages again:
 
   ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
@@ -237,28 +239,28 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 
 ## Considerations
 
-What if we added a new node that used taxonomy term 1? We would want the listing page for term 1 to be cleared. But is it?
+If you add a new node that used taxonomy term 1, you would want the listing page for term 1 to be cleared. 
 
-1. Try adding a new article and use the same taxonomy term:
+1. Add a new article and use the same taxonomy term:
 
   ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img8-node-add-article.png)
 
-2. And curl the taxonomy listing page.
+2. Run curl on the taxonomy listing page.
 
   ```bash{outputLines:2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 60
   ```
 
-  Our taxonomy listing was not cleared. In order to clear the taxonomy term when a new node is added that uses that term, we need to write a little bit of custom code.
+  The taxonomy listing was not cleared. In order to clear the taxonomy term when a new node is added that uses that term, you need to write custom code.
 
 ## Clear An Existing Cache Tag
 
-Now we're going to add a custom module that uses a hook to clear the cache tag for all taxonomy terms.
+Follow the steps below to add a custom module that uses a hook to clear the cache tag for all taxonomy terms.
 
-1. To start, connect to your Dev environment via [SFTP](/sftp).
+1. Connect to your Dev environment via [SFTP](/sftp).
 
-2. Open `code/modules` and create a new directory called `custom_cache_tags`. Open that folder:
+2. Open `code/modules` > create a new directory called `custom_cache_tags`.> ope your newly created folder:
 
   ![SFTP Client](../../images/guides/drupal-8-advanced-page-cache/img9-sftp-client.png)
 
@@ -341,13 +343,13 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
     terminus env:commit $TERMINUS_SITE.dev --message="Add custom_cache_tags"
     ```
 
-6. Clear all caches so that the new hook you added is detected by Drupal:
+6. Clear all caches so that the new hook is detected by Drupal:
 
     ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- cr
     ```
 
-7. Now whenever you add content, the referenced taxonomy term pages are automatically cleared. To test, check on the age of your taxonomy listing again by curling a few times.
+7.  Check the age of the taxonomy listing again by curling a few times to test your code. 
 
   ```bash{outputLines: 2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
@@ -359,11 +361,13 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
   Age: 5
   ```
 
-8. Once you add another article that references term 1, that age should reset to zero. Make the new article node and use the same taxonomy term:
+  Now whenever you add content, the referenced taxonomy term pages are automatically cleared. When you add another article that references term 1, that age should reset to zero.
+
+8. Make the new article node and use the same taxonomy term:
 
   ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img10-node-add-article2.png)
 
-9. Now curl again:
+9. Run curl again:
 
   ```bash{outputLines: 2}
   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
@@ -396,11 +400,11 @@ The code we added clears all references to each taxonomy term every time a node 
 
   ![Views edit screen](../../images/guides/drupal-8-advanced-page-cache/img11-view-taxonomy-term.png)
 
-4. For the custom tag, use `taxonomy-listing:{{ raw_arguments.tid }}`. Save the View:
+4. Use `taxonomy-listing:{{ raw_arguments.tid }}` for the custom tag and then Save the View:
 
  ![Views caching config form](../../images/guides/drupal-8-advanced-page-cache/img12-page-caching-option.png)
 
-5. To see the change, you may need to clear all caches:
+5. Clear all caches to see the change:
 
     ```bash{promptUser: user}
     terminus drush $TERMINUS_SITE.dev -- cr
@@ -414,7 +418,7 @@ The code we added clears all references to each taxonomy term every time a node 
     Age: 8
     ```
 
-7. Alter the custom module so that our new tag, `taxonomy-listing:1` gets cleared when a new node is added that references term 1. Change the code in `custom_cache_tags.module` from:
+7. Edit the custom module allow `taxonomy-listing:1` to be cleared when a new node is added that references term 1 by changing the code in `custom_cache_tags.module` from:
 
     ```php
     $cache_tag = 'taxonomy_term:' . $tid;
@@ -426,7 +430,7 @@ The code we added clears all references to each taxonomy term every time a node 
     $cache_tag = 'taxonomy-listing:' . $tid;
     ```
 
-8. Once again, check that adding a new article clears your taxonomy listing page:
+8. Check that adding a new article clears the taxonomy listing page:
 
     ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img13-node-add-article-3.png)
 

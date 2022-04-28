@@ -64,5 +64,11 @@ If you're generating a block, this will expose the block to Drupal's built-in bl
 ### Drupal 7
 You can force caching for all your views using a module like [Views cache bully](https://drupal.org/project/views_cache_bully).
 
-### Drupal 8
-You can replace the hard-coded cache tag with a form that allows developers to set different cache tags based on configuration of the view using a module like [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag).
+### Drupal 9
+You can replace the hard-coded cache tag with a form that allows developers to set different cache tags based on configuration of the view using a module like [Views Custom Cache Tags](https://www.drupal.org/docs/drupal-apis/cache-api/cache-tags).
+
+<Alert title="Note"  type="info" >
+
+Drupal 8 reached end-of-life status in November 2021, and is no longer supported by Drupal. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29).
+
+</Alert>

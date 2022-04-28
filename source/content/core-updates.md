@@ -11,15 +11,25 @@ This doc includes instructions to make core updates to WordPress and Drupal site
 
 Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates through the Dashboard.
 
-To check for available updates, navigate to **Code** in the Dev tab of the site's Dashboard. Click **Check Now**. If updates are available, click **Apply Updates**.
+To check for available updates:
+
+1. Navigate to **Code** in the Dev tab of the site's Dashboard. 
+
+1. Click **Check Now** and then click **Apply Updates** if updates are available.
 
 ## Drupal 8 Composer-Managed Sites
 
-Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [convert the site to Integrated Composer](/guides/composer-convert).
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates. To be compatible with One-Click updates, you must do **one** of the following:
 
-## Non-Composer-Managed WordPress and Drupal 7 / 8 Sites
+- Update core to use Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update)
 
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
+- [Convert the site to Integrated Composer](/guides/composer-convert)
+
+- Update to [Drupal 9](/drupal-9) which has [Integrated Composer](/guides/integrated-composer) built-in
+
+## Non-Composer-Managed WordPress and Drupal 7 Sites
+
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
 
@@ -30,9 +40,9 @@ Apply one-click updates to individual sites repositories using the Site Dashboar
 
   ![Sreenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
-1. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
+1. Commit and deploy and SFTP changes and then set the site's connection mode to **Git**.
 
-1. From the **Update Options** menu, you can select whether or not you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied:
+1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
   ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
 
@@ -86,10 +96,10 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
+<Tab title="Drupal 9" id="d9" active={true}>
 
 ```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-systems/drops-8.git master
+git pull -Xtheirs https://github.com/pantheon-systems/drupal-recommended master
 # resolve conflicts
 git push origin master
 ```
@@ -161,7 +171,9 @@ In the case where you're unable to use Git, you can use [SFTP](/sftp) to overwri
   </Alert>
 
 1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress).
+
 1. Commit and switch back to Git mode.
+
 1. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
 
 ### Merge Conflict Resolution
@@ -180,10 +192,10 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="Drupal 8" id="d8-1conflict">
+  <Tab title="Drupal 9" id="d9-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
+  git remote add pantheon-drupal-9 https://github.com/pantheon-systems/drupal-recommended
   ```
 
   </Tab>
@@ -221,11 +233,11 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="Drupal 8" id="d8-2conflict">
+  <Tab title="Drupal 9" id="d9-2conflict">
 
   ```bash{promptUser: user}
-  git fetch pantheon-drops-8
-  git rebase pantheon-drops-8/master
+  git fetch pantheon-drupal-9
+  git rebase pantheon-drupal-9/master
   ```
 
   </Tab>
@@ -252,7 +264,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </TabList>
 
-1. If a conflict is introduced, use the output provided to resolve. For example:
+1. Use the output provided to resolve any conflicts introduced. For example:
 
   ```bash{outputLines: 2-15}
   git rebase pantheon-wordpress/master
@@ -359,15 +371,15 @@ This issue happens when you attempt to update very outdated core files from the 
 
  GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
-  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.yml)
 
  </Tab>
 
- <Tab title="Drupal 8" id="d8-2conflict-merge">
+ <Tab title="Drupal 9" id="d9-2conflict-merge">
 
-  GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+  GITHUB-EMBED https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 
- [View on GitHub](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
+ [View on GitHub](https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml)
 
  </Tab>
 
