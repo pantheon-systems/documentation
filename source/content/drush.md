@@ -4,7 +4,7 @@ description: Administer and maintain your Pantheon site from your local Drupal D
 cms: "Drupal"
 categories: [develop]
 tags: [drush]
-reviewed: "2020-02-06"
+reviewed: "2022-04-19"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
@@ -451,8 +451,5 @@ This indicates that the vendor directory contains Drush binaries that should be 
 
 ## Changelog
 
-<Accordion title="Drush Changelog" id="drush-changelog" icon="newspaper">
+You can view the most recent Drush release and changelogs in the [Drush repository](https://github.com/drush-ops/drush/releases).
 
-<DrushChangelog />
-
-</Accordion>

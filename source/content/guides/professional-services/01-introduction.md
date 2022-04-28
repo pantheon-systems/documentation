@@ -1,7 +1,7 @@
 ---
 title: Pantheon Professional Services
 subtitle: Introduction
-description: Pantheon Professional Services include consulting, migrations, load testing, training, AGCDN, Managed Updates, and dedicated Customer Success Managers.
+description: Pantheon Professional Services include consulting, migrations, load testing, application performance and architecture, training, AGCDN, Managed Updates, and dedicated Customer Success Managers.
 categories: [develop]
 tags: [services, migration, AGCDN, managed updates]
 reviewed: "2021-04-01"
@@ -55,6 +55,10 @@ Visit our [Advanced Global CDN](/guides/professional-services/advanced-global-cd
 ## Pre-launch Load Testing
 
 Load tests can be critical steps in ensuring a successful launch. See [Onboarding Services Pre-Launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) for details.
+
+## Application Performance and Architecture
+
+The Application Performance and Architecture team provides frontend and backend assistance with your WordPress and Drupal applications. Refer to [Application Performance and Architecture](/guides/professional-services/application-performance) for details.
 
 ## Professional Service Hours (formerly CAS)
 

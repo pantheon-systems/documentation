@@ -7,28 +7,29 @@ tags: [terminus, drush]
 type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy]
-date: 2/25/2015
+
 ---
 ## Create Sites Faster and More Efficiently
 The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
-<Alert title="Note" type="info">
+<Alert title="Note"  type="info" >
 
-The following does **not** pertain to Composer-managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
+Drupal 8 reached end-of-life status in November 2021, and is no longer supported by Drupal. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29).
 
 </Alert>
 
 ## Installing Terminus
-Installing Terminus is a fairly straight forward process. Just follow [these instructions](/terminus/install).
 
-After you install Terminus, do a quick status check to make sure it works. Depending on your OS, the output may vary, but here's a sample:
+1. [Install Terminus](/terminus/install).
+
+1. Check the status to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
 ```bash{outputLines:2}
 terminus auth:login --email=<email> --machine-token=<machine_token>
  [notice] Logging in via machine token.
 ```
 
-Excellent! You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](/terminus/commands).
+You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](/terminus/commands).
 
 ## Using Terminus
 
@@ -41,14 +42,14 @@ terminus site:list
 +--------------------------+-----------+---------------+--------------------------+
 | Site                     | Framework | Service Level | UUID                     |
 +--------------------------+-----------+---------------+--------------------------+
-| terminus-create          | drupal8   | free          | terminus-create          |
+| terminus-create          | drupal9   | free          | terminus-create          |
 | git-import-example       | drupal    | free          | git-import-example       |
 +--------------------------+-----------+---------------+--------------------------+
 ```
 
-### Create a Brand New Site
+### Create a New Site
 
-Now let's create a new site.
+Follow the steps below to create a new site.
 
 1. List the available Upstreams:
 
@@ -78,13 +79,14 @@ Now let's create a new site.
  | Site                     | Framework | Service Level | UUID                     |
  +--------------------------+-----------+---------------+--------------------------+
  | terminus-cli-create      | drupal    | free          | terminus-cli-create      |
- | terminus-create          | drupal8   | free          | terminus-create          |
+ | terminus-create          | drupal9   | free          | terminus-create          |
  | git-import-example       | drupal    | free          | git-import-example       |
  +--------------------------+-----------+---------------+--------------------------+
  ```
 
 ### Update the Code
-Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready  for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
+
+Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
 ```bash{outputLines:2-7}
 terminus drush <site>.<env> -- site-install
@@ -128,78 +130,79 @@ terminus env:list <site>
 ```
 
 ### Install Contrib Modules and Themes
-While the site's Dev environment is still in SFTP mode, we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
 
-```bash{outputLines:2-13}
-terminus drush <site>.<env> -- dl admin_menu
-Running drush dl admin_menu  on terminus-cli-create-dev
-dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
-Project admin_menu (7.x-3.0-rc5) downloaded to                         [success]
-/srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/modules/admin_menu.
-Project admin_menu contains 3 modules: admin_devel, admin_menu_toolbar, admin_menu.
-tests-MacBook-Pro:~ erikmathy$ terminus drush <site>.<env> -- en admin_menu,admin_menu_toolbar
-Running drush en admin_menu,admin_menu_toolbar  on terminus-cli-create-dev
-dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
-The following extensions will be enabled: admin_menu, admin_menu_toolbar
-Do you really want to continue? (y/n): y
-admin_menu was enabled successfully.                                        [ok]
-admin_menu_toolbar was enabled successfully.                                [ok]
-```
+1. Use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu, while the site's Dev environment is still in SFTP mode.
 
-Not bad, eh? All this without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
+    ```bash{outputLines:2-13}
+    terminus drush <site>.<env> -- dl admin_menu
+    Running drush dl admin_menu  on terminus-cli-create-dev
+    dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
+    Project admin_menu (7.x-3.0-rc5) downloaded to                         [success]
+    /srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/modules/admin_menu.
+    Project admin_menu contains 3 modules: admin_devel, admin_menu_toolbar, admin_menu.
+    tests-MacBook-Pro:~ erikmathy$ terminus drush <site>.<env> -- en admin_menu,admin_menu_toolbar
+    Running drush en admin_menu,admin_menu_toolbar  on terminus-cli-create-dev
+    dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
+    The following extensions will be enabled: admin_menu, admin_menu_toolbar
+    Do you really want to continue? (y/n): y
+    admin_menu was enabled successfully.                                        [ok]
+    admin_menu_toolbar was enabled successfully.                                [ok]
+    ```
 
-![The dashboard showing the code was deployed to the Dev environment](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+    If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-Let's commit it all into the Git repo with the `terminus env:commit` command:
+    ![The dashboard showing the code was deployed to the Dev environment](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
-```bash{outputLines:2-7}
-terminus env:commit <site>.<env> --message="Initial Commit"
-Success: Successfully committed.
-+---------------------+--------+--------+------------------------------------------+------------------+
-| Time                | Author | Labels | Hash                                     | Message          |
-+---------------------+--------+--------+------------------------------------------+------------------+
-| 2015-02-05T22:40:14 | Root   | dev    | 4297d007d1697e1b9a90073510183149dd1c827f | "Initial Commit" |
-+---------------------+--------+--------+------------------------------------------+------------------+
-```
+1. Commit the changes into the Git repo with the `terminus env:commit` command:
 
-Open the Pantheon Dashboard, and you'll see the new files are shown in the Git commit log.
+    ```bash{outputLines:2-7}
+    terminus env:commit <site>.<env> --message="Initial Commit"
+    Success: Successfully committed.
+    +---------------------+--------+--------+------------------------------------------+------------------+
+    | Time                | Author | Labels | Hash                                     | Message          |
+    +---------------------+--------+--------+------------------------------------------+------------------+
+    | 2015-02-05T22:40:14 | Root   | dev    | 4297d007d1697e1b9a90073510183149dd1c827f | "Initial Commit" |
+    +---------------------+--------+--------+------------------------------------------+------------------+
+    ```
 
-![The dashboard's showing the code was deployed to the Dev environment](../../images/dashboard/terminus-cli-code-committed-dashboard.png)
+1. Open the Pantheon Dashboard to see the new files in the Git commit log.
 
-To see what a commit message looks like, let's download Bootstrap and then commit it as well.
+    ![The dashboard's showing the code was deployed to the Dev environment](../../images/dashboard/terminus-cli-code-committed-dashboard.png)
 
-```bash{outputLines:2-13}
-terminus drush <site>.<env> -- dl bootstrap
-Running drush dl bootstrap  on terminus-cli-create-dev
-dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
-Project bootstrap (7.x-3.0) downloaded to                              [success]
-/srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/themes/bootstrap.
-$ terminus env:commit <site>.<env> --message="Adding bootstrap"
-Success: Successfully committed.
-+---------------------+---------+-----------+------------------------------------------+-------------------+
-| Time                | Author  | Labels    | Hash                                     | Message           |
-+---------------------+---------+-----------+------------------------------------------+-------------------+
-| 2015-02-11T18:25:44 | E Mathy | dev       | 34e988fe427f7dfe9f9af0046c83d49268e1f1ac | Adding bootstrap. |
-| 2015-02-05T22:40:14 | Root    | dev | 4297d007d1697e1b9a90073510183149dd1c827f | "Initial Commit"  |
-+---------------------+---------+-----------+------------------------------------------+-------------------+
-```
+1. Download Bootstrap and then commit to see what a commit message looks like:
 
-![The dashboard's showing the code was deployed to the Dev environment](../../images/dashboard/terminus-commit-with-message.png)
+    ```bash{outputLines:2-13}
+    terminus drush <site>.<env> -- dl bootstrap
+    Running drush dl bootstrap  on terminus-cli-create-dev
+    dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
+    Project bootstrap (7.x-3.0) downloaded to                              [success]
+    /srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/themes/bootstrap.
+    $ terminus env:commit <site>.<env> --message="Adding bootstrap"
+    Success: Successfully committed.
+    +---------------------+---------+-----------+------------------------------------------+-------------------+
+    | Time                | Author  | Labels    | Hash                                     | Message           |
+    +---------------------+---------+-----------+------------------------------------------+-------------------+
+    | 2015-02-11T18:25:44 | E Mathy | dev       | 34e988fe427f7dfe9f9af0046c83d49268e1f1ac | Adding bootstrap. |
+    | 2015-02-05T22:40:14 | Root    | dev | 4297d007d1697e1b9a90073510183149dd1c827f | "Initial Commit"  |
+    +---------------------+---------+-----------+------------------------------------------+-------------------+
+    ```
 
-And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
+  ![The dashboard's showing the code was deployed to the Dev environment](../../images/dashboard/terminus-commit-with-message.png)
 
-```bash{promptUser: user}
-terminus env:deploy <site>.test --sync-content --updatedb
-```
+1. Initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
 
-For successful deployment, ensure you clear the site cache:
+    ```bash{promptUser: user}
+    terminus env:deploy <site>.test --sync-content --updatedb
+    ```
 
-```bash{promptUser: user}
-terminus env:clear-cache <site>.test
-```
+1. Clear the site cache to ensure a successful deployment:
+
+    ```bash{promptUser: user}
+    terminus env:clear-cache <site>.test
+    ```
 
 ## Congratulations!
-You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
+You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. 
 
 ##  Next Steps
 - Learn more about [Drush](/drush).

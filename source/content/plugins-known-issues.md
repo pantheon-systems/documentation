@@ -852,7 +852,7 @@ ___
 
 ## WebP Express
 
-<ReviewDate date="2022-01-22" />
+<ReviewDate date="2022-04-07" />
 
 **Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
@@ -866,7 +866,9 @@ Refer to the documentation on [Using Extensions That Assume Write Access](https:
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 
-**Solution:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+**Solution 1:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+
+**Solution 2:** Use the [Advanced Global CDN Image Optimization](/guides/professional-services/advanced-global-cdn#additional-features-from-wafio) feature. This add-on has WebP auto-conversion at the edge, and is more performant than a plugin relying on PHP or WordPress.
 
 ___
 
@@ -1359,6 +1361,28 @@ ___
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 ___
 
+## YITH WooCommerce Request a Quote
+
+<ReviewDate date="2022-04-8" />
+
+**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+
+**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
+
+```php:title=wp-config.php
+/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
+add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
+if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
+   function ywraq_mpdf_change_tmp_dir( $args ) {
+      $upload_dir      = wp_upload_dir();
+      $upload_dir      = $upload_dir['basedir'];
+      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+
+      return $args;
+   }
+}
+```
+___
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
