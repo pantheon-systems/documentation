@@ -34,9 +34,19 @@ See [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom
 <Tab title="Empty Upstream" id="empty-upstream">
 
 Do you have access to the Multidev?
-- Yes: See [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
-- No: See [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
     
+<Accordion title="Yes" id="mdyes">
+
+See [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
+
+</Accordion>
+
+<Accordion title="No" id="mdno">
+
+See [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+
+</Accordion>
+
 </Tab>
 
 <Tab title="Dashboard" id="dashboard">
