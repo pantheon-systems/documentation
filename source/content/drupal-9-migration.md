@@ -17,55 +17,59 @@ Answer the following questions to determine your upgrade path.
 
   How did you create your Drupal site?
 
-  <TabList>
+<TabList>
 
-  <Tab title="Build Tools" id="build-tools" active={true}>
+<Tab title="Build Tools" id="build-tools" active={true}>
 
-  See [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
+See [Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
 
-  </Tab>
+</Tab>
 
-  <Tab title="Custom Upstream" id="custom-upstream">
+<Tab title="Custom Upstream" id="custom-upstream">
 
-  See [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+See [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
 
-  </Tab>
+</Tab>
 
-  <Tab title="Empty Upstream" id="empty-upstream">
+<Tab title="Empty Upstream" id="empty-upstream">
 
-  Do you have access to the Multidev?
-  - Yes: See [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
-  - No: See [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+Do you have access to the Multidev?
+- Yes: See [Migrate a Site That Was Created with an Empty Upstream to Drupal 9](/guides/drupal-9-hosted-createempty-md)
+- No: See [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
     
-  </Tab>
+</Tab>
 
-  <Tab title="Dashboard" id="dashboard">
+<Tab title="Dashboard" id="dashboard">
 
-  What version of Drupal are you on?
+What version of Drupal are you on?
 
-  - Version 8: 
+<Accordion title="Version 8" id="v8">
 
-    Do you have access to the Multidev?
-    - Yes: See [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
-    - No: See [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
+Do you have access to the Multidev?
+- Yes: See [Migrate a Site with Multidev to Drupal 9](/guides/drupal-9-hosted-md)
+- No: See [Migrate a Drupal 8 Site to Drupal 9](/guides/drupal-9-hosted)
 
-  - Version 9: 
+</Accordion>
 
-    Did you create the site prior to November 2021?
-    - Yes: See [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) 
-    - No: 
+<Accordion title="Version 9" id="v9">
 
-      Did you set Drupal version to 8?
-      - Yes: See [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8)
-      - No: 
+Did you create the site prior to November 2021?
+- Yes: See [Migrate a Site That Was Created Before November 2011 to Drupal 9](/guides/drupal-9-hosted-pre112021) 
+- No: 
 
-        Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
-        - Yes: See [Migrate a Site That Needs a Build Tools Workflow to Drupal 9 + Build Tools](/guides/drupal-9-hosted-btworkflow)
-        - No: No additional work required.
-  
-  </Tab>
+  Did you set Drupal version to 8?
+  - Yes: See [Migrate a Site Created With the Pantheon Dashboard to Drupal 9](/guides/drupal-9-hosted-createdashboard-set8)
+  - No: 
 
-  </TabList>
+    Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
+    - Yes: See [Migrate a Site That Needs a Build Tools Workflow to Drupal 9 + Build Tools](/guides/drupal-9-hosted-btworkflow)
+    - No: No additional work required.
+
+</Accordion>
+
+</Tab>
+
+</TabList>
 
 - **No**
 
