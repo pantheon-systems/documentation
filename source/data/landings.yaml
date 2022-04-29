@@ -33,7 +33,7 @@
     - title: 'WordPress on Pantheon Guide'
       subtitle: 'Your guide to WordPress on Pantheon.'
       links:
-        - text: 'Introduction'
+        - text: 'Introduction to WordPress'
           url: '/guides/01-introduction'
         - text: 'Create a WordPress Site'
           url: '/guides/02-create-a-wp-site'
