@@ -28,6 +28,8 @@ This guide will show you how to migrate a site that meets the following criteria
 Build Tools connects Pantheon with your CI service and external Git provider. See the [Build Tools Guide](/guides/build-tools#a-build-tools-projects-components) for details on supported Git and CI services combinations.
 
 
+<Partial file="drupal-9/commit-history.md" />
+
 ## Requirements
 
 Before you continue, confirm that your site meets the following criteria:
@@ -37,10 +39,6 @@ Before you continue, confirm that your site meets the following criteria:
 1. The site is built through a service like Circle CI.
 
 1. Build artifacts are pushed to your Pantheon repository.
-
-## Custom Module Code
-
-Custom module code is outside the scope of this document. See [drupal.org](https://www.drupal.org/docs/creating-custom-modules) for getting your custom code updated with the new version numbers and any code deprecations.
 
 ## See Also
 

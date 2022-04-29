@@ -7,11 +7,6 @@ reviewed: "2021-03-31"
 
 Drupal 9 includes many of the familiar features and layout introduced in Drupal 8, and removes deprecated code to help improve future Drupal development.
 
-<Alert title="Note" type="info" >
-This upgrade migrates your existing site to a new site.  The new site will not maintain your site’s commit history.
-</Alert>
-
-
 ## Choose Your Upgrade Path
 
 Answer the following questions to determine your upgrade path.
@@ -32,7 +27,7 @@ Answer the following questions to determine your upgrade path.
 
   <Tab title="Custom Upstream" id="custom-upstream">
 
-  See [Migrate a Site That Was Created with a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+  See [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
 
   </Tab>
 

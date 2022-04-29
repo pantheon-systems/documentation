@@ -21,9 +21,3 @@ terminus site:upstream:set $SITE drupal-recommended
 ```
 
 Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
-
-<Alert title="Note" type="info" >
-
-Only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the upstream.
-
-</Alert>

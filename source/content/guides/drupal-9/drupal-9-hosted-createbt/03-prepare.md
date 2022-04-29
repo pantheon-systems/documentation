@@ -15,13 +15,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/03-prepare.md
 ---
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment.md" />
-
-4. Install the [jq](https://formulae.brew.sh/formula/jq) JSON processor and [rsync](https://formulae.brew.sh/formula/rsync) on your local environment if they aren't already installed. Install with Homebrew, if using MacOS:
-
-  ```bash{promptUser: user}
-  brew install jq rsync
-  ```
+<Partial file="drupal-9/prepare-local-environment-no-clone-new.md" />
 
 ## Prepare a Local Copy of the Site for Upgrade
 

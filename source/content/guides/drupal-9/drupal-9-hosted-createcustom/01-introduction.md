@@ -1,7 +1,7 @@
 ---
-title: Migrate a Site That Was Created with a Custom Upstream to Drupal 9
+title: Migrate a Custom Upstream to Drupal 9
 subtitle: Introduction
-description: Learn how to Migrate a Site That Was Created with a Custom Upstream to Drupal 9
+description: Learn how to migrate a Custom Upstream to Drupal 9
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
@@ -23,3 +23,4 @@ This guide will show you how to migrate a site that meets the following criteria
 |Drupal version set to 8| n/a
 |Site created before November 2021| n/a
 
+<Partial file="drupal-9/commit-history.md" />

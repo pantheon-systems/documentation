@@ -13,4 +13,4 @@ anchorid: deploy
 editpath: hosted/09-deploy.md
 ---
 
-<Partial file="drupal-9/deploy-using-relaunch.md" />
+<Partial file="drupal-9/deploy-live.md" />

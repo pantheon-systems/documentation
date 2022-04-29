@@ -24,6 +24,8 @@ This guide will show you how to migrate a site that meets the following criteria
 |Drupal version set to 8| n/a
 |**Site created before November 2021**| **Yes**
 
+<Partial file="drupal-9/commit-history.md" />
+
 
 ## Requirements
 
@@ -58,8 +60,6 @@ You must confirm that your site meets the following requirements before you cont
 - The site does not use another package and library manager, such as [Ludwig](https://www.drupal.org/project/ludwig).
 
 - You have not set up Continous Integration or you no longer need it. 
-
-- You have [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the Upstream.
 
 - The trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 

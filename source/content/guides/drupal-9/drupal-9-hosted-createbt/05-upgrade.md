@@ -18,13 +18,8 @@ editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
    ```bash{outputLines:2-5,7-9}
     composer require \
       drupal/upgrade_status:^3 \
-      drupal/devel:^4 \
       drush/drush:^10 \
       -W --no-update
-    composer require \
-      phpunit/phpunit:"^8 | ^9 | ^10" \
-      phpstan/phpstan \
-      --dev -W --no-update
    ```
 
 1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
@@ -52,7 +47,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
 1. Add `composer-patches` to the `require` list and run `composer update`:
 
    ```bash{promptUser: user}
-   composer require cweagans/composer-patches drupal/upgrade_status --no-update
+   composer require cweagans/composer-patches --no-update
    composer update -W --optimize-autoloader --prefer-dist
    ```
 
@@ -95,7 +90,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
    remote:
    ```
 
-1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment** Multidev. This is called `$ENV` in the next steps.
+1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create a Multidev environment. This is called `$ENV` in the next steps.
 
 1. After the build has finished without error, you will see a new environment in the Dashboard under **<span class="glyphicons glyphicons-cloud"></span> Multidev**, named in reference to your pull request.
 
@@ -109,23 +104,15 @@ editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
    terminus drush $SITE.$ENV uli admin
    ```
 
-1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows are incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If your module is incompatible it will need to be removed from the Composer file.
+1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows as incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a Drupal 9 compatible status, then it should be removed.
 
 ## Upgrade MariaDB in All Environments
 
-### Drupal 9 Considerations
-
 <Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
 
-Once you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
+Once you have confirmed that the MariaDB upgrade worked in the Multidev, merge your PR, or push your changes to your master branch in your git provider, to ensure the other components upgrade smoothly.
 
-The possible risks associated with the time it takes for the platform to upgrade the database are minimal, but you can use the following command to mitigate potential errors:
-
-```bash{promptUser: user}
-git push origin master
-```
-
-From the Dashboard, merge the code from Dev, through Test, to Live.
+From the Dashboard, deploy the code from Dev, through Test, to Live.
 
 Or use Terminus, and replace the `$ENV` in this example with the target environment:
 

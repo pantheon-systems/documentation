@@ -25,29 +25,6 @@ Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is s
 
 Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
 
-## Error: Class ViewPageController Does Not Exist
-
-As reported in [Drupal Issue 3161309](https://www.drupal.org/project/drupal/issues/3161309), some fresh installations may encounter the error:
-
-```none
-InvalidArgumentException: Class "Drupal\views\Routing\ViewPageController" does not exist.
-```
-
-If you encounter this error, [clear the cache through the Site Dashboard](/clear-caches#pantheon-dashboard), or with the [Terminus](/terminus) `drush cr` command:
-
-```bash{promptUser: user}
-terminus drush <site>.<env> -- cr
-```
-
-Given the nature of the bug, it might be easier to reinstall Drupal 9.
-
-## Pantheon Drupal 8 Modules Being Upgraded to Drupal 9
-
-| Module Name                                                                                 | Drupal 8 Version? | Drupal 9 Version? |
-|---------------------------------------------------------------------------------------------|:-----------:|:-----------:|
-| [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) |     Yes     |     Yes     |
-| [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon)                   |     Yes     |     Yes     |
-
 ## Site-local Drush Is Required for Drupal 9 Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.

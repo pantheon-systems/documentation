@@ -12,5 +12,5 @@ permalink: docs/guides/drupal-9-hosted-createbt/deploy
 anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-createbt/11-deploy.md
 ---
-<Partial file="drupal-9/deploy-using-relaunch.md" />
+<Partial file="drupal-9/deploy-live.md" />
 

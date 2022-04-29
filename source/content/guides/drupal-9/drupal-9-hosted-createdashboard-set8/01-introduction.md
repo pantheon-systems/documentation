@@ -23,6 +23,9 @@ This guide will show you how to migrate a site that meets the following criteria
 |**Drupal version set to 8**| **Yes**
 |Site created before November 2021| n/a
 
+<Partial file="drupal-9/commit-history.md" />
+
+
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)
