@@ -22,7 +22,7 @@ editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
 1. Add the Integrated Composer upstream as a second remote and fetch:
 
   ```bash{promptUser:user}
-  git remote add ic https://github.com/pantheon-upstreams/drupal-project.git && git fetch ic
+  git remote add ic https://github.com/pantheon-upstreams/drupal-composer-managed.git && git fetch ic
   ```
 
 1. Create a new `composerify` branch to work in:
@@ -45,7 +45,7 @@ editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
    git commit -m "Add and commit Integrated Composer files"
    ```
 
-1. Navigate to `upstream-configuration/composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8:
+1. Navigate to `composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8:
 
   ```json:title=upstream-configuration/composer.json
   "drupal/core-recommended": "^8.8"
