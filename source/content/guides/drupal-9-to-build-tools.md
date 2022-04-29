@@ -14,7 +14,7 @@ This guide shows you how to migrate a Composer-based Drupal site (site created v
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies. A Drupal 9 site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
+Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies. A Drupal 9 site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
 
 The goals of this migration are to:
 
