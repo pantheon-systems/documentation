@@ -1,12 +1,11 @@
 ---
 title: WordPress on Pantheon Guide
-subtitle: Introduction
+subtitle: Introduction to WordPress on Pantheon
 description: Your guide to using WordPress on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 type: guide
-layout: guide
 reviewed: "2022-04-29"
 ---
 
