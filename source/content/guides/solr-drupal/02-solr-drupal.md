@@ -221,7 +221,7 @@ Technical Support for Pantheon Search with Solr 8 on Drupal in Limited Availabil
 - Issues specific to third-party add-ons or customer-developed code.
 - Consultation on administration, configuration, performance, or security.
 
-Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr 3.6 users should recreate configuration and indexing on a fresh installation of Pantheon Search with Solr 8 on a Drupal 8 or Drupal 9 site.
+Upgrading from Solr v3.6 is currently outside the scope of support. Existing Solr v3.6 users should recreate configuration and indexing on a fresh installation of Pantheon Search with Solr 8 on a Drupal 8 or Drupal 9 site.
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
