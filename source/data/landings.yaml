@@ -31,7 +31,7 @@
         - text: 'Choosing Your Start State'
           url: '/start-state' 
         - text: 'WordPress on Pantheon Guide' 
-          url: '/guides/wp-pantheon'
+          url: '/guides/wordpress-on-pantheon'
     - title: 'Explore the Site Dashboard'
       subtitle: 'A developer console for all your sites.'
       links:
