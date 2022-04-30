@@ -1076,6 +1076,6 @@
           url: '/guides/lockr'
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
-        - title: 'WordPress on Pantheon Guide'
+       
     
           
