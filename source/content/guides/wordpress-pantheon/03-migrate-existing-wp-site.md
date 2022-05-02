@@ -53,6 +53,6 @@ You will need to manually migrate your site to Pantheon when any of the followin
 
 - You use Composer (please contact our [Professional Services Migration team](https://pantheon.io/professional-services/website-migrations?docs=) for help.)
 
-1. Complete the steps in [Prepare for Migration](/guides/wordpress-pantheon/migrate-existing-site/#prepare-for-migration).
+1. Complete the steps in [Prepare for Migration](#prepare-for-the-migration).
 
 1. Complete the steps in [Manual Migration](/migrate-manual#create-pantheon-site).
