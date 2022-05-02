@@ -13,4 +13,4 @@ anchorid: available-updates
 editpath: drupal-9/drupal-9-hosted-pre112021/05-available-updates.md
 ---
 
-<Partial file="drupal-apply-upstream-updates.md" />
+<Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />

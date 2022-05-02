@@ -36,4 +36,4 @@ This doc uses the following aliases:
 
 ## Requirements
 
-<Partial file="drupal-9/upgrade-site-requirements-new.md" />
+<Partial file="drupal-9/upgrade-site-requirements-from-empty.md" />

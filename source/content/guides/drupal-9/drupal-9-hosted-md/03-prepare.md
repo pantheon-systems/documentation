@@ -14,7 +14,7 @@ anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-md/03-prepare.md
 ---
 
-<Partial file="drupal-9/prepare-local-environment.md" />
+<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
 ## Apply All Available Upstream Updates
 

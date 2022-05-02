@@ -1,7 +1,7 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build Tools
+title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Troubleshooting
-description:  Troubleshoot common issues when migrating.
+description: 
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]

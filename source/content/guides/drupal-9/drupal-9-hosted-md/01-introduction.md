@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site with Multidev to Drupal 9
 subtitle: Introduction
-description: Learn how to Migrate a Site with Multidev to Drupal 9
+description: Learn how to migrate a site to Drupal 9 using Multidev
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]

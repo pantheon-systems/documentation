@@ -57,11 +57,11 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 ### Modules and Themes
 
-<Partial file="drupal-9/custom-modules-themes.md" />
+<Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
 
 ### settings.php
 
-<Partial file="drupal-9/custom-settings.md" />
+<Partial file="drupal-9/custom-settings-no-docroot.md" />
 
 
 ## Additional Composer Configuration

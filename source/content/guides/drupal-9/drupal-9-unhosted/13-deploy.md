@@ -18,4 +18,4 @@ You should now have all three of the major components of your site imported into
   terminus drush $SITE.dev cr
   ```
 
-<Partial file="drupal-9/launch-using-launch.md" />
+<Partial file="drupal-9/deploy-using-launch.md" />

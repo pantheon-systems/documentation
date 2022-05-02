@@ -13,4 +13,6 @@ anchorid: upload-files
 editpath: drupal-9/drupal-9-hosted-btworkflow/11-upload-files.md
 ---
 
-<Partial file="migrate-add-files-only-drupal.md" />
+<Partial file="migrate-add-files-part1.md" />
+<Partial file="migrate-add-files-part2-not-nested.md" />
+<Partial file="migrate-add-files-part3.md" />

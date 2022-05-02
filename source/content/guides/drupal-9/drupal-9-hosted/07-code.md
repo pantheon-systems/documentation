@@ -28,13 +28,9 @@ editpath: hosted/07-code.md
 
 1. Copy over exported configuration from the original site. From your D9 site, run the following commands:
 
-   ```bash{promptUser: user}
-   git checkout existing-8/master -- sites/default/config
-   git mv sites/default/config/* config/
-   git commit -m "Add site configuration."
-   ```
+   <Partial file="drupal-9/copy-exported-config.md" />
 
-1. Compare your current `pantheon.yml` file with the new D9 `pantheon.upstream.yml`:
+2. Compare your current `pantheon.yml` file with the new D9 `pantheon.upstream.yml`:
 
   ```bash{promptUser: user}
   git diff existing-8/master:pantheon.yml pantheon.upstream.yml
@@ -72,41 +68,13 @@ editpath: hosted/07-code.md
 
 1. Copy over any custom modules or themes from your D8 site:
 
-   <Partial file="drupal-9/custom-modules-themes.md" />
+   <Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
 
 
 1. Check `settings.php` for any customizations to copy over:
 
-  <TabList>
+   <Partial file="drupal-9/custom-settings-no-docroot.md" />
 
-  <Tab title="With Nested Docroot" id="code-docroot" active={true}>
-
-  ```bash{promptUser:user}
-  # Fetch your D8 settings file.
-  git show existing-8/master:web/sites/default/settings.php > web/sites/default/original-settings.php
-  # Check for any customizations (if this returns nothing, you can move on to the next step).
-  # Copy what you need over to web/sites/default/settings.php, and commit as needed.
-  diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-  # Remove the original copy.
-  rm web/sites/default/original-settings.php
-  ```
-  </Tab>
-
-  <Tab title="Without Nested Docroot" id="code-nodocroot">
-
-  ```bash{promptUser:user}
-  # Fetch your D8 settings file.
-  git show existing-8/master:sites/default/settings.php > web/sites/default/original-settings.php
-  # Check for any customizations (if this returns nothing, you can move on to the next step).
-  # Copy what you need over to web/sites/default/settings.php, and commit as needed.
-  diff -Nup web/sites/default/settings.php web/sites/default/original-settings.php
-  # Remove the original copy.
-  rm web/sites/default/original-settings.php
-  ```
-
-  </Tab>
-
-  </TabList>
 
 2. Copy your files and database from your D8 site to the D9 site:
 

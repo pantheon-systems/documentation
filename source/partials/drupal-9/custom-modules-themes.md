@@ -15,11 +15,7 @@ git commit -m "Copy custom modules"
 
 <Tab title="Without Nested Docroot" id="code-nodocroot">
 
-```bash{promptUser:user}
-git checkout master modules/custom
-git mv modules/custom web/modules/
-git commit -m "Copy custom modules"
-```
+<Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
 
 </Tab>
 

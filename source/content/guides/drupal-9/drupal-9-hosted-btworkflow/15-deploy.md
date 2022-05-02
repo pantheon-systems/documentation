@@ -20,4 +20,4 @@ You should now have all three of the major components of your site imported into
   terminus drush $SITE.dev cr
   ```
 
-<Partial file="drupal-9/deploy-live.md" />
+Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.
