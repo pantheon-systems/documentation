@@ -221,7 +221,9 @@ git push origin master
 
 ## Add Your Database
 
-<Partial file="migrate-add-database.md" />
+<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+
+<Partial file="drupal-9/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 

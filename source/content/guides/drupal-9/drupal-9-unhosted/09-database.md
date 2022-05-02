@@ -13,4 +13,7 @@ anchorid: add-database
 editpath: drupal-9/drupal-9-unhosted/09-database.md
 ---
 
-<Partial file="migrate-add-database.md" />
+
+<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+
+<Partial file="drupal-9/migrate-add-database-part2.md" />

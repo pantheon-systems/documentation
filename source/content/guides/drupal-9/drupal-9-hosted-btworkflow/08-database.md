@@ -13,4 +13,15 @@ anchorid: database
 editpath: drupal-9/drupal-9-hosted-btworkflow/08-database.md
 ---
 
-<Partial file="migrate-add-database.md" />
+
+The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
+
+1. Navigate to your existing site's Dashboard.
+
+1. In the Live environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+
+1. Click **Export Database**.
+
+2. Download the resulting file, or copy the URL to use it in the following steps.
+
+<Partial file="drupal-9/migrate-add-database-part2.md" />

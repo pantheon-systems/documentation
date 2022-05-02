@@ -45,11 +45,28 @@ editpath: hosted/07-code.md
 
 1. Copy over any Quicksilver scripts referenced in `pantheon.yml`:
 
-  ```bash{promptUser: user}
-  git checkout existing-8/master -- private/scripts
-  git commit -m "Add Quicksilver scripts."
-  ```
+  <TabList>
 
+  <Tab title="With Nested Docroot" id="code-docroot" active={true}>
+
+    ```bash{promptUser: user}
+    git checkout existing-8/master -- web/private/scripts
+    git commit -m "Add Quicksilver scripts."
+    ```
+
+  </Tab>
+
+
+  <Tab title="Without Nested Docroot" id="code-nodocroot">
+
+    ```bash{promptUser: user}
+    git checkout existing-8/master -- private/scripts
+    git commit -m "Add Quicksilver scripts."
+    ```
+
+  </Tab>
+
+</TabList>
 1. List contrib modules and themes on your D8 site:
 
   ```bash{promptUser: user}
