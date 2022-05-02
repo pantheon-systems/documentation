@@ -5,8 +5,10 @@ description: Your guide to using WordPress on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-type: guide
 reviewed: "2022-04-29"
+layout: guide
+permalink: docs/guides/wordpress-pantheon/
+anchorid: wordpress-pantheon
 ---
 
 Pantheon is a WebOps platform that provides the speed and performance needed to keep your WordPress website running smoothly. Pantheon uses a container-based infrastructure that provides streamlined provisioning, high availability, smooth scaling, and increased security.
