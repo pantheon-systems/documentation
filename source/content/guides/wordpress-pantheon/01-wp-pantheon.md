@@ -23,7 +23,18 @@ You can edit your site directly on Pantheon using SFTP or Git. This includes  ma
 
 You can also use power tools such as [Terminus](/terminus) to manage your Pantheon WordPress site from the command line, or [Quicksilver](/quicksilver) to use available platform hooks. 
 
+We will cover advanced examples later in this guide, including: 
 
-We also have advanced examples, such as the Terminus build tools plugin and Advanced WordPress on Pantheon, integrating external Git repositories, continuous integration, Composer, and automated testing with Pantheon for teams requiring complex workflows and automation.
+- Terminus build tools plugin
+
+- Advanced WordPress on Pantheon
+
+- Integrating external Git repositories
+
+- Continuous integration
+
+- WordPress with Composer
+
+- Automated testing with Pantheon for teams requiring complex workflows and automation
 
 
