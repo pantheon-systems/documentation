@@ -30,8 +30,6 @@
           url: '/regions'
         - text: 'Choosing Your Start State'
           url: '/start-state' 
-        - text: 'WordPress on Pantheon Guide' 
-          url: '/guides/wordpress-pantheon'
     - title: 'Explore the Site Dashboard'
       subtitle: 'A developer console for all your sites.'
       links:
@@ -1056,6 +1054,8 @@
           url: '/guides/terminus-drupal-site-management'
         - text: 'Using WP SAML Auth with Google Apps'
           url: '/guides/wordpress-google-sso'
+        - text: 'WordPress on Pantheon Guide' 
+          url: '/guides/wordpress-pantheon'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
