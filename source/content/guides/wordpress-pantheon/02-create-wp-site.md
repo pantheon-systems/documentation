@@ -5,7 +5,7 @@ description: Create a WordPress site on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-04-29"
+reviewed: "2022-05-02"
 layout: guide
 permalink: docs/guides/wordpress-pantheon/create-wp-site
 anchorid: wordpress-pantheon/create-wp-site
@@ -35,6 +35,8 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
     ![Alt text describing the image](../../../images/new-site-deployment.png)
 
+## Initialize Your Test and Live Environments
+
 1. Click the <Icon icon="equalizer" text="Test"/> tab in the Site Dashboard and then click **Create Test Environment**.
 
     This can take a couple of minutes. Note that your must create your Test environment before you can create your Live environment.
@@ -58,6 +60,8 @@ This page provides steps on creating a new WordPress site on Pantheon.
      so it’s the only place you can access and change your Development Mode.
    </Alert>
 
+## Configure Your Development Mode
+
 1. Select [SFTP](/guides/quickstart/connection-modes/#sftp-connection-mode) or [Git](/guides/quickstart/connection-modes/#git-connection-mode) as as your Development Mode. 
 
     ![Development Modes](../../../images/development-mode.png)
@@ -67,3 +71,12 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Review and follow the steps in the [Using Git with SFTP & WordPress Guide](/guides/wordpress-git/) to ensure that you understand the best ways to install plugins, manage themes, upload media, and edit your site configuration.
 
+## WordPress Multisite
+
+This section is optional, and is only intended for customers who would like to create a network of sites using a single copy of the WordPress codebase and a common database.
+
+1. Review the [WordPress Site Networks Guide](/guides/multisite/) to ensure that you understand Multisite considerations and Multisite governance.
+
+1. Request a [WordPress Site Network](/guides/multisite/#request-a-wordpress-site-network).
+
+1. Complete the configuration steps in WordPress Site Networks Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Site Network created for you in step 2.

@@ -5,7 +5,7 @@ description: Your guide to using WordPress on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-04-29"
+reviewed: "2022-05-02"
 layout: guide
 permalink: docs/guides/wordpress-pantheon/
 anchorid: wordpress-pantheon
