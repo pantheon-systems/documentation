@@ -56,7 +56,6 @@ editpath: hosted/07-code.md
 
   </Tab>
 
-
   <Tab title="Without Nested Docroot" id="code-nodocroot">
 
     ```bash{promptUser: user}
@@ -67,7 +66,7 @@ editpath: hosted/07-code.md
   </Tab>
 
   </TabList>
-  
+
 1. List contrib modules and themes on your D8 site:
 
   ```bash{promptUser: user}
