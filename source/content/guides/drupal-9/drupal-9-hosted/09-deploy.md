@@ -13,4 +13,4 @@ anchorid: deploy
 editpath: hosted/09-deploy.md
 ---
 
-<Partial file="drupal-9/deploy-live.md" />
+Review the site, then proceed to launch using the [Pantheon Relaunch](/relaunch) documentation.
