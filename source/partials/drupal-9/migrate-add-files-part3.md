@@ -2,9 +2,9 @@
 
 1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
 
-2. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 
-3. Click **Import** and then add your archive (based on file size) by following the steps below.
+1. Click **Import** and then add your archive (based on file size) by following the steps below.
 
   <TabList>
 

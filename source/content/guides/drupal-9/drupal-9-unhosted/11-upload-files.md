@@ -14,5 +14,5 @@ editpath: drupal-9/drupal-9-unhosted/11-upload-files.md
 ---
 
 <Partial file="drupal-9/migrate-add-files-part1.md" />
-<Partial file="drupal-9/migrate-add-files-part2-nested.md" />
-<Partial file="drupal-9/migrate-add-files-part3.md" />
+   <Partial file="drupal-9/migrate-add-files-part2-nested.md" />
+   <Partial file="drupal-9/migrate-add-files-part3.md" />

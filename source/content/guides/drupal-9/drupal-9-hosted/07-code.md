@@ -69,13 +69,11 @@ editpath: hosted/07-code.md
 1. Copy over any custom modules or themes from your D8 site:
 
    <Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
-
-
+   
 1. Check `settings.php` for any customizations to copy over:
 
    <Partial file="drupal-9/custom-settings-no-docroot.md" />
-
-
+   
 2. Copy your files and database from your D8 site to the D9 site:
 
     ```bash{promptUser: user}
