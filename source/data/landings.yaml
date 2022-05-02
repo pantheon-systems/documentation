@@ -1054,7 +1054,7 @@
           url: '/guides/terminus-drupal-site-management'
         - text: 'Using WP SAML Auth with Google Apps'
           url: '/guides/wordpress-google-sso'
-        - text: 'WordPress on Pantheon Guide' 
+        - text: 'WordPress on Pantheon Guide'
           url: '/guides/wordpress-pantheon'
     - title: ' '
       links:
