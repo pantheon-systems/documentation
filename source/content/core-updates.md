@@ -99,7 +99,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 <Tab title="Drupal 9" id="d9" active={true}>
 
 ```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-systems/drupal-composer-managed master
+git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed main
 # resolve conflicts
 git push origin master
 ```

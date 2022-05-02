@@ -95,7 +95,7 @@ If you receive an error that you have conflicts while updating, resolve using th
 This is safe to run if you don't have your own changes in any of the conflicting files, such as problems with `.gitignore`.
 
 ```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed.git master
+git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed.git main
 # resolve conflicts
 git push origin master
 ```
