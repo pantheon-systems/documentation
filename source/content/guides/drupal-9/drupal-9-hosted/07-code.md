@@ -50,7 +50,7 @@ editpath: hosted/07-code.md
   <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
     ```bash{promptUser: user}
-    git checkout existing-8/master -- web/private/scripts
+    git checkout existing-8/master -- private/scripts
     git commit -m "Add Quicksilver scripts."
     ```
 
@@ -66,7 +66,8 @@ editpath: hosted/07-code.md
 
   </Tab>
 
-</TabList>
+  </TabList>
+  
 1. List contrib modules and themes on your D8 site:
 
   ```bash{promptUser: user}
