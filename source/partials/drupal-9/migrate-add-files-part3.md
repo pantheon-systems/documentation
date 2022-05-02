@@ -1,4 +1,3 @@
-   Now you have created an archive file in your user's home directory.
 
 2. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
 
