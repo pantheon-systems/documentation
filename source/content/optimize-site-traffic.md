@@ -93,8 +93,7 @@ To block an IP, add the following to `settings.php` or `wp-config.php`. Remember
 
 ```php:title=wp-config.php%20or%20settings.php
 if ($_SERVER['REMOTE_ADDR'] == '192.0.2.38') {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
+  header('HTTP/1.0 403 Forbidden');
   exit;
 }
 ```
@@ -130,8 +129,7 @@ if (!$request_ip_forbidden = in_array($request_remote_addr, $request_ip_blocklis
 }
 
 if ($request_ip_forbidden) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
+  header('HTTP/1.0 403 Forbidden');
   exit;
 }
 ```
@@ -189,8 +187,7 @@ Remember to replace the example user agent (`UglyBot`):
 ```php:title=wp-config.php%20or%20settings.php
 // Block a single bot.
 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Bork-bot') !== FALSE) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
+  header('HTTP/1.0 403 Forbidden');
   exit;
 }
 
@@ -198,9 +195,8 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], 'Bork-bot') !== FALSE) {
 $user_agents_deny_list = ['Go-http-client', 'gozilla', 'InstallShield.DigitalWizard', 'GT\:\:WWW'];
 foreach ($user_agents_deny_list as $agent) {
   if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== FALSE) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
-  exit;
+    header('HTTP/1.0 403 Forbidden');
+    exit;
   }
 }
 ```
