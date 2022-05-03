@@ -67,7 +67,7 @@ Currently, we do not support `ed25519` keys.
       Agent pid 86810
       ```
    
-   * For Windows users, run `start-ssh-agent`. The output confirms that the agent has started. Enter the passphrase, if it has previously been set.
+   * For Windows users, run `start-ssh-agent`. The output confirms the agent has started. Enter the passphrase, if it was previously set.
    
       ```bash{promptUser: user}
       start-ssh-agent
