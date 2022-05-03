@@ -17,7 +17,7 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
 
-In addition to your other WordPress security practices, take steps to block **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
+In addition to your other WordPress security practices, take steps to block brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
 
@@ -31,7 +31,7 @@ In addition to your other WordPress security practices, take steps to block **br
 
    </Accordion>
 
-1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to attract and ban bad bots.
 
 1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
 
@@ -93,7 +93,8 @@ To block an IP, add the following to `settings.php` or `wp-config.php`. Remember
 
 ```php:title=wp-config.php%20or%20settings.php
 if ($_SERVER['REMOTE_ADDR'] == '192.0.2.38') {
-  header('HTTP/1.0 403 Forbidden');
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
   exit;
 }
 ```
@@ -129,7 +130,8 @@ if (!$request_ip_forbidden = in_array($request_remote_addr, $request_ip_blocklis
 }
 
 if ($request_ip_forbidden) {
-  header('HTTP/1.0 403 Forbidden');
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
   exit;
 }
 ```
@@ -187,7 +189,8 @@ Remember to replace the example user agent (`UglyBot`):
 ```php:title=wp-config.php%20or%20settings.php
 // Block a single bot.
 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Bork-bot') !== FALSE) {
-  header('HTTP/1.0 403 Forbidden');
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
   exit;
 }
 
@@ -195,8 +198,9 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], 'Bork-bot') !== FALSE) {
 $user_agents_deny_list = ['Go-http-client', 'gozilla', 'InstallShield.DigitalWizard', 'GT\:\:WWW'];
 foreach ($user_agents_deny_list as $agent) {
   if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== FALSE) {
-    header('HTTP/1.0 403 Forbidden');
-    exit;
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . '/404');
+  exit;
   }
 }
 ```
