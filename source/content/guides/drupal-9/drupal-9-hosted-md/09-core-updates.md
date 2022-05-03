@@ -13,6 +13,6 @@ anchorid: core-updates
 editpath: drupal-9/drupal-9-hosted-md/09-core-updates.md
 ---
 
-Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated/composer) to allow one-click core updates.
+Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates.
 
 <Partial file="drupal-9/core-updates.md" />
