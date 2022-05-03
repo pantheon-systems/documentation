@@ -10,7 +10,7 @@ reviewed: "2022-04-27"
 
 ## Cron Overview
 
-Cron is a standard utility in Unix and Linux systems that it is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year.
+Cron is a standard utility in Unix and Linux systems that is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year.
 
 Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more.
 
