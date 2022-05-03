@@ -13,6 +13,6 @@ anchorid: drupal-core-version
 editpath: drupal-9/drupal-9-hosted-md/07-drupal-core-version.md
 ---
 
-You need to change your core version to Drupal 9 now that you've confirmed that your core dependencies are Drupal 9 compatible,
+You must change your core version to Drupal 9 now that you've confirmed that your core dependencies are Drupal 9 compatible.
 
 <Partial file="drupal-9/core-version.md" />

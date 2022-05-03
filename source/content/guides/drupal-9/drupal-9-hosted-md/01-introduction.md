@@ -14,7 +14,7 @@ anchorid: drupal-9-v8
 editpath: drupal-9/drupal-9-hosted-md/01-introduction.md
 ---
 
-This guide will show you how to migrate a Pantheon hosted, Multidev site to Drupal 9. 
+This guide will show you how to migrate a Pantheon-hosted, Multidev site to Drupal 9. 
 
 Do not use this guide if you meet any of the following criteria:
 
