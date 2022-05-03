@@ -42,8 +42,9 @@ When changing your password, make sure the new password meets the following requ
 
 You’ll need to log in again after your password is changed.
 
+## Email Notifications
 
-<Partial file="platform-email-notifications.md" />
+<Partial file="pantheon-email-notifications.md" />
 
 ## SSH Keys
 
