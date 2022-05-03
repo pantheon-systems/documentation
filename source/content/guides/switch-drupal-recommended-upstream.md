@@ -74,8 +74,6 @@ terminus site:upstream:set $SITE drupal-recommended
 
 Follow the `drupal-recommended` upstream to keep your site current with any general configuration changes recommended by Pantheon.
 
-Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the upstream.
-
 ## Apply New Upstream Updates
 
 After you complete the upstream change, you need to apply the available upstream updates. Use the Pantheon Dashboard in the Dev environment to apply updates. If this is not successful, continue to the next section for help resolving with merge conflicts.

@@ -6,7 +6,7 @@ permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2021-08-30"
+reviewed: "2022-04-28"
 ---
 
 Integrated Composer is a Pantheon platform feature that extends Composer <Popover content="A widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site." /> functionality to WordPress and Drupal's core files, and treats them as a managed dependency. Integrated Composer enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
@@ -53,7 +53,6 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 1. Commit `composer.json` and `composer.lock` and push.
 
    - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
-
 
 ### Add a Package from a Private Repository
 
