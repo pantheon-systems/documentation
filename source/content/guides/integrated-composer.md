@@ -56,11 +56,11 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ### Add a Package from a Private Repository
 
-These steps outline a method for adding a package from a private GitHub repository. For additional information on handling private packages, refer to the official [Composer documentation](https://getcomposer.org/doc/articles/handling-private-packages.md).
+The following steps outline a method for adding a package from a private GitHub repository. For additional information on handling private packages, refer to the official [Composer documentation](https://getcomposer.org/doc/articles/handling-private-packages.md).
 
-This GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. This is a current limitation of GitHub tokens. To limit that scope, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages, as well as ensuring your site repository code is not published publicly. 
+For this procedure a GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. To limit that scope of the GitHub token access, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages and ensure your site repository code is not published publicly. 
 
-1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) and generate a new token with `repo` scope.
+1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) page and generate a new token. Ensure the `repo` scope is selected.
 
 1. Add the private GitHub repository to `composer.json`, replacing `<token>` with your newly generated token.
    ```json:title=composer.json
