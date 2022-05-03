@@ -17,7 +17,7 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
 
-In addition to your other WordPress security practices, take steps to block **brute force attacks** that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
+In addition to your other WordPress security practices, take steps to block brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
 1. Create a separate administrator account with a strong password, then remove the `admin` account.
 
@@ -31,7 +31,7 @@ In addition to your other WordPress security practices, take steps to block **br
 
    </Accordion>
 
-1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to lure and ban bad bots.
+1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to attract and ban bad bots.
 
 1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
 
