@@ -7,8 +7,8 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
 layout: guide
-permalink: docs/guides/wordpress-pantheon/wp-optimization
-anchorid: wordpress-pantheon/wp-optimization
+permalink: docs/guides/wordpress-pantheon/plugins
+anchorid: wordpress-pantheon/plugins
 ---
 
 ## Optimization for Speed
