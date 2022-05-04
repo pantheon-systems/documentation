@@ -188,7 +188,7 @@ Manually create the target folders `code/wp-content/uploads/nitropack` and `code
 
 1. Repeat steps 1 and 2 for your Test and Live environments.
 
-1. Create a symlink in the `code/wp-content` directory in your Dev environment:
+1. Navigate back to `code/wp-content` and create a symlink in your Dev environment:
 
   ```bash{promptUser: user}
   ln -s ./uploads/nitropack/ ./nitropack
