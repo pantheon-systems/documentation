@@ -19,7 +19,7 @@ You can create a new WordPress site from scratch on Pantheon or migrate an exist
 
 ## Site Management
 
-You can edit your site directly on Pantheon using SFTP or Git. This includes  managing themes, plugins, content, and database files. All changes are tracked in version control, and your files and databases will automatically be backed up .
+You can edit your site directly on Pantheon using SFTP or Git. This includes  managing themes, plugins, content, and database files. All changes are tracked in version control, and your files and databases will automatically be backed up.
 
 You can also use power tools such as [Terminus](/terminus) to manage your Pantheon WordPress site from the command line, or [Quicksilver](/quicksilver) to use available platform hooks. 
 

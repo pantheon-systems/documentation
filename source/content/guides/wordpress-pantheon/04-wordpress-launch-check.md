@@ -1,10 +1,14 @@
 ---
-title: Launch Check - WordPress Performance and Configuration Analysis
-description: Learn more about the checks we automatically run on your Pantheon WordPress site.
-cms: "WordPress"
-categories: [go-live]
-tags: [webops, launch]
-reviewed: "2021-04-06"
+title: WordPress on Pantheon Guide
+subtitle: Launch Check - WordPress Performance and Configuration Analysis
+description: Learn more about the checks we automatically run on your Pantheon WordPress site. 
+categories: [wordpress]
+tags: [wordpress, webops]
+contributors: [whitneymeredith]
+reviewed: "2022-05-04"
+layout: guide
+permalink: docs/guides/wordpress-pantheon/wp-launch-check
+anchorid: wordpress-pantheon/wp-launch-check
 ---
 
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.

@@ -11,7 +11,7 @@ permalink: docs/guides/wordpress-pantheon/migrate-existing-wp-site
 anchorid: wordpress-pantheon/migrate-existing-wp-site
 ---
 
-This page provides steps for migrating an existing WordPress site to Pantheon's platform. Review Pantheon's [Managed Migrations](https://pantheon.io/professional-services/website-migrations?docs) page to see if this is a better option for you before you migrate your site.
+This page provides steps for migrating an existing WordPress site to Pantheon's platform. Review Pantheon's [Managed Migrations](https://pantheon.io/professional-services/website-migrations?docs) page to see if having the Pantheon Professional Services team perform your migration is a better option for you before you migrate your site.
 
 ## Prepare Your Site for Migration
 
@@ -25,11 +25,17 @@ Complete the following steps for the current site before beginning the migration
 
 1. Clean up your content.
 
-    1. Clear all pending comments. If you don’t check it regularly, you likely have thousands of spam comments in your queue.
+    1. Clear all pending comments. 
+    
+        - If you don’t check your comments regularly, you likely have thousands of spam comments in your queue.
 
-    1. Navigate to **Posts** > **Tags** > sort by **number of posts** > delete any **tags with zero posts** > **consolidate tags** with only one or two posts into other tags. Tags are important for SEO, but too many can confuse search engines.
+    1. Navigate to **Posts** > **Tags** > sort by **number of posts** > delete **tags with zero posts** > consolidate tags with only one or two posts into other tags. 
+    
+        - Tags are important for SEO, but too many can confuse search engines.
 
-1. Reduce your old post revisions. Post revisions can potentially double the size of your database. 
+1. Reduce your old post revisions. 
+
+    - Post revisions can potentially double the size of your database. 
 
 1. Audit your Plugins and Themes and remove any that you no longer use.
 
@@ -41,13 +47,13 @@ Complete the following steps for the current site before beginning the migration
 
 1. Configure [SSH Keys](/ssh-keys).
 
-## Migrate Your WordPress Site
+## Migrate Your WordPress Site with Guided Migration
 
 1. Install the [Pantheon Migrations](https://wordpress.org/plugins/bv-pantheon-migration/#installation) plugin.
 
 1. Follow the [Guided WordPress Migrations](/migrate#migrate-existing-sites) steps.
 
-## Manually Migrate a Site to Pantheon
+## Manually Migrate Your Site to Pantheon
 
 You will need to manually migrate your site to Pantheon when any of the following apply:
 
