@@ -5,7 +5,7 @@ description:
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-createcustom/site-customizations
