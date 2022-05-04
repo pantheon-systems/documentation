@@ -5,7 +5,7 @@ description:
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
@@ -27,7 +27,7 @@ Access the list of differences by adding the `drops-8` upstream as a second remo
    cd master
    ```
 
-2. Add `drops-8` as a second remote:
+2. Add `drops-8` as a second remote and fetch:
 
    ```bash{promptUser:user}
    git remote add drops-8 https://github.com/pantheon-systems/drops-8.git && git fetch drops-8

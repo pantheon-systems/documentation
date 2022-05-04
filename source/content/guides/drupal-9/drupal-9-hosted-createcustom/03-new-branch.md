@@ -12,6 +12,9 @@ permalink: docs/guides/drupal-9-hosted-createcustom/new-branch
 anchorid: new-branch
 editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
 ---
+
+The first step in the migration process is to create a new branch with Integrated Composer.
+
 1. Create a local clone of the Custom Upstream repository using the SSH URL, and `cd` into the cloned repository:
 
   ```bash{promptUser:user}
