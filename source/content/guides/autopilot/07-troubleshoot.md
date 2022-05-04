@@ -386,7 +386,7 @@ After diagnosing the problem, resolve the issue that is causing the fatal error 
 
 ### Issue
 
-Quicksilver scripts could not be execute on the site. 
+Quicksilver scripts failed to execute on the site. 
   
 ### Solution
   
