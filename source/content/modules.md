@@ -11,7 +11,7 @@ Pantheon maintains several modules to extend and integrate Drupal on the platfor
 
 <Alert title="Note" type="info">
 
-WordPress users should review [Pantheon Plugins](/guides/wordpress-pantheon/05-plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+WordPress users should review [Pantheon Plugins](/guides/wordpress-pantheon/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
 
 </Alert>
 

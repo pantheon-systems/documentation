@@ -85,7 +85,7 @@ After running this operation, be sure that:
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
 
 - [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check)
-- [Launch Check - WordPress Performance and Configuration Analysis](/guides/wordpress-pantheon/04-wordpress-launch-check)
+- [Launch Check - WordPress Performance and Configuration Analysis](/guides/wordpress-pantheon/wordpress-launch-check)
 
 Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver).
 
