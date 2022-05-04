@@ -376,7 +376,7 @@ Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev --
   
 ### Solution
   
-After diagnosing the problem, resolve the issue that is causing the fatal error on the Dev environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
+After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
   
 </Accordion>
 
