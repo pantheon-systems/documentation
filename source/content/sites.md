@@ -87,7 +87,7 @@ Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environme
 ### Status
 
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for
-[Drupal sites](/drupal-launch-check) or [WordPress sites](/wordpress-launch-check).
+[Drupal sites](/drupal-launch-check) or [WordPress sites](/guides/wordpress-pantheon/04-wordpress-launch-check).
 
 ### Database / Files
 
