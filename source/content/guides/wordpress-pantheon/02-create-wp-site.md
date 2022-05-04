@@ -64,10 +64,9 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Select [SFTP](/guides/quickstart/connection-modes/#sftp-connection-mode) or [Git](/guides/quickstart/connection-modes/#git-connection-mode) as as your Development Mode. 
 
+    You can develop in [Git mode](/git), or you can develop with [SFTP mode](/sftp), or even switch between both modes depending on your task and workflow.
+
     ![Development Modes](../../../images/development-mode.png)
-
-
-    On Pantheon, you can develop in [Git mode](/git), or you can develop with [SFTP mode](/sftp), or even switch between both modes depending on your task and workflow.
 
 1. Review and follow the steps in the [Using Git with SFTP & WordPress Guide](/guides/wordpress-git/) to ensure that you understand the best ways to install plugins, manage themes, upload media, and edit your site configuration.
 
@@ -80,3 +79,11 @@ This section is optional, and is only intended for customers who would like to c
 1. Request a [WordPress Site Network](/guides/multisite/#request-a-wordpress-site-network).
 
 1. Complete the configuration steps in WordPress Site Networks Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Site Network created for you in step 2.
+
+## See Also
+
+- [Getting Started with Git](https://pantheon.io/docs/git)
+
+- [Undo Git Commits on Pantheon](https://pantheon.io/docs/undo-commits)
+
+- [Git Faqs](https://pantheon.io/docs/git-faq)
