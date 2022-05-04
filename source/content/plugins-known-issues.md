@@ -1361,26 +1361,44 @@ ___
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 ___
 
-## YITH WooCommerce Request a Quote
+## YITH WooCommerce Extensions with MPDF library
 
-<ReviewDate date="2022-04-8" />
+<ReviewDate date="2022-05-04" />
 
-**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+### Affected Plugins
+- [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/)
+- [YITH WooCommerce PDF Invoice and Shipping List](https://yithemes.com/themes/plugins/yith-woocommerce-pdf-invoice/)
+- [YITH WooCommerce Gift Cards](https://yithemes.com/themes/plugins/yith-woocommerce-gift-cards/)
 
-**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
+**Issue:** Various YITH WooCommerce extensions use the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
-```php:title=wp-config.php
-/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
-add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
-if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
-   function ywraq_mpdf_change_tmp_dir( $args ) {
+**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/yith-mpdf-tmp`) by adding the following code sample to `functions.php`:
+
+```php:title=functions.php
+/** 
+ * Changes PDF cache location for YITH WooCommerce extensions.
+ *
+ * @param array $args The configuration for MPDF initialization.
+ * @return array The updated config with writable path.
+ */
+if ( ! function_exists( 'yith_mpdf_change_tmp_dir' ) ) {
+   function yith_mpdf_change_tmp_dir( array $args ): array {
       $upload_dir      = wp_upload_dir();
       $upload_dir      = $upload_dir['basedir'];
-      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+      $args['tempDir'] = $upload_dir . '/yith-mpdf-tmp/';
 
       return $args;
    }
 }
+
+// Request a Quote
+add_filter( 'ywraq_mpdf_args', 'yith_mpdf_change_tmp_dir', 20, 1 );
+
+// PDF Invoice
+add_filter( 'yith_ywpdi_mpdf_args', 'yith_mpdf_change_tmp_dir', 10, 1 );
+
+// Gift Cards
+add_filter( 'yith_ywgc_mpdf_args', 'yith_mpdf_change_tmp_dir', 10, 1 );
 ```
 ___
 ## Yoast SEO
