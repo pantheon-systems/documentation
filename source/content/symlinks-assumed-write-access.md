@@ -48,7 +48,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
     The command above moves the directory to a local `backups` directory in your home folder. Replace this with your preferred backup location. Note that this backup is now outside and separate from your site's codebase, and is only a safety measure to prevent data loss. Once you've confirmed that the symlink works across all environments and no data has been lost, you can remove this backup.
 
-1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
+1. Use the `cd` command to change to the location where the symlink will live. The symlink command (`ln`) is sensitive to the working directory - the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
 
    ```bash{promptUser: user}
    cd wp-content/path/
