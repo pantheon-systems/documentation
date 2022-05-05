@@ -34,7 +34,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/03-prepare.md
    terminus drush $SITE.live -- config:export --destination sites/default/files/config
    ```
 
-1. For rsync, copy the sftp host information.
+1. For rsync, copy the SFTP host information.
 
    ```bash{promptUser: user}
    RSYNC_HOST=$(terminus connection:info $SITE.live --field=sftp_host)
@@ -46,7 +46,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/03-prepare.md
    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_HOST}:files/config" .
    ```
 
-1. If you do a `git status` it should show changed files in the `config` directory if there are any changed configurations in production.
+1. If you run `git status` it should display changed files in the `config` directory if there are any changed configurations in production.
 
    ```bash{promptUser: user}
    git status
