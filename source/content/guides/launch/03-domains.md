@@ -67,7 +67,7 @@ To pre-provision HTTPS, CAA records must either:
 
 <Alert title="Warning" type="danger">
 
-Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour _after_ DNS routes to Pantheon.
+Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour after DNS routes to Pantheon.
 
 Once you begin this process, you have:
 
@@ -90,7 +90,7 @@ Once you begin this process, you have:
 
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
     
-    It is recommeneded that you use the Dashboard to get the DNS record instead of the Terminus plugin. A misconfiguration of the validation file invalidates these records and the Dashboard does not provide any feedback. 
+   A misconfiguration of the validation file invalidates these records and the Dashboard does not provide any feedback. 
     
     If the DNS validation fails you will receive an error message. This only applies to the DNS validation.
     
