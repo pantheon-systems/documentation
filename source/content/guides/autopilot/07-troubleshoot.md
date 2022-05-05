@@ -404,6 +404,6 @@ An issue with Autopilot occurred because the WordPress Dev, Test, or Live databa
   
 ### Solution
   
-Try updating the database locally, and then retry Autopilot. Contact Support[/link] for assistance if the issue persists.
+Update the database on the target environment, and then retry Autopilot. Contact Support[/link] for assistance if the issue persists.
   
 </Accordion>
