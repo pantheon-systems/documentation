@@ -13,5 +13,11 @@ anchorid: new-updates
 editpath: drupal-9/drupal-9-hosted-pre112021/09-new-updates.md
 ---
 
-After you complete the upstream change, you need to apply the available upstream updates. Use the Pantheon Dashboard in the Dev environment to apply updates. If this is not successful, see [Troubleshooting](/guides/drupal-9-hosted-pre112021/troubleshooting)
+You need to check for updates at this stage in migrating your Drupal site to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer). Follow the steps below after you have completed switch your upstream.
+
+1. Navigate to your **Pantheon Dashboard**.
+
+1. Click **Dev environment** > **click Update** to apply available upstream updates.
+
+If the updates are not successful, see [Troubleshooting](/guides/drupal-9-hosted-pre112021/troubleshooting)
 

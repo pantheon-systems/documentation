@@ -14,7 +14,7 @@ anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-pre112021/03-prepare.md
 ---
   
-
+This page provides steps on preparing your site for migration to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
 
 ## Use Terminus to Confirm the Drupal 9 Upstream
 
