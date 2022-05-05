@@ -9,7 +9,7 @@ contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois, joa-pan]
 date: 9/8/2015
 reviewed: "2022-05-02"
 ---
-Email is a necessity when running a website - whether it's used with a simple contact form or to manage subscription based services. Email delivery can be used for notication of content updates, delivery of sales receipts, updates for password or membership information, and more. Email is the most effective way of communicating with a site's user base, and it is important that messages are filtered properly and not incorrectly marked as spam.
+Email is a necessity when running a website - whether it's used with a simple contact form or to manage subscription based services. Email delivery can be used for notification of content updates, delivery of sales receipts, updates for password or membership information, and more. Email is the most effective way of communicating with a site's user base, and it is important that messages are filtered properly and not incorrectly marked as spam.
 
 One of the most common reasons that emails get blocked, is because it originates from a website hosted by a third party service, like Pantheon. To ensure this doesn't happen, Pantheon recommends using your own email server or a service provider such as SendGrid.
 
