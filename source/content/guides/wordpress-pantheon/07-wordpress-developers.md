@@ -5,10 +5,9 @@ description: Keep your WordPress on Pantheon site secure.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-04-29"
+reviewed: "2022-05-05"
 layout: guide
-permalink: docs/guides/wordpress-pantheon/wp-security
-anchorid: wordpress-pantheon/wp-security
+permalink: docs/guides/wordpress-pantheon/wordpress-developers
+anchorid: wordpress-pantheon/wordpress-developers
 ---
 
-Content goes here.

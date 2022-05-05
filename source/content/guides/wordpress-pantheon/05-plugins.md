@@ -1,7 +1,7 @@
 ---
 title: WordPress on Pantheon Guide
-subtitle: WordPress Optimization and Plugins
-description: Optimization tips and Plugins for WordPress on Pantheon.
+subtitle: Pantheon WordPress Plugins
+description: Plugins for WordPress on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
@@ -11,32 +11,6 @@ permalink: docs/guides/wordpress-pantheon/plugins
 anchorid: wordpress-pantheon/plugins
 ---
 
-## Optimization for Speed
-
-This section provides optional steps to improve your site's speed.
-
-1. Update PHP with Opcode Cache
-
-    - Keep your PHP up-to-date and use the built-in Opcache to reduce CPU load.
-
-2. Persistent Object Cache
-
-    - Reduce the load on your database and CPU overhead with Redis (included in Pantheon accounts).
-
-3. Reverse Proxy Page Cache
-
-    - WordPress can serve cached pages, but other subsystems can do it up to 200x faster. A reverse proxy like Varnish not only helps with performance, but also can help your site be more stable during a traffic spike.
-
-1. The InnoDB Engine
-
-    - Use the InnoDB Storage Engine to avoid table-level locking. InnoDB also helps preserve your data if you have a crash.
-
-1. Dedicated Search Index
-
-    - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/wordpress-solr) for more details.
-
-## Pantheon Plugins
-
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/).
 
 <Alert title="Note" type="info">
@@ -44,6 +18,10 @@ Pantheon maintains multiple plugins to facilitate its workflow within WordPress.
 Drupal users, see [Pantheon Modules](/modules) for details on Drupal modules developed and maintained for the Pantheon workflow.
 
 </Alert>
+
+## [WordPress Pantheon Cache](/wordpress-cache-plugin)
+
+Pantheon maintains an optimized version of WordPress that includes a plugin to control cache expiration. 
 
 ## [Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon)
 
