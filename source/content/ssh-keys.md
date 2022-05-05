@@ -58,14 +58,32 @@ Currently, we do not support `ed25519` keys.
    type .ssh\id_rsa.pub
    ```
 
-1. Run `eval` to start the agent. The `Agent pid` output confirms it has started:
+1. Start the SSH agent.
+   
+   * For Linux and Mac users, run `eval` to start the agent. The `Agent pid` output confirms it's started:
 
-   ```bash{outputLines: 2}
-   eval `ssh-agent`
-   Agent pid 86810
-   ```
+      ```bash{outputLines: 2}
+      eval `ssh-agent`
+      Agent pid 86810
+      ```
+   
+   * For Windows users, run `start-ssh-agent`. The output confirms the agent has started. Enter the passphrase, if it was previously set.
+   
+      ```bash{promptUser: user}
+      start-ssh-agent
+      ```
 
-1. Add the newly created key to the ssh-agent:
+      ```bash{outputLines: 2}
+      Removing old ssh-agent sockets
+      Starting ssh-agent:  done
+      ```
+
+      ```bash{promptUser: user}
+      Enter passphrase for /c/Users/[user]/.ssh/id_rsa:
+      Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
+      ```
+
+1. For Linux and Mac users, add the newly created key to the ssh-agent:
 
    ```bash{promptUser: user}
    ssh-add ~/.ssh/id_rsa
@@ -149,13 +167,22 @@ Unable to negotiate with 203.0.113.123 port 2222: no matching host key type foun
 
 **Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
 
-```none:title=~/.ssh/config
-Host *.drush.in
-    # The settings on the next two lines are temporary until Pantheon updates the available key types.
-    # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
-    HostkeyAlgorithms +ssh-rsa
-    PubkeyAcceptedAlgorithms +ssh-rsa
-```
+   1. Look for `$HOME/.ssh/config file`. If none present, create it using `type`:
+   
+   ```bash{promptUser: winshell}
+   cd %HOMEPATH%/.ssh
+   type nul > config
+   ```
+   
+   2. Copy/paste the following into config:
+   
+   ```none:title=~/.ssh/config
+   Host *.drush.in
+       # The settings on the next two lines are temporary until Pantheon updates the available key types.
+       # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
+       HostkeyAlgorithms +ssh-rsa
+       PubkeyAcceptedAlgorithms +ssh-rsa
+   ```
 
 ### Control Path Error
 

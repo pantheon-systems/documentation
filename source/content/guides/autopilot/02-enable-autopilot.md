@@ -82,21 +82,25 @@ Use the **On**/**Off** toggles to choose which features and elements should be t
 
 ### Destination & Frequency
 
+You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. 
+
+Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
+
 ![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-configuration-destination-frequency.png)
 
-Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
+1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
 
-- Dev
-- Test
-- Live
+    - Dev
+    - Test
+    - Live
 
-Set the **Update Frequency** to schedule Autopilot to run:
+1. Set the **Update Frequency** to schedule Autopilot to run:
 
-- Never (Update Manually)
-- Weekly
-- Monthly
+    - Never (Update Manually)
+    - Weekly
+    - Monthly
 
-Click **Save** to save the changes.
+1. Click **Save** to save the changes.
 
 ### Visual Test Screenshots
 

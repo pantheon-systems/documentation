@@ -20,7 +20,7 @@ code/
     - `composer.json`: Composer automatically updates `composer.json` with customizations for the upstream. Avoid manually modifying this file.
 - `pantheon.upstream.yml`: The `build_step: true` directive in `pantheon.upstream.yml` enables the build step.
 
-When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file, and commits it back to the site’s code repository.  To avoid potential merge conflicts when applying an upstream update, do not commit the `composer.lock` file to the upstream repository.
+When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file, and commits it back to the site’s code repository. To avoid potential merge conflicts after applying an upstream update, do not commit the `composer.lock` file to the upstream repository and instead add it to the `.gitignore` file.
 
 Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNAME`, where `$BRANCHNAME` is the name of the environment or Multidev feature branch.
 

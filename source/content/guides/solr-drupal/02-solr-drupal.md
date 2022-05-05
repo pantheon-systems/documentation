@@ -221,9 +221,16 @@ Technical Support for Pantheon Search with Solr 8 on Drupal in Limited Availabil
 - Issues specific to third-party add-ons or customer-developed code.
 - Consultation on administration, configuration, performance, or security.
 
-Upgrading from Solr 3.6 is currently outside the scope of support. Existing Solr 3.6 users should recreate configuration and indexing on a fresh installation of Pantheon Search with Solr 8 on a Drupal 8 or Drupal 9 site.
+Upgrading from Solr v3.6 is currently outside the scope of support. Existing Solr v3.6 users should recreate configuration and indexing on a fresh installation of Pantheon Search with Solr 8 on a Drupal 8 or Drupal 9 site.
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
+
+### Diagnose Issues
+
+The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working. 
+
+The `drush search-api-pantheon:select` (saps) command runs the query against the Solr server. It is recommended that you use `?debug=true` on any Solr page to allow a query to pass.
+
 
 ### Deploy an Updated `config.zip` to your Solr Server
 

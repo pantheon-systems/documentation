@@ -14,7 +14,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 ## Before You Begin
 
-This process uses Composer to manage modules and dependencies. Before proceeding, you may wish to consult the following docs:
+Although this process uses Composer to manage modules and dependencies, Composer is not required by default. Before proceeding, you may wish to consult the following docs:
 
 - [Composer Fundamentals and Workflows](/guides/composer)
 - [Build Tools](/guides/build-tools)
@@ -34,7 +34,7 @@ In addition to Pantheon, you will need accounts at:
 
 1. Follow the [Before You Begin](/guides/build-tools/create-project/#prerequisites) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.
 
-1. This guide uses several variables in example [Terminus](/terminus) commands. This lets you copy and paste without needing to change the variable. For this to work, you must first export the variables in your local terminal session:
+1. Export the variables below in your local terminal session to use [Terminus](/terminus) variable commands without having to copy and paste the variable: 
 
   ```bash{promptUser: user}
   export SITENAME=yoursitenamehere
@@ -48,15 +48,15 @@ In addition to Pantheon, you will need accounts at:
 
 ## Create a New Drupal 8 Site
 
-1. Using the Terminus Build Tools plugin, create a new Drupal 8 site from the Pantheon [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository on GitHub:
+1. Create a new Drupal 8 site from the Pantheon [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository on GitHub using the Terminus Build Tools plugin:
 
  ```bash{promptUser: user}
  terminus build:project:create pantheon-systems/example-drops-8-composer $SITENAME
  ```
 
- At this point *do not* go to the web interface to continue installation.
+ At this point *do not* go to the web interface to continue installation. You now have a repository on GitHub containing your new site.
 
-1. You now have a repository on GitHub containing your new site. Clone a local copy to your `projects` folder:
+1. Clone a local copy to your `projects` folder:
 
  ```bash{promptUser: user}
  cd ~/projects
@@ -80,9 +80,22 @@ In addition to Pantheon, you will need accounts at:
   composer require "drupalcommerce/commerce_base dev-8.x-1.x"
   ```
 
-1. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
+1. Run `git status` and confirm that the `composer.json` and `composer.lock` files have changed:
 
-  ![Git Status showing updated Composer files](../../images/guides/drupal-8-commerce/git-status.png)
+  ```bash{promptUser: user}
+  git status
+  On branch master
+  Your branch is up to date with ‘origin/master’
+
+  Changes not staged for commit:
+  (use “git add <filename>...” to update what will be committed)
+  (use “git checkout <filename>...” to discard changes in working directory
+
+      modified:    composer.json
+      modified:    composer.lock
+
+    no changes added to commit (use “git add” and/or “git commit -a”)
+  ```
 
 1. Commit the new files and push them to GitHub:
 
@@ -91,22 +104,26 @@ In addition to Pantheon, you will need accounts at:
   git push origin master
   ```
 
-1. From your [CircleCI Dashboard](https://circleci.com/dashboard) you can see that tests are already being run on your new commit. Once they pass, CircleCI will push the changes to your Site Dashboard.
+1. Open your [CircleCI Dashboard](https://circleci.com/dashboard) to see tests running on your new commit. CircleCI will push the changes to your Site Dashboard after the tests pass.
 
-1. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span> **Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
+1. Go to your newly created Site Dashboard > click <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click <span class="glyphicons glyphicons-embed-close"></span> **Code** > click **install later**. 
 
-  ![Build Assets on Dev](../../images/guides/drupal-8-commerce/build-assets.png)
+ You should now see your commit history. CircleCI will commit the build assets and push them to Dev after the automated tests built into our repository complete:
+
+  ![Build Assets on Dev](../../images/guides/drupal-9-commerce/build-assets.png)
 
 ## Reinstall Drupal
 
-1. The Build Tools Plugin command we used earlier automatically installed Drupal's standard profile in the Dev environment for us. Now that we've installed the Commerce profile, we want that installed instead. Using Terminus, we can run the Drush command `site-install` which will first clear the database of the Standard profile before installing Commerce. This Drush command requires that the system be in writable (SFTP) mode:
+The Build Tools Plugin command you used earlier automatically installed Drupal's standard profile in the Dev environment. Now that you have the Commerce profile, you need to install that instead.
+
+1. Run the Drush command `site-install` to clear the database of the Standard profile before installing Commerce. This Drush command requires that the system be in writable (SFTP) mode:
 
   ```bash{promptUser: user}
   terminus connection:set $SITENAME.dev sftp
   terminus drush $SITENAME.dev -- site-install commerce
   ```
 
-  Review the last two lines of output to identify the username and password created:
+1. Review the last two lines of output to identify the username and password created:
 
   ```bash
   Installation complete.  User name: admin  User password: jTHD8hd85U         [ok]
@@ -115,9 +132,9 @@ In addition to Pantheon, you will need accounts at:
 
 1. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a successful install:
 
-    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-8-commerce/commerce-button.png)
+    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-9-commerce/commerce-button.png)
 
-## Conclusion
+## Next Steps
 
 What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/guides/composer) doc for more information.
 

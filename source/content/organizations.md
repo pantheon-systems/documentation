@@ -83,6 +83,8 @@ Organizations can run site environments using their own custom Vanity domains, l
 
 New users who sign up with the email address domain you specify will be automatically added to your organization.
 
+<Partial file="pantheon-email-notifications.md" />
+
 ### Single Sign-On (SSO)
 
 SSO allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. [Learn more about SSO with SAML](/sso-organizations).

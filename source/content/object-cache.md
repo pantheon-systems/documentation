@@ -561,7 +561,7 @@ However, all redirection logic should remain nested in `isset($_ENV['PANTHEON_EN
 
 In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php` and it will fix these problems and will be easier for yourself and others to read and maintain.
 
-### Cache Directory is Not Found
+### Cache Directory Is Not Found
 
 If you push your updates via Git, you may get the error that the Cache directory is not found, Class not found, or the `Cache.php` file was not found. This is because of a `.gitignore` issue that did not allow committing of the Redis cache files. Example error:
 
@@ -583,8 +583,7 @@ Fatal error: require_once(): Failed opening required
 '/srv/bindings/xxxxxxxxx/code/sites/all/modules/redis/redis.autoload.inc'
 ```
 
-
-### You have requested a non-existent service
+### You Have Requested a Non-existent Service
 
 The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/redis) module before it has been enabled:
 
@@ -595,7 +594,7 @@ You have requested a non-existent service "cache.backend.redis".
 
 Install and enable the module to resolve.
 
-### Heavy Redis transactions tracing back to a specific plugin (WordPress)
+### Heavy Redis Transactions Tracing Back to a Specific Plugin (WordPress)
 
 A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group in your theme's `function.php` file, or an [MU-plugin](/mu-plugin):
 
@@ -607,7 +606,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ### Out of Memory Errors
 
-You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/eviction-policy/). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
+You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/#eviction-policies). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
 
 Run the following command to access your site's memory usage metrics: 
 
@@ -634,15 +633,15 @@ Run the following command to access your site's memory usage metrics:
 | Performance M, L, XL   |               512          |
 | Elite                  |               1024         |
 
-*Object Cache is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the [Enable Object Cache](#enable-object-cache) section above for details about which account types have Object Cache on paid plans.
+*Object Cache is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. Refer to the [Enable Object Cache](#enable-object-cache) section above for details about which account types have Object Cache on paid plans.
 
-### What happens when Object Cache reaches maxmemory?
+### What Happens When Object Cache Reaches Maxmemory?
 
 When the specified amount of memory is reached, Object Cache follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file.
 
-On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, please see the official [Redis documentation](https://redis.io/topics/lru-cache).
+On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, refer to the official [Redis documentation](https://redis.io/topics/lru-cache).
 
-### How is Redis configured on the platform?
+### How is Redis Configured on the Platform?
 
 Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (see below), or you can review it here:
 
@@ -673,7 +672,7 @@ activerehashing yes
 
 Note that the `maxmemory` value will vary based on plan level.
 
-### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
+### If Redis Hits the Upper Limit of Memory Usage, Is This Logged on Pantheon?
 
 Yes. There is a `redis.log` file that is available on the Redis container for each environment.
 
@@ -689,7 +688,7 @@ sftp> ls -la logs/
 sftp>
 ```
 
-### Why won't my site work after importing a database backup?
+### Why Won't My Site Work After Importing a Database Backup?
 
 When you replace the database with one that doesn't match the object cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the object cache from the command line](#clear-cache).
 
