@@ -6,7 +6,7 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2022-05-03"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-md/deploy
 anchorid: deploy

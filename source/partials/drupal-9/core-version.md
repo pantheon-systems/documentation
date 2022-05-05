@@ -9,5 +9,7 @@ Run the code below to set the Drupal core version to Drupal 9:
 
 
 <Alert title="Note" type="info" >
-Use the command `composer update` instead of `composer update drupal/core* -W` if you receive the error message "Your requirements could not be resolved to an installable set of packages." 
+
+Replace `composer update drupal/core* -W` command with the `composer update` if you receive the error message "Your requirements could not be resolved to an installable set of packages." 
+
 </Alert>

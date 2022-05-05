@@ -14,6 +14,8 @@ anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-md/03-prepare.md
 ---
 
+Complete all steps in this section to ensure that your Multidev site is ready to be migrated to Drupal 9. 
+
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
 ## Apply All Available Upstream Updates
