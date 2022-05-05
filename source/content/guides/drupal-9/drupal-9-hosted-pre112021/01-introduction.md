@@ -26,11 +26,6 @@ This guide will show you how to migrate a site that meets the following criteria
 
 Drupal 9 sites created on the platform prior to November 30, 2021 use the [Drupal 9](https://github.com/pantheon-upstreams/drupal-project) upstream. Based on community needs, we have released a new upstream. [Drupal with Composer](https://github.com/pantheon-upstreams/drupal-recommended) is now the default Drupal 9 upstream on the platform and users are encouraged to switch to it for improved structure and updates.
 
-
-## Requirements
-This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the upstream.
-
-
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)
