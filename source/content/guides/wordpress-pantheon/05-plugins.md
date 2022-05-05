@@ -29,7 +29,7 @@ This section provides optional steps to improve your site's speed.
 
 1. The InnoDB Engine
 
-    -Use the InnoDB Storage Engine to avoid table-level locking. InnoDB also helps preserve your data if you have a crash.
+    - Use the InnoDB Storage Engine to avoid table-level locking. InnoDB also helps preserve your data if you have a crash.
 
 1. Dedicated Search Index
 
@@ -63,11 +63,11 @@ Check out the WordPress Dashboard section of [Working in the WordPress Dashboard
 
 Facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
 
-From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
+1. Navigate to your WordPress dashboard > click **Settings** > **Pantheon Page Cache**.
 
-The **Clear Cache** option will clear the cache for the entire site, but it does not clear Varnish or Redis.
+1. Click **Clear Cache** to clear the cache for the entire site (this does not clear Varnish or Redis).
 
-We recommend setting **Default Time to Live (TTL)** to 600 seconds.
+1. Set **Default Time to Live (TTL)** to 600 seconds (optional).
 
 ## [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 
@@ -77,7 +77,7 @@ Automatically clear related pages from Pantheon's Edge when you update content. 
 
 Provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
 
-![Pantheon HUD](../images/pantheon-hud.png)
+![Pantheon HUD](../../../images/pantheon-hud.png)
 
 For installation details, see [Configuring Environment Indicators](/environment-indicator).
 

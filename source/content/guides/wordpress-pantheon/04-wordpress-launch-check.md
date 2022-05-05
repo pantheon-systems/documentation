@@ -13,7 +13,7 @@ anchorid: wordpress-pantheon/wordpress-launch-check
 
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
 
-![status tab on live environment](../images/dashboard/status-tab.png)
+![status tab on live environment](../../../images/dashboard/status-tab.png)
 
 ## Overview
 
