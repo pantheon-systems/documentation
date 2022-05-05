@@ -32,7 +32,7 @@ Your site should already be managing contributed modules and themes through Comp
 composer require drupal/PROJECT_NAME:^VERSION
 ```
 
-You can require multiple packages in the same commands if desired.
+You can require multiple packages in the same commands, if desired.
 
 ### Other Composer Packages
 
@@ -48,7 +48,7 @@ diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
 
 ### Libraries
 
-Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that it functions properly.
+Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that it functions correctly.
 
 
 ## Custom Code
@@ -70,10 +70,10 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 ## Push to the External Repository Master Branch
 
-1. Push to the master branch in the external repository:
+1. Push to the `master` branch in the external repository:
 
   ```
   git push origin master
   ```
 
-1. Confirm that the Continuous Integration workflow to succeeds in committing your code changes to the Pantheon site.
+1. Confirm that the Continuous Integration workflow succeeds in committing your code changes to the Pantheon site.
