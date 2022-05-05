@@ -68,10 +68,10 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Review and follow the steps in the [Using Git with SFTP & WordPress Guide](/guides/wordpress-git/) to ensure that you understand the best ways to:
 
-- Install plugins
-- Manage themes
-- Upload media
-- Edit your site configuration
+    - Install plugins
+    - Manage themes
+    - Upload media
+    - Edit your site configuration
 
 ## WordPress Multisite
 
