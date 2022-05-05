@@ -71,6 +71,8 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer-managed wor
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
+1. Set the system-wide default `MailSystemInterface` class. Select **SendGridMailSystem** from the dropdown menu. 
+  
 </Tab>
 
 <Tab title="Drupal 7" id="tab-2-anchor">
