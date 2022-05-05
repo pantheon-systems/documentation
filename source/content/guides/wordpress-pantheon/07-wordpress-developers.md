@@ -1,7 +1,7 @@
 ---
 title: WordPress on Pantheon Guide
-subtitle: WordPress Security
-description: Keep your WordPress on Pantheon site secure.
+subtitle: WordPress on Pantheon for Developers
+description: Develop efficiently with WordPress on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
