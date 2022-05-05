@@ -145,7 +145,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
      - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
      - `--no-update` should not be included when adding dependencies to a site.
 
-1. Set or increment the current configuration version:
+1. Optional: Set or increment the current configuration version:
 
      - If this is your first time setting the config version:
 
