@@ -86,11 +86,7 @@ After you complete the upstream change, you need to apply the available upstream
 
 Conflicts can occur when a modified file in your site's codebase does not align with changes made to the same file in the site's upstream.
 
-> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a state that provides the information you need to resolve the merge.
->
-> \- [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
-
-If you receive an error that you have conflicts while updating, resolve using the `-Xtheirs` flag. This will automatically resolve the conflict with a preference for upstream changes.
+If you receive an error that you have conflicts while updating upstream files, resolve using the `-Xtheirs` flag. This will automatically resolve the conflict with a preference for upstream changes. Alternatively, you can choose to [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
 
 This is safe to run if you don't have your own changes in any of the conflicting files, such as problems with `.gitignore`.
 
@@ -99,9 +95,8 @@ git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed.
 # resolve conflicts
 git push origin master
 ```
-Check that the files are correct before going forward to ensure no bugs are introduced.
 
-If you modified upstream files, the `-Xtheirs` flag will drop your changes. You can [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
+Check that the files are correct before going forward to ensure no bugs are introduced.
 
 You will be in the Drupal with Composer upstream after you apply the upstream updates.
 
