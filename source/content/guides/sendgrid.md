@@ -72,7 +72,7 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer-managed wor
   
 1. You can select the **Theme to render the emails** from the dropdown menu. The **Current** theme is selecetd by default.
 
-Your Drupal application on Pantheon is now configures to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+Your Drupal application on Pantheon is now configured to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
   
 </Tab>
