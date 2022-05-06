@@ -37,31 +37,31 @@ Composer must be aware of all contributed code before you can run `composer upda
 
 1. Review the existing site's code and check for contributed modules in:
 
-  - `/modules`
+    - `/modules`
 
-  - `/modules/contrib`
+    - `/modules/contrib`
 
-  - `/sites/all/modules`
+    - `/sites/all/modules`
 
-  - `/sites/all/modules/contrib`
+    - `/sites/all/modules/contrib`
 
 1. Run the `pm:list` Drush command within a contributed modules folder, for example: 
 
-  - `/modules`
+    - `/modules`
 
-  - `/themes`
+    - `/themes`
 
-  - `/themes/contrib`
+    - `/themes/contrib`
 
-  - `/sites/all/themes`
+    - `/sites/all/themes`
 
-  - `/sites/all/themes/contrib`
+    - `/sites/all/themes/contrib`
 
-  This will list each module followed by the version of that module that is installed:
+    This will list each module followed by the version of that module that is installed:
 
-  ```bash{promptUser:user}
-  drush pm:list --no-core --fields=name,project,version  --format=table
-  ```
+    ```bash{promptUser:user}
+    drush pm:list --no-core --fields=name,project,version  --format=table
+    ```
   
 1. Review the list and note the versions of modules and themes you depend on.
 

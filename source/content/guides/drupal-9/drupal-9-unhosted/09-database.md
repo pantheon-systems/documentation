@@ -15,6 +15,10 @@ editpath: drupal-9/drupal-9-unhosted/09-database.md
 
 Now that you've set up your Pantheon Dev environment, you need to import your database.
 
+## Create a `.sql` Dump File
+
 <Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+
+## Add Your Database to Pantheon's Platform
 
 <Partial file="drupal-9/migrate-add-database-part2.md" />
