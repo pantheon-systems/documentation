@@ -11,7 +11,7 @@ reviewed: "2022-05-02"
 ---
 Email is a necessity when running a website - whether it's used with a simple contact form or to manage subscription based services. Email delivery can be used for notification of content updates, delivery of sales receipts, updates for password or membership information, and more. Email is the most effective way of communicating with a site's user base, and it is important that messages are filtered properly and not incorrectly marked as spam.
 
-One of the most common reasons that emails get blocked, is because it originates from a website hosted by a third party service, like Pantheon. To ensure this doesn't happen, Pantheon recommends using your own email server or a service provider such as SendGrid.
+One of the most common reasons that an email gets blocked, is because it originates from a website hosted by a third party service, like Pantheon. To ensure this doesn't happen, Pantheon recommends using your own email server or a service provider such as SendGrid.
 
 <Alert title="Note"  type="info" >
 
@@ -70,10 +70,9 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer-managed wor
 
 1. Navigate to `/admin/config/system/mailsystem` and select **SendGridMailSystem** from the dropdown menu to set the `MailSystemInterface` class.
   
-1. You can select the **Theme to render the emails** from the dropdown menu. The **Current** theme is selecetd by default.
+1. You have the option to select the **Theme to render the emails** from the dropdown menu to change the theme. The **Current** theme is selected by default.
 
 Your Drupal application on Pantheon is now configured to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
-
   
 </Tab>
 
@@ -214,7 +213,7 @@ Then commit and push the symlink to Pantheon.
 
       <Alert title="Note" type="info">
 
-      Configuring mail to use ports `25`, `465` or `587` is strongly discouraged because it attracts spam activitiey. For details, see [Email with Drupal on Pantheon](/email)
+      Configuring mail to use ports `25`, `465` or `587` is strongly discouraged because it attracts spam activity. For details, see [Email with Drupal on Pantheon](/email)
 
       </Alert>
 
