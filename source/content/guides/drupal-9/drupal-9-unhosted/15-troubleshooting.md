@@ -16,7 +16,7 @@ editpath: drupal-9/drupal-9-unhosted/15-troubleshooting.md
 
 This section covers common troubleshooting scenarios when migrating a Drupal 9 site from another host to Pantheon's platform.
 
-### Provided host name not valid
+## Provided host name not valid
 
 If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
