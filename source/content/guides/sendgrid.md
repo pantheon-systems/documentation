@@ -69,8 +69,10 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer-managed wor
 1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Configuration**.
 
 1. Navigate to `/admin/config/system/mailsystem` and select **SendGridMailSystem** from the dropdown menu to set the `MailSystemInterface` class.
+  
+1. You can select the **Theme to render the emails** from the dropdown menu. The **Current** theme is selecetd by default.
 
-Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+Your Drupal application on Pantheon is now configures to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
   
 </Tab>
