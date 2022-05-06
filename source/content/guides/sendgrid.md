@@ -5,13 +5,13 @@ categories: [integrate]
 tags: [code, email, modules, plugins]
 type: guide
 permalink: docs/guides/:basename
-contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois]
+contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois, joa-pan]
 date: 9/8/2015
-reviewed: "2021-11-02"
+reviewed: "2022-05-02"
 ---
-Email is a necessity when running a website, whether it's used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
+Email is a necessity when running a website - whether it's used with a simple contact form or to manage subscription based services. Email delivery can be used for notification of content updates, delivery of sales receipts, updates for password or membership information, and more. Email is the most effective way of communicating with a site's user base, and it is important that messages are filtered properly and not incorrectly marked as spam.
 
-One of the most common reasons that email gets blocked, is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
+One of the most common reasons that an email gets blocked, is because it originates from a website hosted by a third party service, like Pantheon. To ensure this doesn't happen, Pantheon recommends using your own email server or a service provider such as SendGrid.
 
 <Alert title="Note"  type="info" >
 
@@ -35,7 +35,7 @@ A new Sendgrid account may need to wait 30 days before upgrading to a paid plan.
 
 1. The API key will only be displayed once. Copy the key and save it somewhere secure until you can apply it to the site.
 
-1. From the **Settings Menu** click **Sender Authentication**. SendGrid requires accounts created after April 6th 2020 to identify their sender identity through either **Domain Authentication** or **Single Sender Verification**. A more detailed explanation of these options can be found in the [SendGrid Documentation](https://sendgrid.com/docs/for-developers/sending-email/sender-identity/).
+1. From the **Settings Menu**, click **Sender Authentication**. SendGrid requires accounts created after April 6th 2020 to identify their sender identity through either **Domain Authentication** or **Single Sender Verification**. A more detailed explanation of these options can be found in the [SendGrid documentation](https://sendgrid.com/docs/for-developers/sending-email/sender-identity/).
 
 ## Integrating Sendgrid With Drupal
 
@@ -66,11 +66,14 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer-managed wor
   git push origin master #Or Multidev name
   terminus drush $SITE.$ENV -- en sendgrid_integration -y
   ```
-
 1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Configuration**.
 
-Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+1. Navigate to `/admin/config/system/mailsystem` and select **SendGridMailSystem** from the dropdown menu to set the `MailSystemInterface` class.
+  
+1. You have the option to select the **Theme to render the emails** from the dropdown menu to change the theme. The **Current** theme is selected by default.
 
+Your Drupal application on Pantheon is now configured to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+  
 </Tab>
 
 <Tab title="Drupal 7" id="tab-2-anchor">
@@ -120,11 +123,16 @@ export ENV=dev
   drush dl sendgrid_integration-7.x-1.3 mailsystem composer_vendor
   ```
 
+#### Start Composer
+
 Now that the module and dependencies are installed, initialize Composer:
 
 <Partial file="d7-composer-init.md" />
 
-The above configuration specifies setting `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
+
+#### Protect Directory Path
+  
+The above configuration specifies setting `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file:
 
 ```yaml:title=pantheon.yml
 protected_web_paths:
@@ -151,7 +159,7 @@ protected_web_paths:
   terminus connection:set $SITE.$ENV sftp
   ```
 
-1. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+1. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important for this step. SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
   ```bash{promptUser: user}
   terminus drush $SITE.$ENV -- en composer_vendor -y
@@ -160,7 +168,7 @@ protected_web_paths:
 
 1. From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Settings**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
@@ -191,21 +199,21 @@ Then commit and push the symlink to Pantheon.
      terminus drush <site>.<env> -- en smtp -y
      ```
 
-1. Visit `/admin/config/system/smtp` once you've logged in as administrator.
+1. Visit `/admin/config/system/smtp` once you've logged in as the administrator.
 
 1. In **Install Options**, select **On**.
 
 1. Use the following within SMTP Server Settings:
 
-    **SMTP server**: smtp.sendgrid.net
+    **SMTP server**: `smtp.sendgrid.net`
 
-    **SMTP port**: 2525
+    **SMTP port**: `2525`
 
     **Use encrypted protocol**: We strongly recommend selecting **TLS**
 
       <Alert title="Note" type="info">
 
-      Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email with Drupal on Pantheon](/email)
+      Configuring mail to use ports `25`, `465` or `587` is strongly discouraged because it attracts spam activity. For details, see [Email with Drupal on Pantheon](/email)
 
       </Alert>
 
@@ -214,7 +222,7 @@ Then commit and push the symlink to Pantheon.
 
 </Accordion>
 
-Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
+Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the **Send Test E-mail** configuration field and click **Save configuration** to test.
 
 </Tab>
 
@@ -223,16 +231,13 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
 
-First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
+First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email. Enter the email address. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
 ![SendGrid email search options](../../images/sendgrid-search-options.png)​
 
 You can explore the Statistics and Email Reports from within your site's account to gain insight into email activity, statistics on email clients, and much more.
 
-
-## Congratulations!
-
-You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/resource/the-email-infrastructure-guide-build-it-or-buy-it) for advanced tips on how to create and publish DNS records for increased deliverability.
+You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/resource/the-email-infrastructure-guide-build-it-or-buy-it) for advanced tips on how to create and publish DNS records for increased deliverability.
 
 ## See Also
 
