@@ -13,6 +13,8 @@ anchorid: upload-files
 editpath: drupal-9/drupal-9-unhosted/11-upload-files.md
 ---
 
+Now that you've added your database, you need to add your files.
+
 <Partial file="drupal-9/migrate-add-files-part1.md" />
    <Partial file="drupal-9/migrate-add-files-part2-nested.md" />
    <Partial file="drupal-9/migrate-add-files-part3.md" />

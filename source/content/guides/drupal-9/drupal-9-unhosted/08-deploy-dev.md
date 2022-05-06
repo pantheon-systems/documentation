@@ -12,4 +12,4 @@ permalink: docs/guides/drupal-9-unhosted/deploy-dev
 anchorid: deploy-dev
 editpath: drupal-9/drupal-9-unhosted/07-deploy-dev.md
 ---
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go!
+You should now have all three of the major components of your site imported into Pantheon. Clear your [Pantheon Dashboard caches](/clear-caches#pantheon-dashboard), and you are good to go!
