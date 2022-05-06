@@ -14,7 +14,7 @@ anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-md/03-prepare.md
 ---
 
-Complete all steps in this section to ensure that your Multidev site is ready to be migrated to Drupal 9. 
+Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon. 
 
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 

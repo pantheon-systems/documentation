@@ -28,4 +28,4 @@ This doc uses the following aliases:
 
 ## Requirements
 
-- You can get a local copy of the existing site / access to a Git repository of it
+- You have access to a local copy of the existing site and/or you have access to a Git repository of the existing site

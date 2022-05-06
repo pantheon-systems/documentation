@@ -12,7 +12,7 @@ permalink: docs/guides/drupal-9-unhosted-composer/deploy-live
 anchorid: deploy-live
 editpath: drupal-9/drupal-9-unhosted-composer/09-deploy-live.md
 ---
-You should now have all of the major components of your site imported into Pantheon. Clear your caches on the Pantheon Dashboard, or with Terminus like so:
+You should now have all three of the major components of your site imported into Pantheon. Clear your caches in the [Pantheon Dashboard](/clear-caches#pantheon-dashboard) or with terminus like so:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev cr
