@@ -12,6 +12,7 @@ permalink: docs/guides/drupal-9-unhosted-composer/database
 anchorid: database
 editpath: drupal-9/drupal-9-unhosted-composer/09-database.md
 ---
+
 Now that you've set up your Pantheon Dev environment, you need to import your database.
 
 ## Create a `.sql` Dump File
@@ -38,63 +39,62 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
-   <TabList>
+    <TabList>
 
-   <Tab title="Up to 100MBs" id="100mbs" active={true}>
+    <Tab title="Up to 100MBs" id="100mbs" active={true}>
 
-   If your archive is under 100MB, you can upload the file directly:
+    If your archive is under 100MB, you can upload the file directly:
 
-   1. Click **File** in the **MySQL database** field > **Choose File**.
+    1. Click **File** in the **MySQL database** field > **Choose File**.
 
-   1. Select your local archive file > click **Import**.
+    1. Select your local archive file > click **Import**.
 
-     ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
+      ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
-   **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+    **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
-   </Tab>
+    </Tab>
 
-   <Tab title="Up to 500MBs" id="500mbs">
+    <Tab title="Up to 500MBs" id="500mbs">
 
-   If your archive is less than 500MB, you can import it from URL:
+    If your archive is less than 500MB, you can import it from URL:
 
-   1. Click **URL** in the **MySQL database** field.
+    1. Click **URL** in the **MySQL database** field.
 
-   1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**. 
-   
-      - Change the end of Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
+    1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**.
 
-      ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
+       - Change the end of Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
-   </Tab>
+       ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
 
-   <Tab title="Over 500MBs" id="500mbsplus">
+    </Tab>
 
-   The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+    <Tab title="Over 500MBs" id="500mbsplus">
 
-   1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard > click **Connection Info** > copy the Database connection string. 
-   
-      It will look similar to this:
+    The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
-      ```bash{promptUser: user}
-      mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
-      ```
+    1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard > click **Connection Info** > copy the Database connection string.
 
-   1. `cd` into the directory containing your `.sql` file. 
-   
-   1. Paste the connection string and append it with: `< database.sql` 
+       It will look similar to this:
 
-      - This imports the `.sql` file to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+       ```bash{promptUser: user}
+       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
+       ```
 
-      - Your command will look like:
+    1. `cd` into the directory containing your `.sql` file.
 
-        ```bash{promptUser: user}
-        mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
-        ```
+    1. Paste the connection string and append it with: `< database.sql`
 
-      If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+       - This imports the `.sql` file to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 
+       - Your command will look like:
 
-   </Tab>
+         ```bash{promptUser: user}
+         mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
+         ```
 
-   </TabList>
+       If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+
+    </Tab>
+
+    </TabList>
