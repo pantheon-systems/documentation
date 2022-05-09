@@ -5,7 +5,7 @@ cms: "wordpress"
 categories: [platform]
 tags: [code, site, upstreams]
 showtoc: true
-permalink: docs/:basename
+permalink: docs/start-states/wordpress
 editpath: start-states/wordpress.md/
 reviewed: "2022-05-09"
 ---
