@@ -38,11 +38,11 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
-  <TabList>
+   <TabList>
 
-  <Tab title="Up to 100MBs" id="100mbs" active={true}>
+   <Tab title="Up to 100MBs" id="100mbs" active={true}>
 
-  If your archive is under 100MB, you can upload the file directly:
+   If your archive is under 100MB, you can upload the file directly:
 
    1. Click **File** in the **MySQL database** field > **Choose File**.
 
@@ -50,13 +50,13 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
      ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
-  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+   **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
-  </Tab>
+   </Tab>
 
-  <Tab title="Up to 500MBs" id="500mbs">
+   <Tab title="Up to 500MBs" id="500mbs">
 
-  If your archive is less than 500MB, you can import it from URL:
+   If your archive is less than 500MB, you can import it from URL:
 
    1. Click **URL** in the **MySQL database** field.
 
@@ -66,19 +66,19 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
       ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
 
-  </Tab>
+   </Tab>
 
-  <Tab title="Over 500MBs" id="500mbsplus">
+   <Tab title="Over 500MBs" id="500mbsplus">
 
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+   The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
    1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard > click **Connection Info** > copy the Database connection string. 
    
-    It will look similar to this:
+      It will look similar to this:
 
-    ```bash{promptUser: user}
-    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
-    ```
+      ```bash{promptUser: user}
+      mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
+      ```
 
    1. `cd` into the directory containing your `.sql` file. 
    
@@ -92,9 +92,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
         mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
         ```
 
-    If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+      If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
 
 
-  </Tab>
+   </Tab>
 
-  </TabList>
+   </TabList>
