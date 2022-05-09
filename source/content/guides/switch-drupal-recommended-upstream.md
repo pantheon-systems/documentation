@@ -54,10 +54,6 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
   ------------------ -------------------------------------------------------------------------------------
   ```
 
-## Before You Begin
-
-- This guide requires [User in Charge](/change-management#site-level-roles-and-permissions) permissions to set the upstream.
-
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
