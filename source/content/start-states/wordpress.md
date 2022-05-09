@@ -5,6 +5,8 @@ cms: "wordpress"
 categories: [platform]
 tags: [code, site, upstreams]
 showtoc: true
+permalink: docs/:basename
+editpath: start-states/wordpress.md/
 reviewed: "2022-05-09"
 ---
 
@@ -13,6 +15,8 @@ Pantheon's WordPress upstream
 <https://github.com/pantheon-systems/WordPress>
 
 <https://github.com/pantheon-systems/WordPress/tags>
+
+<https://wordpress.org/news/category/releases/>
 
 [WP Best Practices](/wordpress-best-practices)
 
