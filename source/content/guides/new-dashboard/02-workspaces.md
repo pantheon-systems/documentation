@@ -72,7 +72,7 @@ Webhooks allow you to set up integrations from third-party applications and subs
 
 1. Click **+ Create New Webhook**.
 
-1. Name your Webhook.
+1. Name your Webhook. Please note that this name is only used as an identifier within the dashboard.
 
 1. Fill in your Callback URL. This is provided by whichever third-party app you are using to create your webhook.
 
