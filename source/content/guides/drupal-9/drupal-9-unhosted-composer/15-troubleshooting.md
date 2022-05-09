@@ -14,6 +14,8 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-unhosted-composer/15-troubleshooting.md
 ---
 
+This sections provides common troubleshooting scenarios.
+
 ## Get Messages
 
 When there are problems, you can sometimes get helpful messages about what's wrong with the following command if you have dblog module enabled:
