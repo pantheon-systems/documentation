@@ -299,7 +299,7 @@ Every site has an upstream assigned in order to deliver [one-click updates](/cor
   - Code has been refactored and moved to a new repository.
 - Set an empty upstream to disable one-click updates for sites managed by Composer.
 
-Confirm that the user you are authenticated as has the correct [Site-level permissions](/change-management#site-level-roles-and-permissions). Only a User in Charge or Owner can change a site's Upstream.
+Confirm that the user you are authenticated as has the correct [Site-level permissions](/change-management#site-level-roles-and-permissions).
 
 To see all available upstreams, run:
 

@@ -468,7 +468,7 @@ Switching the upstream of an existing site is risky. Consider creating a new sit
 
 </Alert>
 
-Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/terminus):
+Use [Terminus](/terminus) to change the upstream:
 
 ```bash{promptUser: user}
 terminus site:upstream:set $site $upstream_id
