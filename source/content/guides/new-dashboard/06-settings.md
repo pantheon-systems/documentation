@@ -7,6 +7,7 @@ tags: [dashboard]
 contributors: [joa-pan]
 reviewed: "2021-08-04"
 layout: guide
+showtoc: true
 permalink: docs/guides/new-dashboard/settings
 anchorid: new-dashboard
 editpath: new-dashboard/06-settings.md
@@ -46,3 +47,4 @@ If a user attempts to update a site plan for any site that is not in a Sandbox, 
 
 You can enter terms and conditions that are displayed to Workspace members.
 
+<Partial file="autopilot/autopilot-webhooks.md" />
