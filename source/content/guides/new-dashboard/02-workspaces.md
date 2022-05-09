@@ -64,7 +64,7 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 ### Webhooks
 
-Webhooks allows you to set up integrations from third-party applications and subscribe to different events in the [New Dashboard](/guides/new-dashboard). When an event is triggered, you will receive a notification. This feature is workspace-specific, so anyone who has Admin permissions to a particular workspace has access.
+Webhooks allow you to set up integrations from third-party applications and subscribe to different events in the [New Dashboard](/guides/new-dashboard). When an event is triggered, you will receive a notification. This feature is workspace-specific, so anyone who has Admin permissions to a particular workspace has access.
 
 #### Create A Webhook
 
