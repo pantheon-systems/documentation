@@ -9,8 +9,8 @@ layout: guide
 showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
-editpath: autopilot/05-troubleshoot.md
-reviewed: "2022-03-30"
+editpath: autopilot/06-troubleshoot.md
+reviewed: "2022-09-05"
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
