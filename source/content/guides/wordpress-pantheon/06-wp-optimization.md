@@ -1,7 +1,7 @@
 ---
 title: WordPress on Pantheon Guide
-subtitle: Pantheon WordPress Optimization
-description: Optimization tips for WordPress on Pantheon.
+subtitle: Pantheon Performance and Optimization Features
+description: Optimization and Performance for WorPress on Pantheon
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
@@ -11,7 +11,23 @@ permalink: docs/guides/wordpress-pantheon/wp-optimization
 anchorid: wordpress-pantheon/wp-optimization
 ---
 
+Pantheon provides support for performance and optimization features to help keep your site running quickly.
+
+### New Relic
+
+Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping our support team visualize corresponding performance and symptoms.
+
+### Quicksilver
+
+[Quicksilver](/quicksilver) allows developers and other users to work on the Pantheon dashboard in SFTP mode and commit their code to their upstream repository. This is especially useful in scenarios where you want to export configuration (WP-CFM).
+
+## Optimization Tips
+
 This section provides optional steps to improve your site's speed.
+
+1. [wp_options Table](/optimize-wp-options-table-autoloaded-data)
+
+    - Minimize your Autoloaded data in WordPress to reduce your cache size.
 
 1. Update PHP with Opcode Cache
 
@@ -32,14 +48,3 @@ This section provides optional steps to improve your site's speed.
 1. Dedicated Search Index
 
     - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/wordpress-solr) for more details.
-
-## Pantheon Performance and Optimization Features
-
-### New Relic
-
-Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping our support team visualize corresponding performance and symptoms.
-
-### Quicksilver
-
-[Quicksilver](/quicksilver) allows developers and other users to work on the Pantheon dashboard in SFTP mode and commit their code to their upstream repository. This is especially useful in scenarios where you want to export configuration (WP-CFM).
-
