@@ -21,6 +21,10 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 ## Send an Invitation to Pay to Share Preferred Pricing
 
+### Existing Site
+
+### New Site
+
 In order to share Preferred Pricing with a new client or to maintain Preferred Pricing through a plan change, the Agency should follow these steps:
 
 <Partial file="invite-to-pay.md" />
