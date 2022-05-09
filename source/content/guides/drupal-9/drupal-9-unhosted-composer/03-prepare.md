@@ -6,7 +6,7 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2021-05-09"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted-composer/prepare
