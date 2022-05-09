@@ -4,8 +4,8 @@ subtitle: Settings
 description: Manage site plans, view plan history, and change billing preferences
 categories: [platform]
 tags: [dashboard]
-contributors: [joa-pan]
-reviewed: "2021-08-04"
+contributors: [joa-pan, michellecolon-pantheon]
+reviewed: "2021-09-05"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/settings
