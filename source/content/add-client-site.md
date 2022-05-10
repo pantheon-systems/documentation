@@ -31,7 +31,7 @@ Follow the steps below to transfer ownership and billing of a new site to an Age
 
 1. Click **View All Plans** > click **Select** for the plan you want.
 
-1. Click **Continue** to choose your billing preference.
+1. Click **Continue** to enter the billing information.
 
 1. Click **Transfer Site** > enter the email address associated with the account you want to transfer site ownership to.
 
