@@ -1,4 +1,4 @@
-## Webhooks
+## Autopilot Webhooks
 
 Webhooks allows you to set up integrations from third-party applications and subscribe to different events in the [New Dashboard](/guides/new-dashboard). When an event is triggered, you will receive a notification. This feature is workspace-specific, so anyone who has Admin permissions to a particular workspace has access.
 
