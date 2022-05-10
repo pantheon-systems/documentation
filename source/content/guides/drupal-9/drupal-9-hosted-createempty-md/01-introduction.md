@@ -28,7 +28,7 @@ This guide will show you how to migrate a site that meets the following criteria
 
 ## Requirements
 
-You must confirm that your site meets the following requirements before you continue:
+Confirm that your site meets the following requirements before you continue:
 
 - Ensure your site has the [Pantheon empty repository](https://github.com/pantheon-systems/empty) in its upstream.
 
@@ -61,4 +61,3 @@ You must confirm that your site meets the following requirements before you cont
 - You have not set up Continous Integration or you no longer need it. 
 
 - The trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
-
