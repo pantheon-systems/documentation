@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Introduction
 description: 
 cms: "Drupal 9"
@@ -25,7 +25,6 @@ This guide will show you how to migrate a site that meets the following criteria
 |**Site created before November 2021**| **Yes**
 
 <Partial file="drupal-9/commit-history.md" />
-
 
 ## Requirements
 

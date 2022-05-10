@@ -29,5 +29,3 @@ This guide will show you how to migrate a site that meets the following criteria
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)
-
-
