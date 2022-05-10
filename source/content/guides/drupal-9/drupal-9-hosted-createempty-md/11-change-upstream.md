@@ -13,7 +13,6 @@ anchorid: change-upstream
 editpath: drupal-9/drupal-9-hosted-createempty-md/11-change-upstream.md
 ---
 
-
 Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}

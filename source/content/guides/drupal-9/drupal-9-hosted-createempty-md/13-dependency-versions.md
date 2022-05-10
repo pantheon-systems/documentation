@@ -12,7 +12,5 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/dependency-versions
 anchorid: dependency-versions
 editpath: drupal-9/drupal-9-hosted-createempty-md/13-dependency-versions.md
 ---
+
 <Partial file="composer-updating.md" />
-
-
-
