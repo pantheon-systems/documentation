@@ -1,5 +1,6 @@
 1. Navigate to the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard > select the site from the [Sites list](/organizations/#sites).
 1. Click the site's name to enter the Site Dashboard > click the **Billing** tab.
+
 1. Click **View All Plans** to select a plan size and **Annual** or **Monthly** billing.
 
   <Alert title="Note" type="info">

@@ -15,27 +15,59 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 <Partial file="add-supporting-org.md" />
 
-## Transfer Ownership and Billing for the Site to an Agency
+## Transfer Ownership and Billing
+
+### Transfer an Existing Site
+
+Follow the steps below to transfer ownership and billing of an existing site to an Agency.
 
 <Partial file="transfer-ownership-billing-steps.md" />
+
+Follow the steps below to transfer ownership and billing of an existing site to an Agency.
+
+### Transfer a New Site
+
+1. Click the **Billing** tab in the Pantheon Site Dashboard.
+
+1. Click **View All Plans** > click **Select** for the plan you want.
+
+1. Click **Continue** to choose your billing preference.
+
+1. Click **Transfer Site** > enter the email address associated with the account you want to transfer site ownership to.
+
+1. Click **Send Request**. 
+
+    The recipient will need to confirm the transfer.
 
 ## Send an Invitation to Pay to Share Preferred Pricing
 
 ### Existing Site
 
+ Agencies should follow the steps below to share Preferred Pricing with a new client. 
+
+1. Navigate to the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard > select the site from the [Sites list](/organizations/#sites).
+
+1. Click the site's name to enter the Site Dashboard > click the **Billing** tab.
+
+1. Click **Transfer Site** > enter the email address associated with the account you want to transfer site ownership to.
+
+1. Click **Send Request**. 
+
+    The recipient will need to confirm the transfer.
+
 ### New Site
 
-In order to share Preferred Pricing with a new client or to maintain Preferred Pricing through a plan change, the Agency should follow these steps:
+Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
 
 <Partial file="invite-to-pay.md" />
 
 ## Accepting an Invitation to Pay
 
-1. When a supporting organization is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:
+You'll receive an email inviting you to pay for the site when a supporting organization is ready to transfer ownership of the site to you.
 
   ![Emailed invitation to pay](../images/dashboard/invitation-to-pay.png)
 
-1. When you click on **Make Payment** you'll be brought to one of two pages:
+1. Click **Make Payment** in the email to see one of two pages:
 
   If you're **not logged in**, you'll be prompted to create a new account:
 
@@ -45,8 +77,8 @@ In order to share Preferred Pricing with a new client or to maintain Preferred P
 
   If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner next to the empty avatar, then **My Dashboard** to log in to your account. Then go back to the email and click on **Make Payment** again to proceed under your existing account.
 
-1. If you have an account and are logged in, or created an account in the previous step, you'll be asked to use an existing card if one is on file or add a card to use as payment for the site:
+1. Select to use an existing card if one is on file or add a new card to use as payment for the site if you have an account and are logged in.
 
   ![Add a card to your account](../images/dashboard/add-card.png)
 
-Once you've accepted the invitation, you will receive invoices at the end of each billing cycle.
+You will receive invoices at the end of each billing cycle after you've accepted the invitation.
