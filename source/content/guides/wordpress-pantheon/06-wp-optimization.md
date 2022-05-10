@@ -13,11 +13,11 @@ anchorid: wordpress-pantheon/wp-optimization
 
 Pantheon provides support for performance and optimization features to help keep your site running quickly.
 
-### New Relic
+## New Relic
 
 Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping our support team visualize corresponding performance and symptoms.
 
-### Quicksilver
+## Quicksilver
 
 [Quicksilver](/quicksilver) allows developers and other users to work on the Pantheon dashboard in SFTP mode and commit their code to their upstream repository. This is especially useful in scenarios where you want to export configuration (WP-CFM).
 

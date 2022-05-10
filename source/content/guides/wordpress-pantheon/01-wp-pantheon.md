@@ -15,7 +15,7 @@ Pantheon is a WebOps platform that provides the speed and performance needed to 
 
 ## WordPress on Pantheon
 
-You can create a new WordPress site from scratch on Pantheon or migrate an existing WordPress site to the Pantheon platform. The Pantheon migration tool walks you through the process of installing a plugin on your existing site, and completing the steps to transfer the site to Pantheon. 
+You can create a new WordPress site from scratch on Pantheon or migrate an existing WordPress site to the Pantheon platform. The Pantheon migration tool walks you through the process of installing a plugin on your existing site, and completing the steps to transfer the site to Pantheon. Both scenarios are covered in this guide.
 
 ## Site Management
 

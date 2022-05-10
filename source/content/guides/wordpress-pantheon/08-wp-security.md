@@ -21,7 +21,7 @@ Pantheon automatically provides the following security measures:
 
 ## Additional Security
 
-Pantheon provides additional support for  features:
+Pantheon provides additional security with the following features:
 
 - [Pantheon Global CDN](/global-cdn)
 
