@@ -56,6 +56,8 @@ WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-co
 
 Drupal 9 users can update `sites/default/services.yml` to enable CORS.
 
+Sample `services.yml` file:
+
 ```yml:title=sites/default/services.yml
   cors.config:
     enabled: true
