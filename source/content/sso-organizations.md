@@ -32,7 +32,9 @@ Refer to your IdP for general SAML 2.0 setup instructions. Pantheon will supply 
 
 You will need to enter the following:
 
-1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
+1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name` 
+
+    Note that the single sign-on URL is **case sensitive**.
 
 2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 

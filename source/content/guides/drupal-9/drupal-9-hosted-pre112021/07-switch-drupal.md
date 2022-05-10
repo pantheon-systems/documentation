@@ -13,11 +13,13 @@ anchorid: switch-drupal
 editpath: drupal-9/drupal-9-hosted-pre112021/07-switch-drupal.md
 ---
 
-Change the upstream that your site is tracking with the following command:
+This page provides steps to switch your site from Drupal to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
 
-```bash{promptUser:user}
-terminus site:upstream:set $SITE drupal-recommended
-```
+1. Change the upstream that your site is tracking with the following command:
 
-Follow the `drupal-recommended` upstream to keep your site current with any general configuration changes recommended by Pantheon.
+    ```bash{promptUser:user}
+    terminus site:upstream:set $SITE drupal-recommended
+    ```
+
+1. Follow the `drupal-recommended` upstream to keep your site current with general configuration changes recommended by Pantheon.
 

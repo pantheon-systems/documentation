@@ -1,5 +1,5 @@
 ---
-title: Configuration Workflow for Drupal 8 Sites
+title: Configuration Workflow for Drupal 9 Sites
 description: Commit your Drupal configuration to version control.
 cms: "Drupal"
 categories: [develop]
@@ -9,9 +9,9 @@ reviewed: "2020-10-21"
 
 Managing configuration is an extremely important part of any team website project, but in many cases, this area of the project does not receive as much attention as it deserves. The tools for Drupal 7 do not provide complete coverage of all configuration settings, leading to inconsistencies in configuration handling and inconvenient workarounds. This has led to configuration management becoming a real thorn in the side for many projects.
 
-Pantheon supports the [Drupal 8 Configuration Management system](https://www.drupal.org/documentation/administer/config) and defaults configuration into the `sites/default/config` directory for each Pantheon Drupal site.
+Pantheon supports the [Drupal 9 Configuration Management system](https://www.drupal.org/documentation/administer/config). Each Pantheon Drupal site defaults configuration into the `/config` directory.
 
-You can export your configuration into that directory directly using Drush's `config-export` command or indirectly using Drupal's UI to download the configuration, and then use SFTP/Git to place the configuration in `config` or `sites/default/config`. For more information, check out the [Managing Content, Configuration, and Code Across Environments](/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments) section of [Create a Drupal 8 Site From the Command Line Using Terminus and Drush](/guides/drupal8-commandline).
+You can export your configuration into that directory directly using Drush's `config-export` command or indirectly using Drupal's UI to download the configuration. For more information, check out the [Managing Content, Configuration, and Code Across Environments](/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments) section of [Create a Drupal 8 Site From the Command Line Using Terminus and Drush](/guides/drupal8-commandline).
 
 <Accordion title="Watch: Configuration Management in Drupal" id="d8-config-video" icon="facetime-video">
 
@@ -21,7 +21,7 @@ You can export your configuration into that directory directly using Drush's `co
 
 ## Basic Workflow
 
-1. With the Development environment in SFTP mode, export your configuration to code:
+1. Confirm that the Development environment is in SFTP mode and then export your configuration to code:
 
    ```bash{promptUser: user}
    drush config:export -y
@@ -75,9 +75,9 @@ terminus drush <site>.live -- config:import -y
 open https://live-mysite.pantheonsite.io
 ```
 
-## Configuration Tools for Drupal 8
+## Configuration Tools for Drupal 9
 
-With [Drupal 8](https://pantheon.io/drupal-8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
+With [Drupal 9](/drupal-9), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
 
 ## Config Direct Save Module
 
@@ -111,7 +111,7 @@ Configuration files can contain sensitive information. Drupal takes some measure
 
 ### Before you Begin
 
-- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot) to enable nested docroot on a new or existing Drupal 8 site.
+- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot) to enable nested docroot on a new or existing Drupal 9 site.
 
 ### Configure and Relocate
 
@@ -136,4 +136,4 @@ Relocate the configuration directory for the default location using `git mv`:
 git mv web/sites/default/files/config .
 ```
 
-For additional details, refer to [this Pantheon blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
+

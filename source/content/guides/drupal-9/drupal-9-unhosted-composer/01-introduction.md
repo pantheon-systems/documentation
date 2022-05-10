@@ -6,14 +6,14 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2021-05-09"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted-composer
 anchorid: drupal-9-unhosted-composer
 editpath: drupal-9/drupal-9-unhosted-composer/01-introduction.md
 ---
 
-This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
+This guide will show you how to migrate a Composer site currently hosted outside of Pantheon to Drupal 9.
 
 |Criteria|Value
 |---|---
@@ -28,4 +28,4 @@ This doc uses the following aliases:
 
 ## Requirements
 
-- You can get a local copy of the existing site / access to a Git repository of it
+- You have access to a local copy of the existing site and/or you have access to a Git repository of the existing site

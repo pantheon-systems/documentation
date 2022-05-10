@@ -6,13 +6,15 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2021-05-09"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted-composer/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-unhosted-composer/15-troubleshooting.md
 ---
+
+This sections provides common troubleshooting scenarios.
 
 ## Get Messages
 

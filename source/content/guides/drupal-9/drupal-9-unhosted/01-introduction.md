@@ -14,7 +14,7 @@ anchorid: drupal-9-unhosted
 editpath: drupal-9/drupal-9-unhosted/01-introduction.md
 ---
 
-This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
+This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon's platform. 
 
 |Criteria|Value
 |---|---
@@ -29,13 +29,11 @@ You must confirm that you meet the following requirements before continuing:
 
 - You are able to run `drush` commands in the existing site.
 
-- You are able to check out your existing site codebase into your local machine.
+- You are able to check out your existing site codebase in your local machine.
 
 - The site does not use another package and library manager, like [Ludwig](https://www.drupal.org/project/ludwig).
 
 - You have a brand new Drupal Pantheon site to host your project.
-
-## Before You Begin
 
 ## See Also
 

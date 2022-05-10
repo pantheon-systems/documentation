@@ -12,13 +12,18 @@ permalink: docs/guides/drupal-9-unhosted/copy-config
 anchorid: copy-config
 editpath: drupal-9/drupal-9-unhosted/05-copy-config.md
 ---
-Copy any existing configuration from the source site and update the source path as needed to match your configuration folder:
+
+Now that you've prepared your site, you need to collect configuration information from the source site.
+
+1. Copy any existing configuration from the source site. 
+
+1. Update the source path as needed to match your configuration folder:
 
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
-This is a common location for the config file; if this isn't where your config file is located, replace 'config' with the full path, such as `web/sites/default/config`.
+The example below shows a common location for the config file. If your config file isn't located here, replace `config` with the full path, such as `web/sites/default/config`.
 
 ```bash{promptUser:user}
 cp -r $SOURCE/web/sites/default/files/config/sync/* $DESTINATION/config/
@@ -43,7 +48,7 @@ git commit -m "Pull in configuration from source site"
 
 </TabList>
 
-It is possible that the Drupal site might have moved the configuration path to a different location. You can find out where your config yaml files are via:
+It is possible that the Drupal site might have moved the configuration path to a different location. You can find the location of your `config.yaml` files by running the following command:
 
 ```bash{promptUser:user}
 drush status --fields=config-sync

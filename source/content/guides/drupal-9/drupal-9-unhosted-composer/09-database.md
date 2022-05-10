@@ -6,12 +6,17 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2021-05-09"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted-composer/database
 anchorid: database
 editpath: drupal-9/drupal-9-unhosted-composer/09-database.md
 ---
+
+Now that you've set up your Pantheon Dev environment, you need to import your database.
+
+## Create a `.sql` Dump File
+
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
 1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
@@ -28,60 +33,68 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
 
-1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+1. Navigate to the Site Dashboard > select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
-  <TabList>
+    <TabList>
 
-  <Tab title="Up to 100MBs" id="100mbs" active={true}>
+    <Tab title="Up to 100MBs" id="100mbs" active={true}>
 
-  If your archive is under 100MB, you can upload the file directly:
+    If your archive is under 100MB, you can upload the file directly:
 
-   1. In the **MySQL database** field, click **File**, then **Choose File**.
+    1. Click **File** in the **MySQL database** field > **Choose File**.
 
-   1. Select your local archive file, then press **Import**.
+    1. Select your local archive file > click **Import**.
 
-     ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
+      ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
-  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+    **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
-  </Tab>
+    </Tab>
 
-  <Tab title="Up to 500MBs" id="500mbs">
+    <Tab title="Up to 500MBs" id="500mbs">
 
-  If your archive is less than 500MB, you can import it from URL:
+    If your archive is less than 500MB, you can import it from URL:
 
-   1. In the **MySQL database** field, click **URL**.
+    1. Click **URL** in the **MySQL database** field.
 
-   1. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
+    1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**.
 
-      ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
+       - Change the end of Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
-  </Tab>
+       ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
 
-  <Tab title="Over 500MBs" id="500mbsplus">
+    </Tab>
 
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+    <Tab title="Over 500MBs" id="500mbsplus">
 
-   1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
+    The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
-    ```bash{promptUser: user}
-    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
-    ```
+    1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard > click **Connection Info** > copy the Database connection string.
 
-   1. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with: `< database.sql`. Your command will look like:
+       It will look similar to this:
 
-    ```bash{promptUser: user}
-    mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
-    ```
+       ```bash{promptUser: user}
+       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
+       ```
 
-    If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+    1. `cd` into the directory containing your `.sql` file.
 
-   1. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+    1. Paste the connection string and append it with: `< database.sql`
 
-  </Tab>
+       - This imports the `.sql` file to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 
-  </TabList>
+       - Your command will look like:
+
+         ```bash{promptUser: user}
+         mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
+         ```
+
+       If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+
+    </Tab>
+
+    </TabList>

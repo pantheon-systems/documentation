@@ -6,7 +6,7 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2021-05-09"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted-composer/contrib-custom
@@ -18,9 +18,11 @@ This section describes how to replicate your selection of contributed modules an
 
 ## Composer packages
 
-1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`. If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
+1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`. 
 
-  If the old site has custom patches in its codebase, make sure to copy those over as well.
+  - If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
+
+  - If the old site has custom patches in its codebase, make sure to copy those over as well.
 
 1. Run `composer update` to have Composer create a `composer.lock` file with all versions and dependencies:
 
@@ -28,7 +30,9 @@ This section describes how to replicate your selection of contributed modules an
   composer update
   ```
 
-1. Use `git status` to confirm that all changed files are names that start with `composer.`. If there are other files, add them to `.gitignore` until `git status` only shows the Composer files being modified:
+1. Run the `git status` command to confirm that all changed files have names that start with `composer.`. 
+
+1. Add other folders to `.gitignore` until `git status` only shows the Composer files being modified:
 
   ```shell{promptUser:user}
   git status
@@ -42,9 +46,11 @@ This section describes how to replicate your selection of contributed modules an
 
 ## Custom Code
 
-Manually copy custom code from the old site to the corresponding Pantheon site directory and commit them.
+Complete the steps below if you have custom code that you would like to move to your new site.
 
-Keep the new `.gitignore` file aligned with the current site to avoid potential issues in the future.
+1. Manually copy custom code from the old site to the corresponding Pantheon site directory and commit the changes.
+
+1. Update the new `.gitignore` file to keep it aligned with the current site to avoid potential issues in the future.
 
 If you plan to install libraries using Composer via a `drupal-library` project, do not add anything to `web/libraries` and use Composer to install the libraries instead.
 
@@ -59,23 +65,25 @@ If you do not plan on adding any libraries with Composer in the future, you can 
 
 ### Modules and Themes
 
-From the local Pantheon site directory, copy modules from the local directory of the former platform site:
+Complete the steps below if you have modules and themes that you would like to move to your new site.
 
-```shell{promptUser:user}
-cp -R ../FORMER-PLATFORM/modules/custom web/modules
-git add web/modules/custom
-git commit -m "Copy custom modules"
-```
+1. Navigate to the Pantheon site directory > copy modules from the local directory of the old platform site:
 
-From the local Pantheon site directory, copy themes from the local directory of the former platform site:
+    ```shell{promptUser:user}
+    cp -R ../FORMER-PLATFORM/modules/custom web/modules
+    git add web/modules/custom
+    git commit -m "Copy custom modules"
+    ```
 
-```shell{promptUser:user}
-cp -R ../FORMER-PLATFORM/themes/custom web/themes
-git add web/themes/custom
-git commit -m "Copy custom themes"
-```
+1. Navigate to the Pantheon site directory > copy themes from the local directory of the old platform site:
 
-Do the same for any other custom code you need to carry over.
+    ```shell{promptUser:user}
+    cp -R ../FORMER-PLATFORM/themes/custom web/themes
+    git add web/themes/custom
+    git commit -m "Copy custom themes"
+    ```
+
+3. Navigate to the Pantheon site directory > copy any other custom code you need from your old platform site.
 
 ### settings.php
 
@@ -88,13 +96,16 @@ Your existing site may have customizations to `settings.php` or other configurat
 1. Confirm that the `settings.php` file on the Pantheon D9 site:
 
    - Has one `$settings['container_yamls'][]`
-     
-   And that there are no duplicates.
+   - Contains no duplicates
    - Contains `include __DIR__ . "/settings.pantheon.php";`
 
 ## Configuration
 
-Copy over exported configuration from the original site. From the Pantheon D9 site, run the following commands:
+Complete the steps in this section to copy exported configuration settings from the original site to your new Pantheon site.
+
+1. Navigate to your Pantheon site.
+
+1. Run the following commands:
 
   ```shell{promptUser: user}
   mkdir config

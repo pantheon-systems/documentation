@@ -14,6 +14,8 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-pre112021/11-troubleshooting.md
 ---
 
+This page covers common troubleshooting scenarios when migrating a Drupal site to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
+
 ## Merge Conflicts When Applying Upstream Updates
 
 Conflicts can occur when a modified file in your site's codebase does not align with changes made to the same file in the site's upstream.

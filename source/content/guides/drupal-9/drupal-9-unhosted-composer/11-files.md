@@ -6,12 +6,14 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2021-05-09"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted-composer/files
 anchorid: files
 editpath: drupal-9/drupal-9-unhosted-composer/11-files.md
 ---
+Now that you've added your database, you need to add your files.
+
 **Files** refer to anything within `sites/default/files`, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
@@ -25,8 +27,10 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   tar -czf ~/files.tar.gz .
   ```
 
-1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
+
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+
 1. Click **Import** and add your archive accordingly (based on file size):
 
   <TabList>
@@ -35,9 +39,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   If your archive is under 100MB, you can upload the file directly:
 
-   1. In the **MySQL database** field, click **File**, then **Choose File**.
+   1. Click **File** in the **MySQL database** field > click **Choose File**.
 
-   1. Select your local archive file, then press **Import**.
+   1. Select your local archive file > click **Import**.
 
      ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
@@ -49,15 +53,17 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   If your archive is less than 500MB, you can import it from URL:
 
-   1. In the **Archive of site files** field, click **URL**.
+   1. Click **URL** in the **Archive of site files** field.
 
-   1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
+   1. Paste a publicly accessible URL for the archive > click **Import**. 
+   
+      - Change the end of Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
   </Tab>
 
   <Tab title="Over 500MBs" id="500mbsplusfiles">
 
-  Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of migration, as it allows you to bring over only new content, rather than re-copying every single file.
+  Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of a migration, as it allows you to bring over only new content, rather than re-copying every single file.
 
   We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
 

@@ -26,6 +26,12 @@ We recommend using a separate domain from your production site. This prevents an
 
 </Alert>
 
+### AGCDN Vanity Domains
+
+You must provide a custom certificate if you want to use a vanity domain on your [Advanced Global CDN](guides/professional-services#advanced-global-cdn) site.
+
+Our [Custom Certificate](/custom-certificates#add-a-custom-certificate) service is only available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. 
+
 ## Create Wildcard DNS Records
 
 At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Using the example domain `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
