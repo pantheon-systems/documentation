@@ -14,8 +14,6 @@ anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
 ---
 
-
-
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 ## Contributed Code
@@ -84,4 +82,3 @@ Next, manually copy custom code from the existing site repository to the Compose
 ### settings.php
 
 <Partial file="drupal-9/custom-settings.md" />
-
