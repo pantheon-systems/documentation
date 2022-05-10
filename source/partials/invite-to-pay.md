@@ -1,11 +1,11 @@
 1. Navigate to the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard > select the site from the [Sites list](/organizations/#sites).
-1. Click the site's name to enter the Site Dashboard > click the **Billing** tab.
+1. Click the site's name to open the Site Dashboard > click the **Billing** tab.
 
 1. Click **View All Plans** > click **Select** for the plan you want.
 
-1. Click **Continue** to enter the billing information.
+1. Click **Pay Annually** or **Pay Monthly** to set the billing frequency > click **Continue**.
 
-1. Click **Transfer Site** > enter the email address associated with the account you want to transfer site ownership to.
+1. Click **Transfer Site** > enter the email address associated with the account to which you want to send an invitation to pay.
 
 1. Click **Send Request**. 
 
