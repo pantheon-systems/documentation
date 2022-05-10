@@ -19,7 +19,7 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 ### Transfer an Existing Site
 
-Follow the steps below to transfer ownership and billing of an existing site to an Agency. change
+Follow the steps below to transfer ownership and billing of an existing site to an Agency.
 
 <Partial file="transfer-ownership-billing-steps.md" />
 
