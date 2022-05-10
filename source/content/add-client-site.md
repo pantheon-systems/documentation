@@ -23,9 +23,9 @@ Follow the steps below to transfer ownership and billing of an existing site to 
 
 <Partial file="transfer-ownership-billing-steps.md" />
 
-Follow the steps below to transfer ownership and billing of an existing site to an Agency.
-
 ### Transfer a New Site
+
+Follow the steps below to transfer ownership and billing of a new site to an Agency.
 
 1. Click the **Billing** tab in the Pantheon Site Dashboard.
 
@@ -43,7 +43,7 @@ Follow the steps below to transfer ownership and billing of an existing site to 
 
 ### Existing Site
 
- Agencies should follow the steps below to share Preferred Pricing with a new client. 
+ Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
 
 1. Navigate to the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard > select the site from the [Sites list](/organizations/#sites).
 

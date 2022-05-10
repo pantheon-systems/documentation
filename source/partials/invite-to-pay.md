@@ -9,9 +9,7 @@
 
   </Alert>
 
-1. Click the **<span class="glyphicons glyphicons-envelope"></span>Send a Request** button in the  **Enter Billing Information** page.
-
-1. Enter the recipient's email address and click the **Send Request** button. 
+1. Enter the recipient's email address > click the **<span class="glyphicons glyphicons-envelope"></span>Send a Request** button in the  **Enter Billing Information** page.
 
   A link is immediately sent to the email address to pay through the secure site.
 
