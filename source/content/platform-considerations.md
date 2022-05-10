@@ -54,7 +54,7 @@ Sites that consume services using CORS, such as Amazon S3 CORS, do work on Panth
 
 WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
 
-Drupal users can update `sites/default/services.yml` to enable CORS.
+Drupal 9 users can update `sites/default/services.yml` to enable CORS.
 
 ```yml:title=sites/default/services.yml
   cors.config:
