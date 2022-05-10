@@ -67,7 +67,7 @@ You'll receive an email inviting you to pay for the site when a supporting organ
 
   ![Emailed invitation to pay](../images/dashboard/invitation-to-pay.png)
 
-1. Click **Make Payment** in the email to see one of two pages:
+1. In the email, click **Make Payment** - you'll see one of two pages:
 
   If you're **not logged in**, you'll be prompted to create a new account:
 
@@ -75,7 +75,7 @@ You'll receive an email inviting you to pay for the site when a supporting organ
 
   If you don't already have a Pantheon account, fill out the required fields and click **Continue**.
 
-  If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner next to the empty avatar, then **My Dashboard** to log in to your account. Then go back to the email and click on **Make Payment** again to proceed under your existing account.
+  If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner next to the empty avatar, then **My Dashboard** ,to log in to your account. Then go back to the email and click on **Make Payment** again to proceed under your existing account.
 
 1. Select to use an existing card if one is on file or add a new card to use as payment for the site if you have an account and are logged in.
 
