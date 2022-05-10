@@ -19,7 +19,7 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 ### Transfer an Existing Site
 
-Follow the steps below to transfer ownership and billing of an existing site to an Agency.
+Follow the steps below to transfer ownership and billing of an existing site to an Agency. change
 
 <Partial file="transfer-ownership-billing-steps.md" />
 
@@ -49,11 +49,11 @@ Follow the steps below to transfer ownership and billing of a new site to an Age
 
 1. Click the site's name to open the Site Dashboard > click the **Billing** tab.
 
-1. Click **Transfer Site** > enter the email address associated with the account you want to transfer site ownership to.
+1. Click **Transfer Site** > enter the email address associated with the account to which you want to send an invitation to pay.
 
 1. Click **Send Request**. 
 
-    The recipient will need to confirm the transfer.
+  A link is immediately sent to the email address to pay through the secure site.
 
 ### New Site
 
