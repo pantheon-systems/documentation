@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
 cms: "Drupal 9"
@@ -13,11 +13,12 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/composer-upstream
 anchorid: composer-upstream
 editpath: drupal-9/drupal-9-hosted-createempty-md/05-composer-upstream.md
 ---
+
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
-To minimize issues, these steps make the codebase changes in a new branch:
+To minimize issues, make the codebase changes in a new branch:
 
-1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
+1. In your local terminal, change directories into the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
   ```bash{promptUser:user}
   cd ~/projects/$SITE/
@@ -32,10 +33,9 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
   If you prefer, you can replace `composerify` with another branch name. If you do, remember to adjust the other examples in this doc to match.
 
-
 ## Set Drupal Core Version
 
-Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
+Set the Drupal core version to ensure the site remains on Drupal 8, for now:
 
   ```bash{promptUser:user}
   composer require --no-update drupal/core-recommended:^8.9
@@ -58,17 +58,17 @@ Add the Upgrade Status module to your site with Composer:
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
+When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find out what needs to be done before upgrading.
 
 ## Copy Existing Configuration
 
-Copy any existing configuration from the default branch. Adjust the source folder as needed depending on your folder structure. If no files are copied through this step, that's ok:
+Copy any existing configuration from the default branch. Adjust the source folder as needed, depending on your folder structure. It's okay if no files are copied through this step:
 
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
-This is a common location for the config file; if this isn't where your config file is located, replace 'config' with the full path, such as `web/sites/default/config`.
+This is a common location for the `config` file; if this isn't where your `config` file is located, replace `config` with the full path, such as `web/sites/default/config`.
 
 ```bash{promptUser:user}
 git checkout master config
@@ -114,5 +114,3 @@ git commit -m "Pull in configuration from default branch"
   Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then add `build_step: true` to `pantheon.yml` if it is not already included.
 
  In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
-
-
