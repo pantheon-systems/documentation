@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site That Was Created Before November 2011 to Drupal 9
 subtitle: Troubleshooting
-description: 
+description: Troubleshoot common issues when migrating.
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
