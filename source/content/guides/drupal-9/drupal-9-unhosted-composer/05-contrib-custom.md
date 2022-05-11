@@ -54,7 +54,7 @@ Complete the steps below if you have custom code that you would like to move to 
 
 If you plan to install libraries using Composer via a `drupal-library` project, do not add anything to `web/libraries` and use Composer to install the libraries instead.
 
-If you commit libraries directly to `web/libraries`, then add each directory to be allowed (not ignored) by `.gitignore`. For example, to commit a `favorite-library` directory, add it and each other directory to the `.gitignore` before you `git add`:
+If you commit libraries directly to `web/libraries`, then add each directory to be allowed (not ignored) by `.gitignore`. For example, to commit a `favorite-library` directory, add it and each directory to `.gitignore` before you use `git add`:
 
 ```none:title=.gitignore
 !/web/libraries/favorite-library
@@ -67,7 +67,7 @@ If you do not plan on adding any libraries with Composer in the future, you can 
 
 Complete the steps below if you have modules and themes that you would like to move to your new site.
 
-1. Navigate to the Pantheon site directory > copy modules from the local directory of the old platform site:
+1. Navigate to the Pantheon site directory and copy modules from the local directory of the old platform site:
 
     ```shell{promptUser:user}
     cp -R ../FORMER-PLATFORM/modules/custom web/modules
@@ -75,7 +75,7 @@ Complete the steps below if you have modules and themes that you would like to m
     git commit -m "Copy custom modules"
     ```
 
-1. Navigate to the Pantheon site directory > copy themes from the local directory of the old platform site:
+1. Navigate to the Pantheon site directory and copy themes from the local directory of the old platform site:
 
     ```shell{promptUser:user}
     cp -R ../FORMER-PLATFORM/themes/custom web/themes
@@ -83,7 +83,7 @@ Complete the steps below if you have modules and themes that you would like to m
     git commit -m "Copy custom themes"
     ```
 
-3. Navigate to the Pantheon site directory > copy any other custom code you need from your old platform site.
+3. Navigate to the Pantheon site directory and copy any other custom code you need from your old platform site.
 
 ### settings.php
 
