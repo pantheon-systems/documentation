@@ -1,9 +1,10 @@
 ---
 title: Pantheon Site Portfolio Report
 subtitle: Introduction
-description: Learn how to use the Site Portfolio Report.
+description: Learn more about the information provided in the Site Portfolio Report.
 categories: [billing]
 tags: [billing]
+contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/site-portfolio-report

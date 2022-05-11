@@ -5,6 +5,7 @@ description: Learn more about your Site Portfolio Report.
 categories: [billing]
 tags: [billing]
 layout: guide
+contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/site-portfolio-report/faq
 anchorid: faq
