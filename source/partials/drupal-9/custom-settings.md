@@ -1,7 +1,6 @@
-
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
-We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
+We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory that shouldn't be overwritten, as well as platform-specific customizations.
 
 <TabList>
 
@@ -17,7 +16,6 @@ rm web/sites/default/original-settings.php
 
 </Tab>
 
-
 <Tab title="Without Nested Docroot" id="code-nodocroot">
 
 <Partial file="drupal-9/custom-settings-no-docroot.md" />
@@ -25,7 +23,6 @@ rm web/sites/default/original-settings.php
 </Tab>
 
 </TabList>
-
 
 The resulting `settings.php` should have no `$databases` array.
 
