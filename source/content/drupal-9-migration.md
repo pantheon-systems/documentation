@@ -7,7 +7,7 @@ reviewed: "2021-03-31"
 
 Drupal 9 includes many of the familiar features and layout introduced in Drupal 8, and removes deprecated code to help improve future Drupal development.
 
-## Choose Your Upgrade Path
+## Choose Your Upgrade Path 
 
 <table>
 <thead>
