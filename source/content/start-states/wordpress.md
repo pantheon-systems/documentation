@@ -7,36 +7,38 @@ tags: [code, site, upstreams]
 showtoc: true
 permalink: docs/start-states/wordpress
 editpath: start-states/wordpress.md/
-reviewed: "2022-05-09"
+reviewed: "2022-05-11"
 ---
 
-Pantheon's WordPress upstream
-
-<https://github.com/pantheon-systems/WordPress>
-
-<https://github.com/pantheon-systems/WordPress/tags>
-
-<https://wordpress.org/news/category/releases/>
-
-[WP Best Practices](/wordpress-best-practices)
-
-## Main Differences
-
-- list
-- of things
-- that won't change
-- much
+For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-systems/WordPress) follows [WordPress core](https://wordpress.org/news/category/releases/) one-to-one. This document is intended to provide further context to platform-specific changes in Pantheon's WordPress upstream.
 
 ## Latest Release
 
-goes here
+### <a name="20220426-3"></a>Re-enable WP-Cron for site networks
+
+Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. This change reenabled WP-Cron for WordPress Site Networks. You can read more about WP-Cron for WordPress Site Networks [here](https://pantheon.io/docs/wordpress-cron#wordpress-site-networks).
+
+### <a name="20220426-2"></a>Add documentation to readme outlining branches
+
+Adds documentation to `README.md` which provides context on the repositories branches. This change made to prevent further [customer confusion](https://github.com/pantheon-systems/WordPress/issues/322) with regards to which branch to use as a starting point when creating a custom upstream.
+
+### <a name="20220426-1"></a>Define FS_METHOD
+
+When this constant is not set, WordPress writes and then deletes a temporary file to determine if it has direct access to the filesystem, which we already know to be the case. This multiplies filesystem operations and can degrade performance of the filesystem as a whole in the case of large sites that do a lot of filesystem operations. Setting this constant to `direct` tells WordPress to assume it has direct access and skip creating the extra temporary file. Read more about `FS_METHOD` [here](https://pantheon.io/docs/plugins-known-issues#define-fs_method).
 
 ## Previous Releases
 
-go here
+### <a name="20220405-2"></a>Allow DISABLE_WP_CRON to be overridden
+
+Allowed customers to override DISABLE_WP_CRON by defining this constant in their wp-config.php before wp-config-pantheon.php is required. Read more about enabling WP-Cron [here](https://pantheon.io/docs/wordpress-cron#enable-wp-cron).
+
+### <a name="20220405-1"></a>Disable WP-Cron
+
+Disabled `wp-cron.php` from running on every page load and rely on Pantheon to run cron via WP-CLI. Read more about WP-Cron [here](https://pantheon.io/docs/wordpress-cron).
 
 ## Related Links
 
 - [Pantheon Start States](/start-states)
 - [WordPress Best Practices](/wordpress-best-practices)
+- [WordPress and Drupal Core Updates](/core-updates)
 - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
