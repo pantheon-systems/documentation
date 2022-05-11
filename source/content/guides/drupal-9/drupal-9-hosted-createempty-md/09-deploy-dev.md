@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Deploy to Dev
 description: 
 cms: "Drupal 9"
@@ -48,11 +48,11 @@ If the site is not working, try this Composer command on the local `composerify`
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. Refer to the [Integrated Composer Troubleshooting](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
 
 ### Move composerify to the Main Dev Branch
 
-Once you have confirmed that the site works in the Multidev, replace the `master` branch and its commit history with the `composerify` Multidev's commit history.
+After you confirm that the site works in the Multidev, replace the `master` branch and its commit history with the `composerify` Multidev's commit history:
 
 1. Retrieve the most recent commit hash from the local `composerify` branch:
 
@@ -62,7 +62,7 @@ Once you have confirmed that the site works in the Multidev, replace the `master
 
    This will give you a commit hash like `fd3636f58f5b275b998bb1c9267bff8808353840`.
 
-1. Reset the `master` branch to match that commit then force push that to the Dev environment:
+1. Reset the `master` branch to match that commit, then force push it to the Dev environment:
 
    ```bash{promptUser: user}
    git checkout master
