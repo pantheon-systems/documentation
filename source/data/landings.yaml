@@ -432,6 +432,8 @@
           url: '/tax-exempt-status'
         - text: 'Traffic Limits and Overages'
           url: '/traffic-limits'
+        - text: 'Site Portfolio Report'
+          url: '/guides/site-portfolio-report'
   subtopics:
     - title: 'Point Domains to Pantheon'
       subtitle: 'Add custom domains to environments, configure DNS, and use PHP for redirecting to a common domain.'
