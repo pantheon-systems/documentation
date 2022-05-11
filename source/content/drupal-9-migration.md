@@ -12,8 +12,8 @@ Drupal 9 includes many of the familiar features and layout introduced in Drupal 
 To use this table, find the row whose column values best describe your current and desired state, then select the upgrade guide on the right.
 
 For example:
-- If your site is currently hosted with Pantheon, and was created using Build Tools, use the guide in the first row, "Migrate a Site That Was Created with Build Tools to Drupal 9".  
-- If your site is hosted elsewhere, and is Composer-managed, use the guide in the last row, "Migrate a Composer Managed Drupal 9 Site from Another Platform".
+- If your site is currently hosted with Pantheon, and was created using Build Tools, use the guide in the first row, "Migrate a Site That Was Created with Build Tools to Drupal 9."  
+- If your site is hosted elsewhere, and is Composer-managed, use the guide in the last row, "Migrate a Composer Managed Drupal 9 Site from Another Platform."
 
 <table>
 <thead>
