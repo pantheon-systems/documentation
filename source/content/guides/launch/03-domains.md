@@ -90,9 +90,7 @@ Once you begin this process, you have:
 
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
     
-   A misconfiguration of the validation file invalidates these records and the Dashboard does not provide any feedback. 
-    
-    If the DNS validation fails you will receive an error message. This only applies to the DNS validation.
+   A misconfiguration of the validation file invalidates these records. If the DNS validation fails you will receive an error message.
     
    </Alert>
 
