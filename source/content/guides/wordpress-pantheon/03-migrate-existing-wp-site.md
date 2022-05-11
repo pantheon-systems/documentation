@@ -7,6 +7,7 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-02"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-pantheon/migrate-existing-wp-site
 anchorid: wordpress-pantheon/migrate-existing-wp-site
 ---

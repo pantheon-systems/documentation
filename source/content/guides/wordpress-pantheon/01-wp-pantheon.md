@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: Introduction to WordPress on Pantheon
 description: Your guide to using WordPress on Pantheon.
 categories: [wordpress]
@@ -7,6 +7,7 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-02"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-pantheon/
 anchorid: wordpress-pantheon
 ---

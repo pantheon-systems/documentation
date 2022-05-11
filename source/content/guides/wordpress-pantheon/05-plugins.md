@@ -7,6 +7,7 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-pantheon/plugins
 anchorid: wordpress-pantheon/plugins
 ---

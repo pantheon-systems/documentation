@@ -7,6 +7,7 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-04-29"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-pantheon/wp-security
 anchorid: wordpress-pantheon/wp-security
 ---

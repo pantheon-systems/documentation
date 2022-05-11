@@ -7,6 +7,7 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-09"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-pantheon/troubleshooting
 anchorid: wordpress-pantheon/troubleshooting
 ---

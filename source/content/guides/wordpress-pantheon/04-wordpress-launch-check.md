@@ -7,6 +7,7 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-pantheon/wordpress-launch-check
 anchorid: wordpress-pantheon/wordpress-launch-check
 ---
