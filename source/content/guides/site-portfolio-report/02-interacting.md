@@ -1,6 +1,6 @@
 ---
 title: Pantheon Site Portfolio Report
-subtitle: Interacting with your supplemental report.
+subtitle: Use the Site Portfolio Report.
 description: Learn how to interact with the Site Portfolio Report.
 categories: [billing]
 tags: [billing]

@@ -67,4 +67,4 @@ This information provides a snapshot of the active sites in your portfolio, incl
 
 - [Metrics in the Site Dashboard](/metrics)
 
-- [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site
+- [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic

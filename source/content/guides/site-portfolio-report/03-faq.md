@@ -1,12 +1,12 @@
 ---
 title: Pantheon Site Portfolio Report
-subtitle: Review frequently asked questions about the Site Portfolio Report.
+subtitle: FAQs
 description: Learn more about your Site Portfolio Report.
 categories: [billing]
 tags: [billing]
 layout: guide
 showtoc: true
-permalink: docs/guides/site-portfolio-report/interacting
+permalink: docs/guides/site-portfolio-report/faq
 anchorid: faq
 ---
 
