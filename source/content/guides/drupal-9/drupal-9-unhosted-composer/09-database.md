@@ -33,7 +33,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
 
-1. Navigate to the Site Dashboard > select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+1. Navigate to the Site Dashboard and select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 
@@ -47,23 +47,23 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
     1. Click **File** in the **MySQL database** field > **Choose File**.
 
-    1. Select your local archive file > click **Import**.
+    1. Select your local archive file and click **Import**.
 
       ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
-    **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+    **Note:** If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
     </Tab>
 
     <Tab title="Up to 500MBs" id="500mbs">
 
-    If your archive is less than 500MB, you can import it from URL:
+    If your archive is less than 500MB, you can import it from the URL:
 
     1. Click **URL** in the **MySQL database** field.
 
-    1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**.
+    1. Paste a publicly accessible URL for the `.sql.gz` file and click **Import**.
 
-       - Change the end of Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
+       - Change the end of the Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
        ![Import MySQL Database from URL](../../../../images/dashboard/import-mysql-url.png)
 
@@ -71,29 +71,31 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
     <Tab title="Over 500MBs" id="500mbsplus">
 
-    The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+    The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, refer to [Accessing MySQL Databases](/mysql-access).
 
-    1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard > click **Connection Info** > copy the Database connection string.
+    1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard.
+      
+    1. Click **Connection Info** and copy the database connection string.
 
-       It will look similar to this:
+       Your command will resemble the following structure:
 
        ```bash{promptUser: user}
        mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
        ```
 
-    1. `cd` into the directory containing your `.sql` file.
+    1. Use the `cd` command to change into the directory containing your `.sql` file.
 
     1. Paste the connection string and append it with: `< database.sql`
 
        - This imports the `.sql` file to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 
-       - Your command will look like:
+       - Your command will resemble the following structure:
 
          ```bash{promptUser: user}
          mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
          ```
 
-       If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+       If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, refer to [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
 
     </Tab>
 
