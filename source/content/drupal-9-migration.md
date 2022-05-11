@@ -14,7 +14,7 @@ Drupal 9 includes many of the familiar features and layout introduced in Drupal 
 <tr valign="top">
 <th align="center"><i class="fa fa-cloud"></i><br/>Current Host</th>
 <th align="center"><i class="fa fa-wrench"></i><br/>How Site Was Created</th>
-<th align="center"><i class="fa-solid fa-circle-exclamation"></i><br/>Additional Requirements</th>
+<th align="center"><i class="fa fa-exclamation"></i><br/>Additional Requirements</th>
 <th align="center"><i class="fa fa-book"></i><br/>Upgrade Guide</th>
 </tr>
 </thead>
