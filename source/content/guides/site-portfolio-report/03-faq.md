@@ -51,6 +51,10 @@ Yes. The Site Portfolio Report is emailed to the Site Owner on the account.  The
 
 ## Will credit memo related changes reflect on the report?
 
+## Why do I see “Not determined” in the Site Owner column? 
+
+Not determined means that the site owner was not specified in the workspace.
+
 ## What Should I Do if the Link to the Site Portfolio Report is Broken?
 
 Contact your Pantheon account manager or [submit a support ticket](/guides/support/support-ticket/#organization-dashboard-support-tab) if the link to your Site Portfolio Report is broken.
