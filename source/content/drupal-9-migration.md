@@ -9,17 +9,22 @@ Drupal 9 includes many of the familiar features and layout introduced in Drupal 
 
 ## Choose Your Upgrade Path
 
+To use this table, find the row whose column values best describe your current and desired state, then select the upgrade guide on the right.
+
+For example:
+- If your site is currently hosted with Pantheon, and was created using Build Tools, use the guide in the first row, "Migrate a Site That Was Created with Build Tools to Drupal 9".  
+- If your site is hosted elsewhere, and is Composer-managed, use the guide in the last row, "Migrate a Composer Managed Drupal 9 Site from Another Platform".
+
 <table>
 <thead>
 <tr>
 <th style="text-align: center;vertical-align:top;"><i class="fa fa-cloud"></i><br/>Current Host</th>
-<th style="text-align: center;vertical-align:top;"><i class="fa fa-wrench"></i><br/>How Site Was Created</th>
-<th style="text-align: center;vertical-align:top;"><i class="glyphicon glyphicon-exclamation-sign"></i><br/>Additional Requirements</th>
+<th style="text-align: center;vertical-align:top;"><i class="fa fa-wrench"></i><br/>How Site Was Created<Popover title="Site Creation" content="What is the method you used to create the site?" /></th>
+<th style="text-align: center;vertical-align:top;"><i class="glyphicon glyphicon-exclamation-sign"></i><br/>Additional Requirements<Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /></th>
 <th style="text-align: center;vertical-align:top;"><i class="fa fa-book"></i><br/>Upgrade Guide</th>
 </tr>
 </thead>
 <tbody>
-<tr>
 <td>Pantheon</td>
 <td>Build Tools</td>
 <td>--</td>
