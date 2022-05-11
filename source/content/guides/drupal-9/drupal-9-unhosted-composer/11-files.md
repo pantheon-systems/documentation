@@ -39,13 +39,13 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   If your archive is under 100MB, you can upload the file directly:
 
-   1. Click **File** in the **MySQL database** field > click **Choose File**.
+   1. Click **File** in the **MySQL database** field > **Choose File**.
 
-   1. Select your local archive file > click **Import**.
+   1. Select your local archive file and click **Import**.
 
      ![Import MySQL database from file](../../../../images/dashboard/import-mysql-file.png)
 
-  **Note:** if you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
+  **Note:** If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
   </Tab>
 
@@ -55,9 +55,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
    1. Click **URL** in the **Archive of site files** field.
 
-   1. Paste a publicly accessible URL for the archive > click **Import**. 
+   1. Paste a publicly accessible URL for the archive and click **Import**. 
    
-      - Change the end of Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
+      - Change the end of the Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
   </Tab>
 
@@ -67,7 +67,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
 
-  To sync your current directory to Pantheon:
+  To sync your current directory to Pantheon, run the following command:
 
   ```bash{promptUser: user}
   terminus rsync . my_site.dev:files
