@@ -19,12 +19,13 @@ For example:
 <thead>
 <tr>
 <th style="text-align: center;vertical-align:top;"><i class="fa fa-cloud"></i><br/>Current Host</th>
-<th style="text-align: center;vertical-align:top;"><i class="fa fa-wrench"></i><br/>How Site Was Created</th>
-<th style="text-align: center;vertical-align:top;"><i class="glyphicon glyphicon-exclamation-sign"></i><br/>Additional Requirements</th>
+<th style="text-align: center;vertical-align:top;"><i class="fa fa-wrench"></i><br/>How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> </th>
+<th style="text-align: center;vertical-align:top;"><i class="glyphicon glyphicon-exclamation-sign"></i><br/>Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> </th>
 <th style="text-align: center;vertical-align:top;"><i class="fa fa-book"></i><br/>Upgrade Guide</th>
 </tr>
 </thead>
 <tbody>
+<tr>
 <td>Pantheon</td>
 <td>Build Tools</td>
 <td>--</td>
