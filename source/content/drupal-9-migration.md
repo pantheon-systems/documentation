@@ -9,7 +9,7 @@ Drupal 9 includes many of the familiar features and layout introduced in Drupal 
 
 ## Choose Your Upgrade Path
 
-|<i class="fa-solid fa-cloud"></i>Current Host|<i class="fa-solid fa-screwdriver-wrench"></i>How Site Was Created|<i class="fa-solid fa-diamond-exclamation"></i>Additional Requirements|<i class="fa-solid fa-book"></i>Upgrade Guide
+|<i class="fa fa-cloud"></i><br>Current Host|<i class="fa fa-screwdriver-wrench"></i><br>How Site Was Created|<i class="fa fa-diamond-exclamation"></i><br>Additional Requirements|<i class="fa fa-book"></i><br>Upgrade Guide
 |---|---|---|---
 |Pantheon|Build Tools|--|[Migrate a Site That Was Created with Build Tools to Drupal 9](/guides/drupal-9-hosted-createbt)
 |Pantheon|Custom Upstream|--|[Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
