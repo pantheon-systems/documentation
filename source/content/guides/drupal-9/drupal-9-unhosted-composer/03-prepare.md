@@ -25,7 +25,7 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-1. Navigate to your **User Dashboard** > click <Icon icon={"more-windows"} text={"Sites:"}/> **Create New Site**.
+1. Navigate to your User Dashboard > click <Icon icon={"more-windows"} text={"Sites:"}/> **Create New Site**.
 
 1. Click **Visit your Pantheon Site Dashboard**.
 
@@ -41,13 +41,15 @@ Create a new folder to use while working on the migration. This folder will cont
 
 1. Obtain a local copy of your old site's code. 
 
-  Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `sites/default/files` directory, or any other static assets you do not want tracked by version control.
+  Your code includes all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `sites/default/files` directory, or any other static assets you do not want tracked by version control.
 
 1. Export the database and media files (`sites/default/files`) from the old platform, but do not add them or upload any files to Pantheon.
 
 ### Retrieve a Local Copy of the Pantheon Site's Code
 
-1. Navigate to the Site Dashboard > click the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment > set the site's Development Mode to Git:
+1. Navigate to the Site Dashboard and click the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+
+1. Set the site's **Development Mode** to Git:
 
   ![Git connection mode](../../../../images/dashboard/connection-mode-git.png)
 
@@ -59,4 +61,4 @@ Create a new folder to use while working on the migration. This folder will cont
   git clone ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
   ```
 
-1. Run the `git clone` command inside your working folder.
+1. Run the `git clone` command in the working folder.
