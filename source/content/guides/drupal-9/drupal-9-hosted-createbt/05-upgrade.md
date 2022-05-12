@@ -104,7 +104,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
    terminus drush $SITE.$ENV uli admin
    ```
 
-1. Log in to the site as admin and take a look under **Reports** at **Upgrade Status**. Any modules which **Upgrade Status** shows as incompatible will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a Drupal 9 compatible status, then it should be removed.
+Log in to the site as admin and  navigate to **Upgrade Status** under *Reports**. Modules displayed as incompatible in  **Upgrade Status** will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a Drupal 9 compatible status, then it should be removed.
 
 ## Upgrade MariaDB in All Environments
 
