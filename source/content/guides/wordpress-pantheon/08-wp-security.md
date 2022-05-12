@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress Security
 description: Keep your WordPress on Pantheon site secure.
 categories: [wordpress]
@@ -22,7 +22,7 @@ Pantheon automatically provides the following security measures:
 
 ## Additional Security
 
-Pantheon provides additional security with the following features:
+Pantheon provides additional security through the following features:
 
 - [Pantheon Global CDN](/global-cdn)
 

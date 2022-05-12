@@ -1,6 +1,6 @@
 ---
-title: WordPress on Pantheon Guide
-subtitle: Create a WordPress Site
+title: WordPress on Pantheon Quick Start Guide
+subtitle: Create a New WordPress Site
 description: Create a WordPress site on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
@@ -22,7 +22,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Select <Icon icon="plus" text="Create New Site"/>.
 
-1. Enter a name for your site and select the check box to make the site part of your org only if you are part of an agency.
+1. Enter a name for your site and select the check box to make the site part of your organization only if you are part of an agency.
 
 1. Click **Continue**.
 
@@ -32,7 +32,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
     ![Alt text describing the image](../../../images/choose-your-cms.png)
 
-1. Wait for your site to finish deploying (this make take a couple of minutes) and then visit your Pantheon [Site Dashboard](/guides/quickstart/site-dashboard/).
+1. Wait for your site to finish deploying (this can take a couple of minutes) and then visit your Pantheon [Site Dashboard](/guides/quickstart/site-dashboard/).
 
     ![Alt text describing the image](../../../images/new-site-deployment.png)
 
@@ -40,7 +40,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Click the <Icon icon="equalizer" text="Test"/> tab in the Site Dashboard > click **Create Test Environment**.
 
-    This can take a couple of minutes. Note that your must create your Test environment before you can create your Live environment.
+    This can take a couple of minutes. Note that you must create your Test environment before you can create your Live environment.
 
     ![Alt text describing the image](../../../images/create-test-environment.png)
 

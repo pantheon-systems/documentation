@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress Content Management
 description: Learn how to manage your WordPress content efficiently.
 categories: [wordpress]
@@ -17,6 +17,10 @@ This section provides information to help make managing content and tasks in you
 ## Content Staging
 
 Review our [Content Staging](/content-staging) doc to learn how to successfully stage and move content between environments in your WordPress site.
+
+## WordPress Configuration Management (WP-CFM)
+
+The [WP-CFM plugin](https://pantheon.io/docs/wp-cfm) provides an elegant mechanism for enabling developers to practice configuration management in code. The plugin exports WordPress site configuration from the SQL database's wp_options table to a .json file stored in private/config. After deploying the file to a new environment for the same site, it can then import the configuration from the .json file into the second wp_options table.
 
 ## Cron for WordPress
 

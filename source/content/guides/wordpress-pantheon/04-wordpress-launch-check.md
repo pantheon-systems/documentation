@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: Launch Check - WordPress Performance and Configuration Analysis
 description: Learn more about the checks we automatically run on your Pantheon WordPress site. 
 categories: [wordpress]
@@ -18,61 +18,62 @@ Pantheon provides static site analysis as a service for WordPress sites to make 
 
 ## Overview
 
-Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as static program analysis by gathering performance & behavior patterns to see how a site works.
+Pantheon provides recommendations that fit the vast majority of use cases by using a technique known as static program analysis which gathers performance and behavior patterns to see how a site works.
 
-This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.
-
-In short, you get a fast, repeatable report that can help detect common problems and provide introspection into your site.
+This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. This process is non-intrusive and does not require installation or configuration. Reports and results are issued automatically, and can help detect common problems and provide insight into your site.
 
 ## How Does it Work?
 
-WP Launch Check is a site audit extension for WP-CLI designed for Pantheon customers. While designed initially for the Pantheon Dashboard it is intended to be fully usable outside of Pantheon.
+WP Launch Check is a site audit extension for WP-CLI designed for Pantheon customers, although it is fully usable outside of Pantheon.
 
 ## WPScan (Recommended)
 
-WP Launch Check utilizes the [WPScan API](https://wpscan.com/api) to check for outdated or vulnerable plugins. If you wish to use this service to receive an alerts when your plugins need to be updated, you'll need to obtain an [API token](https://wpscan.com/pricing) from their website and configure your site to use your token.
+WP Launch Check uses the [WPScan API](https://wpscan.com/api) to check for outdated or vulnerable plugins. The service sends alerts when your plugins need to be updated. Follow the steps below to use this service.
 
-### WPScan Site Configuration
+1. Obtain an [API token](https://wpscan.com/pricing) from the WPScan website.
 
-After you've obtained your API token, add it to your site's `wp-config.php` file using the following PHP code: 
+1. Add the token to your site's `wp-config.php` file using the following PHP code: 
 
-```php:title=wp-config.php
-define( 'WPSCAN_API_TOKEN', '$your_api_token' );
-```
+    ```php:title=wp-config.php
+    define( 'WPSCAN_API_TOKEN', '$your_api_token' );
+    ```
+1. Define the environment.
 
-You'll also need to define which environment you want WPScan to run on using the `PANTHEON_WPSCAN_ENVIRONMENTS` constant. This constant is required to use the WPScan functionality, and allows users to decide whether or not scans are done on multiple environments, or just one.
+    You'll also need to define which environment you want WPScan to run on using the `PANTHEON_WPSCAN_ENVIRONMENTS` constant. This constant is required to use the WPScan functionality, and allows you to decide whether or not scans are done on multiple environments, or just one.
 
-To scan one environment:
+    To scan one environment:
 
-```php:title=wp-config.php
-define( 'PANTHEON_WPSCAN_ENVIRONMENTS', 'live' );
-```
+    ```php:title=wp-config.php
+    define( 'PANTHEON_WPSCAN_ENVIRONMENTS', 'live' );
+    ```
 
-To scan multiple environments:
+    To scan multiple environments:
 
-```php:title=wp-config.php
-define( 'PANTHEON_WPSCAN_ENVIRONMENTS', ['dev', 'test', 'live'] );
-```
+    ```php:title=wp-config.php
+    define( 'PANTHEON_WPSCAN_ENVIRONMENTS', ['dev', 'test', 'live'] );
+    ```
 
-To scan all environments:
+    To scan all environments:
 
-```php:title=wp-config.php
-define( 'PANTHEON_WPSCAN_ENVIRONMENTS', '*' );
-```
+    ```php:title=wp-config.php
+    define( 'PANTHEON_WPSCAN_ENVIRONMENTS', '*' );
+    ```
 
 <Alert title="Note"  type="info" >
 
-Scanning multiple or all environments will more rapidly exhaust your daily API request quota.
+Scanning multiple or all environments exhausts your daily API request quota faster.
 
 </Alert>
 
 ## Run Launch Check Manually
 
-To manually perform a site audit using WP Launch Check from the command line (using [Terminus](/terminus)), run:
+You can manually perform a site audit using WP Launch Check from the command line using [Terminus](/terminus).
 
-```php{promptUser: user}
-terminus wp <site>.<env> -- launchcheck <subcommand>
-```
+1. Run the following command:
+
+    ```php{promptUser: user}
+    terminus wp <site>.<env> -- launchcheck <subcommand>
+    ```
 
 For more information about WP-CLI, visit their [GitHub page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [GitHub repo](https://github.com/pantheon-systems/wp_launch_check/).
 
@@ -94,9 +95,18 @@ The database stores your site's data including:
 - categories, tags, and system-wide settings
 - tables 
 
-Launch Check displays database stats, the number of rows in a given table, which tables are using InnoDB storage engine (suggests a query to run if not), transients, and expired transients. [Transients](https://developer.wordpress.org/apis/handbook/transients/) are cached data temporarily stored in the `wp_options` table.  
+Launch Check displays database stats, including:
 
- The `wp_options` table stores several types of data for your site, including:
+- Rows count in a given table
+
+- Tables using InnoDB storage engine (suggests a query to run if not)
+
+    InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
+    To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
+
+- [Transients](https://developer.wordpress.org/apis/handbook/transients/) and expired transients which are cached data temporarily stored in the `wp_options` table. 
+
+The `wp_options` table stores several types of data for your site, including:
 
 - settings for your plugins, widgets, and themes
 - temporarily cached data
@@ -105,11 +115,6 @@ Launch Check displays database stats, the number of rows in a given table, which
 - autoloaded data
 
 If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data).
-
-#### What issues will I experience if I don't use InnoDB?
-
-InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
-To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
 
 ### Probable Exploits
 

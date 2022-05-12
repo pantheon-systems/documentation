@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: Pantheon Performance and Optimization Features
 description: Optimization and Performance for WorPress on Pantheon
 categories: [wordpress]
@@ -16,7 +16,7 @@ Pantheon provides support for performance and optimization features to help keep
 
 ## New Relic
 
-Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping our support team visualize corresponding performance and symptoms.
+Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping the Pantheon support team visualize corresponding performance and symptoms.
 
 ## Quicksilver
 
@@ -26,7 +26,7 @@ Using [New Relic](/new-relic) makes it easy for you to monitor your site's perfo
 
 This section provides optional steps to improve your site's speed.
 
-1. [wp_options Table](/optimize-wp-options-table-autoloaded-data)
+1. Optimize your [wp_options Table](/optimize-wp-options-table-autoloaded-data)
 
     - Minimize your Autoloaded data in WordPress to reduce your cache size.
 
@@ -36,11 +36,11 @@ This section provides optional steps to improve your site's speed.
 
 2. Persistent Object Cache
 
-    - Reduce the load on your database and CPU overhead with Redis (included in Pantheon accounts).
+    - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in Pantheon accounts).
 
 3. Reverse Proxy Page Cache
 
-    - WordPress can serve cached pages, but other subsystems can do it up to 200x faster. A reverse proxy like Varnish not only helps with performance, but also can help your site be more stable during a traffic spike.
+    - WordPress can serve cached pages, but other subsystems can do it up to 200x faster. A reverse proxy like [Varnish](/cache-control) not only helps with performance, but also can help your site be more stable during a traffic spike.
 
 1. The InnoDB Engine
 

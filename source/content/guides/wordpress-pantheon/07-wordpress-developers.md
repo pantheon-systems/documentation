@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress on Pantheon for Developers
 description: Develop efficiently with WordPress on Pantheon.
 categories: [wordpress]
@@ -32,11 +32,11 @@ Review our [WordPress Core Updates](/core-updates) doc for instructions on how t
 
 ## Testing WordPress Core Updates
 
-Review our [Testing WordPress Core Development Versions](/wordpress-development-versions) doc to test development versions of WordPress pushing updates through the WordPress Dashboard or via Git.
+Review our [Testing WordPress Core Development Versions](/wordpress-development-versions) doc to test development versions of WordPress by pushing updates through the WordPress Dashboard or via Git.
 
 ## Environment Specific Configuration for WordPress Sites
 
-Review our [Environment Specific Configuration for WordPress Sites](/environment-specific-config) doc to learn how to turn WordPress site plugins on and off based on the environment they are running on. This doc also shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config).
+Review our [Environment Specific Configuration for WordPress Sites](/environment-specific-config) doc to learn how to turn WordPress site plugins on and off for each environment. This doc also shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config).
 
 ## Local Development
 
@@ -52,7 +52,7 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 
 ## WordPress and PHP Sessions
 
-WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7) by design. All "user state" is managed via cookies. However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the WordPress Native PHP Sessions plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin. Review our [WordPress and PHP Sessions](/wordpress-sessions) doc for more information about working with PHP Sessions in WordPress.
+WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7) by design. Every "user state" is managed via cookies. However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the WordPress Native PHP Sessions plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin. Review our [WordPress and PHP Sessions](/wordpress-sessions) doc for more information about working with PHP Sessions in WordPress.
 
 ## Configure PhpStorm to Create WordPress Plugins on Pantheon
 

@@ -1,5 +1,5 @@
 ---
-title: WordPress on Pantheon Guide
+title: WordPress on Pantheon Quick Start Guide
 subtitle: Troubleshooting WordPress
 description: Explore WordPress troubleshooting solutions.
 categories: [wordpress]
