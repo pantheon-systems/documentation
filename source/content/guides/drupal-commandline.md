@@ -42,7 +42,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
   terminus site:list
   ```
 
-If you see your Pantheon sites, then installation and authentication were successful! When you are comfortable with Terminus, you will find it faster to use than the browser.
+If your Pantheon site is on the list, installation and authentication were successful!
 
 ## Create Your Site and Initialize Environments
 
@@ -96,15 +96,15 @@ The next few sections of this guide use the example variables `my-d9-site` and `
 
 ### Export the Site Name as a Variable
 
-At this point you are probably tired of replacing `my-d9-site` in every command.
+You can now replace `my-d9-site` in every command, so that you don't have to type it in every time.
 
-1. Instead of typing the site name, let's set our site name to a variable so we can copy/paste the remainder of our commands:
+1. Instead of typing the site name, let's set the site name to a variable so we can copy and paste the remainder of our commands:
 
   ```bash{promptUser: user}
   export TERMINUS_SITE=my-d9-site
   ```
 
-  This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `steve-new-site`. The variable name is replaced in the executed command with the value whenever you use the variable name.
+  This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` to `steve-new-site`. The variable name is replaced in the executed command with the value whenever you use the variable name.
 
 1. Test this by echoing your variable:
 
@@ -128,14 +128,13 @@ At this point you are probably tired of replacing `my-d9-site` in every command.
 
 ## Install Drupal Modules
 
-We recommend that you use [Integrated Composer](/guides/integrated-composer) to install and manage your modules. Integrated Composer is a Pantheon platform feature that extends Composer functionality to Drupal's core files, and treats them as a managed dependency. Integrated Composer let's you perform one-click updates from the Dashboard for upstream updates and Composer dependencies.
+We recommend that you use [Integrated Composer](/guides/integrated-composer) to install and manage your modules. Integrated Composer is a Pantheon platform feature that extends Composer functionality to Drupal's core files, and treats them as a managed dependency. Integrated Composer lets you perform one-click updates from the Dashboard for upstream updates and Composer dependencies.
 
 You can also manage all modules with [Composer](/guides/composer), or with Pantheon's [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin), which runs Composer commands in your development environment.
 
 Here, we are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel).
 
 You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, you can have the modules installed in all three environments.
-
 
 1. Download and install the latest stable release of the `devel` package from [drupal.org](https://www.drupal.org/) via Composer:
 
@@ -233,9 +232,9 @@ You may want to remove these modules after you launch your site, or use more adv
 
 ## Managing Content, Configuration, and Code Across Environments
 
-Drupal configuration information is stored in the database by default and can be exported to `yml` files. Configuration changes can be deployed to different environments (like Test and Live) after you export to files and commit to Git. These changes can then be imported to the database.
+Drupal configuration information is stored in the database by default and can be exported to `yml` files. Configuration changes can be deployed to different environments (e.g. Test or Live) after you export to files and commit to Git. These changes can then be imported to the database.
 
-In the lifecycle of managing a site, content editors will add new material to the Live environment. Move updated content into the Test and Dev environments from time to time to build and test features with fresh material from the Live environment.
+In the lifecycle of managing a site, content editors will add new material to the Live environment. We recommend you move updated content into the Test and Dev environments from time to time to build and test features with fresh material from the Live environment.
 
 1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
 
@@ -249,7 +248,7 @@ In the lifecycle of managing a site, content editors will add new material to th
   terminus env:clone-content $TERMINUS_SITE.live dev
   ```
 
-1. Make some configuration change on the Dev environment, such as enabling the glossary that comes with Views module in Drupal core:
+1. Make a configuration change on the Dev environment, such as enabling the glossary that comes with Views module in Drupal core:
 
   ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- views-enable glossary
