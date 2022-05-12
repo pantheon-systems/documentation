@@ -160,7 +160,7 @@ An Upstream cannot be deleted if there are sites using it.
 ## Tips and Tricks
 
 ### Use the Pantheon Workflow
-To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment. Once things look good, release the update to all.
