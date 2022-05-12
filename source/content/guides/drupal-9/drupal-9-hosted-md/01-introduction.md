@@ -14,15 +14,26 @@ anchorid: drupal-9-v8
 editpath: drupal-9/drupal-9-hosted-md/01-introduction.md
 ---
 
-This guide will show you how to migrate a Pantheon-hosted, Multidev site to Drupal 9. 
+This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon's platform. 
 
-Do not use this guide if you meet any of the following criteria:
+<table>
+<thead>
+<tr>
+<th style="text-align: center;vertical-align:top;"><i class="fa fa-cloud"></i><br/>Current Host</th>
+<th style="text-align: center;vertical-align:top;"><i class="fa fa-wrench"></i><br/>How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> </th>
+<th style="text-align: center;vertical-align:top;"><i class="glyphicon glyphicon-exclamation-sign"></i><br/>Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pantheon</td>
+<td>Dashboard</td>
+<td>Multidev</td>
+</tr>
+</tbody>
+</table>
 
-- Build Tools Workflow Needed
-
-- Drupal version set to 8
-
-- Site created before November 2021
+<Partial file="drupal-9/commit-history.md" />
 
 <Partial file="drupal-9/commit-history.md" />
 

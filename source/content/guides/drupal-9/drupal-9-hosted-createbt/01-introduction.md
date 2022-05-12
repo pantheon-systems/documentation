@@ -16,14 +16,24 @@ editpath: drupal-9/drupal-9-hosted-createbt/01-introduction.md
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
 
-|Criteria|Value
-|---|---
-|**Pantheon Hosted**| **Yes**
-|**Site created using**:| **Build Tools**
-|Multi-Dev Environment | n/a
-|Build Tools Workflow Needed | n/a
-|Drupal version set to 8| n/a
-|Site created before November 2021| n/a
+<table>
+<thead>
+<tr>
+<th style="text-align: center;vertical-align:top;"><i class="fa fa-cloud"></i><br/>Current Host</th>
+<th style="text-align: center;vertical-align:top;"><i class="fa fa-wrench"></i><br/>How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> </th>
+<th style="text-align: center;vertical-align:top;"><i class="glyphicon glyphicon-exclamation-sign"></i><br/>Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pantheon</td>
+<td>Build Tools</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+
+<Partial file="drupal-9/see-landing.md" />
 
 Build Tools connects Pantheon with your CI service and external Git provider. See the [Build Tools Guide](/guides/build-tools#a-build-tools-projects-components) for details on supported Git and CI services combinations.
 
