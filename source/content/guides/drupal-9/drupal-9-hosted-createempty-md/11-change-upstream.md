@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Change Upstreams
 description: 
 cms: "Drupal 9"
@@ -12,7 +12,6 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/change-upstream
 anchorid: change-upstream
 editpath: drupal-9/drupal-9-hosted-createempty-md/11-change-upstream.md
 ---
-
 
 Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 

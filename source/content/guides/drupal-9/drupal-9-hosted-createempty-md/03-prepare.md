@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Prepare
 description: 
 cms: "Drupal 9"

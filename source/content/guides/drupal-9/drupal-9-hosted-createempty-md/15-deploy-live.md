@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Deploy Live
 description: 
 cms: "Drupal 9"
@@ -14,4 +14,3 @@ editpath: drupal-9/drupal-9-hosted-createempty-md/15-deploy-live.md
 ---
 
 <Partial file="drupal-9/deploy-live.md" />
-

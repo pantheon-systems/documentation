@@ -14,7 +14,7 @@ anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-btworkflow/15-deploy.md
 ---
 
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with terminus like so:
+You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with Terminus using the following command:
 
   ```bash{promptUser: user}
   terminus drush $SITE.dev cr

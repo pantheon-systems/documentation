@@ -1,7 +1,7 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Troubleshooting
-description: 
+description: Troubleshoot common issues when migrating.
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
@@ -25,15 +25,13 @@ git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git &
 Switched to a new branch 'composerify'
 ```
 
-
-
 ## Provided host name not valid
 
-If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+If you receive the error message `The provided host name is not valid for this server.`, update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
 ## Inspect Site Logs
 
-If the site doesn't load properly, before you do too much work to investigate issues, clear the cache and try again.
+If the site doesn't load properly, clear the cache and try again.
 
 Use Terminus to inspect the site's logs;
 
@@ -41,4 +39,4 @@ Use Terminus to inspect the site's logs;
 terminus drush $SITE.composerify -- wd-show
 ```
 
-See our [logs collection](/logs) documentation for more information.
+Refer to our [logs collection](/logs) documentation for more information.

@@ -21,13 +21,13 @@ editpath: hosted/05-create-site.md
 
    - Choose a region for the site. Click **Continue**.
 
-   After you click Continue, it will take several minutes for the platform to set everything up.
+   After you click **Continue**, it will take several minutes for the platform to configure everything.
 
 1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
 
-1. Still in the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
+1. In the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
-1. Return to the Dev tab, set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
+1. Return to the Dev tab, set the site's **Development Mode** to Git, and [clone the site locally](/local-development#get-the-code).
 
 1. In your local terminal, from the project root directory, run `composer install`.
 

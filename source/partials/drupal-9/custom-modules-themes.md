@@ -1,4 +1,4 @@
-To move modules, use the following commands:
+To move **modules**, use the following commands:
 
 <TabList>
 
@@ -12,7 +12,6 @@ git commit -m "Copy custom modules"
 
 </Tab>
 
-
 <Tab title="Without Nested Docroot" id="code-nodocroot">
 
 <Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
@@ -21,7 +20,7 @@ git commit -m "Copy custom modules"
 
 </TabList>
 
-To move themes, use the following commands:
+To move **themes**, use the following commands:
 
 <TabList>
 
@@ -33,7 +32,6 @@ git mv web/themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 </Tab>
-
 
 <Tab title="Code if No Nested Docroot" id="code-nodocroot">
 

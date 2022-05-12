@@ -20,7 +20,6 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 </Alert>
 
-
 ## Verify the Repository
 
 1. Check that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.

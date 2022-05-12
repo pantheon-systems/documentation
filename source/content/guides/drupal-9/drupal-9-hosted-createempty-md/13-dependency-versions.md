@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Work With Dependency Versions
 description: 
 cms: "Drupal 9"
@@ -12,7 +12,5 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/dependency-versions
 anchorid: dependency-versions
 editpath: drupal-9/drupal-9-hosted-createempty-md/13-dependency-versions.md
 ---
+
 <Partial file="composer-updating.md" />
-
-
-
