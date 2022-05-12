@@ -61,7 +61,7 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 You can use Terminus to install Quicksilver Composer scripts if you have a Composer-managed site. The sections below provide links to Pantheon-maintained repositories with install scripts.
 
-## Secrets
+### Secrets
 
 Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
 
