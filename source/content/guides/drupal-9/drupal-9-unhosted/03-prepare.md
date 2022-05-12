@@ -16,9 +16,10 @@ editpath: drupal-9/drupal-9-unhosted/03-prepare.md
  It's important to prepare your site before you begin the migration process. Complete the steps outlined below to ensure that your site is prepared for migration to Pantheon's platform.
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
- 2. Get a local copy of both your new Pantheon site and your existing codebase.
 
- 3. Set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match the location of your folders.
+2. Get a local copy of both your new Pantheon site and your existing codebase.
+
+3. Set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match the location of your folders.
 
    This doc uses several commands that depend on the locations of both your existing and new site codebases. Setting the variables will simplify the process for you.
 
@@ -26,9 +27,9 @@ editpath: drupal-9/drupal-9-unhosted/03-prepare.md
    export SOURCE=/absolute/path/to/source/site/codebase
    export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
    ```
- 4. Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+4. Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
- 5. Set the **Dev environment** site mode to **Git** to perform Git operations.
+5. Set the **Dev environment** site mode to **Git** to perform Git operations.
 
- 6. Clone your site to your local environment using the `git clone` command from the dashboard.
+6. Clone your site to your local environment using the `git clone` command from the dashboard.
 

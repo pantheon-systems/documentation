@@ -20,9 +20,9 @@ This section describes how to replicate your selection of contributed modules an
 
 1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`. 
 
-  - If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
+   - If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
 
-  - If the old site has custom patches in its codebase, make sure to copy those over as well.
+   - If the old site has custom patches in its codebase, make sure to copy those over as well.
 
 1. Run `composer update` to have Composer create a `composer.lock` file with all versions and dependencies:
 
@@ -65,9 +65,9 @@ If you do not plan on adding any libraries with Composer in the future, you can 
 
 ### Modules and Themes
 
-Complete the steps below if you have modules and themes that you would like to move to your new site.
+If you have modules and themes that you would like to move to your new site, navigate to the Pantheon site directory and...
 
-1. Navigate to the Pantheon site directory and copy modules from the local directory of the old platform site:
+-  Copy modules from the local directory of the old platform site:
 
     ```shell{promptUser:user}
     cp -R ../FORMER-PLATFORM/modules/custom web/modules
@@ -75,7 +75,7 @@ Complete the steps below if you have modules and themes that you would like to m
     git commit -m "Copy custom modules"
     ```
 
-1. Navigate to the Pantheon site directory and copy themes from the local directory of the old platform site:
+- Copy themes from the local directory of the old platform site:
 
     ```shell{promptUser:user}
     cp -R ../FORMER-PLATFORM/themes/custom web/themes
@@ -83,7 +83,7 @@ Complete the steps below if you have modules and themes that you would like to m
     git commit -m "Copy custom themes"
     ```
 
-3. Navigate to the Pantheon site directory and copy any other custom code you need from your old platform site.
+- Copy any other custom code you need from your old platform site.
 
 ### settings.php
 

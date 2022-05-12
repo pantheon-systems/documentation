@@ -33,7 +33,7 @@ This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9
 </tbody>
 </table>
 
-<Partial file="drupal-9/commit-history.md" />
+<Partial file="drupal-9/see-landing.md" />
 
 <Partial file="drupal-9/commit-history.md" />
 

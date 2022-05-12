@@ -34,7 +34,6 @@ Clone your existing site to your local environment following the `git clone` com
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
-
 2. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
 3. Set the following temporary variables in your terminal session to match your folders location and sites names:

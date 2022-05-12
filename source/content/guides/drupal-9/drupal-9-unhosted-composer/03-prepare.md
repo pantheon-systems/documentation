@@ -18,10 +18,7 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ## Create a New Drupal 9 Site
 
-1. Log in to your Pantheon account. 
-
-  If you don't have an account:
-  - [Create an account](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+1. Log in to your Pantheon account. If you don't have an account, [create one](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
@@ -29,13 +26,11 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 1. Click **Visit your Pantheon Site Dashboard**.
 
-Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
-
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
-Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
+3. Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
 
 ### Create a Local Copy of the Old Site's Code
 

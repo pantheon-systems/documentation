@@ -12,7 +12,7 @@ permalink: docs/guides/drupal-9-unhosted-composer/deploy-dev
 anchorid: deploy-dev
 editpath: drupal-9/drupal-9-unhosted-composer/07-deploy-dev.md
 ---
-You committed your code additions locally in the previous. Now you need to push the commits to Pantheon to deploy them to your Dev environment:
+Now that you've committed your code additions locally, push the commits to Pantheon to deploy them to your Dev environment:
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.dev git

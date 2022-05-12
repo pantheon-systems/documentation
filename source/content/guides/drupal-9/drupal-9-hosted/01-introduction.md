@@ -8,7 +8,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-hosted
 anchorid: drupal-9-hosted
 editpath: drupal-9/drupal-9-hosted/01-introduction.md
