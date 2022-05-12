@@ -27,7 +27,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/07-core.md
       --no-update -W --dev
    ```
 
-1. If you have `core-dev` installed, follow below (skip this step if you do not have `core-dev` installed):
+1. If you have `core-dev` installed, enter the following command (skip this step if you do not have `core-dev` installed):
 
    ```bash{outputLines: 2}
    composer require drupal/core-dev:^9 \
