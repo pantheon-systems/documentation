@@ -67,6 +67,12 @@ Your script may require tokens, passwords, or other information that should be p
 
 You can also use your site's [private files path](/private-paths#private-path-for-files) to store values securely.
 
+<Alert type="info" title="Note">
+
+When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
+
+</Alert>
+
 1. Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
 
   This will allow you to write and remove key values. The code example below shows you how to write a value to a key:
@@ -74,12 +80,6 @@ You can also use your site's [private files path](/private-paths#private-path-fo
   ```bash
   terminus secrets:set site.env key value
   ```
-
-<Alert type="info" title="Note">
-
-When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
-
-</Alert>
 
 ### Clear Cloudflare Cache
 
