@@ -29,7 +29,7 @@ The goals of this migration are to:
 
 ## Before You Begin
 
-- Clone your existing site to your local environment following the `git clone` command from the dashboard.
+Clone your existing site to your local environment following the `git clone` command from the dashboard.
 
 <Alert title="Note" type="info" >
 
@@ -49,7 +49,7 @@ The existing site's commit history will no longer exist after migrating to the n
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
+1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
 1. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
@@ -97,9 +97,9 @@ Your site should already be managing contributed modules and themes through Comp
 
 1. Run the `composer require` command for each module and theme in the `$DESTINATION` directory:
 
-```bash{promptUser: user}
-composer require drupal/PROJECT_NAME:^VERSION
-```
+   ```bash{promptUser: user}
+   composer require drupal/PROJECT_NAME:^VERSION
+   ```
 
 You can require multiple packages in the same command if desired.
 
@@ -111,9 +111,9 @@ If you added non-Drupal packages to your site via Composer, use the following st
 
 1. Use the following command to display the differences between the versions of `composer.json`:
 
-```bash{promptUser: user}
-diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
-```
+   ```bash{promptUser: user}
+   diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
+   ```
 
 #### Libraries
 
@@ -238,8 +238,8 @@ Any additional Composer configuration that you have added to your site should be
 Update your `settings.php` file with a trusted host setting, if you receive the following error message:
 
 ```none
- The provided host name is not valid for this server
- ```
+The provided host name is not valid for this server
+```
 
 Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
