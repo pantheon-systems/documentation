@@ -25,7 +25,6 @@ The goals of this migration are to:
 
 - Import your existing codebase, database and files into it.
 
-
 ## Will This Guide Work for Your Site?
 
 You must confirm that you meet the following requirements before continuing:
@@ -50,8 +49,7 @@ You must confirm that you meet the following requirements before continuing:
 
 - Clone your site to your local environment using the `git clone` command from the dashboard.
 
-
-<Alert title="Note"  type="info" >
+<Alert title="Note" type="info" >
 
 Commit history: The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
 
@@ -61,7 +59,7 @@ Commit history: The steps in this process migrate a site, so the new site will n
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
-2. Get a local copy of both your new Pantheon site and your existing codebase.
+1. Get a local copy of both your new Pantheon site and your existing codebase.
 
 1. This doc uses several commands that depend on the locations of both your existing and new site codebases. To simplify this, set the temporary variables `$SOURCE` and `$DESTINATION` in your terminal session to match your folders location.
 
@@ -97,7 +95,6 @@ This section describes how to replicate your selection of contributed modules an
 
 The goal of this process is to have Composer manage all the site's contrib modules, contrib themes, core upgrades, and libraries (referred to as *contributed code*). The only items from the existing site that should remain in the Git repository are custom code, custom themes, and custom modules that are specific to the existing site.
 
-
 #### Modules and Themes
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
@@ -113,7 +110,7 @@ After Composer is aware of all the contributed code, you'll be able to run `comp
   ```bash{promptUser:user}
   drush pm:list --no-core --fields=name,project,version  --format=table
   ```
-  
+
 1. Review the list and note the versions of modules and themes you depend on.
 
 1. Add these modules to your new codebase using Composer by running the following for each module in the `$DESTINATION` directory:
@@ -142,7 +139,7 @@ After Composer is aware of all the contributed code, you'll be able to run `comp
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="could-not-find-version-module_name.md" />	  
+     <Partial file="could-not-find-version-module_name.md" />
 
 #### Other Composer Packages
 
@@ -195,7 +192,7 @@ git status # Ensure working tree is clean
 diff -Nup --ignore-all-space $SOURCE/sites/default/settings.php $DESTINATION/web/sites/default/settings.php
 ```
 
-Then edit web/sites/default/settings.php and commit as needed.
+Then edit `web/sites/default/settings.php` and commit as needed.
 
 The resulting `settings.php` should have no `$databases` array.
 
@@ -203,7 +200,7 @@ The resulting `settings.php` should have no `$databases` array.
 
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 
-You can use the diff command to get the information you need to copy:
+You can use the `diff` command to get the information you need to copy:
 
 ```bash{promptUser:user}
 diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
@@ -228,7 +225,6 @@ git push origin master
 ## Upload Your Files
 
 <Partial file="migrate-add-files-only-drupal.md" />
-
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go!
 
