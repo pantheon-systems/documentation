@@ -10,7 +10,7 @@ permalink: docs/guides/wordpress-composer
 anchorid: wordpress-composer
 ---
 
-[<dfn id="composer">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
+[<dfn id="composer">Composer</dfn>](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
 
 At the most basic level, Composer requires:
 
@@ -21,7 +21,7 @@ At the most basic level, Composer requires:
 
 Complete the steps below before using this guide to create, migrate, or manage updates on your Composer-managed site.
 
-1. Review [Composer's own documentation](https://getcomposer.org/doc/01-basic-usage.md) to understand how Composer can be used independently of WordPress.
+1. Review [Composer's own documentation](https://getcomposer.org/doc/) to understand how Composer can be used independently of WordPress.
 
 1. Review [Composer Fundamentals Dependencies](/guides/composer#dependencies).
 
