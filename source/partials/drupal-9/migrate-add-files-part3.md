@@ -23,8 +23,8 @@
 
    1. Navigate to the **Archive of site files** field > click **URL**.
 
-   1. Paste a publicly accessible URL for the archive > click **Import**. 
-   
+   1. Paste a publicly accessible URL for the archive > click **Import**.
+
    <Alert title="Note"  type="info" >
 
     You must change the end of Dropbox URLs from `dl=0` to `dl=1` to import your archive correctly.

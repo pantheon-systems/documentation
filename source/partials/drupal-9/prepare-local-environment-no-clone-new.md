@@ -2,7 +2,7 @@
 
    - Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP, along with their required dependencies. **Note:** Terminus 3 should be used for PHP >= 8.0. Restart the shell or terminal environment after entering the following command:
 
-    ```bash{promptUser:user}
+    ```bash{promptUser: user}
     brew install git composer php
     ```
 

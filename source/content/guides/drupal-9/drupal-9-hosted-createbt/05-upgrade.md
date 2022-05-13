@@ -6,13 +6,14 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createbt/upgrade
 anchorid: upgrade
 editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
+reviewed: "2021-03-31"
 ---
+
 1. Use Composer to declare version requirements:
 
    ```bash{outputLines:2-5,7-9}

@@ -1,1 +1,1 @@
-If your situation does not match these criteria, see <a href="/docs/drupal-9-migration">Drupal 9 Migration Guides</a> for additional upgrade paths.
+If your situation does not match these criteria, see [Drupal 9 Migration Guides](/drupal-9-migration) for additional upgrade paths.

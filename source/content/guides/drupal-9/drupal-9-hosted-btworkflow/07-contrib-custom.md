@@ -6,12 +6,12 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-btworkflow/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-btworkflow/07-contrib-custom.md
+reviewed: "2021-03-31"
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
@@ -28,9 +28,9 @@ Your site should already be managing contributed modules and themes through Comp
 
 1. Run a `composer require` command for each module and theme in the `$DESTINATION` directory:
 
-```bash
-composer require drupal/PROJECT_NAME:^VERSION
-```
+  ```bash{promptUser: user}
+  composer require drupal/PROJECT_NAME:^VERSION
+  ```
 
 You can require multiple packages in the same commands, if desired.
 
@@ -38,18 +38,17 @@ You can require multiple packages in the same commands, if desired.
 
 If you added non-Drupal packages to your site via Composer:
 
-1. Run the command `composer require` to migrate each package. 
+1. Run the command `composer require` to migrate each package.
 
 1. Use the following command to display the differences between the master and current `composer.json`:
 
-```
-diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
-```
+  ```bash{promptUser: user}
+  diff -Nup --ignore-all-space $SOURCE/composer.json $DESTINATION/composer.json
+  ```
 
 ### Libraries
 
 Libraries can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. If you're using a library's API, you may have to do additional work to ensure that it functions correctly.
-
 
 ## Custom Code
 
@@ -63,7 +62,6 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 <Partial file="drupal-9/custom-settings-no-docroot.md" />
 
-
 ## Additional Composer Configuration
 
 <Partial file="drupal-9/composer-config.md" />
@@ -72,7 +70,7 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 1. Push to the `master` branch in the external repository:
 
-  ```
+  ```bash{promptUser: user}
   git push origin master
   ```
 

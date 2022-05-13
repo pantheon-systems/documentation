@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted/upload-files
 anchorid: upload-files
 editpath: drupal-9/drupal-9-unhosted/11-upload-files.md
+reviewed: "2021-05-13"
 ---
 
 Now that you've added your database, you need to add your files.

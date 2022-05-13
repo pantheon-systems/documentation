@@ -10,7 +10,7 @@ export SITE=anita-drupal && echo "New alias set as $SITE"
 
 Use `terminus site:list` for a list of sites you have access to:
 
-```bash{outputLines:2-6}
+```bash{outputLines:2-8}
 terminus site:list
 --------------------------- --------------------- ------------- ----------------------------------- -------------------- --------------------- ------------- ------------
 Name                        ID                    Plan          Framework          Region           Owner                Created               Memberships   Is Frozen?

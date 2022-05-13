@@ -1,20 +1,20 @@
 ---
 title: Migrate a Drupal 9 Site from Another Platform
 subtitle: Introduction
-description: 
+description: "Migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon"
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted
 anchorid: drupal-9-unhosted
 editpath: drupal-9/drupal-9-unhosted/01-introduction.md
+reviewed: "2021-05-13"
 ---
 
-This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon's platform. 
+This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon's platform.
 
 <table>
 <thead>

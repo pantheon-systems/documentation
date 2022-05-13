@@ -6,16 +6,16 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-createbt/core
 anchorid: core
 editpath: drupal-9/drupal-9-hosted-createbt/07-core.md
+reviewed: "2021-03-31"
 ---
 
 1. Use Composer to remove `config_installer` and add new requirements:
 
-   ```bash{outputLines: 3-7,9-11}
+   ```bash{outputLines: 2-5,7-9}
    composer require drupal/core-recommended:^9 \
       drupal/core-composer-scaffold:^9 \
       drupal/core-project-message:^9 \

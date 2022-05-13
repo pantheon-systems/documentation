@@ -17,7 +17,7 @@
    ![Import MySQL database from file](../../images/dashboard/import-mysql-file.png)
 
    **Note**: If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
-  
+
   </Tab>
 
   <Tab title="Up to 500MBs" id="500mbs">
@@ -25,14 +25,14 @@
   If your archive is less than 500MB, import it from URL:
 
    1. Navigate to the **MySQL database** field.
-   
+
    1. Click **URL**.
-   
-   1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**. 
 
-   <Alert title="Note"  type="info" >
+   1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**.
 
-   You must change the end of Dropbox URLs from `dl=0` to `dl=1` to import your archive correctly.
+   <Alert title="Note" type="info" >
+
+   Change the end of Dropbox URLs from `dl=0` to `dl=1` to import your archive correctly.
 
    </Alert>
 
@@ -45,23 +45,23 @@
   The following instructions allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
    1. Navigate to the Pantheon Site Dashboard.
-   
+
    1. Open the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-   
+
    1. Click **Connection Info**.
-   
-   1. Copy the Database connection string. 
-   
+
+   1. Copy the Database connection string.
+
     The Database connection string will look similar to this:
 
       ```bash{promptUser: user}
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
       ```
 
-   5. `cd` into the directory containing your `.sql` file in your terminal.
-   
-   6.  Paste the connection string and append it with: `< database.sql`. 
-   
+   1. `cd` into the directory containing your `.sql` file in your terminal.
+
+   1. Paste the connection string and append it with: `< database.sql`.
+
     Your command will look like:
 
       ```bash{promptUser: user}

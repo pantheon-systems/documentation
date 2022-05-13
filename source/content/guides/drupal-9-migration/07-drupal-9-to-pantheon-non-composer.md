@@ -57,7 +57,7 @@ Commit history: The steps in this process migrate a site, so the new site will n
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
+1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
 1. Get a local copy of both your new Pantheon site and your existing codebase.
 

@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted/copy-config
 anchorid: copy-config
 editpath: drupal-9/drupal-9-unhosted/05-copy-config.md
+reviewed: "2021-05-13"
 ---
 
 Now that you've prepared your site, you need to collect configuration information from the source site.

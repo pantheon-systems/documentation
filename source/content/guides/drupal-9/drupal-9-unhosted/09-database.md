@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted/add-database
 anchorid: add-database
 editpath: drupal-9/drupal-9-unhosted/09-database.md
+reviewed: "2021-05-13"
 ---
 
 Now that you've set up your Pantheon Dev environment, you need to import your database.

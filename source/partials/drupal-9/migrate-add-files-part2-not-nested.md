@@ -4,4 +4,5 @@
   cd sites/default/files
   tar -czf ~/files.tar.gz .
   ```
+
   Now you have created an archive file in your user's home directory.

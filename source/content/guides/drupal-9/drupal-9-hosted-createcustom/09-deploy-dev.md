@@ -6,12 +6,13 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-createcustom/deploy-dev
 anchorid: deploy-dev
 editpath: drupal-9/drupal-9-hosted-createcustom/09-deploy-dev.md
+reviewed: "2021-03-31"
 ---
+
 Merge the code and files from the Multidev environment to the Dev environment.
 
 1. Merge the `composerify` branch on the Custom Upstream into the `master` branch and push:
@@ -25,7 +26,7 @@ Merge the code and files from the Multidev environment to the Dev environment.
 
 1. If you applied any site-specific code to individual sites' `ic-test` Multidev, merge that Multidev into the Dev environment.
 
-  <Alert title="Note"  type="info" >
+  <Alert title="Note" type="info" >
 
   There is currently a platform bug which prevents Integrated Composer from being enabled until a change to `pantheon.yml` has been pushed to *each site*. Follow the steps below to complete the final deployment.
 
@@ -46,4 +47,3 @@ Merge the code and files from the Multidev environment to the Dev environment.
 1. Make sure to push your changes up again.
 
 1. Confirm that the Dev environment is working as expected.
-

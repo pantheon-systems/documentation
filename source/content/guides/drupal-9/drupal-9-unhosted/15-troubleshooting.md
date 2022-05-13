@@ -6,12 +6,12 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-unhosted/15-troubleshooting.md
+reviewed: "2021-03-31"
 ---
 
 This section covers common troubleshooting scenarios when migrating a Drupal 9 site from another host to Pantheon's platform.

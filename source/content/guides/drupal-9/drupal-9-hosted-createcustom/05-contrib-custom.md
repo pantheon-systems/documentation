@@ -6,13 +6,14 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createcustom/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-createcustom/05-contrib-custom.md
+reviewed: "2021-03-31"
 ---
+
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 <Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">

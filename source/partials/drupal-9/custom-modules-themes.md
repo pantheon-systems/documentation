@@ -31,6 +31,7 @@ git checkout master web/themes/custom
 git mv web/themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
+
 </Tab>
 
 <Tab title="Code if No Nested Docroot" id="code-nodocroot">
@@ -40,6 +41,7 @@ git checkout master themes/custom
 git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
+
 </Tab>
 
 </TabList>

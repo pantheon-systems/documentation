@@ -1,13 +1,14 @@
 1. Navigate to your Drupal site's root directory to run this command:
 
   <TabList>
- 
+
   <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
   ```bash{promptUser:user}
   cd web/sites/default/files
   tar -czf ~/files.tar.gz .
   ```
+
   </Tab>
 
   <Tab title="Without Nested Docroot" id="code-nodocroot">

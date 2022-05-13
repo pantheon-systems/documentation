@@ -3,4 +3,3 @@
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 Follow the steps below to export a `tar.gz` or `.zip` file of your directory files.
-   
