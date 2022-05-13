@@ -1,6 +1,6 @@
 ---
 title: WordPress with Composer on Pantheon
-subtitle: Manually Manage Updates for a Composer-managed WordPress Site on Pantheon
+subtitle: Manually Manage Updates for a Composer-managed WordPress Site 
 description: Learn how to manually manage updates for a Composer-managed WordPress site on Pantheon.
 categories: [develop]
 tags: [wordpress]
