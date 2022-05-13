@@ -1,7 +1,7 @@
 ---
 title: WordPress with Composer on Pantheon
 subtitle: Use Integrated Composer on WordPress Site 
-description: Learn how to migrate a Composer-managed WordPress site to Pantheon.
+description: Learn how to use Integrated Composer with WordPress on Pantheon.
 categories: [develop]
 tags: [wordpress]
 layout: guide
