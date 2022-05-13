@@ -14,4 +14,4 @@ The **Database** import requires a single `.sql` dump that contains the site's c
    - Replace `DATABASE` with the name of your site database within MySQL.
    - `~/db.sql` defines the output target to a file named `db.sql` in your user's home directory. Adjust to match your desired location.
 
-  The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
+The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.

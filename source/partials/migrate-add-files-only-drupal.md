@@ -4,37 +4,37 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 Follow the steps below to export a `tar.gz` or `.zip` file of your directory files.
 
-1. Navigate to your Drupal site's root directory to run this command: 
+1. Navigate to your Drupal site's root directory to run this command:
 
-  <TabList>
+    <TabList>
 
-  <Tab title="With Nested Docroot" id="code-docroot" active={true}>
+    <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
-  ```bash{promptUser:user}
-  cd web/sites/default/files
-  tar -czf ~/files.tar.gz .
-  ```
-  </Tab>
+    ```bash{promptUser:user}
+    cd web/sites/default/files
+    tar -czf ~/files.tar.gz .
+    ```
 
-  <Tab title="Without Nested Docroot" id="code-nodocroot">
+    </Tab>
 
-  ```bash{promptUser:user}
-  cd sites/default/files
-  tar -czf ~/files.tar.gz .
-  ```
+    <Tab title="Without Nested Docroot" id="code-nodocroot">
 
-  </Tab>
+    ```bash{promptUser:user}
+    cd sites/default/files
+    tar -czf ~/files.tar.gz .
+    ```
 
-  </TabList>
+    </Tab>
 
+    </TabList>
 
-   Now you have created an archive file in your user's home directory.
+     Now you have created an archive file in your user's home directory.
 
-1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
+1. Select the **<span class="fa fa-wrench"></span> Dev** environment in the Site Dashboard.
 
-2. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+1. Select **<span class="fa fa-server"></span> Database / Files**.
 
-3. Click **Import** and then add your archive (based on file size) by following the steps below.
+1. Click **Import** and then add your archive (based on file size) by following the steps below.
 
   <TabList>
 
@@ -54,8 +54,8 @@ Follow the steps below to export a `tar.gz` or `.zip` file of your directory fil
 
    1. Navigate to the **Archive of site files** field > click **URL**.
 
-   1. Paste a publicly accessible URL for the archive > click **Import**. 
-   
+   1. Paste a publicly accessible URL for the archive > click **Import**.
+
    <Alert title="Note"  type="info" >
 
     You must change the end of Dropbox URLs from `dl=0` to `dl=1` to import your archive correctly.
@@ -101,7 +101,7 @@ Follow the steps below to export a `tar.gz` or `.zip` file of your directory fil
       done
       ```
 
-   Your files will be uploaded to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, the command waits 180 seconds before continuing where it left off.
+   Your files will be uploaded to your Pantheon site's **<span class="fa fa-wrench"></span> Dev** environment. If an error occurs during transfer, the command waits 180 seconds before continuing where it left off.
 
   </Tab>
 
