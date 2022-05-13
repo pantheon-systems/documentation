@@ -1054,6 +1054,8 @@
           url: '/guides/terminus-drupal-site-management'
         - text: 'Using WP SAML Auth with Google Apps'
           url: '/guides/wordpress-google-sso'
+        - text: 'Using WordPress with Composer on Pantheon'
+          url: '/guides/wordpress-composer'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
