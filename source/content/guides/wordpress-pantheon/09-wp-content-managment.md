@@ -12,7 +12,7 @@ permalink: docs/guides/wordpress-pantheon/wp-content-management
 anchorid: wordpress-pantheon/wp-content-management
 ---
 
-This section provides information to help make managing content and tasks in your WordPress site easier. 
+This section provides information to make managing content and tasks in your WordPress site easier. 
 
 ## Content Staging
 
@@ -28,4 +28,4 @@ Review our [Cron for WordPress](/wordpress-cron) doc to learn how to create and 
 
 ## WordPress Multisite
 
-Review our [WordPress Multisite](/guides/multisite/) guide to learn how Pantheon supports [WordPress Site Networks](https://wordpress.org/support/article/glossary/) (also known as WordPress Multisite) which lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
+Review our [WordPress Multisite](/guides/multisite/) guide to learn how Pantheon supports [WordPress Site Networks](https://wordpress.org/support/article/glossary/) (also known as WordPress Multisite). WordPress Multisite lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
