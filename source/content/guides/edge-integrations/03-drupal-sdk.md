@@ -281,3 +281,7 @@ Use the following snippet to obtain the header data object:
     $smart_content_cdn = new HeaderData();
     $p_obj = $smart_content_cdn->returnPersonalizationObject();
 ```
+
+## Known Issues
+
+There is a known conflict with the [Internal Page Cache](https://www.drupal.org/docs/administering-a-drupal-site/internal-page-cache) module. This module does not provide any benefit when used on a Pantheon environment but may be recommended (or enabled) for some modules. Our recommendation is to disable the Internal Page Cache module on Pantheon to ensure compatibility with Edge Integrations. [Dynamic Page Cache](https://www.drupal.org/docs/8/core/modules/dynamic-page-cache/overview) _is_ compatible with Edge Integrations and does not suffer from the same restrictions.
