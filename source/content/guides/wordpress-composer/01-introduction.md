@@ -10,7 +10,7 @@ permalink: docs/guides/wordpress-composer
 anchorid: wordpress-composer
 ---
 
-Composer is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
+[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
 
 At the most basic level, Composer requires:
 
