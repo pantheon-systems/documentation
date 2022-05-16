@@ -16,7 +16,7 @@ Integrated Composer lets you deploy your site on Pantheon with one-click updates
 
 Follow the steps below to create a new WordPress site using Integrated Composer.
 
-1. Fork the Pantheon-maintained repository from https://github.com/pantheon-upstreams/wordpress-project.
+1. Fork the [Pantheon-maintained repository](https://github.com/pantheon-upstreams/wordpress-project).
 
 1. Add a new Custom Upstream on the Pantheon dashboard.
 

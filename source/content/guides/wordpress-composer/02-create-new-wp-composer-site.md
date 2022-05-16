@@ -6,8 +6,8 @@ categories: [develop]
 tags: [wordpress]
 layout: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/create-a-new-composer-site
-anchorid: create-a-new-composer-site
+permalink: docs/guides/wordpress-composer/create-new--wp-composer-site
+anchorid: create-new-wp-composer-site
 ---
 
 This section provides steps for creating a new Composer-managed WordPress site on Pantheon. You can review the Pantheon-maintained [WordPress Composer Repo](https://github.com/pantheon-systems/wordpress-composer/) for more details regarding this process.
