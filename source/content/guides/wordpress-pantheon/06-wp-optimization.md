@@ -26,26 +26,26 @@ Using [New Relic](/new-relic) makes it easy for you to monitor your site's perfo
 
 This section provides optional steps to improve your site's speed.
 
-1. Optimize your [wp_options Table](/optimize-wp-options-table-autoloaded-data)
+1. Optimize your [wp_options table](/optimize-wp-options-table-autoloaded-data)
 
     - Minimize your Autoloaded data in WordPress to reduce your cache size.
 
-1. Update PHP with Opcode Cache
+1. Update PHP with Opcode cache
 
     - Keep your PHP up-to-date and use the built-in Opcache to reduce CPU load.
 
-2. Persistent Object Cache
+1. Use persistent Object Cache
 
     - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in Pantheon accounts).
 
-3. Reverse Proxy Page Cache
+1. Implement reverse proxy page cache
 
     - WordPress can serve cached pages, but other subsystems can do it up to 200x faster. A reverse proxy like [Varnish](/cache-control) not only helps with performance, but also can help your site be more stable during a traffic spike.
 
-1. The InnoDB Engine
+1. Use the InnoDB Engine
 
     - Use the InnoDB Storage Engine to avoid table-level locking. InnoDB also helps preserve your data if you have a crash.
 
-1. Dedicated Search Index
+1. Create a dedicated search index
 
     - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/wordpress-solr) for more details.
