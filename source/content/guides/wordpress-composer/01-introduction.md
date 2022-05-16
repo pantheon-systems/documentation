@@ -6,11 +6,11 @@ categories: [develop]
 tags: [wordpress]
 layout: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/introduction
-anchorid: introduction
+permalink: docs/guides/wordpress-composer
+anchorid: wordpress-composer
 ---
 
-[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
+Composer is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
 
 At the most basic level, Composer requires:
 
@@ -21,17 +21,13 @@ At the most basic level, Composer requires:
 
 Complete the steps below before using this guide to create, migrate, or manage updates on your Composer-managed site.
 
-1. Review [Composer's own documentation](https://getcomposer.org) to understand how Composer can be used independently of WordPress.
+1. Review [Composer's own documentation](https://getcomposer.org/doc/) to understand how Composer can be used independently of WordPress.
 
 1. Review [Composer Fundamentals Dependencies](/guides/composer#dependencies).
 
 1. Review [Managing Core as Project Dependency](/guides/composer#managing-core-as-a-project-dependency).
 
 1. Review [Custom Upstream Workflow](/guides/composer#custom-upstream-workflow).
-
-<Enablement title="Automation Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
-
-Learn Composer concepts with help from our experts. Pantheon delivers on-demand training to help development teams navigate the platform and improve internal WebOps.
 
 ## See Also
 
