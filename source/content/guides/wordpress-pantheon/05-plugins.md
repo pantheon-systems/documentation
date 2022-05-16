@@ -50,7 +50,7 @@ The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/def
 
 ## Pantheon Advanced Page Cache
 
-[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) automatically clear related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
+[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) automatically clears related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
 
 ## Pantheon HUD
 
