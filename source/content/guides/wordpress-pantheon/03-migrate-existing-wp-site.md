@@ -18,7 +18,7 @@ This page provides steps for migrating an existing WordPress site to Pantheon's 
 
 Complete the following steps for the current site before beginning the migration to Pantheon.
 
-1. Upgrade the latest version of WordPress.
+1. Upgrade to the latest version of WordPress.
 
 1. Fix any broken links.
 
@@ -58,17 +58,17 @@ Complete the following steps for the current site before beginning the migration
 
 You will need to manually migrate your site to Pantheon when any of the following apply:
 
-- **Large WordPress Site:** WordPress site exceeds 500MB.
+- **The WordPress site is large:** WordPress site exceeds 500MB.
 
-- **Preserve Git History:** You'd like to preserve your site's existing Git commit history.
+- **Git history must be preserved:** You'd like to preserve your site's existing Git commit history.
 
 - You use [WordPress Site Networks](/migrate-wordpress-site-networks)
 
-- **Plugin install unavailable on existing WordPress site:** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+- **Plugin installs are unavailable on the existing WordPress site:** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 
-- **Local WordPress Site:** If your WordPress site is only on your local machine and not yet live.
+- **The WordPress site is local:** If your WordPress site is only on your local machine and not yet live.
 
-- **Debug Failed Migration:** It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
+- **You want to debug failed migrations:** It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
 - **You use Composer:** Please contact our [Professional Services Migration team](https://pantheon.io/professional-services/website-migrations?docs=) for help.
 
