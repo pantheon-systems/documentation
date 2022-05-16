@@ -21,7 +21,7 @@ At the most basic level, Composer requires:
 
 Complete the steps below before using this guide to create, migrate, or manage updates on your Composer-managed site.
 
-1. Review [Composer's own documentation](https://getcomposer.org/doc/) to understand how Composer can be used independently of WordPress.
+1. Review [Composer's own documentation](https://getcomposer.org) to understand how Composer can be used independently of WordPress.
 
 1. Review [Composer Fundamentals Dependencies](/guides/composer#dependencies).
 

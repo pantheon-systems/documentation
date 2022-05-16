@@ -6,7 +6,7 @@ categories: [develop]
 tags: [wordpress]
 layout: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/create-new--wp-composer-site
+permalink: docs/guides/wordpress-composer/create-new-wp-composer-site
 anchorid: create-new-wp-composer-site
 ---
 
