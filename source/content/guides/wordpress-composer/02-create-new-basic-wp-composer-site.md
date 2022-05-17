@@ -12,7 +12,7 @@ permalink: docs/guides/wordpress-composer/create-new-basic-wp-composer-site
 anchorid: create-new-basic-wp-composer-site
 ---
 
-This section provides steps for creating a new Composer-managed WordPress site on Pantheon. You can review the Pantheon-maintained [WordPress Composer Repo](https://github.com/pantheon-systems/wordpress-composer/) for more details regarding this process.
+This section provides steps for creating a new [Composer](https://pantheon.io/docs/guides/integrated-composer)-managed WordPress site on Pantheon. You can review the Pantheon-maintained [WordPress Composer Repo](https://github.com/pantheon-systems/wordpress-composer/) for more details regarding this process.
 
 1. [Spin up a new WordPress site](/create-sites) on Pantheon. 
 

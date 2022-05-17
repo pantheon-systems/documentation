@@ -11,11 +11,11 @@ permalink: docs/guides/wordpress-composer/wordpress-ic
 anchorid: wordpress-ic
 ---
 
-Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
+[Integrated Composer](/guides/integrated-composer) lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
 ## WordPress with Integrated Composer
 
-Follow the steps below to create a new WordPress site using Integrated Composer.
+Follow the steps below to create a new WordPress site using Integrated Composer and Upstream.
 
 1. Fork the [Pantheon-maintained repository](https://github.com/pantheon-upstreams/wordpress-project).
 
