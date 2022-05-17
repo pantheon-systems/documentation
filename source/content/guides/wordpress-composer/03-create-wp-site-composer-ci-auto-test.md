@@ -1,6 +1,6 @@
 ---
-title: Create a Composer-manged WordPress Site that uses Continuous Integration and Automated Testing
-subtitle: Create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing
+title: Create an Advanced Composer-managed WordPress Site 
+subtitle: Create an Advanced Composer-managed WordPress Site 
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 categories: [develop]
 tags: [wordpress]
@@ -93,7 +93,7 @@ The `.ci/.github` file enables GitHub Actions in your project.
 
 You must copy the `.ci/.github` file to the `.github` folder in root to enable Github Actions. You must add some secrets to the GitHub Actions configuration.
 
-### Automated Test Scripts .ci/tests
+## Automated Test Scripts .ci/tests
 
 The `.ci/tests` scripts run automated tests. You can add or remove scripts depending on your testing needs.
 
