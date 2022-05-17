@@ -1,13 +1,15 @@
 ---
-title: WordPress with Composer on Pantheon
-subtitle: Create a Composer-managed WordPress Site 
+title: Create a Basic WordPress Site with Composer on Pantheon
+subtitle: Create a Basic Composer-managed WordPress Site 
 description: Learn how to create a Composer-managed WordPress site on Pantheon.
 categories: [develop]
 tags: [wordpress]
+contributors: [whitneymeredith]
+reviewed: "2021-08-05"
 layout: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/create-new-wp-composer-site
-anchorid: create-new-wp-composer-site
+permalink: docs/guides/wordpress-composer/create-new-basic-wp-composer-site
+anchorid: create-new-basic-wp-composer-site
 ---
 
 This section provides steps for creating a new Composer-managed WordPress site on Pantheon. You can review the Pantheon-maintained [WordPress Composer Repo](https://github.com/pantheon-systems/wordpress-composer/) for more details regarding this process.

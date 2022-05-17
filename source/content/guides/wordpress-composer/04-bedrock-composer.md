@@ -1,16 +1,17 @@
 ---
-title: Using Bedrock on Your WordPress Pantheon Site
-subtitle: Bedrock for Composer-managed WordPress Site 
+title: Using Bedrock to Create Your WordPress Pantheon Site
+subtitle: Create Composer-managed WordPress Site on with Bedrock
 description: Learn more about Bedrock for Composer-managed WordPress sites.
 categories: [develop]
 tags: [wordpress]
+contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/bedrock-composer
 anchorid: bedrock-composer
 ---
 
-Composer does not fully support WordPress, however, Bedrock is a central feature of Composer.[Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure. Bedrock helps simplify working on large WordPress projects with multiple plugins and custom code. Bedrock is great resource for WordPress developers who want to use modern web development methodologies.
+Composer does not fully support WordPress, however, Bedrock is a central feature of Composer. [Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure. Bedrock helps simplify working on large WordPress projects with multiple plugins and custom code. Bedrock is great resource for WordPress developers who want to use modern web development methodologies.
 
 ## Create a New Pantheon WordPress Site with Bedrock
 

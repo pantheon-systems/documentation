@@ -4,6 +4,7 @@ subtitle: Use Integrated Composer with WordPress
 description: Learn how to use Integrated Composer with WordPress on Pantheon.
 categories: [develop]
 tags: [wordpress]
+contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/wordpress-ic
