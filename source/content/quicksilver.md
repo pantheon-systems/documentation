@@ -61,6 +61,20 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 You can use Terminus to install Quicksilver Composer scripts if you have a Composer-managed site. The sections below provide links to Pantheon-maintained repositories with install scripts.
 
+### Secrets
+
+Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
+
+You can also use your site's [private files path](/private-paths#private-path-for-files) to store values securely. When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
+
+1. Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
+
+  This will allow you to write and remove key values. The code example below shows you how to write a value to a key:
+
+  ```bash
+  terminus secrets:set site.env key value
+  ```
+
 ### Clear Cloudflare Cache
 
 Use the [Pantheon Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) to clear your Cloudflare cache. 
@@ -175,18 +189,6 @@ For sites using [Integrated Composer](/guides/integrated-composer), the `sync_co
 
 For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
 
-
-## Secrets
-
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr), or with a storage solution in your site's [private files path](/private-paths#private-path-for-files).
-
-For the latter, the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) provides a convenient way to manage secret data in JSON files in your site's private files path.
-
-<Alert type="info" title="Note">
-
-When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
-
-</Alert>
 
 ## Debugging via Terminus
 
