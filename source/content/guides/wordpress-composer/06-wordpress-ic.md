@@ -33,7 +33,7 @@ Follow the steps below to create a new WordPress site using Integrated Composer 
 
 1. Review the [Integrated Composer Guide](/guides/integrated-composer) for information on how to:
 
-    - [Managing Core as a Project Dependency](https://pantheon.io/docs/guides/composer#managing-core-as-a-project-dependency)
+    - [Managing Core as a Project Dependency](/guides/composer#managing-core-as-a-project-dependency)
 
     - [Serving Sites from the Web Subdirectory](/nested-docroot)
 
@@ -62,8 +62,8 @@ Follow the steps below to create a new WordPress site using Integrated Composer 
 
 ## See Also
 
-- [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream) 
+- [Best Practices for Maintaining Custom Upstreams](/maintain-custom-upstream) 
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 
-- [Composer Fundamentals and WebOps Workflows](https://pantheon.io/docs/guides/composer)
+- [Composer Fundamentals and WebOps Workflows](/guides/composer)
