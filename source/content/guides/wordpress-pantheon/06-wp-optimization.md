@@ -30,13 +30,13 @@ This section provides optional steps to improve your site's speed.
 
     - Minimize your Autoloaded data in WordPress to reduce your cache size.
 
-1. Update PHP with Opcode cache
+1. Update Your PHP Version
 
-    - Keep your PHP up-to-date and use the built-in Opcache to reduce CPU load.
+    - Keep your [PHP version](/php-versions#all-php-versions) up-to-date to reduce CPU load.
 
 1. Use persistent Object Cache
 
-    - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in Pantheon accounts).
+    - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in all [Pantheon accounts](/site-plans-faq#plan-resources) above Basic).
 
 1. Implement reverse proxy page cache
 
