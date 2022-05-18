@@ -6,6 +6,8 @@ layout: terminuspage
 categories: [develop]
 tags: [cli, local, terminus, workflow]
 permalink: docs/terminus/:basename
+previousurl: terminus/
+nexturl: terminus/examples/
 image: terminus-thumbLarge
 reviewed: "2022-03-25"
 ---

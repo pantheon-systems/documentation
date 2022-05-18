@@ -12,7 +12,7 @@ showtoc: true
 anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
-reviewed: "2021-08-17"
+reviewed: "2022-05-17"
 ---
 
 [Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
@@ -30,7 +30,7 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-Autopilot is available to Gold Accounts and higher. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
+Autopilot is available to Gold Accounts and higher, as well as agency partners. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
 
 ## Who is Autopilot For?
 
@@ -41,6 +41,12 @@ Site upkeep can be tedious with constant monitoring, building, maintaining websi
 Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Accounts or higher.
 
 Autopilot is enabled for Pantheon sites at the organization level.
+
+## Autopilot For Agencies
+
+Agency users navigate to the Agency Workspace to see sites that have been granted agency access, including any client sites for which the agency is a supporting or owning organization. 
+
+Agency users always access Autopilot through the Agency Workspace.
 
 ## FAQ
 
