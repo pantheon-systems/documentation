@@ -30,7 +30,7 @@ This section provides optional steps to improve your site's speed.
 
     - Minimize your Autoloaded data in WordPress to reduce your cache size.
 
-1. Update Your PHP Version
+1. Update your PHP version
 
     - Keep your [PHP version](/php-versions#all-php-versions) up-to-date to reduce CPU load.
 
