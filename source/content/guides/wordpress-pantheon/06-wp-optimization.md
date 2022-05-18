@@ -20,7 +20,7 @@ Using [New Relic](/new-relic) makes it easy for you to monitor your site's perfo
 
 ## Quicksilver
 
-[Quicksilver](/quicksilver) allows developers and other users to work on the Pantheon dashboard in SFTP mode and commit their code to their upstream repository. This is especially useful in scenarios where you want to export configuration (WP-CFM).
+[Quicksilver](/quicksilver) hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow.
 
 ## Optimization Tips
 

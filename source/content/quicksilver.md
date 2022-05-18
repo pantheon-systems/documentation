@@ -6,7 +6,7 @@ tags: [quicksilver, webops, workflow]
 reviewed: "2022-03-21"
 ---
 
-Hook into platform workflows to automate your Pantheon WebOps workflow. Tell Pantheon which script you want to run, and the platform will run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
+Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow. There is a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/) that you can contribute to. You can also find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/learn-pantheon?docs">
 
