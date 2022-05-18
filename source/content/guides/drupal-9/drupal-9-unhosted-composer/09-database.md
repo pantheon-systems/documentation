@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-05-09"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted-composer/database
 anchorid: database
 editpath: drupal-9/drupal-9-unhosted-composer/09-database.md
+reviewed: "2021-05-09"
 ---
 
 Now that you've set up your Pantheon Dev environment, you need to import your database.
@@ -19,7 +19,7 @@ Now that you've set up your Pantheon Dev environment, you need to import your da
 
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, compress the resulting archive with gzip:
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql
@@ -33,9 +33,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
 
-1. Navigate to the Site Dashboard and select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+1. Navigate to the Site Dashboard and select the **<span class="fa fa-wrench"></span> Dev** environment.
 
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+1. Select **<span class="fa fa-server"></span> Database / Files**.
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
@@ -74,7 +74,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
     The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, refer to [Accessing MySQL Databases](/mysql-access).
 
     1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard.
-      
+
     1. Click **Connection Info** and copy the database connection string.
 
        Your command will resemble the following structure:
@@ -87,7 +87,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
     1. Paste the connection string and append it with: `< database.sql`
 
-       - This imports the `.sql` file to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+       - This imports the `.sql` file to the **<span class="fa fa-wrench"></span> Dev** environment.
 
        - Your command will resemble the following structure:
 

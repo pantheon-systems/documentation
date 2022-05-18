@@ -6,12 +6,13 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-05-09"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted-composer/deploy-live
 anchorid: deploy-live
 editpath: drupal-9/drupal-9-unhosted-composer/09-deploy-live.md
+reviewed: "2021-05-09"
 ---
+
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches in the [Pantheon Dashboard](/clear-caches#pantheon-dashboard) or with terminus like so:
 
   ```bash{promptUser: user}

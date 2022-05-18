@@ -15,7 +15,7 @@ reviewed: "2021-05-13"
 
 Now that you've prepared your site, you need to collect configuration information from the source site.
 
-1. Copy any existing configuration from the source site. 
+1. Copy any existing configuration from the source site.
 
 1. Update the source path as needed to match your configuration folder:
 
@@ -33,7 +33,6 @@ git commit -m "Pull in configuration from source site"
 ```
 
 </Tab>
-
 
 <Tab title="Without Nested Docroot" id="code-nodocroot">
 

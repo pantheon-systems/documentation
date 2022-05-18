@@ -32,4 +32,4 @@ It's important to prepare your site before you begin the migration process. Comp
 
 1. Set the **Dev environment** site mode to **Git** to perform Git operations.
 
-1. Clone your site to your local environment using the `git clone` command from the dashboard.
+1. Clone your site to your local environment using the `git clone` command from the Dashboard.

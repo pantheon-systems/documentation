@@ -6,19 +6,19 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-05-09"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted-composer/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-unhosted-composer/05-contrib-custom.md
+reviewed: "2021-05-09"
 ---
-This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
+This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 ## Composer packages
 
-1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`. 
+1. Copy your package list from the `requires` section of the existing site's `composer.json` and add it to the new site's `composer.json`.
 
    - If the existing `composer.json` defines additional repositories or patches, copy those over too. Take care not to overwrite the `upstream-configuration` package and repository.
 
@@ -26,21 +26,21 @@ This section describes how to replicate your selection of contributed modules an
 
 1. Run `composer update` to have Composer create a `composer.lock` file with all versions and dependencies:
 
-  ```shell{promptUser:user}
+  ```bash{promptUser: user}
   composer update
   ```
 
-1. Run the `git status` command to confirm that all changed files have names that start with `composer.`. 
+1. Run the `git status` command to confirm that all changed files have names that start with `composer.`.
 
 1. Add other folders to `.gitignore` until `git status` only shows the Composer files being modified:
 
-  ```shell{promptUser:user}
+  ```bash{promptUser: user}
   git status
   ```
 
 1. Add and commit the changed Composer files to Git:
 
-  ```shell{promptUser:user}
+  ```shell{promptUser: user}
   git add composer.*; git commit -m "Add composer packages"
   ```
 
@@ -65,11 +65,11 @@ If you do not plan on adding any libraries with Composer in the future, you can 
 
 ### Modules and Themes
 
-If you have modules and themes that you would like to move to your new site, navigate to the Pantheon site directory and...
+If you have modules and themes that you would like to move to your new site, navigate to the Pantheon site directory and:
 
--  Copy modules from the local directory of the old platform site:
+- Copy modules from the local directory of the old platform site:
 
-    ```shell{promptUser:user}
+    ```bash{promptUser: user}
     cp -R ../FORMER-PLATFORM/modules/custom web/modules
     git add web/modules/custom
     git commit -m "Copy custom modules"
@@ -77,7 +77,7 @@ If you have modules and themes that you would like to move to your new site, nav
 
 - Copy themes from the local directory of the old platform site:
 
-    ```shell{promptUser:user}
+    ```bash{promptUser:user}
     cp -R ../FORMER-PLATFORM/themes/custom web/themes
     git add web/themes/custom
     git commit -m "Copy custom themes"
@@ -107,7 +107,7 @@ Complete the steps in this section to copy exported configuration settings from 
 
 1. Run the following commands:
 
-  ```shell{promptUser: user}
+  ```bash{promptUser: user}
   mkdir config
   cp -R ../FORMER-PLATFORM/<config folder location> config/
   git commit -m "Add site configuration."

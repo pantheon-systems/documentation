@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted/create-site
 anchorid: create-site
 editpath: hosted/05-create-site.md
+reviewed: "2021-03-31"
 ---
 
 1. Create a new Drupal 9 Integrated Composer site from the Upstream using the: [Create Your Pantheon Site](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) page. On the this page:
@@ -23,7 +23,7 @@ editpath: hosted/05-create-site.md
 
    After you click **Continue**, it will take several minutes for the platform to configure everything.
 
-1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
+1. In the **<span class="fa fa-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
 
 1. In the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
@@ -41,9 +41,9 @@ editpath: hosted/05-create-site.md
 
 ## Set Drupal Core Version
 
-Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
+Set the Drupal core version to ensure the site remains on Drupal 8 for now:
 
-  ```bash{promptUser:user}
+  ```bash{promptUser: user}
   composer require --no-update drupal/core-recommended:^8.9
   composer require --dev drupal/core-dev:^8.9
   git add composer.*

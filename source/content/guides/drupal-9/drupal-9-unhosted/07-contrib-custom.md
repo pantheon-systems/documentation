@@ -13,6 +13,7 @@ anchorid: contrib-custom
 editpath: drupal-9/drupal-9-unhosted/07-contrib-custom.md
 reviewed: "2021-05-13"
 ---
+
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
 ## Contributed Code
@@ -33,7 +34,7 @@ The only items from the existing site that should remain in the Git repository a
 
 The steps here ensure that all modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Composer must be aware of all contributed code before you can run `composer update` command within the directory. This command tells Composer to upgrade all contributed code automatically. The Pantheon dashboard will also update Composer dependencies in addition to updating the files from the upstream. 
+Composer must be aware of all contributed code before you can run `composer update` command within the directory. This command tells Composer to upgrade all contributed code automatically. The Pantheon dashboard will also update Composer dependencies in addition to updating the files from the upstream.
 
 1. Review the existing site's code and check for contributed modules in:
 
@@ -45,7 +46,7 @@ Composer must be aware of all contributed code before you can run `composer upda
 
     - `/sites/all/modules/contrib`
 
-1. Run the `pm:list` Drush command within a contributed modules folder, for example: 
+1. Run the `pm:list` Drush command within a contributed modules folder, for example:
 
     - `/modules`
 
@@ -91,7 +92,7 @@ Composer must be aware of all contributed code before you can run `composer upda
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="module-name.md" />	  
+    <Partial file="module-name.md" />
 
 ### Other Composer Packages
 
@@ -126,4 +127,3 @@ Next, manually copy custom code from the existing site repository to the Compose
 ## Additional Composer Configuration
 
 <Partial file="drupal-9/composer-config.md" />
-

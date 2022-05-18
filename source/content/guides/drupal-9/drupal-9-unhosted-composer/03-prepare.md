@@ -6,15 +6,15 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-05-09"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-unhosted-composer/prepare
 anchorid: prepare
 editpath: drupal-9/drupal-9-unhosted-composer/03-prepare.md
+reviewed: "2021-05-09"
 ---
 
-Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon. 
+Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
 
 ## Create a New Drupal 9 Site
 
@@ -22,7 +22,7 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-1. Navigate to your User Dashboard > click <Icon icon={"more-windows"} text={"Sites:"}/> **Create New Site**.
+1. Navigate to your User Dashboard, then click <Icon icon={"more-windows"} text={"Sites:"}/> **Create New Site**.
 
 1. Click **Visit your Pantheon Site Dashboard**.
 
@@ -30,11 +30,11 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
 
-3. Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
+1. Create a new folder to use while working on the migration. This folder will contain two subdirectories that you'll create in the next sections, one for the site on the former platform, and one for the Pantheon site.
 
 ### Create a Local Copy of the Old Site's Code
 
-1. Obtain a local copy of your old site's code. 
+1. Obtain a local copy of your old site's code.
 
   Your code includes all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `sites/default/files` directory, or any other static assets you do not want tracked by version control.
 
@@ -42,7 +42,7 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ### Retrieve a Local Copy of the Pantheon Site's Code
 
-1. Navigate to the Site Dashboard and click the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+1. Navigate to the Site Dashboard and click the **<span class="fa fa-wrench"></span> Dev** environment.
 
 1. Set the site's **Development Mode** to Git:
 

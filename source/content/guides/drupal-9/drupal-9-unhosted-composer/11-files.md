@@ -6,12 +6,13 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-05-09"
 layout: guide
 permalink: docs/guides/drupal-9-unhosted-composer/files
 anchorid: files
 editpath: drupal-9/drupal-9-unhosted-composer/11-files.md
+reviewed: "2021-05-09"
 ---
+
 Now that you've added your database, you need to add your files.
 
 **Files** refer to anything within `sites/default/files`, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
@@ -27,9 +28,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   tar -czf ~/files.tar.gz .
   ```
 
-1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
+1. Select the **<span class="fa fa-wrench"></span> Dev** environment in the Site Dashboard.
 
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+1. Select **<span class="fa fa-server"></span> Database / Files**.
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
@@ -55,8 +56,8 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
    1. Click **URL** in the **Archive of site files** field.
 
-   1. Paste a publicly accessible URL for the archive and click **Import**. 
-   
+   1. Paste a publicly accessible URL for the archive and click **Import**.
+
       - Change the end of the Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
   </Tab>
@@ -82,4 +83,3 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   </Tab>
 
   </TabList>
-
