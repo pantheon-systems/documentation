@@ -18,6 +18,15 @@ At the most basic level, Composer requires:
 - A list of dependencies
 - A place to put the dependencies
 
+There are different cases for using Composer to manage dependencies in WordPress, including:
+
+- Manage dependencies for themes and plugins you’re currently developing
+
+- Manage your site's themes and plugins used site
+
+- Total site dependency management, including custom code
+
+
 ## First Steps
 
 Complete the steps below before using this guide to create, migrate, or manage updates on your Composer-managed site.

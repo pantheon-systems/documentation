@@ -69,6 +69,8 @@ anchorid: bedrock-composer
 
 ## See Also
 
+- [Pantheon WordPress with Bedrock Recommended GitHub Repository](https://github.com/pantheon-systems/wordpress-bedrock-recommended)
+
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
 
 - [Terminus Connection Info](/terminus/commands/connection-info)
