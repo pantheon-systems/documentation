@@ -164,4 +164,4 @@ Drupal 7 — permanently opt out of the PageCompression check in the Cache repor
 
  ## See Also
 
- If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check).
+ If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/guides/wordpress-pantheon/wordpress-launch-check).

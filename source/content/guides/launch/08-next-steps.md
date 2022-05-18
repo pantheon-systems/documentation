@@ -59,7 +59,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 - Launch Check
 
-  - [WordPress Launch Check](/wordpress-launch-check/)
+  - [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check)
 
   - [Drupal Launch Check](/drupal-launch-check/)
 

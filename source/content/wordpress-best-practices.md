@@ -48,7 +48,7 @@ There are many plugins and themes in WordPress that require license keys. Since 
 
 ## Testing
 
-* Run [Launch Check](/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
+* Run [Launch Check](/guides/wordpress-pantheon/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
 * Automate testing with [Behat](/guides/behat). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
