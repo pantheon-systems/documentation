@@ -6,12 +6,12 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createempty-md/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
+reviewed: "2021-03-31"
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
@@ -28,23 +28,25 @@ Once Composer is aware of all the contributed code, you'll be able to run `compo
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. Review the site and make a list of the exact versions of modules and themes you depend on. One way to do this is to run the `pm:list` Drush command from within a contributed module's folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. Review the site and make a list of the exact versions of modules and themes you depend on.
+
+  One way to do this is to run the `pm:list` Drush command from within a contributed module's folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
 
   This will list each module, followed by which version of that module is installed:
 
   ```bash{promptUser:user}
-  terminus drush $SITE.dev pm:list -- --no-core --fields=name,version  --format=table
+  terminus drush $SITE.dev pm:list -- --no-core --fields=name,version --format=table
   ```
 
   If you are already using Composer to manage your site dependencies, you can go to `composer.json` in your source site to get the package names and versions.
 
-1. You can add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
+1. Add these modules to your new codebase using Composer by running the following for each module in the `$SITE` directory:
 
   ```bash{promptUser:user}
   composer require drupal/MODULE_NAME:^VERSION
   ```
 
-<Partial file="module-name.md" />
+  <Partial file="module-name.md" />
 
   Some modules use different version formats.
 
@@ -63,8 +65,6 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
    ```
 
     Use the version directly, e.g. `^4.1.1`.
-
-    <Partial file="module_name.md" />	  
 
 ### Libraries
 

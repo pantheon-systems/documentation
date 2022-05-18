@@ -6,12 +6,12 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createempty-md/deploy-dev
 anchorid: deploy-dev
 editpath: drupal-9/drupal-9-hosted-createempty-md/09-deploy-dev.md
+reviewed: "2021-03-31"
 ---
 
 You've now committed the code to the local branch. Deploy that branch directly to a new Multidev (called `composerify` in the steps below) and test the site in the browser.
@@ -44,7 +44,7 @@ Since the commit history of the `composerify` Multidev has no commits in common 
 
 If the site is not working, try this Composer command on the local `composerify` branch:
 
-```bash{promptUser:user}
+```bash{promptUser: user}
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
@@ -56,7 +56,7 @@ After you confirm that the site works in the Multidev, replace the `master` bran
 
 1. Retrieve the most recent commit hash from the local `composerify` branch:
 
-   ```bash{promptUser:user}
+   ```bash{promptUser: user}
    git log --format="%H" -n 1
    ```
 
@@ -70,4 +70,4 @@ After you confirm that the site works in the Multidev, replace the `master` bran
    git push --force origin master
    ```
 
-Your site's Dev environment is now set up to use the Drupal 9 Integrated Composer upstream. 
+Your site's Dev environment is now set up to use the Drupal 9 Integrated Composer upstream.

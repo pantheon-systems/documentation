@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-pre112021/available-updates
 anchorid: available-updates
 editpath: drupal-9/drupal-9-hosted-pre112021/05-available-updates.md
+reviewed: "2021-03-31"
 ---
 
 <Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />

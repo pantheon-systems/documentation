@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-createempty-md/deploy-live
 anchorid: deploy-live
 editpath: drupal-9/drupal-9-hosted-createempty-md/15-deploy-live.md
+reviewed: "2021-03-31"
 ---
 
 <Partial file="drupal-9/deploy-live.md" />

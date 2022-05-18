@@ -1,15 +1,14 @@
 Run the code below to set the Drupal core version to Drupal 9:
 
-  ```shell{promptUser: user}
+  ```bash{promptUser: user}
   composer require --update-with-dependencies --no-update 'drupal/core-recommended:^9' 'drupal/core-composer-scaffold:^9'
   composer update drupal/core* -W
   git add composer.*
   git commit -m "upgrade to Drupal 9"
   ```
 
-
 <Alert title="Note" type="info" >
 
-Replace the `composer update drupal/core* -W` command with `composer update` if you receive the error message `Your requirements could not be resolved to an installable set of packages.`
+If you receive the error message `Your requirements could not be resolved to an installable set of packages`, replace the `composer update drupal/core* -W` command with `composer update`
 
 </Alert>

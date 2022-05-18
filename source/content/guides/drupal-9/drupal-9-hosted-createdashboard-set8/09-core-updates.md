@@ -6,12 +6,12 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createdashboard-set8/core-updates
 anchorid: core-updates
 editpath: drupal-9-hosted-createdashboard-set8/09-core-updates.md
+reviewed: "2021-03-31"
 ---
 
 <Partial file="drupal-9/core-updates.md" />

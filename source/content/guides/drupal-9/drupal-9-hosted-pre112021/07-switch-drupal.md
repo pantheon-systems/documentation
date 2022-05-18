@@ -6,11 +6,11 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 permalink: docs/guides/drupal-9-hosted-pre112021/switch-drupal
 anchorid: switch-drupal
 editpath: drupal-9/drupal-9-hosted-pre112021/07-switch-drupal.md
+reviewed: "2021-03-31"
 ---
 
 This page provides steps to switch your site from Drupal to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
@@ -22,4 +22,3 @@ This page provides steps to switch your site from Drupal to [Drupal with Compose
     ```
 
 1. Follow the `drupal-recommended` upstream to keep your site current with general configuration changes recommended by Pantheon.
-

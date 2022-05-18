@@ -6,21 +6,23 @@ cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createempty-md/composer-upstream
 anchorid: composer-upstream
 editpath: drupal-9/drupal-9-hosted-createempty-md/05-composer-upstream.md
+reviewed: "2021-03-31"
 ---
 
-This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
+This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back.
 
 To minimize issues, make the codebase changes in a new branch:
 
-1. In your local terminal, change directories into the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
+1. In your local terminal, change directories into the site project.
 
-  ```bash{promptUser:user}
+  For example, if you keep your projects in a folder called `projects` in the home directory:
+
+  ```bash{promptUser: user}
   cd ~/projects/$SITE/
   ```
 
@@ -37,7 +39,7 @@ To minimize issues, make the codebase changes in a new branch:
 
 Set the Drupal core version to ensure the site remains on Drupal 8, for now:
 
-  ```bash{promptUser:user}
+  ```bash{promptUser: user}
   composer require --no-update drupal/core-recommended:^8.9
   composer require --dev drupal/core-dev:^8.9
   git add composer.*
@@ -68,7 +70,7 @@ Copy any existing configuration from the default branch. Adjust the source folde
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
-This is a common location for the `config` file; if this isn't where your `config` file is located, replace `config` with the full path, such as `web/sites/default/config`.
+This is a common location for the `config` file. If this isn't where your `config` file is located, replace `config` with the full path, such as `web/sites/default/config`.
 
 ```bash{promptUser:user}
 git checkout master config
@@ -78,7 +80,6 @@ git commit -m "Pull in configuration from default branch"
 ```
 
 </Tab>
-
 
 <Tab title="Without Nested Docroot" id="code-nodocroot">
 
@@ -113,4 +114,4 @@ git commit -m "Pull in configuration from default branch"
 
   Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then add `build_step: true` to `pantheon.yml` if it is not already included.
 
- In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
+  In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
