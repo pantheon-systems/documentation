@@ -81,7 +81,7 @@ For more information about WP-CLI, visit their [GitHub page](https://github.com/
 
 ### Cron
 
-Cron is disabled by default since the `platform-run` job in the WordPress Upstream runs once every hour. You can enable Cron if you would like to use it. This check will return the following message if it finds that Cron is disabled.
+Cron is disabled by default because the `platform-run` job in the WordPress Upstream runs once every hour. You can enable Cron if you would like to use it. The launch check will return the following message if Cron is disabled.
 
 `Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php.`
 
