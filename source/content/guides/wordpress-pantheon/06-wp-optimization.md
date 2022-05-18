@@ -20,7 +20,7 @@ Using [New Relic](/new-relic) makes it easy for you to monitor your site's perfo
 
 ## Quicksilver
 
-[Quicksilver](/quicksilver) hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a another team member triggers the corresponding workflow.
+[Quicksilver](/quicksilver) hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow.
 
 ## Optimization Tips
 
