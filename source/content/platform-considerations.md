@@ -3,16 +3,16 @@ title: Platform Considerations
 description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
 categories: [platform]
 tags: [files, libraries, security, webops]
-reviewed: "2020-10-16"
+reviewed: "2022-04-22"
 ---
 
-This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
+This page is used to keep track of common platform considerations, derived from Pantheon's distributed nature. Check back often, as we are keeping it current as we make improvements to address these limitations.
 
 <Partial file="auth.md" />
 
 ## Browser Support for Pantheon's Dashboard
 
-In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
+In an effort to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
 +------------------------+--------+---------+-------+------+---------------------+
 |                        | Chrome | Firefox | Opera | Edge | Safari              |
@@ -44,7 +44,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 Running the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
 
-Most often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
+Often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
 ## CORS
 
@@ -52,7 +52,28 @@ For sites that need to provide services with Cross-Origin Resource Sharing (COR
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
-WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains [in a MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
+WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
+
+Drupal 9 users can update `sites/default/services.yml` to enable CORS.
+
+Sample `services.yml` file:
+
+```yml:title=sites/default/services.yml
+  cors.config:
+    enabled: true
+    # Specify allowed headers, like 'x-allowed-header'.
+    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin','x-allowed-header','*']
+    # Specify allowed request methods, specify ['*'] to allow all possible ones.
+    allowedMethods: ['*']
+    # Configure requests allowed from specific origins.
+    allowedOrigins: ['http://localhost/','http://localhost:3000','http://localhost:3001','http://localhost:3002','*']
+    # Sets the Access-Control-Expose-Headers header.
+    exposedHeaders: false
+    # Sets the Access-Control-Max-Age header.
+    maxAge: false
+    # Sets the Access-Control-Allow-Credentials header.
+    supportsCredentials: true
+```
 
 ## CSS Preprocessors
 
@@ -66,9 +87,9 @@ MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Eve
 
 ## Drupal 7 and Ampersands
 
-A Drupal 7 site given a URL with an ampersand (`&`) in it, excluding query parameter separation, will return a 404, regardless of the presence of a matching path.
+A Drupal 7 site with an ampersand (`&`) in the site URL (excluding instances of query parameter separation) will return a 404 error, regardless of the presence of a matching path.
 
-Be sure to encode URLs that use ampersands with `%26` in place of `&`.
+Ensure you encode URLs that use ampersands with `%26` instead of `&`.
 
 ## Drupal Steward
 
@@ -78,9 +99,9 @@ For more information about Drupal Steward, refer to the [Drupal Steward FAQ](htt
 
 ## Email and Deliverability
 
-Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
+Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure the high deliverability of emails originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (for example SendGrid) in production to ensure that your email is delivered.
 
-See the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) doc for more details and suggestions.
+For suggestions or more information refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) documentation.
 
 ## ffmpeg Transcoding Support
 
@@ -90,7 +111,7 @@ We do not support ffmpeg transcoding, and we do not have plans to add this featu
 
 Emoji support is available out of the box on WordPress and Drupal 8. Drupal 7 sites can enable Emoji support by following this procedure:
 
-For new _or_ existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
+For new or existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
 
 ```php:title=sites/default/settings.php
 $databases['default']['default']['charset'] = 'utf8mb4';
@@ -125,7 +146,7 @@ Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths
 
 ## .htaccess
 
-Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
+Pantheon sites use nginx to concurrently serve requests. The nginx web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
 For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
@@ -365,4 +386,4 @@ Xdebug is not available on the platform. Local development tools such as [Lando]
 
 ## XML-RPC
 
-The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, as of this doc's last update, listed as experimental, and not included on the Platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.
+The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, as of the last update to this document, listed as experimental and not included on the platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.

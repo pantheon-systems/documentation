@@ -40,7 +40,7 @@ Use these configuration snippets to specify a local configuration that will be i
 
 ### Drupal 9
 
-Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-recommended). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
 ```php
   /**
@@ -216,7 +216,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I get a copy of a default.settings.php?
 
-- Drupal 9 - [https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml](https://github.com/pantheon-systems/drupal-recommended/blob/default/pantheon.upstream.yml)
+- Drupal 9 - [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml)
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 
 ### Where can I find examples of Pantheon settings.php?

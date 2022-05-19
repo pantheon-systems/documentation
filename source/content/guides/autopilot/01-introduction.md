@@ -12,7 +12,7 @@ showtoc: true
 anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
-reviewed: "2022-04-05"
+reviewed: "2022-05-17"
 ---
 
 [Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
@@ -35,6 +35,7 @@ Autopilot is available for the following accounts:
  - Gold
  - Platinum
  - Diamond
+ - Agency partners
 
 Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to discuss which plan is best for your needs.
 
@@ -56,11 +57,15 @@ Autopilot requires the following:
 - [Multidev](/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
 
-### Autopilot Drush, Integrated Composer, and Multisite Compatibility 
+### Autopilot Site Compatibility
 
-![Autopilot Drush and Integrated Composer Compatibility](../../../images/autopilot/autopilot-drush-and-ic-compatibility.jpg)
+![Autopilot Site Compatibility](../../../images/autopilot/autopilot-site-compatibility.jpg)
 
+## Autopilot For Agencies
 
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization. 
+
+Agency users can only access Autopilot through the Agency Workspace.
 
 ## FAQ
 
