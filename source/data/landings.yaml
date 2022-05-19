@@ -1056,8 +1056,6 @@
           url: '/guides/wordpress-google-sso'
         - text: 'Using WordPress with Composer on Pantheon'
           url: '/guides/wordpress-composer'
-        - text: 'WordPress on Pantheon Quick Start Guide'
-          url: '/guides/wordpress-pantheon'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
