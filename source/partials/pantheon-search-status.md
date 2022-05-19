@@ -1,6 +1,6 @@
-<Alert title="Limited Availability" type="info" icon="leaf">
+<Alert title="General Availability" type="info" icon="leaf">
 
-This page refers to products and features which are currently in Limited Availability. Limited Availability allows customers to set up Pantheon Search on Drupal 9 and take advantage of the features of the service. The content on this page is subject to change as development continues, so check back frequently to learn of the latest developments.
+Pantheon Search on Drupal 9 is in General Availability and take advantage of the features of the service. The content on this page is subject to change as development continues, so check back frequently to learn of the latest developments.
 
 </Alert>
 
