@@ -15,7 +15,7 @@ editpath: autopilot/01-introduction.md
 reviewed: "2022-05-17"
 ---
 
-[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal.
+[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
 ## What Autopilot Does
 
@@ -30,11 +30,18 @@ Pantheon's Autopilot:
 
 ## Get Autopilot
 
-Autopilot is available to Gold Accounts and higher, as well as agency partners. Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to talk through what plan is best for your needs.
+Autopilot is available for the following accounts:
+
+ - Gold
+ - Platinum
+ - Diamond
+ - Agency partners
+
+Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to discuss which plan is best for your needs.
 
 ## Who is Autopilot For?
 
-If you build or maintain WordPress and Drupal sites, Autopilot is for you.
+Autopilot is for you if you build or maintain WordPress and Drupal sites.
 
 Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
@@ -42,17 +49,29 @@ Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Acco
 
 Autopilot is enabled for Pantheon sites at the organization level.
 
+## Autopilot Requirements
+
+Autopilot requires the following:
+
+- A Gold, Platinum, or Diamond account
+- [Multidev](/multidev)
+- A compatible version of Drush (if you are not using Integrated Composer)
+
+### Autopilot Site Compatibility
+
+![Autopilot Site Compatibility](../../../images/autopilot/autopilot-site-compatibility.jpg)
+
 ## Autopilot For Agencies
 
-Agency users navigate to the Agency Workspace to see sites that have been granted agency access, including any client sites for which the agency is a supporting or owning organization. 
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization. 
 
-Agency users always access Autopilot through the Agency Workspace.
+Agency users can only access Autopilot through the Agency Workspace.
 
 ## FAQ
 
 ### Is Autopilot configurable per site?
 
-Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/autopilot/enable-autopilot)
+Yes. Access to Autopilot is account-based and individual sites in that account can turn Autopilot on and off as desired. See [Enable Autopilot](/guides/autopilot/enable-autopilot).
 
 ### Will Autopilot email VRT results?
 
@@ -71,9 +90,9 @@ Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/gu
 The version(s) of Drush that are supported by Autopilot for sites:
 - **Up to (not including) Drupal 9**: Drush 8
 - **Drupal 9 with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
-- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not currently compatible with Drush 10.
+- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
 
-Currently, Autopilot only supports Drush 8 for all sites up to Drupal 9.
+Autopilot only supports Drush 8 for all sites up to Drupal 9.
 
 All Drupal 9 sites that use Integrated Composer are compatible with Autopilot.
 
