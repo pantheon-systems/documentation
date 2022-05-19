@@ -65,7 +65,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
     You can develop in [Git mode](/git), or you can develop with [SFTP mode](/sftp), or even switch between both modes depending on your task and workflow.
 
-    ![Development Modes](../../../images/development-mode.png)
+    ![Development Modes](../../../images/development-mode-updated.png)
 
 1. Review and follow the steps in the [Using Git with SFTP & WordPress Guide](/guides/wordpress-git/) to ensure that you understand the best ways to:
 
