@@ -26,7 +26,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Click **Continue**.
 
-    ![Alt text describing the image](../../../images/create-new-site-new.png)
+    ![Alt text describing the image](../../../images/create-new-site-updated.png)
 
 1. Select the WordPress **Deploy** button to create your WordPress site.
 
