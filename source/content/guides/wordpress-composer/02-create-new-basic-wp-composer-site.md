@@ -12,7 +12,7 @@ permalink: docs/guides/wordpress-composer/create-new-basic-wp-composer-site
 anchorid: create-new-basic-wp-composer-site
 ---
 
-This section provides steps for creating a new [Composer](/guides/composer)-managed WordPress site on Pantheon. This process creates a basic WordPress site. Visit the [Create an Advanced Composer-managed WordPress Site](guides/wordpress-composer/create-wp-site-composer-ci-auto-test) section of this guide if you want to create a Composer-managed site that uses Continuous Integration and automated testing.
+This section provides steps for creating a new [Composer](/guides/composer)-managed WordPress site on Pantheon. This process creates a basic WordPress site. Visit the [Create an Advanced Composer-managed WordPress Site](/guides/wordpress-composer/create-wp-site-composer-ci-auto-test) section of this guide if you want to create a Composer-managed site that uses Continuous Integration and automated testing.
 
  You can review the Pantheon-maintained [WordPress Composer Repo](https://github.com/pantheon-systems/wordpress-composer/) for more details on the basic Composer-managed WordPress site creation process.
 
