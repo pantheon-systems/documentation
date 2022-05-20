@@ -5,7 +5,6 @@ description: Learn how to create a basic Composer-managed WordPress site on Pant
 categories: [develop]
 tags: [wordpress]
 contributors: [whitneymeredith]
-reviewed: "2021-08-05"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/create-new-basic-wp-composer-site

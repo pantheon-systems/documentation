@@ -1,7 +1,7 @@
 ---
 title: WordPress with Composer on Pantheon
 subtitle: Introduction
-description: Learn how more about how WordPress with Composer works on Pantheon.
+description: Learn more about how WordPress with Composer works on Pantheon.
 categories: [develop]
 tags: [wordpress]
 contributors: [whitneymeredith]
@@ -29,7 +29,13 @@ There are different cases for using Composer to manage dependencies in WordPress
 
 ## First Steps
 
-Complete the steps below before using this guide to create, migrate, or manage updates on your Composer-managed site.
+Complete the steps below before using this guide to create or manage updates on your Composer-managed WordPress site.
+
+<Alert title="Note for Existing Composer-based WordPress Sites"  type="info" >
+
+Please reach out to our [Professional Services](https://pantheon.io/professional-services) team for information on site migration services if you have need help migrating an existing WordPress Composer-based site (or any site) to Pantheon.
+
+</Alert>
 
 1. Review [Composer's own documentation](https://getcomposer.org/doc/) to understand how Composer can be used independently of WordPress.
 
