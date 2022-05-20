@@ -40,9 +40,9 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 ### /web Directory
 
-1. Store your website in the `/web` subdirectory.
-
 Pantheon serves the site from the `/web` subdirectory because of the configuration in the `pantheon.yml` file. You must store your website in the subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root and prevents web access through Pantheon. Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
+
+1. Store your website in the `/web` subdirectory.
 
 ### /web/wp Directory
 
@@ -82,13 +82,13 @@ The scripts are organized into subdirectories according to their function:
 
 ### Build Scripts .ci/build
 
-The `.ci/build` script builds an artifact suitable for deployment.
+- `.ci/build` script builds an artifact suitable for deployment.
 
 - `.ci/build/php` installs PHP dependencies with Composer
 
 ### Build Scripts .ci/deploy
 
-The `.ci/deploy` scripts facilitate code deployment to Pantheon.
+All scripts stored in the `.ci/deploy` directory facilitate code deployment to Pantheon.
 
  - `.ci/deploy/pantheon/create-multidev` creates a new [Pantheon multidev environment](/multidev) for branches other than the default Git branch. Note that not all users have multidev access. Please consult the [multidev FAQ doc](/multidev-faq) for details.
 
@@ -120,19 +120,29 @@ The `.ci/tests` scripts run automated tests. You can add or remove scripts depen
 
 ### Visual Regression Testing
 
-`.ci/test/visual-regression` runs visual regression testing through a headless browser to take screenshots of web pages and compare them for visual differences.
-
-1. Update the settings in `.ci/test/visual-regression/backstopConfig.js` file for your project. 
-
-    - For example, the `pathsToTest` variable determines the URLs to test.
+The scripts stored in the `.ci/test/visual-regression` directory run visual regression testing through a headless browser to take screenshots of web pages and compare them for visual differences.
 
 - `.ci/test/visual-regression/run` runs [BackstopJS](https://github.com/garris/BackstopJS) visual regression testing.
 
 - `.ci/test/visual-regression/backstopConfig.js` is the [BackstopJS](https://github.com/garris/BackstopJS) configuration file. 
 
+1. Update the settings in `.ci/test/visual-regression/backstopConfig.js` file for your project. 
+
+    - For example, the `pathsToTest` variable determines the URLs to test.
+
 ## Behat Testing 
 
 Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org/en/latest/) is an acceptance/end-to-end testing framework written in PHP. It facilitates testing the fully-built WordPress site on Pantheon. [WordHat](https://wordhat.info/) is used to help integrate Behat and WordPress.
+
+- `.ci/test/behat/initialize` deletes any existing WordPress user from Behat testing and creates a backup of the environment to be tested.
+
+- `.ci/test/behat/run` sets the `BEHAT_PARAMS` environment variable with dynamic information necessary for Behat and configures it to use [WP-CLI](https://wp-cli.org/) via [Terminus](/terminus). This script also creates the necessary WordPress user, starts headless Chrome, and runs Behat.
+
+- `.ci/test/behat/cleanup` restores the previously made database backup, deletes the WordPress user used for Behat testing, and saves screenshots taken by Behat.
+
+- `tests/behat/behat-pantheon.yml` is compatible with running tests against a Pantheon site.
+
+- `tests/behat/tests/behat/features` stores Behat `.feature` extension test files. 
 
 1. Store all `.feature` extension test files in the `tests/behat/tests/behat/features` directory.
 
@@ -144,15 +154,6 @@ Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org
 
         - `tests/behat/tests/behat/features/admin-login.feature` is a Behat test file that logs into the WordPress dashboard as an administrator, updates the `blogname` and `blogdescription` settings, clears the Pantheon cache, visits the home page, and verifies how the updated blog name and description appear.
 
-- `.ci/test/behat/initialize` deletes any existing WordPress user from Behat testing and creates a backup of the environment to be tested.
-
-- `.ci/test/behat/run` sets the `BEHAT_PARAMS` environment variable with dynamic information necessary for Behat and configures it to use [WP-CLI](https://wp-cli.org/) via [Terminus](/terminus). This script also creates the necessary WordPress user, starts headless Chrome, and runs Behat.
-
-- `.ci/test/behat/cleanup` restores the previously made database backup, deletes the WordPress user used for Behat testing, and saves screenshots taken by Behat.
-
-- `tests/behat/behat-pantheon.yml` is compatible with running tests against a Pantheon site.
-
-- `tests/behat/tests/behat/features` stores Behat `.feature` extension test files.  
 
 ## GitHub Actions
 
