@@ -78,30 +78,6 @@ For Object Cache and Pantheon Search (Solr), the following code changes are requ
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-id">
-
-#### Safely Remove Object Cache
-
-<Partial file="remove-addons/drupal-redis.md" />
-
-#### Safely Remove Pantheon Search
-
-<Partial file="remove-addons/d8-solr.md" />
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-id">
-
-#### Safely Remove Object Cache
-
-<Partial file="remove-addons/drupal-redis.md" />
-
-#### Safely Remove Pantheon Search
-
-<Partial file="remove-addons/d7-solr.md" />
-
-</Tab>
-
 </TabList>
 
 ### Elite Plan

@@ -153,49 +153,6 @@ terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8tab1" active={true}>
-
-Before you begin:
-
-- Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) locally.
-- Set the site's connection mode to Git within the site Dashboard or via [Terminus](/terminus):
-
-    ```bash{promptUser: user}
-    terminus connection:set <site>.<env> git
-    ```
-
-- Create a local clone of your site code, and navigate to it in your terminal.
-
-### Install Required and Recommended Modules
-
-#### S3 File System
-
-Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS SDK version 3.x library using Composer.
-
-1. Ensure that the Composer for your site will first look to Drupal's preferred package source to find modules:
-
-  ```bash{promptUser: user}
-  composer config repositories.drupal composer https://packages.drupal.org/8
-  ```
-
-2. Install s3fs module from the preferred package source:
-
-  ```bash{promptUser: user}
-  composer require drupal/s3fs --prefer-dist
-  ```
-
-#### S3 File System CORS
-
-Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
-
-Install s3fs_cors module using Composer:
-
-```bash{promptUser: user}
-composer require drupal/s3fs_cors --prefer-dist
-```
-
-</Tab>
-
 </TabList>
 
 ## Drupal Module Configuration

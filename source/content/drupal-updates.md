@@ -11,15 +11,13 @@ reviewed: "2020-07-21"
 
 The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
 
-While the steps here work, Drupal 8 will not continue to receive security updates in the future.
-
 Visit the [Drupal 9 migration guide](/guides/drupal-9-migration) to find the best path to Drupal 9 for your site.
 
 </Alert>
 
 ## Overview
 
-To upgrade Drupal to a new major version (e.g. version 7 to version 8) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site into the new site.
+To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 9, create a new Drupal 9 site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
@@ -94,4 +92,3 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 - [Drupal 9](/drupal-9)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)
-- [Drupal 8 File Migrations](https://pantheon.io/blog/drupal-8-file-migrations)

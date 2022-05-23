@@ -102,31 +102,6 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 }
 ```
 </Tab>
-  
-
-<Tab title="Drupal 8" id="d8"> 
-
-```php
-if (defined('PANTHEON_ENVIRONMENT')) {
-  if (PANTHEON_ENVIRONMENT == 'live') {
-    // Do not reroute email on Live.
-    $config['reroute_email.settings']['enable'] = FALSE;
-  }
-  else {
-    // Reroute email on all Pantheon environments but Live.
-    $config['reroute_email.settings']['enable'] = TRUE;
-    $config['reroute_email.settings']['address'] = 'tester+qa-' . PANTHEON_ENVIRONMENT . '@example.com';
-  }
-}
-
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  // Reroute email when site is not on Pantheon (local install).
-  $config['reroute_email.settings']['enable'] = TRUE;
-  $config['reroute_email.settings']['address'] = 'tester+local-dev@example.com';
-}
-```
-  
-</Tab>
 
 </TabList>
 

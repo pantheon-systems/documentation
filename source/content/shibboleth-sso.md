@@ -193,7 +193,7 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 ## Drupal Configuration
 
-If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
+If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal sites.
 
 <Alert title="Note" type="info">
 
@@ -208,14 +208,6 @@ If you are using Composer, configuration of the `setting.php` is not needed. For
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
 
-</Tab>
-
-<Tab title="Drupal 8" id="drupal-8-settings" active={true}>
-
-```php:title=settings.php
-# Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
-```
 </Tab>
 
 </TabList>
@@ -255,6 +247,6 @@ Other plugins and modules can provide SSO provider services with less configurat
 
 **Drupal:** The module [SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider](https://www.drupal.org/project/miniorange_saml) provides a simple drop-in alternative way to configure SAML with a variety of IdPs.
 
-The Support team has tested this module on Pantheon using Drupal 8 and Okta.
+The Support team has tested this module on Pantheon using Okta.
 
 **WordPress:** The WordPress version of [SAML SP Single Sign On – SSO login](https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/) works in exactly the same way as the Drupal module, but has not been tested by Pantheon Support.

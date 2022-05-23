@@ -93,14 +93,6 @@ Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disa
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
-
-```bash
-terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
-```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7">
 
 ```bash

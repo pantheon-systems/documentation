@@ -39,7 +39,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
 Pantheon does not count static assets against your traffic limit. However, if the CMS cannot find a favicon in the defined path, it will attempt to generate one through PHP on each request. Asset generation requests such as these are counted as traffic. In addition, since Pantheon locks down all directories except the file upload directories (`wp-contents/upload` on WordPress, or `sites/default/files` on Drupal), the CMS can’t save the file back to the path it’s generating.
 
-This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal (specifically Drupal 8), it shows up as a system path.
+This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal it shows up as a system path.
 
 |  **CMS**  |           **Path**          |
 |:---------:|:---------------------------:|
@@ -146,20 +146,6 @@ If the site is slow or unavailable, run the MySQL query below, replacing `192.0.
 
 ```sql
 mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8tab">
-
-In Drupal 8, the [Ban](https://www.drupal.org/docs/8/core/modules/ban/overview) module is not enabled by default in the Standard install profile, but it does come with core.
-
-Enable the module, then navigate to the site's `/admin/config/people/ban` to enter the IP address (for example, `192.0.2.38`).
-
-If the site is slow or unavailable, run the MySQL query below, replacing `192.0.2.38` with the IP to block:
-
-```sql
-mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
 ```
 
 </Tab>

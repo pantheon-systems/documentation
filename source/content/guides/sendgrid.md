@@ -43,39 +43,6 @@ Follow the procedure outlined below for your CMS:
 
 <TabList>
 
-<Tab title="Drupal 8" id="tab-1-anchor" active={true}>
-
-When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module.
-<Alert title="Warning" type="danger" >
-
-The SendGrid API Integration Module for Drupal 8 requires a Composer-managed workflow as described in our [Build Tools](/guides/build-tools) or the [Convert to Composer](/guides/composer-convert) guides. We cannot support non-Composer workflows using this module. For details, see [the module README](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
-
-</Alert>
-
-1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using Composer:
-
-  ```bash{promptUser: user}
-  composer require drupal/sendgrid_integration
-  ```
-
-1. Commit, push, and enable the new module. Replace `$SITE` and `$ENV` with the site and environment name:
-
-  ```bash{promptUser: user}
-  git add .
-  git commit -m "Install sendgrid_integration"
-  git push origin master #Or Multidev name
-  terminus drush $SITE.$ENV -- en sendgrid_integration -y
-  ```
-1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Configuration**.
-
-1. Navigate to `/admin/config/system/mailsystem` and select **SendGridMailSystem** from the dropdown menu to set the `MailSystemInterface` class.
-  
-1. You have the option to select the **Theme to render the emails** from the dropdown menu to change the theme. The **Current** theme is selected by default.
-
-Your Drupal application on Pantheon is now configured to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
-  
-</Tab>
-
 <Tab title="Drupal 7" id="tab-2-anchor">
 
 ### Choosing an Integration Method

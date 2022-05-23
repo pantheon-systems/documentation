@@ -60,7 +60,7 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 | Patched code support                          | Preserves patched code in applied updates.                                             | Test and Deploy Only                | Drupal 7 sites excluded | <Check/>                |
 | Custom VRT                                    | VRT for authenticated pages or custom DOM elements.                                    | ❌                                   | ❌                       | <Check/>                |
 
-## Requirements and Steps for Drupal 8/9 Compatibility
+## Requirements and Steps for Drupal 9 Compatibility
 
 In order to be supported by Pantheon Managed Updates, Drupal 8 sites should be in a "Composer-clean" state. This requires making sure the site’s codebase meets several criteria.
 

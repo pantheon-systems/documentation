@@ -16,26 +16,6 @@ wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. 
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8-example" active={true}>
-
-Download and enable the [wkhtmltopdf module](https://www.drupal.org/project/wkhtmltopdf) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
-
-```bash{promptUser: user}
-terminus drush <site>.<env> -- en wkhtmltopdf --y
-```
-
-Create a symlink to the hosted library and your site's libraries directory [via Git](/git/#clone-your-site-codebase):
-
-```bash{promptUser: user}
-mkdir -p sites/all/libraries/wkhtmltopdf
-ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
-git add .
-git commit -m "Added wkhtmltopdf library"
-git push
-```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7-example">
 
 Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):

@@ -140,7 +140,6 @@ The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older v
 
 <Partial file="solr-commit-changes.md" />
 
-## Extend Solr for Drupal 8
 
 ### Apache Tika
 

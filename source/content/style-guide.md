@@ -100,7 +100,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 <dd>
 
-If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, `"Drupal 8"`, or `"Drupal 9"`.
+If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"Drupal 9"`.
 
 </dd>
 
@@ -649,21 +649,6 @@ Code goes here.
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7-example">
 
 Here's our Drupal 7 specific copy, and an example snippet:
@@ -693,21 +678,6 @@ Here's our WordPress specific copy, and an example snippet:
 ```php
 /**
   * Some WordPress specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
   *
   */
 
