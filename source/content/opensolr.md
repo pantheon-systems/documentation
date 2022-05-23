@@ -62,9 +62,7 @@ After filling out the appropriate fields, click **Add Index** to create your ind
 
 ## Configure Solr Module
 
-<TabList>
-
-<Tab title="Drupal 7" id="d7-solr">
+Complete the steps below for Drupal 7.
 
 ### Configure Drupal’s ApacheSolr Module
 
@@ -97,10 +95,6 @@ Go to `admin/config/search/apachesolr/settings` and click on your index.
 To test the connection, click **Test Connection**.
 
 If Drupal returns a success message like **“Your site has contacted the Apache Solr server”**, you have successfully set up your index. If not, go back and complete the configuration steps above.
-
-</Tab>
-
-</TabList>
 
 ## Customize Your Configuration
 
