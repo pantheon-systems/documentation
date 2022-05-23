@@ -102,6 +102,10 @@ To create a bundle:
     terminus env:commit <site>.<env> --message="Create bundle_name.json for tracking configuration in code"
     ```
 
+## Automatically Import WP-CFM Configuration Settings into a Cloned Database
+
+You can automatically import your WP-CFM configuration settings into a cloned database if you are using Quicksilver. See [Import WP-CFM Configuration Settings into a Cloned Database](/quicksilver#import-wp-cfm-configuration-settings-into-a-cloned-database) for more details.
+
 ## Deploy Configuration: Pull
 
 ### Dev to Test

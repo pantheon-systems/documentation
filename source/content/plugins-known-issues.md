@@ -364,11 +364,22 @@ ___
 
 ## Elementor
 
-<ReviewDate date="2020-10-08" />
+<ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) Uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. This path cannot be changed via the WP-CLI search-replace function, or any other search & replace plugin.
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
 
-**Solution:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+
+For example: my.example.com
+
+Find or replace must handle `test.example.com` -> `my.example.com` and 
+`my.example.com` -> `test.example.com`.
+
+Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
+
+**Solution 2:** Use the search and replace feature in Elementor to enter the following:
+ 
+`/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
@@ -582,6 +593,16 @@ ___
 <ReviewDate date="2019-05-08" />
 
 **Issue:** The [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/) plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
+
+___
+
+## One Click Demo Import
+
+<ReviewDate date="2022-03-30" />
+
+**Issue:** The [One Click Demo Import](https://wordpress.org/plugins/one-click-demo-import/) plugin returns a `502` error when automatically importing the demo files and pages for a theme. This generally happens when the process reaches the configured `max-execution` time in the Pantheon system `php` file.
+
+**Solution:** Select the **Switch to Manual Import** option to import the demo files, including, `content.xml`, `widgets.wie`, etc.
 
 ___
 
@@ -857,7 +878,7 @@ ___
 
 ## WebP Express
 
-<ReviewDate date="2022-01-22" />
+<ReviewDate date="2022-04-07" />
 
 **Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
@@ -871,7 +892,9 @@ Refer to the documentation on [Using Extensions That Assume Write Access](https:
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 
-**Solution:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+**Solution 1:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+
+**Solution 2:** Use the [Advanced Global CDN Image Optimization](/guides/professional-services/advanced-global-cdn#additional-features-from-wafio) feature. This add-on has WebP auto-conversion at the edge, and is more performant than a plugin relying on PHP or WordPress.
 
 ___
 
@@ -1364,6 +1387,28 @@ ___
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 ___
 
+## YITH WooCommerce Request a Quote
+
+<ReviewDate date="2022-04-8" />
+
+**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+
+**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
+
+```php:title=wp-config.php
+/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
+add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
+if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
+   function ywraq_mpdf_change_tmp_dir( $args ) {
+      $upload_dir      = wp_upload_dir();
+      $upload_dir      = $upload_dir['basedir'];
+      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+
+      return $args;
+   }
+}
+```
+___
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
@@ -1449,7 +1494,7 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 
 ### wp_filesystem->get_contents()
 
-**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail when an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
+**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail wFhen an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
 
 **Solution:** As described in [this StackExchange answer](https://wordpress.stackexchange.com/questions/166161/why-cant-the-wp-filesystem-api-read-googlefonts-json/166172#166172), for cases where file ownership doesn't matter this function could be replaced with `file_get_contents()`. This is true of most cases where the file in question is only being read, not written to.
 

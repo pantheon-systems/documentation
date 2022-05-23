@@ -35,17 +35,22 @@ Warning: session_start(): user session functions not defined
 
 It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more about [WordPress and PHP Sessions](/wordpress-sessions).
 
+### PHP Version Compatibility
+
+WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issues with PHP 8.1 are deprecation notices. A deprecation notice is not an error, but an indicator of the compatibility work that is needed before PHP 9 is released and notices become fatal errors. The PHP code will continue to work with the deprecation notices. 
+
+For more information, refer to the [PHP Versions](/php-versions) documentation. 
+
 ## Site Networks / Multisite
 
 Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
-
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
 ## Plugins with Known Issues
 See [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) for a list of WordPress plugins that are not supported and/or require workarounds.
 
-## Image uploads
+## Image Uploads
 Since WordPress 4.5, a bug exists affecting the upload of large dimension images regardless of file size. This generally presents itself as an "HTTP error" when uploading. See this [core issue](https://core.trac.wordpress.org/ticket/36534) for more information.
 
 ## Force WordPress to use GD Library instead of Imagick

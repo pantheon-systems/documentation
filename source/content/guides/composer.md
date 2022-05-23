@@ -62,7 +62,7 @@ If you are not using Integrated Composer to update your Custom Upstream, all dep
 
 A shortcoming of the Custom Upstream workflow is that site-specific dependencies are likely to cause a lot of conflicts. This workflow is most practical for a large group of sites that require a single set of dependencies. You should only use this workflow if you don’t intend to use site-specific themes, modules, or plugins downstream.
 
-You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and User in Charge roles.
+You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams).
 
 ## Next Steps
 

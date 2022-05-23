@@ -44,7 +44,7 @@ Before you continue, confirm that your site meets the following criteria:
 
 ## Prepare a Local Copy of the Site for Upgrade
 
-1. In the **Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
+1. Set the **Development Mode** to **Git** in the **Dev** tab of the site's Dashboard and then [clone the site locally](/local-development#get-the-code).
 
 1. Change into the `$SITE` directory, then create a new branch based on the default:
 
@@ -59,19 +59,20 @@ Before you continue, confirm that your site meets the following criteria:
    terminus drush $SITE.live -- config:export --destination sites/default/files/config
    ```
 
-1. For rsync, copy the sftp host information.
+1. Copy the sftp host information for rsync:
 
    ```bash{promptUser: user}
    RSYNC_HOST=$(terminus connection:info $SITE.live --field=sftp_host)
+   RSYNC_USER=$(terminus connection:info $SITE.live --field=sftp_username)
    ```
 
 1. Use that host name to rsync from `config:export`:
 
    ```bash{promptUser: user}
-   rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_HOST}:files/config" .
+   rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' "${RSYNC_USER}@${RSYNC_HOST}:files/config" .
    ```
 
-1. If you do a `git status` it should show changed files in the `config` directory if there are any changed configurations in production.
+1. Run `git status` to see changed files in the `config` directory.
 
    ```bash{promptUser: user}
    git status
@@ -93,7 +94,7 @@ Before you continue, confirm that your site meets the following criteria:
       --dev -W --no-update
    ```
 
-1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
+  The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
 
   The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`.
 
@@ -122,7 +123,7 @@ Before you continue, confirm that your site meets the following criteria:
    composer update -W --optimize-autoloader --prefer-dist
    ```
 
-1. If the site doesn't already have a [pantheon.yml](/pantheon-yml#find-or-create-pantheonyml) file, create one with the following values (the comments `#` are optional):
+1. Create a [pantheon.yml](/pantheon-yml#find-or-create-pantheonyml) file  with the values below (the comments `#` are optional) if the site doesn't already have one.
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -163,7 +164,7 @@ Before you continue, confirm that your site meets the following criteria:
 
 1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create an **Integration Environment** Multidev. This is called `$ENV` in the next steps.
 
-1. After the build has finished without error, you will see a new environment in the Dashboard under **Multidev** named in reference to your pull request.
+1. Review the new environment in the Dashboard under **Multidev** named in reference to your pull request after the build has finished without error. 
 
    ```bash{promptUser: user}
    terminus env:info $SITE.$ENV
@@ -183,7 +184,7 @@ Before you continue, confirm that your site meets the following criteria:
 
 <Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
 
-Once you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
+After you have confirmed that the MariaDB upgrade worked in the Multidev, push the changes to the Dev environment to ensure the other components upgrade smoothly.
 
 The possible risks associated with the time it takes for the platform to upgrade the database are minimal, but you can use the following command to mitigate potential errors:
 
@@ -205,7 +206,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
 ## Use Composer to Update Drupal Core
 
-1. Temporarily add write access to protected files and directories:
+1. Add temporary write access to protected files and directories:
 
    ```bash{promptUser: user}
    chmod 777 web/sites/default
@@ -229,14 +230,14 @@ Custom module code is outside the scope of this document. See [drupal.org](https
       --no-update -W --dev
    ```
 
-1. If you have `core-dev` installed, follow below (skip this step if you do not have `core-dev` installed):
+1. Run the command below if you have `core-dev` installed, (skip this step if you do not have `core-dev` installed):
 
    ```bash{outputLines: 2}
    composer require drupal/core-dev:^9 \
       --dev -W --no-update
    ```
 
-1. If the **Upgrade Status** under **Reports** displays obsolete modules, update the modules using the `--no-update -W` switch to instruct Composer to check for all dependencies together rather than for each module. Replace `OBSOLETE-MODULE-NAME` in this example with the module to update:
+1. Update the modules using the `--no-update -W` switch to instruct Composer to check for all dependencies together rather than for each module if the **Upgrade Status** under **Reports** displays obsolete modules. Replace `OBSOLETE-MODULE-NAME` in this example with the module to update:
 
    ```bash{outputLines: 2}
    composer require drupal/OBSOLETE-MODULE-NAME:^9 \
@@ -245,7 +246,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
    Repeat this step for each obsolete module in the project.
 
-1. When you're done updating modules, run `composer update`:
+1. Run `composer update` when you're done updating modules:
 
    ```bash{promptUser: user}
    composer update -W --optimize-autoloader --prefer-dist
@@ -253,7 +254,7 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
    If this command returns an error, check the output for any incompatible modules or themes and check the **Upgrade Status** under **Reports** in the integration environment.
 
-1. Next, edit `composer.json` and add `--no-dev` from the `scripts` section, to exclude the dev dependencies when the build is deployed to production.
+1. Edit `composer.json` and add `--no-dev` from the `scripts` section, to exclude the dev dependencies when the build is deployed to production.
 
    ```json:title=composer.json
      "scripts": {
@@ -273,10 +274,10 @@ Custom module code is outside the scope of this document. See [drupal.org](https
 
 ## Confirm the MariaDB Version and Updates
 
-Validate your database version with `terminus drush`:
+1. Validate your database version with `terminus drush`:
 
-```bash{promptUser: user}
-echo 'SELECT VERSION();' | terminus drush $SITE.$ENV sqlq -
-```
+   ```bash{promptUser: user}
+   echo 'SELECT VERSION();' | terminus drush $SITE.$ENV sqlq -
+   ```
 
-Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.
+1. Review the site and [Launch Check Status tab](/drupal-launch-check) to confirm the database version and any outstanding available updates.

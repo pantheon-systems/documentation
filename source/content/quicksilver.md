@@ -6,7 +6,7 @@ tags: [quicksilver, webops, workflow]
 reviewed: "2022-03-21"
 ---
 
-Hook into platform workflows to automate your Pantheon WebOps workflow. Tell Pantheon which script you want to run, and the platform will run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
+Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow. There is a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/) that you can contribute to. You can also find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -56,6 +56,88 @@ We recommend setting the `web_docroot` to `true` to create a dedicated directory
 If your site uses a [nested docroot](/nested-docroot), the script paths in your `pantheon.yml` file should not include the `web/` path prefix. Scripts in your `pantheon.yml` file should match the following path examples: `private/scripts/new_relic_deploy.php` or `private/scripts/slack_deploy_notification.php`
 
 </Alert>
+
+## Composer Script Installs
+
+You can use Terminus to install Quicksilver Composer scripts if you have a Composer-managed site. The sections below provide links to Pantheon-maintained repositories with install scripts.
+
+### Secrets
+
+Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
+
+You can also use your site's [private files path](/private-paths#private-path-for-files) to store values securely. When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
+
+1. Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
+
+  This will allow you to write and remove key values. The code example below shows you how to write a value to a key:
+
+  ```bash
+  terminus secrets:set site.env key value
+  ```
+
+### Clear Cloudflare Cache
+
+Use the [Pantheon Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) to clear your Cloudflare cache. 
+
+<Alert title="Note"  type="info" >
+
+Always clear your CDN cache using the `after` timing option to avoid requests re-caching stale content. Caches should generally be cleared "bottom up".
+
+</Alert>
+
+### Debugging with Quicksilver
+
+Use the [Pantheon Quicksilver Debugging repository](https://github.com/pantheon-quicksilver/debugging-example) to explore Quicksilver as a workflow improvement tool.
+
+### Drush CMI
+
+The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations. This allows you to import configuration changes from `.yml` files. 
+
+### Drush Revert Features
+
+The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides information on using Drush to commands to revert specific features.
+
+### Enable Development Modules
+
+The [Pantheon Enable Development Module repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/enable_dev_modules) provides steps on how to use Drush within a Quicksilver script.
+
+### Generate Development Content
+
+Use the [Pantheon Generate Development Content repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/generate_dev_content) to integrate Drush devel generate commands into your Quicksilver operations. This allows you to generate development content on each database clone operation.
+
+### Import WP-CFM Configuration Settings into a Cloned Database
+
+Use the [Pantheon WP-CFM Import repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_cfm_import) to automatically import WP-CFM configuration settings into a cloned database. This is useful for development environments that have slightly different settings than the production environment.
+
+<Alert title="Note" type="info">
+
+WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
+
+</Alert>
+
+### New Relic Custom Apdex T Values Multidev Environments
+
+Use the [Pantheon New Relic Apdex T Values repository](https://github.com/pantheon-quicksilver/new-relic-apdex-t) to set custom T values for Multidev environments. Each environment will use the default values of 0.5 and 7 for your server and browser, respectively, if you don't set a custom value. 
+
+### New Relic Deploy Markers
+
+Use the [Pantheon New Relic Deploy Markers repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/new_relic_deploy) to automatically log changes to your site into New Relic's Deployments page. This can be useful for keeping track of performance improvements.
+
+### Search and Replace URLs on WordPress Sites
+
+Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace) to automatically find and replace URLs in the database of a WordPress website. This is helpful for sites that have multiple domains in an environment.
+
+### Slack Integration
+
+Use the [Pantheon Slack Integration repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) to integrate Slack notifications from your Pantheon project using Quicksilver. This integration overview also provides information on how to manage API keys outside of your site repository.
+
+### URL Checker
+
+Use the [Pantheon URL Checker repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/url_checker) to check specific URLs after a live deployment. This script also notifies you of failures by email.
+
+### Webhooks
+
+Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to post workflow data to an external URL for a generic Webhook implementation.
 
 ## Hooks
 
@@ -108,18 +190,6 @@ For sites using [Integrated Composer](/guides/integrated-composer), the `sync_co
 For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
 
 
-## Secrets
-
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr), or with a storage solution in your site's [private files path](/private-paths#private-path-for-files).
-
-For the latter, the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) provides a convenient way to manage secret data in JSON files in your site's private files path.
-
-<Alert type="info" title="Note">
-
-When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
-
-</Alert>
-
 ## Debugging via Terminus
 
 Use the following [Terminus](/terminus) commands for debugging Quicksilver.
@@ -161,6 +231,7 @@ remote:
 ### Autopilot VRT Hook Does Not Run When Expected
 
 For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your `Autopilot` Multidev from the dashboard. Be sure to also delete the `Autopilot` branch, and then create the `Autopilot` Multidev again in the Dashboard. Once you do this, your scripts should start running after the visual regression tests complete.
+
 
 ## See Also
 

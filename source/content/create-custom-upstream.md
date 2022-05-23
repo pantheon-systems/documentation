@@ -171,7 +171,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 9" id="d91">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-recommended.git
+    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-composer-managed.git
     ```
 
     </Tab>
@@ -215,8 +215,8 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
      ```bash{promptUser: user}
      git checkout -b master
-     git fetch pantheon-drupal-9 master
-     git merge pantheon-drupal-9/master
+     git fetch pantheon-drupal-9 main
+     git merge pantheon-drupal-9/main
      git push origin master
      ```
 
@@ -468,7 +468,7 @@ Switching the upstream of an existing site is risky. Consider creating a new sit
 
 </Alert>
 
-Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/terminus):
+Use [Terminus](/terminus) to change the upstream:
 
 ```bash{promptUser: user}
 terminus site:upstream:set $site $upstream_id
