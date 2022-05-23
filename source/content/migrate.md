@@ -174,6 +174,28 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 <TabList>
 
+<Tab title="Drupal 7" id="d7">
+
+Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
+
+```none
+├── includes
+├── index.php
+├── misc
+├── modules
+├── profiles
+├── scripts
+├── sites
+    └── all
+        ├── modules
+        └── themes
+    └── default
+        └── settings.php
+└── themes
+```
+
+</Tab>
+
 <Tab title="WordPress" id="wp">
 
 Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:
@@ -212,8 +234,6 @@ Archives for WordPress sites should include `index.php` at the code root level, 
 **Cause:** The migration tool could not locate a MySQL database dump within the archive.
 
 **Solution:** Ensure that the archive contains a valid MySQL database dump.
-
-**Solution:** This issue is documented on [Drupal.org](https://www.drupal.org/node/2496331). Edit the DB dump as described [here](https://www.drupal.org/node/2496331#comment-10029863).
 
 ### Multiple file directories found within the import archive
 
