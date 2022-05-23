@@ -11,11 +11,11 @@ permalink: docs/guides/wordpress-composer/bedrock-composer
 anchorid: bedrock-composer
 ---
 
-[Composer](https://getcomposer.org/) does not fully support WordPress, however, Bedrock is a central feature of Composer. [Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure. Bedrock helps simplify working on large WordPress projects with multiple plugins and custom code. Bedrock is great resource for WordPress developers who want to use modern web development methodologies.
+[Composer](https://getcomposer.org/) does not fully support WordPress, however, Bedrock is a central feature of Composer. [Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure that helps simplify working on large projects with multiple plugins and custom code. 
 
 ## Create a New Pantheon WordPress Site with Bedrock
 
-1. Run the following command:
+1. Run the following command in Terminus:
 
     ```bash
     composer create-project your_site
@@ -29,9 +29,9 @@ anchorid: bedrock-composer
 
 1. Commit the `vendor` and `web` directories.
 
-    - Pantheon does not support using Composer to install dependencies that are deployed to Pantheon servers. You must commit the entire vendor and web directories into your git repo to ensure that your dependencies are installed for the new project.
+    - Pantheon does not support using Composer to install dependencies that are deployed to Pantheon servers. You must commit the entire `vendor` and `web` directories into your Git repo to ensure that your dependencies are installed for the new project.
 
-1. Convert the `web/app/uploads` directory to a symlink that points to the `files` directory. 
+1. Convert the `web/app/uploads` directory to a [symlink](https://github.com/git-for-windows/git/wiki/Symbolic-Links) that points to the `files` directory. 
 
     - This is necessary because Pantheon stores media files in the `files` directory instead of the `uploads` directory.
 
@@ -41,7 +41,7 @@ anchorid: bedrock-composer
 
 1. Upload the newly created `.env` file by connecting to the Pantheon server using an FTP.
 
-    To find your connection information: Navigate to the site's **Dev environment** in Pantheon > click **Connection Info** > scroll to the bottom of the menu to view your SFTP connection information.
+    - To find your connection information: Navigate to the site's **Dev** environment in Pantheon > click **Connection Info** > scroll to the bottom of the menu to view your SFTP connection information.
 
 1. Connect to your Pantheon site using the SFTP credentials located in the previous step > navigate to the `files` directory > create a `private` directory > create the `.env` file in the `private` directory by running the following command:
 
@@ -60,8 +60,7 @@ anchorid: bedrock-composer
     NONCE_SALT='generateme'
     ```
 
-    - Your `.env` will be created. Pantheon automatically supplies many of the environment variables that are usually stored in the .env file normally.
-    This is why your new `.env` file is smaller than the original Bedrock `.env` file. 
+    - Your `.env` will be created. Your new `.env` file is smaller than the original Bedrock `.env` file because Pantheon automatically supplies many of the environment variables that are usually stored in the `.env` file.
 
 1. Replace all placeholder keys with the [new keys](https://roots.io/salts.html).
 

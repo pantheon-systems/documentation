@@ -40,13 +40,13 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 ### /web Directory
 
-Pantheon serves the site from the `/web` subdirectory because of the configuration in the `pantheon.yml` file. You must store your website in the subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root and prevents web access through Pantheon. Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
+Your site is stored and served from the `/web` subdirectory in the `pantheon.yml` file. You must store your website in this subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root. It also provides additional security by preventing web access through Pantheon. Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
 
-1. Store your website in the `/web` subdirectory.
+1. Verify that your website is stored in the `/web` subdirectory.
 
 ### /web/wp Directory
 
-Other directories and files within the `/web` directory are in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
+Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
 
 1. Move the `WP_SITEURL` to the `/web/wp` directory to allow WordPress core functions to work correctly. 
 
@@ -58,17 +58,17 @@ This project uses Composer to manage third-party PHP dependencies. Some files, s
 
 A custom, [Composer version of WordPress for Pantheon](https://github.com/pantheon-systems/wordpress-composer/) is used as the source for WordPress core.
 
-Third party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json`. The `composer.lock` file keeps track of the exact dependency version. Composer installer-paths are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
+Third party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json` file. The `composer.lock` file keeps track of the exact dependency version. Composer installer-paths are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
 
 Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
-1. Place all dependencies in the **require section** of your `composer.json` file. 
+1. Place all dependencies in the **require** section of your `composer.json` file. 
 
-    - This includes dependencies that are only used in non-Live environments. All dependencies in the require section are pushed to Pantheon.
+    - This includes dependencies that are only used in non-Live environments. All dependencies in the **require** section are pushed to Pantheon.
 
-1. Place all dependencies that are not a part of the web application but are necessary to build or test the project in the **require-dev section**.
+1. Place all dependencies that are not a part of the web application but are necessary to build or test the project in the **require-dev** section.
 
-    - Some examples are `php_codesniffer` and `phpunit`. Dev dependencies are not deployed to Pantheon.
+    - Some example dependencies are `php_codesniffer` and `phpunit`. Dev dependencies are not deployed to Pantheon.
 
 ## Continuous Integration
 
@@ -84,23 +84,15 @@ The scripts are organized into subdirectories according to their function:
 
 - `.ci/build` script builds an artifact suitable for deployment.
 
-- `.ci/build/php` installs PHP dependencies with Composer
+- `.ci/build/php` installs PHP dependencies with Composer.
 
 ### Build Scripts .ci/deploy
 
 All scripts stored in the `.ci/deploy` directory facilitate code deployment to Pantheon.
 
- - `.ci/deploy/pantheon/create-multidev` creates a new [Pantheon multidev environment](/multidev) for branches other than the default Git branch. Note that not all users have multidev access. Please consult the [multidev FAQ doc](/multidev-faq) for details.
+ - `.ci/deploy/pantheon/create-multidev` creates a new [Pantheon Multidev environment](/multidev) for branches other than the default Git branch. Note that not all users have Multidev access. Please consult the [Multidev FAQ doc](/multidev-faq) for details.
 
-- `.ci/deploy/pantheon/dev-multidev` deploys the built artifact to either the Pantheon dev or a multidev environment, depending on the Git branch.
-
-### Github Actions Workflows .ci/.github
-
-The `.ci/.github` file enables GitHub Actions in your project.
-
-1. Copy the `.ci/.github` file to the `.github` folder in root to enable Github Actions. 
-
-1. Add your secrets to the GitHub Actions configuration.
+- `.ci/deploy/pantheon/dev-multidev` deploys the built artifact to either the Pantheon Dev or a Multidev environment, depending on the Git branch.
 
 ## Automated Test Scripts .ci/tests
 
@@ -108,15 +100,15 @@ The `.ci/tests` scripts run automated tests. You can add or remove scripts depen
 
 ### Static Testing 
 
-`.ci/test/static` and `tests/unit` are static tests that analyze code without executing it. These tests are good at detecting syntax errors but not functionality errors.
-
-1. Create all project-specific test files in the `tests/unit` directory.
+- `.ci/test/static` and `tests/unit` are static tests that analyze code without executing it. These tests are good at detecting syntax errors but not functionality errors.
 
 - `.ci/test/static/run` runs [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) with [WordPress coding standards](https://github.com/WordPress/WordPress-Coding-Standards), PHP Unit, and [PHP syntax checking](https://phpcodechecker.com/).
 
 - `tests/unit/bootstrap.php` bootstraps the Composer autoloader.
 
 - `tests/unit/TestAssert.php` provides an example Unit test. 
+
+1. Create all project-specific test files in the `tests/unit` directory.
 
 ### Visual Regression Testing
 
@@ -138,9 +130,9 @@ Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org
 
 - `.ci/test/behat/run` sets the `BEHAT_PARAMS` environment variable with dynamic information necessary for Behat and configures it to use [WP-CLI](https://wp-cli.org/) via [Terminus](/terminus). This script also creates the necessary WordPress user, starts headless Chrome, and runs Behat.
 
-- `.ci/test/behat/cleanup` restores the previously made database backup, deletes the WordPress user used for Behat testing, and saves screenshots taken by Behat.
+- `.ci/test/behat/cleanup` restores the previously made database backup, deletes the WordPress user created for Behat testing, and saves screenshots taken by Behat.
 
-- `tests/behat/behat-pantheon.yml` is compatible with running tests against a Pantheon site.
+- `tests/behat/behat-pantheon.yml` runs tests against the Pantheon site.
 
 - `tests/behat/tests/behat/features` stores Behat `.feature` extension test files. 
 
