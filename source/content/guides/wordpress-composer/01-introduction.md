@@ -1,7 +1,7 @@
 ---
 title: WordPress with Composer on Pantheon
 subtitle: Introduction
-description: Learn more about how WordPress with Composer works on Pantheon.
+description: Learn more about using WordPress with Composer on Pantheon.
 categories: [develop]
 tags: [wordpress]
 contributors: [whitneymeredith]
@@ -11,7 +11,7 @@ permalink: docs/guides/wordpress-composer
 anchorid: wordpress-composer
 ---
 
-[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
+[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a modern way to manage the external (non-core) code used by a WordPress site.
 
 At the most basic level, Composer requires:
 
@@ -22,18 +22,18 @@ There are different cases for using Composer to manage dependencies in WordPress
 
 - Manage dependencies for themes and plugins you’re currently developing
 
-- Manage your site's themes and plugins used site
+- Manage the themes and plugins currently used on the site
 
 - Total site dependency management, including custom code
 
 
 ## First Steps
 
-Complete the steps below before using this guide to create or manage updates on your Composer-managed WordPress site.
+Complete the steps below before using this guide to create or manage updates on your Pantheon Composer-managed WordPress site.
 
 <Alert title="Note for WordPress Composer Sites"  type="info" >
 
-Please reach out to our [Professional Services](https://pantheon.io/professional-services) team for information on site migration services if you have need help migrating an existing WordPress Composer-based site (or any site) to Pantheon.
+Please reach out to our [Professional Services](https://pantheon.io/professional-services) team for information on site migration services if you have an existing Composer-managed WordPress site that you would like to migrate to the Pantheon platform.
 
 </Alert>
 

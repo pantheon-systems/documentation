@@ -36,7 +36,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 1. Review the sections below for important information about your site, including an explanation of the directory structure, Continuous Integration functions, and essential configuration actions.
 
-## Important Directories and Files
+## Review Important Directories and Update File Paths
 
 ### /web Directory
 
