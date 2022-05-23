@@ -103,11 +103,7 @@ We recommend that you do not access an S3 bucket using your AWS root user creden
 
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
-<TabList>
-
-<Tab title="Drupal 7" id="d7tab1">
-
-The following instructions use [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
+The following instructions use Drupal 7 and [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
 These steps require Drush 8, which is run by default on Pantheon for newly created Drupal sites. Sites created prior to November 4, 2015 run 5.x by default.
 
@@ -150,10 +146,6 @@ Install s3fs_cors module using Drush:
 ```bash{promptUser: user}
 terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 ```
-
-</Tab>
-
-</TabList>
 
 ## Drupal Module Configuration
 
