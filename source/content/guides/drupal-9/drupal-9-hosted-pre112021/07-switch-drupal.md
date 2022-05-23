@@ -13,12 +13,10 @@ editpath: drupal-9/drupal-9-hosted-pre112021/07-switch-drupal.md
 reviewed: "2021-03-31"
 ---
 
-This page provides steps to switch your site from Drupal to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
+This page provides steps to switch your site from Drupal to `drupal-recommended`, the [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer) upstream that keeps your site current with general configuration changes recommended by Pantheon.
 
-1. Change the upstream that your site is tracking with the following command:
+Use Terminus to change the upstream that your site is tracking:
 
-    ```bash{promptUser:user}
-    terminus site:upstream:set $SITE drupal-recommended
-    ```
-
-1. Follow the `drupal-recommended` upstream to keep your site current with general configuration changes recommended by Pantheon.
+```bash{promptUser:user}
+terminus site:upstream:set $SITE drupal-recommended
+```
