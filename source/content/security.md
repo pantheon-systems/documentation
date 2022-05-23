@@ -91,14 +91,8 @@ Sites that have the environment locked on Pantheon in addition to enabling the m
 
 Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disable the module:
 
-<TabList>
-
-<Tab title="Drupal 7" id="d7">
+For Drupal 7, run:
 
 ```bash
 terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
 ```
-
-</Tab>
-
-</TabList>
