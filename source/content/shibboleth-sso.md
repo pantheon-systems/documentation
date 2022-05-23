@@ -199,21 +199,14 @@ If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/proje
 
 If you are using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
 
-<TabList>
-
-<Tab title="Drupal 7" id="drupal-7-settings">
+**Drupal 7**
 
 ```php:title=settings.php
 # Provide universal absolute path to the installation.
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
 
-</Tab>
-
-</TabList>
-
 </Alert>
-
 
 ## WordPress Multisite Issues
 
