@@ -13,7 +13,7 @@ anchorid: wordpress-ic
 
 [Integrated Composer](/guides/integrated-composer) is a Pantheon platform feature that extends Composer functionality to WordPress core files, and treats them as a managed dependency. Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-## Create a New WordPress with Integrated Composer on the Pantheon Platform
+## Create a New WordPress Site with Integrated Composer on Pantheon 
 
 The instructions in this section require forking Pantheon's [Composer-enabled WordPress Upstream](https://github.com/pantheon-upstreams/wordpress-project) repository. This is the recommended starting point for forking new upstreams that work with Pantheon's Integrated Composer build process.
 
@@ -29,7 +29,7 @@ Follow the steps below to create a new WordPress site using Integrated Composer 
 
 1. Fork the [Pantheon-maintained repository](https://github.com/pantheon-upstreams/wordpress-project).
 
-1. [Connect your repository](/docs/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
+1. [Connect your repository](/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
 1. Edit the vendor name used in the upstream-config
 
