@@ -14,7 +14,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
-### 20220426
+### 2022-04-26
 
 #### <a name="20220426-3"></a>Re-enable WP-Cron for site networks
 
@@ -30,7 +30,7 @@ When this constant is not set, WordPress writes and then deletes a temporary fil
 
 ## Previous Releases
 
-### 20220405
+### 2022-04-05
 
 #### <a name="20220405-2"></a>Allow DISABLE_WP_CRON to be overridden
 
