@@ -39,11 +39,7 @@ A new Sendgrid account may need to wait 30 days before upgrading to a paid plan.
 
 ## Integrating Sendgrid With Drupal
 
-Follow the procedure outlined below for your CMS:
-
-<TabList>
-
-<Tab title="Drupal 7" id="tab-2-anchor">
+Follow the procedure outlined below for Drupal 7:
 
 ### Choosing an Integration Method
 
@@ -190,10 +186,6 @@ Then commit and push the symlink to Pantheon.
 </Accordion>
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the **Send Test E-mail** configuration field and click **Save configuration** to test.
-
-</Tab>
-
-</TabList>
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
