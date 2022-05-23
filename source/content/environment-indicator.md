@@ -95,11 +95,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php`:
-
-  <TabList>
-
-  <Tab title="Drupal 7" id="d7tab">
+1. Add the following within `settings.php` for Drupal 7:
 
     ```php
     /*
@@ -148,10 +144,6 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
           }
       }
     ```
-
-  </Tab>
-
-  </TabList>
 
 1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
