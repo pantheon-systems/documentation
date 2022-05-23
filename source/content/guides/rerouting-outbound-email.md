@@ -74,11 +74,7 @@ If you don’t have a `settings.php` file, copy the `default.settings.php` file.
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE, open the `settings.php`, and add the following code:
-
-<TabList>
-
-<Tab title="Drupal 7" id="d7">
+Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal 7:
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -101,10 +97,6 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['reroute_email_enable_message'] = 1;
 }
 ```
-</Tab>
-
-</TabList>
-
   
 In order for the snippet to work as intended, the module must be enabled in all environments. The `PANTHEON_ENVIRONMENT` variable changes the reroute email settings based on environment. The configuration in `settings.php` overrides any settings in the Drupal Admin UI.  If your site isn't on Pantheon, look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in your configuration.
 
