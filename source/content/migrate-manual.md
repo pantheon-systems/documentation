@@ -39,7 +39,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 If you are using Multisite, perform the following additional tasks:
 1. Copy the base site to a new directory.
-1. Delete all sites/*, with the exception of
+1. Delete all sites, with the exception of"
    - `sites/{sitename}`: the site they are trying to migrate
    - `sites/all`: contains all modules and themes.
 1. Rename `sites/{sitename}`  to `sites/default`.
@@ -49,8 +49,8 @@ If you are using Multisite, perform the following additional tasks:
 
    If you have prefixes on some of your tables (so that you can share the tables with other subsites):
    1. Extract all the tables the subsites use, including those that are shared.
-   1. Rename the table to remove all table prefixes.
-   1. Continue with the following steps:
+   1. Rename the tables to remove all table prefixes.
+   1. Continue with the following steps.
 
   </Alert>
 
@@ -121,7 +121,7 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
 
-  <Partial file="code.md" />
+  <Partial file="_code.md" />
 
   <Alert title="Note" type="info">
 
@@ -151,13 +151,13 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
    - `plugins`
    - `themes`
 
-  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
+  Also copy any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
    - `libraries`
    - `modules`
