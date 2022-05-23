@@ -79,6 +79,20 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 <TabList>
 
+<Tab title="Drupal 7" id="solr-d7">
+
+#### ApacheSolr module
+
+You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
+
+![ApacheSolr Indexing](../images/d7-solr-reindex.png)
+
+#### Search API Solr module
+
+Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
+
+</Tab>
+
 <Tab title="WordPress" id="solr-wp">
 
 You can initiate the reindexing process from the WordPress dashboard or via Terminus.
