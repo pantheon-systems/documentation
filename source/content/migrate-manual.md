@@ -157,8 +157,6 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 </Alert>
 
-<Partial file="export-database.md" />
-
 </Tab>
 
 <Tab title="Drupal 8" id="d8-code">
