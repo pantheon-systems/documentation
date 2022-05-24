@@ -32,7 +32,7 @@ Note that Drupal 9 has no setting to configure the minimum cache lifetime.
 
 ![Drupal 9 aggregate CSS and JS files](../images/d9-aggregate-css-js.png)
 
-On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
+Pantheon uses HTTP/2, which *may* make aggregation unnecessary for your site, as it allows files to download in parallel. However, this depends on factors such as file sizes, number of files, end users' browsers, and more. If you aren't familiar with how those factors apply to your site, we recommend you keep aggregation enabled.
 
 ### Cache Tags
 
