@@ -1,14 +1,12 @@
-<TabList>
-
-<Tab title="Via Dashboard" id="dashboard" active={true}>
+### Via Dashboard
 
 1. Navigate to the Site Dashboard.
 
-1. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
+2. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
 
-1. Download the scheduled or on-demand backup by selecting **Backups** > **Backup Log** > **Database download link**.
+3. Download the scheduled or on-demand backup by selecting **Backups** > **Backup Log** > **Database download link**.
 
-1. Import the database into your local environment using your MySQL client:
+4. Import the database into your local environment using your MySQL client:
 
   ```bash{promptUser: user}
   gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
@@ -20,10 +18,7 @@
 
   </Alert>
 
-</Tab>
-
-
-<Tab title="Via Terminus" id="terminus">
+### Via Terminus
 
 1. Create and get the database with Terminus commands:
 
@@ -32,15 +27,8 @@
     terminus backup:get $SITE.$ENV --element=db
     ```
 
-1. Import the archive into your local MySQL database using the following command:
+2. Import the archive into your local MySQL database using the following command:
 
     ```bash{promptUser: user}
     gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
     ```
-
-</Tab>
-
-</TabList>
-
-
-

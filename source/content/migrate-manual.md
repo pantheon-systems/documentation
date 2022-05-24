@@ -155,11 +155,6 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
     - `sites/all`: contains all modules and themes.
   1. Rename `sites/{sitename}`  to `sites/default`.
 
-  If you have prefixes on some of your tables (so that you can share the tables with other subsites):
-  1. Get all the tables the subsites use, including those that are shared.
-  1. Rename the tables to remove all table prefixes.
-  1. Continue with the following steps.
-
 </Alert>
 
 <Partial file="export-database.md" />
