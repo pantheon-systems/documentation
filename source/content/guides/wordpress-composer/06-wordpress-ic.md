@@ -33,10 +33,6 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 1. [Connect your repository](/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
-1. Edit the **vendor** name used in the `upstream-config` directory.
-
-    - Pantheon ships the `upstream-config/composer.json` file with the line `name: pantheon-upstreams/upstream-config`. You should change `pantheon-upstreams` to your own project's name. 
-
 1. Update the root `/composer.json` file's `require` section to match the name you chose in the preceding step.
 
 ## Add and Remove Packages

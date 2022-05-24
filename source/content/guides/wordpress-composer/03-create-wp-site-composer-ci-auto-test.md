@@ -25,7 +25,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 ## Create Your Site
 
-1. Use the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin) to copy the Pantheon-maintained [WordPress Composer repository](https://github.com/pantheon-systems/example-wordpress-composer).
+1. Use the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin).
 
     - The Terminus Build Tools plugin will scaffold the new project, including:
 
@@ -33,6 +33,14 @@ This section provides steps to create a new Pantheon WordPress site that will us
        - A free [Pantheon sandbox](/create-sites#sandbox-sites) site
        - [Continuous Integration](https://pantheon.io/integrations/continuous-integration) configuration
        - Credential set up
+
+1. Run the following command to spin up your site: 
+
+    ```bash
+    terminus build:project:create wp
+    ```
+
+    - This site will be based on the Pantheon-maintained [WordPress Composer repository](https://github.com/pantheon-systems/example-wordpress-composer).
 
 1. Review the sections below for important information about your site, including an explanation of the directory structure, Continuous Integration functions, and essential configuration actions.
 
@@ -149,7 +157,11 @@ Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org
 
 ## GitHub Actions
 
-This section provides information on how to enable GitHub Actions for an existing project. 
+This section provides information enabling GitHub Actions for your site. 
+
+The Build Tools Site will configure GitHub Actions automatically if it was passed as the selected CI when creating the site. You will need to consult advanced external resources if you're working with an existing non-Build Tools site and want to add Github Actions.
+
+The steps to enable GitHub Actions for an existing Build Tools site created with another CI (e.g. CircleCI) may work for you.  
 
 1. Copy `.ci/.github` to `.github`. 
 

@@ -11,64 +11,68 @@ permalink: docs/guides/wordpress-composer/bedrock-composer
 anchorid: bedrock-composer
 ---
 
-[Composer](https://getcomposer.org/) does not fully support WordPress, however, Bedrock is a central feature of Composer. [Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure that helps simplify working on large projects with multiple plugins and custom code. 
+WordPress does not natively support [Composer](https://getcomposer.org/), however, Bedrock is a WordPress-specific framework for using Composer on WordPress sites.[Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure that helps simplify working on large projects with multiple plugins and custom code. 
 
 ## Create a New Pantheon WordPress Site with Bedrock
 
 1. Run the following command in Terminus:
 
     ```bash
-    composer create-project your_site
+    composer create-project roots/bedrock your_site
     ```
 
-1. Update the [environment variables](https://docs.roots.io/bedrock/master/environment-variables/#wp-env) in your project's `.env` file.
+1. Run the `git init` command.
 
-1. Store your `.env` outside of the project root on the Pantheon server. 
+1. Navigate to the Pantheon dashboard > click **Connection Info** and copy the SSH Clone Url string > remove everything except the git repository, for example:
 
-    - Bedrock is configured to look for the `.env` file in the `files/private` directory by default. This is also the location where Pantheon stores all files that shouldn't be accessible to the public.
+    ```bash
+     ssh://codeserver.dev.{your site id}@codeserver.dev.{your site id}.drush.in:2222/~/repository.git).
+     ```
 
-1. Commit the `vendor` and `web` directories.
+1. Run the following command in Terminus:
 
-    - Pantheon does not support using Composer to install dependencies that are deployed to Pantheon servers. You must commit the entire `vendor` and `web` directories into your Git repo to ensure that your dependencies are installed for the new project.
+    ```bash
+    git remote add origin your_git_repository_url
+    ```
 
-1. Convert the `web/app/uploads` directory to a [symlink](https://github.com/git-for-windows/git/wiki/Symbolic-Links) that points to the `files` directory. 
+1. Run the following commands to add the Bedrock-initialized files to your new git project:
+
+    ```bash
+    git add .
+    git commit -m "Initialize Bedrock"
+    ```
+
+1. Switch to Git mode:
+
+    - This can be done in via Terminus or in the Pantheon Dashboard:
+
+        - Via Terminus: Run `terminus connection:set your_site_name.dev git`
+
+        - Via Pantheon Dashboard: [Git Mode](/guides/quickstart/connection-modes/#git-connection-mode)
+
+1. Run the following command to force-push your changes:
+
+    ```bash
+    git push --set-upstream origin master -f 
+    ```
+
+1. Move your project's `.env`file to `files/private` and update the [environment variables](https://docs.roots.io/bedrock/master/environment-variables/#wp-env). 
+
+1. Remove the `vendor` directory from the `gitignore` folder and commit it.
+
+    - Pantheon does not support using Composer to install dependencies that are deployed to Pantheon servers. You must commit the entire `vendor` directory into your Git repo to ensure that your dependencies are installed for the new project.
+
+1. Convert the `web/app/uploads` directory to a symlink that points to the `files` directory. 
 
     - This is necessary because Pantheon stores media files in the `files` directory instead of the `uploads` directory.
 
-1. Create the initial `.env` file.
+1. Remove the `.env` file from the Bedrock `gitignore` folder and store it outside of the project root on the Pantheon server. 
 
-    - This is necessary because Bedrock uses environment variables to manage sensitive credentials. These environment variables usually come from multiple sources. The most important variable is the `.env` file which Bedrock uses instead of the standard WordPress `wp-config.php` file. Pantheon was not designed to create the initial `.env` file that your Bedrock site requires. You must create it yourself and upload it to the Pantheon server. The easiest way to do that is by connecting to your Pantheon server using FTP and creating the `.env` file. 
-
-1. Upload the newly created `.env` file by connecting to the Pantheon server using an FTP.
-
-    - To find your connection information: Navigate to the site's **Dev** environment in Pantheon > click **Connection Info** > scroll to the bottom of the menu to view your SFTP connection information.
-
-1. Connect to your Pantheon site using the SFTP credentials located in the previous step > navigate to the `files` directory > create a `private` directory > create the `.env` file in the `private` directory by running the following command:
-
-    ```bash
-    WP_ENV=development
-    WP_SITEURL=${WP_HOME}/wp
-
-    Generate your keys here: https://roots.io/salts.html
-    AUTH_KEY='generateme'
-    SECURE_AUTH_KEY='generateme'
-    LOGGED_IN_KEY='generateme'
-    NONCE_KEY='generateme'
-    AUTH_SALT='generateme'
-    SECURE_AUTH_SALT='generateme'
-    LOGGED_IN_SALT='generateme'
-    NONCE_SALT='generateme'
-    ```
-
-    - Your `.env` will be created. Your new `.env` file is smaller than the original Bedrock `.env` file because Pantheon automatically supplies many of the environment variables that are usually stored in the `.env` file.
-
-1. Replace all placeholder keys with the [new keys](https://roots.io/salts.html).
+    - Bedrock uses environment variables to manage sensitive credentials. These environment variables usually come from multiple sources. The most important variable is the `.env` file which Bedrock uses instead of the standard WordPress `wp-config.php` file. Bedrock is configured to look for the `.env` file in the `files/private` directory by default. This is also the location where Pantheon stores all files that shouldn't be accessible to the public.
 
 1. Use [SFTP or git](/guides/wordpress-git/) to push changes directly to your Pantheon site.
 
 ## See Also
-
-- [Pantheon WordPress with Bedrock Recommended GitHub Repository](https://github.com/pantheon-systems/wordpress-bedrock-recommended)
 
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
 
