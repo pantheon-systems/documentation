@@ -37,26 +37,6 @@ To ensure a successful migration, complete the following tasks on the source sit
 1. Remove unneeded code, database tables, and files
 1. [Configure SSH keys](/ssh-keys)
 
-If you are using Multisite, perform the following additional tasks:
-1. Copy the base site to a new directory.
-1. Delete all sites, with the exception of"
-   - `sites/{sitename}`: the site they are trying to migrate
-   - `sites/all`: contains all modules and themes.
-1. Rename `sites/{sitename}`  to `sites/default`.
-1. Extract the database. 
-
-  <Alert title="Note" type="info" >
-
-   If you have prefixes on some of your tables (so that you can share the tables with other subsites):
-   1. Extract all the tables the subsites use, including those that are shared.
-   1. Rename the tables to remove all table prefixes.
-   1. Continue with the following steps.
-
-  </Alert>
-
-  <Partial file="export-database.md" />
-
-
 <Accordion title="Advanced Tips for Successful Migration" id="advanced-before-you-begin" icon="lightbulb">
 
 #### .gitignore
@@ -167,6 +147,23 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
    - `sites`, excluding `sites/default/files`.
 
   Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+
+    <Alert title="Note" type="info" >
+    If you are using Multisite and wanted to migrate a sub-site, you will need to prepare the directory and the database first:
+    1. Copy the base site to a new directory.
+    1. Delete all sites, with the exception of"
+      - `sites/{sitename}`: the site they are trying to migrate
+      - `sites/all`: contains all modules and themes.
+    1. Rename `sites/{sitename}`  to `sites/default`.
+
+    If you have prefixes on some of your tables (so that you can share the tables with other subsites):
+    1. Get all the tables the subsites use, including those that are shared.
+    1. Rename the tables to remove all table prefixes.
+    1. Continue with the following steps.
+
+    </Alert>
+
+    <Partial file="export-database.md" />
 
   </Tab>
 
