@@ -146,22 +146,23 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
 
-    <Alert title="Note" type="info" >
-    If you are using Multisite and wanted to migrate a sub-site, you will need to prepare the directory and the database first:
-    1. Copy the base site to a new directory.
-    1. Delete all sites, with the exception of"
-      - `sites/{sitename}`: the site they are trying to migrate
-      - `sites/all`: contains all modules and themes.
-    1. Rename `sites/{sitename}`  to `sites/default`.
+  <Alert title="Note" type="info" >
 
-    If you have prefixes on some of your tables (so that you can share the tables with other subsites):
-    1. Get all the tables the subsites use, including those that are shared.
-    1. Rename the tables to remove all table prefixes.
-    1. Continue with the following steps.
+  If you are using Multisite and wanted to migrate a sub-site, you will need to prepare the directory and the database first:
+  1. Copy the base site to a new directory.
+  1. Delete all sites, with the exception of"
+    - `sites/{sitename}`: the site they are trying to migrate
+    - `sites/all`: contains all modules and themes.
+  1. Rename `sites/{sitename}`  to `sites/default`.
 
-    </Alert>
+  If you have prefixes on some of your tables (so that you can share the tables with other subsites):
+  1. Get all the tables the subsites use, including those that are shared.
+  1. Rename the tables to remove all table prefixes.
+  1. Continue with the following steps.
 
-    <Partial file="export-database.md" />
+  </Alert>
+
+  <Partial file="export-database.md" />
 
   </Tab>
 
