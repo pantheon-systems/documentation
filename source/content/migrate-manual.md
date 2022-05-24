@@ -135,7 +135,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
    - `libraries`
    - `modules`
@@ -145,6 +145,23 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
    - `sites`, excluding `sites/default/files`.
 
   Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+
+    <Alert title="Note" type="info" >
+    If you are using Multisite and wanted to migrate a sub-site, you will need to prepare the directory and the database first:
+    1. Copy the base site to a new directory.
+    1. Delete all sites, with the exception of"
+      - `sites/{sitename}`: the site they are trying to migrate
+      - `sites/all`: contains all modules and themes.
+    1. Rename `sites/{sitename}`  to `sites/default`.
+
+    If you have prefixes on some of your tables (so that you can share the tables with other subsites):
+    1. Get all the tables the subsites use, including those that are shared.
+    1. Rename the tables to remove all table prefixes.
+    1. Continue with the following steps.
+
+    </Alert>
+
+    <Partial file="export-database.md" />
 
   </Tab>
 
