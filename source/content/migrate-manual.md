@@ -150,7 +150,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
     If you are using Multisite and wanted to migrate a sub-site, you will need to prepare the directory and the database first:
     1. Copy the base site to a new directory.
-    1. Delete all sites, with the exception of"
+    1. Delete all sites, with the exception of:
        - `sites/{sitename}`: the site they are trying to migrate
        - `sites/all`: contains all modules and themes.
     1. Rename `sites/{sitename}`  to `sites/default`.
