@@ -3,6 +3,8 @@ title: Manually Migrate Sites to Pantheon
 description: Learn how to manually migrate a Drupal or WordPress site to Pantheon
 categories: [get-started]
 tags: [code, dashboard, migrate, site]
+reviewed: "2022-05-23" 
+
 ---
 
 Manually migrate your site to Pantheon when any of the following apply:
@@ -27,23 +29,43 @@ The steps outlined below do not work for Composer-based sites. If you have need 
 
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
-- Read [Platform Considerations](/platform-considerations)
-- Upgrade to the latest version of WordPress or Drupal core
-- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/php-versions/#configure-php-version).
-- Clear all caches
-- Remove unneeded code, database tables, and files
-- [Configure SSH keys](/ssh-keys)
+1. Read [Platform Considerations](/platform-considerations)
+1. Upgrade to the latest version of WordPress or Drupal core
+1. Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
+1. Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/php-versions/#configure-php-version).
+1. Clear all caches
+1. Remove unneeded code, database tables, and files
+1. [Configure SSH keys](/ssh-keys)
+
+If you are using Multisite, perform the following additional tasks:
+1. Copy the base site to a new directory.
+1. Delete all sites, with the exception of"
+   - `sites/{sitename}`: the site they are trying to migrate
+   - `sites/all`: contains all modules and themes.
+1. Rename `sites/{sitename}`  to `sites/default`.
+1. Extract the database. 
+
+  <Alert title="Note" type="info" >
+
+   If you have prefixes on some of your tables (so that you can share the tables with other subsites):
+   1. Extract all the tables the subsites use, including those that are shared.
+   1. Rename the tables to remove all table prefixes.
+   1. Continue with the following steps.
+
+  </Alert>
+
+  <Partial file="export-database.md" />
+
 
 <Accordion title="Advanced Tips for Successful Migration" id="advanced-before-you-begin" icon="lightbulb">
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, use the Pantheon version. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
 
 #### Local Drupal configurations
 
-To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore` so that it will be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
+To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore`. It will then be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
 
 ```bash{promptUser: user}
 chmod u+w sites/default/{.,settings.php}
@@ -67,11 +89,11 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
-1. Name your site and select an [Organization](/organizations) (optional), then click **Create Site**:
+2. Name your site, select an [Organization](/organizations) (optional), then click **Create Site**:
 
    ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
 
-1. Click the link to manually migrate your site then select **Yes** to confirm:
+3. Click the link to manually migrate your site, then select **Yes** to confirm:
 
   <TabList>
 
@@ -99,7 +121,7 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
 
-  <Partial file="code.md" />
+  <Partial file="_code.md" />
 
   <Alert title="Note" type="info">
 
@@ -129,13 +151,13 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
    - `plugins`
    - `themes`
 
-  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
+  Also copy any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
    - `libraries`
    - `modules`
