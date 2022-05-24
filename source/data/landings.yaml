@@ -1021,8 +1021,6 @@
           url: '/guides/new-relic-deploys'
         - image: 'logos/pagerduty.png'
           url: '/guides/pagerduty'
-        - image: 'logos/phpstorm.png'
-          url: '/guides/phpstorm-composer'
         - image: 'logos/pingdom.png'
           url: '/guides/pingdom-uptime-check'
         - image: 'logos/pivotal.png'
