@@ -119,9 +119,9 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Do not overwrite WordPress or Drupal core files on your Pantheon site. Upload your existing site's themes as well as plugins or modules to their locations within the root directory (`code` or `wp-content`, as shown below).
 
-  <TabList>
+<TabList>
 
-  <Tab title="WordPress" id="wp-code" active={true}>
+<Tab title="WordPress" id="wp-code" active={true}>
 
   Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
 
@@ -131,9 +131,9 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
-  </Tab>
+</Tab>
 
-  <Tab title="Drupal 7" id="d7-code">
+<Tab title="Drupal 7" id="d7-code">
 
   Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
@@ -146,7 +146,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
 
-  <Alert title="Note" type="info" >
+<Alert title="Note" type="info" >
 
   If you are using Multisite and wanted to migrate a sub-site, you will need to prepare the directory and the database first:
   1. Copy the base site to a new directory.
@@ -160,13 +160,13 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
   1. Rename the tables to remove all table prefixes.
   1. Continue with the following steps.
 
-  </Alert>
+</Alert>
 
-  <Partial file="export-database.md" />
+<Partial file="export-database.md" />
 
-  </Tab>
+</Tab>
 
-  <Tab title="Drupal 8" id="d8-code">
+<Tab title="Drupal 8" id="d8-code">
 
   Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
 
@@ -179,17 +179,17 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
 
-  </Tab>
+</Tab>
 
-  <Tab title="Drupal 9" id="d9-code">
+<Tab title="Drupal 9" id="d9-code">
 
   Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
 
   Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
 
-  </Tab>
+</Tab>
 
-  </TabList>
+</TabList>
 
 1. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
 
