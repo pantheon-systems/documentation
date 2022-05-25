@@ -59,7 +59,12 @@ Autopilot requires the following:
 
 ### Autopilot Site Compatibility
 
-![Autopilot Site Compatibility](../../../images/autopilot/autopilot-site-compatibility.jpg)
+| Pantheon                                           	| Integrated Composer                               	| External Build Tools                              	| Drupal                                                                      	| WordPress                                                                  	|
+|----------------------------------------------------	|---------------------------------------------------	|---------------------------------------------------	|-----------------------------------------------------------------------------	|----------------------------------------------------------------------------	|
+| Yes <span   style = " color :green " > ✔ </span >  	| Yes <span   style = " color :green " > ✔ </span > 	| Yes <span   style = " color :red " > ❌  </span >  	| Drupal 8 (must have Drush 8)  <span   style = " color :green " > ✔ </span > 	| Any version without Multisite<span   style = " color :green " > ✔ </span > 	|
+| No <span   style = " color :green " > ❌  </sp an > 	| No <span   style = " color :green " > ❌  </span > 	| No <span   style = " color :green " > ✔ </sp an > 	| Drupal 9 <span   style = " color :green " > ✔ </span >                      	|                                                                            	|
+|                                                    	|                                                   	|                                                   	|                                                                             	|                                                                            	|
+
 
 ## Autopilot For Agencies
 
