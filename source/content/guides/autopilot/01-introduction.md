@@ -64,7 +64,7 @@ Your site must be on Pantheon and using [Integrated Composer](/guides/integrated
 | External Build Tools                          | Drupal                                                                 | WordPress                                                             |
 |----------------------------------------------|----------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | Yes <span style = "color :red " > ❌  </span > | Drupal 8 (only with Drush 8)  <span style = "color:green" > ✔ </span > | Any version without Multisite<span style = "color:green" > ✔ </span > |
-| No <span style = "color:green" > ❌  </span > | No <span style = "color:green" > ❌  </span > | No <span style = "color:green" > ✔ </span >   | Drupal 9 <span style = "color:green" > ✔ </span >                      | Any version with Multisite <span style = "color:green" > ❌  </span > | 
+| No <span style = "color:green" > ✔  </span > | Drupal 9 <span style = "color:green" > ✔ </span >                      | Any version with Multisite <span style = "color:green" > ❌  </span > | 
                                                                                     
 ## Autopilot For Agencies
 
