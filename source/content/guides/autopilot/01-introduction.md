@@ -58,12 +58,11 @@ Autopilot requires the following:
 - A compatible version of Drush (if you are not using Integrated Composer)
 
 ### Autopilot Site Compatibility
-
-| Pantheon                                           	| Integrated Composer                               	| External Build Tools                              	| Drupal                                                                      	| WordPress                                                                  	|
-|----------------------------------------------------	|---------------------------------------------------	|---------------------------------------------------	|-----------------------------------------------------------------------------	|----------------------------------------------------------------------------	|
-| Yes <span   style = " color :green " > ✔ </span >  	| Yes <span   style = " color :green " > ✔ </span > 	| Yes <span   style = " color :red " > ❌  </span >  	| Drupal 8 (must have Drush 8)  <span   style = " color :green " > ✔ </span > 	| Any version without Multisite<span   style = " color :green " > ✔ </span > 	|
-| No <span   style = " color :green " > ❌  </sp an > 	| No <span   style = " color :green " > ❌  </span > 	| No <span   style = " color :green " > ✔ </sp an > 	| Drupal 9 <span   style = " color :green " > ✔ </span >                      	|                                                                            	|
-|                                                    	|                                                   	|                                                   	|                                                                             	|                                                                            	|
+| Pantheon                                     | Integrated Composer                          | External Build Tools                          | Drupal                                                                 | WordPress                                                             |
+|----------------------------------------------|----------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| Yes <span style = "color:green" > ✔ </span > | Yes <span style = "color:green" > ✔ </span > | Yes <span style = "color :red " > ❌  </span > | Drupal 8 (must have Drush 8)  <span style = "color:green" > ✔ </span > | Any version without Multisite<span style = "color:green" > ✔ </span > |
+| No <span style = "color:green" > ❌  </span > | No <span style = "color:green" > ❌  </span > | No <span style = "color:green" > ✔ </span >   | Drupal 9 <span style = "color:green" > ✔ </span >                      |                                                                       |
+|                                                    |                                                   |                                                   |                                                          
 
 
 ## Autopilot For Agencies
