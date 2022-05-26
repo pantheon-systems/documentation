@@ -7,7 +7,6 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/drupal-9-hosted-createdashboard-set8/core-updates
 anchorid: core-updates
 editpath: drupal-9-hosted-createdashboard-set8/09-core-updates.md

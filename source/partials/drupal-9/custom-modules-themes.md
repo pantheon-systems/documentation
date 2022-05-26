@@ -24,7 +24,7 @@ To move **themes**, use the following commands:
 
 <TabList>
 
-<Tab title="Code for a Nested Docroot" id="code-docroot" active={true}>
+<Tab title="With Nested Docroot" id="code-docroot" active={true}>
 
 ```bash{promptUser:user}
 git checkout master web/themes/custom
@@ -34,7 +34,7 @@ git commit -m "Copy custom themes"
 
 </Tab>
 
-<Tab title="Code if No Nested Docroot" id="code-nodocroot">
+<Tab title="Without Nested Docroot" id="code-nodocroot">
 
 ```bash{promptUser:user}
 git checkout master themes/custom

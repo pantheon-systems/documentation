@@ -47,7 +47,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
    Framework          drupal8
    ...
    //highlight-start
-   Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/drupal-composer-managed
+   Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/ drupal-composer-managed
    //highlight-end
    ...
    ------------------ -------------------------------------------------------------------------------------
@@ -59,4 +59,4 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ### Apply All Available Upstream Updates
 
-<Partial file="drupal-apply-upstream-updates-drupal-composer-managed.md" />
+<Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />
