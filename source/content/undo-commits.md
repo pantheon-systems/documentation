@@ -5,7 +5,7 @@ categories: [develop]
 tags: [cli, code, git, local, workflow]
 ---
 
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you](/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you](/core-updates) but it is still possible to overwrite core on a local environment and push to your Pantheon Dev environment. Fortunately, this is reversible, but will require a little work.
 
 <Alert title="Warning" type="danger">
 
@@ -17,7 +17,7 @@ Using `git revert` to revert an upstream update will result in the dashboard bei
 
 The following assumes you have set up a [local development environment](/local-development) with [Git version control](/git).
 
-Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
+Before you start making changes to your Git repository. Be sure to have a working clone as a backup. If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. Review the sections below carefully as instructions for reverting commits are different depending on the environment (Dev, Test, Live).
 
 ## Restore Core to Upstream
 
@@ -54,7 +54,7 @@ git reset --hard HEAD~1
 git push --force origin master
 ```
 
-## Revert the Last Commit on Pantheon That Has Been Deployed
+## Revert the Last Commit on Pantheon That Has Been Deployed to Test or Live
 
 It is important to test changes before deploying them to Test or Live, but just in case, this technique will reverse the last commit and leave the history.
 
@@ -63,7 +63,7 @@ git revert HEAD --no-edit
 git push origin master
 ```
 
-## Revert a Prior Commit on Pantheon That Has Been Deployed
+## Revert a Prior Commit on Pantheon That Has Been Deployed to Test or Live
 
 This one is a bit trickier, but you can do it. This will selectively undo a particular commit and leave the history.
 
