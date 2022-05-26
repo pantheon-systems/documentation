@@ -74,4 +74,4 @@ See this [core issue](https://core.trac.wordpress.org/ticket/43310) on WordPress
 
 If you’ve updated the [Twenty Twenty-Two theme](https://wordpress.org/themes/twentytwentytwo/) outside of Pantheon's WordPress upstream, updating to 6.0 will result in an error (due to the [removal](https://core.trac.wordpress.org/changeset/53286) of `wp-content/themes/twentytwentytwo/assets/fonts/LICENSE.md`).
 
-To resolve this error delete this file, commit and push your change, and reapply the update.
+To resolve this error delete this file, commit and push your change, and then reapply the update.
