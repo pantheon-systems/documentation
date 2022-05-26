@@ -62,9 +62,9 @@ Autopilot requires the following:
 Your site must be on Pantheon and using [Integrated Composer](/guides/integrated-composer) to be eligible for Autopilot. Review the criteria below to determine if your site is compatible with Autopilot.
 
 | Do You Use External Build Tools? |Drupal                                                                 | WordPress                                                             |
-|----------------------------------------------|----------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
+-----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (only with Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without Multisite = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 = <span style = "color:green" > ✔ </span > compatible                     | Any version with Multisite = <span style = "color:green" > ❌  </span > incompatible | 
+| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 = <span style = "color:green" > ✔ </span > compatible                     | Any version with Multisite = <span style = "color:green" > ❌  </span > not compatible | 
                                                                                     
 ## Autopilot For Agencies
 
