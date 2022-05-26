@@ -32,7 +32,7 @@ Note that Drupal 9 has no setting to configure the minimum cache lifetime.
 
 ![Drupal 9 aggregate CSS and JS files](../images/d9-aggregate-css-js.png)
 
-On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
+<Partial file="aggregation.md" />
 
 ### Cache Tags
 

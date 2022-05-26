@@ -26,7 +26,7 @@ Page cache maximum age sets the max-age value in the Cache-Control headers that 
 ## Bandwidth Optimization
 ![bandwidth](../images/drupal-8-bandwidth-optimization.png)
 
-On the Live environment, make sure to enable **Aggregate and compress CSS files** and **Aggregate and compress JavaScript files**. This is critical for page render times by reducing the number of HTTP requests and the amount of data transferred. There is no longer a "compress cached pages" setting in Drupal 9.
+<Partial file="aggregation.md" />
 
 Some developers may wonder if HTTP/2 has replaced CSS and Javascript aggregation as a best practice. While HTTP/2 certainly reduces the overhead of requesting and downloading many files, our testing with real-world browsers and web connections still shows benefits for aggregation even with HTTP/2.
 
