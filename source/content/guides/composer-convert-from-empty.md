@@ -77,3 +77,5 @@ Following the `drupal-recommended` upstream will help keep your site up to date 
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

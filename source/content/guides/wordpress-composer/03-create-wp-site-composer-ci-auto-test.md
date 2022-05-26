@@ -1,6 +1,6 @@
 ---
-title: Create an Advanced Composer-managed WordPress Site 
-subtitle: Create an Advanced Composer-managed WordPress Site 
+title: Create a CI, Composer-managed WordPress Site 
+subtitle: Create a WordPress Site That Uses Composer and Continuous Integration
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 categories: [develop]
 tags: [wordpress]
@@ -48,7 +48,8 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 ### /web Directory
 
-Your site is stored and served from the `/web` subdirectory in the `pantheon.yml` file. You must store your website in this subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root. It also provides additional security by preventing web access through Pantheon. Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
+Your site is stored and served from the `/web` subdirectory located next to the `pantheon.yml` file. You must store your website in this subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root. It also provides additional security by preventing web access to files outside of the document root through Pantheon.
+Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
 
 1. Verify that your website is stored in the `/web` subdirectory.
 
@@ -56,7 +57,7 @@ Your site is stored and served from the `/web` subdirectory in the `pantheon.yml
 
 Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
 
-1. Move the `WP_SITEURL` to the `/web/wp` directory to allow WordPress core functions to work correctly. 
+1. Verify that the `WP_SITEURL` file is in the `/web/wp` directory to allow WordPress core functions to work correctly. 
 
 1. Review the `/web/wp-config.php` file for key settings and move other files to the to the `/web/wp` directory as necessary.
 
@@ -64,7 +65,7 @@ Your directories and files within the `/web` directory are stored in different l
 
 This project uses Composer to manage third-party PHP dependencies. Some files, such as `web/wp` may not be visible in the repository. This is because WordPress core and its plugins are installed via Composer and ignored in the `.gitignore` file.
 
-A custom, [Composer version of WordPress for Pantheon](https://github.com/pantheon-systems/wordpress-composer/) is used as the source for WordPress core.
+A [Composer version of WordPress for Pantheon](https://github.com/pantheon-systems/wordpress-composer/) is used as the source for WordPress core.
 
 Third party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json` file. The `composer.lock` file keeps track of the exact dependency version. Composer installer-paths are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
 
@@ -76,7 +77,7 @@ Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
 1. Place all dependencies that are not a part of the web application but are necessary to build or test the project in the **require-dev** section.
 
-    - Some example dependencies are `php_codesniffer` and `phpunit`. Dev dependencies are not deployed to Pantheon.
+    - Example dependencies are `php_codesniffer` and `phpunit`. Dev dependencies are deployed to Dev and Multidev environments but not to Test and Live environments.
 
 ## Continuous Integration
 
