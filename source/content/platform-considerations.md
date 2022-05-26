@@ -52,7 +52,7 @@ Pantheon supports sites that consume services using Cross-Origin Resource Sharin
 
 You must add the correct header to enable CORS services on your site. Review [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html) for more details.
 
-WordPress users can enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors).You can also use an Advanced Global CDN to [modify headers at the Edge](/guides/professional-services/advanced-global-cdn#modify-and-filter-headers-at-the-edge).
+WordPress users can enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors). You can also use an Advanced Global CDN to [modify headers at the Edge](/guides/professional-services/advanced-global-cdn#modify-and-filter-headers-at-the-edge).
 
 Drupal 9 users can update `sites/default/services.yml` to enable CORS.
 
