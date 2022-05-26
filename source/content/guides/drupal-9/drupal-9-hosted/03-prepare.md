@@ -13,4 +13,4 @@ editpath: hosted/03-prepare.md
 reviewed: "2021-03-31"
 ---
 
-<Partial file="drupal-9/prepare-local-environment.md" />
+<Partial file="drupal-9/prepare-local-environment-no-clone-new.md" />

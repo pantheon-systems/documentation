@@ -16,9 +16,7 @@ reviewed: "2021-03-31"
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone-new.md" />
-
-## Prepare a Local Copy of the Site for Upgrade
+1. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
 1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
 

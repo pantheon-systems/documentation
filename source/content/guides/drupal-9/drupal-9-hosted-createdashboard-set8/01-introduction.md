@@ -17,7 +17,7 @@ This guide will show you how to migrate a site that meets the following criteria
 
 | <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                   Pantheon                    |                                                                     Dashboard                                                                      |                                                                                          Drupal 8                                                                                          |
+|                   Pantheon                    |                                                                     Dashboard                                                                      |                                                                                          Drupal version set to 8                                                                                          |
 
 <Partial file="drupal-9/see-landing.md" />
 

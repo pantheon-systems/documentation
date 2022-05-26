@@ -13,7 +13,7 @@ editpath: drupal-9/drupal-9-hosted-createbt/07-core.md
 reviewed: "2021-03-31"
 ---
 
-1. Use Composer to remove `config_installer` and add new requirements:
+1. Use Composer to update your site requirements:
 
    ```bash{outputLines: 2-5,7-9}
    composer require drupal/core-recommended:^9 \

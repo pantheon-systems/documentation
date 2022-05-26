@@ -19,6 +19,12 @@ This guide will show you how to migrate a site that meets the following criteria
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                   Pantheon                    |                                                                     Dashboard                                                                      |                                                                                             --                                                                                             |
 
+<Alert title="Note" type="info" >
+
+This guide is intended for those who do not have access to Multidev.  If you do have access, use [Migrate a Drupal 8 Site with Multidev to Drupal 9 Using Multidev](/guides/drupal-9-hosted-md) instead.
+
+</Alert>
+
 <Partial file="drupal-9/see-landing.md" />
 
 <Partial file="drupal-9/commit-history.md" />
@@ -32,4 +38,4 @@ This doc uses the following aliases:
 
 ## Requirements
 
-<Partial file="drupal-9/upgrade-site-requirements-from-empty.md" />
+<Partial file="drupal-9/upgrade-site-requirements-new.md" />

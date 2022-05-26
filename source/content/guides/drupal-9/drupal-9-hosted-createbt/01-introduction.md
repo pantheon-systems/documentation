@@ -24,8 +24,6 @@ This guide will show you how to migrate a site that meets the following criteria
 
 Build Tools connects Pantheon with your CI service and external Git provider. See the [Build Tools Guide](/guides/build-tools#a-build-tools-projects-components) for details on supported Git and CI services combinations.
 
-<Partial file="drupal-9/commit-history.md" />
-
 ## Requirements
 
 Before you continue, confirm that your site meets the following criteria:

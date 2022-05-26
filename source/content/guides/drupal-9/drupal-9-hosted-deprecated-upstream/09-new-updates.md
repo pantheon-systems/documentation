@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created Before November 2011 to Drupal 9
+title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal 9
 subtitle: Apply New Upstream Updates
 description: 
 cms: "Drupal 9"
@@ -7,9 +7,9 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-pre112021/new-updates
+permalink: docs/guides/drupal-9-hosted-deprecated-upstream/new-updates
 anchorid: new-updates
-editpath: drupal-9/drupal-9-hosted-pre112021/09-new-updates.md
+editpath: drupal-9/drupal-9-hosted-deprecated-upstream/09-new-updates.md
 reviewed: "2021-03-31"
 ---
 
@@ -21,4 +21,4 @@ Follow the steps below after you have completed switching your upstream.
 
 1. Click **Dev environment** > **Update** to apply available upstream updates.
 
-If the updates are not successful, refer to the [Troubleshooting](/guides/drupal-9-hosted-pre112021/troubleshooting) doc.
+If the updates are not successful, refer to the [Troubleshooting](/guides/drupal-9-hosted-deprecated-upstream/troubleshooting) doc.

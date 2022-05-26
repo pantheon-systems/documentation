@@ -16,7 +16,7 @@ reviewed: "2021-03-31"
 Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $SITE drupal-recommended
+terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.

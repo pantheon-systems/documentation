@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created Before November 2011 to Drupal 9
+title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal 9
 subtitle: Prepare
 description: 
 cms: "Drupal 9"
@@ -8,9 +8,9 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/prepare
+permalink: docs/guides/drupal-9-hosted-deprecated-upstream/prepare
 anchorid: prepare
-editpath: drupal-9/drupal-9-hosted-pre112021/03-prepare.md
+editpath: drupal-9/drupal-9-hosted-deprecated-upstream/03-prepare.md
 reviewed: "2021-03-31"
 ---
 
@@ -37,12 +37,14 @@ Upstream           e96c6794-77fe-4931-9a20-48a2fe1a3789: https://github.com/pant
 ...
 ------------------ -------------------------------------------------------------------------------------
 ```
+Use these values to determine which upstream a site is using:
 
-The following values indicate that a site is using a `drupal-recommended` upstream:
+| Framework | Upstream | Site upstream is...
+|---|---|---
+|drupal8|https://github.com/pantheon-upstreams/drupal-project.git|drupal-recommended
+|drupal8|https://github.com/pantheon-upstreams/drupal-project.git|drupal-project
 
-  - The `Framework` is `drupal8`
 
-  - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-project.git`
 
 ## Prepare the Local Environment
 

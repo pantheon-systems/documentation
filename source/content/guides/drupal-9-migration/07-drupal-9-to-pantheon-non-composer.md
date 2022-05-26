@@ -79,7 +79,7 @@ Copy any existing configuration from the source site and update the source path 
   git commit -m "Pull in configuration from source site"
   ```
 
-It is possible that the Drupal site might have relocated the configuration path to a different location. You can find out where your config yaml files are via:
+It is possible that the Drupal site might have relocated the configuration path to a different location. You can find out where your configuration files are via:
 
 ```bash{promptUser:user}
 drush status --fields=config-sync

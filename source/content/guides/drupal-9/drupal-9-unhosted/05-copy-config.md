@@ -47,7 +47,7 @@ git commit -m "Pull in configuration from source site"
 
 </TabList>
 
-It is possible that the Drupal site might have moved the configuration path to a different location. You can find the location of your `config.yaml` files by running the following command:
+It is possible that the Drupal site might have moved the configuration path to a different location. You can find the location of your configuration files by running the following command:
 
 ```bash{promptUser:user}
 drush status --fields=config-sync

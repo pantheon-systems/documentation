@@ -22,20 +22,20 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## Verify the Repository
 
-1. Check that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
+1. Check that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream.
 
-1. Use Terminus to confirm the `drupal-recommended` upstream:
+1. Use Terminus to confirm the `drupal-composer-managed` upstream:
 
   ```bash
   terminus site:info $SITE 
   ```
 
-  The following values indicate that a site is using the `drupal-recommended` upstream:
+  The following values indicate that a site is using the `drupal-composer-managed` upstream:
 
    - The `Framework` is `drupal8`
-   - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended`
+   - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-composer-managed`
 
-   The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `drupal-recommended`:
+   The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `drupal-composer-managed`:
 
    ```bash{outputLines:2-13}
    terminus site:info $SITE
@@ -47,7 +47,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
    Framework          drupal8
    ...
    //highlight-start
-   Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/ drupal-recommended
+   Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/drupal-composer-managed
    //highlight-end
    ...
    ------------------ -------------------------------------------------------------------------------------
@@ -59,4 +59,4 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ### Apply All Available Upstream Updates
 
-<Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />
+<Partial file="drupal-apply-upstream-updates-drupal-composer-managed.md" />

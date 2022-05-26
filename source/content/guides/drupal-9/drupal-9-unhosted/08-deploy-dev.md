@@ -13,4 +13,9 @@ editpath: drupal-9/drupal-9-unhosted/07-deploy-dev.md
 reviewed: "2021-05-13"
 ---
 
-You should now have all three of the major components of your site imported into Pantheon. Clear your [Pantheon Dashboard caches](/clear-caches#pantheon-dashboard), and you are good to go!
+Now that you've committed your code additions locally, push the commits to Pantheon to deploy them to your Dev environment:
+
+```bash{promptUser: user}
+terminus connection:set $SITE.dev git
+git push origin master
+```

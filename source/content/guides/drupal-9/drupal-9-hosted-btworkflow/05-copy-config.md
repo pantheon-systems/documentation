@@ -22,7 +22,7 @@ git add config -A
 git commit -m "Pull in configuration from source site"
 ```
 
-It is possible that the Drupal site might have relocated the configuration path to a different location. You can find where your `config.yaml` files are via:
+It is possible that the Drupal site might have relocated the configuration path to a different location. You can find where your configuration files are via:
 
 ```bash{promptUser: user}
 terminus drush $SOURCE_SITE_NAME.dev -- status --fields=config-sync

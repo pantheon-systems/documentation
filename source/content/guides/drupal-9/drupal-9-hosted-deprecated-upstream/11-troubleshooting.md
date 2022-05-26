@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created Before November 2011 to Drupal 9
+title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal 9
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal 9"
@@ -9,9 +9,9 @@ contributors: [wordsmither]
 reviewed: "2021-03-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-pre112021/troubleshooting
+permalink: docs/guides/drupal-9-hosted-deprecated-upstream/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9/drupal-9-hosted-pre112021/11-troubleshooting.md
+editpath: drupal-9/drupal-9-hosted-deprecated-upstream/11-troubleshooting.md
 ---
 
 This page covers common troubleshooting scenarios when migrating a Drupal site to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
