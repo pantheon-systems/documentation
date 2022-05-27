@@ -17,11 +17,11 @@ Using `git revert` to revert an upstream update will result in the dashboard bei
 
 The following assumes you have set up a [local development environment](/local-development) with [Git version control](/git).
 
-Before you start making changes to your Git repository. Be sure to have a working clone as a backup. If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. Review the sections below carefully as instructions for reverting commits are different depending on the environment (Dev, Test, Live).
+Before you start making changes to your Git repository, be sure to have a working clone as a backup. If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. Review the sections below carefully as instructions for reverting commits are different depending on the environment (Dev, Test, Live).
 
 ## Restore Core to Upstream
 
-In order to get back to a version of core, you can run a Git log on a core file. In this example, we take a look at `/includes/bootstrap.inc` on a Drupal 7 site - as this file has some references to when core was overwritten.
+To get back to a version of core, run a Git log on a core file. In this example, we take a look at `/includes/bootstrap.inc` on a Drupal 7 site - as this file has some references to when core was overwritten.
 
 ```bash{outputLines:2-7}
 git log bootstrap.inc
@@ -33,7 +33,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
     Making a single change to a CSS file in a theme. But bootstrap has a commit?
 ```
 
-At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit `9a11sd8f67af9679a6fsafasdf802834207489328` when changes were made on `Date: Fri Dec 6 15:37:24 2014 -0700`.
+At this point you will have to revert your code back to the commit before core was overwritten. In this case, before commit `9a11sd8f67af9679a6fsafasdf802834207489328`, where changes were made on `Date: Fri Dec 6 15:37:24 2014 -0700`.
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
@@ -47,7 +47,7 @@ git reset --hard HEAD~1
 
 ## Delete the Last Commit on Dev
 
-If you just made the erroneous change and pushed it to Pantheon and realized that there's a problem, you can overwrite history and pretend it never happened. Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques below.
+If you just made the erroneous change, pushed it to Pantheon, then realized that there's a problem, you can overwrite history and pretend it never happened. Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques below.
 
 ```bash{promptUser: user}
 git reset --hard HEAD~1
@@ -91,7 +91,7 @@ The format of the command to reverse a specific change is:
 git revert COMMITID --no-edit
 ```
 
-As an example, to get rid of the commit that included Devel, just grab the commit ID of the Devel commit and use it in the revert command.
+For example, to get rid of the commit that included Devel, grab the commit ID of the Devel commit and use it in the revert command.
 
 ```bash{promptUser: user}
 git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
@@ -107,15 +107,13 @@ git push origin master
 
 If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques. Also note, this resets the Dev environment's codebase only, it does not clone Live's database or files down to Dev.
 
-Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
+Identify the most recent commit deployed to Live, and overwrite history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
 
 ```bash{promptUser: user}
 git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
 git push origin master -f
 ```
 
-## What if Dev is behind Test and Live?
+## What if Dev Is Behind Test and Live?
 
-This happens if you **reset** Dev to an earlier commit, rather than using **revert**.
-To bring everything back in sync and to the same commit, you will need to make a commit on Dev. This can be a trivial commit - just a space or extra line added to a comment within a file will work.
-Once you commit that change, you'll see the commit available for deployment on Test, and then on Live.
+This happens if you **reset** Dev to an earlier commit, rather than using **revert**. To bring everything back in sync and to the same commit, you will need to make a commit on Dev. This can be a trivial commit - just a space or extra line added to a comment within a file will work. Once you commit that change, you'll see the commit available for deployment on Test, and then on Live.
