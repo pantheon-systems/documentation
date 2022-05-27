@@ -1,12 +1,12 @@
 Confirm that your site meets the following requirements before you continue:
 
-- Ensure your site has the [Pantheon `drupal-recommended` repository](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
+- Ensure your site has the [Pantheon `drupal-composer-managed` repository](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream.
 
-   - Use Terminus to confirm the `drupal-recommended` Upstream
+   - Use Terminus to confirm the `drupal-composer-managed` Upstream
 
      Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
-     The following is an abridged example of the output for a site upstream set to `drupal-recommended`:
+     The following is an abridged example of the output for a site upstream set to `drupal-composer-managed`:
 
      ```bash{outputLines:2-18}
      terminus site:info $SITE
@@ -19,14 +19,14 @@ Confirm that your site meets the following requirements before you continue:
      Framework          drupal8
      ...
      //highlight-start
-     Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/drupal-recommended.git
+     Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/drupal-composer-managed.git
      //highlight-end
      ...
      ------------------ -------------------------------------------------------------------------------------
      ```
 
-    The following values indicate that a site is using a `drupal-recommended` upstream:
+    The following values indicate that a site is using a `drupal-composer-managed` upstream:
 
      - The `Framework` is `drupal8`
 
-     - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended.git`
+     - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-composer-managed.git`
