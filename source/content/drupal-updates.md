@@ -11,7 +11,7 @@ reviewed: "2020-07-21"
 
 The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
 
-Visit the [Drupal 9 migration guide](/guides/drupal-9-migration) to find the best path to Drupal 9 for your site.
+Visit the [Drupal 9 migration guide](/drupal-9-migration) to find the best path to Drupal 9 for your site.
 
 </Alert>
 
