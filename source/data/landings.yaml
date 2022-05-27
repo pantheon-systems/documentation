@@ -68,7 +68,7 @@
             - text: 'Drupal 9'
               url: '/drupal-9'
             - text: 'Drupal 9 Migration Guide'
-              url: '/guides/drupal-9-migration'
+              url: '/drupal-9-migration'
             - text: 'Pantheon Search with Solr 8 for Drupal 9'
               url: '/guides/solr-drupal/solr-drupal-9'
         - title: 'Guided Migrations'
