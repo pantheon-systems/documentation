@@ -265,7 +265,10 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
-<Partial file="migrate-add-database.md" />
+
+<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+
+<Partial file="drupal-9/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 
