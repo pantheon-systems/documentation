@@ -71,7 +71,7 @@ You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on
 Before changing your PHP version, confirm that your CMS is compatible:
 
 - [WordPress Requirements](https://wordpress.org/about/requirements/)
-- [Drupal 8 and 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
 
 ## Configure PHP Version

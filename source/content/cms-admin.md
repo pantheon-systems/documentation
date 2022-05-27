@@ -115,25 +115,7 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 ### Install a New Module
 
-<TabList>
-
-<Tab title="Drupal 8" id="d8-1" active={true}>
-
-1. Get the URL to the code you want to install from Drupal.org:
-
-  ![Drupal.org views module](../images/drupal-copy-module-link.png)
-
-  Make sure the module has a version marked `8.x-*` before installing it on a Drupal 8 site.
-
-1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**. Sign in with your admin credentials.
-
-1. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a `tarball` or `zip` file from your desktop:
-
-  ![Installing a module on Drupal 8](../images/drupal-8-install-module.png)
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-2">
+The example steps below are for Drupal 7.
 
 1. Get the URL to the code you want to install from Drupal.org:
 
@@ -144,10 +126,6 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 1. Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
 
   ![Installing via update manager](../images/install-via-update-manager.png)
-
-</Tab>
-
-</TabList>
 
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
 

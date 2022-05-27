@@ -24,7 +24,6 @@ Composer looks within [The PHP Package Repository](https://packagist.org/) for d
 
 - WordPress: <https://wpackagist.org>
 - Drupal 9: <https://packages.drupal.org/9>
-- Drupal 8: <https://packages.drupal.org/8>
 - Drupal 7: <https://packages.drupal.org/7>
 
 ## Managing Core as a Project Dependency

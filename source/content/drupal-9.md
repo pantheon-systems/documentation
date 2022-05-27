@@ -14,7 +14,7 @@ Since Drupal 9 on Pantheon is in active development and includes a number of sig
 
 ## About Drupal 9
 
-Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
+Drupal 9 includes many of the features and layout that Drupal users are familiar with, and it removes deprecated code to help improve future Drupal development.
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
@@ -89,7 +89,7 @@ Manually update the [landofile](https://docs.lando.dev/config/lando.html#base-fi
   framework: drupal9
   ```
 
-When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal8` for a Drupal 8 or Drupal 9 site.
+When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal9` for a Drupal 9 site.
 
 If you created new project with Lando, change the value for `framework` to `drupal9`, then run `lando rebuild`.
 

@@ -89,7 +89,7 @@ ___
 
 This module has been deprecated by its authors for Drupal 8 and above. The suggestions made below are for Drupal 7 users, and are not guaranteed to be successful in all use cases.
 
-If you're creating a new site that needs Composer-managed libraries, we strongly recommend using Drupal 8.1 or newer.
+If you're creating a new site that needs Composer-managed libraries, we strongly recommend using Drupal 9 or newer.
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
@@ -131,16 +131,6 @@ ___
 
 ___
 
-## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference)
-
-<ReviewDate date="2021-08-06" />
-
-Dynamic Entity Reference provides a field combination for Drupal 8 that allows for the reference of more than one entity type.
-
-**Issue**: The Dynamic Entity Reference module is an alpha version contributor module, and the MySQL queries it creates cannot be controlled or regulated. MySQL triggers are not well supported in Drupal or WordPress applications. On Pantheon, when cloning the database between environments, these triggers may not work or may cause errors when used.
-
-___
-
 ## [Feeds](https://www.drupal.org/project/feeds)
 
 <ReviewDate date="2022-01-25" />
@@ -176,15 +166,6 @@ ___
 <ReviewDate date="2019-07-10" />
 
 **Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx web servers and Apache modules are not compatible with the Platform.
-
-___
-
-## [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
-
- **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
-
- **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, refer to [Security on the Pantheon Dashboard](/security/#troubleshoot) for more information.
-
 ___
 
 ## [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
@@ -241,7 +222,7 @@ ___
 
 ## [LiveReload](https://www.drupal.org/project/livereload)
 
-**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
+**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7.
 
 ___
 
@@ -378,13 +359,13 @@ ___
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 ___
 
-## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 8/9 (core)
+## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 9 (core)
 
 <ReviewDate date="2021-03-17" />
 
 **Issue**: Sometimes, after a fresh system install, the **Manage** > **Extend** > **+ Install new module** and **Manage** > **Appearance** > **+ Install new theme** buttons are missing.
 
-This is a known bug in Drupal 8 and Drupal 9. Refer to Issue [#2350711](https://www.drupal.org/project/drupal/issues/2350711) for more information.
+This is a known bug in Drupal 9. Refer to Issue [#2350711](https://www.drupal.org/project/drupal/issues/2350711) for more information.
 
 **Solution**:
 

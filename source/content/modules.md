@@ -22,13 +22,9 @@ The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.dr
 ## [Site Audit](https://www.drupal.org/project/site_audit)
 Static site analysis is a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
 
-## [Search API Pantheon (Drupal 8)](https://www.drupal.org/project/search_api_pantheon)
+## [Search API Pantheon (Drupal)](https://www.drupal.org/project/search_api_pantheon)
 
 This module is meant to simplify the usage of [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) on Pantheon. Search API Solr provides the ability to connect to any Solr server by providing numerous configuration options. This module automatically sets the Solr connection options by extending the plugin from Search API Solr. The module also changes the connection information between Pantheon environments, eliminating the need to do extra work setting up Solr servers for each environment.
-
-## [Drupal 8 Cache Backport (Drupal 7)](https://www.drupal.org/project/d8cache)
-
-Drupal 8 Cache Backport is a module that brings Drupal 8 cache tags and cache `max-age` back to Drupal 7.
 
 ## [Generate Errors (Drupal 7)](https://www.drupal.org/project/generate_errors)
 
@@ -44,7 +40,7 @@ The code for the API module is available within our upstream repositories, in th
 
 This module provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches and other common workflows on the platform in Drupal 7.
 
-The API module is not needed for Drupal 8 or 9.
+The API module is not needed for Drupal 9.
 
 <Alert title="Note" type="info">
 

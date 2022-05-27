@@ -21,12 +21,9 @@ This Pantheon-made [Plugin](https://wordpress.org/plugins/wp-native-php-sessions
 Learn how to ace an online speed test with Pantheon's Global CDN.
 
 ### New Articles
-[PhpStorm for Composer-Managed Drupal 8 Sites](/guides/phpstorm-composer)
-
 
 [DNS Made Easy Domain Configuration](/dns-made-easy)
 
 [Google Domain Configuration](/google)
-
 
 [Style Guide](/style-guide)

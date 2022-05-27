@@ -134,7 +134,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 <Partial file="solr-version.md" />
 
-Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/wordpress-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7) and [Drupal 8](/guides/solr-drupal/solr-drupal-8).
+Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/wordpress-solr) and [Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Support
 

@@ -23,16 +23,6 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
-
-  ```bash{promptUser: user}
-  git pull -Xtheirs https://github.com/pantheon-systems/drops-8.git master
-  # resolve conflicts
-  git push origin master
-  ```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7">
 
   ```bash{promptUser: user}

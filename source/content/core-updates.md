@@ -307,12 +307,6 @@ This process lets you manually resolve the conflict using the command line and a
 
 Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
 
-<Alert title="Warning" type="danger">
-
-<Partial file="drupal-8-8-warning.md" />
-
-</Alert>
-
 ## Suppress WordPress Admin Notice
 
 By default WordPress admin will check for new upstream updates instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin, you will still see upstream updates in the Pantheon dashboard.
