@@ -77,7 +77,10 @@ jobs:
           command: .circleci/scripts/merge_conflicts.sh
       - run:
           name: Test links
-          command: .circleci/tests/link-checker.sh "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
+          command: .circleci/tests/link-checker.sh
+            "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
+    # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
+    resource_class: large
 
   lighthouse:
     docker:
