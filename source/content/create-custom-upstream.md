@@ -232,17 +232,6 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab title="Drupal 8" id="d81">
-
-    ```bash{promptUser: user}
-    git checkout -b master
-    git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master
-    git push origin master
-    ```
-
-    </Tab>
-
     <Tab title=" Drupal 7" id="d71">
 
     ```bash{promptUser: user}

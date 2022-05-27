@@ -39,7 +39,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
    </Alert>
 
-4. For the purpose of this guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
+4. For the purpose of this guide, deploy WordPress or Drupal 9 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
 
    <Accordion title="Deploy a Site on Pantheon (optional)" icon="lightbulb" id="understand-deploy" >
 
