@@ -40,6 +40,9 @@
 - id: carlalberto
   name: Carl Alberto
   github: //github.com/carl-alberto
+  linkedin: //www.linkedin.com/in/carlalberto/
+  wordpress: //profiles.wordpress.org/carl-alberto/
+  twitter: //twitter.com/carlalbertodev
   bio: Implementation Consultant, Pantheon
   avatar: //avatars.githubusercontent.com/u/5098765
 - id: suzannealdrich
@@ -443,3 +446,4 @@
   github: //github.com/szipfel
   twitter: https://twitter.com/szipfel
   bio: Community contributor
+

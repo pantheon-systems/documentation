@@ -123,28 +123,43 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="WordPress" id="wp-code" active={true}>
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
+    Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
 
-   - `mu-plugins`
-   - `plugins`
-   - `themes`
+    - `mu-plugins`
+    - `plugins`
+    - `themes`
 
-  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
+    As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+    Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
+    - `libraries`
+    - `modules`
+    - `profile`
+    - `themes`
+    - `vendor`
+    - `sites`, excluding `sites/default/files`.
 
-  Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+    Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+
+  <Alert title="Note" type="info" >
+
+    You must prepare the directory and the database if you are using Multisite and want to migrate a sub-site.
+
+    1. Copy the base site to a new directory.
+
+    1. Delete all sites, with the exception of:
+
+       - `sites/{sitename}`: the site you are migrating
+       - `sites/all`: contains all of your site's modules and themes
+
+    1. Rename `sites/{sitename}`  to `sites/default`.
+
+  </Alert>
 
   </Tab>
 
