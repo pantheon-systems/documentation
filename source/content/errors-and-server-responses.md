@@ -131,21 +131,6 @@ Even the most reliable web services will occasionally experience slowness, and i
    drupal_http_request($url, $options);
    ```
 
-- Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default. Override that to set a lower value:
-
-   - Globally:
-
-     ```php
-     $settings['http_client_config']['timeout'] = 10;
-     ```
-
-   - For an individual request:
-
-     ```php
-     $client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
-     $client->request('GET', $url, ['timeout' => 10]);
-     ```
-
 - WordPress: Add timeouts using the [http_request_args](https://developer.wordpress.org/reference/hooks/http_request_args/) filter, or the [http_api_curl](https://developer.wordpress.org/reference/hooks/http_api_curl/) action. This code would go in a custom plugin or your theme's `functions.php` file:
 
    ```php

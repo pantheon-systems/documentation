@@ -30,6 +30,12 @@
   avatar: //github.com/whitneymeredith.png?size=460
   bio: Technical Writer, Pantheon
   github: //github.com/whitneymeredith
+- id: wordsmither
+  name: Jennifer Hoffman
+  avatar: //github.com/wordsmither.png?size=460
+  bio: Senior Technical Writer, Pantheon
+  github: //github.com/wordsmither
+  linkedin: //www.linkedin.com/in/wordsmithwest/
 - id: eabquina
   name: Eladio Abquina
   bio: Manager of Implementation Services, Pantheon
@@ -40,6 +46,9 @@
 - id: carlalberto
   name: Carl Alberto
   github: //github.com/carl-alberto
+  linkedin: //www.linkedin.com/in/carlalberto/
+  wordpress: //profiles.wordpress.org/carl-alberto/
+  twitter: //twitter.com/carlalbertodev
   bio: Implementation Consultant, Pantheon
   avatar: //avatars.githubusercontent.com/u/5098765
 - id: suzannealdrich
@@ -443,3 +452,4 @@
   github: //github.com/szipfel
   twitter: https://twitter.com/szipfel
   bio: Community contributor
+

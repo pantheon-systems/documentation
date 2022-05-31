@@ -5,6 +5,7 @@ tags: [libraries, updates]
 categories: [platform]
 reviewed: "2020-05-05"
 ---
+
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 ## Before You Begin
@@ -25,6 +26,8 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 </Alert>
 
 ### All PHP Versions
+
+<ReviewDate date="2022-04-06" />
 
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
@@ -53,7 +56,7 @@ End-of-life (**EOL**) versions are available on the platform but no longer under
 
 </dl>
 
-\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment. 
+\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment.
 
 #### Compatibility Considerations
 
@@ -68,15 +71,14 @@ You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on
 Before changing your PHP version, confirm that your CMS is compatible:
 
 - [WordPress Requirements](https://wordpress.org/about/requirements/)
-- [Drupal 8 and 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
-
 
 ## Configure PHP Version
 
 Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory. If the `pantheon.yml` file is not present, create one to look like the following:
 
-```yaml
+```yaml:title=pantheon.yml
 api_version: 1
 
 php_version: 8.0

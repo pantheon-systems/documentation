@@ -68,7 +68,7 @@
             - text: 'Drupal 9'
               url: '/drupal-9'
             - text: 'Drupal 9 Migration Guide'
-              url: '/guides/drupal-9-migration'
+              url: '/drupal-9-migration'
             - text: 'Pantheon Search with Solr 8 for Drupal 9'
               url: '/guides/solr-drupal/solr-drupal-9'
         - title: 'Guided Migrations'
@@ -633,9 +633,6 @@
         - text: 'Using Lockr to Secure and Manage API and Encryption Keys'
           url: '/guides/lockr'
           icons: 'fa fa-book'
-        - text: 'PhpStorm for Composer-Managed Drupal 8 Sites'
-          url: '/guides/phpstorm-composer'
-          icons: 'fa fa-book'
         - text: 'Pingdom Uptime Check'
           url: '/guides/pingdom-uptime-check'
           icons: 'fa fa-book'
@@ -693,9 +690,6 @@
           links:
             - text: 'Integrated Composer'
               url: '/guides/integrated-composer'
-            - text: 'PhpStorm for Composer-Managed Drupal 8 Sites'
-              url: '/guides/phpstorm-composer'
-            
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
       subtopic-lists:
@@ -1027,8 +1021,6 @@
           url: '/guides/new-relic-deploys'
         - image: 'logos/pagerduty.png'
           url: '/guides/pagerduty'
-        - image: 'logos/phpstorm.png'
-          url: '/guides/phpstorm-composer'
         - image: 'logos/pingdom.png'
           url: '/guides/pingdom-uptime-check'
         - image: 'logos/pivotal.png'
@@ -1054,6 +1046,8 @@
           url: '/guides/terminus-drupal-site-management'
         - text: 'Using WP SAML Auth with Google Apps'
           url: '/guides/wordpress-google-sso'
+        - text: 'Using WordPress with Composer on Pantheon'
+          url: '/guides/wordpress-composer'
         - text: 'WordPress on Pantheon Quick Start Guide'
           url: '/guides/wordpress-pantheon'
     - title: ' '
@@ -1076,6 +1070,3 @@
           url: '/guides/lockr'
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
-       
-    
-          

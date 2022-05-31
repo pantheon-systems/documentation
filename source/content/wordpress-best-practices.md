@@ -78,16 +78,17 @@ Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronge
 
 Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 core release](/changelog/2020/07#wordpress-542). If your version of WordPress is older than this, you can block `xmlrpc.php` attacks by applying your [upstream updates](/core-updates).
 
-### Disable XML-RPC via Pantheon.yml
+### Enable XML-RPC via Pantheon.yml
 
-This method is more performant than disabling via a plugin since this won't involve bootstrapping WordPress. The result of this configuration is that requests to `/xmlrpc.php` will return a 403 status code.
+<Alert title="Note"  type="info" >
 
-Add the following configuration to your [`pantheon.yml`](/pantheon-yml) file:
+Pantheon does not support XML-RPC if it is enabled.
 
-  ```yml:title=pantheon.yml
-  protected_web_paths:
-    - /xmlrpc.php
-  ```
+</Alert>
+
+You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](https://jetpack.com/) or the WordPress mobile app. 
+
+<Partial file="jetpack-enable-xmlrpc.md" />
 
 ### Disable XML-RPC via a Custom Plugin
 

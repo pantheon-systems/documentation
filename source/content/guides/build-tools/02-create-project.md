@@ -82,12 +82,6 @@ Modify the commands in the following examples to match your project's needs.
   terminus build:project:create --git=github --team='My Agency Name' d9 my-site
   ```
 
-- Start a GitHub project with Drupal 8:
-
-  ```bash{promptUser: user}
-  terminus build:project:create --git=github --team='My Agency Name' d8 my-site
-  ```
-
 The script will ask for additional information such as tokens/credentials for GitHub and the associated CI.
 
 For a list of all available command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/3.x/README.md#buildprojectcreate)
@@ -148,7 +142,6 @@ terminus auth:login --machine-token=<machine-token>
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
 - [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
-- [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 
 </Accordion>

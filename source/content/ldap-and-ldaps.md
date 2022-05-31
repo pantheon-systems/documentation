@@ -72,15 +72,6 @@ The ldap\_sso submodule from the suite of modules included in [https://drupal.or
 
 WordPress and Drupal both work with the [Pantheon Secure Integration](/secure-integration). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
-If you're using the Drupal 8 LDAP module, take note of the machine name you give to the LDAP server. Then, in your `settings.php` file, add the following lines for each LDAP server:
-
-```php
-$config['ldap_servers.server.MACHINE_NAME']['address'] = '127.0.0.1';
-$config['ldap_servers.server.MACHINE_NAME']['port'] = PANTHEON_SOIP_CONSTANT_NAME;
-```
-
-In the snippet above, replace the `PANTHEON_SOIP_CONSTANT_NAME` with name given to you by Pantheon, and the LDAP machine name in place of `MACHINE_NAME`. When you return to the server configuration page, verify that both the server address and the server port show as `overridden`.
-
 ## Troubleshooting
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.

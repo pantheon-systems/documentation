@@ -115,8 +115,6 @@ This will not work for Multisite installations, and can result in data loss on s
 
   Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/drush/#add-custom-drush-commands).
 
-  Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
-
 </Tab>
 
 </TabList>

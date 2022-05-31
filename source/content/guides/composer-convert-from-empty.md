@@ -1,6 +1,6 @@
 ---
 title: Convert an Empty Upstream Drupal Site to a Composer Managed Site
-description: Upgrade a Drupal 8 site using an empty upstream by converting it to a Composer-managed Drupal 8 site on the new Integrated Composer framework. 
+description: Upgrade a Drupal 7 site using an empty upstream by converting it to a Composer-managed Drupal 7 site on the new Integrated Composer framework. 
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -10,21 +10,21 @@ contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-02-21"
 ---
 
-Use this guide to convert an empty upstream Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-recommended` upstream while remaining on Drupal 8.
+Use this guide to convert an empty upstream Drupal 7 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-recommended` upstream while remaining on Drupal 7.
 
 ## Overview
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
-By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following:
+By converting an empty upstream Drupal 7 site to a Composer-managed site you will do the following:
 
-1. Remove dependencies that Composer manages from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
+1. Remove dependencies that Composer manages from the existing Drupal 7 site's Git repository, and have Composer manage those dependencies instead.
 
 1. Switch to the `drupal-recommended` Integrated Composer upstream.
 
-The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
+The `drupal-recommended` Integrated Composer upstream works with Drupal 7, and following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
 
-Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+Add Drupal 7 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 7 until you are ready to upgrade to Drupal 9.
 
 ## Will This Guide Work for Your Site?
 
@@ -68,7 +68,7 @@ Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstrea
 terminus site:upstream:set $SITE drupal-recommended
 ```
 
-Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
+Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 7 until you are ready to upgrade to Drupal 9.
 
 ## Working With Dependency Versions
 
@@ -77,3 +77,5 @@ Following the `drupal-recommended` upstream will help keep your site up to date 
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

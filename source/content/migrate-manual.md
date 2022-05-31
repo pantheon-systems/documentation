@@ -39,7 +39,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
 
 #### Local Drupal configurations
 
@@ -51,7 +51,7 @@ mv sites/default/{settings.php,settings.local.php}
 chmod u-w sites/default/{settings.local.php,.}
 ```
 
-Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+Sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php` as this file is not bundled on Pantheon.
 
 </Accordion>
 
@@ -61,7 +61,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, Drupal 9, or WordPress,), and click **Continue**:
+1. Enter your current website URL, choose your site type (Drupal 7, Drupal 9, or WordPress,), and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 
@@ -123,51 +123,43 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="WordPress" id="wp-code" active={true}>
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
+    Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
 
-   - `mu-plugins`
-   - `plugins`
-   - `themes`
+    - `mu-plugins`
+    - `plugins`
+    - `themes`
 
-  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
+    As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+    Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
+    - `libraries`
+    - `modules`
+    - `profile`
+    - `themes`
+    - `vendor`
+    - `sites`, excluding `sites/default/files`.
 
-  Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+    Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
 
-  </Tab>
+  <Alert title="Note" type="info" >
 
-  <Tab title="Drupal 8" id="d8-code">
+    You must prepare the directory and the database if you are using Multisite and want to migrate a sub-site.
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
+    1. Copy the base site to a new directory.
 
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
+    1. Delete all sites, with the exception of:
 
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+       - `sites/{sitename}`: the site you are migrating
+       - `sites/all`: contains all of your site's modules and themes
 
-  </Tab>
+    1. Rename `sites/{sitename}`  to `sites/default`.
 
-  <Tab title="Drupal 9" id="d9-code">
-
-  Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
-
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+  </Alert>
 
   </Tab>
 
@@ -273,7 +265,10 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
-<Partial file="migrate-add-database.md" />
+
+<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+
+<Partial file="drupal-9/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 

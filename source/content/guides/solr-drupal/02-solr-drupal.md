@@ -1,7 +1,7 @@
 ---
 title: Apache Solr for Drupal
 subtitle: Using Solr 8 on Drupal 
-description: Information on using Pantheon Search with Solr 8 on Drupal 8 or Drupal 9
+description: Information on using Pantheon Search with Solr 8 on Drupal 9
 cms: "Drupal 9"
 categories: [integrate]
 tags: [solr, search, modules]
@@ -14,7 +14,7 @@ anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 
-Pantheon Search with Solr 8 gives Drupal 8 or Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
+Pantheon Search with Solr 8 gives Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
 
 <Partial file="pantheon-search-status.md" />
 
@@ -44,7 +44,7 @@ Refer to the [Search API module processors documentation](https://www.drupal.org
 
 ### Drupal Site Setup
 
-Pantheon Search with Solr 8 can be used on Drupal 8 or Drupal 9 sites. You can set up a [new Drupal 9 site](/drupal-9) or visit the [Drupal 9 upgrade and migration](/guides/drupal-9-migration) guide to create a Drupal 9 site.
+Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new Drupal 9 site](/drupal-9) or visit the [Drupal 9 upgrade and migration](/drupal-9-migration) guide to create a Drupal 9 site.
 
 ### Prepare the Local Environment
 
@@ -92,9 +92,9 @@ To enable at the Site level follow the following steps:
 
 After you enable the Apache Solr Index Server, configure the `pantheon.yml` for the platform environment. Before you install the Drupal search module, specify the Solr version in the `pantheon.yml` to avoid incompatibilities.
 
-Currently, Solr 8 is supported for Drupal 8 and Drupal 9 sites.
+Currently, Solr 8 is supported for Drupal 9 sites.
 
-Specify Solr 8 as the search version for Drupal 8 or Drupal 9 sites by adding the following to `pantheon.yml`:
+Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
 
 ```yml:title=pantheon.yml
 search:
@@ -107,7 +107,7 @@ For more information, refer to the documentation on [Specifying a Solr version](
 
 #### Verify `pantheon.yml` is Properly Configured
 
-After you specify the Solr 8 version in the Dev environment of your Drupal 8 or Drupal 9 site, verify that the environment is configured to use Solr 8.
+After you specify the Solr 8 version in the Dev environment of your Drupal 9 site, verify that the environment is configured to use Solr 8.
 
 1. Navigate to **Reports > Status report**
 1. Click **More Info** to identify the PHP version. This will lead you to the PHP Info page.
@@ -204,8 +204,10 @@ Click **Post Solr Schema** to send your custom schema to the Solr 8 server. The 
 * Store rendered output in a single field
   * You always need to make sure to store the rendered output of your content and additional data (such as meta tags) in one single field in the index. This way, it’s a lot easier to search for all the relevant data. It will make your optimizations easier further down the road and it will render your queries a lot smaller & faster.
 
+
 * Filter HTML code
   * Getting what is indexed as close to plain text as possible will decrease the amount of spurious results in a query.
+
 
 * Eliminate field label cruft in Drupal
   * Make sure to index this data using as little markup as possible, and get rid of the field labels. You can do this by assigning a specific view mode to each content type.
@@ -218,9 +220,11 @@ Click **Post Solr Schema** to send your custom schema to the Solr 8 server. The 
   Generally speaking, you're more than welcome to ignore our advice if it's working for you, but we've found in our our testing that a solr 3 relies on things that no longer exist in solr 8 and your index will be built on classes that don't exist on the java-based server and, thus, won't retain any data when you try to send a document to index.
 
 
+
 ## Uninstall Core Search
 
 If the default Drupal core Search module is still enabled for your site, you might want to uninstall it for performance reasons. Navigate to `admin/modules/uninstall` to uninstall the module.
+
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 

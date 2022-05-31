@@ -41,14 +41,6 @@ terminus site:upstream:set <site> empty-7
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-set-upstream">
-
-```bash
-terminus site:upstream:set <site> empty
-```
-
-</Tab>
-
 <Tab title="WordPress" id="wp-set-upstream">
 
 ```bash
@@ -121,37 +113,6 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
             └── default
             └── settings.php
     └── themes
-  ```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8">
-
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
-
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
-
-  ```bash{promptUser: user}
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') core drush modules profiles sites themes vendor index.php web
-  ```
-
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
-
-  Your directory structure should look like this afterwards:
-
-  ```none
-  ├── web
-    ├── core
-    ├── drush
-    ├── modules
-    ├── profiles
-    ├── sites
-        ├── default
-            ├── settings.php
-    ├── themes
-    ├── vendor
-    ├── index.php
   ```
 
 </Tab>

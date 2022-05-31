@@ -84,7 +84,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1. Enter your current website URL.
 
-1. Select **Drupal 7** or **Drupal 8**.
+1. Select **Drupal 7** or **Drupal Composer**.
 
 1. Click **Continue**.
 
@@ -174,26 +174,6 @@ Next, check [log files](/logs) to help identify and fix errors. Drupal or WordPr
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
-
-Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:
-
-```none
-├── core
-├── index.php
-├── modules
-├── profiles
-├── sites
-    └── all
-        ├── modules
-        └── themes
-    └── default
-        └── settings.php
-└── themes
-```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7">
 
 Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
@@ -254,12 +234,6 @@ Archives for WordPress sites should include `index.php` at the code root level, 
 **Cause:** The migration tool could not locate a MySQL database dump within the archive.
 
 **Solution:** Ensure that the archive contains a valid MySQL database dump.
-
-### Could not import database from PHPMyAdmin
-
-**Cause:** PHPMyAdmin version 4.2 can create a database dump Drupal 8 is unable to import.
-
-**Solution:** This issue is documented on [Drupal.org](https://www.drupal.org/node/2496331). Edit the DB dump as described [here](https://www.drupal.org/node/2496331#comment-10029863).
 
 ### Multiple file directories found within the import archive
 
@@ -345,7 +319,7 @@ This command can be used as part of a script to find and update large indexes.
 
 You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
-Drupal 7, Drupal 8, Drupal 9, and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
+Drupal 7, Drupal 9, and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
 Replace `<source>` and `<destination>` with target [site UUIDs](/sites/#site-uuid) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 
