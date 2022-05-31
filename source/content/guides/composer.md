@@ -77,3 +77,5 @@ If you're not ready to go all in with a Composer workflow and you want to see ho
 ## See Also
 
 - [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)
