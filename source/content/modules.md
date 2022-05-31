@@ -19,10 +19,6 @@ WordPress users should review [Pantheon Plugins](/guides/wordpress-pantheon/plug
 
 The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/global-cdn) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
 
-### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
-
-This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Pantheon Search](/solr).
-
 ## Edge Personalization
 
 The [Edge Integrations Drupal module](/guides/edge-integrations/drupal-sdk/) is a Software Development Kit (SDK) that allows users to personalize Drupal. This module uses configuration at the "edge" or the CDN to enable personalization options for Geolocation or Interests. This is done by using HTTP vary headers that tell the CDN to return cached variations of content based on values identified by the user browsing the site.
@@ -38,6 +34,10 @@ Provides login integration between Drupal and the Pantheon Site Dashboard.
 ## [Search API Pantheon (Drupal)](https://www.drupal.org/project/search_api_pantheon)
 
 This module is meant to simplify the usage of [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) on Pantheon. Search API Solr provides the ability to connect to any Solr server by providing numerous configuration options. This module automatically sets the Solr connection options by extending the plugin from Search API Solr. The module also changes the connection information between Pantheon environments, eliminating the need to do extra work setting up Solr servers for each environment.
+
+### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
+
+This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Pantheon Search](/solr).
 
 ## [Site Audit](https://www.drupal.org/project/site_audit)
 Static site analysis is a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
