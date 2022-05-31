@@ -33,7 +33,7 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 1. [Connect your repository](/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
-1. Update the `require` section of the root `/composer.json` file to match the name you chose in the preceding step.
+1. Update the **require** section of the root `/composer.json` file to match the name you chose in the preceding step.
 
 ## Add and Remove Packages
 
