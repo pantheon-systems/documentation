@@ -15,4 +15,4 @@ reviewed: "2022-05-03"
 
 Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates.
 
-<Partial file="drupal-9/core-updates.md" />
+<partial file="drupal-9/core-updates-partial.md" />
