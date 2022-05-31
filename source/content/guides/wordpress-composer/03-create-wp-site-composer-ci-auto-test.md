@@ -11,7 +11,7 @@ permalink: docs/guides/wordpress-composer/create-wp-site-composer-ci-auto-test
 anchorid: create-wp-site-composer-ci-auto-test
 ---
 
-This section provides steps to create a new Pantheon WordPress site that will use [Composer](https://getcomposer.org/), Continuous Integration, and Automated Testing. This guide will get you started, but you will need to customize and maintain the CI/testing set up for your projects.
+This section provides steps to create a new Pantheon WordPress site that will use [Composer](https://getcomposer.org/), Continuous Integration (CI), and Automated Testing. This guide will get you started, but you will need to customize and maintain the CI/testing set up for your projects.
 
 ## Requirements
 
@@ -63,7 +63,7 @@ Your directories and files within the `/web` directory are stored in different l
 
 ### composer.json File
 
-This project uses Composer to manage third-party PHP dependencies. Some files, such as `web/wp` may not be visible in the repository. This is because WordPress core and its plugins are installed via Composer and ignored in the `.gitignore` file.
+This project uses Composer to manage third-party PHP dependencies. Some files, such as `web/wp`, may not be visible in the repository. This is because WordPress core and its plugins are installed via Composer and ignored in the `.gitignore` file.
 
 Third-party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json` file. The `composer.lock` file keeps track of the exact dependency version. Composer installer-paths are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
 
@@ -75,7 +75,7 @@ Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
 1. Place all dependencies that are not a part of the web application but are necessary to build or test the project in the **require-dev** section.
 
-    - Example dependencies are `php_codesniffer` and `phpunit`. Dev dependencies are deployed to Dev and Multidev environments but not to Test and Live environments.
+    - Example dependencies are `php_codesniffer` and `phpunit`. Dev dependencies are deployed to Dev and Multidev environments, but not to Test and Live environments.
 
 ## Continuous Integration
 
@@ -183,7 +183,7 @@ The steps to enable GitHub Actions for an existing Build Tools site created with
 
 ## Working Locally with Lando
 
-Complete the one-time steps below to get started using [Lando](https://docs.devwithlando.io/) to develop locally. Please note than Lando is an independent product and is not supported by Pantheon. Refer to the [Lando documentation](https://docs.devwithlando.io/) for more information.
+Complete the one-time steps below to get started using [Lando](https://docs.devwithlando.io/) for local development. Please note than Lando is an independent product and is not supported by Pantheon. Refer to the [Lando documentation](https://docs.devwithlando.io/) for more information.
 
 1. [Install Lando](https://docs.lando.dev/getting-started/installation.html) if it is not already installed.
 
