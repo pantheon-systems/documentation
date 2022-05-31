@@ -136,12 +136,6 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 </Alert>
 
-<Alert title="Note" type="info">
-
-The current version of the Redis module for Drupal 7 does not work with PHP 7.4, which uses the `php-redis 5.x` library. Refer to [Drupal 7 and PHP 7.4](/object-cache#drupal-7-and-php-74) for more information.
-
-</Alert>
-
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
 1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
@@ -426,16 +420,6 @@ Run the following command to search for big keys:
 ### Cannot Activate the Redis Plugin for WordPress
 
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
-
-### Drupal 7 and PHP 7.4
-
-The current version of the [Drupal 7 Redis module](https://www.drupal.org/project/redis) is not compatible with PHP 7.4, which uses the `php-redis 5.x` library. You may get errors like this:
-
-```php
-Deprecated function: Function Redis::delete() is deprecated in Redis_Lock_PhpRedis->lockRelease() (line 111 of /web/sites/all/modules/contrib/redis/lib/Redis/Lock/PhpRedis.php).
-```
-
-To patch the Redis module, visit [Drupal.org](https://www.drupal.org/project/redis/issues/3074189), download the latest patch, and patch the module in the site's code with these changes.
 
 ### RedisException: Redis server went away
 
