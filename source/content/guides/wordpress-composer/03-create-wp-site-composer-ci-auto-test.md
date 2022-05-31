@@ -65,9 +65,7 @@ Your directories and files within the `/web` directory are stored in different l
 
 This project uses Composer to manage third-party PHP dependencies. Some files, such as `web/wp` may not be visible in the repository. This is because WordPress core and its plugins are installed via Composer and ignored in the `.gitignore` file.
 
-A [Composer version of WordPress for Pantheon](https://github.com/pantheon-systems/wordpress-composer/) is used as the source for WordPress core.
-
-Third party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json` file. The `composer.lock` file keeps track of the exact dependency version. Composer installer-paths are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
+Third-party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json` file. The `composer.lock` file keeps track of the exact dependency version. Composer installer-paths are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
 
 Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
@@ -111,7 +109,7 @@ The `.ci/tests` scripts run automated tests. You can add or remove scripts depen
 
 - `.ci/test/static` and `tests/unit` are static tests that analyze code without executing it. These tests are good at detecting syntax errors but not functionality errors.
 
-- `.ci/test/static/run` runs [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) with [WordPress coding standards](https://github.com/WordPress/WordPress-Coding-Standards), PHP Unit, and [PHP syntax checking](https://phpcodechecker.com/).
+- `.ci/test/static/run` runs [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) with [WordPress coding standards](https://github.com/WordPress/WordPress-Coding-Standards), [PHP Unit](https://phpunit.de/), and [PHP syntax checking](https://phpcodechecker.com/).
 
 - `tests/unit/bootstrap.php` bootstraps the Composer autoloader.
 
@@ -162,19 +160,25 @@ This section provides information enabling GitHub Actions for your site.
 
 The Build Tools Site will configure GitHub Actions automatically if it was passed as the selected CI when creating the site. You will need to consult advanced external resources if you're working with an existing non-Build Tools site and want to add Github Actions.
 
-The steps to enable GitHub Actions for an existing Build Tools site created with another CI (e.g. CircleCI) may work for you.  
+The steps to enable GitHub Actions for an existing Build Tools site created with another CI (for example, CircleCI) shown below might work for you.  
 
 1. Copy `.ci/.github` to `.github`. 
 
 1. Add the following secrets to the Github Actions configuration:
 
-    `ADMIN_EMAIL`
-    `ADMIN_PASSWORD`
-    `ADMIN_USERNAME`
-    `TERMINUS_TOKEN`
-    `TERMINUS_SITE`
-    `SSH_PRIVATE_KEY`
-    `GH_TOKEN`
+    - `ADMIN_EMAIL`
+
+    - `ADMIN_PASSWORD`
+
+    - `ADMIN_USERNAME`
+
+    - `TERMINUS_TOKEN`
+
+    - `TERMINUS_SITE`
+
+    - `SSH_PRIVATE_KEY`
+
+    - `GH_TOKEN`
 
 
 ## Working Locally with Lando
@@ -191,11 +195,19 @@ Complete the one-time steps below to get started using [Lando](https://docs.devw
     
 1. Save the local site URL. 
 
-    - It should be similar to `https://<PROJECT_NAME>.lndo.site.`
+    - The local site URL should look similar to: `https://<PROJECT_NAME>.lndo.site.`
 
-1. Run `lando composer install --no-ansi --no-interaction --optimize-autoloader --no-progress` to download dependencies.
+1. Run the command below to download dependencies.
 
-1. Run `lando pull --code=none` to download the media files and database from Pantheon.
+    ```bash
+    `lando composer install --no-ansi --no-interaction --optimize-autoloader --no-progress`
+    ```
+
+1. Run the command below to download the media files and database from Pantheon.
+
+    ```bash
+    `lando pull --code=none`
+    ``` 
     
 1. Visit the local site URL saved in the preceding steps.
 

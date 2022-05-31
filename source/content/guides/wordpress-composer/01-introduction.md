@@ -11,14 +11,14 @@ permalink: docs/guides/wordpress-composer
 anchorid: wordpress-composer
 ---
 
-[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a modern way to manage the external (non-core) code used by a WordPress site.
+[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a simplified method to manage the external (non-core) code used by a WordPress site.
 
 At the most basic level, Composer requires:
 
 - A list of dependencies
 - A place to put the dependencies
 
-There are different cases for using Composer to manage dependencies in WordPress, including:
+There are different cases for using Composer to manage dependencies on a WordPress site, including:
 
 - Manage dependencies for themes and plugins you’re currently developing
 
@@ -31,13 +31,13 @@ There are different cases for using Composer to manage dependencies in WordPress
 
 Complete the steps below before using this guide to create or manage updates on your Pantheon Composer-managed WordPress site.
 
-<Alert title="Note for WordPress Composer Sites"  type="info" >
+<Alert title="Note for Existing WordPress Composer Sites"  type="info" >
 
 Please reach out to our [Professional Services](https://pantheon.io/professional-services) team for information on site migration services if you have an existing Composer-managed WordPress site that you would like to migrate to the Pantheon platform.
 
 </Alert>
 
-1. Review [Composer's own documentation](https://getcomposer.org/doc/) to understand how Composer can be used independently of WordPress.
+1. Review [Composer's documentation](https://getcomposer.org/doc/) to understand how Composer can be used independently of WordPress.
 
 1. Review [Composer Fundamentals Dependencies](/guides/composer#dependencies).
 

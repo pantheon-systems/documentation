@@ -29,11 +29,11 @@ Pantheon upstreams influence the Composer packages that are included in downstre
 
 Follow the steps in this section to create a new WordPress site using Integrated Composer and Upstream.
 
-1. Fork the [Pantheon-maintained repository](https://github.com/pantheon-upstreams/wordpress-project).
+1. Fork the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-project).
 
 1. [Connect your repository](/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
-1. Update the root `/composer.json` file's `require` section to match the name you chose in the preceding step.
+1. Update the `require` section of the root `/composer.json` file to match the name you chose in the preceding step.
 
 ## Add and Remove Packages
 
@@ -87,7 +87,5 @@ Follow the steps in this section to create a new WordPress site using Integrated
 ## See Also
 
 - [Best Practices for Maintaining Custom Upstreams](/maintain-custom-upstream) 
-
-- [Pantheon YAML Configuration Files](/pantheon-yml)
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
