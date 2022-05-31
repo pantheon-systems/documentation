@@ -13,4 +13,4 @@ editpath: drupal-9-hosted-createdashboard-set8/09-core-updates.md
 reviewed: "2021-03-31"
 ---
 
-<Partial file="drupal-9/core-updates.md" />
+<partial file="drupal-9/core-updates-partial.md" />
