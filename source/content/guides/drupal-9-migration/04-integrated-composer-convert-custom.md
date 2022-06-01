@@ -79,7 +79,7 @@ If you would like to audit your upstream's customizations, compare it with the `
 
 Access the list of differences by adding the `drops-8` upstream as a second remote and use Git to compare the branches:
 
-1. Switch back to the `master` branch:
+1. Checkout the `master` branch:
 
    ```bash{promptUser:user}
    git checkout master
