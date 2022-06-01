@@ -25,7 +25,7 @@ The [Edge Integrations Drupal module](/guides/edge-integrations/drupal-sdk/) is 
 
 ## [Generate Errors (Drupal 7)](https://www.drupal.org/project/generate_errors)
 
-Interface which allows you to generate various errors, to test system behaviors like custom errors and server responses.
+Interface which allows you to generate various errors to test system behaviors like custom errors and server responses.
 
 ## [Login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
 
@@ -37,10 +37,10 @@ This module is meant to simplify the usage of [Search API](https://www.drupal.or
 
 ### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
 
-This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Pantheon Search](/solr).
+This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, visit [Pantheon Search](/solr).
 
 ## [Site Audit](https://www.drupal.org/project/site_audit)
-Static site analysis is a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
+Static site analysis is a service for Drupal sites that makes best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, visit [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
 
 ## [Pantheon Module (Drupal 7)](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon)
 
@@ -59,6 +59,3 @@ The API module is not needed for Drupal 9.
 It is not necessary to use the API module directly. Use [Terminus](/terminus) to interact with your Pantheon site programmatically.
 
 </Alert>
-
-
-
