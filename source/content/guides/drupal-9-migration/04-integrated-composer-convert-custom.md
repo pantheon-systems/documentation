@@ -71,7 +71,7 @@ This doc uses [Terminus](/terminus).
 
 ## Add Contrib and Custom Code
 
-This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9#contributed-code) section of the main Drupal 9 migration document.
+This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9) section of the main Drupal 9 migration document.
 
 <Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">
 
@@ -201,7 +201,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 
 ### Custom Modules and Themes
 
-For custom modules and themes, the process is the same as in [Upgrade to Drupal 9](/guides/drupal-9-migration/upgrade-to-d9#modules-and-themes-1).
+For custom modules and themes, the process is the same as in [Upgrade to Drupal 9](/guides/drupal-9-migration/upgrade-to-d9).
 
 Modules:
 
@@ -242,7 +242,7 @@ Go through the following steps for each child site you wish to test, or that has
 1. Add your custom upstream as a second remote called `upstream` and fetch. You can find the Custom Upstream's Git URL on the repository dashboard:
 
   ```bash{promptUser:user}
-  git remote add upstream <UPSTREAM'S GIT URL> && git fetch upstream
+  git remote add upstream <UPSTREAM GIT URL> && git fetch upstream
   ```
 
 1. Create a new branch called `ic-test` based on the upstream's `composerify` branch. If this site contains unique code customizations, merge this branch later:
