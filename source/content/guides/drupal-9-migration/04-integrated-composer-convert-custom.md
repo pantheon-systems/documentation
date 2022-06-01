@@ -71,7 +71,7 @@ This doc uses [Terminus](/terminus).
 
 ## Add Contrib and Custom Code
 
-This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-migration/upgrade-to-d9) section of the main Drupal 9 migration document.
+This process is the same as the [Add in the Custom and Contrib Code Needed to Run Your Site](/guides/drupal-9-unhosted/contrib-custom) section of the main Drupal 9 migration document.
 
 <Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">
 
@@ -201,7 +201,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
 
 ### Custom Modules and Themes
 
-For custom modules and themes, the process is the same as in [Upgrade to Drupal 9](/guides/drupal-9-migration/upgrade-to-d9).
+For custom modules and themes, the process is the same as the [Custom Code](/guides/drupal-9-unhosted/contrib-custom#custom-code) section.
 
 Modules:
 
