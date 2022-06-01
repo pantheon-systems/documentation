@@ -8,7 +8,7 @@ cms: drupal
 tags: [composer, workflow]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-migration/integrated-composer-convert-custom
+permalink: docs/guides/drupal-9-migration/integrated-composer-convert-custom/
 anchorid: integrated-composer-convert-custom
 editpath: drupal-9-migration/04-integrated-composer-convert-custom.md
 reviewed: "2021-12-10"
