@@ -14,7 +14,7 @@ The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the direct
   
 Using Pantheon's one-click Dashboard updates feature depends on a correctly set the `web_docroot` property.
 
-- Composer-managed sites, including [Integrated Composer](/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
+- Composer-managed sites, including [Integrated Composer](/guides/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that use a [Custom Upstream](/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
@@ -25,7 +25,7 @@ Using Pantheon's one-click Dashboard updates feature depends on a correctly set 
 
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
-This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
+This is especially useful for third party dependencies, such as those installed and managed via [Composer](/guides/composer).
 
 ## Disable One-click Updates
 
@@ -37,14 +37,6 @@ If you wish to stop using one-click Dashboard updates on a particular site, and 
 
 ```bash
 terminus site:upstream:set <site> empty-7
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8-set-upstream">
-
-```bash
-terminus site:upstream:set <site> empty
 ```
 
 </Tab>
@@ -121,37 +113,6 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
             └── default
             └── settings.php
     └── themes
-  ```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8">
-
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
-
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
-
-  ```bash{promptUser: user}
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') core drush modules profiles sites themes vendor index.php web
-  ```
-
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
-
-  Your directory structure should look like this afterwards:
-
-  ```none
-  ├── web
-    ├── core
-    ├── drush
-    ├── modules
-    ├── profiles
-    ├── sites
-        ├── default
-            ├── settings.php
-    ├── themes
-    ├── vendor
-    ├── index.php
   ```
 
 </Tab>

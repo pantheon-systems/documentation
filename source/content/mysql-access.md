@@ -3,7 +3,7 @@ title: Accessing MySQL Databases
 description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 categories: [develop]
 tags: [database, local, ssh]
-reviewed: "2021-07-16"
+reviewed: "2022-03-23"
 ---
 
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
@@ -16,6 +16,14 @@ Due to the nature of our platform, the connection information will change from t
 
 ## Database Connection Information
 
+### Accessing the Database Directly
+
+<Alert title="Note" type="info" >
+
+This option is not available if you have purchased Secure Runtime Access.  [Learn more](/secure-runtime-access).
+
+</Alert>
+
 MySQL credentials for each site environment are located in the Dashboard:
 
 ![MySQL Credentials](../images/dashboard/mysql-info.png)
@@ -23,12 +31,12 @@ MySQL credentials for each site environment are located in the Dashboard:
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
-- **Port**: The TCP/IP port number to use for the connection. There is no default and will differ for every environment on each site.
+- **Port**: The TCP/IP port number to use for the connection. The platform randomly selects the port number. Port numbers will differ in every environment for each site, and might not match what PHP reports.
 - **Username**: MySQL user name to use when connecting to server.
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database to use; the value will always be pantheon and cannot be altered.
 
-As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
+As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
 There's a wide array of MySQL clients that can be used, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
@@ -38,7 +46,7 @@ There's a wide array of MySQL clients that can be used, including:
 
 and others. See the documentation or issue queue of your software to learn more about how to configure a connection.
 
-### Open Sequel Ace Database Connection
+#### Open Sequel Ace Database Connection
 
 Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Ace via [Terminus](/terminus) and [Drush](/drush):
 
@@ -91,6 +99,36 @@ open $TMP_SPF
 
 Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c)!
 
+### Accessing the Database via Your Application using PHP
+
+In this scenario, the application connects using our internal network. Use the following variables in your application to access the database:
+
+- **DB_HOST**: Name of the MySQL server.
+- **DB_PORT**: Database port used.
+- **DB_USER**: MySQL user name to use when connecting to server.
+- **DB_PASSWORD**: The password to use when connecting to the server.
+- **DB_NAME**: The database to use; the value will always be pantheon and cannot be altered.
+- **REPLICA_DB_HOST**: Database IP address. This will be changing to have the same value as DB_HOST, and route to a proxy server. We will no longer support connections via IP Address.
+- **REPLICA_DB_PORT**: Replica database port.
+- **REPLICA_DB_USER**: MySQL replica user name to use when connecting to server.
+- **REPLICA_DB_PASSWORD**: The password to use when connecting to the server.
+- **REPLICA_DB_NAME**: The replica database to use; the value will always be pantheon and cannot be altered.
+
+
+For example:
+```sql
+DB_HOST=dbhost
+DB_PORT=6033
+DB_USER=21b24cbb5bb44b9988a6112f46558b06
+DB_PASSWORD=e064b4a6223149c3812810e232b88eb5
+DB_NAME=pantheon
+REPLICA_DB_HOST=10.73.1.226
+REPLICA_DB_PORT=14097
+REPLICA_DB_USER=59e14dd2cedd4188848b6b4aed6fb5f5
+REPLICA_DB_PASSWORD=e35eff3a5a9f4c29b9044df35ad004e7
+REPLICA_DB_NAME=pantheon
+```
+
 ## SSH Tunneling
 
 By default, MySQL connections made to Pantheon are encrypted:
@@ -120,7 +158,7 @@ Or
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.$ENV.$SITE.drush.in' (111)
 ```
 
-This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 seconds of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
+This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after about one hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 seconds of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
 
 ```bash{promptUser: user}
 terminus env:wake <site>.<env>
@@ -128,8 +166,7 @@ terminus env:wake <site>.<env>
 
 ### Can't Connect to Local MySQL Server Through Socket
 
-See [Database Connection Errors](/database-connection-errors) to troubleshoot
- connection errors like the following:
+See [Database Connection Errors](/database-connection-errors) to troubleshoot connection errors like the following:
 
 ```bash
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
@@ -183,4 +220,4 @@ To disable hexadecimal notation, add `--skip-binary-as-hex` to the [database con
 mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…
 ```
 
-For more information on this behavior change, please refer to [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).
+For more information on this behavior change, refer to the [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).

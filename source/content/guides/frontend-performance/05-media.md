@@ -48,7 +48,7 @@ Social sharing links are often good candidates here and are freely available in 
 
 Images might be expected to grow and shrink by large amounts according to device and browser size, but it's overkill to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.
 
-One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. Drupal 8 and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture) module.
+One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. Drupal 9 and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture) module.
 
 Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp) to define a size attribute appropriate for the given layout at a particular screen-size:
 

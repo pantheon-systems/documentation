@@ -171,15 +171,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <Tab title="Drupal 9" id="d91">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-recommended.git
-    ```
-
-    </Tab>
-
-    <Tab title="Drupal 8" id="d81">
-
-    ```bash{promptUser: user}
-    git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
+    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-composer-managed.git
     ```
 
     </Tab>
@@ -215,12 +207,12 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
      ```bash{promptUser: user}
      git checkout -b master
-     git fetch pantheon-drupal-9 master
-     git merge pantheon-drupal-9/master
+     git fetch pantheon-drupal-9 main
+     git merge pantheon-drupal-9/main
      git push origin master
      ```
 
-    1. Drupal 9 on Pantheon includes [Integrated Composer](/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
+    1. Drupal 9 on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
      Change to it and use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
 
@@ -229,7 +221,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      composer require drupal/pkg-name --no-update
      ```
 
-       Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
+       Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
 
     1. Commit and push the changes:
 
@@ -237,17 +229,6 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      git commit -am "added composer dependencies"
      git push origin master
      ```
-
-    </Tab>
-
-    <Tab title="Drupal 8" id="d81">
-
-    ```bash{promptUser: user}
-    git checkout -b master
-    git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master
-    git push origin master
-    ```
 
     </Tab>
 
@@ -309,7 +290,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
       1. Paste your new GitHub access token.
 
-   - **Framework**: Drupal 7, Drupal 8, Drupal 9, or WordPress
+   - **Framework**: Drupal 7, Drupal 9, or WordPress
 
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
@@ -354,7 +335,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
         1. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
 
-   - **Framework**: Drupal 7, Drupal 8, Drupal 9, or WordPress
+   - **Framework**: Drupal 7, Drupal 9, or WordPress
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
 1. Click **Create**.
@@ -426,7 +407,7 @@ If you would like to change the name or description of your Custom Upstream:
 
 ### Initial Connection Mode
 
-The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 8 and Drupal 9 default to SFTP connection mode.
+The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 9 defaults to SFTP connection mode.
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 
@@ -468,7 +449,7 @@ Switching the upstream of an existing site is risky. Consider creating a new sit
 
 </Alert>
 
-Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/terminus):
+Use [Terminus](/terminus) to change the upstream:
 
 ```bash{promptUser: user}
 terminus site:upstream:set $site $upstream_id

@@ -11,7 +11,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
   Switched to a new branch 'composerify'
   ```
 
@@ -24,7 +24,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
   If you continue to encounter the error, use HTTPS to add the remote:
 
    ```bash{outputLines:2}
-   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   git remote add ic https://github.com/pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
    Switched to a new branch 'composerify'
    ```
 
@@ -120,7 +120,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
   composer require drupal/MODULE_NAME:^VERSION
   ```
 
-  Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module the site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) in the [Composer documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+<Partial file="module-name.md" />
 
   Some modules use different version formats.
 
@@ -140,24 +140,16 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Accordion title="Troubleshoot: Could not find a version of MODULE_NAME" id="tr-minmodule" icon="question-sign">
+    <Partial file="module_name.md" />	  
 
-      If you get the following error, the module listed in the error (or its dependencies) does not meet compatibility requirements:
 
-      ```none
-      [InvalidArgumentException]
-      Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
-      ```
+#### Other Composer Packages
 
-      If there is no stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or `dev` (not recommended). You can read more about `minimum-stability` in the [Composer documentation](https://getcomposer.org/doc/04-schema.md#minimum-stability).
+If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
 
-        - If a dev version of a module fails because it requires a development version of a dependency, allowlist the dev dependency in the same `composer require` as the module:
-
-        ```bash{promptUser:user}
-        composer require drupal/some-module:^1@dev org/some-dependency:^2@dev
-        ```
-
-    </Accordion>
+```
+git diff master:composer.json composer.json
+```
 
 #### Libraries
 
@@ -165,11 +157,11 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 
 ### Custom Code
 
-Manually copy custom code from the existing site repository to the Composer-managed directory.
+Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
 #### Modules and Themes
 
-Modules:
+To move modules, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master modules/custom
@@ -177,7 +169,7 @@ git mv modules/custom web/modules/
 git commit -m "Copy custom modules"
 ```
 
-Themes:
+To move themes, use the following commands:
 
 ```bash{promptUser:user}
 git checkout master themes/custom
@@ -185,7 +177,7 @@ git mv themes/custom web/themes/
 git commit -m "Copy custom themes"
 ```
 
-Follow suit with any other custom code you need to carry over.
+Use the above commands with any of the custom code.
 
 #### settings.php
 
@@ -202,6 +194,16 @@ rm web/sites/default/original-settings.php
 ```
 
 The resulting `settings.php` should have no `$databases` array.
+
+### Additional Composer Configuration
+
+Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
+
+You can use the diff command to get the information you need to copy:
+
+```
+git diff master:composer.json composer.json
+```
 
 ## Deploy
 
@@ -239,7 +241,7 @@ If the site is not working, try this Composer command on the local `composerify`
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) section for more information about troubleshooting Integrated Composer.
 
 ### Move composerify to the Main Dev Branch
 

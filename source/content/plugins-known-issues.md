@@ -5,7 +5,8 @@ cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
-reviewed: "2021-09-13"
+reviewed: "2022-03-24"
+
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -20,7 +21,7 @@ If your work is already updated but still listed here, let us know so we can rem
 
 Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
-See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
+Refer to documentaton on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
 The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
@@ -63,7 +64,7 @@ The following is a list of plugins that assume write access, and the specific fi
 
 ### Define FS_METHOD
 
-There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
+By default, WordPress tests each directory before uploading a file by writing a small temporary file. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the test of writing a small file) by defining the `FS_METHOD` as `direct` in the `wp-config.php` file above the line `/* That's all, stop editing! Happy Pressing. */`. To resolve the issue, configure the `wp-config.php` to resemble the following code sample:
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -71,7 +72,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-Plugins and Themes with issues resolved (at least partially) by this include:
+The successful write of the temporary file returns "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use direct file I/O requests from within PHP, which can open up security issues on poorly configured hosts.
+
+Plugins and themes with issues resolved (at least partially) by this include the following:
 
 - [AccessAlly WordPress LMS](https://accessally.com/)
 - [Blabber Theme](https://themeforest.net/item/blabber-allinone-elementor-blog-news-magazine-wordpress-theme/24305542/)
@@ -83,6 +86,7 @@ Plugins and Themes with issues resolved (at least partially) by this include:
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+- [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 
 ## All-in-One WP Migration
 
@@ -259,9 +263,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 **Issue 2:** In order to attach or upload files, local file attachments set in the admin panel cannot come from the `uploads` folder. Therefore, you must direct attachments to a temporary folder.
 
 
-**Solution:** You can customize the upload path for the temporary folder using the following:  
+**Solution:** You can customize the upload path for the temporary folder using the following:
 
-`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`  
+`define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`
 
 Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
 
@@ -360,11 +364,22 @@ ___
 
 ## Elementor
 
-<ReviewDate date="2020-10-08" />
+<ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) Uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. This path cannot be changed via the WP-CLI search-replace function, or any other search & replace plugin.
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
 
-**Solution:** Use the search-replace feature built in to Elementor, found at `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+
+For example: my.example.com
+
+Find or replace must handle `test.example.com` -> `my.example.com` and 
+`my.example.com` -> `test.example.com`.
+
+Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
+
+**Solution 2:** Use the search and replace feature in Elementor to enter the following:
+ 
+`/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
 
@@ -520,7 +535,32 @@ ___
 
 ___
 
-## ManageWP Worker
+## Jetpack
+
+<ReviewDate date="2022-03-09" />
+
+**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
+
+**Solution:** 
+
+<Partial file="jetpack-enable-xmlrpc.md" />
+
+<Alert title="Note"  type="info" >
+
+Pantheon does not support XML-RPC if it is enabled. You must resolve any issues you experience from enabling XMLPRC on your own.
+
+</Alert>
+
+___
+
+## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
+
+**Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
+
+**Solution:** If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
+___
+
+## [ManageWP worker](https://wordpress.org/plugins/worker/)
 
 <ReviewDate date="2018-10-12" />
 
@@ -553,6 +593,16 @@ ___
 <ReviewDate date="2019-05-08" />
 
 **Issue:** The [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/) plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
+
+___
+
+## One Click Demo Import
+
+<ReviewDate date="2022-03-30" />
+
+**Issue:** The [One Click Demo Import](https://wordpress.org/plugins/one-click-demo-import/) plugin returns a `502` error when automatically importing the demo files and pages for a theme. This generally happens when the process reaches the configured `max-execution` time in the Pantheon system `php` file.
+
+**Solution:** Select the **Switch to Manual Import** option to import the demo files, including, `content.xml`, `widgets.wie`, etc.
 
 ___
 
@@ -696,9 +746,9 @@ ___
 
 <ReviewDate date="2021-10-20" />
 
-**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site in order to monitor various functions and stability. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon. 
+**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
 
-**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents. 
+**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
 ___
 
@@ -734,6 +784,16 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 
 - [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/)
 - [Yoast](https://wordpress.org/plugins/wordpress-seo/)
+
+___
+
+## Smush Pro
+
+<ReviewDate date="2022-03-24" />
+
+**Issue:** The [Smush Pro](https://wpmudev.com/docs/wpmu-dev-plugins/smush/) plugin requires NGINX configuration for WebP image support. This results in issues with assuming write access. In some cases, there is also an issue with the image library processing using a temporary filesystem. Both scenarios are incompatible with Pantheon's platform.
+
+**Solution:** Consider using Pantheon's [AGCDN](/guides/professional-services/advanced-global-cdn) as an alternative. AGCDN provides image optimization that saves PHP resources without the need for a plugin.
 
 ___
 
@@ -818,7 +878,7 @@ ___
 
 ## WebP Express
 
-<ReviewDate date="2022-01-22" />
+<ReviewDate date="2022-04-07" />
 
 **Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
@@ -832,7 +892,9 @@ Refer to the documentation on [Using Extensions That Assume Write Access](https:
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 
-**Solution:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+**Solution 1:** Set the WebP Express settings for `Destination Structure` to `Image Roots` in `/wp-admin/options-general.php?page=webp_express_settings_page` and then clear the cache.
+
+**Solution 2:** Use the [Advanced Global CDN Image Optimization](/guides/professional-services/advanced-global-cdn#additional-features-from-wafio) feature. This add-on has WebP auto-conversion at the edge, and is more performant than a plugin relying on PHP or WordPress.
 
 ___
 
@@ -940,8 +1002,8 @@ export ENV=dev
   touch /tmp/wordfence-waf.php /tmp/.user.ini
   ```
 
-1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**.  
-Complete this step in Dev, Test, and Live Environments. 
+1. Connect to your environment over SFTP, create the required directories, and push the new files. You don't need to switch the environment back to SFTP mode, since you're not changing anything in the [codebase](/pantheon-workflow#code). You can get the SFTP path from the Site Dashboard under **Connection Info**.
+Complete this step in Dev, Test, and Live Environments.
 
   ```bash{promptUser: user}
   sftp -o Port=2222 env.UUID@appserver.env.UUID.drush.in
@@ -952,10 +1014,10 @@ Complete this step in Dev, Test, and Live Environments.
   mkdir files/private/wflogs
   put /tmp/wordfence-waf.php /files/private
   Uploading /tmp/wordfence-waf.php to /files/private/wordfence-waf.php
-  /tmp/wordfence-waf.php                           100%    0     0.0KB/s   00:00    
+  /tmp/wordfence-waf.php                           100%    0     0.0KB/s   00:00
   put /tmp/.user.ini /files/private/
   Uploading /tmp/.user.ini to /files/private/.user.ini
-  /tmp/.user.ini                                   100%    0     0.0KB/s   00:00    
+  /tmp/.user.ini                                   100%    0     0.0KB/s   00:00
   exit
   ```
 
@@ -992,14 +1054,14 @@ Complete this step in Dev, Test, and Live Environments.
 * __DIR__ is not providing the proper path for Wordfence
 * Wordfence cannot find your database credentials
 
-**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP 
+**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP
 from:
 
 ```
 if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
     define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
     include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
-} 
+}
 ```
 to:
 
@@ -1032,7 +1094,7 @@ if (file_exists('/includes/prepend.php')) {
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
 	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-
+}
 ```
 
 #### Further Considerations with Wordfence: Utilizing data storage over files
@@ -1106,7 +1168,7 @@ ___
 
 <ReviewDate date="2021-11-04" />
 
-**Issue 1:** Some features of the [WP Reset](https://wordpress.org/plugins/wp-reset/) plugin can not be used on the Pantheon platform. Features such a file reset and restore do not work because Staging and Production environments are immutable and backups help with restore and data rollbacks. 
+**Issue 1:** Some features of the [WP Reset](https://wordpress.org/plugins/wp-reset/) plugin can not be used on the Pantheon platform. Features such a file reset and restore do not work because staging and production environments are immutable, and backups help with restore and data rollbacks.
 
 **Solution:** Use an alternate plugin that resets the WordPress database to the default installation.
 
@@ -1314,14 +1376,39 @@ ___
   define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');
   ```
 
-2. Create the `languages` directory inside `/files` for each environment.
+1. Create the `languages` directory inside `/files` for each environment.
+
+1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 
 **Solution 2:**
 
-Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
+1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 ___
 
+## YITH WooCommerce Request a Quote
+
+<ReviewDate date="2022-04-8" />
+
+**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+
+**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
+
+```php:title=wp-config.php
+/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
+add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
+if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
+   function ywraq_mpdf_change_tmp_dir( $args ) {
+      $upload_dir      = wp_upload_dir();
+      $upload_dir      = $upload_dir['basedir'];
+      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+
+      return $args;
+   }
+}
+```
+___
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
@@ -1407,7 +1494,7 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 
 ### wp_filesystem->get_contents()
 
-**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail when an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
+**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail wFhen an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
 
 **Solution:** As described in [this StackExchange answer](https://wordpress.stackexchange.com/questions/166161/why-cant-the-wp-filesystem-api-read-googlefonts-json/166172#166172), for cases where file ownership doesn't matter this function could be replaced with `file_get_contents()`. This is true of most cases where the file in question is only being read, not written to.
 

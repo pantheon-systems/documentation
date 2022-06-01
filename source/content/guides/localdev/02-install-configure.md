@@ -41,20 +41,3 @@ Once Localdev is installed and synced, a list of your sites is displayed in a co
 
 ![Localdev's dashboard shows a list of sites](../../../images/localdev/localdev-dashboard.png)
 
-## Download and Test Beta Versions
-
-Download Edge versions to get the latest features, bug fixes, instructions, and help test Localdev.
-
-Note that some versions of Localdev are not compatible with some versions of Docker. See GitHub for more information, or (we don't recommend this) to continue with an untested version of Docker, you can turn off the compatibility check in Localdev's settings.
-
-1. From within your Localdev installation, select Settings in left menu.
-
-1. In the Current Version section, click on `switch to edge`:
-
-  ![Switch to edge version](../../../images/localdev/localdev-switch-to-edge.png)
-
-<Alert type="info" title="Note">
-
-Help improve Localdev by sharing bug reports and feedback in the [GitHub issue queue](https://github.com/pantheon-systems/localdev-issues), or join the [Pantheon Community](/pantheon-community) to post in the [Localdev Slack channel](https://pantheon-community.slack.com/messages/CB2H8065D). Get your [Slack invite here](https://slackin.pantheon.io/).
-
-</Alert>

@@ -159,9 +159,37 @@ function add_header_nocache() {
 }
 ```
 
+### Cross-Origin Resource Sharing (CORS)
+
+The following code sample adds the correct header and enables requests from specific URLs for sites that need to provide services with Cross-Origin Resource Sharing (CORS): 
+
+```php
+function dynamic_cors_headers( $headers ) {
+	// Caching varies based on the origin of requests
+	$headers['Vary'] = 'Origin';
+	// If no origin is supplied, no further checks are needed
+	if ( ! array_key_exists( 'HTTP_ORIGIN', $_SERVER ) ) {
+		return $headers;
+	}
+	// Each of the domains in this array will be given an allow header
+	// Note that http or https and the www subdomain are each different origins
+	$allowed_domains = array(
+		'https://dev-exampleallowedurl.pantheonsite.io',
+		'http://localhost:8084',
+		'http://example.com',
+		'https://www.example.com',
+	);
+	if ( in_array( $_SERVER['HTTP_ORIGIN'], $allowed_domains ) ) {
+		$headers['Access-Control-Allow-Origin'] = $_SERVER['HTTP_ORIGIN'];
+	}
+	return $headers;
+}
+add_filter( 'wp_headers', 'dynamic_cors_headers' );
+```
+
 ### Custom Cookies
 
-Setting custom cookies can also be done from an MU-plugin like in the example below. Find more cookie manipulation examples at [Working with Cookies on Pantheon](/cookies).
+Setting custom cookies can also be done from a MU-plugin like in the following example. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {

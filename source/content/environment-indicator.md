@@ -81,7 +81,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 ## Drupal: Environment Indicator
 
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 and Drupal 8 sites.
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites.
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
@@ -95,59 +95,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php`:
-
-  <TabList>
-
-  <Tab title="Drupal 8" id="d8tab" active={true}>
-
-    ```php
-    /*
-    * Environment Indicator module settings.
-    * see: https://pantheon.io/docs/environment-indicator
-    */
-
-    if (!defined('PANTHEON_ENVIRONMENT')) {
-        $config['environment_indicator.indicator']['name'] = 'Local';
-        $config['environment_indicator.indicator']['bg_color'] = '#505050';
-        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-      }
-      // Pantheon Env Specific Config
-      if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-        switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-          case 'lando': // Localdev or Lando environments
-            $config['environment_indicator.indicator']['name'] = 'Local Dev';
-            $config['environment_indicator.indicator']['bg_color'] = '#990055';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          case 'dev':
-            $config['environment_indicator.indicator']['name'] = 'Dev';
-            $config['environment_indicator.indicator']['bg_color'] = '#307b24';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          case 'test':
-            $config['environment_indicator.indicator']['name'] = 'Test';
-            $config['environment_indicator.indicator']['bg_color'] = '#b85c00';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          case 'live':
-            $config['environment_indicator.indicator']['name'] = 'Live!';
-            $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          default:
-            // Multidev catchall
-            $config['environment_indicator.indicator']['name'] = 'Multidev';
-            $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
-            $config['environment_indicator.indicator']['fg_color'] = '#000000';
-            break;
-        }
-      }
-    ```
-
-  </Tab>
-
-  <Tab title="Drupal 7" id="d7tab">
+1. Add the following within `settings.php` for Drupal 7:
 
     ```php
     /*
@@ -196,10 +144,6 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
           }
       }
     ```
-
-  </Tab>
-
-  </TabList>
 
 1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 

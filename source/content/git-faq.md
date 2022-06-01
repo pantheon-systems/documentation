@@ -88,7 +88,7 @@ git filter-branch -f --index-filter 'git rm -rf --cached --ignore-unmatch sites/
 
 The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
 
-If you're on Drupal 8 or WordPress, you'll need to find your starting point by looking at the Git log.
+If you're on WordPress, you'll need to find your starting point by looking at the Git log.
 
 ## Why can't I connect to Git?
 

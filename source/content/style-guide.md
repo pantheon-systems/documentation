@@ -100,7 +100,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 <dd>
 
-If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, `"Drupal 8"`, or `"Drupal 9"`.
+If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"Drupal 9"`.
 
 </dd>
 
@@ -649,21 +649,6 @@ Code goes here.
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7-example">
 
 Here's our Drupal 7 specific copy, and an example snippet:
@@ -701,21 +686,6 @@ Some code.
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
 <Tab title="Drupal 7" id="d7-example">
 
 Here's our Drupal 7 specific copy, and an example snippet:
@@ -740,7 +710,9 @@ ___
 
 ## Screenshots
 
-Submit screenshots without additional markup. For example, don't use Skitch to add an arrow.
+Submit screenshots without additional markup. For example, don't use Skitch to add an arrow. This helps the Docs team make edits as needed later.
+
+Do not include any personal information like a name, email address, or UUID in the screenshot.
 
 ### GUI
 
@@ -760,7 +732,7 @@ Screenshots are used to reference GUI instructions:
 
 ### Terminal
 
-Terminal screenshots should only be used to demonstrate intended output:
+Terminal screenshots should be described in the text as much as possible, and should only be used to demonstrate intended output:
 
 <Example>
 
@@ -778,7 +750,7 @@ ___
 
 ## Error Messages
 
-Document error messages verbatim as H3s within a **Troubleshooting** section. Using the exact copy of the error message helps to improve SEO, and making the header an H3 allows the section to be linkable within the table of contents for easy sharing.
+Document error messages verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Make the header an H3 to make the section linkable within the table of contents for easy sharing.
 
 <Example>
 

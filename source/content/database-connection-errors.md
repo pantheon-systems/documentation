@@ -45,8 +45,6 @@ However, because the Pantheon environment data is not loaded at this time, any b
   include './sites/all/modules/domain/settings.inc';
 ```
 
-You can also use the above to develop Drupal 8 on Pantheon.
-
 <Alert title="Warning" type="danger">
 
 If you use any other advanced `settings.php` tricks (e.g. enabling Object Cache), you will need to do this <em>before</em> the snippet in D7 to ensure you have a consistent `$conf` array.

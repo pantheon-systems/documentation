@@ -25,6 +25,17 @@
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
+- id: whitneymeredith
+  name: Whitney Meredith
+  avatar: //github.com/whitneymeredith.png?size=460
+  bio: Technical Writer, Pantheon
+  github: //github.com/whitneymeredith
+- id: wordsmither
+  name: Jennifer Hoffman
+  avatar: //github.com/wordsmither.png?size=460
+  bio: Senior Technical Writer, Pantheon
+  github: //github.com/wordsmither
+  linkedin: //www.linkedin.com/in/wordsmithwest/
 - id: eabquina
   name: Eladio Abquina
   bio: Manager of Implementation Services, Pantheon
@@ -35,6 +46,9 @@
 - id: carlalberto
   name: Carl Alberto
   github: //github.com/carl-alberto
+  linkedin: //www.linkedin.com/in/carlalberto/
+  wordpress: //profiles.wordpress.org/carl-alberto/
+  twitter: //twitter.com/carlalbertodev
   bio: Implementation Consultant, Pantheon
   avatar: //avatars.githubusercontent.com/u/5098765
 - id: suzannealdrich
@@ -63,7 +77,7 @@
   url: https://handbuilt.co/
 - id: caitybishop
   name: Caity Bishop
-  bio: Manager of Content, Pantheon
+  bio: Community contributor
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/IMG_2047.jpg
   linkedin: https://www.linkedin.com/in/caitlin-lee-bishop/
 - id: clintonPantheon
@@ -141,7 +155,7 @@
 - id: dgorton
   name: Drew Gorton
   twitter: https://twitter.com/dgorton
-  bio: Director of Developer Relations, Pantheon
+  bio: Community contributor
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Drew.jpg
   github: //github.com/dgorton
 - id: masonjames
@@ -158,7 +172,7 @@
   linkedin: //www.linkedin.com/in/fatimasarahkhalid/
   github: //github.com/sugaroverflow
   drupal: https://www.drupal.org/u/sugaroverflow
-  bio: Developer Programs Engineer, Pantheon
+  bio: Community contributor
 - id: sparklingrobots
   name: Tara King
   avatar: //avatars.githubusercontent.com/u/2217845
@@ -228,6 +242,14 @@
   twitter: https://twitter.com/andrew_mallis
   drupal: https://www.drupal.org/user/72871
   bio: A Bay Area-based polymedia artist & technologist | Co-founder @kalamuna
+- id: CdrMarks
+  name: Ryan Marks
+  avatar: //github.com/CdrMarks.png?size=460
+  bio: Manager of Engineering, Pantheon
+  github: //github.com/CdrMarks
+  wordpress: //profiles.wordpress.org/rmarks
+  drupal: //www.drupal.org/u/cdrmarks
+  linkedin: https://www.linkedin.com/in/cdrmarks
 - id: ccjjmartin
   name: Chris Martin
   github: //github.com/ccjjmartin
@@ -306,6 +328,20 @@
   github: //github.com/BFTrick
   linkedin: https://www.linkedin.com/learning/instructors/patrick-rauland?u=2125562
   url: https://www.speakinginbytes.com/
+- id: jazzsequence
+  name: Chris Reynolds
+  avatar: //github.com/jazzsequence.png?size=460
+  github: //github.com/jazzsequence
+  twitter: //twitter.com/jazzs3quence
+  wordpress: //profiles.wordpress.org/jazzs3quence
+  linkedin: //www.linkedin.com/in/chrissreynolds
+  url: //chrisreynolds.io
+  bio: Software Engineer, Pantheon
+- id: jrastaban
+  name: John Richards II
+  avatar: //github.com/jrastaban.png?size=460
+  bio: Manager of Developer Advocacy, Pantheon
+  github: //github.com/jrastaban
 - id: LukasRos
   name: Lukas Rosenstock
   twitter: https://twitter.com/LukasRosenstock
@@ -326,6 +362,14 @@
   github: //github.com/eeeschwartz/
   linkedin: //www.linkedin.com/in/eeeschwartz
   bio: Civic developer, human centered!
+- id: jspellman814
+  name: John Spellman
+  avatar: //github.com/jspellman814.png?size=460
+  github: //github.com/jspellman814
+  wordpress: //profiles.wordpress.org/jspellman
+  drupal: //www.drupal.org/u/jspellman
+  linkedin: //www.linkedin.com/in/john-spellman-86039262
+  bio: Software Engineer, Pantheon
 - id: stovak
   name: Tom Stovall
   github: //github.com/stovak
@@ -408,8 +452,4 @@
   github: //github.com/szipfel
   twitter: https://twitter.com/szipfel
   bio: Community contributor
-- id: whitneymeredith
-  name: Whitney Meredith
-  avatar: //github.com/whitneymeredith.png?size=460
-  bio: Technical Writer, Pantheon
-  github: //github.com/whitneymeredith
+

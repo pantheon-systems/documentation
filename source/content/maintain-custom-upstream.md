@@ -46,14 +46,6 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
   </Tab>
 
-  <Tab title="Drupal 8" id="d81">
-
-  ```git
-  git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
-  ```
-
-  </Tab>
-
   <Tab title="Drupal 7" id="d71">
 
   ```git
@@ -94,15 +86,6 @@ This test site will be used later for evaluating the Custom Upstream changes we 
   ```git
   git fetch pantheon-wordpress
   git merge pantheon-wordpress/master
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal 8" id="d8">
-
-  ```git
-  git fetch pantheon-drops-8
-  git merge pantheon-drops-8/master
   ```
 
   </Tab>
@@ -160,7 +143,7 @@ An Upstream cannot be deleted if there are sites using it.
 ## Tips and Tricks
 
 ### Use the Pantheon Workflow
-To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment. Once things look good, release the update to all.
@@ -204,14 +187,6 @@ If you receive the error that you have conflicts while updating core, the fastes
 
   </Tab>
 
-  <Tab title="Drupal 8" id="d82">
-
-  ```bash
-  git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
-  ```
-
-  </Tab>
-
   <Tab title=" Drupal 7" id="d72">
 
   ```bash
@@ -232,15 +207,6 @@ If you receive the error that you have conflicts while updating core, the fastes
   git fetch pantheon-wordpress
   git merge pantheon-wordpress/master -Xtheirs
   ```
-
-  </Tab>
-
-  <Tab title="Drupal 8" id="d8-xtheirs">
-
-  ```git
-  git fetch pantheon-drops-8
-  git merge pantheon-drops-8/master -Xtheirs
-    ```
 
   </Tab>
 
@@ -274,14 +240,6 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
   </Tab>
 
-  <Tab title="Drupal 8" id="d82">
-
-  ```bash
-  git remote add pantheon-drops-8 https://github.com/pantheon-systems/drops-8.git
-  ```
-
-  </Tab>
-
   <Tab title=" Drupal 7" id="d72">
 
   ```bash
@@ -301,15 +259,6 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
   ```git
   git fetch pantheon-wordpress
   git merge pantheon-wordpress/master
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal 8" id="d8-2conflict">
-
-  ```git
-  git fetch pantheon-drops-8
-  git merge pantheon-drops-8/master
   ```
 
   </Tab>

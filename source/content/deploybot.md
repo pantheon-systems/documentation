@@ -26,7 +26,7 @@ There are a few known limitations to consider before proceeding:
 - The example workflow may result in committing compiled asset files or code on Pantheon that you might not commit in the source repositories on hosts such as GitHub. The primary use case for this example is to keep a lean repo with fewer source files in GitHub and use DeployBot to compile and ship to Pantheon.
 
 ### Example Workflow
-Let's say I use [Composer](/composer) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub, then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
+Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub, then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
 
 ```json:title=composer.json
 {

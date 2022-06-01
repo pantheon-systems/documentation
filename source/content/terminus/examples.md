@@ -94,7 +94,7 @@ Quickly install updates to core, contributed modules, themes, and plugins from t
 
 ### Upstream Updates (Core)
 
-Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
+Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
 <Alert title={"Note"} type={"info"}>
 
@@ -298,8 +298,6 @@ Every site has an upstream assigned in order to deliver [one-click updates](/cor
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
 - Set an empty upstream to disable one-click updates for sites managed by Composer.
-
-Confirm that the user you are authenticated as has the correct [Site-level permissions](/change-management#site-level-roles-and-permissions). Only a User in Charge or Owner can change a site's Upstream.
 
 To see all available upstreams, run:
 
