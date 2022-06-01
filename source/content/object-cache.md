@@ -4,20 +4,20 @@ description: Understand how to use Object Cache as a drop-in caching mechanism f
 categories: [performance]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
-reviewed: "2022-02-10"
+reviewed: "2022-06-01"
 ---
 
 Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/object-cache) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Object Cache
 
-Most website frameworks like Drupal and WordPress use databases to cache internal application "objects" along with queries for normal page requests, which causes increased load-times.
+Most website frameworks like Drupal and WordPress use databases to cache internal application objects along with queries for normal page requests, which causes increased load-times.
 
-Object Cache remembers, or caches, any queries to the server after the first time a Drupal or WordPress page is loaded. When another user loads the page, the results are provided from the Object Cache stored in memory without needing to query the database again. This results in much faster page load times, and less server impact on database resources.
+Object Cache remembers, or caches, any queries to the server after a Drupal or WordPress page is loaded for the first time. When another user loads the page, the results are provided from the Object Cache which is stored in memory without querying the database again. This results in much faster page load times, and less server impact on database resources.
 
 ### Scalable Performance
 
-Object Cache provides an alternative caching backend that resides in memory rather than databases that store data on disks or SSDs. By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other features for developers looking to use it to manage queues, or perform custom caching of their own.
+Object Cache provides an alternative caching backend that resides in memory rather than a database that stores data on a disk or a solid-state drive (SSD). By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other features for developers looking to use it to manage queues, or perform custom caching of their own.
 
 ## Enable Object Cache
 
@@ -171,9 +171,9 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
   }
   ```
 
-1. Enable the module via from `/admin/modules` if you haven't already done so with Terminus.
+1. Enable the module via `/admin/modules`, if you haven't already done so, using Terminus.
 
-1. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
+1. Verify Redis is enabled by going to the dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
 
 1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
 
@@ -463,20 +463,20 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 This conditional will be true for both web visits and Drush calls. All Redis cache backend settings, plus any other application configuration that should be true no matter the context, should always be enclosed in these types of conditional blocks on Pantheon.
 
-However, all redirection logic should remain nested in `isset($_ENV['PANTHEON_ENVIRONMENT'])` conditionals, as you only want redirections to occur on web visits, not any Drush invocations.
+However, all redirection logic should remain nested in `isset($_ENV['PANTHEON_ENVIRONMENT'])` conditionals, as you only want redirections to occur on web visits, not on any Drush invocations.
 
 In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php` and it will fix these problems and will be easier for yourself and others to read and maintain.
 
 ### Cache Directory Is Not Found
 
-If you push your updates via Git, you may get the error that the Cache directory is not found, Class not found, or the `Cache.php` file was not found. This is because of a `.gitignore` issue that did not allow committing of the Redis cache files. Example error:
+If you push your updates via Git, you might get the error that the cache directory, class, or the `cache.php` file was not found. This is because of a `.gitignore` issue that does not allow you to commit the Redis cache files. Example error:
 
 ```bash
 Fatal error: Class 'Redis_CacheCompressed' not found in
 /srv/bindings/xxxxxxxx/code/sites/all/modules/cache_backport/cache.inc on line 71
 ```
 
-It is possible that your `.gitignore` file is not up to date with the most recent version of your CMS. To resolve this, make sure you do not have any pending core updates.
+It is possible that your `.gitignore` file is not up to date with the most recent version of your CMS. To resolve this, ensure you do not have any pending core updates.
 
 The best and easiest way to update your core is by using Pantheon administration Dashboard. See [WordPress and Drupal Core Updates](/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
 
