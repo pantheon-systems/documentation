@@ -7,12 +7,22 @@ tags: [code, site, upstreams]
 showtoc: true
 permalink: docs/start-states/wordpress
 editpath: start-states/wordpress.md/
-reviewed: "2022-05-11"
+reviewed: "2022-06-01"
 ---
 
 For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-systems/WordPress) follows [WordPress core](https://wordpress.org/news/category/releases/) one-to-one. This document is intended to provide further context to platform-specific changes in Pantheon's WordPress upstream.
 
 ## Latest Release
+
+### 2022-05-24
+
+#### <a name="20220524-1" class="release-update"></a>WordPress 6.0
+
+If you’ve updated the [Twenty Twenty-Two theme](https://wordpress.org/themes/twentytwentytwo/) outside of Pantheon's WordPress upstream, there are conflicting updates from the WordPress core repository.
+
+Pantheon will automatically resolve this conflict when the `Apply Updates` button is clicked on your dashboard by [removing](https://core.trac.wordpress.org/changeset/53286) `wp-content/themes/twentytwentytwo/assets/fonts/LICENSE.md`
+
+## Previous Releases
 
 ### 2022-04-26
 
@@ -27,8 +37,6 @@ Adds documentation to `README.md` which provides context on the repositories bra
 #### <a name="20220426-1" class="release-update"></a>Define FS_METHOD
 
 When this constant is not set, WordPress writes and then deletes a temporary file to determine if it has direct access to the filesystem, which we already know to be the case. This multiplies filesystem operations and can degrade performance of the filesystem as a whole in the case of large sites that do a lot of filesystem operations. Setting this constant to `direct` tells WordPress to assume it has direct access and skip creating the extra temporary file. Read more about `FS_METHOD` [here](/plugins-known-issues#define-fs_method).
-
-## Previous Releases
 
 ### 2022-04-05
 
