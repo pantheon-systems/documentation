@@ -59,7 +59,7 @@ Autopilot requires the following:
 
 ### Autopilot Site Compatibility
 
-Your site must be on Pantheon meet the criteria below to be eligible for Autopilot. 
+Your site must be on Pantheon and meet the criteria below to be eligible for Autopilot. 
 
 | Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
 -----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
