@@ -59,12 +59,12 @@ Autopilot requires the following:
 
 ### Autopilot Site Compatibility
 
-Your site must be on Pantheon and using [Integrated Composer](/guides/integrated-composer) to be eligible for Autopilot. Review the criteria below to determine if your site is compatible with Autopilot.
+Your site must be on Pantheon meet the criteria below to be eligible for Autopilot. 
 
-| Do You Use External Build Tools? |Drupal                                                                 | WordPress                                                             |
+| Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
 -----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (only with Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without Multisite = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 = <span style = "color:green" > ✔ </span > compatible                     | Any version with Multisite = <span style = "color:green" > ❌  </span > not compatible | 
+| Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
+| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
                                                                                     
 ## Autopilot For Agencies
 
