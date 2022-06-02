@@ -9,7 +9,7 @@ reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility/tools
 anchorid: accessibility/tools
-editpath: accessibility/07-tools.md
+editpath: accessibility/06-tools.md
 ---
 
 This section provides an overview of the tools and techniques to improve your website's accessibility.
