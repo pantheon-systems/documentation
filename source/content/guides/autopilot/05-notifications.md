@@ -10,7 +10,7 @@ showtoc: true
 anchorid: notifications
 permalink: docs/guides/autopilot/notifications/
 editpath: autopilot/05-notifications.md
-reviewed: "2021-09-05"
+reviewed: "2022-06-02"
 ---
 
 ## Enable Autopilot Email Notifications

@@ -22,7 +22,7 @@ On the Webhooks page, you have the option to enable or disable your Webhook, edi
 
 After you create your webhook, the app you used is automatically subscribed to it and you now have access to the output of the payload. The payload can be modified in several ways. For example, you can:
 	
-	- Hook into a Slack channel and get a notification whenever a site was deployed or a VRT result comes back.
+    - Hook into a Slack channel and get a notification whenever a site was deployed or a VRT result comes back.
     - Email a specific person when the VRT result comes through.
     - Trigger an alert every time Autopilot runs.
 

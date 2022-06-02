@@ -10,7 +10,7 @@ showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/06-troubleshoot.md
-reviewed: "2022-09-05"
+reviewed: "2022-06-02"
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -21,7 +21,7 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. Autopilot will not allow updates to be queued until all errors have been reviewed and acknowledged.
 
-If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
+If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
 1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
 
@@ -180,7 +180,7 @@ Autopilot fails when a VRT page redirects more than 8 times or is stuck in an in
 
 ### Solution
 
-To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for the page.
+To resolve this issue, remove the page from VRT settings or fix the redirect in the Dev environment for the page.
 
 </Accordion>
 
@@ -204,7 +204,7 @@ Add at least one site to the Autopilot VRT settings.
 
 ### Issue
 
-Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
+Autopilot failed to deploy to Test or Live; however, deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
 
 ### Solution
 
@@ -258,7 +258,7 @@ The most common reason for failure is due to a merge conflict. Changes were depl
 
 ### Solution
 
-If failure is because of a merge conflict, run Autopilot again with latest changes.
+If the failure is because of a merge conflict, run Autopilot again with latest changes.
 
 If the issue is because of a PHP or CMS issue, resolve any issues causing `clear-cache` or `update.php` steps to fail, and manually merge again, or re-run Autopilot.
 

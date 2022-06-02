@@ -17,7 +17,7 @@ editpath: new-dashboard/02-workspaces.md
 
 ## What is a Workspace?
 
-[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the Legacy Dashboards, with Pantheon features and actions that are conveniently available in one place.
+[<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of Legacy Dashboards, with Pantheon features and actions that are conveniently available in one place.
 
 ### Create a New Workspace
 
@@ -39,7 +39,7 @@ Click the Organization’s name and icon in the upper left to switch between Wor
 
 ## Sites
 
-The **<i className="fa fa-window-restore"></i> Sites** tab shows a table of all the Sites your user has access to within the current Workspace. Filter by Plan, Upstream, Status, or owner from the left, or use the buttons in the upper right to migrate an existing site or to create a new site.
+The **<i className="fa fa-window-restore"></i> Sites** tab shows a table of all the sites your user has access to within the current Workspace. Filter by Plan, Upstream, Status, or owner from the left, or use the buttons in the upper right to migrate an existing site or to create a new site.
 
 Click a table heading to sort the table by that heading.
 
@@ -51,7 +51,7 @@ Manage team members and assign [roles and permissions](/change-management#roles-
 
 ## Autopilot
 
-[Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
+[Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal site within your Workspace.
 
 ![A gif showing Autopilot visual regression testing](../../../images/dashboard/vrt.gif)
 
@@ -61,8 +61,10 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
 
-1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab. 
-1. On the Custom Upstreams page click **Add New Upstream**. The Create New Custom Upstream page is displayed. 
+To add a custom Upstream in the Organization Workspace:
+
+1. Select the **Upstream** tab. 
+1. On the **Custom Upstreams** page click **Add New Upstream**. The **Create New Custom Upstream** page is displayed. 
 1. Enter the URL of your GitHub or Bitbucket repository. URLs from the pantheon-systems GitHub workspace will not work.
 1. Select the **Framework** and **Initial Connection Mode**.
 1. Add the desired name and a description. Adding a description is optional.
@@ -70,7 +72,7 @@ Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitH
 
 After the Upstream has been added to your Dashboard, select from the list of available Custom Upstreams and click **Create Site From Upstream**. 
 
-Click **More** in the Custom Upstream to edit or delete. After you click **Edit Settings** you are directed to the Upstream Settings page. Modify the page and click **Save**.
+Click **More** in the Custom Upstream to edit or delete. After you click **Edit Settings** you are directed to the **Upstream Settings** page. Modify the page and click **Save**.
 
 To delete, click **Delete Upstream** from the **More** drop-down menu. 
 

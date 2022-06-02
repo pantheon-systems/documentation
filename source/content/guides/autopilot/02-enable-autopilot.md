@@ -10,7 +10,7 @@ showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2021-08-10"
+reviewed: "2022-06-02"
 ---
 
 ## Enable Autopilot
@@ -27,7 +27,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
 1. Sites for which Autopilot is available are listed in the **All Sites** column of the **Sites** table.
 
-1. Click **Activate** in the Site's row.
+1. Click **Activate** in the site's row.
 
   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose the unsaved changes.
 
@@ -58,7 +58,7 @@ To work with Autopilot, [switch to the Workspace](/guides/new-dashboard/workspac
 
   ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
-1. Click **Save** to initialize Autopilot on the Site.
+1. Click **Save** to initialize Autopilot on the site.
 
 1. Click **Status** in the Autopilot sidebar for the current status of the testing. This process might take a while:
 
@@ -70,7 +70,7 @@ From the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace, cl
 
 The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+If the site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 Click **Save** for each section of the configuration in which you make changes.
 
