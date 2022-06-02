@@ -9,7 +9,7 @@ reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility/inclusive-design
 anchorid: accessibility/inclusive-design
-editpath: accessibility/04-inclusive-design.md
+editpath: accessibility/05-inclusive-design.md
 ---
 
 ## Building a Culture of Inclusion

@@ -1,15 +1,15 @@
 ---
 title: Optimize Your Site for Accessibility
-subtitle: Best Practices
+subtitle: Tools
 description: Tools and techniques to improve your website's accessibility
 categories: [optimize]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
 layout: guide
-permalink: docs/guides/accessibility/best-practices
-anchorid: accessibility/best-practices
-editpath: accessibility/02-best-practices.md
+permalink: docs/guides/accessibility/tools
+anchorid: accessibility/tools
+editpath: accessibility/07-tools.md
 ---
 
 This section provides an overview of the tools and techniques to improve your website's accessibility.
