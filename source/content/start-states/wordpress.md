@@ -51,6 +51,7 @@ Disabled `wp-cron.php` from running on every page load and rely on Pantheon to r
 ## Related Links
 
 - [Pantheon Start States](/start-states)
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
 - [WordPress Best Practices](/wordpress-best-practices)
 - [WordPress and Drupal Core Updates](/core-updates)
 - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
