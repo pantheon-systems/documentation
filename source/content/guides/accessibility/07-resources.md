@@ -9,7 +9,7 @@ reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility/resources
 anchorid: accessibility/resources
-editpath: accessibility/06-resources.md
+editpath: accessibility/07-resources.md
 ---
 
 Here are some additional reference and educational links.
