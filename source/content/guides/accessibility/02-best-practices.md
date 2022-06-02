@@ -4,8 +4,8 @@ subtitle: Best Practices
 description: Tools and techniques to improve your website's accessibility
 categories: [optimize]
 tags: [accessibility, workflow, SEO]
-contributors: [carolyn-shannon]
-reviewed: "2020-12-14"
+contributors: [carolyn-shannon, wordsmither]
+reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility/best-practices
 anchorid: accessibility/best-practices

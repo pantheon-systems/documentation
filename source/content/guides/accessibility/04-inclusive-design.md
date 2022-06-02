@@ -4,8 +4,8 @@ subtitle: Inclusive Design
 description: Design for inclusion to future-proof your site.
 categories: [optimize]
 tags: [accessibility, workflow, SEO]
-contributors: [carolyn-shannon]
-reviewed: "2020-12-14"
+contributors: [carolyn-shannon, wordsmither]
+reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility/inclusive-design
 anchorid: accessibility/inclusive-design

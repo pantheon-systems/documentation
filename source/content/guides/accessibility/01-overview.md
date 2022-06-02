@@ -4,21 +4,23 @@ subtitle: Overview
 description: How to extend your site's reach with accessibility planning, fixes, and reporting.
 categories: [optimize]
 tags: [accessibility, workflow, SEO]
-contributors: [carolyn-shannon]
-reviewed: "2020-12-14"
+contributors: [carolyn-shannon, wordsmither]
+reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility
 anchorid: accessibility
 editpath: accessibility/01-overview.md
 ---
 
+<dfn id="acc">Web accessibility</dfn> means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.  It includes all disabilities that affect access to the Web, including auditory, cognitive, physical, and more.
+
 This guide provides an overview of how to optimize your website for accessibility, using tools and techniques integrated with the Pantheon WebOps workflow. 
 
-This guide will help you improve the experience for everyone who uses your site, future-proof its content, and build a sustainable accessibility practice across your WebOps teams. It will also help you identify areas where you may wish to use professional accessibility services and partners.
+This guide will help you improve the experience for severyone who uses your site, future-proof its content, and build a sustainable accessibility practice across your WebOps teams. It will also help you identify areas where you may wish to use professional accessibility services and partners.
 
 ## Web Content Accessibility Guidelines
 
-The World Wide Web Consortium's (W3C) [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) are an internationally accepted standard for website accessibility. WCAG documents provide detailed explanations and examples on how to make web content more accessible to people with disabilities. The current standard most used is [WCAG 2.1](https://www.w3.org/TR/WCAG21/); [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) is scheduled to be published in 2021. 
+The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility Guidelines (WCAG)</dfn>](https://www.w3.org/WAI/standards-guidelines/wcag/) are an internationally accepted standard for website accessibility. WCAG documents provide detailed explanations and examples on how to make web content more accessible to people with disabilities. The current standard most used is [WCAG 2.1](https://www.w3.org/TR/WCAG21/); [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) is scheduled to be published in 2021. 
 
 ### Principles of accessibility and success criteria
 

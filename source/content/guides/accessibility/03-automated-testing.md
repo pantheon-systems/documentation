@@ -4,8 +4,8 @@ subtitle: Automated Testing
 description: Adding automated accessibility testing to your WebOps workflow.
 categories: [optimize]
 tags: [accessibility, workflow, SEO]
-contributors: [carolyn-shannon]
-reviewed: "2020-12-14"
+contributors: [carolyn-shannon, wordsmither]
+reviewed: "2022-06-01"
 layout: guide
 permalink: docs/guides/accessibility/automated-testing
 anchorid: accessibility/automated-testing
