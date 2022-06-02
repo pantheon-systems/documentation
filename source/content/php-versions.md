@@ -76,17 +76,15 @@ Before changing your PHP version, confirm that your CMS is compatible:
 
 ## Configure PHP Version
 
-PHP versions can be explicitly set using a `pantheon.yml` configuration file in the root of your site's code repository (If you have a local git clone of your site, `/code/` is the project root).
+PHP versions can be explicitly set using a `pantheon.yml` configuration file in the root of your site's code repository. If you have a local git clone of your site, the project root is `/code/`.
 
 > **`pantheon.yml` is used to store your custom settings that override those in `pantheon.upstream.yml`.**
 
-To create or change `pantheon.yml`, implementing the change via `git push` won't work - you'll get a pre-receive hook error. 
+You must use SFTP to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command. Follow the steps below to create or change your `pantheon.yml` file.
 
-Instead, you must use SFTP and add/edit the file directly:
-
-1. In the Pantheon UI, under the 'Code' tab, set your Pantheon DEV environment in SFTP mode
-2. Open your preferred SFTP client (Filezilla, Commander One etc), and use the credentials under the 'Connect with SFTP' in the Pantheon UI to connect to the DEV environment
-3. Under the `/code` directory, if the `pantheon.yml` file is not present, create one to look like the following:
+1. Navigate to the Pantheon dashboard > click the **Dev** environment tab > set the **Development Mode** to **SFTP**.
+1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client (Filezilla, Commander One etc) to Pantheon.
+1. Check the `/code` directory for the `pantheon.yml` file and create one if it not already present:
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -94,13 +92,14 @@ Instead, you must use SFTP and add/edit the file directly:
    php_version: 8.0
    ```
    
-   You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
+   - You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
    
-4. In the Pantheon UI, go to the 'Code' tab of the DEV environment and refresh the page. You should now see a notice that the `pantheon.yml` file has been changed.
-5. Enter a commit message and click 'Commit changes'
-6. After the DEV environment has refreshed, the `pantheon.yml` file should now be committed to the `master branch`.
-7. Switch the site back to Git mode
-8. In your local repo (if you have one), pull down the changes. **Note that you will need to rebase any non-`master` branches and remove their remote versions, then re-push them to avoid the Git pre-receive error.**
+1. Refressh the **Dev** environment tab >  click `/code` directory >  verify that the `pantheon.yml` file has been created.
+1. Enter a commit message and click 'Commit changes'.
+1. Refressh the **Dev** environment tab > verify that the `pantheon.yml` file is now committed to the `master branch`.
+1. Set the **Development Mode** to **Git**.
+8. Pull down the changes in your local repo (if you have one). 
+   - Note that you will need to rebase any non-`master` branches and remove their remote versions, then re-push the branches to avoid the Git pre-receive error.
 
 Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control.
 
