@@ -124,7 +124,7 @@ In this section, we identify the content type where you want to use personalizat
 
 1. Review your content and tag it using the Tags vocabulary (e.g. "Biking").
 
-1. Navigate to `/admin/structure/smart_content_segment_set` to configure geolocation segments. 
+1. Navigate to `/admin/structure/smart_content_segment_set` to configure interest/taxonomy segments. 
 
 1. Click **+Add Global Segment Set**.
     ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities.png)
