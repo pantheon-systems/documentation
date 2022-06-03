@@ -17,9 +17,9 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 
 ## Resolve Conflicts When Updating Core
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
+If you receive the error that you have conflicts while updating core, the fastest resolution is often to use the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
 
-This is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
+This is safe to run if you don't have your own changes in any of the conflicting files, for example problems with `.gitignore`.
 
 <TabList>
 
