@@ -23,11 +23,13 @@ All plans except for a Basic plan can use New Relic&reg; Performance Monitoring.
 
 ## Activate New Relic&reg; Performance Monitoring
 
-Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**:
+1. Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard > click **Activate New Relic Pro**:
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../images/integrations/newrelic/activate-new-relic.png)
 
-Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic tab on your Dashboard, and click **Go to New Relic**.
+1. Visit your site in the browser a couple of times to generate data in New Relic. 
+
+1. Allow a few minutes to pass > go to the **New Relic** tab on your Dashboard > click **Go to New Relic**.
 
 New Relic is automatically enabled for all application containers added to the site, including Multidev environments.
 
@@ -41,7 +43,7 @@ New Relic is automatically enabled for all application containers added to the s
 
   ![Screenshot showing the New Relic landing page.](../images/integrations/newrelic/new-relic-get-started.png)
 
-1. After agreeing to the New Relic terms of service, you can access the data for your site:
+1. Agree to the New Relic terms of service to access the data for your site:
 
   ![Screenshot of the New Relic APM dashboard.](../images/integrations/newrelic/new-relic-apm-dash.png)
 

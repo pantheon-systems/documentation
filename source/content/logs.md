@@ -120,16 +120,18 @@ Automate the process of accessing and maintaining these logs with a script.
 
 ### Create a Script
 
-Open your local terminal to create and access a new local directory:
+1. Open your local terminal to create and access a new local directory:
 
-```bash{promptUser: user}
-mkdir $HOME/site-logs
-cd $HOME/site-logs
-```
+    ```bash{promptUser: user}
+    mkdir $HOME/site-logs
+    cd $HOME/site-logs
+    ```
 
-Choose your preferred method from the following tabs, then click the **Download** button to download the script. Move it to the `site-logs` directory you created, and use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+1. Choose your preferred method from the following tabs > click the **Download** button to download the script. 
 
-The resulting log file might be large.
+1. Move the downloaded script to the `site-logs` directory you created > use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+
+  - The resulting log file might be large.
 
 The script provides several modifiable variables described in its comments:
 
@@ -159,13 +161,15 @@ The script provides several modifiable variables described in its comments:
 
 ### Collect Logs
 
-Download logs by executing the script from within the `site-logs` directory:
+1. Download logs by executing the script from within the `site-logs` directory:
 
 ```bash{promptUser:user}
 bash collect-logs.sh
 ```
 
-You can now access the logs from within the `site-logs` directory. More than one directory is generated for sites that use multiple application containers.
+1. Open the `site-logs` directory to access the logs.
+  
+  - More than one directory is generated for sites that use multiple application containers.
 
 ## Frequently Asked Questions
 

@@ -1,6 +1,6 @@
 ---
 title: Fastly on Pantheon
-subtitle: Review FAQs About Fastly on Pantheon
+subtitle: Fastly on Pantheon FAQs
 description: Get answers to your Fastly on Pantheon questions. 
 categories: [develop]
 tags: [cms]
@@ -37,3 +37,6 @@ The request will timeout at 59 seconds if it passes through port 80 and 443.
 
 </Alert>
 
+## See Also
+
+- [Fastly Resources FAQ](https://www.fastly.com/resources/?q=faq)
