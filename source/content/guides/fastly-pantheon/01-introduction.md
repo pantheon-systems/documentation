@@ -35,6 +35,7 @@ Your website must be connected to Pantheon’s [Advanced Global CDN](/guides/pro
 - [Edge Integrations](/guides/edge-integrations/)
 - [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
+- [Fastly](https://explore.fastly.com)
 
 
 

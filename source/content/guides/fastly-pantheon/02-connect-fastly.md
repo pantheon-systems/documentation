@@ -28,7 +28,7 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Sign in to your Fastly account.
 
-1. Create a New Service and set the **Origin service address** to the Pantheon sub-domain specific to your main site's Live environment. 
+1. Create a **New Service** and set the **Origin service address** to the Pantheon sub-domain specific to your main site's Live environment. 
 
     - Sub-domain information can be found under the Domains/SSL tab. It should look similar to: `live-{site-name}.pantheon.io`.
 
@@ -44,9 +44,9 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
     - You must create a Fastly Condition for each host. The condition let's Fastly know what traffic needs to be sent to what server. Your field entries should like this:
 
-        - Name: Main Content
-        - Apply If...: req.url !~ "^/main"
-        - Priority: 2
+        - **Name:** `Main Content`
+        - **Apply If...:** `req.url !~ "^/main"`
+        - **Priority:** `2`
 
             - This tells Fastly that any URL that does not contain `/main` should be sent to the main server.
 
@@ -55,9 +55,9 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
     - Your field entries should like this:
 
-        - Name: Blog Content
-        - Apply If...: req.url ~ "^/blog"
-        - Priority: 2
+        - **Name:** `Blog Content`
+        - **Apply If...:** `req.url ~ "^/blog"`
+        - **Priority:** `2`
 
             - This tells Fastly that any URL that include `/blog` is sent to the main content server.
 
@@ -65,38 +65,42 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
     - Your entries should look like this: 
 
-        Name: Main_Server_Host
-        Type/Action: Request, Set
-        Destination: http.host
-        Source: live-{site-name}.pantheon.io <-- Main content server's Pantheon subdomain.
-        Ignore If Set: No
-        Priority: 10
+        - **Name:** `Main_Server_Host`
+        - **Type/Action:** `Request, Set`
+        - **Destination:** `http.host`
+        - **Source:** `live-{site-name}.pantheon.io <-- Main content server's Pantheon subdomain`
+        - **Ignore If Set:** `No`
+        - **Priority:** `10`
 
 1. Click **Create** and save the new content.
 
 1. Click the gear icon next to the **Main_Server_Host** header > select **Request Conditions** > click the **Name** drop-down menu > select the `Main_Server_Host_Condition` > click **Assign**. 
 
-    - This assigns the Main_Server_Host Header to the Main_Server_Host_Condition. This appends the header to all traffic sent to the main content server on Pantheon.
+    - This assigns the `Main_Server_Host` Header to the `Main_Server_Host_Condition`. This appends the header to all traffic sent to the main content server on Pantheon.
 
 1. Click **Content** again > click **New** > complete the pop-up fields to create a second custom header for redirected requests.
 
     - Your entries should look like this: 
 
-        Name: Blog_Server_Host
-        Type/Action: Request, Set
-        Destination: http.host
-        Source: live-{site-name}.pantheon.io <-- Secondary content server's Pantheon subdomain.
-        Ignore If Set: No
-        Priority: 10
+        - **Name:** `Blog_Server_Host`
+        - **Type/Action:** `Request, Set`
+        - **Destination:** `http.host`
+        - **Source:** `live-{site-name}.pantheon.io <-- Secondary content server's Pantheon subdomain`
+        - **Ignore If Set:** `No`
+        - **Priority:** `10`
 
 1. Click **Create** and save the new content.
 
-1. Click the gear icon next to the **Main_Server_Host** header > select **Request Conditions** > click the **Name** drop-down menu > select **Blog_Server_Host_Condition** > click **Assign**. 
+1. Click the gear icon next to the **Main_Server_Host** header > select **Request Conditions** > click the **Name** drop-down menu > select `Blog_Server_Host_Condition` > click **Assign**. 
 
-    - This assigns the Main_Server_Host Header to the Blog_Server_Host_Condition. This appends the header to all traffic sent to the main content server on Pantheon.
+    - This assigns the `Main_Server_Host` Header to the `Blog_Server_Host_Condition`. This appends the header to all traffic sent to the main content server on Pantheon.
 
-1. Test the setup by opening a new browser tab and loading the main URL, for example: http://www.example-site.com/. 
+## Test Your Setup
 
-1. Verify that it loads correctly and appends the directory that serves the second Pantheon site to the end of the main URL. Example: http://www.example-site.com/blog/
+Follow the steps below to confirm that your Fastly account is working correctly with your Pantheon account.
+
+1. Test the setup by opening a new browser tab and loading the main URL, for example: `http://www.example-site.com/`. 
+
+1. Verify that it loads correctly and appends the directory that serves the second Pantheon site to the end of the main URL, for example: `http://www.example-site.com/blog/`
 
 
