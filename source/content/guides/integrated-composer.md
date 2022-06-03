@@ -17,7 +17,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 - Follow the [Drupal 9](/drupal-9) doc to create a new Drupal 9 site with Integrated Composer built in.
 
-- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/drupal-9-migration) guide.
+- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/guides/drupal-9-migration) guide.
 
 - To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
@@ -143,21 +143,18 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
     ```
 
      - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
-     - `--no-update` should not be included when adding dependencies to a site.
+     - `--no-update` should not be included when adding dependencies to a site. 
 
-1. Set or increment the current configuration version:
+1. _Optional_ : Set or increment the current configuration version. This step can be skipped initially. Only perform this step if you are prompted to update the Composer config version.
 
-     - If this is your first time setting the config version:
-
-     Confirm the version:
+     - Confirm the version:
 
         ```bash{outputLines:2}
         composer config version
-        1.0.0
         ```
 
      - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies.
-     - Replace `1.0.1` in this example with another number:
+     - Replace `1.0.1` in this example with the latest version number:
 
        ```bash{promptUser: user}
         composer config version 1.0.1
