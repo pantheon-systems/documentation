@@ -51,7 +51,7 @@ Ensure you review our documentation on [Git](/git), [Composer](/guides/composer)
 
 <TabList>
 
-<Tab title="Mac" id="mac" active={true}>
+<Tab title="Mac" id="mac-u" active={true}>
   
 Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
@@ -61,7 +61,7 @@ Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP
 
 </Tab>
 
-<Tab title="Windows" id="win">
+<Tab title="Windows" id="windows-u">
       
 Windows users should install the following dependencies:
   
