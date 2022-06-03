@@ -49,20 +49,22 @@ Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new
 
 Ensure you review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
 
-  <TabList>
+<TabList>
 
-    <Tab title="Mac" id="mac-user" active={true}>
+<Tab title="Mac" id="mac-user" active={true}>
   
-  - Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
+Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
   ```shell{promptUser:user}
   brew install git composer php@7.4
   ```
-   </Tab>
+</Tab>
 
-    <Tab title="Windows" id="win-user">
+<Tab title="Windows" id="win-user">
       
-  - Windows users can install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows) and [Git](https://git-scm.com/download/win), and might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
+Windows users can install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows) and [Git](https://git-scm.com/download/win), and might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
+
+</Tab>
 
 ### Pantheon Environments
 
@@ -214,7 +216,6 @@ Click **Post Solr Schema** to send your custom schema to the Solr 8 server. The 
 * Filter HTML code
   * Getting what is indexed as close to plain text as possible will decrease the amount of spurious results in a query.
 
-
 * Eliminate field label cruft in Drupal
   * Make sure to index this data using as little markup as possible, and get rid of the field labels. You can do this by assigning a specific view mode to each content type.
 
@@ -274,5 +275,3 @@ Change the `repositories` definition by adding a definition for the Lenient repo
     }
 }
 ```
-
-
