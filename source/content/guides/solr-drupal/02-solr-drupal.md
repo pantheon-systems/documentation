@@ -5,7 +5,7 @@ description: Information on using Pantheon Search with Solr 8 on Drupal 9
 cms: "Drupal 9"
 categories: [integrate]
 tags: [solr, search, modules]
-contributors: [joa-pan]
+contributors: [carolynshannon, joa-pan]
 reviewed: "2022-05-15"
 layout: guide
 showtoc: true
@@ -65,6 +65,7 @@ Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP
 Windows users can install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows) and [Git](https://git-scm.com/download/win), and might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
 
 </Tab>
+</TabList>
 
 ### Pantheon Environments
 
@@ -76,7 +77,7 @@ As a Limited Availability participant, your will need to manually enable access 
 
 ### Enable at the Site Level
 
-You must enable Pantheon Search at the site level and add the Apache Solr Index Server. This can be done by using either the Terminus CLI or through the Site Dashboard.
+You must enable Pantheon Search at the site-level and add the Apache Solr Index Server. This can be done by using either the Terminus CLI or through the Site Dashboard.
 
 #### Using Terminus
 
@@ -113,7 +114,7 @@ After you push the changes to `pantheon.yml`, a confirmation message indicating 
 
 For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
 
-#### Verify `pantheon.yml` is Properly Configured
+#### Verify `pantheon.yml` is Configured Correctly
 
 After you specify the Solr 8 version in the Dev environment of your Drupal 9 site, verify that the environment is configured to use Solr 8.
 
@@ -169,13 +170,13 @@ To enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modu
 terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
 ```
 
-You may also enable the modules from the site’s Extend page located in `/admin/modules`.
+You might also enable the modules from the site’s Extend page located in `/admin/modules`.
 
 ## Configure Pantheon Search
 
 ### Add Search Index
 
-Enable the **Search API Solr Admin** module.
+Enable the  Search API Solr Admin module.
 
 Navigate to **Configuration > Search & Metadata > Search API** within Drupal’s Admin interface. The server labeled Pantheon Search should be displayed, and the status should indicate the server has been enabled.
 
@@ -189,11 +190,11 @@ The Index status page should indicate that the newly created index was successfu
 
 ### Add Fields to the Index
 
-To add fields to your new index, click the **Fields** tab, then click **Add fields**. When you are finished, click **Save changes**.
+To add fields to your new index, click **Fields**, then click **Add fields**. When you are finished, click **Save changes**.
 
 ### Index Content
 
-If your site contains content, click **Index now** on the **View** tab of your Index’s Overview page to begin indexing existing content.
+If your site contains content, click **Index now** on the **View** tab of your index’s Overview page to begin indexing existing content.
 
 Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. Both the server and index you just created should be displayed on the page.
 
@@ -203,36 +204,7 @@ Click on the server’s name to view the server. The **View** tab displays serve
 To save and post the schema information, select the **Pantheon Search Admin** tab. To access the **Pantheon Search Admin** tab, the **Execute Pantheon Search admin task** permission must be enabled for the user.
 
 Click **Post Solr Schema** to send your custom schema to the Solr 8 server. The server responds with a `200 - OK` status for each schema file posted.
-
-## Best Practices
-
-* Disable the default search module
-  * In Drupal, disabling the core "search" module will help elminiate accidentally basing views on Drupal's default database-driven search.
-
-* Store rendered output in a single field
-  * You always need to make sure to store the rendered output of your content and additional data (such as meta tags) in one single field in the index. This way, it’s a lot easier to search for all the relevant data. It will make your optimizations easier further down the road and it will render your queries a lot smaller & faster.
-
-
-* Filter HTML code
-  * Getting what is indexed as close to plain text as possible will decrease the amount of spurious results in a query.
-
-* Eliminate field label cruft in Drupal
-  * Make sure to index this data using as little markup as possible, and get rid of the field labels. You can do this by assigning a specific view mode to each content type.
-
-* Improve relevance with content boosting
-  * You can make sure visitors are finding the best content. Apache Solr works with relevance scores to determine where a result should be positioned in relation to all of the other results. In search, boosting a page increases the chance it will show up in a search. For instance: If you're searching for "dinner" you might also want to boost any content with similar tags like "food" and "pizza". Tag-based boosting would increase the relevance scores of tagged items that seem to be related to the query string.
-
-* Do not upgrade indices
-  * If you are moving from Solr 3 to Solr 8, delete your index before upgrading as well as .yml files in your config folder. Sorry, it's just too many versions for the upgrade to any way be usable. We've found trying to upgrade the index leads to indices that don't actually store any data and your search results, no matter how many times you re-index will not contain any results. Just delete your index before upgrading. Or if you've already upgraded, delete your index completely and recreate it from scratch. Importing the configs from a .yml file from the old Solr 3 version of this module will end in your calling support and wondering why your index has no search results. Just delete the index, delete the config.yml file and START FROM SCRATCH building an index.
-  Generally speaking, you're more than welcome to ignore our advice if it's working for you, but we've found in our our testing that a solr 3 relies on things that no longer exist in solr 8 and your index will be built on classes that don't exist on the java-based server and, thus, won't retain any data when you try to send a document to index.
-
-
-
-## Uninstall Core Search
-
-If the default Drupal core Search module is still enabled for your site, you might want to uninstall it for performance reasons. Navigate to `admin/modules/uninstall` to uninstall the module.
-
-
+  
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
 ### Diagnose Issues
@@ -240,7 +212,6 @@ If the default Drupal core Search module is still enabled for your site, you mig
 The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working. 
 
 The `drush search-api-pantheon:select` (saps) command runs the query against the Solr server. It is recommended that you use `?debug=true` on any Solr page to allow a query to pass.
-
 
 ### Deploy an Updated `config.zip` to your Solr Server
 
@@ -256,9 +227,7 @@ If you are using the Lenient endpoint, you may encounter an error when running C
 
 > Package drupal/search_api_pantheon exists in composer repo (https://packages.drupal.org/8) and composer repo (https://packages.drupal.org/lenient) which has a higher repository priority. The packages with higher priority do not match your constraint and are therefore not installable. See https://getcomposer.org/repoprio for details and assistance.
 
-This occurs because both repos contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. 
-
-Change the `repositories` definition by adding a definition for the Lenient repo in the site's `packages.json` file with an explicit `exclude` argument:
+This occurs because both repositories contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. Change the `repositories` definition by adding a definition for the Lenient repository in the site's `packages.json` file with an explicit `exclude` argument:
 
 ```
 "repositories": {
