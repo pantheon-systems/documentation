@@ -1,6 +1,6 @@
 ---
 title: Apache Solr for Drupal
-subtitle: Using Solr 8 on Drupal 
+subtitle: Using Solr 8 on Drupal 9
 description: Information on using Pantheon Search with Solr 8 on Drupal 9
 cms: "Drupal 9"
 categories: [integrate]
@@ -53,12 +53,12 @@ Ensure you review our documentation on [Git](/git), [Composer](/guides/composer)
 
 <Tab title="Mac" id="mac" active={true}>
   
-Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. 
-Restart the shell or terminal environment after entering the following command:
+Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
   ```shell{promptUser:user}
   brew install git composer php@7.4
   ```
+
 </Tab>
 
 <Tab title="Windows" id="win">
@@ -107,18 +107,20 @@ To enable at the Site level follow the following steps:
 
 ### Configure the Version
 
-After you enable the Apache Solr Index Server, configure the `pantheon.yml` for the platform environment. Before you install the Drupal search module, specify the Solr version in the `pantheon.yml` to avoid incompatibilities.
+You must configure the `pantheon.yml` for the platform environment after you enable the Apache Solr Index Server.
 
-Currently, Solr 8 is supported for Drupal 9 sites.
+1. Specify the Solr version in the `pantheon.yml` before you install the Drupal search module to avoid incompatibilities.
 
-Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
+  - Currently, Solr 8 is supported for Drupal 9 sites. Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
 
-```yml:title=pantheon.yml
-search:
-  version: 8
-```
+    ```yml:title=pantheon.yml
+    search:
+      version: 8
+    ```
 
-After you push the changes to `pantheon.yml`, a confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/guides/integrated-composer) to update your site modules.
+1. Push the changes to `pantheon.yml`.
+
+   - A confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/guides/integrated-composer) to update your site modules.
 
 For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
 
@@ -172,19 +174,21 @@ To install the Search API Pantheon module, switch to your local machine.
 
 #### Enable Pantheon Search
 
-To enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush, enter the following command, replacing `$ENV` with the environment:
+You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush. 
 
-```shell{promptUser:user}
-terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
-```
+1. Enter the following command, replacing `$ENV` with the environment:
 
-You might also enable the modules from the site’s Extend page located in `/admin/modules`.
+  ```shell{promptUser:user}
+  terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
+  ```
+
+You might also want to enable the modules from the site’s Extend page located in `/admin/modules`.
 
 ## Configure Pantheon Search
 
 ### Add Search Index
 
-Enable the  Search API Solr Admin module.
+Enable the Search API Solr Admin module.
 
 Navigate to **Configuration > Search & Metadata > Search API** within Drupal’s Admin interface. The server labeled Pantheon Search should be displayed, and the status should indicate the server has been enabled.
 
@@ -198,20 +202,33 @@ The Index status page should indicate that the newly created index was successfu
 
 ### Add Fields to the Index
 
-To add fields to your new index, click **Fields**, then click **Add fields**. When you are finished, click **Save changes**.
+Follow the steps below to add fields to your new index.
+
+1. Click **Fields** > click **Add fields**. 
+
+1. Click **Save changes** when you are finished.
 
 ### Index Content
 
-If your site contains content, click **Index now** on the **View** tab of your index’s Overview page to begin indexing existing content.
+Follow the steps below to index existing content.
 
-Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. Both the server and index you just created should be displayed on the page.
+1. Click **Index now** on the **View** tab of your index’s Overview page.
+
+1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. 
+
+  - Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
 
-Click on the server’s name to view the server. The **View** tab displays server connection information, schema version, and indices.
-To save and post the schema information, select the **Pantheon Search Admin** tab. To access the **Pantheon Search Admin** tab, the **Execute Pantheon Search admin task** permission must be enabled for the user.
+1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
 
-Click **Post Solr Schema** to send your custom schema to the Solr 8 server. The server responds with a `200 - OK` status for each schema file posted.
+1. Select the **Pantheon Search Admin** tab to save and post the schema information. 
+
+1. Enable the **Execute Pantheon Search admin task** permission for users who need access to the **Pantheon Search Admin** tab.
+
+1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
+
+  - The server responds with a `200 - OK` status for each schema file posted.
   
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
