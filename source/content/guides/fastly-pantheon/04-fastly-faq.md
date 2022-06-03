@@ -19,7 +19,7 @@ You can test your Fastly caching features by [confirming that your experience pr
 
 ## Do I Still Get Global CDN Now That I Have AGCDN for Fastly?
 
-Yes, Global CDN is included free of charge for all Pantheon customers. This enables customers to render pages with speed by caching responses at the edge with over 70 Fastly points of presence.
+Yes, [Global CDN](/global-cdn) is included free of charge for all Pantheon customers. This enables customers to render pages with speed by caching responses at the edge with over 70 Fastly points of presence.
 
 ## Who sets up the Fastly edge configuration files?
 

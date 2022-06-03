@@ -11,14 +11,13 @@ permalink: docs/guides/fastly-pantheon
 anchorid: fastly-pantheon
 ---
 
-Pantheon partners with [Fastly](https://www.fastly.com/) to bring you with a fast and safe content delivery network (CDN).
+Pantheon partners with [Fastly](https://www.fastly.com/) to bring you a fast and safe content delivery network (CDN).
 
 Using Fastly on the Pantheon platform to manage your site provides many benefits, including:
 
 - Building logic at the edge
-- Content personalization through edge integration 
+- Content personalization through [Edge Integrations](/guides/edge-integrations/) 
 - Integration with [Splunk](https://www.splunk.com/) and Splunk integration with [New Relic](/new-relic)
-Pantheon's partnership with Fastly offers many benefits to our customers, including:
 - Enhanced Caching at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration / continuous delivery (CI/CD).
 - Image Optimizer (IO) is an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
 
