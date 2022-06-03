@@ -16,7 +16,6 @@ editpath: solr-drupal/02-solr-drupal.md
 
 Pantheon Search with Solr 8 gives Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
 
-<Partial file="pantheon-search-status.md" />
 
 ## Solr 8 Features
 
@@ -48,15 +47,22 @@ Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new
 
 ### Prepare the Local Environment
 
-Review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
+Ensure you review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
 
-- Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
+  <TabList>
+
+    <Tab title="Mac" id="mac-user" active={true}>
+  
+  - Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
   ```shell{promptUser:user}
   brew install git composer php@7.4
   ```
+   </Tab>
 
-- Windows users can install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows) and [Git](https://git-scm.com/download/win), and may need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
+    <Tab title="Windows" id="win-user">
+      
+  - Windows users can install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows) and [Git](https://git-scm.com/download/win), and might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
 
 ### Pantheon Environments
 
