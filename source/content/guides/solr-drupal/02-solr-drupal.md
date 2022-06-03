@@ -64,8 +64,11 @@ Restart the shell or terminal environment after entering the following command:
 <Tab title="Windows" id="win">
       
 Windows users should install the following dependencies:
+  
 * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
+  
 * [Git](https://git-scm.com/download/win)
+  
 * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
 
 </Tab>
