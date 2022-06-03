@@ -19,7 +19,7 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often to use the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
 
-This is safe to run if you don't have your own changes in any of the conflicting files, for example problems with `.gitignore`.
+This is safe to run if you don't have your own changes in any of the conflicting files (for example problems with `.gitignore`).
 
 <TabList>
 
@@ -57,7 +57,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
-If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In that case you should [manually resolve conflicts](#manually-resolve-conflicts). For more details on core updates, see [WordPress and Drupal Core Updates](/core-updates).
+If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In that case, you should [manually resolve conflicts](#manually-resolve-conflicts). For more details on core updates, see [WordPress and Drupal Core Updates](/core-updates).
 
 ### Find a Site's Upstream URL
 
@@ -132,9 +132,9 @@ To resolve:
 
   ![An example of Visual Studio Code highlighting a merge conflict](../images/vscode-merge-conflict.png)
 
-1. Edit the conflict by either choose one of the two versions of the conflicting line(s), or editing a version containing both updates. Be sure to remove all the delineators notes above from the file.
+1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates. Ensure you remove all the delineator notes from the file.
 
-1. Once you've saved your changes, commit and push:
+1. After you've saved your changes, commit and push:
 
   ```bash{promptUser: user}
   git add wp-admin/about.php
@@ -161,4 +161,4 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
   git pull origin multidev
   ```
 
-1. Git will tell you which files are in conflict. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above.
+1. Git notifies you of which files are in conflict. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above.
