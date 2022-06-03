@@ -147,7 +147,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 1. _Optional_ : Set or increment the current configuration version. This step can be skipped initially. Only perform this step if you are prompted to update the Composer config version.
 
-     Confirm the version:
+     - Confirm the version:
 
         ```bash{outputLines:2}
         composer config version
