@@ -31,7 +31,7 @@ Follow the steps below to use New Relic with Splunk and Fastly on Pantheon.
 
 1. Complete the steps to [Activate New Relic Performance Monitoring](/new-relic#activate-new-relic-performance-monitoring) on Pantheon.
 
-1. Complete the steps to [create and access your New Relic account](/docs/new-relic#new-relic-performance-monitoring-access).
+1. Complete the steps to [create and access your New Relic account](/new-relic#new-relic-performance-monitoring-access).
 
 1. Verify that you have the [Fastly prerequisites](https://docs.fastly.com/en/guides/log-streaming-newrelic-logs#prerequisites) for New Relic.
 
