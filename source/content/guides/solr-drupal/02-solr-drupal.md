@@ -51,9 +51,10 @@ Ensure you review our documentation on [Git](/git), [Composer](/guides/composer)
 
 <TabList>
 
-<Tab title="Mac" id="mac-user" active={true}>
+<Tab title="Mac" id="mac-user">
   
-Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
+Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. 
+Restart the shell or terminal environment after entering the following command:
 
   ```shell{promptUser:user}
   brew install git composer php@7.4
@@ -62,9 +63,14 @@ Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP
 
 <Tab title="Windows" id="win-user">
       
-Windows users can install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows) and [Git](https://git-scm.com/download/win), and might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
+Windows users should install the following:
+* [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
+* [Git](https://git-scm.com/download/win)
+  
+Windows users might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
 
 </Tab>
+  
 </TabList>
 
 ### Pantheon Environments
