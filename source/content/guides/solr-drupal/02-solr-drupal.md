@@ -51,7 +51,7 @@ Ensure you review our documentation on [Git](/git), [Composer](/guides/composer)
 
 <TabList>
 
-<Tab title="Mac" id="mac-user">
+<Tab title="Mac" id="mac" active={true}>
   
 Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. 
 Restart the shell or terminal environment after entering the following command:
@@ -63,11 +63,10 @@ Restart the shell or terminal environment after entering the following command:
 
 <Tab title="Windows" id="win-user">
       
-Windows users should install the following:
+Windows users should install the following dependencies:
 * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
 * [Git](https://git-scm.com/download/win)
-  
-Windows users might need to install the [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package to satisfy some dependencies.
+* [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
 
 </Tab>
   
