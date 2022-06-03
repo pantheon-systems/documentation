@@ -69,7 +69,7 @@ terminus site:info <site> --field=upstream
 
 ## Manually Resolve Conflicts
 
-Steps to reslove merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
+Steps to resolve merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
 
 ### Resolve Delete/Modify Conflicts
 
