@@ -156,7 +156,7 @@ It is not possible to set environment variables on Pantheon. However, there are 
 
 ### Terminus Secrets Plugin
 
-You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private filesystem. Your PHP will look similar to the code example below with the third line modified for the key your are configuring.
+You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below with the third line modified for the key you are configuring.
 
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
@@ -168,11 +168,11 @@ $config['example_integration.settings']['apikey'] = $secrets_data['example_api_k
 
 You can manually create and add files to the `/files/private` directory for scenarios that are not supported by the Terminus Secrets plugin. For example, when secrets in the Dev and Live environments are different. 
 
-1. Create your files manually in the `/files/private` directory for each case required:
+1. Create your files manually in the `/files/private` directory for each case required, for example:
 
-    files/private/dev.secrets.json
-    /files/private/test.secrets.json
-    /files/private/live.secrets.json
+    - `/files/private/dev.secrets.json`
+    - `/files/private/test.secrets.json`
+    - `/files/private/live.secrets.json`
 
 1. Add the code below to your `settings.php` file.
 
