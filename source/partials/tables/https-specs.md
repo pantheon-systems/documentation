@@ -5,7 +5,7 @@
 | **Inbound IP**                                                        | Static (shared)                 | Static (shared)                       |
 | **Client Support**                                                    | 95.55% of Browsers <br />Some very old browsers not supported <sup> [1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> * |
 | [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts)     | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts) * |
-| **Protocol**                                                          | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
+| **Protocol**                                                          | TLS 1.3 with SNI                | TLS 1.3 with SNI                      |
 | **Ciphers**                                                           | No Weak 3DES cipher             | No Weak 3DES cipher                   |
 | **Delivery**                                                          | [Global CDN](/global-cdn)  | [Global CDN](/global-cdn)        |
 | **Encryption Endpoint**                                               | Application Container           | Application Container                 |
