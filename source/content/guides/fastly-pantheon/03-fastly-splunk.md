@@ -31,7 +31,7 @@ Follow the steps below to use Splunk with your Fastly and Pantheon with AGCDN ac
 
 1. Verify that you have the [prerequisites](https://docs.fastly.com/en/guides/log-streaming-splunk#prerequisites).
 
-1. Complete the steps to add [Splunk as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-splunk#adding-splunk-as-a-logging-endpoint).
+1. Complete the steps to [add Splunk as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-splunk#adding-splunk-as-a-logging-endpoint).
 
 1. Review the [recommended log format](https://docs.fastly.com/en/guides/log-streaming-splunk#recommended-log-format).
 
@@ -44,7 +44,7 @@ Note that this method does not require a Fastly account or use of Pantheon's AGC
 
 1. Complete the steps to [collect your logs](/logs#collect-logs).
 
-1. Upload your logs to Splunk for processing.
+1. [Upload your logs to Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.6/Data/Uploaddata) for processing.
 
 
 ## See Also

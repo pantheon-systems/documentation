@@ -1,7 +1,7 @@
 ---
 title: Fastly on Pantheon
 subtitle: Integrate Your Fastly Account with Pantheon's New Relic
-description: Learn how to use New Relic with your Fastly account.
+description: Learn how to use New Relic with your Fastly account on Pantheon.
 categories: [develop]
 tags: [cms]
 contributors: [whitneymeredith]

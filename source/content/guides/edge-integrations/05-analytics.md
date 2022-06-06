@@ -305,3 +305,8 @@ It is useful to add audiences to your Goals. Tying this back to our previous Rec
 You can also observe how different audiences convert towards the same Goal.
 
 ![Compared goals](../../../images/guides/edge-integrations/ei-analytics-35-compared-goals.png)
+
+
+## See Also
+
+- [Integrate Your Fastly on Pantheon Account with Splunk](/guides/fastly-pantheon/fastly-splunk)
