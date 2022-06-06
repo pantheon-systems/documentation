@@ -158,11 +158,35 @@ It is not possible to set environment variables on Pantheon. However, there are 
 
 You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below with the third line modified for the key you are configuring.
 
+
+<TabList>
+
+<Tab title="WordPress" id="wp-example" active={true}>
+
+WordPress example code:
+
+```bash
+$secrets_json_text = file_get_contents('/files/private/secrets.json');
+$secrets_data = json_decode($secrets_json_text, TRUE);
+define('EXAMPLE_API_KEY', $data['example_api_key']);
+```
+
+</Tab>
+
+<Tab title="Drupal" id="drupal-example">
+
+Drupal example code:
+
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
 $secrets_data = json_decode($secrets_json_text, TRUE);
 $config['example_integration.settings']['apikey'] = $secrets_data['example_api_key'];
 ```
+
+</Tab>
+
+</TabList>
+
 
 ### Manual File Creation
 
@@ -174,11 +198,48 @@ You can manually create and add files to the `/files/private` directory for scen
     - `/files/private/test.secrets.json`
     - `/files/private/live.secrets.json`
 
-1. Add the code below to your `settings.php` file.
+1. Update your PHP file using the code examples below as a reference.
 
-    Drupal Example
+    - Note the code below uses Sengrid as an example. You will need to modify the code for the specific key you are configuring. 
 
-      ```php
+<TabList>
+
+<Tab title="WordPress" id="wp-example" active={true}>
+
+1. Add the code to your `wp-config.php` file and modify it as necessary for the specific key you are configuring:
+
+```php
+if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+	switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+    case 'live':
+      // keys for production env
+      $secrets_filename = 'live.secrets.json';
+      break;
+    case 'test':
+      // keys for staging env
+      $secrets_filename = 'test.secrets.json';
+      break;
+    default:
+      // keys for dev and multidev envs
+      $secrets_filename = 'dev.secrets.json';
+      break;
+  }
+  if (isset($secrets_filename)) {
+    $secrets_json_text = file_get_contents('/files/private/' . $secrets_filename);
+    $secrets_data = json_decode($secrets_json_text, TRUE);
+
+    define('SENDGRID_API_KEY', $data['sendgrid_api_key']);
+    define('SOME_OTHER_OPTION', $data['other_key_example']);
+}
+```
+
+</Tab>
+
+<Tab title="Drupal" id="drupal-example">
+
+1. Add the code below to your `settings.php` file and modify it as necessary for the specific key you are configuring:
+
+```php
         if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 	    switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
       case 'live':
@@ -202,6 +263,12 @@ You can manually create and add files to the `/files/private` directory for scen
     $config['some_other_config_override']['value'] = $secrets_data['other_key_example'];
     }
     ```
+```
+
+</Tab>
+
+</TabList>
+     
 
 ### Lockr
 
