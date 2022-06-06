@@ -30,5 +30,9 @@ Media captions and transcripts.
 
 ## Color and contrast
 
+## Avoid tables
+
+The World Wide Consortium no longer considers tables used in layout to be a good practice, for the sake of accessibility across multiple different interfaces and devices. Layout tables are complex, and this can be difficult for screen readers to comprehend, therefore complicating accessibility. In an attempt to separate content and structure from the physical presentation of a website, do not include tables as part of your plan for layout with your new site.
+
 
 

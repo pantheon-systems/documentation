@@ -12,23 +12,32 @@ anchorid: accessibility/tools
 editpath: accessibility/06-tools.md
 ---
 
-This section provides an overview of the tools and techniques to improve your website's accessibility.
+## Built-in Tools
 
-## Alternative text descriptions
+This section provides an overview of the tools our platform offers to improve your website's accessibility.
 
-Alt text (alternative text attributes) within HTML code describes the appearance of an image on a page. 
+### Pantheon
 
-Adding alt text to images ensures a description of the image is available whenever an image containing content can't be seen. This is crucial to users of assistive devices (like screen readers), to users with slow connection speeds, and to search engine crawlers when indexing an image. It's easy to do, and improves both user experience and page SEO.
+- [Custom Upstreams](/custom-upstream): Once you've built an accessible site, you can use it to create other sites.
+- [Autopilot](/guides/autopilot): Once your site is compliant, use Autopilot to ensure you don't fall out of compliance.
+- [WebOps Workflow](/pantheon-workflow): Use the Pantheon WebOps Workflow to run your manual and automated tests before going live.
 
-Decorative images, and There are a number of excellent resources on how to write good alt text, including guides by [Mozilla](https://moz.com/learn/seo/alt-text), [](), and [](). Keep it short, describe the meaning the image intends to convey rather than what's in the image. 
+### Drupal Tools
 
-When adding alt text for form buttons that use an image as a "submit" button, describe the function of the button as well, for example "submit sign up form". 
+- [Drupal Accessibility Features](https://www.drupal.org/docs/accessibility/drupal-accessibility-features)
+- [Contributed Modules for Extending Accessibility in Drupal]([https://](https://www.drupal.org/docs/accessibility/contributed-modules-for-extending-accessibility-in-drupal))
 
-### Media captions, transcripts
+### Wordpress Tools
 
-Media captions and transcripts.
+- [WP Accessibility Plugin]([https://](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
+- [Useful Plugins](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/other-plugins-to-improve-accessibility/)
 
-## Color and contrast
+## External Tools
 
+### Automated Testing
+
+Adding automated accessibility testing to your site's build process is a key tool to maintaining and improving your site's accessibility. 
+
+- [Add Lighthouse comparison tests to CI builds](/guides/frontend-performance/diagnostics#lighthouse)
 
 
