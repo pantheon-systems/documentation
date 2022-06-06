@@ -69,20 +69,20 @@ The next step is to post the `schema.xml`, which describes Drupal fields to the 
 
 1. Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr) > click **Post schema**.
 
-  - In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, 
+    - In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, 
 
 1. Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
 
-  ```php:title=settings.php
-  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
-  // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
-  // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/search_api_solr/solr-conf/solr-3.x/schema.xml';
-  // or if you have a contrib folder for modules use
-  // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
-  // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/search_api_solr/solr-conf/solr-3.x/schema.xml';
-  }
-  ```
+    ```php:title=settings.php
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/search_api_solr/solr-conf/solr-3.x/schema.xml';
+    // or if you have a contrib folder for modules use
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/search_api_solr/solr-conf/solr-3.x/schema.xml';
+    }
+    ```
 
 <Alert title="Note" type="info">
 
