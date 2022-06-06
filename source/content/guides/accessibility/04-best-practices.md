@@ -49,7 +49,7 @@ The World Wide Consortium no longer considers tables used in layout to be a good
 
 
 
-## Alt text for the <image> tag
+## Alt text for the \<image\> tag
 
 The required alt attribute describes the appearance or function of an image, and is presented as alternate text for an image if the image cannot be displayed.  [Alt text decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) helps determine when you should use alternative text.
 
@@ -59,11 +59,11 @@ Don’t use the title attribute. The title attribute is not read aloud by screen
 
 SEO: Alt attributes provide better image context/descriptions to search engine crawlers, helping them to index an image properly.
 
-Non-decorative images: use alt="[description of the image]" attributes for all non-decorative images. 
+Non-decorative images: use alt="description of the image" attributes for all non-decorative images. 
 
 Decorative images: Include an empty alt="" attribute is preferred. Bonus points if you can add aria-hidden="true" as well. 
 
-e.g. <img src='/img/mybackgroundimage.png' alt="" aria-hidden="true" />
+e.g. \<img src='/img/mybackgroundimage.png' alt="" aria-hidden="true" /\>
 
 Length: many screen readers cut off at 125 characters
 
@@ -83,7 +83,7 @@ In general, GIFs and animated emojis are not impacted by reduced motion media qu
 
 Use the media query, and for reduced motion substitute a still image for those who prefer reduced motion. 
 
-Use a button to control the animation. Chris Coyier has a good write-up on [progressive enhancement for accessible GIFs](https://css-tricks.com/gifs-and-prefers-reduced-motion/) using the <picture> element for React.
+Use a button to control the animation. Chris Coyier has a good write-up on [progressive enhancement for accessible GIFs](https://css-tricks.com/gifs-and-prefers-reduced-motion/) using the \<picture\> element for React.
 
 For community messaging use (eg Slack, Discord), consider restricting the use of animated GIFs and custom emojis, and add posting guidelines to help inform content creators.
 
