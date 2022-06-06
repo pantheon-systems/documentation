@@ -49,31 +49,20 @@ Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new
 
 Ensure you review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
 
-<TabList>
+* Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
-<Tab title="Mac" id="mac-u" active={true}>
-  
-Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
+    ```shell{promptUser:user}
+    brew install git composer php@7.4
+    ```
 
-  ```shell{promptUser:user}
-  brew install git composer php@7.4
-  ```
+* Windows users should install the following dependencies:
+  
+  * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
+  
+  * [Git](https://git-scm.com/download/win)
+  
+  * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
 
-</Tab>
-
-<Tab title="Windows" id="windows-u">
-      
-Windows users should install the following dependencies:
-  
-* [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-  
-* [Git](https://git-scm.com/download/win)
-  
-* The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
-
-</Tab>
-  
-</TabList>
 
 ### Pantheon Environments
 
@@ -111,13 +100,12 @@ You must configure the `pantheon.yml` for the platform environment after you ena
 
 1. Specify the Solr version in the `pantheon.yml` before you install the Drupal search module to avoid incompatibilities.
 
-  - Currently, Solr 8 is supported for Drupal 9 sites. Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
+    - Currently, Solr 8 is supported for Drupal 9 sites. Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
 
-    ```yml:title=pantheon.yml
-    search:
-      version: 8
-    ```
-
+      ```yml:title=pantheon.yml
+      search:
+        version: 8
+      ```
 1. Push the changes to `pantheon.yml`.
 
    - A confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/guides/integrated-composer) to update your site modules.
@@ -159,16 +147,14 @@ To install the Search API Pantheon module, switch to your local machine.
 1. Clone the Git repository for the desired environment from the Pantheon Site Dashboard.
 1. Enter the following command in the terminal to run `composer install`:
 
-   ```shell{promptUser:user}
-   composer install
-   ```
-
+     ```shell{promptUser:user}
+     composer install
+     ```
 1. Add the Search API Pantheon module as a required dependency:
 
-   ```shell{promptUser:user}
-  composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
-   ```
-
+     ```shell{promptUser:user}
+    composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
+     ```
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
 
@@ -176,12 +162,12 @@ To install the Search API Pantheon module, switch to your local machine.
 
 You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush. 
 
-1. Enter the following command, replacing `$ENV` with the environment:
+Enter the following command, replacing `$ENV` with the environment:
 
-  ```shell{promptUser:user}
-  terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
-  ```
-
+    ```shell{promptUser:user}
+    terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
+    ```
+    
 You might also want to enable the modules from the site’s Extend page located in `/admin/modules`.
 
 ## Configure Pantheon Search
@@ -205,7 +191,6 @@ The Index status page should indicate that the newly created index was successfu
 Follow the steps below to add fields to your new index.
 
 1. Click **Fields** > click **Add fields**. 
-
 1. Click **Save changes** when you are finished.
 
 ### Index Content
@@ -213,22 +198,17 @@ Follow the steps below to add fields to your new index.
 Follow the steps below to index existing content.
 
 1. Click **Index now** on the **View** tab of your index’s Overview page.
-
 1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. 
 
-  - Both the server and index you just created should be displayed on the page.
+Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
 
 1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
-
 1. Select the **Pantheon Search Admin** tab to save and post the schema information. 
-
 1. Enable the **Execute Pantheon Search admin task** permission for users who need access to the **Pantheon Search Admin** tab.
-
 1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
-
-  - The server responds with a `200 - OK` status for each schema file posted.
+   - The server responds with a `200 - OK` status for each schema file posted.
   
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal 
 
