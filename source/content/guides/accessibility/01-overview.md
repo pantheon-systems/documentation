@@ -21,7 +21,7 @@ This guide will help you improve the experience for severyone who uses your site
 
 ## Key Concepts
 
-If Web Accessibility is new to you, these concepts can help you on your journey.
+If Web Accessibility is new to you, these concepts will help you on your journey.
 
 ### Types of Disabilities
 
