@@ -7,6 +7,7 @@ tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
 layout: guide
+showtoc: true
 permalink: docs/guides/accessibility
 anchorid: accessibility
 editpath: accessibility/01-overview.md

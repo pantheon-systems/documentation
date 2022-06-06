@@ -7,6 +7,7 @@ tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"
 layout: guide
+showtoc: true
 permalink: docs/guides/accessibility/get-started
 anchorid: accessibility/get-started
 editpath: accessibility/02-get-started.md
@@ -45,7 +46,7 @@ To optimize an existing site for accessibility,
 
    There are a number of tools available to help create an inventory and assessment of the conformance of your existing site pages to WCAG guidelines. The Web Accessibility Initiative has a number of resources to help with this process:
 
-   - [Easy Checks — A First Review of Web Accessibility]([https://](https://www.w3.org/WAI/test-evaluate/preliminary/))
+   - [Easy Checks — A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/))
    - [List of Web Accessibility Evaluation Tools](https://www.w3.org/WAI/ER/tools/)
 
 1. Prioritize the changes you will make to maximize impact.

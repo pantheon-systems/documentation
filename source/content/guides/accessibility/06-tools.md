@@ -7,6 +7,7 @@ tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
 layout: guide
+showtoc: true
 permalink: docs/guides/accessibility/tools
 anchorid: accessibility/tools
 editpath: accessibility/06-tools.md
@@ -29,7 +30,7 @@ This section provides an overview of the tools our platform offers to improve yo
 
 ### Wordpress Tools
 
-- [WP Accessibility Plugin]([https://](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
+- [WP Accessibility Plugin](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
 - [Useful Plugins](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/other-plugins-to-improve-accessibility/)
 
 ## External Tools
