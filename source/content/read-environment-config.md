@@ -163,7 +163,7 @@ You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/te
 
 <Tab title="WordPress" id="wp-example" active={true}>
 
-WordPress example code:
+1. Modify and use the code example below to write secrets. 
 
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
@@ -175,7 +175,7 @@ define('EXAMPLE_API_KEY', $data['example_api_key']);
 
 <Tab title="Drupal" id="drupal-example">
 
-Drupal example code:
+1. Modify and use the code example below to write secrets.
 
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
@@ -200,13 +200,13 @@ You can manually create and add files to the `/files/private` directory for scen
 
 1. Update your PHP file using the code examples below as a reference.
 
-    - Note the code below uses Sengrid as an example. You will need to modify the code for the specific key you are configuring. 
+    - Note that the code below uses Sengrid as an example. You will need to modify the code for the specific key you are configuring. 
 
 <TabList>
 
 <Tab title="WordPress" id="wp-example" active={true}>
 
-1. Add the code to your `wp-config.php` file and modify it as necessary for the specific key you are configuring:
+3. Add the code to your `wp-config.php` file and modify it as necessary for the specific key you are configuring:
 
 ```php
 if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
