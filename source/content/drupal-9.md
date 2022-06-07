@@ -8,7 +8,7 @@ contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-02-08"
 ---
 
-Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
+Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/drupal-9-migration).
 
 Since Drupal 9 on Pantheon is in active development and includes a number of significant changes from previous versions of Drupal, this doc outlines the biggest changes and answers frequently asked questions.
 
@@ -50,9 +50,9 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Upgrade or Migrate to Drupal 9
 
-To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/guides/drupal-9-migration).
+To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/drupal-9-migration).
 
-To check an existing site's compatibility to upgrade, visit the appropriate [Drupal Migration Guide](/guides/drupal-9-migration).
+To check an existing site's compatibility to upgrade, visit the appropriate [Drupal Migration Guide](/drupal-9-migration).
 
 ## Gutenberg for Drupal 9
 
@@ -70,7 +70,7 @@ We recommend monitoring your site's traffic using [Metrics in the Site Dashboard
 
 ## Troubleshooting and Support
 
-See the appropriate [Drupal 9 Migration Guide](/guides/drupal-9-migration) for help troubleshooting common issues with Drupal 9 with Integrated Composer.
+See the appropriate [Drupal 9 Migration Guide](/drupal-9-migration) for help troubleshooting common issues with Drupal 9 with Integrated Composer.
 
 ### Where can I report an issue?
 
