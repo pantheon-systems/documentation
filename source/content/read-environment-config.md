@@ -7,7 +7,7 @@ tags: [code, database, files, redis]
 
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your site's code.
 
-Database credentials, [Object Cache](/object-cache) (Redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+Database credentials, [Object Cache](/object-cache)(Redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -158,7 +158,6 @@ It is not possible to set environment variables on Pantheon. However, there are 
 
 You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below with the third line modified for the key you are configuring.
 
-
 <TabList>
 
 <Tab title="WordPress" id="wp-example" active={true}>
@@ -187,7 +186,6 @@ $config['example_integration.settings']['apikey'] = $secrets_data['example_api_k
 
 </TabList>
 
-
 ### Manual File Creation
 
 You can manually create and add files to the `/files/private` directory for scenarios that are not supported by the Terminus Secrets plugin. For example, when secrets in the Dev and Live environments are different. 
@@ -200,13 +198,13 @@ You can manually create and add files to the `/files/private` directory for scen
 
 1. Update your PHP file using the code examples below as a reference.
 
-    - Note that the code below uses Sengrid as an example. You will need to modify the code for the specific key you are configuring. 
+    - Note that the code below uses SendGrid as an example. You will need to modify the code for the specific key you are configuring. 
 
 <TabList>
 
 <Tab title="WordPress" id="wp-example" active={true}>
 
-3. Add the code to your `wp-config.php` file and modify it as necessary for the specific key you are configuring:
+1. Add the code to your `wp-config.php` file and modify it as necessary for the specific key you are configuring:
 
 ```php
 if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
@@ -268,13 +266,12 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 </Tab>
 
 </TabList>
-     
 
 ### Lockr
 
-You can use [Lockr](/guides/lockr) for maximum security. Lockr provides a simple-to-use developer interface with a managed scalable cloud key management system. Review the [Install Lockr via the Lockr Terminus Plugin](/guides/lockr#install-lockr-via-the-lockr-terminus-plugin) guide section for installation steps.
+You can use [Lockr](/guides/lockr) for maximum security. Lockr provides a simple-to-use developer interface with a scalable cloud key management system. Review the [Install Lockr via the Lockr Terminus Plugin](/guides/lockr#install-lockr-via-the-lockr-terminus-plugin) guide section for installation steps.
 
-## See Also
+## More Resources
 
 - [Pantheon Secure Integration](/secure-integration)
 
