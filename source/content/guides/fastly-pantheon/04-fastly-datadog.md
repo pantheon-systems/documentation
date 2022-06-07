@@ -11,7 +11,7 @@ permalink: docs/guides/fastly-pantheon/fastly-datadog
 anchorid: fastly-datadog
 ---
 
-This section provides information on integrating your Fastly on Pantheon account with [Datadog](/https://www.datadoghq.com/).
+This section provides information on integrating your Fastly on Pantheon account with [Datadog](https://www.datadoghq.com/).
 
 ## Before You Begin
 
@@ -37,7 +37,7 @@ Follow the steps below to use Datadog with your Fastly on Pantheon account.
 
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 
-- [Datadog](/https://www.datadoghq.com/)
+- [Datadog](https://www.datadoghq.com/)
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 
