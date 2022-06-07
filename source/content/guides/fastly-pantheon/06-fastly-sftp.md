@@ -28,9 +28,7 @@ Follow the steps below to send data to your SFTP sever from your Fastly on Panth
 
 1. Review the [example logging format](https://docs.fastly.com/en/guides/log-streaming-sftp#example-format).
 
-## See Also
-
-- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+## More Resources
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 

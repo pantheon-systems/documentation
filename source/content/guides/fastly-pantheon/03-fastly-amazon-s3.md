@@ -31,9 +31,11 @@ Follow the steps below to use Amazon S3 with your Fastly on Pantheon account.
 
 1. Review the [example logging format](https://docs.fastly.com/en/guides/log-streaming-amazon-s3#example-format).
 
-## See Also
+## More Resources
 
-- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+- [AWS S3 Setup for WordPress](/wordpress-s3)
+
+- [AWS S3 Setup for Drupal](/drupal-s3)
 
 - [Amazon S3](https://aws.amazon.com/)
 

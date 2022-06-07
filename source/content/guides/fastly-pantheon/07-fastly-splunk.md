@@ -45,7 +45,7 @@ Note that this method does not require a Fastly account or use of Pantheon's AGC
 1. [Upload your logs to Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.6/Data/Uploaddata) for processing.
 
 
-## See Also
+## More Resources
 
 - [Pantheon Logs](/logs#available-logs)
 

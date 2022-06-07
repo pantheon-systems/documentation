@@ -15,10 +15,6 @@ Pantheon partners with [Fastly](https://www.fastly.com/) to bring you a fast and
 
 Using Fastly on the Pantheon platform to manage your site provides many benefits, including:
 
-- Building logic at the edge
-
-- Content personalization through [Edge Integrations](/guides/edge-integrations/) 
-
 - Integration with:
     - [Amazon S3](https://aws.amazon.com/)
     - [Datadog](https://www.datadoghq.com/)
@@ -32,17 +28,29 @@ Using Fastly on the Pantheon platform to manage your site provides many benefits
 
 - Image Optimizer (IO) as an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
 
-## Take Advantage of Fastly with Pantheon's Advanced Global CDN 
+## Take Advantage of Fastly on Pantheon 
 
-Your website must be connected to Pantheon’s [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) to use Fastly on the Pantheon platform. You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and complete the appropriate configuration for your WordPress or Drupal site if you plan on using content personalization in addition to Fastly.
+Fastly can be used with the [Global CDN](/global-cdn) that comes automatically with your Pantheon account. Log extracts can be requested from your Customer Success Engineer. Standard analytics include all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
-### How do I get Advanced Global CDN?
+Key content to review in your log report include:
 
-[Contact us](https://pantheon.io/contact-us?docs=) to learn how to get Advanced Global CDN for your organization. Our [Professional Services](/guides/professional-services) team will talk through your needs and set up, configure, and maintain your Fastly edge configurations.
+- Disproportionate patterns of requests and 404s indicate possible exploits.
 
-## See Also
+- Too many requests to the index paths may indicate a volumetric attack against the domain.
 
-- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+- Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
+
+- Known exploit and excess traffic paths.
+
+You can refer to the following docs for common caching issues:
+
+- [Caching: Advanced Topics](/caching-advanced-topics)
+- [Debug Common Cache Busters](/guides/frontend-performance/caching#troubleshoot-caching-issues)
+- [Traffic Limits and Overages](/traffic-limits)
+
+You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and complete the appropriate configuration for your WordPress or Drupal site if you plan on using content personalization in addition to Fastly.
+
+## More Resources
 
 - [Edge Integrations](/guides/edge-integrations/)
 

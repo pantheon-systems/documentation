@@ -29,9 +29,7 @@ Follow the steps below to use Syslog with your Fastly on Pantheon account.
 
 1. Review [Syslog firewall considerations](https://docs.fastly.com/en/guides/log-streaming-syslog#firewall-considerations).
 
-## See Also
-
-- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+## More Resources
 
 - [Fastly](https://explore.fastly.com)
 

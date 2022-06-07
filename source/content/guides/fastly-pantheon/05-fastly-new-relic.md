@@ -34,7 +34,7 @@ Follow the steps below to use New Relic with your Fastly on Pantheon account.
 
 1. Complete steps to [add New Relic logs as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-newrelic-logs#adding-new-relic-logs-as-a-logging-endpoint).
 
-## See Also
+## More Resources
 
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 

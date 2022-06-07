@@ -31,7 +31,7 @@ Follow the steps below to use Datadog with your Fastly on Pantheon account.
 
 1. Review the [using the JSON logging format](https://docs.fastly.com/en/guides/log-streaming-datadog#using-the-json-logging-format) documentation.
 
-## See Also
+## More Resources
 
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 

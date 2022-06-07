@@ -13,6 +13,16 @@ anchorid: fastly-faq
 
 This section provides answers to frequently asked questions about using Fastly on Pantheon.
 
+## Can I use my own Fastly account with the Pantheon Global CDN?
+
+Yes. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header so that WordPress can build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
+
+```php:title=wp-config.php
+if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
+  $_SERVER['HTTPS'] = 'on';
+}
+```
+
 ## Are there other logging endpoints I can use with my Fastly on Pantheon account?
 
 Yes. You can use any of the [Fastly logging endpoints](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) if you have [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly).
@@ -41,7 +51,7 @@ The request will timeout at 59 seconds if it passes through port 80 and 443.
 
 </Alert>
 
-## See Also
+## More Resources
 
 - [Fastly Resources FAQ](https://www.fastly.com/resources/?q=faq)
 

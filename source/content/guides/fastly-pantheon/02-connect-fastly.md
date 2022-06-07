@@ -21,7 +21,7 @@ Verify that you have following before you begin:
 
 - The ability to modify your domain's nameservers
 
-- You have a Pantheon account and are currently using Pantheon’s [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+- You have a [Pantheon account](https://pantheon.io/register) with a configured WordPress or Drupal site
 
 - A [Fastly account](https://www.fastly.com/signup/)
 
