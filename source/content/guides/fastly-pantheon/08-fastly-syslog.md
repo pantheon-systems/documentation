@@ -27,6 +27,10 @@ Follow the steps below to use Syslog with your Fastly on Pantheon account.
 
 1. Review the [example logging format](https://docs.fastly.com/en/guides/log-streaming-syslog#example-format).
 
+1. Add [separators or static strings](https://pantheon.io/register) if needed.
+
+1. Review [Syslog facility and severity](https://docs.fastly.com/en/guides/log-streaming-syslog#syslog-facility-and-severity) information.
+
 1. Review [Syslog firewall considerations](https://docs.fastly.com/en/guides/log-streaming-syslog#firewall-considerations).
 
 ## More Resources

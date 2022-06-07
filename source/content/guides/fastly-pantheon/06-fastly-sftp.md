@@ -20,7 +20,7 @@ Verify the following before you begin:
 - You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
 
 
-## Integrate Datadog with Your Fastly Account on Pantheon
+## Integrate SFTP with Your Fastly Account on Pantheon
 
 Follow the steps below to send data to your SFTP sever from your Fastly on Pantheon account.
 

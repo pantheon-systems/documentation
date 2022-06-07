@@ -13,9 +13,7 @@ anchorid: fastly-splunk
 
 This section provides steps on how to use [Splunk](https://www.splunk.com/) as a logging endpoint with your Pantheon account. You can do this either through a Fastly account connected to Pantheon or by manually uploading your Pantheon logs to Splunk.
 
-## Log Streaming with Splunk and Fastly on Pantheon
-
-### Before You Begin
+## Before You Begin
 
 Verify the following before you begin:
 

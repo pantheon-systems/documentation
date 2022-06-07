@@ -21,7 +21,7 @@ Verify the following before you begin:
 
 -  You have an [Amazon S3](https://portal.aws.amazon.com/billing/signup#/start/email) account
 
-## Integrate Datadog with Your Fastly Account on Pantheon
+## Integrate Amazon S3 with Your Fastly Account on Pantheon
 
 Follow the steps below to use Amazon S3 with your Fastly on Pantheon account.
 
