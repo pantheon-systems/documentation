@@ -69,7 +69,7 @@ You can learn more about how to use or manage the geolocation data in the [Geolo
 
 To validate that geolocation is working, open your browser inspector tools, click the Network tab (in Chrome and Firefox), and reload the page so that new data can be recorded and displayed. When you click on the page URL- usually listed first- and inspect the Response Headers, the relevant geolocation data will appear.
 
-![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/geo-audience-values2.png)
+![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/ei-wp-geo-headers.png)
 
 If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
 
