@@ -15,9 +15,9 @@ editpath: accessibility/02-get-started.md
 
 Making your site accessible doesn't just happen - you have to lay the groundwork and constantly assess your site.
 
-## WCAG Conformance Targets
+## Identify WCAG Conformance Targets
 
-Identify your target level of conformance to Web Content Accessibility Guidelines. The generally accepted target for accessibility is the latest version of [Web Content Accessibility Guidelines (WCAG) Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/). This may already be the standard specified in your organizational policy or it may be the legal requirement for your website.
+Identify your target level of conformance to Web Content Accessibility Guidelines. The generally accepted target for accessibility is the latest version of [Web Content Accessibility Guidelines (WCAG) Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/). This may already be the standard specified in your organizational policy, or it may be the legal requirement for your website.
 
 There are three levels of compliance:
 - Level A: the most basic features
@@ -26,7 +26,7 @@ There are three levels of compliance:
 
 You will need to determine which level you want your site to meet.  While ideally, your site would meet all requirements, it may not be feasible.  At a minimum, we recommend starting with the requirements in Level A, then moving on from there.  
 
-## New Sites
+## Building Compliant Sites
 
 The start of a new site design is the easiest time to build a sustainably accessible site. To do so:
 
@@ -38,18 +38,16 @@ The start of a new site design is the easiest time to build a sustainably access
 - Review and identify accessibility issues before launching your site.
 
 
-## Existing Sites
+## Making an Existing Site Compliant
 
 To optimize an existing site for accessibility, 
 
 1. Assess the site.
 
-   There are a number of tools available to help create an inventory and assessment of the conformance of your existing site pages to WCAG guidelines. The Web Accessibility Initiative has a number of resources to help with this process:
+   There are a number of tools available to help create an inventory and assessment of the conformance of your existing site pages to WCAG guidelines. The [Web Accessibility Initiative](https://www.w3.org/WAI/test-evaluate/preliminary/) has a number of resources to help with this process:
 
-   - [Easy Checks — A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/))
-   - [List of Web Accessibility Evaluation Tools](https://www.w3.org/WAI/ER/tools/)
 
-1. Prioritize the changes you will make to maximize impact.
+2. Prioritize the changes you will make to maximize impact.
 
    There are a number of factors to consider when prioritizing fixes:
    - Impact on users with disabilities: how much does the issue impact users?  Will they unable to perform key tasks? 
@@ -57,13 +55,13 @@ To optimize an existing site for accessibility,
    - Ease and speed of repair: is the fix easy, or will it require significant time and resources?
    - Repeating issues: Issues that turn up repeatedly can indicate issues with the underlying architecture, such as common code or templates.  Fixing these underlying issues can significantly improve your test results.
 
-1. Determine how you will test changes.
+3. Determine how you will test changes.
 
    It can be hard to know where to start with testing changes.  Here are some ideas to help:
    - Choose an automated testing tool.
    - Consider implementing a user testing program.  User testing can not only be an effective tool in your accessibility arsenal, it is a terrific tool to assess the overall effectiveness of your site.
 
-## Ongoing Maintenance
+## Maintaining Compliance
 
 Ensuring that your site is accessible is an ongoing job. Once you have done the initial assessment, consider integrating accessibility into your development process.  To do so:
 
@@ -73,6 +71,3 @@ Ensuring that your site is accessible is an ongoing job. Once you have done the 
 ## Pantheon Products and Features That Can Help
 
 Take advantage of Pantheon's products and features that help build accessible sites. Details are covered in the [Tools](/guides/accessibility/tools) section of this guide. 
-
-
-- 

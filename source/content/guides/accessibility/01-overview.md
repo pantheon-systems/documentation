@@ -15,15 +15,15 @@ editpath: accessibility/01-overview.md
 
 <dfn id="acc">Web accessibility</dfn> means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.  It includes all disabilities that affect access to the Web, including auditory, cognitive, physical, and more. 
 
-This guide provides an overview of how to optimize your website for accessibility, using tools and techniques integrated with the Pantheon WebOps workflow. 
+Making your site accessible not only benefits those with disabilities, but it also improves overall user experience across different devices and situations. It can increase your market share, manage legal risk, improve access to public sector revenue, and protect your brand. In addition, teams that embrace web accessibility find that by designing with a more diverse group of people in mind, they increase the likelihood of innovation.
 
 This guide will help you improve the experience for everyone who uses your site, future-proof its content, and build a sustainable accessibility practice across your WebOps teams. It will also help you identify areas where you may wish to use professional accessibility services and partners.
 
-If Web Accessibility is new to you, these concepts will help you on your journey.
+If web accessibility is new to you, the following concepts will help you on your journey.
 
 ## Types of Disabilities
 
-The [<dfn id="adalong">American with Disabilities Act</dfn> (<dfn id="ada">ADA</dfn>)](https://adata.org/faq/what-definition-disability-under-ada), defines a person with a disability as a person who has a physical or mental impairment that substantially limits one or more major life activity. This includes people who have a record of such an impairment, even if they do not currently have a disability. It also includes individuals who do not have a disability but are regarded as having a disability. The ADA also makes it unlawful to discriminate against a person based on that person’s association with a person with a disability.
+The [<dfn id="adalong">American with Disabilities Act</dfn> (<dfn id="ada">ADA</dfn>)](https://adata.org/faq/what-definition-disability-under-ada), defines a person with a disability as a person who has a physical or mental impairment that substantially limits at least one major life activity. 
 
 Disabilities can be divided into the following categories:
 
@@ -37,7 +37,7 @@ This is by no means an exhaustive list. You can find more details on each from t
 
 ## Web Content Accessibility Guidelines
 
-The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility Guidelines (WCAG)</dfn>](https://www.w3.org/WAI/standards-guidelines/wcag/) are an internationally accepted standard for website accessibility. WCAG documents provide detailed explanations and examples on how to make web content more accessible to people with disabilities. The current standard most used is [WCAG 2.1](https://www.w3.org/TR/WCAG21/); [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) is scheduled to be published in 2021. 
+The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility Guidelines (WCAG)</dfn>](https://www.w3.org/WAI/standards-guidelines/) are an internationally accepted standard for website accessibility. WCAG documents provide detailed explanations and examples on how to make web content more accessible to people with disabilities. The current standard and drafts can be found in the [WCAG 2 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/). 
 
 ## Principles of Accessibility and Success Criteria
 
@@ -53,7 +53,7 @@ For each guideline, there are testable success criteria at [three levels](https:
 
 ## Inclusive Design
 
-<dfn id="incdes">Inclusive Design</dfn> is a methodology that considers the full range of human diversity, with respect to ability, language, culture, and more.  It's intent is to create products whose experiences serve as many people as possible, including those with disabilities.
+<dfn id="incdes">Inclusive Design</dfn> is a methodology that considers the full range of human diversity, with respect to ability, language, culture, and more.  Its intent is to create products whose experiences serve as many people as possible, including those with disabilities.
 
 ## a11y
 
