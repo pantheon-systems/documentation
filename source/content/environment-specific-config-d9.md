@@ -165,3 +165,8 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 | settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not included by default on any Pantheon environment." /> |
 
 
+## More Resources
+
+- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+
+- [Reading Pantheon Environment Configuration](/read-environment-config)

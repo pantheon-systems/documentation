@@ -162,3 +162,12 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
   ```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
+
+
+## More Resources
+
+- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+
+- [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
+
+- [Reading Pantheon Environment Configuration](/read-environment-config)
