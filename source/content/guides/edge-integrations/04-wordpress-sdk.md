@@ -71,7 +71,9 @@ To validate that geolocation is working, open your browser inspector tools, clic
 
 ![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/ei-wp-geo-headers.png)
 
-If the plugin is installed and configured correctly, the `Audience` or `Audience-Set` headers in the `vary` field, which indicates that those headers are being used to vary the cache on the CDN.
+If the plugin is installed and configured correctly, the relevant geolocation header you are varying on (`P13n-Geo-Country-Code` by default) will appear as a value in the `vary` field, indicating that the header is being used to vary the cache on the CDN.
+
+![Chrome Developer Tools Vary Headers](../../../images/guides/edge-integrations/ei-wp-vary.png)
 
 ## Interests
 
