@@ -125,7 +125,7 @@ It runs after the value is pulled from the database, providing the ability to ov
 [`update_option()`](https://codex.wordpress.org/Function_Reference/update_option) should be avoided in this case, as the value is only being changed under specific conditions and a database write of the new value is not required.
 
 
-## See Also
+## More Resources
 
 - [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
 
