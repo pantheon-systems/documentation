@@ -85,9 +85,9 @@ You can read more about how to use or manipulate the interest data in the [Inter
 
 ### Test Interests
 
-You can validate that the interest tracking is working by clicking on multiple pages tagged with the same term 3 (or more, depending on your configuration) times, then going to the same Network tab in your browser inspector tools. This time, you should see a value for `interest` that matches the pages you navigated to.
+You can validate that the interest tracking is working by clicking on multiple pages tagged with the same term 3 (or more, depending on your configuration) times, then going to the same Network tab in your browser inspector tools. This time, you should see a value for `p13n-interest` that matches the pages you navigated to.
 
-![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-interest-value2.png)
+![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-wp-interest-header.png)
 
 ### Interests Code Samples
 
