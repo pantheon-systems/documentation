@@ -41,7 +41,7 @@ Use these values to determine which upstream a site is using:
 
 | Framework | Upstream | Site upstream is...
 |---|---|---
-|drupal8|https://github.com/pantheon-upstreams/drupal-project.git|drupal-recommended
+|drupal8|https://github.com/pantheon-upstreams/drupal-recommended.git|drupal-recommended
 |drupal8|https://github.com/pantheon-upstreams/drupal-project.git|drupal-project
 
 
