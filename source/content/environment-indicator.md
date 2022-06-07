@@ -164,7 +164,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
 
 
-## See Also
+## More Resources
 
 - [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
 
