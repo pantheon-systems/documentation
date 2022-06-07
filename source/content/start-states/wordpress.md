@@ -18,9 +18,9 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 #### <a name="20220524-1" class="release-update"></a>WordPress 6.0
 
-If you have updated the [Twenty Twenty-Two theme](https://wordpress.org/themes/twentytwentytwo/) bundled with Pantheon's WordPress upstream, for example with Autopilot or WP-CLI, then your site has conflicting commits with the latest WordPress 6.0 release.
+If you have updated the [Twenty Twenty-Two theme](https://wordpress.org/themes/twentytwentytwo/) bundled with Pantheon's WordPress upstream, for example with Autopilot or WP-CLI, your site has conflicting commits with the latest WordPress 6.0 release.
 
-Pantheon will automatically resolve these conflicts when the `Apply Updates` button is clicked on your dashboard by [removing](https://core.trac.wordpress.org/changeset/53286) conflicting `LICENSE.md` files within the `wp-content/themes` directory.
+Pantheon will automatically resolve these conflicts when you click the `Apply Updates` button on your dashboard by [removing](https://core.trac.wordpress.org/changeset/53286) conflicting `LICENSE.md` files within the `wp-content/themes` directory.
 
 ## Previous Releases
 
