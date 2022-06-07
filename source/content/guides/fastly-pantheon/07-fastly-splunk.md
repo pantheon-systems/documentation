@@ -19,8 +19,6 @@ This section provides steps on how to use [Splunk](https://www.splunk.com/) as a
 
 Verify the following before you begin:
 
-- You have a Pantheon account and are currently using Pantheon’s [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
-
 - You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
 
 - You have a [Splunk](https://www.splunk.com/) account

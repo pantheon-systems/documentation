@@ -18,15 +18,18 @@ This section provides steps on how to connect your Fastly account to your Panthe
 Verify that you have following before you begin:
 
 - A registered domain name
+
 - The ability to modify your domain's nameservers
-- A paid [Pantheon plan](/site-plan#purchase-a-new-plan)
+
+- You have a Pantheon account and are currently using Pantheon’s [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+
 - A [Fastly account](https://www.fastly.com/signup/)
 
 ## Connect Fastly to Pantheon
 
 Follow the steps below to connect your Fastly account to your Pantheon account.
 
-1. Sign in to your Fastly account.
+1. Sign in to your [Fastly account](https://www.fastly.com/signup/).
 
 1. Create a **New Service** and set the **Origin service address** to the Pantheon sub-domain specific to your main site's Live environment. 
 

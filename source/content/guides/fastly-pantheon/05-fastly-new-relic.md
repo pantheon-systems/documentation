@@ -19,8 +19,6 @@ Verify the following before you begin:
 
 - You have a [Pantheon account that supports New Relic](/new-relic#supported-site-plans)
 
-- You are currently using Pantheon’s [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
-
 - You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
 
 

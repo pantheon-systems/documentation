@@ -17,8 +17,6 @@ This section provides information on integrating your Fastly on Pantheon account
 
 Verify the following before you begin:
 
-- You have a Pantheon account and are currently using Pantheon’s [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
-
 - You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
 
 -  You have an [Amazon S3](https://portal.aws.amazon.com/billing/signup#/start/email) account

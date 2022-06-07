@@ -13,6 +13,10 @@ anchorid: fastly-faq
 
 This section provides answers to frequently asked questions about using Fastly on Pantheon.
 
+## Are there other logging endpoints I can use with my Fastly on Pantheon account?
+
+Yes. You can use any of the [Fastly logging endpoints](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) if you have [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly).
+
 ## How Can I Test My Fastly Caching Features?
 
 You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
@@ -40,3 +44,5 @@ The request will timeout at 59 seconds if it passes through port 80 and 443.
 ## See Also
 
 - [Fastly Resources FAQ](https://www.fastly.com/resources/?q=faq)
+
+- [Fastly logging endpoints](https://docs.fastly.com/en/guides/integrations#_logging-endpoints)
