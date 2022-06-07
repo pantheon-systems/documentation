@@ -23,11 +23,10 @@ Verify the following before you begin:
 
 - You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
 
-- You have a [Splunk](https://www.splunk.com/) account
 
-## Integrate New Relic with Your Splunk and Fastly Accounts on Pantheon
+## Integrate New Relic with Your Fastly Account on Pantheon
 
-Follow the steps below to use New Relic with Splunk and Fastly on Pantheon.
+Follow the steps below to use New Relic with your Fastly on Pantheon account.
 
 1. Complete the steps to [Activate New Relic Performance Monitoring](/new-relic#activate-new-relic-performance-monitoring) on Pantheon.
 
