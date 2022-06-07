@@ -83,13 +83,13 @@ This section is intended to serve as a quick reference and an expanded resource 
 
 ## Digital Animations and GIFs
 
-- [Introduction to the CSS Reduced Motion Media Query | CSS Tricks]([https://](https://css-tricks.com/introduction-reduced-motion-media-query/))
+- [Introduction to the CSS Reduced Motion Media Query | CSS Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-- [Accessible Animations in React (includes code snippet!) | Josh W Comeau]([https://](https://www.joshwcomeau.com/react/prefers-reduced-motion/))
+- [Accessible Animations in React (includes code snippet!) | Josh W Comeau]((https://www.joshwcomeau.com/react/prefers-reduced-motion/)
 
-- [Building Accessible Sites With Gatsby (workshop) - Reducing Motion | Marcy Sutton]([https://](https://marcysutton.github.io/gatsby-a11y-workshop/animation/))
+- [Building Accessible Sites With Gatsby (workshop) - Reducing Motion | Marcy Sutton](https://marcysutton.github.io/gatsby-a11y-workshop/animation/)
 
-- [Designing Safer Web Animation for Motion Sensitivity | article, A List Apart]([https://](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)): Includes overview of vestibular disorders, and some good best practices around creating & using inclusive animations.
+- [Designing Safer Web Animation for Motion Sensitivity | article, A List Apart](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/): Includes overview of vestibular disorders, and some good best practices around creating & using inclusive animations.
 
 - How much motion is too much? https://uxdesign.cc/accessible-interaction-design-38db3b72c3ae: UX Collective’s overview includes the anatomy of motion in web design, when and how it’s useful, and motion rules.
 

@@ -26,7 +26,7 @@ This section provides an overview of the tools our platform offers to improve yo
 ### Drupal Tools
 
 - [Drupal Accessibility Features](https://www.drupal.org/docs/accessibility/drupal-accessibility-features)
-- [Contributed Modules for Extending Accessibility in Drupal]([https://](https://www.drupal.org/docs/accessibility/contributed-modules-for-extending-accessibility-in-drupal))
+- [Contributed Modules for Extending Accessibility in Drupal](https://www.drupal.org/docs/accessibility/contributed-modules-for-extending-accessibility-in-drupal)
 
 ### Wordpress Tools
 
