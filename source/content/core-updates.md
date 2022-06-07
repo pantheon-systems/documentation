@@ -26,7 +26,7 @@ Drupal 8 sites managing core with Composer are not compatible with Pantheon's On
 
 - [Convert the site to Integrated Composer](/guides/composer-convert)
 
-- [Update to Drupal 9](/guides/drupal-9-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
+- [Update to Drupal 9](/drupal-9-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
 
 ## Non-Composer-Managed WordPress and Drupal 7 Sites
 

@@ -43,7 +43,7 @@ Refer to the [Search API module processors documentation](https://www.drupal.org
 
 ### Drupal Site Setup
 
-Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new Drupal 9 site](/drupal-9) or visit the [Drupal 9 upgrade and migration](/guides/drupal-9-migration) guide to create a Drupal 9 site.
+Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new Drupal 9 site](/drupal-9) or visit the [Drupal 9 upgrade and migration](/drupal-9-migration) guide to create a Drupal 9 site.
 
 ### Prepare the Local Environment
 
