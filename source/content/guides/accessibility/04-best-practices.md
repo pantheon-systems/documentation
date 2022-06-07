@@ -92,14 +92,5 @@ But even with the best of intentions, our choices in words may exclude folks. Te
 
 When creating content, the work of inclusive writing and editing means reviewing our work for examples of language that may exclude folks by testing, using inclusive language linting tools and readability scoring tools, and then copy editing to include alternatives.
 
-Here are some resources to help you write using inclusive language.
+See the [Resources](guides/accessibility/resources#inclusive-design) page in this guide to help you write using inclusive language.
 
-- [Pantheon’s Inclusive Language Guide](https://pantheon.io/docs/inclusive-language) aims to support our community and contributors in using more inclusive language.
-    
-- [Hubspot: How to use and promote inclusive language at your organization](https://blog.hubspot.com/marketing/inclusive-language)
-    
-- [Association for Experimental Education: Inclusive and accessible virtual presentations](https://www.aee.org/assets/Enews/2018/Feb/Inclusive-Accessible-Virtual-Meetings.pdf)
-    
-- [American College Personnel Association: Inclusive language for presenters](https://www.youtube.com/watch?v=vTqrSMrVW3w)
-  
-- [National Center on Disability and Journalism: Disability Language Style Guide](https://ncdj.org/style-guide/)
