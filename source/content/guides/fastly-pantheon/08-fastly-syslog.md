@@ -11,7 +11,7 @@ permalink: docs/guides/fastly-pantheon/fastly-syslog
 anchorid: fastly-syslog
 ---
 
-This section provides information on integrating your Fastly on Pantheon account with [Syslog](https://aws.amazon.com/).
+This section provides information on integrating your Fastly on Pantheon account with Syslog.
 
 ## Before You Begin
 
