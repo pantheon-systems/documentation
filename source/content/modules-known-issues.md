@@ -41,9 +41,9 @@ ___
 
 **Issue 1**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform. Refer to [https://www.drupal.org/node/2233843](https://www.drupal.org/node/2233843) for more information.
 
-**Issue 2**: Background processes not running or intermmitently running. When a stream socket is set to non-blocking mode, the pointer immediately goes out of scope after the socket is written and the remote server appears to close the connection without accepting the input.
+**Issue 2**: Background processes are not running or are running intermittently. When a stream socket is set to non-blocking mode, the pointer immediately goes out of scope after the socket is written. The remote server appears to close the connection without accepting the input.
 
-**Solution**: Add sleep before the socket pointer goes out of scope. A 50ms to 250ms was sufficient sleep time to avoid connection being closed before the socket was written. 
+**Solution 2**: Add a sleep function before the socket pointer goes out of scope. A 50ms to 250ms is a sufficient sleep time to avoid the connection being closed before the socket is written. Review the example below.
 
 `sleep()` function added to `background_process_http_request_initiate()` in a custom module:
 ```   
