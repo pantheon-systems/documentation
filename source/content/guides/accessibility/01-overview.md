@@ -13,7 +13,7 @@ anchorid: accessibility
 editpath: accessibility/01-overview.md
 ---
 
-<dfn id="acc">Web accessibility</dfn> means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.  It includes all disabilities that affect access to the Web, including auditory, cognitive, physical, and more. 
+<dfn id="acc">Web accessibility</dfn> refers to building websites, tools, and technologies are designed and developed so that people with disabilities can use them.  
 
 Making your site accessible not only benefits those with disabilities, but it also improves overall user experience across different devices and situations. It can increase your market share, manage legal risk, improve access to public sector revenue, and protect your brand. In addition, teams that embrace web accessibility find that by designing with a more diverse group of people in mind, they increase the likelihood of innovation.
 
@@ -33,7 +33,7 @@ Disabilities can be divided into the following categories:
 - Physical: amputation, paralysis, repetitive stress injury
 - Speech: muteness, stuttering
 
-This is by no means an exhaustive list. You can find more details on each from this excellent article from [Yale University](https://usability.yale.edu/web-accessibility/articles/types-disabilities).
+This is by no means an exhaustive list. You can find more details on each from this article by [Yale University](https://usability.yale.edu/web-accessibility/articles/types-disabilities).
 
 ## Web Content Accessibility Guidelines
 
@@ -41,13 +41,11 @@ The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility 
 
 ## Principles of Accessibility and Success Criteria
 
-The [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines) that structure accessibility guidelines aim for information and user interface components to be Perceivable, Operable, Understandable, and Robust (POUR). 
-
-For each guideline, there are testable success criteria at [three levels](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels): A (essential), AA (ideal), and AAA (high-level support. 
+The [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines) that structure accessibility guidelines aim for information and user interface components to be Perceivable, Operable, Understandable, and Robust (POUR). For each guideline, there are testable success criteria at [three levels](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels): A (essential), AA (ideal), and AAA (high-level support. 
 
 ## WAI-ARIA for rich internet applications 
 
-[<dfn id="waiaria">WAI-ARIA 1.1</dfn>](https://www.w3.org/TR/wai-aria-practices-1.1/) provides additional guidance for dynamic content and advanced user interface controls developed with HTML, JavaScript, and related technologies. It provides insights on ARIA roles, states, and properties to make custom widgets accessible, usable, and interoperable with assistive technologies and to those who rely on keyboard navigation.
+[<dfn id="waiaria">WAI-ARIA 1.1</dfn>](https://www.w3.org/TR/wai-aria-practices-1.1/) provides guidance for dynamic content and advanced user interface controls developed with HTML, JavaScript, and related technologies. It provides insights on ARIA roles, states, and properties to make custom widgets accessible, usable, and interoperable with assistive technologies and to those who rely on keyboard navigation.
 
 [Dequeue](https://www.deque.com/blog/top-5-rules-of-aria/) has good guidance on how to use ARIA effectively to improve the accessibility of web application controls, offering specific guidance for [React](https://www.deque.com/blog/debunking-the-myth-accessibility-and-react/) and [Angular](https://www.deque.com/blog/angular-and-accessibility-issues-and-strategies/) development. 
 

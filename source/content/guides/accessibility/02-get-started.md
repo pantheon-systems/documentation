@@ -17,7 +17,7 @@ Making your site accessible doesn't just happen - you have to lay the groundwork
 
 ## Identify WCAG Conformance Targets
 
-Identify your target level of conformance to Web Content Accessibility Guidelines. The generally accepted target for accessibility is the latest version of [Web Content Accessibility Guidelines (WCAG) Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/). This may already be the standard specified in your organizational policy, or it may be the legal requirement for your website.
+Identify your target level of conformance to the Web Content Accessibility Guidelines. The generally accepted target for accessibility is the latest version of [Web Content Accessibility Guidelines (WCAG) Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/). This may already be the standard specified in your organizational policy, or it may be the legal requirement for your website.
 
 There are three levels of compliance:
 - Level A: the most basic features
@@ -32,7 +32,7 @@ The start of a new site design is the easiest time to build a sustainably access
 
 - Include accessibility in your site's brief and mission.
 - Include accessibility tools and training in the project budget.
-- Ensure everyone on the team is trained in basic usability principles, and that your UX/Design team have substantial expertise in the area.
+- Ensure everyone on the team is trained in basic usability principles, and that your UX/Design team has substantial expertise in the area.
 - Develop a color strategy up front - this can minimize accessibility issues down the line.
 - Perform user testing early in the design process.
 - Review and identify accessibility issues before launching your site.
@@ -65,7 +65,7 @@ To optimize an existing site for accessibility,
 
 Ensuring that your site is accessible is an ongoing job. Once you have done the initial assessment, consider integrating accessibility into your development process.  To do so:
 
-- Train your UX, Design and Development teams in web accessibility.
+- Train your entire project team on web accessibility.
 - Implement testing tools that can be used during the development process.  While there are free tools available to developers, consider investing in tools that reduce false positives and support agile development cycles.
 
 ## Pantheon Products and Features That Can Help

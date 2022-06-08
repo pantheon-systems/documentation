@@ -27,13 +27,13 @@ This section provides an overview of the tools our platform offers to improve yo
 
 These tools are offered by companies other than Pantheon. 
 
-### Drupal Tools
+### Drupal
 
 - [Drupal Accessibility Features](https://www.drupal.org/docs/accessibility/drupal-accessibility-features)
 
 - [Contributed Modules for Extending Accessibility in Drupal](https://www.drupal.org/docs/accessibility/contributed-modules-for-extending-accessibility-in-drupal)
 
-### Wordpress Tools
+### Wordpress
 
 - [WP Accessibility Plugin](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
 
