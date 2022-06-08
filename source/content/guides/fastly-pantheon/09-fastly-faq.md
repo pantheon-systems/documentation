@@ -11,7 +11,7 @@ permalink: docs/guides/fastly-pantheon/fastly-faq
 anchorid: fastly-faq
 ---
 
-This section provides answers to frequently asked questions about using Fastly on Pantheon.
+This section provides answers to frequently asked questions about using Fastly on the Pantheon platform.
 
 ## Can I use my own Fastly account with the Pantheon Global CDN?
 
