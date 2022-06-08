@@ -971,7 +971,13 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. From the codebase directory, create the following symlinks:
+1. Navigate to the codebase directory and create the symlinks listed below:
+
+  <Alert title="Note"  type="info" >
+
+  You must remove the `/wp-content/wflogs` file if it already exists before you create the symlinks listed below.
+
+  </Alert>
 
   ```bash{promptUser: user}
   ln -s ../../files/private/wflogs ./wp-content/wflogs
