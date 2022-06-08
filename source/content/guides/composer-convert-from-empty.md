@@ -18,13 +18,13 @@ Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-compose
 
 By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following:
 
-1. Remove dependencies that Composer manages from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
+* Remove dependencies that Composer manages from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
 
-1. Switch to the `drupal-composer-managed` Integrated Composer upstream.
+* Switch to the `drupal-composer-managed` Integrated Composer upstream.
 
-The `drupal-composer-managed` Integrated Composer upstream works with Drupal 8, and following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
+The `drupal-composer-managed` Integrated Composer upstream works with Drupal 8, and following the `drupal-composer-managed` upstream will help keep your site current with any general configuration changes recommended by Pantheon.
 
-Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 ## Will This Guide Work for Your Site?
 
@@ -38,7 +38,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep 
 
 - The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
-- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, **you should prepend the paths in this document with "web" as needed**.
+- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, _you should prepend the paths in this document with "web" as needed_.
 
 <Alert title="Note" type="info">
 
@@ -62,7 +62,7 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## Change Upstreams
 
-Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
+Your Pantheon site is now configured to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
 terminus site:upstream:set $SITE drupal-composer-managed
