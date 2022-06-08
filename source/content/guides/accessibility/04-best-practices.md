@@ -95,5 +95,5 @@ Words are one of the primary ways we both connect and help one another. But even
 
 When creating content, the work of inclusive writing and editing means reviewing our work for examples of language that may exclude folks by testing, using inclusive language linting tools and readability scoring tools, and then copy editing to include alternatives.
 
-See the [Resources](guides/accessibility/resources#inclusive-language) page in this guide to help you write using inclusive language.
+See the [Resources](/guides/accessibility/resources#inclusive-language) page in this guide to help you write using inclusive language.
 
