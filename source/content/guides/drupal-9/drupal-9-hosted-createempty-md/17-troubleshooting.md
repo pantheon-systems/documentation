@@ -21,7 +21,7 @@ If you encounter a `Permission denied (publickey)` error, check that your [SSH k
 If you continue to encounter the error, use HTTPS to add the remote:
 
 ```bash{outputLines:2}
-git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+git remote add ic https://github.com/pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/master
 Switched to a new branch 'composerify'
 ```
 

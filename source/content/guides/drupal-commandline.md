@@ -55,7 +55,7 @@ The next few sections of this guide use the example variables `my-d9-site` and `
 1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create my-d9-site "My D9 Site" "drupal-recommended"
+  terminus site:create my-d9-site "My D9 Site" "drupal-composer-managed"
   ```
 
   If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organization name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
