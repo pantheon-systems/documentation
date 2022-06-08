@@ -55,6 +55,22 @@ releases.
 
 </Alert>
 
+### PHP Version Compatibility Matrix
+
+| PHP Version | Terminus 3.x | Terminus 2.x |
+| -----------:|:-----------:| :--------: |
+| 8.2 | ❌          | ❌          |
+| 8.1 | ✅          | ❌          |
+| 8.0 | ✅          | ❌          |
+| 7.4 | ✅          | ❌          |
+| 7.3 | ❌          | ✅          |
+| 7.2 | ❌          | ✅          |
+| 7.1 | ❌          | ✅          |
+| 7.0 | ❌          | ✅          |
+| 5.6 | ❌          | ✅          |
+| 5.5 | ❌          | ✅          |
+| 5.3 | ❌          | ❌          |
+
 ## Troubleshooting
 
 ### Nothing to install or update
