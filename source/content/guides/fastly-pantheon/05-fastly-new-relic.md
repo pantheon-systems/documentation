@@ -17,14 +17,13 @@ This section provides information on integrating your Fastly account with Panthe
 
 Verify the following before you begin:
 
-- You have a [Pantheon account that supports New Relic](/new-relic#supported-site-plans)
+- You have a [Pantheon account that supports New Relic](/new-relic#supported-site-plans).
 
-- You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
-
+- You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly).
 
 ## Integrate New Relic with Your Fastly Account on Pantheon
 
-Follow the steps below to use New Relic with your Fastly on Pantheon account.
+Follow the steps below to use New Relic with your Fastly account on Pantheon.
 
 1. Complete the steps to [Activate New Relic Performance Monitoring](/new-relic#activate-new-relic-performance-monitoring) on Pantheon.
 
