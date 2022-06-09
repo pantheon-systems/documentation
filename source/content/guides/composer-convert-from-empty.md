@@ -12,6 +12,9 @@ reviewed: "2022-02-21"
 
 Use this guide to convert an empty upstream Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
 
+<Partial file="drupal-9/see-landing.md" />
+
+
 ## Overview
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.

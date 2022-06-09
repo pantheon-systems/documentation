@@ -11,6 +11,9 @@ reviewed: "2022-03-10"
 
 This guide shows you how to migrate a Composer-based Drupal site (site created via Pantheon dashboard or Terminus) to a Build Tools-based site.
 
+<Partial file="drupal-9/see-landing.md" />
+
+
 ## Overview
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies. A Drupal 9 site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.

@@ -7,6 +7,8 @@ tags: [code, dashboard, migrate, site]
 
 Manually migrate your site to Pantheon when any of the following apply:
 
+<Partial file="drupal-9/guide-note.md" />
+
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
 - **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
@@ -15,7 +17,6 @@ Manually migrate your site to Pantheon when any of the following apply:
 - **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 - **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-If none of the above apply to your project, use the [standard migration procedure](/migrate).
 
 <Alert title="Note for Composer-based Sites" type="info" >
 
