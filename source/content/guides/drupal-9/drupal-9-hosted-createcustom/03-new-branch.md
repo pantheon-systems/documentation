@@ -10,12 +10,12 @@ layout: guide
 permalink: docs/guides/drupal-9-hosted-createcustom/new-branch
 anchorid: new-branch
 editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
-reviewed: "2021-03-31"
+reviewed: "2022-06-09"
 ---
 
 The first step in the migration process is to create a new branch with Integrated Composer.
 
-1. Create a local clone of the Custom Upstream repository using the SSH URL, and `cd` into the cloned repository:
+1. Create a local clone of the Custom Upstream repository using the SSH URL and change the directory into the cloned repository:
 
   ```bash{promptUser:user}
   git clone $SSH_URL
@@ -34,7 +34,7 @@ The first step in the migration process is to create a new branch with Integrate
    git checkout -b composerify
    ```
 
-1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. This is because you're going to completely replace the file structure and re-add customizations:
+1. On the `composerify` branch, use Git to remove all the files in the directory and commit the change. This is because you are going to completely replace the file structure and re-add customizations:
 
    ```bash{promptUser:user}
     git rm -rf * && git commit -m "Removing all files"
@@ -43,7 +43,7 @@ The first step in the migration process is to create a new branch with Integrate
 1. Add and commit files from the Integrated Composer upstream:
 
    ```bash{promptUser:user}
-   git checkout ic/master .
+   git checkout ic/main .
    git add $FILE_NAME
    git commit -m "Add and commit Integrated Composer files"
    ```
