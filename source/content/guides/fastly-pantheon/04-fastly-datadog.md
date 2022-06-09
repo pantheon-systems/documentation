@@ -11,21 +11,21 @@ permalink: docs/guides/fastly-pantheon/fastly-datadog
 anchorid: fastly-datadog
 ---
 
-This section provides information on integrating your Fastly on Pantheon account with [Datadog](https://www.datadoghq.com/).
+This section provides information on integrating your Fastly account on Pantheon with [Datadog](https://www.datadoghq.com/).
 
 ## Before You Begin
 
 Verify the following before you begin:
 
-- You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
+- You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly).
 
--  You have a [Datadog](https://www.datadoghq.com/) account
+-  You have a [Datadog](https://www.datadoghq.com/) account.
 
 ## Integrate Datadog with Your Fastly Account on Pantheon
 
-Follow the steps below to use Datadog with your Fastly on Pantheon account.
+Follow the steps below to use Datadog with your Fastly account on Pantheon.
 
-1. Verify that you have the [prerequisites](https://docs.fastly.com/en/guides/log-streaming-datadog#prerequisites).
+1. Verify that you have the [Datadog prerequisites](https://docs.fastly.com/en/guides/log-streaming-datadog#prerequisites).
 
 1. Complete the steps to [add Datadog as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-datadog#adding-datadog-as-a-logging-endpoint).
 
