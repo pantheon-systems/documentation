@@ -28,13 +28,15 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
 
-    Drupal SDK: 
+    **Edge Integrations Drupal SDK**
+    Installing the Edge Integrations Drupal SDK will give you all the documentation in the Drupal SDK package as well as the Edge Integrations Global LIbrary (which is required for Edge Integrations to work optimally in Drupal). You might choose this option if you do _not_ plan on using Smart Content in your Drupal site.
 
     ```
     composer require pantheon-systems/edge-integrations-drupal-sdk
     ```
 
-    Smart Content CDN module:
+    **Smart Content CDN module**
+    Installing the Smart Content CDN module will install the Smart Content module and the Edge Integrations Glboal Library. It does _not_ give you any documentation in the Drupal SDK package. You might choose this option if you plan on using the Smart Content ecosystem to manage personalized content in your Drupal site.
 
     ```
     composer require pantheon-systems/smart_content_cdn
