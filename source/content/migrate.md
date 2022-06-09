@@ -8,6 +8,8 @@ reviewed: "2021-04-01"
 
 This doc shows how to use the Pantheon Dashboard to migrate a website to Pantheon from another platform.
 
+<Partial file="drupal9/guide-note.md" />
+
 If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
 
 ## Before You Begin

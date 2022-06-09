@@ -7,6 +7,8 @@ tags: [code, dashboard, migrate, site]
 
 Manually migrate your site to Pantheon when any of the following apply:
 
+<Partial file="drupal9/guide-note.md" />
+
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
 - **Preserve Git History**: You'd like to preserve your site's existing Git commit history.

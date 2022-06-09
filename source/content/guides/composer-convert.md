@@ -12,6 +12,8 @@ reviewed: "2021-10-23"
 
 In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
 
+<Partial file="drupal-9/see-landing.md" />
+
 ## Overview
 
 Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.

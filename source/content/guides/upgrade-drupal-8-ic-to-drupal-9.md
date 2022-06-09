@@ -12,6 +12,9 @@ reviewed: "2022-02-25"
 
 This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a Drupal 9 site using Integrated Composer.
 
+<Partial file="drupal-9/see-landing.md" />
+
+
 ## Overview
 
 The goal of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
