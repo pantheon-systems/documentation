@@ -54,7 +54,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 - [Easy Checks – A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/)
 - [General Checklist](https://a11yproject.com/checklist.html)
 - [WAVE testing tool](https://wave.webaim.org/)
-- 
+
 ### Developers: Command-line Testing and Linting tools
 
 - [accesslint-ci](https://thoughtbot.com/blog/introducing-accesslint-web-accessibility-testing-in-ci)
