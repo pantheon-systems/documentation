@@ -29,14 +29,14 @@ The Edge Integrations personalization system for Drupal consists of two main par
 1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
 
     **Edge Integrations Drupal SDK**
-    Installing the Edge Integrations Drupal SDK will give you all the documentation in the Drupal SDK package as well as the Edge Integrations Global LIbrary (which is required for Edge Integrations to work optimally in Drupal). You might choose this option if you do _not_ plan on using Smart Content in your Drupal site.
+    Installing the Edge Integrations Drupal SDK will give you all the documentation in the Drupal SDK package as well as the Edge Integrations Global LIbrary (which is required for Edge Integrations to work optimally in Drupal). You might choose this option if you do _not_ plan on using Smart Content in your Drupal site. You will still need to install `smart_content_cdn` if you plan on using Smart Content to manage personalized content on your site.
 
     ```
     composer require pantheon-systems/edge-integrations-drupal-sdk
     ```
 
     **Smart Content CDN module**
-    Installing the Smart Content CDN module will install the Smart Content module and the Edge Integrations Glboal Library. It does _not_ give you any documentation in the Drupal SDK package. You might choose this option if you plan on using the Smart Content ecosystem to manage personalized content in your Drupal site.
+    Installing the Smart Content CDN module will install the Smart Content module and the Edge Integrations Glboal Library. It does _not_ give you any documentation in the Drupal SDK package. You might choose this option if you plan on using the Smart Content ecosystem to manage personalized content in your Drupal site. If you installed `smart_content_cdn` with Composer, you do _not_ need to install the Edge Integrations Drupal SDK.
 
     ```
     composer require pantheon-systems/smart_content_cdn
