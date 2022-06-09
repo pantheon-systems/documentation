@@ -41,6 +41,6 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/globa
 - [Errors and Server Responses](/errors-and-server-responses)
 
 ## Support
-- [Getting Support](/support)
+- [Getting Support](/guides/support)
 
 

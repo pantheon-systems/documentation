@@ -37,13 +37,13 @@ If an error is detected during an update attempt, the **Autopilot Status** shows
 
 ![Autopilot Status shows a Needs Attention notice and prompt to Review Test Results](../../../images/autopilot/autopilot-status-failed-screenshots.png)
 
-Click **View Update Details** for details:
+1. Click **View Update Details** for details:
 
-![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
+ ![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
 
-Click **Review Test Results** to compare changes.
+1. Click **Review Test Results** to compare changes.
 
-If you accept the changes, click **Approve**. Otherwise, click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to choose whether to see the Multidev, or adjust the threshold for acceptable changes.
+1. Click **Approve** to accept the changes or click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to view the Multidev, or adjust the threshold for acceptable changes.
 
 ### Acknowledge All Failed Test Results Before You Run Another Test
 
@@ -53,4 +53,4 @@ When a failed test requires review, no new tests can be run on the site until th
 
 ### Is there a limit to the number screenshots Autopilot will take?
 
-Yes. Depending on your [Account](/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+Yes. Depending on your [Account](/guides/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.

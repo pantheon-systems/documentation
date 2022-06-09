@@ -8,6 +8,8 @@ reviewed: "2020-10-08"
 
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).
 
+<Partial file="vanity-https.md" />
+
 The Vanity domain can either be a subdomain of your primary site (`sites.mydomain.com`) or a dedicated domain name (`mypantheonprojects.com`).
 
 If a subdomain of your primary site is configured, a newly created site named "supersite" will then have a Dev environment URL of `dev-supersite.sites.mydomain.com`. If a dedicated domain name is used, the site would instead have a Dev environment URL of `dev-supersite.mypantheonprojects.com`.
@@ -16,13 +18,19 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Dashboard and [submit a support request](/support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+From your Organization Dashboard, go to Dashboard and [open a support ticket](/guides/support/contact-support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
 
 <Alert title="Note" type="info">
 
 We recommend using a separate domain from your production site. This prevents any security issues related to domain-specific cookies. Even the same domain under a different TLD (`.com`, `.net`, etc) would suffice.
 
 </Alert>
+
+### AGCDN Vanity Domains
+
+You must provide a custom certificate if you want to use a vanity domain on your [Advanced Global CDN](guides/professional-services#advanced-global-cdn) site.
+
+Our [Custom Certificate](/custom-certificates#add-a-custom-certificate) service is only available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. 
 
 ## Create Wildcard DNS Records
 
@@ -66,14 +74,17 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 </Alert>
 
+- If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
+
 ## Security Considerations
 
 If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.com`), you should be aware of some security considerations:
 
+<Partial file="vanity-https.md" />
+
 - Sites on the subdomains may be able to read cookies set on your primary site.
 - If a site on the subdomain is reported as a malicious phishing/spam/malware site, it could prevent access to your main marketing site if Google/Norton/etc. block the site.
-- HTTPS is not provisioned for vanity domains. Only custom domains will have HTTPS provisioned.
-  - To provision HTTPS for vanity domains, contact [Sales](https://pantheon.io/contact-sales?docs) to learn how to host your custom certificate on Pantheon.
+
 
 ## Robots.txt with Custom Vanity Domains
 

@@ -48,7 +48,7 @@ sftp> put [your file or files]
 
 ## rsync
 
-rsync is available, but it is a more advanced tool that requires experience with the command line. You can also use the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a shortcut to rsync files to your Pantheon sites.
+rsync is available, but it is a more advanced tool that requires experience with the command line. You can also use the [Terminus rsync plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a shortcut to rsync files to your Pantheon sites.
 
 <Alert title="Note" type="info">
 
@@ -63,7 +63,7 @@ export SITE=[uuid]
 # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
 
 # To Upload/Import
-rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' . --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
 # To Download
 rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
@@ -79,7 +79,7 @@ rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh
 # (-a, -p, -o, -g, -D, etc are not).
 ```
 
-Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync) to learn more.
+rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync) to learn more.
 
 <Alert title="Note" type="info">
 
@@ -138,7 +138,7 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 
 ### Upload a Directory to Pantheon
 
-If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
+If you need to upload the file directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the command below. If you are migrating a site or otherwise overwriting an existing site, remove `--ignore-existing` before running the command.
 
 <Alert title="Warning" type="danger">
 
@@ -147,7 +147,8 @@ Always use the `temp-dir flag` when using rsync for uploads. Removing the flag w
 </Alert>
 
 ```bash{promptUser: user}
-rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync --ignore-existing -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ 
+$ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 
 ### Upload a Single File to Pantheon

@@ -111,7 +111,7 @@ class GuideTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           keywords={node.frontmatter.tags}
           authors={node.frontmatter.contributors}
-          image={"/assets/images/terminus-thumbLarge.png"}
+          image={"/images/assets/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />

@@ -35,10 +35,11 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.$env -- plugin install pantheon-hud --activate
  ```
 
-1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
+1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
- terminus env:deploy $site.test --sync-content --cc --updatedb --note="Install Pantheon HUD plugin"
+ terminus env:deploy $site.test --sync-content --updatedb --note="Install Pantheon HUD plugin"
+ terminus env:clear-cache <site>.test
  ```
 
   If you're working from a Multidev environment, merge to Dev first.
@@ -49,10 +50,11 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.test -- plugin activate pantheon-hud
  ```
 
-1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
+1. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
- terminus env:deploy $site.live --cc --note="Install Pantheon HUD plugin"
+ terminus env:deploy $site.live --note="Install Pantheon HUD plugin"
+ terminus env:clear-cache <site>.live
  ```
 
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
@@ -61,7 +63,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus wp $site.live -- plugin activate pantheon-hud
  ```
 
-All environments will now show the following indicator for logged-in users with the `manage_options` capability:
+All environments will now show the following indicator for users who are logged in with the `manage_options` capability:
 
 ![Pantheon HUD](../images/pantheon-hud.png)
 
@@ -79,7 +81,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 ## Drupal: Environment Indicator
 
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 and Drupal 8 sites.
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites.
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
@@ -93,59 +95,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php`:
-
-  <TabList>
-
-  <Tab title="Drupal 8" id="d8tab" active={true}>
-
-    ```php
-    /*
-    * Environment Indicator module settings.
-    * see: https://pantheon.io/docs/environment-indicator
-    */
-
-    if (!defined('PANTHEON_ENVIRONMENT')) {
-        $config['environment_indicator.indicator']['name'] = 'Local';
-        $config['environment_indicator.indicator']['bg_color'] = '#505050';
-        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-      }
-      // Pantheon Env Specific Config
-      if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-        switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-          case 'lando': // Localdev or Lando environments
-            $config['environment_indicator.indicator']['name'] = 'Local Dev';
-            $config['environment_indicator.indicator']['bg_color'] = '#990055';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          case 'dev':
-            $config['environment_indicator.indicator']['name'] = 'Dev';
-            $config['environment_indicator.indicator']['bg_color'] = '#307b24';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          case 'test':
-            $config['environment_indicator.indicator']['name'] = 'Test';
-            $config['environment_indicator.indicator']['bg_color'] = '#b85c00';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          case 'live':
-            $config['environment_indicator.indicator']['name'] = 'Live!';
-            $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
-            $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-            break;
-          default:
-            // Multidev catchall
-            $config['environment_indicator.indicator']['name'] = 'Multidev';
-            $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
-            $config['environment_indicator.indicator']['fg_color'] = '#000000';
-            break;
-        }
-      }
-    ```
-
-  </Tab>
-
-  <Tab title="Drupal 7" id="d7tab">
+1. Add the following within `settings.php` for Drupal 7:
 
     ```php
     /*
@@ -195,22 +145,29 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
       }
     ```
 
-  </Tab>
-
-  </TabList>
-
-1. Deploy the module to the Test environment within the Site Dashboard or with Terminus:
+1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
- terminus env:deploy $site.test --sync-content --cc --updatedb --note="Install and configure Environment Indicator"
+ terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
+ terminus env:clear-cache <site>.test
  ```
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
-1. Deploy the module to the Live environment within the Site Dashboard or with Terminus:
+1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
   ```bash{promptUser: user}
-  terminus env:deploy $site.live --cc --updatedb --note="Install and configure Environment Indicator"
+  terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
+  terminus env:clear-cache <site>.live
   ```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
+
+
+## More Resources
+
+- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+
+- [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
+
+- [Reading Pantheon Environment Configuration](/read-environment-config)

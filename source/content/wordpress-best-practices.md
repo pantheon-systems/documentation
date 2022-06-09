@@ -4,7 +4,7 @@ description: A list of suggestions for developing WordPress sites on Pantheon.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow, security, composer]
-reviewed: "2020-10-15"
+reviewed: "2022-05-16"
 ---
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
@@ -25,11 +25,12 @@ This article provides suggestions, tips, and best practices for developing and m
 
 ### Plugins
 
-* Add [Composer](/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a composer.json file so things play nice. It makes future debugging much simpler should you need to switch between multiple plugin or WordPress versions to see what caused something to break. While [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md), you will have to commit the dependencies that Composer downloads on Pantheon since running `composer install` on the environments is not supported (just as Git submodules are not supported).
+* Add [Composer](/guides/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a composer.json file so things play nice. It makes future debugging much simpler should you need to switch between multiple plugin or WordPress versions to see what caused something to break. While [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md), you will have to commit the dependencies that Composer downloads on Pantheon since running `composer install` on the environments is not supported (just as Git submodules are not supported).
 
 * If you have a custom plugin that retrieves a specific post (or posts), instead of using `wp_query()` to retrieve it, use the `get_post()` function. While wp_query has its uses, the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object, and does so very efficiently.
 
 * Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
+
 
 ### Themes
 
@@ -39,10 +40,15 @@ This article provides suggestions, tips, and best practices for developing and m
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
+  
+#### Manage License Keys for Themes or Plugins
+
+There are many plugins and themes in WordPress that require license keys. Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments. 
+
 
 ## Testing
 
-* Run [Launch Check](/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
+* Run [Launch Check](/guides/wordpress-pantheon/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
 * Automate testing with [Behat](/guides/behat). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
@@ -72,16 +78,17 @@ Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronge
 
 Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 core release](/changelog/2020/07#wordpress-542). If your version of WordPress is older than this, you can block `xmlrpc.php` attacks by applying your [upstream updates](/core-updates).
 
-### Disable XML-RPC via Pantheon.yml
+### Enable XML-RPC via Pantheon.yml
 
-This method is more performant than disabling via a plugin since this won't involve bootstrapping WordPress. The result of this configuration is that requests to `/xmlrpc.php` will return a 403 status code.
+<Alert title="Note"  type="info" >
 
-Add the following configuration to your [`pantheon.yml`](/pantheon-yml) file:
+Pantheon does not support XML-RPC if it is enabled.
 
-  ```yml:title=pantheon.yml
-  protected_web_paths:
-    - /xmlrpc.php
-  ```
+</Alert>
+
+You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](https://jetpack.com/) or the WordPress mobile app. 
+
+<Partial file="jetpack-enable-xmlrpc.md" />
 
 ### Disable XML-RPC via a Custom Plugin
 
@@ -118,11 +125,40 @@ This method has the advantage of being toggleable without deploying code, by act
 
 1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
 
+## Avoid WordPress Login Attacks
+
+<Partial file="wp-login-attacks.md" />
+
+## Disable Anonymous Access to WordPress Rest API
+
+The WordPress REST API is enabled for all users by default. To improve the security of a WordPress site, you can disable the WordPress REST API for anonymous requests, to avoid exposing admin users. This action improves site safety and reduces unexpected errors that can result in compromised WordPress core functionalities.
+
+The following function ensures that anonymous access to your site's REST API is disabled and that only authenticated requests will work. You can add this code sample to a theme's `functions.php` file or to a must-use plugin:
+
+```php
+// Disable WP Users REST API for non-authenticated users (allows anyone to see username list at /wp-json/wp/v2/users)
+add_filter( 'rest_authentication_errors', function( $result ) {
+	if ( true === $result || is_wp_error( $result ) ) {
+		return $result;
+	}
+
+	if ( ! is_user_logged_in() ) {
+		return new WP_Error(
+			'rest_not_logged_in',
+			__( 'You are not currently logged in.' ),
+			array( 'status' => 401 )
+		);
+	}
+
+	return $result;
+});
+```
+
 ## Security Headers
 
 Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
 
-There are plugins for WordPress that do not require `.htaccess` to set security headers (like [GD Security Headers](https://wordpress.org/plugins/gd-security-headers/) or [HTTP headers to improve web site security](https://wordpress.org/plugins/http-security/)), but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
+There are plugins for WordPress that do not require `.htaccess` to set security headers, but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 
 Adding code like the example below in a plugin (or [mu-plugin](/mu-plugin)) can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
 
@@ -135,7 +171,7 @@ function additional_securityheaders( $headers ) {
     $headers['X-Content-Type-Options']      = 'nosniff';
     $headers['X-XSS-Protection']            = '1; mode=block';
     $headers['Permissions-Policy']          = 'geolocation=(self "https://example.com") microphone=() camera=()';
-    $headers['Content-Security-Policy']     = 'script-src "self"';
+    $headers['Content-Security-Policy']     = "script-src 'self'";
     $headers['X-Frame-Options']             = 'SAMEORIGIN';
   }
 

@@ -9,7 +9,7 @@ reviewed: "2021-08-12"
 
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
 
-The usual [Scope of Support](/support#scope-of-support) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
+The usual [Scope of Support](/guides/support/) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
 
 This process assumes you already have a static site developed and that you have access to the files. For more information about dependencies and which files to upload, consult the documentation for the static site generator you use.
 

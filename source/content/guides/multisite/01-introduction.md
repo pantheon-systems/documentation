@@ -7,7 +7,7 @@ type: guide
 cms: "WordPress"
 categories: [develop]
 tags: [multisite]
-contributors: [danielbachhuber]
+contributors: [danielbachhuber, whitneymeredith]
 anchorid: multisite
 multisite: true
 generator: pagination
@@ -47,3 +47,5 @@ We do not support uses of WordPress Site Networks that run functionally-differen
 Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/migrate-wordpress-site-networks).
 
 Reach out to your account manager to request that a new WordPress Site Network be created for you. Once an employee of Pantheon has created the network, you will receive an email informing you that you've been added to the site. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
+
+ 

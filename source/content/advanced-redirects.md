@@ -241,6 +241,12 @@ Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images,
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 
+## Redirects and Rewrites with PHP
+
+Pantheon uses Nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on the Pantheon platform using the code in the [Pantheon htacess Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) repository.
+
+The file must be included at the very beginning of your Drupal `settings.php` or Wordpress `wp-config.php` file. The code will perform rewrites and redirects prior to full Wordpress or Drupal bootstrap.
+
 ## Restrict Access to Paths Based on IP
 
 If you want to restrict access to files based on the source IP address of the request, you can do so with PHP.
@@ -270,7 +276,7 @@ function is_from_trusted_ip() {
         '192.0.2.38',
         '198.51.100.12',
         '208.0.113.159',
-        '2001:DB8:1C93',
+        '98b9:1da9:71f7:0953:f012:8574:3d58:9ac9',
     );
 
     return ip_in_list($trusted_ips);
@@ -317,54 +323,6 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') && !i
 
 </Tab>
 
-<Tab title="Drupal 8" id="restrict-drupal-8">
-
-The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
-
-```php:title=settings.php
-function ip_in_list($ips) {
-    foreach(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']) as $check_ip) {
-        foreach($ips as $ip) {
-          if(FALSE !== strpos($check_ip, $ip)) {
-            return true;
-          }
-        }
-    }
-    return false;
-  }
-
-  function is_from_trusted_ip() {
-    //Replace the IPs in this array with those you want to restrict access to
-    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
-    return ip_in_list($trusted_ips);
-  }
-  if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
-    // Check if the path should be locked down
-    $to_lockdown = false;
-    $clean_request_uri = rtrim( mb_strtolower(strtok($_SERVER["REQUEST_URI"],'?')), '/' );
-    if ( $_GET['q'] == 'admin') {
-      // admin pages
-      $to_lockdown = true;
-    } elseif ( substr($clean_request_uri, 0, 5) == '/user' ) {
-      // user login page
-      $to_lockdown = true;
-    } elseif ( substr($clean_request_uri, 0, 6) == '/admin' ) {
-      // admin pages
-      $to_lockdown = true;
-    } elseif ( substr($clean_request_uri, 0, 6) == '/node/' && substr($clean_request_uri, -4) == 'edit' ) {
-      // node edit pages
-      $to_lockdown = true;
-    }
-    if($to_lockdown && (php_sapi_name() != "cli")){
-      header('HTTP/1.0 403 Forbidden');
-      echo 'Access denied.';
-    exit();
-    }
-  }
-  ```
-
-</Tab>
-
 <Tab title="Drupal 7" id="restrict-drupal-7">
 
 The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
@@ -383,7 +341,7 @@ function ip_in_list($ips) {
 
   function is_from_trusted_ip() {
     //Replace the IPs in this array with those you want to restrict access to
-    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
+    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','98b9:1da9:71f7:0953:f012:8574:3d58:9ac9');
     return ip_in_list($trusted_ips);
   }
   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {

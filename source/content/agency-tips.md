@@ -12,6 +12,7 @@ We've compiled some great tips for agencies working on Pantheon. They are loosel
 
 One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more.
 
+Partner Agencies are added to the [Agency Partner Directory](https://directory.pantheon.io/agencies?docs) to make it easier for customers to be matched with the right agency.
 
 ## Learn Pantheon through Product Trainings, Resources, and Guides
 [Get hands on training](https://pantheon.io/learn-pantheon?docs) from knowledgeable experts at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
@@ -40,7 +41,7 @@ The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspa
 Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Pantheon Search
-All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/wordpress-solr), [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7) or [Enabling Pantheon Search on Drupal 8](/guides/solr-drupal/solr-drupal-8).
+All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Object Cache
 All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
@@ -58,8 +59,8 @@ Running a WordPress Site Network requires a special configuration that is only a
 ### Migration
 The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/migrate).
 
-## Drupal 8 and Composer
-Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. For details, see [Composer Fundamentals and Workflows](/composer).
+## Drupal and Composer
+Drupal now includes Composer usage within Drupal Core itself. For details, see [Composer Fundamentals and Workflows](/guides/composer).
 
 ## Advanced Tools
 

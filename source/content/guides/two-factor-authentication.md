@@ -189,4 +189,3 @@ Single sign-on (SSO) allows users to authenticate against your Identity Provider
 - [Security on Pantheon](https://pantheon.io/security)
 - [WordPress Two Step Authentication](https://codex.wordpress.org/Two_Step_Authentication)
 - [Drupal Modules For Two-Factor Authentication](https://groups.drupal.org/node/235938)
-- [Configuring SAML for Pantheon's Dashboard with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)

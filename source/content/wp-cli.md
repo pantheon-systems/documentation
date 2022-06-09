@@ -13,7 +13,7 @@ To use WP-CLI on the Pantheon Platform, you'll first need to install [Terminus](
 
 Once you've installed Terminus locally, and verified it's working correctly, you're ready to use WP-CLI. However, if you haven't already, you may want to consider [installing WP-CLI locally](https://make.wordpress.org/cli/handbook/installing/) for use in your local environment.
 
-If you have a [Composer-based site](/composer), Terminus will use the version of WP-CLI that it finds in `vendor/wp-cli` when running WP-CLI commands on the platform.
+If you have a [Composer-based site](/guides/composer), Terminus will use the version of WP-CLI that it finds in `vendor/wp-cli` when running WP-CLI commands on the platform.
 
 <Alert title="Exports" type="export">
 
@@ -74,7 +74,7 @@ echo "SELECT * FROM wp_users WHERE ID=1;" | terminus wp $site.$env -- db query
 
 ## Execute PHP Code Using WP-CLI on Pantheon
 
-The [`wp eval`](https://developer.wordpress.org/cli/commands/eval/) command is not supported on Pantheon, but you can still run the interactive shell [`wp shell`](https://developer.wordpress.org/cli/commands/eval/) to execute PHP commands:
+The [`wp eval`](https://developer.wordpress.org/cli/commands/eval/) command is not supported on Pantheon, but you can still run the interactive shell [`wp shell`](https://developer.wordpress.org/cli/commands/shell/) to execute PHP commands:
 
 ```bash
 terminus wp $site.$env -- shell

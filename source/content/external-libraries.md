@@ -10,31 +10,11 @@ There are some scenarios when an external library is required. The Pantheon plat
 
 ## wkhtmltopdf
 
-[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
+[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html). 
 
-wkhtmltopdf can be found on your application container at `/srv/bin/wkhtmltopdf`. To use it, install or create a compatible plugin or module:
+wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. You must install or create a compatible plugin or module to complete the following steps:
 
 <TabList>
-
-<Tab title="Drupal 8" id="d8-example" active={true}>
-
-Download and enable the [wkhtmltopdf module](https://www.drupal.org/project/wkhtmltopdf) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
-
-```bash{promptUser: user}
-terminus drush <site>.<env> -- en wkhtmltopdf --y
-```
-
-Create a symlink to the hosted library and your site's libraries directory [via Git](/git/#clone-your-site-codebase):
-
-```bash{promptUser: user}
-mkdir -p sites/all/libraries/wkhtmltopdf
-ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
-git add .
-git commit -m "Added wkhtmltopdf library"
-git push
-```
-
-</Tab>
 
 <Tab title="Drupal 7" id="d7-example">
 
@@ -74,12 +54,16 @@ To confirm the source of the error, log in to the Drupal Admin and click **Repor
 
 If you encounter this error, remove the offending `quotes` property from the CSS.
 
-## PhantomJS
+## PhantomJS (Unsupported)
 
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
+However, PhantomJS development [has been suspended until further notice](https://github.com/ariya/phantomjs/issues/15344). While Pantheon continues to include the following binaries, they may be removed in the future.
+
 - PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application container.
 - PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application container.
+
+Recently, PhantomJS started erroring on domains with Let's Encrypt. A known workaround for this is to ignore SSL certificate errors using the following option: `--ignore-ssl-errors=yes`
 
 ### Drupal PhantomJS Configuration
 
@@ -132,8 +116,8 @@ After you've installed the [ImageMagick Engine Plugin](https://wordpress.org/plu
 
 ### How do I request the addition of a new library or a newer version of an existing library?
 
-Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
+Please [contact support](/guides/support/contact-support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 ### Will you set up and configure the module/plugin for me?
 
-No. This is not within our [scope of support](/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
+No. This is not within our [scope of support](/guides/support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.

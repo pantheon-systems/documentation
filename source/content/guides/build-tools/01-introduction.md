@@ -10,7 +10,7 @@ anchorid: build-tools
 permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
-reviewed: "2020-05-08"
+reviewed: "2022-04-19"
 ---
 
 ## What Is Build Tools?
@@ -35,6 +35,8 @@ Build Tools currently supports the following combinations of Git and CI services
 
 1. [<em class="fa fa-github" /> GitHub](https://github.com) and [CircleCI](https://circleci.com/)
 
+1. [<em class="fa fa-github" /> GitHub](https://github.com) and [Github Actions](https://github.com/features/actions)
+
 1. [<em class="fa fa-gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
 
 1. [<em class="fa fa-bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
@@ -57,12 +59,10 @@ Pantheon's Developer Advocacy team holds trainings and Office Hours, and monitor
 
 </Enablement>
 
-<Accordion title="Build Tools Changelog" id="changelog" icon="newspaper">
+## Changelog
 
-<BuildToolsChangelog />
-
-</Accordion>
+You can view the most recent Build Tools release and changelogs in [Pantheon's Build Tools repository](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases).
 
 ## More Resources
 
-- [Integrated Composer](/integrated-composer) for another way to manage deployments and dependencies if you don't need a CI.
+- [Integrated Composer](/guides/integrated-composer) for another way to manage deployments and dependencies if you don't need a CI.

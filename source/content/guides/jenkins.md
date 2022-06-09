@@ -47,7 +47,14 @@ You will need:
         StrictHostKeyChecking no
   ```
 
-- The following Jenkins plugins should be enabled: [Git](https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin) , [Github](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin), [Github Pull Request Builder](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin), [Environment Injector](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin), [Conditional Build Step](https://wiki.jenkins-ci.org/display/JENKINS/Conditional+BuildStep+Plugin), [Run Condition](https://wiki.jenkins-ci.org/display/JENKINS/Run+Condition+Plugin), and [Rebuild](https://wiki.jenkins.io/display/JENKINS/Rebuild+Plugin).
+- The following Jenkins plugins should be enabled:
+  - [Git](https://plugins.jenkins.io/github/)
+  - [GitHub](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin)
+  - [GitHub Pull Request Builder](https://plugins.jenkins.io/ghprb/)
+  - [Environment Injector](https://plugins.jenkins.io/envinject/)
+  - [Conditional Build Step](https://plugins.jenkins.io/conditional-buildstep/)
+  - [Run Condition](https://plugins.jenkins.io/run-condition/)
+  - [Rebuild](https://plugins.jenkins.io/rebuild/)
 - We recommended using matrix-based security when using Jenkins. Anonymous users should have read access to Jenkins projects.
 - Ability to create a Drupal site on Pantheon, with [Multidev](/multidev) enabled.
 - A [GitHub](https://github.com) account.
@@ -96,12 +103,12 @@ At this point, you should be able to create a local branch, commit a change, and
 
 ### Create a Pantheon Site
 
-Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your organization's name.
+Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your organization's name.
 
 1. From your local terminal, use terminus to create a site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create $SITE "My Site" "Drupal 8" --org="My Team"
+  terminus site:create $SITE "My Site" "Drupal 9" --org="My Team"
   terminus connection:set $SITE.dev git
   ```
 

@@ -21,16 +21,16 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 
 - Companion Guide: [Terminus Manual](/terminus)
 - Guide: [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wordpress-commandline)
-- Guide: [Create a Drupal 8 Site From the Command Line Using Terminus and Drush](/guides/drupal8-commandline)
+- Guide: [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drupal-commandline)
 
 ### Keep Learning After Today
 
-You're on a roll! Check out Workshop #3: [Integrate and Automate with Quicksilver](https://pantheon.io/workshops/automate-and-integrate-quicksilver). Or dive into one of our other [Essential Workshops](https://pantheon.io/workshops).
+You're on a roll! Check out Workshop #3: [Integrate and Automate with Quicksilver](/workshops?c=lw3). Or dive into one of our other [Essential Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 
 - [Discuss this class and ask questions](https://discuss.pantheon.io/c/pantheon-training/command-line-interface-terminus/53)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

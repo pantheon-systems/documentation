@@ -32,4 +32,4 @@ via: 1.1 varnish
 content-length: 0
 ```
 
-The presence of `x-pantheon-redirect: primary-domain-policy-doc` indicates that the domain is still being pointed at the former Primary Domain. [Contact support](/support) if this value persists.
+The presence of `x-pantheon-redirect: primary-domain-policy-doc` indicates that the domain is still being pointed at the former Primary Domain. [Contact support](/guides/support/contact-support/) if this value persists.

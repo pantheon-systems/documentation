@@ -67,6 +67,36 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
     git push origin master
     ```
 
+## Apply Patch Using Composer
+
+1. Add `patch` to your `composer.json` file:
+
+    ```bash 
+    {
+    "require": {
+      "cweagans/composer-patches": "~1.0",
+      "drupal/core-recommended": "^8.8",
+    },
+    ```
+
+1. Add a `patches` folder to the root of your `composer.json` file.
+
+1. Add an `extras` section inside your `composer.json` file:
+
+    ```bassh
+    "extra": {
+      "patches-file": "local/path/to/your/composer.patches.json"
+    }
+    ```
+
+1. Run `composer install`.
+
+  This removes the core version, including libraries and dependencies, before re-downloading the core (plus libraries and dependencies), and applying the patch.
+
+## Apply and Manage Drupal Module Patches with Composer
+
+  Read [Drupal's documentation](https://www.drupal.org/docs/develop/using-composer/using-composer-to-install-drupal-and-manage-dependencies#patches) to learn more about applying and managing module patches with Composer.
+
 ## Lock Multidev Environments
 
 As an additional security measures, sites with [Multidev](/multidev) environments should consider [locking](/security) them until they can be patched. If you have [Terminus](/terminus) installed on your local computer, you can lock all environments at once with the following Bash script:

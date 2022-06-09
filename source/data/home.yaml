@@ -1,11 +1,11 @@
 - id: home
   title: 'Documentation Topics'
-  call-to-action: 
+  call-to-action:
     title: 'Quick Start Guide'
-    sub-title: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
+    sub-title: 'New to the Pantheon platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart/'
     type: 'guide'
-  topics: 
+  topics:
     - title: 'Get Started'
       summary: 'Migrate existing sites or spin up a new site, then learn how to manage your projects on Pantheon.'
       icon: 'icon-start.svg'
@@ -45,18 +45,25 @@
       secondary: true
     - title: 'GUIDES'
       summary: 'Need some help leveling up your dev skills? Try one of our guides.'
-      icon: 'i-monitoring.svg'
       url: '/guides/'
+      secondary: true
+    - title: 'DISASTER RECOVERY PLAYBOOK'
+      summary: 'Be ready to act if your site stops responding.'
+      url: '/guides/disaster-recovery/site-goes-down/'
+      secondary: true
+    - title: 'PLATFORM STATUS'
+      summary: 'Check for platform incident reports.'
+      url: 'https://status.pantheon.io/'
       secondary: true
   fourohfourlinks:
     title: 'Popular Documentation'
     links:
       - text: 'Terminus Manual'
         url: '/terminus/'
-      - text: 'Quick Start Guide'
-        url: '/guides/quickstart/'
-      - text: 'Using the Pantheon Workflow'
-        url: '/pantheon-workflow/'
+      - text: 'Upgrade to Drupal 9'
+        url: '/drupal-9-migration/'
+      - text: 'Pantheon Solr Search for Drupal 9'
+        url: '/guides/solr-drupal/solr-drupal-9'
       - text: 'Domains and Redirects'
         url: '/domains/'
       - text: 'Git FAQs'
@@ -65,13 +72,13 @@
         url: '/ssh-keys/'
   three-column-links:
     title: 'Popular Documentation'
-    links: 
+    links:
       - text: 'Terminus Manual'
         url: '/terminus/'
-      - text: 'Quick Start Guide'
-        url: '/guides/quickstart/'
-      - text: 'Platform Considerations'
-        url: '/platform-considerations/'
+      - text: 'Upgrade to Drupal 9'
+        url: '/drupal-9-migration/'
+      - text: 'Pantheon Solr Search for Drupal 9'
+        url: '/guides/solr-drupal/solr-drupal-9'
       - text: 'Launch Essentials'
         url: '/guides/launch/'
       - text: 'Using the Pantheon Workflow'

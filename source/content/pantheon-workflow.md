@@ -57,17 +57,24 @@ While you are able to update the Dev environment via Git, if you would like to d
 
 </Alert>
 
-Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
+After changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
 ![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
 
  - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
+ - We provide a rolling view of typical workflow log entries on the site for 14 days. Log entries are no longer visible on the site after 14 days, but are kept for internal auditing. Log entries visible for longer than 14 days include:
+
+    - `deploy`
+    - `create_environment` (this only applies to Test and Live environments)
+    - `freeze_site`
+    - `unfreeze_site`
+
  - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
  - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
 
-   On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
+ - On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
 After running this operation, be sure that:
 
@@ -78,7 +85,7 @@ After running this operation, be sure that:
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
 
 - [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check)
-- [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check)
+- [Launch Check - WordPress Performance and Configuration Analysis](/guides/wordpress-pantheon/wordpress-launch-check)
 
 Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver).
 
@@ -89,6 +96,10 @@ This entire process is designed around making sure that the Live environment is 
 After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
+
+### Content Staging
+
+Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions. 
 
 ## Configuration Management
 
@@ -104,7 +115,6 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 * [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
-* Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management).
 
 ## Understanding Write Permissions in Test and Live
 

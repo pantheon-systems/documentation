@@ -59,7 +59,7 @@ Here you can select or change your plan and payment method. For more information
 
 ## Support
 
-If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/support) from your Dashboard.
+If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/guides/support/contact-support/) from your Dashboard.
 
 ## Environment Specific Options
 
@@ -87,7 +87,7 @@ Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environme
 ### Status
 
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for
-[Drupal sites](/drupal-launch-check) or [WordPress sites](/wordpress-launch-check).
+[Drupal sites](/drupal-launch-check) or [WordPress sites](/guides/wordpress-pantheon/wordpress-launch-check).
 
 ### Database / Files
 

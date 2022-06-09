@@ -67,6 +67,16 @@ To unlock a site:
 terminus lock:disable <site>:<env>
 ```
 
+### Pass Credentials Using CI Scripting 
+
+If you are using CI scripting, you must configure your CI tool to pass the username and password on every request to allow tests to run in a locked site environment. Configuration steps will vary depending on your chosen CI tool. To help you get started, we've included a CI authentication example:
+
+```bash
+{"base_url" : "https://<username>:<password>@'$TERMINUS_ENV'-'$TERMINUS_SITE'.pantheonsite.io/"}
+```
+  * Replace `<username>` with your selected username.
+  * Replace `<password>` with your configured password.
+
 ## Troubleshooting
 
 ### Authentication Prompt Appears in Environments Where It's Not Enabled
@@ -81,22 +91,8 @@ Sites that have the environment locked on Pantheon in addition to enabling the m
 
 Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disable the module:
 
-<TabList>
-
-<Tab title="Drupal 8" id="d8" active={true}>
-
-```bash
-terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
-```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7">
+For Drupal 7, run:
 
 ```bash
 terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
 ```
-
-</Tab>
-
-</TabList>

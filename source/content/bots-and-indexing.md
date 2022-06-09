@@ -74,7 +74,7 @@ To support pre-launch SEO and site search testing, we allow the following bots a
 - [PowerMapper](https://www.powermapper.com/products/mapper/)
 - [Swiftbot](https://swiftype.com/swiftbot) by Swiftype
 
-Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/support#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
+Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/guides/support/faq/#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
 If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon:
 
@@ -82,7 +82,66 @@ If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on y
 
 You can index your site under your production domain once it's added to the Live environment. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](https://wordpress.org/plugins/google-sitemap-generator/) or [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugins, which will maintain sitemap updates automatically. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
+## Robots.txt with Composer and Drupal
+
+When using Drupal scaffolding, the root `web/robots.txt` file will be overwritten on each `composer install`, whether it is managed locally or on Pantheon using Integrated Composer. For more information, refer to [Using Drupal's Composer Scaffold](https://www.drupal.org/docs/develop/using-composer/using-drupals-composer-scaffold).
+
+Modifications are made in a separate file that is appended to the existing `robots.txt`. The path and name of the file are arbitrary. In the example below, we'll create a new file in an assets folder located at the root of the website host to which it applies.
+
+In the terminal, run the following command in the root directory of your local Git repository:
+
+```bash{promptUser: user}
+touch assets/my-robots-additions.txt
+```
+
+You can now add your changes into that newly created file using a text editor.
+
+Modify the site's root `composer.json` file to append this new file when copying Drupal's scaffolding. The `...` represents existing content. If you already have `"file-mapping"`, content can be added to the section.
+
+```json:title=composer.json
+"file-mapping": {
+    ...
+    "[web-root]/robots.txt": {
+        "append": "assets/my-robots-additions.txt"
+    }
+}
+```
+
+You can test this locally using `composer install`. If successful, use the following commands to commit changes:
+
+```bash{promptUser: user}
+git add assets/my-robots-additions.txt composer.json
+git commit -m "Append robots.txt changes via composer"
+```
+
 ## Troubleshooting
+
+### Robots.txt conflicting with Composer
+
+The default Drupal upstream includes a line in `.gitignore` to exclude tracking `web/robots.txt` because it is automatically generated during `composer install`. Occasionally, this is removed and modifications to `robots.txt` are committed. This will cause a merge conflict when attempting to run composer, and will cause builds to fail on Integrated Composer.
+
+Move the accidentally tracked file out of the repository and into `.gitignore`. You may want to pull any changes you need out of this file and in to a temporary text file for later use.
+
+In the terminal, run the following commands in the root directory of your local Git repository:
+
+```bash{promptUser: user}
+git rm --cached web/robots.txt
+git commit -m "Remove auto-generated robots.txt"
+```
+
+In your text editor add the following to `.gitignore`:
+```
+/web/robots.txt
+```
+
+Commit that change using the following command:
+
+```bash{promptUser: user}
+git add .gitignore
+git commit -m "Do not track changes to generated robots.txt"
+```
+
+You can now proceed with the recommended method of using [Robots.txt with Composer and Drupal](/bots-and-indexing#robotstxt-with-composer-and-drupal)
 
 ### Sitemaps Produce a White Screen of Death (WSOD)
 

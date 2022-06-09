@@ -74,11 +74,7 @@ If you don’t have a `settings.php` file, copy the `default.settings.php` file.
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE, open the `settings.php`, and add the following code:
-
-<TabList>
-
-<Tab title="Drupal 7" id="d7">
+Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal 7:
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -101,35 +97,6 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['reroute_email_enable_message'] = 1;
 }
 ```
-</Tab>
-  
-
-<Tab title="Drupal 8" id="d8"> 
-
-```php
-if (defined('PANTHEON_ENVIRONMENT')) {
-  if (PANTHEON_ENVIRONMENT == 'live') {
-    // Do not reroute email on Live.
-    $config['reroute_email.settings']['enable'] = FALSE;
-  }
-  else {
-    // Reroute email on all Pantheon environments but Live.
-    $config['reroute_email.settings']['enable'] = TRUE;
-    $config['reroute_email.settings']['address'] = 'tester+qa-' . PANTHEON_ENVIRONMENT . '@example.com';
-  }
-}
-
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  // Reroute email when site is not on Pantheon (local install).
-  $config['reroute_email.settings']['enable'] = TRUE;
-  $config['reroute_email.settings']['address'] = 'tester+local-dev@example.com';
-}
-```
-  
-</Tab>
-
-</TabList>
-
   
 In order for the snippet to work as intended, the module must be enabled in all environments. The `PANTHEON_ENVIRONMENT` variable changes the reroute email settings based on environment. The configuration in `settings.php` overrides any settings in the Drupal Admin UI.  If your site isn't on Pantheon, look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in your configuration.
 
@@ -168,8 +135,10 @@ You can do this through the Site Dashboard and the Drupal Admin UI, or by using 
 ```bash{promptUser: user}
 terminus auth:login
 terminus drush <site>.test -- en reroute_email -y
-terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Initial deploy. Reroute Email demo"
-terminus env:deploy <site>.live --cc --updatedb --note="Initial deploy. Reroute Email demo"
+terminus env:deploy <site>.test --sync-content --updatedb --note="Initial deploy. Reroute Email demo"
+terminus env:clear-cache <site>.test
+terminus env:deploy <site>.live --updatedb --note="Initial deploy. Reroute Email demo"
+terminus env:clear-cache <site>.live
 terminus drush <site>.test -- en reroute_email -y
 terminus drush <site>.live -- en reroute_email -y
 ```
@@ -185,6 +154,6 @@ If you don’t see what you’re expecting, review your `settings.php` and ensur
 Now, when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in the `settings.php` file. The `settings.php` will ensure emails are not rerouted on Live. Make sure you’re using a [SMTP gateway](/email/#outgoing-email) on Live to ensure email deliverability.
 
 
-## See Also
+## Additional Information
 
 [Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)

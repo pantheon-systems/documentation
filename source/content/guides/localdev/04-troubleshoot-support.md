@@ -14,7 +14,7 @@ editpath: localdev/04-troubleshoot-support.md
 
 ## Contact Support
 
-Before contacting Support, review the [support request best practices](/support#best-practices) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
+Before contacting Support, review the [support ticket best practices](/guides/support/support-ticket/) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
@@ -26,7 +26,7 @@ Before contacting Support, review the [support request best practices](/support#
 
 1. Report the error:
 
-   - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/support/#real-time-chat-support) and include the steps you took to reproduce the error.
+   - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/guides/support/contact-support/#real-time-chat-support) and include the steps you took to reproduce the error.
 
 ## Provide Feedback or Feature Requests
 
@@ -99,5 +99,5 @@ No, new Multidev environments must still be created from the Site Dashboard or [
 
 ### Can I setup Localdev with a Mac that has an M1 chip?
 
-No, Macs with the M1 chip are not currently supported.
+Yes, Macs with the M1 chip are supported.
 

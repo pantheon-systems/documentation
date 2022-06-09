@@ -46,7 +46,7 @@ Sometimes your CMS may encounter issues due to cached data that ends up in an od
 
 - [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/terminus/commands/env-clear-cache).
 - Clear all keys from the Object Cache using the [Redis CLI](/object-cache#use-the-redis-command-line-client).
-- Review the caching logic for your CMS version. [Drupal 8](/drupal-8-cache), for example, has some specific caching features that may be a factor.
+- Review the caching logic for your CMS version. [Drupal 9](/drupal-9-cache), for example, has some specific caching features that may be a factor.
 - For issues confined to a specific page or display element, review the specific [caching logic](/cache-control) for your site or page.
 - If the Pantheon Advanced Page Cache [plugin](/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
 - Certain Drupal modules and WordPress plugins can conflict with Pantheon's granular cache clearing and header system. Review the [Modules](/modules-known-issues) and [Plugins](/plugins-known-issues) With Known Issues pages to identify potential conflicts.
@@ -78,7 +78,7 @@ More complex issues with code may necessitate using debugging tools beyond your 
 
 ## Pantheon Dashboard
 
-In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/support/).
+In general, if the Pantheon Dashboard stops responding, the first step is to refresh the page. The next step is to log out and back in to the Site Dashboard. If the problem persists, [contact support](/guides/support/contact-support/).
 
 ### Check status.pantheon.io
 
@@ -98,7 +98,7 @@ If changes to your code don't appear to be showing:
   git check-ignore -v path/to/file)
   ```
 
-Check [Composer](/composer) dependencies as well. When a Composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
+Check [Composer](/guides/composer) dependencies as well. When a Composer package has a `.gitignore` or a `.git/` folder in it, the platform is going to ignore the files in that folder.
 
 ### Conflicts
 
@@ -142,21 +142,6 @@ define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 ## Drupal 7
 
 Are you a Drupal 7 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
-
-## Drupal 8
-
-### UnmetDependenciesException when installing Drupal 8
-
-Sometimes when installing Drupal 8, users may see the following error:
-
-![A screenshot of a common Drupal 8 installation error](../images/drupal-8-install-error.png)
-
-This is apparently caused by a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
-
-See the [UnmetDependenciesException when installing Drupal 8](https://www.drupal.org/project/drupal/issues/2594351) issue for more information.
-
-Are you a Drupal 8 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md)
-
 
 ### Displaying Error Messages
 

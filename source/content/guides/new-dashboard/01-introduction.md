@@ -23,7 +23,7 @@ Click **Try the New Dashboard** in the User or Organization Dashboard to access 
 
 ![A screenshot of the Switch to New Dashboard button](../../../images/dashboard/new-dashboard/try-new-dashboard.png)
 
-Alternatively, you can navigate to your existing Dashboard, then add `/beta/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/beta/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately directed to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
+Alternatively, you can navigate to your existing Dashboard, then add `/workspace/` between `pantheon.io` and your [UUID](/glossary#uuid). For example: `pantheon.io/workspace/de305d54-75b4-431b-adb2-eb6b9e546014`. You'll be immediately directed to the default Workspace on the New Dashboard. Click **Sites** on the left to access the Sites view.
 
 <Alert title="Limited Availability" type="info" icon="leaf">
 
@@ -40,7 +40,7 @@ The New Dashboard is available as a Limited Availability feature release while a
 
 ### Pantheon Support
 
-The same great [Support](/support) you already love. The New Dashboard makes it easier to find the right resources, whatever your question is, wherever you are in your Workspace.
+The same great [Support](/guides/support) you already love. The New Dashboard makes it easier to find the right resources, whatever your question is, wherever you are in your Workspace.
 
 For quick access to the old Dashboard and Pantheon Documentation, <i className="fa fa-question-circle"></i>
 
@@ -53,7 +53,7 @@ Select the **Sites** tab in the left-navigation menu to search for a Site, migra
 
 You can create a new Site from the new Dashboard homepage or from the **Site** tab. 
 
-To create a Site, click **Create New Site**. You will be directed to the Classic Dashboard for Site creation. Click **Yes,Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
+To create a Site, click **Create New Site**. You will be directed to the Classic Dashboard for Site creation. Click **Yes, Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
 
 
 ## Utility Navigation
@@ -66,7 +66,7 @@ On the homepage, you have access to an overview of the Workspace that provides t
 
 <TabList>
 
-<Tab title="Personal Workspace" id="personal-workspace">
+<Tab title="Personal Workspace" id="personal-workspace" active={true}>
 
 * Workspace type
 * Sites

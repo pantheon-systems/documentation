@@ -21,9 +21,9 @@ When troubleshooting timeout errors, first verify that the timeout is not caused
 
 | Name                                                                                                                         | Timeout     | Description |
 |:---------------------------------------------------------------------------------------------------------------------------- |:----------- |:----------- |
-| Connection Timeout                                                                                                           | 120 seconds  | Number of seconds to wait for a timeout. |
-| First Byte Timeout                                                                                                           | 120 seconds  | Number of seconds to wait for the first byte. |
-| Between Bytes Timeout                                                                                                        | 120 seconds  | Number of seconds to wait for between bytes. |
+| Connection Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for a timeout. |
+| First Byte Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for the first byte. |
+| Between Bytes Timeout                                                                                                        | 59 seconds  | Number of seconds to wait for between bytes. |
 | Pantheon executed Drupal cron                                                                                                | 180 seconds | Only applies to Pantheon's automatic hourly execution of Drush cron. |
 | [PHP set_time_limit](https://secure.php.net/manual/en/function.set-time-limit.php)                                           | 120 seconds | Number of seconds a script can run. If reached, the script returns a fatal error. |
 | Load Balancer                                                                                                                | 120 seconds | Applies to HTTPS requests and requests to a DNS A record. Requests using the Pantheon CNAME for HTTP requests are *not* limited. |
@@ -36,9 +36,22 @@ When troubleshooting timeout errors, first verify that the timeout is not caused
 
 ## Frequently Asked Questions
 
+### Why is the timeout still set to 59 seconds, after setting up the time out for 120 seconds?
+
+All web requests are set to 59 seconds. Fastly's GCDN terminates the request if the backend does not respond after 59 seconds. PHP will continue to process the request until it hits the PHP `max_execution_time`, however the results will not be relayed to the user browser, because the connection has already terminated.
+
+All non-web requests, such as those that do not pass Fastly's CDN, have a maximum timeout of 120 seconds. This includes requests from Terminus or PHP scripts via SSH. 
+
+
+<Alert title="Note" type="info">
+
+If the request passes through port `80` and `443` it will timeout at 59 seconds. 
+
+</Alert>
+
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/terminus). With that said, most slow cron executions are due to PHP errors or a slow external service; best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/php-errors) for clues.
+Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/php-errors) for clues.
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 

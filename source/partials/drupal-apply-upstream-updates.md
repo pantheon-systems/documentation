@@ -3,11 +3,11 @@
 1. Use Terminus to list all available updates:
 
   ```bash{outputLines:2}
-  terminus upstream:updates:list $SITE
+  terminus upstream:updates:list $SITE.dev
   [warning] There are no available updates for this site.
   ```
 
-1. If any updates are available, apply them using the command line or via the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
+1. Apply any available updates using the command line or the [Pantheon Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard):
 
   ```bash{promptUser: user}
   terminus upstream:updates:apply $SITE.dev --updatedb

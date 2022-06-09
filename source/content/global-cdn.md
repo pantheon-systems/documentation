@@ -1,22 +1,30 @@
 ---
 title: Pantheon Global CDN
 description: Improve Site Performance and Security with Pantheon's Global CDN.
-reviewed: "2020-02-27"
+reviewed: "2022-02-11"
 categories: [performance]
 tags: [cache, cdn, launch, security]
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering, with improved performance and security for customer sites. Tap into powerful and strategically distributed Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Tap into powerful and strategically distributed Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps. 
 
 </Enablement>
 
+## Benefits of Pantheon's Global CDN
+
+Global CDN is SOC 2 compliant and offers protection against DDoS attacks that target network layers (layer 3/4) or application layers (layer 7). DDoS attacks vary in method, but all have the same goal of interfering with content on your site.
+
+Pantheon's Global CDN also uses origin shields for additional protection. Origin shields protect sites from traffic overloads while maintaining high availability and redundancy in your setup. Origin shields also help reduce the risk of DDoS attacks.
+
+Refer to [DoS Attack Mitigation](/optimize-site-traffic#dos-attack-mitigation) for more information.
+
 ## How Does It Work?
 
-Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
+Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary data center, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
 - The Global CDN cache strategy eliminates "cache sharding," in which the same content needs to be cached in separate edge cache instances. This results in higher cache hit rates.
 
@@ -54,68 +62,25 @@ Users with session-style cookies set, or a `NO_CACHE` cookie set will bypass the
 
 To test how stale cache is served, compare the header results of a page refresh when the site's Dev environment is live to the header results when Dev is in Maintenance Mode:
 
-<TabList>
+<Partial file="global-cdn-test-cache.md" />
 
-<Tab title="Via Command Line" id="cli" active={true}>
+Once you know what your site's cache currently looks like, you can check your NGINX or Fastly logs for any traffic anomalies or overages.
 
-1. Examine the headers through the command line:
+[NGINX logs](/logs#available-logs) track all requests made to WordPress or Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/nginx-access-log) to produce a compiled report on the most common requests, such as: 404s, user agents, etc.
 
-  ```bash{outputLines: 2-20}
-  curl --head https://pantheon.io/docs
-  HTTP/2 301
-  content-type: text/html
-  location: https://pantheon.io/docs/
-  server: nginx
-  strict-transport-security: max-age=31622400
-  x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
-  x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
-  cache-control: public, max-age=86400
-  date: Tue, 24 Aug 2021 15:30:21 GMT
-  x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
-  x-cache: HIT, HIT
-  x-cache-hits: 1, 1
-  x-timer: S1629819022.932985,VS0,VE1
-  pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
-  vary: Cookie, Cookie
-  age: 9654
-  accept-ranges: bytes
-  via: 1.1 varnish, 1.1 varnish
-  content-length: 162
-  ```
+Fastly log extracts can be requested from your Customer Success Engineer. Standard analytics includes all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
-  Note the result for `age` or `max-age`.
+In your log report, you want to look for:
+- Disproportionate patterns of requests and 404s indicate possible exploits.
+- Too many requests to the index paths may indicate a volumetric attack against the domain.
+- Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
+- Known exploit and excess traffic paths.
 
-1. Navigate to the site's Dev environment and set the site to Maintenance Mode.
+Please refer to the following docs for common caching issues:
 
-1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
-
-1. In a terminal, cURL the site headers filtered for stale cache:
-
-  ```bash{promptUser: user}
-  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
-  ```
-
-  If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
-
-</Tab>
-
-<Tab title="Via Web Browser" id="web-browser">
-
-1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab.
-
-  Find the response headers for the page or asset.
-
-1. Go to the site's Dev environment and set the site to Maintenance Mode.
-
-1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
-
-1. Go back to the page and Developer Tools, then refresh the page for the newest header responses.
-
-  If the result includes `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.
-
-</Tab>
-
-</TabList>
+- [Caching: Advanced Topics](/caching-advanced-topics)
+- [Debug Common Cache Busters](/guides/frontend-performance/caching#troubleshoot-caching-issues)
+- [Traffic Limits and Overages](/traffic-limits)
 
 ## Frequently Asked Questions
 

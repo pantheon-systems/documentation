@@ -7,9 +7,17 @@ tags: [migrate, workflow]
 reviewed: "2020-07-21"
 ---
 
+<Alert title="Deprecated" type="info" icon="drupal">
+
+The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
+
+Visit the [Drupal 9 migration guide](/drupal-9-migration) to find the best path to Drupal 9 for your site.
+
+</Alert>
+
 ## Overview
 
-To upgrade Drupal to a new major version (e.g. version 7 to version 8) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site into the new site.
+To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 9, create a new Drupal 9 site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
@@ -19,22 +27,11 @@ If you have already created a site and want to upgrade it to a new major version
 
 ## About Drupal 9
 
-[Drupal 9.0.0](https://www.drupal.org/about/9) was released in June of 2020. Pantheon support for live Drupal 9 sites is currently in development. See our [Drupal 9 documentation page](/drupal-9) for more information on early access options for trying Drupal 9 on Pantheon.
-
 Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first.
-
-## Upgrade to Drupal 8
-
-The details of executing an upgrade/migration to Drupal 8 have continued to shift since Drupal 8.0.0 was released. As such, this documentation will focus on the Pantheon-specific aspects. Read the [drupal.org documentation the migration process](https://www.drupal.org/docs/8/upgrade/brief-overview-and-history-of-automated-upgrading-to-drupal-8) before starting on your own migration on Pantheon. The basic steps you will follow to migrate to a Drupal 8 site on Pantheon are:
-
-1. Create a new Drupal 8 site on Pantheon from your User Dashboard.
-1. Add the 8.x version of your contrib modules. Some of these modules will have built-in migrating functionality that will help move their data from Drupal 7 to Drupal 8.
-1. Use the [Migrate](https://www.drupal.org/project/migrate) module to move over data and configuration from Drupal 7.
-1. Depending on the complexity of your site, you will likely want to review, revise, and rerun your migration.
 
 ### Content and configuration
 
-Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 8 site](/drupal-8-configuration-management)).
+Drupal 9 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 9 site](/drupal-9-configuration-management)).
 
 ### Customizing migrations
 
@@ -83,12 +80,6 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 
 ## See Also
 
-View the following [Drupal.org](https://drupal.org) resources for more information:
-
+- [Drupal 9](/drupal-9)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
-- [Executing a Drupal 7 to Drupal 8 upgrade](https://www.drupal.org/node/2257723)
-- [Upgrading from Drupal 7 to Drupal 8](https://www.drupal.org/upgrade/migrate)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)
-- [Running Drupal 8 Data Migrations on Pantheon Through Drush](https://pantheon.io/blog/running-drupal-8-data-migrations-pantheon-through-drush)
-- [Drupal 8 File Migrations
-](https://pantheon.io/blog/drupal-8-file-migrations)

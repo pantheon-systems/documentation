@@ -29,7 +29,7 @@ If you don't see that, look in to recent changes and revert or remove whatever o
 
 ### WordPress Core
 
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 ## Drupal Non-Standard Bootstraps
 
@@ -44,8 +44,6 @@ However, because the Pantheon environment data is not loaded at this time, any b
   extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
   include './sites/all/modules/domain/settings.inc';
 ```
-
-You can also use the above to develop Drupal 8 on Pantheon.
 
 <Alert title="Warning" type="danger">
 

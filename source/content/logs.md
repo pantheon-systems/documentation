@@ -116,7 +116,7 @@ You now have a local copy of the logs directory, which contains the following:
 
 ## Automate Downloading Logs
 
-You can automate the process of accessing and maintaining these logs with a simple script.
+Automate the process of accessing and maintaining these logs with a script.
 
 ### Create a Script
 
@@ -127,49 +127,31 @@ mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
 
-Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the following:
+Choose your preferred method from the following tabs, then click the **Download** button to download the script. Move it to the `site-logs` directory you created, and use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+
+The resulting log file might be large.
+
+The script provides several modifiable variables described in its comments:
 
   <TabList>
 
   <Tab title="Rsync version" id="rsync-ver" active={true}>
 
-  ```bash:title=collect-logs.sh
-  #!/bin/bash
-  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-  SITE_UUID=xxxxxxxxxxx
-  ENV=live
-  for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
-  do
-    rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$app_server:logs" "app_server_$app_server"
-  done
+  <Download file="collect-logs-rsync.sh" />
 
-  # Include MySQL logs
-  for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
-  do
-    rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$db_server:logs" "db_server_$db_server"
-  done
-  ```
+  GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/collect-logs-rsync.sh.txt shell:title=collect-logs-rsync.sh GITHUB-EMBED
+
+  [View on GitHub](https://github.com/pantheon-systems/documentation/blob/main/source/scripts/collect-logs-rsync.sh.txt)
 
   </Tab>
 
   <Tab title="SFTP version" id="sftp-ver">
+  
+  <Download file="collect-logs-sftp.sh" />
 
-  ```bash:title=collect-logs.sh
-  #!/bin/bash
-  # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
-  SITE_UUID=xxxxxxxxxxx
-  ENV=live
-  for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
-  do
-    echo "get -R logs \"app_server_$app_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$app_server"
-  done
+  GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/collect-logs-sftp.sh.txt shell:title=collect-logs-sftp.sh GITHUB-EMBED
 
-  # Include MySQL logs
-  for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
-  do
-    echo "get -R logs \"db_server_$db_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$db_server"
-  done
-  ```
+  [View on GitHub](https://github.com/pantheon-systems/documentation/blob/main/source/scripts/collect-logs-sftp.sh.txt)
 
   </Tab>
 
@@ -203,7 +185,7 @@ The client IP for the following example is `122.248.101.126`:
 
 ### Can I log to the system logger and access syslog?
 
-No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
+No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them. You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
 
 ### Can I access Apache Solr logs?
 
@@ -237,13 +219,13 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
 - Using [Terminus](/terminus):
 
  ```bash{promptUser: user}
- terminus drush <site>.<env> -- watchdog-show
+ terminus drush <site>.<env> -- watchdog-show
  ```
 
 - Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
  ```bash{promptUser: user}
- terminus drush <site>.<env> -- watchdog-show --tail
+ terminus drush <site>.<env> -- watchdog-show --tail
  ```
 
 ### My Drupal database logs are huge. Should I disable dblog?

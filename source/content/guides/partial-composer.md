@@ -11,7 +11,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 
 ## Before You Begin
 
-- Read [Composer Fundamentals and Workflows](/composer)
+- Read [Composer Fundamentals and Workflows](/guides/composer)
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 
@@ -225,6 +225,6 @@ The following example shows you how to install a site local Drush. You can use t
 
 ## Next Steps
 
-If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress. This is not supported on Drupal 8 as it will break one-click updates due to excessive conflicts.
+If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress.
 
 If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/guides/build-tools) guide.
