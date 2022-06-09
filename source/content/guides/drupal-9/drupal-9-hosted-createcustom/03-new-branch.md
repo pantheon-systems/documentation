@@ -43,7 +43,7 @@ The first step in the migration process is to create a new branch with Integrate
 1. Add and commit files from the Integrated Composer upstream:
 
    ```bash{promptUser:user}
-   git checkout ic/master .
+   git checkout ic/main .
    git add $FILE_NAME
    git commit -m "Add and commit Integrated Composer files"
    ```
