@@ -33,6 +33,8 @@ The Site Portfolio Report provides important account information at the top of t
 
 The Site Portfolio Report provides snapshot of your portfolio through three charts:
 
+![Charts](../../../images/guides/site-portfolio-report-charts.png)
+
 ### Existing Sites with Automatic Upgrades
 
 Automatic upgrades happen when your sites exceed the traffic limits of the plan you selected in your contract. Pantheon will upgrade your plan to cover the increased traffic from your users.

@@ -19,13 +19,15 @@ You can view additional information for each of the charts.
 
 Hover over the bars in the chart to see more information, including number of sites by plan.
 
+![Hover over charts](../../../images/guides/site-portfolio-report-chart-hover-over.png)
+
 ## Filter the Report
 
 You can filter the Breakdown tables of all three categories in the report. 
 
-Click the **Filter by** drop-down menus to filter by Owner, Previous Site Plan, or Current Site Plan.
+Click the **Filter by** drop-down menus to filter by specific Owner, All Owners, Previous Site Plan, or Current Site Plan.
 
-You can also filter by several of the headings:
+You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by:
 
 - Site Name
 
@@ -39,7 +41,6 @@ You can also filter by several of the headings:
 
 - Current Invoice Date
 
-- Click the drop-down menu of the heading and select the option you want to filter by:
 
 ## Search the Report
 
@@ -63,4 +64,8 @@ You can collapse and re-expand the each of the Breakdown tables.
 
 Click the arrow located next to the site count of any of the Breakdown tables to collapse (or re-expand) the view.
 
-## Deploy Button Feature stand in.
+## Download CSV 
+
+You can click the Download CSV button under the All Active Sites in Portfolio breakdown table to download data. This allows you to view all data for active sites in Excel or a similar application.
+
+![Breakdown Table with Download](../../../images/guides/site-portfolio-report-breakdown-download.png)
