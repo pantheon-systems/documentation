@@ -5,6 +5,7 @@ categories: [develop]
 tags: [database, local, ssh, redis, webops]
 contributors: [bwood]
 ---
+
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.
 
 This technique configures an SSH client to forward a local port to a port on Pantheon. Once the tunnel is established, you can connect to the local port to access the remote service using the encrypted connection.
@@ -14,7 +15,7 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 - [MySQL database](/mysql-access) (dbserver)
 - [Redis cache](/object-cache)
 
-To restrict access to these services to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access).
+To restrict access to the dbserver to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access).
 
 ## Prerequisites
 
