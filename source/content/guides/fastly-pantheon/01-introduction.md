@@ -24,9 +24,9 @@ Using Fastly on the Pantheon platform to manage your site provides many benefits
     - [Syslog](https://docs.fastly.com/en/guides/log-streaming-syslog)
     - And other [Fastly logging endpoints](https://docs.fastly.com/en/guides/integrations#_logging-endpoints)
 
-- Enhanced Caching at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration / continuous delivery (CI/CD).
+- Enhanced Caching at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration/continuous delivery (CI/CD).
 
-- Image Optimizer (IO) as an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
+- Image Optimizer (IO) as an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
 ## Take Advantage of Fastly on Pantheon 
 
@@ -34,7 +34,7 @@ Fastly can be used with the [Global CDN](/global-cdn) that comes automatically w
 
 Key content to review in your log report include:
 
-- Disproportionate patterns of requests and 404s indicate possible exploits.
+- Disproportionate patterns of requests and 404s, which indicate possible exploits.
 
 - Too many requests to the index paths may indicate a volumetric attack against the domain.
 
@@ -61,6 +61,3 @@ You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 
 - [Fastly](https://explore.fastly.com)
-
-
-
