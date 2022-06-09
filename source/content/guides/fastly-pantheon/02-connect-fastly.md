@@ -15,15 +15,15 @@ This section provides steps on how to connect your Fastly account to your Panthe
 
 ## Before You Begin
 
-Verify that you have following before you begin:
+Verify that you have the following before you begin:
 
-- A registered domain name
+- A registered domain name.
 
-- The ability to modify your domain's nameservers
+- The ability to modify your domain's nameservers.
 
-- You have a [Pantheon account](https://pantheon.io/register) with a configured WordPress or Drupal site
+- A [Pantheon account](https://pantheon.io/register) with a configured WordPress or Drupal site.
 
-- A [Fastly account](https://www.fastly.com/signup/)
+- A [Fastly account](https://www.fastly.com/signup/).
 
 ## Connect Fastly to Pantheon
 
@@ -37,15 +37,15 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Enter the site domain you want to serve as the root level in the **Domain Name** field.    
     
-    - Note that Fastly does not serve A names, such as `site-example.com`. You must use www. Your site domain should look like this: `www.site-example.com`.
+    - Note that Fastly does not serve `A` names, such as `site-example.com`. You must use `www`. Your site domain should look like this: `www.site-example.com`.
 
 1. Click **Configure** after Fastly has finished setting up the service. 
 
-1. Click the **Hosts** tab > click the **+ New** button and add the Pantheon sub-domain for the secondary site's Live environment.
+1. Click the **Hosts** tab > Click the **+ New** button and add the Pantheon sub-domain for the secondary site's Live environment.
 
-1. Select the gear icon next to the primary content host > select **Conditions** > click the **+ New** button > complete the pop-up fields.
+1. Select the <i class="fa fa-gear"></i> gear icon next to the primary content host > Select **Conditions** > Click the **+ New** button > Complete the pop-up fields.
 
-    - You must create a Fastly Condition for each host. Each condition let's Fastly know what traffic needs to be sent to what server. Your field entries should like this:
+    - You must create a Fastly Condition for each host. Each condition lets Fastly know what traffic needs to be sent to which server. Your field entries should like this:
 
         - **Name:** `Main Content`
         - **Apply If...:** `req.url !~ "^/main"`
@@ -54,7 +54,7 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
             - This tells Fastly that any URL that contains `/main` must be sent to the main server.
 
     
-1. Select the gear icon next to the secondary content host > select **Conditions** > click the **+ New** button > complete the pop-up fields.
+1. Select the <i class="fa fa-gear"></i> gear icon next to the secondary content host > Select **Conditions** > Click the **+ New** button > Complete the pop-up fields.
 
     - Your field entries should like this:
 
@@ -64,7 +64,7 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
             - This tells Fastly that any URL that contains `/blog` must be sent to the blog content server.
 
-1. Click **Content** > click **New** > complete the pop-up fields to create a custom header for redirected requests.
+1. Click **Content** > Click **New** > Complete the pop-up fields to create a custom header for redirected requests.
 
     - Your entries should look like this: 
 
@@ -77,11 +77,11 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Click **Create** and save the new content.
 
-1. Click the gear icon next to the **Main_Server_Host** header > select **Request Conditions** > click the **Name** drop-down menu > select the `Main_Server_Host_Condition` > click **Assign**. 
+1. Click the <i class="fa fa-gear"></i> gear icon next to the **Main_Server_Host** header > Select **Request Conditions** > Click the **Name** drop-down menu > Select the `Main_Server_Host_Condition` > Click **Assign**. 
 
     - This assigns the `Main_Server_Host` Header to the `Main_Server_Host_Condition` and appends the header to all traffic sent to the main content server on Pantheon.
 
-1. Click **Content** again > click **New** > complete the pop-up fields to create a second custom header for redirected requests.
+1. Click **Content** again > Click **New** > Complete the pop-up fields to create a second custom header for redirected requests.
 
     - Your entries should look like this: 
 
@@ -94,7 +94,7 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Click **Create** and save the new content.
 
-1. Click the gear icon next to the `Main_Server_Host` header > select **Request Conditions** > click the **Name** drop-down menu > select `Blog_Server_Host_Condition` > click **Assign**. 
+1. Click the <i class="fa fa-gear"></i> gear icon next to the `Main_Server_Host` header > Select **Request Conditions** > Click the **Name** drop-down menu > Select `Blog_Server_Host_Condition` > Click **Assign**. 
 
     - This assigns the `Main_Server_Host` Header to the `Blog_Server_Host_Condition` and appends the header to all traffic sent to the main content server on Pantheon.
 
@@ -105,5 +105,3 @@ Follow the steps below to confirm that your Fastly account is working correctly 
 1. Open a new browser tab and load the main URL, for example: `http://www.example-site.com/`. 
 
 1. Verify that the website loads correctly and appends the directory that serves the second Pantheon site to the end of the main URL, for example: `http://www.example-site.com/blog/`
-
-
