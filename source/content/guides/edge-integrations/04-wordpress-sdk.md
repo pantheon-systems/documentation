@@ -67,7 +67,7 @@ You can learn more about how to use or manage the geolocation data in the [Geolo
 
 ### Test Geolocation
 
-To validate that geolocation is working, open your browser inspector tools, click the Network tab (in Chrome and Firefox), and reload the page so that new data can be recorded and displayed. When you click on the page URL- usually listed first- and inspect the Response Headers, the relevant geolocation data will appear. In this case, the response headers begin with 'p13n-geo'.
+To validate that geolocation is working, open your browser inspector tools, click the Network tab (in Chrome and Firefox), and reload the page so that new data can be recorded and displayed. When you click on the page URL- usually listed first- and inspect the Response Headers, the relevant geolocation data will appear. In this case, the response headers begin with `p13n-geo`.
 
 ![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/ei-wp-geo-headers.png)
 
