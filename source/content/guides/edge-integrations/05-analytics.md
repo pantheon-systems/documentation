@@ -307,6 +307,6 @@ You can also observe how different audiences convert towards the same Goal.
 ![Compared goals](../../../images/guides/edge-integrations/ei-analytics-35-compared-goals.png)
 
 
-## See Also
+## More Resources
 
 - [Integrate Your Fastly on Pantheon Account with Splunk](/guides/fastly-pantheon/fastly-splunk)
