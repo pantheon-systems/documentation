@@ -19,7 +19,7 @@ You can view additional information for each of the charts.
 
 Hover over the bars in the chart to see more information, including number of sites by plan.
 
-![Hover over charts](../../../images/guides/site-portfolio-report-chart-hover-over.png)
+![Hover over charts](../../../images/site-portfolio-report-chart-hover-over.png)
 
 ## Filter the Report
 
@@ -68,4 +68,4 @@ Click the arrow located next to the site count of any of the Breakdown tables to
 
 You can click the Download CSV button under the All Active Sites in Portfolio breakdown table to download data. This allows you to view all data for active sites in Excel or a similar application.
 
-![Breakdown Table with Download](../../../images/guides/site-portfolio-report-breakdown-download.png)
+![Breakdown Table with Download](../../../images/site-portfolio-report-breakdown-download.png)
