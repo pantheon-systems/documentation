@@ -17,7 +17,7 @@ This section provides information on how you can interact with the Site Portfoli
 
 You can view additional information for each of the charts.
 
-Hover over the bars in the chart to see more information, including number of sites by plan.
+Hover over the bars in the chart to see more information, including the number of sites by plan.
 
 ![Hover over charts](../../../images/site-portfolio-report-chart-hover-over.png)
 
@@ -25,7 +25,15 @@ Hover over the bars in the chart to see more information, including number of si
 
 You can filter the Breakdown tables of all three categories in the report. 
 
-Click the **Filter by** drop-down menus to filter by specific Owner, All Owners, Previous Site Plan, or Current Site Plan.
+Click the **Filter by** drop-down menus to filter by:
+
+- Specific Owner
+
+- All Owners
+
+- Previous Site Plan
+
+- Current Site Plan
 
 You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by:
 
@@ -47,6 +55,8 @@ You can also filter by several of the headings. Click the drop-down menu of the 
 You can search each of the Breakdown tables by site name.
 
 Enter the site name you want to search for in the **Search by site name** box located above the breakdown headings.
+
+![Breakdown Table Search Box](../../../images/site-portfolio-report-search.png)
 
 ## Increase the Number of Rows Shown in the Breakdown Tables
 

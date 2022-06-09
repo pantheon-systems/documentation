@@ -31,9 +31,9 @@ The Site Portfolio Report provides important account information at the top of t
 
 ## What’s in the Site Portfolio Report
 
-The Site Portfolio Report provides snapshot of your portfolio through three charts:
+The Site Portfolio Report provides a snapshot of your portfolio through three charts:
 
-![Charts](../../../images/site-portfolio-report-charts.png)
+![Site Portfolio Charts](../../../images/site-portfolio-report-charts.png)
 
 ### Existing Sites with Automatic Upgrades
 
@@ -43,7 +43,7 @@ Read [Traffic Limits and Overages](/traffic-limits) for more information on how 
 
 ### New Sites that Exceeded the Contract
 
-Pantheon allows you to add sites to your portfolio as needed, regardless of the allotment you’ve paid for in your contract to ensure that customers are not blocked. The charges listed in this section of your Site Portfolio Report can result from multiple scenarios, including:
+Pantheon allows you to add sites to your portfolio as needed, regardless of the allotment you previously paid for in your contract to ensure that visitors to your site are not blocked. The charges listed in this section of your Site Portfolio Report can result from multiple scenarios, including:
 
 - Your site portfolio was expanded by the creation of one or more sites
 
