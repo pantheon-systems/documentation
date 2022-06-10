@@ -85,7 +85,7 @@ Which version of Drupal is your site using?
 
 </Accordion>
 
-<Accordion title="Platform" id="pf">
+<Accordion title="Platform.sh" id="pf">
 
 ## Platform.sh
 
