@@ -16,7 +16,7 @@ Which version of Drupal is your site using?
 
 - 9
   - Composer-managed: [Migrate a Composer-Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-  - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform]([https://](/guides/drupal-9-unhosted))
+  - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 - Anything Else
   - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
   - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
@@ -29,7 +29,7 @@ Which version of Drupal is your site using?
 
 - 9
   - Composer-managed: [Migrate a Composer-Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-  - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform]([https://](/guides/drupal-9-unhosted))
+  - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 - Anything Else
   - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
   - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
@@ -38,31 +38,31 @@ Which version of Drupal is your site using?
 
 <Accordion title="Kinsta" id="kinsta">
 
-  What CMS are you using?
+What CMS are you using?
 
-  <TabList>
+<TabList>
 
-   <Tab title="WordPress" id="wp" active={true}>
+  <Tab title="WordPress" id="wp" active={true}>
 
-     - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
-     - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
+  - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
+  - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
 
-   </Tab>
+  </Tab>
 
-   <Tab title="Drupal" id="dp">
+  <Tab title="Drupal" id="dp">
 
-   Which version of Drupal is your site using?
+  Which version of Drupal is your site using?
 
-   - 9
-     - Composer-managed: [Migrate a Composer-Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-     - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform]([https://](/guides/drupal-9-unhosted))
-   - Anything Else
-     - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
-     - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
+  - 9
+    - Composer-managed: [Migrate a Composer-Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
+    - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
+  - Anything Else
+    - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
+    - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
 
-   </Tab>
+  </Tab>
 
-  </TabList>
+</TabList>
 
 </Accordion>
 
@@ -72,7 +72,7 @@ Which version of Drupal is your site using?
 
 - 9
   - Composer-managed: [Migrate a Composer-Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-  - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform]([https://](/guides/drupal-9-unhosted))
+  - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 - Anything Else
   - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
   - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
@@ -98,7 +98,7 @@ Which version of Drupal is your site using?
 
    - 9
      - Composer-managed: [Migrate a Composer-Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-     - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform]([https://](/guides/drupal-9-unhosted))
+     - not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
    - Anything Else
      - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
      - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
