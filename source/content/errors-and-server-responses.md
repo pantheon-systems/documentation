@@ -26,6 +26,11 @@ Pantheon also prevents public access via the web server to private files, `.htac
 ### Pantheon 404 Unknown Site
 "The hostname ... is unknown. Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
+### Error 404 Not Found
+Most times it will show `Failed to load resource: the server responded with a status of 404 ()` if the element is inspected from a web browser and a lot of different variations.
+
+Basically, it means that the client (via web browser) was able to successfully connect to the host (website’s application server), but it was unable to find the actual resource that was requested (i.e. a specific URL or filename). So the best way is to confirm if the URL and file do exist.
+
 ### 502 Upstream Header Too Big
 "Upstream sent too big header while reading response header from upstream."
 This error will occur when the payload or size of the request being sent is greater than the `fastcgi_buffer_size`. Removing additional images reduces the size of the payload being sent to the buffer for nginx to process, and will allow you to post the request. If this happens again, check to see if you are making heavy requests with a number of assets or data being passed.
