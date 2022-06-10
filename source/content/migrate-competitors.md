@@ -6,9 +6,9 @@ tags: [dashboard, migrate, site]
 reviewed: "2021-04-01"
 ---
 
-Moving your site from another platform to Pantheon?  Use the following information to determine the instructions you'll need to do so.
+Moving your site from another platform to Pantheon?  We've got the instructions you'll need to be successful!
 
-Select your old platform:
+**Select your old platform:**
 
 <Accordion title="Acquia" id="acquia">
 
