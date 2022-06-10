@@ -79,6 +79,8 @@ Which version of Drupal is your site using?
 
 </Accordion>
 
+<Accordion title="MISSING OPEN ACCORDION" id="another1">
+
   What CMS are you using?
 
   <TabList>
