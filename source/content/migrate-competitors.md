@@ -12,6 +12,8 @@ Select your old platform:
 
 <Accordion title="Acquia" id="acquia">
 
+## Acquia
+
 Which version of Drupal is your site using?
 
 - 9
@@ -37,6 +39,8 @@ Which version of Drupal is your site using?
 </Accordion>
 
 <Accordion title="Kinsta" id="kinsta">
+
+## Kinsta
 
 What CMS are you using?
 
@@ -68,6 +72,8 @@ Which version of Drupal is your site using?
 
 <Accordion title="Pagely" id="pagely">
 
+## Pagely
+
 Which version of Drupal is your site using?
 
 - 9
@@ -80,6 +86,8 @@ Which version of Drupal is your site using?
 </Accordion>
 
 <Accordion title="Platform.sh" id="platform">
+
+## Platform.sh
 
 What CMS are you using?
 
@@ -111,12 +119,16 @@ Which version of Drupal is your site using?
 
 <Accordion title="WordPress VIP" id="wpvip">
 
+## WordPress VIP
+
   - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
   - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
 
 </Accordion>
 
 <Accordion title="WP Engine" id="wpeng">
+
+## WP Engine
 
   - Archive under 500MB: [Migrate Sites to Pantheon](/migrate)
   - Archive over 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
