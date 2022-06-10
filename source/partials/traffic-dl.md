@@ -40,7 +40,7 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 ## How Do You Know if a Visit Counts?
 
-*The visit counts if it*:
+**The visit counts if it**:
 
 - Is valid
 - Is not a known bot
@@ -49,7 +49,7 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 - Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
 
-*The visit does not count if it*:
+**The visit does not count if it**:
 
 - Is invalid (originating from a known bot or crawler)
   - A high-performance response to crawlers supports SEO, which is one of the reasons Pantheon is the platform of choice for our customers. Although it places load on the platform, Pantheon excludes select automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. See above definition of Visits regarding the combination of datasets to determine traffic metrics. Pantheon excludes certain activity on your Site Dashboard (e.g., Google bot user agent).
