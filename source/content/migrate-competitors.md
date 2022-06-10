@@ -85,14 +85,6 @@ Which version of Drupal is your site using?
 
 </Accordion>
 
-<Accordion title="Platform.sh" id="platform">
-
-## Platform.sh
-
-What CMS are you using?
-
-</Accordion>
-
 <Accordion title="WordPress VIP" id="wpvip">
 
 ## WordPress VIP
