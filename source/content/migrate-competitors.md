@@ -85,7 +85,9 @@ Which version of Drupal is your site using?
 
 </Accordion>
 
-<Accordion title="test" id="test">
+<Accordion title="Platform" id="pf">
+
+## Platform.sh
 
 What CMS are you using?
 
