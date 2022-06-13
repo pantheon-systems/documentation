@@ -47,7 +47,7 @@ Here's the browser version of the script:
 
 <TabList>
 
-<Tab title="PHP 5" id="php5">
+<Tab title="PHP 5" id="php5" active={true}>
 
 ```php:title=myisam-to-innodb.php
 <h1>Pantheon MyISAM to InnoDB engine converter</h1>

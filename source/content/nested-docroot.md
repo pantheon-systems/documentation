@@ -85,79 +85,80 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <TabList>
 
 <Tab title="Drupal 7" id="d7" active={true}>
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
+The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  ```bash{promptUser: user}
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
-  ```
+[Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
+```bash{promptUser: user}
+mkdir web
+git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+```
 
-  Your directory structure should look like this afterwards:
+These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
-  ```none
-  ├── web
-    ├── includes
-    ├── index.php
-    ├── misc
-    ├── modules
-    ├── profiles
-    ├── scripts
-    ├── sites
-        └── all
-            ├── modules
-            └── themes
-            └── default
-            └── settings.php
-    └── themes
-  ```
+Your directory structure should look like this afterwards:
+
+```none
+├── web
+  ├── includes
+  ├── index.php
+  ├── misc
+  ├── modules
+  ├── profiles
+  ├── scripts
+  ├── sites
+      └── all
+          ├── modules
+          └── themes
+          └── default
+          └── settings.php
+  └── themes
+```
 
 </Tab>
 
 <Tab title="WordPress" id="wp">
 
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
+[Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
-  ```bash
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') wp-includes wp-content wp-admin ./*.php web
-  ```
+```bash
+mkdir web
+git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') wp-includes wp-content wp-admin ./*.php web
+```
 
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
+These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
-  Your directory structure should look like this afterwards:
+Your directory structure should look like this afterwards:
 
-  ```none
-  ├── web
+```none
+├── web
+  ├── index.php
+  ├── wp-activate.php
+  ├── wp-config.php
+  ├── wp-config-local-sample.php
+  ├── wp-config-pantheon.php
+  ├── wp-comments-post.php
+  ├── wp-blog-header.php
+  ├── wp-admin
+  ├── wp-cron.php
+  ├── wp-load.php
+  ├── wp-links-opml.php
+  ├── wp-includes
+  ├── xmlrpc.php
+  ├── wp-trackback.php
+  ├── wp-signup.php
+  ├── wp-settings.php
+  ├── wp-mail.php
+  ├── wp-login.php
+  ├── wp-content
     ├── index.php
-    ├── wp-activate.php
-    ├── wp-config.php
-    ├── wp-config-local-sample.php
-    ├── wp-config-pantheon.php
-    ├── wp-comments-post.php
-    ├── wp-blog-header.php
-    ├── wp-admin
-    ├── wp-cron.php
-    ├── wp-load.php
-    ├── wp-links-opml.php
-    ├── wp-includes
-    ├── xmlrpc.php
-    ├── wp-trackback.php
-    ├── wp-signup.php
-    ├── wp-settings.php
-    ├── wp-mail.php
-    ├── wp-login.php
-    ├── wp-content
-      ├── index.php
-      ├── mu-plugins
-      ├── themes
-      ├── plugins
-  ```
+    ├── mu-plugins
+    ├── themes
+    ├── plugins
+```
 
 </Tab>
 
