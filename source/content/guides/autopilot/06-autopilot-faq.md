@@ -1,9 +1,9 @@
 ---
 title: Pantheon Autopilot
-subtitle: Troubleshoot Autopilot Error Messages
-description: "Diagnose and remedy some common Autopilot errors."
+subtitle: Autopilot Frequently Asked Questions
+description: Get answers for your Autopilot questions.
 categories: [automate]
-tags: [autopilot, troubleshoot, webops]
+tags: [autopilot, webops]
 type: guide
 layout: guide
 showtoc: true
