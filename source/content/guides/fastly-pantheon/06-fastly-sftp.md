@@ -11,18 +11,18 @@ permalink: docs/guides/fastly-pantheon/fastly-sftp
 anchorid: fastly-sftp
 ---
 
-This section provides information on integrating your Fastly on Pantheon account with your SFTP server. 
+This section provides information on integrating your Fastly account on Pantheon with your SFTP server. 
 
 ## Before You Begin
 
 Verify the following before you begin:
 
-- You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly)
+- You have already [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly).
 
 
 ## Integrate SFTP with Your Fastly Account on Pantheon
 
-Follow the steps below to send data to your SFTP sever from your Fastly on Pantheon account.
+Follow the steps below to send data to your SFTP sever from your Fastly account on Pantheon.
 
 1. Complete the steps to [add your SFTP as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-sftp#adding-sftp-as-a-logging-endpoint).
 
