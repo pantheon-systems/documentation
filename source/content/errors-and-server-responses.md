@@ -27,9 +27,9 @@ Pantheon also prevents public access via the web server to private files, `.htac
 "The hostname ... is unknown. Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
 ### Error 404 Not Found
-"Failed to load resource: the server responded with a status of 404 ()" displays if a web browser inspects an element and finds multiple variations.
+"Failed to load resource: the server responded with a status of 404 ()" or a similar error message displays when a web browser cannot find the element specified.
 
-This error occurs when the client (via web browser) successfully connects to the host (website’s application server), but is unable to find the actual resource requested (for example, a specific URL or filename). We recommend confirming that the URL and file exist.
+This error occurs when the client (via web browser) successfully connects to the host (website’s application server), but is unable to find the actual resource requested (for example, a specific URL or filename). We recommend confirming that the URL or file name is correct and still exists on the site.
 
 ### 502 Upstream Header Too Big
 "Upstream sent too big header while reading response header from upstream."
