@@ -23,7 +23,7 @@ if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
 }
 ```
 
-## Are there other logging endpoints I can use with my Fastly on Pantheon account?
+## Are there other logging endpoints I can use with my Fastly account on Pantheon?
 
 Yes. You can use any of the [Fastly logging endpoints](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) if you have [connected your Fastly account to your Pantheon account](/guides/fastly-pantheon/connect-fastly).
 
@@ -41,7 +41,7 @@ Advanced Global CDN is supported by Pantheon’s experienced [Professional Servi
 
 ## Why is the timeout still set to 59 seconds, after setting up the time out for 120 seconds?
 
-All web requests are set to 59 seconds. Fastly's GCDN terminates the request if the backend does not respond after 59 seconds. PHP will continue to process the request until it hits the PHP `max_execution_time`, however the results will not be relayed to the user browser, because the connection has already terminated.
+All web requests are set to 59 seconds. Fastly's GCDN terminates the request if the backend does not respond after 59 seconds. PHP will continue to process the request until it hits the PHP `max_execution_time`. However, the results will not be relayed to the user browser because the connection has already terminated.
 
 All non-web requests, such as those that do not pass Fastly's CDN, have a maximum timeout of 120 seconds. This includes requests from Terminus or PHP scripts via SSH.
 
