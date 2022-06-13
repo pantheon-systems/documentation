@@ -630,6 +630,8 @@ ___
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
+Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
+
 <Example>
 
 <TabList>
