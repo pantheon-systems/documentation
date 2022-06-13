@@ -3,7 +3,7 @@ title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
 categories: [platform]
 tags: [logs, newrelic, workflow]
-reviewed: "2020-07-14"
+reviewed: "2022-06-13"
 ---
 
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic&reg; Performance Monitoring](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
@@ -127,11 +127,11 @@ Automate the process of accessing and maintaining these logs with a script.
     cd $HOME/site-logs
     ```
 
-1. Choose your preferred method from the following tabs > click the **Download** button to download the script. 
+1. Choose your preferred method from the following tabs > Click the **Download** button to download the script. 
 
-1. Move the downloaded script to the `site-logs` directory you created > use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+1. Move the downloaded script to the `site-logs` directory you created > Use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
 
-  - The resulting log file might be large.
+  - Please note that the resulting log file might be large.
 
 The script provides several modifiable variables described in its comments:
 
