@@ -366,19 +366,19 @@ ___
 
 <ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another.
 
-**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work.
 
 For example: my.example.com
 
-Find or replace must handle `test.example.com` -> `my.example.com` and 
+Find or replace must handle `test.example.com` -> `my.example.com` and
 `my.example.com` -> `test.example.com`.
 
 Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
 
 **Solution 2:** Use the search and replace feature in Elementor to enter the following:
- 
+
 `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
@@ -541,7 +541,7 @@ ___
 
 **Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
-**Solution:** 
+**Solution:**
 
 <Partial file="jetpack-enable-xmlrpc.md" />
 
@@ -1422,6 +1422,19 @@ ___
 **Issue:** The redirects for the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin setting will detect two options for redirect methods, "PHP", and "Web Server". The Web Server option expects write access to the `nginx.conf` file, which is not writable on Pantheon.
 
 **Solution:** Only use the "PHP" redirect method.
+
+<ReviewDate date="2022-06-13" />
+
+**Issue:** [Yoast Indexables](https://yoast.com/innovations/indexables/) can cause performance issues on very large sites. Sites that have 100,000+ posts may find that trying to index the table with `wp yoast index` will time out. Sites may also see slow load times in both the frontend and wp-admin areas due to queries on the `wp_yoast_indexables`.
+
+**Solution:** [Disable saving data](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/#disabling-indexables) to the `wp_yoast_indexables` table to improve wp-admin performance. However, on sites with 1,000,000+ posts you may see acutely poor performance on the frontend with indexables disabled.
+
+```php:title=plugin.php
+/** Tell Yoast not to save indexable data to the wp_yoast_indexables table. */
+add_filter( 'Yoast\WP\SEO\should_index_indexables', '__return_false' );
+```
+
+Pantheon's Professional Services has tooling available that can help index very large sites. Reach out to your Customer Success Manager to get more information about the tooling.
 
 ___
 
