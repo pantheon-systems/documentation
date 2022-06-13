@@ -4,7 +4,9 @@ description: Set HTTP headers to disable caching along Pantheon's edge layer, Va
 categories: [performance]
 tags: [cache, cdn, cookies]
 ---
+
 ## Exclude Specific Pages from Caching
+
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="webops-cache-control">
@@ -13,11 +15,11 @@ Learn industry best practices for caching, how to take advantage of them on the 
 
 </Enablement>
 
-Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited. 
+Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited.
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7">
+<Tab title="Drupal 7" id="d7" active={true}>
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 
