@@ -32,7 +32,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
         
     Installing the Edge Integrations Drupal SDK will give you all the documentation in the Drupal SDK package as well as the Edge Integrations Global Library, which is required for Edge Integrations to work optimally in Drupal. You should choose this option if you do not plan on using Smart Content in your Drupal site. If you plan on using Smart Content to manage personalized content, you need to install both the Drupal SDK package as well as `smart_content_cdn`.
 
-            ```
+            ```bash{promptUser: user}
             composer require pantheon-systems/edge-integrations-drupal-sdk
             ```
 
@@ -40,7 +40,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
     Installing the Smart Content CDN module will install the Smart Content module and the Edge Integrations Global Library. This option does not include documentation in the Drupal SDK package. You should choose this option if you plan on using the Smart Content ecosystem to manage personalized content in your Drupal site. If you installed `smart_content_cdn` with Composer, you do not need to install the Edge Integrations Drupal SDK.
 
-            ```
+            ```bash{promptUser: user}
             composer require pantheon-systems/smart_content_cdn
             ```
 
