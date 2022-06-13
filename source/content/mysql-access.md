@@ -16,13 +16,11 @@ Due to the nature of our platform, the connection information will change from t
 
 ## Database Connection Information
 
+<Partial file="platform-considerations-connections.md" />
+
 ### Accessing the Database Directly
 
-<Alert title="Note" type="info" >
-
-This option is not available if you have purchased Secure Runtime Access.  [Learn more](/secure-runtime-access).
-
-</Alert>
+This option is not available if you have purchased [Secure Runtime Access](/secure-runtime-access).
 
 MySQL credentials for each site environment are located in the Dashboard:
 

@@ -27,7 +27,9 @@ array(13) {
 
 If you are using a common CMS framework, the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
 
-## Drupal 7 
+<Partial file="platform-considerations-connections.md" />
+
+## Drupal
 
 <Alert title="Warning" type="danger">
 
