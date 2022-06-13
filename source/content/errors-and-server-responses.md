@@ -29,7 +29,7 @@ Pantheon also prevents public access via the web server to private files, `.htac
 ### Error 404 Not Found
 "Failed to load resource: the server responded with a status of 404 ()" or a similar error message displays when a web browser cannot find the element specified.
 
-This error occurs when the client (via web browser) successfully connects to the host (website’s application server), but is unable to find the actual resource requested (for example, a specific URL or filename). We recommend confirming that the URL or file name is correct and still exists on the site.
+This error occurs when the client (via web browser) successfully connects to the host (website’s application server), but is unable to find the actual resource requested (for example, a specific URL or file name). We recommend confirming that the URL or file name is correct and still exists on the site.
 
 ### 502 Upstream Header Too Big
 "Upstream sent too big header while reading response header from upstream."
