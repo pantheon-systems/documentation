@@ -40,16 +40,24 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 ## How Do You Know if a Visit Counts?
 
-**The visit counts if it**:
+### Counted Visits
+
+A visit counts if it:
 
 - Is valid
+
 - Is not a known bot
+
 - Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP
   - Or returns a [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) of 303, 304, or 305.
 
 - Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
 
-**The visit does not count if it**:
+### Uncounted Visits
+
+The traffic measurement model below describes outlines interactions excluded from your site's visit count. Our exclusion metric model relies in part on customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site. 
+
+A visit does not count if it:
 
 - Is invalid (originating from a known bot or crawler)
   - A high-performance response to crawlers supports SEO, which is one of the reasons Pantheon is the platform of choice for our customers. Although it places load on the platform, Pantheon excludes select automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. See above definition of Visits regarding the combination of datasets to determine traffic metrics. Pantheon excludes certain activity on your Site Dashboard (e.g., Google bot user agent).
@@ -68,7 +76,5 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 - Is a 404 or other client error
   - Client errors are returned as [400-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors) responses, and do not count as part of plan traffic limits. 
-
-**Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Our exclusion metric model relies in part on customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site. 
 
 ![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../images/platform-traffic-counted.png)
