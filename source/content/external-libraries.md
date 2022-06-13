@@ -10,13 +10,13 @@ There are some scenarios when an external library is required. The Pantheon plat
 
 ## wkhtmltopdf
 
-[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html). 
+[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html).
 
 wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. You must install or create a compatible plugin or module to complete the following steps:
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7-example">
+<Tab title="Drupal 7" id="d7-example" active={true}>
 
 Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
 

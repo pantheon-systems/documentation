@@ -76,10 +76,9 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 1. Manually re-index Solr after you are notified through the support ticket that Pantheon is done re-provisioning Solr. The re-indexing process is application-side, and varies by site.
 
-
 <TabList>
 
-<Tab title="Drupal 7" id="solr-d7">
+<Tab title="Drupal 7" id="solr-d7" active={true}>
 
 #### ApacheSolr module
 
