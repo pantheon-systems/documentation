@@ -1052,6 +1052,8 @@
           url: '/guides/wordpress-pantheon'
         - text: 'Fastly on Pantheon Guide'
           url: '/guides/fastly-pantheon'
+        - text: 'Custom Upstream Guide'
+          url: '/guides/custom-upstream'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'

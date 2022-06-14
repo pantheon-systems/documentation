@@ -1,8 +1,13 @@
 ---
 title: Introduction to Custom Upstreams
+subtitle: Introduction
 description: Learn how to use Custom Upstreams to free up developer time.
 categories: [get-started]
 tags: [collaborate, launch, upstreams, webops, workflow]
+layout: guide
+showtoc: true
+permalink: docs/guides/custom-upstream
+anchorid: custom-upstream
 ---
 
 <Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />
@@ -124,12 +129,7 @@ Here are definitions for commonly used terms:
 
 - **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
-## Next Steps
 
-Once you've grasped the concepts discussed above, you're ready to create your own Custom Upstream.
-
-- [Create a Custom Upstream](/create-custom-upstream)
-
-## See Also
+## More Resources
 
 - [Static Sites and Empty Upstreams](/static-site-empty-upstream)
