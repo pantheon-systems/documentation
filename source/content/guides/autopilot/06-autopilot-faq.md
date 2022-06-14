@@ -1,7 +1,7 @@
 ---
 title: Pantheon Autopilot
 subtitle: Autopilot Frequently Asked Questions
-description: Get answers for your Autopilot questions.
+description: Get answers to your Autopilot questions.
 categories: [automate]
 tags: [autopilot, webops]
 type: guide
@@ -9,10 +9,10 @@ layout: guide
 showtoc: true
 anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
-reviewed: "2022-03-30"
+reviewed: "2022-06-14"
 ---
 
-This section contains answers to frequently asked questions about Autopilot.
+This section provides answers to frequently asked questions about Autopilot.
 
 ## Is Autopilot configurable per site?
 
