@@ -53,9 +53,7 @@ You can specify the environments to which Autopilot deploys. See the [configurat
 
 ## Does Autopilot clone the database from Live to Dev before doing the updates?
 
-No. Autopilot always tests updates against a Multidev based on the current Dev environment.
-
-For Autopilot to compare updates to the Live environment, keep the Dev environment [synchronized with the Live environment](/pantheon-workflow), to ensure Autopilot tests updates against the most up-to-date state of the Live environment.
+Autopilot tests updates against the current Dev environment's Multidev database by default. Opt into the [Sync Environment](https://pantheon.io/docs/guides/autopilot/enable-autopilot/#schedule) feature in the site's Configuration tab to sync your Live environment before Autopilot checks for updates.
 
 ## Does the Autopilot Multidev count towards the Multidev limit?
 
