@@ -3,7 +3,7 @@ title: Fastly on Pantheon
 subtitle: Fastly on Pantheon FAQs
 description: Get answers to your Fastly on Pantheon questions. 
 categories: [develop]
-tags: [cms]
+tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
