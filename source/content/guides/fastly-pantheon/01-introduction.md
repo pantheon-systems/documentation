@@ -11,7 +11,7 @@ permalink: docs/guides/fastly-pantheon
 anchorid: fastly-pantheon
 ---
 
-Pantheon offers extensive content delivery network (CDN) features through our [Global CDN](/global-cdn)) and [Advanced Global CDN](/guides/professional-services/advanced-global-cdn). Pantheon also partners with [Fastly](https://www.fastly.com/) 
+Pantheon offers extensive content delivery network (CDN) features through our [Global CDN](/global-cdn) and [Advanced Global CDN](/guides/professional-services/advanced-global-cdn). Pantheon also partners with [Fastly](https://www.fastly.com/) 
 if you prefer to use a CDN outside of the Pantheon platform. Using Fastly can be a good option if you are looking for log or media storage integration solutions. 
 
 Using Fastly on the Pantheon platform to manage your site provides: 

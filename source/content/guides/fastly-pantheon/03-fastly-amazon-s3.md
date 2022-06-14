@@ -11,7 +11,7 @@ permalink: docs/guides/fastly-pantheon/fastly-amazon-s3
 anchorid: fastly-amazon-s3
 ---
 
-This section provides information on integrating your Fastly account on Pantheon with [Amazon S3](https://aws.amazon.com/). Amazon S3 is helpful integration solution if you are looking for log storage and/or media storage.
+This section provides information on integrating your Fastly account on Pantheon with [Amazon S3](https://aws.amazon.com/). Amazon S3 can be a good integration solution if you are looking for log storage and/or media storage.
 
 ## Before You Begin
 
