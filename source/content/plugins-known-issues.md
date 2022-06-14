@@ -1424,6 +1424,22 @@ ___
 **Solution:** Only use the "PHP" redirect method.
 
 ___
+## Yoast Indexables
+
+<ReviewDate date="2022-06-14" />
+
+**Issue:** [Yoast Indexables](https://yoast.com/innovations/indexables/) can cause performance issues on large sites. Sites with 100,000+ posts might find that indexing the table with `wp yoast index` will time out. Sites might also see slow load times in both the frontend and wp-admin areas due to queries on the `wp_yoast_indexables` table.
+
+**Solution:** [Disable saving data](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/#disabling-indexables) to the `wp_yoast_indexables` table to improve wp-admin performance. However, if you have 1,000,000+ posts you might see acutely poor performance on the frontend with indexables disabled. Use the code below to diasable data saving for Yoast indexables.
+
+```php:title=plugin.php
+/** Tell Yoast not to save indexable data to the wp_yoast_indexables table. */
+add_filter( 'Yoast\WP\SEO\should_index_indexables', '__return_false' );
+```
+
+Pantheon's [Professional Services](/guides/professional-services) team has tooling available to help index large sites. Reach out to your Customer Success Manager to get more information about tooling.
+
+___
 
 ## YotuWP Easy YouTube Embed
 
