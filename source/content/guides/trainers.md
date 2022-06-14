@@ -33,7 +33,7 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
     <Alert title="Note" type="info">
 
-    Trainers with a great deal of Pantheon experience may want to use our [Custom Upstreams](/custom-upstream) to supply a common set of code to their students. We **do not** recommend trainers new to Pantheon take on that additional complexity.
+    Trainers with a great deal of Pantheon experience may want to use our [Custom Upstreams](/guides/custom-upstream) to supply a common set of code to their students. We **do not** recommend trainers new to Pantheon take on that additional complexity.
 
     </Alert>
 

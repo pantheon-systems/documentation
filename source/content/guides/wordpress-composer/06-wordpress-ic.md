@@ -31,7 +31,7 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 1. Fork the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-project).
 
-1. [Connect your repository](/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
+1. [Connect your repository](/guides/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
 1. Update the **require** section of the root `/composer.json` file to match the name you chose in the preceding step.
 
@@ -69,15 +69,15 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
     - [Add dependencies to your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
 
-1. Review the [Custom Upstreams](/maintain-custom-upstream) documentation to learn how to:
+1. Review the [Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) documentation to learn how to:
 
-    - [Test and Release Pantheon Core Updates](/maintain-custom-upstream#test-and-release-pantheon-core-updates)
+    - [Test and Release Pantheon Core Updates](/guides/custom-upstream/maintain-custom-upstream#test-and-release-pantheon-core-updates)
 
-    - [Automatically Resolve Conflicts from the Command Line](/maintain-custom-upstream#automatically-resolve-from-the-command-line)
+    - [Automatically Resolve Conflicts from the Command Line](/guides/custom-upstream/maintain-custom-upstream#automatically-resolve-from-the-command-line)
 
-    - [Tips and Tricks for Maintaining Custom Upstreams](/maintain-custom-upstream#delete-custom-upstream)
+    - [Tips and Tricks for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream#delete-custom-upstream)
 
-    - [Delete a Custom Upstream](/maintain-custom-upstream#delete-custom-upstream)
+    - [Delete a Custom Upstream](/guides/custom-upstream/maintain-custom-upstream#delete-custom-upstream)
 
 1. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation to learn about:
 
@@ -86,6 +86,6 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 ## See Also
 
-- [Best Practices for Maintaining Custom Upstreams](/maintain-custom-upstream) 
+- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) 
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)

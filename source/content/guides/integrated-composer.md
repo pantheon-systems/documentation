@@ -23,9 +23,9 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ### WordPress with Integrated Composer
 
-1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
+1. [Fork the Pantheon-maintained repository](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 
-1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
+1. [Add a new Custom Upstream](/guides/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
 
 1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
 

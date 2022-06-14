@@ -10,7 +10,7 @@ permalink: docs/guides/custom-upstream/create-custom-upstream
 anchorid: create-custom-upstream
 ---
 
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization](/organizations) Dashboard of an eligible plan. Once an Organization Administrator creates a Custom Upstream, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization](/organizations) Dashboard of an eligible plan. Once an Organization Administrator creates a Custom Upstream, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/guides/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <Alert title="Note" type="info">
 
@@ -464,5 +464,5 @@ In the example above, set or replace the variables `$site` and `$upstream_id` wi
 
 ## Next Steps
 
-- [Best Practices for Maintaining Custom Upstreams](/maintain-custom-upstream)
+- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 - [Switching an Existing site to a Custom Upstream with Terminus](/terminus/examples/#switch-upstreams)

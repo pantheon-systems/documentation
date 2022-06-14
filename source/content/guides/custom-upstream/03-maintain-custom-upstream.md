@@ -10,7 +10,7 @@ permalink: docs/guides/custom-upstream/maintain-custom-upstream
 anchorid: maintain-custom-upstream
 ---
 
-Maintainers of [Custom Upstreams](/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
+Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
 
 <Alert title="Note" type="info">
 
@@ -19,7 +19,7 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 </Alert>
 
 ## Before You Begin
-Follow the procedure to [create a custom upstream](/create-custom-upstream) so that you have:
+Follow the procedure to [create a custom upstream](/guides/custom-upstream/create-custom-upstream) so that you have:
 
 - A repository for your Custom Upstream hosted with your preferred provider (GitLab, Bitbucket, etc)
 - A local clone of that repository, which tracks Pantheon's upstream as a remote

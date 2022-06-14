@@ -305,7 +305,7 @@ To see all available upstreams, run:
 terminus upstream:list
 ```
 
-If your organization has a [Custom Upstream](/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My Custom Upstream"

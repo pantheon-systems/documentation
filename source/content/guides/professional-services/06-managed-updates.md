@@ -62,5 +62,5 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 
 ## See Also
 - [Serving Sites from the Web Subdirectory](/nested-docroot)
-- [Custom Upstreams](/custom-upstream)
+- [Custom Upstreams](/guides/custom-upstream)
 - [Professional Services](/guides/professional-services)

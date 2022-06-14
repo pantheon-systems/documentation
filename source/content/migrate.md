@@ -369,7 +369,7 @@ Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site 
 
 ### How do I use the Pantheon Migrations plugin with a custom WordPress upstream?
 
-If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/custom-upstream), then the migration process will be slightly different.
+If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/guides/custom-upstream), then the migration process will be slightly different.
 
 1. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**.
 

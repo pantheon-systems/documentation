@@ -64,7 +64,7 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 ## Upstreams
 
-Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
+Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
 
 1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab. 
 1. On the Custom Upstreams page click **Add New Upstream**. The Create New Custom Upstream page is displayed. 
