@@ -23,7 +23,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ### WordPress with Integrated Composer
 
-1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
+1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-composer-managed](https://github.com/pantheon-upstreams/wordpress-composer-managed).
 
 1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
 
@@ -112,7 +112,7 @@ You can remove site dependencies if they are no longer needed.
 
 ## Upstream
 
-Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
+Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-composer-managed), and some customizations for the Pantheon platform.
 
 ### Upstream and Site Structure
 
@@ -300,7 +300,7 @@ code/web/wp-content/
 └─ plugins/
 └─ themes/
 ```
-See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-composer-managed/blob/master/.gitignore). 
 </Tab>
 
 </TabList>
