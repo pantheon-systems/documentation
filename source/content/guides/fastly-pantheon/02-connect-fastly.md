@@ -3,7 +3,7 @@ title: Fastly on Pantheon
 subtitle: Connect Your Fastly Account to Pantheon
 description: Learn how to connect your Fastly account to the Pantheon platform.
 categories: [develop]
-tags: [cms]
+tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true

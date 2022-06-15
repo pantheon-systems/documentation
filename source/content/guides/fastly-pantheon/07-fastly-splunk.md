@@ -3,7 +3,7 @@ title: Fastly on Pantheon
 subtitle: Integrate Your Fastly Account on Pantheon with Splunk
 description: Learn how to use Splunk with your Fastly account on Pantheon.
 categories: [develop]
-tags: [cms]
+tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
