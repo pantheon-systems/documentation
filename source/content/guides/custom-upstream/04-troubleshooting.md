@@ -6,8 +6,8 @@ categories: [develop]
 tags: [git, upstreams, workflow]
 layout: guide
 showtoc: true
-permalink: docs/guides/custom-upstream/maintain-custom-upstream
-anchorid: maintain-custom-upstream
+permalink: docs/guides/custom-upstream/troubleshooting
+anchorid: troubleshooting
 ---
 
 This section provides solutions for troubleshooting conflicts.
