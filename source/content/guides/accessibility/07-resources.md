@@ -74,6 +74,9 @@ This section is intended to serve as a quick reference and an expanded resource 
 
  - [Deque University's Tables](https://dequeuniversity.com/checklists/web/tables)
 
+### Links
+
+ - [Writing Hyperlinks](https://www.nngroup.com/articles/writing-links/) from Nielsen Norman Group
 
 ### Media
 

@@ -28,29 +28,29 @@ You will need to determine which level you want your site to meet.  While ideall
 
 ## Building Compliant Sites
 
-The start of a new site design is the easiest time to build a sustainably accessible site. To do so:
+The start of a new site build is the easiest time to build a sustainably accessible site. To do so:
 
 - Include accessibility in your site's brief and mission.
 - Include accessibility tools and training in the project budget.
 - Ensure everyone on the team is trained in basic usability principles, and that your UX/Design team has substantial expertise in the area.
-- Develop a color strategy up front - this can minimize accessibility issues down the line.
+- Develop a color and architecture strategy up front - this can minimize accessibility issues down the line.
 - Perform user testing early in the design process.
 - Review and identify accessibility issues before launching your site.
 
 
 ## Making an Existing Site Compliant
 
-To optimize an existing site for accessibility, 
+To optimize an existing site for accessibility: 
 
 1. Assess the site.
 
-   There are a number of tools available to help create an inventory and assessment of the conformance of your existing site pages to WCAG guidelines. The [Web Accessibility Initiative](https://www.w3.org/WAI/test-evaluate/preliminary/) has a number of resources to help with this process:
+   There are a number of tools available to help create an inventory and assessment of the conformance of your existing site pages to WCAG guidelines. The [Web Accessibility Initiative](https://www.w3.org/WAI/test-evaluate/preliminary/) has a number of resources to help with this process.
 
 
 2. Prioritize the changes you will make to maximize impact.
 
    There are a number of factors to consider when prioritizing fixes:
-   - Impact on users with disabilities: how much does the issue impact users?  Will they unable to perform key tasks? 
+   - Impact on users with disabilities: how much does the issue impact users?  Will they be unable to perform key tasks? 
    - Location of issue: is it on a high-traffic page?
    - Ease and speed of repair: is the fix easy, or will it require significant time and resources?
    - Repeating issues: Issues that turn up repeatedly can indicate issues with the underlying architecture, such as common code or templates.  Fixing these underlying issues can significantly improve your test results.
@@ -59,7 +59,7 @@ To optimize an existing site for accessibility,
 
    It can be hard to know where to start with testing changes.  Here are some ideas to help:
    - Choose an automated testing tool.
-   - Consider implementing a user testing program.  User testing can not only be an effective tool in your accessibility arsenal, it is a terrific tool to assess the overall effectiveness of your site.
+   - Consider implementing a user testing program.  User testing can not only be an effective tool in your accessibility arsenal, it is a terrific tool to assess the overall effectiveness of your site.  See the [Tools](/guides/accessibility/tools) section of this guide for suggestions.
 
 ## Maintaining Compliance
 

@@ -17,13 +17,13 @@ editpath: accessibility/01-overview.md
 
 Making your site accessible not only benefits those with disabilities, but it also improves overall user experience across different devices and situations. It can increase your market share, manage legal risk, improve access to public sector revenue, and protect your brand. In addition, teams that embrace web accessibility find that by designing with a more diverse group of people in mind, they increase the likelihood of innovation.
 
-This guide will help you improve the experience for everyone who uses your site, future-proof its content, and build a sustainable accessibility practice across your WebOps teams. It will also help you identify areas where you may wish to use professional accessibility services and partners.
+This guide will help you improve the experience for everyone who uses your site, future-proof its content, and build a sustainable accessibility practice across your teams. It will also help you identify areas where you may wish to use professional accessibility services and partners.
 
 If web accessibility is new to you, the following concepts will help you on your journey.
 
 ## Types of Disabilities
 
-The [<dfn id="adalong">American with Disabilities Act</dfn> (<dfn id="ada">ADA</dfn>)](https://adata.org/faq/what-definition-disability-under-ada), defines a person with a disability as a person who has a physical or mental impairment that substantially limits at least one major life activity. 
+The [<dfn id="adalong">American with Disabilities Act</dfn> (<dfn id="ada">ADA</dfn>)](https://adata.org/faq/what-definition-disability-under-ada), defines a person with a disability as a person who has a physical or mental impairment that substantially limits at least one major life activity. Disabilities can be both permanent or temporary/situational.
 
 Disabilities can be divided into the following categories:
 
@@ -41,7 +41,7 @@ The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility 
 
 ## Principles of Accessibility and Success Criteria
 
-The [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines) that structure accessibility guidelines aim for information and user interface components to be Perceivable, Operable, Understandable, and Robust (POUR). For each guideline, there are testable success criteria at [three levels](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels): A (essential), AA (ideal), and AAA (high-level support. 
+The [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines) that structure accessibility guidelines aim for information and user interface components to be Perceivable, Operable, Understandable, and Robust (POUR). For each guideline, there are testable success criteria at [three levels](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels): A (essential), AA (ideal), and AAA (high-level support). 
 
 ## WAI-ARIA for rich internet applications 
 

@@ -17,7 +17,7 @@ This section provides an overview of the tools and techniques to improve your we
 
 ## Tables
 
-- **Layout tables** (such a tables that are used to give the effect of columns) are not considered best practice by the The World Wide Consortium, as they reduce accessibility across multiple different interfaces and devices. Layout tables can be difficult for screen readers to comprehend, therefore complicating accessibility.
+- **Layout tables** (such a tables that are used to give the effect of columns) are not considered best practice by the The World Wide Consortium, as they reduce accessibility across multiple different interfaces and devices. Layout tables can be difficult for screen readers to comprehend, therefore complicating accessibility.  Although layout tables may seem easier to implement, the impact to accessibility and to overall site usage is considerable, and they should be avoided at all costs. 
 
 - **Data tables** are still appropriate for presenting information in two dimensions.
 
@@ -25,7 +25,7 @@ See [Deque University's Tables](https://dequeuniversity.com/checklists/web/table
 
 ## Links
 
-Don’t use the `title` attribute in links, as it is not read aloud by screen readers. Instead, make the anchor text relevant and descriptive (for example, don’t use “click here”).
+Don’t use the `title` attribute in links, as it is not read aloud by screen readers. Instead, make the anchor text relevant and descriptive (for example, don’t use “click here”).  See this article on [writing hyperlinks](https://www.nngroup.com/articles/writing-links/) from Nielsen Norman Group for more information.
 
 ## HTML
 
@@ -49,7 +49,7 @@ The `alt` attribute describes the appearance or function of an image, and is pre
 
 See [Alt Text for Images - Examples & 2020 Best Practices - Moz](https://moz.com/learn/seo/alt-text) for more information.
 
-### Subtitles, Captions, and Transcripts
+### Video Subtitles, Captions, and Transcripts
 
 - Subtitles translate the speech on-screen to text. They are generally designed for viewers who can hear but do not understand the language in the video.
 - Captions transcribe both speech and additional audio cues like “knock on the door.” They are designed for viewers who cannot hear the audio in the video.  
