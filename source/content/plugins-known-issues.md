@@ -971,7 +971,7 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Navigate to the codebase directory and create the symlinks listed below:
+1. Navigate to the `code/` directory and create the symlinks listed below:
 
   <Alert title="Note"  type="info" >
 
@@ -980,6 +980,7 @@ export ENV=dev
   </Alert>
 
   ```bash{promptUser: user}
+  cd code/
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
