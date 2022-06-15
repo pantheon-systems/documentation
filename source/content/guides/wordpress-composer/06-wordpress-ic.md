@@ -31,7 +31,7 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 1. Fork the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-project).
 
-1. [Connect your repository](/guides/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
+1. [Connect your repository](/guides/custom-upstream/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
 1. Update the **require** section of the root `/composer.json` file to match the name you chose in the preceding step.
 
