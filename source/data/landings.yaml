@@ -852,7 +852,7 @@
         - text: 'Create a Custom Upstream'
           url: '/create-custom-upstream'
         - text: 'Introduction to Custom Upstreams'
-          url: '/custom-upstream'
+          url: '/guides/custom-upstream'
         - text: 'Use Pantheon Localdev to Develop Sites Locally'
           url: '/guides/localdev'
         - text: 'Best Practices for Maintaining Custom Upstreams'

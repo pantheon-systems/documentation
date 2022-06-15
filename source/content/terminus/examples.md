@@ -293,7 +293,7 @@ The Site Dashboard will open once the reset procedure has completed.
 
 Every site has an upstream assigned in order to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/custom-upstream).
+- Convert existing sites from a default framework to a [Custom Upstream](/guides/custom-upstream).
 - Convert existing sites from one Custom Upstream to another, for reasons like:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.

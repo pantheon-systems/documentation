@@ -32,7 +32,7 @@ Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and
 
 ### Portfolio Upstreams
 
-Managed Updates for Portfolio Upstreams provides provides core, plugin, and module updates for customers managing site collections using [Custom Upstreams](/custom-upstream).
+Managed Updates for Portfolio Upstreams provides provides core, plugin, and module updates for customers managing site collections using [Custom Upstreams](/guides/custom-upstream).
 
 #### Requirements
 

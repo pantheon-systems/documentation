@@ -93,4 +93,4 @@ For other Decoupled configurations, please refer to our [Decoupled Sites](/decou
 
 - [Choosing Your Start State](/start-state)
 - [Switch Upstreams](/terminus/examples#switch-upstreams)
-- [Introduction to Custom Upstreams](/custom-upstream)
+- [Introduction to Custom Upstreams](/guides/custom-upstream)

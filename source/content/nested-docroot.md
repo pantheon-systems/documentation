@@ -76,7 +76,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 
 ### Create a New Site
 
-Your site should use a [Custom Upstream](/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
+Your site should use a [Custom Upstream](/guides/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
 
 ### Convert an Existing Site
 
