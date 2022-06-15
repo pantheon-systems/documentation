@@ -1,16 +1,17 @@
 ---
-title: Best Practices for Maintaining Custom Upstreams
-subtitle: Learn About Custom Upstream Best Practices
-description: Detailed information on how to maintain Custom Upstreams and distribute updates downstream.
+title: Test Custom Upstream Changes
+subtitle: Learn How to Test Custom Upstream Changes Before Release
+description: Create a test version of your Custom Upstream to review changes.
 categories: [develop]
-tags: [git, upstreams, workflow]
+tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true
-permalink: docs/guides/custom-upstream/maintain-custom-upstream
-anchorid: maintain-custom-upstream
+permalink: docs/guides/custom-upstream/test-custom-upstream
+anchorid: test-custom-upstream
 ---
 
-Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
+
+Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. The example below using provides steps to test and update core.
 
 <Alert title="Note" type="info">
 
@@ -18,10 +19,19 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 
 </Alert>
 
-## Before You Begin
-Follow the procedure to [create a custom upstream](/guides/custom-upstream/create-custom-upstream) so that you have:
+### Use the Pantheon Workflow
 
-- A repository for your Custom Upstream hosted with your preferred provider (GitLab, Bitbucket, etc)
+Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments to fully test core updates. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+
+### Sample a Few Sites
+
+We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment ror agencies that manage large portfolios. When things look good, release the update to all.
+
+## Before You Begin
+
+Follow the procedure to [create a custom upstream](/guides/custom-upstream/create-custom-upstream) and confirm that you have:
+
+- A repository for your Custom Upstream hosted with your preferred provider (GitLab, Bitbucket, etc.)
 
 - A local clone of that repository, which tracks Pantheon's upstream as a remote
 
@@ -32,7 +42,8 @@ Follow the procedure to [create a custom upstream](/guides/custom-upstream/creat
 - [Terminus](/terminus)
 
 ## Create a Test Site on Pantheon
-This test site will be used later for evaluating the Custom Upstream changes we will make in the next section.
+
+This test site will be used later for evaluating Custom Upstream changes.
 
 1. Navigate to your User Dashboard > click **Create New Site**.
 
@@ -144,45 +155,4 @@ Updates will become available to sites downstream as one-click updates within an
 Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
 
 </Alert>
-
-## Delete Custom Upstream
-An Upstream cannot be deleted if there are sites using it.
-
-1. Navigate to the Organization Dashboard > click **Upstreams**.
-
-1. Click **Settings** next to the Upstream you want to delete.
-
-1. Select **Source** > click the **Delete Upstream** button:
-
-  ![Delete Upstream Button](../../../images/dashboard/delete-upstream.png)
-
-## Tips and Tricks
-
-### Use the Pantheon Workflow
-
-Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments to fully test core updates. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
-
-### Sample a Few Sites
-
-For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment. When things look good, release the update to all.
-
-### Upstream Configuration File
-
-Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/pantheon-yml).
-
-### Redirects
-
-We normally suggest [PHP redirects](/redirects) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. If you are using a Custom Upstream, any customizations to these files will be lost with each update. It will also be hard to implement site-specific configurations added on these files.
-
-Since this file is shared on all environments, including Multidevs, you can use a `require_once` statement to point to an external file, separate from the Custom Upstream and unique to each site, that loads all the redirects or customizations:
-
-```php
-if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-  require_once( dirname( __FILE__ ) . '/redirects.php' );
-}
-```
-
-Remember that this file is not included in the Custom Upstream and needs to exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
-
-WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
 
