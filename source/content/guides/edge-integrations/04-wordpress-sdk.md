@@ -33,8 +33,7 @@ Adding Edge Integrations support to your Composer-based project is simple and is
 To get started, add the [Edge Integrations WordPress SDK repository](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) as a dependency:
 
 ```bash
-composer require pantheon-systems/
--integrations-wordpress-sdk
+composer require pantheon-systems/edge-integrations-wordpress-sdk
 ```
 
 This command will add the repository to your `/vendor` directory, as well as all of the compiled assets and included dependencies, which include a global CMS-agnostic [PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations), a [WordPress plugin](https://github.com/pantheon-systems/pantheon-wordpress-edge-integrations), and all of the documentation for the SDK.
