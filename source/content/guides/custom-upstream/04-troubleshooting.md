@@ -141,7 +141,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
   In this example, you would open `wp-admin/about.php` in your preferred text editor.
 
-  Then look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
+  Then look for the conflict markers starting with `< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `> Adjust rendering of version release notes`).
 
   Finally, delete the conflict markers and double-check the changes.
 
