@@ -22,25 +22,35 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 Follow the procedure to [create a custom upstream](/guides/custom-upstream/create-custom-upstream) so that you have:
 
 - A repository for your Custom Upstream hosted with your preferred provider (GitLab, Bitbucket, etc)
+
 - A local clone of that repository, which tracks Pantheon's upstream as a remote
+
 - Pantheon's core code merged into your Custom Upstream repository
+
 - Your Custom Upstream repository connected to Pantheon
+
 - [Terminus](/terminus)
 
 ## Create a Test Site on Pantheon
 This test site will be used later for evaluating the Custom Upstream changes we will make in the next section.
 
-1. From your User Dashboard, click **Create New Site**.
-2. Name your site.
-3. Select your organization from the dropdown menu.
-4. Click **Create Site**.
-5. Select the desired repository from the Custom Upstream options.
-6. Click **Visit your Pantheon Dashboard**.
-7. Click **Visit Development Site** and complete the installation process for the selected framework.
+1. Navigate to your User Dashboard > click **Create New Site**.
+
+1. Name your site.
+
+1. Select your organization from the dropdown menu.
+
+1. Click **Create Site**.
+
+1. Select the desired repository from the Custom Upstream options.
+
+1. Click **Visit your Pantheon Dashboard**.
+
+1. Click **Visit Development Site** and complete the installation process for the selected framework.
 
 ## Test and Release Pantheon Core Updates
 
-1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to your local clone of your Custom Upstream repository > add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
   <TabList>
 
@@ -62,7 +72,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
   </TabList>
 
-2. We will also add the test site you created above as a remote to your Custom Upstream. To do that, we first need to grab the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
+2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
 
     ```bash
     terminus connection:info <site>.dev --field=git_url
@@ -113,7 +123,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
   git push pantheon-test core-update
   ```
 
-7. Back on the Site Dashboard for your test site, navigate to the Multidev overview tab and click **Git Branches**.
+7. Return to the Site Dashboard for your test site > navigate to the Multidev overview tab > click **Git Branches**.
 
 8. Click the **Create Environment** button next to the `core-update` branch.
 
@@ -138,26 +148,30 @@ Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n
 ## Delete Custom Upstream
 An Upstream cannot be deleted if there are sites using it.
 
-1. From the Organization Dashboard, navigate to **Upstreams**.
+1. Navigate to the Organization Dashboard > click **Upstreams**.
 
 1. Click **Settings** next to the Upstream you want to delete.
 
-1. Under **Source**, click the **Delete Upstream** button:
+1. Select **Source** > click the **Delete Upstream** button:
 
-  ![Delete Upstream Button](../images/dashboard/delete-upstream.png)
+  ![Delete Upstream Button](../../../images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
 
 ### Use the Pantheon Workflow
-To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+
+Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments to fully test core updates. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
-For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment. Once things look good, release the update to all.
+
+For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment. When things look good, release the update to all.
 
 ### Upstream Configuration File
+
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/pantheon-yml).
 
 ### Redirects
+
 We normally suggest [PHP redirects](/redirects) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. If you are using a Custom Upstream, any customizations to these files will be lost with each update. It will also be hard to implement site-specific configurations added on these files.
 
 Since this file is shared on all environments, including Multidevs, you can use a `require_once` statement to point to an external file, separate from the Custom Upstream and unique to each site, that loads all the redirects or customizations:
@@ -170,5 +184,5 @@ if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANT
 
 Remember that this file is not included in the Custom Upstream and needs to exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
-For WordPress sites, another option is to store redirects in an [MU-Plugin](/mu-plugin).
+WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
 

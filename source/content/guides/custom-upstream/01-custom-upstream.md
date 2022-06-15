@@ -12,9 +12,13 @@ anchorid: custom-upstream
 
 <Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />
 
-If you are a digital agency that serves clients, or if you are a reseller of Pantheon as part of a managed solution, download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
+## Custom Upstreams for Digital Agencies and Pantheon Resellers
 
-For corporate or higher education customers, Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner if you are a digital agency that serves clients, or if you are a reseller of Pantheon as part of a managed solution.
+
+## Corporate and Higher Education Customers 
+
+Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
@@ -36,7 +40,7 @@ Not only does this workflow free up developer time, it establishes a sustainable
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-![Custom upstream update strategy](../images/update-diagram.png)
+![Custom upstream update strategy](../../../images/update-diagram.png)
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-edu-drupal-case-study).
 
@@ -54,7 +58,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Parent upstream level](../images/levelone-icon.png)
+![Parent upstream level](../../../images/levelone-icon.png)
 
 <ul class="upstream">
 <li>Core Updates</li>
@@ -73,7 +77,7 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Custom upstream level](../images/leveltwo-icon.png)
+![Custom upstream level](../../../images/leveltwo-icon.png)
 
 <ul class="upstream">
 <li>Parent Theme</li>
@@ -94,7 +98,7 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Site upstream level](../images/levelthree-icon.png)
+![Site upstream level](../../../images/levelthree-icon.png)
 
 <ul class="upstream">
 <li>Child Theme</li>

@@ -65,7 +65,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
   </TabList>
 
-Double-check the conflicted files before going forward to make sure no bugs were introduced.
+1. Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
 
 ### Manually Resolve from the Command Line
@@ -119,7 +119,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
   </TabList>
 
 
-3. If a conflict is introduced, the output provides all the details we need in order to resolve. For example:
+3. Resolve any conflicts introduced using the output details. For example:
 
   ```bash
   $ git merge pantheon-wordpress/master
