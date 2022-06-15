@@ -34,3 +34,6 @@ Follow the steps using [Terminus](/terminus) below to switch your existing site 
     terminus site:upstream:set $site $upstream_id
     ```
 
+## More Resources
+
+- [Switching an Existing site to a Custom Upstream with Terminus](/terminus/examples/#switch-upstreams)

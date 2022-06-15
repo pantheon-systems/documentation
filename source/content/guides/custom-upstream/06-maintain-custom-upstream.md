@@ -1,7 +1,7 @@
 ---
 title: Best Practices for Maintaining Custom Upstreams
-subtitle: Learn About Custom Upstream Best Practices
-description: Detailed information on how to maintain Custom Upstreams and distribute updates downstream.
+subtitle: Custom Upstream Best Practices
+description: Detailed information on how to maintain Custom Upstreams.
 categories: [develop]
 tags: [git, upstreams, workflow]
 layout: guide
@@ -32,3 +32,8 @@ Remember that this file is not included in the Custom Upstream and needs to exis
 
 WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
 
+## More Resources
+
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
+
+- [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)

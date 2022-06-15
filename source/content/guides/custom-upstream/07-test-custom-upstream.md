@@ -1,6 +1,6 @@
 ---
 title: Test Custom Upstream Changes
-subtitle: Learn How to Test Custom Upstream Changes Before Release
+subtitle: Test Custom Upstream Changes Before Release
 description: Create a test version of your Custom Upstream to review changes.
 categories: [develop]
 tags: [upstreams, workflow, webops]
@@ -156,3 +156,8 @@ Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n
 
 </Alert>
 
+## More Resources
+
+- [WordPress and Drupal Core Updates](/core-updates)
+
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)

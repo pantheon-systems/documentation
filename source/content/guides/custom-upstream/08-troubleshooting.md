@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Custom Upstreams
-subtitle: Troubleshoot Your Custom Upstream
+subtitle: Troubleshoot a Custom Upstream
 description: Learn more about troubleshooting your Custom Upstream.
 categories: [develop]
 tags: [git, upstreams, workflow]
@@ -151,3 +151,9 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
   git add .
   git merge --continue
   ```
+
+## More Resources
+
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
+
+- [Test Custom Upstream Changes](/guides/custom-upstream/test-custom-upstream)

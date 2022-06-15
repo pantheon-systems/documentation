@@ -21,3 +21,12 @@ Follow the site below to delete your Custom Upstream.
 1. Select **Source** > click the **Delete Upstream** button:
 
   ![Delete Upstream Button](../../../images/dashboard/delete-upstream.png)
+
+
+## More Resources
+
+- [Switch an Existing Site to Custom Upstream](/guides/custom-upstream/switch-to-custom-upstream)
+
+- [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
+
+- [Edit an Existing Custom Upstream](/guides/custom-upstream/edit-custom-upstream)

@@ -1,6 +1,6 @@
 ---
 title: Create a Custom Upstream
-subtitle: Learn How to Create a Custom Upstream
+subtitle: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 categories: [develop]
 tags: [upstreams, workflow, webops]
@@ -398,18 +398,6 @@ These are common steps needed for most Git Providers:
 
 </TabList>
 
-## Edit Existing Custom Upstream Settings
-
-Follow the steps below if you want to change the name or description of your Custom Upstream.
-
-1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
-
-1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-
-1. Click **Settings** next to the existing upstream requiring an update.
-
-1. Make desired changes > click **Update**.
-
 ### Initial Connection Mode
 
 The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 9 defaults to SFTP connection mode.
@@ -422,7 +410,7 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 1. Click **Settings** next to the existing upstream requiring an update.
 
-1. Select the desired connection mode, then click **Update**:
+1. Select the desired connection mode > click **Update**:
 
   ![Modify initial connection mode](../../../images/dashboard/initial-connection-mode.png)
 
@@ -450,4 +438,5 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 ## More Resources
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
-- [Switching an Existing site to a Custom Upstream with Terminus](/terminus/examples/#switch-upstreams)
+
+- [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
