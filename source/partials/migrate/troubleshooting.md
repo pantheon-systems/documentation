@@ -15,13 +15,13 @@ Next, check [log files](/logs) to help identify and fix errors. The core is upgr
 
 <Tab title="Drupal 7" id="d7" active={true}>
 
-<Partial file="troubleshooting-importcode-drupal.md" />
+<Partial file="migrate/troubleshooting-importcode-drupal.md" />
 
 </Tab>
 
 <Tab title="WordPress" id="wp">
 
-<Partial file="troubleshooting-importcode-wordpress.md" />
+<Partial file="migrate/troubleshooting-importcode-wordpress.md" />
 
 </Tab>
 
@@ -37,7 +37,7 @@ Next, check [log files](/logs) to help identify and fix errors. The core is upgr
 
 **Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory (`sites/default/files/private`.
 
-<Partial file="troubleshooting-multiple.md" />
+<Partial file="migrate/troubleshooting-multiple.md" />
 
 ### Multiple database dumps found within the import archive
 

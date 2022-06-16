@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site From Kinsta to Pantheon
-subtitle: Introduction
-description: Instructions to migrating your Drupal site from Kinsta to Pantheon.
+subtitle: Troubleshooting
+description: Resolve issues that may occur during migration.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
