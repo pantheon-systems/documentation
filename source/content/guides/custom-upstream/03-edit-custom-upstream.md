@@ -40,6 +40,6 @@ You can safely delete the old Custom Upstream after all sites have been updated 
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 
-- [Switch an Existing Site to Custom Upstream](/guides/custom-upstream/switch-to-custom-upstream)
+- [Switch an Existing Site to Custom Upstream](/guides/custom-upstream/switch-custom-upstream)
 
 - [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)

@@ -173,7 +173,7 @@ You can [manually apply updates from the command line](#apply-upstream-updates-m
 
 Click **Check now** in the Site Dashboard if you know your site's Custom Upstream has updated code that is not visible in the dashboard.
 
-![Check Now](../images/dashboard/check-for-updates.png)
+![Check Now](../../../images/dashboard/check-for-updates.png)
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it might take up to a minute before updates appear on the dashboard.
 

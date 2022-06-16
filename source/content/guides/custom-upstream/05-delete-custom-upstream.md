@@ -25,7 +25,7 @@ Follow the site below to delete your Custom Upstream.
 
 ## More Resources
 
-- [Switch an Existing Site to Custom Upstream](/guides/custom-upstream/switch-to-custom-upstream)
+- [Switch an Existing Site to Custom Upstream](/guides/custom-upstream/switch-custom-upstream)
 
 - [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
 
