@@ -8,7 +8,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-  ![Migrate Existing Site](../images/dashboard/migrate-existing-site.png)
+  ![Migrate Existing Site](../../images/dashboard/migrate-existing-site.png)
 
 1. Enter your current website URL.
 
@@ -30,7 +30,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
- ![Successful Migration BlogVault](../images/dashboard/successful-site-migration-complete-blogvault.png)
+ ![Successful Migration BlogVault](../../images/dashboard/successful-site-migration-complete-blogvault.png)
 
 If the migration is not successful, [contact Support](/guides/support/contact-support/) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 

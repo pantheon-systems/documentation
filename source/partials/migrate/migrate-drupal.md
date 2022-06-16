@@ -2,7 +2,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-  ![Migrate Existing Site](../images/dashboard/migrate-existing-site.png)
+  ![Migrate Existing Site](../../images/dashboard/migrate-existing-site.png)
 
 1. Enter your current website URL.
 
@@ -18,7 +18,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
 
-  ![Drupal create archive](../images/dashboard/drupal-guided-migrate.png)
+  ![Drupal create archive](../../images/dashboard/drupal-guided-migrate.png)
 
   The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
 
@@ -26,4 +26,4 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
- ![Successful Drupal Migration](../images/dashboard/successful-drupal-migration.png)
+ ![Successful Drupal Migration](../../images/dashboard/successful-drupal-migration.png)
