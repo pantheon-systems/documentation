@@ -10,11 +10,11 @@ permalink: docs/guides/custom-upstream/create-custom-upstream
 anchorid: create-custom-upstream
 ---
 
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization](/organizations) Dashboard of an eligible plan. Once an Organization Administrator creates a Custom Upstream, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/guides/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization](/organizations) Dashboard with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. The Custom Upstream must be created within each Organization’s Dashboard if you want to use a specific Custom Upstream for multiple Organizations. 
 
 <Alert title="Note" type="info">
 
-Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/guides/support/#custom-upstreams).
+Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams).
 
 </Alert>
 
@@ -22,7 +22,7 @@ Be aware that support for Custom Upstreams is limited to verification that the e
 
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
-Choose your preferred Git host:
+Follow the steps for your preferred Git host below to create your repository.
 
 <TabList>
 
@@ -131,7 +131,7 @@ You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a s
 
 1. Navigate to your GitLab dashboard and click **New project**.
 
-1. Provide a **Project name**, **Project description** (optional), and **Visibility Level**, then click **Create project**.
+1. Provide a **Project name**, **Project description** (optional), and **Visibility Level** > click **Create project**.
 
 1. Copy the repository URL (HTTPS), and clone the site locally:
 
@@ -149,7 +149,7 @@ You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a s
 
 <Tab title="Other" id="other">
 
-Other Git hosting providers (like Azure DevOps or a self-hosted Bitbucket server) can be used, but we cannot detail specific instructions for each and every provider. You will need to create a new project in that system.
+Other Git hosting providers (like Azure DevOps or a self-hosted Bitbucket server) can be used, but we cannot detail specific instructions for every provider. You will need to create a new project in that system.
 
 As detailed below, [Pantheon Support](/guides/support/contact-support/) will need to add this Custom Upstream for you from a support ticket.
 
@@ -159,9 +159,9 @@ As detailed below, [Pantheon Support](/guides/support/contact-support/) will nee
 
 ## Pull in Core from Pantheon's Upstream
 
-To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
+You must track Pantheon's corresponding upstream repository within the Custom Upstream to avoid incompatibilities.
 
-1. Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon Upstream as a [remote](https://git-scm.com/docs/git-remote):
+1. Navigate to the Custom Upstream's root directory using the command line > add the appropriate Pantheon Upstream as a [remote](https://git-scm.com/docs/git-remote):
 
     <TabList>
 
@@ -217,16 +217,16 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
      git push origin master
      ```
 
-    1. Drupal 9 on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
+      - Drupal 9 on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
-     Change to it and use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
+    1. Change to the `composer.json` file in the `upstream-configuration` directory  and use `composer require` to add packages to the Upstream > set the `config version` to a number that makes sense for you:
 
      ```bash{promptUser: user}
      cd upstream-configuration
      composer require drupal/pkg-name --no-update
      ```
 
-       Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
+       - Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
 
     1. Commit and push the changes:
 
@@ -262,7 +262,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
-1. Click **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
+1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
 
 1. Enter the following information about the Custom Upstream:
 
@@ -277,7 +277,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
      For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
-      1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
+      1. Click [Go to GitHub to generate a personal access token](https://github.com/settings/tokens).
 
       1. Click **Generate new token**.
 
@@ -358,7 +358,7 @@ A Custom Upstream from a GitLab repository must be set up for you by Pantheon Su
     - **Name**: Used to identify the token in GitLab.
     - **Expires at**: We recommend leaving this blank. If the token expires, you will need to create a new one and contact Pantheon Support again to update it.
     - **Username**: We suggest setting a custom username to provide to Pantheon Support.
-    - Give the token the **read_repository** scope.
+    - Select the **read_repository** scope for the token.
 
     ![Adding a deploy token to a GitLab repository](../../../images/gitlab-deploy-token.png)
 
@@ -376,7 +376,7 @@ A Custom Upstream from a GitLab repository must be set up for you by Pantheon Su
 
 Custom Upstreams from other repository hosts must be created for you by Pantheon Support.
   
-These are common steps needed for most Git Providers:
+Common steps needed for most Git Providers are provided below.
 
 1. Prepare a new user specifically for Pantheon access.
 
@@ -436,6 +436,8 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 
 
 ## More Resources
+
+- [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 
