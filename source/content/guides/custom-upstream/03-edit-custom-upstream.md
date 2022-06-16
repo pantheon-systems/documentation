@@ -10,7 +10,7 @@ permalink: docs/guides/custom-upstream/edit-custom-upstream
 anchorid: edit-custom-upstream
 ---
 
-This section provides steps to edit the settings of an existing Custom Upstream.
+This section provides information on editing an existing Custom Upstream.
 
 ## Change Custom Upstream Name or Description
 
