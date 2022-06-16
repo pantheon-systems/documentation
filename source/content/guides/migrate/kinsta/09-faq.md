@@ -1,6 +1,6 @@
 ---
 title: Migrate a Site From Kinsta to Pantheon
-subtitle: Introduction
+subtitle: FAQ
 description: Frequently asked questions about migration.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]

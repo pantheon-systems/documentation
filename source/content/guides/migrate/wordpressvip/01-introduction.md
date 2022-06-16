@@ -6,9 +6,9 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/acquia
-anchorid: acquia
-editpath: migrate/acquia/introduction.md
+permalink: docs/guides/migrate/pagely
+anchorid: pagely
+editpath: migrate/pagely/introduction.md
 reviewed: "2021-06-15"
 ---
 

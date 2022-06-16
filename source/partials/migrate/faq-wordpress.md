@@ -16,7 +16,7 @@ If you'd like your existing WordPress site to get one-click updates from your [C
 
 1. On the next page, choose your Custom Upstream, and complete the installation.
 
-You can now proceed with the normal migration steps [outlined above](#migrate-existing-sites), starting at Step 8.
+You can now proceed with the [standard migration procedure](migrate), starting at Step 8.
 
 ### Are database table prefixes supported?
 
