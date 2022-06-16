@@ -1,0 +1,1 @@
+**Solution:** All files must be moved into the standard location for your site's CMS (`/sites/default/files` for Drupal, and `/wp-content/uploads` for WordPress). For more details, see [Files](/files) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
