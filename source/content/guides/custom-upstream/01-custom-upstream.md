@@ -54,7 +54,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div className="upstream-content-inner-content">
 <h3>Level 1: Pantheon's Core Upstream</h3>
 
-The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress),[Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
+The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress),[Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
 
 </div>
 </div>
@@ -74,9 +74,9 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div className="upstream-content-inner-content">
 <h3>Level 2: Your Custom Upstream</h3>
 
-The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
+The second level repository is a Custom Upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or other Git repository host <Popover content="Contact support to create a custom upstream from another host." />. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or another Git repository host <Popover content="Contact support to create a custom upstream from another host." />. The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
 
 </div>
 </div>
@@ -94,20 +94,12 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 <div className="upstream-content-inner-content">
 <h3>Level 3: Site Repository</h3>
 
-Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
+Core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
 
-The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.
+The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site. This facilitates rolling out updates quickly and easily.
 
 </div>
 </div>
-
-## Custom Upstreams for Digital Agencies and Pantheon Resellers
-
-Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serves clients and resellers of Pantheon are qualified to join the Partner program.
-
-## Custom Upstreams for Corporate and Higher Education Customers 
-
-Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
@@ -115,27 +107,38 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 
 </Alert>
 
+## Custom Upstreams for Digital Agencies and Pantheon Resellers
+
+Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serves clients and resellers of Pantheon are qualified to join the Partner program.
+
+## Custom Upstreams for Corporate and Higher Education Customers 
+
+Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+
 ## Terminology
 
 Here are definitions for commonly used terms:
 
 - **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
 
-- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
+- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
 
 - **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
 
 - **Repository**: A collection of files packaged in a single directory under version control.
 
-- **Remote Repository**: A central version control location, e.g. residing on GitHub or Bitbucket.
+- **Remote Repository**: A central version control location, such as a repository residing on GitHub or Bitbucket.
 
 - **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
 
-- **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
+- **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.
 
 
 ## More Resources
 
+- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
+
 - [Static Sites and Empty Upstreams](/static-site-empty-upstream)
 
+- [WordPress and Drupal Core Updates](/core-updates)
 

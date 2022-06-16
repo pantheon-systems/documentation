@@ -11,11 +11,11 @@ anchorid: test-custom-upstream
 ---
 
 
-Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. The example below using provides steps to test and update core.
+Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend using the workflow example below to  test and update core.
 
 <Alert title="Note" type="info">
 
-Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
+Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) may cause incompatibilities with the platform (for example, the clear cache button, launch checks, cron, and more).
 
 </Alert>
 
@@ -25,7 +25,7 @@ Create content on your test site and use the standard [Pantheon workflow](/panth
 
 ### Sample a Few Sites
 
-We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment ror agencies that manage large portfolios. When things look good, release the update to all.
+We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment or agencies that manage large portfolios. Release the update to when things look good.
 
 ## Before You Begin
 
@@ -59,9 +59,15 @@ This test site will be used later for evaluating Custom Upstream changes.
 
 1. Click **Visit Development Site** and complete the installation process for the selected framework.
 
+<Alert title="Warning" type="danger">
+
+Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
+
+</Alert>
+
 ## Test and Release Pantheon Core Updates
 
-1. Navigate to your local clone of your Custom Upstream repository > add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to the local clone of your Custom Upstream repository > add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
   <TabList>
 
@@ -83,7 +89,7 @@ This test site will be used later for evaluating Custom Upstream changes.
 
   </TabList>
 
-2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
+2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus) > replace `<site>` with your site name:
 
     ```bash
     terminus connection:info <site>.dev --field=git_url
@@ -99,10 +105,10 @@ This test site will be used later for evaluating Custom Upstream changes.
 4. Checkout a new branch:
 
     ```git
-    git checkout -b core-update
+    git checkout -b "core-update"
     ```
 
-  It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives us a chance to reveal issues before distributing updates.
+  It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives you a chance to reveal issues before distributing updates.
 
 5. Pull down Pantheon's core updates from the appropriate upstream:
 
@@ -134,11 +140,11 @@ This test site will be used later for evaluating Custom Upstream changes.
   git push pantheon-test core-update
   ```
 
-7. Return to the Site Dashboard for your test site > navigate to the Multidev overview tab > click **Git Branches**.
+7. Return to the Site Dashboard for your test site > navigate to the **Multidev** overview tab > click **Git Branches**.
 
 8. Click the **Create Environment** button next to the `core-update` branch.
 
-9. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Bitbucket:
+9. Use the new Multidev environment to evaluate your `core-update` branch > merge the branch into master and push to your remote repository on GitHub or Bitbucket when you're ready to release:
 
   ```git
   git checkout master
@@ -146,15 +152,9 @@ This test site will be used later for evaluating Custom Upstream changes.
   git push origin master
   ```
 
-  This assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
+  The example command above assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
 
-Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. For more details, see [WordPress and Drupal Core Updates](/core-updates).
-
-<Alert title="Warning" type="danger">
-
-Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
-
-</Alert>
+Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
 
 ## More Resources
 

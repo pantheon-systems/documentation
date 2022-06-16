@@ -14,13 +14,13 @@ This section provides information to help you manage and maintain your Custom Up
 
 ### Upstream Configuration File
 
-Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/pantheon-yml).
+Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation for details.
 
 ### Redirects
 
-We normally suggest [PHP redirects](/redirects) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. If you are using a Custom Upstream, any customizations to these files will be lost with each update. It will also be hard to implement site-specific configurations added on these files.
+We normally suggest [PHP redirects](/redirects) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. You will lose any customizations to your PHP files every time you update your Custom Upstream. It will also be difficult to implement site-specific configurations added on these files.
 
-Since this file is shared on all environments, including Multidevs, you can use a `require_once` statement to point to an external file, separate from the Custom Upstream and unique to each site, that loads all the redirects or customizations:
+You can use a `require_once` statement to point to an external file since this file is shared on all environments, including Multidevs. It is also separate from the Custom Upstream and unique to each site:
 
 ```php
 if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
@@ -28,7 +28,7 @@ if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANT
 }
 ```
 
-Remember that this file is not included in the Custom Upstream and needs to exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+Remember that this file is not included in the Custom Upstream and must exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
 WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
 

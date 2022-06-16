@@ -416,28 +416,11 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 New sites created from this Custom Upstream will use this connection mode by default going forward.
 
-### Repository URL and password
-
-You cannot modify the repository details on existing Custom Upstreams. If there is a new URL or password you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/terminus):
-
-```bash{promptUser: user}
-terminus site:upstream:set my-site "My New Custom Upstream"
-```
-
-You must be a site owner to switch a site's upstream. After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/terminus/examples/#switch-upstreams).
-
-Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
-
-1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" )** tab within the Pantheon Dashboard and select your organization.
-
-1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-
-1. Click **Settings** next to the existing upstream, then click **Delete**.
-
-
 ## More Resources
 
 - [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
+
+-[Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 
