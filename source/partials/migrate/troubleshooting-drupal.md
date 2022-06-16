@@ -6,7 +6,7 @@
 
 ### Drush archive missing code or files
 
-If you have an existing archive (tgz) file in `sites/default/files` the `drush ard` command may generate an archive without all expected components. Delete all archives and try running `drush ard` again.
+If you have an existing archive (tgz) file in `sites/default/files`, the `drush ard` command may generate an archive without all expected components. Delete all archives and try running `drush ard` again.
 
 ### HTTP 404 error: Unable to download the archive
 

@@ -1,3 +1,3 @@
-- **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
+  - The site archive is greater than 500MB
 
-- **Using Drush 9 or later**: `drush ard` is only available on Drush 8 and earlier.
+  - The site uses Drush 9 or later (`drush ard` is only available on Drush 8 and earlier)

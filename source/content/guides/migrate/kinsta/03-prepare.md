@@ -13,3 +13,6 @@ reviewed: "2021-06-15"
 ---
 
 <Partial file="migrate/prepare.md" />
+<Partial file="migrate/manual-when-all.md" />
+<Partial file="migrate/manual-when-wp.md" />
+<Partial file="migrate/manual-when-drupal.md" />
