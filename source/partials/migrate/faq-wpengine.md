@@ -16,4 +16,3 @@ Follow the [standard migration procedure](migrate). Note that WP Engine blocks t
 5. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 
 6. Follow the procedure to [manually migrate](/migrate-manual) your site.
-
