@@ -32,8 +32,17 @@ For more details, see [Manually Migrate Sites to Pantheon](/migrate-manual).
 
 ## Troubleshooting
 
+<Partial file="migrate/troubleshooting-acquia.md" />
+<Partial file="migrate/troubleshooting-drupal.md" />
+<Partial file="migrate/troubleshooting-wordpress.md" />
 <Partial file="migrate/troubleshooting.md" />
 
 ## Frequently Asked Questions (FAQs)
 
 <Partial file="migrate/faq.md" />
+
+<Partial file="migrate/faq-wordpress.md" />
+
+<Partial file="migrate/faq-drupal.md" />
+
+<Partial file="migrate/faq-wpengine.md" />

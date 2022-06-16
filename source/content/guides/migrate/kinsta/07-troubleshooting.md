@@ -13,4 +13,7 @@ editpath: migrate/kinsta/07-troubleshooting.md
 reviewed: "2021-06-15"
 ---
 
+<Partial file="migrate/troubleshooting-acquia.md" />
+<Partial file="migrate/troubleshooting-drupal.md" />
+<Partial file="migrate/troubleshooting-wordpress.md" />
 <Partial file="migrate/troubleshooting.md" />
