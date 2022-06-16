@@ -101,14 +101,6 @@ The site repository allows separation between common code across all sites, trac
 </div>
 </div>
 
-
-
-<Alert title="Note" type="info">
-
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
-
-</Alert>
-
 ## Custom Upstreams for Digital Agencies and Pantheon Resellers
 
 Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serves clients and resellers of Pantheon are qualified to join the Partner program.
@@ -116,6 +108,12 @@ Download the [Partner Program guide](https://pantheon.io/resources/pantheon-part
 ## Custom Upstreams for Corporate and Higher Education Customers 
 
 Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+
+<Alert title="Note" type="info">
+
+Support for Custom Upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
+
+</Alert>
 
 ## Terminology
 
