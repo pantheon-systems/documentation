@@ -6,8 +6,6 @@ Next, check [log files](/logs) to help identify and fix errors. The core is upgr
 
 ### General Issues
 
-
-
 #### Could not import database, unable to locate a database dump
 
 **Cause:** The migration tool could not locate a MySQL database dump within the archive.
@@ -26,25 +24,15 @@ Next, check [log files](/logs) to help identify and fix errors. The core is upgr
 
 **Solution:** Ensure that a single code root is included within the archive.
 
-#### Cannot Login Using a Google Account
-
-Attempts to login with Google will fail if your organization uses Single Sign-On, resulting in the following error:
-
-![Migration Authentication Error](../../images/dashboard/migration-authentication-error.png)
-
-Click your browser's back button to re-authenticate by entering your email address and sign in with your SAML Identity Provider. For details, see [Single Sign-On for Pantheon Organizations](/sso-organizations).
-
 #### Destination Site Not Found Error
 
-If you are logged in with one identity and re-authenticate a different account, the site created will be associated with one account and the machine token with another, resulting in the following error:
+**Cause**: If you are logged in with one identity and re-authenticate a different account, or use Single Sign-On with with Google, the site created will be associated with one account and the machine token with another, resulting in the this error.
 
-![Destination site not found](../../images/bv-destination-not-found-error.png)
-
-Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
+**Solution**: Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
 #### Maximum Index Size
 
-From the [MySQL reference manual](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html):
+**Cause**:  From the [MySQL reference manual](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html):
 
 > InnoDB has a maximum index length of 767 bytes for tables that use COMPACT or REDUNDANT row format, so for utf8mb3 or utf8mb4 columns, you can index a maximum of 255 or 191 characters, respectively. If you currently have utf8mb3 columns with indexes longer than 191 characters, you must index a smaller number of characters.
 
@@ -54,7 +42,7 @@ Sites migrated from hosts using `utf8mb3` are upgraded to `utf8mb4`. If those si
 Index column size too large. The maximum column size is 767 bytes
 ```
 
-These tables will need to be updated. One method to update index length uses the `ALTER TABLE` command:
+**Solution**: These tables will need to be updated. One method to update index length uses the `ALTER TABLE` command:
 
 ```sql
 ALTER TABLE tableName DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191));

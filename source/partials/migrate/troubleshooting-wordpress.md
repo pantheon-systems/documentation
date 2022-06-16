@@ -2,20 +2,21 @@
 
 #### CDN Blocking POST requests
 
-This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method. Resolve this issue by [temporarily setting POST as an allowed HTTP method within the CDN's configuration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restarting the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
+**Cause:** This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method.
+
+**Solution:**  [Temporarily setting POST as an allowed HTTP method within the CDN's configuration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restarting the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
 
 #### Very Large Site Footprints
 
-Imports can also fail for very large sites, which may time out while importing. In these cases, initiate the migration again from the source site, and the transfer should pick up where it left off.
+**Cause:** Imports can also fail for very large sites, which may time out while importing.
 
+**Solution:** Initiate the migration again from the source site, and the transfer should pick up where it left off.
 
 #### Could not import code, the import file does not appear to contain a valid code directory.
 
 **Cause:** The migration tool could not find the core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
 
-**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive.
-
-Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:
+**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive. Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:
 
 ```none
 ├── index.php
