@@ -55,7 +55,7 @@ Next, check [log files](/logs) to help identify and fix errors. The core is upgr
 
 Attempts to login with Google will fail if your organization uses Single Sign-On, resulting in the following error:
 
-![Migration Authentication Error](../images/dashboard/migration-authentication-error.png)
+![Migration Authentication Error](../../images/dashboard/migration-authentication-error.png)
 
 Click your browser's back button to re-authenticate by entering your email address and sign in with your SAML Identity Provider. For details, see [Single Sign-On for Pantheon Organizations](/sso-organizations).
 
@@ -63,7 +63,7 @@ Click your browser's back button to re-authenticate by entering your email addre
 
 If you are logged in with one identity and re-authenticate a different account, the site created will be associated with one account and the machine token with another, resulting in the following error:
 
-![Destination site not found](../images/bv-destination-not-found-error.png)
+![Destination site not found](../../images/bv-destination-not-found-error.png)
 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
