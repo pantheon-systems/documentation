@@ -249,3 +249,27 @@ This occurs because both repositories contain a package called `drupal/search_ap
     }
 }
 ```
+
+## Best Practices
+
+* Disable the default search module
+  * In Drupal, disabling the core "search" module will help elminiate accidentally basing views on Drupal's default database-driven search.
+
+* Solr server must have the machine name `pantheon_solr8`
+
+* Store rendered output in a single field
+  * You always need to make sure to store the rendered output of your content and additional data (such as meta tags) in one single field in the index. This way, it’s a lot easier to search for all the relevant data. It will make your optimizations easier further down the road and it will render your queries a lot smaller & faster.
+
+* Filter HTML code
+  * Getting what is indexed as close to plain text as possible will decrease the amount of spurious results in a query.
+
+* Eliminate field label cruft in Drupal
+  * Make sure to index this data using as little markup as possible, and get rid of the field labels. You can do this by assigning a specific view mode to each content type.
+
+* Improve relevance with content boosting
+  * You can make sure visitors are finding the best content. Apache Solr works with relevance scores to determine where a result should be positioned in relation to all of the other results. In search, boosting a page increases the chance it will show up in a search. For instance: If you're searching for "dinner" you might also want to boost any content with similar tags like "food" and "pizza". Tag-based boosting would increase the relevance scores of tagged items that seem to be related to the query string.
+
+* Do not upgrade indices
+  * If you are moving from Solr 3 to Solr 8, delete your index before upgrading as well as .yml files in your config folder. Sorry, it's just too many versions for the upgrade to any way be usable. We've found trying to upgrade the index leads to indices that don't actually store any data and your search results, no matter how many times you re-index will not contain any results. Just delete your index before upgrading. Or if you've already upgraded, delete your index completely and recreate it from scratch. Importing the configs from a .yml file from the old Solr 3 version of this module will end in your calling support and wondering why your index has no search results. Just delete the index, delete the config.yml file and START FROM SCRATCH building an index. Generally speaking, you're more than welcome to ignore our advice if it's working for you, but we've found in our our testing that a solr 3 relies on things that no longer exist in solr 8 and your index will be built on classes that don't exist on the java-based server and, thus, won't retain any data when you try to send a document to index.
+
+
