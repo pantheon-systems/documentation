@@ -12,7 +12,7 @@ editpath: migrate/kinsta/01-introduction.md
 reviewed: "2021-06-15"
 ---
 
-Welcome to Pantheon!  We make it easy for you to move a site from Kinsta to Pantheon.  Simply use the following instructions, and you'll be good to go!
+Welcome to Pantheon!  We want to make it easy for you to move a site from Kinsta to Pantheon.  Simply use the following instructions, and you'll be good to go!
 
 There are a few methods for migrating your site to Pantheon:
 

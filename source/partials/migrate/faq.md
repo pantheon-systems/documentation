@@ -1,8 +1,8 @@
 ### How do I clone an existing Pantheon site?
 
-<Partial file="faq-clone-wp.md" />
+<Partial file="migrate/faq-clone-wp.md" />
 
-<Partial file="faq-clone-drupal.md" />
+<Partial file="migrate/faq-clone-drupal.md" />
 
 <Alert title="Note" type="info">
 
@@ -18,13 +18,13 @@ When asked for your current site URL, enter `https://example.com` and continue t
 
 <Tab title="WordPress" id="tab-1-id" active={true}>
 
-<Partial file="faq-local-wp.md" />
+<Partial file="migrate/faq-local-wp.md" />
 
 </Tab>
 
 <Tab title="Drupal" id="tab-2-id">
 
-<Partial file="faq-local-drupal.md" />
+<Partial file="migrate/faq-local-drupal.md" />
 
 </Tab>
 
