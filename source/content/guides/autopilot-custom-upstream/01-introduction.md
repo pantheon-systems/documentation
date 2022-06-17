@@ -75,6 +75,6 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 ## More Resources
 
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
-- [Autopilot Guide](/guides/autopilot/introduction)
+- [Autopilot Guide](/guides/autopilot/)
 - [Custom Upstreams Product Page](https://pantheon.io/upstreams)
 
