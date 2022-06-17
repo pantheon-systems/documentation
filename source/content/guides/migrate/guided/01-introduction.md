@@ -28,7 +28,7 @@ Use this process when any of the following apply:
 
 <Partial file="migrate/manual-when-all.md" />
 <Partial file="migrate/manual-when-drupal.md" />
-<Partial file="migrate/manual-when-wp.md" />
+<Partial file="migrate/manual-when-wordpress.md" />
 
 For instructions on this method, see [Manually Migrate Sites to Pantheon](/migrate-manual).
 

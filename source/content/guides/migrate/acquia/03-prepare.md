@@ -1,14 +1,14 @@
 ---
-title: Migrate Sites to Pantheon Using Guided Migration
+title: Migrate a Site From Acquia to Pantheon Using Guided Migration
 subtitle: Prepare
 description: Get your site ready for migration.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/guided/prepare
+permalink: docs/guides/migrate/acquia/prepare
 anchorid: prepare
-editpath: migrate/guided/03-prepare.md
+editpath: migrate/acquia/03-prepare.md
 reviewed: "2021-06-15"
 ---
 

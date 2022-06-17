@@ -1,18 +1,18 @@
 ---
-title: Migrate a Site From Kinsta to Pantheon Using Guided Migration
+title: Migrate a Site From WordPress VIP to Pantheon Using Guided Migration
 subtitle: Migrate
-description: Learn how to use the guided migration path.
+description: Learn how to use the wordpressvip migration path.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/kinsta/migrate
+permalink: docs/guides/migrate/wordpressvip/migrate
 anchorid: migrate
-editpath: migrate/kinsta/05-migrate.md
+editpath: migrate/wordpressvip/05-migrate.md
 reviewed: "2021-06-15"
 ---
 
-Pantheon provides a guided path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
+Pantheon provides a wordpressvip path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
 
 <Partial file="migrate/migrate-all.md" />
 
