@@ -14,8 +14,6 @@ reviewed: "2021-06-15"
 
 Welcome to Pantheon!  We want to make it easy for you to move a site from another hosting provider to Pantheon.  Simply use the following instructions, and you'll be good to go!
 
-<Partial file="drupal-9/guide-note.md" />
-
 There are a few methods for migrating your site to Pantheon:
 
 ## Guided Migration
