@@ -14,4 +14,5 @@ reviewed: "2021-06-15"
 ---
 
 <Partial file="migrate/troubleshooting.md" />
+<Partial file="migrate/troubleshooting-wpengine.md" />
 <Partial file="migrate/troubleshooting-wordpress.md" />

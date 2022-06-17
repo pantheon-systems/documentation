@@ -14,7 +14,6 @@ reviewed: "2021-06-15"
 ---
 
 <Partial file="migrate/faq.md" />
-
+<Partial file="migrate/faq-drupal.md" />
 <Partial file="migrate/faq-wordpress.md" />
 
-<Partial file="migrate/faq-drupal.md" />
