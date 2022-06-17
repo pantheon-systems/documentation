@@ -7,4 +7,3 @@ To ensure a successful migration, complete the following tasks on the source sit
 1. Clear all caches
 1. Remove unneeded code, database tables, and files
 1. [Configure SSH keys](/ssh-keys)
-1. Ensure your site doesn't meet any the following criteria.  If it does, perform a [manual migration](intro#migrate-manually) instead.

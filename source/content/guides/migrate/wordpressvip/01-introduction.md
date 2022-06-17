@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site From WordPress VIP to Pantheon Using Guided Migration
 subtitle: Introduction
-description: Instructions for migrating your site using our wordpressvip migration process.
+description: Instructions for migrating your site using our guided migration process.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
