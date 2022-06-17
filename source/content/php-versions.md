@@ -68,7 +68,7 @@ End-of-Sale versions are no longer available to new sites on the platform.  Exis
 
 </dl>
 
-\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment.
+\* Sites that use PHP version 5.3 will continue to serve pages. However, new development cannot be done because the development environment behavior is undefined and no longer supported. You can upgrade your PHP version in the development environment to resume development on your site. 
 
 #### Compatibility Considerations
 
