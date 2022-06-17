@@ -1,6 +1,6 @@
-### How can I migrate from WP Engine?
+#### Migration Fails
 
-Follow the [standard migration procedure](migrate). Note that WP Engine blocks the Let's Encrypt challenge file, so you should schedule a [maintenance window](/guides/launch/domains/#maintenance-window) for HTTPS. If your migration fails, you can try the following workaround:
+WP Engine blocks the Let's Encrypt challenge file, so you should schedule a [maintenance window](/guides/launch/domains/#maintenance-window) for HTTPS. If your migration fails, you can try the following workaround:
 
 1. Create and download a backup point from WP Engine.
 
