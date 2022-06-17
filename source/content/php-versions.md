@@ -34,13 +34,13 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 | [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.1. New Relic is not supported in PHP 8.1." /> |
 | [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0." /> |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
-| [7.3](https://v73-php-info.pantheonsite.io/) | ❌          | EOL     |
-| [7.2](https://v72-php-info.pantheonsite.io/) | ❌          | EOL     |
-| [7.1](https://v71-php-info.pantheonsite.io/) | ❌          | EOL     |
-| [7.0](https://v70-php-info.pantheonsite.io/) | ❌          | EOL     |
-| [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.5](https://v55-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | EOL * |
+| [7.3](https://v73-php-info.pantheonsite.io/) | ⚠️          | EOL     |
+| [7.2](https://v72-php-info.pantheonsite.io/) | ⚠️          | EOL     |
+| [7.1](https://v71-php-info.pantheonsite.io/) | ⚠️          | EOL     |
+| [7.0](https://v70-php-info.pantheonsite.io/) | ⚠️          | EOL     |
+| [5.6](https://v56-php-info.pantheonsite.io/) | ⚠️          | EOL |
+| [5.5](https://v55-php-info.pantheonsite.io/) | ❌          | End-of-Sale |
+| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | End-of-Sale * |
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
@@ -50,7 +50,19 @@ Click on the links above to see the complete PHP info for each version, includin
 
 <dd>
 
-End-of-life (**EOL**) versions are available on the platform but no longer under active development, and should not be used unless absolutely necessary.
+End-of-life (**EOL**) versions are available on the platform but no longer receiving updates, and should not be used unless absolutely necessary.
+
+</dd>
+
+</dl>
+
+<dl>
+
+<dt>End-of-Sale</dt>
+
+<dd>
+
+End-of-Sale versions are no longer available to new sites on the platform.  Existing sites using these versions will be automatically upgraded in the future.
 
 </dd>
 
