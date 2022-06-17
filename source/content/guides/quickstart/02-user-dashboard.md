@@ -46,7 +46,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
   - **SSH Keys:** Add and manage your SSH keys.
 
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin](/migrate).
+  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin]/guides/migrate/guided/.
 
   - **Billing:** View and update your billing information for sites you own.
 

@@ -112,5 +112,5 @@ terminus org:list
 ## Next Steps
 
 - [Create a Site](/create-sites)
-- [Migrate Sites to Pantheon](/migrate)
+- [Migrate Sites to Pantheon]/guides/migrate/guided/
 - Read the [FAQs](/organization-faq)

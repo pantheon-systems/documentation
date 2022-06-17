@@ -18,7 +18,7 @@ The Managed Migration Service offered by [Pantheon Professional Services](/guide
 
 The goal of the Migrations Team is to migrate your site to the Pantheon WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
 
-For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate).
+For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon]/guides/migrate/guided/.
 
 If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
 
@@ -190,6 +190,6 @@ These used to be called Custom Application Services (CAS) hours.
 
 ## See Also
 
-- [Migrate Sites to Pantheon](/migrate) and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
+- [Migrate Sites to Pantheon]/guides/migrate/guided/ and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
 - [Migrate to Pantheon: WordPress Site Networks](/migrate-wordpress-site-networks)
 - [Video: Guided WordPress Migrations](/videos/migrate-wordpress)

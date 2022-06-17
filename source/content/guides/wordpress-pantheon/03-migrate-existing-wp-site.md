@@ -52,7 +52,7 @@ Complete the following steps for the current site before beginning the migration
 
 1. Install the [Pantheon Migrations](https://wordpress.org/plugins/bv-pantheon-migration/#installation) plugin.
 
-1. Follow the [Guided WordPress Migrations](/migrate#migrate-existing-sites) steps.
+1. Follow the [Guided WordPress Migrations](/guides/migrate/guided/) steps.
 
 ## Manually Migrate Your Site to Pantheon
 
