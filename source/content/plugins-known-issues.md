@@ -638,7 +638,7 @@ ___
 
 <ReviewDate date="2020-12-10" />
 
-**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) can have incompatible index values for `meta_key` on database tables when installed on a site imported from a host using [3-byte character sets](/migrate#maximum-index-size), resulting in the following error on import:
+**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) can have incompatible index values for `meta_key` on database tables when installed on a site imported from a host using [3-byte character sets](/guides/migrate/guided/troubleshooting#maximum-index-size), resulting in the following error on import:
 
 ```none
 Index column size too large. The maximum column size is 767 bytes
