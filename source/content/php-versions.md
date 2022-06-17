@@ -39,24 +39,36 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 | [7.1](https://v71-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [7.0](https://v70-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.5](https://v55-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | EOL * |
+| [5.5](https://v55-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform.  Existing sites using these versions will be automatically upgraded in the future." /> |
+| [5.3](https://v53-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform.  Existing sites using these versions will be automatically upgraded in the future. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment." />* |
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
 <dl>
 
-<dt>EOL</dt>
+<dt>❌ EOL</dt>
 
 <dd>
 
-End-of-life (**EOL**) versions are available on the platform but no longer under active development, and should not be used unless absolutely necessary.
+End-of-life (**EOL**) versions are available on the platform but no longer receiving updates, and should not be used unless absolutely necessary.
 
 </dd>
 
 </dl>
 
-\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment.
+<dl>
+
+<dt>🚫 End-of-Sale</dt>
+
+<dd>
+
+End-of-Sale versions are no longer available to new sites on the platform.  Existing sites using these versions will be automatically upgraded in the future.
+
+</dd>
+
+</dl>
+
+\* Sites that use PHP version 5.3 will continue to serve pages. However, new development cannot be done because the development environment behavior is undefined and no longer supported. You can upgrade your PHP version in the development environment to resume development on your site. 
 
 #### Compatibility Considerations
 
