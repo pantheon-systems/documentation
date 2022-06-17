@@ -77,7 +77,7 @@
               url: '/videos/migrate-wordpress'
               icon: 'fa fa-video-camera'
             - text: 'Migrate Sites to Pantheon'
-              url: '/migrate'
+              url: '/guides/migrate/guided/'
         - title: 'Migrations From Competitors'
           links:
             - text: 'Acquia'
