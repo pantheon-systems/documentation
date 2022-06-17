@@ -14,6 +14,6 @@ reviewed: "2021-06-15"
 
 Pantheon provides a wpengine path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
 
-<Partial file="migrate/migrate-all.md" />
+<Partial file="migrate/migrate-wordpress.md" />
 
 If the migration is not successful, review [Troubleshooting](troubleshooting), or [contact Support](/guides/support/contact-support/) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
