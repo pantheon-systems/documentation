@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site From Kinsta to Pantheon
+title: Migrate a Site From Kinsta to Pantheon Using Guided Migration
 subtitle: Prepare
 description: Get your site ready for migration.
 categories: [develop]
@@ -14,5 +14,5 @@ reviewed: "2021-06-15"
 
 <Partial file="migrate/prepare.md" />
 <Partial file="migrate/manual-when-all.md" />
-<Partial file="migrate/manual-when-wp.md" />
+<Partial file="migrate/manual-when-wordpress.md" />
 <Partial file="migrate/manual-when-drupal.md" />

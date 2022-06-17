@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site From Kinsta to Pantheon
+title: Migrate a Site From Kinsta to Pantheon Using Guided Migration
 subtitle: Introduction
 description: Instructions for migrating your Drupal site from Kinsta to Pantheon.
 categories: [develop]
@@ -28,7 +28,7 @@ Use this process when any of the following apply:
 
 <Partial file="migrate/manual-when-all.md" />
 <Partial file="migrate/manual-when-drupal.md" />
-<Partial file="migrate/manual-when-wp.md" />
+<Partial file="migrate/manual-when-wordpress.md" />
 
 For instructions on this method, see [Manually Migrate Sites to Pantheon](/migrate-manual).
 
