@@ -15,6 +15,6 @@ anchorid: wp-autopilot-custom-upstream
 
 ## Configure the Custom Upstream
 
-## Using Autopilot Does with Your Upstream Representative Site
+## Using Autopilot with Your Upstream Representative Site
 
 
