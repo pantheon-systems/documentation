@@ -11,11 +11,11 @@ permalink: docs/guides/autopilot-custom-upstream
 anchorid: autopilot-custom-upstream
 ---
 
-Combining Autopilot with Custom Upstreams is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see Get Autopilot and Autopilot Compatibility for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
+Combining [Autopilot](/guides/autopilot) with [Custom Upstreams]/guides/autopilot-custom-upstream is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
 
 ## Autopilot
 
-[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
+Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
 Pantheon's Autopilot:
 
@@ -38,8 +38,6 @@ Autopilot is available for the following accounts:
 Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to discuss which plan is best for your needs.
 
 ### Autopilot Site Compatibility
-
-Autopilot Site Compatibility
 
 Your site must be on Pantheon and meet the criteria below to be eligible for Autopilot. 
 
