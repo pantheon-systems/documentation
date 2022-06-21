@@ -12,7 +12,7 @@ anchorid: delete-custom-upstream
 
 This section provides steps to delete a Custom Upstream. A Custom Upstream cannot be deleted if there are sites using it.
 
-Follow the site below to delete your Custom Upstream.
+Follow these steps to delete your Custom Upstream.
 
 1. Navigate to the Organization Dashboard > click **Upstreams**.
 

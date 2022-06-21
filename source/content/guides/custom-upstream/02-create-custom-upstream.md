@@ -10,7 +10,7 @@ permalink: docs/guides/custom-upstream/create-custom-upstream
 anchorid: create-custom-upstream
 ---
 
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization](/organizations) Dashboard with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. The Custom Upstream must be created within each Organization’s Dashboard if you want to use a specific Custom Upstream for multiple Organizations. 
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization Dashboard](/organizations) with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. The Custom Upstream must be created within each Organization’s Dashboard if you want to use a specific Custom Upstream for multiple Organizations. 
 
 <Alert title="Note" type="info">
 
@@ -34,7 +34,7 @@ Follow the steps for your preferred Git host below to create your repository.
 
 1. [Create an SSH Key](/ssh-keys#generate-ssh-key) if you don't already have one  associated with your GitHub account > [add your SSH Key to GitHub](https://github.com/settings/ssh/new).
 
-1. Click [**Start Project**](https://github.com/new) if this is your first time logging in to GitHub > otherwise click [**New**](https://github.com/new) in the Repositories sidebar on the left.
+1. Click [**Start Project**](https://github.com/new) if this is your first time logging in to GitHub. Otherwise click [**New**](https://github.com/new) in the **Repositories** sidebar on the left.
 
 1. Name the repository.
 
@@ -291,15 +291,15 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
       1. Click **Generate token** and copy the new token to your clipboard.
 
-      1. Return to the Pantheon Organization Dashboard where you are creating the Custom Upstream.
+1. Return to the Pantheon Organization Dashboard where you are creating the Custom Upstream.
 
-      1. Paste your new GitHub access token.
+1. Paste your new GitHub access token.
 
    - **Framework**: Drupal 7, Drupal 9, or WordPress
 
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
-1. Click **Create**.
+4. Click **Create**.
 
 </Tab>
 
@@ -380,7 +380,7 @@ Common steps needed for most Git Providers are provided below.
 
 1. Prepare a new user specifically for Pantheon access.
 
-  - This new account will need to be accessible via API for Pantheon, it must also have access to the repository created in the earlier step.
+   - This new account will need to be accessible via API for Pantheon, it must also have access to the repository created in the earlier step.
 
 1. [Contact support](/guides/support/contact-support/) to add the Custom Upstream to your org. You must provide:
 
@@ -420,7 +420,7 @@ New sites created from this Custom Upstream will use this connection mode by def
 
 - [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
 
--[Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
+- [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 

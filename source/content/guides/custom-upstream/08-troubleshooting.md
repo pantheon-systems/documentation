@@ -16,10 +16,9 @@ This section provides troubleshooting solutions for Custom Upstreams.
 
 ### Automatically Resolve from the Command Line
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (for example, problems with `.gitignore`).
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (for example, problems with `.gitignore`).
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
-
 
   <TabList>
 
@@ -70,7 +69,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 ### Manually Resolve from the Command Line
 
-You must manually resolve the conflict using the command line and a text editor if attempts to automatically resolve conflicts fail or if you want your changes to persist instead of the upstream's changes.
+You must manually resolve the conflict using the command line and a text editor if attempts to automatically resolve conflicts fail, or if you want your changes to persist instead of the upstream's changes.
 
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
@@ -140,13 +139,13 @@ You must manually resolve the conflict using the command line and a text editor 
   To check out the original branch and stop rebasing, run "git merge --abort".
   ```
 
-  In this example, you would:
+   In this example, you would:
   
-  1. Open `wp-admin/about.php` in your preferred text editor.
+   1. Open `wp-admin/about.php` in your preferred text editor.
   
-  1. Locate the conflict markers starting with `<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>> Adjust rendering of version release notes`).
+   1. Locate the conflict markers starting with `<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>> Adjust rendering of version release notes`).
 
-  1. Delete the conflict markers and double-check the changes.
+   1. Delete the conflict markers and double-check the changes.
 
 4. Run `git status` to see conflicting files in the current index > add the files to your index and continue pulling in updates after all conflicts have been addressed.
 

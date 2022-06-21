@@ -21,11 +21,11 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 
 ### Use the Pantheon Workflow
 
-Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments to fully test core updates. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments, and fully test core updates. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
 
-We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment or agencies that manage large portfolios. Release the update to when things look good.
+We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment or agencies that manage large portfolios. Release the update when things look good on these sites.
 
 ## Before You Begin
 
@@ -89,7 +89,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   </TabList>
 
-2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus) > replace `<site>` with your site name:
+2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
 
     ```bash
     terminus connection:info <site>.dev --field=git_url
@@ -144,7 +144,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
 8. Click the **Create Environment** button next to the `core-update` branch.
 
-9. Use the new Multidev environment to evaluate your `core-update` branch > merge the branch into master and push to your remote repository on GitHub or Bitbucket when you're ready to release:
+9. Use the new Multidev environment to evaluate your `core-update` branch > merge the branch into master > push to your remote repository on GitHub or Bitbucket when you're ready to release:
 
   ```git
   git checkout master

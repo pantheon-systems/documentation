@@ -103,7 +103,7 @@ The site repository allows separation between common code across all sites, trac
 
 ## Custom Upstreams for Digital Agencies and Pantheon Resellers
 
-Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serves clients and resellers of Pantheon are qualified to join the Partner program.
+Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serve clients and resellers of Pantheon are qualified to join the Partner program.
 
 ## Custom Upstreams for Corporate and Higher Education Customers 
 

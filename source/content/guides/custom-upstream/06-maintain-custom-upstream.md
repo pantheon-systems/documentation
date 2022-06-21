@@ -12,11 +12,11 @@ anchorid: maintain-custom-upstream
 
 This section provides information to help you manage and maintain your Custom Upstream.
 
-### Upstream Configuration File
+## Upstream Configuration File
 
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation for details.
 
-### Redirects
+## Redirects
 
 We normally suggest [PHP redirects](/redirects) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. You will lose any customizations to your PHP files every time you update your Custom Upstream. It will also be difficult to implement site-specific configurations added on these files.
 
