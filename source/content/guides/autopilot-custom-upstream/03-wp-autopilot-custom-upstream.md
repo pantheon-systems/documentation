@@ -1,6 +1,6 @@
 ---
 title: Autopilot for Custom Upstreams
-subtitle: Use Custom Upstream and Autopilot on WordPress 
+subtitle: Custom Upstream and Autopilot for WordPress 
 description: Set up your WordPress site to use Custom Upstream and Autopilot.
 categories: [develop]
 tags: [autopilot, upstreams]
@@ -20,9 +20,9 @@ This setup runs Autopilot on the Custom Upstream site and on each child site. Yo
 
 The simplest way to start your Custom Upstream journey is to create a new, vanilla WordPress site. The new site’s repository will be the starting point for your Custom Upstream codebase, and will be the only place Autopilot actually affects our yCustom Upstream code. 
 
-1. Name the site in a way that identifies it as the Custom Upstream, for example “Green Sites Upstream”.
+1. Name the site in a way that identifies it as the Custom Upstream, for example “Sites Upstream”.
 
-1. Install WordPress and generate two or three pages of content.
+1. [Create a new WordPress site](/create-sites#create-a-site) and generate two or three pages of content.
 
 1. [Activate Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) and select all three scopes – upstream, plugins, themes under **What Should Autopilot Update?** 
 

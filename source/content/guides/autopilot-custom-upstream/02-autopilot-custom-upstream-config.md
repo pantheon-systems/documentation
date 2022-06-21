@@ -13,7 +13,7 @@ anchorid: autopilot-custom-upstream-config
 
 There are three use cases for combining Autopilot and Custom Upstreams on the Pantheon platform.
 
-## Autopilot Enabled on Downstream site(s) Only
+## Autopilot Enabled on Downstream Sites Only
 
 This use case is considered the standard use case for Autopilot. Autopilot always checks for an upstream in Pantheon’s maintained upstream library or a Custom Upstream created by the user. Autopilot applies the updates from the upstream alongside other modules/plugins/themes. This scenario makes the most sense for customers who are using their upstream as a boilerplate.
 
@@ -94,3 +94,5 @@ This use case requires you to setup your Custom Upstream as a Pantheon site with
 - [Autopilot Apply Updates](/guides/autopilot/apply-updates/)
 
 - [Autopilot Frequently Asked Questions](/guides/autopilot/apply-updates/)
+
+- - [Custom Upstreams Guide](link to be added)
