@@ -90,11 +90,13 @@ Before changing your PHP version, confirm that your CMS is compatible:
 
 PHP versions can be set using the `pantheon.yml` configuration file in the root of your site's code repository. If you have a local git clone of your site, the project root is `/code/`.
 
-Any configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
+Configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
 
 You must use SFTP to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
 
-1. Navigate to the Pantheon dashboard > click the **Dev** environment tab > set the **Development Mode** to **SFTP**.
+1. Navigate to the Pantheon dashboard.
+
+1. Click the **Dev** environment tab and set the **Development Mode** to **SFTP**.
 
 1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
 
@@ -116,7 +118,7 @@ You must use SFTP to create or change the `pantheon.yml` file. You will receive 
 
 1. Set the **Development Mode** to **Git**.
 
-1. Pull down the changes to your local repo (if you have one).
+1. Pull changes to your local repository (if you have one).
 
 Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
