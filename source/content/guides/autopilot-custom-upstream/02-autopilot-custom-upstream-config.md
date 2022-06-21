@@ -37,7 +37,7 @@ This use case is considered the standard use case for Autopilot. Autopilot alway
 
 1. Complete the steps in the [Configuration](/guides/autopilot/enable-autopilot/#configuration), [Schedule](/guides/autopilot/enable-autopilot/#configuration), and [Visual Review](/guides/autopilot/enable-autopilot/#visual-review) sections of the [Autopilot Setup Wizard](/guides/autopilot/enable-autopilot/#autopilot-setup-wizard).
 
-## Autopilot Enabled on Custom Upstream and Downstream Site(s)
+## Autopilot Enabled on Custom Upstream and Downstream Sites
 
 This use case requires you to setup your Custom Upstream as a Pantheon site and enable Autopilot. This setup is beneficial if you have broad portfolios of similar sites (such as universities). We recommend that the child sites exclude certain updates coming from the upstream (such as common plugins/modules) so out-of-sync updates do not accidentally get applied.
 
