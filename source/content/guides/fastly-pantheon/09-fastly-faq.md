@@ -31,10 +31,6 @@ Yes. You can use any of the [Fastly logging endpoints](https://docs.fastly.com/e
 
 You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
 
-## Do I Still Get Global CDN Now That I Have AGCDN for Fastly?
-
-Yes, [Global CDN](/global-cdn) is included free of charge for all Pantheon customers. This enables customers to render pages with speed by caching responses at the edge with over 70 Fastly points of presence.
-
 ## Who sets up the Fastly edge configuration files?
 
 Advanced Global CDN is supported by Pantheon’s experienced [Professional Services](/guides/professional-services) team, who can set up, configure, and maintain your Fastly edge configurations.

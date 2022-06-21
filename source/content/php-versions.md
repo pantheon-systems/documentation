@@ -39,30 +39,42 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 | [7.1](https://v71-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [7.0](https://v70-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.5](https://v55-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | EOL * |
+| [5.5](https://v55-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future." /> |
+| [5.3](https://v53-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment." />* |
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
 <dl>
 
-<dt>EOL</dt>
+<dt>❌ EOL</dt>
 
 <dd>
 
-End-of-life (**EOL**) versions are available on the platform but no longer under active development, and should not be used unless absolutely necessary.
+End-of-life (**EOL**) versions are available on the platform but no longer receiving updates, and should not be used unless absolutely necessary.
 
 </dd>
 
 </dl>
 
-\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment.
+<dl>
+
+<dt>🚫 End-of-Sale</dt>
+
+<dd>
+
+End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future.
+
+</dd>
+
+</dl>
+
+\* Sites that use PHP version 5.3 will continue to serve pages. However, new development cannot be done because the development environment behavior is undefined and no longer supported. You can upgrade your PHP version in the development environment to resume development on your site.
 
 #### Compatibility Considerations
 
 New Relic is not supported in PHP 8.1
 
-WordPress is not fully compatible with PHP 8.0 or PHP 8.1 and deprecation notices remain in WordPress 5.9. With a deprecation notice, the PHP code will continue to work for supported entities until a future release. 
+WordPress is not fully compatible with PHP 8.0 or PHP 8.1 and deprecation notices remain in WordPress 5.9. With a deprecation notice, the PHP code will continue to work for supported entities until a future release.
 
 You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on the [WordPress core](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) site.
 
@@ -78,11 +90,13 @@ Before changing your PHP version, confirm that your CMS is compatible:
 
 PHP versions can be set using the `pantheon.yml` configuration file in the root of your site's code repository. If you have a local git clone of your site, the project root is `/code/`.
 
-> **`pantheon.yml` is used to store your custom settings that override those in `pantheon.upstream.yml`.**
+Configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
 
 You must use SFTP to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
 
-1. Navigate to the Pantheon dashboard > click the **Dev** environment tab > set the **Development Mode** to **SFTP**.
+1. Navigate to the Pantheon dashboard.
+
+1. Click the **Dev** environment tab and set the **Development Mode** to **SFTP**.
 
 1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
 
@@ -93,18 +107,18 @@ You must use SFTP to create or change the `pantheon.yml` file. You will receive 
    
    php_version: 8.0
    ```
-   
+
    - You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
-   
-1. Refresh the **Dev** environment tab >  click `/code` directory >  verify that the `pantheon.yml` file has been created.
+
+1. Refresh the **Dev** environment tab > click `/code` directory > verify that the `pantheon.yml` file has been created.
 
 1. Enter a commit message and click **Commit changes**.
 
-1. Refresh the **Dev** environment tab > verify that the `pantheon.yml` file is now committed to the `master branch`.
+1. Refresh the **Dev** environment tab and verify that the `pantheon.yml` file is now committed to the `master` branch.
 
 1. Set the **Development Mode** to **Git**.
 
-1. Pull down the changes to your local repo (if you have one). 
+1. Pull changes to your local repository (if you have one).
 
 Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
@@ -117,7 +131,7 @@ remote: Changes to `pantheon.yml` detected, but there was an error while process
 remote:
 remote:
 remote: Validation failed with error:
-remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
+remote: >   12.0 is not one of [5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1]
 ```
 
 Modify `pantheon.yml` until valid and commit the fix before attempting to push again.

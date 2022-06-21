@@ -511,7 +511,7 @@ ___
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 ___
 
@@ -574,7 +574,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
@@ -971,15 +971,22 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Navigate to the codebase directory and create the symlinks listed below:
+1. Change to the `code` directory:
+
+   ```bash{promptUser: user}
+   cd code/
+   ```
+   
+1. Create the following symlinks:
 
   <Alert title="Note"  type="info" >
 
-  You must remove the `/wp-content/wflogs` file if it already exists before you create the symlinks listed below.
+  You must remove the `/wp-content/wflogs` file, if it already exists, before you create the symlinks listed below.
 
   </Alert>
 
   ```bash{promptUser: user}
+  
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
@@ -1422,6 +1429,22 @@ ___
 **Issue:** The redirects for the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin setting will detect two options for redirect methods, "PHP", and "Web Server". The Web Server option expects write access to the `nginx.conf` file, which is not writable on Pantheon.
 
 **Solution:** Only use the "PHP" redirect method.
+
+___
+## Yoast Indexables
+
+<ReviewDate date="2022-06-14" />
+
+**Issue:** [Yoast Indexables](https://yoast.com/innovations/indexables/) can cause performance issues on large sites. Sites with 100,000+ posts might find that indexing the table with `wp yoast index` will time out. Sites might also see slow load times in both the frontend and wp-admin areas due to queries on the `wp_yoast_indexables` table.
+
+**Solution:** [Disable saving data](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/#disabling-indexables) to the `wp_yoast_indexables` table to improve wp-admin performance. However, if you have 1,000,000+ posts you might see extremely poor performance on the frontend with indexables disabled. Use the code below to disable data saving for Yoast indexables.
+
+```php:title=plugin.php
+/** Tell Yoast not to save indexable data to the wp_yoast_indexables table. */
+add_filter( 'Yoast\WP\SEO\should_index_indexables', '__return_false' );
+```
+
+Pantheon's [Professional Services](/guides/professional-services) team has tooling available to help index large sites. Reach out to your Customer Success Manager to get more information about tooling.
 
 ___
 
