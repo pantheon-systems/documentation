@@ -14,7 +14,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 </Alert>
 
-[Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
+[Custom Upstreams](/guides/custom-upstream) are available to team members when the organization is associated during site creation.
 
 ## Pantheon Upstreams
 

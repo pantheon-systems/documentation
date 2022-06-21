@@ -48,7 +48,7 @@ To maintain a Composer-based workflow with one-click updates through the Dashboa
 
 ## Custom Upstream Workflow
 
-Use [Integrated Composer](/guides/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream).
+Use [Integrated Composer](/guides/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/guides/custom-upstream).
 
 Updates made using Integrated Composer are only committed at the Custom Upstream level by a single repository maintainer. Updates then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard. Custom Upstreams using Integrated Composer with dependencies in `upstream-configuration/composer.json` can have their own site-specific dependencies added in the top-level `composer.json` file. Custom Upstreams using Integrated Composer should avoid changing the top-level `composer.json` file after sites have been created from the Custom Upstream to avoid merge conflicts.
 

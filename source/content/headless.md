@@ -100,7 +100,7 @@ While not a REST API service by itself, you can create a JSON view using the [Vi
 ## Frequently Asked Questions
 
 ### Can I use other frameworks or distributions?
-You can use [custom upstreams](/custom-upstream), [make your own build](/guides/build-tools) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org) can be used on the platform.
+You can use [custom upstreams](/guides/custom-upstream), [make your own build](/guides/build-tools) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org) can be used on the platform.
 
 ### How can I troubleshoot the backend API?
 We recommend using one of the following Chrome extensions to debug HTTP requests:
