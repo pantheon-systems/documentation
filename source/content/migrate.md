@@ -6,6 +6,8 @@ tags: [dashboard, migrate, site]
 reviewed: "2021-04-01"
 ---
 
+<!--- to be deleted --->
+
 This doc shows how to use the Pantheon Dashboard to migrate a website to Pantheon from another platform.
 
 <Partial file="drupal-9/guide-note.md" />
