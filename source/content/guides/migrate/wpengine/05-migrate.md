@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/migrate/wpengine/migrate
+permalink: docs/guides/wpengine/migrate
 anchorid: migrate
 editpath: migrate/wpengine/05-migrate.md
 reviewed: "2021-06-15"

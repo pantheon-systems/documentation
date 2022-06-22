@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/migrate/kinsta/prepare
+permalink: docs/guides/kinsta/prepare
 anchorid: prepare
 editpath: migrate/kinsta/03-prepare.md
 reviewed: "2021-06-15"

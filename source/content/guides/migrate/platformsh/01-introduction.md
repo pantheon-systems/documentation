@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/migrate/platformsh
+permalink: docs/guides/platformsh
 anchorid: platformsh
 editpath: migrate/platformsh/01-introduction.md
 reviewed: "2021-06-15"

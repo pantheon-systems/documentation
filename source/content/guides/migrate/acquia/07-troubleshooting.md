@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/migrate/acquia/troubleshooting
+permalink: docs/guides/acquia/troubleshooting
 anchorid: troubleshooting
 editpath: migrate/acquia/07-troubleshooting.md
 reviewed: "2021-06-15"

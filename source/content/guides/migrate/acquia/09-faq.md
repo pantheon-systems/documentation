@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/migrate/acquia/faq
+permalink: docs/guides/acquia/faq
 anchorid: faq
 editpath: migrate/acquia/09-faq.md
 reviewed: "2021-06-15"

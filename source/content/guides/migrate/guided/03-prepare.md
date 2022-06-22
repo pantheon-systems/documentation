@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/migrate/guided/prepare
+permalink: docs/guides/guided/prepare
 anchorid: prepare
 editpath: migrate/guided/03-prepare.md
 reviewed: "2021-06-15"
