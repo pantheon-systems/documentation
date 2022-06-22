@@ -7,10 +7,10 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8/deploy-dev
+permalink: docs/guides//manual-d8-noncomposer-to-d8/deploy-dev
 anchorid: deploy-dev
 editpath: migrate/manual-d8-noncomposer-to-d8/07-deploy-dev.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 Now that you've committed your code additions locally, push the commits to Pantheon to deploy them to your Dev environment:

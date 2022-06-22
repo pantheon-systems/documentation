@@ -7,10 +7,10 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8/files
+permalink: docs/guides//manual-d8-noncomposer-to-d8/files
 anchorid: files
 editpath: migrate/manual-d8-noncomposer-to-d8/11-files.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 Now that you've added your database, you need to add your files.

@@ -7,10 +7,10 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8/database
+permalink: docs/guides//manual-d8-noncomposer-to-d8/database
 anchorid: database
 editpath: migrate/manual-d8-noncomposer-to-d8/09-database.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 Now that you've set up your Pantheon Dev environment, you need to import your database.

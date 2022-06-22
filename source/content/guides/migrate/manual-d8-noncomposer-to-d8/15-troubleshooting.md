@@ -8,10 +8,10 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8/troubleshooting
+permalink: docs/guides//manual-d8-noncomposer-to-d8/troubleshooting
 anchorid: troubleshooting
 editpath: migrate/manual-d8-noncomposer-to-d8/15-troubleshooting.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 This sections provides common troubleshooting scenarios.

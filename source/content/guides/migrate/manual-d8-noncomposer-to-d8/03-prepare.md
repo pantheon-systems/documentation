@@ -8,15 +8,15 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8/prepare
+permalink: docs/guides//manual-d8-noncomposer-to-d8/prepare
 anchorid: prepare
 editpath: migrate/manual-d8-noncomposer-to-d8/03-prepare.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
 
-## Create a New Drupal 9 Site
+## Create a New 9 Site
 
 1. Log in to your Pantheon account. If you don't have an account, [create one](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
 
@@ -27,6 +27,8 @@ Complete all steps in this section to ensure that your site is ready to be migra
 1. Click **Visit your Pantheon Site Dashboard**.
 
 ### Set Drupal Core Version
+
+The previous step created a site using Drupal version 9.  To remain on Drupal 8, set the core version as follows: 
 
 <Partial file="drupal-9/core-version-remain-on-d8.md" />
 

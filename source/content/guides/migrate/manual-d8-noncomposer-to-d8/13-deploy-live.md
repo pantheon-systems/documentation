@@ -7,10 +7,10 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8/deploy-live
+permalink: docs/guides//manual-d8-noncomposer-to-d8/deploy-live
 anchorid: deploy-live
 editpath: migrate/manual-d8-noncomposer-to-d8/09-deploy-live.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches in the [Pantheon Dashboard](/clear-caches#pantheon-dashboard) or with terminus like so:

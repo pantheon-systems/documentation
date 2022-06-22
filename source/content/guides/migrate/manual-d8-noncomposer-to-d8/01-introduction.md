@@ -7,10 +7,10 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/manual-d8-noncomposer-to-d8
+permalink: docs/guides//manual-d8-noncomposer-to-d8
 anchorid: manual-d8-noncomposer-to-d8
 editpath: migrate/manual-d8-noncomposer-to-d8/01-introduction.md
-reviewed: "2021-05-09"
+reviewed: "2021-06-22"
 ---
 
 This guide will show you how to migrate a Composer site currently hosted outside of Pantheon to Drupal 9.
