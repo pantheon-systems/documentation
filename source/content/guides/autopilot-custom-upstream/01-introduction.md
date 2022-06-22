@@ -11,7 +11,7 @@ permalink: docs/guides/autopilot-custom-upstream
 anchorid: autopilot-custom-upstream
 ---
 
-Combining [Autopilot](/guides/autopilot) with [Custom Upstreams]/guides/autopilot-custom-upstream is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
+Combining [Autopilot](/guides/autopilot) with [Custom Upstreams](/guides/custom-upstream) is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
 
 ## Autopilot
 
@@ -20,8 +20,11 @@ Pantheon Autopilot automatically detects, performs, and deploys updates for Word
 Pantheon's Autopilot:
 
 - Automatically detects when new updates are available
+
 - Performs the updates in an isolated [Multidev](/multidev) environment
-- Tests the updates with automated visual regression testing (VRT)
+
+- Tests the updates with automated VRT
+
 - Optionally deploys the updates
 
 ### Get Autopilot
@@ -64,14 +67,17 @@ Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pant
 
 <Alert title="Note" type="info">
 
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
+Support for Custom Upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer-based workflow.
 
 </Alert>
 
 ## More Resources
 
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
+
 - [Autopilot Guide](/guides/autopilot/)
+
 - [Custom Upstreams Product Page](https://pantheon.io/upstreams)
+
 - [Custom Upstreams Guide](/guides/custom-upstream)
 
