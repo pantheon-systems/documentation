@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/acquia/prepare
+permalink: docs/migrate/acquia/prepare
 anchorid: prepare
 editpath: migrate/acquia/03-prepare.md
 reviewed: "2021-06-15"
