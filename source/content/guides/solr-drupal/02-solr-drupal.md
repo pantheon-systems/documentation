@@ -56,11 +56,11 @@ Ensure you review our documentation on [Git](/git), [Composer](/guides/composer)
     ```
 
 * Windows users should install the following dependencies:
-  
+
   * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-  
+
   * [Git](https://git-scm.com/download/win)
-  
+
   * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
 
 
@@ -160,14 +160,14 @@ To install the Search API Pantheon module, switch to your local machine.
 
 #### Enable Pantheon Search
 
-You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush. 
+You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush.
 
 Enter the following command, replacing `$ENV` with the environment:
 
     ```shell{promptUser:user}
-    terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
+    terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
     ```
-    
+
 You might also want to enable the modules from the site’s Extend page located in `/admin/modules`.
 
 ## Configure Pantheon Search
@@ -190,7 +190,7 @@ The Index status page should indicate that the newly created index was successfu
 
 Follow the steps below to add fields to your new index.
 
-1. Click **Fields** > click **Add fields**. 
+1. Click **Fields** > click **Add fields**.
 1. Click **Save changes** when you are finished.
 
 ### Index Content
@@ -198,23 +198,23 @@ Follow the steps below to add fields to your new index.
 Follow the steps below to index existing content.
 
 1. Click **Index now** on the **View** tab of your index’s Overview page.
-1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. 
+1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`.
 
 Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
 
 1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
-1. Select the **Pantheon Search Admin** tab to save and post the schema information. 
+1. Select the **Pantheon Search Admin** tab to save and post the schema information.
 1. Enable the **Execute Pantheon Search admin task** permission for users who need access to the **Pantheon Search Admin** tab.
-1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
+1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server.
    - The server responds with a `200 - OK` status for each schema file posted.
-  
-## Troubleshooting Pantheon Search with Solr 8 for Drupal 
+
+## Troubleshooting Pantheon Search with Solr 8 for Drupal
 
 ### Diagnose Issues
 
-The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working. 
+The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working.
 
 The `drush search-api-pantheon:select` (saps) command runs the query against the Solr server. It is recommended that you use `?debug=true` on any Solr page to allow a query to pass.
 
