@@ -94,7 +94,7 @@ Quickly install updates to core, contributed modules, themes, and plugins from t
 
 ### Upstream Updates (Core)
 
-Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
+Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
 <Alert title={"Note"} type={"info"}>
 
@@ -293,13 +293,11 @@ The Site Dashboard will open once the reset procedure has completed.
 
 Every site has an upstream assigned in order to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/custom-upstream).
+- Convert existing sites from a default framework to a [Custom Upstream](/guides/custom-upstream).
 - Convert existing sites from one Custom Upstream to another, for reasons like:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
 - Set an empty upstream to disable one-click updates for sites managed by Composer.
-
-Confirm that the user you are authenticated as has the correct [Site-level permissions](/change-management#site-level-roles-and-permissions). Only a User in Charge or Owner can change a site's Upstream.
 
 To see all available upstreams, run:
 
@@ -307,7 +305,7 @@ To see all available upstreams, run:
 terminus upstream:list
 ```
 
-If your organization has a [Custom Upstream](/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My Custom Upstream"

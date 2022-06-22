@@ -100,7 +100,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 <dd>
 
-If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, `"Drupal 8"`, or `"Drupal 9"`.
+If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"Drupal 9"`.
 
 </dd>
 
@@ -630,6 +630,8 @@ ___
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
+Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
+
 <Example>
 
 <TabList>
@@ -645,21 +647,6 @@ Here's our WordPress specific copy, and an example snippet:
   */
 
 Code goes here.
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
-  *
-  */
-
-Some code.
 ```
 
 </Tab>
@@ -693,21 +680,6 @@ Here's our WordPress specific copy, and an example snippet:
 ```php
 /**
   * Some WordPress specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
   *
   */
 

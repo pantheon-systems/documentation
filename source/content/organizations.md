@@ -53,7 +53,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 ### Upstreams
 
-[Custom Upstreams](/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
+[Custom Upstreams](/guides/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
 
 ### Support
 
@@ -82,6 +82,8 @@ Organizations can run site environments using their own custom Vanity domains, l
 ### Email-Based Registration
 
 New users who sign up with the email address domain you specify will be automatically added to your organization.
+
+<Partial file="pantheon-email-notifications.md" />
 
 ### Single Sign-On (SSO)
 

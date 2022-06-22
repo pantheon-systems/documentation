@@ -4,11 +4,11 @@ description: Administer and maintain your Pantheon site from your local Drupal D
 cms: "Drupal"
 categories: [develop]
 tags: [drush]
-reviewed: "2020-02-06"
+reviewed: "2022-04-19"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/settings-php).
+Drush commands require a `settings.php` file, and it's a best practice to have one.  Drupal 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/settings-php).
 
 ## Terminus Drush and Local Drush
 
@@ -114,7 +114,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 <Alert title="Note" type="info" >
 
-[Registry Rebuild](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 8 and will only work on Drupal 7.
+[Registry Rebuild](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 9 and will only work on Drupal 7.
 
 </Alert>
 
@@ -126,7 +126,7 @@ Drupal's list of PHP classes and files can get corrupted or out-of-date, typical
 terminus drush <site>.<env> -- rr
 ```
 
-Note that the Registry Rebuild command is only necessary on Drupal 7 sites. The command `drush cache:rebuild` for Drupal 8 serves the same function that `registry rebuild` does for older versions of Drupal.
+Note that the Registry Rebuild command is only necessary on Drupal 7 sites. The command `drush cache:rebuild` for Drupal 9 serves the same function that `registry rebuild` does for older versions of Drupal.
 
 ## Run SQL Queries Using Drush on Pantheon
 
@@ -451,8 +451,5 @@ This indicates that the vendor directory contains Drush binaries that should be 
 
 ## Changelog
 
-<Accordion title="Drush Changelog" id="drush-changelog" icon="newspaper">
+You can view the most recent Drush release and changelogs in the [Drush repository](https://github.com/drush-ops/drush/releases).
 
-<DrushChangelog />
-
-</Accordion>

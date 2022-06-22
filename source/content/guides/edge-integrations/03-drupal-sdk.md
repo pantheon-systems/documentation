@@ -18,7 +18,7 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 - Pantheon Edge Integrations library - a CMS-agnostic PHP library that allows reading, process, and set vary headers to be recognized by Pantheon Advanced Global CDN.
 
-- A collection of Drupal 8+ modules in the [Edge Integrations Drupal SDK](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) ecosystem that provide Smart Personalization blocks and preview functionality. If you decide to forgo using the SDK, installing the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) will give you everything you need to get up and running with personalization.
+- A collection of Drupal modules in the [Edge Integrations Drupal SDK](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) ecosystem that provide Smart Personalization blocks and preview functionality. If you decide to forgo using the SDK, installing the [Smart Content CDN module](https://github.com/pantheon-systems/smart_content_cdn) will give you everything you need to get up and running with personalization.
 
 ## Before You Begin
 
@@ -28,19 +28,24 @@ The Edge Integrations personalization system for Drupal consists of two main par
 
 1. Install the necessary modules and dependencies, which can be pulled with [Composer](https://getcomposer.org/). As noted above, this can be achieved either by using the Edge Integrations Drupal SDK, or the Smart Content CDN module.
 
-    Drupal SDK: 
+    ### Edge Integrations Drupal SDK
+        
+    Installing the Edge Integrations Drupal SDK will give you all the documentation in the Drupal SDK package as well as the Edge Integrations Global Library, which is required for Edge Integrations to work optimally in Drupal. You should choose this option if you do not plan on using Smart Content in your Drupal site. If you plan on using Smart Content to manage personalized content, you need to install both the Drupal SDK package as well as `smart_content_cdn`.
 
     ```
     composer require pantheon-systems/edge-integrations-drupal-sdk
     ```
 
-    Smart Content CDN module:
+    ### Smart Content CDN Module
+
+    Installing the Smart Content CDN module will install the Smart Content module and the Edge Integrations Global Library. This option does not include documentation in the Drupal SDK package. You should choose this option if you plan on using the Smart Content ecosystem to manage personalized content in your Drupal site. If you installed `smart_content_cdn` with Composer, you do not need to install the Edge Integrations Drupal SDK.
 
     ```
     composer require pantheon-systems/smart_content_cdn
     ```
 
-1. [Smart Content Preview](https://www.drupal.org/project/smart_content_preview) is an optional package to preview your personalized content. This can also be installed with Composer:
+1. The [Smart Content Preview module](https://www.drupal.org/project/smart_content_preview) is an optional package you can use to preview your personalized content. It allows you to preview content personalized with Smart Content and Smart Content CDN. It can also be installed with Composer:
+
     ```
     composer require drupal/smart_content_preview
     ```
@@ -124,7 +129,7 @@ In this section, we identify the content type where you want to use personalizat
 
 1. Review your content and tag it using the Tags vocabulary (e.g. "Biking").
 
-1. Navigate to `/admin/structure/smart_content_segment_set` to configure geolocation segments. 
+1. Navigate to `/admin/structure/smart_content_segment_set` to configure interest/taxonomy segments. 
 
 1. Click **+Add Global Segment Set**.
     ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities.png)
@@ -281,3 +286,7 @@ Use the following snippet to obtain the header data object:
     $smart_content_cdn = new HeaderData();
     $p_obj = $smart_content_cdn->returnPersonalizationObject();
 ```
+
+## Known Issues
+
+There is a known conflict with the [Internal Page Cache](https://www.drupal.org/docs/administering-a-drupal-site/internal-page-cache) module. This module does not provide any benefit when used in a Pantheon environment, but may be recommended (or enabled) for some modules. Our recommendation is to disable the Internal Page Cache module to ensure compatibility with Edge Integrations. [Dynamic Page Cache](https://www.drupal.org/docs/8/core/modules/dynamic-page-cache/overview) *is* compatible with Edge Integrations and does not have the same restrictions.

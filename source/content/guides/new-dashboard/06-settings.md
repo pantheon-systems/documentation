@@ -33,11 +33,12 @@ You can use multiple payment methods in the workspace. To add a payment method, 
 
 ![A screenshot of the adding card information](../../../images/dashboard/new-dashboard/add-payment.png)
 
-
 ## Organization Workspace
+
 Workspace settings are visible to Admins only.
 
 ### Site Billing Terms
+
 You can add optional payment and terms of service information for Sites built in your Workspace.
 
 Users can purchase a site plan on a Sandbox site. Enter a site address in the **Customized Billing Instruction URL** field to direct users where they can view workspace billing instructions.

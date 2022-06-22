@@ -8,13 +8,13 @@ contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-02-08"
 ---
 
-Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/guides/drupal-9-migration).
+Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/drupal-9-migration).
 
 Since Drupal 9 on Pantheon is in active development and includes a number of significant changes from previous versions of Drupal, this doc outlines the biggest changes and answers frequently asked questions.
 
 ## About Drupal 9
 
-Drupal 9 includes many of the features and layout that Drupal 8 users are familiar with, and it removes deprecated code to help improve future Drupal development.
+Drupal 9 includes many of the features and layout that Drupal users are familiar with, and it removes deprecated code to help improve future Drupal development.
 
 Drupal 9 updates Drupal’s underlying dependencies like [Symfony 4.4](https://symfony.com/releases/4.4) and [Twig 2](https://twig.symfony.com/doc/2.x/index.html), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal 9 and beyond.
 
@@ -50,9 +50,9 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Upgrade or Migrate to Drupal 9
 
-To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/guides/drupal-9-migration).
+To upgrade or migrate an existing Drupal site to Drupal 9 with Integrated Composer, see the [Drupal 9 Migration Guide](/drupal-9-migration).
 
-To check an existing site's compatibility to upgrade, visit our [Prepare for Drupal 9 section](/guides/drupal-9-migration/prepare).
+To check an existing site's compatibility to upgrade, visit the appropriate [Drupal Migration Guide](/drupal-9-migration).
 
 ## Gutenberg for Drupal 9
 
@@ -70,7 +70,7 @@ We recommend monitoring your site's traffic using [Metrics in the Site Dashboard
 
 ## Troubleshooting and Support
 
-See the [Drupal 9 Migration Guide](/guides/drupal-9-migration/troubleshoot) for help troubleshooting common issues with Drupal 9 with Integrated Composer.
+See the appropriate [Drupal 9 Migration Guide](/drupal-9-migration) for help troubleshooting common issues with Drupal 9 with Integrated Composer.
 
 ### Where can I report an issue?
 
@@ -89,7 +89,7 @@ Manually update the [landofile](https://docs.lando.dev/config/lando.html#base-fi
   framework: drupal9
   ```
 
-When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal8` for a Drupal 8 or Drupal 9 site.
+When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal9` for a Drupal 9 site.
 
 If you created new project with Lando, change the value for `framework` to `drupal9`, then run `lando rebuild`.
 

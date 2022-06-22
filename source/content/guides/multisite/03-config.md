@@ -12,7 +12,7 @@ editpath: multisite/03-config.md
 image: multisite
 ---
 
-You can use this doc if you have new WordPress Site Network created for you by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
+This doc is intended for customers who have had a WordPress Site Network created for them by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -106,7 +106,7 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
     switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
       case 'live':
         // Value should be the primary domain for the Site Network.
-        define( 'DOMAIN_CURRENT_SITE', 'live-<site>.pantheonsite.io' );
+        define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
         // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
         // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
         break;

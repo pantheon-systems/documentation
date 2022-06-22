@@ -10,33 +10,13 @@ There are some scenarios when an external library is required. The Pantheon plat
 
 ## wkhtmltopdf
 
-[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html). 
+[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html).
 
 wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. You must install or create a compatible plugin or module to complete the following steps:
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8-example" active={true}>
-
-Download and enable the [wkhtmltopdf module](https://www.drupal.org/project/wkhtmltopdf) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
-
-```bash{promptUser: user}
-terminus drush <site>.<env> -- en wkhtmltopdf --y
-```
-
-Create a symlink to the hosted library and your site's libraries directory [via Git](/git/#clone-your-site-codebase):
-
-```bash{promptUser: user}
-mkdir -p sites/all/libraries/wkhtmltopdf
-ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
-git add .
-git commit -m "Added wkhtmltopdf library"
-git push
-```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-example">
+<Tab title="Drupal 7" id="d7-example" active={true}>
 
 Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
 

@@ -26,6 +26,11 @@ Pantheon also prevents public access via the web server to private files, `.htac
 ### Pantheon 404 Unknown Site
 "The hostname ... is unknown. Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
+### Error 404 Not Found
+"Failed to load resource: the server responded with a status of 404 ()" or a similar error message displays when a web browser cannot find the element specified.
+
+This error occurs when the client (via web browser) successfully connects to the host (website’s application server), but is unable to find the actual resource requested (for example, a specific URL or file name). We recommend confirming that the URL or file name is correct and still exists on the site.
+
 ### 502 Upstream Header Too Big
 "Upstream sent too big header while reading response header from upstream."
 This error will occur when the payload or size of the request being sent is greater than the `fastcgi_buffer_size`. Removing additional images reduces the size of the payload being sent to the buffer for nginx to process, and will allow you to post the request. If this happens again, check to see if you are making heavy requests with a number of assets or data being passed.
@@ -47,7 +52,7 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 ### 503 Header Overflow
 "Header overflow." The new Pantheon Global Edge size limit for cookies, sent in the request `"Cookie: .."` header, is 10KB. If more than 10KB are sent, all cookies are dropped and the request is processed as if no cookies were sent. The header `"X-Cookies-Dropped: 1"` is added to truncated requests and responses. You can ignore this scenario in your PHP code or handle it by displaying a custom error page.
 
-This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For more information, refer to [Environment-Specific Configurations for Drupal 8](/environment-specific-config-d8/#troubleshoot-503-response-header-overflow).
+This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For more information, refer to [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9/#troubleshoot-503-response-header-overflow).
 
 Try reducing the number of set-cookie headers in the response, if you receive a 503 error and your cookie size is smaller than 10KB.
 
@@ -130,21 +135,6 @@ Even the most reliable web services will occasionally experience slowness, and i
    $options = array('timeout' => 10);
    drupal_http_request($url, $options);
    ```
-
-- Drupal 8's `httpClient` class utilizes the Guzzle library and comes with a 30 second timeout by default. Override that to set a lower value:
-
-   - Globally:
-
-     ```php
-     $settings['http_client_config']['timeout'] = 10;
-     ```
-
-   - For an individual request:
-
-     ```php
-     $client = \Drupal::httpClient(['base_url' => 'https://example.com/api']);
-     $client->request('GET', $url, ['timeout' => 10]);
-     ```
 
 - WordPress: Add timeouts using the [http_request_args](https://developer.wordpress.org/reference/hooks/http_request_args/) filter, or the [http_api_curl](https://developer.wordpress.org/reference/hooks/http_api_curl/) action. This code would go in a custom plugin or your theme's `functions.php` file:
 

@@ -4,7 +4,9 @@ description: Set HTTP headers to disable caching along Pantheon's edge layer, Va
 categories: [performance]
 tags: [cache, cdn, cookies]
 ---
+
 ## Exclude Specific Pages from Caching
+
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="webops-cache-control">
@@ -13,24 +15,11 @@ Learn industry best practices for caching, how to take advantage of them on the 
 
 </Enablement>
 
-Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
+Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited.
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
-
-[Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if its cache max age should be zero) that cacheability metadata can be set with:
-
-```php
-// $build is a render array.
-$build['#cache']['max-age'] = 0;
-```
-
-Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable. Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7">
+<Tab title="Drupal 7" id="d7" active={true}>
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 

@@ -4,7 +4,7 @@ description: Learn how to resolve conflicts in your site code base.
 categories: [troubleshoot]
 tags: [git, local, webops]
 contributors: [alexfornuto]
-reviewed: "2020-10-15"
+reviewed: "2022-05-26"
 ---
 
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
@@ -17,26 +17,16 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 
 ## Resolve Conflicts When Updating Core
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
+If you receive the error that you have conflicts while updating core, the fastest resolution is often to use the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
 
-This is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
+This is safe to run if you don't have your own changes in any of the conflicting files (for example problems with `.gitignore`).
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
+<Tab title="Drupal 7" id="d7" active={true}>
 
   ```bash{promptUser: user}
-  git pull -Xtheirs https://github.com/pantheon-systems/drops-8.git default
-  # resolve conflicts
-  git push origin master
-  ```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7">
-
-  ```bash{promptUser: user}
-  git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git default
+  git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git master
   # resolve conflicts
   git push origin master
   ```
@@ -46,7 +36,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 <Tab title="WordPress" id="wp">
 
   ```bash{promptUser: user}
-  git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git default
+  git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
   git push origin master
   ```
@@ -67,7 +57,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
-If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In that case you should [manually resolve conflicts](#manually-resolve-conflicts). For more details on core updates, see [WordPress and Drupal Core Updates](/core-updates).
+If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In that case, you should [manually resolve conflicts](#manually-resolve-conflicts). For more details on core updates, see [WordPress and Drupal Core Updates](/core-updates).
 
 ### Find a Site's Upstream URL
 
@@ -79,7 +69,7 @@ terminus site:info <site> --field=upstream
 
 ## Manually Resolve Conflicts
 
-Steps to reslove merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
+Steps to resolve merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
 
 ### Resolve Delete/Modify Conflicts
 
@@ -142,9 +132,9 @@ To resolve:
 
   ![An example of Visual Studio Code highlighting a merge conflict](../images/vscode-merge-conflict.png)
 
-1. Edit the conflict by either choose one of the two versions of the conflicting line(s), or editing a version containing both updates. Be sure to remove all the delineators notes above from the file.
+1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates. Ensure you remove all the delineator notes from the file.
 
-1. Once you've saved your changes, commit and push:
+1. After you've saved your changes, commit and push:
 
   ```bash{promptUser: user}
   git add wp-admin/about.php
@@ -171,4 +161,4 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
   git pull origin multidev
   ```
 
-1. Git will tell you which files are in conflict. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above.
+1. Git notifies you of which files are in conflict. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above.

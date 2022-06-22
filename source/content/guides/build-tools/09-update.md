@@ -39,16 +39,14 @@ Composer encourages a mental model where code not written specifically for a giv
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: <https://wpackagist.org>
-- Drupal 8: <https://packages.drupal.org/8>
 - Drupal 7: <https://packages.drupal.org/7>
 
-Sites created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file, such as [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/composer.json#L6-L11):
-
+Sites created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file.
 ```json
 repositories": [
      {
        "type": "composer",
-       "url": "https://packages.drupal.org/8"
+       "url": "https://packages.drupal.org/9"
      }
    ],
 ```
@@ -63,7 +61,7 @@ repositories": [
     git checkout -b drupal-8.3.7 master
     ```
 
-1. Update your project to the current Drupal 8 stable version of core released on drupal.org with Composer:
+1. Update your project to the current Drupal stable version of core released on drupal.org with Composer:
 
     ```bash
     composer update drupal/core
@@ -73,15 +71,13 @@ repositories": [
 
   ![composer diff core](../../../images/pr-workflow/composer-lock-diff.png)
 
-1. Commit the updated `composer.lock` file and push a new branch up to GitHub, for example (replace `drupal-8.3.7` according to your current task):
+1. Commit the updated `composer.lock` file and push a new branch up to GitHub, for example (replace `drupal-x.x.x` according to your current task):
 
     ```bash
-    git commit -m="Update to Drupal 8.3.7"
-      git push origin drupal-8.3.7
+    git commit -m="Update to Drupal x.x.x"
+      git push origin drupal-x.x.x
     ```
 
 1. Return to GitHub and compare your feature branch against `master`. You should see all commits made locally here in GitHub. Click **Create Pull Request** and go through your team's standard peer review process.
-
-  ![Composer update pr](../../../images/pr-workflow/composer-update-pr.png)
 
 Use this process to update any dependency required by your project's `composer.json` file. The site should *never* receive Pantheon's one-click updates in the Pantheon Site Dashboard, Drupal's Admin interface, or Drush to update core, as none of these techniques modify the `composer.json` file. You must update core using Composer exclusively.

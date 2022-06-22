@@ -12,6 +12,9 @@ reviewed: "2022-02-25"
 
 This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a Drupal 9 site using Integrated Composer.
 
+<Partial file="drupal-9/see-landing.md" />
+
+
 ## Overview
 
 The goal of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
@@ -24,26 +27,26 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## Will This Guide Work for Your Site?
 
-You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream. 
+You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
 
 Confirm the site requirements in the sections below before upgrading to Drupal 9.
 
 ### Verify the Repository
 
-1. Check that your site has the [Pantheon drupal-recommended repo](https://github.com/pantheon-upstreams/drupal-recommended) in its upstream.
+1. Check that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream.
 
-1. Use Terminus to Confirm the drupal-recommended Upstream:
+1. Use Terminus to Confirm the drupal-composer-managed Upstream:
 
   ```bash
   terminus site:info $SITE 
   ```
 
-  The following values indicate that a site is using the `drupal-recommended` upstream:
+  The following values indicate that a site is using the `drupal-composer-managed` upstream:
 
   - The `Framework` is `drupal8`
-  - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-recommended`
+  - The `Upstream` includes `https://github.com/pantheon-upstreams/drupal-composer-managed`
 
-  The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `drupal-recommended`:
+  The following is an abridged example of the output for the `terminus site:info $SITE` command, if the site upstream is set to `drupal-composer-managed`:
 
   ```bash{outputLines:2-18}
   terminus site:info $SITE
@@ -54,7 +57,7 @@ Confirm the site requirements in the sections below before upgrading to Drupal 9
   Created            2019-12-02 18:28:14
   Framework          drupal8
   ...
-  Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/drupal-recommended
+  Upstream           897fdf15-992e-4fa1-beab-89e2b5027e03: https://github.com/pantheon-upstreams/drupal-composer-managed
   ...
   ------------------ -------------------------------------------------------------------------------------
   ```

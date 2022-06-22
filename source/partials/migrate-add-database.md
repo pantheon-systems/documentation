@@ -42,8 +42,10 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   If your archive is less than 500MB, import it from URL:
 
-   1. Navigate to the **MySQL database** field > click **URL**.
-
+   1. Navigate to the **MySQL database** field.
+   
+   1. Click **URL**.
+   
    1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**. 
 
    <Alert title="Note"  type="info" >
@@ -60,7 +62,13 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   The following instructions allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
-   1. Navigate to the Pantheon Site Dashboard > open the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment > click **Connection Info** > copy the Database connection string. 
+   1. Navigate to the Pantheon Site Dashboard.
+   
+   1. Open the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+   
+   1. Click **Connection Info**.
+   
+   1. Copy the Database connection string. 
    
     The Database connection string will look similar to this:
 
@@ -68,9 +76,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
       ```
 
-   2. `cd` into the directory containing your `.sql` file in your terminal.
+   5. `cd` into the directory containing your `.sql` file in your terminal.
    
-   1.  Paste the connection string and append it with: `< database.sql`. 
+   6.  Paste the connection string and append it with: `< database.sql`. 
    
     Your command will look like:
 

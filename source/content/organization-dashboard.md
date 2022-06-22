@@ -62,7 +62,7 @@ Tags are case-sensitive.
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
 ### Upstream
-Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/start-state/#pantheon-upstreams) and [Custom Upstreams](/custom-upstream).
+Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/start-state/#pantheon-upstreams) and [Custom Upstreams](/guides/custom-upstream).
 
 ### Code Status
 This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.

@@ -17,8 +17,6 @@ By default, Pantheon runs Drush 8 on newly created Drupal 7 sites, and Drush 10 
 
 Pantheon currently supports Drush versions 8, 10, and 11.
 
-Drush 8 is the preferred version of Drush to use with Drupal 8 sites that are not managed by Composer. For sites that are managed by Composer, a [site-local installation](#site-local-drush-usage) of Drush is recommended.
-
 We recommend managing your site through Composer. Visit the [Build Tools Workflow](/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon, or the [Convert to Composer](/guides/composer-convert) guide to convert an existing site to a Composer-managed site.
 
 ## Verify Current Drush Version
@@ -54,11 +52,11 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 Drush only supports one install method; it requires that your Drupal site be built with Composer and that Drush be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
 
 * [Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
-Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version) displayed above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/guides/composer/), and PHP 7.1 or higher.
+Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version) displayed above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 9 or higher, [Composer](/guides/composer/), and PHP 7.1 or higher.
 
 * [Drush 9](https://docs.drush.org/en/9.x/) and Drush 10 only work on Drupal 8.4 to Drupal 9.
 
-* [Drush 8](https://docs.drush.org/en/8.x/) Drush 8 is the only recommended version to use in your pantheon.yml file. It is compatible with Drupal 7 and 8.
+* [Drush 8](https://docs.drush.org/en/8.x/) Drush 8 is the only recommended version to use in your pantheon.yml file. It is compatible with Drupal 7.
 
 * While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
 
@@ -94,7 +92,7 @@ Executing Drush on the platform via a `terminus drush` command will use the vers
 
 ### Site-local Drush Usage
 
-If you are managing your site with Composer, it is recommended that you use Drupal 9 with Drush 11 installed as a site-local Drush. For Drupal 8 sites, use Drush 10.
+If you are managing your site with Composer, it is recommended that you use Drupal 9 with Drush 11 installed as a site-local Drush.
 
 Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0`.
 

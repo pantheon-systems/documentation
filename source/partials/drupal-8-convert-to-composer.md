@@ -11,7 +11,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
   Switched to a new branch 'composerify'
   ```
 
@@ -24,7 +24,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
   If you continue to encounter the error, use HTTPS to add the remote:
 
    ```bash{outputLines:2}
-   git remote add ic https://github.com/pantheon-upstreams/drupal-recommended.git && git fetch ic && git checkout --no-track -b composerify ic/master
+   git remote add ic https://github.com/pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
    Switched to a new branch 'composerify'
    ```
 
@@ -140,7 +140,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="could-not-find-version-module_name.md" />	  
+    <Partial file="module_name.md" />	  
 
 
 #### Other Composer Packages
@@ -157,7 +157,7 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 
 ### Custom Code
 
-Manually copy custom code from the existing site repository to the Composer-managed directory.
+Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
 #### Modules and Themes
 

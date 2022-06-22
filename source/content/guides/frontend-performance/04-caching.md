@@ -242,9 +242,7 @@ In Drupal it is very easy to turn off page caching and forget to turn it back on
 
 1. Review **Page cache maximum age**:
 
-  ![Drupal Performance settings](../../../images/guides/front-end-performance/d8-cache.png)
-
-The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
+  - The Drupal default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 
 </Tab>
 
