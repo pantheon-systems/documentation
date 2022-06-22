@@ -192,6 +192,6 @@ When you re-import the database with current content (prior to going live on Pan
 
 ## See Also
 
-* [Migrate Sites to Pantheon](/guides/migrate/guided/
+* [Migrate Sites to Pantheon](/guides/guided/
 * [Guided WordPress Migrations (video)](/videos/migrate-wordpress)
 * [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check)
