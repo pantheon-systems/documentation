@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/guided/migrate
+permalink: docs/migrate/guided/migrate
 anchorid: migrate
 editpath: migrate/guided/05-migrate.md
 reviewed: "2021-06-15"

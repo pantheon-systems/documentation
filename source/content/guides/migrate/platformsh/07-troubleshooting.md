@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/platformsh/troubleshooting
+permalink: docs/migrate/platformsh/troubleshooting
 anchorid: troubleshooting
 editpath: migrate/guided/07-troubleshooting.md
 reviewed: "2021-06-15"

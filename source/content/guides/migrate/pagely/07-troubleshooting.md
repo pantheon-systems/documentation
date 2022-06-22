@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/pagely/troubleshooting
+permalink: docs/migrate/pagely/troubleshooting
 anchorid: troubleshooting
 editpath: migrate/pagely/07-troubleshooting.md
 reviewed: "2021-06-15"

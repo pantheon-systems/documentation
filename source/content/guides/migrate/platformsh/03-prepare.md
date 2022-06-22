@@ -6,7 +6,7 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/migrate/platformsh/prepare
+permalink: docs/migrate/platformsh/prepare
 anchorid: prepare
 editpath: migrate/platformsh/03-prepare.md
 reviewed: "2021-06-15"

@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/wordpressvip/faq
+permalink: docs/migrate/wordpressvip/faq
 anchorid: faq
 editpath: migrate/wordpressvip/09-faq.md
 reviewed: "2021-06-15"

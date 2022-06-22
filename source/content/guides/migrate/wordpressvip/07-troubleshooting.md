@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/wordpressvip/troubleshooting
+permalink: docs/migrate/wordpressvip/troubleshooting
 anchorid: troubleshooting
 editpath: migrate/wordpressvip/07-troubleshooting.md
 reviewed: "2021-06-15"

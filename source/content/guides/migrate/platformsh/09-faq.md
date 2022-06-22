@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/migrate/platformsh/faq
+permalink: docs/migrate/platformsh/faq
 anchorid: faq
 editpath: migrate/platformsh/09-faq.md
 reviewed: "2021-06-15"
