@@ -13,7 +13,7 @@ anchorid: accessibility
 editpath: accessibility/01-overview.md
 ---
 
-<dfn id="acc">Web accessibility</dfn> refers to building websites, tools, and technologies are designed and developed so that people with disabilities can use them.  
+<p><dfn id="acc">Web accessibility</dfn> refers to building websites, tools, and technologies are designed and developed so that people with disabilities can use them.</p>
 
 Making your site accessible not only benefits those with disabilities, but it also improves overall user experience across different devices and situations. It can increase your market share, manage legal risk, improve access to public sector revenue, and protect your brand. In addition, teams that embrace web accessibility find that by designing with a more diverse group of people in mind, they increase the likelihood of innovation.
 
@@ -43,17 +43,17 @@ The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility 
 
 The [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines) that structure accessibility guidelines aim for information and user interface components to be Perceivable, Operable, Understandable, and Robust (POUR). For each guideline, there are testable success criteria at [three levels](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels): A (essential), AA (ideal), and AAA (high-level support). 
 
-## WAI-ARIA for rich internet applications 
+## WAI-ARIA for Rich Internet Applications 
 
-[<dfn id="waiaria">WAI-ARIA 1.1</dfn>](https://www.w3.org/TR/wai-aria-practices-1.1/) provides guidance for dynamic content and advanced user interface controls developed with HTML, JavaScript, and related technologies. It provides insights on ARIA roles, states, and properties to make custom widgets accessible, usable, and interoperable with assistive technologies and to those who rely on keyboard navigation.
+<p>[<dfn id="waiaria">WAI-ARIA 1.1</dfn>](https://www.w3.org/TR/wai-aria-practices-1.1/) provides guidance for dynamic content and advanced user interface controls developed with HTML, JavaScript, and related technologies. It provides insights on ARIA roles, states, and properties to make custom widgets accessible, usable, and interoperable with assistive technologies and to those who rely on keyboard navigation.</p>
 
 [Dequeue](https://www.deque.com/blog/top-5-rules-of-aria/) has good guidance on how to use ARIA effectively to improve the accessibility of web application controls, offering specific guidance for [React](https://www.deque.com/blog/debunking-the-myth-accessibility-and-react/) and [Angular](https://www.deque.com/blog/angular-and-accessibility-issues-and-strategies/) development. 
 
 ## Inclusive Design
 
-<dfn id="incdes">Inclusive Design</dfn> is a methodology that considers the full range of human diversity, with respect to ability, language, culture, and more.  Its intent is to create products whose experiences serve as many people as possible, including those with disabilities.
+<p><dfn id="incdes">Inclusive Design</dfn> is a methodology that considers the full range of human diversity, with respect to ability, language, culture, and more.  Its intent is to create products whose experiences serve as many people as possible, including those with disabilities.</p>
 
 ## a11y
 
-<dfn id="a11y">a11y</dfn> stands for "accessibility". Use of this term on the internet helps to identify content related specifically to digital accessibility.
+<p><dfn id="a11y">a11y</dfn> stands for "accessibility". Use of this term on the internet helps to identify content related specifically to digital accessibility.</p>
 

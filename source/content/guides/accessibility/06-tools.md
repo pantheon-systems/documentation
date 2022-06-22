@@ -1,6 +1,6 @@
 ---
 title: Optimize Your Site for Accessibility
-subtitle: Tools
+subtitle: Pantheon Tools
 description: Tools and techniques to improve your website's accessibility
 categories: [optimize]
 tags: [accessibility, workflow, SEO]
@@ -13,34 +13,36 @@ anchorid: accessibility/tools
 editpath: accessibility/06-tools.md
 ---
 
-## Built-in Tools
+This section provides an overview of the tools offered by Pantheon that can help you improve your website's accessibility.
 
-This section provides an overview of the tools our platform offers to improve your website's accessibility.
+## Custom Upstreams
 
-### Pantheon
+A Custom Upstream is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams (WordPress,Drupal 9, Drupal 8, Drupal 7) and acts as a parent for site level repositories.
 
-- [Custom Upstreams](/custom-upstream): Once you've built an accessible site, you can use it to create other sites.
-- [Autopilot](/guides/autopilot): Once your site is compliant, use Autopilot to ensure you don't fall out of compliance.
-- [WebOps Workflow](/pantheon-workflow): Use the Pantheon WebOps Workflow to run your manual and automated tests before going live.
+*How does this support accessibility?* Once you've built an accessible site, you can use it to create other sites.
 
-## External Tools
+See [Custom Upstreams](/custom-upstream) for details.
 
-These tools are offered by companies other than Pantheon. 
+## Autopilot
 
-### Drupal
+Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
-- [Drupal Accessibility Features](https://www.drupal.org/docs/accessibility/drupal-accessibility-features)
+*How does this support accessibility?* Once your site is compliant, use Autopilot to ensure you don't fall out of compliance.
 
-- [Contributed Modules for Extending Accessibility in Drupal](https://www.drupal.org/docs/accessibility/contributed-modules-for-extending-accessibility-in-drupal)
+See [Autopilot](/guides/autopilot) for details.
 
-### Wordpress
+## WebOps Workflow
 
-- [WP Accessibility Plugin](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with Multidev.
 
-- [Useful Plugins](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/other-plugins-to-improve-accessibility/)
+*How does this support accessibility?* Use the Pantheon WebOps Workflow to run your manual and automated accessibility tests before going live.
 
-### Automated Testing
+See [WebOps Workflow](/pantheon-workflow) for details.
 
-Adding automated accessibility testing to your site's build process is a key tool to maintaining and improving your site's accessibility. See [Add Lighthouse comparison tests to CI builds](/guides/frontend-performance/diagnostics#lighthouse).
+## Lighthouse Integration
 
+Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provides automated audits for performance, accessibility, progressive web apps, and SEO. Lighthouse audit reports can have a big impact on your frontend performance.
 
+*How does this support accessibility?* Adding automated accessibility testing to your site's build process is a key tool to maintaining and improving your site's accessibility.
+
+See [Lighthouse Integration](/guides/frontend-performance/diagnostics#lighthouse) for details 

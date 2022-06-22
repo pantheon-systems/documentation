@@ -13,11 +13,11 @@ anchorid: accessibility/best-practices
 editpath: accessibility/04-best-practices.md
 ---
 
-This section provides an overview of the tools and techniques to improve your website's accessibility.
+This section provides an overview of accessibility best practices.
 
 ## Tables
 
-- **Layout tables** (such a tables that are used to give the effect of columns) are not considered best practice by the The World Wide Consortium, as they reduce accessibility across multiple different interfaces and devices. Layout tables can be difficult for screen readers to comprehend, therefore complicating accessibility.  Although layout tables may seem easier to implement, the impact to accessibility and to overall site usage is considerable, and they should be avoided at all costs. 
+- **Layout tables** (tables that are used to give the effect of columns) are not considered best practice by the The World Wide Consortium, as they reduce accessibility across multiple different interfaces and devices. Layout tables can be difficult for screen readers to comprehend, therefore complicating accessibility.  Although layout tables may seem easier to implement, the impact to accessibility and to overall site usage is considerable, and they should be avoided at all costs. 
 
 - **Data tables** are still appropriate for presenting information in two dimensions.
 
@@ -47,7 +47,7 @@ The `alt` attribute describes the appearance or function of an image, and is pre
 
 - Decorative images: Include an empty `alt=""` attribute. Or, you can use `aria-hidden="true"`. For example: `<img src='/img/mybackgroundimage.png' alt="" aria-hidden="true" />`
 
-See [Alt Text for Images - Examples & 2020 Best Practices - Moz](https://moz.com/learn/seo/alt-text) for more information.
+See [Alt Text](https://moz.com/learn/seo/alt-text) from Moz for more information.
 
 ### Video Subtitles, Captions, and Transcripts
 
@@ -64,13 +64,13 @@ Automatic captions and transcripts are not sufficient to meet accessibility requ
 
 ### Safer Digital Animations and GIFs
 
-The choices you make around animation directly impacts how your site affects people with motion sensitivities. Knowing what kinds of motion are potentially triggering, and how we can mitigate them, empowers us to create experiences that are safe for your audience and won’t cause unintended harm. 
+The choices you make around animation directly impacts how your site affects people with motion sensitivities. Knowing what kinds of motion are potentially triggering, and how we can mitigate them, allows you to create experiences that are safe for your audience and won’t cause unintended harm. 
 
 Applying inclusive design principles to the animations and transitions we use, on websites, images, presentations, and even icons, removes barriers to those users interacting with your content, and can significantly improve the experience for many others.
 
-For web page and application designs, add user controls that permit user to reduce motion or turn it off completely. Controls and applications that do this make use of the CSS media feature prefers-reduced-motion, and automatically provide a reduced motion alternative (or turn motion off). 
+For web page and application designs, add user controls that allow users to reduce motion or turn it off completely. Controls and applications that do this make use of the CSS media feature `prefers-reduced-motion`, and automatically provide a reduced motion alternative (or turn motion off). 
 
-However, GIFs and animated emojis are generally not impacted by reduced motion media query-based controls, so some additional steps are needed. There are several strategies for pausing GIF animations. 
+However, GIFs and animated emojis are generally not impacted by reduced motion media query-based controls, so some additional steps are needed. 
 
 - Use the media queries, and for reduced motion, substitute a still image for those who prefer reduced motion. 
 
@@ -79,7 +79,7 @@ However, GIFs and animated emojis are generally not impacted by reduced motion m
 
 ## Color and Contrast
 
-[<dfn id="508">Section 508</dfn>](https://www.section508.gov/), which aligns with WCAG 2.0 Level AA, sets a legal standard for the contrast level necessary between text and its background. The baseline AA contrast standard is 4.5:1 for most text and 3:1 for large text (19px+ bold or 24px+ normal text). 
+<p>[<dfn id="508">Section 508</dfn>](https://www.section508.gov/), which aligns with WCAG 2.0 Level AA, sets a legal standard for the contrast level necessary between text and its background. The baseline AA contrast standard is 4.5:1 for most text and 3:1 for large text (19px+ bold or 24px+ normal text).</p>
 
 The [US Web Design System (USWDS)](https://designsystem.digital.gov/) guidelines offer the following advice:
 
@@ -91,9 +91,9 @@ The [US Web Design System (USWDS)](https://designsystem.digital.gov/) guidelines
 
 ## Inclusive Language
 
-Words are one of the primary ways we both connect and help one another. But even with the best of intentions, your choices in words may exclude folks. Terms and phrases may have an origin or make a reference of which we’re not aware, and can be harmful to others. Other phrases may present a reading level barrier for those from different backgrounds.
+Even with the best of intentions, choices in words may exclude visitors. Terms and phrases may have an origin or make a reference of which you're not aware, and can be harmful to others. Or, phrases may present a reading level barrier for those from different backgrounds.
 
-When creating content, the work of inclusive writing and editing means reviewing our work for examples of language that may exclude folks by testing, using inclusive language linting tools and readability scoring tools, and then copy editing to include alternatives.
+When creating content, review it for examples of language that may exclude your visitors by testing, using inclusive language linting and readability scoring tools, and then copy editing to include alternatives.
 
 See the [Resources](/guides/accessibility/resources#inclusive-language) page in this guide to help you write using inclusive language.
 

@@ -31,17 +31,14 @@ This section is intended to serve as a quick reference and an expanded resource 
 ## Learning About Accessibility and Inclusive Design
 
 - [Accessibility Courses List ](https://github.com/mgifford/a11y-courses)
-- [The Business Case for Digital Accessibility](https://www.w3.org/WAI/business-case/)
-- [Types of Disabilities](https://usability.yale.edu/web-accessibility/articles/types-disabilities)
-- [WCAG’s Intro to accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
-
-### Resources in the Community
-
 - [Contributed Modules for Extending Accessibility in Drupal](https://www.drupal.org/docs/accessibility/contributed-modules-for-extending-accessibility-in-drupal)
 - [Drupal Accessibility Features](https://www.drupal.org/docs/accessibility/drupal-accessibility-features)
 - [Drupal Accessibility Guide](https://www.drupal.org/docs/accessibility)
 - [Drupal.org Style Guide: Accessibility](https://www.drupal.org/drupalorg/style-guide/accessibility)
 - [GastbyJS Accessibility Statement](https://www.gatsbyjs.org/accessibility-statement/)
+- [The Business Case for Digital Accessibility](https://www.w3.org/WAI/business-case/)
+- [Types of Disabilities](https://usability.yale.edu/web-accessibility/articles/types-disabilities)
+- [WCAG’s Intro to accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
 - [Wordpress Accessibility Handbook](https://make.wordpress.org/accessibility/handbook/)
 - [Wordpress Accessibility Plugin](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
 - [Wordpress Useful Plugins](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/other-plugins-to-improve-accessibility/)
@@ -54,6 +51,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 - [Easy Checks – A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/)
 - [General Checklist](https://a11yproject.com/checklist.html)
 - [WAVE testing tool](https://wave.webaim.org/)
+- [Manual Accessibility Testing](https://uit.stanford.edu/accessibility/testing/manual-checks)
 
 ### Developers: Command-line Testing and Linting tools
 

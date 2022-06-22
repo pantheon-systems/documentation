@@ -17,14 +17,12 @@ Making your site accessible doesn't just happen - you have to lay the groundwork
 
 ## Identify WCAG Conformance Targets
 
-Identify your target level of conformance to the Web Content Accessibility Guidelines. The generally accepted target for accessibility is the latest version of [Web Content Accessibility Guidelines (WCAG) Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/). This may already be the standard specified in your organizational policy, or it may be the legal requirement for your website.
-
-There are three levels of compliance:
+Start by identifying your target level of conformance to the Web Content Accessibility Guidelines. There are three levels of compliance:
 - Level A: the most basic features
 - Level AA: covers the largest and most common barriers 
 - Level AAA: the highest and most complex level 
 
-You will need to determine which level you want your site to meet.  While ideally, your site would meet all requirements, it may not be feasible.  At a minimum, we recommend starting with the requirements in Level A, then moving on from there.  
+The generally accepted target for accessibility is the latest version of [Web Content Accessibility Guidelines (WCAG) Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/). This may already be the standard specified in your organizational policy, or it may be the legal requirement for your website.
 
 ## Building Compliant Sites
 
@@ -49,7 +47,7 @@ To optimize an existing site for accessibility:
 
 2. Prioritize the changes you will make to maximize impact.
 
-   There are a number of factors to consider when prioritizing fixes:
+   Factors to consider when prioritizing fixes include:
    - Impact on users with disabilities: how much does the issue impact users?  Will they be unable to perform key tasks? 
    - Location of issue: is it on a high-traffic page?
    - Ease and speed of repair: is the fix easy, or will it require significant time and resources?
@@ -57,9 +55,10 @@ To optimize an existing site for accessibility:
 
 3. Determine how you will test changes.
 
-   It can be hard to know where to start with testing changes.  Here are some ideas to help:
-   - Choose an automated testing tool.
-   - Consider implementing a user testing program.  User testing can not only be an effective tool in your accessibility arsenal, it is a terrific tool to assess the overall effectiveness of your site.  See the [Tools](/guides/accessibility/tools) section of this guide for suggestions.
+   Here are some testing options:
+   - Choose an automated testing tool. See the [Tools](/guides/accessibility/resources) section of this guide for suggestions.
+   - While automated testing tools are useful, they can't cover all scenarios.  Therefore, manual testing is an important part of any testing plan.  At the very least, manual testing should include both keyboard and screen reader testing. Stanford University offers a [helpful guide and downloadable checklist](https://uit.stanford.edu/accessibility/testing/manual-checks) to aid in manual testing.
+   - Consider implementing a user testing program.  User testing can not only be an effective tool in your accessibility arsenal, it is a terrific tool to assess the overall effectiveness of your site.  
 
 ## Maintaining Compliance
 
@@ -68,6 +67,3 @@ Ensuring that your site is accessible is an ongoing job. Once you have done the 
 - Train your entire project team on web accessibility.
 - Implement testing tools that can be used during the development process.  While there are free tools available to developers, consider investing in tools that reduce false positives and support agile development cycles.
 
-## Pantheon Products and Features That Can Help
-
-Take advantage of Pantheon's products and features that help build accessible sites. Details are covered in the [Tools](/guides/accessibility/tools) section of this guide. 
