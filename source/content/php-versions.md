@@ -92,13 +92,13 @@ PHP versions can be set using the `pantheon.yml` configuration file in the root 
 
 Configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
 
-You must use SFTP to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
+You can use SFTP or Git mode to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
 
 1. Navigate to the Pantheon dashboard.
 
-1. Click the **Dev** environment tab and set the **Development Mode** to **SFTP**.
+1. Click the **Dev** environment tab and select your preferred **Development Mode**.
 
-1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
+   - Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon if you select SFTP mode.
 
 1. Check the `/code` directory for the `pantheon.yml` file and create one if it is not already present:
 
@@ -116,25 +116,23 @@ You must use SFTP to create or change the `pantheon.yml` file. You will receive 
 
 1. Refresh the **Dev** environment tab and verify that the `pantheon.yml` file is now committed to the `master` branch.
 
-1. Set the **Development Mode** to **Git**.
-
 1. Pull changes to your local repository (if you have one).
 
-Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
+   - Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
-Note that you will need to rebase any non-`master` branches and remove their remote versions, then re-push the branches to avoid the Git pre-receive error.
+1. Rebase any non-`master` branches and remove their remote versions > re-push the branches to avoid the Git pre-receive error:
 
-```none
-remote: PANTHEON ERROR:
-remote:
-remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
-remote:
-remote:
-remote: Validation failed with error:
-remote: >   12.0 is not one of [5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1]
-```
+   ```none
+   remote: PANTHEON ERROR:
+   remote:
+   remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
+   remote:
+   remote:
+   remote: Validation failed with error:
+   remote: >   12.0 is not one of [5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.1]
+   ```
 
-Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
+1. Modify the `pantheon.yml` file until it is valid and commit the fix before attempting to push again.
 
 <Alert title="Note" type="info">
 
@@ -148,7 +146,7 @@ Your site dashboard will detect the changes when you upload a new or modified `p
 
 ![The Site Dashboard sees changes to pantheon.yml](../images/dashboard/pantheon-yml-changes-sftp.png)
 
-If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. In the example below we've attempted to set the PHP version to 12:
+If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. The example below shows a failed attempt to set the PHP version to 12:
 
 ![The Site Dashboard doesn't commit invalid changes](../images/dashboard/pantheon-yml-failure-sftp.png)
 
@@ -162,7 +160,7 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`, for example, upgrading Drush should resolve the issue. For more information, see [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version).
 
-## See Also
+## More Resources
 
 - [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 - [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
