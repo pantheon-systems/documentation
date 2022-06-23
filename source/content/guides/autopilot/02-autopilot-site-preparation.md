@@ -12,7 +12,7 @@ anchorid: autopilot-site-preparation
 permalink: docs/guides/autopilot/autopilot-site-preparation/
 ---
 
-There are several things you can do to make your site and your team are ready for Autopilot.
+There are several things you can do to prepare your site and your team are for Autopilot before it is enabled.
 
 ## Pre-define Your URLs for Virtual Regression Testing
 
