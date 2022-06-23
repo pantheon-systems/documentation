@@ -16,7 +16,7 @@ reviewed: "2021-06-15"
 
 8. Choose to either move the contents of Aquia's nested directory `docroot` up and remove the folder, or rename the folder to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
-9. In your Acquia dashboard, navigate to **Manage > Extend**. Click on the **Uninstall** tab to uninstall Acquia-specific modules.
+9. In your Acquia dashboard, navigate to **Manage > Extend**. Click **Uninstall** to uninstall Acquia-specific modules.
 
 10. For compatibility with Pantheon's platform, adjust any special Acquia configurations related to `env`.
 
