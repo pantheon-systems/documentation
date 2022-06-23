@@ -11,12 +11,12 @@ showtoc: true
 permalink: docs/guides//manual-d8-noncomposer-to-d8/prepare
 anchorid: prepare
 editpath: migrate/manual-d8-noncomposer-to-d8/03-prepare.md
-reviewed: "2021-06-22"
+reviewed: "2021-05-09"
 ---
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
 
-## Create a New 9 Site
+## Create a New Site
 
 1. Log in to your Pantheon account. If you don't have an account, [create one](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
 

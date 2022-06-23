@@ -13,9 +13,7 @@ editpath: migrate/manual-d8-noncomposer-to-d8/01-introduction.md
 reviewed: "2021-06-22"
 ---
 
-This guide will show you how to migrate a Composer site currently hosted outside of Pantheon to Drupal 9.
-
-<Partial file="drupal-9/see-landing.md" />
+This guide will show you how to migrate a Composer site currently hosted outside of Pantheon to Pantheon.
 
 <Partial file="drupal-9/commit-history.md" />
 
