@@ -12,21 +12,37 @@ anchorid: autopilot-site-preparation
 permalink: docs/guides/autopilot/autopilot-site-preparation/
 ---
 
-There are several steps you can take to make your site and your team are ready for Autopilot.
+There are several things you can do to make your site and your team are ready for Autopilot.
 
-**## Pre-define Your URLs for Virtual Regression Testing**
+## Pre-define Your URLs for Virtual Regression Testing
 
-**## Consider What Web Elements You Want to Exclude**
+Autopilot allows you to define specific URLs for individual regression tests. You can define as many URLs for individual regression testing as you want during the [Visual Review](/guides/autopilot/enable-autopilot/#visual-review) section of the Autopilot Wizard.
 
-**## Adjust the Threshold for Dynamic Content**
+You can pre-define these URLs when you begin preparing your site for Autopilot. 
 
-**## Consider Stakeholders for Your VRT Feedback Loop**
+ We recommend that you include pages that:
 
-**## Pay Special Attention to Backend Changes that Autopilot Won't Test**
+- Receive frequent changes
 
-**## Review Exclusions for Composer with Extra Care**
+- Contain key information that should be thoroughly reviewed
 
-**## More Resources**
+- Appear as top links on your homepage
+
+- Receive major content updates 
+
+![Pre-define Autopilot VRT URLs](../../../images/autopilot/autopilot-setup-visual-review.png)
+
+## Consider What Web Elements You Want to Exclude
+
+## Adjust the Threshold for Dynamic Content
+
+## Consider Stakeholders for Your VRT Feedback Loop
+
+## Pay Special Attention to Backend Changes that Autopilot Won't Test
+
+## Review Exclusions for Composer with Extra Care
+
+## More Resources
 
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 

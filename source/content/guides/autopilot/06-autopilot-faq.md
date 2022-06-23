@@ -1,6 +1,6 @@
 ---
 title: Pantheon Autopilot
-subtitle: Autopilot Frequently Asked Questions
+subtitle: Autopilot FAQs
 description: Get answers to your Autopilot questions.
 categories: [automate]
 tags: [autopilot, webops]
