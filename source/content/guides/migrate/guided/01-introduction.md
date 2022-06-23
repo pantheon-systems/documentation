@@ -12,7 +12,7 @@ editpath: migrate/guided/01-introduction.md
 reviewed: "2021-06-15"
 ---
 
-Welcome to Pantheon!  We want to make it easy for you to move a site from another hosting provider to Pantheon.  Simply use the following instructions, and you'll be good to go!
+Welcome to Pantheon! We want to make it easy for you to move a site from another hosting provider to Pantheon. Simply use the following instructions and you'll be good to go!
 
 <Partial file="drupal-9/guide-note.md" />
 
@@ -34,5 +34,5 @@ For instructions on this method, see [Manually Migrate Sites to Pantheon](/migra
 
 ## Professional Services
 
-Professional Services: If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
+If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
 
