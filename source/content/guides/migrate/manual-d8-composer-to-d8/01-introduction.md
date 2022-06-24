@@ -7,9 +7,9 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides//manual-d8-composer-to-d8-to-d8
-anchorid: manual-d8-composer-to-d8-to-d8
-editpath: migrate/manual-d8-composer-to-d8-to-d8/01-introduction.md
+permalink: docs/guides//manual-d8-composer-to-d8
+anchorid: manual-d8-composer-to-d8
+editpath: migrate/manual-d8-composer-to-d8/01-introduction.md
 reviewed: "2021-06-22"
 ---
 
