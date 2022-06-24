@@ -50,13 +50,43 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
-## Adjust the Threshold for Dynamic Content
+### Adjust the Threshold for Dynamic Content
 
-## Consider Stakeholders for Your VRT Feedback Loop
+There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and dynamic web elements. 
+
+You will only be notified of test failures that fall below the threshold you set, if you subscribe to Autopilot notifications.
+
+![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
+
+### Review Exclusions for Composer with Extra Care
+
+Sites managed through Composer have less flexibility when setting exclusions in Autopilot. You can exclude Composer installed modules or your Upstream at the highest level to keep them from being updated, but you should avoid getting too granular in exclusions to avoid merge conflicts.
+
+## Determine Stakeholders for Your VRT Feedback Loop
+
+Autopilot's visual regression tool takes screenshots the before and after the  check really easily if anything has changed and what happens is depending on what your requirements are, what your thresholds are, you can either accept the change by page or you can accept all the changes. 
+
+1. Click **More Actions** in the Review Test Results page to see Autopilot data for the specific site.
+
+1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Dashboard to view the site in a new browser tab.
+
+1. Share this preview link with stakeholders and request their approval.
+
+    ![Autopilot Review Test Results](../../../images/autopilot/autopilot-review-test-results.png)
+
+1. Encourage your stakeholders to [enable Autopilot notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications).
 
 ## Pay Special Attention to Backend Changes that Autopilot Won't Test
 
-## Review Exclusions for Composer with Extra Care
+Autopilot only checks for changes and updates to modules, themes, and core. You should take time to carefully review and test changes that fall outside of Autopilot's scope, including:
+
+- Code changes
+
+- PHP changes
+
+- Templates changes
+
+- Other backend changes
 
 ## More Resources
 
