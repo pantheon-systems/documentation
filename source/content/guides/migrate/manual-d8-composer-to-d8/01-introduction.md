@@ -17,12 +17,8 @@ This guide will show you how to migrate a Composer site currently hosted outside
 
 <Partial file="drupal-9/commit-history.md" />
 
-This doc uses the following aliases:
-
-- **Alias:** `SITE`
-- **Old site folder** `FORMER-PLATFORM`
+<Partial file="migrate/alias-sitefolder.md" />
 
 ## Requirements
 
-- You have access to a local copy of the existing site and/or you have access to a Git repository of the existing site
-- Your site is based on the [drupal/recommended-project]() template or a similar non-composer managed structure.
+<Partial file="migrate/d8composer-d8composer.md" />
