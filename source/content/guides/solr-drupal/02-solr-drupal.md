@@ -147,14 +147,14 @@ To install the Search API Pantheon module, switch to your local machine.
 1. Clone the Git repository for the desired environment from the Pantheon Site Dashboard.
 1. Enter the following command in the terminal to run `composer install`:
 
-     ```shell{promptUser:user}
-     composer install
-     ```
+   ```shell{promptUser:user}
+   composer install
+   ```
 1. Add the Search API Pantheon module as a required dependency:
 
-     ```shell{promptUser:user}
-    composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
-     ```
+   ```shell{promptUser:user}
+   composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
+   ```
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
 
@@ -164,9 +164,9 @@ You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin`
 
 Enter the following command, replacing `$ENV` with the environment:
 
-    ```shell{promptUser:user}
-    terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
-    ```
+```shell{promptUser:user}
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
+```
 
 You might also want to enable the modules from the site’s Extend page located in `/admin/modules`.
 
@@ -234,7 +234,7 @@ If you are using the Lenient endpoint, you may encounter an error when running C
 
 This occurs because both repositories contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. Change the `repositories` definition by adding a definition for the Lenient repository in the site's `packages.json` file with an explicit `exclude` argument:
 
-```
+```json:title=packages.json
 "repositories": {
     "lenient": {
         "type": "composer",
