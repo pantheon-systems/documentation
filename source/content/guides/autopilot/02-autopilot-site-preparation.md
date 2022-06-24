@@ -34,6 +34,22 @@ You can pre-define these URLs when you begin preparing your site for Autopilot.
 
 ## Consider What Web Elements You Want to Exclude
 
+Certain [web elements can be excluded](/guides/autopilot/enable-autopilot/#excluded-web-elements) from your visual regression testing. We recommend creating a list of web elements that you can exclude from testing before you begin to configure Autopilot. 
+
+Dynamic elements are created by your browser and only exist during runtime. Consider excluding the following dynamic web elements from your tests:
+
+- Banner images
+
+- Elements created using JavaScript
+
+- CSS and Pseudo-Elements
+
+- Static Elements with Dynamic Parts 
+
+    - You can have static elements defined in your source code, but the attributes and data inside this element could be modified or set by JavaScript. An example of this situation might be using setAttribute to change an attribute on a static element.
+
+![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
+
 ## Adjust the Threshold for Dynamic Content
 
 ## Consider Stakeholders for Your VRT Feedback Loop
