@@ -2,7 +2,7 @@
 
 1. Set the site's **Development Mode** to Git:
 
-  ![Git connection mode](../../../../../images/dashboard/connection-mode-git.png)
+  ![Git connection mode](../../images/dashboard/connection-mode-git.png)
 
 1. Copy the `git clone` command for the site repository.
 
