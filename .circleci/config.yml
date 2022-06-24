@@ -59,7 +59,7 @@ workflows:
 jobs:
   test-links:
     docker:
-      - image: circleci/php:7.2-cli-node-browsers
+      - image: cimg/php:7.4-cli-node-browsers
         environment:
           BUILD_PATH: /home/circleci/project
     working_directory: ~/project
@@ -84,7 +84,7 @@ jobs:
 
   lighthouse:
     docker:
-      - image: circleci/php:7.2-cli-node-browsers
+      - image: cimg/php:7.4-cli-node-browsers
         environment:
           BUILD_PATH: /home/circleci/project
     working_directory: ~/project
