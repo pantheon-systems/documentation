@@ -93,6 +93,6 @@ This use case requires you to set up your Custom Upstream as a Pantheon site wit
 
 - [Autopilot Apply Updates](/guides/autopilot/apply-updates/)
 
-- [Autopilot Frequently Asked Questions](/guides/autopilot/apply-updates/)
+- [Autopilot FAQs](/guides/autopilot/apply-updates/)
 
 - [Custom Upstream Guide](/guides/custom-upstream)
