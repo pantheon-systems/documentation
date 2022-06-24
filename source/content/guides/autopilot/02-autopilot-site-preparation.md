@@ -90,6 +90,8 @@ Autopilot only checks for changes and updates to modules, themes, and core. You 
 
 ## More Resources
 
+- [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
+
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
