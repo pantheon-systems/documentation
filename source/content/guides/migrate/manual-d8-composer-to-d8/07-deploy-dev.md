@@ -13,9 +13,4 @@ editpath: migrate/manual-d8-composer-to-d8/07-deploy-dev.md
 reviewed: "2021-06-22"
 ---
 
-Now that you've committed your code additions locally, push the commits to Pantheon to deploy them to your Dev environment:
-
-```bash{promptUser: user}
-terminus connection:set $SITE.dev git
-git push origin master
-```
+<Partial file="migrate/deploy-dev.md" />

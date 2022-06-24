@@ -16,20 +16,13 @@ reviewed: "2021-06-22"
 
 This sections provides common troubleshooting scenarios.
 
+
 ## Get Messages
 
-When there are problems, you can sometimes get helpful messages about what's wrong with the following command if you have dblog module enabled:
-
-```bash{promptUser: user}
-terminus drush $SITE.dev watchdog:show
-```
+<Partial file="migrate/drupal-getmessage.md" />
 
 ## Rebuild Cache after Fixing Issues
 
-When you make changes to fix a problem, don't forget to rebuild the cache:
-
-```bash{promptUser: user}
-terminus drush $SITE.dev cr
-```
+<Partial file="migrate/drupal-rebuildcache.md" />
 
 <Partial file="drupal-9/troubleshooting.md" />
