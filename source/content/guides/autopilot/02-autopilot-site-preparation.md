@@ -46,27 +46,27 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
 - Static Elements with Dynamic Parts 
 
-    - You can have static elements defined in your source code, but the attributes and data inside this element could be modified or set by JavaScript. An example of this situation might be using setAttribute to change an attribute on a static element.
+    - You can have static elements defined in your source code, but the attributes and data inside this element could be modified or set by JavaScript. For example, using `setAttribute` to change an attribute on a static element.
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
 ### Adjust the Threshold for Dynamic Content
 
-There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and dynamic web elements. 
+There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and false positive caused by dynamic web elements or other factors. 
 
-You will only be notified of test failures that fall below the threshold you set, if you subscribe to Autopilot notifications.
+You will be notified of test failures that fall below the set threshold if you subscribe to Autopilot notifications.
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
 ### Review Exclusions for Composer with Extra Care
 
-Sites managed through Composer have less flexibility when setting exclusions in Autopilot. You can exclude Composer installed modules or your Upstream at the highest level to keep them from being updated, but you should avoid getting too granular in exclusions to avoid merge conflicts.
+Sites managed through Composer have less flexibility when setting exclusions in Autopilot. You can exclude Composer-installed modules or your Upstream at the highest level to keep them from being updated, but you should avoid getting too granular with your exclusions to avoid merge conflicts.
 
 ## Determine Stakeholders for Your VRT Feedback Loop
 
-Autopilot's visual regression tool takes screenshots the before and after the  check really easily if anything has changed and what happens is depending on what your requirements are, what your thresholds are, you can either accept the change by page or you can accept all the changes. 
+Autopilot's visual regression tool takes before and after screenshots to check for changes. You can accept the changes page by page or accept all changes for all pages an once depending on your requirements and thresholds. It's a good idea to have multiple team members review changes when a lot of updates and content changes have been made. You can share the test results and preview pages with stakeholders to ensure that your site has wide approval before accepting the changes.
 
-1. Click **More Actions** in the Review Test Results page to see Autopilot data for the specific site.
+1. Click **More Actions** in the **Review Test Results** page to see Autopilot data for a specific site.
 
 1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Dashboard to view the site in a new browser tab.
 
