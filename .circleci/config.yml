@@ -43,12 +43,6 @@ workflows:
       - test-links:
           requires:
             - pfe/gatsby-build-and-deploy
-      - lighthouse:
-          requires:
-            - pfe/gatsby-build-and-deploy
-          filters:
-            branches:
-              ignore: main
       - deploy:
           requires:
             - test-links
@@ -81,26 +75,6 @@ jobs:
             "https://${TERMINUS_ENV}--${TERMINUS_SITE}.my.pantheonfrontend.website/docs"
     # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
     resource_class: large
-
-  lighthouse:
-    docker:
-      - image: cimg/php:7.4-cli-node-browsers
-        environment:
-          BUILD_PATH: /home/circleci/project
-    working_directory: ~/project
-    steps:
-      - attach_workspace:
-          at: .
-      - pfe/set-terminus-env
-      - run:
-          name: Import Functions and Variables
-          command: .circleci/scripts/set-env.sh && source $BASH_ENV
-      - run:
-          name: Lighthouse Audit
-          command: npm ci && .circleci/tests/lighthouse/run
-      - store_artifacts:
-          path: lighthouse_data/
-          destination: lighthouse_data/
 
   deploy:
     docker:
