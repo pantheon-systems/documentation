@@ -40,6 +40,8 @@ function downloadTerminus($installdir, $package)
     echo("Moving to " . $installdir . "...\n");
     exec("sudo chmod ugo+rwx /tmp/");
     exec("sudo chmod ugo+rwx /usr/local/bin/");
+    exec("sudo /root/.npm/");
+    exec("sudo chmod -R ugo+rwx /root/.npm/_cacache/tmp/");
     if(!rename("/tmp/" . $package . ".phar", $installdir . "/" . $package)){
         echo("\n" . $installdir . " requires admin rights to write to...\n");
         exec("sudo mv /tmp/" . $package . ".phar " . $installdir . "/" . $package);
