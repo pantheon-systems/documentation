@@ -40,9 +40,10 @@ function downloadTerminus($installdir, $package)
     echo("Moving to " . $installdir . "...\n");
     exec("sudo chmod ugo+rwx /tmp/");
     exec("sudo chmod ugo+rwx /usr/local/bin/");
-    exec("sudo /root/.npm/");
     exec("sudo mkdir -p /root/.npm/_cacache/tmp");
     exec("sudo chmod -R ugo+rwx /root/.npm/_cacache/tmp/");
+    exec("sudo mkdir -p /usr/local/lib/node_modules/broken-link-checker");
+    exec("sudo chmod -R ugo+rwx /usr/local/lib/node_modules/broken-link-checker");
     if(!rename("/tmp/" . $package . ".phar", $installdir . "/" . $package)){
         echo("\n" . $installdir . " requires admin rights to write to...\n");
         exec("sudo mv /tmp/" . $package . ".phar " . $installdir . "/" . $package);
