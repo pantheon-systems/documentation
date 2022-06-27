@@ -266,8 +266,25 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
+The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. For example:
+
+  ```bash
+  mysqldump db_name > backup-file.sql
+  ```
+
+1. Enter your username and password when prompted to authenticate the command.
+
+    - You might want to consider using a terminus credential fetch to avoid entering credentials for future automation steps.
+
+1. Run the command below to load the dump file back into the server:
+
+  ```bash
+  mysql db_name < backup-file.sql
+  ```
+
+You can also use the Pantheon Dashboard to add your site's database.
 
 <Partial file="drupal-9/migrate-add-database-part2.md" />
 
