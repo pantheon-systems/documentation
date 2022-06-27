@@ -55,11 +55,22 @@ Ensure you have the latest versions of Terminus and the Terminus Build Tools plu
 
 ### Access Tokens (Optional)
 
-The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens) and [CircleCI](https://circleci.com/account/api), which are stored as environment variables. The GitHub token needs the **repo** (required), **delete-repo** (optional) and **workflow** (required if using Github Actions) scopes. Optionally, you may generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+The Build Tools plugin will prompt you to create access tokens for any service involved. These tokens are stored as environment variables.
+
+The requirements for these tokens are as follows:
+
+- [GitHub](https://github.com/settings/tokens): The GitHub token needs the **repo** (required), **delete-repo** (optional) and **workflow** (required if using Github Actions) scopes.
+- [CircleCI](https://circleci.com/account/api): No scopes are configurable for this token.
+- [Gitlab](https://gitlab.com/-/profile/personal_access_tokens): The Gitlab token needs the **api**, **read_repository** and **write_repository** scopes.
+- [Bitbucket](https://bitbucket.org/account/settings/app-passwords/): A Bitbucket app password needs the following scopes: **Projects (read)**, **Repositories (read and write)**, **Pull Requests (read and write)** and **Pipelines (edit variables)**
+
+Optionally, you may generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN`, `CIRCLE_TOKEN`, `GITLAB_TOKEN` and `BITBUCKET_TOKEN`, depending on what services are you using:
 
 ```bash{promptUser: user}
 export GITHUB_TOKEN=yourGitHubToken
 export CIRCLE_TOKEN=yourCircleCIToken
+export GITLAB_TOKEN=yourGitlabToken
+export BITBUCKET_TOKEN=yourBitbucketToken
 ```
 
 If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app).
