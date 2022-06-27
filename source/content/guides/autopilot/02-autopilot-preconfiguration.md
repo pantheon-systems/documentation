@@ -1,15 +1,15 @@
 ---
 title: Pantheon Autopilot
-subtitle: Autopilot Site Preparation
-description: Prepare your site for Autopilot.
+subtitle: Autopilot Pre-Configuration Checklist
+description: Understand your Autopilot configuration needs.
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
 contributors: [whitneymeredith]
 showtoc: true
-anchorid: autopilot-site-preparation
-permalink: docs/guides/autopilot/autopilot-site-preparation/
+anchorid: autopilot-preconfiguration
+permalink: docs/guides/autopilot/autopilot-preconfiguration/
 ---
 
 There are several things you can do to prepare your site and your team for Autopilot before it is enabled.
@@ -75,18 +75,6 @@ Autopilot's visual regression tool takes before and after screenshots to check f
     ![Autopilot Review Test Results](../../../images/autopilot/autopilot-review-test-results.png)
 
 1. Encourage your stakeholders to [enable Autopilot notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications).
-
-## Pay Special Attention to Backend Changes that Autopilot Won't Test
-
-Autopilot only checks for changes and updates to modules, themes, and core. You should take time to carefully review and test changes that fall outside of Autopilot's scope, including:
-
-- Code changes
-
-- PHP changes
-
-- Templates changes
-
-- Other backend changes
 
 ## More Resources
 
