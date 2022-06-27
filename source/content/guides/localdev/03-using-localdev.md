@@ -18,7 +18,7 @@ The Localdev Main user interface display is divided into three areas.
 
 1. Switch between [Sites](#connect-and-clone-your-site-locally), [Settings](#settings), and [Help](#help) in the **Global Navigation** menu.
 
-1.  Use **Sync** to refresh the lists in the **Sites** panel when sites have been added or removed (you can only see sites for which you have permissions). 
+1. Use **Sync** to refresh the lists in the **Sites** panel when sites have been added or removed (you can only see sites for which you have permissions). 
 
 1. Select a site to access site-specific actions and environments in the Main interface panel.
 
@@ -34,7 +34,7 @@ Each site is cloned to its own directory within `~/Localdev/` by default. If you
 
 Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once for each site.
 
-Localdev will revert all changes and return you to the **Clone the Dev Environment** screen if there are any errors. Try the process again, then consult the [Troubleshooting section](/guides/localdev/troubleshoot-support#faq) below for details on how to contact Support.
+Localdev will revert all changes and return you to the **Clone the Dev Environment** screen if there are any errors. Try the process again, then consult the [Troubleshooting section](/guides/localdev/troubleshoot-support#faq) below for details, or [contact Support](guides/localdev/troubleshoot-support#contact-support) if the issues persists.
 
 The Main interface will display the Site Screen if the clone is successful.
 
@@ -78,7 +78,7 @@ You can use the **<i className="fa fa-wrench"></i> Develop** tab for the followi
 
 If you have a Git client that you're already comfortable with, you can use it to track, commit, push, and pull code as you normally would. Navigate or point your Git client to track your local code directory, for example: `/Users/yourUser/Localdev/examplesite`.
 
-You can also use the **<i className="fa fa-arrow-down"></i> Pull** and **<i className="fa fa-arrow-up"></i> Push** tabs to have Localdev deal with Git for you.
+You can also use the **<i className="fa fa-arrow-down"></i> Pull** and **<i className="fa fa-arrow-up"></i> Push** tabs to have Localdev handle Git for you.
 
 1. Select the **Pull** tab.
 
@@ -114,7 +114,7 @@ Follow the steps below to initialize tools:
 
 1. Navigate to the site **<i className="fa fa-cog"></i> Config** tab.
 
-1. Review the available tools and enable those you want to use, for example:
+1. Review the available tools and enable those you want to use. For example:
 
     - [phpMyAdmin](https://www.phpmyadmin.net/)
     - [MailHog](https://github.com/mailhog/MailHog)
