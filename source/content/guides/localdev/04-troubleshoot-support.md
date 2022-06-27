@@ -14,7 +14,7 @@ editpath: localdev/04-troubleshoot-support.md
 
 ## Contact Support
 
-Review the [support ticket best practices](/guides/support/support-ticket/) before contacting Support. This helps our team assit you in resolving the issue, or to report any potential issues in Localdev itself.
+Review the [support ticket best practices](/guides/support/support-ticket/) before contacting Support. This helps our team assist you in resolving the issue, and can help report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
