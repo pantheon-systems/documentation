@@ -65,7 +65,7 @@ jobs:
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - run:
           name: Install Broken Link Checker
-          command: sudo npm install --location=global stevenvachon/broken-link-checker
+          command: sudo runuser -u $(whoami) -- npm install stevenvachon/broken-link-checker
       - run:
           name: Check for merge conflicts
           command: .circleci/scripts/merge_conflicts.sh
