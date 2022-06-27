@@ -41,6 +41,7 @@ function downloadTerminus($installdir, $package)
     exec("sudo chmod ugo+rwx /tmp/");
     exec("sudo chmod ugo+rwx /usr/local/bin/");
     exec("sudo /root/.npm/");
+    exec("sudo mkdir -p /root/.npm/_cacache/tmp");
     exec("sudo chmod -R ugo+rwx /root/.npm/_cacache/tmp/");
     if(!rename("/tmp/" . $package . ".phar", $installdir . "/" . $package)){
         echo("\n" . $installdir . " requires admin rights to write to...\n");
