@@ -12,7 +12,7 @@ anchorid: autopilot-site-preparation
 permalink: docs/guides/autopilot/autopilot-site-preparation/
 ---
 
-There are several things you can do to prepare your site and your team are for Autopilot before it is enabled.
+There are several things you can do to prepare your site and your team for Autopilot before it is enabled.
 
 ## Pre-define Your URLs for Virtual Regression Testing
 
@@ -46,13 +46,13 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
 - Static Elements with Dynamic Parts 
 
-    - You can have static elements defined in your source code, but the attributes and data inside this element could be modified or set by JavaScript. For example, using `setAttribute` to change an attribute on a static element.
+    - You can have static elements defined in your source code, but the attributes and data inside this element might be modified or set by JavaScript. For example, using `setAttribute` to change an attribute on a static element.
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
 ### Adjust the Threshold for Dynamic Content
 
-There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and false positive caused by dynamic web elements or other factors. 
+There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and false positives caused by dynamic web elements or other factors. 
 
 You will be notified of test failures that fall below the set threshold if you subscribe to Autopilot notifications.
 
@@ -60,7 +60,7 @@ You will be notified of test failures that fall below the set threshold if you s
 
 ### Review Exclusions for Composer with Extra Care
 
-Sites managed through Composer have less flexibility when setting exclusions in Autopilot. You can exclude Composer-installed modules or your Upstream at the highest level to keep them from being updated, but you should avoid getting too granular with your exclusions to avoid merge conflicts.
+Sites managed through Composer have less flexibility when setting exclusions in Autopilot. You can exclude Composer-installed modules or your Upstream at the highest level to keep them from being updated. However, you should avoid getting too granular with your exclusions to avoid merge conflicts.
 
 ## Determine Stakeholders for Your VRT Feedback Loop
 
