@@ -12,13 +12,13 @@ anchorid: localdev/install-configure
 editpath: localdev/02-install-configure.md
 ---
 
-This section provides information on installing Localdev on your machine.
+This section provides information on how to install Localdev on your machine.
 
-1. Remove older pre-release versions of Localdev if already installed on your machine to avoid potential compatibility issues. Stable Lando releases include support for automatic updates.
+1. Remove older pre-release versions of Localdev, if already installed on your machine, to avoid potential compatibility issues. Stable Lando releases include support for automatic updates.
 
 1. Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg` file.
 
-1. Click **Continue installation** after Localdev checks the Docker installation (Localdev will install or update Docker it for you if needed). 
+1. Click **Continue installation** after Localdev checks the Docker installation (Localdev will install or update Docker for you if needed). 
 
     - If you leave the **Allow Localdev to report usage and errors** box checked, anonymous usage and errors and will be reported to help improve the application. You can change this setting again later if you change your mind.
 
@@ -29,7 +29,7 @@ This section provides information on installing Localdev on your machine.
     1. Click the **here** link in Localdev's **Connect Pantheon account** step to open a browser to the **Create New Token** section of your Pantheon Dashboard.
     1. Click **Generate token** to keep the pre-populated name and create a token.
     1. Copy the **Machine Token** from the modal. This token will only be shown once, so go to the next step before you click **I understand**.
-    1. Navigate to Localdev > paste the token into the box below **Enter your Machine Token** > click **Submit**.
+    1. Navigate to Localdev > Paste the token into the box below **Enter your Machine Token** > Click **Submit**.
 
       ![Connect a Pantheon Account with a Machine Token](../../../images/localdev/localdev-install-connect-account.png)
 
@@ -42,4 +42,3 @@ This section provides information on installing Localdev on your machine.
 A list of your sites is displayed in a column on the left after Localdev is installed and synced.
 
 ![Localdev's dashboard shows a list of sites](../../../images/localdev/localdev-dashboard.png)
-
