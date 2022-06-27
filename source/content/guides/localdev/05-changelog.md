@@ -24,7 +24,7 @@ You can turn off the compatibility check in the Localdev's settings to continue 
 
 1. Select **Settings** in the left menu within your Localdev installation.
 
-1. Click on **switch to edge** in the Current Version section.
+1. Click on **switch to edge** in the **Current Version** section.
 
   ![Switch to edge version](../../../images/localdev/localdev-switch-to-edge.png)
 

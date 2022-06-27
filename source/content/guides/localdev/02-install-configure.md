@@ -18,11 +18,11 @@ This section provides information on installing Localdev on your machine.
 
 1. Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg` file.
 
-1. Click **Continue installation** after Localdev checks the Docker installation and installs or updates it for you if needed. 
+1. Click **Continue installation** after Localdev checks the Docker installation (Localdev will install or update Docker it for you if needed). 
 
     - If you leave the **Allow Localdev to report usage and errors** box checked, anonymous usage and errors and will be reported to help improve the application. You can change this setting again later if you change your mind.
 
-  The Docker window may open several times instructing you to start the Docker server. You can ignore this and minimize the window.
+    - The Docker window may open several times instructing you to start the Docker server. You can ignore this and minimize the window.
 
 1. [Create a machine token](/machine-tokens/#create-a-machine-token) for Localdev:
 
@@ -37,7 +37,7 @@ This section provides information on installing Localdev on your machine.
 
     - If you still have **Your new machine token is ready** in your browser from the previous step, click **I understand** there to close the modal.
 
-1. Click **Go to Localdev** to show the Localdev dashboard.
+1. Click **Go to Localdev** to see the Localdev dashboard.
 
 A list of your sites is displayed in a column on the left after Localdev is installed and synced.
 

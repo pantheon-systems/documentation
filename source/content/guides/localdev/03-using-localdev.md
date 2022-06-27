@@ -12,7 +12,7 @@ anchorid: localdev/using-localdev
 editpath: localdev/03-using-localdev.md
 ---
 
-The Localdev main user interface display is divided into three areas.
+The Localdev Main user interface display is divided into three areas.
 
 ![The main localdev window](../../../images/localdev/localdev-overview.png)
 
@@ -34,9 +34,9 @@ Each site is cloned to its own directory within `~/Localdev/` by default. If you
 
 Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once for each site.
 
-Localdev will revert all changes and return you to the "Clone the dev environment" screen if there are any errors. Try the process again, then consult the [Troubleshooting section](/guides/localdev/troubleshoot-support#faq) below for details on how to contact Support.
+Localdev will revert all changes and return you to the **Clone the Dev Environment** screen if there are any errors. Try the process again, then consult the [Troubleshooting section](/guides/localdev/troubleshoot-support#faq) below for details on how to contact Support.
 
-The Main interface will bring you to the Site Screen if the clone is successful.
+The Main interface will display the Site Screen if the clone is successful.
 
 ![Screenshot of the Localdev Site screen](../../../images/localdev/localdev-site-running-screen.png)
 
@@ -82,7 +82,7 @@ You can also use the **<i className="fa fa-arrow-down"></i> Pull** and **<i clas
 
 1. Select the **Pull** tab.
 
-1. Select the **Pull code** option to copy the site's code from the Pantheon Dev environment to your local environment. 
+1. Select the **Pull code** option to copy the site's code from the Pantheon **Dev** environment to your local environment. 
   
     - The *Last Pull* line below each option's area shows the last time the code was synced.
 
@@ -90,7 +90,7 @@ After you make changes to your site:
 
 1. Navigate to the **<i className="fa fa-arrow-up"></i> Push** tab.
 
-1. Select the information you want pushed to the Pantheon Development environment.
+1. Select the information you want pushed to the Pantheon **Dev** environment.
 
 1. Enter a **Git commit message** that describes the changes made in this particular push.
 
@@ -116,10 +116,10 @@ Follow the steps below to initialize tools:
 
 1. Review the available tools and enable those you want to use, for example:
 
-  - [phpMyAdmin](https://www.phpmyadmin.net/)
-  - [MailHog](https://github.com/mailhog/MailHog)
-  - [CDN](/global-cdn) for emulation to test cookies
-  - [Solr](/solr) or [Redis](/object-cache) for the local site
+    - [phpMyAdmin](https://www.phpmyadmin.net/)
+    - [MailHog](https://github.com/mailhog/MailHog)
+    - [CDN](/global-cdn) for emulation to test cookies
+    - [Solr](/solr) or [Redis](/object-cache) for the local site
 
 ### Advanced
 
@@ -127,9 +127,9 @@ Follow the steps below to initialize tools:
 
 1. Click the **<i className="fa fa-bug"></i> Logs** tab to:
 
-  - Change log verbosity
-  - Initiate a forced rebuild (see [troubleshooting](/guides/localdev/troubleshoot-support) for more information)
-  - Force-remove the entire application (this will also destroy all local site databases)
+    - Change log verbosity
+    - Initiate a forced rebuild (see [troubleshooting](/guides/localdev/troubleshoot-support) for more information)
+    - Force-remove the entire application (this will also destroy all local site databases)
 
 ### Logs
 
