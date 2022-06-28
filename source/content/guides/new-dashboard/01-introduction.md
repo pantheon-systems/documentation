@@ -37,13 +37,11 @@ The New Dashboard is available as a Limited Availability feature release while a
 
 [Autopilot](https://pantheon.io/autopilot?docs) tracks and implements changes, and alerts you if something looks off. See the [Autopilot](/guides/autopilot) documentation to learn how to use Autopilot to handle your WebOps.
 
-
 ### Pantheon Support
 
 The same great [Support](/guides/support) you already love. The New Dashboard makes it easier to find the right resources, whatever your question is, wherever you are in your Workspace.
 
-For quick access to the old Dashboard and Pantheon Documentation, <i className="fa fa-question-circle"></i>
-
+For quick access to the old Dashboard and Pantheon Documentation. <i className="fa fa-question-circle"></i>
 
 ## Sites
 
@@ -54,7 +52,6 @@ Select the **Sites** tab in the left-navigation menu to search for a Site, migra
 You can create a new Site from the new Dashboard homepage or from the **Site** tab. 
 
 To create a Site, click **Create New Site**. You will be directed to the Classic Dashboard for Site creation. Click **Yes, Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
-
 
 ## Utility Navigation
 
@@ -75,7 +72,6 @@ On the homepage, you have access to an overview of the Workspace that provides t
 
 ![A screenshot of the new Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
 
-
 </Tab>
 
 <Tab title="Organization Workspace" id="organization-workspace">
@@ -87,8 +83,6 @@ On the homepage, you have access to an overview of the Workspace that provides t
 
 </Tab>
 </TabList>
-
-
 
 ### Workspaces
 
