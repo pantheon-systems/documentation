@@ -29,7 +29,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
    1. Select your local archive file and click **Import**.
 
-      ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+      ![Import MySQL database from file](../../images/dashboard/import-mysql-file.png)
 
   **Note:** If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
