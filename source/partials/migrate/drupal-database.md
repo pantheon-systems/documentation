@@ -46,7 +46,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
        - Change the end of the Dropbox URLs from `dl=0` to `dl=1` to ensure that your archive imports correctly.
 
-        ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+        ![Import MySQL database from file](../../images/dashboard/import-mysql-file.png)
 
     </Tab>
 
