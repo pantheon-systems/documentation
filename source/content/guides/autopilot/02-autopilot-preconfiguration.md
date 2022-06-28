@@ -1,7 +1,7 @@
 ---
 title: Pantheon Autopilot
 subtitle: Autopilot Pre-Configuration Checklist
-description: Understand your Autopilot configuration needs.
+description: Get a head start on your Autopilot journey.
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
@@ -58,7 +58,7 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
 There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and false positives caused by dynamic web elements or other factors. 
 
-You will be notified of test failures that fall below the set threshold if you subscribe to Autopilot notifications.
+You will be notified of test failures that fall below the set threshold if you [subscribe to Autopilot notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications).
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
@@ -68,11 +68,11 @@ Sites managed through Composer have less flexibility when setting exclusions in 
 
 ## Determine Stakeholders for Your VRT Feedback Loop
 
-Autopilot's visual regression tool takes before and after screenshots to check for changes. You can accept the changes page by page or accept all changes for all pages an once depending on your requirements and thresholds. It's a good idea to have multiple team members review changes when a lot of updates and content changes have been made. You can share the test results and preview pages with stakeholders to ensure that your site has wide approval before accepting the changes.
+Autopilot's visual regression tool takes before and after screenshots to check for changes. You can accept the changes page by page or accept all changes for all pages an once depending on your requirements and thresholds. It's a good idea to have multiple team members review changes when several updates and content changes have been made. You can share the test results and preview pages with stakeholders to ensure that your site has wide approval before accepting the changes.
 
 1. Click **More Actions** in the **Review Test Results** page to see Autopilot data for a specific site.
 
-1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Dashboard to view the site in a new browser tab.
+1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Dashboard to view the site preview in a new browser tab.
 
 1. Share this preview link with stakeholders and request their approval.
 
