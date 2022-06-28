@@ -34,7 +34,7 @@ Each site is cloned to its own directory within `~/Localdev/` by default. If you
 
 Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once for each site.
 
-Localdev will revert all changes and return you to the **Clone the Dev Environment** screen if there are any errors. Try the process again, then consult the [Troubleshooting section](/guides/localdev/troubleshoot-support#faq) below for details, or [contact Support](guides/localdev/troubleshoot-support#contact-support) if the issues persists.
+Localdev will revert all changes and return you to the **Clone the Dev Environment** screen if there are any errors. Try the process again, then consult the [Troubleshooting section](/guides/localdev/troubleshoot-support#faq) below for details, or [contact Support](/guides/localdev/troubleshoot-support#contact-support) if the issues persists.
 
 The Main interface will display the Site Screen if the clone is successful.
 
