@@ -79,97 +79,20 @@ This section reflects resources for legacy site plans. Sites that have been upgr
 
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
+|                                | Personal                                               | Professional                                           | Business                                               | Elite                                                  |
+|--------------------------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| Application Containers         | 1                                                      | 1                                                      | 2                                                      | 4+                                                     |
+| PHP Concurrency                | 4                                                      | 8                                                      | 8                                                      | 8                                                      |
+| PHP Memory Limit               | 256MB                                                  | 256MB                                                  | 512MB                                                  | 512MB                                                  |
+| MySQL Buffer Pool              | 128MB                                                  | 512MB                                                  | 1024MB                                                 | 2014MB+                                                |
+| Redis Cache Size               | n/a                                                    | 235MB                                                  | 471MB                                                  | 1024MB                                                 |
+| Storage                        | 5GB                                                    | 20GB                                                   | 30GB                                                   | 100GB+                                                 |
+| Custom Domain Limit (per site) | 5                                                      | 25                                                     | 100                                                    | 200                                                    |
+| Free and managed HTTPS         | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > |
+| New Relic                      | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > |
+| Object Cache                   |                                                        | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > |
+| Multidev                       |                                                        |                                                        | < span    style =  "  color:green  "   >  ✔  </ span > | < span    style =  "  color:green  "   >  ✔  </ span > |
 
-<table class="table table-condensed table-bordered">
-    <thead class="thead-inverse">
-      <tr>
-        <th scope="row" class="thead-inverse"></th>
-        <th>Personal</th>
-        <th>Professional</th>
-        <th>Business</th>
-        <th>Elite</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row" class="thead-inverse">Application Containers</th>
-        <td>1</td>
-        <td>1</td>
-        <td>2</td>
-        <td>4+</td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">PHP Concurrency</th>
-        <td>4</td>
-        <td>8</td>
-        <td>8</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">PHP Memory Limit</th>
-        <td>256MB</td>
-        <td>256MB</td>
-        <td>512MB</td>
-        <td>512MB<Popover content="Up to 1024MB is available for certain Elite plans. <a href='https://pantheon.io/pantheon-elite-plans'>Learn more about Pantheon Elite Plans</a> and contact Sales for information about plans with custom resources." /></td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">MySQL Buffer Pool</th>
-        <td>128MB</td>
-        <td>512MB</td>
-        <td>1024MB</td>
-        <td>2014MB+</td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">Redis Cache Size</th>
-        <td>n/a</td>
-        <td>235MB</td>
-        <td>471MB</td>
-        <td>1024MB</td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">Storage</th>
-        <td>5GB</td>
-        <td>20GB</td>
-        <td>30GB</td>
-        <td>100GB+</td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <Popover content="For details, see <a href='/domains/#custom-domains'>Domains and Redirects</a>." /></th>
-        <td>5</td>
-        <td>25</td>
-        <td>100</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/https/'>HTTPS on Pantheon's Global CDN</a>." /></th>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">New Relic <Popover content="For details, see <a href='/new-relic/'>New Relic APM Pro</a>." /></th>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-      </tr>
-      <tr>
-        <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." /></th>
-        <td></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-      </tr>
-      <tr>
-      <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/multidev/'>Multidev</a>, regardless of plan." /></th>
-        <td></td>
-        <td></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-        <td><span  style= " color:green " > ✔ </span></td>
-      </tr>
-    </tbody>
-</table>
 
 ### Glossary
 
