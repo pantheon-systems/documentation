@@ -142,31 +142,31 @@ The platform resources provided to your website depend on your current plan. Pan
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/https/'>HTTPS on Pantheon's Global CDN</a>." /></th>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">New Relic <Popover content="For details, see <a href='/new-relic/'>New Relic APM Pro</a>." /></th>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">Object Cache <Popover content="For details, see <a href='/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." /></th>
         <td></td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
       </tr>
       <tr>
       <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/multidev/'>Multidev</a>, regardless of plan." /></th>
         <td></td>
         <td></td>
-        <td>✓</td>
-        <td>✓</td>
+        <td><span  style= " color:green " > ✔ </span></td>
+        <td><span  style= " color:green " > ✔ </span></td>
       </tr>
     </tbody>
 </table>
