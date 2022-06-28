@@ -41,7 +41,9 @@ The New Dashboard is available as a Limited Availability feature release while a
 
 The same great [Support](/guides/support) you already love. The New Dashboard makes it easier to find the right resources, whatever your question is, wherever you are in your Workspace.
 
-For quick access to the old Dashboard and Pantheon Documentation. <i className="fa fa-question-circle"></i>
+To stick with the old Dashboard, click on the banner at the top of the page to opt out.
+
+![A screenshot of the new Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/revert-to-old-dashboard.png)
 
 ## Sites
 
