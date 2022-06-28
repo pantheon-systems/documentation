@@ -63,6 +63,18 @@ No. If you encounter any issues about Multidev limits, [contact Support](/guides
 
 Not yet. Currently, Autopilot only supports tests on anonymous access versions of pages. Support for authenticated (logged-in user) page tests is planned for a future release.
 
+## What does Autopilot specifically check for?
+
+Autopilot only checks for changes and updates to modules, themes, and core. You should take time to carefully review and test changes that fall outside of Autopilot's scope, including:
+
+- Code changes
+
+- PHP changes
+
+- Templates changes
+
+- Other backend changes
+
 ## More Resources
 
 - [Apply Autopilot Updates](/guides/autopilot/apply-updates)
