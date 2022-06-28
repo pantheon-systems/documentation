@@ -59,31 +59,31 @@ The Build Tools plugin will prompt you to create access tokens for the services 
 
 - [GitHub](https://github.com/settings/tokens): The GitHub token checks for the following scopes:
 
-  -  **repo** (required)
+  - `repo` (required)
   
-  - **delete-repo** (optional)
+  - `delete-repo` (optional)
   
-  - **workflow** (required if using Github Actions)
+  - `workflow` (required if using Github Actions)
 
 - [CircleCI](https://circleci.com/account/api): No scopes are configurable for this token.
 
 - [Gitlab](https://gitlab.com/-/profile/personal_access_tokens): The Gitlab token requires the following scopes:
 
-  -  **api**
+  - `api`
   
-  - **read_repository** 
+  - `read_repository`
   
-  - **write_repository** 
+  - `write_repository` 
 
 - [Bitbucket](https://bitbucket.org/account/settings/app-passwords/): A Bitbucket app password requires the following scopes: 
 
-  - **Projects (read)**
+  - `Projects` (read)
   
-  - **Repositories (read and write)**
+  - `Repositories` (read and write)
   
-  - **Pull Requests (read and write)**
+  - `Pull Requests` (read and write)
   
-  -  **Pipelines (edit variables)**
+  - `Pipelines` (edit variables)
 
 Optionally, you can generate your tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN`, `CIRCLE_TOKEN`, `GITLAB_TOKEN` and `BITBUCKET_TOKEN`, depending on what services are you using:
 
