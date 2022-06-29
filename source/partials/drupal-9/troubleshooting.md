@@ -1,3 +1,7 @@
+## Site-local Drush Is Required for Drupal 9 Sites
+
+Do not remove `drush/drush` from `composer.json`. If it is removed, `terminus drush` commands will fail with errors related to Twig.
+
 ## Pantheon Launch Check Status Error: services.yml does not exist
 
 After you set up Drupal 9, the following error might be displayed in the **Best practices** section of the Pantheon Launch Check:
@@ -24,10 +28,6 @@ Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is s
   ```
 
 Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
-
-## Site-local Drush Is Required for Drupal 9 Sites
-
-Do not remove `drush/drush` from `composer.json`. If it is removed, `terminus drush` commands will fail with errors related to Twig.
 
 ## Where Can I Report an Issue?
 
