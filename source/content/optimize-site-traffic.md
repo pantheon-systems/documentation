@@ -164,13 +164,15 @@ Install and use the following WordPress plugin:
 
 ### Block User Agents in Drupal or WordPress
 
-Similar to the IP blocking methods listed above, you can also target specific unwanted user agents that you may want to block.
+Similar to the IP blocking methods listed above, you can also target specific unwanted user agents (UA) that you may want to block.
 
-You can do this by [adding the User Agents to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
+While the CMS will block the listed UAs from accessing the content directly, blocked UAs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
+
+To block UAs in Drupal or WordPress, [add the UAs to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
 
 The `stripos` function implements a case-insensitive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`.
 
-Remember to replace the example user agent (`UglyBot`):
+Remember to replace the example UA (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
 // Block a single bot.
