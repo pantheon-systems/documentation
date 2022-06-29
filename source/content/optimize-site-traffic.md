@@ -85,6 +85,8 @@ Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.or
 
 IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php`, via a Drupal module, or WordPress plugin.
 
+While the CMS will block the listed IPs from accessing the content directly, blocked IPs may still be able to access content served by CDN-level cached responses.
+
 #### Use a PHP Snippet to Block IPs
 
 Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DoS attack, PHP can be added to the configuration file even while site performance is being affected.
