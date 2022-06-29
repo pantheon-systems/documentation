@@ -51,9 +51,29 @@ Select the **Sites** tab in the left-navigation menu to search for a Site, migra
 
 ### Create a New Site
 
-You can create a new Site from the new Dashboard homepage or from the **Site** tab. 
+You can create a new Site from the new Dashboard homepage, by clicking **Sites** on the left navigation. 
 
-To create a Site, click **Create New Site**. You will be directed to the Classic Dashboard for Site creation. Click **Yes, Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
+1. Click **+ Create New Site**. 
+
+1. Choose what type of CMS Site you want to create and you will be brought to the **Create Your Pantheon Site** page:
+
+  ![Create Your Pantheon Site page](../images/dashboard/create-pantheon-site.png)
+
+1. Name the site.
+
+  <Alert title="Note" type="info">
+
+  The site name will be prefixed to all [Platform URLs](/domains/#platform-domains), which are automatically configured as subdomains of `pantheonsite.io`.
+
+  This name cannot be changed once set.
+
+  </Alert>
+
+1. Optionally, if you have access to [organizations](/organization-dashboard/#new-sites), choose an organization to affiliate the site with.
+
+1. Choose a [Region](/regions) for the Site.
+
+1. Click **Continue** and wait while the platform provisions the site with the start state you selected > Click **Visit your Pantheon Site Dashboard** once complete.
 
 ## Utility Navigation
 
