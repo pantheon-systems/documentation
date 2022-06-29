@@ -85,7 +85,7 @@ Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.or
 
 IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php`, via a Drupal module, or WordPress plugin.
 
-While the CMS will block the listed IPs from accessing the content directly, blocked IPs may still be able to access content served by CDN-level cached responses.
+While the CMS will block the listed IPs from accessing the content directly, blocked IPs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
 
 #### Use a PHP Snippet to Block IPs
 
