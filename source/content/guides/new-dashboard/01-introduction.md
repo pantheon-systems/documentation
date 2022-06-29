@@ -77,7 +77,7 @@ You can create a new Site from the new Dashboard homepage, by clicking **Sites**
 
 ## Utility Navigation
 
-Your user icon, Gravatar, or <i className="fa fa-user-circle"></i> by default, gives you quick access to your User Settings and information about who you're logged in as.
+Your user icon, or Gravatar <i className="fa fa-user-circle"></i>, gives you quick access to your User Settings and information about who you're logged in as.
 
 ### Home
 
