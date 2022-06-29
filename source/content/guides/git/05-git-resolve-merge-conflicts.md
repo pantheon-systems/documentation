@@ -14,9 +14,9 @@ anchorid: git-resolve-merge-conflicts
 
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
-> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
->
-> \- [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
+When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
+
+[Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
 
 ## Resolve Conflicts When Updating Core
 
@@ -102,7 +102,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
   git status
   On branch master
   Changes to be committed:
-  (use "git reset HEAD ..." to unstage)
+  use "git reset HEAD ..." to unstage
   new file: README.txt
   ```
 
@@ -133,7 +133,7 @@ To resolve:
 
 1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `<<<<<<< HEAD` at the top, and `>>>>>>> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
 
-  ![An example of Visual Studio Code highlighting a merge conflict](../images/vscode-merge-conflict.png)
+  ![An example of Visual Studio Code highlighting a merge conflict](../../../images/vscode-merge-conflict.png)
 
 1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates. Ensure you remove all the delineator notes from the file.
 
@@ -151,11 +151,11 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 
 1. Set the Dev environment to Git mode:
 
-  ![Git Connection Mode](../images/dashboard/connection-mode-git.png)
+  ![Git Connection Mode](../../../images/dashboard/connection-mode-git.png)
 
 1. Clone the repository to your local computer:
 
-  ![Git Clone](../images/dashboard/git-string.png)
+  ![Git Clone](../../../images/dashboard/git-string.png)
 
 1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
 
