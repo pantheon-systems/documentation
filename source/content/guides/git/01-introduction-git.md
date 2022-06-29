@@ -2,7 +2,6 @@
 title: Git on Pantheon Introduction
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename
 categories: [develop]
 tags: [git, cli, workflow]
 searchboost: 50
