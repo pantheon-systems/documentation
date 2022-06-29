@@ -981,7 +981,7 @@ export ENV=dev
 
   <Alert title="Note"  type="info" >
 
-  You must remove the `/wp-content/wflogs` file, if it already exists, before you create the symlinks listed below.
+  You must remove the `/wp-content/wflogs` directory, if it already exists, before you create the symlinks listed below.
 
   </Alert>
 
