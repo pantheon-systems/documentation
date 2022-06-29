@@ -508,7 +508,7 @@
         - text: 'Securely Working with phpinfo'
           url: '/phpinfo'
         - text: 'Platform Resources for Legacy Plans'
-          url: '/platform-resources'
+          url: '/site-plans-faq'
         - text: 'Timeouts on Pantheon'
           url: '/timeouts'
         - text: 'Cron for WordPress'
