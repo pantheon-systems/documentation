@@ -4,12 +4,11 @@ description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 categories: [develop]
 tags: [git, cli, workflow]
-searchboost: 50
 type: video
 layout: guide
 showtoc: true
-permalink: docs/guides/introduction-git
-anchorid: introduction-git
+permalink: docs/guides/git
+anchorid: git
 ---
 
 <Youtube src="LG7_wWQHtS4" title="Git" />

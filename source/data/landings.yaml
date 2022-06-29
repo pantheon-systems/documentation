@@ -1054,6 +1054,8 @@
           url: '/guides/fastly-pantheon'
         - text: 'Custom Upstream Guide'
           url: '/guides/custom-upstream'
+        - text: 'Git on Pantheon Guide'
+          url: '/guides/git'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
