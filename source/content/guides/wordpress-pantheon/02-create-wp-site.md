@@ -86,8 +86,8 @@ This section is optional, and is only intended for customers who would like to c
 
 ## See Also
 
-- [Getting Started with Git](https://pantheon.io/docs/git)
+- [Getting Started with Git](/guides/git/)
 
-- [Undo Git Commits on Pantheon](https://pantheon.io/docs/undo-commits)
+- [Undo Git Commits on Pantheon](/guides/git/undo-commits)
 
-- [Git Faqs](https://pantheon.io/docs/git-faq)
+- [Git Faqs](/guides/git/faq-git)

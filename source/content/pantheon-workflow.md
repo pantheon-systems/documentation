@@ -49,7 +49,7 @@ For more detailed information on developing directly in SFTP mode, please see th
 
 ### Combine Code from Dev and Content from Live in Test
 
-When you're ready to test a new set of changes, deploy your code from Dev to Test. At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, [each deployment generates a Git tag](/git-faq#what-are-the-git-tags).
+When you're ready to test a new set of changes, deploy your code from Dev to Test. At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, [each deployment generates a Git tag](/guides/git/faq-git#what-are-the-git-tags).
 
 <Alert title="Note" type="info">
 

@@ -4,7 +4,10 @@ description: Answers to common questions about Git, Drupal, WordPress and Panthe
 categories: [develop]
 tags: [git, iterate, local, workflow]
 contributors: [mrfelton, alexfornuto]
-reviewed: "2020-03-16"
+layout: guide
+showtoc: true
+permalink: docs/guides/git/faq-git
+anchorid: faq-git
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
@@ -14,7 +17,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 </Enablement>
 
-This doc answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts)
+This doc answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)
 
 ## Does Pantheon support Git submodules?
 
@@ -50,7 +53,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ## How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/undo-commits).
+See [Undo Git commits like overwriting Drupal core](/guides/git/undo-commits).
 
 ## How do I apply a patch from Drupal.org on Pantheon?
 
@@ -154,7 +157,7 @@ No. Git is a powerful and useful tool, but it does take some practice to effecti
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
-As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts) for more information.
+As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts) for more information.
 
 ## How do I delete a remote branch?
 
