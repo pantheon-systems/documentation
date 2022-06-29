@@ -1,13 +1,16 @@
 ---
-title: Git
+title: Git on Pantheon Introduction
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename
 categories: [develop]
 tags: [git, cli, workflow]
-layout: video
 searchboost: 50
 type: video
+layout: guide
+showtoc: true
+permalink: docs/guides/introduction-git
+anchorid: introduction-git
 ---
 
 <Youtube src="LG7_wWQHtS4" title="Git" />

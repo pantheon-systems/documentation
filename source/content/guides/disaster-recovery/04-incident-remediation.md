@@ -64,7 +64,7 @@ As part of the Managed Updates deployment process, a Multidev will be cloned fro
 The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](https://pantheon.io/docs/terminus/commands/backup-restore) documentation for more information. 
 
 #### Reverting a bad commit to Pantheon
-If a bad commit has been deployed to your Pantheon site, you can roll back the commit using Git. The process depends on the nature of the change and whether it involves core updates or upstream updates, etc. Refer to the [Undo Commits](https://pantheon.io/docs/undo-commits) documentation for more information. 
+If a bad commit has been deployed to your Pantheon site, you can roll back the commit using Git. The process depends on the nature of the change and whether it involves core updates or upstream updates, etc. Refer to the [Undo Commits](/guides/git/undo-commits) documentation for more information. 
 
 #### Database/filesystem issues
 The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). Refer to the [Database Workflow](https://pantheon.io/docs/database-workflow) docuemntation for more information. 

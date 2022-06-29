@@ -3,6 +3,10 @@ title: Undo Git Commits
 description: Learn how to revert a Git commit before and after pushing to Pantheon.
 categories: [develop]
 tags: [cli, code, git, local, workflow]
+layout: guide
+showtoc: true
+permalink: docs/guides/git/undo-commits
+anchorid: undo-commits
 ---
 
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you](/core-updates) but it is still possible to overwrite core on a local environment and push to your Pantheon Dev environment. Fortunately, this is reversible, but will require a little work.

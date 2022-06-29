@@ -14,7 +14,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 </Enablement>
 
-This doc answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts)
+This doc answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/guides/git/git-resolve-merge-conflicts)
 
 ## Does Pantheon support Git submodules?
 
@@ -50,7 +50,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ## How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/undo-commits).
+See [Undo Git commits like overwriting Drupal core](/guides/git/undo-commits).
 
 ## How do I apply a patch from Drupal.org on Pantheon?
 
