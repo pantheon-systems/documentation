@@ -42,4 +42,4 @@ You will be in the Drupal with Composer upstream after you apply the upstream up
 
 ## See Also
 
-- [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts)
+- [Resolve Git Merge Conflicts](/guides/git/git-resolve-merge-conflicts)

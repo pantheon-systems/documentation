@@ -80,7 +80,7 @@ After you complete the upstream change, you need to apply the available upstream
 
 Conflicts can occur when a modified file in your site's codebase does not align with changes made to the same file in the site's upstream.
 
-If you receive an error that you have conflicts while updating upstream files, resolve using the `-Xtheirs` flag. This will automatically resolve the conflict with a preference for upstream changes. Alternatively, you can choose to [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
+If you receive an error that you have conflicts while updating upstream files, resolve using the `-Xtheirs` flag. This will automatically resolve the conflict with a preference for upstream changes. Alternatively, you can choose to [manually resolve conflicts](/guides/git/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
 
 This is safe to run if you don't have your own changes in any of the conflicting files, such as problems with `.gitignore`.
 

@@ -157,7 +157,7 @@ No. Git is a powerful and useful tool, but it does take some practice to effecti
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
-As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts) for more information.
+As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/guides/git/git-resolve-merge-conflicts) for more information.
 
 ## How do I delete a remote branch?
 
