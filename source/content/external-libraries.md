@@ -24,7 +24,7 @@ Download and enable the [Print module](https://www.drupal.org/project/print) fro
 terminus drush <site>.<env> -- en print --y
 ```
 
-Create a symlink to the hosted library and your site's `libraries` directory [via Git](/git/#clone-your-site-codebase):
+Create a symlink to the hosted library and your site's `libraries` directory [via Git](/guides/git/git-config#clone-your-site-codebase):
 
 ```bash{promptUser: user}
 mkdir -p sites/all/libraries/wkhtmltopdf

@@ -14,7 +14,7 @@ Before you can migrate a WordPress Site Network, you must be a contract customer
 
 ## Requirements
 
-* [Download](https://git-scm.com/downloads) and install [Git](/git)
+* [Download](https://git-scm.com/downloads) and install [Git](/guides/git/git-config)
 * [Rsync or SFTP Client](/rsync-and-sftp)
 * [MySQL Client](/mysql-access)
 
@@ -34,7 +34,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
   ```
 
 1. From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/git).
-1. Copy the SSH URL for the site repository, found in the [clone command](/git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+1. Copy the SSH URL for the site repository, found in the [clone command](/guides/git/git-config#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
   ```bash{promptUser: user}
   ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git

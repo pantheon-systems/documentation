@@ -93,7 +93,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 In the commands below, replace `<site>` with your Pantheon site name.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info <site>.dev --fields='Git Command' --format=string`
         cd <site>

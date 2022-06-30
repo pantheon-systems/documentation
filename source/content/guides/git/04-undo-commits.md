@@ -19,7 +19,7 @@ Using `git revert` to revert an upstream update will result in the dashboard bei
 
 ## Before You Begin
 
-The following assumes you have set up a [local development environment](/local-development) with [Git version control](/git).
+The following assumes you have set up a [local development environment](/local-development) with [Git version control](/guides/git/git-config).
 
 Before you start making changes to your Git repository, be sure to have a working clone as a backup. If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. Review the sections below carefully as instructions for reverting commits are different depending on the environment (Dev, Test, Live).
 

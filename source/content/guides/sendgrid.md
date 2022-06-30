@@ -67,7 +67,7 @@ export ENV=dev
 
 1. Install [Composer](https://getcomposer.org) and [Drush](https://docs.drush.org/en/7.x/install/), then install and authenticate [Terminus](/terminus/install).
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
 
   ```bash{promptUser: user}
   cd $SITE

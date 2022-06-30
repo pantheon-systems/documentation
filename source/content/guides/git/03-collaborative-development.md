@@ -6,8 +6,8 @@ tags: [collaborate, git, local, webops, workflow]
 contributors: [bmackinney, jessifischer, mrfelton]
 layout: guide
 showtoc: true
-permalink: docs/guides/git/git-config
-anchorid: git-config
+permalink: docs/guides/git/collaborative-development
+anchorid: collaborative-development
 
 ---
 Pantheon provides Git repositories for all sites on the platform. Some teams may need an external repository hosted by a provider, like GitHub or Bitbucket, to function as the canonical version of the site's codebase. This guide shows you how to get started using Pantheon with an external respository. The example below uses a GitHub account. However, the steps should be similar for any provider.

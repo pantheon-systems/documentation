@@ -5,8 +5,8 @@ categories: [develop]
 tags: [code, git, local, webops, workflow]
 layout: guide
 showtoc: true
-permalink: docs/guides/fastly-pantheon/connect-fastly
-anchorid: connect-fastly
+permalink: docs/guides/git/git-config
+anchorid: git-config
 ---
 Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. If you like to [develop locally](/local-development), it's a good way to streamline your website operations: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 

@@ -133,7 +133,7 @@ Be sure that you have:
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 ```

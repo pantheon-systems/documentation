@@ -71,4 +71,4 @@ Site names must be unique across all Pantheon sites, including [frozen](/platfor
 ## Next Steps
 
  - [Developing Directly with SFTP](/sftp)
- - [Starting with Git](/git)
+ - [Starting with Git](/guides/git/git-config)

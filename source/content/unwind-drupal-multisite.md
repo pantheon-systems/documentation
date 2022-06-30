@@ -45,7 +45,7 @@ This method uses a [Custom Upstream](/guides/custom-upstream), a feature availab
 
 Then for each site:
 
-4. [Git clone the repo](/git/#clone-your-site-codebase) locally.
+4. [Git clone the repo](/guides/git/git-config#clone-your-site-codebase) locally.
 
 5. If there are customizations on the individual sites that are not incorporated into the upstream repository, commit those changes from your archives into the local repo.
 
