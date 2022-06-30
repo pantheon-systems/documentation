@@ -1,38 +1,40 @@
-This section describes the causes of, and solution to the error messages that are displayed on the Site Dashboard if the migration fails to complete.
+This section provides information on causes and solutions to error messages that display in the Site Dashboard if a migration fails to complete.
 
-If your code, database, and files have completed migrating, but your site is not working as you'd expect, please review [Pantheon Platform Considerations](/platform-considerations). For example, if your site uses [PHP short tags](/platform-considerations/#php-short-tags), you'll need to convert them to standard PHP tags.
+First troubleshooting steps:
 
-Next, check [log files](/logs) to help identify and fix errors. The core is upgraded as part of migration, so you may have additional work to complete the upgrade.
+1. Review [Pantheon Platform Considerations](/platform-considerations) if your code, database, and files have completed migrating, but your site is not working as you'd expect. For example, if your site uses [PHP short tags](/platform-considerations/#php-short-tags), you'll need to convert them to standard PHP tags.
 
-### General Issues
+1. Check the [log files](/logs) to help identify and fix errors. The core is upgraded as part of the migration, so you may have additional work to complete the upgrade.
 
-#### Could not import database, unable to locate a database dump
+## General Issues
+
+### Could not import database, unable to locate a database dump
 
 **Cause:** The migration tool could not locate a MySQL database dump within the archive.
 
 **Solution:** Ensure that the archive contains a valid MySQL database dump.
 
-#### Multiple database dumps found within the import archive
+### Multiple database dumps found within the import archive
 
 **Cause:** The migration tool detected multiple MySQL database dumps within the archive.
 
 **Solution:** Ensure that a single MySQL dump is included within the archive.
 
-#### Multiple code roots found within the import archive
+### Multiple code roots found within the import archive
 
 **Cause:**  The migration tool detected more than one potential location for the code root in the archive.
 
 **Solution:** Ensure that a single code root is included within the archive.
 
-#### Destination Site Not Found Error
+### Destination Site Not Found Error
 
-**Cause**: If you are logged in with one identity and re-authenticate a different account, or use Single Sign-On with with Google, the site created will be associated with one account and the machine token with another, resulting in the this error.
+**Cause**: This error occurs when you are logged in with one identity and re-authenticate with a different account or use Single Sign-On with Google. The site created will be associated with one account and the machine token with another.
 
 **Solution**: Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
-#### Maximum Index Size
+### Maximum Index Size
 
-**Cause**:  From the [MySQL reference manual](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html):
+**Cause**: The [MySQL reference manual](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html) explains this error as:
 
 > InnoDB has a maximum index length of 767 bytes for tables that use COMPACT or REDUNDANT row format, so for utf8mb3 or utf8mb4 columns, you can index a maximum of 255 or 191 characters, respectively. If you currently have utf8mb3 columns with indexes longer than 191 characters, you must index a smaller number of characters.
 
