@@ -13,6 +13,6 @@ editpath: migrate/manual-d8-composer-to-d8/09-database.md
 reviewed: "2021-06-22"
 ---
 
-Now that you've set up your Pantheon Dev environment, you need to import your database by creating a .sql dump file.
+Now that you've configured your Pantheon Dev environment, you need to import your database by creating a `.sql` dump file.
 
 <Partial file="migrate/drupal-database.md" />
