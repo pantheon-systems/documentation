@@ -54,7 +54,7 @@ Begin by creating a local copy of your [codebase](/code#pantheon-git-repository 
 
 1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab, at the top of the **<span class="glyphicons glyphicons-embed-close"></span> Code** panel, click on **Clone with Git**:
 
-  ![Copy Git Clone Command](../images/dashboard/git-string.png)
+  ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
 1. Copy the `git clone` command and paste it into your terminal. Git will create a directory as part of the clone, so you don't need to create one:
 
@@ -170,7 +170,7 @@ There is a handy list of Git commands (along with a lot of other documentation) 
 
 When the push command completes, Pantheon instantly deploys the changes to your development server:
 
-![Image of the Dev tab syncing with a recently pushed git commit](../images/dashboard/sync-code.png)
+![Image of the Dev tab syncing with a recently pushed git commit](../../../images/dashboard/sync-code.png)
 
 Back to your site's **<span class="glyphicons glyphicons-wrench"></span> Dev** tab in Pantheon, click **Visit Development Site**, to see the changes made by your new code.
 
@@ -190,7 +190,7 @@ To configure this URL in SourceTree simply remove the `git clone` and the traili
 - Destination Path: The local path where you want to clone the repository.
 - Name: Your site name.
 
-![SourceTree git Configuration](../images/sourcetree-config.png)
+![SourceTree git Configuration](../../../images/sourcetree-config.png)
 
 Alternatively, you can simply clone the repository using `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 

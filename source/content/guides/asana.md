@@ -91,7 +91,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 ## Configure Quicksilver Integration
 Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Asana to the [private path](/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
         cd $SITE

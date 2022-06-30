@@ -17,7 +17,7 @@ If you do not already have one, [create a new WordPress site](/guides/quickstart
 
 ## Clone the Code Repository
 
-Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection-information) or clone your site codebase with [Git](/git/#clone-your-site-codebase).
+Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection-information) or clone your site codebase with [Git](/guides/git/git-config#clone-your-site-codebase).
 
 ## Create a PhpStorm Project
 

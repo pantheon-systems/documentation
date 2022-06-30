@@ -130,7 +130,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     </Alert>
 
-6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
         git add .
         git commit -m "Create private/jira_integration.php and configure platform hooks"

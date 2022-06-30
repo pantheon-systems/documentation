@@ -61,7 +61,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
  terminus connection:set <site>.<env> git
  ```
 
-1. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
+1. [Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), if you haven't already.
 1. Create a `pantheon.yml` file if it doesn't already exist.
 1. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
 
@@ -122,7 +122,7 @@ Your directory structure should look like this afterwards:
 
 The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-[Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
+[Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), then execute the following from the project root directory:
 
 ```bash
 mkdir web

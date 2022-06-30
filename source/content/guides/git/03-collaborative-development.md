@@ -57,9 +57,9 @@ This guide will show you the basics for collaborating with others if your site:
 
 ### Create a Repository on GitHub
 
-Configure your GitHub respository to match the settings in the image below.
+Configure your GitHub repository to match the settings in the image below.
 
- ![Create a Repository on GitHub](../../images/create-git-reponew.png)
+ ![Create a Repository on GitHub](../../../images/create-git-reponew.png)
 
 ### Add the GitHub Repository as a Remote
 
@@ -69,7 +69,7 @@ To add the GithHub repository as a remote, replace the word `origin` with the na
 
 The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
 
-  ![Push an existing repo to GitHub](../../images/push-existing-reponew.png)
+  ![Push an existing repo to GitHub](../../../images/push-existing-reponew.png)
 
 In the example below, the remote is named `github`.
 
@@ -107,7 +107,7 @@ In your terminal:
 
  The repository on GitHub now has all of the same code as the existing site.
 
- ![GitHub repo same as site](../../images/github-repo-origin-sameas-remotenew.png)
+ ![GitHub repo same as site](../../../images/github-repo-origin-sameas-remotenew.png)
 
 ## Migrate Existing Site Repositories to Pantheon
 
@@ -186,7 +186,7 @@ In this instance, you'll create the `settings.php` file.
 
  This push to Pantheon failed, because the Development environment was in SFTP mode.
 
- ![Connection Mode set to SFTP](../../images/dashboard/connection-mode-sftp.png)
+ ![Connection Mode set to SFTP](../../../images/dashboard/connection-mode-sftp.png)
 
 1. Switch the connection mode to Git by clicking on the toggle, or enter code below in the command line:
 
@@ -194,7 +194,7 @@ In this instance, you'll create the `settings.php` file.
   terminus connection:set <site>.<env> git
   ```
 
- ![Connection Mode set to Git](../../images/dashboard/connection-mode-git.png)
+ ![Connection Mode set to Git](../../../images/dashboard/connection-mode-git.png)
 
 1. Push to Pantheon:
 
@@ -209,7 +209,7 @@ In this instance, you'll create the `settings.php` file.
     fe267cb..b802550  master -> master
   ```
 
- ![Commit deployed to Pantheon Dashboard](../../images/dashboard/commit-deployed-pantheon-dashboard.png)
+ ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/commit-deployed-pantheon-dashboard.png)
 
  The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
@@ -292,13 +292,13 @@ In this instance, you'll create the `settings.php` file.
   terminus multidev:create <site>.dev <to_env>
   ```
 
- ![New environment named configs](../../images/dashboard/new-env-configs.png)
+ ![New environment named configs](../../../images/dashboard/new-env-configs.png)
 
  The module will now be available to activate and test on Pantheon for your colleagues to experience. 
 
 1. Add a link to the module's configuration page on the Multidev environment in your GitHub pull request.
 
- ![New environment configuration admin url](../../images/configs-admin-url-configs-env.png)
+ ![New environment configuration admin url](../../../images/configs-admin-url-configs-env.png)
 
 ### Create Pull Request
 
@@ -308,11 +308,11 @@ In this instance, you'll create the `settings.php` file.
  - @-mentions of team members
  - A list of tasks for team members to perform before merging
 
- ![Pull request for configs branch](../../images/configuration-pull-request-1.png)
+ ![Pull request for configs branch](../../../images/configuration-pull-request-1.png)
 
  Timani completed the tasks, we discussed a bit in person, and he merged the PR.
 
- ![Merged pull request for configs branch](../../images/merged-pull-request-1.png)
+ ![Merged pull request for configs branch](../../../images/merged-pull-request-1.png)
 
 ## Deploy to Pantheon
 
@@ -324,7 +324,7 @@ Checkout the master branch locally, then pull from github master, and then push 
   git push pantheon master
   ```
 
- ![Merged PR commit in the Pantheon dashboard](../../images/dashboard/merged-pull-request-1-dashboard.png)
+ ![Merged PR commit in the Pantheon dashboard](../../../images/dashboard/merged-pull-request-1-dashboard.png)
 
 ## Optional Tools to Optimize Workflows
 

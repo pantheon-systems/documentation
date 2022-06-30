@@ -142,7 +142,7 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Code
 
-1. Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
+1. Test your changes, then [commit locally and push to Pantheon](/guides/git/git-config#push-changes-to-pantheon):
 
   ```bash{promptUser: user}
   git commit -am "enter a summary of the changes"
