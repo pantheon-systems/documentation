@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site From Acquia to Pantheon Using Guided Migration
 subtitle: Migrate
-description: Learn how to use the acquia migration path.
+description: Learn how to use the Acquia migration path.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
