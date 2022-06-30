@@ -31,5 +31,5 @@ For instructions on this method, see [Manually Migrate Sites to Pantheon](/migra
 
 ## Professional Services
 
-Professional Services: If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
+Pantheon's Professional Services team can migrate your site for you. Learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
 
