@@ -22,7 +22,7 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ### Set Drupal Core Version
 
-The previous step created a site using Drupal version 9.  To remain on Drupal 8, set the core version as follows: 
+The previous step created a site using Drupal version 9. To remain on Drupal 8, set the core version as follows: 
 
 <Partial file="drupal-9/core-version-remain-on-d8.md" />
 
