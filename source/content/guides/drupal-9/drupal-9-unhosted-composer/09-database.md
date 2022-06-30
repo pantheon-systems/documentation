@@ -13,6 +13,6 @@ editpath: drupal-9/drupal-9-unhosted-composer/09-database.md
 reviewed: "2021-05-09"
 ---
 
-Now that you've set up your Pantheon Dev environment, you need to import your database by creating an SQL dump file.
+Now that you've set up your Pantheon Dev environment, you need to import your database by creating a `.sql` dump file.
 
 <Partial file="migrate/drupal-database.md" />
