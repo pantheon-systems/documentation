@@ -6,8 +6,8 @@ tags: [git, local, webops]
 contributors: [alexfornuto]
 layout: guide
 showtoc: true
-permalink: docs/guides/git/git-resolve-merge-conflicts
-anchorid: git- resolve-merge-conflicts
+permalink: docs/guides/git/resolve-merge-conflicts
+anchorid: resolve-merge-conflicts
 ---
 
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
