@@ -12,8 +12,8 @@ editpath: migrate/acquia/05-migrate.md
 reviewed: "2021-06-15"
 ---
 
-Pantheon provides a acquia path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
+Pantheon provides an Acquia path for migrating existing sites to the platform. This process begins by clicking the **Migrate Existing Site** button on the User Dashboard.
 
 <Partial file="migrate/migrate-drupal.md" />
 
-If the migration is not successful, review [Troubleshooting](troubleshooting), or [contact Support](/guides/support/contact-support/) and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
+Review [Troubleshooting](troubleshooting) or [contact Support](/guides/support/contact-support/) if the migration is unsuccessful. Include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
