@@ -26,13 +26,14 @@ This method uses the **Migrate Existing Site** button on the User Dashboard, and
 
 Use this process when any of the following apply:
 
+
 <Partial file="migrate/manual-when-all.md" />
 <Partial file="migrate/manual-when-drupal.md" />
 <Partial file="migrate/manual-when-wordpress.md" />
 
-For instructions on this method, see [Manually Migrate Sites to Pantheon](/migrate-manual).
+Review [Manually Migrate Sites to Pantheon](/migrate-manual) for instructions on this method.
 
 ## Professional Services
 
-Professional Services: If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
+Pantheon's Professional Services team can migrate your site for you. Learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
 
