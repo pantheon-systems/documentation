@@ -34,12 +34,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
 Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
-  ```bash{promptUser:user}
-  composer require --no-update drupal/core-recommended:^8.9
-  composer require --dev drupal/core-dev:^8.9
-  git add composer.*
-  git commit -m "Remain on Drupal 8"
-  ```
+<Partial file="drupal-9/core-version-remain-on-d8.md" />
 
 ### Add Upgrade Status Module
 

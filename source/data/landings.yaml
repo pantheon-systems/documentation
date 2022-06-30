@@ -94,6 +94,8 @@
               url: '/migrate-manual'
             - text: 'Migrate to Pantheon: WordPress Site Networks'
               url: '/migrate-wordpress-site-networks'
+            - text: 'Migrate a Composer-managed Drupal 8 Site to Pantheon'
+              url: '/guides/manual-d8-composer-to-d8'
         - title: 'Website Migration Service'
           links:
             - text: 'Contract Pantheon Professional Services'

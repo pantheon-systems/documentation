@@ -1,17 +1,17 @@
 ---
-title: Migrate a Composer Managed Drupal 9 Site from Another Platform
+title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
 subtitle: Add Contrib and Custom Code
-description: 
-cms: "Drupal 9"
+description: Learn how to add Contrib and custom code.
+cms: "Drupal 8"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-unhosted-composer/contrib-custom
+permalink: docs/guides/manual-d8-composer-to-d8/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9/drupal-9-unhosted-composer/05-contrib-custom.md
-reviewed: "2021-05-09"
+editpath: migrate/manual-d8-composer-to-d8/05-contrib-custom.md
+reviewed: "2021-06-22"
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
