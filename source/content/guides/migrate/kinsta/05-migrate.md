@@ -16,4 +16,4 @@ Pantheon provides a guided path for migrating existing sites to the platform. Th
 
 <Partial file="migrate/migrate-all.md" />
 
-Review [Troubleshooting](troubleshooting) or [contact Support](/guides/support/contact-support/) if the migration is unsuccessful. Include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
+Review [Troubleshooting](/guides/kinsta/troubleshooting) or [contact Support](/guides/support/contact-support/) if the migration is unsuccessful. Include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
