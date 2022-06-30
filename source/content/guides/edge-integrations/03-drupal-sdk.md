@@ -116,6 +116,8 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 
 1. If you don’t have a VPN client, navigate to the **Segments Sets Admin** page at `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
 
+![Smart Content Preview](../../../images/guides/edge-integrations/ei-drupal-smart-content-preview.png)
+
 The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview; anonymous users will not have access.
 
 ### Configure Interest via Taxonomy
