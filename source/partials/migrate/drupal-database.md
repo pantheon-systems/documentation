@@ -8,17 +8,20 @@ The **Database** import requires a single `.sql` dump that contains the site's c
   ```
 
    - Replace `USERNAME` with a MySQL user with permissions to access your site's database.
-   - Replace `PASSWORD` with the MySQL user's password. You can also move `-p` to the end of the command and leave it blank, to be prompted for your password. This prevents your MySQL password from being visible on your terminal.
+
+   - Replace `PASSWORD` with the MySQL user's password. You can also move `-p` to the end of the command to leave it blank if you want to be prompted for your password. This prevents your MySQL password from being visible on your terminal.
+
    - Replace `DATABASE` with the name of your site database within MySQL.
+
    - `~/db.sql` defines the output target to a file named `db.sql` in your user's home directory. Adjust to match your desired location.
 
-  The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
+  The resulting file will be named `db.sql.gz`. You can use the Pantheon Dashboard or a MySQL client to add your site's database.
 
 1. Navigate to the Site Dashboard and select the **<span class="fa fa-wrench"></span> Dev** environment.
 
 1. Select **<span class="fa fa-server"></span> Database / Files**.
 
-1. Click **Import** and add your archive accordingly (based on file size):
+1. Click **Import** and add your archive (based on file size):
 
     <TabList>
 
@@ -58,7 +61,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
     1. Click **Connection Info** and copy the database connection string.
 
-       Your command will resemble the following structure:
+       Your command will look similar to the example below:
 
        ```bash{promptUser: user}
        mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
@@ -70,7 +73,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
        - This imports the `.sql` file to the **<span class="fa fa-wrench"></span> Dev** environment.
 
-       - Your command will resemble the following structure:
+       - Your command will look similar to the example below:
 
          ```bash{promptUser: user}
          mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql

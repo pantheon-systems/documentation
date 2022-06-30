@@ -1,7 +1,7 @@
 ---
 title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
 subtitle: Deploy
-description: 
+description: Learn how to deploy your site.
 cms: "Drupal 8"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]

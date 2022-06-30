@@ -1,6 +1,8 @@
-If you have modules and themes that you would like to move to your new site, navigate to the Pantheon site directory and:
+Follow the steps below if you want to move modules and themes to your new site.
 
-- Copy modules from the local directory of the old platform site:
+1. Navigate to the Pantheon site directory.
+
+1. Copy modules from the local directory of the old platform site:
 
     ```bash{promptUser: user}
     cp -R ../FORMER-PLATFORM/modules/custom web/modules
@@ -8,7 +10,7 @@ If you have modules and themes that you would like to move to your new site, nav
     git commit -m "Copy custom modules"
     ```
 
-- Copy themes from the local directory of the old platform site:
+1. Copy themes from the local directory of the old platform site:
 
     ```bash{promptUser:user}
     cp -R ../FORMER-PLATFORM/themes/custom web/themes
@@ -16,4 +18,4 @@ If you have modules and themes that you would like to move to your new site, nav
     git commit -m "Copy custom themes"
     ```
 
-- Copy any other custom code you need from your old platform site.
+1. Copy any other custom code you need from your old platform site.

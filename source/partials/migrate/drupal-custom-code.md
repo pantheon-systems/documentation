@@ -4,13 +4,19 @@ Complete the steps below if you have custom code that you would like to move to 
 
 1. Update the new `.gitignore` file to keep it aligned with the current site to avoid potential issues in the future.
 
-If you plan to install libraries using Composer via a `drupal-library` project, do not add anything to `web/libraries` and use Composer to install the libraries instead.
+### Install Libraries with drupal-library
 
-If you commit libraries directly to `web/libraries`, then add each directory to be allowed (not ignored) by `.gitignore`. For example, to commit a `favorite-library` directory, add it and each directory to `.gitignore` before you use `git add`:
+Do not add anything to `web/libraries` if you want to install libraries using Composer via a `drupal-library` project. Use must use Composer to install your libraries.
 
-```none:title=.gitignore
-!/web/libraries/favorite-library
-!/web/libraries/other-favorite-library
-```
+1. Add each directory to be allowed (not ignored) by `.gitignore` if you commit libraries directly to `web/libraries`.
 
-If you do not plan on adding any libraries with Composer in the future, you can remove the `web/libraries` line from the `.gitignore` file. This might lead to builds failing in the future if at some point you or another developer use Composer to add a library.
+    - For example, to commit a `favorite-library` directory, add it and each directory to `.gitignore`. 
+
+1. Run the  `git add` command:
+
+    ```none:title=.gitignore
+    !/web/libraries/favorite-library
+    !/web/libraries/other-favorite-library
+    ```
+
+You can remove the `web/libraries` line from the `.gitignore` file if you do not plan on adding any libraries with Composer in the future. This might lead to builds failing in the future if you or another developer use Composer to add a library later on.

@@ -1,7 +1,7 @@
 ---
 title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
 subtitle: Troubleshooting
-description:  Troubleshoot common issues when migrating.
+description:  Learn how to troubleshoot common issues when migrating.
 cms: "Drupal 8"
 categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
