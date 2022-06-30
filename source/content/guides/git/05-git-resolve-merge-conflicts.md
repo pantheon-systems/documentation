@@ -6,8 +6,8 @@ tags: [git, local, webops]
 contributors: [alexfornuto]
 layout: guide
 showtoc: true
-permalink: docs/guides/git/resolve-merge-conflicts
-anchorid: resolve-merge-conflicts
+permalink: docs/guides/git/git-resolve-merge-conflicts
+anchorid: git- resolve-merge-conflicts
 ---
 
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
@@ -131,7 +131,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 To resolve:
 
-1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `<<<<<<< HEAD` at the top, and `>>>>>>> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
+1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
 
   ![An example of Visual Studio Code highlighting a merge conflict](../images/vscode-merge-conflict.png)
 
