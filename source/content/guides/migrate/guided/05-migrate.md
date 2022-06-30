@@ -12,7 +12,7 @@ editpath: migrate/guided/05-migrate.md
 reviewed: "2021-06-15"
 ---
 
-Pantheon provides a guided path for migrating existing sites to the platform, which begins by clicking **Migrate Existing Site** in the User Dashboard.
+Pantheon provides a guided path for migrating existing sites to the platform. This process begins by clicking **Migrate Existing Site** in the User Dashboard.
 
 <Partial file="migrate/migrate-all.md" />
 

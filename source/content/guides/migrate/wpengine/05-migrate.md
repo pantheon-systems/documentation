@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site From WP Engine to Pantheon Using Guided Migration
 subtitle: Migrate
-description: Learn how to use the wpengine migration path.
+description: Learn how to use the WP Engine migration path.
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
