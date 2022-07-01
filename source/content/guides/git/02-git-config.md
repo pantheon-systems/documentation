@@ -31,20 +31,20 @@ Download and install Git for your operating system:
 
 You must provide a name and email with which your commits will be associated before you can commit your code in Git.
 
-1. Run the following command to enter your own name and email"
+1. Run the following command to enter your own name and email.
 
-  ```bash{promptUser: user}
-  git config --global user.name "Anita Pantheon"
-  git config --global user.email anita@pantheon.io
-  ```
+    ```bash{promptUser: user}
+    git config --global user.name "Anita Pantheon"
+    git config --global user.email anita@pantheon.io
+    ```
 
-  - The `--global` option sets these values for all projects you manage with Git.
+    - The `--global` option sets these values for all projects you manage with Git.
 
 1. Run the command below to set a default editor for commit messages. Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/visual-studio-code)).
 
-  ```bash{promptUser: user}
-  git config --global core.editor nano
-  ```
+    ```bash{promptUser: user}
+    git config --global core.editor nano
+    ```
 
 ## Clone Your Site Codebase
 
@@ -54,7 +54,7 @@ Create a local copy of your [codebase](/code#pantheon-git-repository "About your
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to Git > click **Clone with Git**:
+1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to Git > click **Clone with Git**: 
 
   ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
@@ -93,30 +93,30 @@ You can now edit your site code using your [preferred](https://xkcd.com/378/ "XK
 
 1. Run the command below to find files in your local clone that Git is not tracking.
 
-  ```bash{promptUser: user}
-  git status
-  ```
+    ```bash{promptUser: user}
+    git status
+    ```
 
- - Pending changes and files to be added will be listed like this:
+    - Pending changes and files to be added will be listed like this:
 
-  ```git
-  On branch master
-  Your branch is up to date with 'origin/master'.
+    ```git
+    On branch master
+    Your branch is up to date with 'origin/master'.
 
-  Changes not staged for commit:
-    (use "git add <file>..." to update what will be committed)
-    (use "git checkout -- <file>..." to discard changes in working directory)
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
 
           modified:   index.php
           modified:   wp-admin/admin-ajax.php
 
-  Untracked files:
-    (use "git add <file>..." to include in what will be committed)
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
 
           superdev.php
 
-  no changes added to commit (use "git add" and/or "git commit -a")
-  ```
+    no changes added to commit (use "git add" and/or "git commit -a")
+    ```
 
 1. Cut and paste the paths to these files when using `git add`, which **stages** the files for the next commit.
 
@@ -126,26 +126,26 @@ Sending code to Pantheon is a two-step process with Git. First, you need to comm
 
 1. Commit changed files to let Git know that they are ready to be pushed to the remote.
 
-  - Every commit includes a brief message so you can later remember why the change was made. It is worthwhile to take a moment and create an accurate commit message to help others understand your changes:
+    - Every commit includes a brief message so you can later remember why the change was made. It is worthwhile to take a moment and create an accurate commit message to help others understand your changes:
 
-  ```bash{promptUser: user}
-  git commit -am "Add a great new plugin to increase awesomesauce level of my WordPress site."
-  ```
+    ```bash{promptUser: user}
+    git commit -am "Add a great new plugin to increase awesomesauce level of my WordPress site."
+    ```
 
-  This command uses a combination of options `-am`: `-a` to include *all* files changed, and `-m` to include a commit *message*:
+    This command uses a combination of options `-am`: `-a` to include *all* files changed, and `-m` to include a commit *message*:
 
-  <Alert type="info" title="Note">
+    <Alert type="info" title="Note">
 
-  Any _new_ (untracked) files not staged with `git add` will not be included by the `-a` flag. Be sure to review what is and isn't staged with `git status` before you commit your work.
+    Any _new_ (untracked) files not staged with `git add` will not be included by the `-a` flag. Be sure to review what is and isn't staged with `git status` before you commit your work.
 
-  </Alert>
+    </Alert>
 
-  If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will abort the commit. If the commit worked you will see something like this:
+    If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will abort the commit. If the commit worked you will see something like this:
 
-  ```git
-  [master d2fce4ea] Add a great new plugin to increase awesomesauce level of my WordPress site.
-  2 files changed, 3 insertions(+)
-  ```
+    ```git
+    [master d2fce4ea] Add a great new plugin to increase awesomesauce level of my WordPress site.
+    2 files changed, 3 insertions(+)
+    ```
 
 1. Run the `push` command to send the changes of the committed files from the local to Pantheon.
 
