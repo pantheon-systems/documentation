@@ -47,7 +47,7 @@ Development versions and beta releases are not supported and should not be run o
  terminus connection:set <site>.<env> git
  ```
 
-1. From within the [local clone of your site's code repository](/git#clone-your-site-codebase):
+1. From within the [local clone of your site's code repository](/guides/git/git-config#clone-your-site-codebase):
 
  ```bash{promptUser: user}
  git checkout -b "wpcore"

@@ -32,7 +32,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 </Alert>
 
-1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/git#install-git) and [clone the code](/git#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/guides/git/git-config#install-git) and [clone the code](/guides/git/git-config#clone-your-site-codebase) locally if you have not done so already.
 
 1. From your terminal, `cd` to the site code repository:
 
