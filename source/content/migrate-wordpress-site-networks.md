@@ -33,7 +33,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
   git commit -m "initial commit"
   ```
 
-1. From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/git).
+1. From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/guides/git/git-config).
 1. Copy the SSH URL for the site repository, found in the [clone command](/guides/git/git-config#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
   ```bash{promptUser: user}

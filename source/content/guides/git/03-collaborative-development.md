@@ -337,6 +337,6 @@ Checkout the master branch locally, then pull from github master, and then push 
 
 ## Additional Resources
 
-- [Starting with Git](/git)
+- [Starting with Git](/guides/git/git-config)
 
 - [Git FAQs](/guides/git/faq-git)
