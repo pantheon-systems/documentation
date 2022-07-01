@@ -1,5 +1,6 @@
 ---
 title: Git on Pantheon Guide
+subtitle: Introduction
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 categories: [develop]

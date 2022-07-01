@@ -1,5 +1,6 @@
 ---
 title: Configure Git
+subtitle: Install and Configure Git
 description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
 categories: [develop]
 tags: [code, git, local, webops, workflow]
