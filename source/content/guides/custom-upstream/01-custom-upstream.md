@@ -78,7 +78,7 @@ The second level repository is a Custom Upstream. This is where core updates fro
 
 The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or another Git repository host. The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
 
-To create a Custom Upstream from another host like GitLab, [contact support](/support).
+To create a Custom Upstream from another host like GitLab, [contact support](/guides/support).
 
 </div>
 </div>
