@@ -32,7 +32,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    2. Select your local archive file > click **Import**.
 
-   ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+     ![Import MySQL database from file](../../images/dashboard/import-mysql-file.png)
 
    **Note**: If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
   

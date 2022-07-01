@@ -422,4 +422,4 @@ In this case, you will want to remove `ff = only` from your `.gitconfig` file an
 
 ## See Also
 
-Check our standard migration procedure for related [Frequently Asked Questions](/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/migrate#troubleshooting) tips.
+Check our standard migration procedure for related [Frequently Asked Questions](/guides/guided/faq) and [Troubleshooting](/guides/guided/troubleshooting) tips.

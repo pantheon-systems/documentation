@@ -85,6 +85,8 @@ Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.or
 
 IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php`, via a Drupal module, or WordPress plugin.
 
+While the CMS will block the listed IPs from accessing the content directly, blocked IPs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
+
 #### Use a PHP Snippet to Block IPs
 
 Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DoS attack, PHP can be added to the configuration file even while site performance is being affected.
@@ -162,13 +164,15 @@ Install and use the following WordPress plugin:
 
 ### Block User Agents in Drupal or WordPress
 
-Similar to the IP blocking methods listed above, you can also target specific unwanted user agents that you may want to block.
+Browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string, with each request they make to the server. Similar to the IP blocking methods listed above, you can also target specific unwanted UAs that you may want to block.
 
-You can do this by [adding the User Agents to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
+While the CMS will block the listed UAs from accessing the content directly, blocked UAs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
+
+To block UAs in Drupal or WordPress, [add the UAs to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
 
 The `stripos` function implements a case-insensitive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`.
 
-Remember to replace the example user agent (`UglyBot`):
+Remember to replace the example UA (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
 // Block a single bot.
