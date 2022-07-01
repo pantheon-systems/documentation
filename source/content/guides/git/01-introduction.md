@@ -19,7 +19,11 @@ Git is an open source version control system. It’s fast, secure, and reliable,
 
 Every Pantheon website comes with a preconfigured container that stores your Git repository—a fancy word for the code and its history.
 
-You can use the connection info from the dashboard and copy into your terminal if you have Git installed on your computer.  This clones the repository to your local environment and syncs your local with the remote version of the code. All changes you make are periodically committed locally and pushed to the remote.
+## Git Workflow
+
+Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. It's a good way to streamline your website operations if you like to [develop locally](/local-development). You can develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+
+You can use the connection info from the dashboard and copy into your terminal to clone the repository to your local environment. This also syncs your local with the remote version of the code. All changes you make are periodically committed locally and pushed to the remote.
 
 Git allows you to create a parallel version or branch of your current codebase and maintain the current version while you build the new one. This is useful if you're working on more than one version of the code,for example both the current and future version of your website.
 

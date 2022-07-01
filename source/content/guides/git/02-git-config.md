@@ -9,14 +9,15 @@ showtoc: true
 permalink: docs/guides/git/git-config
 anchorid: git-config
 ---
-Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. If you like to [develop locally](/local-development), it's a good way to streamline your website operations: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+
+This section provides steps for installing and configuring Git to work with your Pantheon account.
 
 ## Before You Begin
 
-This page assumes that you've:
+Confirm that you have:
 
 - [Created a site](/create-sites) on Pantheon
-- Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
+- Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account
 
 ## Install Git
 
@@ -28,32 +29,32 @@ Download and install Git for your operating system:
 
 ## Configure Git
 
-Before you can commit your code in Git, you must provide a name and email with which your commits will be associated:
+You must provide a name and email with which your commits will be associated before you can commit your code in Git.
 
-```bash{promptUser: user}
-git config --global user.name "Anita Pantheon"
-git config --global user.email anita@pantheon.io
-```
+1. Run the following command to enter your own name and email"
 
-The `--global` option sets these values for all projects you manage with Git.
+  ```bash{promptUser: user}
+  git config --global user.name "Anita Pantheon"
+  git config --global user.email anita@pantheon.io
+  ```
 
-To set a default editor for commit messages:
+  - The `--global` option sets these values for all projects you manage with Git.
 
-```bash{promptUser: user}
-git config --global core.editor nano
-```
+1. Run the command below to set a default editor for commit messages. Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/visual-studio-code)).
 
-Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/visual-studio-code)).
+  ```bash{promptUser: user}
+  git config --global core.editor nano
+  ```
 
 ## Clone Your Site Codebase
 
-Begin by creating a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") with `git clone`.
+Create a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") with `git clone`.
 
-1. In your terminal, navigate to the directory where you keep your projects.
+1. Use Terminal to navigate to the directory where you keep your projects.
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab, at the top of the **<span class="glyphicons glyphicons-embed-close"></span> Code** panel, click on **Clone with Git**:
+1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to Git > click **Clone with Git**:
 
   ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
@@ -84,46 +85,48 @@ Begin by creating a local copy of your [codebase](/code#pantheon-git-repository 
 
 You can now edit your site code using your [preferred](https://xkcd.com/378/ "XKCD comic about text editors") text editor or IDE.
 
-If you want to add a new file to your codebase, you will need to tell Git about it. Otherwise, Git will not track the file.
+1. Run the command below to add a new file to your codebase and have Git track the file. 
 
-```bash{promptUser: user}
-git add path/to/file.txt
-```
+  ```bash{promptUser: user}
+  git add path/to/file.txt
+  ```
 
-To find out if you have any files in your local clone that Git isn't yet tracking, run:
+1. Run the command below to find files in your local clone that Git is not tracking.
 
-```bash{promptUser: user}
-git status
-```
+  ```bash{promptUser: user}
+  git status
+  ```
 
-Any pending changes and files to be added will be listed like this:
+ - Pending changes and files to be added will be listed like this:
 
-```git
-On branch master
-Your branch is up to date with 'origin/master'.
+  ```git
+  On branch master
+  Your branch is up to date with 'origin/master'.
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+  Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git checkout -- <file>..." to discard changes in working directory)
 
-        modified:   index.php
-        modified:   wp-admin/admin-ajax.php
+          modified:   index.php
+          modified:   wp-admin/admin-ajax.php
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
 
-        superdev.php
+          superdev.php
 
-no changes added to commit (use "git add" and/or "git commit -a")
-```
+  no changes added to commit (use "git add" and/or "git commit -a")
+  ```
 
-You can then cut and paste the paths to these files when using `git add`, which **stages** the files for the next commit.
+1. Cut and paste the paths to these files when using `git add`, which **stages** the files for the next commit.
 
 ## Push Changes to Pantheon
 
-Sending code to Pantheon is a two step process with Git. First, you need to commit the files locally. Then you need to "push" them to the Pantheon cloud.
+Sending code to Pantheon is a two-step process with Git. First, you need to commit the files locally. Then you need to "push" them to the Pantheon cloud.
 
-1. In order to tell Git the files are ready, you need to commit them. Every commit includes a brief message so you can later remember why the change was made. It is worthwhile to take a moment and create an accurate commit message to help others understand your changes:
+1. Commit changed files to let Git know that they are ready to be pushed to the remote.
+
+  - Every commit includes a brief message so you can later remember why the change was made. It is worthwhile to take a moment and create an accurate commit message to help others understand your changes:
 
   ```bash{promptUser: user}
   git commit -am "Add a great new plugin to increase awesomesauce level of my WordPress site."
@@ -144,7 +147,7 @@ Sending code to Pantheon is a two step process with Git. First, you need to comm
   2 files changed, 3 insertions(+)
   ```
 
-1. You have committed the file locally, but you still need to send the changes to Pantheon. To do this, use the `push` command:
+1. Run the `push` command to send the changes of the committed files from the local to Pantheon.
 
   ```bash{promptUser: user}
   git push origin master
@@ -169,11 +172,12 @@ There is a handy list of Git commands (along with a lot of other documentation) 
 
 ### View the Changes on Pantheon
 
-When the push command completes, Pantheon instantly deploys the changes to your development server:
+Pantheon instantly deploys the changes to your development server when the push command completes.
 
 ![Image of the Dev tab syncing with a recently pushed git commit](../../../images/dashboard/sync-code.png)
 
-Back to your site's **<span class="glyphicons glyphicons-wrench"></span> Dev** tab in Pantheon, click **Visit Development Site**, to see the changes made by your new code.
+Click your site's **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > click **Visit Development Site** to see the changes made by your new code.
+
 
 ## Troubleshooting
 
@@ -206,9 +210,9 @@ fatal: Could not read from remote repository.
 
 To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/port-2222).
 
-## Additional Resources
+## More Resources
 
-For further learning, we recommend the following resources:
+We recommend the following resources for further learning:
 
 - [Git Documentation](https://git-scm.com/documentation)
 - [Pro Git Book](https://git-scm.com/book/en/v2)
