@@ -26,7 +26,7 @@ The Custom Upstream workflow frees up developer time, and establishes a sustaina
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-![Custom upstream update strategy](../../../images/update-diagram.png)
+![Custom Upstream update strategy](../../../images/update-diagram.png)
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-edu-drupal-case-study).
 
@@ -76,7 +76,9 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 
 The second level repository is a Custom Upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or another Git repository host <Popover content="Contact support to create a custom upstream from another host." />. The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or another Git repository host. The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+
+To create a Custom Upstream from another host like GitLab, [contact support](/support).
 
 </div>
 </div>
