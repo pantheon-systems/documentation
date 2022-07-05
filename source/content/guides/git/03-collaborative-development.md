@@ -358,7 +358,7 @@ There are other options to further optimize workflows now that you have the basi
 
 These tools allow your team to fully implement continuous delivery with automated testing and continuous integration.
 
-## Additional Resources
+## More Resources
 
 - [Starting with Git](/guides/git/git-config)
 
