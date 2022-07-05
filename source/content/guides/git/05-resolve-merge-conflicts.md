@@ -57,9 +57,12 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 </TabList>
 
-Double-check the files before going forward to make sure no bugs were introduced.
+1. Double-check the files before going forward to make sure no bugs were introduced.
 
-If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In that case, you should [manually resolve conflicts](#manually-resolve-conflicts). For more details on core updates, see [WordPress and Drupal Core Updates](/core-updates).
+  - The `-Xtheirs` flag will drop your changes if you modify core CMS files.
+  You should [manually resolve conflicts](#manually-resolve-conflicts) in this scenario. 
+  
+1. Review [WordPress and Drupal Core Updates](/core-updates) for more details on core updates.
 
 ### Find a Site's Upstream URL
 
@@ -155,20 +158,20 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
 
 1. Set the Dev environment to Git mode:
 
-  ![Git Connection Mode](../../../images/dashboard/connection-mode-git.png)
+    ![Git Connection Mode](../../../images/dashboard/connection-mode-git.png)
 
 1. Clone the repository to your local computer:
 
-  ![Git Clone](../../../images/dashboard/git-string.png)
+    ![Git Clone](../../../images/dashboard/git-string.png)
 
 1. Navigate to the repository directory > pull the Multidev branch to master. 
 
-  - In the example below, replace `multidev` with the Multidev environment name:
+    - In the example below, replace `multidev` with the Multidev environment name:
 
-    ```bash{promptUser: user}
-    git checkout master
-    git pull origin multidev
-    ```
+      ```bash{promptUser: user}
+      git checkout master
+      git pull origin multidev
+      ```
 
 1. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above when you receive the Git notification with the files that are in conflict. 
 
@@ -179,3 +182,5 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
 - [Undo Git Commits](/guides/git/undo-commits)
 
 - [Multidev](/multidev)
+
+- [WordPress and Drupal Core Updates](/core-updates)
