@@ -752,7 +752,11 @@ ___
 
 ## Error Messages
 
-Document error messages verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Make the header an H3 to make the section linkable within the table of contents for easy sharing.
+<ReviewDate date="2022-06-05" />
+
+When referencing error messages in the body of an article, format them as monospace, and either place them inline (if short) or as a new paragraph (if long).
+
+When providing solutions to error messages, document them verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Making the header an H3 makes the section linkable within the table of contents for easy sharing.
 
 <Example>
 
