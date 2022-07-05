@@ -225,7 +225,7 @@ You may see one of the following issues:
 
 - `Fatal error: Cannot redeclare format_size() (previously declared in /code/web/core/includes/common.inc:137) in /code/vendor/drupal/core/includes/common.inc on line 137`
 - Pantheon error page with “No code” or “No site detected” on newly initialized environments
-- `Fatal error: Cannot redeclare drupal_get_filename() (previously declared in /code/vendor/drupal/core/includes/bootstrap.inc:164) in /code/web/core/includes/bootstrap.inc on line`
+- `Fatal error: Cannot redeclare drupal_get_filename() (previously declared in /code/vendor/drupal/core/includes/bootstrap.inc:164) in /code/web/core/includes/bootstrap.inc on line 164`
 
 To resolve this, clone the site to your local computer and ensure that Composer 2.2 or later is installed locally. Run `composer install` and after going through the interactive prompts to allow plugins, you may then commit and push this code up to your site. 
 
