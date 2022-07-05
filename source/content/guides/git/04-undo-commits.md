@@ -100,7 +100,9 @@ You can use interactive mode by passing a `-i` or `--interactive` to the `git re
 
     - A selection screen displays with a list of options.
 
-1. Select 
+1. Select the appropriate command depending on your needs.
+
+Review the [Git documentation](http://shafiul.github.io/gitbook/4_interactive_rebasing.html) for more information.
 
 ## Delete the Last Commit on Dev
 
