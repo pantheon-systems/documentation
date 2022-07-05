@@ -215,6 +215,30 @@ If there is an error in the output, it may be due to an error in the site's `com
 
 To resolve, examine the error in the log. It may be a syntax or parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
 
+### Creating a new Multidev or deploying to an environment results in an empty site
+
+Any plugin that acts on the code base of your site must be manually allowed as a plugin on your site's composer.json. This change took effect with Composer 2.2 as a new required layer of security. Sites that were working previously will now have builds that fail, this can arise as a broken environment or code changes not being reflected after a commit. 
+
+You may read more about this security requirement on [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
+
+You may see one of the following issues:
+
+- `Fatal error: Cannot redeclare format_size() (previously declared in /code/web/core/includes/common.inc:137) in /code/vendor/drupal/core/includes/common.inc on line 137`
+- Pantheon error page with “No code” or “No site detected” on newly initialized environments
+- `Fatal error: Cannot redeclare drupal_get_filename() (previously declared in /code/vendor/drupal/core/includes/bootstrap.inc:164) in /code/web/core/includes/bootstrap.inc on line`
+
+To resolve this, clone the site to your local computer and ensure that Composer 2.2 or later is installed locally. Run `composer install` and after going through the interactive prompts to allow plugins, you may then commit and push this code up to your site. 
+
+The following is an example of these prompts.
+
+```bash{outputLines:2-6}
+❯ composer install
+composer/installers contains a Composer plugin which is currently not in your allow-plugins config. See https://getcomposer.org/allow-plugins
+Do you trust "composer/installers" to execute code and wish to enable it now? (writes "allow-plugins" to composer.json) [y,n,d,?] y
+cweagans/composer-patches contains a Composer plugin which is currently not in your allow-plugins config. See https://getcomposer.org/allow-plugins
+Do you trust "cweagans/composer-patches" to execute code and wish to enable it now? (writes "allow-plugins" to composer.json) [y,n,d,?]
+```
+
 ### Upstream Updates Cannot Be Applied
 
 When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
