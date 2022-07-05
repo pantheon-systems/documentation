@@ -150,3 +150,5 @@ This happens if you **reset** Dev to an earlier commit, rather than using **reve
 - [Your Site Code on Pantheon](/code)
 
 - [Git FAQs](/guides/git/faq-git)
+
+- [Resolve Merge Conflicts](/guides/git/resolve-merge-conflicts)

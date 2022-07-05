@@ -59,8 +59,8 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 1. Double-check the files before going forward to make sure no bugs were introduced.
 
-  - The `-Xtheirs` flag will drop your changes if you modify core CMS files.
-  You should [manually resolve conflicts](#manually-resolve-conflicts) in this scenario. 
+    - The `-Xtheirs` flag will drop your changes if you modify core CMS files.
+    You should [manually resolve conflicts](#manually-resolve-conflicts) in this scenario. 
   
 1. Review [WordPress and Drupal Core Updates](/core-updates) for more details on core updates.
 
