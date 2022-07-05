@@ -11,8 +11,6 @@ permalink: docs/guides/git/resolve-merge-conflicts
 anchorid: resolve-merge-conflicts
 ---
 
-[Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
-
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 > When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
@@ -21,7 +19,7 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 
 ## Resolve Conflicts When Updating Core
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often to use the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
+The fastest resolution for conflicts when updating is often to use the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
 
 This is safe to run if you don't have your own changes in any of the conflicting files (for example problems with `.gitignore`).
 
@@ -65,7 +63,7 @@ If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In tha
 
 ### Find a Site's Upstream URL
 
-Enter the following command in [Terminus](/terminus) to retrieve your Upstream URL:
+1. Run the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
 ```bash{promptUser: user}
 terminus site:info <site> --field=upstream
@@ -77,25 +75,28 @@ Steps to resolve merge conflicts vary by the type of conflict. Refer to the sect
 
 ### Resolve Delete/Modify Conflicts
 
-A delete/modify conflict occurs when one commit deletes a file and another modifies it. To resolve such a conflict from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
+A delete/modify conflict occurs when one commit deletes a file and another modifies it. Run the commands below in sequence to resolve such a conflict.
 
-For example, the Git log may contain an entry similar to the following:
 
-```git
-CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
-```
+1. Identify the file that is generating a delete error.
 
-1. From your local repository, run this Git command to get a copy of the file in conflict:
+    For example, the Git log may contain an entry similar to the following:
 
-  ```bash{promptUser: user}
-  git checkout <commit ID> -- <file>
-  ```
+    ```git
+    CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
+    ```
 
-  <Alert title="Note" type="info">
+1. Navigate to your local repository > run the following Git command to get a copy of the file in conflict:
 
-  When looking for a commit ID, you can find the last instance where the missing file was in the repository.
+    ```bash{promptUser: user}
+    git checkout <commit ID> -- <file>
+    ```
 
-  </Alert>
+    <Alert title="Note" type="info">
+
+    When looking for a commit ID, you can find the last instance where the missing file was in the repository.
+
+    </Alert>
 
 1. Run `git status` and verify that there is a new file to add to the repository:
 
@@ -113,7 +114,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git commit -am "verifying missing README.txt"
  ```
 
- You will receive confirmation from Git that the file has been committed.
+  You will receive confirmation from Git that the file has been committed.
 
 1. Run the Git push command:
 
@@ -130,15 +131,17 @@ CONFLICT (content): Merge conflict in wp-admin/about.php
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-To resolve:
+Follow the steps below to resolve this scenario.
 
 1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
 
   ![An example of Visual Studio Code highlighting a merge conflict](../../../images/vscode-merge-conflict.png)
 
-1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates. Ensure you remove all the delineator notes from the file.
+1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates. 
 
-1. After you've saved your changes, commit and push:
+1. Remove all the delineator notes from the file.
+
+1. Commit and push your changes:
 
   ```bash{promptUser: user}
   git add wp-admin/about.php
@@ -148,7 +151,7 @@ To resolve:
 
 ### Resolve Conflicts from Multidevs
 
-If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
+Follow the steps below to resolve a merge conflict that is preventing you from merging a Multidev environment.
 
 1. Set the Dev environment to Git mode:
 
@@ -158,11 +161,21 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 
   ![Git Clone](../../../images/dashboard/git-string.png)
 
-1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
+1. Navigate to the repository directory > pull the Multidev branch to master. 
 
-  ```bash{promptUser: user}
-  git checkout master
-  git pull origin multidev
-  ```
+  - In the example below, replace `multidev` with the Multidev environment name:
 
-1. Git notifies you of which files are in conflict. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above.
+    ```bash{promptUser: user}
+    git checkout master
+    git pull origin multidev
+    ```
+
+1. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above when you receive the Git notification with the files that are in conflict. 
+
+## More Resources
+
+- [Git FAQs](/guides/git/faq-git)
+
+- [Undo Git Commits](/guides/git/undo-commits)
+
+- [Multidev](/multidev)

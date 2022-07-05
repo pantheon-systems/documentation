@@ -25,7 +25,7 @@ You must have the items listed below completed before you begin the steps in thi
 
 - Set up a [local development environment](/local-development) with [Git version control](/guides/git/git-config).
 
-- Have a working clone as a backup
+- Have a working [clone](/guides/git/git-config#clone-your-site-codebase) as a backup
 
     - If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. 
 
@@ -57,7 +57,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
 You can delete changes made in your local environment that have not been pushed to Pantheon. 
 
-Run the command below to locally delete that last commit. This is destructive and will undo all changes.
+1. Run the command below to locally delete that last commit. This is destructive and will undo all changes.
 
 ```bash{promptUser: user}
 git reset --hard HEAD~1
@@ -67,7 +67,7 @@ git reset --hard HEAD~1
 
 You can delete changes made in your local environment that have been pushed to Pantheon. 
 
-Run the command below to delete that last commit. This is destructive and will undo all changes.
+1. Run the command below to delete that last commit. This is destructive and will undo all changes.
 
 ```bash{promptUser: user}
 git reset --hard HEAD~1
@@ -78,7 +78,7 @@ git push --force origin master
 
 It is important to test changes before deploying them to Test or Live. However, you can reverse commits pushed to your Test or Live environment on Pantheon.
 
-Run the command below to reverse the last commit and retain your history.
+1. Run the command below to reverse the last commit and retain your history.
 
 ```bash{promptUser: user}
 git revert HEAD --no-edit
