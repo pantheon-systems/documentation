@@ -1,6 +1,6 @@
 ---
 title: Resolve Git Merge Conflicts
-subtitle: Resolve Merege Conflicts
+subtitle: Resolve Merge Conflicts
 description: Learn how to resolve conflicts in your site code base. 
 categories: [troubleshoot]
 tags: [git, local, webops]

@@ -57,11 +57,50 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
 You can delete changes made in your local environment that have not been pushed to Pantheon. 
 
-1. Run the command below to locally delete that last commit. This is destructive and will undo all changes.
+### Hard Reset
+
+A hard reset will completely destroy all changes and remove them from the local directory.
+
+1. Run the command below to locally delete that last commit. 
 
 ```bash{promptUser: user}
 git reset --hard HEAD~1
 ```
+
+### Soft Reset
+
+A soft reset will keep your files and stage all changes back automatically. 
+
+1. Run the command below to locally delete that last commit. 
+
+```bash{promptUser: user}
+git reset --soft HEAD ~1
+git commit -C HEAD ~1
+```
+
+## Go Back in Time
+
+Resetting to a point in time when you know your local was working correctly can be a simple way to get back on track.
+
+1. Run the command below, replacing the amount of time you want to go back to as needed:
+
+```bash{promptUser: user}
+git reset --hard HEAD@{5.minutes.ago}
+```
+
+## Interactive Rebase
+
+You can use interactive mode by passing a `-i` or `--interactive` to the `git rebase` command. This is a good option if you have a number of commits that you would like to modify during the rebase.
+
+1. Run the command below to enter interactive mode:
+
+    ```bash{promptUser: user}
+    git rebase -i origin/master
+    ```
+
+    - A selection screen displays with a list of options.
+
+1. Select 
 
 ## Delete the Last Commit on Dev
 
