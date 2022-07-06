@@ -33,7 +33,7 @@ You can remove submodules:
 
 1. Commit and push your changes.
 
-## What are the Git tags?
+## What are the "update\_drops" Git tags?
 
 The "update\_drops" tags are from our upstream updates in the past (Pantheon no longer tags these).
 
