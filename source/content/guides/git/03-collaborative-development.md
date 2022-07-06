@@ -50,6 +50,7 @@ The sections below will show you the basics for collaborating with others if you
     Resolving deltas: 100% (208616/208616), done.
     Checking connectivity... done.
     ```
+
 1. Change directory into the site repository > verify your connection to the Pantheon server:
 
     ```bash{outputLines: 2-4}
