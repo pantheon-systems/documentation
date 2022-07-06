@@ -217,7 +217,7 @@ To resolve, examine the error in the log. It may be a syntax or parse error of t
 
 ### Creating a New Multidev or Deploying to an Environment Results in an Empty Site
 
-You must manually allow any plugin that acts on the code base of your site in your  `composer.json` file. This is a Composer 2.2 requirement that provides an additional layer of security. Sites that were working previously will now have builds that fail because of this new requirement. Failed builds can arise as a broken environment or as unreflected code changes after a commit. 
+You must manually allow any plugin that acts on the code base of your site in your  `composer.json` file. This is a Composer 2.2 requirement introduced on July 1, 2022 that provides an additional layer of security. Sites that were working previously will have builds that fail because of this new requirement. Failed builds can arise as a broken environment or as unreflected code changes after a commit. 
 
 Read more about this security requirement on [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
 
