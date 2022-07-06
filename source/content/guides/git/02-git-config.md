@@ -178,7 +178,7 @@ Pantheon instantly deploys the changes to your development server when the push 
 
 ![Image of the Dev tab syncing with a recently pushed git commit](../../../images/dashboard/sync-code.png)
 
-1. Navigate to your site's dashboard > clik the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab.
+1. Navigate to your site's dashboard > click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab.
 
 1. Click **Visit Development Site** to see the changes made by your new code.
 
@@ -201,17 +201,15 @@ To configure this URL:
 
 1. Paste the URL into the **Source URL** field.
 
-1. Remove `git clone` from the beginning of the URL. 
+   1. Remove `git clone` from the beginning of the URL. 
 
-1. Remove the trailing space and 'my-site' name from the end of the URL.
+   1. Remove the trailing space and 'my-site' name from the end of the URL provided in the **Connection Info** section of your Pantheon Dashboard.
 
-provided in the **Connection Info** section of your Pantheon Dashboard.
+      - Your Source URL should look like this: `ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git`
 
-  - You Source URL should look like this: `ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git`
+1. In the **Destination Path** field, enter the local path where you want to clone the repository.
 
-1. Populate the **Destination Path** field: The local path where you want to clone the repository.
-
-1. Populate the **Name** field: Your site name.
+1. In the the **Name** field, enter your site name.
 
 ![SourceTree git Configuration](../../../images/sourcetree-config.png)
 
