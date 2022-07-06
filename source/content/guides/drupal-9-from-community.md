@@ -10,13 +10,13 @@ contributors: [wordsmither]
 date: 07/06/2022
 ---
 
-Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Using Drupal distributions is exceptionally helpful if you want to create a website but don't want to build it from scratch. 
+Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 
 
-In short, you should start by following the documentation provided with the community distribution; then continuing with the following process.
+Start by following the documentation provided with the community distribution; then continue with the following steps.
 
 ## Requirements
 
-- You are managing site dependencies using Composer.  If not, and you can [convert a standard Drupal site to a Composer managed site](/docs/guides/composer-convert).
+- You are managing site dependencies using Composer.  If not, you can [convert a standard Drupal site to a Composer managed site](/guides/composer-convert).
 
 ## Create an Empty Upstream
 
@@ -36,27 +36,33 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
 
 Use the documentation provided with the community distribution to run the recommended Composer `create-project` command.  Here are some examples
 
+### Apigee
+
   ```bash{promptUser: user}
   composer create-project apigee/devportal-kickstart-project:9.x-dev MY_PROJECT --no-interaction
   ```
+
+### Drupal Thunder
 
   ```bash{promptUser: user}
   composer create-project thunder/thunder-project thunder --no-interaction --no-install
   ```
 
+### DKAN Open Data Platform
+
   ```bash{promptUser: user}
   composer create-project getdkan/recommended-project my-project
   ```
 
-<Alert title="Warning" type="info" >
+<Alert title="Warning" type="danger" >
 
 Do not rely on the sample code above.  Be sure to use the instructions provided with the community distribution.
 
 </Alert>
 
-## Copy/Create Files and Folders
+## Add Files and Folders
 
-Now, you're going to copy files and folders from the Pantheon GitHub repository for use in your project.  To simplify this, first clone https://github.com/pantheon-systems/drupal-composer-managed into another folder.
+Now you're going to copy files and folders from the Pantheon GitHub repository for use in your project.  To simplify this, first clone https://github.com/pantheon-systems/drupal-composer-managed into another folder.
 
 In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the the cloned repository.
 
@@ -78,11 +84,11 @@ In the code samples included below, [`drupal-composer-managed-path`] should be r
   mkdir -p config
   ```
 
-## Composer Management
+## Update Composer Settings
 
 Add/modify the settings in `blob/main/composer.json` as follows:
 
-1. Add upstream-configuration path repository:
+1. Add the `upstream-configuration` path repository:
 
    ```
    "autoload": {
@@ -102,7 +108,7 @@ Add/modify the settings in `blob/main/composer.json` as follows:
    },
    ```
 
-1. Add pantheon-systems/drupal-integrations and quicksilver scripts (optional) to `extra`:
+1. Add `pantheon-systems/drupal-integrations` and quicksilver scripts (optional) to `extra`:
    
    ```
    "extra": {
@@ -151,7 +157,7 @@ Add/modify the settings in `blob/main/composer.json` as follows:
    },
    ``` 
 
-1. Add scripts and scripts-description sections: 
+1. Add these `scripts` and `scripts-description` sections: 
 
    ```
    "scripts": {
@@ -167,7 +173,7 @@ Add/modify the settings in `blob/main/composer.json` as follows:
    },
    ```
 
-## settings.php
+## Update settings.php
 
 Add the following to your `/web/sites/default/settings.php` file.
 
@@ -175,7 +181,12 @@ Add the following to your `/web/sites/default/settings.php` file.
 include __DIR__ . "/settings.pantheon.php";
 ```
 
+## Launch Your Site
+
+<Partial file="drupal-9/deploy-using-launch.md" />
+
+
 ## See Also
 
-- [Get Started](/docs/get-started)
-- [Drupal 9 Migration Guides](/docs/drupal-9-migration)
+- [Get Started](/get-started)
+- [Drupal 9 Migration Guides](/drupal-9-migration)
