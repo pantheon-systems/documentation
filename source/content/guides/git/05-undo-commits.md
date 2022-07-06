@@ -63,9 +63,9 @@ A hard reset will completely destroy all changes and remove them from the local 
 
 1. Run the command below to locally delete that last commit. 
 
-```bash{promptUser: user}
-git reset --hard HEAD~1
-```
+   ```bash{promptUser: user}
+   git reset --hard HEAD~1
+   ```
 
 ### Soft Reset
 
@@ -73,10 +73,10 @@ A soft reset will keep your files and stage all changes back automatically.
 
 1. Run the command below to locally delete that last commit. 
 
-```bash{promptUser: user}
-git reset --soft HEAD ~1
-git commit -C HEAD ~1
-```
+   ```bash{promptUser: user}
+   git reset --soft HEAD ~1
+   git commit -C HEAD ~1
+   ```
 
 ## Go Back in Time
 
@@ -84,9 +84,9 @@ Resetting to a point in time when you know your local was working correctly can 
 
 1. Run the command below, replacing the amount of time you want to go back to as needed:
 
-```bash{promptUser: user}
-git reset --hard HEAD@{5.minutes.ago}
-```
+   ```bash{promptUser: user}
+   git reset --hard HEAD@{5.minutes.ago}
+   ```
 
 ## Interactive Rebase
 
@@ -110,10 +110,10 @@ You can delete changes made in your local environment that have been pushed to P
 
 1. Run the command below to delete that last commit. 
 
-```bash{promptUser: user}
-git reset --hard HEAD~1
-git push --force origin master
-```
+   ```bash{promptUser: user}
+   git reset --hard HEAD~1
+   git push --force origin master
+   ```
 
 ## Revert the Last Commit on Pantheon That Has Been Deployed to Test or Live
 
@@ -121,10 +121,10 @@ It is important to test changes before deploying them to Test or Live. However, 
 
 1. Run the command below to reverse the last commit and retain your history.
 
-```bash{promptUser: user}
-git revert HEAD --no-edit
-git push origin master
-```
+   ```bash{promptUser: user}
+   git revert HEAD --no-edit
+   git push origin master
+   ```
 
 ## Revert a Prior Commit on Pantheon That Has Been Deployed to Test or Live
 
@@ -168,7 +168,7 @@ You can revert a past commit that has been pushed to your Test or Live environme
 
 ## Reset Dev Environment to Live
 
-You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev, however, it does reset the Dev environment's codebase. 
+You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev. However, it does reset the Dev environment's codebase. 
 
 1. Identify the most recent commit deployed to Live.
 
