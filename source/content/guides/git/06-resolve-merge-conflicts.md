@@ -74,11 +74,11 @@ terminus site:info <site> --field=upstream
 
 ## Manually Resolve Conflicts
 
-Steps to resolve merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, or Multidev conflicts.
+Steps to resolve merge conflicts vary by the type of conflict. Refer to the sections below for more information on resolving delete/modify conflicts, content conflicts, and Multidev conflicts.
 
 ### Resolve Delete/Modify Conflicts
 
-A delete/modify conflict occurs when one commit deletes a file and another modifies it. Run the commands below in sequence to resolve such a conflict.
+A delete/modify conflict occurs when one commit deletes a file and another modifies it. Follow the steps below to resolve such a conflict.
 
 
 1. Identify the file that is generating a delete error.
@@ -156,11 +156,11 @@ Follow the steps below to resolve this scenario.
 
 Follow the steps below to resolve a merge conflict that is preventing you from merging a Multidev environment.
 
-1. Set the Dev environment to Git mode:
+1. Navigate to your **Dev** environment > set the **Development Mode** to **Git**:
 
     ![Git Connection Mode](../../../images/dashboard/connection-mode-git.png)
 
-1. Clone the repository to your local computer:
+1. Click **Clone with Git** to Clone the repository to your local computer:
 
     ![Git Clone](../../../images/dashboard/git-string.png)
 
@@ -173,7 +173,7 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
       git pull origin multidev
       ```
 
-1. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above when you receive the Git notification with the files that are in conflict. 
+1. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above when you receive the Git notification listing the files that are in conflict. 
 
 ## More Resources
 

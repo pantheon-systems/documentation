@@ -45,7 +45,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
     Making a single change to a CSS file in a theme. But bootstrap has a commit?
 ```
 
-1. Run a Git log on a core file to get back to a version of core.
+1. Run a Git log on a core file to get back to a previous version of core.
 
 1. Revert your code back to the commit before core was overwritten. 
 
@@ -90,7 +90,7 @@ git reset --hard HEAD@{5.minutes.ago}
 
 ## Interactive Rebase
 
-You can use interactive mode by passing a `-i` or `--interactive` to the `git rebase` command. This is a good option if you have a number of commits that you would like to modify during the rebase.
+You can enter interactive mode by passing a `-i` or `--interactive` to the `git rebase` command. This is a good option if you have a number of commits that you would like to modify during the rebase.
 
 1. Run the command below to enter interactive mode:
 
@@ -106,9 +106,9 @@ Review the [Git documentation](http://shafiul.github.io/gitbook/4_interactive_re
 
 ## Delete the Last Commit on Dev
 
-You can delete changes made in your local environment that have been pushed to Pantheon. 
+You can delete changes made in your local environment that have been pushed to Pantheon. This will completely destroy all changes and remove them from the local directory.
 
-1. Run the command below to delete that last commit. This is destructive and will undo all changes.
+1. Run the command below to delete that last commit. 
 
 ```bash{promptUser: user}
 git reset --hard HEAD~1
@@ -181,7 +181,7 @@ You can reset your Dev environment history to match the current state of your Li
 
 ## What if Dev Is Behind Test and Live?
 
-This happens if you **reset** Dev to an earlier commit, rather than using **revert**. You must make a commit on Dev to re-sync the environments. This will also get the commit history between the environments to match. The commit you use can be trivial, such as a space or extra line added to a comment within a file will work. You'll see the commit available for deployment on Test, and then on Live after you commit that change.
+This happens if you **reset** Dev to an earlier commit, rather than using **revert**. You must make a commit on Dev to re-sync the environments. This will also get the commit history between the environments to match. The commit you use can be trivial, such as a space or extra line added to a comment within a file. You'll see the commit available for deployment on Test, and then on Live after you commit the change.
 
 
 ## More Resources

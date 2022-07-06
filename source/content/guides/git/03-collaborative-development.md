@@ -1,6 +1,6 @@
 ---
 title: Collaborative Development Using GitHub and Pantheon
-subtitle: Collaborative Development
+subtitle: Collaborative Development with an External Repository
 description: Use GitHub to collaborate with the team members on your Pantheon site.
 categories: [develop]
 tags: [collaborate, git, local, webops, workflow]
@@ -18,11 +18,11 @@ Pantheon provides Git repositories for all sites on the platform. However, some 
 The codebase for your site is stored in a Git repository. This includes your versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
 This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"),
-or one of their forks that our users manage as [Custom Upstreams](/guides/custom-upstream) "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on the Pantheon platform will track one of these upstream repositories as a Git remote. 
+or one of their forks that our users manage as [Custom Upstreams](/guides/custom-upstream). Your site’s repository on the Pantheon platform will track one of these upstream repositories as a Git remote. 
 
 These repositories control the common codebase for several sites. The most common change to an upstream is the release of a new core version. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using GitHub to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repository in sync with GitHub.
 
-This sections below will show you the basics for collaborating with others if your site:
+The sections below will show you the basics for collaborating with others if your site:
 
 - Is only on Pantheon and you’re moving development to GitHub
 - Exists on GitHub and you want to deploy to Pantheon
@@ -31,14 +31,14 @@ This sections below will show you the basics for collaborating with others if yo
 
 ## Synchronizing Existing Pantheon Sites to GitHub
 
- 1. 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
+ 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to Git > click **Clone with Git**:
+1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**:
 
   ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
 
-  Your local copy will now track the Pantheon repository as origin.
+  Your local copy will now track the Pantheon repository as the origin.
 
     ```bash{outputLines: 2-8}
     git clone <ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git d7-ci>
@@ -50,7 +50,7 @@ This sections below will show you the basics for collaborating with others if yo
     Resolving deltas: 100% (208616/208616), done.
     Checking connectivity... done.
     ```
- 1. Change directory into the site repository > verify your connection to the Pantheon server:
+1. Change directory into the site repository > verify your connection to the Pantheon server:
 
     ```bash{outputLines: 2-4}
     cd d7-ci
@@ -206,7 +206,7 @@ You must create the `settings.php` file to develop in sync.
 
     ![Connection Mode set to SFTP](../../../images/dashboard/connection-mode-sftp.png)
 
-1. Switch the connection mode to Git by clicking on the toggle, or enter code below in the command line:
+1. Set the **Development Mode** to **Git** by clicking on the toggle, or enter the code below in the command line:
 
     ```bash{promptUser: user}
     terminus connection:set <site>.<env> git
@@ -360,7 +360,7 @@ These tools allow your team to fully implement continuous delivery with automate
 
 ## More Resources
 
-- [Starting with Git](/guides/git/git-config)
+- [Install and Configure Git](/guides/git/git-config)
 
 - [Git FAQs](/guides/git/faq-git)
 

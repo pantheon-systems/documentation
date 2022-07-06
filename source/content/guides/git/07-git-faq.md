@@ -39,7 +39,7 @@ The "update\_drops" tags are from our upstream updates in the past (Pantheon no 
 
 The tag `pantheon.initialize` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
 
-Savvy Git users might wonder, if they create their own `pantheon_test_N` tag with a higher value N, can they push changes directly to test? The answer is yes.
+You can create your own `pantheon_test_N` tag with a higher value N to push changes directly to test.
 
 ```bash{outputLines:2-9}
 git tag
@@ -58,7 +58,7 @@ See [Undo Git commits like overwriting Drupal core](/guides/git/undo-commits).
 
 ## How do I apply a patch from Drupal.org on Pantheon?
 
-If you want to patch core or a module, you should use Git. You will need to switch from On Server Development if it's enabled.
+You should use Git if you want to patch core or a module. You will need to switch from On Server Development if it's enabled.
 
 Drupal.org has very good instructions about [applying patches with Git](https://www.drupal.org/node/1399218).
 
@@ -110,7 +110,7 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
   terminus connection:info <site>.dev --fields=git_host
   ```
 
-  Which will return:
+  This will return:
 
   ```none
     Git Host   codeserver.dev.1887c5fa-...-8fe90727d85b.drush.in
@@ -208,7 +208,7 @@ Pantheon provides default `.gitignore` files in the base of each site's code rep
 
 ## Troubleshoot Commit Issues
 
-If you encounter an error when trying to commit, check the following:
+Check the following if you encounter an error when trying to make a commit:
 
 - Commit Size: If the commit is too large, it will be rejected.
 

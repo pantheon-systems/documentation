@@ -48,17 +48,17 @@ You must provide a name and email with which your commits will be associated bef
 
 ## Clone Your Site Codebase
 
-Create a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") with `git clone`.
+You must create a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") using the `git clone` command. Follow the steps below to ensure that you create the clone correctly.
 
-1. Use Terminal to navigate to the directory where you keep your projects.
+1. Navigate to the Terminal directory where you keep your projects.
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to Git > click **Clone with Git**: 
+1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**. 
 
   ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
-1. Copy the `git clone` command and paste it into your terminal. Git will create a directory as part of the clone, so you don't need to create one:
+1. Copy the `git clone` command and paste it into Terminal. Git will create a directory as part of the clone, so you don't need to create one:
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -79,7 +79,9 @@ Create a local copy of your [codebase](/code#pantheon-git-repository "About your
   Resolving deltas: 100% (12802/12802), done.
   ```
 
-  If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, confirm that you have a current version of Git.
+- Check your [SSH key](/ssh-keys) setup if you run into permission problems. 
+  
+- Confirm that you have a current version of Git if the clone starts but can't complete.
 
 ## Make Changes
 
@@ -118,7 +120,7 @@ You can now edit your site code using your [preferred](https://xkcd.com/378/ "XK
     no changes added to commit (use "git add" and/or "git commit -a")
     ```
 
-1. Cut and paste the paths to these files when using `git add`, which **stages** the files for the next commit.
+1. Cut and paste the paths to these files when using `git add`. This **stages** the files for the next commit.
 
 ## Push Changes to Pantheon
 
@@ -140,7 +142,7 @@ Sending code to Pantheon is a two-step process with Git. First, you need to comm
 
     </Alert>
 
-    If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will abort the commit. If the commit worked you will see something like this:
+    If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will abort the commit. You will see something similar to the example below if the commit worked:
 
     ```git
     [master d2fce4ea] Add a great new plugin to increase awesomesauce level of my WordPress site.
@@ -176,7 +178,9 @@ Pantheon instantly deploys the changes to your development server when the push 
 
 ![Image of the Dev tab syncing with a recently pushed git commit](../../../images/dashboard/sync-code.png)
 
-Click your site's **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > click **Visit Development Site** to see the changes made by your new code.
+1. Navigate to your site's dashboard > clik the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab.
+
+1. Click **Visit Development Site** to see the changes made by your new code.
 
 
 ## Troubleshooting
@@ -189,11 +193,25 @@ SourceTree and other Git GUI clients generally prompt for a Source URL using HTT
 
 Some Git GUI clients, like SourceTree, do support the use of `ssh://` URLs to clone the code base.
 
-To configure this URL in SourceTree simply remove the `git clone` and the trailing space and 'my-site' name off the end of the command provided in the **Connection Info** section of your Pantheon Dashboard.
+To configure this URL:
 
-- Source URL: `ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git`
-- Destination Path: The local path where you want to clone the repository.
-- Name: Your site name.
+1. Navigate to your Pantheon **Dev** environment > click  **Connection Info** > copy the **SSH clone URL**.
+
+1. Navigate to SourceTree > click **Clone a repository**.
+
+1. Paste the URL into the **Source URL** field.
+
+1. Remove `git clone` from the beginning of the URL. 
+
+1. Remove the trailing space and 'my-site' name from the end of the URL.
+
+provided in the **Connection Info** section of your Pantheon Dashboard.
+
+  - You Source URL should look like this: `ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git`
+
+1. Populate the **Destination Path** field: The local path where you want to clone the repository.
+
+1. Populate the **Name** field: Your site name.
 
 ![SourceTree git Configuration](../../../images/sourcetree-config.png)
 
@@ -201,7 +219,7 @@ Alternatively, you can simply clone the repository using `git clone` and then us
 
 ### Blocked Port
 
-If your local network is blocking port 2222, you'll see an error like this when attempting to run `git clone`, `git push`, or `git pull`:
+You'll see an error like the one below when attempting to run `git clone`, `git push`, or `git pull` if your local network is blocking port 2222.
 
 ```none
 ssh: connect to host codeserver.dev.xxx.drush.in port 2222: Operation timed out
@@ -230,4 +248,8 @@ We recommend the following resources for further learning:
 For Pantheon-specific Git questions, see the following:
 
 - [Git FAQs](/guides/git/faq-git)
+
 - [Undo Git Commits](/guides/git/undo-commits)
+
+- [Useful Git Commands](/guides/git/useful-commands)
+
