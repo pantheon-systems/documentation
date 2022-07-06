@@ -33,10 +33,9 @@ The sections below will show you the basics for collaborating with others if you
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
+  ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+
 1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**:
-
-    ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
-
 
     Your local copy will now track the Pantheon repository as the origin.
 
