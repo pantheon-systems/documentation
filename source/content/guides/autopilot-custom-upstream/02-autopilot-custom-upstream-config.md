@@ -15,7 +15,13 @@ There are three use cases for combining Autopilot and Custom Upstreams on the Pa
 
 ## Autopilot Enabled on Downstream Sites Only
 
-This use case is considered the standard use case for Autopilot. Autopilot always checks for an upstream in Pantheon’s maintained upstream library or a Custom Upstream created by the user. Autopilot applies the updates from the upstream alongside other modules/plugins/themes. This scenario makes the most sense if you are using your Custom Upstream as a boilerplate template.
+This use case is considered the standard use case for Autopilot. Autopilot always checks for an upstream in Pantheon’s maintained upstream library or a Custom Upstream created by the user. Autopilot applies the updates from the upstream alongside other modules, plugins, and themes. This scenario makes the most sense if you are using your Custom Upstream as a boilerplate template.
+
+<Alert title="Note: Drupal 9 Users"  type="info" >
+
+Autopilot Enabled on Downstream Sites Only is the best option if you are using Drupal 9 with Integrated Composer. Updates cannot occur on both the upstream and the downstream or there will be continual conflicts due to technical configurations, including a single `composer.lock` file.
+
+</Alert>
 
 **Pros**:
 
