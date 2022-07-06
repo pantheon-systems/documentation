@@ -31,14 +31,14 @@ The sections below will show you the basics for collaborating with others if you
 
 ## Synchronizing Existing Pantheon Sites to GitHub
 
- 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
+1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
 1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**:
 
-  ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+    ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
 
-  Your local copy will now track the Pantheon repository as the origin.
+    Your local copy will now track the Pantheon repository as the origin.
 
     ```bash{outputLines: 2-8}
     git clone <ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git d7-ci>
