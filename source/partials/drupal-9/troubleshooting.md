@@ -25,10 +25,6 @@ Ensure your site's [Development Mode](/guides/quickstart/connection-modes/) is s
 
 Learn more about the [service configuration](/services-yml#create-and-modify-servicesyml) file.
 
-## Site-local Drush Is Required for Drupal 9 Sites
-
-Do not remove `drush/drush` from `composer.json`. If it is removed, `terminus drush` commands will fail with errors related to Twig.
-
 ## Where Can I Report an Issue?
 
 [Contact support](/guides/support/contact-support) to report any issues that you encounter.

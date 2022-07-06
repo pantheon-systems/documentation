@@ -69,6 +69,40 @@ If the number of custom domains on a site exceeds that allowed by the new site p
 
 </Alert>
 
+## Legacy Platform Resources
+
+<Alert title="Legacy Site Plans Only" type="info">
+
+This section reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to [Site Plan Resources](/site-plans-faq#plan-resources) for current information.
+
+</Alert>
+
+The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
+
+|                                | Personal                                               | Professional                                           | Business                                               | Elite                                                  |
+|--------------------------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| Application Containers         | 1                                                      | 1                                                      | 2                                                      | 4+                                                     |
+| PHP Concurrency                | 4                                                      | 8                                                      | 8                                                      | 8                                                      |
+| PHP Memory Limit               | 256MB                                                  | 256MB                                                  | 512MB                                                  | 512MB <Popover   content = "Up to 1024MB is available for certain Elite plans.[Learn more about Pantheon Elite Plans](https://pantheon.io/pantheon-elite-plans) and contact Sales for information about plans with custom resources." />                                                                                       |
+| MySQL Buffer Pool              | 128MB                                                  | 512MB           | 1024MB                                                 | 2014MB+                                                |
+| Storage                        | 5GB                                                    | 20GB                                                   | 30GB                                                   | 100GB+                                                 |
+| Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." /> | 5                                                      | 25                                                     | 100                                                    | 200                                                    |
+| Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." />        | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span>| <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                     | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Object Cache  <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." />                 |                                                        | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Multidev <Popover content="All sites associated with an organization have access to <a href='/docs/multidev/>Multidev</a> regardless of plan." />                      |                                                        |                                                        |<span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+
+
+### Glossary
+
+**Application Containers**: Each [application container](/application-containers) is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
+
+**PHP Concurrency**: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance.
+
+**PHP Memory Limit (Application Memory Limit)**: The maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
+
+**MySQL Buffer Pool**: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
+
 ## Frequently Asked Questions
 
 ### Can I host more than one site on an individual plan?
@@ -95,5 +129,9 @@ Note that the annual plan prices are listed as annual cost.
 ## See Also
 
 - [Manage Plans in the Site Dashboard](/site-plan)
+
 - [Traffic Limits and Overages](/traffic-limits)
+
 - [Metrics in the Site Dashboard](/metrics)
+
+- [Application Containers](/application-containers)

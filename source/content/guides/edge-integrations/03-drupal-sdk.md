@@ -90,6 +90,7 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 1. Click **Add Condition**.
 
 1. Fill in value for **Equals**. Fastly is currently set up to return 2-letter country codes for geolocation. If your country is USA, type in “US” in all uppercase letters.
+
     ![Segment Equals](../../../images/guides/edge-integrations/segmentequals.png)
 
 1. Add all of the required segments and select one that will act as the default.
@@ -115,6 +116,8 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 1. Navigate to the page with the block and you will see the personalization you configured.
 
 1. If you don’t have a VPN client, navigate to the **Segments Sets Admin** page at `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
+
+    ![Smart Content Preview](../../../images/guides/edge-integrations/ei-drupal-smart-content-preview.png)
 
 The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview; anonymous users will not have access.
 
