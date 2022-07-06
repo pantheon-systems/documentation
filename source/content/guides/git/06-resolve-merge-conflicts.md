@@ -68,9 +68,9 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 1. Run the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
-```bash{promptUser: user}
-terminus site:info <site> --field=upstream
-```
+   ```bash{promptUser: user}
+   terminus site:info <site> --field=upstream
+   ```
 
 ## Manually Resolve Conflicts
 
