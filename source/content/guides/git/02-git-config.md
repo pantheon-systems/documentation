@@ -29,7 +29,7 @@ Download and install Git for your operating system:
 
 ## Configure Git
 
-You must provide a name and email with which your commits will be associated before you can commit your code in Git.
+Provide a name and email with which your commits will be associated before you can commit your code in Git.
 
 1. Run the following command to enter your own name and email.
 
@@ -79,7 +79,7 @@ You must create a local copy of your [codebase](/code#pantheon-git-repository "A
   Resolving deltas: 100% (12802/12802), done.
   ```
 
-- Check your [SSH key](/ssh-keys) setup if you run into permission problems. 
+- Check your [SSH key](/ssh-keys) setup if you run into permission problems.
   
 - Confirm that you have a current version of Git if the clone starts but can't complete.
 
@@ -87,7 +87,7 @@ You must create a local copy of your [codebase](/code#pantheon-git-repository "A
 
 You can now edit your site code using your [preferred](https://xkcd.com/378/ "XKCD comic about text editors") text editor or IDE.
 
-1. Run the command below to add a new file to your codebase and have Git track the file. 
+1. Run the command below to add a new file to your codebase and have Git track the file.
 
   ```bash{promptUser: user}
   git add path/to/file.txt
@@ -182,7 +182,6 @@ Pantheon instantly deploys the changes to your development server when the push 
 
 1. Click **Visit Development Site** to see the changes made by your new code.
 
-
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
@@ -203,9 +202,10 @@ To configure this URL:
 
    1. Remove `git clone` from the beginning of the URL. 
 
-   1. Remove the trailing space and 'my-site' name from the end of the URL provided in the **Connection Info** section of your Pantheon Dashboard.
+   1. Remove the trailing space and `my-site` name from the end of the URL provided in the **Connection Info** section of your Pantheon Dashboard.
 
-      Your Source URL should look like this: 
+      Your Source URL should look like this:
+
       ```
       ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git
       ```

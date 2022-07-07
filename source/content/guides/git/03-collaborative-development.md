@@ -9,16 +9,15 @@ layout: guide
 showtoc: true
 permalink: docs/guides/git/collaborative-development
 anchorid: collaborative-development
-
 ---
+
 Pantheon provides Git repositories for all sites on the platform. However, some teams might need an external repository hosted by a provider, like GitHub or Bitbucket, to function as the canonical version of the site's codebase. This section shows you how to use Pantheon with an external repository. The example below uses a GitHub account. However, the steps should be similar for any provider.
 
 ## Git Repositories on Pantheon
 
 The codebase for your site is stored in a Git repository. This includes your versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
-This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"),
-or one of their forks that our users manage as [Custom Upstreams](/guides/custom-upstream). Your site’s repository on the Pantheon platform will track one of these upstream repositories as a Git remote. 
+This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/ "Pantheon's Drupal 7 repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"), or one of their forks that our users manage as [Custom Upstreams](/guides/custom-upstream). Your site’s repository on the Pantheon platform will track one of these upstream repositories as a Git remote. 
 
 These repositories control the common codebase for several sites. The most common change to an upstream is the release of a new core version. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using GitHub to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repository in sync with GitHub.
 
@@ -50,9 +49,9 @@ The sections below will show you the basics for collaborating with others if you
     Checking connectivity... done.
     ```
 
-1. Change directory into the site repository > verify your connection to the Pantheon server:
+1. Change directory into the site repository and verify your connection to the Pantheon server:
 
-    ```bash{outputLines: 2-4}
+    ```bash{outputLines: 3-4}
     cd d7-ci
     git remote -v
     origin  ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (fetch)

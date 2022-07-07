@@ -61,32 +61,32 @@ You can delete changes made in your local environment that have not been pushed 
 
 A hard reset will completely destroy all changes and remove them from the local directory.
 
-1. Run the command below to locally delete that last commit. 
+Run the command below to locally delete that last commit. 
 
-   ```bash{promptUser: user}
-   git reset --hard HEAD~1
-   ```
+```bash{promptUser: user}
+git reset --hard HEAD~1
+```
 
 ### Soft Reset
 
 A soft reset will keep your files and stage all changes back automatically. 
 
-1. Run the command below to locally delete that last commit. 
+Run the command below to locally delete that last commit:
 
-   ```bash{promptUser: user}
-   git reset --soft HEAD ~1
-   git commit -C HEAD ~1
-   ```
+```bash{promptUser: user}
+git reset --soft HEAD ~1
+git commit -C HEAD ~1
+```
 
 ## Go Back in Time
 
 Resetting to a point in time when you know your local was working correctly can be a simple way to get back on track.
 
-1. Run the command below, replacing the amount of time you want to go back to as needed:
+Run the command below, replacing the amount of time you want to go back to as needed:
 
-   ```bash{promptUser: user}
-   git reset --hard HEAD@{5.minutes.ago}
-   ```
+```bash{promptUser: user}
+git reset --hard HEAD@{5.minutes.ago}
+```
 
 ## Interactive Rebase
 
@@ -108,23 +108,23 @@ Review the [Git documentation](http://shafiul.github.io/gitbook/4_interactive_re
 
 You can delete changes made in your local environment that have been pushed to Pantheon. This will completely destroy all changes and remove them from the local directory.
 
-1. Run the command below to delete that last commit. 
+Run the command below to delete that last commit:
 
-   ```bash{promptUser: user}
-   git reset --hard HEAD~1
-   git push --force origin master
-   ```
+```bash{promptUser: user}
+git reset --hard HEAD~1
+git push --force origin master
+```
 
 ## Revert the Last Commit on Pantheon That Has Been Deployed to Test or Live
 
 It is important to test changes before deploying them to Test or Live. However, you can reverse commits pushed to your Test or Live environment on Pantheon.
 
-1. Run the command below to reverse the last commit and retain your history.
+Run the command below to reverse the last commit and retain your history.
 
-   ```bash{promptUser: user}
-   git revert HEAD --no-edit
-   git push origin master
-   ```
+```bash{promptUser: user}
+git revert HEAD --no-edit
+git push origin master
+```
 
 ## Revert a Prior Commit on Pantheon That Has Been Deployed to Test or Live
 

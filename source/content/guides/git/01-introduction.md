@@ -13,7 +13,7 @@ anchorid: git
 
 <Youtube src="LG7_wWQHtS4" title="Git" />
 
-Pantheon provides industry standard version control with [Git](https://git-scm.com/). Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably. We also give you the power of feature branching through [Multidev](/multidev). 
+Pantheon provides industry standard version control with [Git](https://git-scm.com/). Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably. We also give you the power of feature branching through [Multidev](/multidev).
 
 Git is an open source version control system. It’s fast, secure, and reliable, and supports both simple versioning or complex, distributed, non-linear workflows for hundreds of contributors.
 
@@ -29,7 +29,7 @@ Git allows you to create a parallel version or branch of your current codebase a
 
 You can push this new version of your website to the Pantheon platform, and then build an environment around it with [Multidev](/multidev).
 
-Your changes are sent up the pipeline to your Live environment when you commit.  [Git allows you to quickly revert](/guides/git/undo-commits) changes without the risk of restoring the entire environment from a backup if a bug makes it past your automated testing.
+Your changes are sent up the pipeline to your Live environment when you commit. [Git allows you to quickly revert](/guides/git/undo-commits) changes without the risk of restoring the entire environment from a backup if a bug makes it past your automated testing.
 
 ## More Resources
 

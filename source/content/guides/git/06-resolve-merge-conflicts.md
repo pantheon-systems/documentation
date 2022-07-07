@@ -66,11 +66,11 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 ### Find a Site's Upstream URL
 
-1. Run the following command in [Terminus](/terminus) to retrieve your Upstream URL:
+Run the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
-   ```bash{promptUser: user}
-   terminus site:info <site> --field=upstream
-   ```
+```bash{promptUser: user}
+terminus site:info <site> --field=upstream
+```
 
 ## Manually Resolve Conflicts
 
@@ -164,7 +164,7 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
 
     ![Git Clone](../../../images/dashboard/git-string.png)
 
-1. Navigate to the repository directory > pull the Multidev branch to master. 
+1. Navigate to the repository directory, change to the `master` branch and pull the Multidev branch to `master`.
 
     - In the example below, replace `multidev` with the Multidev environment name:
 
@@ -173,7 +173,7 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
       git pull origin multidev
       ```
 
-1. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above when you receive the Git notification listing the files that are in conflict. 
+1. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above when you receive the Git notification listing the files that are in conflict.
 
 ## More Resources
 
