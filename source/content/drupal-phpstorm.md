@@ -17,7 +17,7 @@ After you've [created your site on Pantheon](/create-sites), you'll need to set 
 
 ### Clone the Code Repository
 
-Make sure your Dev environment is in Git mode, then [clone your Git repository](/git) to your local workstation.
+Make sure your Dev environment is in Git mode, then [clone your Git repository](/guides/git/git-config) to your local workstation.
 
 ### Create a New PhpStorm Project
 

@@ -1,12 +1,17 @@
 ---
 title: Git FAQs
+subtitle: FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
 categories: [develop]
 tags: [git, iterate, local, workflow]
 contributors: [mrfelton, alexfornuto]
-reviewed: "2020-03-16"
+layout: guide
+showtoc: true
+permalink: docs/guides/git/faq-git
+anchorid: faq-git
 ---
-[Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/local-development), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+
+This section answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -14,21 +19,27 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 </Enablement>
 
-This doc answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts)
-
 ## Does Pantheon support Git submodules?
 
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
 
-You can remove submodules with `git rm`:
+You can remove submodules:
 
-```bash{promptUser: user}
-git rm ./submodule_directory/
-```
+1. Run the `git rm` command:
 
-Then commit and push your changes.
+  ```bash{promptUser: user}
+  git rm ./submodule_directory/
+  ```
 
-## What are the Git tags?
+1. Commit and push your changes.
+
+## What are the "update\_drops" Git tags?
+
+The "update\_drops" tags are from our upstream updates in the past (Pantheon no longer tags these).
+
+The tag `pantheon.initialize` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
+
+You can create your own `pantheon_test_N` tag with a higher value N to push changes directly to test.
 
 ```bash{outputLines:2-9}
 git tag
@@ -41,24 +52,19 @@ pantheon_live_2
 pantheon_test_1
 pantheon_test_2
 ```
-
-The "update\_drops" tags are from our upstream updates in the past (we don't tag them anymore, but used to).
-
-The tag `pantheon.initialize` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
-
-Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can."
-
 ## How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/undo-commits).
+See [Undo Git commits like overwriting Drupal core](/guides/git/undo-commits).
 
 ## How do I apply a patch from Drupal.org on Pantheon?
 
-If you want to patch core or a module, you should use Git. You will need to switch from On Server Development if it's enabled.
+You should use Git if you want to patch core or a module. You will need to switch from On Server Development if it's enabled.
 
 Drupal.org has very good instructions about [applying patches with Git](https://www.drupal.org/node/1399218).
 
-From your local clone, run the `git apply` command as per Drupal.org, commit your change, and push back to Pantheon. A best practice is to include a link to the issue/comment where the patch came from in your commit message.
+1. Navigate to your local clone > run the `git apply` command as per Drupal.org.
+
+1. Commit your change > push to Pantheon. A best practice is to include a link to the issue/comment where the patch came from in your commit message.
 
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
@@ -78,9 +84,9 @@ We are currently running Git 2.4.x.
 
 ## Why were pushes denied because of changes in sites/default/files?
 
-If you find that you're running into issues with commits that reference `sites/default/files`, use the filter-branch command to rewrite those references out of your repository. The engineers at GitHub have [documented this technique](https://help.github.com/articles/removing-sensitive-data-from-a-repository/).
+If you find that you're running into issues with commits that reference `sites/default/files`, use the filter-branch command to remove those references from your repository. The engineers at GitHub have [documented this technique](https://help.github.com/articles/removing-sensitive-data-from-a-repository/).
 
-From within the Drupal root of your site:
+Navigate to the Drupal root of your site:
 
 ```bash{promptUser: user}
 git filter-branch -f --index-filter 'git rm -rf --cached --ignore-unmatch sites/default/files' --prune-empty -- f4160148..HEAD
@@ -104,7 +110,7 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
   terminus connection:info <site>.dev --fields=git_host
   ```
 
-  Which will return:
+  This will return:
 
   ```none
     Git Host   codeserver.dev.1887c5fa-...-8fe90727d85b.drush.in
@@ -154,7 +160,7 @@ No. Git is a powerful and useful tool, but it does take some practice to effecti
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
-As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts) for more information.
+As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts) for more information.
 
 ## How do I delete a remote branch?
 
@@ -202,9 +208,20 @@ Pantheon provides default `.gitignore` files in the base of each site's code rep
 
 ## Troubleshoot Commit Issues
 
-If you encounter an error when trying to commit, check the following:
+Check the following if you encounter an error when trying to make a commit:
 
 - Commit Size: If the commit is too large, it will be rejected.
+
   - Check the commit for non-codebase files that have been added to the site.
+
   - Does the commit contain a full overwrite of the entire site? Rather than overwrite the site in place, we suggest migrating to a new site to avoid downtime and potential conflicts. See [Relaunch Existing Pantheon Site](/relaunch) for more information.
+
 - Confirm that the file isn't listed in `.gitignore`
+
+## More Resources
+
+- [Git Documentation](https://git-scm.com/doc)
+
+- [Undo Git Commits](/guides/git/undo-commits)
+
+- [Resolve Merge Conflicts](/guides/git/resolve-merge-conflicts)

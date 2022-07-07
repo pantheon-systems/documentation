@@ -11,7 +11,7 @@ The following instructions enable Twig debugging and set development-friendly pe
 ## Enable Twig Debugging on Dev & Multidevs
 Pantheon handles the inclusion of service configuration files. The [default file provided](https://github.com/pantheon-systems/drupal-composer-managed/tree/default/web/sites/default) has everything you need, so enabling Twig debugging is simple:
 
-1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/git/#clone-your-site-codebase) or via [Terminus](/terminus):
+1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:info <site>.dev --fields='Git Command' --format=string

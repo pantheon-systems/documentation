@@ -65,7 +65,7 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 ### Can I use my own Git repository (e.g GitHub)?
 
-Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/collaborative-development).
+Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/git/collaborative-development).
 
 [Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/guides/custom-upstream).
 

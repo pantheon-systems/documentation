@@ -86,7 +86,7 @@ All plans except for the Basic plan can use Object Cache. Sandbox site plans can
   terminus connection:set <site>.<env> git
   ```
 
-1. [Clone the site's codebase](/git/#clone-your-site-codebase) if you have not done so already.
+1. [Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase) if you have not done so already.
 
 1. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 

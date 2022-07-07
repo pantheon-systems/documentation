@@ -965,7 +965,7 @@ export ENV=dev
   terminus connection:set $SITE.$ENV git
   ```
 
-1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/git#clone-your-site-codebase):
+1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site

@@ -118,7 +118,7 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. You wi
 
 1. Pull changes to your local repository (if you have one).
 
-   - Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
+   - Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/guides/git/git-config#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
 1. Rebase any non-`master` branches and remove their remote versions > re-push the branches to avoid the Git pre-receive error:
 

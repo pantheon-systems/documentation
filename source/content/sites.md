@@ -65,7 +65,7 @@ If you need assistance, our expert Customer Support team is here to help make bu
 
 ### Connection Info
 
-Here you can find the [SSH clone URL](/git), [Database Connection Information](/mysql-access), and [SFTP](/sftp) connection information.
+Here you can find the [SSH clone URL](/guides/git/git-config), [Database Connection Information](/mysql-access), and [SFTP](/sftp) connection information.
 
 ### Code
 

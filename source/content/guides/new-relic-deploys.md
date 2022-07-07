@@ -31,7 +31,7 @@ export site=yoursitename
 
 </Alert>
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git#clone-your-site-codebase) and navigate to the project's root directory. You can use Terminus to provide the clone command:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. You can use Terminus to provide the clone command:
 
   ```bash{outputLines:2-3}
   terminus connection:info $site.dev --fields='Git Command' --format=string
@@ -86,7 +86,7 @@ export site=yoursitename
 
    </Alert>
 
-1. [Add, commit, and push](/git#push-changes-to-pantheon) changes to the Dev environment:
+1. [Add, commit, and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
   ```bash{promptUser: user}
   git add private/scripts/new_relic_deploy.php

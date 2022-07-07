@@ -99,7 +99,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 
 Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Pivotal Tracker to the [private path](/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
 
   ```bash{promptUser: user}
   `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
@@ -140,7 +140,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
     </Alert>
 
-6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
   ```bash{promptUser: user}
   git add .

@@ -33,7 +33,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <Tab title="WordPress" id="wp-init" active={true}>
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
   ```bash{promptUser: user}
   SITE=<site_name>
@@ -102,7 +102,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <Tab title="Drupal 7" id="d7-init">
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
   ```bash{promptUser: user}
   SITE=<site_name>

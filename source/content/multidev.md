@@ -143,7 +143,7 @@ Any changes you make to a branch you have checked out locally will be committed 
 
 ## Edit Code
 
-Edit your content locally via [Git](/git) or utilize on-server development via [SFTP](/sftp) mode.
+Edit your content locally via [Git](/guides/git/git-config) or utilize on-server development via [SFTP](/sftp) mode.
 
 ### SFTP Mode
 

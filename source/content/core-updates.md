@@ -180,7 +180,7 @@ In the case where you're unable to use Git, you can use [SFTP](/sftp) to overwri
 
 This process lets you manually resolve the conflict using the command line and a text editor.
 
-1. Navigate to a [local clone of your site repository](/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to a [local clone of your site repository](/guides/git/git-config#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
   <TabList>
 
