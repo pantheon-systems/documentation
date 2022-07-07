@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [get-started]
 tags: [site]
 type: guide
-permalink: docs/guides/drupal-9-from-community
+permalink: docs/guides/drupal-9-from-dist
 contributors: [wordsmither]
 date: 07/06/2022
 ---
@@ -188,7 +188,7 @@ include __DIR__ . "/settings.pantheon.php";
    git push origin master -f
    ```
 
-1. Install your site in the dev environment and test that everything works
+1. Install your site in the dev environment and test that everything works.
 
 
 ## See Also
