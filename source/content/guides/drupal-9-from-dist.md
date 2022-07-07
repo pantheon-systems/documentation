@@ -16,7 +16,7 @@ Start by looking at the documentation provided with the community distribution; 
 
 ## Prepare
 
-1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
+<Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
 ## Create a Site Based on an Empty Upstream
 
