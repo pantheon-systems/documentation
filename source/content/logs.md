@@ -248,7 +248,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
 
-1. Add `logs/*` to the project's [`.gitignore` file](/git-faq/#can-i-use-gitignore-on-pantheon).
+1. Add `logs/*` to the project's [`.gitignore` file](/guides/git/faq-git#can-i-use-gitignore-on-pantheon).
 
 1. In your project's `logs` directory, create `logwatcher.sh`:
 

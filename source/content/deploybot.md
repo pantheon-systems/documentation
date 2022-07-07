@@ -12,7 +12,7 @@ Continuous integration solutions make sure that each step in your deployment pro
 
 ## Before You Begin
 - If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
-- Manage and store your site's code repository on a third party hosting service, such as [GitHub](/guides/collaborative-development).
+- Manage and store your site's code repository on a third party hosting service, such as [GitHub](/guides/git/collaborative-development).
 - Your workflow and build steps should already be known and established before attempting to add continuous integration.
 
   For example, if you would like to use DeployBot to send compiled CSS and JavaScript files to Pantheon you should already have a task runner, such as [Grunt](https://gruntjs.com/), within your site's codebase that can be used to compile assets.

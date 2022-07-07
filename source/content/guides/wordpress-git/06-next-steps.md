@@ -34,4 +34,4 @@ You can repeat configuration steps manually, but that can be error prone and tim
 
 This covers the basics of using Git on Pantheon with WordPress. Regardless of whether you prefer an SFTP client, and IDE, or the command line, Pantheon believes that developers should be able to use the tools that let you work the fastest, without sacrificing quality or security.
 
-If you decide down the road that you would like to work locally and make commits using Git directly, you can read our [Starting With Git](/git) documentation.
+If you decide down the road that you would like to work locally and make commits using Git directly, you can read our [Starting With Git](/guides/git/git-config) documentation.

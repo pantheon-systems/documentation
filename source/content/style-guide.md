@@ -121,7 +121,7 @@ Of particular note, any documentation that uses Terminus should reference it in 
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 
@@ -133,7 +133,7 @@ Be sure that you have:
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 ```
@@ -752,7 +752,11 @@ ___
 
 ## Error Messages
 
-Document error messages verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Make the header an H3 to make the section linkable within the table of contents for easy sharing.
+<ReviewDate date="2022-06-05" />
+
+When referencing error messages in the body of an article, format them as monospace, and either place them inline (if short) or as a new paragraph (if long).
+
+When providing solutions to error messages, document them verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Making the header an H3 makes the section linkable within the table of contents for easy sharing.
 
 <Example>
 

@@ -34,7 +34,7 @@ You can output the size of your repository by running [`git count-objects -vH`](
 ## Prune and Optimize Large Repositories
 
 
-1. [Clone the site's codebase](/git#clone-your-site-codebase), if you haven't already.
+1. [Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), if you haven't already.
 
 1. Set the connection mode for each environment (excluding Test and Live) to git. You can do this with Terminus:
 
