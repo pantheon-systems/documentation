@@ -177,7 +177,7 @@ include __DIR__ . "/settings.pantheon.php";
    git remote add origin [pantheon_remote]
    ```
 
-   If you need to get pantheon_remote, use terminus:
+   If you need to get pantheon_remote, use Terminus:
 
    ```
    terminus connection:info --field=git_url [site].dev
