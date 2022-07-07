@@ -18,7 +18,7 @@ Start by looking at the documentation provided with the community distribution; 
 
 1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
-## Create an Empty Upstream
+## Create a Site Based on an Empty Upstream
 
 There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
 
