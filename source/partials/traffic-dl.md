@@ -55,7 +55,7 @@ A visit counts if it:
 
 ### Uncounted Visits
 
-The traffic measurement model below describes outlines interactions excluded from your site's visit count. Our exclusion metric model relies in part on customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site. 
+The traffic measurement model below describes interactions excluded from your site's visit count. Our exclusion metric model relies partly on customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site. 
 
 A visit does not count if it:
 
