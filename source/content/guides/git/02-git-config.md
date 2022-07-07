@@ -205,7 +205,10 @@ To configure this URL:
 
    1. Remove the trailing space and 'my-site' name from the end of the URL provided in the **Connection Info** section of your Pantheon Dashboard.
 
-      - Your Source URL should look like this: `ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git`
+      Your Source URL should look like this: 
+      ```
+      ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git
+      ```
 
 1. In the **Destination Path** field, enter the local path where you want to clone the repository.
 
