@@ -1,6 +1,6 @@
 ---
-title: Create a Drupal 9 Site Using a Community Distribution
-description: Learn how to create a site using a Drupal 9 community distribution.
+title: Create a Drupal 9 Site Using a Drupal Distribution
+description: Learn how to create a site using a Drupal 9 distribution.
 cms: "Drupal"
 categories: [get-started]
 tags: [site]
@@ -12,7 +12,7 @@ date: 07/06/2022
 
 Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 
 
-Start by following the documentation provided with the community distribution; then continue with the following steps.
+Start by looking at the documentation provided with the community distribution; then continue with the following steps.
 
 ## Requirements
 
@@ -32,70 +32,53 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
   terminus site:create my-new-site "My New Site" empty
   ```
 
-## Create the Community Distribution Project 
+## Create the Project 
 
-Use the documentation provided with the community distribution to run the recommended Composer `create-project` command.  Here are some examples
-
-### Apigee
-
-  ```bash{promptUser: user}
-  composer create-project apigee/devportal-kickstart-project:9.x-dev MY_PROJECT --no-interaction
-  ```
-
-### Drupal Thunder
-
-  ```bash{promptUser: user}
-  composer create-project thunder/thunder-project thunder --no-interaction --no-install
-  ```
-
-### DKAN Open Data Platform
-
-  ```bash{promptUser: user}
-  composer create-project getdkan/recommended-project my-project
-  ```
-
-<Alert title="Warning" type="danger" >
-
-Do not rely on the sample code above.  Be sure to use the instructions provided with the community distribution.
-
-</Alert>
+Use the documentation provided with the Drupal distribution to run the recommended Composer `create-project` command. 
 
 ## Add Files and Folders
 
 Now you're going to copy files and folders from the Pantheon GitHub repository for use in your project.  To simplify this, first clone https://github.com/pantheon-systems/drupal-composer-managed into another folder.
 
-In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the the cloned repository.
+In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the the cloned repository.  In addition, they assume the commands are being run from the folder created from the `create-project` command.
 
 1. Copy the `upstream-configuration` folder to your site:
 
   ```bash{promptUser: user}
-  cp -r /drupal-composer-managed-path/upstream-configuration 
+  cp -r /drupal-composer-managed-path/upstream-configuration .
   ```
 
 1. Copy the `pantheon.upstream.yml` file to your site:
 
   ```bash{promptUser: user}
-  cp  /drupal-composer-managed-path/pantheon-upstream.yml
+  cp  /drupal-composer-managed-path/pantheon-upstream.yml .
   ```
 
 1. Create an empty `config` folder:
 
   ```bash{promptUser: user}
-  mkdir -p config
+  mkdir -p config .
   ```
 
 ## Update Composer Settings
 
-Add/modify the settings in `blob/main/composer.json` as follows:
+Add/modify the settings in `composer.json` as follows:
 
 1. Add the `upstream-configuration` path repository:
 
    ```
-   "autoload": {
-       "classmap": [
-           "upstream-configuration/scripts/ComposerScripts.php"
-       ]
-   },
+   "repositories": [
+       {
+           "type": "composer",
+           "url": "https://packages.drupal.org/8"
+       },
+//highlight-start
+       {
+           "type": "path",
+           "url": "upstream-configuration"
+       }
+   ],
+//highlight-end
    ```
 
 1. Include the following in the `require` section:
@@ -181,12 +164,35 @@ Add the following to your `/web/sites/default/settings.php` file.
 include __DIR__ . "/settings.pantheon.php";
 ```
 
-## Launch Your Site
+## Initialize, Push and Test
 
-<Partial file="drupal-9/deploy-using-launch.md" />
+1. Initialize the git repo and commit everything:
+   ```
+   git init -b master
+   git commit -am "Initial commit"
+   ```
+
+1. Add the Pantheon repository as a remote:
+   ```
+   git remote add origin [pantheon_remote]
+   ```
+
+   If you need to get pantheon_remote, use terminus:
+
+   ```
+   terminus connection:info --field=git_url [site].dev
+   ```
+
+1. Force push to Pantheon master branch:
+   ```
+   git push origin master -f
+   ```
+
+1. Install your site in the dev environment and test that everything works
 
 
 ## See Also
 
 - [Get Started](/get-started)
 - [Drupal 9 Migration Guides](/drupal-9-migration)
+- [Go Live](/go-live)
