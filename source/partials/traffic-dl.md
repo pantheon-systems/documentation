@@ -42,39 +42,39 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 ### Counted Visits
 
-A visit counts if it:
+A visit counts if it is one of the following:
 
-- Is valid
+- Valid
 
-- Is not a known bot
+- Not a known bot
 
 - Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP
   - Or returns a [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) of 303, 304, or 305.
 
-- Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day too.
+- Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day as well.
 
 ### Uncounted Visits
 
 The traffic measurement model below describes interactions excluded from your site's visit count. Our exclusion metric model relies partly on customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site. 
 
-A visit does not count if it:
+A visit does not count if it is one of the following:
 
-- Is invalid (originating from a known bot or crawler)
+- Invalid (originating from a known bot or crawler)
   - A high-performance response to crawlers supports SEO, which is one of the reasons Pantheon is the platform of choice for our customers. Although it places load on the platform, Pantheon excludes select automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. See the above definition of _visits_, regarding the combination of datasets to determine traffic metrics. Pantheon excludes certain activity on your Site Dashboard (e.g., Google bot user agent).
   - Some bots and crawlers present themselves as end-user browsers. This makes their behavior difficult to distinguish from human end users. Some bots exhibiting this behavior, while they claim to be regular browsers, remain distinctive enough to exclude from billing.
   - To block specific bots and crawlers from your site, [add them to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or [use PHP to block specific User Agents](/optimize-site-traffic#block-user-agents-in-drupal-or-wordpress).
 
-- Is a non-unique or repeated IP address for a given day
+- A non-unique or repeated IP address for a given day
 
-- Is a response from a static asset, such as images, PDFs, CSS, JS, etc.
+- A response from a static asset, such as images, PDFs, CSS, JS, etc.
 
-- Is using excessive bandwidth 
+- Uses excessive bandwidth 
   - Individual sites consuming excessive bandwidth may be contacted separately by Pantheon for monitoring and actions required to address any plan abuse.
 
-- Is a redirect
+- A redirect
   - The platform does not count the following [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) redirect responses: 301, 302, 307, 308.
 
-- Is a 404 or other client error
+- A 404 or other client error
   - Client errors are returned as [400-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors) responses, and do not count as part of plan traffic limits. 
 
 ![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../images/platform-traffic-counted.png)
