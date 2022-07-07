@@ -14,9 +14,9 @@ Distributions are pre-made packages that you can use to simplify creating and se
 
 Start by looking at the documentation provided with the community distribution; then continue with the following steps.
 
-## Requirements
+## Prepare
 
-- You are managing site dependencies using Composer.  If not, you can [convert a standard Drupal site to a Composer managed site](/guides/composer-convert).
+1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
 ## Create an Empty Upstream
 
