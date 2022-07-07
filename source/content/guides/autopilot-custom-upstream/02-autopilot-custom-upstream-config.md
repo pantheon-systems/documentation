@@ -15,7 +15,7 @@ There are three use cases for combining Autopilot and Custom Upstreams on the Pa
 
 ## Autopilot Enabled on Downstream Sites Only
 
-This use case is considered the standard use case for Autopilot. Autopilot always checks for an upstream in Pantheon’s maintained upstream library or a Custom Upstream created by the user. Autopilot applies the updates from the upstream alongside other modules, plugins, and themes. This scenario makes the most sense if you are using your Custom Upstream as a boilerplate template.
+This use case is considered the standard use case for Autopilot. Autopilot always checks for an upstream in Pantheon’s upstream library or a Custom Upstream created by the user. Autopilot applies the updates from the upstream alongside other modules, plugins, and themes. This scenario makes the most sense if you are using your Custom Upstream as a boilerplate template.
 
 <Alert title="Note: Drupal 9 Users"  type="info" >
 
@@ -45,7 +45,7 @@ Autopilot Enabled on Downstream Sites Only is the best option if you are using D
 
 ## Autopilot Enabled on Custom Upstream and Downstream Sites
 
-This use case requires you to set up your Custom Upstream as a Pantheon site and enable Autopilot. This setup is beneficial if you have broad portfolios of similar sites (such as universities). We recommend that the child sites exclude certain updates coming from the upstream (such as common plugins/modules) so out-of-sync updates do not accidentally get applied.
+This use case requires you to set up your Custom Upstream as a Pantheon site and enable Autopilot. This setup is beneficial if you have broad portfolios of similar sites (such as universities). We recommend that the child sites exclude certain updates coming from the upstream (such as common plugins or modules) so out-of-sync updates do not accidentally get applied.
 
 **Pros**: 
 
@@ -55,7 +55,7 @@ This use case requires you to set up your Custom Upstream as a Pantheon site and
 
 **Cons**:
 
-- You must exclude certain plugins/themes at the site level to avoid merge conflicts with the upstream
+- You must exclude certain plugins and themes at the site level to avoid merge conflicts with the upstream
 
 ### Enable Autopilot on Your Custom Upstream and Downstream Sites
 
@@ -80,7 +80,7 @@ This use case requires you to set up your Custom Upstream as a Pantheon site wit
 
 **Cons**: 
 
-- Not fully taking advantage of Autopilot's benefits
+- Does not fully take advantage of Autopilot's benefits
 
 - Manual deployment of downstream updates
 

@@ -51,7 +51,7 @@ Drupal 9 users should note that there are technical limitations when using Autop
 
 ## Custom Upstream
 
-Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
+Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects quickly.
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
 The Custom Upstream workflow frees up developer time, and establishes a sustainable and scalable process for handling updates across massive site portfolios.
@@ -60,7 +60,7 @@ New features and functionality can be continuously developed in the Custom Upstr
 
 ### Custom Upstreams for Digital Agencies and Pantheon Resellers
 
-Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serves clients and resellers of Pantheon are qualified to join the Partner program.
+Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and other benefits of becoming a Pantheon Partner. Digital agencies that serve clients and resellers of Pantheon are qualified to join the Partner program.
 
 ### Custom Upstreams for Corporate and Higher Education Customers 
 
