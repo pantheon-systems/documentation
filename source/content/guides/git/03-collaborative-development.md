@@ -351,9 +351,11 @@ You must create the `settings.php` file to develop in sync.
 
 There are other options to further optimize workflows now that you have the basic setup. 
 
- - A continuous integration server like Jenkins, Travis CI, Bamboo, or CircleCI
+- Pantheon's [Build Tools](/guides/build-tools/)
 
- - A suite of automated acceptance tests using Behat or PHPUnit
+- A continuous integration server like Jenkins, Travis CI, Bamboo, or CircleCI
+
+- A suite of automated acceptance tests using Behat or PHPUnit
 
 These tools allow your team to fully implement continuous delivery with automated testing and continuous integration.
 
