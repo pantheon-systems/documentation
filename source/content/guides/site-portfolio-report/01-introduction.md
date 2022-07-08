@@ -53,8 +53,7 @@ Pantheon allows you to add sites to your portfolio as needed, regardless of the 
 
 This information provides a snapshot of the active sites in your portfolio, including now-deleted sites that were active the last time the invoice was generated. This information does not show deleted, inactive, or sandbox sites.
 
-## See Also
-
+## More Resources
 
 - [Billing in the Site Dashboard](/site-billing)
 

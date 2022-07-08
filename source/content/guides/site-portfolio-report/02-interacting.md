@@ -79,3 +79,11 @@ Click the arrow located next to the site count of any of the Breakdown tables to
 You can click the Download CSV button under the All Active Sites in Portfolio breakdown table to download data. This allows you to view all data for active sites in Excel or a similar application.
 
 ![Breakdown Table with Download](../../../images/site-portfolio-report-breakdown-download.png)
+
+## More Resources
+
+- [Traffic Limits and Overages](/traffic-limits)
+
+- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
+
+- [Metrics in the Site Dashboard](/metrics)
