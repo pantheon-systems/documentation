@@ -117,7 +117,7 @@ This method has the advantage of being toggleable without deploying code, by act
   }, PHP_INT_MAX);
   ```
 
-	If your site uses a nested web root directory you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php` 
+	If your site uses a nested web root directory, you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php` 
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 
