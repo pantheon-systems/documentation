@@ -1074,5 +1074,5 @@
           url: '/guides/two-factor-authentication'
         - text: 'Using Lockr to Secure and Manage API and Encryption Keys'
           url: '/guides/lockr'
-        - text: 'Using SendGrid To Deliver Email'
-          url: '/guides/sendgrid'
+        - text: 'Advanced Global CDN'
+          url: '/guides/agcdn'
