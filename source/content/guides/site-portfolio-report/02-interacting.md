@@ -25,7 +25,7 @@ Hover over the bars in the chart to see more information, including the number o
 
 You can filter the Breakdown tables of all three categories in the report. 
 
-Click the **Filter by** drop-down menus to filter by:
+Click the **Filter by** drop-down menus to sort by:
 
 - Specific Owner
 
@@ -62,7 +62,7 @@ Enter the site name you want to search for in the **Search by site name** box lo
 
 You can increase the number of rows shown in each of the three Breakdown tables.
 
-Click the **Show rows per page** drop-down menu and select the number of rows you want to view.
+1. Click the **Show rows per page** drop-down menu and select the number of rows you want to view.
 
 ## Navigate to the Organization Dashboard from the Site Portfolio Report
 
@@ -72,7 +72,7 @@ Click the link under the Customer Organization heading at the top of the report 
 
 You can collapse and re-expand the each of the Breakdown tables.
 
-Click the arrow located next to the site count of any of the Breakdown tables to collapse (or re-expand) the view.
+1. Click the arrow located next to the site count of any of the Breakdown tables to collapse (or re-expand) the view.
 
 ## Download CSV 
 
