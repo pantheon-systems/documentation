@@ -12,7 +12,7 @@ date: 07/06/2022
 
 Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 
 
-Start by looking at the documentation provided with the community distribution; then continue with the following steps.
+Review the [documentation provided with the community distribution](https://www.drupal.org/project/project_distribution) before following the steps below.
 
 ## Prepare
 
@@ -36,11 +36,15 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
 
 Use the documentation provided with the Drupal distribution to run the recommended Composer `create-project` command. 
 
+You can review a list of commonly used distributions on the [Drupal Distributions](https://www.drupal.org/project/project_distribution) page.
+
 ## Add Files and Folders
 
-Now you're going to copy files and folders from the Pantheon GitHub repository for use in your project.  To simplify this, first clone https://github.com/pantheon-systems/drupal-composer-managed into another folder.
+Now you're going to copy files and folders from the Pantheon GitHub repository for use in your project. 
 
-In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the the cloned repository.  In addition, they assume the commands are being run from the folder created from the `create-project` command.
+1. Clone https://github.com/pantheon-systems/drupal-composer-managed into another folder.
+
+    In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the the cloned repository.  In addition, they assume the commands are being run from the folder created from the `create-project` command.
 
 1. Copy the `upstream-configuration` folder to your site:
 
@@ -72,13 +76,13 @@ Add/modify the settings in `composer.json` as follows:
            "type": "composer",
            "url": "https://packages.drupal.org/8"
        },
-//highlight-start
+    //highlight-start
        {
            "type": "path",
            "url": "upstream-configuration"
        }
    ],
-//highlight-end
+    //highlight-end
    ```
 
 1. Include the following in the `require` section:
@@ -99,11 +103,11 @@ Add/modify the settings in `composer.json` as follows:
            "locations": {
                "web-root": "./web"
            },
-//highlight-start
+    //highlight-start
            "allowed-packages": [
                "pantheon-systems/drupal-integrations"
            ],
-//highlight-end
+    //highlight-end
            "file-mapping": {
                "[project-root]/.editorconfig": false,
                "[project-root]/pantheon.upstream.yml": false,
@@ -120,9 +124,9 @@ Add/modify the settings in `composer.json` as follows:
            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
-//highlight-start
-           "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-//highlight-end
+    //highlight-start
+         "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+    //highlight-end
        },
        "composer-exit-on-patch-failure": true,
        "patchLevel": {
@@ -164,20 +168,22 @@ Add the following to your `/web/sites/default/settings.php` file.
 include __DIR__ . "/settings.pantheon.php";
 ```
 
-## Initialize, Push and Test
+## Initialize, Push, and Test
 
 1. Initialize the git repo and commit everything:
+   
    ```
    git init -b master
    git commit -am "Initial commit"
    ```
 
 1. Add the Pantheon repository as a remote:
+   
    ```
    git remote add origin [pantheon_remote]
    ```
 
-   If you need to get pantheon_remote, use Terminus:
+   If you need to get `pantheon_remote`, use Terminus:
 
    ```
    terminus connection:info --field=git_url [site].dev
@@ -191,8 +197,10 @@ include __DIR__ . "/settings.pantheon.php";
 1. Install your site in the dev environment and test that everything works.
 
 
-## See Also
+## More Resources
 
 - [Get Started](/get-started)
+
 - [Drupal 9 Migration Guides](/drupal-9-migration)
+
 - [Go Live](/go-live)
