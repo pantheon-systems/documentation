@@ -25,18 +25,18 @@ It includes a wide range of benefits that let teams individually manage their ow
 
 | Feature        | AGCDN |
 | ------------- | -------------------------------------- |
-| [OSI Layer 3 & 4 DDoS Protection & Mitigation]() | <span style="color:green">✔</span> |
-| SOC 2 Type 2 Compliance        | <span style="color:green">✔</span> |
-| IP Allowlisting & Blocklisting   | <span style="color:green">✔</span> |
-| Token Authentication / JWT (JSON Web Token) | <span style="color:green">✔</span> |
-| Custom Error & Maintenance Page Rules| <span style="color:green">✔</span> |
-| Geolocation-based Actions | <span style="color:green">✔</span>|
-| Device Detection and Edge Control | <span style="color:green">✔</span> |
-| Complete CDN Edge Logs | <span style="color:green">✔</span>|
-| Modify and Filter Headers at the Edge |<span style="color:green">✔</span> |
-| Edge Redirects | <span style="color:green">✔</span> |
-| Domain Masking and Reverse Proxy| <span style="color:green">✔</span> |
-| Enterprise Blue/Green Deployment Support| <span style="color:green">✔</span> |Rate Limiting(early access)| <span style="color:green">✔</span>  |                                                                                  
+| [OSI Layer 3 & 4 DDoS Protection & Mitigation](/guides/agcdn/agcdn-features#osi-layer-3--4-ddos-protection--mitigation) | <span style="color:green">✔</span> |
+| [SOC 2 Type 2 Compliance](/guides/agcdn/agcdn-features#soc-2-type-2-compliance)        | <span style="color:green">✔</span> |
+| [IP Allowlisting & Blocklisting](/guides/agcdn/agcdn-features#ip-allowlisting--blocklisting)   | <span style="color:green">✔</span> |
+| [Token Authentication / JWT (JSON Web Token)](/guides/agcdn/agcdn-features#token-authentication--jwt-json-web-token) | <span style="color:green">✔</span> |
+| [Custom Error & Maintenance Page Rules](/guides/agcdn/agcdn-features#custom-error--maintenance-page-rules)| <span style="color:green">✔</span> |
+| [Geolocation-based Actions](/guides/agcdn/agcdn-features#geolocation-based-actions) | <span style="color:green">✔</span>|
+| [Device Detection and Edge Control](/guides/agcdn/agcdn-features#device-detection-and-edge-control) | <span style="color:green">✔</span> |
+| [Complete CDN Edge Logs](/guides/agcdn/agcdn-features#complete-cdn-edge-logs) | <span style="color:green">✔</span>|
+| [Modify and Filter Headers at the Edge](/guides/agcdn/agcdn-features#modify-and-filter-headers-at-the-edge) |<span style="color:green">✔</span> |
+| [Edge Redirects](/guides/agcdn/agcdn-features#edge-redirects) | <span style="color:green">✔</span> |
+| [Domain Masking and Reverse Proxy](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)| <span style="color:green">✔</span> |
+| [Enterprise Blue/Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-bluegreen-deployment-support)| <span style="color:green">✔</span> |[Rate Limiting(early access)](/guides/agcdn/agcdn-features#rate-limiting-early-access)| <span style="color:green">✔</span>  |                                                                                  
 
 
 ### AGCDN with WAF/IO Features
@@ -45,10 +45,10 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 
 | Feature         | AGCDN with WAF and IO |
 | ------------- | ------------------------- |
-| Layer 7/Enterprise WAF rules| <span style="color:green">✔</span> |
-| Efficient Image Optimization (IO) at the Edge  |  <span style="color:green">✔</span> |
-| Rate Limiting for Form & Log-in Pages   | <span style="color:green">✔</span> |
-| Advanced Bot Detection & Mitigation <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
+| [Layer 7/Enterprise WAF rules](/guides/agcdn/agcdn-features#layer-7enterprise-waf-rules)| <span style="color:green">✔</span> |
+| [Efficient Image Optimization (IO) at the Edge](/guides/agcdn/agcdn-features#efficient-image-optimization-(io)-at-the-edge)  |  <span style="color:green">✔</span> |
+| [Rate Limiting for Form & Log-in Pages](/guides/agcdn/agcdn-features#rate-limiting-early-access)   | <span style="color:green">✔</span> |
+| [Advanced Bot Detection & Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection--mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
 
 
 

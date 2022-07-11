@@ -71,19 +71,19 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
 ## AGCDN with WAF/IO Features
 
-### Layer 7/Enterprise WAF rules
+### Layer 7/Enterprise WAF Rules
 
 Application-layer (OSI Layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
-### OWASP & WAF rules for Drupal/WordPress
+Our Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
 
 Support for <abbr title="Open Web Application Security Project">OWASP</abbr> WordPress and Drupal rules helps you monitor and address the most commonly seen application risks for these popular CMSes. Examples include SQL injection and <abbr title="Cross-Site Scripting">XSS</abbr> vulnerabilities.
 
-### Custom/Comprehensive WAF services
+### Efficient Image Optimization (IO) at the Edge
 
-Our Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
+IO renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
-### Advanced bot detection & mitigation (available as an add-on)
+### Advanced Bot Detection & Mitigation 
 
 The following third-party plugins are available:
   
