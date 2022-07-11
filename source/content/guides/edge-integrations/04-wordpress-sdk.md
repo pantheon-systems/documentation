@@ -99,7 +99,7 @@ To implement this, refer to the [example](https://github.com/pantheon-systems/ed
 
 ## WP REST API
 
-The WordPress Edge Integrations plugin provides REST API endpoints for all of the major functions and output available via server-side PHP code. This allows JavaScript-based front-ends and custom Gutenberg blocks to be informed about Edge Integrations configuration, segments and user data. Edge Integrations uses the `pantheon/v1/ei` endpoint (e.g. `https://domain.com/wp-json/pantheon/v1/ei`) and exposes the following endpoints:
+The WordPress Edge Integrations plugin provides REST API endpoints for all of the major functions and output available via server-side PHP code. This allows JavaScript-based front-ends and custom Gutenberg blocks to be informed about the Edge Integrations configuration, segments, and user data. Edge Integrations uses the `pantheon/v1/ei` endpoint (e.g. `https://domain.com/wp-json/pantheon/v1/ei`) and exposes the following endpoints:
 
 * `/pantheon/v1/ei/segments`
 * `/pantheon/v1/ei/segments/connection`
@@ -125,13 +125,13 @@ A full list and descriptions of all endpoints exists in the [WordPress Edge Inte
 
 ### Segments
 
-These endpoints expose the different types of segments available with Edge Integrations. It does *not* necessarily reflect the *currently active* segments (see [Config](#Config) below). _Segments_, in this context, mean the different ways by which users can be identified. For Edge Integrations, this means information gathered about a user based on their geolocation information and interest tracking. For the purposes of the API, "connection" is split away from the other "geo" segments into its own namespace. 
+The endpoints above expose the different types of segments available within Edge Integrations. It does not necessarily reflect the currently active segments (more information can be found in the [Config section](#Config) below). In this context, Segments indicate the different ways users can be identified. For Edge Integrations, it is information gathered about a user based on their geolocation information and interest tracking. For the purposes of the API, "connection" is split away from the other "geo" segments into its own namespace. 
 
 [Read more about `segments`](https://pantheon.stoplight.io/docs/edge-integrations/48045c3028625-ei-segments).
 
 ### Config
 
-The `config` endpoints expose information about how the Edge Integrations plugin works and what the current settings are. Most of these reflect things that are set via the filters available in the main `Pantheon\EI\WP` namespace as well as those in `Pantheon\EI\WP\Interest` and `Pantheon\EI\WP\Geo`. These allow you to have an understanding of the current working state of the plugin in the API.
+The `config` endpoints expose information about how the Edge Integrations plugin works and what the current settings are. Most of these reflect what is set via the filters available in the main `Pantheon\EI\WP` namespace, as well as those in `Pantheon\EI\WP\Interest` and `Pantheon\EI\WP\Geo`. These allow you to have an understanding of the current working state of the plugin in the API.
 
 [Read more about `config`](https://pantheon.stoplight.io/docs/edge-integrations/edaa3dbe9bca3-ei-config).
 
@@ -143,7 +143,7 @@ The `user` endpoints allow you to get information about the current user. Becaus
 
 ## How to Integrate with Gutenberg/the WordPress Block Editor
 
-The WordPress Edge Integrations plugin doesn't have any block editor integration out of the box, but the API endpoints described above can be used as a foundation upon which to build blocks that meet the needs of your site and implementation. 
+The WordPress Edge Integrations plugin does not have any block editor integration out of the box, but the API endpoints described above can be used as a foundation upon which to build blocks that meet the needs of your site and implementation. 
 
 [Read more about blocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/).
 
