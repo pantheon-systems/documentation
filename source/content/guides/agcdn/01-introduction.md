@@ -24,7 +24,7 @@ It includes a wide range of benefits that let teams individually manage their ow
 ### AGCDN 
 
 
-| <!-- -->                                                                                            | <!-- -->                                                                                     | <!-- -->                                                                                        |
+| []()                                                                                            | []()                                                                                     | []()                                                                                        |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | OSI Layer 3 & 4 DDoS Protection & Mitigation <span style="color:green">✔</span>  | SOC 2 Type 2 Compliance <span style="color:green">✔</span>                | IP Allowlisting & Blocklisting  <span style="color:green">✔</span>          |
 | Token Authentication / JWT (JSON Web Token) <span style="color:green">✔</span>   | Custom Error & Maintenance Page Rules <span style="color:green">✔</span>  | Geolocation-based Actions <span style="color:green">✔</span>             |
@@ -35,11 +35,11 @@ It includes a wide range of benefits that let teams individually manage their ow
 
 ### AGCDN with WAF/IO Features
 
-| <!-- -->      | <!-- --> |<!-- --> |
+| []()      | []() |[]() |
 | ------------- | ------------- |-------------------------|
 | Layer 7/Enterprise WAF rules<span style="color:green">✔</span>  |  |
-| Basic         |  Efficient Image Optimization (IO) at the Edge <span style="color:green">✔</span>  | Rate Limiting for Form & Log-in Pages <span style="color:green">✔</span>|
-| Advanced Bot Detection & Mitigation <Popover content="Not all plugins are supported." />  <span style="color:green">✔</span> |  | |
+|  Efficient Image Optimization (IO) at the Edge <span style="color:green">✔</span>  | Rate Limiting for Form & Log-in Pages <span style="color:green">✔</span>|
+| Advanced Bot Detection  <Popover content="Not all plugins are supported." /> & Mitigation <span style="color:green">✔</span> |  | |
 
 
 ### OSI Layer 3 & 4 DDoS Protection & Mitigation
