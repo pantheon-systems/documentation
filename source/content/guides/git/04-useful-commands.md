@@ -17,7 +17,7 @@ This section contains useful commands to help you get started with Git on Panthe
 
 ### Fetch
 
-The `fetch` command retrieves changes from your remote and adds them to your local.
+The `fetch` command retrieves changes from your remote and adds them to your local. Replace `$branch-name` with the name of your branch in the example below.
 
 ```bash{promptUser: user}
 git fetch origin $branch-name
@@ -25,7 +25,7 @@ git fetch origin $branch-name
 
 ### Pull
 
-The `pull` command retrieves changes from your remote and adds them to a local branch that contains changes that have not been committed to the remote yet.
+The `pull` command retrieves changes from your remote and adds them to a local branch that contains changes that have not been committed to the remote yet. Replace `$branch-name` with the name of your branch in the example below.
 
 ```bash{promptUser: user}
  git pull --rebase origin $branch-name
@@ -42,6 +42,8 @@ git branch --set-upstream-to=origin/main main
 ```
 
 ### Push from a Local Branch to a Remote Branch with a Different Name
+
+Replace `$branch-name` with the name of your branch in the example below.
 
 ```bash{promptUser: user}
 git push origin $local-branch-name:$remote-branch-name
