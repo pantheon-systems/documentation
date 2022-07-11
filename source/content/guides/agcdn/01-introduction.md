@@ -19,7 +19,28 @@ It includes a wide range of benefits that let teams individually manage their ow
 
 > **Note**: At the moment, AGCDN only works with custom domains. `.pantheonsite.io` domains are not covered.
 
-# AGCDN Features
+## AGCDN Features
+
+### AGCDN 
+
+
+| <!-- -->                                                                                            | <!-- -->                                                                                     | <!-- -->                                                                                        |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| OSI Layer 3 & 4 DDoS Protection & Mitigation <span style="color:green">✔</span>  | SOC 2 Type 2 Compliance <span style="color:green">✔</span>                | IP Allowlisting & Blocklisting  <span style="color:green">✔</span>          |
+| Token Authentication / JWT (JSON Web Token) <span style="color:green">✔</span>   | Custom Error & Maintenance Page Rules <span style="color:green">✔</span>  | Geolocation-based Actions <span style="color:green">✔</span>             |
+| Device Detection and Edge Control <span style="color:green">✔</span>       | Complete CDN Edge Logs <span style="color:green">✔</span>                | Modify and Filter Headers at the Edge <span style="color:green">✔</span>    |
+| Edge Redirects <span style="color:green">✔</span>                                | Domain Masking and Reverse Proxy <span style="color:green">✔</span>      | Enterprise Blue/Green Deployment Support <span style="color:green">✔</span>  |
+| Rate Limiting (Early Access)  <span style="color:green">✔</span>                  |                                                                                              |                                                                                                 |
+
+
+### AGCDN with WAF/IO Features
+
+| <!-- -->      | <!-- --> |<!-- --> |
+| ------------- | ------------- |-------------------------|
+| Layer 7/Enterprise WAF rules<span style="color:green">✔</span>  |  |
+| Basic         |  Efficient Image Optimization (IO) at the Edge <span style="color:green">✔</span>  | Rate Limiting for Form & Log-in Pages <span style="color:green">✔</span>|
+| Advanced Bot Detection & Mitigation <Popover content="Not all plugins are supported." />  <span style="color:green">✔</span> |  | |
+
 
 ### OSI Layer 3 & 4 DDoS Protection & Mitigation
 
@@ -31,7 +52,7 @@ SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a s
 
 ### IP Allowlisting & Blocklisting
 
- Restrict access to properties using Acess Control Lists (ACLs) that use IP adddresses to either allow or deny access.
+ Restrict access to properties using Access Control Lists (ACLs) that use IP addresses to either allow or deny access.
 
 - Blocklist - prevent users with specific IPs or in IP ranges from accessing your site.
 
@@ -106,17 +127,22 @@ Rate Limiting, a feature of Advanced Global CDN, lets you place limits on reques
 
 The benefits of Rate Limiting include:
 
-- Volumetric Attack Mitigation - Reduce the effectiveness of malicious traffic, including brute-force login and denial-of-service attacks.
+- **Volumetric Attack Mitigation** - Reduce the effectiveness of malicious traffic, including brute-force login and denial-of-service attacks.
 
-- Policy-based Control - Rate Limiting supports adjustable configurations for your policy, including requests per second, and detection window.
+- **Policy-based Control** - Rate Limiting supports adjustable configurations for your policy, including requests per second, and detection window.
 
-- Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
+- **Custom Responses** - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
 
 <Alert title="Note"  type="info" >
 
 This feature is currently in Early Access; for more information, reach out to your account manager.
 
 </Alert>
+
+## Get AGCDN
+
+[Contact the Professional Services team](https://pantheon.io/contact?docs) to determine the best configuration for you.
+
 
 ## More Resources
 
