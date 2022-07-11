@@ -178,3 +178,8 @@ Configure Autopilot for each individual premium and paid plugins and modules. De
 ## Enable Autopilot Email Notifications
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
+
+## More Resources
+
+- [Autopilot for Custom Upstreams Guide](/guides/autopilot-custom-upstream)
+
