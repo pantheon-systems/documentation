@@ -24,22 +24,21 @@ It includes a wide range of benefits that let teams individually manage their ow
 ### AGCDN 
 
 
-| &nbsp;                                                                                            | &nbsp;                                                                                     | &nbsp;                                                                                        |
+| OSI Layer 3 & 4 DDoS Protection & Mitigation <span style="color:green">✔</span>                                                                                             | SOC 2 Type 2 Compliance <span style="color:green">✔</span>                                                                                      | IP Allowlisting & Blocklisting  <span style="color:green">✔</span>                                                                                                 |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| OSI Layer 3 & 4 DDoS Protection & Mitigation <span style="color:green">✔</span>  | SOC 2 Type 2 Compliance <span style="color:green">✔</span>                | IP Allowlisting & Blocklisting  <span style="color:green">✔</span>          |
-| Token Authentication / JWT (JSON Web Token) <span style="color:green">✔</span>   | Custom Error & Maintenance Page Rules <span style="color:green">✔</span>  | Geolocation-based Actions <span style="color:green">✔</span>             |
-| Device Detection and Edge Control <span style="color:green">✔</span>       | Complete CDN Edge Logs <span style="color:green">✔</span>                | Modify and Filter Headers at the Edge <span style="color:green">✔</span>    |
-| Edge Redirects <span style="color:green">✔</span>                                | Domain Masking and Reverse Proxy <span style="color:green">✔</span>      | Enterprise Blue/Green Deployment Support <span style="color:green">✔</span>  |
-| Rate Limiting (Early Access)  <span style="color:green">✔</span>                  |                                                                                              |                                                                                                 |
+
+| **Token Authentication / JWT (JSON Web Token)** <span style="color:green">✔</span>   | **Custom Error & Maintenance Page Rules** <span style="color:green">✔</span>  | **Geolocation-based Actions** <span style="color:green">✔</span>             |
+| **Device Detection and Edge Control** <span style="color:green">✔</span>       | **Complete CDN Edge Logs** <span style="color:green">✔</span>                | **Modify and Filter Headers at the Edge** <span style="color:green">✔</span>    |
+| **Edge Redirects** <span style="color:green">✔</span>                                | **Domain Masking and Reverse Proxy** <span style="color:green">✔</span>      | **Enterprise Blue/Green Deployment Support** <span style="color:green">✔</span>  |
+| **Rate Limiting (Early Access)**  <span style="color:green">✔</span>                  |                                                                                              |                                                                                                 |
 
 
 ### AGCDN with WAF/IO Features
 
-| &nbsp;     | &nbsp; |&nbsp; |
+| Layer 7/Enterprise WAF rules<span style="color:green">✔</span>      | Efficient Image Optimization (IO) at the Edge <span style="color:green">✔</span> |Rate Limiting for Form & Log-in Pages <span style="color:green">✔</span> |
 | ------------- | ------------- |-------------------------|
-| Layer 7/Enterprise WAF rules<span style="color:green">✔</span>  |  |
-|  Efficient Image Optimization (IO) at the Edge <span style="color:green">✔</span>  | Rate Limiting for Form & Log-in Pages <span style="color:green">✔</span>|
-| Advanced Bot Detection  <Popover content="Not all plugins are supported." /> & Mitigation <span style="color:green">✔</span> |  | |
+
+| **Advanced Bot Detection  <Popover content="Not all plugins are supported." /> & Mitigation** <span style="color:green">✔</span> |  | |
 
 
 ### OSI Layer 3 & 4 DDoS Protection & Mitigation
