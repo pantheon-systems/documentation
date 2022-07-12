@@ -15,7 +15,7 @@ anchorid: agcdn
 
 Each AGCDN service configuration is offered as an annual contract subscription. Customers can include multiple sites to the configuration, or conditionally apply specific rules.
 
-AGCDN includes a wide range of benefits that let teams:
+AGCDN provides a wide range of benefits that let teams:
 
 - Individually manage their own sites
 
@@ -27,9 +27,11 @@ AGCDN includes a wide range of benefits that let teams:
 
 > **Note**: At the moment, AGCDN only works with custom domains. `.pantheonsite.io` domains are not covered.
 
-## AGCDN Features
+## What Does AGCDN Include?
 
-### AGCDN 
+### AGCDN
+
+AGCDN provides many features:
 
 | Feature        | AGCDN |
 | ------------- | -------------------------------------- |
@@ -46,7 +48,6 @@ AGCDN includes a wide range of benefits that let teams:
 | [Domain Masking and Reverse Proxy](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)| <span style="color:green">✔</span> |
 | [Enterprise Blue and Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-blue-and-green-deployment-support)| <span style="color:green">✔</span> |[Rate Limiting(early access)](/guides/agcdn/agcdn-features#rate-limiting)| <span style="color:green">✔</span>  |                                                                                  
 
-
 ### AGCDN with WAF/IO Features
 
 AGCDN with WAF/IO includes everything in the table above with the following additions:
@@ -59,16 +60,29 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 | [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection-and-mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
 
 
+## Is AGCDN Right For Me?
+
+AGCDN is a great option for many users. You can review the [Judicial Council of California AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of AGCDN implementation. AGCDN is beneficial if you are want to:
+
+- Block Malicious traffic 
+
+- Create Geofenceing / IP restrictions
+
+- Rate limits with a website firewall (only with AGCDN with WAF / IO)
+
+- Define valid user agent strings
+
 
 ## Get AGCDN
 
 [Contact the Professional Services team](https://pantheon.io/contact?docs) to determine the best configuration for you.
-
 
 ## More Resources
 
 - [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
+
+- [How to Fight Cyberattacks Using Pantheon’s Advanced Global CDN](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn)
 
 - [Fastly on Pantheon](/guides/fastly-pantheon)

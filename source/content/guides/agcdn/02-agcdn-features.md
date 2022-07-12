@@ -120,3 +120,7 @@ This feature is currently in Early Access. Reach out to your account manager for
 
 - [Fastly on Pantheon](/guides/fastly-pantheon)
 
+- [How to Fight Cyberattacks Using Pantheon’s Advanced Global CDN](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn)
+
+
+

@@ -1,7 +1,7 @@
 ---
 title: Advanced Global CDN
 subtitle: FAQs
-description: Get answers to your AGCDn questions.
+description: Get answers to your AGCDN questions.
 categories: [develop]
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
@@ -29,6 +29,10 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
 [Contact us](https://pantheon.io/contact?docs) to learn how Advanced Global CDN can help your organization. Our Professional Services team will talk through your needs and help determine the best configuration for you.
 
+### Is AGCDN Compatible with Custom Upstream and Autopilot?
+
+Yes. AGCDN is compatible with Custom Upstream and Autopilot.
+
 ## More Resources
 
 - [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
@@ -36,4 +40,6 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 
 - [Fastly on Pantheon](/guides/fastly-pantheon)
+
+- [How to Fight Cyberattacks Using Pantheon’s Advanced Global CDN](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn)
 
