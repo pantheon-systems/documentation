@@ -18,7 +18,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 #### <a name="20220606-1" class="release-update"></a>Show a more meaningful notice when trying to install WP plugin in Git mode
 
-The plugin installation UI is disabled, and a notice is added to the plugins page if a site is in Git mode.
+If a site is in Git mode, the plugin installation UI is disabled and a notice is added to the plugins page.
 
 #### <a name="20220603-1" class="release-update"></a>Remove call to Pantheon API from WP admin
 
