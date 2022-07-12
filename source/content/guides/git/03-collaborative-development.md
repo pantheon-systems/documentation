@@ -261,7 +261,7 @@ You must create the `settings.php` file to develop in sync.
 1. Download the module and its dependencies in your local environment.
 
     ```bash{promptUser: user}
-    drush dl configuration-7.x-2.x-dev xautoload
+    composer require drupal/xautoload
     ```
 
 1. Enable the module > test and verify that the module is working. 
