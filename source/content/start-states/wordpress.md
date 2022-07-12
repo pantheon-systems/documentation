@@ -26,7 +26,7 @@ Most of the time the Pantheon API requests are needless (e.g. there is no update
 
 The update notice behavior will be as follows:
 
-- If a WP Core update is detected (via get_core_updates), the update notice is shown on each admin page.
+- If a WP Core update is detected (via `get_core_updates`), the update notice is shown on each admin page.
 - If a WP Core update is not detected, the update notice is only shown on the update-core or update-core-network page.
 
 Notices will still only be shown on dev and multidev environments. Users can click the notice on the updates page at any time to find out if an update is available via their Pantheon dashboard.
