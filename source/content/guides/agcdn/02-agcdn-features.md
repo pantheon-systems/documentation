@@ -70,6 +70,10 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 
 ## AGCDN with WAF and IO Features
 
+Pantheon's partnership with [Fastly](https://www.fastly.com/) offers many benefits to our customers, such as image optimizer (IO) and enhanced caching at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration / continuous delivery (CI/CD). 
+
+You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
+
 ### Layer 7 and Enterprise WAF Rules
 
 Application-layer (OSI Layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
