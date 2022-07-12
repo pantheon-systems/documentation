@@ -363,7 +363,7 @@ Run the following code to access your Hit/Miss ratio:
 
 Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
 
-In your local terminal, run the following command to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
+Run the command below in your local terminal to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
 
 ```bash {outputLines: 2-11}
 <redis-cli connection info> --stat
@@ -385,7 +385,7 @@ You can also use the `i` (interval) option in this mode to change the frequency 
 
 Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
 
-In your local terminal, run the following command to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
+Run the command below in your local terminal to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
 
 ```bash {outputLines: 2-25}
 <redis-cli connection info> --bigkeys
