@@ -363,21 +363,21 @@ Run the following code to access your Hit/Miss ratio:
 
 Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
 
-Run the following command to access stat mode: 
+In your local terminal, run the following command to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
 
-  ```bash
-  redis> --stat
-  ------- data ------ --------------------- load -------------------- - child -
-  keys       mem      clients blocked requests            connections
-  506        1015.00K 1       0       24 (+0)             7
-  506        1015.00K 1       0       25 (+1)             7
-  506        3.40M    51      0       60461 (+60436)      57
-  506        3.40M    51      0       146425 (+85964)     107
-  507        3.40M    51      0       233844 (+87419)     157
-  507        3.40M    51      0       321715 (+87871)     207
-  508        3.40M    51      0       408642 (+86927)     257
-  508        3.40M    51      0       497038 (+88396)     257
-  ```
+```bash {outputLines: 2-11}
+<redis-cli connection info> --stat
+------- data ------ --------------------- load -------------------- - child -
+keys       mem      clients blocked requests            connections
+506        1015.00K 1       0       24 (+0)             7
+506        1015.00K 1       0       25 (+1)             7
+506        3.40M    51      0       60461 (+60436)      57
+506        3.40M    51      0       146425 (+85964)     107
+507        3.40M    51      0       233844 (+87419)     157
+507        3.40M    51      0       321715 (+87871)     207
+508        3.40M    51      0       408642 (+86927)     257
+508        3.40M    51      0       497038 (+88396)     257
+```
 
 You can also use the `i` (interval) option in this mode to change the frequency at which new lines are printed. 
 
@@ -385,35 +385,35 @@ You can also use the `i` (interval) option in this mode to change the frequency 
 
 Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
 
-Run the following command to search for big keys:
+In your local terminal, run the following command to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
 
-    ```bash
-      redis> --bigkeys
+```bash {outputLines: 2-25}
+<redis-cli connection info> --bigkeys
 
-      # Scanning the entire keyspace to find biggest keys as well as
-      # average sizes per key type.  You can use -i 0.01 to sleep 0.01 sec
-      # per SCAN command (not usually needed).
+# Scanning the entire keyspace to find biggest keys as well as
+# average sizes per key type.  You can use -i 0.01 to sleep 0.01 sec
+# per SCAN command (not usually needed).
 
-      [00.00%] Biggest string found so far 'key-419' with 3 bytes
-      [05.14%] Biggest list   found so far 'mylist' with 100004 items
-      [35.77%] Biggest string found so far 'counter:__rand_int__' with 6 bytes
-      [73.91%] Biggest hash   found so far 'myobject' with 3 fields
+[00.00%] Biggest string found so far 'key-419' with 3 bytes
+[05.14%] Biggest list   found so far 'mylist' with 100004 items
+[35.77%] Biggest string found so far 'counter:__rand_int__' with 6 bytes
+[73.91%] Biggest hash   found so far 'myobject' with 3 fields
 
-      -------- summary -------
+-------- summary -------
 
-      Sampled 506 keys in the keyspace!
-      Total key length in bytes is 3452 (avg len 6.82)
+Sampled 506 keys in the keyspace!
+Total key length in bytes is 3452 (avg len 6.82)
 
-      Biggest string found 'counter:__rand_int__' has 6 bytes
-      Biggest   list found 'mylist' has 100004 items
-      Biggest   hash found 'myobject' has 3 fields
+Biggest string found 'counter:__rand_int__' has 6 bytes
+Biggest   list found 'mylist' has 100004 items
+Biggest   hash found 'myobject' has 3 fields
 
-      504 strings with 1403 bytes (99.60% of keys, avg size 2.78)
-      1 lists with 100004 items (00.20% of keys, avg size 100004.00)
-      0 sets with 0 members (00.00% of keys, avg size 0.00)
-      1 hashs with 3 fields (00.20% of keys, avg size 3.00)
-      0 zsets with 0 members (00.00% of keys, avg size 0.00)
-    ```
+504 strings with 1403 bytes (99.60% of keys, avg size 2.78)
+1 lists with 100004 items (00.20% of keys, avg size 100004.00)
+0 sets with 0 members (00.00% of keys, avg size 0.00)
+1 hashs with 3 fields (00.20% of keys, avg size 3.00)
+0 zsets with 0 members (00.00% of keys, avg size 0.00)
+```
 
 ## Troubleshooting
 
