@@ -1,10 +1,16 @@
 ---
-title: Private Paths for Files and Code
+title: Secure Development on Pantheon
+subtitle: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 tags: [infrastructure, security]
 categories: [platform,develop]
-reviewed: "2020-08-17"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/secure-development/private-paths
+anchorid: private-paths
 ---
+
 The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 
 Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.

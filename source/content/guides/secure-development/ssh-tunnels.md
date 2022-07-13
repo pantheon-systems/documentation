@@ -1,9 +1,14 @@
 ---
-title: Secure Connections to Pantheon Services via TLS or SSH Tunnels
+title: Secure Development on Pantheon
+subtitle: Secure Connections to Pantheon Services via TLS or SSH Tunnels
 description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
 categories: [develop]
 tags: [database, local, ssh, redis, webops]
 contributors: [bwood]
+layout: guide
+showtoc: true
+permalink: docs/guides/secure-development/ssh-tunnels
+anchorid: ssh-tunnels
 ---
 
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.
@@ -15,7 +20,7 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 - [MySQL database](/mysql-access) (dbserver)
 - [Redis cache](/object-cache)
 
-To restrict access to the dbserver to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access).
+To restrict access to the dbserver to SSH tunnels only, consider [Secure Runtime Access](/guides/secure-development/secure-runtime-access).
 
 ## Prerequisites
 
@@ -65,7 +70,7 @@ alias tsqlc=terminus-sql-cli
 
 From the Site Dashboard, access the environment you want to connect with, and click **Connection Info**. This will give you the required environment specific values for the command example below.
 
-![Connection info](../images/dashboard/connection-info.png)
+![Connection info](../../../images/dashboard/connection-info.png)
 
 Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
 

@@ -18,7 +18,7 @@ Pantheon automatically provides the following security measures:
 - Secure Dev environment
 - DDOS and intrusion protection
 - Automated backups
-- [Dashboard Security](/security) to lock your environments
+- [Dashboard Security](/guides/secure-development/security-tool) to lock your environments
 
 ## Additional Security
 
@@ -26,15 +26,15 @@ Pantheon provides additional security through the following features:
 
 - [Pantheon Global CDN](/global-cdn)
 
-- [Secure Runtime Access](/secure-runtime-access)
+- [Secure Runtime Access](/guides/secure-development/secure-runtime-access)
 
 - [Lockr](/guides/lockr)
 
 - [Secure Integration](/secure-integration)
 
-- [Two factor authentication](/guides/two-factor-authentication)
+- [Two factor authentication](/guides/secure-development/two-factor-authentication)
 
-- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/ssh-tunnels)
+- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels)
 
 ## Avoid WordPress Login Attacks
 

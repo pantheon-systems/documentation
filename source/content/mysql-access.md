@@ -20,7 +20,7 @@ Due to the nature of our platform, the connection information will change from t
 
 ### Accessing the Database Directly
 
-This option is not available if you have purchased [Secure Runtime Access](/secure-runtime-access).
+This option is not available if you have purchased [Secure Runtime Access](/guides/secure-development/secure-runtime-access).
 
 MySQL credentials for each site environment are located in the Dashboard:
 
@@ -140,7 +140,7 @@ mysql> SHOW STATUS LIKE "Ssl_cipher";
 +---------------+---------------------------+
 ```
 
-Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/ssh-tunnels).
+Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels).
 
 ## Troubleshooting MySQL Connections
 
