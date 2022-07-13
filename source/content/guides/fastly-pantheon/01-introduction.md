@@ -28,7 +28,7 @@ Using Fastly on the Pantheon platform to manage your site provides:
 
 - Enhanced Caching at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration/continuous delivery (CI/CD).
 
-- Image Optimizer (IO) as an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
+- Image Optimizer (IO) as an add-on that renders images using high-density CHI metro points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
 ## Take Advantage of Fastly on Pantheon 
 

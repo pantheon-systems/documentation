@@ -2,7 +2,7 @@
 Availability monitoring services (e.g., Pingdom, New Relic Synthetics) function by periodically reaching out to sites to gauge availability. Some failures in availability do not require action and can be considered false alarms, such as failures due to internet routing or idle containers.
 
 ### Internet Routing
-A temporary routing issue between a particular monitoring service endpoint and one of our CDN Points of Presence (POPs) can result in an alert. The internet is a big place, and there's a lot of potential for intermittent packet loss between any two points, depending in the route taken. A single loss of access from one point to another does not always correlate to an issue with the site itself.
+A temporary routing issue between a particular monitoring service endpoint and one of our CDN CHI metro Points of Presence (POPs) can result in an alert. The internet is a big place, and there's a lot of potential for intermittent packet loss between any two points, depending in the route taken. A single loss of access from one point to another does not always correlate to an issue with the site itself.
 
 Tools like [MTR](https://en.wikipedia.org/wiki/MTR_(software)) can help to diagnose a routing issue.
 
