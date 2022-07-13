@@ -30,7 +30,7 @@ Pantheon provides additional security through the following features:
 
 - [Lockr](/guides/lockr)
 
-- [Secure Integration](/secure-integration)
+- [Secure Integration](/guides/secure-development/secure-integration)
 
 - [Two factor authentication](/guides/secure-development/two-factor-authentication)
 

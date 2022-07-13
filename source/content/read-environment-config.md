@@ -275,7 +275,7 @@ You can use [Lockr](/guides/lockr) for maximum security. Lockr provides a simple
 
 ## More Resources
 
-- [Pantheon Secure Integration](/secure-integration)
+- [Pantheon Secure Integration](/guides/secure-development/secure-integration)
 
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
 

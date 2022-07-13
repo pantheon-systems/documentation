@@ -25,7 +25,7 @@ We do not provide IP ranges for outgoing requests for application containers and
 
 Instead, we suggest that you use an alternate form of verification like API keys or similar, if possible. We also offer an Enterprise level product called a Secure Integration that will provide variables to each of your environments in order to establish a direct route to your sites.
 
-For more information, see [Secure Integration](/secure-integration).
+For more information, see [Secure Integration](/guides/secure-development/secure-integration).
 
 ## Outbound Mail Service
 See [Email on Pantheon](/email) for information on working with dynamic IPs using SMTP and REST API configurations for outbound email service.
@@ -42,7 +42,7 @@ The following payment gateways are known to work in cloud-based infrastructures 
 
 
 ## Known Problematic Services
-The following services are known to be problematic without using [Secure Integration](/secure-integration):
+The following services are known to be problematic without using [Secure Integration](/guides/secure-development/secure-integration):
 
 - LDAP
 - FirstData

@@ -26,6 +26,6 @@ The MSSQL PHP library used to interface with Microsoft SQL Server databases is n
 
 ## Dynamic Outbound IPs
 
-Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is [Secure Integration](/secure-integration). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request. For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
+Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is [Secure Integration](/guides/secure-development/secure-integration). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request. For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
 <Partial file="tmp-directory.md" />

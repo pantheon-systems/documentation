@@ -1,8 +1,13 @@
 ---
-title: Pantheon Secure Integration
+title: Secure Development on Pantheon
+subtitle: Pantheon Secure Integration
 description: Configuring your Drupal or WordPress site to use Secure Integration as a defense-in-depth solution to access systems behind firewalls.
 categories: [platform]
 tags: [database, professional-services, redis, security]
+ayout: guide
+showtoc: true
+permalink: docs/guides/secure-development/secure-integration
+anchorid: secure-integration
 ---
 [Pantheon Secure Integration](https://pantheon.io/features/secure-integration), formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us) for more information.
 
@@ -12,7 +17,7 @@ One of the effects of the elastic nature of Pantheon's platform is that sites ha
 
 Secure Integration uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer), offering a consistent IP address range (*not* a single address) from which requests are made to your local service.
 
-![Secure Integration diagram](../images/si-diagram.png)
+![Secure Integration diagram](../../../images/si-diagram.png)
 
 ## Create a Secure Tunnel
 
@@ -95,3 +100,6 @@ Secure Integration connects to the same external resource from all environments.
 ### Is Secure Integration a replacement for authentication?
 
 No, Secure Integration is not a replacement for authentication, but rather is a [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
+
+
+## More Resources
