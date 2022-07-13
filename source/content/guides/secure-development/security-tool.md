@@ -21,7 +21,7 @@ When a Dev environment is locked, a lock icon will be added to the screenshot of
 
 </Alert>
 
-![Lock environment](../images/../../dashboard/lock-environment.png)
+![Lock environment](..//../../images/dashboard/lock-environment.png)
 
 ## Password Protect Your Site's Environments
 
@@ -91,7 +91,7 @@ If you see an authentication prompt for a different environment (for example, a 
 
 ### Drupal HTTP Authentication Module
 
-The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/guides/secure-development/security-tool/#password-protect-your-site%27s-environments) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
+The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/guides/secure-development/security-tool) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
 
 Sites that have the environment locked on Pantheon in addition to enabling the module will experience 403 errors. You can resolve these errors by unlocking the environment in the Site Dashboard, clearing cache, then disabling the module in Drupal's admin interface. Once you've disabled the module you can safely lock the environment on Pantheon.
 
