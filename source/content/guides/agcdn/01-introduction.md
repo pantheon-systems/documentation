@@ -17,11 +17,13 @@ Each AGCDN service configuration is offered as an annual contract subscription. 
 
 AGCDN provides a wide range of benefits that let teams:
 
-- Individually manage their own sites
+- Block Malicious traffic 
 
-- Drive growth through site iteration
+- Create Geofencing / IP restrictions
 
-- Calibrate control over branding
+- Rate limits with a website firewall (only with AGCDN with WAF / IO)
+
+- Define valid user agent strings
 
 - Extend enterprise-grade security
 
@@ -62,16 +64,7 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 
 ## Is AGCDN Right For Me?
 
-AGCDN is a great option for many users. You can review the [Judicial Council of California AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation. AGCDN is beneficial if you want to:
-
-- Block Malicious traffic 
-
-- Create Geofencing / IP restrictions
-
-- Rate limits with a website firewall (only with AGCDN with WAF / IO)
-
-- Define valid user agent strings
-
+AGCDN is a great option for many users. You can review the [Judicial Council of California AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation. 
 
 ## Get AGCDN
 
