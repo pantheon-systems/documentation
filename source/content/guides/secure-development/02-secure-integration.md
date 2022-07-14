@@ -50,19 +50,28 @@ After your Secure Integration is configured, we update your site environment wit
 
 Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose `PANTHEON_SOIP_LDAP_STAFF` and `PANTHEON_SOIP_LDAP_STUDENTS` as names to identify the connections.
 
-Direct connection, no Secure Integration:
+
+<TabList>
+
+<Tab title="Secure Integration" id="si-example" active={true}>
+
+```php
+127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
+127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
+```
+
+</Tab>
+
+<Tab title="Direct Connection (no Secure Integration)" id="nosi-example">
 
 ```php
 123.45.6.22:443
 223.23.4.33:443
 ```
 
-With Secure Integration:
+</Tab>
 
-```php
-127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
-127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
-```
+</TabList>
 
 In cases where you cannot supply a direct PHP constant, consider wrapping it into a variable. For example:
 

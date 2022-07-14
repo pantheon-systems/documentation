@@ -88,14 +88,14 @@ Follow the steps below to manually create an SSH tunnel within your Pantheon Sit
 
 1. Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
 
-  ```bash{promptUser: user}
-  ssh -f -N -L LOCAL_PORT:localhost:SERVER_PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
-  ```
-  * Replace `<LOCAL_PORT>` with an available port on your device.
-  * Replace `<SERVER_PORT>` with the designated port found on your Site Dashboard.
-  * Often, the same input can be used for the `<LOCAL_PORT>` and `<SERVER_PORT>`.
+      ```bash{promptUser: user}
+    ssh -f -N -L LOCAL_PORT:localhost:SERVER_PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
+    ```
+    * Replace `<LOCAL_PORT>` with an available port on your device.
+    * Replace `<SERVER_PORT>` with the designated port found on your Site Dashboard.
+    * Often, the same input can be used for the `<LOCAL_PORT>` and `<SERVER_PORT>`.
 
-  The command must include the port you are entering the tunnel from. You can replace `<LOCAL_PORT>` with the database port specified in the **Connection Info** tab. Similarly, do the same for `<PASSWORD>`
+    The command must include the port you are entering the tunnel from. You can replace `<LOCAL_PORT>` with the database port specified in the **Connection Info** tab. Similarly, do the same for `<PASSWORD>`
 
 1. Run the following command:
 

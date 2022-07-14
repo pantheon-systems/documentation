@@ -149,11 +149,11 @@ There are many different organization-wide [WordPress plugins for single sign on
 
 1. Configure the **Options** section(optional) under the SSO/SAML Settings:
 
-  - Select the **Create user if not exists** checkbox if you want users to be auto-created.
+   - Select the **Create user if not exists** checkbox if you want users to be auto-created.
 
-  - Select the **Keep Local login** checkout if you still want to use the normal WP login form, otherwise you will always be using OneLogin to authenticate.
+   - Select the **Keep Local login** checkout if you still want to use the normal WP login form, otherwise you will always be using OneLogin to authenticate.
 
-  ![TFA OneLogin Options](../../../images/tfa-wp-onelogin-options.png)
+   ![TFA OneLogin Options](../../../images/tfa-wp-onelogin-options.png)
 
 1. Configure the **Attribute Mapping** in the SSO/SAML Settings of the WordPress Admin with the values shown below. Values are case-sensitive.
 
