@@ -34,8 +34,6 @@ If you have not already created these directories, you will need to do that firs
 
 Follow the steps below to store data that should be version controlled, such as [Quicksilver](/quicksilver) scripts.
 
-1.  within the `private` directory at the root level of your site's codebase (same level as `index.php`). 
-
 <TabList>
 
 <Tab title="Git" id="git-example" active={true}>
