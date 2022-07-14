@@ -13,7 +13,7 @@ anchorid: secure-development
 
 All Pantheon sites come with built-in security features, including secure infrastructure, encrypted channels, and least-privilege user access. Pantheon also  provides fully managed and free HTTPS certificates, automated backups, and one-click updates for all WebOps platform plans.
 
-Pantheon offers several additional ways to keep your sites and code secure and private. This guide provides information on multiple steps you can take to secure your sites and code depending on your needs:
+Pantheon offers several additional ways to keep your sites and code secure and private. This guide provides information on multiple methods you can use to secure your sites and code depending on your needs:
 
 - [Secure Integration](/guides/secure-development/security-tool)
 
