@@ -11,7 +11,7 @@ Due to Pantheon's cloud-based infrastructure, these outbound requests are sent v
 </Alert>
 
 ## Pantheon Secure Integration
-If your site relies on a static IP address for outgoing requests, and your site is within an Enterprise or EDU+ organizations, then the recommended solution is [Secure Integration](/secure-integration). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.
+If your site relies on a static IP address for outgoing requests, and your site is within an Enterprise or EDU+ organizations, then the recommended solution is [Secure Integration](/guides/secure-development/secure-integration). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.
 
 ## IP Address Based Security Schemes
 Each application container worker uses a distinct application container, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.
