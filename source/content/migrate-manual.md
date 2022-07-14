@@ -362,9 +362,18 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
 
-  ```bash
+   
+  ```bash:title=migrate-rsync.sh
+  #!/bin/bash
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxx
+  
   ENV='dev'
-  SITE='SITEID'
+  # The sshpass command is required.
+  if ! [ -x "$(command -v sshpass)" ]; then
+	echo 'Error: The sshpass command was not found.' >&2
+	exit 1
+  fi 
 
   read -sp "Your Pantheon Password: " PASSWORD
   if [[ -z "$PASSWORD" ]]; then
