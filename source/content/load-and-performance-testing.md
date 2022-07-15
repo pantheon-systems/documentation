@@ -22,7 +22,7 @@ Before you start, it's important to understand the difference between load and p
 
 Performance testing is the process in which you measure an application's response time to proactively expose bottlenecks. In addition to regularly referring to your New Relic reports, you should consider regularly executing performance tests as part of routine maintenance to ensure performance isn't being degraded by code or configuration changes.  You should run these test before any load testing. If your application is not performing well, then you can be assured that the load test will not go well.  
 
-The scope of performance tests should be limited to the application itself on a development environment (Dev or [Multidev](/multidev)) without caching. This will give you an honest look into your application and show exactly how uncached requests will perform. You can bypass cache by [setting the `no-cache` HTTP headers](/cache-control) in responses.
+The scope of performance tests should be limited to the application itself on a development environment (Dev or [Multidev](/guides/multidev)) without caching. This will give you an honest look into your application and show exactly how uncached requests will perform. You can bypass cache by [setting the `no-cache` HTTP headers](/cache-control) in responses.
 
 ### Pre-launch Load Testing
 

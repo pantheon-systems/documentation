@@ -83,7 +83,7 @@ export SITE=yoursitename
 
 </Alert>
 
-1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/multidev) environment set to [SFTP mode](#sftp-mode).
+1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/guides/multidev) environment set to [SFTP mode](#sftp-mode).
 
   <Alert title="Note" type="info">
 

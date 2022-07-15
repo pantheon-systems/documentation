@@ -87,5 +87,5 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 
 - [Custom Upstreams Guide](/guides/custom-upstream)
 
-- [Multidev](/multidev)
+- [Multidev](/guides/multidev)
 

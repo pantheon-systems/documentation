@@ -27,7 +27,7 @@ You can use the connection information in your dashboard and copy it into your t
 
 Git allows you to create a parallel version or branch of your current codebase and maintain the current version while you build the new one. This is useful if you're working on more than one version of the code, for example both the current and future version of your website.
 
-You can push this new version of your website to the Pantheon platform, and then build an environment around it with [Multidev](/multidev).
+You can push this new version of your website to the Pantheon platform, and then build an environment around it with [Multidev](/guides/multidev).
 
 Your changes are sent up the pipeline to your Live environment when you commit. [Git allows you to quickly revert](/guides/git/undo-commits) changes without the risk of restoring the entire environment from a backup if a bug makes it past your automated testing.
 

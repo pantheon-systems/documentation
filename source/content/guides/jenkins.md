@@ -56,7 +56,7 @@ You will need:
   - [Run Condition](https://plugins.jenkins.io/run-condition/)
   - [Rebuild](https://plugins.jenkins.io/rebuild/)
 - We recommended using matrix-based security when using Jenkins. Anonymous users should have read access to Jenkins projects.
-- Ability to create a Drupal site on Pantheon, with [Multidev](/multidev) enabled.
+- Ability to create a Drupal site on Pantheon, with [Multidev](/guides/multidev) enabled.
 - A [GitHub](https://github.com) account.
 
 ## Create A New Site

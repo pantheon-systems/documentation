@@ -111,4 +111,4 @@ At this time, Pantheon does not provide or support:
 
 - [Build Tools](/guides/build-tools)
 - [Localdev](/guides/localdev)
-- [Pantheon Multidev](/multidev)
+- [Pantheon Multidev](/guides/multidev)
