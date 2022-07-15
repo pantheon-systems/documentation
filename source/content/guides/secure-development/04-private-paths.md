@@ -19,12 +19,13 @@ Determining which path to use depends on whether or not the data should be track
 
 #### Private Path for Files (Not Version Controlled)
 
-Drupal: `sites/default/files/private`
-WordPress: `wp-content/uploads/private`
+- Drupal: `sites/default/files/private`
+
+- WordPress: `wp-content/uploads/private`
 
 #### Private Path for Code (Version Controlled)
 
-Drupal and WordPress: `private`
+- Drupal and WordPress: `private`
 
 <Alert title="Note" type="info">
 
@@ -70,9 +71,11 @@ You can integrate this service using the [Lockr plugin](https://wordpress.org/pl
 
 Alternatively, you can store sensitive data in a JSON or ini-style text file within the following directories:
 
-- `wp-content/uploads/private` (WordPress)
-- `/wp-content/uploads/private/sites/<blog_id>/` (WordPress Multisite)
-- `sites/default/files/private` (Drupal)
+- WordPress: `wp-content/uploads/private` 
+
+- WordPress Multisite: `/wp-content/uploads/private/sites/<blog_id>/` 
+
+- Drupal: `sites/default/files/private` 
 
 These directories are symbolically linked to Valhalla and can also be accessed from the `files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
 
@@ -88,13 +91,25 @@ else {
 }
 ```
 
-This Drupal example reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
+The Drupal example above reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
 
 ### Plugins That Manage Private Paths
 
-WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on WordPress.org and projects on Drupal.org that will help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers [do not support *.htaccess* rules](/platform-considerations/#htaccess).
+WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on [WordPress.org](https://wordpress.org/) and projects on [Drupal.org](https://www.drupal.org/) that help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers [do not support *.htaccess* rules](/platform-considerations/#htaccess).
 
-Site developers can author their own custom solution to provide authentication, access checks, and ultimately use PHP's [readfile()](http://php.net/readfile/) or [fpassthru()](http://php.net/fpassthru/) functions to read files from the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) areas, respectively, and then output them to the authenticated web user's browser.
+Site developers can author their own custom solution to:
+
+- Provide authentication
+
+- Access checks
+
+- Use PHP's [readfile()](http://php.net/readfile/) or [fpassthru()](http://php.net/fpassthru/) functions to read files from:
+
+  - WordPress: `wp-content/uploads/private` 
+  
+  - Drupal: `sites/default/files/private` 
+  
+- Output files to the authenticated web user's browser
 
 ### Known Limitations of File Names and Permissions
 
@@ -102,7 +117,7 @@ Please see [Pantheon Filesystem](/files#known-limitations-of-file-names-and-perm
 
 ### Additional Drupal Configuration
 
-These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
+These files are web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
 Follow the steps below to set up the configuration.
 
@@ -120,11 +135,21 @@ Another way to protect files and directories is to define a protected web path i
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
 
-If you receive the error above, make sure that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to start from your Dev environment and create the private directory, then commit via Git, or create via SFTP and commit via Pantheon Dashboard. After the directory has been created and committed, you can deploy to Test and Live to deploy the new directory. After the directory exists you can resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
+If you receive the error above:
+
+1. Make sure that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to:
+
+  1. Start from your Dev environment and create the private directory.
+  
+  1. Commit via Git, or create via SFTP and commit via Pantheon Dashboard. 
+  
+  1. Deploy to Test and Live to deploy the new directory after the directory has been created and committed.  
+  
+  1. Resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
 
 ### Selectively Exposing Code
 
-If you have a private code library that needs to have a specific sub-directory exposed (for example, using SimpleSamlPHP), you can do this with symlinks:
+If you have a private code library that needs to have a specific sub-directory exposed (for example, using `SimpleSamlPHP`), you can do this with symlinks:
 
   ```bash
   # from within a git checkout
@@ -141,8 +166,7 @@ The result will be a web-accessible URL at `https://dev.yoursite.pantheonsite.io
 Make sure to set a relative path for these keys. This ensures the key path will work on all appservers across the site's environments.
 
 
-1. Set the encryption key path
-You can either set the path in the Drupal admin interface, or with Terminus and Drush as below:
+1. Set the encryption key path.You can either set the path in the Drupal admin interface, or with Terminus and Drush as below:
 
    ```bash
    terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>

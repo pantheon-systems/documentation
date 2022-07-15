@@ -39,21 +39,21 @@ You have the ability to password protect any of the available environments.
 
 1. Click **Lock Environment**.
 
-If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
+  If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
-![Credentials](../../../images/dashboard/environment-access.png)
+  ![Credentials](../../../images/dashboard/environment-access.png)
 
-Refresh your page and you will notice that the environment is shown as Private. You will also be able to see the credentials needed to access that environment.
+1. Refresh your page and you will notice that the environment is shown as Private. You will also be able to see the credentials needed to access that environment.
 
-You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
+  You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
-Visit the URL of the environment that you have made private to verify that everything is working correctly. You should see an authentication form prompting you to enter the username and password for that environment to start your session.
+1. Visit the URL of the environment that you have made private to verify that everything is working correctly. You should see an authentication form prompting you to enter the username and password for that environment to start your session.
 
 ![Locked site example](../../../images/auth-required.png)
 
 <Alert title="Note" type="info">
 
-Environments will not be cached by the [Global CDN](/global-cdn) while locked.
+Environments are not cached by the [Global CDN](/global-cdn) while locked.
 
 </Alert>
 
@@ -99,7 +99,11 @@ You must configure your CI tool to pass the username and password on every reque
 
 ### Authentication Prompt Appears in Environments Where It's Not Enabled
 
-If you see an authentication prompt for a different environment (for example, a Dev site authentication prompt on the Test environment), you likely have assets, such as images, loading from a locked environment. Inspect your page source code and search for the locked environment's URL (for example, `dev-yoursite.pantheonsite.io`), then replace that with the correct URL for the current environment.
+If you see an authentication prompt for a different environment (for example, a Dev site authentication prompt on the Test environment), you likely have assets, such as images, loading from a locked environment. 
+
+1. Inspect your page source code and search for the locked environment's URL (for example, `dev-yoursite.pantheonsite.io`). 
+
+1. Replace that URL with the correct URL for the current environment.
 
 ### Drupal HTTP Authentication Module
 

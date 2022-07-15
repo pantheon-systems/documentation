@@ -26,13 +26,13 @@ You can use `phpinfo` to see a comprehensive list of what's installed with the v
 
 ### Drupal Note
 
-Drupal makes the `phpinfo` available to privileged users at `https://example.com/admin/reports/status/php`.
+Drupal makes the `phpinfo` available to privileged users at `https://example.com/admin/reports/status/php`
 
 ## Review phpinfo
 
 Follow the steps below to keep your `phpinfo` file secure.
 
-1. [Lock environment](/guides/secure-development/security-tool)(if the environment does not currently need to be publicly accessible).
+1. [Lock environment](/guides/secure-development/security-tool) (if the environment does not currently need to be publicly accessible).
 
 1. Create a php file with an obscure filename that uses `phpinfo`.
 

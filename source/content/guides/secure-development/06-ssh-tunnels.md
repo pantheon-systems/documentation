@@ -11,7 +11,7 @@ permalink: docs/guides/secure-development/ssh-tunnels
 anchorid: ssh-tunnels
 ---
 
-This section provides information on you can use SSH tunnels to keep your sites secure.
+This section provides information on how you can use SSH tunnels to keep your sites secure.
 
 Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling) for additional security. This increases your remote connection security, especially in a public or untrusted environment.
 
@@ -41,7 +41,7 @@ Later versions of the MySQL client support the `--ssl` option.  Using this comma
 
 1. Search for the `--ssl` option. If you add the `--ssl` option to your command there is no need to setup an SSH tunnel as described below.
 
-Follow the steps below to manually set up your SSH tunnel in Terminus.
+Follow the steps below to set up your SSH tunnel in Terminus.
 
 1. Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/terminus):
 
@@ -94,10 +94,12 @@ Follow the steps below to manually create an SSH tunnel within your Pantheon Sit
     ssh -f -N -L LOCAL_PORT:localhost:SERVER_PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
     ```
     * Replace `<LOCAL_PORT>` with an available port on your device.
+
     * Replace `<SERVER_PORT>` with the designated port found on your Site Dashboard.
+
     * Often, the same input can be used for the `<LOCAL_PORT>` and `<SERVER_PORT>`.
 
-    The command must include the port you are entering the tunnel from. You can replace `<LOCAL_PORT>` with the database port specified in the **Connection Info** tab. Similarly, do the same for `<PASSWORD>`
+    The command must include the port you are entering the tunnel from. You can replace `<LOCAL_PORT>` with the database port specified in the **Connection Info** tab. Do the same for `<PASSWORD>`
 
 1. Run the following command:
 
@@ -111,7 +113,7 @@ Follow the steps below to manually create an SSH tunnel within your Pantheon Sit
   lsof -i :LOCAL_PORT
   ```
 
-1. Run the following To test the connection to the database:
+1. Run the following to test the connection to the database:
 
   ```bash{promptUser: user}
   echo 'SELECT 1' | mysql -u pantheon -pPASSWORD -h 127.0.0.1 -P LOCAL_PORT pantheon`
@@ -119,7 +121,7 @@ Follow the steps below to manually create an SSH tunnel within your Pantheon Sit
 
   - It should return the output `1`. 
 
-  - A common error you'll receive if you use the wrong port, will resemble the following output:
+  - A common output error if you use the wrong port resembles the following:
 
   ```bash{promptUser: user}
   ssh: Could not resolve hostname dbserver.<ENV>.<SITE_ID>: nodename nor servname provided, or not known
@@ -132,7 +134,7 @@ Due to the nature of our platform, the connection information will change from t
 
 </Alert>
 
-You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's `<USERNAME>` in the following command:
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's `<USERNAME>` to run the following command:
 
 ```bash{promptUser: user}
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
@@ -164,7 +166,7 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
   redis-cli -h 127.0.0.1 -p PORT -a PASSWORD
   ```
 
-You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME to run the following command:
 
 ```bash{promptUser: user}
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill

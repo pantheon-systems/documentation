@@ -11,7 +11,7 @@ permalink: docs/guides/secure-development/two-factor-authentication
 anchorid: two-factor-authentication
 ---
 
-This section provides information on you can use Two-factor authentication (TFA) to keep your sites secure.
+This section provides information on how you can use Two-factor authentication (TFA) to keep your sites secure.
 
 TFA is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password. 
 
@@ -33,7 +33,13 @@ For more information, see [Multi Factor Authentication in Drupal Watchdog](http:
 
 ## Benefits of Two-Factor Authentication
 
-Two-factor authentication is a helpful security practice because it prevents attackers from compromising accounts by requiring an extra authentication method beyond a username and password to log in. This is important because standard password access can be easy to bypass if the user has a simple password that's easy to guess, is observed typing in their password, or has used their password on another site that becomes compromised. 
+Two-factor authentication is a helpful security practice because it prevents attackers from compromising accounts by requiring an extra authentication method beyond a username and password to log in. This is important because standard password access can be easy to bypass if the user:
+
+- Has a simple password that's easy to guess
+
+- Is observed typing in their password
+
+- Has used their password on another site that becomes compromised
 
 By requiring a second form of authentication (especially one tied to a physical device like a mobile phone or a USB key), would-be attackers not only have to compromise a user’s password, but also their mobile phone or physical USB key, which makes the attack much more difficult.
 
@@ -71,11 +77,11 @@ There are many different [WordPress plugins for two-factor authentication](https
 
 Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can:
 
-  - synchronize and import your database
+  - Synchronize and import your database
 
-  - use a tool like [WP-CFM](/wp-cfm)
+  - Use a tool like [WP-CFM](/wp-cfm)
 
-  - keep the new application page from the Duo Admin panel open, and reenter the values for each environment
+  - Keep the new application page from the Duo Admin panel open, and reenter the values for each environment
 
 </Alert>
 
@@ -89,13 +95,19 @@ There are a few [different Drupal modules](https://groups.drupal.org/node/235938
 
 1. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/download) for either iOS or Android.
 
-1. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**; set **TOTP** as the default validation plugin; add **Recovery Codes** as a fallback plugin; and allow **Trusted Browsers** for your domain.
+1. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**: 
+
+  - Set **TOTP** as the default validation plugin.
+  
+  - Add **Recovery Codes** as a fallback plugin.
+  
+  - Allow **Trusted Browsers** for your domain.
 
   ![TFA Module Settings](../../../images/tfa-drupal-module-settings.png)
 
-1. Go to the Security settings on each user profile you want to use TFA, and click **Enable TFA**.
+1. Go to the Security settings on each user profile you want to use TFA > click **Enable TFA**.
 
-1. Enter your current password, and view the TFA Setup - Application page.
+1. Enter your current password > view the TFA Setup - Application page.
 
   ![TFA setup](../../../images/tfa-drupal-otp-setup.png)
 
@@ -149,7 +161,7 @@ There are many different organization-wide [WordPress plugins for single sign on
 
   ![TFA OneLogin Ident](../../../images/tfa-wp-onelogin-ident.png)
 
-1. Configure the **Options** section(optional) under the SSO/SAML Settings:
+1. Configure the **Options** section (optional) under the SSO/SAML Settings:
 
    - Select the **Create user if not exists** checkbox if you want users to be auto-created.
 
@@ -165,7 +177,7 @@ There are many different organization-wide [WordPress plugins for single sign on
 
   ![TFA OneLogin Custom Actions](../../../images/tfa-onelogin-custom-actions.png)
 
-1. Use the OneLogin dashboard to log in to your WordPress site!
+1. Use the OneLogin dashboard to log in to your WordPress site.
 
   ![TFA OneLogin WP Login](../../../images/tfa-onelogin-wp-login.png)
 
