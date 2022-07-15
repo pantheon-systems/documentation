@@ -3,9 +3,14 @@ title: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
 categories: [develop]
 tags: [collaborate, workflow, webops, multidev]
-reviewed: "2021-06-30"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/multidev/multidev-faq
+anchorid: multidev-faq
 ---
-For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev).
+
+For information about what Multidev is and how to use it, see our full guide on [Multidev](/guides/multidev).
 
 ## Who has access to Multidev?
 

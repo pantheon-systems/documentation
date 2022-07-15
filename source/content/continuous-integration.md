@@ -14,7 +14,7 @@ See our [Build Tools](/guides/build-tools) guide for a more detailed look at a w
 [Terminus](/terminus) is a Symfony/Console-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
 
 - Site creation
-- [Multidev environment](/multidev) creation and removal
+- [Multidev environment](/guides/multidev) creation and removal
 - Content cloning
 - Code pushes
 

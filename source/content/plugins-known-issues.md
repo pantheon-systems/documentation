@@ -267,7 +267,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 
 `define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`
 
-Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
+Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/guides/multidev) you are using.
 
 At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
 
@@ -959,7 +959,7 @@ export ENV=dev
 
 </Alert>
 
-1. Set your Dev (or [Multidev](/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.$ENV git

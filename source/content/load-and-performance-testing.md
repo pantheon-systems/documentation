@@ -57,7 +57,7 @@ The procedure for executing a load test and a performance test are similar:
 
 ## Running the Tests
 
-If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
+If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/guides/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
 
 <Alert title="Warning" type="danger">
 

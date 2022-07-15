@@ -8,7 +8,7 @@ tags: [organizations, agencies, multidev]
 
 ### What is the benefit of Multidev?
 
-[Multidev](/multidev) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
+[Multidev](/guides/multidev) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
 
 ### How does Multidev work?
 

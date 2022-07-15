@@ -62,4 +62,4 @@ Replace `<site>` with your site name. You can see a list of all your sites by ru
 
 ## Delete a Multidev Environment
 
-Refer to the [Delete a Branch Environment](/multidev#delete-a-branch-environment) section of our Multidev guide for more information.
+Refer to the [Delete a Branch Environment](/guides/multidev/delete-multidev) section of our Multidev guide for more information.
