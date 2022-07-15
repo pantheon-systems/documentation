@@ -10,7 +10,9 @@ permalink: docs/guides/secure-development/secure-integration
 anchorid: secure-integration
 ---
 
-[Pantheon Secure Integration](https://pantheon.io/features/secure-integration), formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us) for more information.
+This section provides information on [Pantheon Secure Integration](https://pantheon.io/features/secure-integration).
+
+Pantheon Secure Integration, formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us) for more information.
 
 Pantheon's platform is elastic in nature. All sites have a [dynamic outgoing IP](/outgoing-ips) and container IP addresses are not constant. This means that direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
 

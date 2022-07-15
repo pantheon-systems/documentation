@@ -11,6 +11,8 @@ permalink: docs/guides/secure-development/ssh-tunnels
 anchorid: ssh-tunnels
 ---
 
+This section provides information on you can use SSH tunnels to keep your sites secure.
+
 Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling) for additional security. This increases your remote connection security, especially in a public or untrusted environment.
 
 This technique configures an SSH client to forward a local port to a port on Pantheon. You can connect to the local port to access the remote service using the encrypted connection after the SSH tunnel is established.

@@ -11,6 +11,8 @@ permalink: docs/guides/secure-development/private-paths
 anchorid: private-paths
 ---
 
+This section provides information on you can use private paths to keep your files and code secure.
+
 The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 
 Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third-party services should not be version controlled alongside your site's code.

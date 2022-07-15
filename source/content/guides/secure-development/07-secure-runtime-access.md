@@ -12,7 +12,9 @@ permalink: docs/guides/secure-development/secure-runtime-access
 anchorid: secure-runtime-access
 ---
 
-Pantheon’s database services use strong random passwords and TLS to encrypt communications by default. Customers seeking additional defense in depth can enable Secure Runtime Access (SRA).
+This section provides information on you can use Secure Runtime Access with SSH tunnels to keep your sites secure.
+
+Pantheon’s database services use strong, random passwords and TLS to encrypt communications by default. Customers seeking additional defense can enable Secure Runtime Access (SRA).
 
 SRA actively discards attempts to connect to persistent instances like MySQL or SFTP, disregarding the attempt before it reaches the service. When SRA is enabled, the connection attempts to the service will be rejected unless the connection comes through the appropriate [SSH tunnel](/guides/secure-development/ssh-tunnels).
 
@@ -29,3 +31,8 @@ Follow the [Secure Tunnels](/guides/secure-development/ssh-tunnels) doc to creat
 ## What It Looks Like When a Connection Is Refused
 
 When SRA is enabled and a connection is refused, SSH will respond with the `No route to host` error. To resolve this issue refer to the troubleshooting section of the [SSH Tunnels](/guides/secure-development/ssh-tunnels) doc.
+
+
+## More Resources
+
+- [SSH Tunnels](/guides/secure-development/ssh-tunnels)

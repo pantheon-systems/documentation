@@ -11,7 +11,9 @@ permalink: docs/guides/secure-development/two-factor-authentication
 anchorid: two-factor-authentication
 ---
 
-Two-factor authentication (TFA) is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password. 
+This section provides information on you can use Two-factor authentication (TFA) to keep your sites secure.
+
+TFA is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password. 
 
 The two most common methods of secondary authentication are:
 

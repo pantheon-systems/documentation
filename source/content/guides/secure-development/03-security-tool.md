@@ -11,7 +11,9 @@ permalink: docs/guides/secure-development/security-tool
 anchorid: security-tool
 ---
 
-There are occasions when you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
+This section provides information on securing your Pantheon environments by locking them within the dashboard.
+
+This is a useful solution when you are working on your site and you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
 This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
