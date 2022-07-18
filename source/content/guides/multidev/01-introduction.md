@@ -11,7 +11,7 @@ permalink: docs/guides/multidev
 anchorid: multidev
 ---
 
-Multidevs are development environments for teams. They allow a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the main `master` site. Each forked branch will have its own separate development environment, including database and files.
+Multidevs are development environments for teams. A Multidev environment allows a developer to fork the entire stack (code and content), work independently, and then merge the code changes back into the main `master` site. Each forked branch has its own separate development environment, including database and files.
 
 ![Dev Test and Live icon](../../../images/multidev-flow.png)
 
@@ -23,18 +23,19 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 ## Benefits of Multidev
 
-**Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
+**Easy workflow:** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
 
-**No more surprises.** Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
+**No more surprises:** Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
-**A fork for every developer on your team.** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
+**A fork for every developer on your team:** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
+
 ![Pantheon standard workflow vs multidev](../../../images/multidev-workflow.png)​
 
 ## Branching and Multidev Terminology
 
-Branching is a standard mechanism for duplicating source code under revision control for parallel development. In that context, Multidev is Pantheon’s support of a branching workflow using the Pantheon platform and Dashboard.
+Branching is a standard mechanism for duplicating source code under revision control for parallel development. Multidev is Pantheon’s support of a branching workflow using the Pantheon platform and Dashboard.
 
-There are a number of terms used throughout the Multidev workflow:
+There are a number of terms used throughout the Multidev workflow that will be useful for you and your team to know:
 
 <dl>
 
@@ -95,3 +96,10 @@ Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
 </dd>
 
 </dl>
+
+
+## More Resources
+
+- [Pantheon Site Dashboard](/sites)
+
+- [Use the Pantheon WebOps Workflow](/pantheon-workflow)

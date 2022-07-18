@@ -11,13 +11,20 @@ permalink: docs/guides/multidev/clone-content
 anchorid: clone-content
 ---
 
+This section provides steps on how to clone content in your Multidev.
 
-1. Select the environment you want to clone content (files and database) into.
+1. Select the environment will contain the cloned content (files and database).
 
 1. Click **Database / Files**.
 
-1. Select the source environment in the **From this Environment** drop-down menu.
+1. Select the source environment containing the content to be cloned in the **From this Environment** drop-down menu.
 
 1. Select Database, Files, or both.
 
-1. Choose whether to execute update.php after cloning, and click **Clone the Database & the Files from `source` into `target` Environment**.
+1. Select whether you want to execute `update.php` after cloning > click **Clone the Database & the Files from `source` into `target` Environment**.
+
+Your content will be cloned into the environment you selected in step 1.
+
+## More Resources
+
+- [Terminus Commands: terminus env:clone-content](/terminus/commands/env-clone-content)
