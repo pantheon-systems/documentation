@@ -11,7 +11,7 @@ permalink: docs/guides/multidev/edit-multidev
 anchorid: edit-multidev
 ---
 
-This section provides steps on how to edit and merge code in your Multidev environments.
+This section provides steps on how to make edits, merge code in your Multidev environments, and rename a branch.
 
 ## Edit Code
 
@@ -72,6 +72,28 @@ The steps below show you how to merge code from a Multidev into the master branc
 Instructions for using the command-line to merge the changes into the target are shown below and can be pasted directly into the terminal without modification.
 
 ![Location of Multidev merge button](../../../images/dashboard/multidev-merge.png)
+
+
+## Rename a Branch
+
+Branch names must be lowercase and no more than 11 characters. If you push a branch to Pantheon that exceeds the character limit or has uppercase letters, it cannot become a Multidev environment. The solution is to rename the branch. This is only recommended if you don't have other users working on this branch, or if you have already coordinated with them.
+
+1. Run the command below to rename the branch:
+
+  ```bash{promptUser: user}
+  git branch -m old-branch-name new-name
+  ```
+
+1. Push the renamed branch:
+
+  ```bash{promptUser: user}
+  git push origin new-name
+  ```
+
+  This creates a new branch with the commit history intact. 
+  
+1. Navigate to the Multidev Environments page > click **Git Branches** > delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
+
 
 ## More Resources
 

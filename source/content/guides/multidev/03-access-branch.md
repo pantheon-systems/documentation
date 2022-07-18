@@ -20,7 +20,7 @@ This section provides steps on how to access a Multidev branch environment.
 
     Git instructions are shown under the Connection Mode section of the code page for all Dev and Multidev environments.
 
-1. Use **git checkout `branch-name`** on the command line after you have cloned your site's codebase to your local machine. You can check out the necessary branch using your preferred Git client e.g. SourceTree, GitKraken, GitHub Desktop, etc.
+1. Use **git checkout `branch-name`** on the command line after you have cloned your site's codebase to your local machine. You can check out the necessary branch using your preferred Git client, for example, SourceTree, GitKraken, GitHub Desktop, etc.
 
 Any changes you make to a branch you have checked out locally are committed and pushed to the Multidev of the same name.
 

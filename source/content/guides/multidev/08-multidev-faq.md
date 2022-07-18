@@ -11,22 +11,21 @@ permalink: docs/guides/multidev/multidev-faq
 anchorid: multidev-faq
 ---
 
-For information about what Multidev is and how to use it, see our full guide on [Multidev](/guides/multidev).
+This section provides answers to frequently asked Multidev questions.
 
-## Who has access to Multidev?
+## Is Multidev available for all accounts?
 
 Multidev is available to all organizations and users with [Gold Accounts](/guides/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
 
-### Should I have access to Multidev?
-
-Multidevs that are already on a site are available to all users with access to the site.
-
-Users have access to create a new Multidev if they:
-
-- Belong to a Gold Account customer or above.
-- Support a site that is owned by a Gold Account customer or above.
+### Who can access Multidev?
 
 Multidev environments that are already created on a Pantheon site are available to all users with access to the site.
+
+You can create a new Multidev if you:
+
+- Belong to a Gold Account or above
+
+- Support a site that is owned by a Gold Account customer or above
 
 Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
@@ -56,7 +55,7 @@ Branch names can contain any ASCII letter and number (a through z, 0 through 9) 
 
 ## Can I fork my code without using Multidev?
 
-Yes, you can; your Git repository is not restricted. If you do not use Multidev, then the interface will not show the branches, allow creation of an environment for a branch, and so forth.
+Yes. Your Git repository is not restricted. If you do not use Multidev, then the interface will not show the branches, allow creation of an environment for a branch, and so forth.
 
 ## Can I create a new environment for my local branch?
 
@@ -86,7 +85,7 @@ No, but developers can use [Quicksilver hooks](/quicksilver#hooks) to integrate 
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage Multidev environments.
 
-## Will I lose access to Multidevs if the organization downgrades the plan?
+## Will I lose access to Multidev environments if the organization downgrades the plan?
 
 If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
 
@@ -97,3 +96,11 @@ Multidev environments spin down after approximately 60 minutes of idle time. Ref
 ## Creating a Multidev Failed - Specified Key Was Too Long
 
 Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb).
+
+## More Resources
+
+- [Multidev Guide](/guides/multidev)
+
+- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+
+- [Git on Pantheon](/guides/git)
