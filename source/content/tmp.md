@@ -17,7 +17,7 @@ export env=dev
 
 ## Default Temporary Path
 
-Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L67) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L142-L150). Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
+Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L67). Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
 
 ```php
 /**
@@ -96,33 +96,6 @@ terminus drush $site.$env -- variable-get some_tmp_setting
 Output of this command should look something like the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](../images/d7-vget-tmp-default.png)
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8tmppath">
-
-Correct an unsupported temporary path set by a module or theme using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
-
-```php
-/**
-* Drupal 8
-* Fix unsupported temporary path
-* Replace some_module and some_tmp_setting
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $config['some_module.settings']['some_tmp_setting']= $_SERVER['HOME'] . '/tmp';
-}
-```
-
-Verify the setting by using [Terminus](/terminus) to run `drush config-get` with `--include-overridden`:
-
-```bash
-terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
-```
-
-Output of this command should look something like the following Plupload example:
-
-![cget plupload settings temporary_uri filesystem](../images/d8-cget-tmp-default.png)
 
 </Tab>
 
@@ -207,35 +180,6 @@ terminus drush $site.$env -- variable-get some_tmp_setting
 Output of this command should look something like the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](../images/d7-vget-tmp-filesystem.png)
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8workaround">
-
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
-
-```php:title=settings.php
-/**
-* Drupal 8
-* Persistent tmp across app containers
-* Replace some_module and some_tmp_setting
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $config['some_module.settings']['some_tmp_setting']= 'sites/default/files/private/tmp';
-}
-```
-
-The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
-
-Verify the setting by using [Terminus](/terminus) to run `drush config-get` with `--include-overridden`:
-
-```bash
-terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
-```
-
-Output of this command should look something like the following Plupload example:
-
-![cget plupload settings temporary_uri filesystem](../images/d8-cget-tmp-filesystem.png)
 
 </Tab>
 

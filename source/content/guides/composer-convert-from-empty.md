@@ -10,7 +10,10 @@ contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-02-21"
 ---
 
-Use this guide to convert an empty upstream Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-recommended` upstream while remaining on Drupal 8.
+Use this guide to convert an empty upstream Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
+
+<Partial file="drupal-9/see-landing.md" />
+
 
 ## Overview
 
@@ -18,13 +21,13 @@ Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-compose
 
 By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following:
 
-1. Remove dependencies that Composer manages from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
+* Remove dependencies that Composer manages from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
 
-1. Switch to the `drupal-recommended` Integrated Composer upstream.
+* Switch to the `drupal-composer-managed` Integrated Composer upstream.
 
-The `drupal-recommended` Integrated Composer upstream works with Drupal 8, and following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
+The `drupal-composer-managed` Integrated Composer upstream works with Drupal 8, and following the `drupal-composer-managed` upstream will help keep your site current with any general configuration changes recommended by Pantheon.
 
-Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 ## Will This Guide Work for Your Site?
 
@@ -38,7 +41,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep 
 
 - The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
 
-- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, **you should prepend the paths in this document with "web" as needed**.
+- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, you should prepend the paths in this document with "web" as needed.
 
 <Alert title="Note" type="info">
 
@@ -62,13 +65,13 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## Change Upstreams
 
-Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
+Your Pantheon site is now configured to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $SITE drupal-recommended
+terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Following the `drupal-recommended` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
 
 ## Working With Dependency Versions
 
@@ -77,3 +80,5 @@ Following the `drupal-recommended` upstream will help keep your site up to date 
 ## See Also
 
 - [Composer Fundamentals and Workflows](/guides/composer)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

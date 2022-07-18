@@ -39,7 +39,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
 Pantheon does not count static assets against your traffic limit. However, if the CMS cannot find a favicon in the defined path, it will attempt to generate one through PHP on each request. Asset generation requests such as these are counted as traffic. In addition, since Pantheon locks down all directories except the file upload directories (`wp-contents/upload` on WordPress, or `sites/default/files` on Drupal), the CMS can’t save the file back to the path it’s generating.
 
-This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal (specifically Drupal 8), it shows up as a system path.
+This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal it shows up as a system path.
 
 |  **CMS**  |           **Path**          |
 |:---------:|:---------------------------:|
@@ -84,6 +84,8 @@ Pantheon doesn't count [denial-of-service (DoS) attacks](https://en.wikipedia.or
 ### Block IPs in Drupal or WordPress
 
 IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php`, via a Drupal module, or WordPress plugin.
+
+While the CMS will block the listed IPs from accessing the content directly, blocked IPs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
 
 #### Use a PHP Snippet to Block IPs
 
@@ -150,20 +152,6 @@ mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8tab">
-
-In Drupal 8, the [Ban](https://www.drupal.org/docs/8/core/modules/ban/overview) module is not enabled by default in the Standard install profile, but it does come with core.
-
-Enable the module, then navigate to the site's `/admin/config/people/ban` to enter the IP address (for example, `192.0.2.38`).
-
-If the site is slow or unavailable, run the MySQL query below, replacing `192.0.2.38` with the IP to block:
-
-```sql
-mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
-```
-
-</Tab>
-
 <Tab title="WordPress" id="wptab">
 
 Install and use the following WordPress plugin:
@@ -176,13 +164,15 @@ Install and use the following WordPress plugin:
 
 ### Block User Agents in Drupal or WordPress
 
-Similar to the IP blocking methods listed above, you can also target specific unwanted user agents that you may want to block.
+Browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string, with each request they make to the server. Similar to the IP blocking methods listed above, you can also target specific unwanted UAs that you may want to block.
 
-You can do this by [adding the User Agents to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
+While the CMS will block the listed UAs from accessing the content directly, blocked UAs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
+
+To block UAs in Drupal or WordPress, [add the UAs to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or with `stripos`.
 
 The `stripos` function implements a case-insensitive match which can be helpful when dealing with mixed bots or crawlers, such as `Curl/dev` vs `curlBot`.
 
-Remember to replace the example user agent (`UglyBot`):
+Remember to replace the example UA (`UglyBot`):
 
 ```php:title=wp-config.php%20or%20settings.php
 // Block a single bot.

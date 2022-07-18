@@ -100,7 +100,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 <dd>
 
-If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, `"Drupal 8"`, or `"Drupal 9"`.
+If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"Drupal 9"`.
 
 </dd>
 
@@ -121,7 +121,7 @@ Of particular note, any documentation that uses Terminus should reference it in 
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 
@@ -133,7 +133,7 @@ Be sure that you have:
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 ```
@@ -630,6 +630,8 @@ ___
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
+Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
+
 <Example>
 
 <TabList>
@@ -645,21 +647,6 @@ Here's our WordPress specific copy, and an example snippet:
   */
 
 Code goes here.
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
-  *
-  */
-
-Some code.
 ```
 
 </Tab>
@@ -693,21 +680,6 @@ Here's our WordPress specific copy, and an example snippet:
 ```php
 /**
   * Some WordPress specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Here's our Drupal 8 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 8 specific thing
   *
   */
 
@@ -780,7 +752,11 @@ ___
 
 ## Error Messages
 
-Document error messages verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Make the header an H3 to make the section linkable within the table of contents for easy sharing.
+<ReviewDate date="2022-06-05" />
+
+When referencing error messages in the body of an article, format them as monospace, and either place them inline (if short) or as a new paragraph (if long).
+
+When providing solutions to error messages, document them verbatim as H3s within a **Troubleshooting** section. Use the exact copy of the error message to help improve search result findability. Making the header an H3 makes the section linkable within the table of contents for easy sharing.
 
 <Example>
 

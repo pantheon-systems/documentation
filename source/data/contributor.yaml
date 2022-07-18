@@ -13,18 +13,24 @@
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
   linkedin: //www.linkedin.com/in/edward-angert/
-- id: joa-pan
-  name: Joanie Edwards
-  avatar: //github.com/joa-pan.png?size=460
-  bio: Senior Technical Writer, Pantheon
-  github: //github.com/joa-pan
-  drupal: https://www.drupal.org/u/_joan
 - id: michellecolon-pantheon
   name: Michelle Colón
   avatar: //github.com/michellecolon-pantheon.png?size=460
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
+- id: joa-pan
+  name: Joanie Edwards
+  avatar: //github.com/joa-pan.png?size=460
+  bio: Senior Technical Writer, Pantheon
+  github: //github.com/joa-pan
+  drupal: https://www.drupal.org/u/_joan
+- id: wordsmither
+  name: Jennifer Hoffman
+  avatar: //github.com/wordsmither.png?size=460
+  bio: Senior Technical Writer, Pantheon
+  github: //github.com/wordsmither
+  linkedin: //www.linkedin.com/in/wordsmithwest/
 - id: whitneymeredith
   name: Whitney Meredith
   avatar: //github.com/whitneymeredith.png?size=460
@@ -40,6 +46,9 @@
 - id: carlalberto
   name: Carl Alberto
   github: //github.com/carl-alberto
+  linkedin: //www.linkedin.com/in/carlalberto/
+  wordpress: //profiles.wordpress.org/carl-alberto/
+  twitter: //twitter.com/carlalbertodev
   bio: Implementation Consultant, Pantheon
   avatar: //avatars.githubusercontent.com/u/5098765
 - id: suzannealdrich
@@ -77,7 +86,7 @@
   avatar: //avatars.githubusercontent.com/u/38017436?v=4
 - id: albertcausing
   name: Albert Causing
-  bio: Support Team Lead, Pantheon
+  bio: Manager, CSE EMEA, Pantheon
   avatar: //avatars0.githubusercontent.com/u/17841145
   twitter: https://twitter.com/acausing
   drupal: https://www.drupal.org/u/acausing

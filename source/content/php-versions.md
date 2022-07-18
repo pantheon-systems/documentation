@@ -5,6 +5,7 @@ tags: [libraries, updates]
 categories: [platform]
 reviewed: "2020-05-05"
 ---
+
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 ## Before You Begin
@@ -26,6 +27,8 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 ### All PHP Versions
 
+<ReviewDate date="2022-04-06" />
+
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
 | [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.1. New Relic is not supported in PHP 8.1." /> |
@@ -36,30 +39,42 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 | [7.1](https://v71-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [7.0](https://v70-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.5](https://v55-php-info.pantheonsite.io/) | ❌          | EOL |
-| [5.3](https://v53-php-info.pantheonsite.io/) | ❌          | EOL * |
+| [5.5](https://v55-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future." /> |
+| [5.3](https://v53-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment." />* |
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
 <dl>
 
-<dt>EOL</dt>
+<dt>❌ EOL</dt>
 
 <dd>
 
-End-of-life (**EOL**) versions are available on the platform but no longer under active development, and should not be used unless absolutely necessary.
+End-of-life (**EOL**) versions are available on the platform but no longer receiving updates, and should not be used unless absolutely necessary.
 
 </dd>
 
 </dl>
 
-\* Sites that use this version of PHP will continue to serve pages, but new development cannot be done. The behavior of the development environment is undefined and not supported. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment. 
+<dl>
+
+<dt>🚫 End-of-Sale</dt>
+
+<dd>
+
+End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future.
+
+</dd>
+
+</dl>
+
+\* Sites that use PHP version 5.3 will continue to serve pages. However, new development cannot be done because the development environment behavior is undefined and no longer supported. You can upgrade your PHP version in the development environment to resume development on your site.
 
 #### Compatibility Considerations
 
 New Relic is not supported in PHP 8.1
 
-WordPress is not fully compatible with PHP 8.0 or PHP 8.1 and deprecation notices remain in WordPress 5.9. With a deprecation notice, the PHP code will continue to work for supported entities until a future release. 
+WordPress is not fully compatible with PHP 8.0 or PHP 8.1 and deprecation notices remain in WordPress 5.9. With a deprecation notice, the PHP code will continue to work for supported entities until a future release.
 
 You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on the [WordPress core](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) site.
 
@@ -68,53 +83,56 @@ You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on
 Before changing your PHP version, confirm that your CMS is compatible:
 
 - [WordPress Requirements](https://wordpress.org/about/requirements/)
-- [Drupal 8 and 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
-
 
 ## Configure PHP Version
 
-Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory. If the `pantheon.yml` file is not present, create one to look like the following:
+PHP versions can be set using the `pantheon.yml` configuration file in the root of your site's code repository. If you have a local git clone of your site, the project root is `/code/`.
 
-```yaml
-api_version: 1
+Configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
 
-php_version: 8.0
-```
+You can use SFTP or Git mode to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
 
-You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
+1. Navigate to the Pantheon dashboard.
 
-Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control.
+1. Click the **Dev** environment tab and select your preferred **Development Mode**.
 
-The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
+   - Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon if you select SFTP mode.
 
-### Verify Changes
+1. Check the `/code` directory for the `pantheon.yml` file and create one if it is not already present:
 
-#### Git Mode
+   ```yaml:title=pantheon.yml
+   api_version: 1
+   
+   php_version: 8.0
+   ```
 
-The first place to determine if your changes have been successful is the output from your `git push` command. A correct implementation will return:
+   - You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
 
-```none
-remote: PANTHEON NOTICE:
-remote:
-remote: Changes to `pantheon.yml` detected.
-remote:
-remote: Successfully applied `pantheon.yml` to the 'dev' environment.
-```
+1. Refresh the **Dev** environment tab > click `/code` directory > verify that the `pantheon.yml` file has been created.
 
-If you have an invalid `pantheon.yml` file, the `git push` operation will fail and your commit will be rejected. In this example, we've set an unavailable PHP version:
+1. Enter a commit message and click **Commit changes**.
 
-```none
-remote: PANTHEON ERROR:
-remote:
-remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
-remote:
-remote:
-remote: Validation failed with error:
-remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
-```
+1. Refresh the **Dev** environment tab and verify that the `pantheon.yml` file is now committed to the `master` branch.
 
-Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
+1. Pull changes to your local repository (if you have one).
+
+   - Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/guides/git/git-config#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
+
+1. Rebase any non-`master` branches and remove their remote versions > re-push the branches to avoid the Git pre-receive error:
+
+   ```none
+   remote: PANTHEON ERROR:
+   remote:
+   remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
+   remote:
+   remote:
+   remote: Validation failed with error:
+   remote: >   12.0 is not one of [5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.1]
+   ```
+
+1. Modify the `pantheon.yml` file until it is valid and commit the fix before attempting to push again.
 
 <Alert title="Note" type="info">
 
@@ -124,11 +142,11 @@ Changes to `pantheon.yml` [deployed as hotfixes](/pantheon-yml#deploying-hotfixe
 
 #### SFTP Mode
 
-When you upload a new or modified `pantheon.yml` file in SFTP mode, your site dashboard will detect the changes:
+Your site dashboard will detect the changes when you upload a new or modified `pantheon.yml` file in SFTP mode.
 
 ![The Site Dashboard sees changes to pantheon.yml](../images/dashboard/pantheon-yml-changes-sftp.png)
 
-If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. In the example below we've attempted to set the PHP version to 12:
+If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. The example below shows a failed attempt to set the PHP version to 12:
 
 ![The Site Dashboard doesn't commit invalid changes](../images/dashboard/pantheon-yml-failure-sftp.png)
 
@@ -142,7 +160,7 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`, for example, upgrading Drush should resolve the issue. For more information, see [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version).
 
-## See Also
+## More Resources
 
 - [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 - [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)

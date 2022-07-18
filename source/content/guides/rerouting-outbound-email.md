@@ -21,7 +21,7 @@ You’ll be able to funnel all development and testing emails to a single inbox 
 
 You can use [SFTP](/sftp) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module. Alternatively, you can use Git to keep automated backups running on Dev.
 
-For instance, you can use [a start state](/start-state/#import-an-existing-site) and perform a [git clone](/git) of the Pantheon site.
+For instance, you can use [a start state](/start-state/#import-an-existing-site) and perform a [git clone](/guides/git/git-config) of the Pantheon site.
 
 ```bash{promptUser: user}
 cd sites
@@ -74,11 +74,7 @@ If you don’t have a `settings.php` file, copy the `default.settings.php` file.
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE, open the `settings.php`, and add the following code:
-
-<TabList>
-
-<Tab title="Drupal 7" id="d7">
+Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal 7:
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -101,35 +97,6 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['reroute_email_enable_message'] = 1;
 }
 ```
-</Tab>
-  
-
-<Tab title="Drupal 8" id="d8"> 
-
-```php
-if (defined('PANTHEON_ENVIRONMENT')) {
-  if (PANTHEON_ENVIRONMENT == 'live') {
-    // Do not reroute email on Live.
-    $config['reroute_email.settings']['enable'] = FALSE;
-  }
-  else {
-    // Reroute email on all Pantheon environments but Live.
-    $config['reroute_email.settings']['enable'] = TRUE;
-    $config['reroute_email.settings']['address'] = 'tester+qa-' . PANTHEON_ENVIRONMENT . '@example.com';
-  }
-}
-
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  // Reroute email when site is not on Pantheon (local install).
-  $config['reroute_email.settings']['enable'] = TRUE;
-  $config['reroute_email.settings']['address'] = 'tester+local-dev@example.com';
-}
-```
-  
-</Tab>
-
-</TabList>
-
   
 In order for the snippet to work as intended, the module must be enabled in all environments. The `PANTHEON_ENVIRONMENT` variable changes the reroute email settings based on environment. The configuration in `settings.php` overrides any settings in the Drupal Admin UI.  If your site isn't on Pantheon, look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in your configuration.
 

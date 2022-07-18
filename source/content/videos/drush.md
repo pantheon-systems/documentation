@@ -23,7 +23,7 @@ If you install Pantheon’s command line tool, [Terminus](/terminus/install), yo
 
 If you don’t already have a local environment configured, try installing [Kalabox](http://www.kalabox.io/). It comes pre-installed with Terminus and Drush.
 
-Let’s view all the enabled modules on my Drupal 8 site by running `terminus drush` followed
+Let’s view all the enabled modules on my Drupal site by running `terminus drush` followed
 by the site name and the environment—in this case the Dev environment of the drushme site—then 2 dashes to let Terminus know the following are all Drush parameters, not Terminus parameters.
 
 I just want to see the modules that are enabled and not part of core, so I use the appropriate flags.

@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.0.6"
+        "version": "3.0.7"
     },
     "commands": [
         {
@@ -296,7 +296,7 @@
             "usage": [
                 "completion [--debug] [--] [<shell>]"
             ],
-            "help": "The <info>completion<\/> command dumps the shell completion script required\nto use shell autocompletion (currently only bash completion is supported).\n\n<comment>Static installation\n-------------------<\/>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion bash | sudo tee \/etc\/bash_completion.d\/terminus.phar<\/>\n\nOr dump the script to a local file and source it:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion bash > completion.sh<\/>\n\n    <comment># source the file whenever you use the project<\/>\n    <info>source completion.sh<\/>\n\n    <comment># or add this line at the end of your \"~\/.bashrc\" file:<\/>\n    <info>source \/path\/to\/completion.sh<\/>\n\n<comment>Dynamic installation\n--------------------<\/>\n\nAdd this add the end of your shell configuration file (e.g. <info>\"~\/.bashrc\"<\/>):\n\n    <info>eval \"$(\/tmp\/update-tool\/terminus\/terminus.phar completion bash)\"<\/>",
+            "help": "The <info>completion<\/> command dumps the shell completion script required\nto use shell autocompletion (currently only bash completion is supported).\n\n<comment>Static installation\n-------------------<\/>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion bash | sudo tee \/etc\/bash_completion.d\/terminus.phar<\/>\n\nOr dump the script to a local file and source it:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion bash > completion.sh<\/>\n\n    <comment># source the file whenever you use the project<\/>\n    <info>source completion.sh<\/>\n\n    <comment># or add this line at the end of your \"~\/.bashrc\" file:<\/>\n    <info>source \/path\/to\/completion.sh<\/>\n\n<comment>Dynamic installation\n--------------------<\/>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~\/.bashrc\"<\/>):\n\n    <info>eval \"$(\/tmp\/update-tool\/terminus\/terminus.phar completion bash)\"<\/>",
             "definition": {
                 "arguments": {
                     "shell": {
@@ -5812,13 +5812,13 @@
         },
         {
             "name": "local:commitAndPush",
-            "description": "CLone a copy of site code into $HOME\/pantheon-local-copies",
+            "description": "Commit local changes to remote repository.",
             "usage": [
                 "local:commitAndPush <site>",
                 "local:commitAndPush <site> Clone's a local copy into \"$HOME\/pantheon-local-copies\"",
-                "lc"
+                "lcp"
             ],
-            "help": "CLone a copy of site code into $HOME\/pantheon-local-copies",
+            "help": "Commit local changes to remote repository.",
             "definition": {
                 "arguments": {
                     "site": {
@@ -15660,6 +15660,7 @@
                 "envs",
                 "help",
                 "lc",
+                "lcp",
                 "ldb",
                 "lf",
                 "list",

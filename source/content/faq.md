@@ -65,13 +65,13 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 ### Can I use my own Git repository (e.g GitHub)?
 
-Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/collaborative-development).
+Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/git/collaborative-development).
 
-[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/custom-upstream).
+[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/guides/custom-upstream).
 
 ### Does Pantheon support Drupal Multisite?
 
-No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Custom Upstreams](/custom-upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multisite setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
+No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Custom Upstreams](/guides/custom-upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multisite setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
@@ -134,7 +134,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 <Partial file="solr-version.md" />
 
-Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/wordpress-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7) and [Drupal 8](/guides/solr-drupal/solr-drupal-8).
+Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/wordpress-solr) and [Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Support
 

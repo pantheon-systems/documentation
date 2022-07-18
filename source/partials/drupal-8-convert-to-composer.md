@@ -34,12 +34,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
 Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
-  ```bash{promptUser:user}
-  composer require --no-update drupal/core-recommended:^8.9
-  composer require --dev drupal/core-dev:^8.9
-  git add composer.*
-  git commit -m "Remain on Drupal 8"
-  ```
+<Partial file="drupal-9/core-version-remain-on-d8.md" />
 
 ### Add Upgrade Status Module
 
@@ -140,7 +135,7 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     Use the version directly, e.g. `^4.1.1`
 
-    <Partial file="could-not-find-version-module_name.md" />	  
+    <Partial file="module_name.md" />	  
 
 
 #### Other Composer Packages
@@ -157,7 +152,7 @@ Libraries can be handled similarly to modules, but the specifics depend on how y
 
 ### Custom Code
 
-Manually copy custom code from the existing site repository to the Composer-managed directory.
+Next, manually copy custom code from the existing site repository to the Composer-managed directory.
 
 #### Modules and Themes
 

@@ -4,7 +4,7 @@ description: A list of suggestions for developing WordPress sites on Pantheon.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow, security, composer]
-reviewed: "2020-10-15"
+reviewed: "2022-05-16"
 ---
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
@@ -48,7 +48,7 @@ There are many plugins and themes in WordPress that require license keys. Since 
 
 ## Testing
 
-* Run [Launch Check](/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
+* Run [Launch Check](/guides/wordpress-pantheon/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
 * Automate testing with [Behat](/guides/behat). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
@@ -78,16 +78,17 @@ Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronge
 
 Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 core release](/changelog/2020/07#wordpress-542). If your version of WordPress is older than this, you can block `xmlrpc.php` attacks by applying your [upstream updates](/core-updates).
 
-### Disable XML-RPC via Pantheon.yml
+### Enable XML-RPC via Pantheon.yml
 
-This method is more performant than disabling via a plugin since this won't involve bootstrapping WordPress. The result of this configuration is that requests to `/xmlrpc.php` will return a 403 status code.
+<Alert title="Note"  type="info" >
 
-Add the following configuration to your [`pantheon.yml`](/pantheon-yml) file:
+XML-RPC is not recommended on the Pantheon platform. Pantheon does not support XML-RPC if it is enabled. 
 
-  ```yml:title=pantheon.yml
-  protected_web_paths:
-    - /xmlrpc.php
-  ```
+</Alert>
+
+You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](https://jetpack.com/) or the WordPress mobile app. 
+
+<Partial file="jetpack-enable-xmlrpc.md" />
 
 ### Disable XML-RPC via a Custom Plugin
 
@@ -115,6 +116,8 @@ This method has the advantage of being toggleable without deploying code, by act
     return [];
   }, PHP_INT_MAX);
   ```
+
+	If your site uses a nested web root directory, you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php` 
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 
@@ -157,7 +160,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
 
-There are plugins for WordPress that do not require `.htaccess` to set security headers (like [GD Security Headers](https://wordpress.org/plugins/gd-security-headers/)), but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
+There are plugins for WordPress that do not require `.htaccess` to set security headers, but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 
 Adding code like the example below in a plugin (or [mu-plugin](/mu-plugin)) can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
 

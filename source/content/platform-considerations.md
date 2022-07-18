@@ -48,11 +48,11 @@ Often, the best solution is to implement data exports as a web service, incremen
 
 ## CORS
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
+Pantheon supports sites that consume services using Cross-Origin Resource Sharing (CORS), such as Amazon S3 CORS.
 
-Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
+You must add the correct header to enable CORS services on your site. Review [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html) for more details.
 
-WordPress users can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/) or enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors)
+WordPress users can enable CORS for selected domains in a [MU plugin](/mu-plugin#cross-origin-resource-sharing-cors). You can also use an Advanced Global CDN to [modify headers at the Edge](/guides/professional-services/advanced-global-cdn#modify-and-filter-headers-at-the-edge).
 
 Drupal 9 users can update `sites/default/services.yml` to enable CORS.
 
@@ -80,6 +80,8 @@ Sample `services.yml` file:
 Pantheon does not currently support LESS or Sass/Compass CSS preprocessor languages. LESS and Sass will need to be pre-compiled to make traditional CSS stylesheets before being pushed to the platform.
 
 ## Database Stored Procedures
+
+<Partial file="platform-considerations-connections.md" />
 
 MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
@@ -109,7 +111,7 @@ We do not support ffmpeg transcoding, and we do not have plans to add this featu
 
 ## Emoji Support
 
-Emoji support is available out of the box on WordPress and Drupal 8. Drupal 7 sites can enable Emoji support by following this procedure:
+Emoji support is available out of the box on WordPress and Drupal 9. Drupal 7 sites can enable Emoji support by following this procedure:
 
 For new or existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
 

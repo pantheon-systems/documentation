@@ -40,17 +40,6 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-2">
-
-1. Navigate to the Site Dashboard and select the desired environment.
-2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
-3. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
-
-  ![Drupal 8 Clear Caches](../images/d8-cc.png)
-
-</Tab>
-
-
 <Tab title="Drupal 7" id="d7-3">
 
 1. Navigate to the Site Dashboard and select the desired environment.

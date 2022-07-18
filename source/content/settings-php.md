@@ -271,16 +271,3 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
-### Drupal 8 Error: "The provided host name is not valid for this server."
-
-This error comes from a feature in Drupal 8 designed to protect against [HTTP HOST Header attacks](https://www.drupal.org/node/1992030). Drupal 8 allows you to specify "trusted host patterns," which specify a set of domains that incoming requests must match.
-
-If you see this error, you need to update your [trusted host patterns](#trusted-host-setting) in `settings.php` and add your new domain(s) to the `$settings['trusted_host_patterns']` array.
-
-By default, Pantheon's environment is configured to not allow any non-trusted hosts. Trusted hosts are added via the `PANTHEON_ENVIRONMENT` variable in `settings.php` [here](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L184):
-
-GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php php:title=settings.php 179-187 GITHUB-EMBED
-
-### Drupal 8.8
-
-<Partial file="drupal-8-8-warning.md" />

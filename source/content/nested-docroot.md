@@ -15,7 +15,7 @@ The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the direct
 Using Pantheon's one-click Dashboard updates feature depends on a correctly set the `web_docroot` property.
 
 - Composer-managed sites, including [Integrated Composer](/guides/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
-- Sites that use a [Custom Upstream](/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
+- Sites that use a [Custom Upstream](/guides/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
 
@@ -41,14 +41,6 @@ terminus site:upstream:set <site> empty-7
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-set-upstream">
-
-```bash
-terminus site:upstream:set <site> empty
-```
-
-</Tab>
-
 <Tab title="WordPress" id="wp-set-upstream">
 
 ```bash
@@ -69,7 +61,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
  terminus connection:set <site>.<env> git
  ```
 
-1. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
+1. [Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), if you haven't already.
 1. Create a `pantheon.yml` file if it doesn't already exist.
 1. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
 
@@ -84,7 +76,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 
 ### Create a New Site
 
-Your site should use a [Custom Upstream](/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
+Your site should use a [Custom Upstream](/guides/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
 
 ### Convert an Existing Site
 
@@ -93,110 +85,80 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <TabList>
 
 <Tab title="Drupal 7" id="d7" active={true}>
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
+The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  ```bash{promptUser: user}
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
-  ```
+[Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), then execute the following from the project root directory:
 
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
+```bash{promptUser: user}
+mkdir web
+git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+```
 
-  Your directory structure should look like this afterwards:
+These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
-  ```none
-  ├── web
-    ├── includes
-    ├── index.php
-    ├── misc
-    ├── modules
-    ├── profiles
-    ├── scripts
-    ├── sites
-        └── all
-            ├── modules
-            └── themes
-            └── default
-            └── settings.php
-    └── themes
-  ```
+Your directory structure should look like this afterwards:
 
-</Tab>
-
-<Tab title="Drupal 8" id="d8">
-
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
-
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
-
-  ```bash{promptUser: user}
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') core drush modules profiles sites themes vendor index.php web
-  ```
-
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
-
-  Your directory structure should look like this afterwards:
-
-  ```none
-  ├── web
-    ├── core
-    ├── drush
-    ├── modules
-    ├── profiles
-    ├── sites
-        ├── default
-            ├── settings.php
-    ├── themes
-    ├── vendor
-    ├── index.php
-  ```
+```none
+├── web
+  ├── includes
+  ├── index.php
+  ├── misc
+  ├── modules
+  ├── profiles
+  ├── scripts
+  ├── sites
+      └── all
+          ├── modules
+          └── themes
+          └── default
+          └── settings.php
+  └── themes
+```
 
 </Tab>
 
 <Tab title="WordPress" id="wp">
 
-  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
+[Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), then execute the following from the project root directory:
 
-  ```bash
-  mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') wp-includes wp-content wp-admin ./*.php web
-  ```
+```bash
+mkdir web
+git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') wp-includes wp-content wp-admin ./*.php web
+```
 
-  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
+These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
-  Your directory structure should look like this afterwards:
+Your directory structure should look like this afterwards:
 
-  ```none
-  ├── web
+```none
+├── web
+  ├── index.php
+  ├── wp-activate.php
+  ├── wp-config.php
+  ├── wp-config-local-sample.php
+  ├── wp-config-pantheon.php
+  ├── wp-comments-post.php
+  ├── wp-blog-header.php
+  ├── wp-admin
+  ├── wp-cron.php
+  ├── wp-load.php
+  ├── wp-links-opml.php
+  ├── wp-includes
+  ├── xmlrpc.php
+  ├── wp-trackback.php
+  ├── wp-signup.php
+  ├── wp-settings.php
+  ├── wp-mail.php
+  ├── wp-login.php
+  ├── wp-content
     ├── index.php
-    ├── wp-activate.php
-    ├── wp-config.php
-    ├── wp-config-local-sample.php
-    ├── wp-config-pantheon.php
-    ├── wp-comments-post.php
-    ├── wp-blog-header.php
-    ├── wp-admin
-    ├── wp-cron.php
-    ├── wp-load.php
-    ├── wp-links-opml.php
-    ├── wp-includes
-    ├── xmlrpc.php
-    ├── wp-trackback.php
-    ├── wp-signup.php
-    ├── wp-settings.php
-    ├── wp-mail.php
-    ├── wp-login.php
-    ├── wp-content
-      ├── index.php
-      ├── mu-plugins
-      ├── themes
-      ├── plugins
-  ```
+    ├── mu-plugins
+    ├── themes
+    ├── plugins
+```
 
 </Tab>
 

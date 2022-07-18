@@ -5,6 +5,7 @@ categories: [manage]
 tags: [dashboard, git, terminus, updates]
 reviewed: "2021-04-15"
 ---
+
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
 
 ## Drupal 9
@@ -13,32 +14,31 @@ Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated-composer
 
 To check for available updates:
 
-1. Navigate to **Code** in the Dev tab of the site's Dashboard. 
+1. Navigate to **Code** in the Dev tab of the site's Dashboard.
 
 1. Click **Check Now** and then click **Apply Updates** if updates are available.
 
 ## Drupal 8 Composer-Managed Sites
 
-Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates. To be compatible with One-Click updates, you must do **one** of the following:
+Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates. To be compatible with One-click updates, you must do **one** of the following:
 
 - Update core to use Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update)
 
 - [Convert the site to Integrated Composer](/guides/composer-convert)
 
-- Update to [Drupal 9](/drupal-9) which has [Integrated Composer](/guides/integrated-composer) built-in
+- [Update to Drupal 9](/drupal-9-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
 
 ## Non-Composer-Managed WordPress and Drupal 7 Sites
 
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream), become available downstream as a one-click update.
 
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
-
 
 ## Apply Upstream Updates via the Site Dashboard
 
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
 
-  ![Sreenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
+  ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
 1. Commit and deploy and SFTP changes and then set the site's connection mode to **Git**.
 
@@ -180,7 +180,7 @@ In the case where you're unable to use Git, you can use [SFTP](/sftp) to overwri
 
 This process lets you manually resolve the conflict using the command line and a text editor.
 
-1. Navigate to a [local clone of your site repository](/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to a [local clone of your site repository](/guides/git/git-config#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
   <TabList>
 
@@ -274,7 +274,7 @@ This process lets you manually resolve the conflict using the command line and a
   M	wp-admin/about.php
   Falling back to patching base and 3-way merge...
   Auto-merging wp-admin/about.php
-  CONFLICT (content): Merge conflict in wp-admin/about.php
+  CONFLICT (content): Merge conflict in wp-admin/about.php //highlight-line
   error: Failed to merge in the changes.
   Patch failed at 0001 Adjust rendering of version release notes
   The copy of the patch that failed is found in: .git/rebase-apply/patch
@@ -306,12 +306,6 @@ This process lets you manually resolve the conflict using the command line and a
 ## Core Release Updates
 
 Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
-
-<Alert title="Warning" type="danger">
-
-<Partial file="drupal-8-8-warning.md" />
-
-</Alert>
 
 ## Suppress WordPress Admin Notice
 

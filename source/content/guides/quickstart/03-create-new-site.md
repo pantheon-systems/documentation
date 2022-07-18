@@ -35,11 +35,11 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
    <Alert title="Note" type="info">
 
-   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/custom-upstream), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/guides/custom-upstream), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
 
    </Alert>
 
-4. For the purpose of this guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
+4. For the purpose of this guide, deploy WordPress or Drupal 9 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
 
    <Accordion title="Deploy a Site on Pantheon (optional)" icon="lightbulb" id="understand-deploy" >
 

@@ -93,7 +93,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 In the commands below, replace `<site>` with your Pantheon site name.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info <site>.dev --fields='Git Command' --format=string`
         cd <site>
@@ -130,7 +130,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     </Alert>
 
-6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
         git add .
         git commit -m "Create private/jira_integration.php and configure platform hooks"

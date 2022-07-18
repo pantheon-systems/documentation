@@ -77,7 +77,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
   - Drupal built the page. **Drupal Only**
 
 - **X-Served-By**
-  - Hostnames of points of presence (POPs) from the Global CDN that the request routed through. The names are typically based on the codes for nearby airports. The first entry is the POP close to the origin datacenter. The second entry (if one exists) is the POP close to the device loading the page.
+  - Hostnames of CHI metro points of presence (POPs) from the Global CDN that the request routed through. The names are typically based on the codes for nearby airports. The first entry is the POP close to the origin datacenter. The second entry (if one exists) is the POP close to the device loading the page.
 
 - **X-Cache**
   - The hit and miss values shown here correspond to the POPs listed in X-Served-By. A request can "hit" in Global CDN either close to the device loading the page or close to the origin datacenter.

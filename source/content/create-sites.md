@@ -28,7 +28,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
-1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal 9, Drupal 8, or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
+1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal 9, or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
 
    Wait while the platform provisions the site with the start state you selected.
 
@@ -62,7 +62,7 @@ Your account is your own individual account, and every account can manage multip
 
 ### Can I rename my Pantheon site after creation?
 
-No. Site names and Platform URLs are permanent and cannot be changed. As a workaround, you can export your existing site and import it to a new site with the correct name. See [Migrate Sites to Pantheon FAQs](/migrate/#how-do-i-clone-an-existing-pantheon-site).
+No. Site names and Platform URLs are permanent and cannot be changed. As a workaround, you can export your existing site and import it to a new site with the correct name. See [Migrate Sites to Pantheon FAQs](/guides/guided/#how-do-i-clone-an-existing-pantheon-site).
 
 ### What if my site name is already taken?
 
@@ -71,4 +71,4 @@ Site names must be unique across all Pantheon sites, including [frozen](/platfor
 ## Next Steps
 
  - [Developing Directly with SFTP](/sftp)
- - [Starting with Git](/git)
+ - [Starting with Git](/guides/git/git-config)

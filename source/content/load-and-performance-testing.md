@@ -75,7 +75,7 @@ Once the test is running, execute common tasks done by editors and administrator
 - Run any scripts that could be triggered while users are on the site
 - Flush Redis cache (if Redis is running)
 
-### Determing the Number of Concurrent Users in Google Analytics
+### Determine the Number of Concurrent Users in Google Analytics
 
 Pantheon offers [Pre-launch Load Testing](/guides/professional-services/onboarding#pre-launch-load-testing) to newly purchased Elite plans. For the Professional Services team to proceed with executing the load test, a [load test questionnaire form](https://implem.ps-pantheon.com/load-test/new) needs to be filled out with required information. The required information includes **Peak Page Views**, **Peak Sessions**, **Peak Users** and **Average Session Duration** which can be retrieved from your site's Google Analytics data.
 

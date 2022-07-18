@@ -9,7 +9,7 @@ contributors: [alexfornuto, ari]
 
 When Drupal releases critical security releases, Pantheon takes immediate steps to patch our Drupal upstreams. These updates may not always be accessible for users who:
 
-- use a [Custom Upstream](/custom-upstream) or [Public Distribution](/start-state/#public-distributions) which hasn't been patched, or no upstream
+- use a [Custom Upstream](/guides/custom-upstream) or [Public Distribution](/start-state/#public-distributions) which hasn't been patched, or no upstream
 - encounter merge conflicts when applying upstream updates
 
 This doc describes how to manually patch your Drupal core.

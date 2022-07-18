@@ -19,21 +19,21 @@ This page helps troubleshoot common issues that you may encounter when using Aut
 
 If you have already attempted to troubleshoot an error, or if you want to confirm that the error is consistent, try running Autopilot on the site again:
 
-1. Autopilot will not allow updates to be queued until all errors have been reviewed and acknowledged.
+1. Review and acknowledge any errors to allow Autopilot to queue updates. 
 
-If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
+   If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
-1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
+1. Click **Sites** > **Actions** >  **Manage Autopilot Settings**.
 
-1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components.
+1. Navigate to the **Autopilot Configuration** screen > click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
-1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates**.
+1. Click **Status** in Autopilot's side bar > click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually. 
 
 ### Re-run Autopilot If Tests Have Already Passed
 
-Manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence.
+You must manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence. To start an update manually:
 
-To manually start an update, click **Actions** in the site's row on the Autopilot screen, and click **Start Applying Updates**.
+Click **Actions** in the site's row on the Autopilot screen > click **Start Applying Updates**.
 
 ### Re-run Autopilot If Tests Were Approved After Dev Changes
 
@@ -79,7 +79,7 @@ An error occurred because your site is currently running an unsupported version 
 
 Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error.
 
-Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
 
 ### Solution
 
@@ -159,7 +159,7 @@ This error message most likely results from a merge conflict when applying upstr
 
 ### Solution
 
-Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation.
+Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
 ](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
@@ -180,7 +180,7 @@ Autopilot fails when a VRT page redirects more than 8 times or is stuck in an in
 
 ### Solution
 
-To resolve this issue remove the page from VRT settings or fix the redirect in the Dev environment for the page.
+To resolve this issue, remove the page from VRT settings or fix the redirect in the Dev environment for the page.
 
 </Accordion>
 
@@ -204,7 +204,7 @@ Add at least one site to the Autopilot VRT settings.
 
 ### Issue
 
-Autopilot failed to deploy to Test or Live, however deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
+Autopilot failed to deploy to Test or Live; however, deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
 
 ### Solution
 
@@ -280,11 +280,11 @@ Use the following steps:
 
 * For WordPress:
 
-`wp cache flush`
+  `wp cache flush`
 
 * Drupal:
 
-`drush cache-rebuild`
+  `drush cache-rebuild`
 
 </Accordion>
 
@@ -312,7 +312,7 @@ A CMS was not detected.
 
 ### Solution
 
-Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the [documentation](https://pantheon.io/docs/create-sites).
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](https://pantheon.io/docs/create-sites).
 
 </Accordion>
 

@@ -104,7 +104,7 @@ Check [Composer](/guides/composer) dependencies as well. When a Composer package
 
 See [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) on our [WordPress and Drupal Core Updates](/core-updates) page for more information on core update conflicts. Note, deleted `README.txt` files can cause dashboard conflicts.
 
-For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts).
+For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts).
 
 ## White Screen of Death (WSOD)
 
@@ -142,21 +142,6 @@ define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 ## Drupal 7
 
 Are you a Drupal 7 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
-
-## Drupal 8
-
-### UnmetDependenciesException when installing Drupal 8
-
-Sometimes when installing Drupal 8, users may see the following error:
-
-![A screenshot of a common Drupal 8 installation error](../images/drupal-8-install-error.png)
-
-This is apparently caused by a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
-
-See the [UnmetDependenciesException when installing Drupal 8](https://www.drupal.org/project/drupal/issues/2594351) issue for more information.
-
-Are you a Drupal 8 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md)
-
 
 ### Displaying Error Messages
 

@@ -3,7 +3,7 @@ title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
 categories: [platform]
 tags: [logs, newrelic, workflow]
-reviewed: "2020-07-14"
+reviewed: "2022-06-13"
 ---
 
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic&reg; Performance Monitoring](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
@@ -120,16 +120,18 @@ Automate the process of accessing and maintaining these logs with a script.
 
 ### Create a Script
 
-Open your local terminal to create and access a new local directory:
+1. Open your local terminal to create and access a new local directory:
 
-```bash{promptUser: user}
-mkdir $HOME/site-logs
-cd $HOME/site-logs
-```
+    ```bash{promptUser: user}
+    mkdir $HOME/site-logs
+    cd $HOME/site-logs
+    ```
 
-Choose your preferred method from the following tabs, then click the **Download** button to download the script. Move it to the `site-logs` directory you created, and use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+1. Choose your preferred method from the following tabs > Click the **Download** button to download the script. 
 
-The resulting log file might be large.
+1. Move the downloaded script to the `site-logs` directory you created > Use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+
+  - Please note that the resulting log file might be large.
 
 The script provides several modifiable variables described in its comments:
 
@@ -159,13 +161,15 @@ The script provides several modifiable variables described in its comments:
 
 ### Collect Logs
 
-Download logs by executing the script from within the `site-logs` directory:
+1. Download logs by executing the script from within the `site-logs` directory:
 
 ```bash{promptUser:user}
 bash collect-logs.sh
 ```
 
-You can now access the logs from within the `site-logs` directory. More than one directory is generated for sites that use multiple application containers.
+1. Open the `site-logs` directory to access the logs.
+  
+  - More than one directory is generated for sites that use multiple application containers.
 
 ## Frequently Asked Questions
 
@@ -244,7 +248,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
 
-1. Add `logs/*` to the project's [`.gitignore` file](/git-faq/#can-i-use-gitignore-on-pantheon).
+1. Add `logs/*` to the project's [`.gitignore` file](/guides/git/faq-git#can-i-use-gitignore-on-pantheon).
 
 1. In your project's `logs` directory, create `logwatcher.sh`:
 

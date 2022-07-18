@@ -14,7 +14,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 </Alert>
 
-[Custom Upstreams](/custom-upstream) are available to team members when the organization is associated during site creation.
+[Custom Upstreams](/guides/custom-upstream) are available to team members when the organization is associated during site creation.
 
 ## Pantheon Upstreams
 
@@ -79,4 +79,4 @@ terminus dashboard:view my-new-panopoly-site
 
 ## Import an Existing Site
 
-Your site migration has four phases. You’ll package your site, import it, test it out, then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/migrate).
+Your site migration has four phases. You’ll package your site, import it, test it out, then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/guides/guided/.

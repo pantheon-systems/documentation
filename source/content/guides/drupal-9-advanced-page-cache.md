@@ -12,7 +12,7 @@ contributors: [stevector, dwayne, davidneedham]
 
 When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 
-This module has no configuration settings of its own, just enable it and it will pass along information already present in Drupal 8 to the Global CDN.
+This module has no configuration settings of its own, just enable it and it will pass along information already present in Drupal to the Global CDN.
 
 To take finer grain control of how Drupal handles its cache data on both the Global CDN and internal Drupal caches, you can set and clear your own custom tags. This guide will show you how to do this using a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/docs/drupal-apis/cache-api/cache-tags).
 
@@ -35,7 +35,7 @@ First, set up a new Drupal 9 site and add the Pantheon Advanced Page Cache modul
 1. Create a new Drupal 9 site from your local command line environment using Terminus:
 
   ```bash{promptUser: user
-  terminus site:create $TERMINUS_SITE $TERMINUS_SITE "Drupal 8"
+  terminus site:create $TERMINUS_SITE $TERMINUS_SITE "Drupal 9"
   ```
 
    You can replace the second instance of `$TERMINUS_SITE` with a site label.
@@ -73,10 +73,7 @@ First, set up a new Drupal 9 site and add the Pantheon Advanced Page Cache modul
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-7. Turn on full page caching by setting the **Page cache maximum age** field to "10 min", then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`:
-
-  ![Drupal 8 admin screen for Performance](../../images/guides/drupal-8-advanced-page-cache/img1-config-dev-performance.png
-)
+7. Turn on full page caching by setting the **Page cache maximum age** field to "10 min", then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`.
 
   You can also make those same changes using Drush via Terminus:
 
@@ -119,7 +116,7 @@ You can now look at HTTP Headers with the steps above completed.
     x-drupal-cache: HIT
     x-drupal-dynamic-cache: MISS
     x-frame-options: SAMEORIGIN
-    x-generator: Drupal 8 (https://www.drupal.org)
+    x-generator: Drupal 9 (https://www.drupal.org)
     x-pantheon-styx-hostname: styx-fe3-b-3174343232-r3qrq
     x-styx-req-id: styx-d1a4bdde194dbd2b07eeac64d3ac75bb
     x-ua-compatible: IE=edge
@@ -161,8 +158,6 @@ The remaining steps in this guide trim the output of the `curl` commands to only
 
 1. View some of the headers on the listing page for the taxonomy term (`/taxonomy/term/1`):
 
-   ![Drupal 8 taxonomy screen](../../images/guides/drupal-8-advanced-page-cache/img5-taxonomy-term-1.png)
-
    ```bash{outputLines:2-3}
    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
    Surrogate-Key-Raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.taxonomy_term http_response node:1 node_emit_list node_view rendered taxonomy_term:1 taxonomy_term_view user:1 user_view
@@ -179,8 +174,6 @@ The remaining steps in this guide trim the output of the `curl` commands to only
   ```
 
 3. Make a page node (`/node/add/page`).
-
-   ![Drupal 8 node add page](../../images/guides/drupal-8-advanced-page-cache/img6-node-add-page-2.png)
 
 4. View the headers:
 

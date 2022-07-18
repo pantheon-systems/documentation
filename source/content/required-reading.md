@@ -17,7 +17,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/globa
 - [HTTPS on Pantheon's Global CDN](/https)
 
 ## Build
-- [Migrate Sites to Pantheon](/migrate)
+- [Migrate Sites to Pantheon](/guides/guided/
 - [rsync and SFTP](/rsync-and-sftp)
 - [Configuring settings.php](/settings-php) or [Configuring wp-config.php](/wp-config-php)
 - [Drupal Drush Command-Line Utility](/drush)

@@ -53,7 +53,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 ### Upstreams
 
-[Custom Upstreams](/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
+[Custom Upstreams](/guides/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
 
 ### Support
 
@@ -112,5 +112,5 @@ terminus org:list
 ## Next Steps
 
 - [Create a Site](/create-sites)
-- [Migrate Sites to Pantheon](/migrate)
+- [Migrate Sites to Pantheon](/guides/guided/
 - Read the [FAQs](/organization-faq)

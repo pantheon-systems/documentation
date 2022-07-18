@@ -33,7 +33,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <Tab title="WordPress" id="wp-init" active={true}>
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
   ```bash{promptUser: user}
   SITE=<site_name>
@@ -102,7 +102,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <Tab title="Drupal 7" id="d7-init">
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
   ```bash{promptUser: user}
   SITE=<site_name>
@@ -225,6 +225,6 @@ The following example shows you how to install a site local Drush. You can use t
 
 ## Next Steps
 
-If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress. This is not supported on Drupal 8 as it will break one-click updates due to excessive conflicts.
+If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress.
 
 If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/guides/build-tools) guide.

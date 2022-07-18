@@ -35,9 +35,9 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 ## Maintain a Single Codebase for Multiple Sites
 
-This method uses a [Custom Upstream](/custom-upstream), a feature available to EDUs, Enterprises, and [Pantheon Partner Agencies](https://pantheon.io/plans/partner-program?docs).
+This method uses a [Custom Upstream](/guides/custom-upstream), a feature available to EDUs, Enterprises, and [Pantheon Partner Agencies](https://pantheon.io/plans/partner-program?docs).
 
-1. Create a [Custom Upstream](/custom-upstream) based on the multisite configuration.
+1. Create a [Custom Upstream](/guides/custom-upstream) based on the multisite configuration.
 
 2. Archive each of your sites using `drush ard`.
 
@@ -45,7 +45,7 @@ This method uses a [Custom Upstream](/custom-upstream), a feature available to E
 
 Then for each site:
 
-4. [Git clone the repo](/git/#clone-your-site-codebase) locally.
+4. [Git clone the repo](/guides/git/git-config#clone-your-site-codebase) locally.
 
 5. If there are customizations on the individual sites that are not incorporated into the upstream repository, commit those changes from your archives into the local repo.
 

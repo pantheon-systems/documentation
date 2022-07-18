@@ -7,6 +7,8 @@ tags: [code, dashboard, migrate, site]
 
 Manually migrate your site to Pantheon when any of the following apply:
 
+<Partial file="drupal-9/guide-note.md" />
+
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
 - **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
@@ -15,7 +17,6 @@ Manually migrate your site to Pantheon when any of the following apply:
 - **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 - **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-If none of the above apply to your project, use the [standard migration procedure](/migrate).
 
 <Alert title="Note for Composer-based Sites" type="info" >
 
@@ -39,7 +40,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
 
 #### Local Drupal configurations
 
@@ -51,7 +52,7 @@ mv sites/default/{settings.php,settings.local.php}
 chmod u-w sites/default/{settings.local.php,.}
 ```
 
-Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+Sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php` as this file is not bundled on Pantheon.
 
 </Accordion>
 
@@ -61,7 +62,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, Drupal 9, or WordPress,), and click **Continue**:
+1. Enter your current website URL, choose your site type (Drupal 7, Drupal 9, or WordPress,), and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 
@@ -123,51 +124,43 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="WordPress" id="wp-code" active={true}>
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
+    Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
 
-   - `mu-plugins`
-   - `plugins`
-   - `themes`
+    - `mu-plugins`
+    - `plugins`
+    - `themes`
 
-  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
+    As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
   <Tab title="Drupal 7" id="d7-code">
 
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
+    Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
+    - `libraries`
+    - `modules`
+    - `profile`
+    - `themes`
+    - `vendor`
+    - `sites`, excluding `sites/default/files`.
 
-  Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+    Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
 
-  </Tab>
+  <Alert title="Note" type="info" >
 
-  <Tab title="Drupal 8" id="d8-code">
+    You must prepare the directory and the database if you are using Multisite and want to migrate a sub-site.
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
+    1. Copy the base site to a new directory.
 
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
+    1. Delete all sites, with the exception of:
 
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+       - `sites/{sitename}`: the site you are migrating
+       - `sites/all`: contains all of your site's modules and themes
 
-  </Tab>
+    1. Rename `sites/{sitename}`  to `sites/default`.
 
-  <Tab title="Drupal 9" id="d9-code">
-
-  Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
-
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+  </Alert>
 
   </Tab>
 
@@ -273,7 +266,27 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
-<Partial file="migrate-add-database.md" />
+The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
+
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. For example:
+
+  ```bash
+  mysqldump db_name > backup-file.sql
+  ```
+
+1. Enter your username and password when prompted to authenticate the command.
+
+    - You might want to consider using a terminus credential fetch to avoid entering credentials for future automation steps.
+
+1. Run the command below to load the dump file back into the server:
+
+  ```bash
+  mysql db_name < backup-file.sql
+  ```
+
+You can also use the Pantheon Dashboard to add your site's database.
+
+<Partial file="drupal-9/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 
@@ -349,9 +362,18 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
 
-  ```bash
+   
+  ```bash:title=migrate-rsync.sh
+  #!/bin/bash
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxx
+  
   ENV='dev'
-  SITE='SITEID'
+  # The sshpass command is required.
+  if ! [ -x "$(command -v sshpass)" ]; then
+	echo 'Error: The sshpass command was not found.' >&2
+	exit 1
+  fi 
 
   read -sp "Your Pantheon Password: " PASSWORD
   if [[ -z "$PASSWORD" ]]; then
@@ -409,4 +431,4 @@ In this case, you will want to remove `ff = only` from your `.gitconfig` file an
 
 ## See Also
 
-Check our standard migration procedure for related [Frequently Asked Questions](/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/migrate#troubleshooting) tips.
+Check our standard migration procedure for related [Frequently Asked Questions](/guides/guided/faq) and [Troubleshooting](/guides/guided/troubleshooting) tips.
