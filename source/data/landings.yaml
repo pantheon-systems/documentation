@@ -1,4 +1,5 @@
 - title: 'Get Started'
+  subtitle: ''
   path: 'get-started'
   video_id: 'qHHWonKfGsQ'
   cta:
@@ -118,6 +119,7 @@
             - text: 'Contract Pantheon Professional Services'
               url: '/guides/professional-services/website-migration-service'
 - title: 'Develop'
+  subtitle: ''
   path: 'develop'
   video_id: 'v7qe2_OZ95k'
   cta:
@@ -387,6 +389,7 @@
           url: '/guides/wordpress-google-sso'
           icon: 'fa fa-book'
 - title: 'Go Live'
+  subtitle: ''
   path: 'go-live'
   video_id: 'nZvf2CrLh9o'
   cta:
@@ -475,6 +478,7 @@
             - text: 'Managing Drupal and WordPress Subsites Under a Single Domain'
               url: '/single-application-sites'
 - title: 'Explore Platform Architecture'
+  subtitle: ''
   path: 'platform'
   video_id: 'qWyMHOCU79M'
   cta:
@@ -582,6 +586,7 @@
             - text: 'Automate and Integrate your Pantheon Workflow with Quicksilver Platform Hooks'
               url: '/quicksilver/'
 - title: 'Automate & Integrate'
+  subtitle: ''
   path: 'automate'
   video_id: 'mdc8o19wfTI'
   cta:
@@ -744,6 +749,7 @@
             - text: 'Using WP-CLI On The Pantheon Platform'
               url: '/wp-cli'
 - title: 'Optimize Performance'
+  subtitle: ''
   path: 'performance'
   video_id: 'BAbJyb-uznY'
   cta:
@@ -843,6 +849,7 @@
             - text: 'Optimize Your wp-options Table and Autoloaded Data'
               url: '/optimize-wp-options-table-autoloaded-data'
 - title: 'Manage Teams & Organizations'
+  subtitle: ''
   path: 'manage'
   video_id: '8bsPxcnffYM'
   cta:
@@ -923,6 +930,7 @@
         - text: 'Traffic Limits and Overages'
           url: '/traffic-limits'
 - title: 'Troubleshoot'
+  subtitle: ''
   path: 'troubleshoot'
   video_id: 'V7RvZwl5Sw8'
   cta:
@@ -985,6 +993,7 @@
         - text: 'Restoring an Environment from a Backup'
           url: '/restore-environment-backup'
 - title: 'Guides'
+  subtitle: ''
   path: 'guides'
   guides:
     - title: ''
