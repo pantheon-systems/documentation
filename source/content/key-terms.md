@@ -36,7 +36,7 @@ When first starting with Pantheon, it might feel like you've landed in a country
 
 
 <dt>SFTP</dt>
-<dd>SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the apps.module in Drupal, or the plugin/theme manager in WordPress), [enable SFTP mode first](/sftp).
+<dd>SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the apps.module in Drupal, or the plugin/theme manager in WordPress), [enable SFTP mode first](/sftp).</dd>
 
 <dt>Terminus</dt>
 <dd>The [Terminus](/terminus) command line interface provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.</dd>
@@ -45,3 +45,8 @@ When first starting with Pantheon, it might feel like you've landed in a country
 <dd>WebOps is a set of practices that facilitates collaboration and automates processes to improve the productivity of the whole web team from developers and designers to content editors, stakeholders, and more. The result is cross-functional web teams empowered to develop, test, and release website changes faster and more reliably. Learn how to [use the Pantheon WebOps Workflow](/pantheon-workflow) to manage your development processes.</dd>
 
 </dl>
+
+
+## See Also
+
+- [Glossary](/glossary)
