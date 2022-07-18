@@ -17,14 +17,14 @@ This section provides steps on how to make edits, merge code in your Multidev en
 
 You can edit your code locally in one of two ways:
 
-- [Git](/guides/git/git-config)
-
 - On-server development with [SFTP](/sftp) mode
+
+- [Git](/guides/git/git-config)
 
 
 ### SFTP Mode
 
-1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
+1. Navigate to the **Code** tab of the target Multidev environment within the **Site Dashboard**.
 
 1. Set the connection mode to **SFTP** if it is not already set.
 
@@ -34,7 +34,7 @@ You can edit your code locally in one of two ways:
 
 ### Git Mode
 
-1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
+1. Navigate to the **Code** tab of the target Multidev environment within the **Site Dashboard**.
 
 1. Set the connection mode to **Git** if it is not already set.
 
@@ -44,7 +44,7 @@ You can edit your code locally in one of two ways:
 
 1. Navigate to the project's root directory to view existing branches using `git branch -a`.
 
-  If the target environment's branch is _not_ listed, update the list by running `git fetch origin`. When your local clone of the repository shows to be tracking the expected remote branch on Pantheon (e.g., `example-br`), switch to that branch:
+  If the target environment's branch is _not_ listed, update the list by running `git fetch origin`. When your local clone of the repository shows to be tracking the expected remote branch on Pantheon (for example, `example-br`), switch to that branch:
 
   ```bash{promptUser: user}
   git checkout example-br
@@ -92,8 +92,7 @@ Branch names must be lowercase and no more than 11 characters. If you push a bra
 
   This creates a new branch with the commit history intact. 
   
-1. Navigate to the Multidev Environments page > click **Git Branches** > delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
-
+1. Navigate to the **Multidev Environments** page > click **Git Branches** > delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
 
 ## More Resources
 

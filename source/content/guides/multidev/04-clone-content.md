@@ -13,7 +13,7 @@ anchorid: clone-content
 
 This section provides steps on how to clone content in your Multidev.
 
-1. Select the environment will contain the cloned content (files and database).
+1. Select the environment that will contain the cloned content (files and database).
 
 1. Click **Database / Files**.
 

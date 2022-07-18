@@ -29,7 +29,7 @@ You can create a new Multidev if you:
 
 Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
-If you meet the conditions and still don't have access to an existing Multidev or to create a new Multidev, please [contact Support](https://dashboard.pantheon.io/#support).
+If you meet the conditions and still don't have access to an existing Multidev or the ability to create a new Multidev, please [contact Support](https://dashboard.pantheon.io/#support).
 
 ## How many Multidev environments do I get?
 
@@ -59,7 +59,7 @@ Yes. Your Git repository is not restricted. If you do not use Multidev, then the
 
 ## Can I create a new environment for my local branch?
 
-Yes. Push a new branch from your local (e.g., `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
+Yes. Push a new branch from your local (for example, `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
 
 ## Is there a limit on the number of branches or environments?
 

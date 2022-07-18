@@ -17,14 +17,14 @@ This section provides steps on how you can compare Multidev environments on your
 
 You can compare your Multidev environments using the following methods:
 
-- Through the Multidev tab of the Site Dashboard
+- Through the Multidev tab in the Site Dashboard
 
-- From the site's root directory using your CLI 
+- In the site's root directory using your CLI 
 
 
 ### Local Comparison Through the Site Dashboard
 
-1. Navigate to the Site Dashboard > click **Multidev**.
+1. Navigate to the **Site Dashboard** > click **Multidev**.
 
 The Multidev Environments page provides a list of all existing environments for a site, along with a quick comparison between environments and the master branch of your Dev environment. 
 
@@ -36,7 +36,7 @@ The Multidev Environments page provides a list of all existing environments for 
 
 ### Local Comparison from the Site Root Directory
 
-1. Navigate to the site's root directory on your local
+1. Navigate to the site's root directory on your local.
 
 1. Run the following command: 
 

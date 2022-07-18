@@ -49,65 +49,19 @@ Branching is a standard mechanism for duplicating source code under revision con
 
 There are a number of terms used throughout the Multidev workflow that will be useful for you and your team to know:
 
-<dl>
+- **Commit:** Record snapshot to history.
 
-<dt>commit</dt>
+- **Push:** Send changes to a remote repository.
 
-<dd>
+- **Branch:** Movable pointer to a set of commits, allowing independent development and history.
 
-Record snapshot to history.
+- **Environment:** Independent infrastructure for a site, including code, database, and files.
 
-</dd>
+- **Fork:** To divide in branches, copying source code to start independent development. At Pantheon, we are also copying content (files and database) when forking.
 
-<dt>push</dt>
+- **Merge:** Combine contents of a&nbsp;branch into another, like a bug fix branch into master.
 
-<dd>
-
-Send changes to a remote repository.
-
-</dd>
-
-<dt>branch</dt>
-
-<dd>
-
-Movable pointer to a set of commits, allowing independent development and history.
-
-</dd>
-
-<dt>environment</dt>
-
-<dd>
-
-Independent infrastructure for a site, including code, database, and files.
-
-</dd>
-
-<dt>fork</dt>
-
-<dd>
-
-To divide in branches, copying source code to start independent development. At Pantheon, we are also copying content (files and database) when forking.
-
-</dd>
-
-<dt>merge</dt>
-
-<dd>
-
-Combine contents of a&nbsp;branch into another, like a bug fix branch into master.
-
-</dd>
-
-<dt ignored>master</dt>
-
-<dd>
-
-Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
-
-</dd>
-
-</dl>
+- **Master:** Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
 
 
 ## More Resources
