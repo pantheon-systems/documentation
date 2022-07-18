@@ -870,7 +870,15 @@ ___
 
 **Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](https://pantheon.io/docs/backups/) for more information.
 
-**Solution:** Use the platforms automated backups [from the Site Dashboard](/backups). If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. Refer to the [Access Backups](https://pantheon.io/docs/backups#access-backups) documentation for more details.
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by: 
+
+- Running the bash script in your local system 
+
+- Using an external server
+
+- Using a service that runs cron jobs for you
+
+Refer to the [Access Backups](https://pantheon.io/docs/backups#access-backups) documentation for more details.
 
 ___
 
