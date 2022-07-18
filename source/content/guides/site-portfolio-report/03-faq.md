@@ -45,19 +45,19 @@ The total amount owed can be viewed on the invoice linked at the top of the Site
 
 ## How Can I Access the Site Portfolio Report?
 
-Your Site Portfolio Report will be emailed to the Site Owner of the account. Click the link provided in the email to view the report.
+Your Site Portfolio Report will be emailed to the team member designated to handle the billing of the account. Simply click the link provided in the email to view the report. The team member handling billing must have Admin privileges to access the Site Portfolio link. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link.
 
 ## Who Has Access to the Site Portfolio Report?
 
-The Site Portfolio Report is emailed to the Site Owner of the account. No other users will receive the email. However, the Site Owner can share the link provided in the email with other users.
+The Site Portfolio Report is emailed to the Site Owner of the account or a team member designated to handle the billing of the account. No other users will receive the email. The Site Portfolio Report can be downloaded by Admin-level users and shared as needed. Alternatively, the Site Owner can change the privileges of users who need access to the report to Admin. 
 
 ## Can I Share the Site Portfolio Report?
 
-Yes. The Site Owner can share the link provided in the email with other users.
+Yes. Any team member with Admin privileges can download and share the report. 
 
 ## Can I Change Who Receives the Site Portfolio Report?
 
-Yes. The Site Portfolio Report is emailed to the Site Owner on the account.  The current Site Owner must [transfer ownership directly](/site-billing#transfer-ownership-and-billing-for-this-site) if another teammate needs to assume site and billing ownership.
+Yes. The Site Portfolio Report is emailed to a team member designated to handle the billing of the account. The current Site Owner must [transfer ownership directly](/site-billing#transfer-ownership-and-billing-for-this-site) if another teammate needs to assume site and billing ownership. Only Admin-level users can access the link to the Site Portfolio Report.
 
 ## Can my invoice be blank at any given time frame?
 
