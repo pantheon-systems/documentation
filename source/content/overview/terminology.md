@@ -1,9 +1,9 @@
 ---
 title: Key Terms
 description: Learn the language of Pantheon.
-categories: [get-started]
-tags: [agencies, billing, dashboard]
-contributors: [edwardangert]
+categories: [overview]
+tags: [support]
+contributors: [wordsmither]
 ---
 
 When first starting with Pantheon, it might feel like you've landed in a country where you don't know the language!  Review these terms to begin learning the Pantheon language. 
