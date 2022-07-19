@@ -27,6 +27,12 @@ You can create a new Multidev if you:
 
 - Support a site that is owned by a Gold Account customer or above
 
+<Alert title="Note"  type="info" >
+
+Site admins of an organization with Multidev can invite independent contractors or set an agency as a supporting organization. The Pantheon system will automatically choose the highest account tier among the group. This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.   
+
+</Alert>
+
 Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
 If you meet the conditions and still don't have access to an existing Multidev or the ability to create a new Multidev, please [contact Support](https://dashboard.pantheon.io/#support).
