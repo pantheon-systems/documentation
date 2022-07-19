@@ -21,6 +21,7 @@ class LandingTemplate extends Component {
         <SEO title={topic.title} />
           <main className="container doc-content-well" id="docs-main">
               <h1 className="title">{topic.title}</h1>
+              <p>{topic.subtitle}</p>
               <section className="row">
                   {topic.video_id && (
                     <div className="col-md-6 hero-video__video">
@@ -112,6 +113,7 @@ export const pageQuery = graphql`
     landingsYaml(id: { eq: $id }) {
       id
       title
+      subtitle
       video_id
       path
       cta {
