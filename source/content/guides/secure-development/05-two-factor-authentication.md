@@ -171,27 +171,27 @@ There are many different organization-wide [WordPress plugins for single sign on
 
 1. Populate the **Attribute Mapping** fields below in the SSO/SAML Settings of the WordPress Admin. Values are case-sensitive.
 
-  - Username
-  - E-mail
-  - First Name
-  - Last Name
-  - Role
+   - Username
+   - E-mail
+   - First Name
+   - Last Name
+   - Role
 
   ![TFA OneLogin Attributes](../../../images/tfa-wp-onelogin-attribute.png)
 
 1. Configure the **Customize Actions and Links** in the SSO/SAML Settings of the WordPress Admin to **Prevent use of ?normal**. This requires OneLogin as the authentication solution.
 
-  ![TFA OneLogin Custom Actions](../../../images/tfa-onelogin-custom-actions.png)
+   ![TFA OneLogin Custom Actions](../../../images/tfa-onelogin-custom-actions.png)
 
 1. Use the OneLogin dashboard to log in to your WordPress site.
 
-  ![TFA OneLogin WP Login](../../../images/tfa-onelogin-wp-login.png)
+   ![TFA OneLogin WP Login](../../../images/tfa-onelogin-wp-login.png)
 
-  <Alert title="Note" type="info">
+   <Alert title="Note" type="info">
 
-  You can also refer to OneLogin's documentation, [Configure SAML for WordPress](https://onelogin.service-now.com/support/?id=kb_article&sys_id=590b1d83db109700d5505eea4b96197f), for further troubleshooting. You will need a OneLogin admin account to access their knowledge base.
+    You can also refer to OneLogin's documentation, [Configure SAML for WordPress](https://onelogin.service-now.com/support/?id=kb_article&sys_id=590b1d83db109700d5505eea4b96197f), for further troubleshooting. You will need a OneLogin admin account to access their knowledge base.
 
-  </Alert>
+   </Alert>
 
 </Tab>
 
@@ -226,13 +226,13 @@ There are many different organization-wide [Drupal modules for single sign on](h
 
 1. Populate the OneLogin SAML module `admin/config/onelogin_saml` fields below.Values are case-sensitive.
 
-  - IdP Entity Id
-  - Single Sign On Service URL
-  - Single Log Out Service URL
-  - X.509 Certificate
-  - Username 
-  - E-mail 
-  - Role
+   - IdP Entity Id
+   - Single Sign On Service URL
+   - Single Log Out Service URL
+   - X.509 Certificate
+   - Username 
+   - E-mail 
+   - Role
 
   ![TFA OneLogin Options](../../../images/tfa-drupal-onelogin-options.png)
 
