@@ -1,9 +1,16 @@
 ---
-title: Global CDN Caching for High Performance with Drupal and WordPress
+title: Pantheon Global CDN
+subtitle: Global CDN Caching for High Performance with Drupal and WordPress
 description: Configure and verify edge caching is working on your WordPress or Drupal sites.
 categories: [performance]
 tags: [cache, cdn]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/global-cdn/global-cdn-caching
+anchorid: global-cdn-caching
 ---
+
 Pantheon's Global CDN supports caching to accelerate both static content and anonymous pages for sites on the platform. By serving data from cache servers all over the world, website visitors receive a response without waiting to access the application container. Clusters of these cache servers in each region are called **points of presence** or **POPs** for short. When a website uses these CHI metro POPs effectively, the site can free up its PHP workers and database to process more dynamic requests. Each POP can handle hundreds of thousands of requests per second, much more than a site's own PHP and database containers.
 
 Every site on Pantheon already uses the Global CDN; each HTTP request from a website visitor first goes to closest POP to see if there's a regional cache of the content. If the closest POP doesn't have the content, the request will then go to a POP near the origin (i.e. the PHP workers and database). If the content is cached anywhere in the world, the origin POP will have a copy. If neither POP has appropriate cache data, the request will continue to an application container worker, which will generate responses that may be cached on the way back to the browser.
@@ -81,5 +88,5 @@ In the event that a cookie is being set and you are unsure of what's setting it,
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Working with Cookies on Pantheon](/cookies)
 * [Bypassing Cache with HTTP Headers](/cache-control)
-* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 * [Caching: Advanced Topics](/caching-advanced-topics)

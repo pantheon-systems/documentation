@@ -1,12 +1,18 @@
 ---
 title: Pantheon Global CDN
+subtitle: Introduction
 description: Improve Site Performance and Security with Pantheon's Global CDN.
 reviewed: "2022-02-11"
 categories: [performance]
 tags: [cache, cdn, launch, security]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/global-cdn
+anchorid: global-cdn
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Tap into powerful and strategically distributed CHI metro Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Tap into powerful and strategically distributed CHI metro Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/guides/global-cdn/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

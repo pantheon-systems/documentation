@@ -8,7 +8,7 @@ permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
 ---
 
-[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/9.0) and the [Pantheon Global CDN](/global-cdn).
+[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/9.0) and the [Pantheon Global CDN](/guides/global-cdn/).
 
 When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 

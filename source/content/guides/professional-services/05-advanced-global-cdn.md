@@ -127,7 +127,7 @@ Pantheon's partnership with [Fastly](https://www.fastly.com/) offers many benefi
 
 - **Image Optimizer (IO)** is an add-on that renders images using high-density CHI metro points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
 
-You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
+You can test your Fastly caching features by [confirming that your experience protection works](/guides/global-cdn/global-cdn#confirm-that-experience-protection-works).
 
 ## Frequently Asked Questions
 
@@ -149,7 +149,7 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
 ## See Also
 
-- [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
+- [Pantheon Global CDN](/guides/global-cdn/) - Learn about the Global CDN that comes with all Pantheon sites.
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 

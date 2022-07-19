@@ -7,7 +7,7 @@ reviewed: "2022-03-25"
 ---
 ## Allow a User to Bypass the Cache
 
-Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/global-cdn) will neither get the user's response from any existing cache nor store the response from the user into the cache.
+Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/guides/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
@@ -50,7 +50,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
-[Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/global-cdn#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
+[Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
 ## Using Your Own Session-Style Cookies
 

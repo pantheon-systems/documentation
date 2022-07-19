@@ -5,7 +5,7 @@ cms: "Drupal"
 categories: [performance]
 tags: [caching, cdn]
 ---
-To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/global-cdn-caching), you'll need to configure your site's performance settings.
+To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/guides/global-cdn/global-cdn-caching), you'll need to configure your site's performance settings.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
@@ -38,7 +38,7 @@ Note that Drupal 9 has no setting to configure the minimum cache lifetime.
 
 Drupal 9 uses the [cache metadata](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x) system introduced in Drupal 8 that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
-This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal's cache metadata to communicate with the [Pantheon Global CDN](/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
+This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal's cache metadata to communicate with the [Pantheon Global CDN](/guides/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
 
 For Drupal 9, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer#add-a-dependency-to-an-individual-site), then enable it via the Drupal Admin:
 
@@ -94,4 +94,4 @@ mysql> TRUNCATE TABLE cache_form;
 ```
 
 ## See Also
-- [Global CDN Caching for High Performance](/global-cdn-caching)
+- [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)

@@ -3,12 +3,14 @@ title: "HTTPS on Pantheon's Global CDN"
 description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
 categories: [go-live]
 tags: [cdn, dns, https, security]
-layout: doc
-permalink: docs/:basename
-searchboost: 200
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/global-cdn/https
+anchorid: https
 ---
 
-Pantheon's new [Global CDN](/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
+Pantheon's new [Global CDN](/guides/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

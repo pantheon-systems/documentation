@@ -42,7 +42,7 @@ If you don't already own a domain name, register one with a third-party provider
 
 </Accordion>
 
-Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/https).
+Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/guides/global-cdn/https).
 
 <Partial file="tables/custom-domains-limit.md" />
 

@@ -1,8 +1,14 @@
 ---
-title: Testing Global CDN Caching
+title: Pantheon Global CDN
+subtitle: Testing Global CDN Caching
 description: Detailed information on how to determine if CDN caching is working on your site.
 categories: [performance]
 tags: [cache, cdn]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/global-cdn/test-global-cdn-caching
+anchorid: test-global-cdn-caching
 ---
 
 ## Test CDN Caching with curl

@@ -41,7 +41,7 @@ To verify that everything is working correctly, visit the URL of the environment
 
 <Alert title="Note" type="info">
 
-While locked, environments will not be cached by the [Global CDN](/global-cdn).
+While locked, environments will not be cached by the [Global CDN](/guides/global-cdn).
 
 </Alert>
 
