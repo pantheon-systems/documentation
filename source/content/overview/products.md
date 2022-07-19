@@ -4,6 +4,7 @@ description: Learn about the components of the Pantheon platform.
 categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
+permalink: docs/overview/products
 ---
 
 Pantheon offers a wide array of products and features to simplify building and managing your sites.

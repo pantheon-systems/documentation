@@ -4,6 +4,7 @@ description: Learn about the components of the Pantheon platform.
 categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
+permalink: docs/overview/platform
 ---
 
 Unlike traditional hosting, Pantheon delivers truly elastic hosting through automation in software. Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.

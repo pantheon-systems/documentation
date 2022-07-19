@@ -4,6 +4,7 @@ description: Learn the language of Pantheon.
 categories: [overview]
 tags: [support]
 contributors: [wordsmither]
+permalink: docs/overview/terminology
 ---
 
 When first starting with Pantheon, it might feel like you've landed in a country where you don't know the language!  Review these terms to begin learning the Pantheon language. 
