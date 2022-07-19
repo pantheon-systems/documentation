@@ -64,18 +64,25 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 ## Upstreams
 
-Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
+Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab. 
-1. On the Custom Upstreams page click **Add New Upstream**. The Create New Custom Upstream page is displayed. 
+1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab.
+
+1. On the Custom Upstreams page click **Get Started**. The Create New Custom Upstream page is displayed.
+
 1. Enter the URL of your GitHub or Bitbucket repository. URLs from the pantheon-systems GitHub workspace will not work.
+
 1. Select the **Framework** and **Initial Connection Mode**.
+
 1. Add the desired name and a description. Adding a description is optional.
+
 1. Click **Save**.
 
 After the Upstream has been added to your Dashboard, select from the list of available Custom Upstreams and click **Create Site From Upstream**. 
 
-Click **More** in the Custom Upstream to edit or delete. After you click **Edit Settings** you are directed to the Upstream Settings page. Modify the page and click **Save**.
+![List of available custom upstreams](../../../images/dashboard/new-dashboard/custom-upstreams-list.png)
+
+In your list of upstreams, click **More** to edit or delete. After you click **Edit Settings** you are directed to the Upstream Settings page. Modify the page and click **Save**.
 
 To delete, click **Delete Upstream** from the **More** drop-down menu. 
 
