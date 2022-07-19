@@ -149,7 +149,7 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
 ## See Also
 
-- [Pantheon Global CDN](/guides/global-cdn/) - Learn about the Global CDN that comes with all Pantheon sites.
+- [Pantheon Global CDN](/guides/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 

@@ -85,7 +85,7 @@ ___
 
 ## [Boost](https://www.drupal.org/project/boost)
 
-**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. Refer to [Pantheon's Global CDN](/guides/global-cdn/) documentation for more information.
+**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation for more information.
 
 ___
 

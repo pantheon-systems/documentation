@@ -24,7 +24,7 @@ Pantheon automatically provides the following security measures:
 
 Pantheon provides additional security through the following features:
 
-- [Pantheon Global CDN](/guides/global-cdn/)
+- [Pantheon Global CDN](/guides/global-cdn)
 
 - [Secure Runtime Access](/secure-runtime-access)
 

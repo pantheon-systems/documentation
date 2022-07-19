@@ -7,7 +7,7 @@ reviewed: "2022-03-25"
 ---
 ## Allow a User to Bypass the Cache
 
-Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/guides/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
+Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/guides/global-cdn) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 

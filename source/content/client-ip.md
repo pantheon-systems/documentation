@@ -8,7 +8,7 @@ reviewed: "2020-03-09"
 
 <Alert title="Warning" type="danger">
 
-This page was written before the [Pantheon Global CDN](/guides/global-cdn/) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are no longer an accurate way to geolocate your traffic.
+This page was written before the [Pantheon Global CDN](/guides/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are no longer an accurate way to geolocate your traffic.
 
 If geolocation is a requirement for your site, consider an [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare.
 

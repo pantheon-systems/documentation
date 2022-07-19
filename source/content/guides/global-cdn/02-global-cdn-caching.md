@@ -15,7 +15,7 @@ Pantheon's Global CDN supports caching to accelerate both static content and ano
 
 Every site on Pantheon already uses the Global CDN; each HTTP request from a website visitor first goes to closest POP to see if there's a regional cache of the content. If the closest POP doesn't have the content, the request will then go to a POP near the origin (i.e. the PHP workers and database). If the content is cached anywhere in the world, the origin POP will have a copy. If neither POP has appropriate cache data, the request will continue to an application container worker, which will generate responses that may be cached on the way back to the browser.
 
-![Varnish Diagram](../images/cdn-flow.png)
+![Varnish Diagram](../../../images/cdn-flow.png)
 
 The Global CDN can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by POPs, and end-users won't encounter errors or broken pages.
 
