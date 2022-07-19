@@ -169,7 +169,13 @@ There are many different organization-wide [WordPress plugins for single sign on
 
    ![TFA OneLogin Options](../../../images/tfa-wp-onelogin-options.png)
 
-1. Configure the **Attribute Mapping** in the SSO/SAML Settings of the WordPress Admin with the values shown below. Values are case-sensitive.
+1. Populate the **Attribute Mapping** fields below in the SSO/SAML Settings of the WordPress Admin. Values are case-sensitive.
+
+  - Username
+  - E-mail
+  - First Name
+  - Last Name
+  - Role
 
   ![TFA OneLogin Attributes](../../../images/tfa-wp-onelogin-attribute.png)
 
@@ -218,7 +224,15 @@ There are many different organization-wide [Drupal modules for single sign on](h
 
 1. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.
 
-1. Configure the OneLogin SAML module `admin/config/onelogin_saml` to match the screenshot below. Values are case-sensitive.
+1. Populate the OneLogin SAML module `admin/config/onelogin_saml` fields below.Values are case-sensitive.
+
+  - IdP Entity Id
+  - Single Sign On Service URL
+  - Single Log Out Service URL
+  - X.509 Certificate
+  - Username 
+  - E-mail 
+  - Role
 
   ![TFA OneLogin Options](../../../images/tfa-drupal-onelogin-options.png)
 

@@ -31,7 +31,7 @@ You have the ability to password protect any of the available environments.
 
 1. Select the environment (for example, <span class="glyphicon glyphicon-wrench"></span> **Dev**).
 
-1. Select <span class="glyphicon glyphicon-keys"></span> **Security**.
+1. Select **Security**.
 
 1. Select **Locked**.
 
