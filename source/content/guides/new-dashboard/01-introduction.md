@@ -103,6 +103,8 @@ On the homepage, you have access to an overview of the Workspace that provides t
 * Sites
 * Account tier
 
+![A screenshot of the new Dashboard homepage with Organizational Overview](../../../images/dashboard/new-dashboard/organizational-overview.png)
+
 </Tab>
 </TabList>
 
