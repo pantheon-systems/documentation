@@ -13,6 +13,8 @@ anchorid: multidev
 
 Multidevs are development environments for teams. A Multidev environment allows a developer to fork the entire stack (code and content), work independently, and then merge the code changes back into the main `master` site. Each forked branch has its own separate development environment, including database and files. Each branch environment can be independently set to use either SFTP or Git mode for code changes.
 
+Each site has a limit of 10 Multidev environments. Elite sites can request additional Multidev environments [from support](/guides/support/contact-support/) as needed.
+
 Multidev is available for the following accounts:
 
 - Gold
@@ -23,7 +25,11 @@ Multidev is available for the following accounts:
 
 - Agency partners
 
-Each site has a limit of 10 Multidev environments. Elite sites can request additional Multidev environments [from support](/guides/support/contact-support/) as needed.
+<Alert title="Note"  type="info" >
+
+Site admins of an organization with Multidev can invite independent contractors or set an agency as a supporting organization. The Pantheon system will automatically choose the highest account tier among the group. This logic makes the features available to the supporting organization or the site team members on the associated sites.   
+
+</Alert>
 
 ![Dev Test and Live icon](../../../images/multidev-flow.png)
 
