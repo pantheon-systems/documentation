@@ -120,5 +120,5 @@ No, Secure Integration is not a replacement for authentication, but rather is a 
 
 ## More Resources
 
-- [Two Factor Authentication](/guides/secure-development-two-factor-authentication)
+- [Two Factor Authentication](/guides/secure-development/two-factor-authentication)
 
