@@ -90,6 +90,6 @@ To delete, click **Delete Upstream** from the **More** drop-down menu.
 
 Chat with Pantheon Support, access and create Support tickets, engage with other Pantheon users via Slack, or search documentation.
 
-## Settings
+## Workspace Settings
 
 Use the **Settings** tab to modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
