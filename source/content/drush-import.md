@@ -16,7 +16,7 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
    - A [Pantheon account is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
 
-1. Verify that you have Drupal 7 with Drush 8 if you have a non-Composer managed site *or* Drupal 9 with [Drush 11.1.1 or higher](https://www.drush.org/latest/install/) if you have a Composer-managed site only.
+1. Verify that you have Drupal 7 with Drush 8 if you have a non-Composer managed site *or* Drupal 9 with [Drush 11.1.1 or higher](https://www.drush.org/latest/install/) if you have a Composer-managed site.
 
 1. Verify that you have Drush access to your existing Drupal site.
 
@@ -28,21 +28,11 @@ The first thing you'll need to do is to generate a Drush archive of your existin
 
 1. Run the command below if you have Drush access to the site direct via the shell:
 
-```bash{promptUser: user}
-drush archive-dump --destination=drush-archive.tar.gz
-```
+   ```bash{promptUser: user}
+   drush archive-dump --destination=drush-archive.tar.gz
+   ```
 
    - This creates a file called `drush-archive.tar.gz` that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places. The important thing is that you have a Drush archive that can be downloaded via a URL.
-
-## Install Terminus
-
-1. Set up Terminus, the Pantheon CLI, if you haven't already using Composer as described in the [installation instructions on GitHub](https://github.com/pantheon-systems/cli/wiki/installation).
-
-
-
-Install [Terminus 3](/terminus/terminus-3-0) if you have a Composer-managed Drupal 9 site with Drush 11.
-
-Install Terminus Conversion Tools plugin: https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation
 
 ## Import Your Archive
 
@@ -77,9 +67,9 @@ Install Terminus Conversion Tools plugin: https://github.com/pantheon-systems/te
 
 <Tab title="Drupal 9 Composer-managed" id="d9">
 
-1. Install [Terminus 3](/terminus/terminus-3-0) if you have a Composer-managed Drupal 9 site with Drush 11.
+1. Install [Terminus 3](/terminus/terminus-3-0) if you have a Composer-managed Drupal 9 site with Drush 11.1.1.
 
-1. Install [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
+1. Install the [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
 
 1. Run the command below to create the site on Pantheon. Change the `site-machine-name` to your machine's name.
 
