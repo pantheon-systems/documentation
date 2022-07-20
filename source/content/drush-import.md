@@ -12,13 +12,21 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 ## Before You Begin
 
-1. Create a Pantheon account with at least one free Dev site slot open. 
+- Create a Pantheon account with at least one free Dev site slot open. 
 
    - A [Pantheon account is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
 
-1. Verify that you have Drupal 7 with Drush 8 if you have a non-Composer managed site *or* Drupal 9 with [Drush 11.1.1 or higher](https://www.drush.org/latest/install/) if you have a Composer-managed site.
+- If you have a non-Composer managed Drupal 7 site, verify that you are using Drush 8. Note that Composer-managed sites are not supported.
 
-1. Verify that you have Drush access to your existing Drupal site.
+- If you have a Composer-managed Drupal 9 site, verify that you are using Drush 11. Note that only Composer-managed sites are supported.
+
+   - If you are moving a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site, use one of the following guides instead:
+
+    - Your site is Composer-managed: Migrate a Composer Managed Drupal 9 Site from Another Platform
+
+    - Your site is not Composer-managed: Migrate a Drupal 9 Site from Another Platform
+
+- Verify that you have Drush access to your existing Drupal site.
 
 ## Generate a Drush Archive
 
@@ -34,13 +42,15 @@ The first thing you'll need to do is to generate a Drush archive of your existin
 
    - This creates a file called `drush-archive.tar.gz` that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places. The important thing is that you have a Drush archive that can be downloaded via a URL.
 
+## Install Terminus
+
+Install [Terminus 3](/terminus/terminus-3-0).
+
 ## Import Your Archive
 
 <TabList>
 
 <Tab title="Drupal 7 non-Composer" id="d7" active={true}>
-
-1. Set up Terminus, the Pantheon CLI, if you haven't already using Composer as described in the [installation instructions on GitHub](https://github.com/pantheon-systems/cli/wiki/installation).
 
 1. Authenticate into Pantheon with Terminus:
 
@@ -67,11 +77,9 @@ The first thing you'll need to do is to generate a Drush archive of your existin
 
 <Tab title="Drupal 9 Composer-managed" id="d9">
 
-1. Install [Terminus 3](/terminus/terminus-3-0) if you have a Composer-managed Drupal 9 site with Drush 11.1.1.
-
 1. Install the [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
 
-1. Run the command below to create the site on Pantheon. Change the `site-machine-name` to your machine's name.
+1. Run the command below to create the site on Pantheon. Change the `site-machine-name` to a unique name that you would like to use for your site.
 
 ```bash{promptUser: user}
  terminus conversion:import-site site-machine-name /path/to/archive.tar.gz --site-label="Site Label"
