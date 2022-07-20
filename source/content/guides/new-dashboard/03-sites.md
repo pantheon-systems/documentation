@@ -13,7 +13,6 @@ anchorid: new-dashboard
 editpath: new-dashboard/03-sites.md
 ---
 
-
 Pantheon gives you the tools to build, maintain, and measure your sites. To get started, create a free site from scratch, or migrate a site an existing site to Pantheon.
 
 ## Sites
@@ -34,14 +33,14 @@ You can filter by plan, upstream, status, or Site owner.
 
 You can filter by plan, tags, upstream, status, or Site owner.
 
-
 ## Autopilot
-You can view which sites are Autopilot Enabled, Needs Review, or has Errors. 
 
-Search sites by name and get quick access to details such as when a site was last updated, the deployment destination, status, and the update frequency.
+After you Activate Autopilot on a site, you can view whether your sites have a status of: Autopilot Enabled, Needs Review, or has Errors. 
 
-Click **Actions** to either manage settings or apply updates. 
+Search sites by name and get quick access to details such as when a site was last updated, the deployment destination, status, and the update frequency. To manage settings or apply updates, click **Actions**. 
 
 Autopilot on Pantheon automatically detects new site updates and tests them with automated visual regression testing. 
 
-Click **Review Test Results** to review the testing of a site.You are directed to the Review Test Results page for the site. You have the option to discard the test, accept changes, approve, or do more, such as add a threshold or view the Multidev.  You are directed to the Legacy Dashboard if you select **More Actions**.
+### Autopilot Test Results
+
+To review the testing of a site, click **Review Test Results** and you will be directed to the Review Test Results page for the site. You have the option to discard the test, accept changes, approve, or do more, such as add a threshold or view the Multidev. Click **More Actions** to be directed to the Legacy Dashboard.
