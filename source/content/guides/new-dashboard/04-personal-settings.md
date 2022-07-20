@@ -13,15 +13,15 @@ anchorid: new-dashboard
 editpath: new-dashboard/04-personal-settings.md
 ---
 
-The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **User Settings**.
+The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **Personal Settings**.
 
 ![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.jpg)
 
 ## Profile
 
-Update your name, email address, password, or [delete your account](/delete-account).
+Update your name, email address, password, country and region, or [delete your account](/delete-account).
 
-### Login Details
+### Account and Security
 
 You can update the current email address or password associated with your Dashboard. 
 
@@ -42,14 +42,23 @@ When changing your password, make sure the new password meets the following requ
 
 You’ll need to log in again after your password is changed.
 
-## Email Notifications
+## Notifications
 
-<Partial file="pantheon-email-notifications.md" />
+### Autopilot Email Notifications
+
+You can configure email notifications for Autopilot alerts and activity digests.
+
+- **Weekly Activity Digest**: A weekly summary of Autopilot activity across all sites within the workspaces that have Autopilot enabled. Digests are sent each Monday with information about the previous seven days.
+
+- **Failed Visual Regression Tests**: Real-time email notifications for failed visual regression tests for a given site.
+
+### Email Preferences
+
+Manage your email preferences and only receive the emails you want. Confirm your email, check off any relevant categories, and click **Update Settings**.
 
 ## SSH Keys
 
 SSH keys allow you to establish a secure connection between your computer and Pantheon. Visit the SSH Keys tab to review your existing configured keys, and add or revoke SSH keys. Follow the steps in [SSH Keys](/ssh-keys) to generate, add, and revoke SSH keys. 
-
 
 ## Machine Tokens
 
@@ -57,13 +66,12 @@ Machine tokens are used to uniquely identify your machine and securely authentic
 
 The token key will only be shown once and provides the same access as your username and password. To learn more about machine tokens, refer to the [Creating and Revoking Machine Tokens](/machine-tokens) documentation.
 
-
 ## Preferences
 
 ### New Pantheon Features
 
 #### Redesigned Dashboard Interface
 
-If you would like to be directed to the redesigned Dashboard interface when you log in to Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
+If you would like to be directed to the redesigned Dashboard interface when you log into Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
 
 If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 
