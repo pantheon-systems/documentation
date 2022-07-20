@@ -98,15 +98,15 @@ PHP versions can be set using the `pantheon.yml` configuration file in the root 
 
 Configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
 
-You can use SFTP or Git mode to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
+You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow the steps below to create or change your `pantheon.yml` file.
 
 <TabList>
 
 <Tab title="SFTP Mode" id="sftp-steps" active={true}>
 
-1. Navigate to the Site dashboard.
+1. Navigate to the Site dashboard > click **Dev**.
 
-1. Click the **Dev** environment tab and select **SFTP** as your **Development Mode**.
+1. Select **SFTP** as your **Development Mode**.
 
 1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
 
@@ -160,7 +160,9 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 1. Navigate to your **pantheon.yml** file > edit the `php_version` with the version of PHP you are upgrading to.
 
-1. Add, commit, and push your changes in your CLI.
+1. Add and commit the changes in your CLI.
+
+    - You will receive a pre-receive hook error if you try to use the `git push` command in Git.
 
 1. Rebase any non-`master` branches and remove their remote versions > re-push the branches to avoid the Git pre-receive error:
 
