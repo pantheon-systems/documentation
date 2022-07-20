@@ -45,7 +45,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 1. Choose the Drupal major version.
 
-1. Configure the correct version of PHP by going to **Preferences**  > **Languages & Frameworks** > [**PHP**](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level 5.3.
+1. Configure the correct version of PHP by going to **Preferences**  > **Languages & Frameworks** > [**PHP**](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level with the desired/appropriate version of PHP (e.g. 8.0).
 
 ### Drush Support
 
