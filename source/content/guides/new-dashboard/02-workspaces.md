@@ -88,7 +88,7 @@ To delete, click **Delete Upstream** from the **More** drop-down menu.
 
 ## Support
 
-Chat with Pantheon Support or access and create new Support tickets.
+Chat with Pantheon Support, access and create Support tickets, engage with other Pantheon users via Slack, or search documentation.
 
 ## Settings
 
