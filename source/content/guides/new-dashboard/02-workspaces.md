@@ -5,7 +5,7 @@ description: Workspaces are a home base for your WebOps.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert,joa-pan]
-reviewed: "2021-02-26"
+reviewed: "2022-07-20"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/workspaces
@@ -19,9 +19,7 @@ editpath: new-dashboard/02-workspaces.md
 
 [<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the Legacy Dashboards, with Pantheon features and actions that are conveniently available in one place.
 
-
 ### Create a New Workspace
-
 
 #### Organization Workspace
 
@@ -30,7 +28,6 @@ To create a new Workspace from the Dashboard, click the Organization’s name an
 ![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
 
 If you are creating the the Workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the Workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
-
 
 ### Switch Between Workspaces
 
@@ -46,13 +43,11 @@ The **<i className="fa fa-window-restore"></i> Sites** tab shows a table of all 
 
 Click a table heading to sort the table by that heading.
 
-
 ## Team
 
 By default, all users are assigned the Administrator role after the Workspace is created.
 
 Manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
-
 
 ## Autopilot
 

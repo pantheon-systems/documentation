@@ -4,8 +4,8 @@ subtitle: Dashboard Sites
 description: Search Sites in the Dashboard
 categories: [platform]
 tags: [dashboard, webops, workflow]
-contributors: [joa-pan]
-reviewed: "2021-07-31"
+contributors: [joa-pan, michellecolon-pantheon]
+reviewed: "2022-07-20"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/sites

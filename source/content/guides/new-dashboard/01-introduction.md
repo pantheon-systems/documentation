@@ -4,8 +4,8 @@ subtitle: Introduction
 description: The new Pantheon Dashboard makes it easier to manage your WebOps from one Workspace fast.
 categories: [platform]
 tags: [dashboard, webops, workflow]
-contributors: [edwardangert,joa-pan]
-reviewed: "2021-02-26"
+contributors: [edwardangert,joa-pan, michellecolon-pantheon]
+reviewed: "2022-07-20"
 layout: guide
 permalink: docs/guides/new-dashboard
 anchorid: new-dashboard
