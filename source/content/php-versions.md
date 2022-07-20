@@ -15,7 +15,13 @@ Older software is more likely to contain code that is incompatible with recent P
 - Update core to the latest release. For details, see [WordPress and Drupal Core Updates](/core-updates).
 - Update themes, plugins, and modules. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
-## Verify Current PHP Versions
+<Alert title="Note" type="info">
+
+Changes to `pantheon.yml` [deployed as hotfixes](/pantheon-yml#deploying-hotfixes) are not detected.
+
+</Alert>
+
+## Verify Your Current PHP Version
 
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
@@ -86,7 +92,7 @@ Before changing your PHP version, confirm that your CMS is compatible:
 - [Drupal 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
 
-## Configure PHP Version
+## Configure Your PHP Version
 
 PHP versions can be set using the `pantheon.yml` configuration file in the root of your site's code repository. If you have a local git clone of your site, the project root is `/code/`.
 
@@ -94,11 +100,15 @@ Configurations made in `pantheon.yml` will override custom settings in `pantheon
 
 You can use SFTP or Git mode to create or change the `pantheon.yml` file. You will receive a pre-receive hook error if you try to use the `git push` command in Git. Follow the steps below to create or change your `pantheon.yml` file.
 
-1. Navigate to the Pantheon dashboard.
+<TabList>
 
-1. Click the **Dev** environment tab and select your preferred **Development Mode**.
+<Tab title="SFTP Mode" id="sftp-steps" active={true}>
 
-   - Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon if you select SFTP mode.
+1. Navigate to the Site dashboard.
+
+1. Click the **Dev** environment tab and select **SFTP** as your **Development Mode**.
+
+1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
 
 1. Check the `/code` directory for the `pantheon.yml` file and create one if it is not already present:
 
@@ -120,6 +130,38 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. You wi
 
    - Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control. The next time you [push your changes](/guides/git/git-config#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
+Your site dashboard will detect the changes when you upload a new or modified `pantheon.yml` file in SFTP mode.
+
+![The Site Dashboard sees changes to pantheon.yml](../images/dashboard/pantheon-yml-changes-sftp.png)
+
+If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. The example below shows a failed attempt to set the PHP version to 12:
+
+![The Site Dashboard doesn't commit invalid changes](../images/dashboard/pantheon-yml-failure-sftp.png)
+
+</Tab>
+
+<Tab title="Git Mode" id="git-steps">
+
+1. Navigate to the Site dashboard > click **Dev**.
+
+1. Select **Git** as your **Development Mode**.
+
+1. Click **Clone with Git** > click the copy button to copy the string.
+
+1. Navigate to your local CLI.
+
+1. Enter `git clone` and paste the copied string to clone your repository:
+
+   ```bash{promptUser: user}
+   git clone [copied_repo_string]
+   ```
+
+1. `cd` into the project directory. 
+
+1. Navigate to your **pantheon.yml** file > edit the `php_version` with the version of PHP you are upgrading to.
+
+1. Add, commit, and push your changes in your CLI.
+
 1. Rebase any non-`master` branches and remove their remote versions > re-push the branches to avoid the Git pre-receive error:
 
    ```none
@@ -134,21 +176,10 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. You wi
 
 1. Modify the `pantheon.yml` file until it is valid and commit the fix before attempting to push again.
 
-<Alert title="Note" type="info">
+</Tab>
 
-Changes to `pantheon.yml` [deployed as hotfixes](/pantheon-yml#deploying-hotfixes) are not detected.
+</TabList>
 
-</Alert>
-
-#### SFTP Mode
-
-Your site dashboard will detect the changes when you upload a new or modified `pantheon.yml` file in SFTP mode.
-
-![The Site Dashboard sees changes to pantheon.yml](../images/dashboard/pantheon-yml-changes-sftp.png)
-
-If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. The example below shows a failed attempt to set the PHP version to 12:
-
-![The Site Dashboard doesn't commit invalid changes](../images/dashboard/pantheon-yml-failure-sftp.png)
 
 ## Troubleshoot Post-Upgrade Errors
 
