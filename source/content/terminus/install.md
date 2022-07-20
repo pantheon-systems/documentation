@@ -53,7 +53,7 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 
 ### Homebrew Installation
 
-The Terminus application is published to Homebrew; to install, run:
+The Terminus application is published to [Homebrew](https://brew.sh/); to install, run:
 
 ```bash
 brew install pantheon-systems/external/terminus
