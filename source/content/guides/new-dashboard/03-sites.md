@@ -14,17 +14,15 @@ editpath: new-dashboard/03-sites.md
 ---
 
 
-Pantheon gives you the tools to build, maintain and measure your sites. To get started, create a free site from scratch, or migrate a site an existing site to Pantheon.
+Pantheon gives you the tools to build, maintain, and measure your sites. To get started, create a free site from scratch, or migrate a site an existing site to Pantheon.
 
 ## Sites
 
-Select the **Sites** tab in the Global Primary Navigation menu to search for a Site, migrate an existing Site, or create a new Site. 
+Select the **Sites** tab in the Global Primary Navigation menu to search for a Site, migrate an existing Site, or create a new Site in the left navigation. 
 
 ### Create a New Site
 
-You can create a new Site from the new Dashboard homepage or from the **Site** tab. 
-
-To create a Site, click **Create New Site**. You will be directed to the Legacy Dashboard for Site creation. Click **Yes,Continue** to be directed to the  **Create Your Pantheon Site** page. For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
+<Partial file="create-new-site-new-dash.md" />
 
 ### Search Sites
 
