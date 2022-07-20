@@ -62,7 +62,7 @@ Yes! Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl reques
 curl -IsH "Pantheon-Debug:1" https://www.example.com/ | grep surrogate-key-raw
 ```
 
-![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](../images/surrogate-key-raw-example.png)
+![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](../../../images/surrogate-key-raw-example.png)
 
 To prevent issues with Twitter card validation and to reduce the overall time to load, the `Surrogate-Key-Raw` header is not returned by default. Exposing this header provides context for entities included on a given page.
 

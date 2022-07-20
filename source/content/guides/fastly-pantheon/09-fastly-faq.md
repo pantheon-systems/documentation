@@ -29,7 +29,7 @@ Yes. You can use any of the [Fastly logging endpoints](https://docs.fastly.com/e
 
 ## How Can I Test My Fastly Caching Features?
 
-You can test your Fastly caching features by [confirming that your experience protection works](/guides/global-cdn/global-cdn#confirm-that-experience-protection-works).
+You can test your Fastly caching features by [confirming that your experience protection works](/guides/global-cdn#confirm-that-experience-protection-works).
 
 ## Who sets up the Fastly edge configuration files?
 
