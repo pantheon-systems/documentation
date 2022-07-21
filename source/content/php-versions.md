@@ -120,9 +120,9 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
    - You do not need to specify the PHP version's exact point release (e.g, `8.0.19`), as these are managed by the platform and deployed automatically.
 
-1. In your SFTP client refresh the `/code` directory and verify that the `pantheon.yml` file has been created and contains the changed version.
+1. Navigate to your SFTP client and refresh the `/code` directory to verify that the `pantheon.yml` file has been created and contains the changed version.
 
-1. In the dashboard, refresh the **Dev** environment tab and verify that the `pantheon.yml` file is available to commit.
+1. Navigate to the Site dashboard and refresh the **Dev** environment tab to verify that the `pantheon.yml` file is available to commit.
 
 1. Enter a commit message and click **Commit changes**.
 
@@ -148,9 +148,10 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 1. Select **Git** as your **Development Mode**.
 
-1. If you have not yet cloned the repository to your local computer, follow the steps in [Clone Your Site Codebase](/guides/git/git-config#clone-your-site-codebase)
+1. Follow the steps in [Clone Your Site Codebase](/guides/git/git-config#clone-your-site-codebase) if you have not yet cloned the repository to your local computer.
 
 1. Navigate to your **pantheon.yml** file and edit the `php_version` with the version of PHP you are upgrading to. If the file does not yet exist, it should be created.
+
    ```yaml:title=pantheon.yml
    api_version: 1
 
@@ -161,7 +162,7 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 1. Add and commit the changes and push them to your site
 
-1. If there are any Multidev environments that also need the same change, rebase any non-`master` branches to ensure they are on the same PHP version.
+1. Rebase any non-`master` branches to ensure they are on the same PHP version if there are any Multidev environments that also need the same change.
 
 If an invalid version is specified there will be an error when trying to push changes
 
