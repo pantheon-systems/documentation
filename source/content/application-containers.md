@@ -27,7 +27,7 @@ terminus env:wake <site>.<env>
 ## What's In an Application Container?
 
 - All containers are created equally; free accounts are not underpowered.
-- All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/phpinfo).
+- All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/guides/secure-development/phpinfo).
   - Packages:
     - LDAP
     - SOAP

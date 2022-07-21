@@ -43,11 +43,7 @@ Read [Traffic Limits and Overages](/traffic-limits) for more information on how 
 
 ### New Sites that Exceeded the Contract
 
-Pantheon allows you to add sites to your portfolio as needed, regardless of the allotment you previously paid for in your contract to ensure that visitors to your site are not blocked. The charges listed in this section of your Site Portfolio Report can result from multiple scenarios, including:
-
-- Your site portfolio was expanded by the creation of one or more sites
-
-- Your site(s) received an upgrade, initiated by you or by automatic performance adjustments
+Pantheon allows you to add sites to your portfolio as needed, regardless of the existing contract allotment, to provide more flexibility between billing cadences. This table lists all new sites on a paid plan. 
 
 ### All Active Sites in Portfolio
 
