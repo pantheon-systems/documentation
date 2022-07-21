@@ -139,5 +139,5 @@ You can also integrate with external Solr search indexes with services like [Ope
 - [Platform and Custom Domains](/domains)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port)
 - [LDAP and LDAPS](/ldap-and-ldaps)
-- [Secure Integration](/secure-integration)
+- [Secure Integration](/guides/secure-development/secure-integration)
 - [SSO and Identity Federation on Pantheon](/sso)

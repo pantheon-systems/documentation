@@ -167,6 +167,6 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 - [Log Files on Pantheon](/logs)
 - [PHP Errors and Exceptions](/php-errors)
 - [The pantheon.yml Configuration File](/pantheon-yml)
-- [Securely Working with phpinfo](/phpinfo)
+- [Securely Working with phpinfo](/guides/secure-development/phpinfo)
 - [php.net - Backward Incompatible Changes](https://secure.php.net/manual/en/migration70.incompatible.php)
 - [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices)

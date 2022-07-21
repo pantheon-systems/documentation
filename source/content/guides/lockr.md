@@ -9,7 +9,7 @@ contributors: [cteitzel]
 featuredcontributor: true
 reviewed: "2022-02-04"
 ---
-[Lockr](https://lockr.io) works with [Pantheon's Secure Integration](https://pantheon.io/docs/secure-integration) to provide an additional layer of security to your site. Lockr is an easy-to-use plugin for WordPress or Drupal to manage your site’s API and encryption keys in a secure off-site hosted environment. Lockr removes the key from your site code and database and stores it in a secure and certified key manager. When your site needs the key for an encryption/decryption or API request, Lockr uses the Pantheon server’s certificate to authenticate on your behalf and release the key.
+[Lockr](https://lockr.io) works with [Pantheon's Secure Integration](/guides/secure-development/secure-integration) to provide an additional layer of security to your site. Lockr is an easy-to-use plugin for WordPress or Drupal to manage your site’s API and encryption keys in a secure off-site hosted environment. Lockr removes the key from your site code and database and stores it in a secure and certified key manager. When your site needs the key for an encryption/decryption or API request, Lockr uses the Pantheon server’s certificate to authenticate on your behalf and release the key.
 
 Site administrators have the ability to control how and where their sensitive keys are stored, thus improving the overall security of the site and allowing it to meet specific regulatory and compliance requirements for key management. Lockr also separately stores development and production specific keys to create an additional layer of security between environments.
 

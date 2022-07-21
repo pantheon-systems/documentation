@@ -162,7 +162,7 @@ You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migratio
 
 - Configuring or decommissioning S3 (existing S3 integrations are fine, this is just for changes to the file structures in the application)
 
-- Ensuring your applications are working with any required [Secure Integrations](/secure-integration)
+- Ensuring your applications are working with any required [Secure Integrations](//guides/secure-development/secure-integration)
 
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
