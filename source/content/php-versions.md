@@ -94,7 +94,7 @@ Before changing your PHP version, confirm that your CMS is compatible:
 
 ## Configure Your PHP Version
 
-PHP versions can be set using the `pantheon.yml` configuration file in the root of your site's code repository. If you have a local git clone of your site, the project root is `/code/`.
+PHP versions can be set using the `pantheon.yml` configuration file in the root of your site's code repository.
 
 Configurations made in `pantheon.yml` will override custom settings in `pantheon.upstream.yml`.
 
@@ -110,17 +110,19 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
 
-1. Check the `/code` directory for the `pantheon.yml` file and create one if it is not already present:
+1. Check the `/code` directory for the `pantheon.yml` file or create one if it is not already present and alter it to include the desired PHP version.
 
    ```yaml:title=pantheon.yml
    api_version: 1
-   
+
    php_version: 8.0
    ```
 
-   - You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
+   - You do not need to specify the PHP version's exact point release (e.g, `8.0.19`), as these are managed by the platform and deployed automatically.
 
-1. Refresh the **Dev** environment tab > click `/code` directory > verify that the `pantheon.yml` file has been created.
+1. In your SFTP client refresh the `/code` directory and verify that the `pantheon.yml` file has been created and contains the changed version.
+
+1. In the dashboard, refresh the **Dev** environment tab and verify that the `pantheon.yml` file is available to commit.
 
 1. Enter a commit message and click **Commit changes**.
 
@@ -146,25 +148,22 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 1. Select **Git** as your **Development Mode**.
 
-1. Click **Clone with Git** > click the copy button to copy the string.
+1. If you have not yet cloned the repository to your local computer, follow the steps in [Clone Your Site Codebase](/guides/git/git-config#clone-your-site-codebase)
 
-1. Navigate to your local CLI.
+1. Navigate to your **pantheon.yml** file and edit the `php_version` with the version of PHP you are upgrading to. If the file does not yet exist, it should be created.
+   ```yaml:title=pantheon.yml
+   api_version: 1
 
-1. Enter `git clone` and paste the copied string to clone your repository:
-
-   ```bash{promptUser: user}
-   git clone [copied_repo_string]
+   php_version: 8.0
    ```
 
-1. `cd` into the project directory. 
+   - You do not need to specify the PHP version's exact point release (e.g, `8.0.19`), as these are managed by the platform and deployed automatically.
 
-1. Navigate to your **pantheon.yml** file > edit the `php_version` with the version of PHP you are upgrading to.
+1. Add and commit the changes and push them to your site
 
-1. Add and commit the changes in your CLI.
+1. If there are any Multidev environments that also need the same change, rebase any non-`master` branches to ensure they are on the same PHP version.
 
-    - You will receive a pre-receive hook error if you try to use the `git push` command in Git.
-
-1. Rebase any non-`master` branches and remove their remote versions > re-push the branches to avoid the Git pre-receive error:
+If an invalid version is specified there will be an error when trying to push changes
 
    ```none
    remote: PANTHEON ERROR:
@@ -173,10 +172,10 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
    remote:
    remote:
    remote: Validation failed with error:
-   remote: >   12.0 is not one of [5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.1]
+   remote: >   12.0 is not one of [5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1]
    ```
 
-1. Modify the `pantheon.yml` file until it is valid and commit the fix before attempting to push again.
+Modify the `pantheon.yml` file until it is valid and commit the fix before attempting to push again.
 
 </Tab>
 
