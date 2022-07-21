@@ -9,9 +9,10 @@ layout: guide
 showtoc: true
 permalink: docs/guides/secure-development
 anchorid: secure-development
+reviewed: "2022-07-21"
 ---
 
-This guide provides a collection of resources and extra methods you can use to secure your sites and code depending on your needs:
+This guide provides a collection of resources and additional methods you can use to secure your sites and code depending on your needs:
 
 - [Secure Integration](/guides/secure-development/security-tool)
 
@@ -27,23 +28,21 @@ This guide provides a collection of resources and extra methods you can use to s
 
 - [Secure Runtime Access](/guides/secure-development/secure-runtime-access)
 
-
-All Pantheon sites come with built-in security features that are compatible with the extra security measures listed above, including:
+All Pantheon sites come with built-in security features that are compatible with the security measures listed above, including:
 
 - Secure infrastructure
 
 - Encrypted channels
 
-- Least-privilege user access.
+- Least-privilege user access
 
 Pantheon also provides:
 
-- Fully managed and free HTTPS certificates
+- Fully managed and free [HTTPS certificates](/https)
 
-- Automated backups 
+- [Automated backups](/backups)
 
-- One-click updates for all WebOps platform plans
-
+- [One-click updates](/core-updates) for all WebOps platform plans
 
 ## More Resources
 

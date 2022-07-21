@@ -8,13 +8,14 @@ ayout: guide
 showtoc: true
 permalink: docs/guides/secure-development/secure-integration
 anchorid: secure-integration
+reviewed: "2022-07-21"
 ---
 
-This section provides information on [Pantheon Secure Integration](https://pantheon.io/features/secure-integration).
+This section provides information on [Pantheon Secure Integration](https://pantheon.io/features/secure-integration?docs).
 
-Pantheon Secure Integration, formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us) for more information.
+Pantheon Secure Integration, formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us?docs) for more information.
 
-Pantheon's platform is elastic in nature. All sites have a [dynamic outgoing IP](/outgoing-ips) and container IP addresses are not constant. This means that direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
+Pantheon's platform is [elastic](https://en.wikipedia.org/wiki/Elasticity_(cloud_computing)) in nature. All sites have a [dynamic outgoing IP](/outgoing-ips) and container IP addresses are not constant. This means that direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
 
 ## How It Works
 
@@ -54,8 +55,9 @@ After your Secure Integration is configured, we update your site environment wit
 
 ### Example LDAP Connection with PHP Constants
 
-Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose `PANTHEON_SOIP_LDAP_STAFF` and `PANTHEON_SOIP_LDAP_STUDENTS` as names to identify the connections.
+Any code you're using to connect to the remote service must accept a PHP Constant for the port number.
 
+For example: If you have two LDAP servers, one for staff and another for students, you may choose `PANTHEON_SOIP_LDAP_STAFF` and `PANTHEON_SOIP_LDAP_STUDENTS` as names to identify the connections.
 
 <TabList>
 
@@ -117,8 +119,6 @@ Secure Integration connects to the same external resource from all environments.
 
 No, Secure Integration is not a replacement for authentication, but rather is a [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
 
-
 ## More Resources
 
 - [Two Factor Authentication](/guides/secure-development/two-factor-authentication)
-

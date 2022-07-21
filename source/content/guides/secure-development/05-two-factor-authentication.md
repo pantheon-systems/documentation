@@ -9,11 +9,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/two-factor-authentication
 anchorid: two-factor-authentication
+reviewed: "2022-07-21"
 ---
 
-This section provides information on how you can use Two-factor authentication (TFA) to keep your sites secure.
+This section provides information on how to use Two-factor authentication (TFA) to keep your sites secure.
 
-TFA is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password. 
+TFA is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password.
 
 The two most common methods of secondary authentication are:
 
@@ -27,7 +28,7 @@ More advanced methods are also available, including:
 
 - Location through GPS
 
-- Hardware tokens 
+- Hardware tokens
 
 For more information, see [Multi Factor Authentication in Drupal Watchdog](http://www.drupalwatchdog.net/volume-2/issue-2/multi-factor-authentication) and [Two Step Authentication on WordPress.org](https://codex.wordpress.org/Two_Step_Authentication).
 
@@ -41,7 +42,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 - Has used their password on another site that becomes compromised
 
-By requiring a second form of authentication (especially one tied to a physical device like a mobile phone or a USB key), would-be attackers not only have to compromise a user’s password, but also their mobile phone or physical USB key, which makes the attack much more difficult.
+By requiring a second form of authentication (especially one tied to a physical device like a mobile phone or a USB key), would-be attackers not only have to compromise a user’s password, but also their mobile phone or physical USB key, which makes the attack more difficult.
 
 ## Single Site TFA
 
@@ -55,7 +56,7 @@ There are many different [WordPress plugins for two-factor authentication](https
 
 1. Log in to the [Duo Admin Panel](https://admin.duosecurity.com/) and navigate to **Applications**.
 
-1. Click **Protect an Application** and locate **WordPress** in the applications list. 
+1. Click **Protect an Application** and locate **WordPress** in the applications list.
 
 1. Click **Protect this Application** to get your **integration key**, **secret key**, and **API hostname**.
 
@@ -65,23 +66,23 @@ There are many different [WordPress plugins for two-factor authentication](https
   terminus remote:wp $SITENAME.dev -- plugin install duo-wordpress --activate
   ```
 
-1. Open the settings page for the Duo plugin > configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
-    
+1. Open the settings page for the Duo plugin, then configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
+
   ![TFA Duo Configuration](../../../images/duo-settings.png)
 
 1. Click **Save Changes**. The page will be automatically redirected to the Duo setup wizard.
 
-6. Follow the on-screen instructions to configure an authentication device to your site and test it. Your browser will be redirected back to the plugin settings page after the configuration is complete.
+1. Follow the on-screen instructions to configure an authentication device to your site and test it. Your browser will be redirected back to the plugin settings page after the configuration is complete.
 
 <Alert title="Note" type="info">
 
 Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can:
 
-  - Synchronize and import your database
+- Synchronize and import your database
 
-  - Use a tool like [WP-CFM](/wp-cfm)
+- Use a tool like [WP-CFM](/wp-cfm)
 
-  - Keep the new application page from the Duo Admin panel open, and reenter the values for each environment
+- Keep the new application page from the Duo Admin panel open, and reenter the values for each environment
 
 </Alert>
 
@@ -89,23 +90,25 @@ Duo configuration settings and keys are stored in the database. To avoid setting
 
 <Tab title="Drupal" id="tab-2-id">
 
-There are a few [different Drupal modules](https://groups.drupal.org/node/235938) including the [Two-Factor Authentication](https://www.drupal.org/project/tfa) module that provide the foundation necessary to use two-factor authentication on a single Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-Based One Time Password are available in the [TFA Basic plugins](https://www.drupal.org/project/tfa_basic) module. There are also developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev).
+There are a few [different Drupal modules](https://groups.drupal.org/node/235938), including the [Two-Factor Authentication](https://www.drupal.org/project/tfa) module that provide the foundation necessary to use two-factor authentication on a single Drupal site.
+
+In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-Based One Time Password are available in the [TFA Basic plugins](https://www.drupal.org/project/tfa_basic) module. There are also developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev).
 
 1. Install and enable the [Two-factor Authentication (TFA)](https://www.drupal.org/project/tfa) module and the [TFA Basic plugins](https://www.drupal.org/project/tfa_basic) module on your Drupal site.
 
-1. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/download) for either iOS or Android.
+1. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/download) for either iOS, Android, or desktop use.
 
-1. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**: 
+1. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**:
 
-  - Set **TOTP** as the default validation plugin.
-  
-  - Add **Recovery Codes** as a fallback plugin.
-  
-  - Allow **Trusted Browsers** for your domain.
+   - Set **TOTP** as the default validation plugin.
 
-  ![TFA Module Settings](../../../images/tfa-drupal-module-settings.png)
+   - Add **Recovery Codes** as a fallback plugin.
 
-1. Go to the Security settings on each user profile you want to use TFA > click **Enable TFA**.
+   - Allow **Trusted Browsers** for your domain.
+
+   ![TFA Module Settings](../../../images/tfa-drupal-module-settings.png)
+
+1. Go to the Security settings on each user profile you want to use TFA, then click **Enable TFA**.
 
 1. Enter your current password > view the TFA Setup - Application page.
 
@@ -122,8 +125,6 @@ There are a few [different Drupal modules](https://groups.drupal.org/node/235938
 </Tab>
 
 </TabList>
-
-
 
 ## Organization TFA
 
@@ -197,7 +198,7 @@ There are many different organization-wide [WordPress plugins for single sign on
 
 <Tab title="Drupal" id="drupal-org">
 
-There are many different organization-wide [Drupal modules for single sign on](https://groups.drupal.org/node/182004) that can also provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin](https://www.drupal.org/project/onelogin) module.
+There are many different organization-wide [Drupal modules for single sign-on](https://groups.drupal.org/node/182004) that can also provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin](https://www.drupal.org/project/onelogin) module.
 
 #### OneLogin Instructions
 
@@ -206,6 +207,7 @@ There are many different organization-wide [Drupal modules for single sign on](h
 1. Install the Drupal SAML 2.0 app connector as part of the OneLogin dashboard. This will need to be done for each Drupal site that is being managed by OneLogin.
 
 1. Edit the OneLogin Drupal app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
+
   ![TFA OneLogin Config](../../../images/tfa-drupal-onelogin-config.png)
 
 1. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
@@ -227,11 +229,11 @@ There are many different organization-wide [Drupal modules for single sign on](h
 1. Populate the OneLogin SAML module `admin/config/onelogin_saml` fields below.Values are case-sensitive.
 
    - IdP Entity Id
-   - Single Sign On Service URL
+   - Single Sign-on Service URL
    - Single Log Out Service URL
    - X.509 Certificate
-   - Username 
-   - E-mail 
+   - Username
+   - E-mail
    - Role
 
   ![TFA OneLogin Options](../../../images/tfa-drupal-onelogin-options.png)
@@ -256,9 +258,9 @@ We recommend adding an [SSH Key](/ssh-keys) to authenticate yourself on Pantheon
 
 </Alert>
 
-### Single Sign-On for Orgs
+### Single Sign-on for Orgs
 
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/sso-organizations).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-on for Pantheon Organizations](/sso-organizations).
 
 ## More Resources
 

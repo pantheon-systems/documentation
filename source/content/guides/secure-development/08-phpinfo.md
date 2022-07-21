@@ -10,11 +10,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/phpinfo
 anchorid: phpinfo
+reviewed: "2022-07-21"
 ---
 
 This section provides information on steps you can take to obscure your [phpinfo](https://secure.php.net/manual/en/function.phpinfo.php) online.
 
-Pantheon provisions isolated Linux containers with an optimized PHP stack. The `php.ini` is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/php-versions). 
+Pantheon provisions isolated Linux containers with an optimized PHP stack. The `php.ini` is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/php-versions).
 
 You can use `phpinfo` to see a comprehensive list of what's installed with the version of PHP in use by a particular environment. We also have [example PHP info](/php-versions/#available-php-versions) for each version of PHP on the platform.
 
@@ -22,7 +23,7 @@ You can use `phpinfo` to see a comprehensive list of what's installed with the v
 
 - `phpinfo` exposes sensitive information, including the password to connect to the DB
 
-- You must delete any `phpinfo` file you create immediately after review 
+- Delete any `phpinfo` file you create immediately after review
 
 ### Drupal Note
 
@@ -50,9 +51,7 @@ Follow the steps below to keep your `phpinfo` file secure.
 
 ## Terminus
 
-You can use [Terminus](/terminus) to check your `phpinfo` values as an alternative to exposing information on a web-accessible URL. 
-
-1. Run the following command:
+You can use [Terminus](/terminus) to check your `phpinfo` values as an alternative to exposing information on a web-accessible URL:
 
 ```bash{promptUser: user}
 terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"

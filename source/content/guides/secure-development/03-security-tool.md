@@ -9,9 +9,10 @@ layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/security-tool
 anchorid: security-tool
+reviewed: "2022-07-21"
 ---
 
-This section provides information on securing your Pantheon environments by locking them within the dashboard.
+This section provides information on how to secure your Pantheon environments by locking them within the Dashboard.
 
 This is a useful solution when you are working on your site and you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
@@ -49,7 +50,7 @@ You have the ability to password protect any of the available environments.
 
 1. Visit the URL of the environment that you have made private to verify that everything is working correctly. You should see an authentication form prompting you to enter the username and password for that environment to start your session.
 
-![Locked site example](../../../images/auth-required.png)
+  ![Locked site example](../../../images/auth-required.png)
 
 <Alert title="Note" type="info">
 
@@ -59,13 +60,13 @@ Environments are not cached by the [Global CDN](/global-cdn) while locked.
 
 ### Customize Lock Page
 
-You can add a `locked.html` file in your site's root directory if you'd like to customize the lock page that displays beneath the authentication form. 
+You can add a `locked.html` file in your site's root directory if you'd like to customize the lock page that displays beneath the authentication form.
 
 ## Unlock a Site's Environment
 
-Follow the steps below when you are ready to make your environment public again. 
+Follow the steps below when you are ready to make your environment public again.
 
-1. Click **Security** on your Site Dashboard. 
+1. Click **Security** on your Site Dashboard.
 
 1. Click **Public** next to Environmental Access. This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
 
@@ -85,23 +86,24 @@ Your site can also be locked and unlocked using [Terminus](/terminus).
   terminus lock:disable <site>:<env>
   ```
 
-### Pass Credentials Using CI Scripting 
+### Pass Credentials Using CI Scripting
 
-You must configure your CI tool to pass the username and password on every request to allow tests to run in a locked site environment if you are using CI scripting.  Configuration steps will vary depending on your chosen CI tool. We've included a CI authentication example to help you get started:
+Configure your CI tool to pass the username and password on every request to allow tests to run in a locked site environment if you are using CI scripting. Configuration steps will vary depending on your chosen CI tool. We've included a CI authentication example to help you get started:
 
 ```bash
 {"base_url" : "https://<username>:<password>@'$TERMINUS_ENV'-'$TERMINUS_SITE'.pantheonsite.io/"}
 ```
-  * Replace `<username>` with your selected username.
-  * Replace `<password>` with your configured password.
+
+- Replace `<username>` with your selected username.
+- Replace `<password>` with your configured password.
 
 ## Troubleshooting
 
 ### Authentication Prompt Appears in Environments Where It's Not Enabled
 
-If you see an authentication prompt for a different environment (for example, a Dev site authentication prompt on the Test environment), you likely have assets, such as images, loading from a locked environment. 
+If you see an authentication prompt for a different environment (for example, a Dev site authentication prompt on the Test environment), you likely have assets, such as images, loading from a locked environment.
 
-1. Inspect your page source code and search for the locked environment's URL (for example, `dev-yoursite.pantheonsite.io`). 
+1. Inspect your page source code and search for the locked environment's URL (for example, `dev-yoursite.pantheonsite.io`).
 
 1. Replace that URL with the correct URL for the current environment.
 
