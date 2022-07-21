@@ -73,7 +73,7 @@ The Site Portfolio Report may not be generated or no data will be displayed on t
 
 - The invoice is not a positive invoice (i.e. it has a negative balance rather than a charge to the customer).
 
-- You are special-terms customer
+- You are a special-terms customer
 
 ## Will invoices be accessible all the time after they are generated or do they expire or archive after certain period of time?
 
