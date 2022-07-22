@@ -37,8 +37,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
-| [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues.
-" /> |
+| [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues." /> |
 | [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0." /> |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
 | [7.3](https://v73-php-info.pantheonsite.io/) | ❌          | EOL     |
