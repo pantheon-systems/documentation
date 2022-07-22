@@ -260,7 +260,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
   ![Organization Dashboard](../../../images/dashboard/organizations.png)
 
-1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+1. Select **Debug** > click the **Upstreams** tab.
 
 1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
 
@@ -309,7 +309,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
   ![Organization Dashboard](../../../images/dashboard/organizations.png)
 
-1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+1. Select **Debug** > click the **Upstreams** tab.
 
 1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
 
@@ -406,7 +406,7 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 1. Access the **Organization Dashboard** from your Admin dashboard.
 
-1. Select **Debug** > click the **<span class="upstreams-regular"></span> Upstreams** tab.
+1. Select **Debug** > click the **Upstreams** tab.
 
 1. Enter the following:
 
