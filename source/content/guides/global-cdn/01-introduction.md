@@ -35,7 +35,7 @@ Global CDN takes Pantheon's high-performance page and asset caching system, [Var
 
 - **Dynamically expire selected content:** Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available as Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
 
-When we first turned on the Global CDN, we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
+Many users see multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US when they first turn Global CDN. International users will benefit even more:
 
 ![Example before and after page load time](../../../images/global-cdn-time-to-load.png)
 

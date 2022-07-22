@@ -1,5 +1,6 @@
 ---
-title: "HTTPS on Pantheon's Global CDN"
+title: Pantheon Global CDN
+subtitle: "HTTPS on Pantheon's Global CDN"
 description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
 categories: [go-live]
 tags: [cdn, dns, https, security]
