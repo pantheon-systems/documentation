@@ -38,7 +38,7 @@ All Pantheon sites come with built-in security features that are compatible with
 
 Pantheon also provides:
 
-- Fully managed and free [HTTPS certificates](/https)
+- Fully managed and free [HTTPS certificates](/guides/global-cdn/https)
 
 - [Automated backups](/backups)
 
@@ -46,6 +46,6 @@ Pantheon also provides:
 
 ## More Resources
 
-- [Pantheon Global CDN](/global-cdn)
+- [Pantheon Global CDN](/guides/global-cdn)
 
 - [Pantheon Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
