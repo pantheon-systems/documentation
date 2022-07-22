@@ -1,7 +1,7 @@
 ---
 title: Pantheon Global CDN
-subtitle: Global CDN Caching for High Performance with Drupal and WordPress
-description: Configure and verify edge caching is working on your WordPress or Drupal sites.
+subtitle: Configure and Verify Edge Caching
+description: Global CDN Caching for High Performance with Drupal and WordPress
 categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith]

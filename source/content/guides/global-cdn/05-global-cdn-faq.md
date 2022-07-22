@@ -69,3 +69,75 @@ To prevent issues with Twitter card validation and to reduce the overall time to
 ## Advanced Global CDN
 
 For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service.
+
+### How do I switch my site over to HTTPS from HTTP?
+
+To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/http-to-https).
+
+### How do I upgrade my existing Pantheon site?
+
+Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
+
+### What level of encryption is provided?
+
+High grade TLS 1.3 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
+
+### How can I obtain an A+ SSL Labs rating?
+
+Upgrade your site to the Global CDN and then send the [HSTS header](/pantheon-yml/#enforce-https--hsts).
+
+### Can I bring my own certificate?
+
+Yes. See our page on [custom certificates](/custom-certificates) for more information.
+
+But you shouldn't need to buy a custom certificate or worry about renewals in most cases. For example, wildcard certificates aren't necessary to secure communications for multiple domains, because we will automatically deploy certificates for all domains on your site. The certificates provided by Pantheon on the Global CDN provide end-to-end encryption.
+
+Some customers have purchased expensive certificates, often through an upsell from the certificate authority. Unfortunately, an expensive certificate does not mean increased security. If in doubt, we encourage you to test your site with SSL Labs, compare it to this [A+ report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io), and share it with your client.
+
+If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](/guides/support/contact-support/) to discuss your case.
+
+### Is HTTPS encryption end-to-end?
+
+Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to the individual application container. This is an improvement over our legacy system that terminated all encryption at the load balancer, and a huge upgrade over setups which use a "mixed mode" strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
+
+### Will HTTPS be available for my site throughout the upgrade process?
+
+Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
+
+Existing sites that are not already hosted on Pantheon can [pre-provision HTTPS](/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
+
+<Alert title="Note" type="info">
+
+You can pre-provision HTTPS via DNS records, or the Let's Encrypt ACME challenge file. You cannot use the challenge file if:
+
+ - You cannot host the provided verification file on the current site.
+ - Your current server doesn't support files without extension names (like IIS with .NET)
+
+Verifying with the provided DNS record is the preferred method for customers who can make new DNS records for their domain(s).
+
+In some cases, such as when the custom domain has an existing third-party CAA, you must manually add the Let's Encrypt CAA.
+ 
+Let’s Encrypt’s identifying domain name for CAA is letsencrypt.org. For more official information, read Let's Encrypt's [Certification Practice Statement CPS, section 4.2.1.](https://letsencrypt.org/repository/).
+
+This tool can be used to gather more info on how pass the custom domain verification https://letsdebug.net/
+
+If you do not already have HTTPS, you don't need to pre-provision, but doing so will allow you to launch your Pantheon site with HTTPS already enabled, and is recommended.
+
+</Alert>
+
+### How many custom domains are supported?
+
+<Partial file="tables/custom-domains-limit.md" />
+
+### Which browsers and operating systems are supported?
+
+All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
+
+### What about Cloudflare?
+
+Refer to [Cloudflare Domain Configuration](/cloudflare).
+
+### For how long are Let's Encrypt certificates valid and what happens when they expire?
+
+Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
+
