@@ -1,1 +1,42 @@
+---
+title: July 2022 Changelog
+changelog: true
+description: July 2022 Pantheon changelog
+reviewed: "2022-07-01"
+---
 
+## Platform Improvements
+
+### Drupal 9.4.1
+
+[Drupal 9.4.1](https://www.drupal.org/project/drupal/releases/9.4.1) is available for production sites. This is a patch (bugfix) release of Drupal 9 and is ready for use on production sites.
+
+
+### Drupal 9.3.14
+
+[Drupal 9.3.14](https://www.drupal.org/project/drupal/releases/9.3.14) is available for production sites and includes backwards-compatible improvements. [Drupal 9.3](https://www.drupal.org/project/drupal/releases/9.3.0) was released in December 2021. From Drupal 9.3, PHP version 8.0 or higher is recommended; PHP 7.3 and higher remains supported. [Drupal 9](/drupal-9) sites on Pantheon use [Integrated Composer](/guides/integrated-composer), enabling one-click core updates through the Dashboard. To check for available updates, click **Check Now** from the site's **Dashboard Dev** tab.
+
+
+### Drupal 9.2.20
+
+[Drupal 9.2.20](https://www.drupal.org/project/drupal/releases/9.2.20) is available and includes backwards-compatible improvements. This is a minor version of Drupal 9 and is available for use on production sites.
+
+
+### WordPress 6.0
+
+[WordPress 6.0](https://wordpress.org/news/2022/05/arturo/) is the latest major release of WordPress and is currently available on the Pantheon platform. This release features nearly a thousand enhancements and bug fixes.
+
+If you’ve updated the previously released Twenty Twenty-two theme outside of Pantheon's WordPress upstream, updating to WordPress 6.0 will result in an error, due to the [removal](https://core.trac.wordpress.org/changeset/53286) of the `wp-content/themes/twentytwentytwo/assets/fonts/LICENSE.md` file. To resolve this error delete this file, commit, and push your change, then reapply the update. Detailed information on applying and debugging core updates can be found in the [Core Updates documentation](https://pantheon.io/docs/core-updates). 
+
+
+## Documentation
+
+[Autopilot for Custom Upstreams]() - Combining Autopilot with Custom Upstreams is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites. To learn more, refer to the documentation.
+
+[Fastly on Pantheon]() - Pantheon offers extensive content delivery network (CDN) features through our Global CDN and Advanced Global CDN. Pantheon also partners with Fastly if you prefer to use a CDN outside of the Pantheon platform. Using Fastly can be a good option if you are looking for log or media storage integration solutions. For more information, refer to the documentation.
+
+[Get Started]() -  Refer to our Getting Started page to learn how to migrate to the Pantheon platform. The guided migration process is customized for the CMS systems that each competitor may offers.
+
+[Git on Pantheon Guide]() - A new guide on using Git on the Pantheon platform is now available. Pantheon provides industry standard version control with Git. Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
+
+[WordPress REST API]() -The WordPress Edge Integrations plugin provides REST API endpoints for all of the major functions and output available via server-side PHP code. A full list and descriptions of all endpoints exists in the WordPress Edge Integrations SDK documentation. To learn more about the WordPress SDK, refer to the documentation.
