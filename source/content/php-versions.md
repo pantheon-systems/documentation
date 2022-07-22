@@ -108,9 +108,9 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 1. Select **SFTP** as your **Development Mode**.
 
-1. Use the credentials under the **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
+1. Use the credentials under **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
 
-1. Check the `/code` directory for the `pantheon.yml` file or create one if it is not already present and alter it to include the desired PHP version.
+1. Check the `/code` directory for the `pantheon.yml` file (or create one if it is not already present) and alter it to include the desired PHP version.
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -160,11 +160,11 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
    - You do not need to specify the PHP version's exact point release (e.g, `8.0.19`), as these are managed by the platform and deployed automatically.
 
-1. Add and commit the changes and push them to your site
+1. Add and commit the changes and push them to your site.
 
 1. Rebase any non-`master` branches to ensure they are on the same PHP version if there are any Multidev environments that also need the same change.
 
-If an invalid version is specified there will be an error when trying to push changes
+If an invalid version is specified there will be an error when trying to push changes:
 
    ```none
    remote: PANTHEON ERROR:
