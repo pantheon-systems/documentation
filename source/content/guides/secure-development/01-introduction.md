@@ -1,7 +1,7 @@
 ---
 title: Secure Development on Pantheon
 subtitle: Introduction
-description: Learn how to development securely on Pantheon.
+description: Learn how to develop securely on Pantheon.
 categories: [develop]
 tags: [cms, security, cdn]
 contributors: [whitneymeredith]
@@ -14,7 +14,7 @@ reviewed: "2022-07-21"
 
 This guide provides a collection of resources and additional methods you can use to secure your sites and code depending on your needs:
 
-- [Secure Integration](/guides/secure-development/security-tool)
+- [Secure Integration](/guides/secure-development/secure-integration)
 
 - [Lock Environments in the Dashboard](/guides/secure-development/security-tool)
 
@@ -22,7 +22,7 @@ This guide provides a collection of resources and additional methods you can use
 
 - [Two-factor Authentication](/guides/secure-development/two-factor-authentication)
 
-- [Secure SSH Connections to Pantheon Services](/guides/secure-development/phpinfo)
+- [Secure SSH Connections to Pantheon Services](/guides/secure-development/ssh-tunnels)
 
 - [Securely Working with phpinfo](/guides/secure-development/phpinfo)
 
