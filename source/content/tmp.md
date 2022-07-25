@@ -99,6 +99,22 @@ Output of this command should look something like the following Plupload example
 
 </Tab>
 
+<Tab title="Drupal 9" id="d9tmppath">
+
+Correct an unsupported temporary path set by a module or theme using `$settings` override in `settings.php`. Replace `file_temp_path` with the conflicting module or theme setting:
+
+```php
+/**
+* Drupal 9
+* Fix unsupported temporary path
+* Replace file_temp_path
+*/
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $settings['file_temp_path'] = $_SERVER['HOME'] . '/tmp';
+}
+```
+</Tab>
+
 </TabList>
 
 ## Multiple Application Containers
@@ -181,6 +197,24 @@ Output of this command should look something like the following Plupload example
 
 ![cget plupload settings temporary_uri filesystem](../images/d7-vget-tmp-filesystem.png)
 
+</Tab>
+
+<Tab title="Drupal 9" id="d9workaround">
+
+Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$settings` override in `settings.php`. Replace `file_temp_path` with the conflicting module or theme setting:
+
+```php:title=settings.php
+/**
+* Drupal 9
+* Fix unsupported temporary path
+* Replace file_temp_path
+*/
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $settings['file_temp_path'] = 'sites/default/files/private/tmp';
+}
+```
+
+The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 </Tab>
 
 </TabList>
