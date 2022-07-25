@@ -14,7 +14,7 @@ anchorid: create-multidev
 This section provides steps on how to create a new fork in a Pantheon environment by using the code from the Dev environment.
 
 
-1. Navigate to the **Site Dashboard** > click the **Multidev** tab.
+1. Navigate to the **Site Dashboard** then click the **Multidev** tab.
 
 1. Click **Create Multidev Environment**.
 
@@ -40,7 +40,7 @@ This section provides steps on how to create a new fork in a Pantheon environmen
 
    It will take a few minutes to create the environment and clone the content from the source environment. You can continue working on the Dashboard while it's being created.
 
-   You can create cloned Multidev environments from Dev, Test, or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
+   You can create cloned Multidev environments from Dev, Test, or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev under Git Branches.
 
 <Alert title="Note" type="info">
 

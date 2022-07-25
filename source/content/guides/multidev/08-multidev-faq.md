@@ -65,7 +65,7 @@ Yes. Your Git repository is not restricted. If you do not use Multidev, then the
 
 ## Can I create a new environment for my local branch?
 
-Yes. Push a new branch from your local (for example, `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
+Yes. Push a new branch from your local (for example, `git push origin example-br`) then navigate to **Multidev** then **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
 
 ## Is there a limit on the number of branches or environments?
 

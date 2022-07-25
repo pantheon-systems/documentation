@@ -21,7 +21,7 @@ This section provides steps on how to clone content in your Multidev.
 
 1. Select Database, Files, or both.
 
-1. Select whether you want to execute `update.php` after cloning > click **Clone the Database & the Files from `source` into `target` Environment**.
+1. Select whether you want to execute `update.php` after cloning then click **Clone the Database & the Files from `source` into `target` Environment**.
 
 Your content will be cloned into the environment you selected in step 1.
 

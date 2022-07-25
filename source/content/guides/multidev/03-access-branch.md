@@ -14,7 +14,7 @@ anchorid: access-branch
 This section provides steps on how to access a Multidev branch environment.
 
 
-1. Navigate to the **Site Dashboard** > click **Multidev**.
+1. Navigate to the **Site Dashboard** then click **Multidev**.
 
 1. Select the name of the environment.
 

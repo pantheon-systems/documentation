@@ -24,7 +24,7 @@ You can compare your Multidev environments using the following methods:
 
 ### Local Comparison Through the Site Dashboard
 
-1. Navigate to the **Site Dashboard** > click **Multidev**.
+1. Navigate to the **Site Dashboard** then click **Multidev**.
 
 The Multidev Environments page provides a list of all existing environments for a site, along with a quick comparison between environments and the master branch of your Dev environment. 
 
