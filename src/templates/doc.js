@@ -18,6 +18,7 @@ import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
+import ProductGroup from "../components/productGroup"
 import SEO from "../layout/seo"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
@@ -43,6 +44,7 @@ const shortcodes = {
   Tab,
   Card,
   CardGroup,
+  ProductGroup,
   Enablement,
   Color,
   Download,
