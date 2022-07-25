@@ -65,7 +65,7 @@ You can use Terminus to install Quicksilver Composer scripts if you have a Compo
 
 Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
 
-You can also use your site's [private files path](/private-paths#private-path-for-files) to store values securely. When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
+You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
 
 1. Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
 

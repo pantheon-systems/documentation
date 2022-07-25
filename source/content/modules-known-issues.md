@@ -69,7 +69,7 @@ ___
 
 <ReviewDate date="2020-08-25" />
 
-**Issue**: This module conflicts with [Pantheon's Dashboard Security Tool](/security#password-protect-your-sites-environments) when both are enabled on Drupal sites, resulting in 403 errors.
+**Issue**: This module conflicts with [Pantheon's Dashboard Security Tool](/guides/secure-development/security-tool#password-protect-your-sites-environments) when both are enabled on Drupal sites, resulting in 403 errors.
 
 **Solution**:  We suggest using Pantheon's Dashboard Security Tool if you want to set up HTTP authentication. Additionally, refer to [Advanced Redirects and Restrictions](/advanced-redirects) for more options to control and restrict access to some or all of your site.
 

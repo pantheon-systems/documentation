@@ -37,5 +37,5 @@ For all sites, we recommend instructing users to change their passwords regularl
 ## See Also
 - [Accessing an Account After the Owner Leaves](/site-access)
 - [Role-Based Permissions & Change Management](/change-management)
-- [Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication)
+- [Secure Your Site with Two-Factor Authentication](/guides/secure-development/two-factor-authentication)
 - [Team Management](/team-management)

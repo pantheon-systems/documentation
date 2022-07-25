@@ -50,7 +50,7 @@ Start by creating a new machine user in your Atlassian Cloud instance. This user
 4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine user's password.
 
 ## Securely Store User Credentials on Pantheon
-Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/private-paths/#private-path-for-files) of Pantheon's filesystem.
+Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/guides/secure-development/private-paths#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
@@ -89,7 +89,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Jira to the [private path](/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Jira to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 In the commands below, replace `<site>` with your Pantheon site name.
 

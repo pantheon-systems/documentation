@@ -304,7 +304,7 @@ This can occur if hardcoded links are found in the HTML source of your pages. To
 
 ## PHP Configuration
 
-`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/phpinfo) for more information on PHP configuration.
+`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/guides/secure-development/phpinfo) for more information on PHP configuration.
 
 ## PHP/Java Bridge
 

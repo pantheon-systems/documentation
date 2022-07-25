@@ -129,7 +129,7 @@ On this tab you can create backups, restore from an existing backup, or view the
 
 ### Security
 
-Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Security on the Pantheon Dashboard](/security).
+Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Security on the Pantheon Dashboard](/guides/secure-development/security-tool).
 
 ## Site UUID
 
@@ -151,4 +151,4 @@ For example uses, see the following:
 
 - [Port 2222 Blocked Workaround](/port-2222#set-up-the-tunnel)
 - [rsync and sftp](/rsync-and-sftp/#sftp)
-- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/ssh-tunnels/#prerequisites)
+- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels/#prerequisites)

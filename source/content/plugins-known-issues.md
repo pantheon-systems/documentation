@@ -233,7 +233,7 @@ ___
 
 **Solution:** This plugin only works in the `Coming Soon Mode` on Pantheon. You need to add content to the **Page Settings** > **Message**, so the Coming Soon page won't appear as a blank page.
 
-Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/security#customize-lock-page).
+Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/guides/secure-development/security-tool#customize-lock-page).
 
 ___
 
@@ -829,7 +829,7 @@ ___
 
 **Solution:** Manually change `unloq_credentials` key in the`wp_options` table. Alternatively, you can re-create an application by resetting your plugin installation (deactivate, delete entries, etc.).
 
-For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication/#single-site-tfa).
+For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/guides/secure-development/two-factor-authentication/#single-site-tfa).
 
 ___
 
@@ -861,6 +861,24 @@ Events:
 Brizy:
 
 - `wp-content/plugins/brizy/vendor/twig/twig/.gitignore`
+
+___
+
+## Updraft / Updraft Plus Backup
+
+<ReviewDate date="2022-07-18" />
+
+**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](https://pantheon.io/docs/backups/) for more information.
+
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by: 
+
+- Running the bash script in your local system 
+
+- Using an external server
+
+- Using a service that runs cron jobs for you
+
+Refer to the [Access Backups](https://pantheon.io/docs/backups#access-backups) documentation for more details.
 
 ___
 
@@ -992,7 +1010,7 @@ export ENV=dev
   ln -s ../files/private/.user.ini ./.user.ini
   ```
 
-1. Open `pantheon.yml` and add a [protected web path](/private-paths) for `.user.ini`:
+1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
 
   ```yml:title=pantheon.yml
   protected_web_paths:
@@ -1351,7 +1369,7 @@ ___
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
-**Solution:** Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/security).
+**Solution:** Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/guides/secure-development/security-tool).
 
 ___
 

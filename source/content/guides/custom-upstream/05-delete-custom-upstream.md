@@ -14,11 +14,11 @@ This section provides steps to delete a Custom Upstream. A Custom Upstream canno
 
 Follow these steps to delete your Custom Upstream.
 
-1. Navigate to the Organization Dashboard > click **Upstreams**.
+1. Access the **Organization Dashboard** from your Admin dashboard.
 
-1. Click **Settings** next to the Upstream you want to delete.
+1. Select **Debug** > click the **<span class="upstreams-regular"></span> Upstreams** tab.
 
-1. Select **Source** > click the **Delete Upstream** button:
+1. Click Delete Upstream and confirm.
 
   ![Delete Upstream Button](../../../images/dashboard/delete-upstream.png)
 

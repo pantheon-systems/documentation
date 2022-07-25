@@ -107,7 +107,7 @@ The restore process removes any recent content or changes applied to your site s
 
 If you still want to restore a backup to the Live environment, we recommend the following steps:
 
-- [Lock the environment first](/security)
+- [Lock the environment first](/guides/secure-development/security-tool)
 - [Run a backup](/backups) of LIVE, in order to have a copy of files and the database that will be overwritten
 - Run the restore while the site is still locked
 
