@@ -99,11 +99,8 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
 ## Lock Multidev Environments
 
-<<<<<<< HEAD
-As an additional security measures, sites with [Multidev](/guides/multidev) environments should consider [locking](/guides/secure-development/security-tool) them until they can be patched. If you have [Terminus](/terminus) installed on your local computer, you can lock all environments at once with the following Bash script:
-=======
-As an additional security measures, sites with [Multidev](/multidev) environments should consider [locking](/guides/secure-development/security-tool) them until they can be patched. If you have [Terminus](/terminus) installed on your local computer, you can lock all environments at once with the following Bash script:
->>>>>>> 9f9f3949a4cdd1931428005a7e47926b31ebad59
+
+As an additional security measure, sites with [Multidev](/guides/multidev) environments should consider [locking](/guides/secure-development/security-tool) them until they can be patched. If you have [Terminus](/terminus) installed on your local computer, you can lock all environments at once with the following Bash script:
 
 ```bash
 #!/bin/bash
