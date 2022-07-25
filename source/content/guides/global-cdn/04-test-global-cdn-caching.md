@@ -20,17 +20,18 @@ This section provides steps on how to test your Global CDN caching.
 
 1. Enter the command below with your full Pantheon domain URL.
 
-    - The `-L` flag instructs curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
-    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
-    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
-    - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
-
-    ```bash{outputLines: 2-7}
+  ```bash{outputLines: 2-7}
     curl -L -Is -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
     HTTP/2 200
     cache-control: public, max-age=86400
     age: 65772
     ```
+
+    - The `-L` flag instructs curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
+    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
+    - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
+ 
 
 1. Add the `Pantheon-Debug: 1` header to your request to view the `Surrogate-Key-Raw` header:
 
@@ -45,6 +46,8 @@ This section provides steps on how to test your Global CDN caching.
 1. Remove the pipe (`|`) and everything following it from these commands to see all headers. 
 
 ## Test Global CDN with Browser Headers
+
+You can also test Global CDN with browser headers.
 
 ### View HTTPS Headers with Chrome
 
@@ -66,11 +69,11 @@ This section provides steps on how to test your Global CDN caching.
 
 1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
 
-### View HTTPS Headers with Internet Explorer
+### View HTTPS Headers with Edge
 
-1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
+1. Use the developer tools by pressing **F12** or by clicking **Settings**, then clicking **More tools**, and then **Developer Tools**.
 
-1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
+  - By default, DevTools records all network requests in the Network tool as long as DevTools remains open.
 
 ## How to Read HTTP Headers
 
