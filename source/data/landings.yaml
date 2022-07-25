@@ -491,6 +491,22 @@
     type: 'reference'
     subtitle: 'Familiarize yourself with all the terms found in our docs.'
     url: '/glossary'
+guides:
+    - title: 'Platform Overview'
+      links:
+        - image: 'logos/deploybot.png'
+        - text: 'Terminology'
+          url: '/overview/terminology'
+        - text: 'Architecture'
+          url: '/overview/platform'
+        - text: 'Products'
+          url: '/overview/products'
+        - text: 'Integrations'
+          url: '/overview/integrations'
+        - text: 'Accounts'
+          url: '/overview/accounts'
+        - text: 'Support'
+          url: '/overview/support'
   topics-groups:
     - title: 'Platform Services & Resources'
       subtitle: 'Learn about the services and resources provided to your website.'

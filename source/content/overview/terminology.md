@@ -1,5 +1,5 @@
 ---
-title: Key Terms
+title: Terminology
 description: Learn the language of Pantheon.
 categories: [overview]
 tags: [support]
@@ -15,7 +15,7 @@ When first starting with Pantheon, it might feel like you've landed in a country
 <dd>CMS is a software application that allows users to collaborate in the creation, editing, and production of digital content, such as web pages, blog posts, etc. Pantheon supports both Drupal and WordPress.</dd>
 
 <dt>Containers</dt>
-<dd>At their simplest, containers package code and it's dependencies together. We serve our customers by provisioning isolated Linux containers with an optimized PHP stack in place. Each container includes its own Nginx, [APCu cache](/apcu), and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Object Cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) and [All About Application Containers](/application-containers) for more information.</dd>
+<dd>At their simplest, containers package code and its dependencies together. We serve our customers by provisioning isolated Linux containers with an optimized PHP stack in place. Each container includes its own Nginx, [APCu cache](/apcu), and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Object Cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) and [All About Application Containers](/application-containers) for more information.</dd>
 
 <dt>Custom Upstreams</dt>
 <dd>Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. Learn more at [Introduction to Custom Upstreams](/guides/custom-upstream).</dd>
