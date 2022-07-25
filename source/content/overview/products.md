@@ -11,6 +11,28 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 ## Managed Hosting and Servers
 
+<CardGroup>
+
+  <Card title={"Decoupled Hosting"} link={"https://github.com/pantheon-systems/terminus-build-tools-plugin"}>
+
+Create a [GitHub](https://github.com) PR Workflow to test Pantheon sites on [CircleCI](https://circleci.com/) (or other CI services).
+
+  </Card>
+
+  <Card title={"Drupal Hosting"} link={"https://github.com/pantheon-systems/terminus-composer-plugin"}>
+
+Run [Composer](https://getcomposer.org/) commands on Pantheon sites.
+
+  </Card>
+
+<Card title={"WordPress Hosting"} link={"https://github.com/pantheon-systems/terminus-drupal-console-plugin"}>
+
+Run Drupal Console commands on Pantheon sites.
+
+  </Card>
+
+</CardGroup>
+
 - [WordPress Hosting](/guides/wordpress-pantheon/)
 - [Drupal Hosting](/drupal-9)
 - [Decoupled Hosting](/decoupled-sites)
