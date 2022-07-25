@@ -11,7 +11,13 @@ permalink: docs/guides/global-cdn
 anchorid: global-cdn
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN allows you to tap into powerful and strategically distributed CHI metro Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/guides/global-cdn/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous pages for sites on the platform. By serving data from cache servers all over the world, website visitors receive a response without waiting to access the application container. 
+
+## Points of Presence 
+
+Global CDN allows you to tap into powerful and strategically distributed CHI metro Points of Presence (POPs) around the globe, where site pages and assets are cached, and [HTTPS](/guides/global-cdn/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org). When a website uses these CHI metro POPs effectively, the site can free up its PHP workers and database to process more dynamic requests. Each POP can handle hundreds of thousands of requests per second, much more than a site's own PHP and database containers.
+
+See [Points of Presence Workflow](/guides/global-cdn/global-cdn-caching#points-of-presence-workflow) for more details.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

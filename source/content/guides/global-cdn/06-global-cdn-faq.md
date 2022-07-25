@@ -14,7 +14,7 @@ anchorid: global-cdn-faq
 
 This section provides answers to frequently asked Global CDN questions.
 
-### I already have a CDN. Can I use it with the Pantheon Global CDN?
+### Can I use my current CDN with the Pantheon Global CDN?
 
 Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address.
 
@@ -31,10 +31,6 @@ No, the www-redirector service is part of the legacy infrastructure. You can cho
 ### Are vanity domains supported?
 
 You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
-
-### What about Cloudflare?
-
-See [Cloudflare Domain Configuration](/cloudflare).
 
 ### Is the CDN configurable?
 
@@ -65,10 +61,6 @@ curl -IsH "Pantheon-Debug:1" https://www.example.com/ | grep surrogate-key-raw
 ![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](../../../images/surrogate-key-raw-example.png)
 
 To prevent issues with Twitter card validation and to reduce the overall time to load, the `Surrogate-Key-Raw` header is not returned by default. Exposing this header provides context for entities included on a given page.
-
-## Advanced Global CDN
-
-For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) service.
 
 ### How do I switch my site over to HTTPS from HTTP?
 
@@ -140,4 +132,12 @@ Refer to [Cloudflare Domain Configuration](/cloudflare).
 ### For how long are Let's Encrypt certificates valid and what happens when they expire?
 
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
+
+## More Resources
+
+- [Custom Certificates](/custom-certificates#option-2-manually-managed-custom-certificates)
+
+- [Bypassing Cache with HTTP Headers](/cache-control)
+
+- [Caching: Advanced Topics](/caching-advanced-topics)
 
