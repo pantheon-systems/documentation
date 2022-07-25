@@ -1,6 +1,6 @@
 ---
 title: Pantheon Global CDN
-subtitle: "HTTPS on Pantheon's Global CDN"
+subtitle: Provision HTTPS
 description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
 categories: [go-live]
 tags: [cdn, dns, https, security]
@@ -98,3 +98,6 @@ If you encounter rate limits, we recommend the following approaches:
 ## More Resources
 
 - [Custom Certificates](/custom-certificates#option-2-manually-managed-custom-certificates)
+
+- [Bypassing Cache with HTTP Headers](/cache-control)
+
