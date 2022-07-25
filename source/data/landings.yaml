@@ -1095,6 +1095,8 @@
           url: '/overview/products'
         - text: 'Integrations'
           url: '/overview/integrations'
+        - text: 'Workflows'
+          url: '/overview/workflows'
         - text: 'Account Management'
           url: '/overview/accounts'
         - text: 'Support'
