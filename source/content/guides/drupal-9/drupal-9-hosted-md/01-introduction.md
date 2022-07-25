@@ -32,7 +32,7 @@ This upgrade will not maintain your site’s commit history.
 
 <Alert title="Multidev Required" type="danger">
 
-To maintain best practices and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
+To maintain best practices and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/guides/multidev) feature.
 
 Pantheon support is not available to users who avoid the Multidev steps.
 

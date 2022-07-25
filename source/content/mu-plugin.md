@@ -306,7 +306,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 
 ### WP-CFM Compatibility
 
-[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/multidev) environments, but a Must Use plugin needs to be configured:
+[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/guides/multidev) environments, but a Must Use plugin needs to be configured:
 
 ```php
 add_filter( 'wpcfm_multi_env', function( $pantheon_envs ) {

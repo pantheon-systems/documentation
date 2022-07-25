@@ -261,7 +261,7 @@ terminus env:clear-cache <site>.live
 
 There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live:
 
-- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
+- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/guides/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
 
 - Code changes have been force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
 

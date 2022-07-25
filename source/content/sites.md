@@ -9,7 +9,7 @@ The Site Dashboard is where you can find all the tools you need to successfully 
 
 ![Site Dashboard](../images/dashboard/site-dashboard-image.png)
 
-At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/multidev).
+At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/guides/multidev).
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
 

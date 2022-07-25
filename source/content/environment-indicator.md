@@ -4,7 +4,7 @@ description: Learn how to implement an environment indicator for Drupal and Word
 categories: [develop]
 tags: [site, terminus, workflow, webops]
 ---
-Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/multidev).
+Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/guides/multidev).
 
 For a heads-up indicator of your Pantheon site and environment, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
 

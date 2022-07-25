@@ -25,7 +25,7 @@ Create content on your test site and use the standard [Pantheon workflow](/panth
 
 ### Sample a Few Sites
 
-We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/multidev) environment or agencies that manage large portfolios. Release the update when things look good on these sites.
+We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/guides/multidev) environment or agencies that manage large portfolios. Release the update when things look good on these sites.
 
 ## Before You Begin
 

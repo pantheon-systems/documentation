@@ -11,7 +11,7 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 </Alert>
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

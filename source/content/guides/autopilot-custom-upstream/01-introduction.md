@@ -21,7 +21,7 @@ Pantheon's Autopilot:
 
 - Automatically detects when new updates are available
 
-- Performs the updates in an isolated [Multidev](/multidev) environment
+- Performs the updates in an isolated [Multidev](/guides/multidev) environment
 
 - Tests the updates with automated VRT
 
@@ -87,5 +87,5 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 
 - [Custom Upstreams Guide](/guides/custom-upstream)
 
-- [Multidev](/multidev)
+- [Multidev](/guides/multidev)
 

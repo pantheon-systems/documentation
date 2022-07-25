@@ -34,7 +34,7 @@ This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml`
 
 ## Pull Request Workflow
 
-In this WebOps workflow, a [Multidev](/multidev) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
+In this WebOps workflow, a [Multidev](/guides/multidev) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
 ![Multidev PR workflow](../../images/pr-workflow/github-circle-pantheon.png)
 

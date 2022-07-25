@@ -6,7 +6,7 @@ categories: [develop]
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
 ---
-Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/guides/git/git-config) or working in the WordPress or Drupal admin interface in [SFTP](/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/multidev)) in **SFTP** mode.
+Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/guides/git/git-config) or working in the WordPress or Drupal admin interface in [SFTP](/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/guides/multidev)) in **SFTP** mode.
 
 <Alert title="Exports" type="export">
 
@@ -83,7 +83,7 @@ export SITE=yoursitename
 
 </Alert>
 
-1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/multidev) environment set to [SFTP mode](#sftp-mode).
+1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/guides/multidev) environment set to [SFTP mode](#sftp-mode).
 
   <Alert title="Note" type="info">
 
@@ -91,7 +91,7 @@ export SITE=yoursitename
 
   </Alert>
 
-1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/multidev#merge-code) the change to Dev at this point.
+1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/guides/multidev#merge-code) the change to Dev at this point.
 
 1. Use [WP-CLI](/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
 
