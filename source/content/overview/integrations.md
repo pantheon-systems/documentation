@@ -11,31 +11,129 @@ Extend the capabilities of Pantheon with these integrations:
 
 ## Site Management
 
-- [Quicksilver](/quicksilver)
-- [Pingdom Uptime Check](/guides/pingdom-uptime-check)
 
+<ProductGroup>
+
+  <Product title={"Pingdom Uptime Check"} link={"/guides/pingdom-uptime-check"}>
+
+  [Pingdom](https://www.pingdom.com/) provides several different types of uptime and performance checks
+
+  </Product>
+
+  <Product title={"Quicksilver"} link={"/quicksilver"}>
+
+  Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow.
+
+  </Product>
+
+</ProductGroup>
 
 ## Site Extensions
 
-- [Opensolr: search](/opensolr)
-- [Sendgrid: email](/guides/sendgrid)
-- [Drupal Commerce](/guides/drupal-9-commerce)
-- [AWS S3 Setup for WordPress](/wordpress-s3/)
+<ProductGroup>
 
+  <Product title={"AWS S3 Setup for Drupal"} link={"/drupal-s3"}>
+
+  Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution
+
+  </Product>
+
+  <Product title={"AWS S3 Setup for WordPress"} link={"/wordpress-s3"}>
+
+  Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution
+
+  </Product>
+
+  <Product title={"Drupal Commerce"} link={"/guides/drupal-9-commerce"}>
+
+  [Drupal Commerce](https://drupalcommerce.org/) is an e-commerce implementation designed specifically for Drupal
+
+  </Product>
+  
+  <Product title={"Opensolr"} link={"/opensolr"}>
+
+  [Opensolr](https://pantheon.io/docs/opensolr#:~:text=The-,Opensolr,-service%20offers%C2%A0a) offers automated provisioning for the most complex Failover Systems.
+
+  </Product>
+
+  <Product title={"Sendgrid"} link={"/guides/sendgrid"}>
+
+  [Sendgrid](https://sendgrid.com/) provides reliable inbox delivery at scale.
+
+  </Product>
+
+ </ProductGroup>
 
 ## Project Management
 
-- [Asana](/guides/asana/)
-- [Jira](/guides/jira/)
-- [Pivotal Tracker](/guides/pivotal-tracker/)
-- [Trello](/guides/trello/)
+<ProductGroup>
 
+  <Product title={"Asana"} link={"/guides/asana/"}>
+
+  [Asana](https://asana.com/) is a flexible project management tool which helps teams to collaborate on projects in either an waterfall or kanban framework.
+
+  </Product>
+
+  <Product title={"Pivotal Tracker"} link={"/guides/pivotal-tracker/"}>
+
+  [Pivotal Tracker](https://www.pivotaltracker.com/) is a tool for agile teams which may need to balance several projects at once, but need short term clarity into work-in-progress. 
+
+  </Product>
+
+  <Product title={"Trello"} link={"/guides/trello/"}>
+
+  [Trello](https://trello.com/) helps teams to collaborate on projects in an agile framework
+
+  </Product>
+
+
+</ProductGroup>
 
 ## Security and Authentication
 
-- [2FA](/guides/two-factor-authentication)
-- [Lockr](/guides/lockr/)
-- [LDAP](/ldap-and-ldaps/)
-- [Machine Tokens](/machine-tokens/)
-- [SSO](/sso-organizations/)
-- [WP SAML Auth](/guides/wordpress-google-sso/)
+<ProductGroup>
+
+  <Product title={"2FA"} link={"/guides/two-factor-authentication"}>
+
+  2FA is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password
+
+  </Product>
+
+  <Product title={"Lockr"} link={"/guides/lockr/"}>
+
+  [Lockr](https://lockr.io/) works with Pantheon's Secure Integration to provide an additional layer of security to your site.
+
+  </Product>
+
+  <Product title={"LDAP"} link={"/ldap-and-ldaps"}>
+
+  LDAP provides access and maintenance of a distributed directory storing organized sets of records.
+
+  </Product>
+
+  <Product title={"Machine Tokens"} link={"/machine-tokens"}>
+
+  Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
+
+  </Product>
+
+  <Product title={"Shibboleth SSO"} link={"/shibboleth-sso"}>
+
+  Use SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
+
+  </Product>
+
+  <Product title={"SSO"} link={"/sso-organizations"}>
+
+  Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
+
+  </Product>
+
+  <Product title={"WP SAML Auth"} link={"/guides/wordpress-google-sso"}>
+
+   [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) lets your users sign into WordPress using their Google Account.
+
+  </Product>
+
+</ProductGroup>
+

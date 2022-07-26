@@ -37,21 +37,15 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"CDN"} link={"/global-cdn"}>
-
-  Pantheon's Global CDN is a core platform offering that provides improved performance and security for customer sites. 
-
-  </Product>
-
-  <Product title={"Security"} link={"/guides/secure-development"}>
-
-  All Pantheon sites come with built-in security features, including secure infrastructure, encrypted channels, and least-privilege user access.
-
-  </Product>
-
   <Product title={"Backups"} link={"/backups"}>
 
   Nightly automated backups of your site’s database, files, and code are stored and created by job workers also running in the site's region.
+
+  </Product>
+
+  <Product title={"CDN"} link={"/global-cdn"}>
+
+  Pantheon's Global CDN is a core platform offering that provides improved performance and security for customer sites. 
 
   </Product>
 
@@ -61,15 +55,21 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
+  <Product title={"Security"} link={"/guides/secure-development"}>
+
+  All Pantheon sites come with built-in security features, including secure infrastructure, encrypted channels, and least-privilege user access.
+
+  </Product>
+
 </ProductGroup>
 
 ## Developer Tools
 
 <ProductGroup>
 
-  <Product title={"Terminus CLI"} link={"/terminus"}>
+  <Product title={"Build Tools"} link={"guides/build-tools/"}>
 
-  Access complete platform functionality from our integrated command line.
+  Build Tools connects Pantheon with your CI service and external Git provider.
 
   </Product>
 
@@ -79,15 +79,33 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Version Control with Git"} link={"/guides/git/"}>
+  <Product title={"Dev & Staging Environments"} link={"/pantheon-workflow"}>
+
+  Every site comes with identical Dev, Test, and Live environments, so you can test on your non-production instances before going live with new features, and without having to stop all work-in-progress.
+
+  </Product>
+
+  <Product title={"Git"} link={"/guides/git/"}>
 
   Pantheon provides industry standard version control with [Git](https://git-scm.com/).
 
   </Product>
 
-  <Product title={"Dev & Staging Environments"} link={"/pantheon-workflow"}>
+  <Product title={"New Relic Performance Monitoring"} link={"/new-relic"}>
 
-  Every site comes with identical Dev, Test, and Live environments, so you can test on your non-production instances before going live with new features, and without having to stop all work-in-progress.
+  New Relic® Performance Monitoring offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+
+  </Product>
+
+  <Product title={"Terminus CLI"} link={"/terminus"}>
+
+  Access complete platform functionality from our integrated command line.
+
+  </Product>
+
+  <Product title={"Valhalla"} link={"/files"}>
+
+  Valhalla creates a symbolic link (symlink), to the files directory in the appropriate location of your docroot.
 
   </Product>
 
@@ -111,7 +129,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Batch Edits"} link={"/quicksilver#hooks"}>
 
-  what on earth is this?
+  Is this a thing?
 
   </Product>
 
@@ -129,7 +147,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Analytics"} link={""}>
 
-  Huh?
+  Is this a thing?
 
   </Product>
 
