@@ -157,26 +157,28 @@ In general, there's no need for temporary files to persist across application co
 
 <Tab title="WordPress" id="wpworkaround" active={true}>
 
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
+Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. 
 
-```php:title=site-config.php
-/**
-* WordPress
-* Persistent tmp across app containers
-* Replace SOME_TMP_SETTING
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  define('SOME_TMP_SETTING', '/wp-content/uploads/private/tmp');
-}
-```
+1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
-The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  ```php:title=site-config.php
+  /**
+  * WordPress
+  * Persistent tmp across app containers
+  * Replace SOME_TMP_SETTING
+  */
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define('SOME_TMP_SETTING', '/wp-content/uploads/private/tmp');
+  }
+  ```
 
-Verify the setting by using [Terminus](/terminus) to run `wp config get`:
+  - The `private` and `tmp` directories do not exist by default. you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-```bash
-terminus wp $site.$env -- config get SOME_TMP_SETTING
-```
+1. Verify the setting by using [Terminus](/terminus) to run `wp config get`:
+
+  ```bash
+  terminus wp $site.$env -- config get SOME_TMP_SETTING
+  ```
 
 Output of this command should look something like the following Contact Form 7 example:
 
@@ -186,26 +188,28 @@ Output of this command should look something like the following Contact Form 7 e
 
 <Tab title="Drupal 7" id="d7workaround">
 
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
+Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$conf` override in `settings.php`. 
 
-```php:title=settings.php
-/**
-* Drupal 7
-* Persistent tmp across app containers
-* Replace some_tmp_setting
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['some_tmp_setting'] = 'sites/default/files/private/tmp';
-}
-```
+1. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
-The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  ```php:title=settings.php
+  /**
+  * Drupal 7
+  * Persistent tmp across app containers
+  * Replace some_tmp_setting
+  */
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    $conf['some_tmp_setting'] = 'sites/default/files/private/tmp';
+  }
+  ```
 
-Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+  - The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-```bash{promptUser: user}
-terminus drush $site.$env -- variable-get some_tmp_setting
-```
+1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+
+  ```bash{promptUser: user}
+  terminus drush $site.$env -- variable-get some_tmp_setting
+  ```
 
 Output of this command should look something like the following Plupload example:
 
@@ -215,20 +219,29 @@ Output of this command should look something like the following Plupload example
 
 <Tab title="Drupal 9" id="d9workaround">
 
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$settings` override in `settings.php`. Replace `file_temp_path` with the conflicting module or theme setting:
+Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$settings` override in `settings.php`. 
 
-```php:title=settings.php
-/**
-* Drupal 9
-* Fix unsupported temporary path
-* Replace file_temp_path
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $settings['file_temp_path'] = 'sites/default/files/private/tmp';
-}
-```
+1. Replace `file_temp_path` with the conflicting module or theme setting:
 
-The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  ```php:title=settings.php
+  /**
+  * Drupal 9
+  * Fix unsupported temporary path
+  * Replace file_temp_path
+  */
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    $settings['file_temp_path'] = 'sites/default/files/private/tmp';
+  }
+  ```
+
+  - The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+
+1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+
+  ```bash{promptUser: user}
+  terminus drush $site.$env -- variable-get file_tmp_path
+  ```
+
 </Tab>
 
 </TabList>
