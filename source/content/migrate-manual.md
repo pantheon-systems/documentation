@@ -429,6 +429,10 @@ ff = only
 
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
-## See Also
+## More Resources
 
-Check our standard migration procedure for related [Frequently Asked Questions](/guides/guided/faq) and [Troubleshooting](/guides/guided/troubleshooting) tips.
+- [Frequently Asked Questions](/guides/guided/faq)
+
+- [Troubleshooting](/guides/guided/troubleshooting) tips
+
+- [Importing Drush Site Archives with Terminus](/drush-import)
