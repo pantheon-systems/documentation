@@ -203,7 +203,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
   }
   ```
 
-  - The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  - The `private` and `tmp` directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
 1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
@@ -234,7 +234,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
   }
   ```
 
-  - The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  - The `private` and `tmp` directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
 1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
