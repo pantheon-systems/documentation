@@ -52,11 +52,6 @@ Correct an unsupported temporary path set by a plugin or theme in `wp-config.php
 1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
   ```php
-  /**
-  * WordPress
-  * Fix unsupported temporary path
-  * Replace SOME_TMP_SETTING
-  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
   }
@@ -81,11 +76,6 @@ Correct an unsupported temporary path set by a module or theme using `$conf` ove
 1. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
-  /**
-  * Drupal 7
-  * Fix unsupported temporary path
-  * Replace some_tmp_setting
-  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
   }
@@ -110,11 +100,6 @@ Correct an unsupported temporary path set by a module or theme using `$settings`
 1. Replace `file_temp_path` with the conflicting module or theme setting:
 
   ```php
-  /**
-  * Drupal 9
-  * Fix unsupported temporary path
-  * Replace file_temp_path
-  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $settings['file_temp_path'] = $_SERVER['HOME'] . '/tmp';
   }
@@ -125,7 +110,6 @@ Correct an unsupported temporary path set by a module or theme using `$settings`
   ```bash
   terminus drush $site.$env -- variable-get file_temp_path
   ```
-
 
 </Tab>
 
