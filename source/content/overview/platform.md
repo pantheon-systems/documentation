@@ -9,7 +9,7 @@ permalink: docs/overview/platform
 
 Unlike traditional hosting, Pantheon delivers truly elastic hosting through automation in software. Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
 
-**Need Visual. Similar to https://pantheon.io/features/elastic-hosting?**
+NEED VISUAL. SIMILAR TO https://pantheon.io/features/elastic-hosting?
 
 ## Edge
 
