@@ -95,6 +95,8 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 ## Automation Tools
 
+<ProductGroup>
+
   <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/guides/autopilot"}>
 
   Automate finding, testing, and applying WordPress and Drupal updates. 
@@ -107,9 +109,9 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Batch Edits"} link={""}>
+  <Product title={"Batch Edits"} link={"/quicksilver#hooks"}>
 
-  
+  what on earth is this?
 
   </Product>
 
@@ -127,7 +129,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Analytics"} link={""}>
 
-  
+  Huh?
 
   </Product>
 
