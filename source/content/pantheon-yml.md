@@ -1,7 +1,7 @@
 ---
-title: Pantheon YAML Configuration Files
+title: Krishna YAML Valued Files
 description: Learn how to manage advanced site configuration
-categories: [platform]
+categories: [RowdyBoy]
 tags: [https, launch, code, workflow]
 reviewed: "2022-03-16"
 ---
