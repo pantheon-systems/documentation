@@ -47,24 +47,26 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
 <Tab title="WordPress" id="wptmppath" active={true}>
 
-Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
+Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. 
 
-```php
-/**
-* WordPress
-* Fix unsupported temporary path
-* Replace SOME_TMP_SETTING
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
-}
-```
+1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
-Verify the setting by using [Terminus](/terminus) to run `wp config get`:
+  ```php
+  /**
+  * WordPress
+  * Fix unsupported temporary path
+  * Replace SOME_TMP_SETTING
+  */
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
+  }
+  ```
 
-```bash{promptUser: user}
-terminus wp $site.$env -- config get SOME_TMP_SETTING
-```
+1. Verify the setting by using [Terminus](/terminus) to run `wp config get`:
+
+  ```bash{promptUser: user}
+  terminus wp $site.$env -- config get SOME_TMP_SETTING
+  ```
 
 Output of this command should look something like the following Contact Form 7 example:
 
@@ -74,24 +76,26 @@ Output of this command should look something like the following Contact Form 7 e
 
 <Tab title="Drupal 7" id="d7tmppath">
 
-Correct an unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
+Correct an unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. 
 
-```php
-/**
-* Drupal 7
-* Fix unsupported temporary path
-* Replace some_tmp_setting
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
-}
-```
+1. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
-Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+  ```php
+  /**
+  * Drupal 7
+  * Fix unsupported temporary path
+  * Replace some_tmp_setting
+  */
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
+  }
+  ```
 
-```bash
-terminus drush $site.$env -- variable-get some_tmp_setting
-```
+1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+
+  ```bash
+  terminus drush $site.$env -- variable-get some_tmp_setting
+  ```
 
 Output of this command should look something like the following Plupload example:
 
@@ -101,18 +105,28 @@ Output of this command should look something like the following Plupload example
 
 <Tab title="Drupal 9" id="d9tmppath">
 
-Correct an unsupported temporary path set by a module or theme using `$settings` override in `settings.php`. Replace `file_temp_path` with the conflicting module or theme setting:
+Correct an unsupported temporary path set by a module or theme using `$settings` override in `settings.php`. 
 
-```php
-/**
-* Drupal 9
-* Fix unsupported temporary path
-* Replace file_temp_path
-*/
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $settings['file_temp_path'] = $_SERVER['HOME'] . '/tmp';
-}
-```
+1. Replace `file_temp_path` with the conflicting module or theme setting:
+
+  ```php
+  /**
+  * Drupal 9
+  * Fix unsupported temporary path
+  * Replace file_temp_path
+  */
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    $settings['file_temp_path'] = $_SERVER['HOME'] . '/tmp';
+  }
+  ```
+
+1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+
+  ```bash
+  terminus drush $site.$env -- variable-get file_temp_path
+  ```
+
+
 </Tab>
 
 </TabList>
