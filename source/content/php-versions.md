@@ -37,7 +37,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
-| [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.1. New Relic is not supported in PHP 8.1." /> |
+| [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues." /> |
 | [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0." /> |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
 | [7.3](https://v73-php-info.pantheonsite.io/) | ❌          | EOL     |
@@ -78,11 +78,7 @@ End-of-Sale versions are no longer available to new sites on the platform. Exist
 
 #### Compatibility Considerations
 
-New Relic is not supported in PHP 8.1
-
-WordPress is not fully compatible with PHP 8.0 or PHP 8.1 and deprecation notices remain in WordPress 5.9. With a deprecation notice, the PHP code will continue to work for supported entities until a future release.
-
-You can follow the development updates for WordPress with PHP 8.0 and PHP 8.1 on the [WordPress core](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) site.
+PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues.
 
 ### CMS Version Requirements
 
