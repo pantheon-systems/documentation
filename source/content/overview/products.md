@@ -65,6 +65,8 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 ## Developer Tools
 
+<ProductGroup>
+
   <Product title={"Terminus CLI"} link={"/terminus"}>
 
   Access complete platform functionality from our integrated command line.
@@ -89,6 +91,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
+</ProductGroup>
 
 ## Automation Tools
 
@@ -110,7 +113,11 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
+</ProductGroup>
+
 ## Marketing and Editor Tools
+
+<ProductGroup>
 
   <Product title={"Personalization"} link={"/guides/edge-integrations/"}>
 
@@ -123,5 +130,7 @@ Pantheon offers a wide array of products and features to simplify building and m
   
 
   </Product>
+
+</ProductGroup>
 
 
