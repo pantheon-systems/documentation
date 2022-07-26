@@ -11,7 +11,7 @@ permalink: docs/guides/global-cdn/https
 anchorid: https
 ---
 
-Pantheon's [Global CDN](/guides/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
+Pantheon's [Global CDN](/guides/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform. Your [HTTPS](/guides/global-cdn/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon">
 

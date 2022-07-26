@@ -13,16 +13,6 @@ anchorid: global-cdn-caching
 
 This section provides steps on how to configure and verify your edge caching.
 
-## Points of Presence Workflow
-
-Every site Pantheon site uses Global CDN. This means that every HTTP request from a website visitor first goes to closest CHI metro [POP](/guides/global-cdn#points-of-presence) to see if there's a regional cache of the content. If the closest POP doesn't have the content, the request will then go to a POP near the origin (i.e. the PHP workers and database). If the content is cached anywhere in the world, the origin POP will have a copy. If neither POP has appropriate cache data, the request will continue to an application container worker, which will generate responses that may be cached on the way back to the browser.
-
-![Varnish Diagram](../../../images/cdn-flow.png)
-
-Global CDN can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by POPs, and end-users won't encounter errors or broken pages.
-
-## Configure Global CDN Caching
-
 Global CDN is automatically present on each Pantheon site. You do not need to form install or activate it. However, you should review the content on this page if you are interested in configuring how Global CDN will cache your site.
 
 <Alert title="Note" type="info">
@@ -31,7 +21,19 @@ Global CDN does not require a module or plugin installation. Do **not** install 
 
 </Alert>
 
-### HTTP Headers
+## Cache Clearing
+
+We recommend installing the Pantheon Advanced Page Cache to take advantage of Global CDN's granular cache clearing capabilities. 
+
+- [Advanced Page Cache plugin for WordPress](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
+
+- [Advanced Page Cache module for Drupal](https://www.drupal.org/project/pantheon_advanced_page_cache)
+
+Additionally, you can remove all pages from cache in the Site Dashboard under Site Admin or from the command line.
+
+For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
+
+## HTTP Headers
 
 You do not need to separately configure your HTTP headers for Global CDN.
 

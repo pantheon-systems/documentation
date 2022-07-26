@@ -11,11 +11,11 @@ permalink: docs/guides/global-cdn/experience-protection
 anchorid: experience-protection
 ---
 
-Experience Protection provides a seamless, uninterrupted experience for the user. If the server is not responding and can't serve a new copy of a page, Global CDN will choose to serve a cached version instead of displaying an error, even if the cached version has expired (this is called _stale cache_).
+Experience Protection provides a seamless, uninterrupted experience for your users. Global CDN will serve a cached version of your page instead of displaying an error iff the server is not responding and can't serve a new copy of the page. Global CDN will display the cached version even if it is _stale cache_ (expired). 
 
 ## Adjust TTL to Determine Fresh vs. Stale Content
 
-Your site’s CMS page-level caching must be correctly configured to take advantage of Experience Protection settings.
+Your site’s CMS page-level caching must be correctly configured to take advantage of Experience Protection.
 
 You can adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL). Set the cache TTL to a value equal to or higher than 3700 seconds for best results:
 
@@ -52,7 +52,6 @@ Check your logs for:
 - Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
 
 - Known exploit and excess traffic paths.
-
 
 ## More Resources
 
