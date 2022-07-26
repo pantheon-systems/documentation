@@ -1087,7 +1087,7 @@
     - title: ''
       type: 'normal'
       links:
-         - text: 'Architecture'
+        - text: 'Architecture'
           url: '/overview/platform'
         - text: 'Products'
           url: '/overview/products'
