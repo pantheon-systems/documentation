@@ -162,11 +162,6 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
   ```php:title=site-config.php
-  /**
-  * WordPress
-  * Persistent tmp across app containers
-  * Replace SOME_TMP_SETTING
-  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('SOME_TMP_SETTING', '/wp-content/uploads/private/tmp');
   }
@@ -193,11 +188,6 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 1. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php:title=settings.php
-  /**
-  * Drupal 7
-  * Persistent tmp across app containers
-  * Replace some_tmp_setting
-  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $conf['some_tmp_setting'] = 'sites/default/files/private/tmp';
   }
@@ -224,11 +214,6 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 1. Replace `file_temp_path` with the conflicting module or theme setting:
 
   ```php:title=settings.php
-  /**
-  * Drupal 9
-  * Fix unsupported temporary path
-  * Replace file_temp_path
-  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $settings['file_temp_path'] = 'sites/default/files/private/tmp';
   }
