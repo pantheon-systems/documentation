@@ -14,7 +14,7 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 - Create a Pantheon account with at least one free Dev site slot open. 
 
-   - A [Pantheon account is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
+   - A [Pantheon account is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, reach out to your Account Manager and they can grant you one.
 
 - If you have a non-Composer managed Drupal 7 site, verify that you are using Drush 8. Note that Composer-managed sites are not supported.
 
@@ -22,7 +22,7 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
    <Alert title="Note"  type="info" >
 
-   If you are moving a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site, use one of the following guides instead:
+   If you are migrating a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site, use one of the following guides instead:
 
       - Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
 
@@ -30,7 +30,7 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
    </Alert>
 
-- Verify that you have Drush access to your existing Drupal site.
+- Verify that you have Drush access on your existing Drupal site.
 
 ## Generate a Drush Archive
 
@@ -95,7 +95,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 ## Automate Imports
 
-Every aspect of the Terminus process is designed to support automation. You can script imports like this to run several concurrently (or in serial).
+Every aspect of the Terminus process is designed to support automation. You can script imports to run several concurrently (or in serial).
 
 Terminus is a rapidly evolving project, so stay tuned. Let us know what you would like to see, and forks and pull requests are always welcome!
 
