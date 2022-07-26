@@ -13,57 +13,115 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 <ProductGroup>
 
-  <Product title={"Decoupled Hosting"} link={"https://github.com/pantheon-systems/terminus-build-tools-plugin"}>
+  <Product title={"WordPress Hosting"} link={"/guides/wordpress-pantheon/"}>
 
-Create a [GitHub](https://github.com) PR Workflow to test Pantheon sites on [CircleCI](https://circleci.com/) (or other CI services).
-
-  </Product>
-
-  <Product title={"Drupal Hosting"} link={"https://github.com/pantheon-systems/terminus-composer-plugin"}>
-
-Run [Composer](https://getcomposer.org/) commands on Pantheon sites.
+  Our WordPress hosting delivers sites with unrivaled speed, uptime, and scalability.
 
   </Product>
 
-  <Product title={"WordPress Hosting"} link={"https://github.com/pantheon-systems/terminus-drupal-console-plugin"}>
+  <Product title={"Drupal Hosting"} link={"/drupal-9"}>
 
-Run Drupal Console commands on Pantheon sites.
+  One-click core updates, no server management, and the highest performance possible for the latest versions of Drupal.
+
+  </Product>
+
+  <Product title={"Decoupled Hosting"} link={"/decoupled-sites"}>
+
+  Decoupled Sites run a Node.js codebase in parallel with a WordPress or Drupal site.
+
+  </Product>
+
+  <Product title={"Caching"} link={"/videos/cache"}>
+
+  Pantheon provides key-value based Redis for backend caching.
+
+  </Product>
+
+  <Product title={"CDN"} link={"/global-cdn"}>
+
+  Pantheon's Global CDN is a core platform offering that provides improved performance and security for customer sites. 
+
+  </Product>
+
+  <Product title={"Security"} link={"/guides/secure-development"}>
+
+  All Pantheon sites come with built-in security features, including secure infrastructure, encrypted channels, and least-privilege user access.
+
+  </Product>
+
+  <Product title={"Backups"} link={"/backups"}>
+
+  Nightly automated backups of your site’s database, files, and code are stored and created by job workers also running in the site's region.
+
+  </Product>
+
+  <Product title={"Failover and Recovery"} link={"/guides/disaster-recovery"}>
+
+  Maintain 99.99% uptime and minimize loss in the event of a total data center failure. 
 
   </Product>
 
 </ProductGroup>
 
-- [WordPress Hosting](/guides/wordpress-pantheon/)
-- [Drupal Hosting](/drupal-9)
-- [Decoupled Hosting](/decoupled-sites)
-- [Caching](/videos/cache)
-- [CDN](/global-cdn)
-- Security <-- pending publication of security guide -->
-- [Back-Ups](/backups)
-- [Failover and Recovery](/guides/disaster-recovery)
-
-
 ## Developer Tools
 
-- [Terminus CLI](/terminus)
-- [Quicksilver Webhooks](/quicksilver#hooks)
-- [Local Development](/guides/localdev)
-- [Composer Dependency Manager](/guides/composer)
-- Deployment Pipeline
-- [Version Control with Git](/guides/git/git-config)
-- [Dev & Staging Environments](/pantheon-workflow)
+  <Product title={"Terminus CLI"} link={"/terminus"}>
+
+  Access complete platform functionality from our integrated command line.
+
+  </Product>
+
+  <Product title={"Composer Dependency Manager"} link={"/guides/composer"}>
+
+  Composer is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
+
+  </Product>
+
+  <Product title={"Version Control with Git"} link={"/guides/git/"}>
+
+  Pantheon provides industry standard version control with [Git](https://git-scm.com/).
+
+  </Product>
+
+  <Product title={"Dev & Staging Environments"} link={"/pantheon-workflow"}>
+
+  Every site comes with identical Dev, Test, and Live environments, so you can test on your non-production instances before going live with new features, and without having to stop all work-in-progress.
+
+  </Product>
 
 
 ## Automation Tools
 
-- [Visual Regression Testing (VRT) with Autopilot](/guides/autopilot)
-- [Automatic Updates with Autopilot](/guides/autopilot)
-- Batch Edits
+  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/guides/autopilot"}>
 
+  Automate finding, testing, and applying WordPress and Drupal updates. 
+
+  </Product>
+
+  <Product title={"Quicksilver Webhooks"} link={"/quicksilver#hooks"}>
+
+  Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to post workflow data to an external URL for a generic Webhook implementation.
+
+  </Product>
+
+  <Product title={"Batch Edits"} link={""}>
+
+  
+
+  </Product>
 
 ## Marketing and Editor Tools
 
-- Content Management
-- [Personalization](/guides/edge-integrations/)
-- Analytics
+  <Product title={"Personalization"} link={"/guides/edge-integrations/"}>
+
+  Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. 
+
+  </Product>
+
+  <Product title={"Analytics"} link={""}>
+
+  
+
+  </Product>
+
 

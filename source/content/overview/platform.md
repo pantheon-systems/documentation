@@ -9,22 +9,20 @@ permalink: docs/overview/platform
 
 Unlike traditional hosting, Pantheon delivers truly elastic hosting through automation in software. Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
 
+**Need Visual. Similar to https://pantheon.io/features/elastic-hosting?**
+
 ## Edge
 
 The Edge is the exterior of Pantheon — the part that directly touches the public internet. The Edge has a built-in, ultra-fast Varnish cache automatically enabled for every site. It improves page load times and helps sites cruise through viral traffic spikes without breaking a sweat. The Edge also knows how to intelligently route and load-balance requests across the entire Runtime Matrix.
 
-## Content Management
-
-<dfn id="cms">Content Management (CMS)</dfn> is a software application that allows users to collaborate in the creation, editing, and production of digital content, such as web pages, blog posts, etc. Pantheon supports both Drupal and WordPress, as well as allowing you to run a decoupled CMS.
-
 
 ## Containers and the Runtime Matrix
 
-<dfn id="containers">Containers</dfn> package code and its dependencies together. We serve our customers by provisioning isolated Linux containers with an optimized PHP stack in place. Each container includes its own Nginx, [APCu cache](/apcu), and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Object Cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) and [All About Application Containers](/application-containers) for more information.
+<dfn id="containers">Containers</dfn> package code and their dependencies together. We serve our customers by provisioning isolated Linux containers with an optimized PHP stack in place. Each container includes its own Nginx, [APCu cache](/apcu), and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Object Cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) and [All About Application Containers](/application-containers) for more information.
 
-Our Runtime Matrix is where the action happens: it executes the code for your website. Over a million Linux containers running PHP and NGINX are distributed across a big grid of powerful dedicated machines. These containers are provisioned and managed by our software without any need for manual configuration. 
+Our Runtime Matrix executes the code for your website. Over a million Linux containers running PHP and NGINX are distributed across a big grid of powerful dedicated machines. These containers are provisioned and managed by our software without any need for manual configuration. 
 
-The essence of a runtime container is a highly tuned PHP-FPM worker and its connections to the outside world. Incoming requests come via NGINX, which handles requests for static assets and passes dynamic requests to PHP. Runtime containers are "share nothing", but they have connections to services such as:
+A runtime container is a highly tuned PHP-FPM worker and its connections to the outside world. Incoming requests come via NGINX, which handles requests for static assets and passes dynamic requests to PHP. Runtime containers "share nothing", but they have connections to services such as:
 
 - [MariaDB](/database-workflow): Every website needs a database, and we fulfill this need with a horizontally scalable database grid—running the latest MariaDB—that’s similar to the Runtime Matrix in design. The database layer provides redundancy and scalability by supporting a robust replication topology, managed automatically. 
 
@@ -41,3 +39,7 @@ The essence of a runtime container is a highly tuned PHP-FPM worker and its conn
 Every environment for your site (Dev, Test, Live) runs on its own container. At the Performance Medium level and above, the Test and Live environments have multiple containers.
 
 See [All About Application Containers](/application-containers) for more information.
+
+## Content Management
+
+<dfn id="cms">Content Management (CMS)</dfn> is a software application that allows users to collaborate in the creation, editing, and production of digital content, such as web pages, blog posts, etc. Pantheon supports both Drupal and WordPress, as well as allowing you to run a decoupled CMS.
