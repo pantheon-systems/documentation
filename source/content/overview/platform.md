@@ -1,11 +1,14 @@
 ---
-title: Platform Overview
+title: Our Platform
 description: Learn about the components of the Pantheon platform.
 categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/platform
 ---
+
+<navbar>
+  <navbaritem>
 
 Unlike traditional hosting, Pantheon delivers truly elastic hosting through automation in software. Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
 
@@ -43,3 +46,4 @@ See [All About Application Containers](/application-containers) for more informa
 ## Content Management
 
 <dfn id="cms">Content Management (CMS)</dfn> is a software application that allows users to collaborate in the creation, editing, and production of digital content, such as web pages, blog posts, etc. Pantheon supports both Drupal and WordPress, as well as allowing you to run a decoupled CMS.
+

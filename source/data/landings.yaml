@@ -1080,8 +1080,8 @@
           url: '/guides/lockr'
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
-- title: 'Explore Our Platform'
-  subtitle: ''
+- title: 'Pantheon Overview'
+  subtitle: 'Pantheon offers a robust platform for your web sites, offering dozens of features, integrations and customization options.  As such, it can be a little like landing in a country where you don't know the language!  The following documents provide an overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
   path: 'overview'
   guides:
     - title: ''
