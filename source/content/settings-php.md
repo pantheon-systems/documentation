@@ -214,10 +214,11 @@ if (defined('PANTHEON_ENVIRONMENT')) {
  }
 ```
 
-### Where can I get a copy of a default.settings.php?
+### Where can I get a copy of a default.settings.php file?
 
-- Drupal 9 - [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml)
-- Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
+- **Drupal 9:** There is no `default.settings.php` file in the Drupal 9 repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php)
+
+- **Drupal 7:** [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 
 ### Where can I find examples of Pantheon settings.php?
 
