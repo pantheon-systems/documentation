@@ -22,7 +22,7 @@ Extend the capabilities of Pantheon with these integrations:
 
   <Product title={"Quicksilver"} link={"/quicksilver"}>
 
-  Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow.
+  Quicksilver can automate your Pantheon WebOps workflow.
 
   </Product>
 
@@ -70,19 +70,19 @@ Extend the capabilities of Pantheon with these integrations:
 
   <Product title={"Asana"} link={"/guides/asana/"}>
 
-  [Asana](https://asana.com/) is a flexible project management tool which helps teams to collaborate on projects in either an waterfall or kanban framework.
+  [Asana](https://asana.com/) manages team projects and individual tasks..
 
   </Product>
 
   <Product title={"Pivotal Tracker"} link={"/guides/pivotal-tracker/"}>
 
-  [Pivotal Tracker](https://www.pivotaltracker.com/) is a tool for agile teams which may need to balance several projects at once, but need short term clarity into work-in-progress. 
+  [Pivotal Tracker](https://www.pivotaltracker.com/) offers product planning and management. 
 
   </Product>
 
   <Product title={"Trello"} link={"/guides/trello/"}>
 
-  [Trello](https://trello.com/) helps teams to collaborate on projects in an agile framework
+  [Trello](https://trello.com/) helps teams to collaborate on projects in an agile framework.
 
   </Product>
 
@@ -95,7 +95,7 @@ Extend the capabilities of Pantheon with these integrations:
 
   <Product title={"2FA"} link={"/guides/two-factor-authentication"}>
 
-  2FA is a security practice that requires your website users to provide a secondary form of authentication in addition to their standard username and password
+  2FA requires your website users to provide a secondary form of authentication in addition to their standard username and password
 
   </Product>
 

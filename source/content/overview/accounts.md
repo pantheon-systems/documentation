@@ -7,19 +7,13 @@ contributors: [wordsmither]
 permalink: docs/overview/accounts
 ---
 
-Learn ways of setting up your teams, how billing works, and how to get support.  By the end of this section, you should be able to comfortably develop an organization plan and administer your Pantheon platform. 
-
-[some sort of visual, like https://docs.google.com/presentation/d/18g29_dTLfQeUTy84uG9Juso9TPFJYv2-HRbZD3h_Vjc/edit#slide=id.g5e25caeefc_0_97]
-
-## Roles
-
-Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
-
-See [Change Management](/change-management) for more details.
+Learn ways of setting up your teams, using your dashbaords, and how billing works.  By the end of this section, you should be able to comfortably develop an organization plan and administer your Pantheon platform. 
 
 ## Organizations
 
 Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+
+[SOME SORT OF VISUAL, LIKE https://docs.google.com/presentation/d/18g29_dTLfQeUTy84uG9Juso9TPFJYv2-HRbZD3h_Vjc/edit#slide=id.g5e25caeefc_0_97]
 
 From your Organization Dashboard you can manage your
 - Sites
@@ -29,6 +23,12 @@ From your Organization Dashboard you can manage your
 
 
 See [Organizations](/organizations) for details. 
+
+## Roles
+
+Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
+
+See [Change Management](/change-management) for more details.
 
 ## Dashboards
 
@@ -49,8 +49,11 @@ Billing can be managed in one of two places:
 - For specific sites, billing is managed via the [Site Dashboard](/site-billing).
 - For the entire account, billing is managed via the [User Dashboard](/account-billing)
 
-Needed:
--- when does billing start
--- what is billing frequency
--- how are bills received
--- when is payment due
+Billing can be done monthly or annually.
+
+- [Monthly billing](/guides/new-dashboard/workspace-billing/subscriptions) is the default option.  You will receive your first bill [WHEN?]
+  
+- [Annual billing](/annual-billing) is available to all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost. Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+
+
+Once an invoice is received, payment is due [WHEN?]

@@ -31,15 +31,15 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Caching"} link={"/videos/cache"}>
+  <Product title={"Backups"} link={"/backups"}>
 
-  Pantheon provides key-value based Redis for backend caching.
+  Nightly automated backups of your site’s database, files, and code.
 
   </Product>
 
-  <Product title={"Backups"} link={"/backups"}>
+  <Product title={"Caching"} link={"/videos/cache"}>
 
-  Nightly automated backups of your site’s database, files, and code are stored and created by job workers also running in the site's region.
+  Pantheon provides key-value based Redis for backend caching.
 
   </Product>
 
@@ -75,13 +75,13 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Composer Dependency Manager"} link={"/guides/composer"}>
 
-  Composer is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
+  Composer provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
 
   </Product>
 
   <Product title={"Dev & Staging Environments"} link={"/pantheon-workflow"}>
 
-  Every site comes with identical Dev, Test, and Live environments, so you can test on your non-production instances before going live with new features, and without having to stop all work-in-progress.
+  Every site comes with identical Dev, Test, and Live environments, for testing your non-production instances before going live.
 
   </Product>
 
@@ -93,7 +93,13 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"New Relic Performance Monitoring"} link={"/new-relic"}>
 
-  New Relic® Performance Monitoring offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+  New Relic® Performance Monitoring provides a nearly real-time look into the performance of a web application.
+
+  </Product>
+
+  <Product title={"Personalization"} link={"/guides/edge-integrations/"}>
+
+  Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. 
 
   </Product>
 
@@ -123,34 +129,8 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Quicksilver Webhooks"} link={"/quicksilver#hooks"}>
 
-  Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to post workflow data to an external URL for a generic Webhook implementation.
-
-  </Product>
-
-  <Product title={"Batch Edits"} link={"/quicksilver#hooks"}>
-
-  Is this a thing?
+  Use our [Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) for a generic Webhook implementation.
 
   </Product>
 
 </ProductGroup>
-
-## Marketing and Editor Tools
-
-<ProductGroup>
-
-  <Product title={"Personalization"} link={"/guides/edge-integrations/"}>
-
-  Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. 
-
-  </Product>
-
-  <Product title={"Analytics"} link={""}>
-
-  Is this a thing?
-
-  </Product>
-
-</ProductGroup>
-
-

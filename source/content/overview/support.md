@@ -9,23 +9,38 @@ permalink: docs/overview/support
 
 Pantheon offers multiple options to help you in building the best sites possible.
 
-## Documentation
+<ProductGroup>
 
-You're already here!  Browse and search our documentation site for the most current information to manage your site.
+  <Product title={"Documentation"} link={"/"}>
 
-## Pantheon Learning
+  You're already here! Browse and search our documentation site for the most current information to manage your site.
 
-Speed up development with product trainings, resources, and guides. [Learn Pantheon](/learn-pantheon).
+  </Product>
 
-## Professional Services
+  <Product title={"Pantheon Learning"} link={"/learn-pantheon"}>
 
-[Pantheon Professional Services](/guides/professional-services) include consulting, migrations, load testing, application performance and architecture, training, AGCDN, Managed Updates, and dedicated Customer Success Managers.
+  Speed up development with product trainings, resources, and guides.
 
-## Pantheon Community
+  </Product>
 
-Share best practices with other experienced and active users of Pantheon's platform.  See [The Pantheon Community](/pantheon-community) for more information.
+  <Product title={"Professional Services"} link={"guides/professional-services"}>
 
-## Get Support
+  Customized solutions for the most complex technical challenges and ensure your success on Pantheon.
 
-Learn how to access Pantheon's expert team and what your Account tier includes: [Get Support](/guides/support/)
+  </Product>
+
+  <Product title={"Pantheon Community"} link={"/pantheon-community"}>
+
+  Share best practices with other experienced and active users of Pantheon's platform.
+
+  </Product>
+
+  <Product title={"Get Support"} link={"guides/support/"}>
+
+  Pantheon offers a range of support options that include the features required for mission critical sites.
+
+  </Product>
+
+
+</ProductGroup>
 

@@ -1081,7 +1081,7 @@
         - text: 'Using SendGrid To Deliver Email'
           url: '/guides/sendgrid'
 - title: 'Pantheon Overview'
-  subtitle: 'Pantheon offers a robust platform for your web sites, offering dozens of features, integrations and customization options.  As such, it can be a little like landing in a country where you don''t know the language!  The following documents provide an overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
+  subtitle: 'Pantheon offers a robust platform for your web sites, offering dozens of features, integrations and customization options.  As such, it can be a little like landing in a country where you don''t know the language!  The following documents provide an overview of our capabilities, making it possible for you to understand the language, and determine your next steps. [THE FOLLOWING LINKS NEED IMAGES]'
   path: 'overview'
   guides:
     - title: ''
@@ -1093,7 +1093,7 @@
           url: '/overview/products'
         - text: 'Integrations'
           url: '/overview/integrations'
-        - text: 'Workflows'
+        - text: 'Developer Workflow'
           url: '/overview/workflows'
         - text: 'Account Management'
           url: '/overview/accounts'
