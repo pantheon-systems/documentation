@@ -27,11 +27,11 @@ This section provides steps on how to test your Global CDN caching.
     age: 65772
     ```
 
-    - The `-L` flag instructs curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
-    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
-    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
-    - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
- 
+      - The `-L` flag instructs curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
+      - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+      - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
+      - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
+  
 
 1. Add the `Pantheon-Debug: 1` header to your request to view the `Surrogate-Key-Raw` header:
 

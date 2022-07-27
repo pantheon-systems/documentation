@@ -1,7 +1,7 @@
 ---
 title: Pantheon Global CDN
 subtitle: Global CDN FAQ
-description: Detailed information on how to determine if CDN caching is working on your site.
+description: Get answers to your Global CDN questions.
 categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith]

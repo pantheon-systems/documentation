@@ -1,7 +1,7 @@
 ---
 title: Pantheon Global CDN
 subtitle: Configure DNS and Provision HTTPS
-description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
+description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt.
 categories: [go-live]
 tags: [cdn, dns, https, security]
 contributors: [whitneymeredith]
