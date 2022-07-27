@@ -119,7 +119,7 @@ To test whether or not a cookie is preventing the CDN from caching:
         Vary: Accept-Encoding, Cookie
         ```
 
-In the event that a cookie is set and you are unsure of what's setting it, disable modules one by one and test for the cookie via 'curl' command after each one is disabled. When the cookie is no longer set, the last module disabled before the test is the culprit.
+In the event that a cookie is set and you are unsure of what's setting it, disable modules one-by-one and test for the cookie via 'curl' command after each one is disabled. When the cookie is no longer set, the last module disabled before the test is causing the issue.
 
 ## More Resources
 

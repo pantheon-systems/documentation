@@ -18,7 +18,7 @@ This section provides answers to frequently asked Global CDN questions.
 
 Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address.
 
-To retain your existing CDN, set up a "stacked CDN" configuration. Ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
+To retain your existing CDN, set up a *stacked CDN* configuration. Ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
 While we have some limited documentation for this setup with [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), this is a largely self-serve practice.
 
@@ -26,7 +26,7 @@ If you need additional features or customization for your CDN, consider our [Adv
 
 ### Is the www-redirector service still available?
 
-No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects) to your site's configuration file (wp-config.php or settings.php).
+No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects) to your site's configuration file (`wp-config.php` or `settings.php`).
 
 ### Are vanity domains supported?
 
@@ -42,7 +42,7 @@ Hit rates are not currently available, but you can measure traffic for the Live 
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
 
-You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header so that WordPress can build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
+You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header to alloww WordPress to build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
 
 ```php:title=wp-config.php
 if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
@@ -50,9 +50,11 @@ if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
 }
 ```
 
+Review the [Fastly on Pantheon guide](/guides/fastly-pantheon) for more information.
+
 ### Can I expose the `Surrogate-Key-Raw` header?
 
-Yes! Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl request, then use `grep` to filter the output. Replace `https://www.example.com/` in the following example:
+Yes. Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl request, then use `grep` to filter the output. Replace `https://www.example.com/` in the following example:
 
 ```bash{promptUser: user}
 curl -IsH "Pantheon-Debug:1" https://www.example.com/ | grep surrogate-key-raw
@@ -68,7 +70,7 @@ To avoid mixed-content browser warnings and excessive redirects, follow the proc
 
 ### How do I upgrade my existing Pantheon site?
 
-Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
+Make the switch on an existing Pantheon site by updating the DNS for your domains. If your site doesn't have the new combined **Domains/HTTPS** tab, open a support chat to get the upgrade enabled.
 
 ### What level of encryption is provided?
 
@@ -86,15 +88,15 @@ But you shouldn't need to buy a custom certificate or worry about renewals in mo
 
 Some customers have purchased expensive certificates, often through an upsell from the certificate authority. Unfortunately, an expensive certificate does not mean increased security. If in doubt, we encourage you to test your site with SSL Labs, compare it to this [A+ report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io), and share it with your client.
 
-If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](/guides/support/contact-support/) to discuss your case.
+If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a third-party CDN service provider like Cloudflare, CloudFront, StackPath, etc. Configuration differs depending on provider, so please [contact support](/guides/support/contact-support/) to discuss your case.
 
 ### Is HTTPS encryption end-to-end?
 
-Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to the individual application container. This is an improvement over our legacy system that terminated all encryption at the load balancer, and a huge upgrade over setups which use a "mixed mode" strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
+Yes. HTTPS is terminated at the CDN edge and traffic is encrypted all the way to the individual application container. This is an improvement over our legacy system that terminated all encryption at the load balancer, and a huge upgrade over setups which use a mixed mode strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
 
 ### Will HTTPS be available for my site throughout the upgrade process?
 
-Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
+Yes. As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
 
 Existing sites that are not already hosted on Pantheon can [pre-provision HTTPS](/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
@@ -129,7 +131,7 @@ All modern browsers and operating systems are supported. For details, see the **
 
 Refer to [Cloudflare Domain Configuration](/cloudflare).
 
-### For how long are Let's Encrypt certificates valid and what happens when they expire?
+### How long are Let's Encrypt certificates valid and what happens when they expire?
 
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
 

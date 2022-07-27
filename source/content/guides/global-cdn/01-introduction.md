@@ -11,7 +11,7 @@ permalink: docs/guides/global-cdn
 anchorid: global-cdn
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without waiting to access the application container. 
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without having to wait. 
 
 ## How Does Global CDN Work?
 
@@ -21,7 +21,7 @@ Global CDN allows you to tap into powerful and strategically distributed CHI met
 
 ## Points of Presence Workflow
 
-Every site Pantheon site uses Global CDN. This means that every HTTP request from a website visitor first goes to closest CHI metro [POP](/guides/global-cdn#points-of-presence) to see if there's a regional cache of the content. If the closest POP doesn't have the content, the request will then go to a POP near the origin (i.e. the PHP workers and database). If the content is cached anywhere in the world, the origin POP will have a copy. If neither POP has appropriate cache data, the request will continue to an application container worker, which will generate responses that may be cached on the way back to the browser.
+Every site Pantheon site uses Global CDN. This means that every HTTP request from a website visitor first goes to closest CHI metro [POP](/guides/global-cdn#points-of-presence) to see if there's a regional cache of the content. If the closest POP doesn't have the content, the request will then go to a POP near the origin (i.e. the PHP workers and database). If the content is cached anywhere in the world, the origin POP will have a copy. If neither POP has the appropriate cache data, the request will continue to an application container worker, which will generate responses that may be cached on the way back to the browser.
 
 ![Varnish Diagram](../../../images/cdn-flow.png)
 

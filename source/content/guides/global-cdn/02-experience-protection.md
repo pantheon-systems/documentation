@@ -11,25 +11,7 @@ permalink: docs/guides/global-cdn/experience-protection
 anchorid: experience-protection
 ---
 
-Experience Protection provides a seamless, uninterrupted experience for your users. Global CDN will serve a cached version of your page instead of displaying an error iff the server is not responding and can't serve a new copy of the page. Global CDN will display the cached version even if it is _stale cache_ (expired). 
-
-## Adjust TTL to Determine Fresh vs. Stale Content
-
-Your site’s CMS page-level caching must be correctly configured to take advantage of Experience Protection.
-
-You can adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL). Set the cache TTL to a value equal to or higher than 3700 seconds for best results:
-
-- [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
-
-- [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
-
-### Session-Style Cookies or `NO_CACHE` Cookies 
-
-You will bypass the cache and will not see cached content if you have session-style cookies set, or a `NO_CACHE` cookie set. For best results:
-
-1. Set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). 
-
-Learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
+Experience Protection provides a seamless, uninterrupted experience for your users. Global CDN will serve a cached version of your page instead of displaying an error if the server is not responding and can't serve a new copy of the page. Global CDN will display the cached version even if it is _stale cache_ (expired). 
 
 ## Confirm That Experience Protection Works
 
@@ -52,6 +34,25 @@ Check your logs for:
 - Heavy requests to administrative and login paths may indicate a generalized CMS exploit attempt.
 
 - Known exploit and excess traffic paths.
+
+## Adjust TTL to Determine Fresh vs. Stale Content
+
+Your site’s CMS page-level caching must be correctly configured to take advantage of Experience Protection.
+
+You can adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL). Set the cache TTL to a value equal to or higher than 3700 seconds for best results:
+
+- [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
+
+- [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
+
+### Session-Style Cookies or `NO_CACHE` Cookies 
+
+You will bypass the cache and will not see cached content if you have session-style cookies set, or a `NO_CACHE` cookie set. For best results:
+
+1. Set the `NO_CACHE` cookie to persist longer than the site’s page cache (this includes logged in users and authenticated traffic). 
+
+Learn more about the exceptions to page caching rules in [Caching: Advanced Topics](/caching-advanced-topics#allow-a-user-to-bypass-the-cache).
+
 
 ## More Resources
 

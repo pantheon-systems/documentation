@@ -20,7 +20,7 @@ This section provides steps on how to test your Global CDN caching.
 
 1. Enter the command below with your full Pantheon domain URL.
 
-  ```bash{outputLines: 2-7}
+    ```bash{outputLines: 2-7}
     curl -L -Is -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
     HTTP/2 200
     cache-control: public, max-age=86400
@@ -73,7 +73,7 @@ You can also test Global CDN with browser headers.
 
 1. Use the developer tools by pressing **F12** or by clicking **Settings**, then clicking **More tools**, and then **Developer Tools**.
 
-  - By default, DevTools records all network requests in the Network tool as long as DevTools remains open.
+By default, DevTools records all network requests in the Network tool as long as DevTools remains open.
 
 ## How to Read HTTP Headers
 
@@ -87,7 +87,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
   - `no-cache, must-revalidate, post-check=0, pre-check=0` typically indicates that there is a conflict in Drupal's default header.
 
-  - **All static assets** 
+- **All static assets** 
   
   - Includes images and other assets on production environments (Test and Live) are set with a `max-age` of 366 days. We recommend using new file names or appending a changeable query string if content needs to change earlier. Development environments (Dev and Multidevs) intentionally do not cache static assets.
 

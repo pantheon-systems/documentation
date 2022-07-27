@@ -1,6 +1,6 @@
 ---
 title: Pantheon Global CDN
-subtitle: Provision HTTPS
+subtitle: Configure DNS and Provision HTTPS
 description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
 categories: [go-live]
 tags: [cdn, dns, https, security]
@@ -12,12 +12,6 @@ anchorid: https
 ---
 
 Pantheon's [Global CDN](/guides/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform. Your [HTTPS](/guides/global-cdn/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
-
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon">
-
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
-
-</Enablement>
 
 <Partial file="configure-dns.md" />
 
@@ -67,7 +61,7 @@ Server name indication (SNI) is the technology replacing the expensive, legacy l
 
 ### HTTPS Doesn't Provision with Incorrect AAAA Configurations
 
-Pantheon cannot not begin provisioning HTTPS if the Site Dashboard detects incorrect values set on AAAA records. Once you update the records using the recommended values, HTTPS will start to provision automatically. The values for AAAA records look similar, but they are distinct.
+Pantheon cannot not begin provisioning HTTPS if the Site Dashboard detects incorrect values set on AAAA records. After you update the records using the recommended values, HTTPS will start to provision automatically. The values for AAAA records look similar, but they are distinct.
 
 ### Certificate Mismatch Browser Warning
 
