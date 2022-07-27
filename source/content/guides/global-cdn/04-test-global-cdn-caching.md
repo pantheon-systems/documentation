@@ -16,22 +16,24 @@ This section provides steps on how to test your Global CDN caching.
 
 ## Test CDN Caching with curl
 
-1. Open a terminal.
+1. Review the command instructions:
 
-1. Enter the command below with your full Pantheon domain URL.
+    - The `-L` flag instructs curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
+
+    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+
+    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
+    
+    - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
+
+1. Run the command below in a terminal with your full Pantheon domain URL.
 
     ```bash{outputLines: 2-7}
-    curl -L -Is -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
-    HTTP/2 200
-    cache-control: public, max-age=86400
-    age: 65772
-    ```
-
-      - The `-L` flag instructs curl to resend the request to the new location in the case of a 301, 302, or 303 redirect.
-      - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
-      - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
-      - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
-  
+      curl -L -Is -H "accept-encoding: gzip, deflate, br" https://scalewp.io | egrep '(HTTP|cache-control|age:)'
+      HTTP/2 200
+      cache-control: public, max-age=86400
+      age: 65772
+      ```    
 
 1. Add the `Pantheon-Debug: 1` header to your request to view the `Surrogate-Key-Raw` header:
 
