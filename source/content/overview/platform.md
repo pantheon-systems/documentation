@@ -7,8 +7,10 @@ contributors: [wordsmither]
 permalink: docs/overview/platform
 ---
 
-<navbar>
-  <navbaritem>
+<navbar title="Overview" items="test, test2" activePage="test">
+  <navbarItem item="test" activePage="test"/>
+  <navbarItem item="test2" activePage="test"/>
+</navbar>
 
 Unlike traditional hosting, Pantheon delivers truly elastic hosting through automation in software. Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
 

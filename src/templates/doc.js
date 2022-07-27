@@ -33,6 +33,8 @@ import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
+import navbar from "../components/navbar"
+import navbarItem from "../components/navbarItem"
 
 const shortcodes = {
   Callout,
@@ -59,6 +61,8 @@ const shortcodes = {
   ResourceSelector,
   DNSProviderDocs,
   Check,
+  navbar,
+  navbarItem,
 }
 
 class DocTemplate extends React.Component {
