@@ -50,31 +50,33 @@ Live preview of content from your CMS backend rendered in your frontend applicat
 
 A local development environment that supports communication between backend and frontend services.
 
-<Accordion title="Pantheon Decoupled Glossary" id="glossary" icon="info-sign">
+<Accordion title="Pantheon Decoupled Terminology" id="terminology" icon="info-sign">
 
-CMS:  In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with Decoupled Sites.
+### CMS  
+In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with Decoupled Sites.
 
-Decoupled Site: A Decoupled Site is a front-end application hosted at Pantheon. It can reference a connected CMS Site at Pantheon, an external site, or exist as its independent application. 
+### Decoupled Site
+A Decoupled Site is a front-end application hosted at Pantheon. It can reference a connected CMS Site at Pantheon, an external site, or exist as its independent application. 
 
-React
+### React
 React is a free and open-source front-end JavaScript library for building user interfaces based on UI components
 
-React Component
+### React Component
 Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions but work in isolation and return HTML.
 
-Next.js
+### Next.js
 Next.js is a free and open source web application framework based on React.js, Node.js, webpack and Babel.js for building server-side rendered and/or static web applications using React.
 
-Gatsby
+### Gatsby
 Gatsby is an open-source static site generator built on top of Node.js using React and GraphQL. It provides over 2500 plugins to create static sites based on sources as Markdown documents, MDX, images, and numerous Content Management Systems such as WordPress, Drupal and more 
 
-GraphQL
+### GraphQL
 GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. One way to understand how GraphQL works is through resolvers. A resolver is a function responsible for populating the data for a single field in your schema. So if a particular piece of data comes from one endpoint, a resolver could be developed for that particular endpoint and data to populate that field. 
 
-Static Site Generation (SSG)
+### Static Site Generation (SSG)
 SSG means the entire site is pre-rendered into HTML, CSS, and JavaScript files at build time.
 
-Server Side Rendering (SSR)
+### Server Side Rendering (SSR)
 Server-Side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
 
 </Accordian>
