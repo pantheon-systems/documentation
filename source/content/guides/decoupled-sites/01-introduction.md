@@ -51,7 +51,7 @@ Pantheon Decoupled allows you to connect to your Git provider and deploy a Gatsb
 * A local development environment that supports communication between backend and frontend services.
 
 
- ## Pantheon Decoupled Terminology
+## Pantheon Decoupled Terminology
 
 <Accordion title="Terms to Know" id="know-terms" icon="info-sign">
 
