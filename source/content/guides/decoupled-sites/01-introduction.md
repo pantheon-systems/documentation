@@ -5,7 +5,7 @@ description:
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
-reviewed: "2021-07-31"
+reviewed: "2022-07-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled-sites/introduction
@@ -77,4 +77,4 @@ SSG means the entire site is pre-rendered into HTML, CSS, and JavaScript files a
 Server Side Rendering (SSR)
 Server-Side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
 
-
+</Accordian>

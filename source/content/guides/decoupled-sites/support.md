@@ -5,18 +5,18 @@ description:
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
-reviewed: "2021-07-31"
+reviewed: "2022-07-31"
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled-sites/support
 anchorid: support
 ---
 
-# What is included in the scope of support?
+# What is Included in the Scope of Support?
 
 Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes usage of documented workflows as defined in this documentation. 
 
-## What is outside of the scope of support?
+## What is Outside of the Scope of Support?
 
 Technical Support for Pantheon Decoupled does not include the following:
 
@@ -36,7 +36,7 @@ Technical Support covers issues related to the following:
 * During customer outages that cannot be resolved by the customers or CSE, escalation to on-call engineers
 
 
-## How do I file a bug or get support?
+## How do I File a Bug or Get Support?
 
 Pantheon has a limited scope of support for early access products. For assistance with your decoupled site you can email helpdesk@pantheon.io.You will receive a response within 1 business day.
 
