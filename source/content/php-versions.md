@@ -3,7 +3,7 @@ title: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [libraries, updates]
 categories: [platform]
-reviewed: "2020-05-05"
+reviewed: "2021-07-28"
 ---
 
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
@@ -37,7 +37,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 | Version                                      | Recommended |  Status |
 | --------------------------------------------:|:-----------:| ------- |
-| [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues." /> |
+| [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="PHP 8.1 is not recommended due to `proxysql` and PHP 8.1 incompatibility issues." /> |
 | [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0." /> |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
 | [7.3](https://v73-php-info.pantheonsite.io/) | ❌          | EOL     |
@@ -78,7 +78,7 @@ End-of-Sale versions are no longer available to new sites on the platform. Exist
 
 #### Compatibility Considerations
 
-PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues.
+PHP 8.1 is not recommended due to `proxysql` and PHP 8.1 incompatibility issues.
 
 ### CMS Version Requirements
 
