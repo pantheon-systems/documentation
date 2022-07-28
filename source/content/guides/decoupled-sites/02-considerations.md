@@ -8,9 +8,8 @@ contributors: [joa-pan]
 reviewed: "2021-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/
-anchorid: 
-editpath: 
+permalink: docs/guides/decoupled-sites/considerations
+anchorid: considerations
 ---
 The following components are needed for Pantheon Decoupled: 
 
@@ -49,4 +48,6 @@ Terminus-
   - Validate that the required plugins are installed: `terminus self:plugin:list`
 - Create [Github Personal access tokens](https://github.com/settings/tokens)
 - Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens)
+
+## Best Practices
 

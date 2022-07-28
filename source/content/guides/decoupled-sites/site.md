@@ -8,11 +8,9 @@ contributors: [joa-pan]
 reviewed: "2021-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/
-anchorid: 
-editpath: 
+permalink: docs/guides/decoupled-sites/site
+anchorid: site
 ---
-
 
 # Before You Begin
 
