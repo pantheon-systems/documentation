@@ -50,18 +50,13 @@ Pantheon Decoupled allows you to connect to your Git provider and deploy a Gatsb
 
 * A local development environment that supports communication between backend and frontend services.
 
-
 ## Pantheon Decoupled Terminology
-
-<Accordion title="Terms to Know" id="know-terms" icon="info-sign">
 
 ### CMS  
 In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with Decoupled Sites.
 
 ### Decoupled Site
-A Decoupled Site is a front-end application hosted at Pantheon. It can reference a connected CMS Site at Pantheon, an external site, or exist as its independent application. 
-
-</Accordian>
+A Decoupled Site is a front-end application hosted at Pantheon. It can reference a connected CMS Site at Pantheon, an external site, or exist as its independent application.
 
 ### React
 React is a free and open-source front-end JavaScript library for building user interfaces based on UI components
