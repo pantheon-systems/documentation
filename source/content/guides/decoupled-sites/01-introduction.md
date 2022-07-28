@@ -61,6 +61,8 @@ In the context of our Decoupled Product, a CMS Site is a Content Management Syst
 ### Decoupled Site
 A Decoupled Site is a front-end application hosted at Pantheon. It can reference a connected CMS Site at Pantheon, an external site, or exist as its independent application. 
 
+</Accordian>
+
 ### React
 React is a free and open-source front-end JavaScript library for building user interfaces based on UI components
 
@@ -82,4 +84,4 @@ SSG means the entire site is pre-rendered into HTML, CSS, and JavaScript files a
 ### Server Side Rendering (SSR)
 Server-Side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
 
-</Accordian>
+

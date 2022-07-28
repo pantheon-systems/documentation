@@ -11,6 +11,7 @@ showtoc: true
 permalink: docs/guides/decoupled-sites/considerations
 anchorid: considerations
 ---
+
 The following components are needed for Pantheon Decoupled: 
 
 * NodeJS
