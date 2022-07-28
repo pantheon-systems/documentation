@@ -37,6 +37,8 @@ You should have access to the Early Access Customer checklist provided during on
 
 
 
+## Site Setup
+
 Pantheon Decoupled is available through the New Dashboard. To access it log in to your Pantheon Dashboard and Navigate to the Sites page. 
 
 Select the Sites tab in the the New Dashboard. 
@@ -62,6 +64,9 @@ Select the GitHub option and click Connect. A window for GitHub.com is displayed
 Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed. 
 
 3. Specify the permission configurations and click Install. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard. 
+
+
+
 
 Import the Repository
 Connect to your Git provider and select an existing repository.
