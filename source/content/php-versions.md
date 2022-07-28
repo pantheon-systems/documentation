@@ -78,7 +78,7 @@ End-of-Sale versions are no longer available to new sites on the platform. Exist
 
 #### Compatibility Considerations
 
-PHP 8.1 is not recommended due to `mysqlproxy` and PHP 8.1 incompatibility issues.
+PHP 8.1 is not recommended due to `proxysql` and PHP 8.1 incompatibility issues.
 
 ### CMS Version Requirements
 
