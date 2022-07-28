@@ -1,9 +1,14 @@
 ---
 title: New Relic Performance Monitoring
+subtitle: Introduction
 description: Learn how to enable and use New Relic Performance Monitoring metrics and reports for your Drupal or WordPress site on Pantheon.
 categories: [performance]
 tags: [logs, measure, newrelic]
-reviewed: "2021-03-31"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/new-relic
+anchorid: new-relic
 ---
 
 [New Relic&reg; Performance Monitoring](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
@@ -24,7 +29,7 @@ All plans except for a Basic plan can use New Relic&reg; Performance Monitoring.
 
 1. Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard > Click **Activate New Relic Pro**:
 
-  ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../images/integrations/newrelic/activate-new-relic.png)
+  ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
 
 1. Visit your site in the browser a couple of times to generate data in New Relic. 
 
@@ -36,17 +41,17 @@ New Relic is automatically enabled for all application containers added to the s
 
 1. Go to the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**:
 
-  ![Screenshot showing the newly activated New Relic.](../images/integrations/newrelic/new-relic-activated.png)
+  ![Screenshot showing the newly activated New Relic.](../../../images/integrations/newrelic/new-relic-activated.png)
 
 1. Ignore the **Get started**, button, and select **APM** from the menu at the top:
 
-  ![Screenshot showing the New Relic landing page.](../images/integrations/newrelic/new-relic-get-started.png)
+  ![Screenshot showing the New Relic landing page.](../../../images/integrations/newrelic/new-relic-get-started.png)
 
 1. Agree to the New Relic terms of service to access the data for your site:
 
-  ![Screenshot of the New Relic APM dashboard.](../images/integrations/newrelic/new-relic-apm-dash.png)
+  ![Screenshot of the New Relic APM dashboard.](../../../images/integrations/newrelic/new-relic-apm-dash.png)
 
-  ![SCreenshot of the New Relic APM data for a Pantheon site.](../images/integrations/newrelic/new-relic-summary.png)
+  ![SCreenshot of the New Relic APM data for a Pantheon site.](../../../images/integrations/newrelic/new-relic-summary.png)
 
 ### Who is the New Relic account associated with?
 
@@ -212,56 +217,12 @@ It is important to note that this method is sensitive to call location. Most cus
 
 Availability monitoring from APM is heavily outdated, and will not work with the Pantheon platform. As an alternative, you can use the free New Relic Synthetic Lite service using the [steps provided above](#configure-ping-monitors-for-availability).
 
-## Frequently Asked Questions
+## More Resources
 
-### How do I change the New Relic site owner now that our Pantheon site has a new site owner?
+- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 
-A New Relic account can have only one owner at any time. You must be the current account owner to change your role to someone who currently has an Admin role for the account. For more information, see [New Relic's documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-billing-usage/change-account-owner).
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
-### How can I share a link to a particular metric?
+- [New Relic University: Intro to New Relic APM](https://learn.newrelic.com/get-started-with-apm)
 
-At the bottom of any page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.
-
-### How much is New Relic&reg; Performance Monitoring?
-
-Pantheon provides New Relic&reg; Performance Monitoring for all site plans except Basic, at no cost. Purchase additional services or upgrade your New Relic account by reaching out to [sales@newrelic.com](mailto:sales@newrelic.com).
-
-### Will turning on New Relic&reg; Performance Monitoring slow my site down?
-
-Basically no, New Relic will not make your site slower. There is a very small amount of overhead, but it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
-
-### What is the difference between app server response time and browser page load time?
-
-App server response time measures how the page was built on Pantheon, including PHP execution, database, Redis (if used). Browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
-
-### Can I use my existing New Relic license with my Pantheon site?
-
-Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic&reg; Performance Monitoring license. [Activate New Relic&reg; Performance Monitoring](#activate-new-relic-performance-monitoring) for your site, then [contact support](/guides/support/contact-support/). Be sure to provide:
-
-* The Site ID
-* Your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding)
-* Your New Relic [Account ID](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id#finding)
-
-**Note:** Pantheon SSO cannot be used to sign in to New Relic for sites using their own license. You will not be able to sign in to New Relic directly from the Pantheon Dashboard.
-
-### Why are servers listed in New Relic with no data?
-
-Because Pantheon's runtime matrix runs your application across many containers simultaneously, it's common to see old containers with no reporting data as your application shifts around. This is not a cause for concern.
-
-### Can I disable New Relic for a specific environment?
-
-We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
-
-### Can I use the New Relic One Logs feature?
-
-New Relic&reg; Performance Monitoring logs are available at `/logs/newrelic.log`. The New Relic provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic's left-side menu.
-
-See [Log Files on Pantheon](/logs) for more information on accessing your logs.
-
-## See Also
-
-* [MySQL Troubleshooting With New Relic Pro](/debug-mysql-new-relic)
-* [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-* [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-* [New Relic University: Intro to New Relic APM](https://learn.newrelic.com/get-started-with-apm)
-* [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance)
+- [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance)

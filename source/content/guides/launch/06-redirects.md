@@ -29,6 +29,6 @@ Now that you're redirecting requests to a single, primary domain, it's the perfe
 
 Prevent cookie hijacking and get an A+ rating from SSL Labs.
 
-#### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) (Optional)
+#### [Setup Availability Monitoring](/guides/new-relic) (Optional)
 
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email if a response fails.

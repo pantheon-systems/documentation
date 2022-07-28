@@ -126,7 +126,7 @@ Now that you’ve run your load test, you can review the results on BlazeMeter a
 
 ![The BlazeMeter settings window](../../images/blazemeter-review-results.png)
 
-The report is a high-level overview of site performance, but you’ll want more details for the full picture. [New Relic](/new-relic)- which you can enable through the Pantheon Site Dashboard- will provide more information on slow transactions and appserver response times for both web and non-web transactions.
+The report is a high-level overview of site performance, but you’ll want more details for the full picture. [New Relic](/guides/new-relic)- which you can enable through the Pantheon Site Dashboard- will provide more information on slow transactions and appserver response times for both web and non-web transactions.
 
 You can also view the load report directly to evaluate the number of users and the concurrent response time, shown here:
 

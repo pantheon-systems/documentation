@@ -17,7 +17,7 @@ editpath: disaster-recovery/02-planning-ahead.md
 Disasters are sometimes unavoidable, but steps can be taken to ensure that these incidents are not frequent, reversible, and not destructive.
 
 ## Monitor and Optimize Performance
-Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](https://pantheon.io/docs/new-relic)(APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](https://pantheon.io/docs/new-relic).
+Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](/guides/new-relic)(APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](/guides/new-relic).
 
 New Relic also provides a performance monitoring service that can send notification of downtime or degraded performance by email and other channels. Refer to the documentation on [New Relic Alerts](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/introduction-new-relic-alerts) for more information.
 

@@ -24,7 +24,7 @@ You can configure the audit reports to produce consistent measurements of how yo
 
 ## New Relic
 
-[New Relic® Performance Monitoring](/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
+[New Relic® Performance Monitoring](/guides/new-relic) offers a wide array of metrics that provide a nearly real-time look into web application performance.
 
 ### Monitor Performance with New Relic
 

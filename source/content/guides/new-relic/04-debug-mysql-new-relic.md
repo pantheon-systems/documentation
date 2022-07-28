@@ -1,12 +1,17 @@
 ---
-title: MySQL Troubleshooting with New Relic Performance Monitoring
+title: New Relic Performance Monitoring
+subtitle: MySQL Troubleshooting with New Relic Performance Monitoring
 description: Use integrated reporting services with New Relic Performance Monitoring to isolate MySQL performance issues on your Drupal or WordPress sites.
 categories: [troubleshoot]
 tags: [database, newrelic]
-reviewed: "2020-10-07"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/new-relic/debug-mysql-new-relic
+anchorid: debug-mysql-new-relic
 ---
 
-While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use [New Relic&reg; Performance Monitoring](/new-relic). This article explains how you can troubleshoot MySQL databases with New Relic APM.
+While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use [New Relic&reg; Performance Monitoring](/guides/new-relic). This article explains how you can troubleshoot MySQL databases with New Relic APM.
 
 ## Open New Relic&reg; Performance Monitoring
 
@@ -43,15 +48,15 @@ At times, systems like Drupal's Watchdog appear at the top. In general, that's a
 [Download database log files](/logs#database-log-files) and review the `mysql-slow-query.log` file. Search for the query within the log. If it isn't there, download and unzip any applicable archived slow logs (e.g. `mysqld-slow-query.log-20160606`) and search there. The archived slow logs are created by date and time, so look for the one that corresponds with the trace you are working with.
 
 Using the information from the New Relic trace, find the full query in the slow log. First, choose a distinctive part of the query. In this case I used `grep -c users_comment.uis AS users_comment_uid` to get a count of the number of times that field has been included in the slow log. If the log is small enough (or if you have enough RAM), you can load it into your favorite text editor or IDE instead.
- ![Review slow low](../images/review-slow-log.png)​
+ ![Review slow low](../../../images/review-slow-log.png)​
 Close out the SFTP session and get the MySQL CLI information for the Test MySQL server. If the Test server has major differences from your Live server, you can either connect to Live (not recommended) or clone your Live database to your Dev or Test environment via your Pantheon Dashboard. Once this is done, connect to the MySQL server of your choice and run the query.  
- ![Execute the query](../images/execute-query.png)
+ ![Execute the query](../../../images/execute-query.png)
 If the result confirm your suspicions, as this one does, delve in deeper to find out why the query is behaving so badly. Type [EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html) and then re-paste the query. MySQL will display extended information on how it’s [executing the query](https://dev.mysql.com/doc/refman/5.7/en/using-explain.html). Look for really odd things. For example, this one really doesn't look that bad, except the users table is referenced twice via alias and there isn't a single key index being used to search them.
- ![Extended information example](../images/extended-info-example.png)
+ ![Extended information example](../../../images/extended-info-example.png)
 Looking at that table with a MySQL `describe` command shows that there is no primary key set on the UID field.
- ![MySQL table describe users](../images/mysql-table-describe-users.png)
+ ![MySQL table describe users](../../../images/mysql-table-describe-users.png)
 Now that the problem has been found, it can be addressed. In this case, simply adding in the primary key and re-running the query gets a much improved query performance of 0.10 seconds.
- ![Improved query performance](../images/improved-query-preformance.png)
+ ![Improved query performance](../../../images/improved-query-preformance.png)
 
 ## Recap
 

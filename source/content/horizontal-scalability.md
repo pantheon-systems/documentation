@@ -84,7 +84,7 @@ Requests that span more than 3 weeks require approval from the organization or s
 
 Consider enabling New Relic&reg; Performance Monitoring for your site. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
 
-For more information, see [New Relic&reg; Performance Monitoring](/new-relic).
+For more information, see [New Relic&reg; Performance Monitoring](/guides/new-relic).
 
 ## Managing Temporary Files
 

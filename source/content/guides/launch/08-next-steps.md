@@ -43,9 +43,9 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 - [Set Up Outgoing Email](/email/)
 
-- [Activate New Relic Pro](/new-relic/#activate-new-relic-performance-monitoring)
+- [Activate New Relic Pro](/guides/new-relic/activate-new-relic)
 
-- [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
+- [Setup Availability Monitoring](/guides/new-relic)
 
 - [Load and Performance Test](/load-and-performance-testing/)
 
