@@ -43,7 +43,7 @@ Copy the provided query in the output and run as instructed.
 
 ### Troubleshoot With New Relic&reg; Performance Monitoring
 
-To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic). Using our integrated reporting services with New Relic&reg; Performance Monitoring, you can isolate MySQL performance issues on your Drupal or WordPress sites.
+To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic). Using our integrated reporting services with New Relic&reg; Performance Monitoring, you can isolate MySQL performance issues on your Drupal or WordPress sites.
 
 ### Review Slow Query Logs
 
@@ -64,5 +64,5 @@ Typical WordPress sites are limited to the capacity of a single database to serv
 - [Access MySQL Databases](/mysql-access)
 - [Database Connection Errors](/database-connection-errors)
 - [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 - [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb)
