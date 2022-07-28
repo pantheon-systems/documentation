@@ -36,32 +36,32 @@ You should have access to the Early Access Customer checklist provided during on
 
 
 
-
 ## Site Setup
 
 Pantheon Decoupled is available through the New Dashboard. To access it log in to your Pantheon Dashboard and Navigate to the Sites page. 
 
-Select the Sites tab in the the New Dashboard. 
+. Select **Sites** in the the New Dashboard. 
 
-Click the Decoupled tab to view the Early Access offering. 
+. Click the **Decoupled** tab to view the Early Access offering. 
 
-Click +Create New Site on the New Dashboard  homepage to begin your decoupled journey. 
+. Click **+Create New Site** in the New Dashboard  under the **Decoupled** tab to begin your decoupled journey. 
 
 
-Create an application from scratch using Importing a repository or you can use our starter kit template for:
+You can create an application from scratch using **Importing a repository** or you can use our starter kit template for:
 
-Drupal + Next.js
+* Server side render applications: Next.js and Drupal
 
-Wordpress + Gatsby
+* Static site generated sigte: Gatsby and WordPress
 
 Under the Decoupled Site section on the Site Creation page, click the option that best suits your needs. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 9, Next.js v12, etc. ) Refer to the section on compatibility for more information.
 
-Connect your Account
-To start you will need to specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider. 
+# Connect your Account
 
-Select the GitHub option and click Connect. A window for GitHub.com is displayed, and you are prompted “Where do you want to install Pantheon”. 
+. To start you will need to specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider. 
 
-Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed. 
+. Select the GitHub option and click Connect. A window for GitHub.com is displayed, and you are prompted “Where do you want to install Pantheon”. 
+
+. Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed. 
 
 3. Specify the permission configurations and click Install. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard. 
 
