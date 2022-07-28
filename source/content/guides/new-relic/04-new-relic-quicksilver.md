@@ -1,7 +1,7 @@
 ---
 title: New Relic Performance Monitoring
-subtitle: Automatically Label Code Changes in New Relic®; Performance Monitoring using Quicksilver Hooks
-description: A guide to integrating Pantheon and New Relic®; Performance Monitoring for deployment labeling.
+subtitle: New Relic Labelling with Quicksilver
+description: Automatically Label Code Changes in New Relic®; Performance Monitoring using Quicksilver Hooks
 categories: [automate]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [scottmassey]
@@ -17,11 +17,13 @@ In this guide, we'll automatically label code changes to your site in New Relic&
 
 ## Activate New Relic&reg; Performance Monitoring Pro
 
-Follow the instructions at [New Relic APM Pro](/guides/new-relic/activate-new-relic) to activate New Relic&reg; Performance Monitoring for your site.
+ Performance Monitoring for your site.
 
 ## Configure Quicksilver Hook to Record Deployments
 
-Next, we'll use Pantheon's Quicksilver hooks to run our example [New Relic script](https://github.com/pantheon-systems/quicksilver-examples/blob/master/new_relic_deploy/new_relic_deploy.php) immediately after code is synced on Dev or a Multidev environment and after code is deployed to Test and Live. The script configured in this guide applies a label to the Deployment page in New Relic.
+1. Follow the instructions to [activate New Relic APM Pro](/guides/new-relic/activate-new-relic) if you have not already activated it.
+
+1. Use Pantheon's Quicksilver hooks to run our example [New Relic script](https://github.com/pantheon-systems/quicksilver-examples/blob/master/new_relic_deploy/new_relic_deploy.php) immediately after code is synced on Dev or a Multidev environment and after code is deployed to Test and Live. The script configured in this guide applies a label to the Deployment page in New Relic.
 
 <Alert title="Variables" type="export">
 
@@ -33,7 +35,9 @@ export site=yoursitename
 
 </Alert>
 
-1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. You can use Terminus to provide the clone command:
+1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already.
+
+1. Navigate to the project's root directory. You can use Terminus to provide the clone command:
 
   ```bash{outputLines:2-3}
   terminus connection:info $site.dev --fields='Git Command' --format=string
@@ -41,7 +45,7 @@ export site=yoursitename
   git clone ssh://codeserver.dev.2187...d85b@codeserver.dev.2187...d85b.drush.in:2222/~/repository.git sitename
   ```
 
-  After you copy and run the output command, change directory to the site code root:
+1. Copy and run the output command and then change directory to the site code root:
 
   ```bash{promptUser: user}
   cd $site
@@ -100,8 +104,17 @@ export site=yoursitename
 
   ![Deployment tab display](../../../images/integrations/newrelic/deploy_tab.png)
 
-1. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic&reg; Performance Monitoring.
+1. Confirm that there are no issues, and then deploy your new commit to Test and Live. Your deploys will now be recorded in New Relic&reg; Performance Monitoring.
 
-## Conclusion
+## More Quicksilver Examples
 
-This is a fast way to integrate New Relic&reg; Performance Monitoring and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
+The steps above provide a fast way to integrate New Relic&reg; Performance Monitoring and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
+
+## More Resources
+
+- [Automate and Integrate your WebOps Workflow with Quicksilver](/quicksilver)
+
+- [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples)
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+
