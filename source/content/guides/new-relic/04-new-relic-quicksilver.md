@@ -1,6 +1,6 @@
 ---
 title: New Relic Performance Monitoring
-subtitle: New Relic Labelling with Quicksilver
+subtitle: New Relic Labeling with Quicksilver
 description: Automatically Label Code Changes in New Relic®; Performance Monitoring using Quicksilver Hooks
 categories: [automate]
 tags: [code, newrelic, quicksilver, workflow]
@@ -15,25 +15,21 @@ New Relic&reg; Performance Monitoring is a powerful tool for monitoring the perf
 
 In this guide, we'll automatically label code changes to your site in New Relic&reg;'s Deployment page using Pantheon's [Quicksilver hooks](/quicksilver/#hooks) and [Terminus](/terminus). This creates a traceable connection between performance changes and code deployments, allowing developers to see if a code change positively or negatively impacted performance.
 
-## Activate New Relic&reg; Performance Monitoring Pro
-
- Performance Monitoring for your site.
-
 ## Configure Quicksilver Hook to Record Deployments
 
 1. Follow the instructions to [activate New Relic APM Pro](/guides/new-relic/activate-new-relic) if you have not already activated it.
 
 1. Use Pantheon's Quicksilver hooks to run our example [New Relic script](https://github.com/pantheon-systems/quicksilver-examples/blob/master/new_relic_deploy/new_relic_deploy.php) immediately after code is synced on Dev or a Multidev environment and after code is deployed to Test and Live. The script configured in this guide applies a label to the Deployment page in New Relic.
 
-<Alert title="Variables" type="export">
+    <Alert title="Variables" type="export">
 
-This process uses [Terminus](/terminus) commands that require your site name. Before we begin, set the variable `$site` in your terminal session to match your site name:
+    This process uses [Terminus](/terminus) commands that require your site name. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
-```bash{promptUser: user}
-export site=yoursitename
-```
+    ```bash{promptUser: user}
+    export site=yoursitename
+    ```
 
-</Alert>
+    </Alert>
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already.
 

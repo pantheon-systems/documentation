@@ -26,9 +26,6 @@ All plans except for a Basic plan can use New Relic&reg; Performance Monitoring.
 
 
 
-
-## Troubleshooting
-
 ## More Resources
 
 - [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)

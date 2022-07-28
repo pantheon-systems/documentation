@@ -1,6 +1,6 @@
 ---
 title: New Relic Performance Monitoring
-subtitle: MySQL Troubleshooting with New Relic Performance Monitoring
+subtitle: MySQL Troubleshooting with New Relic
 description: Use integrated reporting services with New Relic Performance Monitoring to isolate MySQL performance issues on your Drupal or WordPress sites.
 categories: [troubleshoot]
 tags: [database, newrelic]
@@ -21,7 +21,7 @@ Modern reporting services that are integrated with your site help speed the proc
 
 1. Select the environment: Dev, Test, or Live. 
 
-1. Click the **New Relic** tab, and select **Go to New Relic**.
+1. Click the **New Relic** tab, and then select **Go to New Relic**.
 
 ## Investigate Activity
 
@@ -68,13 +68,14 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
     - Choose a distinctive part of the query. In this case I used `grep -c users_comment.uis AS users_comment_uid` to get a count of the number of times that field has been included in the slow log. 
     
     - If the log is small enough (or if you have enough RAM), you can load it into your favorite text editor or IDE instead.
-    ![Review slow low](../../../images/review-slow-log.png)​
+
+ ![Review slow low](../../../images/review-slow-log.png)​
 
 1. Close out the SFTP session and get the MySQL CLI information for the Test MySQL server. If the Test server has major differences from your Live server, you can either connect to Live (not recommended) or clone your Live database to your Dev or Test environment via your Pantheon Dashboard.  
 
 1. Connect to the MySQL server of your choice and run the query. 
 
-    ![Execute the query](../../../images/execute-query.png)
+ ![Execute the query](../../../images/execute-query.png)
 
     - Tips for reviewing the query:
 
@@ -86,6 +87,7 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
         ![MySQL table describe users](../../../images/mysql-table-describe-users.png)
         Now that the problem has been found, it can be addressed. In this case, simply adding in the primary key and re-running the query gets a much improved query performance of 0.10 seconds.
+        
         ![Improved query performance](../../../images/improved-query-preformance.png)
 
 ## Recap
