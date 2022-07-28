@@ -14,7 +14,7 @@ anchorid: starter-kits
 
 # Creating a New Project for Decoupled 
 
-You can create a decoupled site using a Pantheon starter kit. Choose from eithera WordPress or Drupal CMS. 
+You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS. 
 
 ## Prerequisites
 
