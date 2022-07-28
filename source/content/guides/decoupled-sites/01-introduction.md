@@ -50,7 +50,10 @@ Live preview of content from your CMS backend rendered in your frontend applicat
 
 A local development environment that supports communication between backend and frontend services.
 
-<Accordion title="Pantheon Decoupled Terminology" id="terminology" icon="info-sign">
+
+ ## Pantheon Decoupled Terminology
+
+<Accordion title="Terms to Know" id="know-terms" icon="info-sign">
 
 ### CMS  
 In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with Decoupled Sites.
