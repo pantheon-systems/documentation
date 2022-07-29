@@ -62,3 +62,15 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
 1. If you selected multiple location failures, define the number of locations to trigger the failure. Name the Click **Create condition**.
 
 <Partial file="monitor-alerts.md" />
+
+## More Resources
+
+- [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
+
+-  [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+
+- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+
+- [New Relic FAQ](/guides/new-relic/new-relic-faq)

@@ -1,5 +1,5 @@
 ---
-title: New Relic Performance Monitoring
+title: New Relic Performance Monitoring on Pantheon
 subtitle: New Relic FAQ
 description: Get answers to your New Relic questions.
 categories: [automate]
@@ -64,3 +64,5 @@ See [Log Files on Pantheon](/logs) for more information on accessing your logs.
 -  [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
 - [Troubleshoot New Relic](/guides/new-relic/troubleshoot-new-relic)
+
+- [Incident Management with New Relic and PagerDuty](/guides/pagerduty/)

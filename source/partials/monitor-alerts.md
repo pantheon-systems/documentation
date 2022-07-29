@@ -1,6 +1,6 @@
 ## False Alarms
 
-Availability monitoring services (for example, Pingdom, New Relic Synthetics) function by periodically reaching out to sites to gauge availability. Some failures in availability do not require action and can be considered false alarms, such as failures due to internet routing or idle containers.
+Availability monitoring services (for example, Pingdom and New Relic Synthetics) function by periodically reaching out to sites to gauge availability. Some failures in availability do not require action and can be considered false alarms, such as failures due to internet routing or idle containers.
 
 ### Internet Routing
 
@@ -32,4 +32,4 @@ Before opening a support ticket based on an alert, take the following actions:
 
     - Links to screenshots or screencasts of the behavior, if necessary
 
-  If the issue creating the alert stems from the Pantheon Platform, we will investigate and resolve. Alerts triggered by the site's code are not within Pantheon's scope of support. For details, see [Getting Support](/guides/support/#code).
+  If the issue creating the alert stems from the Pantheon Platform, we will investigate and resolve it. Alerts triggered by the site's code are not within Pantheon's scope of support. For details, see [Getting Support](/guides/support/#code).

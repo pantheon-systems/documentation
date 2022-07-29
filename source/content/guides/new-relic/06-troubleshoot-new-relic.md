@@ -1,5 +1,5 @@
 ---
-title: New Relic Performance Monitoring
+title: New Relic Performance Monitoring on Pantheon
 subtitle: Troubleshoot New Relic
 description: Find troubleshooting solutions for your New Relic account.
 categories: [automate]
@@ -105,6 +105,10 @@ Availability monitoring from APM is heavily outdated, and will not work with the
 ## More Resources
 
 -  [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+
+- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 
 - [New Relic FAQ](/guides/new-relic/new-relic-faq)
 

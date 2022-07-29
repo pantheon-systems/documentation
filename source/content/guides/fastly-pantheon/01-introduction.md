@@ -56,7 +56,7 @@ You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and
 
 - [Edge Integrations](/guides/edge-integrations/)
 
-- [New Relic](/guides/new-relic)
+- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
 
 - [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
 

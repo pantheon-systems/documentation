@@ -1,5 +1,5 @@
 ---
-title: New Relic Performance Monitoring
+title: New Relic Performance Monitoring on Pantheon
 subtitle: Activate New Relic
 description: Learn how to enable and use New Relic Performance Monitoring metrics and reports for your Drupal or WordPress site on Pantheon.
 categories: [performance]
@@ -11,11 +11,11 @@ permalink: docs/guides/new-relic/activate-new-relic
 anchorid: activate-new-relic
 ---
 
-This sections shows you how to activate and configure your New Relic account.
+This sections provides steps on how to activate and configure your New Relic account.
 
 ## Activate New Relic&reg;
 
-1. Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard > Click **Activate New Relic Pro**:
+1. Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and then click **Activate New Relic Pro**:
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
 
@@ -43,7 +43,7 @@ New Relic is automatically enabled for all application containers added to the s
 
 ### Who is the New Relic account associated with?
 
-- If the site owner is a **user**, the site owner's name and email address is used to create the New Relic account.
+- If the site owner is a **user**, the site owner's name and email address are used to create the New Relic account.
 
 - If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic is used to create the New Relic account.
 
@@ -67,9 +67,11 @@ New Relic provides a free availability monitoring service within their Synthetic
 
 1. Click **Create my monitor**.
 
-Pantheon can provide New Relic ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — are only available to customers on an annual contract and requires an additional cost. Contact our sales team or your dedicated account manager for details.
+Pantheon can provide New Relic Ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — are only available to customers on an annual contract at an additional cost. Review [New Relic Ping Monitors](/guides/pagerduty/monitor/) for more details.
 
 ## More Resources
+
+- [New Relic Ping Monitors](/guides/pagerduty/monitor/)
 
 - [New Relic Labelling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
 

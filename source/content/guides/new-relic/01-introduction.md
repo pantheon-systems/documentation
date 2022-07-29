@@ -1,5 +1,5 @@
 ---
-title: New Relic Performance Monitoring
+title: New Relic Performance Monitoring on Pantheon
 subtitle: Introduction
 description: Learn how New Relic Performance Monitoring can help you with your metrics and reports on Pantheon.
 categories: [performance]
@@ -15,7 +15,7 @@ anchorid: new-relic
 
 ## Supported Site Plans
 
-All plans except for a Basic plan can use New Relic&reg; Performance Monitoring. New Relic&reg; Performance Monitoring is available to Sandbox site plans for developmental purposes, but New Relic&reg; Performance Monitoring will not be available going live on a Basic plan.
+All plans except for a Basic plan can use New Relic. New Relic is available to Sandbox site plans for developmental purposes, but will not be available when your Basic plan goes live.
 
 | Plans         | New Relic&reg; Performance Monitoring Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ------- |
@@ -28,10 +28,11 @@ All plans except for a Basic plan can use New Relic&reg; Performance Monitoring.
 
 ## More Resources
 
+- [Incident Management with New Relic and PagerDuty](/guides/pagerduty/)
+
 - [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 
 - [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
-- [New Relic University: Intro to New Relic APM](https://learn.newrelic.com/get-started-with-apm)
 
-- [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance)
+

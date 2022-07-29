@@ -86,3 +86,12 @@ When an incident is created, PagerDuty uses an escalation policy to determine wh
   ![Escalation Policy](../../../images/pagerduty/pg-escalation.png)
 
 4. Click **Save**.
+
+
+# More Resources
+
+- [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
+
+- [Integrate Your Fastly Account with New Relic](/guides/fastly-pantheon/fastly-new-relic)
+
+- [New Relic FAQ](/guides/new-relic/new-relic-faq)

@@ -35,3 +35,11 @@ To get started, you need to activate [New Relic&reg; Performance Monitoring](/gu
 3. Use the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Live Site** and browse your site for a few minutes to generate data in New Relic:
 
   ![New Relic Enable and Generate Data](../../../images/pagerduty/new-relic-generate-data.png)
+
+## More Resources
+
+- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
+
+- [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
+
+- [Integrate Your Fastly Account with New Relic](/guides/fastly-pantheon/fastly-new-relic)

@@ -1,6 +1,6 @@
 ---
 title: Fastly on Pantheon
-subtitle: Integrate Your Fastly Account with Pantheon's New Relic
+subtitle: Integrate Your Fastly Account with New Relic
 description: Learn how to use New Relic with your Fastly account on Pantheon.
 categories: [develop]
 tags: [cms, logs, newrelic]
@@ -33,11 +33,14 @@ Follow the steps below to use New Relic with your Fastly account on Pantheon.
 
 1. Complete steps to [add New Relic logs as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-newrelic-logs#adding-new-relic-logs-as-a-logging-endpoint).
 
+
 ## More Resources
 
-- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
 
-- [New Relic](/guides/new-relic)
+- [Incident Management with New Relic and PagerDuty](/guides/pagerduty/)
+
+- [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 

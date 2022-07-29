@@ -1,6 +1,6 @@
 ---
-title: New Relic Performance Monitoring
-subtitle: Monitor and Improve Performance
+title: New Relic Performance Monitoring on Pantheon
+subtitle: Monitor and Improve Site Performance
 description: Learn how to use New Relic to monitor and improve site performance.
 categories: [performance]
 tags: [logs, measure, newrelic]
@@ -15,11 +15,11 @@ This section provides information on how to monitor and improve site performance
 
 ## Monitor and Improve Performance
 
-New Relic's Dashboard starts with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
+New Relic's Dashboard opens with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
 
 1. PHP Execution
 1. Database Queries (MySQL or Redis)
-1. External Requests (e.g. calls to third-party APIs)
+1. External Requests (calls to third-party APIs)
 
 Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/guides/new-relic/debug-mysql-new-relic) could be the result of slow queries, or an elevated volume of queries overall.
 
@@ -87,6 +87,8 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 ## More Resources
 
-- [New Relic Labelling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
+- [New Relic Ping Monitors](/guides/pagerduty/monitor/)
+
+- [New Relic Labeling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
 
 - [New Relic FAQ](/guides/new-relic/new-relic-faq)

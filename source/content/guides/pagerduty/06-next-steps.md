@@ -22,3 +22,16 @@ getfeedbackform: default
 Congrats! You just setup a kickass incident management procedure with automated notifications for your team. Celebrate!
 
 But this is just the tip of the iceberg. Checkout more [PagerDuty integrations](https://www.pagerduty.com/integrations/) and also be sure to [download their mobile application](https://www.pagerduty.com/features/mobile-incident-management/).
+
+
+## More Resources
+
+- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
+
+- [New Relic FAQ](/guides/new-relic/new-relic-faq)
+
+-  [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+
+- [Troubleshoot New Relic](/guides/new-relic/troubleshoot-new-relic)
+
+- [Integrate Your Fastly Account with New Relic](/guides/fastly-pantheon/fastly-new-relic)

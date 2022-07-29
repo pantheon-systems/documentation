@@ -46,3 +46,11 @@ Now we'll hookup our PagerDuty service as a notification channel for our alert p
 1. Select the **Alert policies** tab, and **Add alert policies**.
 
 1. Select the policy created in the [monitoring](/guides/pagerduty/monitor) part of this guide, and **Save changes**.
+
+## More Resources
+
+- [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
+
+- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
