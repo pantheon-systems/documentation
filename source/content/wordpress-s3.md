@@ -15,7 +15,7 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 
@@ -74,7 +74,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
   <Alert title="Warning" type="danger">
 
-  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/git-faq/#does-pantheon-support-git-submodules)).
+  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/guides/git/faq-git#does-pantheon-support-git-submodules)).
 
   </Alert>
 

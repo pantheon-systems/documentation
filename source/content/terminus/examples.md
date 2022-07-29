@@ -261,7 +261,7 @@ terminus env:clear-cache <site>.live
 
 There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live:
 
-- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
+- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/guides/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
 
 - Code changes have been force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
 
@@ -293,7 +293,7 @@ The Site Dashboard will open once the reset procedure has completed.
 
 Every site has an upstream assigned in order to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/custom-upstream).
+- Convert existing sites from a default framework to a [Custom Upstream](/guides/custom-upstream).
 - Convert existing sites from one Custom Upstream to another, for reasons like:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
@@ -305,7 +305,7 @@ To see all available upstreams, run:
 terminus upstream:list
 ```
 
-If your organization has a [Custom Upstream](/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My Custom Upstream"

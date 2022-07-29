@@ -36,7 +36,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 - Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-- Install and configure [Git](/git) and [Composer](https://getcomposer.org/download/) on your local computer.
+- Install and configure [Git](/guides/git/git-config) and [Composer](https://getcomposer.org/download/) on your local computer.
 
    - Mac users can use [Homebrew](https://brew.sh/) to install both Git and Composer, along with their required dependencies:
 

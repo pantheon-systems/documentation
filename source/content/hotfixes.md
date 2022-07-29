@@ -4,7 +4,7 @@ description: Learn how to deploy and test hot fixes and preserve orphan commits 
 categories: [troubleshoot]
 tags: [code, collaborate, git, webops, workflow]
 ---
-For Experts only. You should not need to attempt this if you use [Multidev](/multidev) and keep commits from reaching Dev that you do not intend on deploying.
+For Experts only. You should not need to attempt this if you use [Multidev](/guides/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
 <Alert title="Warning" type="danger">
 

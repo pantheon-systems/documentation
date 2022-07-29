@@ -11,7 +11,7 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 </Alert>
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -44,12 +44,12 @@ Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/80205
 
 ### Commit Code in Dev
 
-Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/git).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/guides/git/git-config).
 For more detailed information on developing directly in SFTP mode, please see the [guide](/sftp).
 
 ### Combine Code from Dev and Content from Live in Test
 
-When you're ready to test a new set of changes, deploy your code from Dev to Test. At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, [each deployment generates a Git tag](/git-faq#what-are-the-git-tags).
+When you're ready to test a new set of changes, deploy your code from Dev to Test. At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, [each deployment generates a Git tag](/guides/git/faq-git#what-are-the-git-tags).
 
 <Alert title="Note" type="info">
 

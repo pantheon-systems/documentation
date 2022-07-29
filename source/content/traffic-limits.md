@@ -3,7 +3,7 @@ title: Traffic Limits and Overages
 description: Information on how Pantheon measures site traffic in visits and pages served.
 categories: [performance]
 tags: [billing, measure, traffic]
-reviewed: "2020-06-22"
+reviewed: "2022-06-10"
 ---
 
 Pantheon’s customers generate the most value from [WebOps](https://pantheon.io/webops?docs), and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs), and we deploy [backend resources](/site-plans-faq#plan-resources) to support your continued success.
@@ -16,7 +16,7 @@ Pantheon helps ensure your sites are performing at their best by provisioning se
 
 Site traffic consists of two components: **Site Visits** and **Pages Served**. The Site Dashboard gives you immediate access to these metrics, which are refreshed daily. Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using Pantheon's Site Dashboard.
 
-## Traffic Metrics
+## Traffic Definitions
 
 <Partial file="traffic-dl.md" />
 
@@ -28,7 +28,6 @@ Each site is provisioned for optimal performance based on the traffic load it is
 
 ### Traffic Metrics
 
-**Measurement**. Pantheon defines “visits” in the Site Dashboard as set out above under “Site Visits.”
 
 **Exclusions**. The traffic measurement model above describes those interactions specifically excluded. Inherent in our model is customer feedback. [Contact support](/guides/support/contact-support) to request that Pantheon consider additional exclusions if you experience issues with your site and any of the following:
 
@@ -40,6 +39,8 @@ Each site is provisioned for optimal performance based on the traffic load it is
   - A high-performance response to crawlers supports SEO, which is one of the reasons Pantheon is the platform of choice for our customers. Although it places load on the platform, Pantheon excludes select automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. See above definition of Visits regarding the combination of datasets to determine traffic metrics. Pantheon excludes certain activity on your Site Dashboard (e.g., Google bot user agent).
   - Some bots and crawlers present themselves as end-user browsers. This makes their behavior difficult to distinguish from human end users. Some bots exhibiting this behavior, while they claim to be regular browsers, remain distinctive enough to exclude from billing.
   - To block specific bots and crawlers from your site, [add them to `robots.txt`](/bots-and-indexing#indexing-your-pantheon-site) or [use PHP to block specific User Agents](/optimize-site-traffic#block-user-agents-in-drupal-or-wordpress).
+
+## Traffic Incidents
 
 Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
 

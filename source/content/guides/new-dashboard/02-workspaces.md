@@ -5,7 +5,7 @@ description: Workspaces are a home base for your WebOps.
 categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert,joa-pan]
-reviewed: "2021-02-26"
+reviewed: "2022-07-20"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/workspaces
@@ -19,9 +19,7 @@ editpath: new-dashboard/02-workspaces.md
 
 [<dfn id="worksp">Workspaces</dfn>](/guides/new-dashboard) are the improved version of the Legacy Dashboards, with Pantheon features and actions that are conveniently available in one place.
 
-
 ### Create a New Workspace
-
 
 #### Organization Workspace
 
@@ -29,8 +27,7 @@ To create a new Workspace from the Dashboard, click the Organization’s name an
 
 ![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
 
-If you are creating the the Workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the Workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
-
+If you are creating the Workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the Workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
 
 ### Switch Between Workspaces
 
@@ -46,13 +43,11 @@ The **<i className="fa fa-window-restore"></i> Sites** tab shows a table of all 
 
 Click a table heading to sort the table by that heading.
 
-
 ## Team
 
 By default, all users are assigned the Administrator role after the Workspace is created.
 
 Manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
-
 
 ## Autopilot
 
@@ -64,25 +59,32 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 ## Upstreams
 
-Create a new Workspace-specific [Custom Upstream](/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams all you to use an external repository as a template for your site.
+Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab. 
-1. On the Custom Upstreams page click **Add New Upstream**. The Create New Custom Upstream page is displayed. 
+1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab.
+
+1. On the Custom Upstreams page click **Get Started**. The Create New Custom Upstream page is displayed.
+
 1. Enter the URL of your GitHub or Bitbucket repository. URLs from the pantheon-systems GitHub workspace will not work.
+
 1. Select the **Framework** and **Initial Connection Mode**.
+
 1. Add the desired name and a description. Adding a description is optional.
+
 1. Click **Save**.
 
 After the Upstream has been added to your Dashboard, select from the list of available Custom Upstreams and click **Create Site From Upstream**. 
 
-Click **More** in the Custom Upstream to edit or delete. After you click **Edit Settings** you are directed to the Upstream Settings page. Modify the page and click **Save**.
+![List of available custom upstreams](../../../images/dashboard/new-dashboard/custom-upstreams-list.png)
+
+In your list of upstreams, click **More** to edit or delete. After you click **Edit Settings** you are directed to the Upstream Settings page. Modify the page and click **Save**.
 
 To delete, click **Delete Upstream** from the **More** drop-down menu. 
 
 ## Support
 
-Chat with Pantheon Support or access and create new Support tickets.
+Chat with Pantheon Support, access and create Support tickets, engage with other Pantheon users via Slack, or search documentation.
 
-## Settings
+## Workspace Settings
 
 Use the **Settings** tab to modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.

@@ -97,7 +97,7 @@ The scripts are organized into subdirectories according to their function:
 
 All scripts stored in the `.ci/deploy` directory facilitate code deployment to Pantheon.
 
- - `.ci/deploy/pantheon/create-multidev` creates a new [Pantheon Multidev environment](/multidev) for branches other than the default Git branch. Note that not all users have Multidev access. Please consult the [Multidev FAQ doc](/multidev-faq) for details.
+ - `.ci/deploy/pantheon/create-multidev` creates a new [Pantheon Multidev environment](/guides/multidev) for branches other than the default Git branch. Note that not all users have Multidev access. Please consult the [Multidev FAQ doc](/guides/multidev/multidev-faq) for details.
 
 - `.ci/deploy/pantheon/dev-multidev` deploys the built artifact to either the Pantheon Dev or a Multidev environment, depending on the Git branch.
 

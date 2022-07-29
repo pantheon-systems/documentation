@@ -22,7 +22,7 @@ reviewed: "2022-05-17"
 Pantheon's Autopilot:
 
 - Automatically detects when new updates are available
-- Performs the updates in an isolated [Multidev](/multidev) environment
+- Performs the updates in an isolated [Multidev](/guides/multidev) environment
 - Tests the updates with automated visual regression testing (VRT)
 - Optionally deploys the updates
 
@@ -45,7 +45,7 @@ Autopilot is for you if you build or maintain WordPress and Drupal sites.
 
 Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
-Autopilot requires [Multidev](/multidev), and is available to Pantheon Gold Accounts or higher.
+Autopilot requires [Multidev](/guides/multidev), and is available to Pantheon Gold Accounts or higher.
 
 Autopilot is enabled for Pantheon sites at the organization level.
 
@@ -54,7 +54,7 @@ Autopilot is enabled for Pantheon sites at the organization level.
 Autopilot requires the following:
 
 - A Gold, Platinum, or Diamond account
-- [Multidev](/multidev)
+- [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
 
 ### Autopilot Site Compatibility
@@ -75,6 +75,9 @@ Agency users can only access Autopilot through the Agency Workspace.
 ## See Also
 
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
+
 - [Webinar: Put CMS Updates on Cruise Control with Autopilot](https://pantheon.io/put-cms-updates-on-cruise-control-with-autopilot-webinar)
+
 - [Autopilot Makes Open Source CMS a Reality at Scale](https://pantheon.io/blog/open-source-cms-scale-autopilot)
+
 - [Robots, Autopilot, and The Holy Grail of WebOps](https://pantheon.io/blog/robots-autopilot-and-holy-grail-webops)

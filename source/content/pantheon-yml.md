@@ -132,7 +132,7 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
 1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. 
 
-1. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
+1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 
   Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
@@ -244,7 +244,7 @@ For more information, see [Automate your Workflow with Quicksilver Platform Inte
 
 ## Custom Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/guides/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 

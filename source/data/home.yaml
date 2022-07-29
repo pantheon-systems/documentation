@@ -66,8 +66,6 @@
         url: '/guides/solr-drupal/solr-drupal-9'
       - text: 'Domains and Redirects'
         url: '/domains/'
-      - text: 'Git FAQs'
-        url: '/git-faq/'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
   three-column-links:
@@ -89,8 +87,6 @@
         url: '/domains/'
       - text: 'Configuring settings.php'
         url: '/settings-php/'
-      - text: 'Git FAQs'
-        url: '/git-faq/'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
       - text: 'Object Cache (formerly Redis) for Drupal or WordPress'

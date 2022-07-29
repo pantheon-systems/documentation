@@ -47,7 +47,7 @@ Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new
 
 ### Prepare the Local Environment
 
-Ensure you review our documentation on [Git](/git), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
+Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
 
 * Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
@@ -56,11 +56,11 @@ Ensure you review our documentation on [Git](/git), [Composer](/guides/composer)
     ```
 
 * Windows users should install the following dependencies:
-  
+
   * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-  
+
   * [Git](https://git-scm.com/download/win)
-  
+
   * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
 
 
@@ -147,27 +147,27 @@ To install the Search API Pantheon module, switch to your local machine.
 1. Clone the Git repository for the desired environment from the Pantheon Site Dashboard.
 1. Enter the following command in the terminal to run `composer install`:
 
-     ```shell{promptUser:user}
-     composer install
-     ```
+   ```shell{promptUser:user}
+   composer install
+   ```
 1. Add the Search API Pantheon module as a required dependency:
 
-     ```shell{promptUser:user}
-    composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
-     ```
+   ```shell{promptUser:user}
+   composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
+   ```
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
 
 #### Enable Pantheon Search
 
-You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush. 
+You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush.
 
 Enter the following command, replacing `$ENV` with the environment:
 
-    ```shell{promptUser:user}
-    terminus drush $SITE.$ENV -- pm-enable search_api_pantheon:^8@beta search_api_pantheon_admin
-    ```
-    
+```shell{promptUser:user}
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
+```
+
 You might also want to enable the modules from the site’s Extend page located in `/admin/modules`.
 
 ## Configure Pantheon Search
@@ -190,7 +190,7 @@ The Index status page should indicate that the newly created index was successfu
 
 Follow the steps below to add fields to your new index.
 
-1. Click **Fields** > click **Add fields**. 
+1. Click **Fields** > click **Add fields**.
 1. Click **Save changes** when you are finished.
 
 ### Index Content
@@ -198,23 +198,23 @@ Follow the steps below to add fields to your new index.
 Follow the steps below to index existing content.
 
 1. Click **Index now** on the **View** tab of your index’s Overview page.
-1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`. 
+1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`.
 
 Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
 
 1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
-1. Select the **Pantheon Search Admin** tab to save and post the schema information. 
+1. Select the **Pantheon Search Admin** tab to save and post the schema information.
 1. Enable the **Execute Pantheon Search admin task** permission for users who need access to the **Pantheon Search Admin** tab.
-1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server. 
+1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server.
    - The server responds with a `200 - OK` status for each schema file posted.
-  
-## Troubleshooting Pantheon Search with Solr 8 for Drupal 
+
+## Troubleshooting Pantheon Search with Solr 8 for Drupal
 
 ### Diagnose Issues
 
-The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working. 
+The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working.
 
 The `drush search-api-pantheon:select` (saps) command runs the query against the Solr server. It is recommended that you use `?debug=true` on any Solr page to allow a query to pass.
 
@@ -234,7 +234,7 @@ If you are using the Lenient endpoint, you may encounter an error when running C
 
 This occurs because both repositories contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. Change the `repositories` definition by adding a definition for the Lenient repository in the site's `packages.json` file with an explicit `exclude` argument:
 
-```
+```json:title=packages.json
 "repositories": {
     "lenient": {
         "type": "composer",

@@ -16,7 +16,7 @@ Yes, APCu can be used as a cache backend or a "key-value store"; however, this i
 
 ### How can I determine what my current APCu settings are?
 
-Search for `shm_size` in [phpinfo](/phpinfo).
+Search for `shm_size` in [phpinfo](/guides/secure-development/phpinfo).
 
 As this is not a runtime configuration, the `shm_size` cannot be changed. If a greater `shm_size` is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.pantheon.io/plans/pricing?docs "Pantheon Pricing") for a larger `shm_size` allocation.
 
@@ -29,4 +29,4 @@ No. The **Clear Caches** button in the Site Dashboard does not interact with APC
 - [Application Containers overview](/application-containers)
 - [Clearing the cache](/clear-caches)
 - [Object Cache (formerly Redis)](/object-cache)
-- [Securely Working with phpinfo](/phpinfo)
+- [Securely Working with phpinfo](/guides/secure-development/phpinfo)

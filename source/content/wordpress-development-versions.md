@@ -10,7 +10,7 @@ Pantheon provides [one-click updates](/core-updates) for WordPress core within t
 
 <Alert title="Warning" type="danger">
 
-Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a [Multidev](/multidev) environment or within an isolated local environment on a branch other than master.
+Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a [Multidev](/guides/multidev) environment or within an isolated local environment on a branch other than master.
 
 </Alert>
 
@@ -47,7 +47,7 @@ Development versions and beta releases are not supported and should not be run o
  terminus connection:set <site>.<env> git
  ```
 
-1. From within the [local clone of your site's code repository](/git#clone-your-site-codebase):
+1. From within the [local clone of your site's code repository](/guides/git/git-config#clone-your-site-codebase):
 
  ```bash{promptUser: user}
  git checkout -b "wpcore"

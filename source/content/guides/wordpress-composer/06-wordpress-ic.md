@@ -53,15 +53,15 @@ To create a new WordPress site using Integrated Composer, use Terminus to create
 
     - [Add dependencies to your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
 
-1. Review the [Custom Upstreams](/maintain-custom-upstream) documentation to learn how to:
+1. Review the [Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) documentation to learn how to:
 
-    - [Test and Release Pantheon Core Updates](/maintain-custom-upstream#test-and-release-pantheon-core-updates)
+    - [Test and Release Pantheon Core Updates](/guides/custom-upstream/maintain-custom-upstream#test-and-release-pantheon-core-updates)
 
-    - [Automatically Resolve Conflicts from the Command Line](/maintain-custom-upstream#automatically-resolve-from-the-command-line)
+    - [Automatically Resolve Conflicts from the Command Line](/guides/custom-upstream/maintain-custom-upstream#automatically-resolve-from-the-command-line)
 
-    - [Tips and Tricks for Maintaining Custom Upstreams](/maintain-custom-upstream#delete-custom-upstream)
+    - [Tips and Tricks for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream#delete-custom-upstream)
 
-    - [Delete a Custom Upstream](/maintain-custom-upstream#delete-custom-upstream)
+    - [Delete a Custom Upstream](/guides/custom-upstream/maintain-custom-upstream#delete-custom-upstream)
 
 1. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation to learn about:
 
@@ -70,6 +70,6 @@ To create a new WordPress site using Integrated Composer, use Terminus to create
 
 ## See Also
 
-- [Best Practices for Maintaining Custom Upstreams](/maintain-custom-upstream) 
+- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) 
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)

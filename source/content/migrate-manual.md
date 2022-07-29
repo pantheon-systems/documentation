@@ -266,8 +266,25 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
+The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. For example:
+
+  ```bash
+  mysqldump db_name > backup-file.sql
+  ```
+
+1. Enter your username and password when prompted to authenticate the command.
+
+    - You might want to consider using a terminus credential fetch to avoid entering credentials for future automation steps.
+
+1. Run the command below to load the dump file back into the server:
+
+  ```bash
+  mysql db_name < backup-file.sql
+  ```
+
+You can also use the Pantheon Dashboard to add your site's database.
 
 <Partial file="drupal-9/migrate-add-database-part2.md" />
 
@@ -345,9 +362,18 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
 
-  ```bash
+   
+  ```bash:title=migrate-rsync.sh
+  #!/bin/bash
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxx
+  
   ENV='dev'
-  SITE='SITEID'
+  # The sshpass command is required.
+  if ! [ -x "$(command -v sshpass)" ]; then
+	echo 'Error: The sshpass command was not found.' >&2
+	exit 1
+  fi 
 
   read -sp "Your Pantheon Password: " PASSWORD
   if [[ -z "$PASSWORD" ]]; then
@@ -403,6 +429,10 @@ ff = only
 
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
-## See Also
+## More Resources
 
-Check our standard migration procedure for related [Frequently Asked Questions](/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/migrate#troubleshooting) tips.
+- [Frequently Asked Questions](/guides/guided/faq)
+
+- [Troubleshooting](/guides/guided/troubleshooting) tips
+
+- [Importing Drush Site Archives with Terminus](/drush-import)

@@ -31,7 +31,6 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
-
 ## Add a Dependency to an Individual Site
 
 1. Clone the Git repository from the Pantheon site's dashboard.
@@ -133,7 +132,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
     ```
 
      - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
-     - `--no-update` should not be included when adding dependencies to a site. 
+     - `--no-update` should not be included when adding dependencies to a site.
 
 1. _Optional_ : Set or increment the current configuration version. This step can be skipped initially. Only perform this step if you are prompted to update the Composer config version.
 
@@ -147,8 +146,8 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
      - Replace `1.0.1` in this example with the latest version number:
 
        ```bash{promptUser: user}
-        composer config version 1.0.1
-        ```
+       composer config version 1.0.1
+       ```
 
 1. Commit and push.
 
@@ -205,6 +204,38 @@ If there is an error in the output, it may be due to an error in the site's `com
 
 To resolve, examine the error in the log. It may be a syntax or parse error of the JSON files, or some sort of error loading a library via Composer. You can also try running the same command on your local Git checkout of the site's code and see if you can update the `composer.json` and `composer.lock` files to run the command successfully.
 
+### Creating a New Multidev or Deploying to an Environment Results in an Empty Site
+
+You must manually allow any plugin that acts on the code base of your site in your  `composer.json` file. This is a Composer 2.2 requirement introduced on July 1, 2022 that provides an additional layer of security. Sites that were working previously will have builds that fail because of this new requirement. Failed builds can arise as a broken environment or as unreflected code changes after a commit.
+
+Read more about this security requirement on [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
+
+You might see one of the following issues:
+
+- `Fatal error: Cannot redeclare format_size() (previously declared in /code/web/core/includes/common.inc:137) in /code/vendor/drupal/core/includes/common.inc on line 137`
+
+- Pantheon error page with “No code” or “No site detected” on newly initialized environments
+
+- `Fatal error: Cannot redeclare drupal_get_filename() (previously declared in /code/vendor/drupal/core/includes/bootstrap.inc:164) in /code/web/core/includes/bootstrap.inc on line 164`
+
+Follow the steps below to resolve the issue:
+
+1. Clone the site to your local computer and ensure that Composer 2.2 or later is installed locally.
+
+1. Run `composer install` and complete the interactive prompts to allow plugins.
+
+   - The prompts will look like this:
+
+    ```bash{outputLines:2-5}
+    composer install
+    composer/installers contains a Composer plugin which is currently not in your allow-plugins config. See https://getcomposer.org/allow-plugins
+    Do you trust "composer/installers" to execute code and wish to enable it now? (writes "allow-plugins" to composer.json) [y,n,d,?] y
+    cweagans/composer-patches contains a Composer plugin which is currently not in your allow-plugins config. See https://getcomposer.org/allow-plugins
+    Do you trust "cweagans/composer-patches" to execute code and wish to enable it now? (writes "allow-plugins" to composer.json) [y,n,d,?]
+    ```
+
+1. Commit and push the code up to your site.
+
 ### Upstream Updates Cannot Be Applied
 
 When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
@@ -215,7 +246,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 ]
 ```
 
-**Issue 1:** The site might use a [Custom Upstream](/custom-upstream).
+**Issue 1:** The site might use a [Custom Upstream](/guides/custom-upstream).
 
 **Solution 1:** Copy the Upstream URL and then follow **Solution 2**:
 
@@ -251,15 +282,16 @@ Merge the changes manually:
    Automatic merge failed; fix conflicts and then commit the result.
    ```
 
-1. [Resolve the conflict](/git-resolve-merge-conflicts#resolve-content-conflicts) and follow the instructions to commit the merged changes.
+1. [Resolve the conflict](/guides/git/resolve-merge-conflicts/#resolve-content-conflicts) and follow the instructions to commit the merged changes.
 
 1. To verify that the merge was successful, run `composer install` on your local branch to verify that the `composer.json` parses correctly, and that the correct libraries are installed or updated. If the command fails, then the merge was not made correctly and the error message may point to how `composer.json` needs to change.
 
 1. Push the changes to Pantheon. Integrated Composer will run again with the updated `composer.json`.
 
-### Changes Lost During Direct Upload or Commit 
+### Changes Lost During Direct Upload or Commit
 
-Do not commit module/plugin or theme files directly to your site when in Git mode. You also should not upload module/plugin or theme files directly to your site when in SFTP mode. Direct commits and uploads will be lost because the `.gitignore` file in your upstream repository has several defined paths, which causes files in those directories to be ignored.  These directories are:
+Do not commit module/plugin or theme files directly to your site when in Git mode. You also should not upload module/plugin or theme files directly to your site when in SFTP mode. Direct commits and uploads will be lost because the `.gitignore` file in your upstream repository has several defined paths, which causes files in those directories to be ignored. These directories are:
+
 <TabList>
 
 <Tab title="Drupal" id="drupal-gitignore" active={true}>
@@ -276,10 +308,12 @@ code/web/
 └─ sites/*/private/
 └─ themes/contrib/
 ```
+
 See the `.gitignore` file for Drupal [here](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
 
 The `contrib` folders are where community contributed modules, profiles, and themes would reside.
 The `custom` folders, which are not ignored, are where modules, profiles, and themes created by you would reside.
+
 </Tab>
 
 <Tab title="WordPress" id="wp-gitignore">
@@ -290,7 +324,13 @@ code/web/wp-content/
 └─ plugins/
 └─ themes/
 ```
+<<<<<<< HEAD
 See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-composer-managed/blob/master/.gitignore). 
+=======
+
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+
+>>>>>>> main
 </Tab>
 
 </TabList>
@@ -305,7 +345,7 @@ To resolve, there are two potential solutions:
 
 - If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
-- Remove the upstream updates by [undoing the commits](/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+- Remove the upstream updates by [undoing the commits](/guides/git/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
 
 ### Issues using `wikimedia/composer-merge-plugin`
 
@@ -347,7 +387,7 @@ Pantheon does not offer support for Composer GUIs or any conflicts that might be
 
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 
-Contrib modules added by Integrated Composer from the now deprecated [Drupal Project](https://github.com/pantheon-upstreams/drupal-project/blob/master/composer.json#L29) upstream are placed in the `/modules/composer` directory in case a site already has non-Composer-managed modules in the standard `/modules/contrib` directory. If your site does not fall into this category, it is safe to rename the `composer` directory back to the standard `contrib` and alter the installer path to match. 
+Contrib modules added by Integrated Composer from the now deprecated [Drupal Project](https://github.com/pantheon-upstreams/drupal-project/blob/master/composer.json#L29) upstream are placed in the `/modules/composer` directory in case a site already has non-Composer-managed modules in the standard `/modules/contrib` directory. If your site does not fall into this category, it is safe to rename the `composer` directory back to the standard `contrib` and alter the installer path to match.
 
 We recommend upgrading to the [Drupal Composer Managed Project](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json#L50), which installs modules to the standard `contrib` directory. This `/modules/contrib` directory is added by default to the `.gitignore` file which tells Git to ignore files generated by Composer. You can manually add packages and make commits up to the repository by modifying the `.gitignore` file with the following exception:
 
@@ -357,9 +397,9 @@ We recommend upgrading to the [Drupal Composer Managed Project](https://github.c
 
 <Alert title="Note"  type="info" >
 
- All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file as this can create a conflict that causes Integrated Composer to fail.
+All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file as this can create a conflict that causes Integrated Composer to fail.
 
- </Alert>
+</Alert>
 
 ### What features are planned for Integrated Composer on Pantheon?
 

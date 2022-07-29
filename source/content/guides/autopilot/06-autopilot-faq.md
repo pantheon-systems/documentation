@@ -1,6 +1,6 @@
 ---
 title: Pantheon Autopilot
-subtitle: Autopilot Frequently Asked Questions
+subtitle: Autopilot FAQs
 description: Get answers to your Autopilot questions.
 categories: [automate]
 tags: [autopilot, webops]
@@ -53,9 +53,7 @@ You can specify the environments to which Autopilot deploys. See the [configurat
 
 ## Does Autopilot clone the database from Live to Dev before doing the updates?
 
-No. Autopilot always tests updates against a Multidev based on the current Dev environment.
-
-For Autopilot to compare updates to the Live environment, keep the Dev environment [synchronized with the Live environment](/pantheon-workflow), to ensure Autopilot tests updates against the most up-to-date state of the Live environment.
+Autopilot tests updates against a Multidev cloned from the current Dev environment by default. Opt into the [Sync Environment](https://pantheon.io/docs/guides/autopilot/enable-autopilot/#schedule) feature in the site's **Configuration** tab to sync your Live environment before Autopilot checks for updates.
 
 ## Does the Autopilot Multidev count towards the Multidev limit?
 
@@ -64,3 +62,19 @@ No. If you encounter any issues about Multidev limits, [contact Support](/guides
 ## Does Autopilot perform tests on authenticated pages?
 
 Not yet. Currently, Autopilot only supports tests on anonymous access versions of pages. Support for authenticated (logged-in user) page tests is planned for a future release.
+
+## What does Autopilot specifically check for?
+
+Autopilot only checks for changes and updates to modules, themes, and core. You should take time to carefully review and test changes that fall outside of Autopilot's scope, including:
+
+- Code changes
+
+- PHP changes
+
+- Templates changes
+
+- Other backend changes
+
+## More Resources
+
+- [Apply Autopilot Updates](/guides/autopilot/apply-updates)

@@ -13,7 +13,7 @@ We do not recommend directly restoring a Live environment from a backup; instead
 
 </Alert>
 
-If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/undo-commits) **before** attempting a site restore.
+If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/guides/git/undo-commits) **before** attempting a site restore.
 
 If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp).
 
@@ -107,7 +107,7 @@ The restore process removes any recent content or changes applied to your site s
 
 If you still want to restore a backup to the Live environment, we recommend the following steps:
 
-- [Lock the environment first](/security)
+- [Lock the environment first](/guides/secure-development/security-tool)
 - [Run a backup](/backups) of LIVE, in order to have a copy of files and the database that will be overwritten
 - Run the restore while the site is still locked
 

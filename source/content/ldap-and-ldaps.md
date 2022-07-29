@@ -14,7 +14,7 @@ PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are 
 
 <Alert title="Note" type="info">
 
-Pantheon supports IP-based defense-in-depth firewall configuration schemes *only* when implemented as part of a [Pantheon Secure Integration](/secure-integration) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
+Pantheon supports IP-based defense-in-depth firewall configuration schemes *only* when implemented as part of a [Pantheon Secure Integration](/guides/secure-development/secure-integration) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
 
 </Alert>
 
@@ -28,7 +28,7 @@ WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](https://secure.php.net/manual/en/function.putenv.php).
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/private-paths) in your codebase: `SITEROOT/private`.
+If your LDAP server uses security certificate(s), place them in the [private file directory](/guides/secure-development/private-paths) in your codebase: `SITEROOT/private`.
 
 Then, specify the location of the certificate file(s) in `sites/default/settings.php` using `putenv`. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  For more information about working with `settings.php`, see [configuring settings.php](/settings-php).
 
@@ -70,7 +70,7 @@ The ldap\_sso submodule from the suite of modules included in [https://drupal.or
 
 ### Does Secure Integration work with LDAP?
 
-WordPress and Drupal both work with the [Pantheon Secure Integration](/secure-integration). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
+WordPress and Drupal both work with the [Pantheon Secure Integration](/guides/secure-development/secure-integration). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
 ## Troubleshooting
 

@@ -233,7 +233,7 @@ ___
 
 **Solution:** This plugin only works in the `Coming Soon Mode` on Pantheon. You need to add content to the **Page Settings** > **Message**, so the Coming Soon page won't appear as a blank page.
 
-Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/security#customize-lock-page).
+Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/guides/secure-development/security-tool#customize-lock-page).
 
 ___
 
@@ -267,7 +267,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 
 `define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`
 
-Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
+Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/guides/multidev) you are using.
 
 At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
 
@@ -511,7 +511,7 @@ ___
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 ___
 
@@ -574,7 +574,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
@@ -638,7 +638,7 @@ ___
 
 <ReviewDate date="2020-12-10" />
 
-**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) can have incompatible index values for `meta_key` on database tables when installed on a site imported from a host using [3-byte character sets](/migrate#maximum-index-size), resulting in the following error on import:
+**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) can have incompatible index values for `meta_key` on database tables when installed on a site imported from a host using [3-byte character sets](/guides/guided/troubleshooting#maximum-index-size), resulting in the following error on import:
 
 ```none
 Index column size too large. The maximum column size is 767 bytes
@@ -829,7 +829,7 @@ ___
 
 **Solution:** Manually change `unloq_credentials` key in the`wp_options` table. Alternatively, you can re-create an application by resetting your plugin installation (deactivate, delete entries, etc.).
 
-For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication/#single-site-tfa).
+For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/guides/secure-development/two-factor-authentication/#single-site-tfa).
 
 ___
 
@@ -861,6 +861,24 @@ Events:
 Brizy:
 
 - `wp-content/plugins/brizy/vendor/twig/twig/.gitignore`
+
+___
+
+## Updraft / Updraft Plus Backup
+
+<ReviewDate date="2022-07-18" />
+
+**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](https://pantheon.io/docs/backups/) for more information.
+
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by: 
+
+- Running the bash script in your local system 
+
+- Using an external server
+
+- Using a service that runs cron jobs for you
+
+Refer to the [Access Backups](https://pantheon.io/docs/backups#access-backups) documentation for more details.
 
 ___
 
@@ -950,7 +968,7 @@ ___
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/multidev)) environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -959,33 +977,40 @@ export ENV=dev
 
 </Alert>
 
-1. Set your Dev (or [Multidev](/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.$ENV git
   ```
 
-1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/git#clone-your-site-codebase):
+1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Navigate to the codebase directory and create the symlinks listed below:
+1. Change to the `code` directory:
+
+   ```bash{promptUser: user}
+   cd code/
+   ```
+   
+1. Create the following symlinks:
 
   <Alert title="Note"  type="info" >
 
-  You must remove the `/wp-content/wflogs` file if it already exists before you create the symlinks listed below.
+  You must remove the `/wp-content/wflogs` directory, if it already exists, before you create the symlinks listed below.
 
   </Alert>
 
   ```bash{promptUser: user}
+  
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
   ```
 
-1. Open `pantheon.yml` and add a [protected web path](/private-paths) for `.user.ini`:
+1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
 
   ```yml:title=pantheon.yml
   protected_web_paths:
@@ -1344,7 +1369,7 @@ ___
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
-**Solution:** Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/security).
+**Solution:** Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/guides/secure-development/security-tool).
 
 ___
 
@@ -1422,6 +1447,22 @@ ___
 **Issue:** The redirects for the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin setting will detect two options for redirect methods, "PHP", and "Web Server". The Web Server option expects write access to the `nginx.conf` file, which is not writable on Pantheon.
 
 **Solution:** Only use the "PHP" redirect method.
+
+___
+## Yoast Indexables
+
+<ReviewDate date="2022-06-14" />
+
+**Issue:** [Yoast Indexables](https://yoast.com/innovations/indexables/) can cause performance issues on large sites. Sites with 100,000+ posts might find that indexing the table with `wp yoast index` will time out. Sites might also see slow load times in both the frontend and wp-admin areas due to queries on the `wp_yoast_indexables` table.
+
+**Solution:** [Disable saving data](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/#disabling-indexables) to the `wp_yoast_indexables` table to improve wp-admin performance. However, if you have 1,000,000+ posts you might see extremely poor performance on the frontend with indexables disabled. Use the code below to disable data saving for Yoast indexables.
+
+```php:title=plugin.php
+/** Tell Yoast not to save indexable data to the wp_yoast_indexables table. */
+add_filter( 'Yoast\WP\SEO\should_index_indexables', '__return_false' );
+```
+
+Pantheon's [Professional Services](/guides/professional-services) team has tooling available to help index large sites. Reach out to your Customer Success Manager to get more information about tooling.
 
 ___
 

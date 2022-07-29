@@ -14,7 +14,7 @@ editpath: localdev/04-troubleshoot-support.md
 
 ## Contact Support
 
-Before contacting Support, review the [support ticket best practices](/guides/support/support-ticket/) to help our team help you resolve the issue, or to report any potential issues in Localdev itself.
+Review the [support ticket best practices](/guides/support/support-ticket/) before contacting Support. This helps our team assist you in resolving the issue, and can help report any potential issues in Localdev itself.
 
 1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
 
@@ -44,7 +44,7 @@ mkdir: cannot create directory '/app/./wp-content/uploads':
 File exists\n","label":"myawesomesite","timestamp":"2020-11-25T16:40:12.057Z"}
 ```
 
-The contents of `wp-contents/uploads` should be symlinked to files, in keeping with the [code moves up, content moves down](/pantheon-workflow#code-moves-up-content-moves-down) best practice of the Pantheon WebOps workflow.
+The content of `wp-contents/uploads` should be symlinked to files, in keeping with the [code moves up, content moves down](/pantheon-workflow#code-moves-up-content-moves-down) best practice of the Pantheon WebOps workflow.
 
 You can [contact support](#contact-support) for help moving your files out of the codebase.
 
@@ -65,11 +65,11 @@ See step 9 of [Create a Site](/create-sites#create-a-site).
 
 The steps in this section should only be used as a last resort. This resets Localdev and will remove the machine token and all local copies of your connected sites.
 
-1. Click **Settings**
+1. Click **Settings**.
 
-1. **Reset to defaults**
+1. Click **Reset to defaults**.
 
-1. **Proceed with reset**
+1. Click **Proceed with reset**.
 
 ## FAQ
 

@@ -56,7 +56,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/multidev):
+This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/guides/multidev):
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -67,7 +67,7 @@ export ENV=dev
 
 1. Install [Composer](https://getcomposer.org) and [Drush](https://docs.drush.org/en/7.x/install/), then install and authenticate [Terminus](/terminus/install).
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
 
   ```bash{promptUser: user}
   cd $SITE

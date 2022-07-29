@@ -55,7 +55,7 @@ Some key differences of decoupled architecture include:
 ### Pantheon's Platform Benefits
 Backend APIs running on Pantheon take advantage of the following platform features for optimal performance:
 
-* [**Global CDN**](/global-cdn): Cache backend API responses from WordPress or Drupal in 40+ global POPs (points of presence).
+* [**Global CDN**](/global-cdn): Cache backend API responses from WordPress or Drupal in 40+ global CHI metro POPs (points of presence).
 * **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
 <!--todo: does solr belong here? help wanted describing the benefits of solr in context of decoupled site.]-->
 
@@ -100,7 +100,7 @@ While not a REST API service by itself, you can create a JSON view using the [Vi
 ## Frequently Asked Questions
 
 ### Can I use other frameworks or distributions?
-You can use [custom upstreams](/custom-upstream), [make your own build](/guides/build-tools) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org) can be used on the platform.
+You can use [custom upstreams](/guides/custom-upstream), [make your own build](/guides/build-tools) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org) can be used on the platform.
 
 ### How can I troubleshoot the backend API?
 We recommend using one of the following Chrome extensions to debug HTTP requests:

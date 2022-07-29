@@ -53,7 +53,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 ### Upstreams
 
-[Custom Upstreams](/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
+[Custom Upstreams](/guides/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
 
 ### Support
 
@@ -69,7 +69,7 @@ All Partner Agencies and EDU organizations have Change Management and Custom Ups
 
 ### Multidev
 
-Partner Agencies, Enterprise accounts, and [Gold Account](/guides/support/#support-features-and-response-times) EDU organizations and above have [Multidev](/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.
+Partner Agencies, Enterprise accounts, and [Gold Account](/guides/support/#support-features-and-response-times) EDU organizations and above have [Multidev](/guides/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.
 
 ### Change Management
 
@@ -112,5 +112,7 @@ terminus org:list
 ## Next Steps
 
 - [Create a Site](/create-sites)
-- [Migrate Sites to Pantheon](/migrate)
+
+- [Migrate Sites to Pantheon](/guides/guided)
+
 - Read the [FAQs](/organization-faq)

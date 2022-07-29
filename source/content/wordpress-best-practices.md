@@ -82,7 +82,7 @@ Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 cor
 
 <Alert title="Note"  type="info" >
 
-Pantheon does not support XML-RPC if it is enabled.
+XML-RPC is not recommended on the Pantheon platform. Pantheon does not support XML-RPC if it is enabled. 
 
 </Alert>
 
@@ -116,6 +116,8 @@ This method has the advantage of being toggleable without deploying code, by act
     return [];
   }, PHP_INT_MAX);
   ```
+
+	If your site uses a nested web root directory, you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php` 
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 

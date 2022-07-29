@@ -20,7 +20,7 @@ Items such as Nginx configuration or Varnish settings are not editable.
 
 Let's look at an example of upgrading a site to PHP7 with pantheon.yml.
 
-We’ll start by creating a [Multidev](/multidev) environment for testing in a separate and safe space.
+We’ll start by creating a [Multidev](/guides/multidev) environment for testing in a separate and safe space.
 
 Now we’ll create a pantheon.yml file for the Multidev branch, set the PHP version to 7, and commit the pantheon.yml file to the Multidev environment.
 

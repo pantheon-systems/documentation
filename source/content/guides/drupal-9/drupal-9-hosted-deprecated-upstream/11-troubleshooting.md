@@ -36,10 +36,10 @@ git push origin master
 
 Check that the files are correct before going forward to ensure no bugs are introduced.
 
-If you modified upstream files, the `-Xtheirs` flag will drop your changes. You can [manually resolve conflicts](/git-resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
+If you modified upstream files, the `-Xtheirs` flag will drop your changes. You can [manually resolve conflicts](/guides/git/resolve-merge-conflicts#manually-resolve-conflicts) to fix this issue.
 
 You will be in the Drupal with Composer upstream after you apply the upstream updates.
 
 ## See Also
 
-- [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts)
+- [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)
