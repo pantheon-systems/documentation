@@ -19,7 +19,7 @@ A New Relic account can have only one owner at any time. You must be the current
 
 ### How can I share a link to a particular metric?
 
-Click **Permalink** at the bottom of any page.  This will preserve the current time window and take the link recipient to the same page you're currently looking at.
+Click **Permalink** at the bottom of any page.  This will preserve the current time window and take the link recipient to the same page you are currently viewing.
 
 ### How much does New Relic&reg; Performance Monitoring cost?
 
@@ -31,7 +31,13 @@ No, New Relic will not make your site slower. The overhead is small enough to be
 
 ### What is the difference between app server response time and browser page load time?
 
-App server response time measures how the page was built on Pantheon, including PHP execution, database, and Redis (if used). Browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
+App server response time measures how the page was built on Pantheon, including PHP execution, database, and Redis (if used). Browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Likely causes include:
+
+- Unaggregated or uncompressed scripts and stylesheets
+
+- Invalid markup
+
+- Unoptimized client-side code (like JavaScript)
 
 ### Can I use my existing New Relic license with my Pantheon site?
 

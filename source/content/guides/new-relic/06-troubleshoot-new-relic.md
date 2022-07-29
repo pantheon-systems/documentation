@@ -25,7 +25,7 @@ This section provides solutions for common New Relic troubleshooting scenarios.
 
 ### If you click the Go to New Relic button and are instead sent to a log in screen
 
-1. Log into the Pantheon Dashboard in an [Incognito](https://support.google.com/chrome/answer/95464) or [Private](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) window. The New Relic accounts are shared via SSO, so loading the page in a private window will force new sign-in credentials. If you can sign in this way, use the following steps to resolve access for your main browser session:
+1. Log into the Pantheon Dashboard in an [Incognito](https://support.google.com/chrome/answer/95464) or [Private](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) window. The New Relic accounts are shared via SSO, so loading the page in a private window will force new sign-in credentials. If you can sign in this way, use the steps below to resolve access for your main browser session.
 
 1. Close all of your open New Relic tabs.
 
@@ -47,7 +47,7 @@ You will be prompted to set up New Relic if you try to access New Relic before a
 
 ### If you see "We're sorry, you haven't verified your email address yet."
 
-A confirmation email will be sent to the site owner to complete the setup process after activating New Relic&reg; Performance Monitoring. The account must be verified before members of the site can access New Relic dashboard.
+A confirmation email is sent to the site owner to complete the setup process after activating New Relic&reg; Performance Monitoring. The account must be verified before members of the site can access the New Relic dashboard.
 
 If the New Relic account holder (the site owner or user who activated the New Relic account for the site) did not receive the confirmation email, you can re-send the link by clicking **Forgot your password**:
 
@@ -57,11 +57,11 @@ If the New Relic account holder (the site owner or user who activated the New Re
 
 1. Click **Send my reset link**.
 
-1. Open the email you will receive and click the reset link.
+1. Open the email and click the reset link.
 
 1. Follow the prompts to access your account.
 
-[Contact support](/guides/support/contact-support/) if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
+[Contact support](/guides/support/contact-support/) if you are unsure what user the New Relic account is associated with and are unable to identify where the password reset email has been sent.
 
 ## Removing Multidev Environments in New Relic
 
@@ -79,7 +79,7 @@ You must manually [remove a deleted Multidev environment in New Relic](https://d
 
 You might encounter situations where New Relic's Browser agent interferes with other systems. For example, the JavaScript tag might cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve many errors by disabling New Relic's Browser monitoring agent.
 
-In this example we'll disable it on all AMP pages:
+New Relic is disabled on all AMP pages in this example:
 
 ```php
 $path = $_SERVER['REQUEST_URI'];
@@ -92,7 +92,7 @@ if ($pos !== false){
 }
 ```
 
-This code should be added to `settings.php` for Drupal sites or `wp-config.php` for WordPress sites.
+The code above should be added to `settings.php` for Drupal sites or `wp-config.php` for WordPress sites.
 
 To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 

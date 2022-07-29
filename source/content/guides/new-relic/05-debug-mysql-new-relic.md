@@ -13,7 +13,7 @@ anchorid: debug-mysql-new-relic
 
 This sections provides information on how to solve MySQL issues with New Relic.
 
-Modern reporting services that are integrated with your site help speed the process up the process of going through MySQL and PHP slow logs to find issues. There are a few different systems to choose from, but at Pantheon we use [New Relic&reg; Performance Monitoring](/guides/new-relic). The information below explains how you can troubleshoot MySQL databases with New Relic APM.
+Modern reporting services that are integrated with your site help speed up the process of going through MySQL and PHP slow logs to find issues. There are a few different systems to choose from, but at Pantheon we use [New Relic&reg; Performance Monitoring](/guides/new-relic). The information below explains how you can troubleshoot MySQL databases with New Relic APM.
 
 ## Open New Relic&reg; Performance Monitoring
 
@@ -33,7 +33,7 @@ Modern reporting services that are integrated with your site help speed the proc
 
 1. Click **Transactions**. The default sort is **Most Time Consuming** but this can be a false positive, as it measures a sum of time loading specific transactions, not the time per individual transaction. If a particular item is called 10x more than another, but loads quickly, it's **sum** will send it to the top of the list even if it's behaving well. 
 
-1. Choose **Slowest average result time**. This will resort the order, bringing the biggest speed (or lack thereof) offenders to the fore.
+1. Choose **Slowest average result time**. This will re-sort the order, bringing the slowest performing items to the top.
 
 ### Drupal Sites
 
@@ -65,7 +65,7 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
 1. Use the information from the New Relic trace to find the full query in the slow log. Tips: 
 
-    - Choose a distinctive part of the query. In this case I used `grep -c users_comment.uis AS users_comment_uid` to get a count of the number of times that field has been included in the slow log. 
+    - Choose a distinctive part of the query. The example here uses `grep -c users_comment.uis AS users_comment_uid` to get the number of times that field has been included in the slow log. 
     
     - If the log is small enough (or if you have enough RAM), you can load it into your favorite text editor or IDE instead.
 
@@ -79,7 +79,7 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
     - Tips for reviewing the query:
 
-         - If the result confirm your suspicions, as the one above does, delve in deeper to find out why the query is behaving so badly. Type [EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html) and then re-paste the query. MySQL will display extended information on how it’s [executing the query](https://dev.mysql.com/doc/refman/5.7/en/using-explain.html). 
+         - If the results confirm your suspicions, as the one above does, delve in deeper to find out why the query is behaving so badly. Type [EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html) and then re-paste the query. MySQL will display extended information on how it’s [executing the query](https://dev.mysql.com/doc/refman/5.7/en/using-explain.html). 
          
          - Look for odd things. For example, the one below doesn't look that bad, except that the users table is referenced twice via alias and there isn't a single key index being used to search them. Looking at that table with a MySQL `describe` command shows that there is no primary key set on the UID field.
 
