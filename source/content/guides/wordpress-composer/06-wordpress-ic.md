@@ -27,31 +27,15 @@ Pantheon upstreams influence the Composer packages that are included in downstre
 
 ## Create Your WordPress Integrated Composer Site
 
-Follow the steps in this section to create a new WordPress site using Integrated Composer and Upstream.
-
-1. Fork the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-composer-managed).
-
-1. [Connect your repository](/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
-
-1. Update the **require** section of the root `/composer.json` file to match the name you chose in the preceding step.
+To create a new WordPress site using Integrated Composer, use Terminus to create a site from the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-composer-managed):
+ 
+ `terminus site:create --org ORG --region REGION -- <site_name> <label> "WordPress Composer Managed"`
 
 ## Add and Remove Packages
 
-1. Use `composer require`in the `upstream-config` directory to edit the upstream `composer.json` file.
+1. Use `composer require`in the `upstream-configuration` directory to edit the upstream `composer.json` file.
 
     - The repository template places a theme in the upstream `composer.json` file. This works well for downstream sites that all use the same theme. You should remove themes from the upstream `composer.json` file if you do not intend to use the upstream to lock downstream sites into a particular theme. You cannot remove installed packages from downstream sites if the packages were included from the upstream site. 
-
-## Maintain Your Integrated Composer Fork
-
- There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
-
-1. Increase the version number listed in the `upstream-config/composer.json` file each time you make edits.
-
-    - Composer checks the contents of the root `/composer.json` file for changes that should be pushed to your upstream configuration. 
-
-1. Verify your changes to the `upstream-config/composer.json` file by running `composer install` or `composer update` in the `upstream-config` directory. 
-
-    - Be careful not to rely on ["root-only" properties of composer.json](https://getcomposer.org/doc/04-schema.md).
 
 ## Manage Your WordPress Integrated Composer Site
 

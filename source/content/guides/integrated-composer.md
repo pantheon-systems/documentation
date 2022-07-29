@@ -23,11 +23,9 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ### WordPress with Integrated Composer
 
-1. [Fork the Pantheon-maintained repository](/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-composer-managed](https://github.com/pantheon-upstreams/wordpress-composer-managed).
-
-1. [Add a new Custom Upstream](/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
-
-1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
+1. Use Terminus to create a site from the [Pantheon-maintained WordPress Composer Managed repository](https://github.com/pantheon-upstreams/wordpress-composer-managed):
+ 
+   - `terminus site:create --org ORG --region REGION -- <site_name> <label> "WordPress Composer Managed"`
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
@@ -124,16 +122,8 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 1. Change into the Upstream's configuration directory:
 
-   - Drupal:
-
     ```bash{promptUser: user}
     cd upstream-configuration
-    ```
-
-   - WordPress:
-
-    ```bash{promptUser: user}
-    cd upstream-config 
     ```
 
 1. Run `composer require` for each dependency:
