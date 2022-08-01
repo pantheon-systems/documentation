@@ -75,7 +75,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 ### Included Configuration Support
 
 -  SSL certificate pre-provisioning
-  - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
+  - Ensure your site is configured for [HTTPS](/guides/global-cdn/https) at launch or as soon as the domain certificates have been provisioned
 
 - Email configuration
   - Set up external [email](/email) to work with the provider of your choice

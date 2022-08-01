@@ -4,7 +4,7 @@ description: Learn how to clear cache for Drupal and WordPress sites on Pantheon
 categories: [performance]
 tags: [cache, cdn]
 ---
-Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/global-cdn) service.
+Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/guides/global-cdn) service.
 
 ## Granular Cache Clearing
 Use the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to automatically clear caches for related pages as content is updated. No configuration needed, simply install and enable to take advantage of the granular cache clearing capabilities of the Global CDN.

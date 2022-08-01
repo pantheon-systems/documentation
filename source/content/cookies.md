@@ -147,5 +147,5 @@ For custom code, you should leverage the built-in authentication methods, PHP se
 
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Bypassing Cache with HTTP Headers](/cache-control)
-* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 * [Caching: Advanced Topics](/caching-advanced-topics)

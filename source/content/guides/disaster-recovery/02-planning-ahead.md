@@ -33,7 +33,7 @@ The Pantheon Global CDN delivers pages directly to users from the Varnish edge p
 
 *  Determine the extent to which your site usesis utilizing the edge cache by requesting a cache hit rate report from Support. This shows the cache hit rate for the full site on a daily basis.
 
-* Test the cacheability of individual pages by examining the page headers using CURL or developer tools. Refer to [Testing Global CDN Caching](https://pantheon.io/docs/test-global-cdn-caching) for more information. 
+* Test the cacheability of individual pages by examining the page headers using CURL or developer tools. Refer to [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching) for more information. 
 
 * Optimize your caching strategy by checking cookies, application configurations, and session management. Refer to our [Debug Caching Issues](https://pantheon.io/docs/debug-cache) documentation.
 

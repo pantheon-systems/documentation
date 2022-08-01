@@ -121,7 +121,7 @@ This is not intended to replace reviewing your error logs. Learn more about [acc
 
 ### Domains / HTTPS
 
-Use the [Domains/HTTPS tab](/guides/launch/domains) to connect custom domain(s) and provision HTTPS. For more details, see [HTTPS on Pantheon's Global CDN](/https).
+Use the [Domains/HTTPS tab](/guides/launch/domains) to connect custom domain(s) and provision HTTPS. For more details, see [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https).
 
 ### Backups
 

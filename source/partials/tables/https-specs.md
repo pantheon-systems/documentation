@@ -7,7 +7,7 @@
 | [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts)     | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts) * |
 | **Protocol**                                                          | TLS 1.3 with SNI                | TLS 1.3 with SNI                      |
 | **Ciphers**                                                           | No Weak 3DES cipher             | No Weak 3DES cipher                   |
-| **Delivery**                                                          | [Global CDN](/global-cdn)  | [Global CDN](/global-cdn)        |
+| **Delivery**                                                          | [Global CDN](/guides/global-cdn)  | [Global CDN](/guides/global-cdn)        |
 | **Encryption Endpoint**                                               | Application Container           | Application Container                 |
 
 \* The browser compatibility and SSL Labs scores are guaranteed for Pantheon-provided Let’s Encrypt certificates. The same results are typical for a custom certificate from a mainstream CA with mainstream attributes, but not guaranteed.  For custom certificates, compatibility and SSL Labs score depends on attributes of that certificate, such as number of SAN entries, CA and signing algorithm.

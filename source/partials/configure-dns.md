@@ -1,6 +1,6 @@
 ## Configure DNS
 
-The <span class="glyphicons glyphicons-alert text-warning"></span> icon within the Domains / HTTPS page indicates that the domain has not been properly routed to Pantheon. The following actions are required:
+The <span class="glyphicons glyphicons-alert text-warning"></span> icon within the Domains / HTTPS page indicates that the domain has not been properly routed to Pantheon. Complete the steps below before you provision your HTTPS.
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.

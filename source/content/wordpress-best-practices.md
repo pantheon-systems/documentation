@@ -54,9 +54,9 @@ There are many plugins and themes in WordPress that require license keys. Since 
 
 ## Live
 
-* We recommend using HTTPS. For more information, see [HTTPS on Pantheon's Global CDN](/https)
+* We recommend using HTTPS. For more information, see [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
 
-* Verify [Global CDN caching](/test-global-cdn-caching) is working on your site.
+* Verify [Global CDN caching](/guides/global-cdn/test-global-cdn-caching) is working on your site.
 
 * Follow our [Frontend Performance](/guides/frontend-performance) guide to tune your WordPress site.
 
