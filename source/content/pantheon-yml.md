@@ -287,7 +287,7 @@ remote:
 
 ### Deploying Hotfixes
 
-Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (for example add a code comment), then deploy up to production using the standard Pantheon workflow.
+Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (for example add a code comment), then deploy up to production using the standard Pantheon workflow. (Pantheon standard workflow is done via the dashboard deploy or terminus env:deploy, manually creating git tags and pushing it on the platform do not invoke all the processes that a proper "deployment" does)
 
 ## See Also
 
