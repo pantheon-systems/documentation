@@ -57,7 +57,7 @@ You will need to enter the following:
 
 Azure configuration requires several modifications from the general instructions in the above section. 
 
-1. Complete the Pantheon-specific steps in Azure's documentation to [Configure Azure AD SSO for page](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/pantheon-tutorial#configure-azure-ad-sso).
+1. Complete the Pantheon-specific steps in Azure's documentation to [Configure Azure AD SSO](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/pantheon-tutorial#configure-azure-ad-sso).
 
 1. Confirm that you make all required edits to correctly map custom attributes, including:
 
