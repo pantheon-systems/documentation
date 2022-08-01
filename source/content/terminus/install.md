@@ -73,12 +73,12 @@ You must log in with a machine token after the installation completes. A machine
   terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
   ```
 
-  - Machine tokens are keyed to the email address associated with your Pantheon user account. After a token has been used to authenticate Terminus, future sessions are authenticated with your email address:
+    - Machine tokens are keyed to the email address associated with your Pantheon user account. After a token has been used to authenticate Terminus, future sessions are authenticated with your email address:
 
   ```bash{promptUser: user}
   terminus auth:login --email <email@example.com>
   ```
-  
+
 ### SSH Authentication
 
 Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
