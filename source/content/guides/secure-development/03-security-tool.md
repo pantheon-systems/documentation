@@ -54,7 +54,7 @@ You have the ability to password protect any of the available environments.
 
 <Alert title="Note" type="info">
 
-Environments are not cached by the [Global CDN](/global-cdn) while locked.
+Environments are not cached by the [Global CDN](/guides/global-cdn) while locked.
 
 </Alert>
 

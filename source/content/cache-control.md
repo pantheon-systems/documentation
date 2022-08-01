@@ -132,7 +132,7 @@ As an alternative to using HTTP headers to control downstream caching, you can s
 
 <Alert title="Warning" type="danger">
 
-Pantheon does not support manually editing and updating the VCL on Global CDN. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request for [Global CDN](/global-cdn), open a [Support Ticket](/guides/support/contact-support/#ticket-support).
+Pantheon does not support manually editing and updating the VCL on Global CDN. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request for [Global CDN](/guides/global-cdn), open a [Support Ticket](/guides/support/contact-support/#ticket-support).
 
 Note some customizations to VCL are available via [Adavanced Global CDN](/guides/professional-services/advanced-global-cdn). For more information, [Contact Sales](https://pantheon.io/contact-us).
 
@@ -164,10 +164,10 @@ X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 ```
 
-The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/test-global-cdn-caching).
+The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching).
 
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Working with Cookies on Pantheon](/cookies)
-* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 * [Caching: Advanced Topics](/caching-advanced-topics)

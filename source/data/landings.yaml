@@ -361,7 +361,7 @@
         - text: 'Switching Sites from HTTP to HTTPS'
           url: '/http-to-https'
         - text: HTTPS on Pantheon's Global CDN
-          url: '/https'
+          url: '/guides/global-cdn/https'
         - text: 'Creating and Revoking Machine Tokens'
           url: '/machine-tokens'
         - text: 'Pantheon Secure Integration'
@@ -453,7 +453,7 @@
             - text: 'Modify the Local Hosts File'
               url: '/hosts-file'
             - text: "HTTPS on Pantheon's Global CDN"
-              url: '/https'
+              url: '/guides/global-cdn/https'
             - text: 'Relaunch Existing Pantheon Site'
               url: '/relaunch'
             - text: 'Vanity Domains'
@@ -811,7 +811,7 @@
             - text: 'Setting Up CloudFront CDN with Drupal'
               url: '/drupal-cloudfront'
             - text: 'Global CDN Caching for High Performance with Drupal and WordPress'
-              url: '/global-cdn-caching'
+              url: '/guides/global-cdn/global-cdn-caching'
             - text: 'Pantheon Modules'
               url: '/modules'
             - text: 'Considerations for Google Analytics and PANTHEON_STRIPPED'
@@ -819,7 +819,7 @@
             - text: 'Pantheon Plugins'
               url: '/guides/wordpress-pantheon/plugins'
             - text: 'Testing Global CDN Caching'
-              url: '/test-global-cdn-caching'
+              url: '/guides/global-cdn/test-global-cdn-caching'
         - title: 'Application Configurations'
           links:
             - text: 'APCu Cache Basics'

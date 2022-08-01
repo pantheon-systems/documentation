@@ -60,13 +60,13 @@ Pantheon's [Object Cache (formerly Redis)](/object-cache) provides an alternativ
 
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
-### [Configure Caching](/global-cdn-caching)
+### [Configure Caching](/guides/global-cdn/global-cdn-caching)
 
 Maximize performance on Pantheon by configuring your site's performance settings.
 
 Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application container, which in turns frees up resources to build more dynamic requests.
 
-### [Test Cache](/test-global-cdn-caching)
+### [Test Cache](/guides/global-cdn/test-global-cdn-caching)
 
 Follow the steps below to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
 

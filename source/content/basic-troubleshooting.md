@@ -86,7 +86,7 @@ If Pantheon is experiencing a platform issue that impacts sites, we post updates
 
 ### HTTPS Issues
 
-When resolving issues with Pantheon's [HTTPS](/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
+When resolving issues with Pantheon's [HTTPS](/guides/global-cdn/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
 
 ### Code Changes
 
