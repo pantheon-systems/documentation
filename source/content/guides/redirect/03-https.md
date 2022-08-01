@@ -7,7 +7,6 @@ tags: [dns, https, redirects]
 layout: guide
 contributors: [wordsmither]
 reviewed: "2022-08-01"
-showtoc: true
 permalink: docs/guides/redirect/https/
 anchorid: https
 ---

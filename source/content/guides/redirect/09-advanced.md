@@ -1,6 +1,6 @@
 ---
-title: Advanced Redirects and Restrictions
-subtitle: Introduction
+title: Redirects Guide
+subtitle: Advanced Redirects and Restrictions
 description: Configure custom redirect logic for specific scenarios
 categories: [go-live]
 tags: [dns, https, redirects]
