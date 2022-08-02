@@ -19,10 +19,10 @@ All plans except for a Basic plan can use New Relic. New Relic is available to S
 
 | Plans         | New Relic&reg; Performance Monitoring Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ------- |
-| Sandbox       | ✓       |
-| Basic         |         |
-| Performance   | ✓       |
-| Elite         | ✓       |
+| Sandbox       | <span style="color:green">✔</span>      |
+| Basic         |  <span style="color:red">❌ </span>      |
+| Performance   | <span style="color:green">✔</span>      |
+| Elite         | <span style="color:green">✔</span>      |
 
 
 
