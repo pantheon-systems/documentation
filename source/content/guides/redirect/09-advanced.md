@@ -1,7 +1,7 @@
 ---
 title: Redirects Guide
 subtitle: Advanced Redirects and Restrictions
-description: Configure custom redirect logic for specific scenarios
+description: Configure custom redirect logic for specific scenarios.
 categories: [go-live]
 tags: [dns, https, redirects]
 layout: guide
@@ -26,7 +26,7 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`.
 
-If you're setting [HSTS](/redirects#redirect-to-https) in `pantheon.yml`, you don't need additional PHP redirection.
+If you're setting [HSTS](/redirects#redirect-to-https) in `pantheon.yml`, you don't need additional PHP redirection, simply run the following code:
 
 ```php:title=wp-config.php%20or%20settings.php
 // Require HTTPS across all Pantheon environments
@@ -51,7 +51,9 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
 The following configuration will redirect requests for `subdomain.example.com` to `https://example.com/subdirectory/`.
 
-When using this type of redirect, you must first [remove the primary domain](/redirects#update-or-remove-primary-domain) from the environment.
+1. [Remove the primary domain](/redirects#update-or-remove-primary-domain) from the environment.
+
+1. Run the following code:
 
 ```php:title=wp-config.php%20or%20settings.php
 // Redirect subdomain to a specific path.
@@ -177,7 +179,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
 }
 ```
 
-## Wildcard Redirect from one subfolder to another
+## Wildcard Redirect From One Subfolder to Another
 
 The following configuration will redirect requests pointed to any page in `example.com/old/` to the same page in `example.com/new/`. For example, `example.com/old/contributors.html` will redirect to `example.com/new/contributors.html`:
 
@@ -204,7 +206,7 @@ if( strpos( $uri, $url_to_match ) === 0) {
 
 ## Redirect Legacy UNIX-Style User Home Folder Paths
 
-When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
+When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Run the following code to parse out the username and relative path that the request was made for:
 
 ```php:title=wp-config.php%20or%20settings.php
 $request_parts = explode('/', $_SERVER['REQUEST_URI']);
@@ -243,7 +245,7 @@ Drupal sites can force lowercase letters using the following:
 
 ## Redirect Files
 
-Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare) or another stacked CDN to handle file redirects.
+Because Drupal and WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare) or another stacked CDN to handle file redirects.
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 

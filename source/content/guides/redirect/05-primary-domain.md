@@ -1,7 +1,7 @@
 ---
 title: Redirects Guide
 subtitle: Set the Primary Domain
-description: 
+description: Learn how to set the primary domain for your site.
 categories: [go-live]
 tags: [dns, https, redirects]
 layout: guide

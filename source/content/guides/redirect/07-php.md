@@ -1,7 +1,7 @@
 ---
 title: Redirects Guide
 subtitle: Redirect with PHP
-description: 
+description: Learn how to redirect with PHP.
 categories: [go-live]
 tags: [dns, https, redirects]
 layout: guide
@@ -12,9 +12,9 @@ permalink: docs/guides/redirect/php
 anchorid: php
 ---
 
-If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. However, redirecting the platform domain will break the screenshot of your site in the User Dashboard, and may complicate troubleshooting for our [Support](/guides/support/contact-support/) team.
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. However, redirecting the platform domain will break the screenshot of your site in the User Dashboard, and might complicate troubleshooting for our [Support](/guides/support/contact-support/) team.
 
-AGCDN only works with custom domains; `.pantheonsite.io` domains are not covered. With AGCDN, a site will not be fully protected under WAF if it is using the platform domain. A platform domain redirect to the main domain is recommended. 
+AGCDN only works with custom domains. This means that `.pantheonsite.io` domains are not covered. With AGCDN, a site will not be fully protected under WAF if it is using the platform domain. A platform domain redirect to the main domain is recommended. 
 
 <Partial file="_redirects.md" />
 

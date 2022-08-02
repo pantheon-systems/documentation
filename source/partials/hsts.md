@@ -24,6 +24,6 @@ enforce_https: off
 
 #### Considerations
 
-- Use of `full` or `full+subdomains` should be treated as a commitment. HSTS headers are cached by browsers for the duration of the max-age period. If your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS), visitors will be unable to access your site.
+- Use of `full` or `full+subdomains` should be treated as a commitment. HSTS headers are cached by browsers for the duration of the max-age period. If your site is unable to serve HTTPS (for example, by moving to a host that doesn't support HTTPS), visitors will be unable to access your site.
 - Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
 - To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/http-to-https) doc.
