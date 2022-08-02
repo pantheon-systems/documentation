@@ -24,7 +24,7 @@ image: getting-started-Largethumb
 reviewed: "2020-08-03"
 ---
 
-In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
+This section provides steps on how to connect a bare domain and `www` domain to Pantheon's Live environment.
 
 The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/relaunch).
 
@@ -38,13 +38,15 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
 
-  It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
+  It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check the following:
 
     - Ensure that there's no "parking page" or redirect configured in your DNS.
+
     - The TXT record's Host value doesn't have a trailing `.`.
+
     - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
-1. In a new tab or browser window, copy the **Required Values** to your [DNS](/dns) provider. If you see:
+1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/dns) provider. If you see:
 
   > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
 
@@ -52,7 +54,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
 
-1. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
+1. Select **Connect Domain** and enter the bare domain (for example, `example.com`, and then click **Connect Domain**.
 
 ## Existing Sites
 
@@ -128,3 +130,9 @@ When a certificate is ready you can switch DNS destinations from your existing s
 ### Maintenance Window
 
 If you are unable to prove domain ownership (e.g. WP Engine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/guides/launch/configure-dns)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
+
+## More Resources
+
+- [Test a Domain Not Resolved to Pantheon](/guides/launch/advanced-curls/#test-a-domain-not-resolved-to-pantheon)
+
+- [Provision HTTPS] https://pantheon.io/docs/guides/launch/configure-dns/#provision-https

@@ -22,34 +22,38 @@ editpath: launch/02-plans.md
 image: getting-started-Largethumb
 ---
 
-In this lesson, we'll upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
+This section shows you how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
 
-Contract customers should contact their account manager when they're ready to upgrade their site plan.
+Contract customers must contact their account manager when they're ready to upgrade their site plan.
 
 ## Use Your Own Card
 
-To upgrade and pay for the site now, add your payment method:
+Add your payment method to upgrade and pay for the site now:
 
-1. From the Pantheon Site Dashboard, click **Upgrade** next to the site's name.
+1. Navigate to the Pantheon Site Dashboard, and click **Upgrade** next to the site's name.
+
 1. Click the **Select** button under the [plan you choose](https://pantheon.io/pricing/).
-1. At the **Choose Billing** step, select the billing frequency: [**Pay Annually**](/annual-billing) or **Pay Monthly**.
+
+1. Proceed to the **Choose Billing** step, and then select the billing frequency: [**Pay Annually**](/annual-billing) or **Pay Monthly**.
+
    - If you've chosen a **Performance Plan**, choose the size and click **Continue**.
+
    - If you've chosen a **Basic Plan**, click **Continue**.
+
 1. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information.
-1. Click **Continue** and if everything looks right, click **Place Your Order** to confirm your purchase.
+
+1. Click **Continue** and review your information carefully, then click **Place Your Order** to confirm your purchase.
+
    - [Contact Support](/guides/support/contact-support) if you need any help.
 
-As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
+As the site owner, you’ll receive an email confirming the change to the site. You’ll receive an updated invoice after the site billing is processed.
 
-## Transfer Ownership and Billing for This Site
+## More Resources
 
-<Partial file="transfer-ownership-billing-intro.md" />
+- [Transfer Ownership and Billing for This Site](/site-billing#transfer-ownership-and-billing-for-this-site)
 
-<Partial file="transfer-ownership-billing-steps.md" />
+- [Troubleshooting a Declined Credit Card](https://stripe.com/docs/declines/codes)
 
-## Troubleshooting a Declined Credit Card
-
-<Partial file="billing-declined-card-codes.md" />
 
 <Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">
 
