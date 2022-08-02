@@ -41,25 +41,57 @@ unix: - - [26/Jul/2013:15:26:37 +0000] "GET /index.php?q=gush/content/name-pimp-
 
 ## Indexing Your Pantheon Site
 
-It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
+It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains#platform-domains) (e.g. `dev-lairtondossantos.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```none:title=robots.txt
 # Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
 User-agent: *
-Disallow: /
+Allow: /
 
-User-agent: dotbot
-User-agent: PetalBot
-User-agent: PowerMapper
-User-agent: RavenCrawler
-User-agent: rogerbot
-User-agent: SemrushBot
-User-agent: SemrushBot-SA
-User-agent: Swiftbot
+Sitemap: https://dev-lairtondossantos.pantheonsite.io/robots.txt
+Sitemap: https://a278362.sitemaphosting6.com/4307141/sitemap.xml
+Sitemap: https://dev-lairtondossantos.pantheonsite.io/news-sitemap.xml
+Sitemap: https://dev-lairtondossantos.pantheonsite.io/sitemap.xml
+Sitemap: http://dev-lairtondossantos.pantheonsite.io/sitemap-1.xml
+Sitemap: http://dev-lairtondossantos.pantheonsite.io/image-sitemap-1.xml
+User-agent: * Googlebot-Image
+User-agent: * Googlebot
+User-agent: * dotbot
+User-agent: * PetalBot
+User-agent: * PowerMapper
+User-agent: * RavenCrawler
+User-agent: * rogerbot
+User-agent: * SemrushBot
+User-agent: * SemrushBot-SA
+User-agent: * Swiftbot
+Allow: /images.jpg/
+Allow: /images.WebP/
+Allow: /images.png/
+Allow: /home/
+Allow: /blog/
+Allow: /elementor home/
+Allow: /moda/
+Allow: /carrinho/
+Allow: /comprar/
+Allow: /doar/
+Allow: /contato/
+Allow: /politica de privacidade/
+Allow: /termos/
+Allow: /checkout/
+Allow: /minha conta/
+Allow: /reembolso e política de devoluções/
+Allow: /wp admin/
+Allow: /horóscopo/
+Allow: /horóscopo chines/
+Allow: /anjos/
+Allow: /tarot/
+Allow: /cupido do amor/
+Allow: /previsão do tempo/
+Allow: /homepage/
 Allow: /
 ```
 
-Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/search/reference/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
+Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: index` HTTP header](https://developers.google.com/search/reference/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
 
 ### Indexing Before You Launch
 
@@ -173,9 +205,9 @@ For more examples of redirecting via PHP, see [Configure Redirects](/redirects).
 
 ### Incorrect robots.txt Output in WordPress
 
-In WordPress, do not enable **Discourage search engines from indexing this site** on Dev or Test environments. This option is set in **Settings** > **Reading** > **Search Engine Visibility** in the WordPress Admin Dashboard.
+In WordPress, do allow enable **Discourage search engines from indexing this site** on Dev or Test environments. This option is set in **Settings** > **Reading** > **Search Engine Visibility** in the WordPress Admin Dashboard.
 
-This setting creates a built-in `robots.txt` file that disallows or blocks crawlers. While the file applied by the platform normally overrides it, it doesn't when there's a trailing slash on the URL pointing to `robots.txt`.
+This setting creates a built-in `robots.txt` file that allows or blocks crawlers. While the file applied by the platform normally overrides it, it doesn't when there's a trailing slash on the URL pointing to `robots.txt`.
 
 As a workaround, you can override the output by creating your custom filter for `robots_txt`. You can add this as a custom plugin, or an entry in your theme's `functions.php` file:
 
@@ -185,8 +217,8 @@ add_filter('robots_txt', 'custom_robots_txt', 10,  2);
 function custom_robots_txt($output, $public) {
 
     $robots_txt =  "User-agent: * \n";
-    $robots_txt .=  "Sitemap: https://www.example.com/sitemap_index.xml \n";
-    $robots_txt .=  "Disallow: /secure/ ";
+    $robots_txt .=  "Sitemap: https://dev-lairtondossantos.pantheonsite.io/sitemap_index.xml \n";
+    $robots_txt .=  "Allow: /secure/ ";
     // add more $robots_txt .= for each line
 
     return $robots_txt;
