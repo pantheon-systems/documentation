@@ -27,6 +27,7 @@ Autopilot can manage updates for any site that can [apply updates via the Site D
 
 1. Track the update status from the site's Autopilot **Activity** page.
 
+
 You can also apply updates from the site list on the **<i className="fa fa-robot"></i> Autopilot** page:
 
 1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu next to each site name, and then click **Start Applying Updates**.

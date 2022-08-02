@@ -16,7 +16,7 @@ This section provides information on how to deactivate Autopilot for an individu
 
 ## Deactivate Autopilot
 
-Use **one** of the deactivation methods to deactivate an individual site below. You do not need to deactivate Autopilot using both methods.
+Use **one** of the deactivation methods below to deactivate Autopilot on an individual site. You do not need to deactivate Autopilot using both methods.
 
 ## Deactivate From the Autopilot Index Page
 
@@ -24,7 +24,7 @@ Use **one** of the deactivation methods to deactivate an individual site below. 
 
 1. Locate the site you want to deactivate.
 
-1. Click the **Actions** drop-down menu on the site listing, and then click **Deactivate Autopilot**.
+1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu on the site listing, and then click **Deactivate Autopilot**.
 
 1. Click **Deactivate Autopilot** in the pop-up to confirm the action. 
 
