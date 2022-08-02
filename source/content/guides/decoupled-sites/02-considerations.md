@@ -5,12 +5,12 @@ description:
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
-reviewed: "2022-07-31"
-layout: guide
+type: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/considerations
-editpath: decoupled-sites/considerations.md
 anchorid: considerations
+permalink: docs/guides/decoupled-sites/
+editpath: decoupled-sites/02-considerations.md
+reviewed: "2022-07-31"
 ---
 
 Pantheon Decoupled 

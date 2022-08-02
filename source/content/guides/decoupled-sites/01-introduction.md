@@ -5,12 +5,12 @@ description:
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
-reviewed: "2022-07-31"
-layout: guide
+type: guide
 showtoc: true
+anchorid: introduction
 permalink: docs/guides/decoupled-sites/introduction
 editpath: decoupled-sites/introduction.md
-anchorid: introduction
+reviewed: "2022-07-31"
 ---
 
 <Alert title="Early Access" type="info" icon="leaf">

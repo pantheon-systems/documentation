@@ -5,12 +5,12 @@ description:
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
-reviewed: "2022-07-31"
-layout: guide
+type: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/support
-editpath: decoupled-sites/support.md
 anchorid: support
+permalink: docs/guides/decoupled-sites/
+editpath: decoupled-sites/05-support.md
+reviewed: "2022-07-31"
 ---
 
 # Scope of Support

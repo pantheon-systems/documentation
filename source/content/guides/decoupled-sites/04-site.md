@@ -5,12 +5,12 @@ description:
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
-reviewed: "2022-07-31"
-layout: guide
+type: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/site
-editpath: decoupled-sites/site.md
 anchorid: site
+permalink: docs/guides/decoupled-sites/site
+editpath: decoupled-sites/04-site.md
+reviewed: "2022-07-31"
 ---
 
 # Before You Begin
