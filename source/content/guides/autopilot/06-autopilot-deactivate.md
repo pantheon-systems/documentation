@@ -1,7 +1,7 @@
 ---
 title: Pantheon Autopilot
-subtitle: Apply Updates
-description: Learn how to deactivate Autopilot for a site.
+subtitle: Deactivate Autopilot
+description: Learn how to deactivate Autopilot for an individual site.
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
