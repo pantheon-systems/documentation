@@ -13,7 +13,7 @@ anchorid: https
 
 The standard best practice when using HTTPS is to set an [HSTS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) header to force connections over HTTPS only.
 
-These redirect configuration are considered best practice and recommended as part of the going live procedure. Configure these settings after connecting a custom domain in the Site Dashboard when you're ready to launch the site.
+This configuration is considered best practice and recommended as part of the going live procedure. Configure these settings after connecting a custom domain in the Site Dashboard when you're ready to launch the site.
 
 ## Set HSTS with Pantheon.yml
 

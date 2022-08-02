@@ -60,7 +60,6 @@ You can detect user agents via JavaScript, then redirect requests to your config
 
 The following example can also be used in addition to Cloudflare's mobile redirection service to detect user agents not yet supported, such as tablets.
 
-#### User Agent
 ```javascript
 if ((navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i))){
    location.replace("https://m.example.com");

@@ -23,7 +23,7 @@ Using `.htaccess` is generally not recommended - even for sites running [Apache]
 
 Advantages of redirecting via  Primary Domain + PHP instead of `.htaccess` include:
 
-- Logic and decisions can be made that a web server would have no context for, as it's executable code with application state awareness. Conditional logic, regular expressions, and much more are possible.
+- Logic and decisions can be made that a web server would have no context for, as it iss executable code with application state awareness. Conditional logic, regular expressions, and much more are possible.
 - Configuration tends to be more maintainable as Drupal and WordPress developers are typically more familiar with PHP than Apache rewrite rules.
 - Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, the [Pantheon Global CDN](/guides/global-cdn) will cache it as well.
 
