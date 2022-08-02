@@ -8,7 +8,7 @@ contributors: [joa-pan]
 reviewed: "2022-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/
+permalink: docs/guides/decoupled-sites/support
 editpath: decoupled-sites/support.md
 anchorid: support
 ---
