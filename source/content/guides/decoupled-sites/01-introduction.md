@@ -6,10 +6,11 @@ categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
 type: guide
+layout: guide
 showtoc: true
 anchorid: introduction
 permalink: docs/guides/decoupled-sites/introduction
-editpath: decoupled-sites/introduction.md
+editpath: decoupled-sites/01-introduction.md
 reviewed: "2022-07-31"
 ---
 

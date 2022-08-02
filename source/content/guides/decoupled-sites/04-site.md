@@ -6,6 +6,7 @@ categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
 type: guide
+layout: guide
 showtoc: true
 anchorid: site
 permalink: docs/guides/decoupled-sites/site

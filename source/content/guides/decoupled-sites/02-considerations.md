@@ -6,9 +6,10 @@ categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
 type: guide
+layout: guide
 showtoc: true
 anchorid: considerations
-permalink: docs/guides/decoupled-sites/
+permalink: docs/guides/decoupled-sites/considerations
 editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-07-31"
 ---

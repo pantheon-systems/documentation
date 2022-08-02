@@ -6,9 +6,10 @@ categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
 type: guide
+layout: guide
 showtoc: true
 anchorid: starter-kits
-permalink: docs/guides/decoupled-sites/
+permalink: docs/guides/decoupled-sites/starter-kits
 editpath: decoupled-sites/03-starter-kits.md
 reviewed: "2022-07-31"
 ---
