@@ -8,7 +8,8 @@ contributors: [joa-pan]
 reviewed: "2022-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/starter-kits
+permalink: docs/guides/decoupled-sites/
+editpath: decoupled-sites/starter-kits.md
 anchorid: starter-kits
 ---
 

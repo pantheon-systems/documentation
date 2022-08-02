@@ -8,47 +8,46 @@ contributors: [joa-pan]
 reviewed: "2022-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/introduction
+permalink: docs/guides/decoupled-sites/
+editpath: decoupled-sites/introduction.md
 anchorid: introduction
 ---
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-Pantheon Decoupled is available for Early Access participants while features are in active development. The Pantheon development team is  rolling out new functionality often while this product in Early Access
+Pantheon Decoupled is available for Early Access participants. Features for Pantheon Decoupled are in active development. Pantheon's development team is  rolling out new functionality often while this product is in Early Access. To learn how you can enroll in our Early Access program, visit https://pantheon.io/features/decoupled-cms.
 
 </Alert>
 
 
-# What is Pantheon Decoupled
+# What is a Decoupled Site
 
-Pantheon Decoupled websites separate the front-end and back-end into separate entities. This allows developers to separate the back-end functionality and database from the front-end Markup and JavaScript content.
+Decoupled sites separate the front-end and back-end into distinct entities. This allows developers to separate back-end functionality and databases from the front-end Markup and JavaScript content.
 
-Traditional CMSs like Drupal and WordPress are hosted and served with the website every time a request for a page is made. This  means that the traditional CMSs are built with back-end and front-end bundled into a single application.
+A traditional content management system (CMS) like Drupal and WordPress is hosted and served with the website every time a request for a page is made. With a traditional CMS the back-end and front-end are bundled into a single application.
 
-Decoupling is the process of separating content systems or services. By decoupling the services needed to operate a site, each component can become easier to independently work on, minimizing site interruptions and failures, providing a more efficient and smoother WebOps experience. 
+Decoupling is the process of separating the content system or services. By decoupling the services needed to operate a site, each component can become easier to independently work on, minimizing site interruptions and failures, providing a more efficient and smoother WebOps experience. 
 
-The Pantheon Decoupled consists of methods and tools that improve the experience of building a decoupled front-end that sources data from a CMS back-end. 
+Decoupled Architecture is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks specialized to their areas of expertise; Front-end Developers can use modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic LAMP stack systems like WordPress and Drupal.
 
+# What is Pantheon Decoupled?
 
-Decoupled sites offer various possibilities:
+Pantheon Decoupled  provides users with tools that improve the experience of building a decoupled front-end that sources data from a CMS back-end. 
 
-* One to one: CMS Site to Decoupled Site
+With decoupled sites a CMS Site can linked to a single decoupled site or multiples sites or the user does not need a CMS at all and can link directly to a front end application./
 
-* One to many: CMS Site to many Decoupled Sites
+Pantheon Decoupled allows you to connect to your Git provider and deploy a site with Gatsby or Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or select an existing repository. 
 
-* many to one: CMS Sites to one Decoupled Site
+Pantheon offers recommended decoupled starter kit templates that are preconfigured, and include the following:
 
-* none to many: Just a Front end Application.
-
-Pantheon Decoupled allows you to connect to your Git provider and deploy a Gatsby or Next.js site. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or select an existing repository. Pantheon offers  recommended decoupled starter kit templates that are preconfigured, and  include the following:
-
-* A set of recommended modules or plugins leveraged by decoupled sites on Pantheon.
+* A set of recommended modules or plugins for creating decoupled sites on Pantheon.
 
 * An example content integration showing content from your CMS backend rendered in your frontend application.
 
 * Live preview of content from your CMS backend rendered in your frontend application.
 
 * A local development environment that supports communication between backend and frontend services.
+
 
 ## Pantheon Decoupled Terminology
 

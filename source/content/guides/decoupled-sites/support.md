@@ -8,24 +8,16 @@ contributors: [joa-pan]
 reviewed: "2022-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/support
+permalink: docs/guides/decoupled-sites/
+editpath: decoupled-sites/support.md
 anchorid: support
 ---
 
-# What is Included in the Scope of Support?
+# Scope of Support
 
 Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes usage of documented workflows as defined in this documentation. 
 
-## What is Outside of the Scope of Support?
-
-Technical Support for Pantheon Decoupled does not include the following:
-
-* Debugging custom applications and code
-* Customization of solutions, templates, or tools; including unsupported software functionality.
-* Issues specific to customer-developed code.
-
-* Consultation on administration, configuration, performance, or security.
-
+## What is Included in the Scope of Support?
 
 Technical Support covers issues related to the following:
 
@@ -34,6 +26,14 @@ Technical Support covers issues related to the following:
 * Enable customers by providing related documentation, where to access logs, and when appropriate share similar case studies that provide a solution for the customer in line with the product life cycle.
 * Advocate for customers by validating and reporting bugs, feature requests, and improving platform documentation in line with the product life cycle
 * During customer outages that cannot be resolved by the customers or CSE, escalation to on-call engineers
+
+
+Technical Support for Pantheon Decoupled does not include the following:
+
+* Debugging custom applications and code
+* Customization of solutions, templates, or tools; including unsupported software functionality.
+* Issues specific to customer-developed code.
+* Consultation on administration, configuration, performance, or security.
 
 
 ## How do I File a Bug or Get Support?

@@ -8,9 +8,12 @@ contributors: [joa-pan]
 reviewed: "2022-07-31"
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/considerations
+permalink: docs/guides/decoupled-sites/
+editpath: decoupled-sites/considerations.md
 anchorid: considerations
 ---
+
+Pantheon Decoupled 
 
 The following components are needed for Pantheon Decoupled: 
 
