@@ -24,8 +24,6 @@ All plans except for a Basic plan can use New Relic. New Relic is available to S
 | Performance   | <span style="color:green">✔</span>      |
 | Elite         | <span style="color:green">✔</span>      |
 
-
-
 ## More Resources
 
 - [Incident Management with New Relic and PagerDuty](/guides/pagerduty/)
@@ -33,6 +31,3 @@ All plans except for a Basic plan can use New Relic. New Relic is available to S
 - [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 
 - [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-
-
-
