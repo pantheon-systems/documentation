@@ -46,7 +46,7 @@ if (preg_match('/^live-(.+)\.pantheonsite\.io$/', $_SERVER["HTTP_HOST"], $matche
 ### Without Regex
 
 ```php:title=wp-config.php%20or%20settings.php
-if (preg_match('/^live-(.+)\.pantheonsite\.io$/', $_SERVER["HTTP_HOST"], $matches)) {
+if ($_SERVER["HTTP_HOST"] == "live-mysite.pantheonsite.io")) {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://www.' . $matches[1] . '.com/');
 }
