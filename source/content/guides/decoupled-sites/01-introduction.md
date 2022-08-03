@@ -8,8 +8,8 @@ contributors: [joa-pan]
 type: guide
 layout: guide
 showtoc: true
-anchorid: introduction
-permalink: docs/guides/decoupled-sites/introduction
+anchorid: decoupled-introduction
+permalink: docs/guides/decoupled-sites/
 editpath: decoupled-sites/01-introduction.md
 reviewed: "2022-07-31"
 ---
