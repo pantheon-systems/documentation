@@ -11,7 +11,7 @@ permalink: docs/guides/new-relic/activate-new-relic
 anchorid: activate-new-relic
 ---
 
-This sections provides steps on how to activate and configure your New Relic account.
+This section provides steps on how to activate and configure your New Relic account.
 
 ## Activate New Relic&reg;
 
@@ -25,7 +25,6 @@ New Relic is automatically enabled for all application containers added to the s
 
 1. Allow a few minutes to pass and then navigate to the **New Relic** tab on your Dashboard and click **Go to New Relic**.
 
-
 ## Configure New Relic&reg; Performance Monitoring Access
 
 1. Go to the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**:
@@ -36,7 +35,7 @@ New Relic is automatically enabled for all application containers added to the s
 
   ![Screenshot showing the New Relic landing page.](../../../images/integrations/newrelic/new-relic-get-started.png)
 
-1. Agree to the New Relic terms of service to access the data for your site:
+1. Agree to the New Relic Terms of Service to access the data for your site:
 
   ![Screenshot of the New Relic APM dashboard.](../../../images/integrations/newrelic/new-relic-apm-dash.png)
 
@@ -48,11 +47,13 @@ New Relic is automatically enabled for all application containers added to the s
 
 - If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic is used to create the New Relic account.
 
-In both cases, there is not a one-to-one mapping between Pantheon users and New Relic users. Every Pantheon user selecting **Go to New Relic** from the Pantheon dashboard is logged in as the same New Relic user.
+In both cases, there is not a one-to-one mapping between Pantheon users and New Relic users. Every Pantheon user who selects **Go to New Relic** from the Pantheon dashboard is logged in as the same New Relic user.
 
 ## Configure Ping Monitors for Availability
 
-New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
+New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. 
+
+To configure this service:
 
 1. Click **New Relic** and then click **Go to New Relic** from the target environment within the Site Dashboard on Pantheon.
 
@@ -60,7 +61,7 @@ New Relic provides a free availability monitoring service within their Synthetic
 
 1. Click **Add new** on the **Monitors** tab (default) and enter the details for the URL you want to monitor.
 
-1. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance networking issues.
+1. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false positives due to long-distance networking issues.
 
 1. Set the frequency for checks. We suggest 5 minutes.
 
@@ -77,6 +78,3 @@ Pantheon can provide New Relic Ping monitoring for free as part of the service. 
 - [New Relic Labelling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
 
 - [New Relic FAQ](/guides/new-relic/new-relic-faq)
-
-
-
