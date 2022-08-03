@@ -593,7 +593,8 @@
               url: '/supported-php'
             - text: 'Terminus'
               url: '/supported-terminus'
-subtitle: ''
+- title: 'Automate & Integrate'
+  subtitle: ''
   path: 'automate'
   video_id: 'mdc8o19wfTI'
   cta:
