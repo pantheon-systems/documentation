@@ -587,7 +587,7 @@
               url: '/supported-drupal'
             - text: 'WordPress'
               url: '/supported-wp'
-          - title: ''
+        - title: ''
           links:
             - text: 'PHP'
               url: '/supported-php'
