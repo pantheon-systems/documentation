@@ -21,14 +21,14 @@ Choose one of the following options to configure the primary domain.
 
 WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
 
-### Ready to launch like the pros?
+### Configure a Long-Duration HSTS Header
 
-Now that you're redirecting requests to a single, primary domain, it's the perfect time to configure a long-duration HSTS header, or set up an availability monitoring service to watch over your site like an automated hawk.
+You should configure a long-duration HSTS header, or set up an availability monitoring service to watch over your site after redirecting requests to a single, primary domain.
 
-#### [Send a Long-Duration HSTS Header for Increased Security](/pantheon-yml/#enforce-https--hsts)
+HTTP Strict Transport Security (HSTS) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking. Refer to [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts) for more information.
 
-Prevent cookie hijacking and get an A+ rating from SSL Labs.
+## More Resources
 
-#### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) (Optional)
+- [Platform and Custom Domains](/domains)
 
-New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email if a response fails.
+- [Pantheon YAML Configuration Files](/pantheon-yml)

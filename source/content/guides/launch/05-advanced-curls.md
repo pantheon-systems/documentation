@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Advanced cURLs
+subtitle: Advanced cURLs for Site Migration
 description: Part five of our Launch Essentials guide covers using advanced cURL techniques to prepare a site for launch.
 anchorid: advanced-curls
 layout: guide
@@ -14,7 +14,8 @@ editpath: launch/05-advanced-curls.md
 image: getting-started-Largethumb
 ---
 
-This section provides information on how to use essential commands during the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
+This section provides information on how to use cURL commands during the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
+
 The commands below show you how to:
 
 - Test a domain not yet resolved to Pantheon with advanced cURL techniques 

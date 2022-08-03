@@ -28,11 +28,3 @@ This section provides information on how to [create your Live environment](/guid
 - [Pantheon Quick Start Guide](/guides/quickstart/)
 
 - [Content Staging with WordPress and Drupal](/content-staging)
-
-and have a registered domain name where you can control DNS settings.
-
-<Alert title="Note" type="info">
-
-Pantheon is not a domain registrar, and we do not offer DNS management as a service. To connect a custom domain to Pantheon, you need to register one with a third-party provider.
-
-</Alert>

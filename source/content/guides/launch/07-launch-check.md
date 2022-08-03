@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
-subtitle: Launch Checks
-description: Part seven of our Launch Essentials guide covers launch checks to perform before going live.
+subtitle: Pre-launch Configuration
+description: Part seven of our Launch Essentials guide covers important configuration to perform before going live.
 anchorid: launch-check
 layout: guide
 showtoc: true
@@ -31,11 +31,11 @@ This section provides information on how to:
 
 1. Repeat these steps for the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live** environments.
 
-For more information on this feature, see [Backups Tool](/backups).
+For more information on this feature, refer to [Backups Tool](/backups).
 
 ## Enable and Test Email Plugin/Module (Optional)
 
-If your site will be sending outgoing email, we *strongly* recommend using a third-party email service provider. See [Email on Pantheon](/email) for more information.
+If your site will be sending outgoing email, we *strongly* recommend using a third-party email service provider. Refer to [Email on Pantheon](/email) for more information.
 
 <Alert type="info" title="Note">
 
@@ -51,9 +51,9 @@ Launch with confidence by taking advantage of Pantheon's static site analysis se
 
 1. Navigate to the **<span class="glyphicons glyphicons-info-sign"></span> Status** page.
 
-1. The automated report will check for exploited patterns in code, shows database stats, reveals PHP errors, and much more.
+The automated report will check for exploited patterns in code, shows database stats, reveals PHP errors, and much more.
 
-For more information on what is included in these checks and how they work, see [Drupal Launch Check](/drupal-launch-check) and [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check).
+For more information on what is included in these checks and how they work, refer to [Drupal Launch Check](/drupal-launch-check) and [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check).
 
 ## Maximize Performance by Configuring Cache (Optional)
 
@@ -74,3 +74,11 @@ Serving anonymous traffic from virtual memory allows a cached response to be ret
 Follow the steps below to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
 
 <Partial file="global-cdn-test-cache.md" />
+
+## More Resources
+
+- [Backups Tool](/backups)
+
+- [Email on Pantheon](/email)
+
+- [Global CDN Guide](/guides/global-cdn)

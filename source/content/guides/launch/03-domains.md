@@ -26,6 +26,12 @@ reviewed: "2020-08-03"
 
 This section provides information on how to connect a bare domain and `www` domain to Pantheon's Live environment.
 
+<Alert title="Note" type="info">
+
+Pantheon is not a domain registrar, and we do not offer DNS management as a service. To connect a custom domain to Pantheon, you need to register one with a third-party provider.
+
+</Alert>
+
 The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/relaunch).
 
 ## Connect Domain
@@ -36,7 +42,9 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Enter the `www` domain (e.g., `www.example.com`) then click **Connect Domain**. We'll enter the bare domain (without the `www`) in Step 7.
 
-1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
+
+1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
 
   It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check the following:
 
@@ -50,7 +58,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
   > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
 
-  Wait a minute, then refresh the page.
+  Wait one minute, then refresh the page.
 
 1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
 
@@ -133,6 +141,8 @@ If you are unable to prove domain ownership (e.g. WP Engine blocks serving the r
 
 ## More Resources
 
+- [Platform and Custom Domains](/domains)
+
 - [Test a Domain Not Resolved to Pantheon](/guides/launch/advanced-curls/#test-a-domain-not-resolved-to-pantheon)
 
-- [Provision HTTPS] https://pantheon.io/docs/guides/launch/configure-dns/#provision-https
+- [Provision HTTPS](/guides/launch/configure-dns/#provision-https)

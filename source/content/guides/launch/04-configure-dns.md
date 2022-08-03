@@ -38,3 +38,10 @@ Click [here](/dns/#frequently-asked-questions) to learn more about DNS settings.
 <Partial file="enable-https.md" />
 
 <Partial file="https-requirements.md" />
+
+## More Resources
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+
+- [Platform and Custom Domains](/domains)
+
