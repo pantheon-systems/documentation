@@ -1,7 +1,6 @@
 ---
 title: Supported WordPress Versions
 description: Learn which versions of WordPress are currently supported, as well as additional compatibility information.
-description: 
 categories: [platform]
 tags: [libraries, updates]
 contributors: [wordsmither]
