@@ -18,21 +18,27 @@ editpath: launch/01-introduction.md
 image: getting-started-Largethumb
 ---
 
-This guide will show you how to create, configure, and push your site to live on Pantheon.
+Pantheon is a Webops platform for open-source Drupal and WordPress sites that makes it easy to design, build, test, and measure your sites. WebOps combines the lessons of Agile and DevOps communities to prioritize iterative work that is visible to all team members. You can quickly deploy different versions of the same site on your Test environment, Live environment, and backup servers.
+
+This guide will show you how to create, configure, and launch your site on Pantheon.
 
 ## Essential Steps in this Guide
 
-- Upgrade a site to a paid plan
+- [Create the Live environment](/guides/quickstart/create-test-live/)
 
--  Add a custom domain
+- [Upgrade Site Plan](/guides/launch/plans/)
 
-- Enable free, automated HTTPS
+- [Configure DNS](/guides/launch/domains/)
 
-- Redirect traffic to a single domain (e.g., `www.example.com` or `example.com`)
+- [Configure Caching](/guides/global-cdn/global-cdn-caching/)
 
-- Enable and schedule weekly backups
+- [Enable and Schedule Weekly Backups](/guides/launch/launch-check/)
 
-- Review status reports
+- [Set a Primary Domain](/guides/launch/redirects/)
 
-- Optimize performance
 
+## More Resources
+
+- [Use the Pantheon WebOps Workflow](/pantheon-workflow)
+
+- [Your Site Code on Pantheon](/code)

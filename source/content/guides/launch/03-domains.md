@@ -24,7 +24,7 @@ image: getting-started-Largethumb
 reviewed: "2020-08-03"
 ---
 
-This section provides steps on how to connect a bare domain and `www` domain to Pantheon's Live environment.
+This section provides information on how to connect a bare domain and `www` domain to Pantheon's Live environment.
 
 The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/relaunch).
 

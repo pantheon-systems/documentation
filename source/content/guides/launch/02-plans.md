@@ -22,7 +22,7 @@ editpath: launch/02-plans.md
 image: getting-started-Largethumb
 ---
 
-This section shows you how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
+This section provides information on how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
 
 Contract customers must contact their account manager when they're ready to upgrade their site plan.
 

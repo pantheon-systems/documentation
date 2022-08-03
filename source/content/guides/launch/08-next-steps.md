@@ -21,46 +21,50 @@ editpath: launch/08-next-steps.md
 image: getting-started-Largethumb
 getfeedbackform: default
 ---
-Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in your glory.
 
-When you're ready to launch another site, use this best-practice checklist to establish a repeatable going live procedure.
+Congratulations on launching a site on Pantheon. Review next steps below for information on WordPress and Drupal launch checks, content staging, New Relic performance monitoring, load and performance testing, and secure development on the Pantheon platform.
 
-## Final Review for Going Live
+## Next Steps
 
-- [Create the Live environment](/guides/quickstart/create-test-live/)
+### WordPress and Drupal Launch Check
 
-- [Upgrade Site Plan](/guides/launch/plans/)
+[WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check):
+Pantheon provides recommendations that fit the vast majority of use cases by using a technique known as static program analysis which gathers performance and behavior patterns to see how a site works.
 
-- [Enable and Schedule Weekly Backups](/guides/launch/launch-check/)
+[Drupal Launch Check](/drupal-launch-check/): Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members.
 
-- [Enable Redis](/object-cache#enable-object-cache)
+## Content Staging
 
-- [Configure Caching](/guides/global-cdn/global-cdn-caching/)
+[Content Staging](/content-staging) workflow between test and live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment. Review the [Content Staging](/content-staging) documentation to find content staging solutions that match your current WordPress or Drupal configuration.  
 
-- [Test Cache](/guides/global-cdn/test-global-cdn-caching/)
+## Activate New Relic
 
-- [(WordPress) Disable XML-RPC](/wordpress-best-practices/#avoid-xml-rpc-attacks)
+[New Relic Performance Monitoring](/new-relic/#activate-new-relic-performance-monitoring) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
-- [Set Up Outgoing Email](/email/)
+## Load and Performance Test
 
-- [Activate New Relic Pro](/new-relic/#activate-new-relic-performance-monitoring)
+[Load and Performance Tests](/load-and-performance-testing/) can help expose and identify potential performance killers. These tests provide insight for how a site will perform during peak traffic spikes.
 
-- [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
+## Secure Development on Pantheon
 
-- [Load and Performance Test](/load-and-performance-testing/)
+All Pantheon sites come with built-in security features that are compatible with the security measures listed above, including:
 
-- [Add Domains to the Live Environment](/guides/launch/domains/)
+  - Secure infrastructure
 
-- [Redirect to a Primary Domain](/guides/launch/redirects/)
+  - Encrypted channels
 
-- [(WordPress) Update URL references](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning)
+  - Least-privilege user access
 
-- [Configure DNS](/guides/launch/domains/)
+Review our [Secure Development on Pantheon](/guides/secure-development) guide for a collection of resources and additional methods you can use to secure your sites and code depending on your needs.
+ 
+## More Resources
 
-- Launch Check
+- [Git on Pantheon Guide](/guides/git)
 
-  - [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check)
+- [Composer Fundamentals and WebOps Workflows](/guides/composer)
 
-  - [Drupal Launch Check](/drupal-launch-check/)
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)
 
-- [Review Status Report](/guides/launch/launch-check/)
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
+
+- [Drupal 9 on Pantheon](/drupal-9)

@@ -13,6 +13,16 @@ editpath: launch/07-launch-check.md
 image: getting-started-Largethumb
 ---
 
+This section provides information on how to:
+
+- Enable and schedule weekly backups
+
+- Enable and test your Email plugin or module
+
+- Review status reports
+
+- Test your cache
+
 ## Enable and Schedule Weekly Backups
 
 1. Click **<span class="glyphicons glyphicons-cloud-upload"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
@@ -45,14 +55,7 @@ Launch with confidence by taking advantage of Pantheon's static site analysis se
 
 For more information on what is included in these checks and how they work, see [Drupal Launch Check](/drupal-launch-check) and [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check).
 
-  **Shoot for all green, but at the very least be sure and fix all errors and review every notice.**
-
-## Level Up: Maximize Performance by Configuring Cache (Optional)
-
-
-## Ready to launch like the pros?
-
-Since you're in fixin' mode, take some time to optimize performance using Object Cache (formerly Redis) and Pantheon's global CDN.
+## Maximize Performance by Configuring Cache (Optional)
 
 ### [Enable Object Cache](/object-cache)
 

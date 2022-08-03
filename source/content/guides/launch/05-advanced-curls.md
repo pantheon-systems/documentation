@@ -14,12 +14,18 @@ editpath: launch/05-advanced-curls.md
 image: getting-started-Largethumb
 ---
 
-In this lesson, we'll review essential commands for the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
-Using the commands below, we’ll use advanced cURL techniques to test a domain not resolved to Pantheon yet, use the Pantheon Debugger, and suppress certificate errors.
+This section provides information on how to use essential commands during the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
+The commands below show you how to:
+
+- Test a domain not yet resolved to Pantheon with advanced cURL techniques 
+ 
+- Use the Pantheon Debugger
+
+- Suppress certificate errors
 
 ## Test a Domain Not Resolved to Pantheon
 
-When you’re migrating a site, you may want to ensure that the site responds correctly to the given host name, but if the DNS is not yet pointed at Pantheon, you won’t be able to do this. 
+It's important to ensure that your site responds correctly to the given host name during the migration process. You can't test this if the DNS is not yet pointed at Pantheon. 
 
 A common way around this is to use the `/etc/hosts` file to change your local DNS resolution. Another way is to use cURL’s `--resolve` option, which provides a custom address for a specific host and port pair. The cURL `--resolve` request inserts the specified address into cURL's DNS cache. This overrides the DNS lookup and prevents the normally resolved IP address from being used. 
 
@@ -125,3 +131,7 @@ If you are using SCP and SFTP for transfers, the `-k` option instructs cURL to s
  ```bash
  curl -k https://myexamplesite.com
  ```
+
+## More Resources
+
+- [Fastly on Pantheon](/guides/fastly-pantheon)
