@@ -1,15 +1,15 @@
 ---
 title: Pantheon Decoupled
-subtitle: 
-description: 
+subtitle: Covered in scope of support
+description: Will add content.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
 type: guide
 layout: guide
 showtoc: true
-anchorid: decoupled-site
-permalink: docs/guides/decoupled-sites/
+anchorid: site
+permalink: docs/guides/decoupled-sites/site/
 editpath: decoupled-sites/04-site.md
 reviewed: "2022-07-31"
 ---

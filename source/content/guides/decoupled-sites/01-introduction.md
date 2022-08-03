@@ -1,15 +1,15 @@
 ---
 title: Pantheon Decoupled
-subtitle: 
-description: 
+subtitle: Will Add content
+description: Will add content.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
 type: guide
 layout: guide
 showtoc: true
-anchorid: decoupled-introduction
-permalink: docs/guides/decoupled-sites/
+anchorid: introduction
+permalink: docs/guides/decoupled-sites/introduction/
 editpath: decoupled-sites/01-introduction.md
 reviewed: "2022-07-31"
 ---
