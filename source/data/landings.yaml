@@ -459,7 +459,7 @@
             - text: 'Platform and Custom Domains'
               url: '/domains'
             - text: 'Configuring Redirects'
-              url: '/guides/guides/redirect'
+              url: '/guides/redirect'
             - text: 'Managing Drupal and WordPress Subsites Under a Single Domain'
               url: '/single-application-sites'
 - title: 'Explore Platform Architecture'
