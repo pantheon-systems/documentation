@@ -169,7 +169,7 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Configure Redirects](/redirects).
+For more examples of redirecting via PHP, see [Configure Redirects](/guides/redirect).
 
 ### Incorrect robots.txt Output in WordPress
 

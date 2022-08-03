@@ -33,7 +33,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
 1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to attract and ban bad bots.
 
-1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
+1. [Restrict Access to Paths Based on IP](/guides/redirect/advanced#restrict-access-to-paths-based-on-ip).
 
 ## Configure favicon.ico to Serve a Static Image
 

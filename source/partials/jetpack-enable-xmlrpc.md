@@ -9,7 +9,7 @@
 
  This will maintain the normal security settings for other paths, but allows access for XMLRPC. Follow the remaining steps below to block all requests to the `xmlrpc.php` file EXCEPT those added to your IP address allowlist. 
 
-1. Add [Jetpack IP addresses](https://jetpack.com/support/how-to-add-jetpack-ips-allowlist/) to the [is_from_trusted_ip function](/advanced-redirects#restrict-access-to-paths-based-on-ip) of your `wp-config.php` file.
+1. Add [Jetpack IP addresses](https://jetpack.com/support/how-to-add-jetpack-ips-allowlist/) to the [is_from_trusted_ip function](/guides/redirect/advanced#restrict-access-to-paths-based-on-ip) of your `wp-config.php` file.
 
 1. Change your `disallow_uri` array to:
 

@@ -81,7 +81,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
   - Set up external [email](/email) to work with the provider of your choice
 
 - Redirect handling
-  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
+  - Move [redirects](/guides/redirect) from `htaccess` into `settings.php` or `wp-config`
 
 - Search configuration
   - Configure sites that use Acquia Search to use Pantheon Search instead. (Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.)

@@ -12,13 +12,13 @@ permalink: docs/guides/redirect/advanced
 anchorid: advanced
 ---
 
-Basic domain and HTTPS redirection can be handled by the [Primary Domain](/redirects#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
+Basic domain and HTTPS redirection can be handled by the [Primary Domain](/guides/redirect#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
 
 Redirect logic should be added to `wp-config.php` for [WordPress](/wp-config-php) sites, and `settings.php` for [Drupal](/settings-php) sites.
 
 <Alert type="danger" title="Warning">
 
-With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/redirects#update-or-remove-primary-domain) the Primary Domain).
+With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/guides/redirect#update-or-remove-primary-domain) the Primary Domain).
 
 </Alert>
 
@@ -26,7 +26,7 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`.
 
-If you're setting [HSTS](/redirects#redirect-to-https) in `pantheon.yml`, you don't need additional PHP redirection, simply run the following code:
+If you're setting [HSTS](/guides/redirect#redirect-to-https) in `pantheon.yml`, you don't need additional PHP redirection, simply run the following code:
 
 ```php:title=wp-config.php%20or%20settings.php
 // Require HTTPS across all Pantheon environments
@@ -51,7 +51,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
 The following configuration will redirect requests for `subdomain.example.com` to `https://example.com/subdirectory/`.
 
-1. [Remove the primary domain](/redirects#update-or-remove-primary-domain) from the environment.
+1. [Remove the primary domain](/guides/redirect#update-or-remove-primary-domain) from the environment.
 
 1. Run the following code:
 
@@ -150,7 +150,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
 <Alert type="info" title="Note">
 
-If you've configured your [primary domain at the platform level](/redirects#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same environment, redirection will happen automatically.
+If you've configured your [primary domain at the platform level](/guides/redirect#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same environment, redirection will happen automatically.
 
 </Alert>
 

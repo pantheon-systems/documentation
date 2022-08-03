@@ -174,7 +174,7 @@ failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize
 ```
 
 **Solution:** Uncheck **Enable 404 fallbacks** in the Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
-The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/advanced-redirects#redirect-files) section of [Advanced Redirects and Restrictions](/advanced-redirects).
+The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/guides/redirect/advanced#redirect-files) section of [Advanced Redirects and Restrictions](/guides/redirect/advanced).
 
 ___
 
@@ -683,7 +683,7 @@ ___
 
 **Issue 1:** When using the [Redirection](https://wordpress.org/plugins/redirection/) plugin, customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
-**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
+**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/guides/redirect) for more information.
 
 **Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
 
