@@ -1,0 +1,1 @@
+Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/guides/custom-upstream/maintain-custom-upstream) by the upstream maintainer each time the project releases a new version.

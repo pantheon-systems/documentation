@@ -15,7 +15,7 @@ By default, Pantheon runs Drush 8 on newly created Drupal 7 sites, and Drush 10 
 
 ## Available Drush Versions
 
-Pantheon currently supports Drush versions 8, 10, and 11.
+<Partial file="drush-supported.md" />
 
 We recommend managing your site through Composer. Visit the [Build Tools Workflow](/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon, or the [Convert to Composer](/guides/composer-convert) guide to convert an existing site to a Composer-managed site.
 
@@ -47,40 +47,7 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 </Alert>
 
-## Compatibility and Requirements
-
-Drush only supports one install method; it requires that your Drupal site be built with Composer and that Drush be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
-
-* [Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
-Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version) displayed above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 9 or higher, [Composer](/guides/composer/), and PHP 7.1 or higher.
-
-* [Drush 9](https://docs.drush.org/en/9.x/) and Drush 10 only work on Drupal 8.4 to Drupal 9.
-
-* [Drush 8](https://docs.drush.org/en/8.x/) Drush 8 is the only recommended version to use in your pantheon.yml file. It is compatible with Drupal 7.
-
-* While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](https://docs.drush.org/en/8.x/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
-
-<Alert title="Note" type="info">
-
-When running Drush locally, we highly recommend running Drush version 8.3.2 or higher.
-
-</Alert>
-
-### PHP Requirements and Compatibility
-
-| Drush Version  | PHP Version | End of Life     | Drupal 7| Drupal 8 | Drupal 9
-| ------------- |:-------------:|:-------------:|:-------------:   |:-------------: |:-------------:  |        
-| 11      | 7.4+     | TBD      |  <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |
-| 10      | 7.1+     | January 2022| ❌      |Compatible but no longer supported | Compatible but no longer supported| 
-| 9      | 5.6+     | May 2020  | ❌      |Compatible but no longer supported |<span style="color:red">❌ </span>|
-| 8     | 5.4.5+     | November 2022| <span style="color:green">✔</span>    |Supported but not recommended|<span style="color:red">❌ </span>|
-| 7      | 5.3.0+     | July 2017| Compatible but no longer supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span>|
-| 6      | 5.3.0+     | December 2015| Compatible but no longer supported    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span>|
-| 5     | 5.2.0+    | May 2015 | Compatible but no longer supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span> |
-
-Drush 11 is not available through `pantheon.yml`. Drush 11 can only be used through a [site-local installation](#site-local-drush-usage).
-
-For more information, refer to our guide on [Upgrading PHP Versions](/php-versions).
+<Partial file="drush-compatibility.md" />
 
 ## Troubleshooting
 

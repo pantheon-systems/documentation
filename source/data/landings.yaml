@@ -578,8 +578,22 @@
               url: '/pantheon-yml'
             - text: 'Automate and Integrate your Pantheon Workflow with Quicksilver Platform Hooks'
               url: '/quicksilver/'
-- title: 'Automate & Integrate'
-  subtitle: ''
+    - title: 'Supported Software, Languages, and Versions'
+      subtitle: ''
+      subtopic-lists:
+        - title: ''
+          links:
+            - text: 'Drupal'
+              url: '/supported-drupal'
+            - text: 'WordPress'
+              url: '/supported-wp'
+          - title: ''
+          links:
+            - text: 'PHP'
+              url: '/supported-php'
+            - text: 'Terminus'
+              url: '/supported-terminus'
+subtitle: ''
   path: 'automate'
   video_id: 'mdc8o19wfTI'
   cta:
