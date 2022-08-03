@@ -18,12 +18,14 @@ This section provides information on how to monitor and improve site performance
 New Relic's Dashboard opens with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
 
 1. PHP Execution
+
 1. Database Queries (MySQL or Redis)
+
 1. External Requests (calls to third-party APIs)
 
-Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/guides/new-relic/debug-mysql-new-relic) could be the result of slow queries, or an elevated volume of queries overall.
+Depending on which area you need to optimize, you will explore different areas of data. For instance, a lot of [time spent in the database](/guides/new-relic/debug-mysql-new-relic) could be the result of slow queries, or an elevated volume of queries overall.
 
-For more information on using New Relic's features, we encourage you to read the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
+For more information on using New Relic's features, we encourage you to review the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
 
 - [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
 
