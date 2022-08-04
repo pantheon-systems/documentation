@@ -57,7 +57,17 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Varying Cookies
 
-Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's Edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
+Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's Edge, the cookie name must follow the naming rules below:
+
+- Must begin with the 7 capital letters `STYXKEY`
+- Must have one or more of the following:
+
+  - letters `a-z` and `A-Z`
+	- numbers `0-9`
+	- underscore `_`
+	- hyphen `-`
+  
+If you prefer a regular expression, the name must match the following format: `STYXKEY[a-zA-Z0-9_-]+`. Test your cookie with [Regex 101.](https://regex101.com/) 
 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
 
@@ -137,5 +147,5 @@ For custom code, you should leverage the built-in authentication methods, PHP se
 
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Bypassing Cache with HTTP Headers](/cache-control)
-* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 * [Caching: Advanced Topics](/caching-advanced-topics)

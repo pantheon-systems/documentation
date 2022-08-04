@@ -35,7 +35,7 @@ It can be used where a domain's public traffic is delivered from a server-side r
 
 Decoupled Sites are presently in Early Access, where we are engaging with a small set of customers via our [Professional Services](/guides/professional-services) team.
 
-Pantheon Decoupled Sites will be built to run on a content delivery network (CDN) and optimized for popular static site generator (SSG) frameworks like Gatsby. Decoupled Sites will take the results of a Node.js static site generator process and deploy it to the edge of the [Global CDN](/global-cdn).
+Pantheon Decoupled Sites will be built to run on a content delivery network (CDN) and optimized for popular static site generator (SSG) frameworks like Gatsby. Decoupled Sites will take the results of a Node.js static site generator process and deploy it to the edge of the [Global CDN](/guides/global-cdn).
 
 
 

@@ -18,13 +18,13 @@ Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set d
 
 ## Redirects
 
-We normally suggest [PHP redirects](/redirects) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. You will lose any customizations to your PHP files every time you update your Custom Upstream. It will also be difficult to implement site-specific configurations added on these files.
+We normally suggest [PHP redirects](/guides/redirect) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. You will lose any customizations to your PHP files every time you update your Custom Upstream. It will also be difficult to implement site-specific configurations added on these files.
 
 You can use a `require_once` statement to point to an external file since this file is shared on all environments, including Multidevs. It is also separate from the Custom Upstream and unique to each site:
 
 ```php
-if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-  require_once( dirname( __FILE__ ) . '/redirects.php' );
+if ( file_exists( dirname( __FILE__ ) . '/guides/redirect.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  require_once( dirname( __FILE__ ) . '/guides/redirect.php' );
 }
 ```
 
@@ -37,3 +37,5 @@ WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
 - [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
+
+- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)

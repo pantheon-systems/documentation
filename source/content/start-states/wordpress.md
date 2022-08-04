@@ -14,6 +14,25 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
+### 2022-07-12
+
+#### <a name="20220606-1" class="release-update"></a>Show a more meaningful notice when trying to install WP plugin in Git mode
+
+If a site is in Git mode, the plugin installation UI is disabled and a notice is added to the plugins page.
+
+#### <a name="20220603-1" class="release-update"></a>Remove call to Pantheon API from WP admin
+
+Most of the time the Pantheon API requests are needless (e.g. there is no update available) and beyond the negative effect that has on the system as a whole, it also can cause a poor experience for the WordPress user when the API call fails under load. Additionally, reduced reliance on the API means more reliability, and less complexity in terms of checking for error conditions and edge cases.
+
+The update notice behavior will be as follows:
+
+- If a WP Core update is detected (via `get_core_updates`), the update notice is shown on each admin page.
+- If a WP Core update is not detected, the update notice is only shown on the update-core or update-core-network page.
+
+Notices will still only be shown on dev and multidev environments. Users can click the notice on the updates page at any time to find out if an update is available via their Pantheon dashboard.
+
+## Previous Releases
+
 ### 2022-05-24
 
 #### <a name="20220524-1" class="release-update"></a>WordPress 6.0
@@ -22,7 +41,6 @@ If you have updated the [Twenty Twenty-Two theme](https://wordpress.org/themes/t
 
 Pantheon will automatically resolve these conflicts when you click the `Apply Updates` button on your dashboard by [removing](https://core.trac.wordpress.org/changeset/53286) conflicting `LICENSE.md` files within the `wp-content/themes` directory.
 
-## Previous Releases
 
 ### 2022-04-26
 

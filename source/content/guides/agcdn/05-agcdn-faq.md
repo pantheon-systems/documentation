@@ -33,6 +33,10 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
 Yes. AGCDN is compatible with Custom Upstream and Autopilot.
 
+### Does AGCDN include Edge caching?
+
+No, Edge caching is not included in AGCDN. However, AGCDN with WAF/IO does include image caching at the Edge.
+
 ## More Resources
 
 - [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.

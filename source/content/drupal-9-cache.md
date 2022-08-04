@@ -37,5 +37,5 @@ Some developers may wonder if HTTP/2 has replaced CSS and Javascript aggregation
 Other modules like `views.module`, which is now in Drupal 9's core, and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should consider implementing their cache settings to provide a good logged-in user experience.
 
 ## See Also
-- [Global CDN Caching for High Performance](/global-cdn-caching)
+- [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
 - [Drupal 9 Cache API Documentation](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x)

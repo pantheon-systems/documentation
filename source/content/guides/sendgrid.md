@@ -56,7 +56,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/multidev):
+This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/guides/multidev):
 
 ```bash{promptUser: user}
 export SITE=yoursitename

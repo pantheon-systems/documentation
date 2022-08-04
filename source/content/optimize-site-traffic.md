@@ -33,7 +33,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
 1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to attract and ban bad bots.
 
-1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
+1. [Restrict Access to Paths Based on IP](/guides/redirect/advanced#restrict-access-to-paths-based-on-ip).
 
 ## Configure favicon.ico to Serve a Static Image
 
@@ -200,4 +200,4 @@ Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#pro
 
 ## Advanced Protection and Performance With Advanced Global CDN
 
-[Advanced Global CDN](/guides/professional-services/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DoS attempts.
+[Advanced Global CDN](/guides/professional-services/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DoS attempts.

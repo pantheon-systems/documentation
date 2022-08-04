@@ -4,7 +4,6 @@ Pantheon platform email notifications are listed below. These notifications are 
 
 The emails listed below are received by all users, regardless of their assigned role. Refer to [Roles and Permissions](/change-management#roles-and-permissions) for more information.
 
-
 - **New membership:** a site admin-generated invitation to a user. The invited user is not required to have an account yet.
 
 - **Password reset:** a user-generated email sent after submitting a request on the login form.
@@ -17,11 +16,9 @@ The emails listed below are received by all users, regardless of their assigned 
 
 The emails listed below are only received by users who have been assigned to the site admin role.
 
-
 - **Site plan level change:** a Pantheon-generated notification sent to all site admins and organization / workspace admins when a site's plan is upgraded or downgraded.
 
 - **Site added as supporting organization / workspace:** a Pantheon-generated notification sent to all organization / workspace admins when a site is added to an organization / workspace as a supporting organization / workspace.
-
 
 ### Autopilot Email Notifications
 

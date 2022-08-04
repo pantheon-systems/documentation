@@ -13,7 +13,7 @@ editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
 ---
 
-Autopilot updates and visually tests a copy of your site on a [Multidev](/multidev) so it can detect issues before it tries to apply updates.
+Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it tries to apply updates.
 
 ## Successful Tests
 

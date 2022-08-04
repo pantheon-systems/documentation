@@ -11,7 +11,11 @@ permalink: docs/guides/fastly-pantheon
 anchorid: fastly-pantheon
 ---
 
+<<<<<<< HEAD
 Pantheon offers extensive content delivery network (CDN) features through our [Global CDN](/global-cdn) and [Advanced Global CDN](/guides/agcdn). Pantheon also partners with [Fastly](https://www.fastly.com/) 
+=======
+Pantheon offers extensive content delivery network (CDN) features through our [Global CDN](/guides/global-cdn) and [Advanced Global CDN](/guides/professional-services/advanced-global-cdn). Pantheon also partners with [Fastly](https://www.fastly.com/) 
+>>>>>>> ef2ccb65b3774550602e7def529af08f3d65b528
 if you prefer to use a CDN outside of the Pantheon platform. Using Fastly can be a good option if you are looking for log or media storage integration solutions. 
 
 Using Fastly on the Pantheon platform to manage your site provides: 
@@ -28,11 +32,11 @@ Using Fastly on the Pantheon platform to manage your site provides:
 
 - Enhanced Caching at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration/continuous delivery (CI/CD).
 
-- Image Optimizer (IO) as an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
+- Image Optimizer (IO) as an add-on that renders images using high-density CHI metro points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
 ## Take Advantage of Fastly on Pantheon 
 
-Fastly can be used with the [Global CDN](/global-cdn) that comes automatically with your Pantheon account. Log extracts can be requested from your Customer Success Engineer. Standard analytics include all pages requested, but will not include service calls and other traffic that does not load the tracking script.
+Fastly can be used with the [Global CDN](/guides/global-cdn) that comes automatically with your Pantheon account. Log extracts can be requested from your Customer Success Engineer. Standard analytics include all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
 Key content to review in your log report include:
 
@@ -58,7 +62,7 @@ You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and
 
 - [New Relic](/new-relic)
 
-- [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
+- [Pantheon Global CDN](/guides/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 

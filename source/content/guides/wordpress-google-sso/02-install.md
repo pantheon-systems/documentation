@@ -17,7 +17,7 @@ In this step, we'll install the WP SAML Auth plugin and bring up the settings pa
 
 ## Choose Your Environment
 
-If your site has [Multidev](/multidev) enabled, we suggest working in a new multidev environment to avoid conflicting with the work of other developers on your team. Otherwise, you'll be working from the Dev environment.
+If your site has [Multidev](/guides/multidev) enabled, we suggest working in a new multidev environment to avoid conflicting with the work of other developers on your team. Otherwise, you'll be working from the Dev environment.
 
 <Alert title="Environment Variables" type="export">
 

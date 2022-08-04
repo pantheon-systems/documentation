@@ -19,7 +19,6 @@ All plans except for a Basic plan can use New Relic&reg; Performance Monitoring.
 | Performance   | ✓       |
 | Elite         | ✓       |
 
-<Alert title="Note" type="info" >New Relic&reg; is not supported on sites using PHP 8.1. </Alert>
 
 ## Activate New Relic&reg; Performance Monitoring
 
@@ -58,9 +57,9 @@ In both cases, there is not a one-to-one mapping between Pantheon users and New 
 
 ### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
 
-1. From the New Relic Dashboard, click on the User Account to the right.
-1. From the Dropdown, click **Log Out**.
-1. Back on the Pantheon Site Dashboard, click the **Go to New Relic** button.
+1. Select the User Account in the New Relic Dashboard.
+1. Select **Log Out** from the drop-down menu. 
+1. Navigate to the Site Dashboard > click the **Go to New Relic** button.
 
 ### If you click the Go to New Relic button and are instead sent to a log in screen
 
@@ -85,7 +84,7 @@ After activating New Relic&reg; Performance Monitoring, a confirmation email wil
 
 If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
 
-1. On New Relic's login page, click **Forgot your password?**.
+1. Click **Forgot your password?** on New Relic's login page.
 1. Enter the email address of the site owner.
 1. Click **Send my reset link**.
 1. Open the email you will receive, click the reset link, and follow the prompts to access your account.
@@ -98,7 +97,7 @@ New Relic provides a free availability monitoring service within their Synthetic
 
 1. Click **New Relic** > **Go to New Relic** from the target environment within the Site Dashboard on Pantheon.
 1. Select **Synthetics** from the menu bar at the top of the page.
-1. From the **Monitors** tab (default), click **Add new**, and enter the details for the URL you want to monitor.
+1. Click **Add new** on the **Monitors** tab (default) and enter the details for the URL you want to monitor.
 1. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance networking snafus.
 1. Set the frequency for checks. We suggest 5 minutes.
 1. Provide an email address for notifications.
@@ -181,8 +180,8 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 After deleting a Multidev environment from your site, you'll need to manually [remove it in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).
 
-1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.
-1. From the New Relic menu bar, select **APM** > **Applications**.
+1. Navigate to your Dashboard, select the **New Relic** tab, and click **Open New Relic**.
+1. Select **APM** > **Applications** in the New Relic menu bar.
 1. Wait until the color-coded health status turns gray, then select the app's gear icon.
 1. Select **Delete app**, and click the confirmation button.
 

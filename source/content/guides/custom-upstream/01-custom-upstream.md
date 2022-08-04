@@ -144,3 +144,5 @@ Here are definitions for commonly used terms:
 
 - [WordPress and Drupal Core Updates](/core-updates)
 
+- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
+

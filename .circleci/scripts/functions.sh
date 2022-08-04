@@ -33,7 +33,7 @@ gatsby-tokens() {
 # Set GitHub API token
     touch .env.production
     echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
-    echo "SEGMENT_KEY=$SEGMENT_KEY" >> .env.production
+    echo "SEGMENT_KEY_NEW=$SEGMENT_KEY_NEW" >> .env.production
     echo "GTM_ID=$GTM_ID" >> .env.production
 }
 

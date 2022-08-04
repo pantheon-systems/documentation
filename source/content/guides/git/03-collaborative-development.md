@@ -261,7 +261,7 @@ You must create the `settings.php` file to develop in sync.
 1. Download the module and its dependencies in your local environment.
 
     ```bash{promptUser: user}
-    drush dl configuration-7.x-2.x-dev xautoload
+    composer require drupal/xautoload
     ```
 
 1. Enable the module > test and verify that the module is working. 
@@ -351,9 +351,11 @@ You must create the `settings.php` file to develop in sync.
 
 There are other options to further optimize workflows now that you have the basic setup. 
 
- - A continuous integration server like Jenkins, Travis CI, Bamboo, or CircleCI
+- Pantheon's [Build Tools](/guides/build-tools/)
 
- - A suite of automated acceptance tests using Behat or PHPUnit
+- A continuous integration server like Jenkins, Travis CI, Bamboo, or CircleCI
+
+- A suite of automated acceptance tests using Behat or PHPUnit
 
 These tools allow your team to fully implement continuous delivery with automated testing and continuous integration.
 
@@ -363,4 +365,4 @@ These tools allow your team to fully implement continuous delivery with automate
 
 - [Git FAQs](/guides/git/faq-git)
 
-- [Multidev](/multidev)
+- [Multidev](/guides/multidev)

@@ -9,7 +9,7 @@ The Site Dashboard is where you can find all the tools you need to successfully 
 
 ![Site Dashboard](../images/dashboard/site-dashboard-image.png)
 
-At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/multidev).
+At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/guides/multidev).
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
 
@@ -121,7 +121,7 @@ This is not intended to replace reviewing your error logs. Learn more about [acc
 
 ### Domains / HTTPS
 
-Use the [Domains/HTTPS tab](/guides/launch/domains) to connect custom domain(s) and provision HTTPS. For more details, see [HTTPS on Pantheon's Global CDN](/https).
+Use the [Domains/HTTPS tab](/guides/launch/domains) to connect custom domain(s) and provision HTTPS. For more details, see [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https).
 
 ### Backups
 
@@ -129,7 +129,7 @@ On this tab you can create backups, restore from an existing backup, or view the
 
 ### Security
 
-Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Security on the Pantheon Dashboard](/security).
+Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Security on the Pantheon Dashboard](/guides/secure-development/security-tool).
 
 ## Site UUID
 
@@ -151,4 +151,4 @@ For example uses, see the following:
 
 - [Port 2222 Blocked Workaround](/port-2222#set-up-the-tunnel)
 - [rsync and sftp](/rsync-and-sftp/#sftp)
-- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/ssh-tunnels/#prerequisites)
+- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels/#prerequisites)

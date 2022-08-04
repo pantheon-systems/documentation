@@ -29,7 +29,7 @@ To minimize issues, make the codebase changes in a new branch:
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/master
+  git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
   Switched to a new branch 'composerify'
   ```
 
@@ -68,7 +68,7 @@ Copy any existing configuration from the default branch. Adjust the source folde
 This is a common location for the `config` file. If this isn't where your `config` file is located, replace `config` with the full path, such as `web/sites/default/config`.
 
 ```bash{promptUser:user}
-git checkout master config
+git checkout main config
 git mv config/* config
 git rm -f web/sites/default/config/.htaccess
 git commit -m "Pull in configuration from default branch"
@@ -79,7 +79,7 @@ git commit -m "Pull in configuration from default branch"
 <Tab title="Without Nested Docroot" id="code-nodocroot">
 
 ```bash{promptUser:user}
-git checkout master sites/default/config
+git checkout main sites/default/config
 git mv sites/default/config/* config
 git rm -f sites/default/config/.htaccess
 git commit -m "Pull in configuration from default branch"
@@ -94,7 +94,7 @@ git commit -m "Pull in configuration from default branch"
 1. Compare the old codebase's `pantheon.yml` to the new `pantheon.upstream.yml`:
 
   ```bash{promptUser:user}
-  git diff master:pantheon.yml pantheon.upstream.yml
+  git diff main:pantheon.yml pantheon.upstream.yml
   ```
 
   Press `q` on your keyboard to exit the diff display.
@@ -102,7 +102,7 @@ git commit -m "Pull in configuration from default branch"
 1. Copy the old `pantheon.yml` to preserve settings:
 
   ```bash{promptUser:user}
-  git checkout master pantheon.yml
+  git checkout main pantheon.yml
   git add pantheon.yml
   git commit -m 'Copy my pantheon.yml'
   ```

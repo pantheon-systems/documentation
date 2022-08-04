@@ -37,4 +37,4 @@ To tune your site for these metrics, focus on these key areas:
 - [Reduce Server Response Time](/guides/frontend-performance/caching)
 - [Compress Images](/guides/frontend-performance/media#compress-images)
 - [Deliver Efficient CSS and JavaScript](/guides/frontend-performance/code-css#deliver-efficient-css-and-javascript)
-- [Avoid Redirects](/guides/frontend-performance/redirects)
+- [Avoid Redirects](/guides/frontend-performance/guides/redirect)

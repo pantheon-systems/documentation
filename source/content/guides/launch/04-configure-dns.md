@@ -11,7 +11,7 @@ editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
 
-In this lesson we'll configure DNS and provision [free, automated HTTPS](/https) on Pantheon.
+In this lesson we'll configure DNS and provision [free, automated HTTPS](/guides/global-cdn/https) on Pantheon.
 
 <Alert title="Note" type="info">
 

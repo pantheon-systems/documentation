@@ -181,6 +181,6 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
 
 - [Undo Git Commits](/guides/git/undo-commits)
 
-- [Multidev](/multidev)
+- [Multidev](/guides/multidev)
 
 - [WordPress and Drupal Core Updates](/core-updates)

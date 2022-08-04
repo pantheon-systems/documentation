@@ -102,7 +102,7 @@ It may take up to two business days to process the request.
 
 ## Remove a Custom Certificate
 
-All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
+All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/guides/global-cdn/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
 
 
 ## Frequently Asked Questions
@@ -113,7 +113,7 @@ You can use a single certificate to cover multiple domains spread across various
 
 ### What about sites purchased online?
 
-Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/https/#can-i-bring-my-own-certificate).
+Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/guides/global-cdn/https/#can-i-bring-my-own-certificate).
 
 ### Will custom certificates be self-serve?
 
@@ -155,7 +155,7 @@ To take your site live by moving custom domains from one Site Dashboard to anoth
 
 ## You May Also Refer To
 
-- [Pantheon Global CDN](/global-cdn)
+- [Pantheon Global CDN](/guides/global-cdn)
 - [Advanced Global CDN](/guides/professional-services#advanced-global-cdn)
-- [HTTPS on Pantheon's Global CDN](/https)
+- [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
 - [Introduction to Domain Name Services](/dns)

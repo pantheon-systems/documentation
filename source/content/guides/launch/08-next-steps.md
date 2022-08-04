@@ -35,9 +35,9 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 - [Enable Redis](/object-cache#enable-object-cache)
 
-- [Configure Caching](/global-cdn-caching/)
+- [Configure Caching](/guides/global-cdn/global-cdn-caching/)
 
-- [Test Cache](/test-global-cdn-caching/)
+- [Test Cache](/guides/global-cdn/test-global-cdn-caching/)
 
 - [(WordPress) Disable XML-RPC](/wordpress-best-practices/#avoid-xml-rpc-attacks)
 
@@ -51,7 +51,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 - [Add Domains to the Live Environment](/guides/launch/domains/)
 
-- [Redirect to a Primary Domain](/guides/launch/redirects/)
+- [Redirect to a Primary Domain](/guides/launch/guides/redirect/)
 
 - [(WordPress) Update URL references](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning)
 

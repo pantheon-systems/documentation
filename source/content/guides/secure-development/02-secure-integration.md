@@ -1,62 +1,85 @@
 ---
-title: Pantheon Secure Integration
+title: Secure Development on Pantheon
+subtitle: Pantheon Secure Integration
 description: Configuring your Drupal or WordPress site to use Secure Integration as a defense-in-depth solution to access systems behind firewalls.
 categories: [platform]
 tags: [database, professional-services, redis, security]
+ayout: guide
+showtoc: true
+permalink: docs/guides/secure-development/secure-integration
+anchorid: secure-integration
+reviewed: "2022-07-21"
 ---
-[Pantheon Secure Integration](https://pantheon.io/features/secure-integration), formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us) for more information.
 
-One of the effects of the elastic nature of Pantheon's platform is that sites have a [dynamic outgoing IP](/outgoing-ips). Container IP addresses are not constant, so direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
+This section provides information on [Pantheon Secure Integration](https://pantheon.io/features/secure-integration).
+
+Pantheon Secure Integration, formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is an available add-on service for contract customers. [Contact us](https://pantheon.io/contact-us?) for more information.
+
+Pantheon's platform is [elastic](https://en.wikipedia.org/wiki/Elasticity_(cloud_computing)) in nature. All sites have a [dynamic outgoing IP](/outgoing-ips) and container IP addresses are not constant. This means that direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
 
 ## How It Works
 
 Secure Integration uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer), offering a consistent IP address range (*not* a single address) from which requests are made to your local service.
 
-![Secure Integration diagram](../images/si-diagram.png)
+![Secure Integration diagram](../../../images/si-diagram.png)
 
 ## Create a Secure Tunnel
 
 [Contact support](/guides/support/contact-support/) and provide the following for each of your remote services:
 
 - IP address
+
 - Port number
+
 - Name to identify connection
+
   - Uppercase letters and underscores allowed
+
   - Used for [PHP Constant](https://secure.php.net/manual/en/language.constants.php) that will replace the numeric port number in your code
 
-Once setup is complete on our end, we'll provide you with the information you need to use Secure Integration, including a PHP constant in the format `PANTHEON_SOIP_EXAMPLE`, where `EXAMPLE` is replaced with the service name you specify.
+After the setup is complete on our end, we'll provide you with the information you need to use Secure Integration, including a PHP constant in the format `PANTHEON_SOIP_EXAMPLE`, where `EXAMPLE` is replaced with the service name you specify.
 
 <Alert title="Note" type="info" >
 
-At a minimum, allow one business day to fulfill this implementation request. Provide complete information to ensure timely and efficient processesing, and to minimize any issues that may arise.
+At a minimum, allow one business day to fulfill this implementation request. Provide complete information to ensure timely and efficient processing, and to minimize any issues that may arise.
 
 </Alert>
 
 ## Configure Your Site
 
-Once the gateway has been established, you must update your code to use it. This process varies depending on the modules or plugins in use, and the type of service you're routing through the gateway.
+You must update your code after the gateway has been established. This process varies depending on the modules or plugins in use, and the type of service you're routing through the gateway.
 
 ### PHP Constants as Port Numbers
 
-Once your Secure Integration is configured, we update your site environment with the PHP constant `PANTHEON_SOIP_EXAMPLE`. This constant translates to the port number, internal to your Pantheon Site, through which your external service can be accessed.
+After your Secure Integration is configured, we update your site environment with the PHP constant `PANTHEON_SOIP_EXAMPLE`. This constant translates to the port number, internal to your Pantheon Site, through which your external service can be accessed.
 
 ### Example LDAP Connection with PHP Constants
 
-Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose `PANTHEON_SOIP_LDAP_STAFF` and `PANTHEON_SOIP_LDAP_STUDENTS` as names to identify the connections.
+Any code you're using to connect to the remote service must accept a PHP Constant for the port number.
 
-Direct connection, no Secure Integration:
+For example: If you have two LDAP servers, one for staff and another for students, you may choose `PANTHEON_SOIP_LDAP_STAFF` and `PANTHEON_SOIP_LDAP_STUDENTS` as names to identify the connections.
+
+<TabList>
+
+<Tab title="Secure Integration" id="si-example" active={true}>
+
+```php
+127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
+127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
+```
+
+</Tab>
+
+<Tab title="Direct Connection (no Secure Integration)" id="nosi-example">
 
 ```php
 123.45.6.22:443
 223.23.4.33:443
 ```
 
-With Secure Integration:
+</Tab>
 
-```php
-127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
-127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
-```
+</TabList>
 
 In cases where you cannot supply a direct PHP constant, consider wrapping it into a variable. For example:
 
@@ -72,7 +95,7 @@ See also: [FAQ and Troubleshooting for LDAP](/ldap-and-ldaps/#frequently-asked-q
 
 <Alert title="Note" type="info" >
 
-It is very important to set reasonable timeouts for requests sent via Secure Integration, since [normal PHP timeouts](https://secure.php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set, due to failing gateway connection requests that build up and consume resources.
+It is important to set reasonable timeouts for requests sent via Secure Integration, since [normal PHP timeouts](https://secure.php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set, due to failing gateway connection requests that build up and consume resources.
 
 </Alert>
 
@@ -95,3 +118,7 @@ Secure Integration connects to the same external resource from all environments.
 ### Is Secure Integration a replacement for authentication?
 
 No, Secure Integration is not a replacement for authentication, but rather is a [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
+
+## More Resources
+
+- [Two Factor Authentication](/guides/secure-development/two-factor-authentication)

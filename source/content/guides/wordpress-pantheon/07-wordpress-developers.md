@@ -48,7 +48,7 @@ Review our [Managing Custom Code for WordPress with Plugins](/wordpress-custom-c
 
 ## AWS S3 Setup for WordPress
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations#highly-populated-directories) or serving [large files](/platform-considerations#large-files).
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations#highly-populated-directories) or serving [large files](/platform-considerations#large-files).
 
 ## WordPress and PHP Sessions
 

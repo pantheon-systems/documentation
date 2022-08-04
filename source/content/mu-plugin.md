@@ -286,7 +286,7 @@ For more information, see [How do I disable the persistent object cache for a ba
 
 ### Redirects
 
-In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
+In addition to [PHP redirects](/guides/redirect), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
 // 301 Redirect from /old to /new
@@ -306,7 +306,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 
 ### WP-CFM Compatibility
 
-[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/multidev) environments, but a Must Use plugin needs to be configured:
+[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/guides/multidev) environments, but a Must Use plugin needs to be configured:
 
 ```php
 add_filter( 'wpcfm_multi_env', function( $pantheon_envs ) {

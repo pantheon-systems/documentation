@@ -48,7 +48,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 1. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 1. Click on **Save**.
-1. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/redirects) for more information.
+1. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/guides/redirect) for more information.
 
 Repeat the steps above to create an **A** record for the bare domain, using `@` as the **Name** and the same IP address, then repeat again for the **AAAA** records.
 
@@ -65,7 +65,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 1. Scroll down and enable **Automatic HTTPS Rewrites**
 
-1. Remove existing redirects [configured via PHP](/redirects#redirect-with-php) in `settings.php` or `wp-config.php` that you no longer need, and update any still required to point to the domain managed by Cloudflare. You can also set the [Primary Domain](/domains#choose-primary-domain) from the Site Dashboard.
+1. Remove existing redirects [configured via PHP](/guides/redirect#redirect-with-php) in `settings.php` or `wp-config.php` that you no longer need, and update any still required to point to the domain managed by Cloudflare. You can also set the [Primary Domain](/domains#choose-primary-domain) from the Site Dashboard.
 
 1. Proceed with DNS configuration as described in Option 1, but make sure the cloud is toggled orange, not gray:
 
@@ -108,4 +108,4 @@ If you're using Cloudflare's IP Geolocation feature, you will need to read the `
 ## Next Steps
 
 - [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
-- [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)
+- [Launch Essentials: Redirect to a Primary Domain](/guides/launch/guides/redirect)

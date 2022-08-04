@@ -1,18 +1,24 @@
 ---
-title: Advanced Redirects and Restrictions
-description: Configure custom redirect logic for specific scenarios
+title: Redirects Guide
+subtitle: Advanced Redirects and Restrictions
+description: Configure custom redirect logic for specific scenarios.
 categories: [go-live]
-tags: [redirects, https, dns, launch]
-reviewed: "2020-02-12"
+tags: [dns, https, redirects]
+layout: guide
+contributors: [wordsmither]
+reviewed: "2022-08-01"
+showtoc: true
+permalink: docs/guides/redirect/advanced
+anchorid: advanced
 ---
 
-Basic domain and HTTPS redirection can be handled by the [Primary Domain](/redirects#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
+Basic domain and HTTPS redirection can be handled by the [Primary Domain](/guides/redirect#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
 
 Redirect logic should be added to `wp-config.php` for [WordPress](/wp-config-php) sites, and `settings.php` for [Drupal](/settings-php) sites.
 
 <Alert type="danger" title="Warning">
 
-With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/redirects#update-or-remove-primary-domain) the Primary Domain).
+With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/guides/redirect#update-or-remove-primary-domain) the Primary Domain).
 
 </Alert>
 
@@ -20,7 +26,7 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`.
 
-If you're setting [HSTS](/redirects#redirect-to-https) in `pantheon.yml`, you don't need additional PHP redirection.
+If you're setting [HSTS](/guides/redirect#redirect-to-https) in `pantheon.yml`, you don't need additional PHP redirection, simply run the following code:
 
 ```php:title=wp-config.php%20or%20settings.php
 // Require HTTPS across all Pantheon environments
@@ -45,7 +51,9 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
 The following configuration will redirect requests for `subdomain.example.com` to `https://example.com/subdirectory/`.
 
-When using this type of redirect, you must first [remove the primary domain](/redirects#update-or-remove-primary-domain) from the environment.
+1. [Remove the primary domain](/guides/redirect#update-or-remove-primary-domain) from the environment.
+
+1. Run the following code:
 
 ```php:title=wp-config.php%20or%20settings.php
 // Redirect subdomain to a specific path.
@@ -142,7 +150,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
 <Alert type="info" title="Note">
 
-If you've configured your [primary domain at the platform level](/redirects#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same same environment, redirection will happen automatically.
+If you've configured your [primary domain at the platform level](/guides/redirect#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same environment, redirection will happen automatically.
 
 </Alert>
 
@@ -171,7 +179,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
 }
 ```
 
-## Wildcard Redirect from one subfolder to another
+## Wildcard Redirect From One Subfolder to Another
 
 The following configuration will redirect requests pointed to any page in `example.com/old/` to the same page in `example.com/new/`. For example, `example.com/old/contributors.html` will redirect to `example.com/new/contributors.html`:
 
@@ -198,7 +206,7 @@ if( strpos( $uri, $url_to_match ) === 0) {
 
 ## Redirect Legacy UNIX-Style User Home Folder Paths
 
-When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
+When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Run the following code to parse out the username and relative path that the request was made for:
 
 ```php:title=wp-config.php%20or%20settings.php
 $request_parts = explode('/', $_SERVER['REQUEST_URI']);
@@ -237,13 +245,13 @@ Drupal sites can force lowercase letters using the following:
 
 ## Redirect Files
 
-Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare) or another stacked CDN to handle file redirects.
+Because Drupal and WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare) or another stacked CDN to handle file redirects.
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 
 ## Redirects and Rewrites with PHP
 
-Pantheon uses Nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on the Pantheon platform using the code in the [Pantheon htacess Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) repository.
+Pantheon uses nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on the Pantheon platform using the code in the [Pantheon htacess Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) repository.
 
 The file must be included at the very beginning of your Drupal `settings.php` or Wordpress `wp-config.php` file. The code will perform rewrites and redirects prior to full Wordpress or Drupal bootstrap.
 

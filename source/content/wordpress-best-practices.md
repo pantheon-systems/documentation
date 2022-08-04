@@ -54,9 +54,9 @@ There are many plugins and themes in WordPress that require license keys. Since 
 
 ## Live
 
-* We recommend using HTTPS. For more information, see [HTTPS on Pantheon's Global CDN](/https)
+* We recommend using HTTPS. For more information, see [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
 
-* Verify [Global CDN caching](/test-global-cdn-caching) is working on your site.
+* Verify [Global CDN caching](/guides/global-cdn/test-global-cdn-caching) is working on your site.
 
 * Follow our [Frontend Performance](/guides/frontend-performance) guide to tune your WordPress site.
 
@@ -82,7 +82,7 @@ Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 cor
 
 <Alert title="Note"  type="info" >
 
-Pantheon does not support XML-RPC if it is enabled.
+XML-RPC is not recommended on the Pantheon platform. Pantheon does not support XML-RPC if it is enabled. 
 
 </Alert>
 
@@ -116,6 +116,8 @@ This method has the advantage of being toggleable without deploying code, by act
     return [];
   }, PHP_INT_MAX);
   ```
+
+	If your site uses a nested web root directory, you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php` 
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 

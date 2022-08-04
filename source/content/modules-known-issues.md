@@ -69,9 +69,9 @@ ___
 
 <ReviewDate date="2020-08-25" />
 
-**Issue**: This module conflicts with [Pantheon's Dashboard Security Tool](/security#password-protect-your-sites-environments) when both are enabled on Drupal sites, resulting in 403 errors.
+**Issue**: This module conflicts with [Pantheon's Dashboard Security Tool](/guides/secure-development/security-tool#password-protect-your-sites-environments) when both are enabled on Drupal sites, resulting in 403 errors.
 
-**Solution**:  We suggest using Pantheon's Dashboard Security Tool if you want to set up HTTP authentication. Additionally, refer to [Advanced Redirects and Restrictions](/advanced-redirects) for more options to control and restrict access to some or all of your site.
+**Solution**:  We suggest using Pantheon's Dashboard Security Tool if you want to set up HTTP authentication. Additionally, refer to [Advanced Redirects and Restrictions](/guides/redirect/advanced) for more options to control and restrict access to some or all of your site.
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 ## [Boost](https://www.drupal.org/project/boost)
 
-**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. Refer to [Pantheon's Global CDN](/global-cdn) documentation for more information.
+**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation for more information.
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/global-cdn) documentation. 
+**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation. 
 ___
 
 ## [Views data export](https://www.drupal.org/project/views_data_export)
