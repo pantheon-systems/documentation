@@ -11,13 +11,13 @@ permalink: docs/guides/agcdn/agcdn-wafio
 anchorid: agcdn-wafio
 ---
 
-This section provides detailed information all AGCDN with WAF and IO features.
+This section provides detailed information on AGCDN with WAF and IO features.
 
 ## Layer 7 and Enterprise WAF Rules
 
 Application-layer (OSI Layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
-Our Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
+The AGCDN Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
 
 Support for <abbr title="Open Web Application Security Project">OWASP</abbr> WordPress and Drupal rules help you monitor and address the most common application risks. Examples include SQL injection and <abbr title="Cross-Site Scripting">XSS</abbr> vulnerabilities.
 
@@ -41,7 +41,7 @@ The customer is responsible for purchasing, maintaining payment for, and support
 
 ### Rate Limiting 
 
-Rate Limiting is in early access. This is feature of Advanced Global CDN that lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
+Rate Limiting is in early access. Rate Limiting lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
 
 The benefits of Rate Limiting include:
 

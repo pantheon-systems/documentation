@@ -11,7 +11,7 @@ permalink: docs/guides/agcdn/agcdn-features
 anchorid: agcdn-features
 ---
 
-This section provides detailed information all AGCDN features.
+This section provides detailed information on AGCDN features.
 
 ## OSI Layer 3 and 4 DDoS Protection & Mitigation
 
@@ -31,11 +31,19 @@ Restrict access to properties using Access Control Lists (ACLs) that use IP addr
 
 ## Tor Traffic Blocking
 
-Tor encrypts and routes user traffic through at least three Tor nodes to mask the starting IP addresses of users. AGCDN can block Tor traffic when it is determined that it is being maliciously.
+Tor encrypts and routes user traffic through at least three Tor nodes to mask a user's starting IP address. AGCDN can block malicious Tor traffic.
 
 ## Custom Rules and Redirects
 
-AGCDN allows you to use custom site rules, including bespoke cookie-handling, URL rate-limiting, header modifications and filters, and URL and query string sorting and filtering. 
+AGCDN allows you to use custom site rules, including:
+
+- Bespoke cookie-handling
+
+- URL rate-limiting
+
+- Header modifications and filters
+
+- URL and query string sorting and filtering 
 
 ## Token Authentication with JSON Web Token
 
@@ -47,7 +55,7 @@ Response code messages enable you to create custom error pages (for example, 404
 
 ## Geolocation-based Actions
 
-Sending location info to your application is much faster than fetching it from a third-party API. AGCDN enables actions based on the physical location of your user (for example, blocking or redirecting based on country), and can send location information to your application for performant, custom control.
+Sending location information to your application is much faster than fetching it from a third-party API. AGCDN enables actions based on the physical location of your user (for example, blocking or redirecting based on country), and can send location information to your application for performant, custom control.
 
 ## Device Detection and Edge Control
 
@@ -55,15 +63,19 @@ Sending location info to your application is much faster than fetching it from a
 
 ## Complete CDN Edge Logs
 
-Edge Logs show every request to your website and records of whether or not the content was cached. Server logs can only record requests that couldn't be fulfilled from a CDN's cache. Full CDN edge logs replace these with logs to provide a complete picture of your traffic.
-
-## Modify and Filter Headers at the Edge
-
-Change or filter request and response headers before your application goes live. You can create, add, delete, or update parts of your request and apply custom rules.
+Edge Logs show every request to your website and records cached and uncached content. Server logs can only record requests that couldn't be fulfilled from a CDN's cache. Full CDN Edge Logs replace these with logs to provide a complete picture of your traffic.
 
 ## Edge Redirects
 
-Reduce requests to your CMS by moving page redirects to the edge. We can do path, domain, and pattern-based (RegEx) redirects, or redirects based on geolocation information. We can also combine redirect behavior using Headers (Cookies, Responses, etc.).
+Reduce requests to your CMS by moving page redirects to the edge. AGCDN can combine redirect behavior using Headers (Cookies, Responses, etc.). AGCDN provides redirects for:
+
+- Path
+
+- Domain
+
+- Pattern-based (RegEx) 
+
+- Redirects based on geolocation information
 
 ## Domain Masking and Reverse Proxy
 
