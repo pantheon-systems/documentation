@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Support
-description: Informationon what is supported for Pantheon Decoupled.
+description: Information on what is supported for Pantheon Decoupled.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]

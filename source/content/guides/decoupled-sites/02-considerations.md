@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Considerations
-description: WHat you need to know to get started with Pantheon Decoupled.
+description: What you need to know to get started with Pantheon Decoupled.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]

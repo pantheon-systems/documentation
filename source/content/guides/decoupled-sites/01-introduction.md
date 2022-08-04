@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Learn about Pantheon Decoupled 
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, ]
 type: guide
 layout: guide
 showtoc: true
@@ -33,7 +33,7 @@ Decoupled Architecture is a site architecture that combines the speed and agilit
 
 ## What is Pantheon Decoupled?
 
-Pantheon Decoupled  provides users with tools that improve the experience of building a decoupled front-end that sources data from a CMS back-end. 
+Pantheon Decoupled provides users with tools that improve the experience of building a decoupled front-end that sources data from a CMS back-end. 
 
 With decoupled sites a CMS Site can linked to a single decoupled site or multiples sites or the user does not need a CMS at all and can link directly to a front end application./
 
@@ -51,7 +51,7 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 
 ### Pantheon Decoupled Terminology
 
-<Accordion title="Pantheon Decoupled Terminology" id="terms-decoupled" icon="info-sign">
+<Accordion title="Terms to know related to Pantheon Decoupled" id="terms-decoupled" icon="info-sign">
 
 #### CMS  
 In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with Decoupled Sites.
@@ -80,9 +80,10 @@ SSG means the entire site is pre-rendered into HTML, CSS, and JavaScript files a
 #### Server Side Rendering (SSR)
 Server-Side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
 
+</Accordion>
+
 ### Pantheon Decoupled Options
 With Pantheon Decoupled you can create Server Side Rendered (SSR) sites and Static Site Generated sites.
 
 Currently, Pantheon Decoupled does not support SSR using Gatsby, but it does support SSG with Next.js
 
-</Accordion>
