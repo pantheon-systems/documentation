@@ -41,9 +41,11 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Click **Configure** after Fastly has finished setting up the service. 
 
-1. Click the **Hosts** tab > Click the **+ New** button and add the Pantheon sub-domain for the secondary site's Live environment.
+1. Click the **Hosts** tab, select the **+ New** button, and then add the Pantheon sub-domain for the secondary site's Live environment.
 
-1. Select the <i class="fa fa-gear"></i> gear icon next to the primary content host > Select **Conditions** > Click the **+ New** button > Complete the pop-up fields.
+1. Select the <i class="fa fa-gear"></i> gear icon next to the primary content host, then select **Conditions**.
+
+1. Click the **+ New** button and then complete the pop-up fields.
 
     - You must create a Fastly Condition for each host. Each condition lets Fastly know what traffic needs to be sent to which server. Your field entries should like this:
 
@@ -79,7 +81,7 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Click **Create** and save the new content.
 
-1. Click the <i class="fa fa-gear"></i> gear icon next to the **Main_Server_Host** header, select **Request Conditions**.
+1. Click the <i class="fa fa-gear"></i> gear icon next to the **Main_Server_Host** header, and then select **Request Conditions**.
 
 1. Click the **Name** drop-down menu, select the `Main_Server_Host_Condition`, and then click **Assign**.
 
