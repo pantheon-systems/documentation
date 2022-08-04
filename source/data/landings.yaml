@@ -1070,12 +1070,5 @@
           url: '/guides/partial-composer'
         - text: 'Using Lockr to Secure and Manage API and Encryption Keys'
           url: '/guides/lockr'
-<<<<<<< HEAD
         - text: 'Advanced Global CDN'
           url: '/guides/agcdn'
-=======
-        - text: 'Using SendGrid To Deliver Email'
-          url: '/guides/sendgrid'
-        - text: 'Secure Development on Pantheon'
-          url: '/guides/secure-development'
->>>>>>> ef2ccb65b3774550602e7def529af08f3d65b528
