@@ -41,7 +41,7 @@ This guide will show you how to create, configure, and launch your site on the P
 
 - [Enable and Schedule Weekly Backups](/guides/launch/launch-check/)
 
-- [Set a Primary Domain](/guides/launch/redirects/)
+- [Set a Primary Domain](/guides/launch/redirects)
 
 
 ## More Resources

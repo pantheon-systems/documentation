@@ -6,7 +6,7 @@ anchorid: redirects
 categories: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
-permalink: docs/guides/launch/redirects/
+permalink: docs/guides/launch/redirects
 editpath: launch/06-redirects.md
 image: getting-started-Largethumb
 ---
