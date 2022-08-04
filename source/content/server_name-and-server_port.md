@@ -45,7 +45,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ## Please Also Refer To
 
-- [Advanced Redirects and Restrictions](/advanced-redirects)
+- [Advanced Redirects and Restrictions](/guides/redirect/advanced)
 - [Configuring Settings.php](/settings-php)
 - [Configuring wp-config.php](/wp-config-php)
 - [Plugins with Known Issues](/plugins-known-issues)

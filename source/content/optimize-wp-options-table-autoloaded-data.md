@@ -67,7 +67,7 @@ We recommend minimizing your autoloaded data to increase to your site's performa
 
 ### Redirect Your Site with PHP
 
-Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/redirects#redirect-with-php).
+Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/guides/redirect#redirect-with-php).
 
 ### Clean up Transient Data
 

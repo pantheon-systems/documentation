@@ -16,8 +16,8 @@ If your DNS provider is not on the list below, consult the [Configure DNS](/guid
 
 ## Next Steps
 
-- [Choose a Primary Domain for SEO](/guides/launch/redirects)
-- [Configure Redirects](/redirects)
+- [Choose a Primary Domain for SEO](/guides/launch/guides/redirect)
+- [Configure Redirects](/guides/redirect)
 
 ## See Also
 

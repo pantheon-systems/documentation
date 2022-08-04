@@ -203,4 +203,4 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
  - [Launch Essentials](/guides/launch)
  - [Platform and Custom Domains](/domains)
- - [Configure Redirects](/redirects)
+ - [Configure Redirects](/guides/redirect)

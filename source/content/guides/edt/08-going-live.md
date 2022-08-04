@@ -41,7 +41,7 @@ All links from the video are provided below.
  - [Manage Plans in the Site Dashboard](/site-plan)
  - [Pantheon's Global CDN](/guides/global-cdn)
  - [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
- - [Redirect to a Primary Domain](/redirects/#redirect-to-https)
+ - [Redirect to a Primary Domain](/guides/redirect/#redirect-to-https)
  - [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https-+-hsts)
 
 
