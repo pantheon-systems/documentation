@@ -51,7 +51,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 - [Add Domains to the Live Environment](/guides/launch/domains/)
 
-- [Redirect to a Primary Domain](/guides/launch/redirects/)
+- [Redirect to a Primary Domain](/guides/launch/guides/redirect/)
 
 - [(WordPress) Update URL references](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning)
 

@@ -25,7 +25,7 @@ The following articles include techniques and configurations for `settings.php` 
 - [Reading Pantheon Environment Configuration](/read-environment-config) (including domain_access)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Platform and Custom Domains](/domains)
-- [Configure Redirects](/redirects)
+- [Configure Redirects](/guides/redirect)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
@@ -72,7 +72,7 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 
 <Alert title="Note" type="info">
 
-Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 9 redirects from our [Configure Redirects](/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
+Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 9 redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
 
 </Alert>
 

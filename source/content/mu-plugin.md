@@ -286,7 +286,7 @@ For more information, see [How do I disable the persistent object cache for a ba
 
 ### Redirects
 
-In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
+In addition to [PHP redirects](/guides/redirect), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
 // 301 Redirect from /old to /new
