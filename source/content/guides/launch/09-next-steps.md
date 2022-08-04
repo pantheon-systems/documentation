@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Final Review
-description: Part eight of our Launch Essentials guide covers the next steps to take after your site goes live.
+description: Review next steps to take after you launch your site.
 launch: true
 survey: true
 anchorid: launch-check

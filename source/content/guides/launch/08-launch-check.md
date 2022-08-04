@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Pre-launch Configuration
-description: Part seven of our Launch Essentials guide covers important configuration to perform before going live.
+description: Complete important configuration before launching your site.
 anchorid: launch-check
 layout: guide
 showtoc: true

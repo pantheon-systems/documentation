@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Set a Primary Domain for SEO
-description: Part six of our Launch Essentials guide covers redirecting users to the proper domains and paths.
+description: Redirect users to the correct domains and paths for your site.
 anchorid: redirects
 categories: [go-live]
 tags: [dns, https, launch, webops]

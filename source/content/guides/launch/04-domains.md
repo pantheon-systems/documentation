@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Connect a Domain Name
-description: Part three of our Launch Essentials guide covers connecting your domain to your Pantheon-hosted site.
+description: Learn how to connect your domain to your Pantheon-hosted site.
 launch: true
 anchorid: domains
 generator: pagination
@@ -86,9 +86,9 @@ Once you begin this process, you have:
 
 </Alert>
 
-1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+1. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 
-1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+1. Select the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
 1. Select **Details** next to the bare domain.
 
@@ -106,38 +106,13 @@ Once you begin this process, you have:
 
 1. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
-After verifying domain ownership, your domain's HTTPS certificate(s) will automatically begin generating and be deployed to Pantheon’s Global CDN within an hour.
+Your domain's HTTPS certificate(s) will begin to generate automatically after your verify domain ownership. The certificate will automatically deploy to Pantheon’s Global CDN within an hour.
 
-When a certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without HTTPS interruption.
-
-<Accordion title=" Test Locally Before Updating DNS (optional)" id="local-test" icon="info-sign">
-
-  Ready to launch like the pros?
-  Before updating DNS, you can validate HTTPS configuration for the domain is ready on Pantheon by testing locally:
-
-  1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
-
-  1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
-
-  1. Select **Details** next to the bare domain.
-
-  1. Copy the A record value provided in the Pantheon Site Dashboard.
-
-  1. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
-
-          `192.123.456.789 example.com`
-
-    This will tell your computer to look for ‘example.com’ at the new Pantheon address.
-
-  1. Make sure your site works with HTTPS by entering your domain with HTTPS in the browser (e.g., `https://www.example.com/`).
-
-  1. When you finish testing, remove the edits made to your hosts file.
-
-</Accordion>
+You can switch DNS destinations from your existing site to your new Pantheon site without HTTPS interruption when your certificate is ready.
 
 ### Maintenance Window
 
-If you are unable to prove domain ownership (e.g. WP Engine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/guides/launch/configure-dns)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
+You will not be able to pre-provision HTTPS to prevent service interruption if you can't prove domain ownership (for example, WP Engine blocks serving the required challenge file). We recommend completing the next section ([Configure DNS](/guides/launch/configure-dns)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
 
 ## More Resources
 

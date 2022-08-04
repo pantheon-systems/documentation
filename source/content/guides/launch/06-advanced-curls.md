@@ -1,7 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Advanced cURLs for Site Migration
-description: Part five of our Launch Essentials guide covers using advanced cURL techniques to prepare a site for launch.
+description: Use advanced cURL techniques to migrate and prepare your site for launch.
 anchorid: advanced-curls
 layout: guide
 showtoc: true

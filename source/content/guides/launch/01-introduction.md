@@ -4,6 +4,7 @@ subtitle: Introduction
 description: Review essential steps for launching your site on Pantheon.
 categories: [go-live]
 tags: [collaborate, launch, site, webops, workflow]
+contributors: [whitneymeredith]
 layout: guide
 type: guide
 anchorid: introduction
@@ -34,7 +35,7 @@ This guide will show you how to create, configure, and launch your site on the P
 
 - [Select Your Site Plan](/guides/launch/plans/)
 
-- [Configure DNS](/guides/launch/domains/)
+- [Configure DNS and Provision HTTPS](/guides/launch/domains/)
 
 - [Configure Caching](/guides/global-cdn/global-cdn-caching/)
 
