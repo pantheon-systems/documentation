@@ -54,7 +54,9 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
             - This tells Fastly that any URL that contains `/main` must be sent to the main server.
 
     
-1. Select the <i class="fa fa-gear"></i> gear icon next to the secondary content host > Select **Conditions** > Click the **+ New** button > Complete the pop-up fields.
+1. Select the <i class="fa fa-gear"></i> gear icon next to the secondary content host, and then select **Conditions**.
+
+1. Click the **+ New** button and then complete the pop-up fields.
 
     - Your field entries should like this:
 
@@ -64,7 +66,7 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
             - This tells Fastly that any URL that contains `/blog` must be sent to the blog content server.
 
-1. Click **Content** > Click **New** > Complete the pop-up fields to create a custom header for redirected requests.
+1. Click **Content**, select **New**, and then complete the pop-up fields to create a custom header for redirected requests.
 
     - Your entries should look like this: 
 
@@ -77,11 +79,13 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Click **Create** and save the new content.
 
-1. Click the <i class="fa fa-gear"></i> gear icon next to the **Main_Server_Host** header > Select **Request Conditions** > Click the **Name** drop-down menu > Select the `Main_Server_Host_Condition` > Click **Assign**. 
+1. Click the <i class="fa fa-gear"></i> gear icon next to the **Main_Server_Host** header, select **Request Conditions**.
+
+1. Click the **Name** drop-down menu, select the `Main_Server_Host_Condition`, and then click **Assign**.
 
     - This assigns the `Main_Server_Host` Header to the `Main_Server_Host_Condition` and appends the header to all traffic sent to the main content server on Pantheon.
 
-1. Click **Content** again > Click **New** > Complete the pop-up fields to create a second custom header for redirected requests.
+1. Click **Content** again, select **New**, and then complete the pop-up fields to create a second custom header for redirected requests.
 
     - Your entries should look like this: 
 
@@ -94,7 +98,9 @@ Follow the steps below to connect your Fastly account to your Pantheon account.
 
 1. Click **Create** and save the new content.
 
-1. Click the <i class="fa fa-gear"></i> gear icon next to the `Main_Server_Host` header > Select **Request Conditions** > Click the **Name** drop-down menu > Select `Blog_Server_Host_Condition` > Click **Assign**. 
+1. Click the <i class="fa fa-gear"></i> gear icon next to the `Main_Server_Host` header, and then select **Request Conditions**.
+
+1. Click the **Name** drop-down menu, select `Blog_Server_Host_Condition`, and then click **Assign**. 
 
     - This assigns the `Main_Server_Host` Header to the `Blog_Server_Host_Condition` and appends the header to all traffic sent to the main content server on Pantheon.
 
