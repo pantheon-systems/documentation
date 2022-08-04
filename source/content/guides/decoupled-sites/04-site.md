@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Site
-description: Will add content.
+description: .
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -14,7 +14,7 @@ editpath: decoupled-sites/04-site.md
 reviewed: "2022-07-31"
 ---
 
-# Before You Begin
+## Before You Begin
 
 You should have access to the Early Access Customer checklist provided during onboarding. 
 
@@ -39,7 +39,7 @@ To begin using Pantheon Decoupled, ensure you meet the following prerequisites:
     NOTE: Other configurations are not currently supported. 
 
 
-## Compatibility
+### Compatibility
 
 You can create an application from scratch by importing a repository or you can use our the Pantheon starter kit templates to develop a decoupled site. 
 Use the starter kits to create a server side render
@@ -49,9 +49,7 @@ Use the starter kits to create a server side render
 * Static site generated site: Gatsby and WordPress
 
 
-
-
-# Site Setup
+## Site Setup
 
 Pantheon Decoupled is available in the New Dashboard, when it is enabled during the customer onboarding process. To access it Pantheon Decoupled follow the following steps:
 
@@ -66,7 +64,7 @@ Pantheon Decoupled is available in the New Dashboard, when it is enabled during 
 Under the Decoupled Site section on the Site Creation page, click the option that best suits your needs. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 9, Next.js v12, etc.) 
  
 
-# Connect your Account
+### Connect your Account
 
 1. To start you will need to specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider. 
 
@@ -78,13 +76,13 @@ Under the Decoupled Site section on the Site Creation page, click the option tha
 
 
 
-# Create a Site by Importing a Repository
+## Create a Site by Importing a Repository
 
 Import the Repository
 Connect to your Git provider and select an existing repository.
 
 
-## Prerequisites
+### Prerequisites
 
 * You are using a Git repository.
 
@@ -97,7 +95,7 @@ Connect to your Git provider and select an existing repository.
     * `yarn.lock`
 
 
-## Procedure
+### Procedure
 
 To connect your GitHub repository, click **Import Repository** on the _What kind of site are you creating?_ page.
 

@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Starter Kits
-description: Will add content.
+description: Use a Pantheon Starter Kit to congfire a decoupled site backend
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -14,28 +14,12 @@ editpath: decoupled-sites/03-starter-kits.md
 reviewed: "2022-07-31"
 ---
 
-# Creating a New CMS Backend for a Decoupled Frontend
+## Creating a New CMS Backend for a Decoupled Frontend
 
-You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS. 
+You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS. You can also create a site without any CMS. 
 
-## Prerequisites
-
-- Composer (required for CMS backends): [Install Globally](https://getcomposer.org/download/)
-- [Generate machine token](https://pantheon.io/docs/machine-tokens#create-a-machine-token) & [Authenticate into Terminus](https://pantheon.io/docs/machine-tokens#authenticate-into-terminus)
-- [Install Terminus](https://pantheon.io/docs/terminus/install) (3.0.0 above required)
-- Also install the following plugins:
-  - `terminus self:plugin:install terminus-build-tools-plugin`
-  - `terminus self:plugin:install terminus-power-tools`
-  - `terminus self:plugin:install terminus-secrets-plugin`
-  - Reload the terminus plugins: `terminus self:plugin:reload`
-  - Clear cache for composer: `composer clear-cache`
-  - Validate that the required plugins are installed: `terminus self:plugin:list`
-- Create [Github Personal access tokens](https://github.com/settings/tokens)
-- Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens)
 
 ## Installation
-
-## Drupal installation 
 
 <TabList>
 
@@ -45,7 +29,7 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   ```
   terminus build:project:create \
-    --team='{My Team Name}' \
+    --team='My Team Name}' \
     --template-repository="git@github.com:pantheon-systems/decoupled-drupal-recommended.git" pantheon-systems/decoupled-drupal-recommended \
     --ci-template='git@github.com:pantheon-systems/advanced-ci-templates' \
     --visibility private {PROJECT_NAME} \
@@ -53,11 +37,11 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
     --profile="pantheon_decoupled_profile"
   ```
 
-  Replace `{PROJECT_NAME}` with your project name - for example `decoupled-drupal`.
+  * Replace `<{PROJECT_NAME}>` with your project name, for example `decoupled-drupal`.
 
-  Replace `'{My Team Name}'` with your team name - for example `My Agency`. This can also be omitted.
+  * Replace `<'{My Team Name}'>` with your team name, for example `My Agency`. This can also be omitted.
 
-**Note:** This will result in a Github repository being created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site being created on Pantheon and a CircleCI project being created for automated deployments.
+**Note:** This will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
 
 
 </Tab>
@@ -76,17 +60,17 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
     --stability=dev
   ```
 
-  Replace `{PROJECT_NAME}` with a Project name for example `decoupled-wordpress`.
+  * Replace `{PROJECT_NAME}` with a Project name for example `decoupled-wordpress`.
 
-  Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
+  * Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
 
-**Note:** This will result in a Github repository being created for this new codebase, a site being created on Pantheon and a CircleCI project being created for automated deployments.
+**Note:** This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
 
 </Tab>
 </TabList>
 
 
-## Additional Options
+### Additional Options
 
 #### Installing with Umami Demo Data
 
@@ -119,15 +103,3 @@ For more information, consult the [available services section of the build tools
 If you would like the repo created to be under a GitHub organization instead of the authenticated user's namespace, you can use the `--org` option.
 
 For information on additional options, consult the [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
-
-
-# 
-
-To start you will need to specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider. 
-
-Select the GitHub option and click Connect. A window for GitHub.com is displayed, and you are prompted “Where do you want to install Pantheon”. 
-
-Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed. 
-
-3. Specify the permission configurations and click Install. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard. 
-
