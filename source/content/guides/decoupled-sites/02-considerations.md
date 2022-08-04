@@ -1,6 +1,6 @@
 ---
 title: Pantheon Decoupled
-subtitle: Adding content
+subtitle: Considerations
 description: Will add content.
 categories: [platform]
 tags: [webops, workflow, decoupled]
@@ -14,45 +14,47 @@ editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-07-31"
 ---
 
-Pantheon Decoupled 
+You need to ensure you system has the correct components to use Pantheon Decoupled. 
 
-The following components are needed for Pantheon Decoupled: 
+## Components for Pantheon Decoupled
 
-* NodeJS
-    We recommend installing NVM using Homebrew if you are using a Mac
+The following components are needed to run Pantheon Decoupled: 
 
-* Lando
+* NodeJS: Installing NVM using Homebrew is recommeded for Mac users.
 
-Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.
+* Lando: Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.
 
-Recommended:
+* The followig are recommended when using Pantheon Decoupled:
 
-VS Code - Other IDEs can be used, but our projects ship with suggested plugins an example settings for VSCode.
+  * VS Code - Other IDEs can be used, but our projects ship with suggested plugins and example settings for VSCode.
 
-Optional - These tools are all included in the Lando VM, but can be useful to have installed for use without Lando.
+* Optionally, the following tools are included in the Lando VM, but can be useful to have installed for use without Lando:
 
-PHP - we recommend installing via homebrew on Mac to not conflict with the OS PHP version.
+  * PHP - Install using Homebrew on Mac to not conflict with the PHP version that comes with your operating system.
 
-Composer - follow instructions to install composer globally.
+  * Composer - Install composer globally.
 
-Terminus- 
+  * Terminus - Terminus is needed to update build tools for Pantheon Decoupled.
 
-# Creating a New Project
 
-## Prerequisites
+### Before You Begin
 
-- Composer (required for CMS backends): [Install Globally](https://getcomposer.org/download/)
-- [Generate machine token](https://pantheon.io/docs/machine-tokens#create-a-machine-token) & [Authenticate into Terminus](https://pantheon.io/docs/machine-tokens#authenticate-into-terminus)
-- [Install Terminus](https://pantheon.io/docs/terminus/install) (3.0.0 above required)
-- Also install the following plugins:
-  - `terminus self:plugin:install terminus-build-tools-plugin`
-  - `terminus self:plugin:install terminus-power-tools`
-  - `terminus self:plugin:install terminus-secrets-plugin`
-  - Reload the terminus plugins: `terminus self:plugin:reload`
-  - Clear cache for composer: `composer clear-cache`
-  - Validate that the required plugins are installed: `terminus self:plugin:list`
-- Create [Github Personal access tokens](https://github.com/settings/tokens)
-- Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens)
+To create a new project using a Pantheon Decoupled starter kit the following components are needed:
 
-## Best Practices
+* Composer is required for the CMS backends
+  * [Install Globally](https://getcomposer.org/download/)
 
+* [Install Terminus](https://pantheon.io/docs/terminus/install) version 3.0.0 or higher
+  * You can also install the following plugins:
+    * `terminus self:plugin:install terminus-build-tools-plugin`
+    * `terminus self:plugin:install terminus-power-tools`
+    * `terminus self:plugin:install terminus-secrets-plugin`
+    * Reload the terminus plugins: `terminus self:plugin:reload`
+    * Clear cache for composer: `composer clear-cache`
+    * Validate that the required plugins are installed: `terminus self:plugin:list`
+
+* Machine Token:[Generate machine token](https://pantheon.io/docs/machine-tokens#create-a-machine-token) and [Authenticate into Terminus](https://pantheon.io/docs/machine-tokens#authenticate-into-terminus)
+
+* Create [Github Personal access tokens](https://github.com/settings/tokens)
+
+* Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens)

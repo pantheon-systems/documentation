@@ -1,6 +1,6 @@
 ---
 title: Pantheon Decoupled
-subtitle: Covered
+subtitle: Starter Kits
 description: Will add content.
 categories: [platform]
 tags: [webops, workflow, decoupled]

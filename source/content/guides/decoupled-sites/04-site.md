@@ -1,6 +1,6 @@
 ---
 title: Pantheon Decoupled
-subtitle: Covered in scope of support
+subtitle: Site
 description: Will add content.
 categories: [platform]
 tags: [webops, workflow, decoupled]
