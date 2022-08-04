@@ -61,4 +61,4 @@ This feature is currently in Early Access. Reach out to your account manager for
 
 - [Fastly on Pantheon](/guides/fastly-pantheon)
 
-- [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
+- [Pantheon Global CDN](/guides/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.

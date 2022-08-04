@@ -39,7 +39,7 @@ No, Edge caching is not included in AGCDN. However, AGCDN with WAF/IO does inclu
 
 ## More Resources
 
-- [Pantheon Global CDN](/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
+- [Pantheon Global CDN](/guides/global-cdn) - Learn about the Global CDN that comes with all Pantheon sites.
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 
