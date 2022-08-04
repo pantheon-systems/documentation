@@ -49,8 +49,9 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 
 * A local development environment that supports communication between backend and frontend services.
 
-
 ### Pantheon Decoupled Terminology
+
+<Accordion title="Pantheon Decoupled Terminology" id="terms-decoupled" icon="info-sign">
 
 #### CMS  
 In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with Decoupled Sites.
@@ -79,9 +80,9 @@ SSG means the entire site is pre-rendered into HTML, CSS, and JavaScript files a
 #### Server Side Rendering (SSR)
 Server-Side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
 
-
 ### Pantheon Decoupled Options
-
 With Pantheon Decoupled you can create Server Side Rendered (SSR) sites and Static Site Generated sites.
 
 Currently, Pantheon Decoupled does not support SSR using Gatsby, but it does support SSG with Next.js
+
+</Accordion>

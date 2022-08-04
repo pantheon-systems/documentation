@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Starter Kits
-description: Use a Pantheon Starter Kit to congfire a decoupled site backend
+description: Use a Pantheon starter kit to congfire a decoupled site backend.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -42,7 +42,6 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
   * Replace `<'{My Team Name}'>` with your team name, for example `My Agency`. This can also be omitted.
 
 **Note:** This will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
-
 
 </Tab>
 

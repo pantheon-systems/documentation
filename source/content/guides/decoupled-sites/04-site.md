@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Site
-description: .
+description: Create a site after configuring the decoupled backend.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -16,11 +16,7 @@ reviewed: "2022-07-31"
 
 ## Before You Begin
 
-You should have access to the Early Access Customer checklist provided during onboarding. 
-
-You should have the **Decoupled** tab enabled in your dashboard. 
-
-To begin using Pantheon Decoupled, ensure you meet the following prerequisites:
+You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin using Pantheon Decoupled, ensure you meet the following prerequisites:
 
 * Your site repository is in GitHub.
 
@@ -41,17 +37,16 @@ To begin using Pantheon Decoupled, ensure you meet the following prerequisites:
 
 ### Compatibility
 
-You can create an application from scratch by importing a repository or you can use our the Pantheon starter kit templates to develop a decoupled site. 
-Use the starter kits to create a server side render
+You can create an application from scratch by importing a repository or you can use our the Pantheon starter kit templates to develop a decoupled site. Use the starter kits to create: 
 
-* Server side render applications: Next.js and Drupal
+* Server side rendered applications: Next.js and Drupal
 
 * Static site generated site: Gatsby and WordPress
 
 
 ## Site Setup
 
-Pantheon Decoupled is available in the New Dashboard, when it is enabled during the customer onboarding process. To access it Pantheon Decoupled follow the following steps:
+Pantheon Decoupled is available in the New Dashboard, when it is enabled during the customer onboarding process. To access Pantheon Decoupled  and get started perform the following steps:
 
 1. Log in to your Pantheon Dashboard and navigate to the **Sites** page.
 
@@ -75,14 +70,11 @@ Under the Decoupled Site section on the Site Creation page, click the option tha
 1. Specify the permission configurations and click Install. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard. 
 
 
-
 ## Create a Site by Importing a Repository
 
-Import the Repository
 Connect to your Git provider and select an existing repository.
 
-
-### Prerequisites
+### Prerequisites 
 
 * You are using a Git repository.
 
@@ -129,4 +121,4 @@ To connect your GitHub repository, click **Import Repository** on the _What kind
 
 1. Click **Continue**.
 
-You are directed to a new page with the site name, deployment, and build information/ status. You will receive a message that you decoupled site has successfully been added to Pantheon. You can view the build log by clicking **Build Details**
+You are directed to a new page with the site name, deployment, and build information/ status. You will receive a message that you decoupled site has successfully been added to Pantheon. You can view the build log by clicking **Build Details**.
