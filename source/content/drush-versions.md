@@ -47,6 +47,8 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 </Alert>
 
+## Compatibility and Requirements
+
 <Partial file="drush-compatibility.md" />
 
 ## Troubleshooting

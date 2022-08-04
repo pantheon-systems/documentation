@@ -9,7 +9,7 @@ contributors: [wordsmither]
 The following table indicates availability of the specified Drupal version, as well as our usage recommendations and our support scope.
 
 | Version | Available | Recommended | Supported |
-| -----------:|:-----------:| :--------: |
+| --:|:-----------:| :--------: | :--------: |
 |10 | ✅          | ❌          | ❌          |
 | 9 | ✅          | ✅          | ✅          |
 | 8 | ❌          | ❌          | ✅          |
@@ -19,6 +19,8 @@ The following table indicates availability of the specified Drupal version, as w
 ## Drush Version Support
 
 <Partial file="drush-supported.md" />
+
+### Considerations
 
 <Partial file="drush-compatibility.md" />
 

@@ -1,4 +1,3 @@
-## Compatibility and Requirements
 
 Drush only supports one install method; it requires that your Drupal site be built with Composer and that Drush be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
 
