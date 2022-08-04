@@ -1,7 +1,7 @@
 <ReviewDate date="2022-04-06" />
 
 | Version                                      | Recommended |  Status |
-| --:|:-----------:| ------- |
+| -------------------------------------------- | :---------: | ------- |
 | [8.1](https://v81-php-info.pantheonsite.io/)| ➖ | Available <Popover title="Compatibility Note" content="PHP 8.1 is not recommended due to `proxysql` and PHP 8.1 incompatibility issues." /> |
 | [8.0](https://v80-php-info.pantheonsite.io/) | ✅          | Active <Popover title="Compatibility Note" content="WordPress is not fully compatible with PHP 8.0." /> |
 | [7.4](https://v74-php-info.pantheonsite.io/) | ✅          | Active  |
@@ -9,7 +9,7 @@
 | [7.2](https://v72-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [7.1](https://v71-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [7.0](https://v70-php-info.pantheonsite.io/) | ❌          | EOL     |
-| [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL |
+| [5.6](https://v56-php-info.pantheonsite.io/) | ❌          | EOL     |
 | [5.5](https://v55-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future." /> |
 | [5.3](https://v53-php-info.pantheonsite.io/) | 🚫          | End-of-Sale <Popover title="End-of-Sale" content="End-of-Sale versions are no longer available to new sites on the platform. Existing sites using these versions will be automatically upgraded in the future. To resume development on a site using a retired version of PHP, upgrade the PHP version on the development environment." />* |
 
