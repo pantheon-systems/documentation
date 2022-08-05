@@ -36,6 +36,12 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ## Add a Dependency to an Individual Site
 
+The require `require-dev` command installs dependencies only in Dev and Multidev environments. test and live, the build is made using . I
+
+<TabList>
+
+<Tab title="Dev and Multidev Environments" id="dev-multidev" active={true}>
+
 1. Clone the Git repository from the Pantheon site's dashboard.
 
 1. Run `composer install`:
@@ -52,9 +58,50 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 1. Commit `composer.json` and `composer.lock` and push.
 
-   - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
+   - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. 
 
-### Add a Package from a Private Repository
+</Tab>
+
+<Tab title="Test and Live Environments" id="test-live">
+
+1. Clone the Git repository from the Pantheon site's dashboard.
+
+1. Run `composer install`:
+
+   ```bash{promptUser: user}
+    composer install -- no-dev
+   ```
+
+1. Add a new dependency locally:
+
+   ```bash{promptUser: user}
+    composer require drupal/pkg-name
+   ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, build artifacts, and deploy the changes to your Test or Live environment. 
+
+
+</Tab>
+
+</TabList>
+
+## Remove Individual Site Dependencies
+
+You can remove site dependencies if they are no longer needed.
+
+1. Remove the dependency locally:
+
+   ```bash{promptUser: user}
+    composer remove drupal/pkg-name
+   ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, etc.
+
+## Add a Package from a Private Repository
 
 The following steps outline a method for adding a package from a private GitHub repository. For additional information on handling private packages, refer to the official [Composer documentation](https://getcomposer.org/doc/articles/handling-private-packages.md).
 
@@ -87,20 +134,6 @@ For this procedure a GitHub token will be added to your code repository. It allo
    git commit -m "Adding private package <your-package>"
    git push
    ```
-
-### Remove Individual Site Dependencies
-
-You can remove site dependencies if they are no longer needed.
-
-1. Remove the dependency locally:
-
-   ```bash{promptUser: user}
-    composer remove drupal/pkg-name
-   ```
-
-1. Commit `composer.json` and `composer.lock` and push.
-
-   - Pantheon will run Composer, generate build artifacts, etc.
 
 ## Apply One-click Updates
 
