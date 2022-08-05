@@ -11,7 +11,7 @@ permalink: docs/guides/agcdn/agcdn-wafio
 anchorid: agcdn-wafio
 ---
 
-This section provides detailed information on AGCDN with WAF and IO features.
+This section provides detailed information on AGCDN with WAF and IO features. AGCDN with WAF/IO includes all [AGCDN features](/guides/agcdn/agcdn-features) and the additional features below.
 
 ## Layer 7 and Enterprise WAF Rules
 
