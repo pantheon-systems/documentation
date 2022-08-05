@@ -59,4 +59,4 @@ The TXT record is only required if you need to prove ownership of your domain in
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/guides/redirect)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirect)

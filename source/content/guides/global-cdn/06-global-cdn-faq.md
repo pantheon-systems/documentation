@@ -26,7 +26,7 @@ If you need additional features or customization for your CDN, consider our [Adv
 
 ### Is the www-redirector service still available?
 
-No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/guides/redirect) to your site's configuration file (`wp-config.php` or `settings.php`).
+No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirect) to your site's configuration file (`wp-config.php` or `settings.php`).
 
 ### Are vanity domains supported?
 
