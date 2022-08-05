@@ -36,8 +36,6 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ## Add a Dependency to an Individual Site
 
-The require `require-dev` command installs dependencies only in Dev and Multidev environments. test and live, the build is made using . I
-
 <TabList>
 
 <Tab title="Dev and Multidev Environments" id="dev-multidev" active={true}>
