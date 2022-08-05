@@ -50,7 +50,7 @@ AGCDN provides many features:
 | [Domain Masking and Reverse Proxy](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)| <span style="color:green">✔</span> |
 | [Enterprise Blue and Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-blue-and-green-deployment-support)| <span style="color:green">✔</span> | 
 |[Custom Rules and Redirects](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |  <span style="color:green">✔</span> | 
-|[Tor Traffic Blocking](/guides/agcdn/agcdn-features/tor-traffic-blocking)| <span style="color:green">✔</span> |
+|[Tor Traffic Blocking](/guides/agcdn/agcdn-features#tor-traffic-blocking)| <span style="color:green">✔</span> |
 
 
 ### AGCDN with WAF/IO Features
