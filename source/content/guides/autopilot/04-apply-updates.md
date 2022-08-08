@@ -18,9 +18,9 @@ Autopilot can manage updates for any site that can [apply updates via the Site D
 
 ## Apply Available Updates
 
-1. Navigate to the **Autopilot Status** screen, and then click **Queue Updates**.
+1. Navigate to the **Autopilot Status** screen, then click **Queue Updates**.
 
-    - You can also apply updates from the site list on the **<i className="fa fa-robot"></i> Autopilot** page. Navigate to the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu next to each site name, and then click **Start Applying Updates**.
+    - You can also apply updates from the site list on the **<i className="fa fa-robot"></i> Autopilot** page. Navigate to the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu next to each site name, then click **Start Applying Updates**.
 
     - The platform adds the request to a queue, and will apply updates and deploy them to the chosen environments as quickly as possible, depending on current platform load.
 
@@ -62,7 +62,7 @@ You must add a directory to the repository with a single `.gitkeep` file stored 
     git touch sites/default/config/.gitkeep 
     ```
  
-1. Run the add command to add `sites/default/config/.gitkeep` 
+1. Run the `add` command to add `sites/default/config/.gitkeep` 
 
 1. Commit and push your changes.
 
