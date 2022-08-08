@@ -66,6 +66,7 @@ You can remove site dependencies if they are no longer needed. You should use ca
 
     ```bash
     terminus drush site.live -- pm:uninstall module1 module2
+   ```
 
 1. Remove the dependency locally:
 
@@ -81,7 +82,7 @@ You can remove site dependencies if they are no longer needed. You should use ca
 
 The following steps outline a method for adding a package from a private GitHub repository. For additional information on handling private packages, refer to the official [Composer documentation](https://getcomposer.org/doc/articles/handling-private-packages.md).
 
-For this procedure a GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. To limit that scope of the GitHub token access, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages and ensure your site repository code is not published publicly. 
+For this procedure, a GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. To limit the scope of the GitHub token access, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages and ensure your site repository code is not published publicly. 
 
 1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) page and generate a new token. Ensure the `repo` scope is selected.
 
@@ -113,7 +114,7 @@ For this procedure a GitHub token will be added to your code repository. It allo
 
 ## Apply One-click Updates
 
-1. Navigate to **Code** in the Dev tab of the site's Dashboard.
+1. Navigate to **Code** in the **Dev** tab of the site's Dashboard.
 
 1. Click **Check Now**.
 
@@ -214,7 +215,7 @@ To resolve this error:
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
-1. Navigate to the **Code** in the **Dev** tab of your Site Dashboard.
+1. Navigate to **Code** in the **Dev** tab of your Site Dashboard.
 
 1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
 
@@ -228,7 +229,7 @@ To resolve, examine the error in the log. It may be a syntax or parse error of t
 
 You must manually allow any plugin that acts on the code base of your site in your  `composer.json` file. This is a Composer 2.2 requirement introduced on July 1, 2022 that provides an additional layer of security. Sites that were working previously will have builds that fail because of this new requirement. Failed builds can arise as a broken environment or as unreflected code changes after a commit.
 
-Read more about this security requirement on [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
+Read more about this security requirement in [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
 
 You might see one of the following issues:
 
@@ -351,7 +352,7 @@ See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstr
 
 </TabList>
 
-See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
+See [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
 
 ### Changes Lost During Upstream Updates
 
