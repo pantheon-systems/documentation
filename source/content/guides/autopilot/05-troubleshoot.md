@@ -244,11 +244,13 @@ Check that CLI cache clear steps work in the Dev environment. See if creating ot
 
 ### Composer Error
 
-#### Diagnoses
-If utilizing [Integrated Composer](https://pantheon.io/docs/guides/integrated-composer), the error could be caused by a composer build failure.
+#### Diagnosis
+The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](https://pantheon.io/docs/guides/integrated-composer), 
 
 #### Solution
-Check the build log in the site dashboard on the latest commit to see if an error was posted, or test locally running `composer install` or `composer update` using [Composer 2](https://pantheon.io/docs/guides/integrated-composer#pantheon-supports-composer-2) to see if any issues can be identified.
+Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
+
+You can also use [Composer 2](https://pantheon.io/docs/guides/integrated-composer#pantheon-supports-composer-2) to test locally and identify issues by running `composer install` or `composer update`
 
 </Accordion>
 
