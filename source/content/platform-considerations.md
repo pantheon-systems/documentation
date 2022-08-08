@@ -15,12 +15,18 @@ This page is used to keep track of common platform considerations, derived from 
 In an effort to maintain platform security measures and to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
 +------------------------+--------+---------+-------+------+---------------------+
-|                        | [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.) | [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases) | [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility) | [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history) | [Safari](https://en.wikipedia.org/wiki/Safari_version_history#Version_compatibility)              |
+|                        | Chrome | Firefox | Opera | Edge | Safari              |
 +========================+========+=========+=======+======+=====================+
 | **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
 +------------------------+---------------------------------+---------------------+
 
-To confirm which browser version you are using, visit <https://www.whatsmybrowser.org/>.
+To confirm which browser version you are using, visit <https://www.whatsmybrowser.org/>, and compare your browser's version with the latest available:
+
+  - [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.)
+  - [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases)
+  - [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility)
+  - [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history)
+  - [Safari](https://en.wikipedia.org/wiki/Safari_version_history#Version_compatibility)
 
 ## Batch Uploads
 
@@ -202,11 +208,11 @@ If your repository has grown over 2GB and is causing problems (such as errors wh
 
 Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
-| File Size       | Platform Compatibility          | Notes                               |
-|:--------------- | ------------------------------- |------------------------------------ |
-| ≤ 100MB         | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
-|   100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MB         | <span  style="color:red">❌</span>   | Must be hosted via 3rd-party CDN    |
+| File Size     | Platform Compatibility               | Notes                               |
+|:--------------|--------------------------------------|-------------------------------------|
+| ≤ 100MB       | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
+| 100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
+| > 256MB       | <span  style="color:red">❌</span>    | Must be hosted via 3rd-party CDN    |
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
