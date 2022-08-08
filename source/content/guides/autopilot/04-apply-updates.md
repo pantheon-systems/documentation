@@ -28,12 +28,15 @@ Autopilot can manage updates for any site that can [apply updates via the Site D
 
 ### Autopilot and Drupal
 
-Drupal base directories must exist for an Autopilot action (including updates) to succeed. You can [add a `.gitkeep` file](#autopilot-updates-fail-on-drupal-sites-with-no-config-directory) to each basic directory to ensure they exist. Basic Drupal directories with their default values are:
+Drupal base directories must exist for an Autopilot action (including updates) to succeed. You can [add a `.gitkeep` file](#autopilot-updates-fail-on-drupal-sites-with-no-config-directory) to each basic directory to ensure they exist. Basic Drupal directories and their default values are:
 
-`$settings['file_temp_path'] = 'sites/default/temp';   // default values`
-`$settings['file_public_path']  = 'sites/default/files';`
-`$settings['file_private_path']  = 'sites/default/private';`
-`$settings['config_sync_directory'] = 'sites/default/config';`
+- `$settings['file_temp_path'] = 'sites/default/temp';`   
+
+- `$settings['file_public_path'] = 'sites/default/files';`
+
+- `$settings['file_private_path'] = 'sites/default/private';`
+
+- `$settings['config_sync_directory'] = 'sites/default/config';`
 
 ### Autopilot and Drupal 9 with Integrated Composer
 
