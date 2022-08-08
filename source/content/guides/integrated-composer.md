@@ -36,32 +36,6 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ## Add a Dependency to an Individual Site
 
-<TabList>
-
-<Tab title="Dev and Multidev Environments" id="dev-multidev" active={true}>
-
-1. Clone the Git repository from the Pantheon site's dashboard.
-
-1. Run `composer install`:
-
-   ```bash{promptUser: user}
-    composer install
-   ```
-
-1. Add a new dependency locally:
-
-   ```bash{promptUser: user}
-    composer require drupal/pkg-name
-   ```
-
-1. Commit `composer.json` and `composer.lock` and push.
-
-   - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. 
-
-</Tab>
-
-<Tab title="Test and Live Environments" id="test-live">
-
 1. Clone the Git repository from the Pantheon site's dashboard.
 
 1. Run `composer install`:
@@ -81,10 +55,6 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
    - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. You can now deploy the changes from the updated Dev environment to the Test and Live environments.
 
 1. Complete the steps to [commit Dev changes to Test and Live](/pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) through your Pantheon dashboard or with [Terminus env:deploy](/terminus/commands/env-deploy).
-
-</Tab>
-
-</TabList>
 
 ## Remove Individual Site Dependencies
 
