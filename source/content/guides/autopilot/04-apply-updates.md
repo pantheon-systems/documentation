@@ -42,7 +42,7 @@ Drupal base directories must exist for an Autopilot action (including updates) t
 
 Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer).
 
-## Autopilot Apply Updates Troubleshooting
+## Troubleshoot Autopilot Updates 
 
 ### Autopilot updates fail on Drupal sites with no config directory
 
