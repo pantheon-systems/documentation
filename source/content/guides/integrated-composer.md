@@ -62,7 +62,7 @@ You can remove site dependencies if they are no longer needed. You should use ca
 
 1. Clone the database from Live to all other environments before continuing.
 
-1. Ensure that all modules in the package have been uninstalled. Uninstall them in the Drupal admin dashboard, or do from the command line with Terminus:
+1. Ensure that all modules in the package have been uninstalled. You can uninstall modules in the Drupal admin dashboard, or from the command line with Terminus:
 
     ```bash
     terminus drush site.live -- pm:uninstall module1 module2
