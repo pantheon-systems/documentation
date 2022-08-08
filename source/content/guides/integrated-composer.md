@@ -67,7 +67,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 1. Run `composer install`:
 
    ```bash{promptUser: user}
-    composer install -- no-dev
+    composer install
    ```
 
 1. Add a new dependency locally:
@@ -78,8 +78,9 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 1. Commit `composer.json` and `composer.lock` and push.
 
-   - Pantheon will run Composer, build artifacts, and deploy the changes to your Test or Live environment. 
+   - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. You can now deploy the changes from the updated Dev environment to the Test and Live environments.
 
+1. Complete the steps to [commit Dev changes to Test and Live](/pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) through your Pantheon dashboard or with [Terminus env:deploy](/terminus/commands/env-deploy).
 
 </Tab>
 
@@ -87,7 +88,14 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ## Remove Individual Site Dependencies
 
-You can remove site dependencies if they are no longer needed.
+You can remove site dependencies if they are no longer needed. You should use caution when removing individual site dependencies. You can cause problems with your site if you decide you no longer need a module but leave it installed, and then remove site dependencies.
+
+1. Ensure that all modules in the package have been uninstalled. Uninstall them in the Drupal admin dashboard, or do it from the command line with Terminus:
+
+    ```bash
+    terminus drush site.live -- pm:uninstall module1 module2
+
+1. Clone the database from Live to all other environments before continuing.
 
 1. Remove the dependency locally:
 
