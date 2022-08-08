@@ -12,7 +12,7 @@ anchorid: advanced-global-cdn
 editpath: professional-services/05-advanced-global-cdn.md
 ---
 
-[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn?docs) is a Managed Service that takes Pantheon's <abbr title="Content delivery network">CDN</abbr> offering a step forward, for customers that require unique optimizations for digital delivery at scale.
+[<dfn id="agcdn">Advanced Global CDN</dfn>](https://pantheon.io/product/advanced-global-cdn?docs) is a Managed Service that takes Pantheon's CDN offering a step forward, for customers that require unique optimizations for digital delivery at scale.
 
 Review the [Advanced Global CDN guide](/guides/agcdn) for a full list of features and benefits.
 

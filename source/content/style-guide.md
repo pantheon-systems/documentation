@@ -264,20 +264,6 @@ Description of the new term.
 
 </Example>
 
-### Abbreviations
-
-<Example>
-
-The <abbr title="Abbreviation">abbr</abbr> tag is used to provide the full name of an abbreviated term on mouse hover.
-
-<hr className="source-code" /> <br/>
-
-```html
-The <abbr title="Abbreviation">abbr</abbr> tag is used to provide the full name of an abbreviated term on mouse hover.
-```
-
-</Example>
-
 ### Hyperlinks
 
 Do not specify a target tab or window for external, or any other links, leaving the viewer the option to open in a new tab.

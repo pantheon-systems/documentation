@@ -16,7 +16,7 @@ editpath: professional-services/06-managed-updates.md
 
 With Pantheon Managed Updates (**PMU**), you get:
 
-- <abbr title="Content Management System">CMS</abbr> core updates
+- CMS core updates
 - Module / plugin updates
 - Visual Regression Testing (**VRT**)
 

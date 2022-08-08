@@ -19,7 +19,7 @@ Application-layer (OSI Layer 7) protection simplifies event monitoring and mitig
 
 The AGCDN Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
 
-Support for <abbr title="Open Web Application Security Project">OWASP</abbr> WordPress and Drupal rules help you monitor and address the most common application risks. Examples include SQL injection and <abbr title="Cross-Site Scripting">XSS</abbr> vulnerabilities.
+Support for XSS vulnerabilities.
 
 ## Efficient Image Optimization at the Edge
 

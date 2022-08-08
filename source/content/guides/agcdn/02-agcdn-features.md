@@ -15,7 +15,7 @@ This section provides detailed information on AGCDN features.
 
 ## OSI Layer 3 and 4 DDoS Protection & Mitigation
 
-Advanced Global CDN provides <abbr title="Distributed Denial of Service">DDoS</abbr> protection and mitigation at the network (Layer 3) and transport (Layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
+Advanced Global CDN provides DDoS protection and mitigation at the network (Layer 3) and transport (Layer 4) layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
 
 ## SOC 2 Type 2 Compliance
 

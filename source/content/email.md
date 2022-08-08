@@ -114,7 +114,7 @@ current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpasswo
 
 ### Can I use Pantheon's local MTA (postfix)?
 
-We strongly recommend that you do not use the local <abbr title="mail transfer agent">MTA</abbr> (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
+We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
 ### Can I access the mail logs for my site?
 
@@ -126,7 +126,7 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
 
 ### Are there SPF records for Pantheon's local MTA (postfix)?
 
-If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an <abbr title="sender policy framework">SPF</abbr> record, then you should include Pantheon's SPF record, as shown below:
+If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
 
 ```none
 v=spf1 include:spf.example.com include:spf.pantheon.io ~all
