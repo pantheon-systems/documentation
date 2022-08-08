@@ -12,13 +12,15 @@ This page is used to keep track of common platform considerations, derived from 
 
 ## Browser Support for Pantheon's Dashboard
 
-In an effort to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
+In an effort to maintain platform security measures and to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
 +------------------------+--------+---------+-------+------+---------------------+
-|                        | Chrome | Firefox | Opera | Edge | Safari              |
+|                        | [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.) | [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases) | [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility) | [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history) | [Safari](https://en.wikipedia.org/wiki/Safari_version_history#Version_compatibility)              |
 +========================+========+=========+=======+======+=====================+
 | **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
 +------------------------+---------------------------------+---------------------+
+
+To confirm which browser version you are using, visit <https://www.whatsmybrowser.org/>.
 
 ## Batch Uploads
 
