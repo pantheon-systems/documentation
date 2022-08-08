@@ -60,12 +60,12 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 You can remove site dependencies if they are no longer needed. You should use caution when removing individual site dependencies. You can cause problems with your site if you decide you no longer need a module but leave it installed, and then remove site dependencies.
 
-1. Ensure that all modules in the package have been uninstalled. Uninstall them in the Drupal admin dashboard, or do it from the command line with Terminus:
+1. Clone the database from Live to all other environments before continuing.
+
+1. Ensure that all modules in the package have been uninstalled. Uninstall them in the Drupal admin dashboard, or do from the command line with Terminus:
 
     ```bash
     terminus drush site.live -- pm:uninstall module1 module2
-
-1. Clone the database from Live to all other environments before continuing.
 
 1. Remove the dependency locally:
 
