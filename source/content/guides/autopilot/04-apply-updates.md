@@ -43,7 +43,7 @@ Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Dr
 
 ### Autopilot updates fail on Drupal sites with no config directory
 
-Autopilot updates will fail if you are have drops8, no exported / config directory, or the directory is not set in the main `settings.php` file and version-managed.
+Drupal sites must have all [basic directories](#autopilot-and-drupal) to deploy Autopilot updates successfully. Autopilot updates will fail, for example, if you have drops8 and no exported / config directory, or the directory is not set in the main `settings.php` file and version-managed. 
 
 You must add a directory to the repository with a single `.gitkeep` file stored inside to successfully apply Autopilot updates. This creates the directory for the filesystem to use for updates. 
 
