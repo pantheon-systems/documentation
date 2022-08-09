@@ -84,7 +84,7 @@ Follow the steps in this section to create a new WordPress site using Integrated
     - [Custom Upstream Configurations](/pantheon-yml#custom-upstream-configurations)
 
 
-## See Also
+## More Resources
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) 
 

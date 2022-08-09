@@ -45,7 +45,7 @@ Please reach out to our [Professional Services](https://pantheon.io/professional
 
 1. Review [Custom Upstream Workflow](/guides/composer#custom-upstream-workflow).
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
 

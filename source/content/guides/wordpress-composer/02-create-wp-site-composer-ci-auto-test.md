@@ -1,5 +1,5 @@
 ---
-title: Create a CI, Composer-managed WordPress Site 
+title: WordPress with Composer on Pantheon 
 subtitle: Create a CI, Composer-managed WordPress Site
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 categories: [develop]
@@ -49,7 +49,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 ### /web Directory
 
 Your site is stored and served from the `/web` subdirectory located next to the `pantheon.yml` file. You must store your website in this subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root. It also provides additional security by preventing web access to files outside of the document root through Pantheon.
-Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
+Your files may still be accessible from your version control project if it is public. Refer to the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
 
 1. Verify that your website is stored in the `/web` subdirectory.
 
@@ -129,100 +129,9 @@ The scripts stored in the `.ci/test/visual-regression` directory run visual regr
 
     - For example, the `pathsToTest` variable determines the URLs to test.
 
-## Behat Testing 
 
-Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org/en/latest/) is an acceptance/end-to-end testing framework written in PHP. It facilitates testing the fully-built WordPress site on Pantheon. [WordHat](https://wordhat.info/) is used to help integrate Behat and WordPress.
+## More Resources
 
-- `.ci/test/behat/initialize` deletes any existing WordPress user from Behat testing and creates a backup of the environment to be tested.
+- [Pantheon YAML Configuration Files](/pantheon-yml)
 
-- `.ci/test/behat/run` sets the `BEHAT_PARAMS` environment variable with dynamic information necessary for Behat and configures it to use [WP-CLI](https://wp-cli.org/) via [Terminus](/terminus). This script also creates the necessary WordPress user, starts headless Chrome, and runs Behat.
-
-- `.ci/test/behat/cleanup` restores the previously made database backup, deletes the WordPress user created for Behat testing, and saves screenshots taken by Behat.
-
-- `tests/behat/behat-pantheon.yml` runs tests against the Pantheon site.
-
-- `tests/behat/tests/behat/features` stores Behat `.feature` extension test files. 
-
-1. Store all `.feature` extension test files in the `tests/behat/tests/behat/features` directory.
-
-    - The example tests must be replaced with project-specific tests.
-
-        - `tests/behat/tests/behat/features/visit-homepage.feature` is a Behat test file that visits the homepage and verifies a `200` response.
-
-        - `tests/behat/tests/behat/features/admin-login.feature` is a Behat test file that logs into the WordPress dashboard as an administrator and verifies access to new user creation.
-
-        - `tests/behat/tests/behat/features/admin-login.feature` is a Behat test file that logs into the WordPress dashboard as an administrator, updates the `blogname` and `blogdescription` settings, clears the Pantheon cache, visits the home page, and verifies how the updated blog name and description appear.
-
-
-## GitHub Actions
-
-This section provides information enabling GitHub Actions for your site. 
-
-The Build Tools Site will configure GitHub Actions automatically if it was passed as the selected CI when creating the site. You will need to consult advanced external resources if you're working with an existing non-Build Tools site and want to add Github Actions.
-
-The steps to enable GitHub Actions for an existing Build Tools site created with another CI (for example, CircleCI) shown below might work for you.  
-
-1. Copy `.ci/.github` to `.github`. 
-
-1. Add the following secrets to the Github Actions configuration:
-
-    - `ADMIN_EMAIL`
-
-    - `ADMIN_PASSWORD`
-
-    - `ADMIN_USERNAME`
-
-    - `TERMINUS_TOKEN`
-
-    - `TERMINUS_SITE`
-
-    - `SSH_PRIVATE_KEY`
-
-    - `GH_TOKEN`
-
-
-## Working Locally with Lando
-
-Complete the one-time steps below to get started using [Lando](https://docs.devwithlando.io/) for local development. Please note than Lando is an independent product and is not supported by Pantheon. Refer to the [Lando documentation](https://docs.devwithlando.io/) for more information.
-
-1. [Install Lando](https://docs.lando.dev/getting-started/installation.html) if it is not already installed.
-
-1. Clone your project repository from GitHub to your local.
-
-1. Manually create a `.lando.yml` file with your preferred configuration, based on the WordPress recipe.
-
-1. Run `lando start` to start Lando.
-    
-1. Save the local site URL. 
-
-    - The local site URL should look similar to: `https://<PROJECT_NAME>.lndo.site.`
-
-1. Run the command below to download dependencies.
-
-    ```bash
-    `lando composer install --no-ansi --no-interaction --optimize-autoloader --no-progress`
-    ```
-
-1. Run the command below to download the media files and database from Pantheon.
-
-    ```bash
-    `lando pull --code=none`
-    ``` 
-    
-1. Visit the local site URL saved in the preceding steps.
-
-    - You should now be able to edit your site locally. The steps above do not need to be completed on subsequent starts. You can stop Lando with `lando stop` and start it again with `lando start`.
-
-1. Run all Composer, Terminus and wp-cli commands in Lando instead of the host machine. 
-
-    - This is done by prefixing the desired command with `lando`. For example, after a change to `composer.json` run `lando composer update` rather than `composer update`.
-
-<Alert title="Warning" type="danger" >
-
-Do NOT push/pull code between Lando and Pantheon directly. All code should be pushed to GitHub and deployed to Pantheon through a continuous integration service, such as CircleCI.
-
-</Alert>
-
-## See Also
-
-- [Install and Configure Lando for WordPress](/guides/lando-wordpress)
+- [Continuous Integration Solutions on Pantheon](/continuous-integration)

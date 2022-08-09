@@ -223,3 +223,7 @@ Lando also runs a search and replace on the database **siteurl** and **sitename*
   ```
 
   </Alert>
+
+## More Resources
+
+- [Develop Locally with Lando](/guides/wordpress-composer/lando-composer)

@@ -39,4 +39,6 @@ Your changes are sent up the pipeline to your Live environment when you commit. 
 
 - [Git FAQs](/guides/git/faq-git)
 
+- [Use GitHub Actions with Your Composer-based WordPress Site](/guides/wordpress-composer/github-actions-composer)
+
 - [Multidev](/guides/multidev)
