@@ -40,7 +40,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
-1. Enter the `www` domain (e.g., `www.example.com`), then click **Connect Domain**. You'll enter the bare domain (without the `www`) in a later step.
+1. Enter the `www` domain (for example, `www.example.com`), then click **Connect Domain**. You'll enter the bare domain (without the `www`) in a later step.
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
 
@@ -70,7 +70,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 Sites can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
-To pre-provision HTTPS, CAA records must either:
+To pre-provision HTTPS, Certification Authority Authorization (CAA) records must either:
 
 - Not exist for the domain and its parent domains, **OR**
 - Authorize Let's Encrypt

@@ -13,15 +13,7 @@ editpath: launch/07-launch-check.md
 image: getting-started-Largethumb
 ---
 
-This section provides information on how to:
-
-- [Enable and schedule weekly backups](#enable-and-schedule-weekly-backups)
-
-- [Enable and test your Email plugin or module](#enable-and-test-email-pluginmodule-optional)
-
-- [Review status reports](#review-status-reports)
-
-- [Test your cache](#test-cache)
+This section provides information on how to enable backups, test your email plugin or module, review status reports, and test your cache.
 
 ## Enable and Schedule Weekly Backups
 
@@ -63,21 +55,21 @@ Refer to [Drupal Launch Check](/drupal-launch-check) and [WordPress Launch Check
 
 ## Maximize Performance by Configuring Cache (Optional)
 
-### [Enable Object Cache](/object-cache)
+### Enable Object Cache
 
 Pantheon's [Object Cache (formerly Redis)](/object-cache) provides an alternative, drop-in caching backend for your website. This removes caching work from the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers, including managing queues and custom caching.
 
 All plans except for a Basic plan can use Object Cache. Object Cache is available to Sandbox plans for developmental purposes, but will not be available going live on a Basic plan.
 
-### [Configure Caching](/guides/global-cdn/global-cdn-caching)
+### Configure Caching
 
-Maximize performance on Pantheon by configuring your site's performance settings.
+[Configure your performance settings](/guides/global-cdn/global-cdn-caching) to maximize performance.
 
 Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application container, which in turns frees up resources to build more dynamic requests.
 
-### [Test Cache](/guides/global-cdn/test-global-cdn-caching)
+### Test Cache
 
-Follow the steps below to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using cURL.
+Follow the steps below to [test Pantheon's Global CDN](/guides/global-cdn/test-global-cdn-caching). This will show you whether or not a page is being served from Global CDN by examining the HTTP headers from a response using cURL.
 
 <Partial file="global-cdn-test-cache.md" />
 
