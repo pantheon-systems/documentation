@@ -23,12 +23,14 @@ WordPress site admins must ensure that all URLs in the site's database are updat
 
 ### Configure a Long-Duration HSTS Header
 
-You should configure a long-duration HSTS header, or set up an availability monitoring service to watch over your site after redirecting requests to a single, primary domain.
+You should configure a long-duration HTTP Strict Transport Security (HSTS) header, or set up an availability monitoring service to watch over your site after redirecting requests to a single, primary domain.
 
-HTTP Strict Transport Security (HSTS) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking. Refer to [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts) for more information.
+HSTS instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking. Refer to [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts) for more information.
 
 ## More Resources
 
 - [Platform and Custom Domains](/domains)
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
+
+- [Secure Development on Pantheon](/guides/secure-development)

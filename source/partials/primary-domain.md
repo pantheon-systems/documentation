@@ -18,9 +18,9 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 1. Use Terminus to add the primary domain. In this example, replace:
 
-    - `my-site` with your site name,
+    - `my-site` with your site name
     - `live` if you'd like to set it for a different environment
-    - `www.example.com` with your primary domain:
+    - `www.example.com` with your primary domain
 
   ```bash{promptUser: user}
   terminus domain:primary:add my-site.live www.example.com

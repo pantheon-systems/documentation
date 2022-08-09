@@ -28,7 +28,7 @@ This section provides information on how to connect a bare domain and `www` doma
 
 <Alert title="Note" type="info">
 
-Pantheon is not a domain registrar, and we do not offer DNS management as a service. To connect a custom domain to Pantheon, you need to register one with a third-party provider.
+Pantheon is not a domain registrar, and we do not offer DNS management as a service. To connect a custom domain to Pantheon, you need to register the domain with a third-party provider.
 
 </Alert>
 
@@ -40,7 +40,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
-1. Enter the `www` domain (e.g., `www.example.com`) then click **Connect Domain**. We'll enter the bare domain (without the `www`) in Step 7.
+1. Enter the `www` domain (e.g., `www.example.com`), then click **Connect Domain**. You'll enter the bare domain (without the `www`) in a later step.
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
 
@@ -50,7 +50,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
     - Ensure that there's no "parking page" or redirect configured in your DNS.
 
-    - The TXT record's Host value doesn't have a trailing `.`.
+    - The TXT record's Host value doesn't have a trailing `.`
 
     - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
@@ -72,14 +72,14 @@ Sites can pre-provision certificates and avoid HTTPS service interruption by ver
 
 To pre-provision HTTPS, CAA records must either:
 
-- Not exist for the domain and its parent domains, or
-- Authorize Let's Encrypt.
+- Not exist for the domain and its parent domains, **OR**
+- Authorize Let's Encrypt
 
 <Alert title="Warning" type="danger">
 
 Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour after DNS routes to Pantheon.
 
-Once you begin this process, you have:
+After you begin this process, you have:
 
 - 7 days to complete the challenge response. After that, you must create a new challenge.
 - 30 days to adjust DNS values.
@@ -100,7 +100,7 @@ Once you begin this process, you have:
 
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
     
-   A misconfiguration of the validation file invalidates these records. If the DNS validation fails you will receive an error message.
+   A misconfiguration of the validation file invalidates these records. You will receive an error message if the DNS validation fails.
     
    </Alert>
 

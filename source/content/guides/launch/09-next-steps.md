@@ -43,7 +43,7 @@ Pantheon provides recommendations that fit the vast majority of use cases by usi
 
 ## Load and Performance Test
 
-[Load and Performance Tests](/load-and-performance-testing/) can help expose and identify potential performance killers. These tests provide insight for how a site will perform during peak traffic spikes.
+[Load and Performance Tests](/load-and-performance-testing/) can help expose and identify potential performance issues. These tests provide insight for how a site will perform during peak traffic spikes.
 
 ## Secure Development on Pantheon
 

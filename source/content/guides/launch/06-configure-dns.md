@@ -29,13 +29,13 @@ You can validate that HTTPS configuration for the domain is ready on Pantheon by
 
 1. Select **Details** next to the bare domain.
 
-1. Copy the A record value provided in the Pantheon Site Dashboard.
+1. Copy the **A** record value provided in the Pantheon Site Dashboard.
 
 1. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
 
           `192.123.456.789 example.com`
 
-    This will tell your computer to look for ‘example.com’ at the new Pantheon address.
+    This will tell your computer to look for `example.com` at the new Pantheon address.
 
 1. Make sure your site works with HTTPS by entering your domain with HTTPS in the browser (for example, `https://www.example.com/`).
 
@@ -43,11 +43,11 @@ You can validate that HTTPS configuration for the domain is ready on Pantheon by
 
 ## Configure DNS
 
-These instructions cover the common `example.com` and `www.example.com` domain configuration. Refer to [Platform and Custom Domains](/domains/#custom-domains) for other domain configurations.
+The instructions in this section cover the common `example.com` and `www.example.com` domain configuration. Refer to [Platform and Custom Domains](/domains/#custom-domains) for other domain configurations.
 
 <Partial file="configure-dns.md" />
 
-Click below for more detailed instructions pertaining to your specific DNS host. 
+Click below for more detailed instructions for your specific DNS host. 
 
 <Accordion title=" DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
