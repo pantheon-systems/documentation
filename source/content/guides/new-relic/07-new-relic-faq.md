@@ -15,7 +15,7 @@ This section provides answers to frequently asked New Relic&reg; questions.
 
 ### How do I change the New Relic&reg; site owner now that our Pantheon site has a new site owner?
 
-A New Relic&reg; account can have only one owner at any time. You must be the current account owner to change your role to someone who currently has an Admin role for the account. For more information, see [New Relic&reg;'s documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-billing-usage/change-account-owner).
+A New Relic&reg; account can have only one owner at any given time. You must be the current account owner to change your role to someone who currently has an Admin role for the account. For more information, see [New Relic&reg;'s documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-billing-usage/change-account-owner).
 
 ### How can I share a link to a particular metric?
 
@@ -27,7 +27,7 @@ Pantheon provides New Relic&reg; Performance Monitoring at no cost for all site 
 
 ### Will turning on New Relic&reg; Performance Monitoring slow my site down?
 
-No, New Relic&reg; will not make your site slower. The overhead is small enough to be almost imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
+No, New Relic&reg; will not make your site slower. The overhead is small enough to be almost imperceptible. The amount of available metrics useful for debugging and improving performance far outweighs the negligible difference.
 
 ### What is the difference between app server response time and browser page load time?
 
