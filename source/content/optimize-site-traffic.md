@@ -4,7 +4,7 @@ description: Determine and address the causes of unexpected traffic
 categories: [troubleshoot]
 tags: [billing, logs, measure, traffic]
 contributors: [edwardangert]
-reviewed: "2022-02-15"
+reviewed: "2022-08-09"
 ---
 
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
@@ -200,4 +200,4 @@ Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#pro
 
 ## Advanced Protection and Performance With Advanced Global CDN
 
-[Advanced Global CDN](/guides/professional-services/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DoS attempts.
+[Advanced Global CDN](/guides/agcdn) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). AGCDN provides an additional layer of protection against DoS attempts including WAF (Web Application Firewall) and Rate Limiting.
