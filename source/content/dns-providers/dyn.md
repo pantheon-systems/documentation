@@ -72,4 +72,8 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+<<<<<<< HEAD
 * [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)
+=======
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirect)
+>>>>>>> 1a0fee07ec7755cba82508f5412c59115b2f8890

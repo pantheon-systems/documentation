@@ -234,13 +234,23 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 <Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
 
-### Diagnosis
+### CMS Error
 
+#### Diagnosis
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
-### Solution
-
+#### Solution
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
+
+### Composer Error
+
+#### Diagnosis
+The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](https://pantheon.io/docs/guides/integrated-composer), 
+
+#### Solution
+Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
+
+You can also use [Composer 2](https://pantheon.io/docs/guides/integrated-composer#pantheon-supports-composer-2) to test locally and identify issues by running `composer install` or `composer update`
 
 </Accordion>
 
