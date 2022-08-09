@@ -25,6 +25,12 @@ Support for XSS vulnerabilities.
 
 Image Optimization (IO) renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
+<Alert title="Note"  type="info" >
+
+Pantheon partners with [Fastly](https://www.fastly.com/), if you prefer to use a CDN outside of the Pantheon platform. Fastly requires permissions to add domains to accounts, if it detects that a domain already exists.
+  
+</Alert>
+
 ## Advanced Bot Detection and Mitigation 
 
 The following third-party plugins are available:
