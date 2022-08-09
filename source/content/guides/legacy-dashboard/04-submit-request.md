@@ -1,5 +1,5 @@
 ---
-title: Advanced Global CDN
+title: Legacy Dashboard
 subtitle: Submit a Request
 description: Learn how to submit a configuration or support request.
 categories: [develop]

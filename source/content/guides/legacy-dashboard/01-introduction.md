@@ -1,5 +1,5 @@
 ---
-title: Advanced Global CDN
+title: Legacy Dashboard
 subtitle: Introduction
 description: AGCDN enables Edge configuration tools for advanced site management, enhanced security, and a customizable WAF.
 categories: [develop]

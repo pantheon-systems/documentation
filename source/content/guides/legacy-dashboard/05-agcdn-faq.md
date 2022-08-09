@@ -1,5 +1,5 @@
 ---
-title: Advanced Global CDN
+title: Legacy Dashboard
 subtitle: FAQs
 description: Get answers to your AGCDN questions.
 categories: [develop]
