@@ -200,4 +200,4 @@ Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#pro
 
 ## Advanced Protection and Performance With Advanced Global CDN
 
-[Advanced Global CDN](/guides/agcdn) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). AGCDN provides an additional layer of protection against DoS attempts including WAF (Web Application Firewall) and Rate Limiting.
+[Advanced Global CDN](/guides/agcdn) (AGCDN) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). AGCDN provides an additional layer of protection against DoS attempts. [AGCDN with WAF / IO](/guides/agcdn/agcdn-wafio) provides Web Application Firewall (WAF), Image Optimization (IO), and Rate Limiting.
