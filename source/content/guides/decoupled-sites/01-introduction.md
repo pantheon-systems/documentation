@@ -43,12 +43,11 @@ Pantheon Decoupled allows you to connect to your Git repository and deploy a sit
 
 You can build a decoupled site on Pantheon using several methods; you can apply your own configuration or use a Pantheon developed start kit.  The following workflow applies when starting your decoupled journey:
 
-| Without a Starter Kit (No Backend Configuration)    | Using a Starter Kit (Configure Backend)|
-| :---                                                |    :----:                              |
-| 1. Import a repository                              | 1. Configure a backend                 | 
+| Without a Starter Kit (No Backend Configuration)    | Using a Starter Kit (Backend Configuration)|
+| :---                                                |    :----:                                  |
+| 1. Import a repository                              | 1. Configure a backend                     | 
 | 2. Connect repository to Node.js frontend           | 2. Configure kit package - to connect backend to front end|                               
-| 3.                                                  | 3. Configure frontend starter 
-
+| 3.                                                  | 3. Configure frontend starter              |
 
 
 ### Pantheon Decoupled Starters Kits
