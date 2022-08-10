@@ -17,4 +17,4 @@ Sites that are running older PHP versions not listed above will continue to serv
 
 \* `proxysql` is not yet compatible with PHP 8.1.
 
-\* WordPress is not fully compatible with PHP 8.0.
+\*\* WordPress is not fully compatible with PHP 8.0.
