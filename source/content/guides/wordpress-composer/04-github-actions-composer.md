@@ -1,6 +1,6 @@
 ---
 title: WordPress with Composer on Pantheon
-subtitle: Use GitHub Actions with Your Composer-based WordPress Site 
+subtitle: Use GitHub Actions with Your Composer-managed WordPress Site 
 description: Learn how to use GitHub Actions with your Composer-based WordPress site. 
 categories: [develop]
 tags: [wordpress]

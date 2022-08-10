@@ -1,6 +1,6 @@
 ---
 title: WordPress with Composer on Pantheon
-subtitle: Use Behat Testing with Your Composer-based WordPress Site 
+subtitle: Use Behat Testing with Your Composer-managed WordPress Site 
 description: Learn how to use Behat testing with your Composer-based WordPress site. 
 categories: [develop]
 tags: [wordpress]
