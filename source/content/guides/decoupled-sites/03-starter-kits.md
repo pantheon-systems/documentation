@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Starter Kits
-description: Use a Pantheon starter kit to congfire a decoupled site backend.
+description: Use a Pantheon starter kit to configure a decoupled site backend.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
