@@ -23,16 +23,13 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ### WordPress with Integrated Composer
 
-1. [Fork the Pantheon-maintained repository](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
-
-1. [Add a new Custom Upstream](/guides/custom-upstream/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
-
-1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
+1. Use Terminus to create a site from the [Pantheon-maintained WordPress Composer Managed repository](https://github.com/pantheon-upstreams/wordpress-composer-managed):
+ 
+   - `terminus site:create --org ORG --region REGION -- <site_name> <label> "WordPress Composer Managed"`
 
 1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
-
 
 ## Add a Dependency to an Individual Site
 
@@ -122,7 +119,7 @@ For this procedure, a GitHub token will be added to your code repository. It all
 
 ## Upstream
 
-Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
+Upstream refers to the source code that is hosted in the Pantheon code repository and includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-composer-managed), and some customizations for the Pantheon platform.
 
 ### Upstream and Site Structure
 
@@ -134,16 +131,8 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 1. Change into the Upstream's configuration directory:
 
-   - Drupal:
-
     ```bash{promptUser: user}
     cd upstream-configuration
-    ```
-
-   - WordPress:
-
-    ```bash{promptUser: user}
-    cd upstream-config 
     ```
 
 1. Run `composer require` for each dependency:
@@ -345,9 +334,13 @@ code/web/wp-content/
 └─ plugins/
 └─ themes/
 ```
+<<<<<<< HEAD
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-composer-managed/blob/master/.gitignore). 
+=======
 
 See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
 
+>>>>>>> main
 </Tab>
 
 </TabList>
