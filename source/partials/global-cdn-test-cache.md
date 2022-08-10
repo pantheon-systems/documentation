@@ -29,9 +29,9 @@
 
   Note the result for `age` or `max-age`.
 
-1. Navigate to the site's Dev environment and set the site to Maintenance Mode.
+1. Navigate to the site's **Dev** environment and set the site to **Maintenance Mode**.
 
-1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
+1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
 
 1. cURL the site headers filtered for stale cache in a terminal:
 
@@ -49,7 +49,7 @@
 
 1. Find the response headers for the page or asset.
 
-1. Go to the site's Dev environment and set the site to Maintenance Mode.
+1. Go to the site's **Dev** environment and set the site to **Maintenance Mode**.
 
 1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
 

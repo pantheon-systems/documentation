@@ -61,4 +61,5 @@ The A record is required if you wish to include `www` within your site's primary
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirect)
+
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)
