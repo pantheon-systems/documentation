@@ -21,6 +21,16 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 - To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
+<Alert title="Note" type="info" >
+  
+The following Composer-based Drupal 9 upstreams are depreciated in favor of [drupal-composer-managed](https://github.com/pantheon-upstreams/drupal-composer-managed):
+   - [drupal-project](https://github.com/pantheon-upstreams/drupal-project)
+   - [drupal-recommended](https://github.com/pantheon-upstreams/drupal-recommended)
+
+If you wish to convert your site from one of these upstream to the supported `drupal-composer-managed` upstream, check out the [Terminus Conversion Tools Plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin).
+
+</Alert>
+
 ### WordPress with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
