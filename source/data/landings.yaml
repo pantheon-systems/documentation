@@ -946,6 +946,8 @@
           url: '/timeouts'
         - text: 'Temporary File Management'
           url: '/tmp'
+        - text: 'Troubleshooting Integrated Composer code syncs, upstream updates, and redirect errors'
+          url: '/guides/integrated-composer#troubleshooting-code-syncs-upstream-updates-and-redirect-errors'
         - text: 'WordPress Known Issues'
           url: '/wordpress-known-issues'
     - title: 'Database'
