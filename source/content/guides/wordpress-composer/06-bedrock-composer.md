@@ -25,7 +25,9 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 
 1. Run the `git init` command.
 
-1. Navigate to the Pantheon dashboard > click ****Connection Info**** and copy the SSH Clone Url string > remove everything except the git repository, for example:
+1. Navigate to the Pantheon dashboard and click **Connection Info**.
+
+1. Copy the SSH Clone Url string and remove everything except the git repository, for example:
 
     ```bash
     ssh://codeserver.dev.{your site id}@codeserver.dev.{your site id}.drush.in:2222/~/repository.git).
