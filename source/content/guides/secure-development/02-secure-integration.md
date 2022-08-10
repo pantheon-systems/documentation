@@ -27,7 +27,7 @@ Secure Integration uses TLS encryption to create a tunnel from the application c
 
 [Contact support](/guides/support/contact-support/) and provide the following for each of your remote services:
 
-- IP address
+- IP address(Not a URL as our system uses consistent IP addresses by means of identifying a certain connection)
 
 - Port number
 
