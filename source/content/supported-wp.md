@@ -14,7 +14,7 @@ Using a previous WordPress version will leave your account vulnerable to well-do
 
 </Alert>
 
-Development versions and beta releases are not supported
+Development versions and beta releases are not supported.
 
 ## Plugins Support
 

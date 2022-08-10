@@ -1,1 +1,1 @@
-Outdated versions of core CMS are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/guides/custom-upstream/maintain-custom-upstream) by the upstream maintainer each time the project releases a new version.
+We support the latest public version of WordPress. Outdated versions of WordPress may function on the platform, but they are not actively supported.
