@@ -23,11 +23,12 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 <Alert title="Note" type="info" >
   
-The following Composer-based Drupal 9 upstreams are depreciated in favor of `drupal-composer-managed`:
-   - `drupal-project`
-   - `drupal-recommended`
+The Composer-based Drupal 9 upstreams below have been deprecated in favor of the `drupal-composer-managed` upstream.
 
-If you wish to convert your site from one of these upstream to the supported `drupal-composer-managed` upstream, check out the [Terminus Conversion Tools Plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin).
+- `drupal-project`
+- `drupal-recommended`
+
+You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) if you want to convert your site from one of the deprecated upstreams to the supported `drupal-composer-managed` upstream.
 
 </Alert>
 
