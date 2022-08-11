@@ -73,17 +73,15 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
 #### Installing with Umami Demo Data
 
-This is can aonly be used on Drupal backend sites.
+This is can only be used on Drupal backend sites.
 
-The installation command above will create a backend with limited example content. To instead create a site with Drupal's Umami demo data set, change the profile flag to:
+The installation command above will create a backend with limited example content. To create a site with Drupal's Umami demo data set instead, change the profile flag in your `terminus build:project:create` command to:
 
 `--profile="pantheon_decoupled_umami_demo"`
 
-In your `terminus build:project:create` command.
-
 #### Using Other Git Hosts or CI Services
 
-Terminus build tools supports a number of other combinations of git hosts and CI services.
+Terminus build tools supports a number of other combinations of Git hosts and CI services.
 
 For example, to use GitHub actions as your CI service, you could add the following additional flag to your `terminus build:project:create` command:
 
@@ -97,8 +95,8 @@ For more information, consult the [available services section of the build tools
 
 #### Using a GitHub Organization
 
-`--org="{My Organization Name}"`
+If you would like the repo created to be under a GitHub organization instead of the authenticated user's namespace, you can use the `--org` option:
 
-If you would like the repo created to be under a GitHub organization instead of the authenticated user's namespace, you can use the `--org` option.
+`--org="{My Organization Name}"`
 
 For information on additional options, consult the [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
