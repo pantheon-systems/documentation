@@ -18,8 +18,8 @@ reviewed: "2022-08-11"
 
 You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
 
-* [Next.js and Drupal](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports ser
-* [Gatsby and WordPress](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation  
+* [Drupal and Next.js](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports server-side rendering. 
+* [WordPress and Gatsby](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation. 
 
 
 ## Backend Installation and Configuration
@@ -76,13 +76,15 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
 #### Installing with Umami Demo Data
 
-> NOTE: This can only be used on Drupal backend sites.
+> NOTE: The following configuration can only be used on Drupal backend sites.
 
-If you would like to run the Umami Demo site, you will need to add the site configuration. The installation command detailed above, will create a backend with limited example content. 
+The installation command in the section above, will create a backend with limited example content. If you would like to run the Umami Demo site, you will need to add the site configuration. 
 
-In the `terminus build:project:create` command change the profile flag to the following, to create a site with Drupal's Umami demo data:
+To create a site with Drupal's Umami demo data, change the profile flag in the `terminus build:project:create` command to the following:
 
-    `--profile="pantheon_decoupled_umami_demo"`
+```
+--profile="pantheon_decoupled_umami_demo"
+```
 
 
 #### Using Other Git Hosts or CI Services
@@ -91,22 +93,26 @@ Terminus build tools supports a number of other combinations of Git hosts and CI
 
 For example, to use GitHub actions as your CI service, you could add the following additional flag to your `terminus build:project:create` command:
 
-`--ci=githubactions`
+```
+--ci=githubactions
+```
 
 Other possible values include:
 
-    * `circleci`
-    * `gitlab-pipelines`
-    * `bitbucket-pipelines`
+* `circleci`
+* `gitlab-pipelines`
+* `bitbucket-pipelines`
 
 > NOTE: If you are using GitHub Actions, your token should have the "workflow" scope.
 
-For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the Build Tools [documentation](https://pantheon.io/docs/guides/build-tools/). 
+For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the BuiThank has ld Tools [documentation](https://pantheon.io/docs/guides/build-tools/). 
 
 #### Using a GitHub Organization
 
 If you would like the repository created to be under a GitHub organization instead of the authenticated user's namespace, you can use the `--org` option.
 
-`--org="{My Organization Name}"`
+```
+--org="{My Organization Name}"
+```
 
 For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section or see our Build Tools [documentation](https://pantheon.io/docs/guides/build-tools/).
