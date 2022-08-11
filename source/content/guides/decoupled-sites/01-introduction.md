@@ -37,18 +37,24 @@ Pantheon Decoupled provides users with tools that improve the experience of buil
 
 With decoupled sites, a CMS site can be linked to a single decoupled site, multiples sites, or the user does not need a CMS at all and can link directly to a frontend application.
 
-Pantheon Decoupled allows you to connect to your Git repository and deploy a site with Gatsby, Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or start with a clean set up and select an existing repository. 
+Pantheon Decoupled allows you to connect to your Git repository and deploy a site with Gatsby, Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or start with a clean set up and connect it to an existing repository. 
 
 ### How Can I Create a Decoupled Site on the Platform
 
-You can build a decoupled site on Pantheon using several methods; you can apply your own configuration or use a Pantheon developed start kit.  The following workflow applies when starting your decoupled journey:
+You can build a decoupled site on Pantheon using several methods; you can apply your own configuration or use a Pantheon developed start kit. The following workflows apply when starting your decoupled journey.
 
-| Without a Starter Kit (No Backend Configuration)    | Using a Starter Kit (Backend Configuration)|
-| :---                                                |    :----:                                  |
-| 1. Import a repository                              | 1. Configure a backend                     | 
-| 2. Connect repository to Node.js frontend           | 2. Configure kit package - to connect backend to front end|                               
-| 3.                                                  | 3. Configure frontend starter              |
-
+* **Without a Starter Kit (No Backend Configuration)**
+  1. Import a GitHub repository.
+  1. Configure the frontend application.
+  1. Connect to the Node.js frontend application.
+  1. Push changes to trigger a site build.
+  
+* **Using a Starter Kit (With Backend Configuration)**                        
+  1. Configure the backend.
+  1. Use the kit package to connect the backend to the frontend.
+  1. Configure the frontend application.
+  1. Connect repository to the Node.js frontend application.       
+  1. Push changes to trigger a site build.
 
 ### Pantheon Decoupled Starters Kits
 
@@ -58,7 +64,7 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 
 * An example content integration showing content from your CMS backend rendered in your frontend application.
 
-* Live preview of content from your CMS backend rendered in your frontend application.
+* A live preview of content from your CMS backend rendered in your frontend application.
 
 * A local development environment that supports communication between backend and frontend services.
 
@@ -74,19 +80,19 @@ In the context of our Decoupled Product, a CMS Site is a Content Management Syst
 A decoupled site is a frontend application hosted at Pantheon. It can reference a connected CMS Site at Pantheon, an external site, or exist as its independent application.
 
 #### React
-React is a free and open source frontend JavaScript library for building user interfaces based on UI components.
+[React](https://reactjs.org/) is a free and open source frontend JavaScript library for building user interfaces based on UI components.
 
 #### React Component
 Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions but work in isolation and return HTML.
 
 #### Next.js
-Next.js is a free and open source web application framework based on React.js, Node.js, webpack and Babel.js for building server-side rendered and/or static web applications using React.
+[Next.js](https://nextjs.org/) is a free and open source web application framework based on React.js, Node.js, webpack and Babel.js for building server-side rendered and/or static web applications using React.
 
 #### Gatsby
-Gatsby is an open source static site generator built on Node.js using React and GraphQL. It provides over 2500 plugins to create static sites based on sources as Markdown documents, MDX, images, and numerous Content Management Systems such as WordPress, Drupal, and more.
+[Gatsby](https://www.gatsbyjs.com/) is an open source static site generator built on Node.js using React and GraphQL. It provides over 2500 plugins to create static sites based on sources as Markdown documents, MDX, images, and numerous Content Management Systems such as WordPress, Drupal, and more.
 
 #### GraphQL
-GraphQL is an open source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. 
+[GraphQL](https://graphql.org/) is an open source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. 
 
 #### Static Site Generation (SSG)
 SSG refers to a site in which the content is pre-rendered into HTML, CSS, and JavaScript files at build time.
@@ -97,7 +103,7 @@ Server Side Rendering is a content rendering method in which each web page is se
 </Accordion>
 
 ### Pantheon Decoupled Options
-With Pantheon Decoupled you can create sites from server side rendering (SSR) or a static site generator (SSG).
 
+With Pantheon Decoupled you can create sites from server side rendering (SSR) or a static site generator (SSG).
 Currently, Pantheon Decoupled does not support SSR using Gatsby, but it does support SSG with Next.js.
 
