@@ -21,7 +21,8 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 - To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
-<Alert title="Note" type="info" >
+<Alert title="Note"  type="info" >
+
   
 `drupal-composer-managed` is the recommended Composer-based Drupal 9 upstream. The Composer-based Drupal 9 upstreams below have been deprecated.
 
