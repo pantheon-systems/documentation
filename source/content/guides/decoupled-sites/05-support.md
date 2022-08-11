@@ -40,5 +40,3 @@ Technical Support for Pantheon Decoupled does not include the following:
 ### How do I File a Bug or Get Support?
 
 Pantheon has a limited scope of support for early access products. For assistance with your decoupled site you can email helpdesk@pantheon.io. You will receive a response within one business day.
-
- 
