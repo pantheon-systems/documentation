@@ -9,7 +9,7 @@ type: guide
 layout: guide
 showtoc: true
 anchorid: introduction
-permalink: docs/guides/decoupled-sites/introduction/
+permalink: docs/guides/decoupled-sites/
 editpath: decoupled-sites/01-introduction.md
 reviewed: "2022-08-11"
 ---
