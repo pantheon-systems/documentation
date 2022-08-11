@@ -44,9 +44,11 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `'{My Team Name}'` with your team name, for example `My Agency`. This can also be omitted.
 
-> NOTE: This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
+   <Alert title="Note"  type="info" >
+    This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
+   </Alert>
 
-</Tab>
+ </Tab>
 
 <Tab title="WordPress Backend " id="wordpress-install">
 
@@ -66,7 +68,9 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
 
-> NOTE: This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
+   <Alert title="Note"  type="info" >
+    This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
+   </Alert>
 
 </Tab>
 </TabList>
@@ -76,7 +80,9 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
 #### Installing with Umami Demo Data
 
-> NOTE: The following configuration can only be used on Drupal backend sites.
+ <Alert title="Note"  type="info" >
+ The following configuration can only be used on Drupal backend sites.
+ </Alert>
 
 The installation command in the section above will create a backend with limited example content. If you would like to run the Umami Demo site, you will need to add the site configuration. 
 
@@ -102,7 +108,7 @@ Other possible values include:
 * `gitlab-pipelines`
 * `bitbucket-pipelines`
 
-> NOTE: If you are using GitHub Actions, your token should have the "workflow" scope.
+If you are using GitHub Actions, your token should have the "workflow" scope.
 
 For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the BuiThank has ld Tools [documentation](https://pantheon.io/docs/guides/build-tools/). 
 
