@@ -1,7 +1,7 @@
 ---
 title: Pantheon Decoupled
 subtitle: Support
-description: Information on what is supported for Pantheon Decoupled.
+description: Information on what supported is available for Pantheon Decoupled.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -11,12 +11,12 @@ showtoc: true
 anchorid: support
 permalink: docs/guides/decoupled-sites/support/
 editpath: decoupled-sites/05-support.md
-reviewed: "2022-07-31"
+reviewed: "2022-08-11"
 ---
 
 ## Scope of Support
 
-Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes usage of documented workflows as defined in this documentation. 
+Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes use of the documented workflows as defined in this documentation. 
 
 ### What is Included in the Scope of Support?
 
@@ -39,6 +39,6 @@ Technical Support for Pantheon Decoupled does not include the following:
 
 ### How do I File a Bug or Get Support?
 
-Pantheon has a limited scope of support for early access products. For assistance with your decoupled site you can email helpdesk@pantheon.io.You will receive a response within 1 business day.
+Pantheon has a limited scope of support for early access products. For assistance with your decoupled site you can email helpdesk@pantheon.io. You will receive a response within one business day.
 
  
