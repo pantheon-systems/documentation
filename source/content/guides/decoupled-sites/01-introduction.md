@@ -73,6 +73,7 @@ Server-side Rendering is a content rendering method in which each web page is se
 
 </Accordion>
 
+
 ### Site Options
 
 With Pantheon Decoupled you can create sites from server-side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Decoupled Early Access offering:
@@ -84,6 +85,7 @@ With Pantheon Decoupled you can create sites from server-side rendering (SSR) or
 Currently, Pantheon Decoupled does not support SSR using Gatsby. Support for SSG with Next.js is available. 
 
 Other permutations for site development using Pantheon Decoupled can be used, but are not supported and currently not recommended. 
+
 
 ### Create a Decoupled Site with Pantheon
 
@@ -102,6 +104,7 @@ You can build a decoupled site on Pantheon using several methods. The decoupled 
   1. Connect repository to the Node.js frontend application.       
   1. Push changes to trigger a site build.
 
+
 ### Pantheon Decoupled Starters Kits
 
 Pantheon offers recommended decoupled starter kit templates that are preconfigured, and include the following:
@@ -112,4 +115,4 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 
 * A live preview of content from your CMS backend rendered in your frontend application.
 
-* A local development environment that supports communication between backend and frontend services.
+* A development environment that supports communication between backend and frontend services.
