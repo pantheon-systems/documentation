@@ -107,7 +107,7 @@ Other possible values include:
 
 If you are using GitHub Actions, your token should have the "workflow" scope.
 
-For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the BuiThank has ld Tools [documentation](https://pantheon.io/docs/guides/build-tools/). 
+For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the BuiThank has ld Tools [documentation](/guides/build-tools/). 
 
 #### Using a GitHub Organization
 
@@ -119,4 +119,4 @@ If you would like the repo created to be under a GitHub organization instead of 
 
 For information on additional options, consult the [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
 
-For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section or see our Build Tools [documentation](https://pantheon.io/docs/guides/build-tools/).
+For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section or see our Build Tools [documentation](/guides/build-tools/).
