@@ -44,8 +44,7 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `'{My Team Name}'` with your team name, for example `My Agency`. This can also be omitted.
 
-   <Alert title="Note"  type="info" >
-    This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
+      > This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
    </Alert>
 
  </Tab>
@@ -68,9 +67,7 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
 
-   <Alert title="Note"  type="info" >
-    This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
-   </Alert>
+      > This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
 
 </Tab>
 </TabList>
@@ -116,7 +113,9 @@ For more information, refer to the [Available Services](https://github.com/panth
 
 If you would like the repo created to be under a GitHub organization instead of the authenticated user's namespace, you can use the `--org` option:
 
-`--org="{My Organization Name}"`
+```
+--org="{My Organization Name}"
+```
 
 For information on additional options, consult the [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
 
