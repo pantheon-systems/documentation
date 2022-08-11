@@ -94,7 +94,6 @@ Connect to your Git provider and select an existing repository.
 * The repository needs to contain only one of the following files:
 
     * `package-lock.json`
-
     * `yarn.lock`
 
 
@@ -113,7 +112,6 @@ Create a site with out configuring the backend and link to a frontend framework.
 1. Add to the General Info section.
 
     * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation. 
-
     * Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
 
 1. (Optional) Link your CMS.
@@ -125,7 +123,6 @@ Create a site with out configuring the backend and link to a frontend framework.
 1. (Optional) Add configurations.
 
     * You can add specifications to help manage your root directory, build settings, and set environment variables. 
-
     * You can set the Environment Variables in the Advanced Setting section. 
 
     > **NOTE**: Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features like preview.
@@ -140,7 +137,6 @@ You are directed to a new page with the site name, deployment, and build informa
 #### Prerequisites
 
 * You are using a Git repository and the repository is already connected.
-
 * You are using Drupal as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
 
 #### Site Creation with Drupal and Next.js Starter Kit Template
@@ -181,6 +177,3 @@ You are directed to a new page with the site name, deployment, and build informa
 1. Optionally, you can set the Environment Variables in the **Advanced Setting** section.
 
 1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information and status. Now, you can view the build log by clicking **Build Details**.
-
-
-
