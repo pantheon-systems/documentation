@@ -77,7 +77,7 @@ An error occurred because your site is currently running an unsupported version 
   
 ### Diagnosis
 
-If your Drupal site is not managed with Composer, Autopilot only works on sites that are running Drush 8. Composer managed sites may use any compatible Drush version and will not display the Drush version error.
+If your Drupal site is not managed with Composer, Autopilot only works on sites that are running Drush 8. Composer-managed sites may use any compatible Drush version and will not display the Drush version error.
 
 Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
 
