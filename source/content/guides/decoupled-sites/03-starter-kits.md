@@ -11,25 +11,28 @@ showtoc: true
 anchorid: starter-kits
 permalink: docs/guides/decoupled-sites/starter-kits/
 editpath: decoupled-sites/03-starter-kits.md
-reviewed: "2022-07-31"
+reviewed: "2022-08-11"
 ---
 
-## Creating a New CMS Backend for a Decoupled Frontend
+## Create the CMS Backend
 
-You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS. You can also create a site without any CMS. 
+You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
+
+* [Drupal and Next.js](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports server-side rendering. 
+* [WordPress and Gatsby](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation. 
 
 
-## Installation
+## Backend Installation and Configuration
 
 <TabList>
 
-<Tab title="Drupal Backend Installation" id="drupal-install" active={true}>
+<Tab title="Drupal Backend" id="drupal-install" active={true}>
 
-- Run the `terminus build:project:create` as follows:
+- Run `terminus build:project:create`:
 
   ```
   terminus build:project:create \
-    --team='My Team Name}' \
+    --team='{My Team Name}' \
     --template-repository="git@github.com:pantheon-systems/decoupled-drupal-recommended.git" pantheon-systems/decoupled-drupal-recommended \
     --ci-template='git@github.com:pantheon-systems/advanced-ci-templates' \
     --visibility private {PROJECT_NAME} \
@@ -37,17 +40,17 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
     --profile="pantheon_decoupled_profile"
   ```
 
-  * Replace `<{PROJECT_NAME}>` with your project name, for example `decoupled-drupal`.
+  * Replace `{PROJECT_NAME}` with your project name, for example `decoupled-drupal`.
 
-  * Replace `<'{My Team Name}'>` with your team name, for example `My Agency`. This can also be omitted.
+  * Replace `'{My Team Name}'` with your team name, for example `My Agency`. This can also be omitted.
 
-**Note:** This will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
+> NOTE: This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
 
 </Tab>
 
-<Tab title="WordPress Backend Installation" id="wordpress-install">
+<Tab title="WordPress Backend " id="wordpress-install">
 
-- Run the `terminus build:project:create` as follows:
+- Run `terminus build:project:create`:
 
   ```
   terminus build:project:create \
@@ -63,21 +66,25 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
 
-**Note:** This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
+> NOTE: This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
 
 </Tab>
 </TabList>
 
 
-### Additional Options
+### Additional Configuration Options
 
 #### Installing with Umami Demo Data
 
-This is can only be used on Drupal backend sites.
+> NOTE: The following configuration can only be used on Drupal backend sites.
 
-The installation command above will create a backend with limited example content. To create a site with Drupal's Umami demo data set instead, change the profile flag in your `terminus build:project:create` command to:
+The installation command in the section above will create a backend with limited example content. If you would like to run the Umami Demo site, you will need to add the site configuration. 
 
-`--profile="pantheon_decoupled_umami_demo"`
+To create a site with Drupal's Umami demo data, change the profile flag in the `terminus build:project:create` command to the following:
+
+```
+--profile="pantheon_decoupled_umami_demo"
+```
 
 #### Using Other Git Hosts or CI Services
 
@@ -85,13 +92,19 @@ Terminus build tools supports a number of other combinations of Git hosts and CI
 
 For example, to use GitHub actions as your CI service, you could add the following additional flag to your `terminus build:project:create` command:
 
-`--ci=githubactions`
+```
+--ci=githubactions
+```
 
-Other possible values are `circleci`, `gitlab-pipelines` and `bitbucket-pipelines`.
+Other possible values include:
 
-Note: if using Github Actions, your token should have the "workflow" scope.
+* `circleci`
+* `gitlab-pipelines`
+* `bitbucket-pipelines`
 
-For more information, consult the [available services section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services).
+> NOTE: If you are using GitHub Actions, your token should have the "workflow" scope.
+
+For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the BuiThank has ld Tools [documentation](https://pantheon.io/docs/guides/build-tools/). 
 
 #### Using a GitHub Organization
 
@@ -100,3 +113,5 @@ If you would like the repo created to be under a GitHub organization instead of 
 `--org="{My Organization Name}"`
 
 For information on additional options, consult the [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
+
+For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section or see our Build Tools [documentation](https://pantheon.io/docs/guides/build-tools/).

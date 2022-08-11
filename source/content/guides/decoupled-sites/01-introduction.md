@@ -66,7 +66,7 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 
 * A live preview of content from your CMS backend rendered in your frontend application.
 
-* A local development environment that supports communication between backend and frontend services.
+* A development environment that supports communication between backend and frontend services.
 
 ### Pantheon Decoupled Terminology
 
@@ -96,14 +96,14 @@ Components are independent and reusable bits of code. They serve the same purpos
 #### Static Site Generation (SSG)
 SSG refers to a site in which the content is pre-rendered into HTML, CSS, and JavaScript files at build time.
 
-#### Server Side Rendering (SSR)
-Server Side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
+#### Server-side Rendering (SSR)
+Server-side Rendering is a content rendering method in which each web page is served to a site visitor at runtime, meaning that a portion of the build process happens on each page request.
 
 </Accordion>
 
 ### Site Options
 
-With Pantheon Decoupled you can create sites from server side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Decoupled Early Access offering:
+With Pantheon Decoupled you can create sites from server-side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Decoupled Early Access offering:
 
 * **Import Repository**: Connect your Git provider and select an existing repository. The CMS is optional for this configuration. Limited support is provided for this configuration.
 * **Gatsby and Wordpress**: Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS. This configuration uses static site generation.
@@ -113,9 +113,9 @@ Currently, Pantheon Decoupled does not support SSR using Gatsby. Support for SSG
 
 Other permutations for site development using Pantheon Decoupled can be used, but are not supported and currently not recommended. 
 
-### How Can I Create a Decoupled Site on the Platform
+### Create a Decoupled Site with Pantheon
 
-You can build a decoupled site on Pantheon using several methods; you can apply your own configuration or use a Pantheon developed start kit. The following workflows apply when starting your decoupled journey.
+You can build a decoupled site on Pantheon using several methods. The decoupled option must be enabled you can apply your own configuration or use a Pantheon developed start kit. The following workflows apply when starting your decoupled journey.
 
 * **Without a Starter Kit (No Backend Configuration)**
   1. Import a GitHub repository.
