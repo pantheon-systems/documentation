@@ -128,7 +128,7 @@ Create a site with out configuring the backend and link to a frontend framework.
 
     * You can set the Environment Variables in the Advanced Setting section. 
 
-    > NOTE: Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features like preview.
+    > **NOTE**: Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features like preview.
 
 1. Click **Continue**.
 
