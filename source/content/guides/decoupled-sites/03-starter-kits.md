@@ -44,8 +44,7 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `'{My Team Name}'` with your team name, for example `My Agency`. This can also be omitted.
 
-      > This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
-   </Alert>
+This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
 
  </Tab>
 
@@ -67,7 +66,7 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   * Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
 
-      > This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
+This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
 
 </Tab>
 </TabList>
