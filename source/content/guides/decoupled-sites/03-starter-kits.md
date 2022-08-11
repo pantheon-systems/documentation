@@ -32,7 +32,7 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
   ```
   terminus build:project:create \
-    --team='My Team Name}' \
+    --team='{My Team Name}' \
     --template-repository="git@github.com:pantheon-systems/decoupled-drupal-recommended.git" pantheon-systems/decoupled-drupal-recommended \
     --ci-template='git@github.com:pantheon-systems/advanced-ci-templates' \
     --visibility private {PROJECT_NAME} \
