@@ -32,8 +32,8 @@ The following components are needed to configure your backend, especially if usi
      * Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.
 
 * The following tools are included in the [Lando VM](https://docs.lando.dev/getting-started/installation.html), but can be useful to have installed for use without Lando:
-     * [PHP](https://www.php.net/) - An open-source, server-side programming language that can be used to create websites, applications, and more. It is a widely-used language that can be embedded into HTML. Install using Homebrew on Mac to not conflict with the PHP version that comes with your operating system.
-     * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project  manages them for you.
+     * [PHP](https://www.php.net/) - An open-source, server-side programming language that can be used to create websites, applications, and more. It is a widely-used language that can be embedded in HTML. Install using Homebrew on Mac to not conflict with the PHP version that comes with your operating system.
+     * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
      * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for Pantheon Decoupled.
 
 ### Frontend Requirements
@@ -41,12 +41,12 @@ The following components are needed to configure your backend, especially if usi
 The following components are needed to configure your frontend for Pantheon Decoupled: 
  
 * [Node.js](https://nodejs.org/en/)
-  * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommeded for Mac users.
+  * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
 
 ## Before You Use the Decoupled Starter Kit
 
-To create and configure a new decoupled project using a Pantheon Decoupled starter kit the following components are required:
+To create and configure a new decoupled project using a Pantheon Decoupled starter kit, the following components are required:
 
 * Install [Composer](https://getcomposer.org/download/) globally.
   * Composer is required for the CMS backends.
