@@ -48,7 +48,7 @@ This action will result in a GitHub repository created for this new codebase und
 
  </Tab>
 
-<Tab title="WordPress Backend " id="wordpress-install">
+<Tab title="WordPress Backend" id="wordpress-install">
 
 - Run `terminus build:project:create`:
 
