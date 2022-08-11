@@ -47,12 +47,12 @@ You can also create a site without a CMS. Create a site from scratch by importin
 
 The versions that are supported are as follows:
 
-|Tooling    | Version         |
-|:---:      | :---:           |
-|Gatsby     | 4 or higher     |
-|Next.js    | 12 or higher    |
-|Drupal     | 9 or higher     |
-|WordPress  | 5.9 or higher   |
+|  Tooling   |      Version    |
+|  :---:     |       :---:     |
+|  Gatsby    |    4 or higher  |
+| Next.js    |   12 or higher  |
+|  Drupal    |   9 or higher   |
+| WordPress  |   5.9 or higher |
 
 
 ## Site Setup
