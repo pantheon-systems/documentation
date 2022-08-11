@@ -39,34 +39,6 @@ With decoupled sites, a CMS site can be linked to a single decoupled site, multi
 
 Pantheon Decoupled allows you to connect to your Git repository and deploy a site with Gatsby, Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or start with a clean set up and connect it to an existing repository. 
 
-### How Can I Create a Decoupled Site on the Platform?
-
-You can build a decoupled site on Pantheon by applying your own configuration or using a Pantheon-developed start kit. The following workflows apply when starting your decoupled journey.
-
-* **Without a Starter Kit (No Backend Configuration)**
-  1. Import a GitHub repository.
-  1. Configure the frontend application.
-  1. Connect to the Node.js frontend application.
-  1. Push changes to trigger a site build.
-  
-* **Using a Starter Kit (With Backend Configuration)**                        
-  1. Configure the backend.
-  1. Use the starter kit package to connect the backend to the frontend.
-  1. Configure the frontend application.
-  1. Connect the repository to the Node.js frontend application.       
-  1. Push changes to trigger a site build.
-
-### Pantheon Decoupled Starters Kits
-
-Pantheon offers recommended decoupled starter kit templates that are preconfigured, and include the following:
-
-* A set of recommended modules or plugins for creating decoupled sites on Pantheon.
-
-* An example content integration showing content from your CMS backend rendered in your frontend application.
-
-* A live preview of content from your CMS backend rendered in your frontend application.
-
-* A development environment that supports communication between backend and frontend services.
 
 ### Pantheon Decoupled Terminology
 
