@@ -992,7 +992,7 @@ export ENV=dev
 1. Change to the `code` directory:
 
    ```bash{promptUser: user}
-   cd code/
+   cd /my-site
    ```
    
 1. Create the following symlinks:
