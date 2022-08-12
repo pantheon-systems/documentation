@@ -1,6 +1,6 @@
 ---
 title: Supported PHP Versions
-description: Learn which versions of PHP are currently supported, and any compatibility issues.
+description: Learn which versions of PHP are currently supported, and review potential compatibility issues.
 categories: [platform]
 tags: [libraries, updates]
 contributors: [wordsmither]
@@ -10,8 +10,8 @@ contributors: [wordsmither]
 
 ## Drush Compatibility
 
-See [Managing Drush Versions on Pantheon](/drush-versions).
+Refer to [Managing Drush Versions on Pantheon](/drush-versions) for detailed compatibility information.
 
 ## Terminus Compatibility
 
-See [Version Updates](/terminus/updates#php-version-compatibility-matrix).
+Refer to [Version Updates](/terminus/updates#php-version-compatibility-matrix) for detailed compatibility information.

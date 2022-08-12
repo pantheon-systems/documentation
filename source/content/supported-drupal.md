@@ -8,12 +8,12 @@ contributors: [wordsmither]
 
 The following table indicates availability of the specified Drupal version, as well as our usage recommendations and our support scope.
 
-| Version | Available | Recommended | Supported |
+| Drupal Version | Available | Recommended | Supported |
 | ----------- | :---------: | :---------: | :---------: |
-| 10          | ✅          | ❌           | ❌          |
-| 9           | ✅          | ✅           | ✅          |
-| 8           | ❌          | ❌           | ✅          |
-| 7           | ✅          | ❌           | ✅          |
+| 10          | <span style="color:green">✔</span>         | ❌           | ❌          |
+| 9           | <span style="color:green">✔</span>          | <span style="color:green">✔</span>           | <span style="color:green">✔</span>         |
+| 8           | ❌          | ❌           | <span style="color:green">✔</span>         |
+| 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span>          |
 | 6           | ❌          | ❌           | ❌          |
 
 ## Drush Version Support
@@ -26,4 +26,4 @@ The following table indicates availability of the specified Drupal version, as w
 
 ## Modules Support
 
-See [Drupal Modules with Known Issues](/modules-known-issues) for any known compatibility issues.
+Refer to [Drupal Modules with Known Issues](/modules-known-issues) for a list of known compatibility issues.
