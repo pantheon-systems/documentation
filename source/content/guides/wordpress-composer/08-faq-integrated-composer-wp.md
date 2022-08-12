@@ -31,13 +31,17 @@ Subdirectory Multisite is not currently compatible with Integrated Composer usin
 
 WordPress themes can be managed in Integrated Composer if the theme is available on the [WordPress.org](http://wordpress.org/) repository or [Packagist.org](http://packagist.org/). Bedrock uses the [WPackagist.org](http://wpackagist.org/) repository for themes and plugins which mirrors the plugin and theme repositories on WordPress.org.
 
-For themes hosted on WordPress.org, the following command can be used:
+### WordPress.org- hosted Themes 
+
+Run the following command:
 
 ```bash{promptUser: user}
 composer require wpackagist-theme/{$theme-name}
 ```
 
-If a theme is available on Packagist (uncommon but possible) you would use a standard composer require:
+### Packagist-hosted Themes
+
+If a theme is available on Packagist, which is uncommon but possible, you can use a standard composer require command:
 
 ```bash{promptUser: user}
 composer require {$vendor}/{$package-name}
@@ -49,12 +53,17 @@ In the above example, the `$package-name` could be the theme name, or it could j
 
 WordPress plugins are handled with Composer the same way that themes are above. For most plugins, the [WPackagist.org](http://wpackagist.org/) repository will be sufficient and contain the plugin you need, however many plugin developers also push their code to Packagist, which makes that an option for both plugins that exist on [WordPress.org](http://wordpress.org/) as well as plugins that are not in the WordPress.org repository but exist and are actively maintained on Github.
 
-For plugins hosted on WordPress.org, the following command can be used:
+### WordPress.org Plugins
+
+Run the following command:
 
 ```bash{promptUser: user}
 composer require wpackagist-plugin/{$plugin-name}
 ```
-If a plugin is available on Packagist, you would use the following instead:
+
+### Packagist Plugin
+
+If a plugin is available on Packagist, you can use the following Composer require command:
 
 ```bash{promptUser: user}
 composer require {$vendor}/{$package-name}
