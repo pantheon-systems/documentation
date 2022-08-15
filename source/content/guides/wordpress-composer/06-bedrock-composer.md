@@ -13,7 +13,7 @@ anchorid: bedrock-composer
 
 This section provides information on how to use Bedrock with Integrated Composer on a WordPress site.
 
-WordPress does not natively support [Composer](https://getcomposer.org/), however, Bedrock is a WordPress-specific framework for using Composer on WordPress sites.[Bedrock](https://roots.io/bedrock/) is a custom WordPress project structure that helps simplify working on large projects with multiple plugins and custom code.
+WordPress does not natively support [Composer](https://getcomposer.org/), however, Bedrock is a WordPress-specific framework for using Composer on WordPress sites. [Bedrock](https://roots.io/bedrock/) also provides a custom WordPress project structure that helps simplify working on large projects with multiple plugins and custom code.
 
 ## Create a New Pantheon WordPress Site with Bedrock
 

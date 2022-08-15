@@ -31,7 +31,7 @@ There are different cases for using Composer to manage dependencies on a WordPre
 
 Complete the steps below before using this guide to create or manage updates on your Pantheon Composer-managed WordPress site.
 
-<Alert title="Note for Existing WordPress Composer Sites"  type="info" >
+<Alert title="Existing WordPress Composer Sites"  type="info" >
 
 Please reach out to our [Professional Services](https://pantheon.io/professional-services) team for information on site migration services if you have an existing Composer-managed WordPress site that you would like to migrate to the Pantheon platform.
 
