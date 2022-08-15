@@ -2,8 +2,6 @@
 title: Integrated Composer
 subtitle: Add or Remove Individual Site Dependencies
 description: Learn how to add or remove an individual site dependency.
-type: guide
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]

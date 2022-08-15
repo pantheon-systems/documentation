@@ -2,8 +2,6 @@
 title: Integrated Composer
 subtitle: Add a Package from a Private Repository
 description: Learn how to add a package from a private repository.
-type: guide
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]

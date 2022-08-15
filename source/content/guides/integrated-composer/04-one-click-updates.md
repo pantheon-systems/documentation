@@ -2,7 +2,6 @@
 title: Integrated Composer
 subtitle: Apply One-click Updates
 description: Learn how to apply One-click updates with Integrated Composer.
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]

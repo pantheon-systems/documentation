@@ -2,7 +2,6 @@
 title: Integrated Composer
 subtitle: Integrated Composer Support
 description: Learn how to access support for Integrated Composer.
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]

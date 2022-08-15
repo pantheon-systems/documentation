@@ -2,7 +2,6 @@
 title: Integrated Composer
 subtitle: Use Upstream with Integrated Composer
 description: Learn how to use Upstream with Integrated Composer.
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]

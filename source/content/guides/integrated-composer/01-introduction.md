@@ -2,15 +2,13 @@
 title: Integrated Composer
 subtitle: Introduction
 description: Learn how to use Integrated Composer.
-type: guide
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
-permalink: docs/guides/integrated-composer
+permalink: docs/guides/integratedcomposer
 anchorid: integrated-composer
 ---
 

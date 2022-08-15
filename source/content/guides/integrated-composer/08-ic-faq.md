@@ -2,7 +2,6 @@
 title: Integrated Composer
 subtitle: Integrated Composer FAQ
 description: Get answers to your Integrated Composer questions.
-permalink: docs/guides/:basename
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
