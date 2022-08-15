@@ -207,3 +207,7 @@ If your site contains a binary patch, such as https://www.drupal.org/files/issue
 A workaround for this issue, is to reconfigure the patch to exclude the binary contents in it.
 
 <Partial file="configure-wp-site-networks-with-integrated-composer.md" />
+
+## More Resources
+
+- [Integrated Composer FAQ](/guides/integrated-composer/ic-faq)

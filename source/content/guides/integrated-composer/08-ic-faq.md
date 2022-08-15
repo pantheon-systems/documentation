@@ -55,8 +55,16 @@ All modules will be overwritten by Integrated Composer if you don't add the exce
 
 ### What features are planned for Integrated Composer on Pantheon?
 
-Pantheon's devs are working hard to make the Integrated Composer experience on Pantheon better.
+Pantheon's developers are working hard to make the Integrated Composer experience on Pantheon better.
 
 Features that are still in development:
 
-- Integrated Composer and [Build Tools](/guides/build-tools)
+- [Integrated Composer](/guides/integrated-composer)
+
+- [Build Tools](/guides/build-tools)
+
+## More Resources
+
+- [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
+
+- [Add Contrib and Custom Code in Drupal 9](/guides/drupal-9-hosted-createcustom/contrib-custom)

@@ -16,7 +16,7 @@ This sections provides information on how to add or remove individual site depen
 
 ## Add a Dependency to an Individual Site
 
-1. Clone the Git repository from the Pantheon site's dashboard.
+1. [Clone the Git repository](/guides/git/git-config#clone-your-site-codebase) from the Pantheon site's dashboard.
 
 1. Run `composer install`:
 
@@ -60,3 +60,8 @@ You can remove site dependencies if they are no longer needed. You should use ca
    - Pantheon will run Composer, generate build artifacts, etc.
 
 
+## More Resources
+
+- [Manage Some Dependencies with Composer](/guides/partial-composer)
+
+- [Build Tools](/guides/build-tools/)

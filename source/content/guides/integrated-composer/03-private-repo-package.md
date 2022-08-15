@@ -41,9 +41,14 @@ For this procedure, a GitHub token will be added to your code repository. It all
 
 1. Run `composer update` to install the new package.
 
-1. If the above command update works locally, commit the updated composer files and add them to your environment
+1. Commit the updated composer files and add them to your environment only if the above command update works locally.
+
    ```bash{promptUser: user
    git add composer.json composer.lock
    git commit -m "Adding private package <your-package>"
    git push
    ```
+
+## More Resources
+
+- [Git on Pantheon Guide](/guides/git)

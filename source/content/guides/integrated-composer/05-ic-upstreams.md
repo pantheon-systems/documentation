@@ -24,7 +24,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 ### How to Add Dependencies to Your Upstream
 
-1. Clone the Git repository from the Pantheon site's Dashboard.
+1. [Clone the Git repository](/guides/git/git-config#clone-your-site-codebase) from the Pantheon site's dashboard.
 
 1. Change into the Upstream's configuration directory:
 
@@ -65,3 +65,11 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
        ```
 
 1. Commit and push.
+
+## More Resources
+
+- [Custom Upstreams](/guides/custom-upstream)
+
+- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
+
+- [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)

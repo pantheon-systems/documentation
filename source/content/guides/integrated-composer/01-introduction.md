@@ -44,14 +44,18 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 1. Create a new WordPress site from the Upstream. Do not customize the upstream as yet.
 
-1. In the Dev environment, click **Visit Development Site** and follow the prompts to complete the CMS installation.
+1. Navigate to the Dev environment, then click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
 1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
 
 
+## More Resources
 
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
+- [Supported Drupal Versions](/supported-drupal)
 
+- [Drupal 9](/drupal-9)
 
 
 
