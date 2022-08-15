@@ -8,7 +8,7 @@ contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
-permalink: docs/guides/integratedcomposer
+permalink: docs/guides/integrated-composer
 anchorid: integrated-composer
 ---
 
