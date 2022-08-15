@@ -61,11 +61,9 @@ Autopilot requires the following:
 
 Your site must be on Pantheon and meet the criteria below to be eligible for Autopilot. 
 
-| Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
-                                                                                    
+* Drupal: Must be using Integrated Composer or Drush 8
+* WordPress: Must not be using a Multisite Network
+
 ## Autopilot For Agencies
 
 Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization. 

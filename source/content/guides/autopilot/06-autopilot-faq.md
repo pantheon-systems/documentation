@@ -28,20 +28,15 @@ Yes. If your site is using [Integrated Composer](/guides/integrated-composer) (`
 
 ## Does Autopilot work with Build Tools?
 
-Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/guides/build-tools/) or other workflows that use external Git repositories.
+Yes.
 
 ## What versions of Drush are supported by Autopilot?
 
-The version(s) of Drush that are supported by Autopilot for sites:
-- **Up to (not including) Drupal 9**: Drush 8
-- **Drupal 9 with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
-- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
+The version(s) of Drush that are supported by Autopilot are:
+- **Drupal with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
+- **Drupal without Integrated Composer**: Drush 8 is supported.
 
-Autopilot only supports Drush 8 for all sites up to Drupal 9.
-
-All Drupal 9 sites that use Integrated Composer are compatible with Autopilot.
-
-Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information.
+See [Drush versions](/drush-versions) for more information.
 
 ## Does Autopilot support Terminus actions?
 
