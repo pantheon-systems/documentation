@@ -33,4 +33,4 @@ Pantheon is dedicated to a positive and harassment-free community experience for
 
 ## Style Guide
 
-The [Pantheon Documentation Style Guide](docs/style-guide) can help with markdown and formatting tips. In general, we use the [Google developer documentation style guide](https://developers.google.com/style/) for English language rules.
+The [Pantheon Documentation Style Guide](/style-guide) can help with markdown and formatting tips. In general, we use the [Google developer documentation style guide](https://developers.google.com/style/) for English language rules.
