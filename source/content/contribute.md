@@ -1,5 +1,5 @@
 ---
-title: Contributing to Pantheon Docs
+title: Contribute to Pantheon Docs
 description: Learn how you can contribute to the Pantheon open-source documentation project on GitHub.
 categories: [get-started]
 tags: [collaborate]
