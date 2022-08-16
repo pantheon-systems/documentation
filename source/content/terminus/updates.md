@@ -47,11 +47,9 @@ If you used the [Homebrew installation](/terminus/install#homebrew-installation)
 brew upgrade pantheon-systems/external/terminus
 ```
 
-<Alert title="Note" type={"info"}>
+<Alert title="Note" type="info">
 
-Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully
-test compatibility with existing configurations before upgrading to new major
-releases.
+Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test compatibility with existing configurations before upgrading to new  major releases.
 
 </Alert>
 
@@ -80,7 +78,5 @@ The `self:update` command is only available for standalone Terminus installed us
 ## EOL Timeline
 
 <Partial file="terminus/eol.md" />
-
-
 
 <Releases />
