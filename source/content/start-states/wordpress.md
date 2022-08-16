@@ -18,7 +18,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 #### <a name="20220816" class="release-update"></a>Deprecate `pantheon-cache` in favor of `pantheon cache`
 
-When the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin is active, WordPress sites on Pantheon have two distinct but similarly-named WP-CLI commands: `wp pantheon cache` (which is provided by Pantheon Advanced Page Cache) and `wp pantheon-cache` (which is provided by the Pantheon mu-plugin. This creates in a confusing end result where it's unclear what Pantheon cache WP-CLI command to use or which subcommands are available for which parent commands.
+When the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin is active, WordPress sites on Pantheon have two distinct but similarly-named WP-CLI commands: `wp pantheon cache` (which is provided by Pantheon Advanced Page Cache) and `wp pantheon-cache` (which is provided by the Pantheon mu-plugin. This leads to confusion about which Pantheon cache WP-CLI command to use or which subcommands are available for which parent commands.
 
 This change aims to help eliminate this confusion by deprecating `wp pantheon-cache` and moving the `set-maintenance-mode` subcommand under `pantheon cache`. When the `pantheon-cache` command is run, a deprecation notice will be displayed with the updated command and the function will be executed. A deprecation notice has also been added to the text that displays when a user runs `wp pantheon-cache set-maintenance-mode --help`. The `pantheon-cache` command will be removed and display an error when run in a future release, and fully removed entirely in a release following that.
 
