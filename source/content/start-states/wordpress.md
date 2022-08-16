@@ -14,6 +14,16 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
+### 2022-08-16
+
+#### <a name="20220816" class="release-update"></a>Deprecate `pantheon-cache` in favor of `pantheon cache`
+
+When the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin is active, WordPress sites on Pantheon have two distinct but similarly-named WP-CLI commands: `wp pantheon cache` (which is provided by Pantheon Advanced Page Cache) and `wp pantheon-cache` (which is provided by the Pantheon mu-plugin. This creates in a confusing end result where it's unclear what Pantheon cache WP-CLI command to use or which subcommands are available for which parent commands.
+
+This change aims to help eliminate this confusion by deprecating `wp pantheon-cache` and moving the `set-maintenance-mode` subcommand under `pantheon cache`. When the `pantheon-cache` command is run, a deprecation notice will be displayed with the updated command and the function will be executed. A deprecation notice has also been added to the text that displays when a user runs `wp pantheon-cache set-maintenance-mode --help`. The `pantheon-cache` command will be removed and display an error when run in a future release, and fully removed entirely in a release following that.
+
+## Previous Releases
+
 ### 2022-07-12
 
 #### <a name="20220606-1" class="release-update"></a>Show a more meaningful notice when trying to install WP plugin in Git mode
@@ -30,8 +40,6 @@ The update notice behavior will be as follows:
 - If a WP Core update is not detected, the update notice is only shown on the update-core or update-core-network page.
 
 Notices will still only be shown on dev and multidev environments. Users can click the notice on the updates page at any time to find out if an update is available via their Pantheon dashboard.
-
-## Previous Releases
 
 ### 2022-05-24
 
