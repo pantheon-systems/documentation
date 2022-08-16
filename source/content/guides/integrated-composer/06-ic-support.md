@@ -1,7 +1,7 @@
 ---
 title: Integrated Composer
 subtitle: Integrated Composer Support
-description: Learn how to access support for Integrated Composer.
+description: Learn about support for Integrated Composer.
 tags: [composer, workflow]
 categories: [get-started]
 contributors: [ari, edwardangert]
