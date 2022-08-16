@@ -13,47 +13,7 @@ previousurl: terminus/configuration/
 image: terminus-thumbLarge
 ---
 
-<Alert title="Warning" type="danger">
 
-The recent 2.x releases of Terminus signify a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, refer to the [Terminus 2.0](/terminus-2-0) documentation.
-
-</Alert>
-
-<TerminusVersion text="Update to the Current Release" />
-
-## Update Standalone Terminus
-
-If you used the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation, update to the newest version with:
-
-```bash{promptUser: user}
-terminus self:update
-```
-
-Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/self-update) to see the available options.
-
-## Update Terminus Installer PHAR
-
-To update the Composer-managed version of Terminus that was installed with the [Terminus Installer PHAR](/terminus/install#terminus-installer-phar), navigate to the directory where Terminus was originally installed, then run the following command:
-
-```bash{promptUser: user}
-curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
-```
-
-### Update Terminus Homebrew Installation
-
-If you used the [Homebrew installation](/terminus/install#homebrew-installation) installation, update to the newest version with the following command:
-
-```bash{promptUser: user}
-brew upgrade pantheon-systems/external/terminus
-```
-
-<Alert title="Note" type="info">
-
-Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test compatibility with existing configurations before upgrading to new major releases.
-
-</Alert>
-
-### PHP Version Compatibility Matrix
 
 <Partial file="terminus-guide/php.md" />
 
