@@ -1,15 +1,21 @@
 ---
-title: Environment-Specific Configuration for WordPress Sites
+title: Environment Configuration
+subtitle: Environment-Specific Configuration for WordPress Sites
 description: Learn how to turn WordPress site plugins on and off based on the environment they are running on.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow]
 reviewed: "2020-08-11"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/environment-configuration/environment-specific-config
+anchorid: environment-specific-config
 ---
 
 In order to improve the development and debugging processes, you might use settings and plugins in your Development environment that you do not use on Live.
 
-This doc shows how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
+This doc shows how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/guides/environment-configuration/read-environment-config). To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
 ## Define WP_DEBUG to Perform Actions Based on Environment
 
@@ -46,7 +52,7 @@ Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accord
 <?php
 /*
   Plugin Name: Site Config
-  Plugin URI: https://pantheon.io/docs/environment-specific-config
+  Plugin URI: https://pantheon.io/docs/guides/environment-configuration/environment-specific-config
   Description: Activates and deactivates plugins based on environment.
   Version: 0.1.1
   Author: Pantheon
@@ -127,6 +133,6 @@ It runs after the value is pulled from the database, providing the ability to ov
 
 ## More Resources
 
-- [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
 
-- [Reading Pantheon Environment Configuration](/read-environment-config)
+- [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

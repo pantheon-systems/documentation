@@ -1,11 +1,17 @@
 ---
-title: Reading Pantheon Environment Configuration
+title: Environment Configuration
+subtitle: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
 categories: [platform]
 tags: [code, database, files, redis]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/environment-configuration/read-environment-config
+anchorid: read-environment-config
 ---
 
-Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your site's code.
+You should never copy/paste credentials from your Dashboard into any of your site's code.
 
 Database credentials, [Object Cache](/object-cache)(Redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
@@ -279,10 +285,10 @@ You can use [Lockr](/guides/lockr) for maximum security. Lockr provides a simple
 
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
 
-- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
 
-- [Configuring Environment Indicators](/environment-indicator)
+- [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator)
 
 - [WordPress Security](/guides/wordpress-pantheon/wp-security)

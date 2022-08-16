@@ -1,8 +1,14 @@
 ---
-title: Restoring an Environment from a Backup
+title: Environment Configuration
+subtitle: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
 categories: [troubleshoot]
 tags: [backup, dashboard, git, webops, workflow]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/environment-configuration/restore-environment
+anchorid: restore-environment
 ---
 
 Each site environment's backups are located on the Backups tab for that environment in the Pantheon Dashboard.
@@ -15,7 +21,7 @@ We do not recommend directly restoring a Live environment from a backup; instead
 
 If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/guides/git/undo-commits) **before** attempting a site restore.
 
-If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp).
+If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/guides/environment-configuration/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp).
 
 ## Before you Begin the Restore Process
 
@@ -23,7 +29,7 @@ It is important that you and your team know that this is a **destructive** proce
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/guides/support/contact-support/).
 
-![Backup tool](../images/dashboard/backup-tool.png)
+![Backup tool](../../../images/dashboard/backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
@@ -35,13 +41,13 @@ For development environments (e.g., Dev and Multidevs), the **Restore** button i
 
 </Alert>
 
-![Backups and Restore Button](../images/dashboard/restore-button.png)
+![Backups and Restore Button](../../../images/dashboard/restore-button.png)
 
 ## Restore an Environment From Another Environment's Backup
 
 From within the source environment, find the backup you want to restore and click the download link for Database and Files:
 
-![Temporary backup link](../images/dashboard/direct-download-archive.png)
+![Temporary backup link](../../../images/dashboard/direct-download-archive.png)
 
 This provides a temporary private link directly from Google Cloud Storage, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
@@ -56,7 +62,7 @@ wget "https://storage.googleapis.com/gcs-pantheon-backups/..." -O output-file
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
-![Workflow Tab](../images/dashboard/workflow-tab.png)
+![Workflow Tab](../../../images/dashboard/workflow-tab.png)
 
 ### Restore Code
 
@@ -70,7 +76,7 @@ This method is recommended for distributed teams working collaboratively. To und
 
 1. Copy the commit ID:
 
- ![commit ID](../images/dashboard/commit-id.png)
+ ![commit ID](../../../images/dashboard/commit-id.png)
 
 1. Replace **ID** with the commit ID and run: `git revert ID --no-edit`
 
@@ -88,7 +94,7 @@ This is a destructive process. If you're not comfortable with this technique, us
 
 1. Copy the commit ID:
 
- ![commit ID](../images/dashboard/commit-id.png)
+ ![commit ID](../../../images/dashboard/commit-id.png)
 
 1. Replace **ID** with the commit ID you want to reset and run: `git reset ID --hard`
 

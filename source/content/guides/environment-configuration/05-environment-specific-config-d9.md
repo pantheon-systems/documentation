@@ -1,11 +1,17 @@
 ---
-title: Environment-Specific Configurations for Drupal 9
+title: Environment Configuration
+subtitle: Environment-Specific Configurations for Drupal 9
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal 9's configuration override system.
 cms: "Drupal 9"
 categories: [develop]
 tags: [workflow]
 contributors: [peter-pantheon, rachelwhitton]
+layout: guide
+showtoc: true
+permalink: docs/guides/environment-configuration/environment-specific-config-d9
+anchorid: environment-specific-config-d9
 ---
+
 The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev & Multidevs). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
 ## Enable Twig Debugging on Dev & Multidevs
@@ -167,6 +173,6 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
 ## More Resources
 
-- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Reading Pantheon Environment Configuration](/read-environment-config)
+- [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)
