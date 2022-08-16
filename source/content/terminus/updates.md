@@ -55,7 +55,7 @@ Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test 
 
 ### PHP Version Compatibility Matrix
 
-<Partial file="terminus/php.md" />
+<Partial file="terminus-guide/php.md" />
 
 ## Troubleshooting
 
@@ -77,6 +77,6 @@ The `self:update` command is only available for standalone Terminus installed us
 
 ## EOL Timeline
 
-<Partial file="terminus/eol.md" />
+<Partial file="terminus-guide/eol.md" />
 
 <Releases />

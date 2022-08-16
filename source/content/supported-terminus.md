@@ -6,7 +6,7 @@ tags: [libraries, updates]
 contributors: [wordsmither]
 ---
 
-<Partial file="terminus/eol.md" />
+<Partial file="terminus-guide/eol.md" />
 
 <Alert title="Note" type="info" >
 
@@ -16,5 +16,5 @@ Terminus 1.x and 0.x are EOL.
 
 ### PHP Version Compatibility Matrix
 
-<Partial file="terminus/php.md" />
+<Partial file="terminus-guide/php.md" />
 
