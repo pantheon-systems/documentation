@@ -7,8 +7,8 @@ tags: [backup, dashboard, git, webops, workflow]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/environment-configuration/restore-environment
-anchorid: restore-environment
+permalink: docs/guides/environment-configuration/restore-environment-backup
+anchorid: restore-environment-backup
 ---
 
 Each site environment's backups are located on the Backups tab for that environment in the Pantheon Dashboard.
