@@ -33,7 +33,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 
 ### All PHP Versions
 
-<Partial file="php-versions.md" />
+<Partial file="_php-versions.md" />
 
 ### CMS Version Requirements
 
