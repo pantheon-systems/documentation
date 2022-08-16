@@ -20,7 +20,9 @@ The following steps outline a method for adding a package from a private GitHub 
 
 For this procedure, a GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. To limit the scope of the GitHub token access, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages and ensure your site repository code is not published publicly. 
 
-1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) page and generate a new token. Ensure the `repo` scope is selected.
+1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) page and generate a new token. 
+
+1. Ensure that the `repo` scope is selected.
 
 1. Add the private GitHub repository to `composer.json`, replacing `<token>` with your newly generated token.
    ```json:title=composer.json
@@ -32,16 +34,16 @@ For this procedure, a GitHub token will be added to your code repository. It all
     ],
     ```
 
-1. Require the package and specify the branch, prefixed with `dev-`
+1. Run the command below to require the package and specify the branch, prefixed with `dev-`
    ```json:title=composer.json
     "require": {
         "mycompany/my-private-repo": "dev-branch-name"
     },
    ```
 
-1. Run `composer update` to install the new package.
+1. Run the `composer update` command to install the new package.
 
-1. Commit the updated composer files and add them to your environment only if the above command update works locally.
+1. Run the commands below to commit the updated Composer files and add them to your environment only if the above command update works locally.
 
    ```bash{promptUser: user
    git add composer.json composer.lock

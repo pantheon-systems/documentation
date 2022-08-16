@@ -24,7 +24,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 ### How to Add Dependencies to Your Upstream
 
-1. [Clone the Git repository](/guides/git/git-config#clone-your-site-codebase) from the Pantheon site's dashboard.
+1. [Clone the Git repository](/guides/git/git-config#clone-your-site-codebase) from the Site Dashboard.
 
 1. Change into the Upstream's configuration directory:
 
@@ -40,7 +40,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
     cd upstream-config 
     ```
 
-1. Run `composer require` for each dependency:
+1. Run the `composer require` command for each dependency:
 
     ```bash{promptUser: user}
     composer require drupal/pkg-name --no-update
@@ -49,7 +49,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
      - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
      - `--no-update` should not be included when adding dependencies to a site.
 
-1. _Optional_ : Set or increment the current configuration version. This step can be skipped initially. Only perform this step if you are prompted to update the Composer config version.
+1. _Optional_ . Set or increment the current configuration version. This step can be skipped initially. Only perform this step if you are prompted to update the Composer config version.
 
      - Confirm the version:
 
@@ -64,7 +64,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
        composer config version 1.0.1
        ```
 
-1. Commit and push.
+1. Commit and push your changes.
 
 ## More Resources
 
@@ -73,3 +73,5 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 
 - [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)

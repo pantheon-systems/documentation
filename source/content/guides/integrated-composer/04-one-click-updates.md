@@ -18,7 +18,7 @@ You can apply one-click updates in the Site Dashboard or with Terminus.
 
 ## Site Dashboard
 
-1. Navigate to **Code** in the **Dev** tab of the site's Dashboard.
+1. Navigate to the **Dev** tab of the Site Dashboard, and click **Code**.
 
 1. Click **Check Now**.
 

@@ -59,7 +59,7 @@ Pantheon's developers are working hard to make the Integrated Composer experienc
 
 Features that are still in development:
 
-- [Integrated Composer](/guides/integrated-composer)
+- [Integrated Composer](/guides/integrated-composer) improvements
 
 - [Build Tools](/guides/build-tools)
 

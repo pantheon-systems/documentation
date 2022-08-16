@@ -30,7 +30,7 @@ This sections provides information on how to add or remove individual site depen
     composer require drupal/pkg-name
    ```
 
-1. Commit `composer.json` and `composer.lock` and push.
+1. Commit `composer.json` and `composer.lock` and push the changes.
 
    - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. You can now deploy the changes from the updated Dev environment to the Test and Live environments.
 
@@ -41,7 +41,7 @@ This sections provides information on how to add or remove individual site depen
 
 You can remove site dependencies if they are no longer needed. You should use caution when removing individual site dependencies. You can cause problems with your site if you decide you no longer need a module but leave it installed, and then remove site dependencies.
 
-1. Clone the database from Live to all other environments before continuing.
+1. [Clone the database from Live](/guides/quickstart/clone-live-to-dev/) to all other environments before continuing.
 
 1. Ensure that all modules in the package have been uninstalled. You can uninstall modules in the Drupal admin dashboard, or from the command line with Terminus:
 
@@ -55,7 +55,7 @@ You can remove site dependencies if they are no longer needed. You should use ca
     composer remove drupal/pkg-name
    ```
 
-1. Commit `composer.json` and `composer.lock` and push.
+1. Commit `composer.json` and `composer.lock` and push the changes.
 
    - Pantheon will run Composer, generate build artifacts, etc.
 
