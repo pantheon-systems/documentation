@@ -49,7 +49,11 @@ Yes. If you have a [Supported Site Plan](#supported-site-plans), you can bring y
 
 - Your New Relic&reg; [Account ID](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id#finding)
 
-**Note:** Pantheon SSO cannot be used to sign in to New Relic&reg; for sites using their own license. You will not be able to sign in to New Relic directly from the Pantheon Dashboard.
+<Alert title="Note"  type="info" >
+
+Pantheon SSO cannot be used to sign in to New Relic&reg; for sites using their own license. You will not be able to sign in to New Relic directly from the Pantheon Dashboard.
+
+</Alert>
 
 ### Why are servers listed in New Relic&reg; with no data?
 
