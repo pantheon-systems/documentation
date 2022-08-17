@@ -21,8 +21,3 @@ This guide will show you how to migrate a site that meets the following criteria
 
 <Partial file="drupal-9/see-landing.md" />
 
-<Alert title="Note" type="info" >
-
-This upgrade will not maintain your site’s commit history.
-
-</Alert>
