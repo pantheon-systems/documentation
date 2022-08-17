@@ -1,7 +1,7 @@
 ---
 title: Incident Management
-subtitle: New Relic Ping Monitors
-description: Page two of our guide on Pagerduty integration with New Relic for incident management.
+subtitle: New Relic&reg; Ping Monitors
+description: Page two of our guide on Pagerduty integration with New Relic&reg; for incident management.
 layout: guide
 categories: [performance]
 tags: [logs, measure, newrelic, teams, webops]
@@ -11,7 +11,7 @@ permalink: docs/guides/pagerduty/monitor/
 editpath: pagerduty/02-monitors.md
 reviewed: "2020-08-18"
 ---
-In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic Synthetics.
+In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic&reg; Synthetics.
 
 ## Create a Monitor
 
@@ -37,11 +37,11 @@ In this lesson, we'll set up a new ping monitor to periodically check the site's
 
 1. We'll setup notifications in a [later lesson](/guides/pagerduty/notify) with PagerDuty.
 
-Pantheon can provide New Relic ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — is only available to customers on an annual contract and requires an additional cost. Contact our sales team or your dedicated account manager for details.
+Pantheon can provide New Relic&reg; ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — is only available to customers on an annual contract and requires an additional cost. Contact our sales team or your dedicated account manager for details.
 
 ## Configure Alert Policy
 
-Now that you have a monitor setup in New Relic to periodically check your Pantheon site, you'll need to configure alerts for downtime incidents:
+Now that you have a monitor setup in New Relic&reg; to periodically check your Pantheon site, you'll need to configure alerts for downtime incidents:
 
 1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic** then **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Go to New Relic**.
 
@@ -65,12 +65,12 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
 
 ## More Resources
 
-- [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
+- [Monitor and Improve Site Performance with New Relic&reg;](/guides/new-relic/monitor-new-relic)
 
-- [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
 - [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 
-- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+- [Troubleshooting WordPress Performance with New Relic&reg;](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
-- [New Relic FAQ](/guides/new-relic/new-relic-faq)
+- [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)
