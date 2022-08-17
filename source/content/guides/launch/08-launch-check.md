@@ -4,7 +4,6 @@ subtitle: Pre-launch Configuration
 description: Complete important configuration before launching your site.
 anchorid: launch-check
 layout: guide
-showtoc: true
 categories: [go-live]
 tags: [backup, launch, webops]
 showtoc: true
