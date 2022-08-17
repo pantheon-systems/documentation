@@ -67,7 +67,7 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
 
 - [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
 
--  [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
 - [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 
