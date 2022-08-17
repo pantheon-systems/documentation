@@ -61,17 +61,17 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 ### Can I disable New Relic&reg; for a specific environment?
 
-We don't recommend turning off New Relic&reg; for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic&reg; Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+We don't recommend turning off New Relic&reg; for any one environment, as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic&reg; Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
 ### Can I use the New Relic&reg; One Logs feature?
 
 New Relic&reg; Performance Monitoring logs are available at `/logs/newrelic.log`. The New Relic&reg; provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic&reg;'s left-side menu.
 
-See [Log Files on Pantheon](/logs) for more information on accessing your logs.
+Refer to [Log Files on Pantheon](/logs) for more information on accessing your logs.
 
 ## More Resources
 
--  [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
 - [Troubleshoot New Relic&reg;](/guides/new-relic/troubleshoot-new-relic)
 
