@@ -47,7 +47,7 @@ If you encounter an error during a code sync or if the site is missing files tha
 
 1. Navigate to **Code** in the **Dev** tab of your Site Dashboard.
 
-1. Navigate to the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
+1. Navigate to the **Commit Log** section, find the most recent commit, and click **View Log** to view the Composer command that was run and the output that was given by that command.
 
 ### Dashboard Workflow Shows an Error During Sync Code or Deploying to a New Environment
 
@@ -59,7 +59,7 @@ To resolve this issue, examine the error in the log. It may be a syntax or parse
 
 You must manually allow any plugin that acts on the code base of your site in your  `composer.json` file. This is a Composer 2.2 requirement introduced on July 1, 2022 that provides an additional layer of security. Sites that were working previously will have builds that fail because of this new requirement. Failed builds can arise as a broken environment or as unreflected code changes after a commit.
 
-Read more about this security requirement in [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
+Read more about this security requirement in [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins).
 
 You might see one of the following issues:
 
@@ -190,7 +190,7 @@ When **Auto-Resolve Updates** is selected and the `composer.json` contents are c
 
 There are two potential solutions to resolve this issue: 
 
-- If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
+- If you have a copy of the `composer.json` file from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
 - Remove the upstream updates by [undoing the commits](/guides/git/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
 
@@ -204,7 +204,7 @@ When using Pantheon's Integrated Composer, this plugin often tries to run a `com
 
 If your site contains a binary patch, such as https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the Composer build step will fail. This is because [cweagans/composer-patches](https://github.com/cweagans/composer-patches) use the patch utility to apply patches. The most recent version of this utility does not support binary patches and fails when deployed.
 
-A workaround for this issue, is to reconfigure the patch to exclude the binary contents in it.
+A workaround for this issue is to reconfigure the patch to exclude the binary contents in it.
 
 <Partial file="configure-wp-site-networks-with-integrated-composer.md" />
 
