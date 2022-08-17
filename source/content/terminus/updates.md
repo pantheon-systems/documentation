@@ -33,7 +33,7 @@ Note that the `self:update` command is only available for the standalone Terminu
 
 ## Update Terminus Installer PHAR
 
-To update the Composer-managed version of Terminus that was installed with the [Terminus Installer PHAR](/terminus/install#terminus-installer-phar), navigate to the directory where Terminus was originally installed, then run the follwoing command:
+To update the Composer-managed version of Terminus that was installed with the [Terminus Installer PHAR](/terminus/install#terminus-installer-phar), navigate to the directory where Terminus was originally installed, then run the following command:
 
 ```bash{promptUser: user}
 curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
@@ -43,27 +43,25 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
 
 If you used the [Homebrew installation](/terminus/install#homebrew-installation) installation, update to the newest version with the following command:
 
-```bash
+```bash{promptUser: user}
 brew upgrade pantheon-systems/external/terminus
 ```
 
-<Alert title="Note" type={"info"}>
+<Alert title="Note" type="info">
 
-Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully
-test compatibility with existing configurations before upgrading to new major
-releases.
+Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test compatibility with existing configurations before upgrading to new major releases.
 
 </Alert>
 
 ### PHP Version Compatibility Matrix
 
-<Partial file="terminus/php.md" />
+<Partial file="terminus-guide/php.md" />
 
 ## Troubleshooting
 
 ### Nothing to install or update
 
-For Composer-managed Terminus installations, if the update command above returns an output that indicates no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the following install command:
+For Composer-managed Terminus installations, if the update command above returns an output that indicates no updates were found, delete the existing Terminus version (e.g. `$HOME/terminus`) and re-run the following install command:
 
 ```bash{promptUser: user}
 rm -rf $HOME/terminus
@@ -79,8 +77,6 @@ The `self:update` command is only available for standalone Terminus installed us
 
 ## EOL Timeline
 
-<Partial file="terminus/eol.md" />
-
-
+<Partial file="terminus-guide/eol.md" />
 
 <Releases />

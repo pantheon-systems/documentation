@@ -1,7 +1,7 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site
 subtitle: Support
-description: Information on what supported is available for Pantheon Decoupled.
+description: Information on what supported is available for Pantheon Front-End Site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -29,7 +29,7 @@ Technical Support covers issues related to the following:
 * During customer outages that cannot be resolved by the customers or CSE, escalation to on-call engineers
 
 
-Technical Support for Pantheon Decoupled does not include the following:
+Technical Support for Pantheon Front-End Site does not include the following:
 
 * Debugging custom applications and code
 * Customization of solutions, templates, or tools; including unsupported software functionality.
@@ -40,3 +40,5 @@ Technical Support for Pantheon Decoupled does not include the following:
 ### How do I File a Bug or Get Support?
 
 Pantheon has a limited scope of support for early access products. For assistance with your decoupled site you can email helpdesk@pantheon.io. You will receive a response within one business day.
+
+Visit [Pantheors Office Hours](https://pantheon.io/developers/office-hours) to ask questions about decoupled architecture and get help with Front-End Site.

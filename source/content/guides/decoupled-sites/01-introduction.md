@@ -1,10 +1,10 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site 
 subtitle: Introduction
-description: Learn about Pantheon Decoupled 
+description: Learn about Pantheon's decoupled architecture using Front-End Site
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-Pantheon Decoupled is available for Early Access participants. Features for Pantheon Decoupled are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. To learn how you can enroll in our Early Access program, visit https://pantheon.io/features/decoupled-cms.
+Pantheon Front-End Site is available for Early Access participants. Features for Pantheon Front-End Site are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. To learn how you can enroll in our Early Access program, visit https://pantheon.io/features/decoupled-cms.
 
 </Alert>
 
@@ -31,18 +31,18 @@ Decoupling is the process of separating the content system or services. By decou
 
 Decoupled Architecture is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks tailored to their areas of expertise. For example, Frontend Developers can use modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic systems like WordPress and Drupal.
 
-## What is Pantheon Decoupled?
+## What is Front-End Site?
 
-Pantheon Decoupled provides users with tools that improve the experience of building a decoupled frontend that sources data from a CMS backend. 
+Pantheon Front-End Site provides users with tools that improve the experience of building a decoupled frontend that sources data from a CMS backend. 
 
 With decoupled sites, a CMS site can be linked to a single decoupled site, multiple sites, or the user does not need a CMS at all and can link directly to a frontend application.
 
-Pantheon Decoupled allows you to connect to your Git repository and deploy a site with Gatsby, Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or start with a clean set up and connect it to an existing repository. 
+Front-End Site allows you to connect to your Git repository and deploy a site with Gatsby, Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or start with a clean set up and connect it to an existing repository. 
 
 
-### Pantheon Decoupled Terminology
+### Decoupled Terminology
 
-<Accordion title="Terms to know for Pantheon Decoupled" id="terms-decoupled" icon="info-sign">
+<Accordion title="Terms to know for Pantheon Front-End Site" id="terms-decoupled" icon="info-sign">
 
 #### CMS  
 In the context of our Decoupled Product, a CMS Site is a Content Management System configured to work with decoupled sites.
@@ -76,15 +76,15 @@ Server-side Rendering is a content rendering method in which each web page is se
 
 ### Site Options
 
-With Pantheon Decoupled you can create sites from server-side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Decoupled Early Access offering:
+With Pantheon Front-End Site you can create sites from server-side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Front-End Site Early Access offering:
 
 * **Import Repository**: Connect your Git provider and select an existing repository. The CMS is optional for this configuration. Limited support is provided for this configuration.
 * **Gatsby and Wordpress**: Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS. This configuration uses static site generation.
 * **Next.js and Drupal**: Create a decoupled site using a base Next.js frontend template with Drupal as the CMS. This configuration uses the static site rendering method. 
 
-Currently, Pantheon Decoupled does not support SSR using Gatsby. Support for SSG with Next.js is available. 
+Currently, Pantheon Front-End Site does not support SSR using Gatsby. Support for SSG with Next.js is available. 
 
-Other permutations for site development using Pantheon Decoupled can be used, but are not supported and currently not recommended. 
+Other permutations for site development using Front-End Site can be used, but are not supported and currently not recommended. 
 
 
 ### Create a Decoupled Site with Pantheon
@@ -105,7 +105,7 @@ You can build a decoupled site on Pantheon using several methods. The decoupled 
   1. Push changes to trigger a site build.
 
 
-### Pantheon Decoupled Starters Kits
+### Pantheon Front-End Site Starters Kits
 
 Pantheon offers recommended decoupled starter kit templates that are preconfigured, and include the following:
 
@@ -116,3 +116,16 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 * A live preview of content from your CMS backend rendered in your frontend application.
 
 * A development environment that supports communication between backend and frontend services.
+
+
+## See Also 
+
+- [Introducing Front-End Sites](https://pantheon.io/blog/introducing-front-end-sites-pantheon-dashboard)
+
+- [Use an Empty Upstream to Host a Static Site on Pantheon](https://pantheon.io/docs/static-site-empty-upstream)
+
+- [How Decoupled Architectures Can Benefit the Entire Web Team, and Drive User Engagement](https://pantheon.io/blog/decoupled-architectures-can-benefit-every-member-of-web-team)
+
+- [Drupal: Sometimes Headless, Never Heartless](https://pantheon.io/blog/drupal-sometimes-headless-never-heartless)
+
+- [Headless Websites: What's the Big Deal with Decoupled Architecture?](https://pantheon.io/blog/headless-websites-whats-big-deal-decoupled-architecture)

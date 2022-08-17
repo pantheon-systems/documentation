@@ -32,4 +32,4 @@ Drupal 9.2.x will receive security coverage until June 15, 2022. Sites on 9.1.x 
 
 [Pantheon Disaster Recovery Playbook](/guides/disaster-recovery) - Address and troubleshoot emergency downtime situations on the Pantheon platform. The guide focuses on the immediate actions a Pantheon customer should take in the event of a catastrophic site failure. 
 
-[Using Solr 8 on Drupal 9](/guides/solr-drupal/solr-drupal-9) - Pantheon Search with Solr 8 is currently available as part of our Early Access program. Pantheon Search derives from Apache Solr v8.8 and gives Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) easy one-click updates.
+[Using Solr 8 on Drupal 9](/guides/solr-drupal/solr-drupal-9) - Pantheon Search with Solr 8 is currently available as part of our Early Access program. Pantheon Search derives from Apache Solr v8.8 and gives Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer/one-click-updates) easy one-click updates.
