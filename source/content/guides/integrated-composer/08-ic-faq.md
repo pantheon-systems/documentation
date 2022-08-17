@@ -49,7 +49,7 @@ We recommend upgrading to the [Drupal Composer Managed Project](https://github.c
 
 <Alert title="Note"  type="info" >
 
-All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file as this can create a conflict that causes Integrated Composer to fail.
+All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file, as this can create a conflict that causes Integrated Composer to fail.
 
 </Alert>
 
