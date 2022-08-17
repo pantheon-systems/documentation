@@ -1,7 +1,7 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site
 subtitle: Support
-description: Information on what supported is available for Pantheon Decoupled.
+description: Information on what supported is available for Pantheon Front-End Site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -29,7 +29,7 @@ Technical Support covers issues related to the following:
 * During customer outages that cannot be resolved by the customers or CSE, escalation to on-call engineers
 
 
-Technical Support for Pantheon Decoupled does not include the following:
+Technical Support for Pantheon Front-End Site does not include the following:
 
 * Debugging custom applications and code
 * Customization of solutions, templates, or tools; including unsupported software functionality.

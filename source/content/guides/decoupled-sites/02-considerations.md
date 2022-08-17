@@ -1,7 +1,7 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site
 subtitle: Considerations
-description: Components needed to get started with Pantheon Decoupled.
+description: Components needed to get started with Front-End Site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan]
@@ -14,19 +14,19 @@ editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
 ---
 
-Ensure your system has the correct components to use Pantheon Decoupled. 
+Ensure your system has the correct components to use Pantheon Front-End Site. 
 
-## Components for Pantheon Decoupled
+## Components for Pantheon Front-End Site
 
 ### General Requirements
 
-* You have Pantheon Decoupled enabled in your dashboard.
+* You have the decoupled offering enabled in your dashboard.
 * You are using [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
   * Other IDEs can be used, but our project ships with suggested plugins and example settings for VSCode.
 
 ### Backend Requirements
 
-The following components are needed to configure your backend, especially if using the starter kits for Pantheon Decoupled: 
+The following components are needed to configure your backend, especially if using the starter kits for Pantheon Front-End Site: 
 
 * Lando: An open source, cross-platform, local development environment and DevOps tool built on Docker container technology. 
      * Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.
@@ -34,11 +34,11 @@ The following components are needed to configure your backend, especially if usi
 * The following tools are included in the [Lando VM](https://docs.lando.dev/getting-started/installation.html), but can be useful to have installed for use without Lando:
      * [PHP](https://www.php.net/) - An open-source, server-side programming language that can be used to create websites, applications, and more. It is a widely-used language that can be embedded in HTML. Install using Homebrew on Mac to not conflict with the PHP version that comes with your operating system.
      * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
-     * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for Pantheon Decoupled.
+     * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for Front-End Site.
 
 ### Frontend Requirements
 
-The following components are needed to configure your frontend for Pantheon Decoupled: 
+The following components are needed to configure your frontend for the decoupled offering: 
  
 * [Node.js](https://nodejs.org/en/)
   * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
@@ -46,7 +46,7 @@ The following components are needed to configure your frontend for Pantheon Deco
 
 ## Before You Use the Decoupled Starter Kit
 
-To create and configure a new decoupled project using a Pantheon Decoupled starter kit, the following components are required:
+To create and configure a new decoupled project using a Front-End Site starter kit, the following components are required:
 
 * Install [Composer](https://getcomposer.org/download/) globally.
   * Composer is required for the CMS backends.
@@ -64,6 +64,6 @@ To create and configure a new decoupled project using a Pantheon Decoupled start
     * [Generate a machine token](/machine-tokens#create-a-machine-token).
     * [Authenticate the token into Terminus](/machine-tokens#authenticate-into-terminus).
 
-* Create [Github Personal access tokens](https://github.com/settings/tokens).
+* Create [GitHub Personal Access Tokens](https://github.com/settings/tokens).
 
 * Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens).

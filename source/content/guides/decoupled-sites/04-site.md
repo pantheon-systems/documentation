@@ -1,5 +1,5 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site
 subtitle: Site Creation
 description: Configure the frontend and create a site.
 categories: [platform]
@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 ## Before You Begin
 
-You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin using Pantheon Decoupled, ensure you meet the following prerequisites:
+You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin using Front-End Site, ensure you meet the following prerequisites:
 
 * Your site repository is in GitHub.
 
@@ -57,7 +57,7 @@ The versions that are supported are as follows:
 
 ## Site Setup
 
-Pantheon Decoupled is available in the New Dashboard, after it is enabled during the customer onboarding process. To access Pantheon Decoupled and start developing the frontend application, perform the following steps:
+Front-End Site is available in the New Dashboard, after it is enabled during the customer onboarding process. To access Front-End Site and start developing the frontend application, perform the following steps:
 
 1. Log in to your Pantheon Dashboard and navigate to the **Sites** page.
 
