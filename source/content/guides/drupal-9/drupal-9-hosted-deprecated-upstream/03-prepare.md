@@ -14,7 +14,7 @@ editpath: drupal-9/drupal-9-hosted-deprecated-upstream/03-prepare.md
 reviewed: "2021-03-31"
 ---
 
-This page provides steps on preparing your site for migration to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
+This page provides steps on preparing your site for migration to [Drupal with Composer Upstream](/guides/integrated-composer).
 
 ## Use Terminus to Confirm the Drupal 9 Upstream
 

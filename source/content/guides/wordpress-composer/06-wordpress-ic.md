@@ -63,11 +63,11 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
     - [Add a Dependency to an Individual Site](/guides/integrated-composer#add-a-dependency-to-an-individual-site)
 
-    - [Add a Package from a Private Repository](/guides/integrated-composer#add-a-package-from-a-private-repository)
+    - [Add a Package from a Private Repository](/guides/integrated-composer/private-repo-package)
 
-    - [Apply One-click Updates](/guides/integrated-composer#apply-one-click-updates)
+    - [Apply One-click Updates](/guides/integrated-composer/one-click-updates)
 
-    - [Add dependencies to your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
+    - [Add dependencies to your Upstream](/guides/integrated-composer/ic-upstreams)
 
 1. Review the [Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) documentation to learn how to:
 
