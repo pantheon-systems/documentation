@@ -4,7 +4,7 @@ description: Determine and address the causes of unexpected traffic
 categories: [troubleshoot]
 tags: [billing, logs, measure, traffic]
 contributors: [edwardangert]
-reviewed: "2022-02-15"
+reviewed: "2022-08-09"
 ---
 
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
@@ -33,7 +33,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
 1. Add a [honeypot](https://wordpress.org/plugins/search/honeypot/) plugin to attract and ban bad bots.
 
-1. [Restrict Access to Paths Based on IP](/advanced-redirects#restrict-access-to-paths-based-on-ip).
+1. [Restrict Access to Paths Based on IP](/guides/redirect/advanced#restrict-access-to-paths-based-on-ip).
 
 ## Configure favicon.ico to Serve a Static Image
 
@@ -200,4 +200,4 @@ Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#pro
 
 ## Advanced Protection and Performance With Advanced Global CDN
 
-[Advanced Global CDN](/guides/professional-services/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DoS attempts.
+[Advanced Global CDN](/guides/agcdn) (AGCDN) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). AGCDN provides an additional layer of protection against DoS attempts. [AGCDN with WAF / IO](/guides/agcdn/agcdn-wafio) provides Web Application Firewall (WAF), Image Optimization (IO), and Rate Limiting.

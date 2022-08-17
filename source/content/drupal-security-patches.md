@@ -71,7 +71,7 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
 1. Add `patch` to your `composer.json` file:
 
-    ```bash 
+    ```json:title=composer.json
     {
     "require": {
       "cweagans/composer-patches": "~1.0",
@@ -83,7 +83,7 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
 1. Add an `extras` section inside your `composer.json` file:
 
-    ```bassh
+    ```json:title=composer.json
     "extra": {
       "patches-file": "local/path/to/your/composer.patches.json"
     }

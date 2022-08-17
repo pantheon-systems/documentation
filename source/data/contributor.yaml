@@ -19,11 +19,11 @@
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
-- id: joa-pan
+- id: 
   name: Joanie Edwards
-  avatar: //github.com/joa-pan.png?size=460
+  avatar: //github.com/.png?size=460
   bio: Senior Technical Writer, Pantheon
-  github: //github.com/joa-pan
+  github: //github.com/
   drupal: https://www.drupal.org/u/_joan
 - id: wordsmither
   name: Jennifer Hoffman
@@ -165,6 +165,11 @@
   twitter: https://twitter.com/masonjames
   url: https://www.valet.io/
   bio: CEO | Founder of WP Valet
+- id: hckia
+  name: Cyrus Kia
+  avatar: //avatars.githubusercontent.com/u/7597686?v=4
+  github: //github.com/hckia
+  bio: Customer Success Engineer, Pantheon
 - id: fatimask
   name: Fatima Sarah Khalid
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/fatima.jpg
@@ -301,6 +306,11 @@
   twitter: https://twitter.com/davidneedham
   drupal: //www.drupal.org/u/davidneedham
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David%20Needham.png
+- id: backlineint
+  name: Brian Perry
+  avatar: //avatars.githubusercontent.com/u/889478?v=4
+  github: //github.com/backlineint
+  bio: Senior Software Engineer, Pantheon
 - id: stevector
   name: Steve Persch
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Steve%20Persch%20Headshot.jpg
@@ -362,6 +372,11 @@
   github: //github.com/eeeschwartz/
   linkedin: //www.linkedin.com/in/eeeschwartz
   bio: Civic developer, human centered!
+- id: cobypear
+  name: Coby Sher
+  avatar: //avatars.githubusercontent.com/cobypear
+  github: //github.com/CobyPear
+  bio: Software Engineer, Pantheon
 - id: jspellman814
   name: John Spellman
   avatar: //github.com/jspellman814.png?size=460
