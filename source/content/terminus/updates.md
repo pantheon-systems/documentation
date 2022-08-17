@@ -79,4 +79,6 @@ The `self:update` command is only available for standalone Terminus installed us
 
 <Partial file="terminus-guide/eol.md" />
 
+## Changelog
+
 <Releases />
