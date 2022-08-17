@@ -1,7 +1,7 @@
 ---
-title: New Relic Performance Monitoring on Pantheon
+title: New Relic&reg; Performance Monitoring on Pantheon
 subtitle: Monitor and Improve Site Performance
-description: Learn how to use New Relic to monitor and improve site performance.
+description: Learn how to use New Relic&reg; to monitor and improve site performance.
 categories: [performance]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith]
@@ -11,11 +11,11 @@ permalink: docs/guides/new-relic/monitor-new-relic
 anchorid: monitor-new-relic
 ---
 
-This section provides information on how to monitor and improve site performance with New Relic.
+This section provides information on how to monitor and improve site performance with New Relic&reg;.
 
 ## Monitor and Improve Performance
 
-New Relic's Dashboard opens with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
+New Relic&reg;'s Dashboard opens with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
 
 1. PHP Execution
 
@@ -25,9 +25,9 @@ New Relic's Dashboard opens with a high-level breakdown of application performan
 
 Depending on which area you need to optimize, you will explore different areas of data. For instance, a lot of [time spent in the database](/guides/new-relic/debug-mysql-new-relic) could be the result of slow queries, or an elevated volume of queries overall.
 
-For more information on using New Relic's features, we encourage you to review the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
+For more information on using New Relic&reg;'s features, we encourage you to review the [New Relic&reg; APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic&reg; to investigate specific areas of performance below:
 
-- [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
+- [Measuring PHP7 Performance with New Relic&reg;](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
 
 - [MySQL Troubleshooting With New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
@@ -37,11 +37,11 @@ For more information on using New Relic's features, we encourage you to review t
 
 ## Focus on Authenticated Users Only
 
-It can be useful to exclude anonymous users who are using your site's page cache if your site consists of mostly authenticated traffic. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.
+It can be useful to exclude anonymous users who are using your site's page cache if your site consists of mostly authenticated traffic. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic&reg; on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.
 
 ### Drupal
 
-To disable New Relic for anonymous traffic on Drupal-based sites, add the following code to your `sites/default/settings.php`:
+To disable New Relic&reg; for anonymous traffic on Drupal-based sites, add the following code to your `sites/default/settings.php`:
 
 ```php:title=settings.php
 // Disable New Relic for anonymous users.
@@ -66,7 +66,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 ### WordPress
 
-To disable New Relic for anonymous traffic on WordPress sites, add the following code to your `templates/<your_template>/functions.php`:
+To disable New Relic&reg; for anonymous traffic on WordPress sites, add the following code to your `templates/<your_template>/functions.php`:
 
 ```php:title=functions.php
 // Disable New Relic for anonymous users.
@@ -89,8 +89,8 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 ## More Resources
 
-- [New Relic Ping Monitors](/guides/pagerduty/monitor/)
+- [New Relic&reg; Ping Monitors](/guides/pagerduty/monitor/)
 
-- [New Relic Labeling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
+- [New Relic&reg; Labeling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
 
-- [New Relic FAQ](/guides/new-relic/new-relic-faq)
+- [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)
