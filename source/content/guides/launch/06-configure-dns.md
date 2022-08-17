@@ -5,7 +5,7 @@ description: Configure your DNS records and provision HTTPS.
 anchorid: configure-dns
 categories: [go-live]
 tags: [dns, https, launch, webops]
-type: guide
+layout: guide
 showtoc: true
 permalink: docs/guides/launch/configure-dns/
 ---

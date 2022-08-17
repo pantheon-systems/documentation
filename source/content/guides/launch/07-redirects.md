@@ -5,7 +5,7 @@ description: Redirect users to the correct domains and paths for your site.
 anchorid: redirects
 categories: [go-live]
 tags: [dns, https, launch, webops]
-type: guide
+layout: guide
 showtoc: true
 permalink: docs/guides/launch/redirects
 ---
