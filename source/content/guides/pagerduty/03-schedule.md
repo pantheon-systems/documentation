@@ -1,7 +1,7 @@
 ---
 title: Incident Management
 subtitle: PagerDuty Schedule
-description: Page three of our guide on Pagerduty integration with New Relic for incident management.
+description: Page three of our guide on Pagerduty integration with New Relic&reg; for incident management.
 pagerduty: true
 anchorid: schedule
 generator: pagination
@@ -90,8 +90,8 @@ When an incident is created, PagerDuty uses an escalation policy to determine wh
 
 # More Resources
 
-- [Monitor and Improve Site Performance with New Relic](/guides/new-relic/monitor-new-relic)
+- [Monitor and Improve Site Performance with New Relic&reg;](/guides/new-relic/monitor-new-relic)
 
-- [Integrate Your Fastly Account with New Relic](/guides/fastly-pantheon/fastly-new-relic)
+- [Integrate Your Fastly Account with New Relic&reg;](/guides/fastly-pantheon/fastly-new-relic)
 
-- [New Relic FAQ](/guides/new-relic/new-relic-faq)
+- [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)
