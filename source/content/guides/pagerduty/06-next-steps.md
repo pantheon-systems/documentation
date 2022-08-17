@@ -1,7 +1,7 @@
 ---
 title: Incident Management
 subtitle: Next Steps
-description: Page six of our guide on Pagerduty integration with New Relic for incident management.
+description: Page six of our guide on Pagerduty integration with New Relic&reg; for incident management.
 survey: true
 pagerduty: true
 anchorid: next-steps
@@ -26,12 +26,12 @@ But this is just the tip of the iceberg. Checkout more [PagerDuty integrations](
 
 ## More Resources
 
-- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
+- [New Relic&reg; Performance Monitoring on Pantheon](/guides/new-relic)
 
-- [New Relic FAQ](/guides/new-relic/new-relic-faq)
+- [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)
 
--  [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
-- [Troubleshoot New Relic](/guides/new-relic/troubleshoot-new-relic)
+- [Troubleshoot New Relic&reg;](/guides/new-relic/troubleshoot-new-relic)
 
-- [Integrate Your Fastly Account with New Relic](/guides/fastly-pantheon/fastly-new-relic)
+- [Integrate Your Fastly Account with New Relic&reg;](/guides/fastly-pantheon/fastly-new-relic)
