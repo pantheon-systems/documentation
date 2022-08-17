@@ -7,7 +7,6 @@ layout: guide
 showtoc: true
 categories: [go-live]
 tags: [backup, launch, webops]
-showtoc: true
 permalink: docs/guides/launch/launch-check/
 ---
 
