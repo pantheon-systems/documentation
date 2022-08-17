@@ -4,7 +4,7 @@ We support WordPress Multisites with subdirectories. However, if you are working
 
 <Alert title="Note"  type="info" >
 
-The solution outlined below has worked for select customers, and might not work for your specific configuration / environment.
+While the solution outlined below has worked for select customers, it might not work for your specific configuration / environment.
 
 </Alert>
 
