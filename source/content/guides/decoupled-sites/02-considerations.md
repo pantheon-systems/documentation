@@ -14,7 +14,7 @@ editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
 ---
 
-Ensure your system has the correct components to use Pantheon Front-End Site. 
+Ensure your system has the correct components to use Pantheon Front-End Site.
 
 ## Components for Pantheon Front-End Site
 
