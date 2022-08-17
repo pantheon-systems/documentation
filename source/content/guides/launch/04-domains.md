@@ -2,14 +2,12 @@
 title: Launch Essentials
 subtitle: Connect a Domain Name
 description: Learn how to connect your domain to your Pantheon-hosted site.
-launch: true
+
 anchorid: domains
-generator: pagination
 layout: guide
 categories: [go-live]
 tags: [dns, https, launch, webops]
 permalink: docs/guides/launch/domains/
-image: getting-started-Largethumb
 ---
 
 This section provides information on how to connect a bare domain and `www` domain to Pantheon's Live environment.

@@ -6,7 +6,9 @@ categories: [go-live]
 tags: [collaborate, launch, site, webops, workflow]
 contributors: [whitneymeredith]
 layout: guide
-image: getting-started-Largethumb
+showtoc: true
+permalink: docs/guides/launch/
+anchorid: launch
 ---
 
 Pantheon is a WebOps platform for open-source Drupal and WordPress sites that makes it easy to design, build, test, and measure your sites. WebOps combines the lessons of Agile and DevOps communities to prioritize iterative work that is visible to all team members. You can quickly deploy different versions of the same site on your Test environment, Live environment, and backup servers.

@@ -3,11 +3,11 @@ title: Launch Essentials
 subtitle: Select Your Site Plan
 description: Select the right site plan to cover your needs.
 layout: guide
+showtoc: true
 categories: [go-live]
 tags: [agencies, billing, launch, webops]
 anchorid: plans
 permalink: docs/guides/launch/plans/
-image: getting-started-Largethumb
 ---
 
 This section provides information on how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.

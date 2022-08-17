@@ -7,10 +7,7 @@ layout: guide
 showtoc: true
 categories: [go-live]
 tags: [backup, launch, webops]
-type: guide
 permalink: docs/guides/launch/launch-check/
-editpath: launch/07-launch-check.md
-image: getting-started-Largethumb
 ---
 
 This section provides information on how to enable backups, test your email plugin or module, review status reports, and test your cache.

@@ -9,7 +9,6 @@ categories: [go-live]
 tags: [backup, launch, webops]
 contributors: [whitneymeredith]
 permalink: docs/guides/launch/advanced-curls/
-image: getting-started-Largethumb
 ---
 
 This section provides information on how to use cURL commands during the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 
