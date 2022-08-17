@@ -12,6 +12,8 @@ reviewed: "2021-10-23"
 
 In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
 
+During this process, you will be creating a new branch based on the git history of the new upstream.  You'll then re-add the contrib and custom code for your site to the new branch, and test it on a Multidev environment.  Once everything is working correctly in the Multidev environment, you'll deploy the changes to the Dev environment by replacing your site's master branch with the new branch you've built.  Finally, after testing and confirming everything looks good, you'll use Terminus to switch the site over to the new upstream.
+
 <Partial file="drupal-9/see-landing.md" />
 
 ## Overview
