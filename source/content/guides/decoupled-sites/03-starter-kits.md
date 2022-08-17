@@ -1,10 +1,10 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site
 subtitle: Starter Kits
 description: Use a Pantheon starter kit to configure a decoupled site backend.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true

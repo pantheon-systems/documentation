@@ -1,10 +1,10 @@
 ---
-title: Pantheon Decoupled
+title: Pantheon Front-End Site
 subtitle: Site Creation
 description: Configure the frontend and create a site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 ## Before You Begin
 
-You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin using Pantheon Decoupled, ensure you meet the following prerequisites:
+You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin using Front-End Site, ensure you meet the following prerequisites:
 
 * Your site repository is in GitHub.
 
@@ -57,7 +57,7 @@ The versions that are supported are as follows:
 
 ## Site Setup
 
-Pantheon Decoupled is available in the New Dashboard, after it is enabled during the customer onboarding process. To access Pantheon Decoupled and start developing the frontend application, perform the following steps:
+Front-End Site is available in the New Dashboard, after it is enabled during the customer onboarding process. To access Front-End Site and start developing the frontend application, perform the following steps:
 
 1. Log in to your Pantheon Dashboard and navigate to the **Sites** page.
 
@@ -116,7 +116,7 @@ Create a site with out configuring the backend and link to a frontend framework.
 
 1. (Optional) Link your CMS.
 
-    > NOTE: If you are using a specified CMS, you can link your CMS backend and the site environment from which to source content. However, this is more applicable when using the Decoupled starter kit templates.
+    > **NOTE**: If you are using a specified CMS, you can link your CMS backend and the site environment from which to source content. However, this is more applicable when using the Decoupled starter kit templates.
 
 1. Ensure **Make this a private repository** is selected.
 
