@@ -1,5 +1,5 @@
 ---
-title: Pantheon Front-End Site
+title: Pantheon Front-End Sites
 subtitle: Site Creation
 description: Configure the frontend and create a site.
 categories: [platform]
@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 ## Before You Begin
 
-You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin using Front-End Site, ensure you meet the following prerequisites:
+You should have the **Decoupled** tab enabled in your dashboard after onboarding. To begin creating a Front-End Site, ensure you meet the following prerequisites:
 
 * Your site repository is in GitHub.
 
@@ -57,7 +57,7 @@ The versions that are supported are as follows:
 
 ## Site Setup
 
-Front-End Site is available in the New Dashboard, after it is enabled during the customer onboarding process. To access Front-End Site and start developing the frontend application, perform the following steps:
+Front-End Site is available in the New Dashboard, after it is enabled during the customer onboarding process. To access the Front-End Site decoupled architecture and start developing the frontend application, perform the following steps:
 
 1. Log in to your Pantheon Dashboard and navigate to the **Sites** page.
 
@@ -139,7 +139,7 @@ You are directed to a new page with the site name, deployment, and build informa
 * You are using a Git repository and the repository is already connected.
 * You are using Drupal as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
 
-#### Site Creation with Drupal and Next.js Starter Kit Template
+#### Site Creation with Drupal and Next.js Starter Kit Template Configuration
 
 1. After clicking the **Drupal and Next.js** option, select a repo listed under **Choose your Git provider**. Click **Continue**.
 
@@ -164,7 +164,7 @@ You are directed to a new page with the site name, deployment, and build informa
 
 * You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` plugin enabled.
 
-#### Site Creation with WordPress and Gatsby Starter Kit Template
+#### Site Creation with WordPress and Gatsby Starter Kit Template Connfiguration
 
 1. Click the **Gatsby + WordPress** template and select a Git provider listed under **Choose your Git provider**. Click **Continue**.
 

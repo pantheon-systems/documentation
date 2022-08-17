@@ -1,5 +1,5 @@
 ---
-title: Pantheon Front-End Site
+title: Pantheon Front-End Sites
 subtitle: Starter Kits
 description: Use a Pantheon starter kit to configure a decoupled site backend.
 categories: [platform]
