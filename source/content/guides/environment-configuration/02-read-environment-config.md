@@ -11,7 +11,9 @@ permalink: docs/guides/environment-configuration/read-environment-config
 anchorid: read-environment-config
 ---
 
-You should never copy/paste credentials from your Dashboard into any of your site's code.
+This section provides information on how to use database credentials for Object Cache(Redis) authentication.
+
+You should never copy and paste credentials from your Dashboard into any of your site's code.
 
 Database credentials, [Object Cache](/object-cache)(Redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
@@ -43,7 +45,7 @@ Unless you're implementing Domain Access, using something other than the standar
 
 </Alert>
 
-Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in `settings.php`.
+Pantheon uses [Pressflow](https://www.pressflow.org/) to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in `settings.php`.
 
 ```php
 <?php
@@ -83,7 +85,7 @@ Adding this snippet may cause the Status tab to show that Fast 404 pages are not
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-For more information, see [configuring wp-config.php](/wp-config-php).
+Refer to [configuring wp-config.php](/wp-config-php) for more information.
 
 ## Hard-coded Directory References and $_ENV\['HOME']
 
@@ -95,7 +97,7 @@ $_ENV['HOME']
 
 ### Using $_SERVER
 
-When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains#primary-domain).
+When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (for example, [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains#primary-domain).
 
 For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/server_name-and-server_port).
 

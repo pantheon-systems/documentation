@@ -11,13 +11,13 @@ permalink: docs/guides/environment-configuration/environment-indicator
 anchorid: environment-indicator
 ---
 
+This section provides information on how to install an indicator to receive alerts when changes are made in your site and environments.
 
-
-For a heads-up indicator of your Pantheon site and environment, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
+We recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
 
 <Alert title="Exports" type="export">
 
-This doc uses [Terminus](/terminus) example commands with common variable names for the site and environment names. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
+This doc uses [Terminus](/terminus) example commands with common variable names for the site and environment names. Before you begin these steps, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
