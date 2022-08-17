@@ -6,9 +6,8 @@ anchorid: redirects
 categories: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
+showtoc: true
 permalink: docs/guides/launch/redirects
-editpath: launch/06-redirects.md
-image: getting-started-Largethumb
 ---
 
 This section provides information on how to redirect all traffic to a primary domain, which is a best practice for SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor navigates to a bare domain, for example, `example.com` (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
