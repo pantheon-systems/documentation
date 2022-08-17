@@ -4,7 +4,7 @@ subtitle: Support
 description: Information on what supported is available for Pantheon Front-End Site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [ joa-pan, joa-pan]
 type: guide
 layout: guide
 showtoc: true
