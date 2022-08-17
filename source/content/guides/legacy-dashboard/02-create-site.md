@@ -1,5 +1,5 @@
 ---
-title: Creating Sites
+title: Create A Site
 description: Create a new Drupal or WordPress site on Pantheon.
 categories: [get-started]
 tags: [site, dashboard]
