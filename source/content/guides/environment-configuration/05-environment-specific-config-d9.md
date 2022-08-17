@@ -12,31 +12,33 @@ permalink: docs/guides/environment-configuration/environment-specific-config-d9
 anchorid: environment-specific-config-d9
 ---
 
+This section provides information on how to manage verbose debugging options and system performance settings for individual environments.
+
 The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev & Multidevs). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
 ## Enable Twig Debugging on Dev & Multidevs
 Pantheon handles the inclusion of service configuration files. The [default file provided](https://github.com/pantheon-systems/drupal-composer-managed/tree/default/web/sites/default) has everything you need, so enabling Twig debugging is simple:
 
-1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/terminus):
+1. Clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/terminus) if you haven't done so already. 
 
  ```bash{promptUser: user}
  terminus connection:info <site>.dev --fields='Git Command' --format=string
  ```
 
-2. Navigate to the site's docroot and rename the existing default service file for pre-production environments:
+1. Navigate to the site's docroot and rename the existing default service file for pre-production environments:
 
  ```bash{promptUser: user}
  mv sites/default/default.services.pantheon.preproduction.yml sites/default/services.pantheon.preproduction.yml
  ```
 
-3. Stage, commit, and push your changes to Pantheon:
+1. Stage, commit, and push your changes to Pantheon:
 
  ```bash{promptUser: user}
  git commit -am "Create pre-production service config file and enable Twig debug"
  git push -u origin master
  ```
 
-4. Clear caches on Dev within the Site Dashboard or via [Terminus](/terminus):
+1. Clear caches on Dev within the Site Dashboard or via [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus env:clear-cache <site>.<env>
@@ -59,29 +61,29 @@ Pantheon handles the inclusion of service configuration files. The [default file
         <div class="section layout-container clearfix">
  ```
 
-For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 9](/services-yml).
+Refer to [Creating a services.yml File for Drupal 9](/services-yml) for more information on Pantheon's service configuration files for Drupal. 
 
-## Enable Cacheability Debugging on Dev & Multidevs
+## Enable Cacheability Debugging on Dev and Multidevs
 
 1. Add the `sites/default/services.pantheon.preproduction.yml` file to your project if you have not done so already.
 
- This service file is used to manage settings across Pantheon's development environments, like Dev and Multidevs. Settings in this file are not applied to production environments, like Test and Live.
+ - This service file is used to manage settings across Pantheon's development (Dev and Multidev) environments. Settings in this file are not applied to production (Test and Live) environments.
 
-2. Enable Drupal 9's [CacheableResponseInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableResponseInterface.php/function/CacheableResponseInterface%3A%3AaddCacheableDependency/9.0.x) to help debug cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
+1. Enable Drupal 9's [CacheableResponseInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableResponseInterface.php/function/CacheableResponseInterface%3A%3AaddCacheableDependency/9.0.x) to help debug your cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
 
     ```yaml
     parameter:
      http.response.debug_cacheability_headers: true
     ```
 
-3. Stage, commit, and push your changes to Pantheon:
+1. Stage, commit, and push your changes to Pantheon:
 
   ```bash{promptUser: user}
   git commit -am "Pre-production enable cacheability debug service"
   git push
   ```
 
-4. Verify service setting and debug cache behavior by inspecting response headers on a development environment URL. If enabled, cacheable responses will return `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts` headers such as:
+1. Verify service setting and debug cache behavior by inspecting response headers on a development environment URL. If enabled, cacheable responses will return `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts` headers such as:
 
   ```bash
   $ curl -I http://dev-cacheability-headers.pantheonsite.io/ | grep -E 'X-Drupal-Cache-Context|X-Drupal-Cache-Tags'
@@ -89,7 +91,7 @@ For more information on Pantheon's service configuration files for Drupal, refer
   X-Drupal-Cache-Tags: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.frontpage http_response node_list rendered
   ```
 
-For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 9](/services-yml).
+Refer to [Creating a services.yml File for Drupal 9](/services-yml) for more information on Pantheon's service configuration files for Drupal.
 
 ### Troubleshoot 503 Response: Header Overflow
 
@@ -139,14 +141,14 @@ This issue can be caused by a number of scenarios related to cache tags, such as
   }
   ```
 
-2. Stage, commit, and push your changes to Pantheon:
+1. Stage, commit, and push your changes to Pantheon:
 
     ```bash{promptUser: user}
     git commit -am "Override system performance configurations per env"
     git push
     ```
 
-3. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/terminus):
+1. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/terminus):
 
    ```bash{promptUser: user}
    terminus drush <site>.<env> -- config-get system.performance --include-overridden
@@ -160,7 +162,7 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
    </Alert>
 
-4. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
+1. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
 
 ## Inclusions and Loading Order of Settings and Services Files
 
