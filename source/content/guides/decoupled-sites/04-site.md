@@ -4,7 +4,7 @@ subtitle: Site Creation
 description: Configure the frontend and create a site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
@@ -116,7 +116,7 @@ Create a site with out configuring the backend and link to a frontend framework.
 
 1. (Optional) Link your CMS.
 
-    > NOTE: If you are using a specified CMS, you can link your CMS backend and the site environment from which to source content. However, this is more applicable when using the Decoupled starter kit templates.
+    > **NOTE**: If you are using a specified CMS, you can link your CMS backend and the site environment from which to source content. However, this is more applicable when using the Decoupled starter kit templates.
 
 1. Ensure **Make this a private repository** is selected.
 

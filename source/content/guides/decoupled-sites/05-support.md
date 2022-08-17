@@ -40,3 +40,5 @@ Technical Support for Pantheon Front-End Site does not include the following:
 ### How do I File a Bug or Get Support?
 
 Pantheon has a limited scope of support for early access products. For assistance with your decoupled site you can email helpdesk@pantheon.io. You will receive a response within one business day.
+
+Visit [Pantheors Office Hours](https://pantheon.io/developers/office-hours) to ask questions about decoupled architecture and get help with Front-End Site.

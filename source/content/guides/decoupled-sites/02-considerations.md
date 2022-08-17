@@ -4,7 +4,7 @@ subtitle: Considerations
 description: Components needed to get started with Front-End Site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true

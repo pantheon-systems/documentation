@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Learn about Pantheon's decoupled architecture using Front-End Site
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
