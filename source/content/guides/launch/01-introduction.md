@@ -6,16 +6,6 @@ categories: [go-live]
 tags: [collaborate, launch, site, webops, workflow]
 contributors: [whitneymeredith]
 layout: guide
-type: guide
-anchorid: introduction
-launch: true
-generator: pagination
-pagination:
-    provider: data.launchpages
-use:
-    - launchpages
-permalink: docs/guides/launch/
-editpath: launch/01-introduction.md
 image: getting-started-Largethumb
 ---
 

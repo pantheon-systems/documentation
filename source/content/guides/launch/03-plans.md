@@ -6,19 +6,7 @@ layout: guide
 categories: [go-live]
 tags: [agencies, billing, launch, webops]
 anchorid: plans
-launch: true
-type: guide
-generator: pagination
-pagination:
-    provider: data.launchpages
-use:
-    - launchpages
 permalink: docs/guides/launch/plans/
-nexturl: guides/launch/domains/
-nextpage: Domains & HTTPS
-previousurl: guides/launch/
-previouspage: Introduction
-editpath: launch/02-plans.md
 image: getting-started-Largethumb
 ---
 

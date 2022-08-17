@@ -7,7 +7,6 @@ categories: [go-live]
 tags: [dns, https, launch, webops]
 type: guide
 permalink: docs/guides/launch/configure-dns/
-editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
 

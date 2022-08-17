@@ -8,20 +8,8 @@ generator: pagination
 layout: guide
 categories: [go-live]
 tags: [dns, https, launch, webops]
-type: guide
-pagination:
-    provider: data.launchpages
-use:
-    - launchpages
-    - docs_tags
 permalink: docs/guides/launch/domains/
-nexturl: guides/launch/configure-dns/
-nextpage: Configure DNS and HTTPS
-previousurl: guides/launch/plans/
-previouspage: Upgrade Site Plan
-editpath: launch/03-domains.md
 image: getting-started-Largethumb
-reviewed: "2020-08-03"
 ---
 
 This section provides information on how to connect a bare domain and `www` domain to Pantheon's Live environment.
