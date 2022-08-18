@@ -20,10 +20,8 @@ reviewed: "2022-08-11"
 
 Wordpress and Drupal are currently the only CMSs supported on Pantheon Decoupled. 
 
-What dependency versions are compatible with Pantheon Decoupled?
 
-
-### What components do Pantheon Front-End Sites currently support?
+### What dependency versions are compatible with Pantheon Decoupled?
 
 Pantheon Front-End Sites currently support:
 
