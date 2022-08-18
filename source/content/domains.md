@@ -24,7 +24,7 @@ Pantheon issues platform domains for all environments. Each environment (Dev, Te
 - live-site-name.pantheonsite.io
 - multidev-env-site-name.pantheonsite.io
 
-All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a good best practice to ensure you are ready to go live with HTTPS. See [Redirect to HTTPS](/redirects/#redirect-to-https) for more information.
+All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a good best practice to ensure you are ready to go live with HTTPS. See [Redirect to HTTPS](/guides/redirect/#redirect-to-https) for more information.
 
 ### robots.txt
 
@@ -106,7 +106,7 @@ Choose a primary domain from the dropdown at the bottom of **Domains / HTTPS**:
 
 <Alert title="Note" type="info">
 
-Redirects cannot be managed via `.htaccess`, which is ignored on our platform. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
+Redirects cannot be managed via `.htaccess`, which is ignored on our platform. For details, see [Configure Redirects](/guides/redirect/#php-vs-htaccess).
 
 </Alert>
 
@@ -128,7 +128,7 @@ If your site configuration prevents you from setting the primary domain from the
 
 </Accordion>
 
-For more redirect scenarios, see [Configure Redirects](/redirects).
+For more redirect scenarios, see [Configure Redirects](/guides/redirect).
 
 ## Vanity Domains for Organizations
 
@@ -183,6 +183,6 @@ You can modify your local `hosts` file to validate domain-specific settings befo
 
 ## See Also
 
-- [Configure Redirects](/redirects)
+- [Configure Redirects](/guides/redirect)
 - [Launch Essentials](/guides/launch)
 - [Relaunch Existing Pantheon Site](/relaunch)

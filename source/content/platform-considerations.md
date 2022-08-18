@@ -12,13 +12,21 @@ This page is used to keep track of common platform considerations, derived from 
 
 ## Browser Support for Pantheon's Dashboard
 
-In an effort to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
+In an effort to maintain platform security measures and to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
 +------------------------+--------+---------+-------+------+---------------------+
 |                        | Chrome | Firefox | Opera | Edge | Safari              |
 +========================+========+=========+=======+======+=====================+
 | **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
 +------------------------+---------------------------------+---------------------+
+
+To confirm which browser version you are using, visit <https://www.whatsmybrowser.org/>, and compare your browser's version with the latest available:
+
+  - [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.)
+  - [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases)
+  - [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility)
+  - [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history)
+  - [Safari](https://en.wikipedia.org/wiki/Safari_version_history#Version_compatibility)
 
 ## Batch Uploads
 
@@ -150,7 +158,7 @@ Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths
 
 Pantheon sites use nginx to concurrently serve requests. The nginx web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
-For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
+For details, see [Configure Redirects](/guides/redirect/#php-vs-htaccess).
 
 If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers its [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) as a managed service. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
@@ -200,11 +208,11 @@ If your repository has grown over 2GB and is causing problems (such as errors wh
 
 Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
-| File Size       | Platform Compatibility          | Notes                               |
-|:--------------- | ------------------------------- |------------------------------------ |
-| ≤ 100MB         | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
-|   100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MB         | <span  style="color:red">❌</span>   | Must be hosted via 3rd-party CDN    |
+| File Size     | Platform Compatibility               | Notes                               |
+|:--------------|--------------------------------------|-------------------------------------|
+| ≤ 100MB       | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
+| 100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
+| > 256MB       | <span  style="color:red">❌</span>    | Must be hosted via 3rd-party CDN    |
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
@@ -269,7 +277,7 @@ MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`m
 
 Pantheon does not currently support modifying the `nginx.conf` per site, as we run a highly tuned universal configuration file. All of the containers run a standard profile, and we have opted to keep this configuration to keep the `nginx.conf` lean.
 
-If your site uses `nginx.conf` rules for redirects, see [Configure Redirects](/redirects/#php-vs-htaccess).
+If your site uses `nginx.conf` rules for redirects, see [Configure Redirects](/guides/redirect/#php-vs-htaccess).
 
 If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) as a managed service. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 

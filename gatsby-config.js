@@ -40,8 +40,8 @@ module.exports = {
     { // Handles inserting the Segment js blob into the site
       resolve: "gatsby-plugin-segment-js",
       options: {
-        prodKey: process.env.SEGMENT_KEY,
-        devKey: process.env.SEGMENT_KEY,
+        prodKey: process.env.SEGMENT_KEY_NEW,
+        devKey: process.env.SEGMENT_KEY_NEW,
         trackPage: false,
       },
     },

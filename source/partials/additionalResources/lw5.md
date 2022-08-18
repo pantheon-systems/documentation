@@ -34,7 +34,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 - Doc: [Manage Plans in the Site Dashboard](/select-plan)
 - Doc: [Pantheon Global CDN](/guides/global-cdn)
 - Doc: [HTTPS on Pantheon's Global CDN](/free-https)
-- Doc: [Configure Redirects](/redirects)
+- Doc: [Configure Redirects](/guides/redirect)
 - Doc: [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)
 - [Pantheon's Advanced Global CDN](https://pantheon.io/product/advanced-global-cdn)
 

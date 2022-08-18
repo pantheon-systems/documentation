@@ -77,7 +77,7 @@ An error occurred because your site is currently running an unsupported version 
   
 ### Diagnosis
 
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error.
+If your Drupal site is not managed with Composer, Autopilot only works on sites that are running Drush 8. Composer-managed sites may use any compatible Drush version and will not display the Drush version error.
 
 Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
 
@@ -162,7 +162,7 @@ This error message most likely results from a merge conflict when applying upstr
 Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
-](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
+](/guides/integrated-composer/ic-troubleshooting) and [Adding Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams).
 
 </Accordion>
 
@@ -234,13 +234,23 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 <Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
 
-### Diagnosis
+### CMS Error
 
+#### Diagnosis
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
-### Solution
-
+#### Solution
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
+
+### Composer Error
+
+#### Diagnosis
+The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer), 
+
+#### Solution
+Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
+
+You can also use [Composer 2](/guides/integrated-composer/ic-support) to test locally and identify issues by running `composer install` or `composer update`
 
 </Accordion>
 

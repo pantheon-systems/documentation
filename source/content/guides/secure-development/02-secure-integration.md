@@ -29,6 +29,8 @@ Secure Integration uses TLS encryption to create a tunnel from the application c
 
 - IP address
 
+  - Pantheon uses consistent IP addresses (not a URL) to identify a specific connection
+
 - Port number
 
 - Name to identify connection
