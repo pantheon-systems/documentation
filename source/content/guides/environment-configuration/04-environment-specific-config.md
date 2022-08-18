@@ -115,9 +115,8 @@ endif;
     # Enable development mode for jetpack
         add_filter( 'jetpack_development_mode', '__return_true' );
     }
-   
-
  ```
+
 
 The next time you deploy code from Dev to Test and clone the database from Live into Test, the plugins will remain active on Test, even though the database clone would normally deactivate them. This is especially important for plugins like [wp-reroute-email](https://wordpress.org/plugins/wp-reroute-email/), which prevents Test and Dev environments from behaving like Live, in this case, spamming emails to users.
 
