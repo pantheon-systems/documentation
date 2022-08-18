@@ -19,7 +19,7 @@ This guide will show you how to migrate a site that meets the following criteria
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                   Pantheon                    |                                                                  Custom Upstream                                                                   |                                                                                             --                                                                                             |
 
-During this process, you will be working in a new branch, replace the entire file structure with the code from Pantheon's Integrated Composer upstream, then re-add your contrib and custom code to the new codebase. Then, you will create multidev environments on individual sites for testing and to apply any site-specific code customizations. 
+During this process, you will work in a new branch to replace the entire file structure with the code from Pantheon's Integrated Composer upstream, and then re-add your contrib and custom code to the new codebase. Then, you will create Multidev environments on individual sites for testing and to apply any site-specific code customizations. 
 
 
 <Partial file="drupal-9/see-landing.md" />
