@@ -83,10 +83,10 @@
     "url": "git+https://github.com/pantheon-systems/documentation.git"
   },
   "scripts": {
-    "build": "gatsby clean && gatsby build --prefix-paths --log-pages",
-    "develop": "gatsby clean && gatsby develop",
+    "build": "gatsby build --prefix-paths --log-pages",
+    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "gatsby clean && npm run develop",
+    "start": "npm run develop",
     "serve": "gatsby serve --prefix-paths",
     "lighthouse-run": "node ./tests/lighthouse/lighthouse.run.js",
     "lighthouse-run-local": "node ./tests/lighthouse/lighthouse.run.local.js",
