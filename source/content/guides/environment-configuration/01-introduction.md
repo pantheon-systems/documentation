@@ -1,7 +1,7 @@
 ---
 title: Environment Configuration
 subtitle: Environment Configuration on Pantheon
-description: Learn how to configure your environments on Pantheon.
+description: Learn about environment configurations on Pantheon.
 categories: [develop]
 tags: [site, terminus, workflow, webops]
 contributors: [whitneymeredith]
@@ -11,7 +11,7 @@ permalink: docs/guides/environment-configuration
 anchorid: environment-configuration
 ---
 
-Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting your live site. Additional development environments are available with [Multidev](/guides/multidev). Refer to the [Pantheon WebOps Workflow](/pantheon-workflow) documentation for more details.
+Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting your Live site. Additional development environments are available with [Multidev](/guides/multidev). Refer to the [Pantheon WebOps Workflow](/pantheon-workflow) documentation for more details.
 
 The separation of configuration and code also helps improve security and makes it easy to restore an individual environment to a backup version.
 

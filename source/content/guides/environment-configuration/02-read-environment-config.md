@@ -1,7 +1,7 @@
 ---
 title: Environment Configuration
 subtitle: Reading Pantheon Environment Configuration
-description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
+description: Learn about the separation of configuration and code within Pantheon's runtime container environment.
 categories: [platform]
 tags: [code, database, files, redis]
 contributors: [whitneymeredith]
@@ -11,11 +11,11 @@ permalink: docs/guides/environment-configuration/read-environment-config
 anchorid: read-environment-config
 ---
 
-This section provides information on how to use database credentials for Object Cache(Redis) authentication.
+This section provides information on how to use database credentials for Object Cache (Redis) authentication.
 
 You should never copy and paste credentials from your Dashboard into any of your site's code.
 
-Database credentials, [Object Cache](/object-cache)(Redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+Database credentials, [Object Cache](/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -33,7 +33,7 @@ array(13) {
   etc...
 ```
 
-If you are using a common CMS framework, the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
+The code you need to load this configuration and boot your app should already be pre-configured if you are using a common CMS framework. However, if you need any type of custom configuration, you can work with environmental configuration directly.
 
 <Partial file="platform-considerations-connections.md" />
 
@@ -45,7 +45,7 @@ Unless you're implementing Domain Access, using something other than the standar
 
 </Alert>
 
-Pantheon uses [Pressflow](https://www.pressflow.org/) to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in `settings.php`.
+Pantheon uses [Pressflow](https://www.pressflow.org/) to automatically read the environmental configuration. If you're working with a vanilla Drupal site or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. You can do this in `settings.php` file in Drupal.
 
 ```php
 <?php
@@ -54,7 +54,7 @@ extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, for Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, in Drupal 7:
 
 ```php
 // All Pantheon Environments.
