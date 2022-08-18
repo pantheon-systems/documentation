@@ -45,6 +45,6 @@ Note that this method does not require a Fastly account or use of Pantheon's AGC
 
 - [Pantheon Logs](/logs#available-logs)
 
-- [New Relic](/new-relic)
+- [New Relic](/guides/new-relic)
 
 - [Log Streaming with Splunk](https://docs.fastly.com/en/guides/log-streaming-splunk)
