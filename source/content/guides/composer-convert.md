@@ -7,7 +7,7 @@ cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
-reviewed: "2021-10-23"
+reviewed: "2022-08-18"
 ---
 
 In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
