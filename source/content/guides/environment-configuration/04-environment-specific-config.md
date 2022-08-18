@@ -78,16 +78,14 @@ endif;
     -  This example activates the `wp-reroute-email` and `debug-bar` plugins, and sets the Jetpack plugin's development mode on all environments except for Live. It also adds the converse filters and deactivates the plugins on Live. You can expand this file to account for all of your environment-specific configurations, or add similar files for Dev-specific and Test and Live-specific configurations.
 
  ```php:title=live-specific-configs.php
-<?php
-
-# List Development Plugins
+    # List Development Plugins
     $plugins = array(
         'debug-bar/debug-bar.php',
         'developer/developer.php',
         'wp-reroute-email/wp-reroute-email.php'
         );
 
-# Live-specific configs
+    # Live-specific configs
     if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) ) ) {
 
     # Disable Development Plugins
@@ -116,9 +114,10 @@ endif;
 
     # Enable development mode for jetpack
         add_filter( 'jetpack_development_mode', '__return_true' );
-}
-?>
-```
+    }
+   
+
+ ```
 
 The next time you deploy code from Dev to Test and clone the database from Live into Test, the plugins will remain active on Test, even though the database clone would normally deactivate them. This is especially important for plugins like [wp-reroute-email](https://wordpress.org/plugins/wp-reroute-email/), which prevents Test and Dev environments from behaving like Live, in this case, spamming emails to users.
 
