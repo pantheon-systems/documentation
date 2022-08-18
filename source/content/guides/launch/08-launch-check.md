@@ -6,10 +6,7 @@ anchorid: launch-check
 layout: guide
 categories: [go-live]
 tags: [backup, launch, webops]
-<<<<<<< HEAD
-showtoc: true
-=======
->>>>>>> cb9415480a47172460649212f885121045fcbf05
+showtoc: true 
 permalink: docs/guides/launch/launch-check/
 ---
 
