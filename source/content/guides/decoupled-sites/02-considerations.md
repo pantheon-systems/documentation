@@ -1,10 +1,10 @@
 ---
-title: Pantheon Front-End Site
+title: Pantheon Front-End Sites
 subtitle: Considerations
-description: Components needed to get started with Front-End Site.
+description: Components needed to get started with a Front-End Site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan, backlineint, cobypear, hckia]
+contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
@@ -14,9 +14,10 @@ editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
 ---
 
-Ensure your system has the correct components to use Pantheon Front-End Site.
+Ensure your system has the correct components to deploy a Pantheon Front-End Site. 
 
-## Components for Pantheon Front-End Site
+
+## Components for Pantheon Front-End Sitea
 
 ### General Requirements
 
@@ -26,7 +27,7 @@ Ensure your system has the correct components to use Pantheon Front-End Site.
 
 ### Backend Requirements
 
-The following components are needed to configure your backend, especially if using the starter kits for Pantheon Front-End Site: 
+The following components are needed to configure your backend, especially if using the starter kits for Pantheon Front-End Sites: 
 
 * Lando: An open source, cross-platform, local development environment and DevOps tool built on Docker container technology. 
      * Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.
@@ -34,7 +35,7 @@ The following components are needed to configure your backend, especially if usi
 * The following tools are included in the [Lando VM](https://docs.lando.dev/getting-started/installation.html), but can be useful to have installed for use without Lando:
      * [PHP](https://www.php.net/) - An open-source, server-side programming language that can be used to create websites, applications, and more. It is a widely-used language that can be embedded in HTML. Install using Homebrew on Mac to not conflict with the PHP version that comes with your operating system.
      * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
-     * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for Front-End Site.
+     * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
 
 ### Frontend Requirements
 
@@ -67,3 +68,4 @@ To create and configure a new decoupled project using a Front-End Site starter k
 * Create [GitHub Personal Access Tokens](https://github.com/settings/tokens).
 
 * Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens).
+
