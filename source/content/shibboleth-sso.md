@@ -8,7 +8,7 @@ contributors: [kyletaylored]
 
 This doc covers the installation and configuration of [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. For a simpler SSO service provider solution, jump to [Alternatives](#alternatives).
 
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/latest/simplesamlphp-sp.html). This documentation contains only the necessary extra steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp.html). This documentation contains only the necessary extra steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
 
@@ -46,7 +46,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
   git commit -am "Adding SimpleSAML symlink"
   ```
 
-1. [Generate or install certs](https://simplesamlphp.org/docs/latest/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp/cert`.
+1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp) as needed, and add them to the repository in `private/simplesamlphp/cert`.
 
 </Tab>
 
@@ -104,7 +104,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
-1. [Generate or install certificates](https://simplesamlphp.org/docs/latest/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
+1. [Generate or install certificates](https://simplesamlphp.org/docs/stable/simplesamlphp-sp) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
 By the end of these steps, you should have a docroot structure similar to the output below:
 
@@ -228,7 +228,7 @@ There is a known issue with the Drupal 7 version of the SimpleSAMLphp Authentica
 
 ### SimpleSAMLphp Error: can't find metadata
 
-Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp).
+Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/stable/simplesamlphp-sp).
 
 The files must be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, if you are using Composer. This is similar to the config setup for Composer.
 

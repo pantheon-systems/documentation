@@ -24,4 +24,4 @@ When setting the Drupal core version, use the command `composer update` instead 
 
 <Partial file="drupal-9/troubleshooting-drush.md" />
 
-<Partial file="drupal-9/troubleshooting.md" />
+<Partial file="drupal-9/troubleshooting-general.md" />

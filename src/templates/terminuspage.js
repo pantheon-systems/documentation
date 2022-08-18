@@ -26,6 +26,7 @@ import Download from "../components/download"
 import Commands from "../components/commands"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
+import Partial from "../components/partial"
 
 const shortcodes = {
   Callout,
@@ -41,6 +42,7 @@ const shortcodes = {
   Releases,
   TerminusVersion,
   Download,
+  Partial,
   Commands,
   ReviewDate,
   Check,

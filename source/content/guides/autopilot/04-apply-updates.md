@@ -40,7 +40,7 @@ Drupal base directories must exist for an Autopilot action (including updates) t
 
 ### Autopilot and Drupal 9 with Integrated Composer
 
-Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer).
+Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer/ic-upstreams).
 
 ## Troubleshoot Autopilot Updates 
 

@@ -989,10 +989,10 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Change to the `code` directory:
+1. Change to the `my-site` directory:
 
    ```bash{promptUser: user}
-   cd code/
+   cd /my-site
    ```
    
 1. Create the following symlinks:
