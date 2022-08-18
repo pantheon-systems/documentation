@@ -13,7 +13,7 @@ anchorid: activate-new-relic
 
 This section provides steps on how to activate and configure your New Relic&reg; account.
 
-## Activate New Relic&reg;
+## Activate New Relic&reg; Performance Monitoring
 
 New Relic&reg; is automatically enabled for all application containers added to the site, including Multidev environments. You can activate New Relic&reg; in the Site Dashboard if you or a team member previously disabled it.
 
@@ -21,7 +21,7 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
 
-1. Visit your site in the browser a couple of times to generate data in New Relic&reg;. 
+1. Visit your site in the browser a couple of times to generate data in New Relic&reg;.
 
 1. Allow a few minutes to pass and then navigate to the **New Relic** tab on your Dashboard and click **Go to New Relic**.
 

@@ -25,9 +25,9 @@ Pantheon provides recommendations that fit the vast majority of use cases by usi
 
 [Content Staging](/content-staging) workflow between test and live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment. Review the [Content Staging](/content-staging) documentation to find content staging solutions that match your current WordPress or Drupal configuration.  
 
-## Activate New Relic
+## Activate New Relic&reg; Performance Monitoring
 
-[New Relic Performance Monitoring](/new-relic/#activate-new-relic-performance-monitoring) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
+[New Relic Performance Monitoring](/guides/new-relic/activate-new-relic#activate-new-relic-performance-monitoring) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
 ## Load and Performance Test
 
