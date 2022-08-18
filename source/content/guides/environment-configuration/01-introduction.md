@@ -30,4 +30,3 @@ This guide shows you how to:
 - [Configuration Management](/pantheon-workflow#configuration-management)
 
 - [Content Staging](/content-staging)
-
