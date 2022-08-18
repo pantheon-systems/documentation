@@ -16,6 +16,10 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ### 2022-08-16
 
+#### <a name="20220818" class="release-update"></a>Ensure REST API responses are not cached for authenticated users
+
+REST API responses were being cached for logged-in users, which was causing issues when updating Posts via the block editor (such as creating new taxonomy terms, for example). This commit changes the cache headers so that API responses are no longer cached for authenticated users.
+
 #### <a name="20220816" class="release-update"></a>Deprecate `pantheon-cache` in favor of `pantheon cache`
 
 When the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin is active, WordPress sites on Pantheon have two distinct but similarly-named WP-CLI commands: `wp pantheon cache` (which is provided by Pantheon Advanced Page Cache) and `wp pantheon-cache` (which is provided by the Pantheon mu-plugin. This leads to confusion about which Pantheon cache WP-CLI command to use or which subcommands are available for which parent commands.
