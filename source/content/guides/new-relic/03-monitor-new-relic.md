@@ -1,7 +1,7 @@
 ---
-title: New Relic&reg; Performance Monitoring on Pantheon
+title: New Relic Performance Monitoring on Pantheon
 subtitle: Monitor and Improve Site Performance
-description: Learn how to use New Relic&reg; to monitor and improve site performance.
+description: Learn how to use New Relic to monitor and improve site performance.
 categories: [performance]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith]

@@ -1,7 +1,7 @@
 ---
-title: New Relic&reg; Performance Monitoring on Pantheon
-subtitle: New Relic&reg; Labeling with Quicksilver
-description: Automatically Label Code Changes in New Relic&reg; Performance Monitoring using Quicksilver Hooks.
+title: New Relic Performance Monitoring on Pantheon
+subtitle: New Relic Labeling with Quicksilver
+description: Automatically Label Code Changes in New Relic Performance Monitoring using Quicksilver Hooks.
 categories: [automate]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [scottmassey]

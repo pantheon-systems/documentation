@@ -1,5 +1,5 @@
 ---
-title: New Relic&reg; Performance Monitoring on Pantheon
+title: New Relic Performance Monitoring on Pantheon
 subtitle: New Relic&reg; FAQ
 description: Get answers to your New Relic&reg; questions.
 categories: [automate]
@@ -19,7 +19,7 @@ A New Relic&reg; account can have only one owner at any given time. You must be 
 
 ### How can I share a link to a particular metric?
 
-Click **Permalink** at the bottom of any page.  This will preserve the current time window and take the link recipient to the same page you are currently viewing.
+Click **Permalink** at the bottom of any page. This will preserve the current time window and take the link recipient to the same page you are currently viewing.
 
 ### How much does New Relic&reg; Performance Monitoring cost?
 

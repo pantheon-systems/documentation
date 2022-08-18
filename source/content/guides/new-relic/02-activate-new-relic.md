@@ -1,7 +1,7 @@
 ---
-title: New Relic&reg; Performance Monitoring on Pantheon
-subtitle: Activate New Relic&reg;
-description: Learn how to enable and use New Relic&reg; Performance Monitoring metrics and reports for your Drupal or WordPress site on Pantheon.
+title: New Relic Performance Monitoring on Pantheon
+subtitle: Activate New Relic
+description: Learn how to enable and use New Relic Performance Monitoring metrics and reports for your Drupal or WordPress site on Pantheon.
 categories: [performance]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith]

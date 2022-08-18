@@ -1,5 +1,5 @@
 ---
-title: New Relic&reg; Performance Monitoring on Pantheon
+title: New Relic Performance Monitoring on Pantheon
 subtitle: Troubleshoot New Relic&reg;
 description: Find troubleshooting solutions for your New Relic&reg; account.
 categories: [automate]
