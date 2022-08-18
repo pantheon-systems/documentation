@@ -8,11 +8,13 @@ contributors: [backlineint, cobypear, hckia, joa-pan]
 type: guide
 layout: guide
 showtoc: true
-anchorid: introduction
+anchorid: faq
 permalink: docs/guides/decoupled-sites/
-editpath: decoupled-sites/01-introduction.md
+editpath: decoupled-sites/faq.md
 reviewed: "2022-08-11"
 ---
+
+## Frequently Asked Questions
 
 ### Can I use any CMS with Pantheon Decoupled?
 
