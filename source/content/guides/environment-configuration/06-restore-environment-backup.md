@@ -175,7 +175,7 @@ export ENV=dev # or different environment name
   tar -xzvf file-backup.tar.gz
   ```
 
-  - This creates a `files_env` directory. 
+    - This creates a `files_env` directory. 
 
 1. `cd` to the `files_env` directory and use rsync to copy your content back to the environment you're restoring. For example:
 

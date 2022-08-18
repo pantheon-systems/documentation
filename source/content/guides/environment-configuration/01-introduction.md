@@ -13,6 +13,9 @@ anchorid: environment-configuration
 
 Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting your Live site. Additional development environments are available with [Multidev](/guides/multidev). Refer to the [Pantheon WebOps Workflow](/pantheon-workflow) documentation for more details.
 
+
+## Code and Configuration in Separate Environments
+
 The separation of configuration and code also helps improve security and makes it easy to restore an individual environment to a backup version.
 
 This guide shows you how to:

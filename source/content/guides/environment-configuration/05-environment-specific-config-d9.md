@@ -67,7 +67,7 @@ Refer to [Creating a services.yml File for Drupal 9](/services-yml) for more inf
 
 1. Add the `sites/default/services.pantheon.preproduction.yml` file to your project if you have not done so already.
 
- - This service file is used to manage settings across Pantheon's development (Dev and Multidev) environments. Settings in this file are not applied to production (Test and Live) environments.
+    - This service file is used to manage settings across Pantheon's development (Dev and Multidev) environments. Settings in this file are not applied to production (Test and Live) environments.
 
 1. Enable Drupal 9's [CacheableResponseInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableResponseInterface.php/function/CacheableResponseInterface%3A%3AaddCacheableDependency/9.0.x) to help debug your cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
 
@@ -168,9 +168,9 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
 | Settings File         | Inclusions |
 |:--------------------- |:---------- |
-| settings.php          | services.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> settings.pantheon.php <br /> settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
-| settings.pantheon.php | services.pantheon.preproduction.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /> <br /> services.pantheon.production.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /> <br /> |
-| settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not included by default on any Pantheon environment." /> |
+| `settings.php`          | `services.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> settings.pantheon.php <br /> settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
+| `settings.pantheon.php` | `services.pantheon.preproduction.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /> <br /> `services.pantheon.production.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /> <br /> |
+| `settings.local.php` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  `development.services.yml` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 9 upstream. It is not included by default on any Pantheon environment." /> |
 
 
 ## More Resources
