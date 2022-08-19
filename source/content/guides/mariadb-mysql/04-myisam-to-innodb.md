@@ -1,5 +1,5 @@
 ---
-title: MariaDB (MySQL) on Pantheon
+title: MariaDB and MySQL on Pantheon
 subtitle: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
 categories: [develop]
@@ -13,9 +13,7 @@ anchorid: myisam-to-innodb
 
 This section provides information on how to convert MySQL Tables from MyISAM to InnoDB.
 
-Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html), indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way.
-
-Sites that don't use InnoDB are missing out on performance and stability gains.  As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
+Sites that don't use [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html) are missing out on performance and stability gains. As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
 
 <Alert title="Warning" type="danger">
 
@@ -145,7 +143,7 @@ die(0);
 
 ## Advanced Method via Command Line
 
-If you want to run the script from the command line instead of adding it to your codebase, use this script.
+Use the script below if you want to run the script from the command line instead of adding it to your codebase. 
 
 ### Before You Begin
 
@@ -153,103 +151,79 @@ Make sure you have:
 
 - PHP installed on your computer
 - Your [database connection info](/guides/mariadb-mysql/mysql-access) for your Dev environment from your [Site Dashboard](/sites)
-- Copy the script below and save it in a file with a `.php` extension in your home directory.
 
-```php:title=myisam-to-innbodb.php
-<?php
-/*
- * Use this version if you are NOT a Pantheon customer.
- */
-$db = array();
-/*
- * Change these to match your database connection information
- */
-$db['host']     = "localhost";
-$db['port']     = "3306";
-$db['user']     = "";
-$db['password'] = "";
-$db['database'] = "";
-/*
- * DO NOT CHANGE ANYTHING BELOW THIS LINE
- * Unless you know what you are doing. :)
- */
-$db['connectString'] = $db['host'];
-if (isset($db['port']) && (int)$db['port']==$db['port']) {
-    $db['connectString'] .= ":" . $db['port'];
-}
-$mysqli = @new mysqli($db['connectString'], $db['user'], $db['password'], $db['database']);
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."\n";
-    die(1);
-}
-$results = $mysqli->query("show tables;");
-if ($results===false or $mysqli->connect_errno) {
-    echo "MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."\n";
-    die(2);
-}
-while ($row= $results->fetch_assoc()) {
-    $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_' . $db['database']]}'";
-    $thisTable = $mysqli->query($sql)->fetch_assoc();
-    if ($thisTable['Engine']==='MyISAM') {
-        $sql = "alter table " . $row['Tables_in_' . $db['database']]. " ENGINE = InnoDB;";
-        echo "Changing {$row['Tables_in_' . $db['database']]} from {$thisTable['Engine']} to InnoDB.\n";
-        $mysqli->query($sql);
-    } else {
-        echo $row['Tables_in_' . $db['database']] . ' is of the Engine Type ' . $thisTable['Engine'] . ".\n";
-        echo "Not changing to InnoDB.\n\n";
+
+1. Copy the script below 
+
+    ```php:title=myisam-to-innbodb.php
+    <?php
+    /*
+    * Use this version if you are NOT a Pantheon customer.
+    */
+    $db = array();
+    /*
+    * Change these to match your database connection information
+    */
+    $db['host']     = "localhost";
+    $db['port']     = "3306";
+    $db['user']     = "";
+    $db['password'] = "";
+    $db['database'] = "";
+    /*
+    * DO NOT CHANGE ANYTHING BELOW THIS LINE
+    * Unless you know what you are doing. :)
+    */
+    $db['connectString'] = $db['host'];
+    if (isset($db['port']) && (int)$db['port']==$db['port']) {
+        $db['connectString'] .= ":" . $db['port'];
     }
-}
-die(0);
-```
+    $mysqli = @new mysqli($db['connectString'], $db['user'], $db['password'], $db['database']);
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."\n";
+        die(1);
+    }
+    $results = $mysqli->query("show tables;");
+    if ($results===false or $mysqli->connect_errno) {
+        echo "MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."\n";
+        die(2);
+    }
+    while ($row= $results->fetch_assoc()) {
+        $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_' . $db['database']]}'";
+        $thisTable = $mysqli->query($sql)->fetch_assoc();
+        if ($thisTable['Engine']==='MyISAM') {
+            $sql = "alter table " . $row['Tables_in_' . $db['database']]. " ENGINE = InnoDB;";
+            echo "Changing {$row['Tables_in_' . $db['database']]} from {$thisTable['Engine']} to InnoDB.\n";
+            $mysqli->query($sql);
+        } else {
+            echo $row['Tables_in_' . $db['database']] . ' is of the Engine Type ' . $thisTable['Engine'] . ".\n";
+            echo "Not changing to InnoDB.\n\n";
+        }
+    }
+    die(0);
+    ```
 
-Here are the parameters you will need to configure before running the script:
+1. Configure the parameters below:
 
-<dl>
+  - **Host:** This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
 
-<dt>host</dt>
+  - **Port:** This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
 
-<dd>
+  - **User:** This is the user name you use to connect to MySQL with.
 
-This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+  - **Password:** This is your MySQL password for the user you specified in the line above.
 
-</dd>
+  - **Database:** This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
+  
+1. Save the script in a file with a `.php` extension in your home directory, and set it as executable.
 
-<dt>port</dt>
-
-<dd>
-
-This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
-
-</dd>
-
-<dt>user</dt>
-
-<dd>
-
-This is the user name you use to connect to MySQL with.
-
-</dd>
-
-<dt>password</dt>
-
-<dd>
-
-This is your MySQL password for the user you specified in the line above.
-
-</dd>
-
-<dt ignored>database</dt>
-
-<dd>
-
-This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
-
-</dd>
-
-</dl>
-
-Save the file, set it as executable, then execute the program from a command window.
+1. Execute the program from a command window.
 
 The script will alert you to everything it's doing. It has safeties built in to keep it from changing anything but MyISAM tables. It will look at every table in your database, and if the engine is MyISAM, it will change it to an InnoDB.
 
-Once you have run it successfully, check everything. This is not a dangerous script; the change is pretty simple. However, it's your data, so be careful.
+Review the changes carefully after you have run it successfully.
+
+## More Resources
+
+- [Access MySQL Databases](/guides/mariadb-mysql/mysql-access)
+
+- [Global CDN](/guides/global-cdn)

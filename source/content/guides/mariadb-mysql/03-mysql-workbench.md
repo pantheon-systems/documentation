@@ -1,5 +1,5 @@
 ---
-title: MariaDB (MySQL) on Pantheon
+title: MariaDB and MySQL on Pantheon
 subtitle: Using MySQL Workbench to Access a Database
 description: Detailed information on using MySQL Workbench for creating, executing, and optimizing SQL queries.
 categories: [manage]
@@ -44,5 +44,13 @@ After the configuration is complete, the new connection will be available on the
 ## Connect to the Database
 
 At this point, you are all set and can administer your database. There will be a new entry on the Workbench for the newly set up connection and you can click the icon to initiate a session.
+
 ## Troubleshooting MySQL Connections
-See [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access).
+
+Refer to [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access).
+
+## More Resources
+
+- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels)
+
+- [Secure Runtime Access](/guides/secure-development/secure-runtime-access)

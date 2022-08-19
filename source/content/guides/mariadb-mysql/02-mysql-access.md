@@ -1,7 +1,7 @@
 ---
-title: MariaDB (MySQL) on Pantheon
-subtitle: Accessing MySQL Databases
-description: Configure and troubleshoot your Pantheon website's MySQL database connections.
+title: MariaDB and MySQL on Pantheon
+subtitle: Accessing MariaDB and MySQL Databases
+description: Configure and troubleshoot your Pantheon website's MariaDB or MySQL database connections.
 categories: [develop]
 tags: [database, local, ssh]
 contributors: [whitneymeredith]
@@ -11,7 +11,7 @@ permalink: docs/guides/mariadb-mysql/mysql-access
 anchorid: mysql-access
 ---
 
-This section provides information on how to access your MySQL database with Pantheon's direct connection tool, MariaDB.
+This section provides information on how to access your MariaDB or MySQL database through Pantheon.
 
 <Alert title="Note" type="info">
 
@@ -33,9 +33,9 @@ MySQL credentials for each site environment are located in the Dashboard:
 
 The following required fields are provided:
 
-- **Server**: The hostname of the MySQL server.
+- **Server**: The hostname of the MariaDB or MySQL server.
 - **Port**: The TCP/IP port number to use for the connection. The platform randomly selects the port number. Port numbers will differ in every environment for each site, and might not match what PHP reports.
-- **Username**: MySQL user name to use when connecting to server.
+- **Username**: MariaDB or MySQL user name to use when connecting to server.
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database to use; the value will always be pantheon and cannot be altered.
 
@@ -175,4 +175,8 @@ See [Database Connection Errors](/database-connection-errors) to troubleshoot co
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
 
+## More Resources
 
+- [MariaDB and MySQL FAQ](/guides/mariadb-mysql/mariadb-mysql-faq)
+
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)

@@ -1,5 +1,5 @@
 ---
-title: MariaDB (MySQL) on Pantheon
+title: MariaDB and MySQL on Pantheon
 subtitle: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
 categories: [troubleshoot]
@@ -67,10 +67,14 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 
 Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. [MySQL replication](/guides/mariadb-mysql/hyperdb) rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
 
-## See Also
+## More Resources
 
 - [Access MySQL Databases](/guides/mariadb-mysql/mysql-access)
+
 - [Database Connection Errors](/database-connection-errors)
+
 - [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+
+- [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
+
 - [Converting MySQL Tables From MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb)

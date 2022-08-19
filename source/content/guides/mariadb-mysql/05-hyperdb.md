@@ -1,5 +1,5 @@
 ---
-title: MariaDB (MySQL) on Pantheon
+title: MariaDB and MySQL on Pantheon
 subtitle: Scaling WordPress with MySQL Replicas and HyperDB
 description: Learn how to distribute requests to replica MySQL databases on WordPress using HyperDB.
 cms: "WordPress"
@@ -107,3 +107,9 @@ if ( ! empty( $_ENV['REPLICA_DB_HOST'] ) && ! is_admin() ) {
 ```
 
 In this example, you’ll want [some form of cache fallback](/object-cache) if reads to the replica begin failing.
+
+## More Resources
+
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
+
+- [WordPress Best Practices](/wordpress-best-practices)

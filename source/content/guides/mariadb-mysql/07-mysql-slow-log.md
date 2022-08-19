@@ -1,5 +1,5 @@
 ---
-title: MariaDB (MySQL) on Pantheon
+title: MariaDB and MySQL on Pantheon
 subtitle: MySQL Slow Log
 description: Use a Drupal or WordPress site's MySQL Slow Log to troubleshoot MySQL and identify serious performance issues.
 categories: [troubleshoot]
@@ -194,5 +194,8 @@ This means there were 70 slow queries between 10 and 11AM (UTC). That is roughly
 
 For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic).
 
-## See Also
+## More Resources
+
 - [Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)
+
+- [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

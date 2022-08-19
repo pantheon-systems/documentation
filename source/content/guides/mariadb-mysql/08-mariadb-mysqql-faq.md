@@ -1,7 +1,7 @@
 ---
-title: MariaDB (MySQL) on Pantheon
-subtitle: MariaDB (MySQL) FAQ
-description: Get answers to your MariaDB (MySQL) questions.
+title: MariaDB and MySQL on Pantheon
+subtitle: MariaDB and MySQL FAQ
+description: Get answers to your MariaDB and MySQL questions.
 categories: [develop]
 tags: [database]
 contributors: [whitneymeredith]
@@ -11,7 +11,7 @@ permalink: docs/guides/mariadb-mysql/mariadb-mysql-faq
 anchorid: mariadb-mysql-faq
 ---
 
-This section provides answers to frequently asked MariaDB (MySQL) questions.
+This section provides answers to frequently asked MariaDB and MySQL questions.
 
 ### How can I access my MySQL Slow Query logs?
 
@@ -21,7 +21,7 @@ To access the log for your database:
 
 1. Get the SFTP connection info for the environment in question.
 1. Replace the word `appserver` with `dbserver` in the connection string.
-1. The MySQL slow query logs are in the `logs` subdirectory.
+1. Navigate to the `logs` subdirectory to view the MySQL slow query logs.
 
 ### How can I access MySQL binary logs?
 
@@ -60,3 +60,11 @@ mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…
 ```
 
 For more information on this behavior change, refer to the [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).
+
+## More Resources
+
+- [Accessing MariaDB and MySQL Databases](/guides/mariadb-mysql/mysql-access)
+
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+
+- [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
