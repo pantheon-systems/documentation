@@ -13,7 +13,15 @@ anchorid: mysql-workbench
 
 This section provides information on how to use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) to access a database on Pantheon.
 
-[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides DBAs and developers an integrated tools environment for: database design & modeling; SQL development; database administration; and support for Windows, Mac OS X, and Linux.
+[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides DBAs and developers with an integrated tools environment for: 
+
+- Database design and modeling
+
+- SQL development
+
+- Database administration
+
+- Support for Windows, Mac OS X, and Linux
 
 ## Get Started
 
@@ -21,29 +29,36 @@ Start by getting the MySQL connection for the environment you want to access. To
 
 ## Create a New MySQL Connection
 
-Now that you have the credentials for the database handy, you can start MySQL Workbench and set up your connection. Once the application has started, click the **+** icon on the top left of the screen to create a MySQL connection. Next, enter the information to connect to the database. Each of the following are required:
+1. Start MySQL Workbench and click the **+** icon on the top left of the screen to create a MySQL connection. 
 
-**Connection Name** - A unique name (add a prefix for Dev/Test/Live)  
-**Connection Method** - Standard (TCP/IP)  
-**Hostname** - MySQL database hostname  
-**Username** - MySQL database username  
-**Port** - MySQL database port (tip: Remember this value)  
-**Password** - The password on the dashboard's connection info<br />
+1. Enter the information to connect to the database. Each of the following are required:
 
-Click the **Store in Keychain...** button and enter your MySQL password for the environment.
+    **Connection Name** - A unique name (add a prefix for Dev/Test/Live)  
+    **Connection Method** - Standard (TCP/IP)  
+    **Hostname** - MySQL database hostname  
+    **Username** - MySQL database username  
+    **Port** - MySQL database port (tip: Remember this value)  
+    **Password** - The password on the dashboard's connection info<br />
+
+1. Click the **Store in Keychain...** button and enter your MySQL password for the environment.
 
 <Alert title="Note" type="info">
+
 Ensure you have the correct database username and password for your environment.
+
 </Alert>
+
 ## Test the Database Connection
 
-After entering all the information, click **Test Connection** to initiate a connection with the remote database. If it succeeds, you'll receive a confirmation message.
+1. Click **Test Connection** to initiate a connection with the remote database after you complete the steps in the section above.
 
-After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
+ - If it succeeds, you'll receive a confirmation message.
+
+1. Confirm that the new connection is available on the MySQL Workbench workspace after the configuration completes.
 
 ## Connect to the Database
 
-At this point, you are all set and can administer your database. There will be a new entry on the Workbench for the newly set up connection and you can click the icon to initiate a session.
+You can now administer your database. There will be a new entry on the Workbench for the newly configured connection and you can click the icon to initiate a session.
 
 ## Troubleshooting MySQL Connections
 
