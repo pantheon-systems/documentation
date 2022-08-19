@@ -115,7 +115,7 @@ The Test and Live environments do not have write access to code outside of the d
 
 ## Develop
 
-Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
+Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/guides/environment-configuration/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
 
 ### .gitignore
 

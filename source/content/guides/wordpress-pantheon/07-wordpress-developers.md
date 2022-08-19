@@ -36,7 +36,7 @@ Review our [Testing WordPress Core Development Versions](/wordpress-development-
 
 ## Environment Specific Configuration for WordPress Sites
 
-Review our [Environment Specific Configuration for WordPress Sites](/environment-specific-config) doc to learn how to turn WordPress site plugins on and off for each environment. This doc also shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/read-environment-config).
+Review our [Environment Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config) doc to learn how to turn WordPress site plugins on and off for each environment. This doc also shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/guides/environment-configuration/read-environment-config).
 
 ## Local Development
 
