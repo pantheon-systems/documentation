@@ -1,7 +1,7 @@
 ---
 title: New Relic Performance Monitoring on Pantheon
-subtitle: New Relic&reg; FAQ
-description: Get answers to your New Relic&reg; questions.
+subtitle: New Relic FAQ
+description: Get answers to your New Relic questions.
 categories: [automate]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [whitneymeredith]
