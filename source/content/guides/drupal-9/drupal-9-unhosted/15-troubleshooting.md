@@ -22,5 +22,5 @@ If you receive the error message "The provided host name is not valid for this s
 
 <Partial file="drupal-9/troubleshooting-drush.md" />
 
-<Partial file="drupal-9/troubleshooting.md" />
+<Partial file="drupal-9/troubleshooting-general.md" />
 

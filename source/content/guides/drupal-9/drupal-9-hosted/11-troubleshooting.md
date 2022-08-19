@@ -16,4 +16,4 @@ reviewed: "2021-03-31"
 
 <Partial file="drupal-9/troubleshooting-drush.md" />
 
-<Partial file="drupal-9/troubleshooting.md" />
+<Partial file="drupal-9/troubleshooting-general.md" />

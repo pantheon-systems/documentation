@@ -1,7 +1,7 @@
 ---
 title: Incident Management
 subtitle: Slack Integrations (optional)
-description: Page five of our guide on Pagerduty integration with New Relic for incident management.
+description: Page five of our guide on Pagerduty integration with New Relic&reg; for incident management.
 pagerduty: true
 anchorid: slack
 generator: pagination
@@ -50,3 +50,10 @@ This will automatically send notifications to whoever is on-call via SMS and ema
 ![SMS interactions](../../../images/pagerduty/pg-sms-notification.png)
 
 ![CSlack authorization](../../../images/pagerduty/pg-slack-notification.png)
+
+
+## More Resources
+
+- [Monitor and Improve Site Performance with New Relic&reg;](/guides/new-relic/monitor-new-relic)
+
+- [Integrate Your Fastly Account with New Relic&reg;](/guides/fastly-pantheon/fastly-new-relic)

@@ -77,9 +77,8 @@ Use the `pantheon.yml` file to set up platform hooks and advanced site configura
 
 ### New Relic APM Pro
 
-New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic&reg; Performance Monitoring](/new-relic). The following blog posts are also a great reference:
+New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic&reg; Performance Monitoring](/guides/new-relic). The following blog posts are also a great reference:
 
-- [Getting Started with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 

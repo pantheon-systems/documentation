@@ -1,6 +1,6 @@
 ## Provision HTTPS
 
-The process to provision certificates kicks off automatically after the domain has been successfully routed to Pantheon, indicated by the following notice:
+The process to provision certificates kicks off automatically after the domain has been successfully routed to Pantheon, and is indicated by the following notice:
 
 <blockquote class="block-info">
 
@@ -10,7 +10,7 @@ The process to provision certificates kicks off automatically after the domain h
 
 </blockquote>
 
-Both the bare domain and the `www` domain will be accessible over HTTPS once the HTTPS status turns green (which may take up to an hour):
+Both the bare domain and the `www` domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
 
 <blockquote class="block-success">
 

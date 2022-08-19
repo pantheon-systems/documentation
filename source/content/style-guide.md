@@ -905,6 +905,12 @@ Create reusable content in a separate Markdown file that can be included within 
 
 Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
 
+<Alert title="Warning" type="danger" >
+
+Partial file names must not duplicate the names of files in the source/content directory.
+
+</Alert>
+
 Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
 
 After you create the file, include it in the doc:

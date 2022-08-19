@@ -40,7 +40,7 @@ Drupal 9 uses the [cache metadata](https://api.drupal.org/api/drupal/core%21core
 
 This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal's cache metadata to communicate with the [Pantheon Global CDN](/guides/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
 
-For Drupal 9, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer#add-a-dependency-to-an-individual-site), then enable it via the Drupal Admin:
+For Drupal 9, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer/dependencies), then enable it via the Drupal Admin:
 
 ```bash{promptUser: user}
 composer require drupal/pantheon_advanced_page_cache

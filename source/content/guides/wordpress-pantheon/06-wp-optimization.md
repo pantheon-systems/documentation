@@ -16,7 +16,7 @@ Pantheon provides support for performance and optimization features to help keep
 
 ## New Relic
 
-Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping the Pantheon support team visualize corresponding performance and symptoms.
+Using [New Relic](/guides/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping the Pantheon support team visualize corresponding performance and symptoms.
 
 ## Quicksilver
 
