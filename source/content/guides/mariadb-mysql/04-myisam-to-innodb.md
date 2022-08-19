@@ -206,14 +206,14 @@ Make sure you have:
 
   - **Host:** This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
 
-  - **Port:** This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
+    - **Port:** This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
 
-  - **User:** This is the user name you use to connect to MySQL with.
+    - **User:** This is the user name you use to connect to MySQL with.
 
-  - **Password:** This is your MySQL password for the user you specified in the line above.
+    - **Password:** This is your MySQL password for the user you specified in the line above.
 
-  - **Database:** This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
-  
+    - **Database:** This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
+    
 1. Save the script in a file with a `.php` extension in your home directory, and set it as executable.
 
 1. Execute the program from a command window.

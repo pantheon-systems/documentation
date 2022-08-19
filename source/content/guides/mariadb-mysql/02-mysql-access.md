@@ -37,9 +37,9 @@ The following required fields are provided:
 - **Port**: The TCP/IP port number to use for the connection. The platform randomly selects the port number. Port numbers will differ in every environment for each site, and might not match what PHP reports.
 - **Username**: MariaDB or MySQL user name to use when connecting to server.
 - **Password**: The password to use when connecting to the server.
-- **Database**: The database to use; the value will always be pantheon and cannot be altered.
+- **Database**: The database to use. This value will always be `pantheon` and cannot be altered.
 
-As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
+Each database server is in the cloud, which allows credentials to occasionally be updated and without notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
 There's a wide array of MySQL clients that can be used, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
@@ -134,7 +134,7 @@ REPLICA_DB_NAME=pantheon
 
 ## SSH Tunneling
 
-By default, MySQL connections made to Pantheon are encrypted:
+MySQL connections made to Pantheon are encrypted by default:
 
 ```sql
 mysql> SHOW STATUS LIKE "Ssl_cipher";
@@ -145,7 +145,7 @@ mysql> SHOW STATUS LIKE "Ssl_cipher";
 +---------------+---------------------------+
 ```
 
-Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels).
+Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, refer to [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels).
 
 ## Troubleshooting MySQL Connections
 
@@ -169,7 +169,7 @@ terminus env:wake <site>.<env>
 
 ### Can't Connect to Local MySQL Server Through Socket
 
-See [Database Connection Errors](/database-connection-errors) to troubleshoot connection errors like the following:
+Refer to [Database Connection Errors](/database-connection-errors) to troubleshoot connection errors such as the following:
 
 ```bash
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).

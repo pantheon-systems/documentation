@@ -27,16 +27,6 @@ MariaDB provides a full database solution, including:
 
 - Columnar storage
 
-This guide shows you how to:
-
-- Access your MariaDB database through Pantheon
-
-- Access your MariaDB database with Workbench
-
-- Resolve slow logs
-
-- Identify and kill long-running MySQL queries
-
 ## More Resources
 
 - [Database Workflow Tool](/database-workflow)
