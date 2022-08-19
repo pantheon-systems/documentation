@@ -1,16 +1,23 @@
 ---
-title: Configuring Environment Indicators
+title: Environment Configuration
+subtitle: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
 categories: [develop]
 tags: [site, terminus, workflow, webops]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/environment-configuration/environment-indicator
+anchorid: environment-indicator
 ---
-Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/guides/multidev).
 
-For a heads-up indicator of your Pantheon site and environment, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
+This section provides information on how to install an indicator to receive alerts when changes are made in your site and environments.
+
+We recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
 
 <Alert title="Exports" type="export">
 
-This doc uses [Terminus](/terminus) example commands with common variable names for the site and environment names. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
+This doc uses [Terminus](/terminus) example commands with common variable names for the site and environment names. Before you begin these steps, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -65,7 +72,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 
 All environments will now show the following indicator for users who are logged in with the `manage_options` capability:
 
-![Pantheon HUD](../images/pantheon-hud.png)
+![Pantheon HUD](../../../images/pantheon-hud.png)
 
 You can restrict this to specific users with the `pantheon_hud_current_user_can_view` filter:
 
@@ -100,7 +107,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
     ```php
     /*
     * Environment Indicator module settings.
-    * see: https://pantheon.io/docs/environment-indicator
+    * see: https://pantheon.io/docs/guides/environment-configuration/environment-indicator
     */
 
     $conf['environment_indicator_overwrite'] = TRUE;
@@ -166,8 +173,8 @@ All environments will now show a color-coded environment indicator, as defined w
 
 ## More Resources
 
-- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
 
-- [Reading Pantheon Environment Configuration](/read-environment-config)
+- [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

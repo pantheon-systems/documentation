@@ -22,7 +22,7 @@ For Drupal 7 and earlier, Pantheon uses a variant of Pressflow Drupal to allow t
 
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
-- [Reading Pantheon Environment Configuration](/read-environment-config) (including domain_access)
+- [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) (including domain_access)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Platform and Custom Domains](/domains)
 - [Configure Redirects](/guides/redirect)
@@ -128,7 +128,7 @@ Depending on your use case, there are three possibilities:
 
 - For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Object Cache](/object-cache) guide for examples.
 
-- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Object Cache](/object-cache) guide for examples.
+- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or see our [Object Cache](/object-cache) guide for examples.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472).
 

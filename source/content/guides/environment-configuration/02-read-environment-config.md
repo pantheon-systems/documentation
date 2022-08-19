@@ -1,13 +1,21 @@
 ---
-title: Reading Pantheon Environment Configuration
-description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
+title: Environment Configuration
+subtitle: Reading Pantheon Environment Configuration
+description: Learn about the separation of configuration and code within Pantheon's runtime container environment.
 categories: [platform]
 tags: [code, database, files, redis]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/environment-configuration/read-environment-config
+anchorid: read-environment-config
 ---
 
-Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your site's code.
+This section provides information on how to use database credentials for Object Cache (Redis) authentication.
 
-Database credentials, [Object Cache](/object-cache)(Redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+You should never copy and paste credentials from your Dashboard into any of your site's code.
+
+Database credentials, [Object Cache](/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -25,7 +33,7 @@ array(13) {
   etc...
 ```
 
-If you are using a common CMS framework, the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
+The code you need to load this configuration and boot your app should already be pre-configured if you are using a common CMS framework. However, if you need any type of custom configuration, you can work with environmental configuration directly.
 
 <Partial file="platform-considerations-connections.md" />
 
@@ -37,7 +45,7 @@ Unless you're implementing Domain Access, using something other than the standar
 
 </Alert>
 
-Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in `settings.php`.
+Pantheon uses [Pressflow](https://www.pressflow.org/) to automatically read the environmental configuration. If you're working with a vanilla Drupal site or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. You can do this in `settings.php` file in Drupal.
 
 ```php
 <?php
@@ -46,7 +54,7 @@ extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, for Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, in Drupal 7:
 
 ```php
 // All Pantheon Environments.
@@ -77,7 +85,7 @@ Adding this snippet may cause the Status tab to show that Fast 404 pages are not
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-For more information, see [configuring wp-config.php](/wp-config-php).
+Refer to [configuring wp-config.php](/wp-config-php) for more information.
 
 ## Hard-coded Directory References and $_ENV\['HOME']
 
@@ -89,7 +97,7 @@ $_ENV['HOME']
 
 ### Using $_SERVER
 
-When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains#primary-domain).
+When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (for example, [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains#primary-domain).
 
 For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/server_name-and-server_port).
 
@@ -271,7 +279,7 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 
 ### Lockr
 
-You can use [Lockr](/guides/lockr) for maximum security. Lockr provides a simple-to-use developer interface with a scalable cloud key management system. Review the [Install Lockr via the Lockr Terminus Plugin](/guides/lockr#install-lockr-via-the-lockr-terminus-plugin) guide section for installation steps.
+You can use [Lockr](/guides/lockr) for maximum site security. Lockr provides a simple-to-use developer interface with a scalable cloud key management system. Review the [Install Lockr via the Lockr Terminus Plugin](/guides/lockr#install-lockr-via-the-lockr-terminus-plugin) guide section for installation steps.
 
 ## More Resources
 
@@ -279,10 +287,10 @@ You can use [Lockr](/guides/lockr) for maximum security. Lockr provides a simple
 
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
 
-- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
 
-- [Configuring Environment Indicators](/environment-indicator)
+- [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator)
 
 - [WordPress Security](/guides/wordpress-pantheon/wp-security)

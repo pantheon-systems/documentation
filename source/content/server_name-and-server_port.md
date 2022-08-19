@@ -49,4 +49,4 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 - [Configuring Settings.php](/settings-php)
 - [Configuring wp-config.php](/wp-config-php)
 - [Plugins with Known Issues](/plugins-known-issues)
-- [Reading Pantheon Environment Configuration](/read-environment-config)
+- [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)
