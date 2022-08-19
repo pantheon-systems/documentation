@@ -289,7 +289,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 ## See Also
 
-- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
 - [PHP Slow Log](/php-slow-log)
 - [PHP Errors and Exceptions](/php-errors)
 - [Bots and Indexing](/bots-and-indexing)

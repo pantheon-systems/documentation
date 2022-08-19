@@ -6,7 +6,7 @@ Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site 
 
 ### Is the MySQL MyISAM engine supported?
 
-No. If any of your database tables are using the MyISAM engine, you'll need to [convert them to InnoDB](/myisam-to-innodb).
+No. If any of your database tables are using the MyISAM engine, you'll need to [convert them to InnoDB](/guides/mariadb-mysql/myisam-to-innodb).
 
 ### Can I use multiple SQL files in the archive?
 

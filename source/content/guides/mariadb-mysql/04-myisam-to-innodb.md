@@ -1,10 +1,18 @@
 ---
-title: Converting MySQL Tables From MyISAM to InnoDB
+title: MariaDB (MySQL) on Pantheon
+subtitle: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
 categories: [develop]
 tags: [database, cli]
-reviewed: "2020-03-16"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/mariadb-mysql/myisam-to-innodb
+anchorid: myisam-to-innodb
 ---
+
+This section provides information on how to convert MySQL Tables from MyISAM to InnoDB.
+
 Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html), indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way.
 
 Sites that don't use InnoDB are missing out on performance and stability gains.  As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
@@ -144,7 +152,7 @@ If you want to run the script from the command line instead of adding it to your
 Make sure you have:
 
 - PHP installed on your computer
-- Your [database connection info](/mysql-access) for your Dev environment from your [Site Dashboard](/sites)
+- Your [database connection info](/guides/mariadb-mysql/mysql-access) for your Dev environment from your [Site Dashboard](/sites)
 - Copy the script below and save it in a file with a `.php` extension in your home directory.
 
 ```php:title=myisam-to-innbodb.php
@@ -202,7 +210,7 @@ Here are the parameters you will need to configure before running the script:
 
 <dd>
 
-This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
 
 </dd>
 

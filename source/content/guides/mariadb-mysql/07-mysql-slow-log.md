@@ -1,9 +1,18 @@
 ---
-title: MySQL Slow Log
+title: MariaDB (MySQL) on Pantheon
+subtitle: MySQL Slow Log
 description: Use a Drupal or WordPress site's MySQL Slow Log to troubleshoot MySQL and identify serious performance issues.
 categories: [troubleshoot]
 tags: [cli, database]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/mariadb-mysql/mysql-slow-log
+anchorid: mysql-slow-log
 ---
+
+This section provides information on how to analyze your MySQL slow log to improve performance.
+
 Analyzing the MySQL slow log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
 
 ## Requirements
@@ -186,4 +195,4 @@ This means there were 70 slow queries between 10 and 11AM (UTC). That is roughly
 For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic).
 
 ## See Also
-- [Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)
+- [Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)

@@ -1,11 +1,19 @@
 ---
-title: Identify and Kill Queries with MySQL Command-Line Tool
+title: MariaDB (MySQL) on Pantheon
+subtitle: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
 categories: [troubleshoot]
 tags: [cli, database]
-reviewed: "2020-10-28"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/mariadb-mysql/kill-mysql-queries
+anchorid: kill-mysql-queries
 ---
-Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL database](/mysql-access).
+
+This section provides information on how to identify and kill queries with MySQL Command-Line Tool.
+
+Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL database](/guides/mariadb-mysql/mysql-access).
 
 <Enablement title="Ramp up website performance" link="/docs/workshops?c=lw4">
 
@@ -47,7 +55,7 @@ To get a better view of what's happening with your queries, take a look at [MySQ
 
 ### Review Slow Query Logs
 
-Use your site's [MySQL Slow Log](/mysql-slow-log) to troubleshoot MySQL and identify serious performance issues.
+Use your site's [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log) to troubleshoot MySQL and identify serious performance issues.
 
 ### Enable Redis
 
@@ -57,12 +65,12 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 
 ### Consider MySQL Replication (WordPress)
 
-Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. [MySQL replication](/hyperdb) rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
+Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. [MySQL replication](/guides/mariadb-mysql/hyperdb) rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
 
 ## See Also
 
-- [Access MySQL Databases](/mysql-access)
+- [Access MySQL Databases](/guides/mariadb-mysql/mysql-access)
 - [Database Connection Errors](/database-connection-errors)
-- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
-- [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb)
+- [Converting MySQL Tables From MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb)

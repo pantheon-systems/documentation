@@ -1,10 +1,18 @@
 ---
-title: Scaling WordPress with MySQL Replicas and HyperDB
+title: MariaDB (MySQL) on Pantheon
+subtitle: Scaling WordPress with MySQL Replicas and HyperDB
 description: Learn how to distribute requests to replica MySQL databases on WordPress using HyperDB.
 cms: "WordPress"
 categories: [performance]
 tags: [database]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/mariadb-mysql/hyperdb
+anchorid: hyperdb
 ---
+
+This section provides information on how to scale your WordPress site with MySQL Replicas and HyperDB.
 
 <Alert title="Note" type="info" >
 
