@@ -1,7 +1,7 @@
 ---
 title: Pantheon Front-End Sites
 subtitle: Frequently Asked Questions
-description: Learn about Pantheon's decoupled architecture using Front-End Site
+description: Learn about frequently asked questions for Pantheon's decoupled architecture using Front-End Sites
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, joa-pan]
@@ -9,7 +9,7 @@ type: guide
 layout: guide
 showtoc: true
 anchorid: faq
-permalink: docs/guides/decoupled-sites/
+permalink: docs/guides/decoupled-sites/faq/
 editpath: decoupled-sites/06-faq.md
 reviewed: "2022-08-11"
 ---
@@ -18,7 +18,7 @@ reviewed: "2022-08-11"
 
 ### Can I use any CMS with Pantheon Decoupled?
 
-Wordpress and Drupal are currently the only CMSs supported on Pantheon Decoupled. 
+WordPress and Drupal are currently the only CMSs supported on Pantheon Decoupled. 
 
 
 ### What dependency versions are compatible with Pantheon Decoupled?
@@ -36,8 +36,7 @@ Pantheon Front-End Sites currently support:
 Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
 
-
-## Known Limitations 
+## Known Issues
 
 <Accordion title="Preview functionality is not supported for Gatsby" id="preview" icon="info-sign">
 Preview functionality is not currently supported for Gatsby. Currently, it is only available for Drupal sites.
