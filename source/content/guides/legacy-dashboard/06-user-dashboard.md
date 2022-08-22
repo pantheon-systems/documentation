@@ -58,6 +58,7 @@ For information on Site Dashboard, visit our [Site Dashboard](guides/quickstart/
 
 ## More Resources
 
+- [User Dashboard Quick Start](/guides/quickstart/user-dashboard/)
 - [Role-Based Permissions & Change Management](/change-management)
 - [New Site Owner FAQs](/site-owner-faq)
 - [Billing in the Site Dashboard](/site-billing)
