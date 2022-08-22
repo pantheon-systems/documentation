@@ -1,15 +1,18 @@
 ---
 title: Legacy Dashboard
 subtitle: Introduction
-description: AGCDN enables Edge configuration tools for advanced site management, enhanced security, and a customizable WAF.
+description: Legacy Dashboard has all the tools you need to manage your sites, team, and more.
 categories: [develop]
-tags: [professional-services, logs, cdn, security]
-contributors: [whitneymeredith]
+tags: [agencies, collaborate, dashboard, organizations, teams]
+contributors: [michellecolon-pantheon]
 layout: guide
 showtoc: true
-permalink: docs/guides/agcdn
-anchorid: agcdn
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/01-introduction.md
 ---
 
-Pantheon's Legacy Dashboard gives you access to billing, metrics, managing sites and teams, how to creates sites, and more. This guide will walk you through how to utilize the tools available to make the most of your WebOps experience.
+Pantheon's Legacy Dashboard gives you access to billing, metrics, managing sites and teams, how to creates sites, open support tickets, and more. This guide will walk you through how to utilize the tools available to make the most of your WebOps experience.
 
+<Partial file="new-dashboard-info.md" />
