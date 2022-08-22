@@ -13,7 +13,7 @@ anchorid: mariadb-mysql-faq
 
 This section provides answers to frequently asked MariaDB and MySQL questions.
 
-### How can I access my MySQL Slow Query logs?
+### How can I access my MySQL Slow Query Logs?
 
 Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html).
 
@@ -23,7 +23,7 @@ To access the log for your database:
 1. Replace the word `appserver` with `dbserver` in the connection string.
 1. Navigate to the `logs` subdirectory to view the MySQL slow query logs.
 
-### How can I access MySQL binary logs?
+### How can I access MySQL Binary Logs?
 
 These logs are generally not used for development but may be useful to troubleshoot disk quota issues.
 
@@ -39,7 +39,7 @@ Table prefixes are not supported or recommended by Pantheon. While the server wi
 
 ### Can I create a database in addition to the Pantheon database?
 
-No, only one database per site is provided. While create privileges are granted, any additional database will not survive regular maintenance operations.
+No, only one database per site is provided. While creation privileges are granted, any additional database will not survive regular maintenance operations.
 
 ### Can I put unique tables in the Pantheon database?
 

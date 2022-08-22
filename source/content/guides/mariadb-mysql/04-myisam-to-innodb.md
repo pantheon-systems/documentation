@@ -13,7 +13,7 @@ anchorid: myisam-to-innodb
 
 This section provides information on how to convert MySQL Tables from MyISAM to InnoDB.
 
-Sites that don't use [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html) are missing out on performance and stability gains. As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
+Sites that use [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html) have better performance and stability gains. Pantheon's Launch Check for new sites looks at the engine type on every table, and notifies you if a table uses MyISAM engine, so you can fix it. There is a PHP script you can use to help convert your MyISAM tables to InnoDB.
 
 <Alert title="Warning" type="danger">
 
@@ -25,7 +25,7 @@ Always make sure to delete the script after successfully converting your databas
 
 ## MySQL Command
 
-Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
+Run the command below from the MySQL command prompt to convert a table from MyISAM to InnoDB:
 
 ```sql
 ALTER TABLE table_name ENGINE=InnoDB;
@@ -47,9 +47,8 @@ This script is designed specifically for sites running on the Pantheon platform,
   https://dev-yoursite.pantheonsite.io/filename.php
   ```
 
-That's all there is to it — the script will do all the work.
 
-Here's the browser version of the script:
+You can view the browser version of the script below:
 
 <TabList>
 
@@ -150,7 +149,7 @@ Use the script below if you want to run the script from the command line instead
 Make sure you have:
 
 - PHP installed on your computer
-- Your [database connection info](/guides/mariadb-mysql/mysql-access) for your Dev environment from your [Site Dashboard](/sites)
+- Your [database connection info](/guides/mariadb-mysql/mysql-access#accessing-the-database-directly)
 
 
 1. Copy the script below 
@@ -204,7 +203,7 @@ Make sure you have:
 
 1. Configure the parameters below:
 
-  - **Host:** This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+    - **Host:** This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
 
     - **Port:** This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
 
@@ -218,7 +217,7 @@ Make sure you have:
 
 1. Execute the program from a command window.
 
-The script will alert you to everything it's doing. It has safeties built in to keep it from changing anything but MyISAM tables. It will look at every table in your database, and if the engine is MyISAM, it will change it to an InnoDB.
+The script will alert you to everything it's doing. It has safety protocols built in to keep it from changing anything but MyISAM tables. It will look at every table in your database, and if the engine is MyISAM, it will change it to an InnoDB.
 
 Review the changes carefully after you have run it successfully.
 
