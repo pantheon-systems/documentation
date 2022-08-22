@@ -13,12 +13,6 @@ previousurl: terminus/configuration/
 image: terminus-thumbLarge
 ---
 
-<Alert title="Warning" type="danger">
-
-The recent 2.x releases of Terminus signify a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, refer to the [Terminus 2.0](/terminus-2-0) documentation.
-
-</Alert>
-
 <TerminusVersion text="Update to the Current Release" />
 
 ## Update Standalone Terminus
