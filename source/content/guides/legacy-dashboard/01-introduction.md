@@ -11,3 +11,5 @@ permalink: docs/guides/agcdn
 anchorid: agcdn
 ---
 
+Pantheon's Legacy Dashboard gives you access to billing, metrics, managing sites and teams, how to creates sites, and more. This guide will walk you through how to utilize the tools available to make the most of your WebOps experience.
+
