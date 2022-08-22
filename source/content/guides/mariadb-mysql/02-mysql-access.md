@@ -25,29 +25,31 @@ Due to the nature of our platform, the connection information will change from t
 
 ### Accessing the Database Directly
 
-This option is not available if you have purchased [Secure Runtime Access](/guides/secure-development/secure-runtime-access).
+You cannot access the database directly if you have purchased [Secure Runtime Access](/guides/secure-development/secure-runtime-access).
 
-MySQL credentials for each site environment are located in the Dashboard:
+MySQL credentials for each site environment are located in your Site Dashboard.
+
+Navigate to the environment you want to connect with, and select **Connection Info** to view your Database credentials.
 
 ![MySQL Credentials](../../../images/dashboard/mysql-info.png)
 
 The following required fields are provided:
 
-- **Server**: The hostname of the MariaDB or MySQL server.
+- **Server**: The hostname of the server.
 - **Port**: The TCP/IP port number to use for the connection. The platform randomly selects the port number. Port numbers will differ in every environment for each site, and might not match what PHP reports.
-- **Username**: MariaDB or MySQL user name to use when connecting to server.
+- **Username**: The user name to use when connecting to server.
 - **Password**: The password to use when connecting to the server.
-- **Database**: The database to use. This value will always be `pantheon` and cannot be altered.
+- **Database**: The database name to use. This value will always be `pantheon` and cannot be altered.
 
 Each database server is in the cloud, which allows credentials to occasionally be updated and without notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
-There's a wide array of MySQL clients that can be used, including:
+There's a wide array of MySQL clients that you can use, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
 - [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/),
 - [Navicat](https://www.navicat.com/download),
 - [PHPMyAdmin](https://www.phpmyadmin.net/),
 
-and others. See the documentation or issue queue of your software to learn more about how to configure a connection.
+and others. Refer to the documentation or issue queue of your software to learn more about how to configure a connection.
 
 #### Open Sequel Ace Database Connection
 
@@ -104,13 +106,13 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 
 ### Accessing the Database via Your Application using PHP
 
-In this scenario, the application connects using our internal network. Use the following variables in your application to access the database:
+You can connect to the application with Pantheon's internal network. Use the following variables in your application to access the database:
 
-- **DB_HOST**: Name of the MySQL server.
+- **DB_HOST**: Name of the server.
 - **DB_PORT**: Database port used.
-- **DB_USER**: MySQL user name to use when connecting to server.
+- **DB_USER**: User name to use when connecting to server.
 - **DB_PASSWORD**: The password to use when connecting to the server.
-- **DB_NAME**: The database to use; the value will always be pantheon and cannot be altered.
+- **DB_NAME**: The database to use; the value will always be `pantheon` and cannot be altered.
 - **REPLICA_DB_HOST**: Database IP address. This will be changing to have the same value as DB_HOST, and route to a proxy server. We will no longer support connections via IP Address.
 - **REPLICA_DB_PORT**: Replica database port.
 - **REPLICA_DB_USER**: MySQL replica user name to use when connecting to server.

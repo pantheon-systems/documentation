@@ -1,7 +1,7 @@
 ---
 title: MariaDB and MySQL on Pantheon
 subtitle: Using MySQL Workbench to Access a Database
-description: Detailed information on using MySQL Workbench for creating, executing, and optimizing SQL queries.
+description: Use MySQL Workbench to create, execute, and optimize SQL queries.
 categories: [manage]
 tags: [database, local]
 contributors: [whitneymeredith]
@@ -13,7 +13,7 @@ anchorid: mysql-workbench
 
 This section provides information on how to use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) to access a database on Pantheon.
 
-[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides DBAs and developers with an integrated tools environment for: 
+[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides database administrators and developers with integrated tools for: 
 
 - Database design and modeling
 
@@ -25,13 +25,13 @@ This section provides information on how to use [MySQL Workbench](https://dev.my
 
 ## Get Started
 
-Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's Dashboard. For detailed information, see [Accessing MySQL database](/guides/mariadb-mysql/mysql-access).
+Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the sites Dashboard. Refer to [Accessing MySQL database](/guides/mariadb-mysql/mysql-access) for detailed information. 
 
 ## Create a New MySQL Connection
 
 1. Start MySQL Workbench and click the **+** icon on the top left of the screen to create a MySQL connection. 
 
-1. Enter the information to connect to the database. Each of the following are required:
+1. Enter the information to connect to the database. The following fields are required:
 
     **Connection Name** - A unique name (add a prefix for Dev/Test/Live)  
     **Connection Method** - Standard (TCP/IP)  
@@ -52,7 +52,7 @@ Ensure you have the correct database username and password for your environment.
 
 1. Click **Test Connection** to initiate a connection with the remote database after you complete the steps in the section above.
 
- - If it succeeds, you'll receive a confirmation message.
+    -  You'll receive a confirmation message if it succeeds.
 
 1. Confirm that the new connection is available on the MySQL Workbench workspace after the configuration completes.
 
@@ -62,7 +62,7 @@ You can now administer your database. There will be a new entry on the Workbench
 
 ## Troubleshooting MySQL Connections
 
-Refer to [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access).
+Refer to [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access#troubleshooting-mysql-connections) for more information.
 
 ## More Resources
 

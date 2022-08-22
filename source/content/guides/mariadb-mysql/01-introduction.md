@@ -1,7 +1,7 @@
 ---
 title: MariaDB and MySQL on Pantheon
 subtitle: Introduction
-description: Learn more about using MariaDB (MySQL) on Pantheon.
+description: Learn how to use MariaDB and MySQL on Pantheon.
 categories: [develop]
 tags: [database]
 contributors: [whitneymeredith]
@@ -13,7 +13,7 @@ anchorid: mariadb-mysql
 
 Pantheon provides direct access to your databases through our platform for debugging and for importing large databases. Pantheon is standardized on MariaDB, but we also support MySQL database connections.
 
-Each site environment (Dev, Test and Live) has a separate database that requires unique credentials. Credentials are automatically included in your site configuration.
+Each site environment (Dev, Test, and Live) has a separate database that requires unique credentials. Credentials are automatically included in your site configuration.
 
 ## MariaDB and MySQL
 
