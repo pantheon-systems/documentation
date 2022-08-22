@@ -10,7 +10,7 @@ layout: guide
 showtoc: true
 anchorid: faq
 permalink: docs/guides/decoupled-sites/
-editpath: decoupled-sites/faq.md
+editpath: decoupled-sites/06-faq.md
 reviewed: "2022-08-11"
 ---
 
