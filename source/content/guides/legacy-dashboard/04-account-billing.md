@@ -1,8 +1,13 @@
 ---
-title: Billing in the User Dashboard
+title: Legacy Dashboard
+subtitle: Billing in the User Dashboard
 description: View billing history (invoices and transactions) or edit credit card profiles to manage billing for sites in bulk within the Billing tab of the Account tool in the User Dashboard.
 categories: [platform]
 tags: [billing, dashboard]
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/04-account-billing.md
 ---
 
 ## Access Account Billing
@@ -68,7 +73,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 <Partial file="billing-declined-card-codes.md" />
 
-## See Also
+## More Resources
 
 - [Billing in the Site Dashboard](/site-billing)
 - [New Site Owner FAQs](/site-owner-faq)

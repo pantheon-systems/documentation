@@ -4,7 +4,6 @@ subtitle: Billing in the Site Dashboard
 description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
 categories: [manage]
 tags: [billing, dashboard]
-contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
@@ -131,7 +130,7 @@ To update the email to which notifications are sent, follow the steps in [Replac
 
 If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 
-## See Also
+## More Resources
 
 - [Account Billing in the User Dashboard](/account-billing)
 - [Manage Plans in the Site Dashboard](/site-plan)
