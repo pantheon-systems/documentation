@@ -1,14 +1,16 @@
 ---
-title: Billing in the Site Dashboard
+title: Legacy Dashboard
+subtitle: Billing in the Site Dashboard
 description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
 categories: [manage]
 tags: [billing, dashboard]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/agcdn/agcdn-wafio
-anchorid: agcdn-wafio
-reviewed: "2020-01-10"
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/03-site-billing.md
 ---
 
 <Alert title="Note" type="info">

@@ -1,14 +1,15 @@
 ---
-title: Create A Site
+title: Legacy Dashboard
+subtitle: Create A Site
 description: Create a new Drupal or WordPress site on Pantheon.
 categories: [get-started]
 tags: [site, dashboard]
-contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/agcdn/agcdn-features
-anchorid: agcdn-features
-reviewed: "2021-04-23"
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/02-create-site.md
 ---
 
 The Pantheon Dashboard provides a quick "click to install" method of creating new sites. In less than five minutes, you'll have a new site up and running on the platform.
