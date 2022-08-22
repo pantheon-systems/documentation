@@ -2,6 +2,10 @@ Similar to [XML-RPC](#avoid-xml-rpc-attacks), the `wp-login.php` path can be sub
 
 There are a few recommended actions you can take to protect yourself against login abuse.
 
+### Change the Admin Account Name
+
+Change your admin account name. Many attacks assume the default name, “admin.”
+
 ### Change the wp-login.php Path
 
 Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose, such as `/login` or `/admin`. Then [redirect](/guides/redirect/advanced#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
