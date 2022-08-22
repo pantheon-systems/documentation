@@ -12,7 +12,7 @@ permalink: docs/guides/wordpress-pantheon/wp-security
 anchorid: wordpress-pantheon/wp-security
 ---
 
-This section will help you advance on the security continuum, regardless of your current level of sophistication. We'll cover the basics of securely administering and updating WordPress, recommend plugins that can help enhance your security, and help you close the three most often exploited WordPress vulnerabilities.
+This section will cover the basics of securely administering and updating WordPress, recommend plugins that can help enhance your security, and help you close the most often exploited WordPress vulnerabilities.
 
 ## Built-in Security Features
 
@@ -50,7 +50,7 @@ WordPress core is the most secure part of the CMS, provided you're running the m
 
 ### WordPress Auto-Update Feature Considerations
 
-WordPress has an auto-update feature to help with keeping the core current. This functionality works great for some users, but it could be incompatible with your team's best practices. The background updater requires that your WordPress instance have the permission to write to itself, which is an inherent security risk. Still, it's reasonable to stick with auto updates unless you:
+WordPress has an auto-update feature to help with keeping the core current. However, it requires that your WordPress instance have the permission to write to itself, which is an inherent security risk. Still, it's reasonable to stick with auto updates unless you:
 
 - Manage your own site and have your own version control process.
 - Implement your own deployment mechanism—for example, if you have multiple servers to update.
@@ -58,13 +58,13 @@ WordPress has an auto-update feature to help with keeping the core current. This
 
 If any of the above apply, you should [disable auto-updates](https://make.wordpress.org/core/2013/10/25/the-definitive-guide-to-disabling-auto-updates-in-wordpress-3-7/). If you do so, however, it's important to create a process for updates that includes version control and controlled deployments.  You can do so as follows:
 
-1. First, disable file edits. The background auto-updater requires this permission to operate, but since you're manually updating, you can close this vulnerability. That's good, because hackers can exploit file editing capabilities to run arbitrary code on your site. Just add this snippet into your wp-config.php to turn it off:
+1. Disable file edits. The background auto-updater requires this permission to operate, but since you're manually updating, you can close this vulnerability. To do so, add this snippet into your wp-config.php to turn it off:
 
   ```php:title=wp-config.php
   define('DISALLOW_FILE_EDIT', true);
   ```
 
-1. Second, disable updates on test and live. Updates should be done in the development environment, not directly on your live or test sites. This workflow is built into Pantheon. Here's how we code for it in our default wp-config.php:
+1. Disable updates on test and live. Updates should be done in the development environment, not directly on your live or test sites. This workflow is built into Pantheon. Here's how we code for it in our default wp-config.php:
 
   ```php:title=wp-config.php
   // FS writes aren't permitted in test or live, so we should let WordPress know to disable relevant UI
@@ -85,18 +85,18 @@ Here's what a simple manual update procedure looks like:
 
 1. Log in to your WordPress admin in a development environment.
 2. Update core, themes, and plugins as needed.
-3. Quick check to see if everything is functioning normally: If so, commit changes. If not, troubleshoot.
+3. Check to see if everything is functioning normally: If so, commit changes. If not, troubleshoot.
 4. Deploy code to your Test environment, syncing your Live content and settings down to Test.
 5. Test the site thoroughly, making sure your content and configuration is fully functional with the new code. If it looks good, push to Live. If not, sync back to Dev for more troubleshooting.
 
 
 ### Automatic Updates
 
-Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Custom Upstreams](/guides/custom-upstream) that include favored plugins, custom plugins, a base theme, etc. The goal with this setup is to be able to update that shared codebase and then have all of the sites based on that site receive the updates automatically. 
+Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Custom Upstreams](/guides/custom-upstream) that include favored plugins, custom plugins, a base theme, etc. This allows you to update that shared codebase and then have all of the sites based on that site receive the updates automatically. 
 
-While custom upstreams and a shared codebase will help, adding automation and scripting to the mix will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and give a report back to a human indicating that the site has updates ready to go. 
+While Custom Upstreams will help, adding automation and scripting to the mix will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and give a report back to a human indicating that the site has updates ready to go. 
 
-While it requires some upfront work from you to set up, the basic ingredients are ready for you to work with. Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](https://pantheon.io/docs/wp-cli/)—and add in our [Quicksilver hooks](https://pantheon.io/docs/quicksilver/) to trigger testing and you're on your way to a truly powerful combination of best practices AND convenience. 
+Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](https://pantheon.io/docs/wp-cli/) and add in our [Quicksilver hooks](https://pantheon.io/docs/quicksilver/) to trigger testing, and you're on your way. 
 
 [Pixotech has a nice writeup](http://www.pixotech.com/automating-pluginmodule-updates-on-pantheon/) on their process that does just this, and our own Andrew Taylor has a [fantastic script for doing all of this plus visual regression testing](https://pantheon.io/blog/automating-security-updates-scalewpio) on Pantheon.
 
@@ -115,7 +115,7 @@ These are some of our favorite plugins for helping you move across the security 
 
 ## Closing WordPress Coding Vulnerabilities
 
-It's possible to take every precaution in keeping your site secure, but to introduce vulnerabilities in the code. There are three common types of attacks that rely on insecure code. It's important to both be aware of these vulnerabilities, and know how to prevent them. If you write any custom code for WordPress or anyone on your team does the same, it's essential to understand (and prevent) these common attacks.
+It's possible to take every precaution in keeping your site secure, but to introduce vulnerabilities in the code. There are three common types of attacks that rely on insecure code. It's important to both be aware of these vulnerabilities, and know how to prevent them. If you or anyone on your team write any custom code for WordPress, it's essential to understand (and prevent) these common attacks.
 
 ### Cross-Site Scripting (XSS)
 
@@ -127,12 +127,12 @@ Avoid this attack by validating, escaping and sanitizing your data. For detailed
 
 This type of attack also relies on unsanitized data. The attacker attempts to enter SQL commands through an input form on your webpage. These commands can do everything from filling your database with spam to deleting data.
 
-As with XSS attacks, preventing SQL injections is all about proper data hygiene. Your code should check that any data inputted is properly formatted and free of suspicious characters before it's added to the database.[This guide](https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data) from the WordPress Codex provides a good overview of how to code these security checks.
+As with XSS attacks, preventing SQL injections is all about proper data hygiene. Your code should check that any data inputted is properly formatted and free of suspicious characters before it's added to the database. [This guide](https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data) from the WordPress Codex provides a good overview of how to code these security checks.
 
 ### Cross-Site Request Forgery (CSRF)
 
 This type of attack uses a trusted user's account to fool your website into accepting malicious code. The attack is possible when a user logs into your website, then navigates away from the site and encounters a forged link. The user clicks the link, which generates a forged request to your site. The user doesn't know what happened, and your site is fooled into thinking the request came from the user.  
-    
+
 WordPress has a built-in function to help stop CSRF attacks called a "nonce,” or "number used once.” The number is an identifier attached to a specific user and session and can be changed at any interval you decide. Any information that looks like it comes from the user, but doesn't include the nonce, will be rejected.  
     
 For detailed information on how to generate and use nonces, consult this guide from[CSS-Tricks](https://css-tricks.com/wordpress-front-end-security-csrf-and-nonces/).

@@ -16,9 +16,7 @@ WordPress suggests password complexity guidelines when you create a user and pas
 
 ### Disable "Anyone Can Register"
 
-Some attackers or lost visitors might try to create an account via the login page.
-
-To turn off the feature, navigate to the **Settings** tab in WordPress admin and uncheck **Anyone can register** on the **Membership** line.
+Some attackers or lost visitors might try to create an account via the login page. To disable this, navigate to the **Settings** tab in WordPress admin and uncheck **Anyone can register** on the **Membership** line.
 
 ### Add Multi-factor Authentication (MFA)
 
