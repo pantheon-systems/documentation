@@ -1,14 +1,17 @@
 ---
-title: Billing in the Site Dashboard
-description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
-categories: [manage]
-tags: [billing, dashboard]
-contributors: [whitneymeredith]
+title: Legacy Dashboard
+subtitle: Add a Client Site to Your Organization Dashboard
+description: Learn how to add a client to your Partner Agency to share special features and pricing.
+categories: [platform]
+tags: [agencies, billing, organizations]
+contributors: [edwardangert]
+searchboost: 150
 layout: guide
 showtoc: true
-permalink: docs/guides/agcdn/agcdn-wafio
-anchorid: agcdn-wafio
-reviewed: "2020-01-10"
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/09-client-org-dashboard.md
 ---
 
 <Alert title="Note" type="info">
