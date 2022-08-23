@@ -49,7 +49,7 @@ Otherwise, please ask each student to [create their own Pantheon account](https:
 
  Aside from prerequisites specific to your training program, please inform students that they will get notifications from Pantheon after the setup process. Letting them know upfront saves everyone some questions and surprises.
 
-## See Also
+## More Resources
 
  Providing links to key documents in your follow up materials will help your students long after class ends as they start to explore Pantheon on their own. We recommend the following:
 

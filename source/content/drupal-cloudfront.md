@@ -81,7 +81,7 @@ Execute the following steps as an anonymous user (logged out).
 ### CloudFront Unable to Connect to Pantheon
 If you find that CloudFront is unable to receive content from the origin (Pantheon) for HTTPS traffic, it's likely due to the Host HTTP header forwarded in the request. To resolve, switch Forward Headers behaviors setting from "All" to "None".
 
-## See Also
+## More Resources
 
 * [CDN Developer's Article](http://wimleers.com/article/easy-drupal-cdn-integration-for-fun-and-profit)
 * [CDN Module](https://drupal.org/project/CDN)

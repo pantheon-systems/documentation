@@ -223,6 +223,6 @@ Do NOT push/pull code between Lando and Pantheon directly. All code should be pu
 
 </Alert>
 
-## See Also
+## More Resources
 
 - [Install and Configure Lando for WordPress](/guides/lando-wordpress)

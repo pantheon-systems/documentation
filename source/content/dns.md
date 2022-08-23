@@ -199,7 +199,7 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 <Partial file="_hosts-file.md" />
 
-## See Also
+## More Resources
 
  - [Launch Essentials](/guides/launch)
  - [Platform and Custom Domains](/domains)

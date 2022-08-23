@@ -294,7 +294,7 @@ In the lifecycle of managing a site, content editors will add new material to th
 
 If you're a developer who lives in the command line, you now see the power of Terminus and Drush. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like Drush (and WP-CLI for WordPress) give you the power to manage the inner workings of your Drupal powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
 
-## See Also
+## More Resources
 
 - [Use the Pantheon Workflow](/pantheon-workflow)
 - [Configuration Workflow for Drupal 9 Sites](/drupal-9-configuration-management)

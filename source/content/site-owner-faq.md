@@ -85,7 +85,7 @@ Self-serve sites are billable via recurring monthly or [annual](/annual-billing)
 
 <Partial file="billing-declined-card-codes.md" />
 
-## See Also
+## More Resources
 
 - [Billing in the Site Dashboard](/site-billing)
 - [Account Billing in the User Dashboard](/account-billing)

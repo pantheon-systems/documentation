@@ -150,6 +150,6 @@ Displays the files that references sessions. If any are found, you'll be prompte
 
 If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it. Pull requests are always welcome!
 
-## See Also
+## More Resources
 
 If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).

@@ -40,5 +40,5 @@ An unsupported repository is typically a project created only for internal use a
 
 A deprecated repository is a project that has been retired or replaced, and is no longer supported by Pantheon. Details about the repository can be found in the `README.md`. Additional information, such as suitable alternative projects or guidance on finding solutions, might be available in the [Community Slack](https://slackin.pantheon.io/). Using a project that has been deprecated is not encouraged.
 
-## See Also
+## More Resources
 - [Get Support](/guides/support/)

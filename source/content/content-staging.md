@@ -76,7 +76,7 @@ Drupal also offers the [YAML Content](https://www.drupal.org/docs/contributed-mo
 
 Drupal’s [Content Synchronization](https://www.drupal.org/project/content_sync) module allows you to synchronize content across multiple environments. You can export single content items or all content items from one environment to another.
 
-## See Also
+## More Resources
 
 - [Pantheon WebOps Workflow](/pantheon-workflow#code-moves-up-content-moves-down)
 - [INFOGRAPHIC: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)

@@ -148,7 +148,7 @@ Best practices during normal operation (e.g. not during a site relaunch) suggest
 
 As soon as you complete step 3, visitors to your domain will see the new site. Until step 5 is complete and the DNS is fully propagated, your visitors may still see the new site with the old site's HTTPS certificate, that will go offline shortly.
 
-## See Also
+## More Resources
 
 - [Launch Essentials](/guides/launch)
 - [Manage Plans in the Site Dashboard](/site-plan)

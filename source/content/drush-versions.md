@@ -87,7 +87,7 @@ Drupal sites created on Pantheon in late 2015 or earlier that do not have `drush
 
 Configure a newer version of Drush as [documented above](#configure-drush-version) to resolve.
 
-## See Also
+## More Resources
 
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)

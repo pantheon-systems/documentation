@@ -349,7 +349,7 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 }
 ```
 
-## See Also
+## More Resources
 
 This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 

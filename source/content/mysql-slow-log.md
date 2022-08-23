@@ -185,5 +185,5 @@ This means there were 70 slow queries between 10 and 11AM (UTC). That is roughly
 
 For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic).
 
-## See Also
+## More Resources
 - [Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)

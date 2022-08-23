@@ -29,6 +29,6 @@ This guide will show you how to migrate a site that meets the following criteria
 
 - You are able to [create a new Drupal 9 site using Terminus Build Tools](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project)
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)

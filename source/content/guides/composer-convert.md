@@ -76,7 +76,7 @@ Following the `drupal-composer-managed` upstream will help keep your site up to 
 
 <Partial file="composer-updating.md" />
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)
 

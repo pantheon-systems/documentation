@@ -59,7 +59,7 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 
 Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. [MySQL replication](/hyperdb) rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
 
-## See Also
+## More Resources
 
 - [Access MySQL Databases](/mysql-access)
 - [Database Connection Errors](/database-connection-errors)

@@ -24,7 +24,7 @@ As this is not a runtime configuration, the `shm_size` cannot be changed. If a g
 
 No. The **Clear Caches** button in the Site Dashboard does not interact with APCu. The function [`apcu_clear_cache`](https://www.php.net/manual/en/function.apcu-clear-cache.php) will clear the APCu cache for a single application container.
 
-## See Also
+## More Resources
 
 - [Application Containers overview](/application-containers)
 - [Clearing the cache](/clear-caches)

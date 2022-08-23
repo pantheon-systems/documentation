@@ -287,7 +287,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
    Stop the process with **CTRL-C**.
 
-## See Also
+## More Resources
 
 - [MySQL Slow Log](/mysql-slow-log)
 - [PHP Slow Log](/php-slow-log)

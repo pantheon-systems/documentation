@@ -70,7 +70,7 @@ Host *.drush.in
   ServerAliveInterval 60
 ```
 
-## See Also
+## More Resources
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 - [MySQL Slow Log](/mysql-slow-log)
 - [Converting MySQL Tables from MyISAM to InnoDB](/myisam-to-innodb)

@@ -181,7 +181,7 @@ You can modify your local `hosts` file to validate domain-specific settings befo
 
 <Partial file="_hosts-file.md" />
 
-## See Also
+## More Resources
 
 - [Configure Redirects](/guides/redirect)
 - [Launch Essentials](/guides/launch)

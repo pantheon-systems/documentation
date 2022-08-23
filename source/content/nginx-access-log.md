@@ -113,7 +113,7 @@ You can navigate the `nginx-access.log` file using the CLI, without GoAccess. Th
   ```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
 
 
-## See Also
+## More Resources
 
 * [Log Files on Pantheon](/logs)
 * [Bots and Indexing](/bots-and-indexing)

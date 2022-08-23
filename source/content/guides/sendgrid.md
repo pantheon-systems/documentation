@@ -198,7 +198,7 @@ You can explore the Statistics and Email Reports from within your site's account
 
 You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/resource/the-email-infrastructure-guide-build-it-or-buy-it) for advanced tips on how to create and publish DNS records for increased deliverability.
 
-## See Also
+## More Resources
 
 - [Use WP Mail SMTP to Send Email with Sendgrid](/guides/sendgrid-wordpress-wp-mail-smtp)
 - [Prevent Spamming During Drupal Debugging and Testing](/guides/rerouting-outbound-email)
