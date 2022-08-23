@@ -1,137 +1,99 @@
 ---
-title: Billing in the Site Dashboard
-description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
-categories: [manage]
-tags: [billing, dashboard]
+title: Legacy Dashboard
+subtitle: Managing Sites and Teams with the Pantheon Organization Dashboard
+description: Detailed information on how to add users and sites to your organization.
+categories: [platform]
+tags: [agencies, collaborate, dashboard, organizations, teams]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/agcdn/agcdn-wafio
-anchorid: agcdn-wafio
-reviewed: "2020-01-10"
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/08-site-org-dashboard.md
 ---
 
-<Alert title="Note" type="info">
+The Organization Dashboard is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
 
-Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing) for more information.
+<Alert title="For Info on the New Dashboard" type="info">
 
-</Alert>
-
-## Access Site Billing
-
-1. From the User Dashboard, click on the site you want to access billing for.
-
-1. Go to the Site Dashboard and click the **Billing** tab.
-
-<Alert title="Note" type="info">
-
-Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
+This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard Workspaces guide](/guides/new-dashboard/workspaces) for information on teams and organization workspaces in the New Pantheon Dashboard.
 
 </Alert>
 
-### Roles and Permissions
+## Add Sites to Your Organization
 
-The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
+### New Sites
+
+While creating a new site, the **Organization Affiliation** field that lists the organizations to which a user belongs, is displayed to any user in your [organization](/organizations). New sites that are affiliated with an organization are automatically added to your Organization Dashboard, and the user who creates the site is designated as the owner.
+
+### Existing Sites
+
+From the Site Dashboard, the Site Owner will want to:
+
+<Partial file="add-supporting-org.md" />
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).
+ If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/guides/support/contact-support/) to transfer sites to your Organization.
 
 </Alert>
 
-## View a Recent Invoice from the Dashboard
+## Manage Site Teams
+If you need to add developers as full team members to a site, or outside contractors to individual sites, the Organization Administrator or existing Site Team Member will need to add them to the site team:
 
-<Partial file="view-invoices.md" />
+1. Check the box next to the site or sites you want to add the user to.
+2. Click **Team** and **Add a team member**.
+3. Enter the user's email address.
+4. Click **Add team member**.
 
-## Transfer Ownership and Billing for This Site
+The user will receive an email notification with a link to the Site Dashboard.
 
-<Partial file="transfer-ownership-billing-intro.md" />
-<Partial file="transfer-ownership-billing-steps.md" />
+Removing site team members follows the same process.
 
-## Your Credit Cards
+## Filter Sites
 
-### Add a New Credit Card
+At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters.
 
-If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all plans, use the steps in this section to add a new credit card profile in the **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** section of your User Dashboard.
+### Site Plan
 
-1. If the site:
-    - Is currently in Sandbox mode:
-        1. Click **Add Card**.
-        1. Click **+ Add New Card**.
-    - Already has a card associated with it:
-        - Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
+This lets you filter sites by their [site plan](/site-plan).
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+### Tags
 
-1. Find the existing card under **Billing Information** and click **Change** next to it, then click **Add New Card**.
+You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
-1. Enter your credit card information and click **Add Card**.
+<Alert title="Note" type="info">
 
-1. To add the card to the site, select the new card and click **Update Credit Card**.
-    - Skip this step to store the card without adding it to the site.
+Tags are case-sensitive.
 
-Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
+</Alert>
 
-### Bill This Site to a New Card
+To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
-Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
+### Upstream
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/start-state/#pantheon-upstreams) and [Custom Upstreams](/guides/custom-upstream).
 
-1. Find the existing card under BILLING INFORMATION and click **Change** next to it.
+### Code Status
 
-1. Select the new card and click **Update Credit Card**.
+This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.
 
- You should get a message saying "Your billing information has been updated!"
+### Status
 
-### Do Not Bill This Site to a Card
+This filter shows any sites that are [frozen](/platform-considerations/#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/guides/global-cdn).
 
-A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/site-plan/#cancel-current-plan).
+### User in Charge
+Filters sites by the [user in charge](/change-management/#roles-and-permissions).
 
-After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
+## Add Users to Your Organization
 
-1. Go to the Site Dashboard and click the **Billing** tab.
-1. Find your card under BILLING INFORMATION and click **Remove Card**.
+Organization Administrators can add members to the Organization Team as follows:
 
- You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
+1. Click on the **People tab**.
+2. Click **Add user**.
+3. Enter the user's email address.
+4. Choose the user's role.
+5. Click **Add user**.
 
-### Replace or Update an Old or Expired Credit Card
-
-<Partial file="replace-credit-card.md" />
-
-### Troubleshooting a Declined Credit Card
-
-<Partial file="billing-declined-card-codes.md" />
-
-## Frequently Asked Questions
-
-### What forms of payment are accepted?
-
-Sites purchased online through the Pantheon Site Dashboard accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.).
-
-### Does Pantheon accept PayPal?
-
-Pantheon currently does not accept PayPal.
-
-### Can there be more than one site owner?
-
-A site can only have one site owner.
-
-### Can the payment for a site be split between multiple cards.
-
-No, payment for a site can only come from one card at a time.
-
-### Why don't I get email notifications about upcoming billing?
-
-When a billing cycle approaches, billing emails are only sent to the billing contact email. The billing contact is set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment.
-
-To update the email to which notifications are sent, follow the steps in [Replace or Update an Old or Expired Credit Card](#replace-or-update-an-old-or-expired-credit-card). Use the same card information with a new email address in the **Add Payment Method** modal to receive emails at a different address while continuing to bill the same card.
-
-If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
-
-## See Also
-
-- [Account Billing in the User Dashboard](/account-billing)
-- [Manage Plans in the Site Dashboard](/site-plan)
-- [Traffic Limits and Overages](/traffic-limits)
-- [Site Plans FAQs](/site-plans-faq)
+If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard.
