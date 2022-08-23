@@ -18,7 +18,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
 1. From your User or Organization's Dashboard, click **Create New Site** to be brought to the **Create Your Pantheon Site** page:
 
-  ![Create Your Pantheon Site page](../images/dashboard/create-pantheon-site.png)
+  ![Create Your Pantheon Site page](../../../images/dashboard/create-pantheon-site.png)
 
 1. Name the site.
 

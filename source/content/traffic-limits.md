@@ -85,12 +85,12 @@ Certain activities are generally excluded from the calculation of visits and pag
 
 <Partial file="traffic-overages-faq.md" />
 
-## See Also
+## More Resources
 
-- [Billing in the Site Dashboard](/site-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 - [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-- [Manage Plans in the Site Dashboard](/site-plan)
-- [Metrics in the Site Dashboard](/metrics)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-dashboard)
+- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
 - [Site Plans FAQs](/site-plans-faq)
 - [Traffic Overages and the Site Plan](/overages-site-plan)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

@@ -8,7 +8,7 @@ searchboost: 70
 
 Pantheon now offers annual billing plans for all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost.
 
-For standard billing information, see [Billing in the Site Dashboard](/site-billing)
+For standard billing information, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 
 ## Annual Billing Savings
 
@@ -97,7 +97,7 @@ Before switching to annual billing, consider:
 
     ![Site Plan Flag](../images/dashboard/plan-updated-flag.png)
 
-## See Also
+## More Resources
 
- - [Billing in the Site Dashboard](/site-billing)
- - [Manage Plans in the Site Dashboard](/site-plan)
+ - [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
+ - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/plan-dashboard)

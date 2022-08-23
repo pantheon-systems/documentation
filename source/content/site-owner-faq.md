@@ -87,7 +87,7 @@ Self-serve sites are billable via recurring monthly or [annual](/annual-billing)
 
 ## See Also
 
-- [Billing in the Site Dashboard](/site-billing)
-- [Account Billing in the User Dashboard](/account-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
 - [Team Management](/team-management)
-- [Add a Client Site to your Organization Dashboard](/add-client-site)
+- [Add a Client Site to your Organization Dashboard](/guides/legacy-dashboard/add-client-site)

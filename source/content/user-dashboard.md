@@ -46,4 +46,4 @@ To associate an image with your Pantheon account, you'll need to [create a Grava
 ## See Also
 - [Role-Based Permissions & Change Management](/change-management)
 - [New Site Owner FAQs](/site-owner-faq)
-- [Billing in the Site Dashboard](/site-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)

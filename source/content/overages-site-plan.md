@@ -18,10 +18,10 @@ The number of unique visits displayed in [Pantheon’s Site Dashboard](/metrics)
 
 ## See Also
 
-- [Billing in the Site Dashboard](/site-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 - [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-- [Manage Plans in the Site Dashboard](/site-plan)
-- [Metrics in the Site Dashboard](/metrics)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
+- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
 - [Site Plans FAQs](/site-plans-faq)
 - [Traffic Limits and Overages](/traffic-limits)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

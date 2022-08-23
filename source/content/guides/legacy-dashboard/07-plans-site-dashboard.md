@@ -8,7 +8,7 @@ contributors: [cityofoaksdesign]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard/plan-dashboard
+permalink: docs/guides/legacy-dashboard/site-dashboard
 anchorid: legacy-dashboard
 editpath: legacy-dashboard/07-plans-site-dashboard.md
 ---
@@ -57,7 +57,7 @@ The permission to manage a site's plan is granted only to the roles of **Site Ow
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
 
@@ -208,7 +208,7 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Make sure the change details are correct, then click **Submit**.
 
-1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
+1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
 
 Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
 

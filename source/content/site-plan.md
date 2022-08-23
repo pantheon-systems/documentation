@@ -50,7 +50,7 @@ The permission to manage a site's plan is granted only to the roles of **Site Ow
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
 
@@ -201,13 +201,13 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Make sure the change details are correct, then click **Submit**.
 
-1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
+1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
 
 Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
 
-## See Also
+## More Resources
 
-- [Billing in the Site Dashboard](/site-billing)
-- [Account Billing in the User Dashboard](/account-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)
