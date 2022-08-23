@@ -40,6 +40,7 @@ From the Site Dashboard, the Site Owner will want to:
 </Alert>
 
 ## Manage Site Teams
+
 If you need to add developers as full team members to a site, or outside contractors to individual sites, the Organization Administrator or existing Site Team Member will need to add them to the site team:
 
 1. Check the box next to the site or sites you want to add the user to.
@@ -84,6 +85,7 @@ This filter shows which sites have core updates available, which ones are up to 
 This filter shows any sites that are [frozen](/platform-considerations/#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/guides/global-cdn).
 
 ### User in Charge
+
 Filters sites by the [user in charge](/change-management/#roles-and-permissions).
 
 ## Add Users to Your Organization
