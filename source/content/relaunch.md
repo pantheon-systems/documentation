@@ -66,7 +66,7 @@ The permission to manage billing and plans is granted only to the role of **Site
 
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
-To retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+To retain Preferred Pricing an updated [invitation to pay](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
 
 The new Site Plan will be billed immediately.
 
