@@ -66,7 +66,7 @@ See the steps in our [Site Access](/site-access) doc for recovery instructions.
 
 From the Site Dashboard, click the tag that shows the current plan or **Upgrade** next to the site's name. Select a plan, and follow the prompts to pay or transfer site ownership to invite another user to pay.
 
-For more information, see [Manage Plans in the Site Dashboard](/site-plan).
+For more information, see [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan).
 
 ### Change or Update Payment Method
 

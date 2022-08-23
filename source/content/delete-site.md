@@ -14,7 +14,7 @@ Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Pe
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/site-plan) for more information.
+**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/legacy-dashboard/site-plan) for more information.
 
 **After you delete a site that had a live domain or subdomain**: Update the DNS records so that they don't continue to point to the deleted site.
 

@@ -48,9 +48,11 @@ Removing site team members follows the same process.
 At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters.
 
 ### Site Plan
-This lets you filter sites by their [site plan](/site-plan).
+
+This lets you filter sites by their [site plan](/guides/legacy-dashboard/site-plan).
 
 ### Tags
+
 You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
 <Alert title="Note" type="info">
@@ -62,9 +64,11 @@ Tags are case-sensitive.
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
 ### Upstream
+
 Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/start-state/#pantheon-upstreams) and [Custom Upstreams](/guides/custom-upstream).
 
 ### Code Status
+
 This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.
 
 ### Status
@@ -72,6 +76,7 @@ This filter shows which sites have core updates available, which ones are up to 
 This filter shows any sites that are [frozen](/platform-considerations/#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/guides/global-cdn).
 
 ### User in Charge
+
 Filters sites by the [user in charge](/change-management/#roles-and-permissions).
 
 
