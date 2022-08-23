@@ -8,9 +8,9 @@ contributors: [cityofoaksdesign]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard/site-dashboard
+permalink: docs/guides/legacy-dashboard/site-plan
 anchorid: legacy-dashboard
-editpath: legacy-dashboard/07-plans-site-dashboard.md
+editpath: legacy-dashboard/07-site-plan.md
 ---
 
 Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
