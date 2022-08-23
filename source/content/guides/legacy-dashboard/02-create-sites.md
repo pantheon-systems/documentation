@@ -41,7 +41,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Click **Visit your Pantheon Site Dashboard** to transfer to the [Site Dashboard](/guides/quickstart/site-dashboard/).
 1. Click **Visit Development Site** and complete the installation process for the selected framework.
 
-  ![Site Dashboard in the Dev tab shows the Visit Development Site button](../images/dashboard/site-dashboard-dev.png)
+  ![Site Dashboard in the Dev tab shows the Visit Development Site button](../../../images/dashboard/site-dashboard-dev.png)
 
 ## Sandbox Sites
 

@@ -22,10 +22,10 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 1. Go to the Site Dashboard.
 
 1. For Sandbox sites, click **Upgrade** next to the site's name:
-  ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
+  ![Upgrade plan button shown on Sandbox sites](../../../images/dashboard/upgrade-plan.png)
 
   Otherwise, click the current plan tag next to the site's name:
-  ![Change current plan for paid sites](../images/dashboard/change-plan.png)
+  ![Change current plan for paid sites](../../../images/dashboard/change-plan.png)
 
 <Alert title="Note" type="info">
 
@@ -129,7 +129,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 
 1. Click **Select** to switch plans:
 
- ![Select a different plan](../images/dashboard/select-plan.png)
+ ![Select a different plan](../../../images/dashboard/select-plan.png)
 
 ### Enter Billing Information
 
@@ -196,15 +196,15 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Select the current plan:
 
- ![Change current plan for paid sites](../images/dashboard/change-plan.png)
+ ![Change current plan for paid sites](../../../images/dashboard/change-plan.png)
 
 1. Click the **Downgrade to free** link to cancel the current plan:
 
- ![Downgrade to free by cancelling current plan](../images/dashboard/cancel-plan.png)
+ ![Downgrade to free by cancelling current plan](../../../images/dashboard/cancel-plan.png)
 
 1. Check **Yes, cancel my plan** then click **Continue**:
 
- ![Confirm plan cancellation](../images/dashboard/confirm-cancellation.png)
+ ![Confirm plan cancellation](../../../images/dashboard/confirm-cancellation.png)
 
 1. Make sure the change details are correct, then click **Submit**.
 
