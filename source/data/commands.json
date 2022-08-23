@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.0.7"
+        "version": "3.0.8"
     },
     "commands": [
         {
@@ -1648,8 +1648,8 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "[all|code|files|database|db] Backup element to retrieve",
-                        "default": "all"
+                        "description": "[code|files|database|db] Backup element to retrieve",
+                        "default": "files"
                     },
                     "format": {
                         "name": "--format",
@@ -3465,7 +3465,7 @@
             "usage": [
                 "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--] <site>.<env> <target_env>",
                 "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env> environment to <target_env> environment and clears the database.",
+                "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env> environment to <target_env> environment and clears the cache.",
                 "env:clone-content <site>.<env> <target_env> --db-only Clones only the database from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --files-only Clones only files from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env> environment to <target_env> environment and updates the Drupal database (if applicable)."
