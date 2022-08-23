@@ -59,7 +59,7 @@ Checking db pull for expected tables...
 Database pull failed...
 ```
 
-See step 9 of [Create a Site](/create-sites#create-a-site).
+See step 9 of [Create a Site](/guides/legacy-dashboard/create-sites#create-a-site).
 
 ### Log out and Reset to Defaults
 

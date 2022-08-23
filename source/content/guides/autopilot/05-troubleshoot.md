@@ -322,7 +322,7 @@ A CMS was not detected.
 
 ### Solution
 
-Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](https://pantheon.io/docs/create-sites).
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](https://pantheon.io/docs/guides/legacy-dashboard/create-sites).
 
 </Accordion>
 

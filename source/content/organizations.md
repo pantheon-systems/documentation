@@ -111,7 +111,7 @@ terminus org:list
 
 ## Next Steps
 
-- [Create a Site](/create-sites)
+- [Create a Site](/guides/legacy-dashboard/create-sites)
 
 - [Migrate Sites to Pantheon](/guides/guided)
 

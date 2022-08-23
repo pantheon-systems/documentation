@@ -46,7 +46,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-[Create a new Drupal 9 site from the Dashboard](/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
+[Create a new Drupal 9 site from the Dashboard](/guides/legacy-dashboard/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
 
 ## Upgrade or Migrate to Drupal 9
 
