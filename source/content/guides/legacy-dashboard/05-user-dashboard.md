@@ -9,7 +9,7 @@ showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard
 anchorid: legacy-dashboard
-editpath: legacy-dashboard/06-user-dashboard.md
+editpath: legacy-dashboard/05-user-dashboard.md
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
