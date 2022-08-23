@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/metrics
-anchorid: legacy-dashboard
+anchorid: metrics
 editpath: legacy-dashboard/06-metrics-site-dashboard.md
 ---
 

@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/org-dashboard
-anchorid: legacy-dashboard
+anchorid: org-dashboard
 editpath: legacy-dashboard/08-site-org-dashboard.md
 ---
 

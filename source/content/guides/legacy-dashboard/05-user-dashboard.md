@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/user-dashboard
-anchorid: legacy-dashboard
+anchorid: user-dashboard
 editpath: legacy-dashboard/05-user-dashboard.md
 ---
 

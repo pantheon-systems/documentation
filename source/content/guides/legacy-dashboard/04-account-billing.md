@@ -6,7 +6,7 @@ categories: [platform]
 tags: [billing, dashboard]
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/account-billing
-anchorid: legacy-dashboard
+anchorid: account-billing
 editpath: legacy-dashboard/04-account-billing.md
 ---
 

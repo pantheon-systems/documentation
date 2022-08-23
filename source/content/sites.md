@@ -80,7 +80,7 @@ Learn how to use the [Pantheon workflow](/pantheon-workflow) to manage your site
 
 ### Metrics
 
-Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment, the **<span class="glyphicons glyphicons-charts"></span> Metrics** tab provides insight into your site's traffic. Learn more in our guide on [Metrics in the Site Dashboard](/metrics).
+Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment, the **<span class="glyphicons glyphicons-charts"></span> Metrics** tab provides insight into your site's traffic. Learn more in our guide on [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics).
 
 ![Site Metrics](../images/dashboard/metrics-graphs.png "Screenshot showing the Metrics tab of a Live site.")
 

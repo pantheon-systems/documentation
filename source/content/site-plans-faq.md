@@ -126,12 +126,12 @@ If you exceed the Performance Extra Large plan limits of 300,000 monthly visits 
 
 Note that the annual plan prices are listed as annual cost.
 
-## See Also
+## More Resources
 
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
 
 - [Traffic Limits and Overages](/traffic-limits)
 
-- [Metrics in the Site Dashboard](/metrics)
+- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
 
 - [Application Containers](/application-containers)

@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/site-billing
-anchorid: legacy-dashboard
+anchorid: site-billing
 editpath: legacy-dashboard/03-site-billing.md
 ---
 

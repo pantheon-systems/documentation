@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/create-site
-anchorid: legacy-dashboard
+anchorid: create-site
 editpath: legacy-dashboard/02-create-site.md
 ---
 

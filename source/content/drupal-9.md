@@ -66,7 +66,7 @@ You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Dr
 
 You can also read more about the installation process on [Drupal.org](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
 
-We recommend monitoring your site's traffic using [Metrics in the Site Dashboard](/metrics) to check for increased traffic after installing Gutenberg.
+We recommend monitoring your site's traffic using [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics) to check for increased traffic after installing Gutenberg.
 
 ## Troubleshooting and Support
 
