@@ -1,137 +1,220 @@
 ---
-title: Billing in the Site Dashboard
-description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
-categories: [manage]
-tags: [billing, dashboard]
-contributors: [whitneymeredith]
+title: Legacy Dashboard
+subtitle: Manage Plans in the Site Dashboard
+description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
+categories: [platform]
+tags: [billing, dashboard, site]
+contributors: [cityofoaksdesign]
 layout: guide
 showtoc: true
-permalink: docs/guides/agcdn/agcdn-wafio
-anchorid: agcdn-wafio
-reviewed: "2020-01-10"
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard
+anchorid: legacy-dashboard
+editpath: legacy-dashboard/07-plans-site-dashboard.md
 ---
 
-<Alert title="Note" type="info">
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
 
-Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing) for more information.
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
 
-</Alert>
+## Access Site Plan
 
-## Access Site Billing
+1. Go to the Site Dashboard.
 
-1. From the User Dashboard, click on the site you want to access billing for.
+1. For Sandbox sites, click **Upgrade** next to the site's name:
+  ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
 
-1. Go to the Site Dashboard and click the **Billing** tab.
-
-<Alert title="Note" type="info">
-
-Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
-
-</Alert>
-
-### Roles and Permissions
-
-The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
+  Otherwise, click the current plan tag next to the site's name:
+  ![Change current plan for paid sites](../images/dashboard/change-plan.png)
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
 
 </Alert>
 
-## View a Recent Invoice from the Dashboard
+## Upgrades
 
-<Partial file="view-invoices.md" />
+Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
 
-## Transfer Ownership and Billing for This Site
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Organization for assistance in order to retain your special pricing rate.
+
+## Downgrades
+
+Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan. No prorated refunds or credits will be issued for site downgrades.
+
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+
+### Downgrade to Sandbox
+
+To downgrade to Sandbox, see [Cancel Current Plan](/site-plan#cancel-current-plan). Note: [Custom domains](/domains/#custom-domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
+
+Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/backups).
+
+## Roles & Permissions
+
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+
+<Alert title="Note" type="info">
+
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
+
+</Alert>
+
+## Considerations
+
+Consider the following changes to feature access _before_ upgrading or downgrading the site's plan. Certain scenarios require code changes in order to safely change the site plan.
+
+### Basic Plan
+
+[New Relic](/guides/new-relic), [Object Cache](/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+
+For Object Cache and Pantheon Search (Solr), the following code changes are required before the feature can be safely disabled:
+
+<TabList>
+
+<Tab title="WordPress" id="wp-id" active={true}>
+
+#### Safely Remove Object Cache
+
+<Partial file="remove-addons/wp-redis.md" />
+
+#### Safely Remove Pantheon Search
+
+<Partial file="remove-addons/wp-solr.md" />
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-id">
+
+#### Safely Remove Object Cache
+
+<Partial file="remove-addons/drupal-redis.md" />
+
+#### Safely Remove Pantheon Search
+
+<Partial file="remove-addons/d7-solr.md" />
+
+</Tab>
+
+</TabList>
+
+### Elite Plan
+
+Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
+
+### Enterprise Organizations
+
+Plan prices are not shown in the Site Dashboard, and you will not be prompted to enter billing information as described below.
+
+If the site is associated with an Enterprise Flagship organization, additional Performance plans not shown in the Site Dashboard are available to purchase.
+
+[Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
+
+## Purchase a New Plan
+
+This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
+
+<Alert title="Note" type="info">
+
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
+
+</Alert>
+
+### Select Plan
+
+1. Go to the Site Dashboard.
+
+1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
+
+1. Click **Select** to switch plans:
+
+ ![Select a different plan](../images/dashboard/select-plan.png)
+
+### Enter Billing Information
+
+Site ownership is designated to the user account entering billing information.
+
+<TabList>
+
+<Tab title="Add New Card" id="add-cc-id" active={true}>
+
+If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
+
+1. Click the **<span class="glyphicon glyphicon-plus"></span> Add New Card** link.
+
+1. Enter the email address you would like invoices sent to.
+
+1. Enter your credit card information and click **Add Card**.
+
+1. Make sure the desired card is selected and click **Continue**.
+
+</Tab>
+
+<Tab title="Select Existing Card" id="existing-cc-id">
+
+To associate an existing card from your account as the payment method for this site:
+
+1. Select the desired card.
+
+1. Click **Continue**.
+
+</Tab>
+
+<Tab title="Send a Request" id="request-payment-id">
 
 <Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
 
-## Your Credit Cards
+</Tab>
 
-### Add a New Credit Card
+</TabList>
 
-If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all plans, use the steps in this section to add a new credit card profile in the **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** section of your User Dashboard.
+### Confirm Your Purchase
 
-1. If the site:
-    - Is currently in Sandbox mode:
-        1. Click **Add Card**.
-        1. Click **+ Add New Card**.
-    - Already has a card associated with it:
-        - Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
+1. Make sure the **Plan** details are correct.
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Verify the card shown in **Billing** details.
 
-1. Find the existing card under **Billing Information** and click **Change** next to it, then click **Add New Card**.
+1. Click the **Submit** button.
 
-1. Enter your credit card information and click **Add Card**.
+The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
 
-1. To add the card to the site, select the new card and click **Update Credit Card**.
-    - Skip this step to store the card without adding it to the site.
+Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
-Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
+## Cancel Current Plan
 
-### Bill This Site to a New Card
+Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox.
 
-Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
+<Alert title="Note" type="info" >
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11).
 
-1. Find the existing card under BILLING INFORMATION and click **Change** next to it.
+</Alert>
 
-1. Select the new card and click **Update Credit Card**.
+1. Go to the Site Dashboard.
 
- You should get a message saying "Your billing information has been updated!"
+1. Select the current plan:
 
-### Do Not Bill This Site to a Card
+ ![Change current plan for paid sites](../images/dashboard/change-plan.png)
 
-A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/site-plan/#cancel-current-plan).
+1. Click the **Downgrade to free** link to cancel the current plan:
 
-After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
+ ![Downgrade to free by cancelling current plan](../images/dashboard/cancel-plan.png)
 
-1. Go to the Site Dashboard and click the **Billing** tab.
-1. Find your card under BILLING INFORMATION and click **Remove Card**.
+1. Check **Yes, cancel my plan** then click **Continue**:
 
- You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
+ ![Confirm plan cancellation](../images/dashboard/confirm-cancellation.png)
 
-### Replace or Update an Old or Expired Credit Card
+1. Make sure the change details are correct, then click **Submit**.
 
-<Partial file="replace-credit-card.md" />
+1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
 
-### Troubleshooting a Declined Credit Card
+Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
 
-<Partial file="billing-declined-card-codes.md" />
+## More Resources
 
-## Frequently Asked Questions
-
-### What forms of payment are accepted?
-
-Sites purchased online through the Pantheon Site Dashboard accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.).
-
-### Does Pantheon accept PayPal?
-
-Pantheon currently does not accept PayPal.
-
-### Can there be more than one site owner?
-
-A site can only have one site owner.
-
-### Can the payment for a site be split between multiple cards.
-
-No, payment for a site can only come from one card at a time.
-
-### Why don't I get email notifications about upcoming billing?
-
-When a billing cycle approaches, billing emails are only sent to the billing contact email. The billing contact is set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment.
-
-To update the email to which notifications are sent, follow the steps in [Replace or Update an Old or Expired Credit Card](#replace-or-update-an-old-or-expired-credit-card). Use the same card information with a new email address in the **Add Payment Method** modal to receive emails at a different address while continuing to bill the same card.
-
-If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
-
-## See Also
-
+- [Billing in the Site Dashboard](/site-billing)
 - [Account Billing in the User Dashboard](/account-billing)
-- [Manage Plans in the Site Dashboard](/site-plan)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)
