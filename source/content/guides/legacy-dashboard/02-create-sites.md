@@ -30,7 +30,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
   </Alert>
 
-1. Optionally, if you have access to [organizations](/organization-dashboard/#new-sites), choose an organization to affiliate the site with.
+1. Optionally, if you have access to [organizations](/guides/legacy-dashboard/org-dashboard/#new-sites), choose an organization to affiliate the site with.
 1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 

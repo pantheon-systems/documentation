@@ -26,7 +26,7 @@ Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pan
 
 ## The Organization Dashboard
 
-Access the [Organization Dashboard](/organization-dashboard) in the following ways:
+Access the [Organization Dashboard](/guides/legacy-dashboard/org-dashboard) in the following ways:
 
 - From the User Dashboard, click the **Organizations** tab, then click the name of the Organization.
 - From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click the Organization name.
@@ -43,13 +43,13 @@ Agency organizations will show "Site Owners" instead of "Users in Charge"
 
 A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/platform-considerations/#inactive-site-freezing).
 
-For more details on the Sites tab, see
-[Managing Sites and Teams with the Pantheon Organization Dashboard](/organization-dashboard).
+For more details on the Sites tab, refer to
+[Managing Sites and Teams with the Pantheon Organization Dashboard](/guides/legacy-dashboard/org-dashboard).
 
 ### People
 
 View all of your collaborators, filter them by role, manage their roles, and add new users to your organization.
-[Learn how to add users to the organization](/organization-dashboard/#add-users-to-your-organization) and [role-based permissions & change management](/change-management). 
+[Learn how to add users to the organization](/guides/legacy-dashboard/org-dashboard/#add-users-to-your-organization) and [role-based permissions & change management](/change-management). 
 
 ### Upstreams
 

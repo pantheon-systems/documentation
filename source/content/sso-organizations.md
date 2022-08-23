@@ -23,7 +23,7 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/t
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/organization-dashboard). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
 
 ### External Members
 
