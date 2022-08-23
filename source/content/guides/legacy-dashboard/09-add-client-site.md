@@ -9,7 +9,7 @@ searchboost: 150
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard
+permalink: docs/guides/legacy-dashboard/client-org-dashboard
 anchorid: legacy-dashboard
 editpath: legacy-dashboard/09-client-org-dashboard.md
 ---

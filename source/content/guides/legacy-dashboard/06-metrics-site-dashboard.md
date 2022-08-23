@@ -7,7 +7,7 @@ tags: [billing, dashboard, measure, traffic]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard
+permalink: docs/guides/legacy-dashboard/metrics
 anchorid: legacy-dashboard
 editpath: legacy-dashboard/06-metrics-site-dashboard.md
 ---

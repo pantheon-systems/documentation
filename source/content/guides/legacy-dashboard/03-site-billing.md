@@ -7,7 +7,7 @@ tags: [billing, dashboard]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard
+permalink: docs/guides/legacy-dashboard/site-billing
 anchorid: legacy-dashboard
 editpath: legacy-dashboard/03-site-billing.md
 ---
@@ -132,7 +132,7 @@ If you are the billing contact for an online site plan, check your spam folder, 
 
 ## More Resources
 
-- [Account Billing in the User Dashboard](/account-billing)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/04-account-billing)
 - [Manage Plans in the Site Dashboard](/site-plan)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)

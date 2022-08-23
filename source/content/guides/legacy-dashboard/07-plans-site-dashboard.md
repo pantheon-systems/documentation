@@ -8,7 +8,7 @@ contributors: [cityofoaksdesign]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard
+permalink: docs/guides/legacy-dashboard/plan-dashboard
 anchorid: legacy-dashboard
 editpath: legacy-dashboard/07-plans-site-dashboard.md
 ---

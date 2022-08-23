@@ -8,7 +8,7 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard
+permalink: docs/guides/legacy-dashboard/org-dashboard
 anchorid: legacy-dashboard
 editpath: legacy-dashboard/08-site-org-dashboard.md
 ---
