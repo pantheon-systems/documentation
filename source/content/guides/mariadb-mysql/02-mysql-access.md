@@ -1,6 +1,6 @@
 ---
 title: MariaDB and MySQL on Pantheon
-subtitle: Accessing MariaDB and MySQL Databases
+subtitle: Access MariaDB and MySQL Databases
 description: Configure your MariaDB or MySQL database connections on Pantheon.
 categories: [develop]
 tags: [database, local, ssh]
@@ -23,11 +23,11 @@ Due to the nature of our platform, the connection information will change from t
 
 <Partial file="platform-considerations-connections.md" />
 
-### Accessing the Database Directly
+### Access Your Database Directly
 
 You cannot access the database directly if you have purchased [Secure Runtime Access](/guides/secure-development/secure-runtime-access).
 
-MySQL credentials for each site environment are located in your Site Dashboard.
+The database credentials for each site environment are located in your Site Dashboard.
 
 Navigate to the environment you want to connect with, and select **Connection Info** to view your Database credentials.
 
@@ -44,12 +44,12 @@ The following required fields are provided:
 Each database server is in the cloud, which allows credentials to occasionally be updated and without notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
 There's a wide array of MySQL clients that you can use, including:
-- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/),
-- [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/),
-- [Navicat](https://www.navicat.com/download),
-- [PHPMyAdmin](https://www.phpmyadmin.net/),
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+- [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/)
+- [Navicat](https://www.navicat.com/download)
+- [PHPMyAdmin](https://www.phpmyadmin.net/)
 
-and others. Refer to the documentation or issue queue of your software to learn more about how to configure a connection.
+Refer to the documentation or issue queue of your software to learn more about how to configure a connection.
 
 #### Open Sequel Ace Database Connection
 
@@ -104,7 +104,7 @@ open $TMP_SPF
 
 Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c)!
 
-### Accessing the Database via Your Application using PHP
+### Accessing the Database via Your Application with PHP
 
 You can connect to the application with Pantheon's internal network. Use the following variables in your application to access the database:
 
@@ -112,12 +112,12 @@ You can connect to the application with Pantheon's internal network. Use the fol
 - **DB_PORT**: Database port used.
 - **DB_USER**: User name to use when connecting to server.
 - **DB_PASSWORD**: The password to use when connecting to the server.
-- **DB_NAME**: The database to use; the value will always be `pantheon` and cannot be altered.
+- **DB_NAME**: The database name to use. This value will always be `pantheon` and cannot be altered.
 - **REPLICA_DB_HOST**: Database IP address. This will be changing to have the same value as DB_HOST, and route to a proxy server. We will no longer support connections via IP Address.
 - **REPLICA_DB_PORT**: Replica database port.
 - **REPLICA_DB_USER**: MySQL replica user name to use when connecting to server.
 - **REPLICA_DB_PASSWORD**: The password to use when connecting to the server.
-- **REPLICA_DB_NAME**: The replica database to use; the value will always be pantheon and cannot be altered.
+- **REPLICA_DB_NAME**: The replica database name to use. This value will always be `pantheon` and cannot be altered.
 
 
 For example:
@@ -182,3 +182,5 @@ Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'
 - [MariaDB and MySQL FAQ](/guides/mariadb-mysql/mariadb-mysql-faq)
 
 - [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+
+- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels)

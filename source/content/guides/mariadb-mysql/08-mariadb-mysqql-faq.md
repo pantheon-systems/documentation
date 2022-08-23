@@ -19,7 +19,7 @@ Pantheon logs underperforming database queries using the [MySQL Slow Query Log](
 
 To access the log for your database:
 
-1. Get the SFTP connection info for the environment in question.
+1. Get the SFTP **Connection Info** for the environment in question.
 1. Replace the word `appserver` with `dbserver` in the connection string.
 1. Navigate to the `logs` subdirectory to view the MySQL slow query logs.
 
@@ -29,9 +29,9 @@ These logs are generally not used for development but may be useful to troublesh
 
 To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html) ("binlogs"):
 
-1. Get the SFTP connection info for the environment in question.
+1. Get the SFTP **Connection Info** for the environment in question.
 1. Replace the word `appserver` with `dbserver` in the connection string.
-1. The MySQL slow query logs are in the `data` subdirectory.
+1. Navigate to the `data` subdirectory to view the MySQL Slow Query logs.
 
 ### Are table prefixes supported?
 

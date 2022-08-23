@@ -1,7 +1,7 @@
 ---
 title: MariaDB and MySQL on Pantheon
 subtitle: Identify and Kill Queries with MySQL Command-Line Tool
-description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site.
+description: Learn how to identify and kill long-running MySQL queries on your site.
 categories: [troubleshoot]
 tags: [cli, database]
 contributors: [whitneymeredith]
@@ -57,7 +57,7 @@ You can clear out a large number of bad requests without having to run `kill` on
 
 ### Troubleshoot With New Relic&reg; Performance Monitoring
 
-Take a look at [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic) to get a better view of what's happening with your queries. Using our integrated reporting services with New Relic&reg; Performance Monitoring, you can isolate MySQL performance issues on your Drupal or WordPress sites.
+Review [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic) to get a better understanding of what's happening with your queries. You can use Pantheon's integrated reporting services with New Relic&reg; Performance Monitoring to help isolate MySQL performance issues on your Drupal or WordPress sites.
 
 ### Review Slow Query Logs
 
@@ -67,9 +67,10 @@ Use your site's [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log) to troubl
 
 Most website frameworks like Drupal and WordPress use the database to cache internal application objects which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Because the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
 
-[Object Cache](/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to use it to manage queues, or do custom caching of their own.
+[Object Cache](/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to manage queues, or do custom caching of their own.
 
 ### Consider MySQL Replication (WordPress)
+
 [MySQL replication](/guides/mariadb-mysql/hyperdb) rapidly copies content from the primary database to a replica database. This allows you to spread requests across multiple databases to improve site performance and load times.
 
 ## More Resources

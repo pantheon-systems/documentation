@@ -1,6 +1,6 @@
 ---
 title: MariaDB and MySQL on Pantheon
-subtitle: Converting MySQL Tables From MyISAM to InnoDB
+subtitle: Convert MySQL Tables from MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
 categories: [develop]
 tags: [database, cli]
@@ -152,7 +152,7 @@ Make sure you have:
 - Your [database connection info](/guides/mariadb-mysql/mysql-access#accessing-the-database-directly)
 
 
-1. Copy the script below 
+1. Copy the script below.
 
     ```php:title=myisam-to-innbodb.php
     <?php
@@ -203,15 +203,15 @@ Make sure you have:
 
 1. Configure the parameters below:
 
-    - **Host:** This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+    - **Host:** This is the name of the remote machine your database is running on. If you are a Pantheon customer, `localhost` is wrong. Get the correct host from your [Site Dashboard](/guides/mariadb-mysql/mysql-access/#database-connection-information) and paste it in the PHP script to replace `localhost`.
 
-    - **Port:** This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
+    - **Port:** This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, `3306` is the standard port for MySQL.
 
-    - **User:** This is the user name you use to connect to MySQL with.
+    - **User:** This is the user name you use to connect to MySQL.
 
     - **Password:** This is your MySQL password for the user you specified in the line above.
 
-    - **Database:** This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
+    - **Database:** This is the name of the database that contains the tables. If you are a pantheon customer, this is `pantheon`. If you are not a Pantheon customer, you will need to get this from your host.
     
 1. Save the script in a file with a `.php` extension in your home directory, and set it as executable.
 
@@ -219,7 +219,7 @@ Make sure you have:
 
 The script will alert you to everything it's doing. It has safety protocols built in to keep it from changing anything but MyISAM tables. It will look at every table in your database, and if the engine is MyISAM, it will change it to an InnoDB.
 
-Review the changes carefully after you have run it successfully.
+Review the changes carefully after you have run the program successfully.
 
 ## More Resources
 
