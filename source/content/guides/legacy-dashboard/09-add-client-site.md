@@ -9,9 +9,9 @@ searchboost: 150
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard/client-org-dashboard
+permalink: docs/guides/legacy-dashboard/add-client-site
 anchorid: legacy-dashboard
-editpath: legacy-dashboard/09-client-org-dashboard.md
+editpath: legacy-dashboard/09-add-client-site.md
 ---
 
 <Alert title="Note" type="info">
@@ -132,9 +132,9 @@ To update the email to which notifications are sent, follow the steps in [Replac
 
 If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 
-## See Also
+## More Resources
 
-- [Account Billing in the User Dashboard](/account-billing)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/plan-dashboard)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)

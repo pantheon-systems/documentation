@@ -214,7 +214,7 @@ Optionally, you can remove the Sandbox site after downgrading. For details, see 
 
 ## More Resources
 
-- [Billing in the Site Dashboard](/site-billing)
-- [Account Billing in the User Dashboard](/account-billing)
+- [Billing in the Site Dashboard](docs/guides/legacy-dashboard/site-billing)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)

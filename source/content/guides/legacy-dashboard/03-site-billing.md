@@ -132,7 +132,7 @@ If you are the billing contact for an online site plan, check your spam folder, 
 
 ## More Resources
 
-- [Account Billing in the User Dashboard](/guides/legacy-dashboard/04-account-billing)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/plan-dashboard)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)
