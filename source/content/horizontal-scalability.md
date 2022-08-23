@@ -35,7 +35,7 @@ For more information on containers, see [All About Application Containers](/appl
 
 Add containers by upgrading the site's plan within the Site Dashboard to a Performance Medium plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
 
-For more information about your plan changes, see [Manage Plans in the Site Dashboard](/site-plan/#upgrades).
+For more information about your plan changes, see [Manage Plans in the Site Dashboard](/guides/site-plan/upgrades-and-downgrades).
 ## Handle Traffic Spikes
 
 When preparing for traffic spikes manually (not on Pantheon), you need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).

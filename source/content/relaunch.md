@@ -76,7 +76,7 @@ The new Site Plan will be billed immediately.
 
 For a fast, smooth relaunch, consider having two browser tabs open, one with the old Site Dashboard, and one with the new.
 
-1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/site-plan/#purchase-a-new-plan).
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/site-plan/purchase-site-plan).
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
@@ -116,7 +116,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
 
-1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/site-plan/#cancel-current-plan).
+1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/site-plan/cancel-site-plan).
 
 1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
 
@@ -151,5 +151,5 @@ As soon as you complete step 3, visitors to your domain will see the new site. U
 ## See Also
 
 - [Launch Essentials](/guides/launch)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Manage Plans in the Site Dashboard](/guides/site-plan)
 - [Billing in the Site Dashboard](/site-billing)

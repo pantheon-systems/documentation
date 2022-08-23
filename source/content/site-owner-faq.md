@@ -54,7 +54,7 @@ You can access New Relic&reg; Performance Monitoring directly from the Site Dash
 
 Pantheon Search and Object Cache are available to Sandbox plans for testings, and to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
 
-For more information about the Basic plan, see [Manage Plans in the Site Dashboard](/site-plan/#basic-plan), or see our [Site Plan FAQ](/site-plans-faq#plan-resources) to learn more about plan resources.
+For more information about the Basic plan, see [Manage Plans in the Site Dashboard](/guides/site-plan), or see our [Site Plan FAQ](/guides/site-plan/site-plans-faq) to learn more about plan resources.
 
 ## Billing Tasks
 
@@ -66,7 +66,7 @@ See the steps in our [Site Access](/site-access) doc for recovery instructions.
 
 From the Site Dashboard, click the tag that shows the current plan or **Upgrade** next to the site's name. Select a plan, and follow the prompts to pay or transfer site ownership to invite another user to pay.
 
-For more information, see [Manage Plans in the Site Dashboard](/site-plan).
+For more information, see [Manage Plans in the Site Dashboard](/guides/site-plan).
 
 ### Change or Update Payment Method
 

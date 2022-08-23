@@ -6,7 +6,7 @@ tags: [billing, measure, traffic]
 reviewed: "2022-06-10"
 ---
 
-Pantheon’s customers generate the most value from [WebOps](https://pantheon.io/webops?docs), and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs), and we deploy [backend resources](/site-plans-faq#plan-resources) to support your continued success.
+Pantheon’s customers generate the most value from [WebOps](https://pantheon.io/webops?docs), and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs), and we deploy [backend resources](/guides/site-plan) to support your continued success.
 
 The number of unique visits displayed in [Pantheon’s Site Dashboard](/metrics) determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
 
@@ -22,7 +22,7 @@ Site traffic consists of two components: **Site Visits** and **Pages Served**. T
 
 ## How does traffic affect performance?
 
-Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to increase the plan size so that you can continue to expect a site that runs smoothly.
+Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/guides/site-plan) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to increase the plan size so that you can continue to expect a site that runs smoothly.
 
 ## Measurement of Traffic
 
@@ -89,8 +89,8 @@ Certain activities are generally excluded from the calculation of visits and pag
 
 - [Billing in the Site Dashboard](/site-billing)
 - [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Manage Plans in the Site Dashboard](/guides/site-plan)
 - [Metrics in the Site Dashboard](/metrics)
-- [Site Plans FAQs](/site-plans-faq)
+- [Site Plans FAQs](/guides/site-plan/site-plans-faq)
 - [Traffic Overages and the Site Plan](/overages-site-plan)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

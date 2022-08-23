@@ -59,9 +59,9 @@ This table shows any sites that were deactivated during the time between the pre
 
 - [Site Owner FAQ](/site-owner-faq)
 
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Manage Plans in the Site Dashboard](/guides/site-plan)
 
-- [Site Plans FAQs](/site-plans-faq)
+- [Site Plans FAQs](/guides/site-plan/site-plans-faq)
 
 - [Traffic Limits and Overages](/traffic-limits)
 

@@ -100,4 +100,4 @@ Before switching to annual billing, consider:
 ## See Also
 
  - [Billing in the Site Dashboard](/site-billing)
- - [Manage Plans in the Site Dashboard](/site-plan)
+ - [Manage Plans in the Site Dashboard](/guides/site-plan)

@@ -36,7 +36,7 @@ This section provides optional steps to improve your site's speed.
 
 1. Use persistent Object Cache
 
-    - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in all [Pantheon accounts](/site-plans-faq#plan-resources) above Basic).
+    - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in all [Pantheon accounts](/guides/site-plan) above Basic).
 
 1. Implement reverse proxy page cache
 

@@ -55,7 +55,7 @@ The site default PHP version is applied to every environment unless a PHP versio
 
 ## Billing
 
-Here you can select or change your plan and payment method. For more information, see [Manage Plans in the Site Dashboard](/site-plan).
+Here you can select or change your plan and payment method. For more information, see [Manage Plans in the Site Dashboard](/guides/site-plan).
 
 ## Support
 
