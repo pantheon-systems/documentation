@@ -8,7 +8,7 @@ reviewed: "2022-06-10"
 
 Pantheon’s customers generate the most value from [WebOps](https://pantheon.io/webops?docs), and an essential component of our WebOps platform is ensuring the uptime and performance of your site. Pantheon optimizes for site traffic based on your choice of [pricing plan](https://pantheon.io/pricing-comparison?docs), and we deploy [backend resources](/site-plans-faq#plan-resources) to support your continued success.
 
-The number of unique visits displayed in [Pantheon’s Site Dashboard](/metrics) determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
+The number of unique visits displayed in [Pantheon’s Site Dashboard](/guides/legacy-dashboard/metrics) determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
 
 ## Site Traffic Measurement Model
 
@@ -85,12 +85,12 @@ Certain activities are generally excluded from the calculation of visits and pag
 
 <Partial file="traffic-overages-faq.md" />
 
-## See Also
+## More Resources
 
-- [Billing in the Site Dashboard](/site-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 - [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-- [Manage Plans in the Site Dashboard](/site-plan)
-- [Metrics in the Site Dashboard](/metrics)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
+- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
 - [Site Plans FAQs](/site-plans-faq)
 - [Traffic Overages and the Site Plan](/overages-site-plan)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

@@ -1,12 +1,19 @@
 ---
-title: User Dashboard and Account
+title: Legacy Dashboard
+subtitle: User Dashboard and Account
 description: The Pantheon user entity and its relationship to Drupal or WordPress sites, teams, and organizations.
 categories: [get-started]
 tags: [dashboard, organizations, users]
+layout: guide
+showtoc: true
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard/user-dashboard
+anchorid: user-dashboard
+editpath: legacy-dashboard/05-user-dashboard.md
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
-![Site Dashboard](../images/dashboard/pantheon-user-dashboard.png)
+![Site Dashboard](../../../images/dashboard/pantheon-user-dashboard.png)
 
 ## Sites Tab
 
@@ -43,7 +50,15 @@ This is where you can update and manage your personal account details. Use the o
 
 To associate an image with your Pantheon account, you'll need to [create a Gravatar](https://en.gravatar.com/) for the email address you use with your Pantheon account. If you already have a Gravatar set up for another email address, update your Gravatar profile to add the email address you use on Pantheon. For help, visit the [Gravatar Support](https://gravatar.com/support/) page.
 
-## See Also
+<Alert title="Note"  type="info" >
+
+For information on Site Dashboard, visit our [Site Dashboard](/guides/quickstart/site-dashboard/) documentation.
+
+</Alert>
+
+## More Resources
+
+- [User Dashboard Quick Start](/guides/quickstart/user-dashboard/)
 - [Role-Based Permissions & Change Management](/change-management)
 - [New Site Owner FAQs](/site-owner-faq)
 - [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)

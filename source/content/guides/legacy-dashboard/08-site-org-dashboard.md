@@ -1,9 +1,18 @@
 ---
-title: Managing Sites and Teams with the Pantheon Organization Dashboard
+title: Legacy Dashboard
+subtitle: Managing Sites and Teams with the Pantheon Organization Dashboard
 description: Detailed information on how to add users and sites to your organization.
 categories: [platform]
 tags: [agencies, collaborate, dashboard, organizations, teams]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard/org-dashboard
+anchorid: org-dashboard
+editpath: legacy-dashboard/08-site-org-dashboard.md
 ---
+
 The Organization Dashboard is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
 
 <Alert title="For Info on the New Dashboard" type="info">
@@ -31,6 +40,7 @@ From the Site Dashboard, the Site Owner will want to:
 </Alert>
 
 ## Manage Site Teams
+
 If you need to add developers as full team members to a site, or outside contractors to individual sites, the Organization Administrator or existing Site Team Member will need to add them to the site team:
 
 1. Check the box next to the site or sites you want to add the user to.
@@ -42,14 +52,13 @@ The user will receive an email notification with a link to the Site Dashboard.
 
 Removing site team members follows the same process.
 
-
 ## Filter Sites
 
 At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters.
 
 ### Site Plan
 
-This lets you filter sites by their [site plan](/guides/legacy-dashboard/site-plan).
+This lets you filter sites by their [site plan](/site-plan).
 
 ### Tags
 
@@ -78,7 +87,6 @@ This filter shows any sites that are [frozen](/platform-considerations/#inactive
 ### User in Charge
 
 Filters sites by the [user in charge](/change-management/#roles-and-permissions).
-
 
 ## Add Users to Your Organization
 

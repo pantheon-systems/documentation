@@ -20,7 +20,7 @@ Multidev is one of the highlight features of the Pantheon Partner Program. Visit
 
 ## Change Management
 
-From within the [Organization Dashboard](/organization-dashboard), you can assign [organization](/organizations) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
+From within the [Organization Dashboard](/guides/legacy-dashboard/org-dashboard), you can assign [organization](/organizations) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
 
 ### Can I Restrict Access to a Specific Site with the Developer Role?
 

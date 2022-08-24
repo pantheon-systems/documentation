@@ -26,7 +26,7 @@
           url: '/guides/wordpress-commandline'
           icon: 'fa fa-book'
         - text: 'Creating Sites'
-          url: '/create-sites'
+          url: '/guides/legacy-dashboard/create-sites'
         - text: 'Create a Drupal 9 Site Using a Community Distribution'
           url: '/guides/drupal-9-from-dist'
           icon: 'fa fa-book'

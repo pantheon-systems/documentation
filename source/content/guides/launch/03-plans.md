@@ -38,7 +38,7 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 
 ## More Resources
 
-- [Transfer Ownership and Billing for This Site](/site-billing#transfer-ownership-and-billing-for-this-site)
+- [Transfer Ownership and Billing for This Site](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site)
 
 - [Troubleshooting a Declined Credit Card](https://stripe.com/docs/declines/codes)
 

@@ -22,7 +22,7 @@ The simplest way to start your Custom Upstream journey is to create a new, vanil
 
 1. Name the site in a way that identifies it as the Custom Upstream, for example “Sites Upstream”.
 
-1. [Create a new WordPress site](/create-sites#create-a-site) and generate two or three pages of content.
+1. [Create a new WordPress site](/guides/legacy-dashboard/create-sites#create-a-site) and generate two or three pages of content.
 
 1. [Activate Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) and select all three scopes – upstream, plugins, and themes under **What Should Autopilot Update?** 
 

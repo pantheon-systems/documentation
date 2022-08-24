@@ -1,8 +1,13 @@
 ---
-title: Account Billing in the User Dashboard
+title: Legacy Dashboard
+subtitle: Billing in the User Dashboard
 description: View billing history (invoices and transactions) or edit credit card profiles to manage billing for sites in bulk within the Billing tab of the Account tool in the User Dashboard.
 categories: [platform]
 tags: [billing, dashboard]
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard/account-billing
+anchorid: account-billing
+editpath: legacy-dashboard/04-account-billing.md
 ---
 
 ## Access Account Billing
@@ -10,7 +15,7 @@ tags: [billing, dashboard]
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**.
 1. Click the **Billing** tab.
 
-![Access account billing through the User Dashboard](../images/dashboard/dashboard-account-billing.gif)
+![Access account billing through the User Dashboard](../../../images/dashboard/dashboard-account-billing.gif)
 
 Review **credit card profiles** for the sites you pay for and own on Pantheon. Each credit card profile shows billing history (invoices and transactions) for any site(s) using the card as the payment method, as set in the Site Dashboard. To add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing).
 

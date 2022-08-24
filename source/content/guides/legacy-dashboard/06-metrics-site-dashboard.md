@@ -1,9 +1,15 @@
 ---
-title: Metrics in the Site Dashboard
+title: Legacy Dashboard
+subtitle: Metrics in the Site Dashboard
 description: Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
 categories: [platform]
 tags: [billing, dashboard, measure, traffic]
-reviewed: "2020-06-22"
+layout: guide
+showtoc: true
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard/metrics
+anchorid: metrics
+editpath: legacy-dashboard/06-metrics-site-dashboard.md
 ---
 
 Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/quickstart/create-test-live). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
@@ -19,7 +25,7 @@ terminus metrics <site>.<env>
 1. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of the Site Dashboard.
 1. Click **<span class="glyphicons glyphicons-charts"></span> Metrics**.
 1. Toggle displayed date ranges by clicking **Day**, **Week**, or **Month**:
-  ![Charts for pages served and visits within the Metrics tool of the Site Dashboard](../images/dashboard/metrics-graphs.png)
+  ![Charts for pages served and visits within the Metrics tool of the Site Dashboard](../../../images/dashboard/metrics-graphs.png)
 
 ## Available Metrics
 
@@ -69,7 +75,7 @@ Yes. For example, multiple devices on the same home network visiting your site w
 
 Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/terminus/install) or update to the [current release](/terminus/updates#updates) for access to the `metrics` command.
 
-## See Also
+## More Resources
 
 - [Traffic Limits and Overages](/traffic-limits)
 - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)

@@ -1,9 +1,15 @@
 ---
-title: Creating Sites
+title: Legacy Dashboard
+subtitle: Create A Site
 description: Create a new Drupal or WordPress site on Pantheon.
 categories: [get-started]
 tags: [site, dashboard]
-reviewed: "2021-04-23"
+layout: guide
+showtoc: true
+reviewed: "2022-08-20"
+permalink: docs/guides/legacy-dashboard/create-sites
+anchorid: create-sites
+editpath: legacy-dashboard/02-create-sites.md
 ---
 
 The Pantheon Dashboard provides a quick "click to install" method of creating new sites. In less than five minutes, you'll have a new site up and running on the platform.
@@ -12,7 +18,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
 1. From your User or Organization's Dashboard, click **Create New Site** to be brought to the **Create Your Pantheon Site** page:
 
-  ![Create Your Pantheon Site page](../images/dashboard/create-pantheon-site.png)
+  ![Create Your Pantheon Site page](../../../images/dashboard/create-pantheon-site.png)
 
 1. Name the site.
 
@@ -24,7 +30,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
   </Alert>
 
-1. Optionally, if you have access to [organizations](/organization-dashboard/#new-sites), choose an organization to affiliate the site with.
+1. Optionally, if you have access to [organizations](/guides/legacy-dashboard/org-dashboard/#new-sites), choose an organization to affiliate the site with.
 1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
@@ -35,7 +41,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Click **Visit your Pantheon Site Dashboard** to transfer to the [Site Dashboard](/guides/quickstart/site-dashboard/).
 1. Click **Visit Development Site** and complete the installation process for the selected framework.
 
-  ![Site Dashboard in the Dev tab shows the Visit Development Site button](../images/dashboard/site-dashboard-dev.png)
+  ![Site Dashboard in the Dev tab shows the Visit Development Site button](../../../images/dashboard/site-dashboard-dev.png)
 
 ## Sandbox Sites
 

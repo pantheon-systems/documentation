@@ -66,7 +66,7 @@ See the steps in our [Site Access](/site-access) doc for recovery instructions.
 
 From the Site Dashboard, click the tag that shows the current plan or **Upgrade** next to the site's name. Select a plan, and follow the prompts to pay or transfer site ownership to invite another user to pay.
 
-For more information, see [Manage Plans in the Site Dashboard](/site-plan).
+For more information, see [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan).
 
 ### Change or Update Payment Method
 
@@ -87,7 +87,7 @@ Self-serve sites are billable via recurring monthly or [annual](/annual-billing)
 
 ## See Also
 
-- [Billing in the Site Dashboard](/site-billing)
-- [Account Billing in the User Dashboard](/account-billing)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
 - [Team Management](/team-management)
-- [Add a Client Site to your Organization Dashboard](/add-client-site)
+- [Add a Client Site to your Organization Dashboard](/guides/legacy-dashboard/add-client-site)
