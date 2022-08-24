@@ -23,28 +23,27 @@ Refer to [Error Handling and Logging](https://secure.php.net/manual/en/book.erro
 Each of the PHP errors are handled differently depending on the site environment. On Dev and Test, they are shown directly to the user in the browser. On Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to `wp-content/debug.log`. PHP errors are also logged on the application container at `logs/php-error.log`.
 
 Here's a breakdown of what errors are shown and where:
-
-|-----------------|--------------|-------------|--------------|------------------------|
++-----------------+--------------+-------------+--------------+------------------------+
 | **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
-|-----------------|--------------|-------------|--------------|------------------------|
-|                 | notice       | <span style="color:green">✔</span>       | <span style="color:green">✔</span>        |                        |
-|                 |--------------|-------------|--------------|------------------------|
-| Dev             | warning      | <span style="color:green">✔</span>       | <span style="color:green">✔</span>       |                        |
-|                 |--------------|-------------|--------------|------------------------|
-|                 | error        | <span style="color:green">✔</span>       |              | <span style="color:green">✔</span>                 |
-|-----------------|--------------|-------------|--------------|------------------------|
-|                 | notice       |             | <span style="color:green">✔</span>        |                        |
-+                 |--------------|-------------|--------------|------------------------|
-| Test            | warning      |             | <span style="color:green">✔</span>       |                        |
-|                 |--------------|-------------|--------------|------------------------|
-|                 | error        | <span style="color:green">✔</span>       |              |  <span style="color:green">✔</span>                 |
-|-----------------|--------------|-------------|--------------|------------------------|
-|                 | notice       |             | <span style="color:green">✔</span>        |                        |
-+                 |--------------|-------------|--------------+------------------------+
-| Live            | warning      |             | <span style="color:green">✔</span>       |                        |
-|                 |--------------|-------------|--------------|------------------------|
-|                 | error        |             |              |  <span style="color:green">✔</span>                 |
-|-----------------|--------------|-------------|--------------|------------------------|
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       | **✓**       | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+| Dev             | warning      | **✓**       | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        | **✓**       |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       |             | **✓**        |                        |
++                 +--------------+-------------+--------------+------------------------+
+| Test            | warning      |             | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        | **✓**       |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       |             | **✓**        |                        |
++                 +--------------+-------------+--------------+------------------------+
+| Live            | warning      |             | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        |             |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
 
 Refer to [Log Files on Pantheon](/logs) for more information.
 
