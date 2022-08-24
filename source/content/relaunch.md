@@ -76,7 +76,7 @@ The new Site Plan will be billed immediately.
 
 For a fast, smooth relaunch, consider having two browser tabs open, one with the old Site Dashboard, and one with the new.
 
-1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan/#purchase-a-new-plan).
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan#purchase-a-new-plan).
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 

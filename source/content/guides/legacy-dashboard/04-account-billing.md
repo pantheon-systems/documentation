@@ -77,4 +77,4 @@ Deleting a card profile from your account will also delete its associated billin
 
 - [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 - [New Site Owner FAQs](/site-owner-faq)
-- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-dashboard)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)

@@ -13,7 +13,7 @@ editpath: legacy-dashboard/05-user-dashboard.md
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
-![Site Dashboard](../images/dashboard/pantheon-user-dashboard.png)
+![Site Dashboard](../../../images/dashboard/pantheon-user-dashboard.png)
 
 ## Sites Tab
 

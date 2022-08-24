@@ -22,4 +22,4 @@ You can create a new Site from the new Dashboard homepage by clicking **+ Create
 
 1. Click **Continue** and wait while the platform provisions the site with the start state you selected > Click **Visit your Pantheon Site Dashboard** once complete.
 
-For more information on Site creation, refer to the [Creating Sites](guides/legacy-dashboard/create-sites) documentation. 
+For more information on Site creation, refer to the [Creating Sites](/guides/legacy-dashboard/create-sites) documentation. 
