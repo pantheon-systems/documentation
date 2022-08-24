@@ -1,5 +1,5 @@
 ---
-title:
+title: PHP on Pantheon
 subtitle: WordPress and PHP Sessions
 description: Detailed information on the behaviors of WordPress and PHP sessions.
 cms: "WordPress"
@@ -10,6 +10,8 @@ showtoc: true
 permalink: docs/guides/php/wordpress-sessions
 anchorid: wordpress-sessions
 ---
+
+This section provides information on WordPress and PHP sessions.
 
 WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7). All "user state" is managed via cookies. This is a Core design decision.
 
@@ -132,3 +134,9 @@ curl -Is https://www.getpantheon.com | grep PHPSESS|wc -l
 You should substitute your site URL in there, but the desired output is "0" (zero).
 
 If your site is overly aggressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
+
+## More Resources
+
+- [WordPress PHP Requirements](https://wordpress.org/about/requirements/)
+
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)

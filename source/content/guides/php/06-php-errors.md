@@ -9,13 +9,16 @@ showtoc: true
 permalink: docs/guides/php/php-errors
 anchorid: php-errors
 ---
+
+This section provides information on how to interpret and resolve PHP errors.
+
 There are three basic kinds of PHP errors:
 
 - **Notice**: room for improvement; typically unset variables or missing array keys.
 - **Warning**: errors will probably occur if not addressed.
 - **Error**: fatal, execution terminated. Often known as the "white screen of death".
 
-For more in-depth information, see [Error Handling and Logging](https://secure.php.net/manual/en/book.errorfunc.php).
+Refer to [Error Handling and Logging](https://secure.php.net/manual/en/book.errorfunc.php) for more information.
 
 Each of the PHP errors are handled differently depending on the site environment. On Dev and Test, they are shown directly to the user in the browser. On Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to `wp-content/debug.log`. PHP errors are also logged on the application container at `logs/php-error.log`.
 
@@ -24,26 +27,26 @@ Here's a breakdown of what errors are shown and where:
 +-----------------+--------------+-------------+--------------+------------------------+
 | **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       | **✓**       | **✓**        |                        |
+|                 | notice       | <span style="color:green">✔</span>       | <span style="color:green">✔</span>        |                        |
 |                 +--------------+-------------+--------------+------------------------+
-| Dev             | warning      | **✓**       | **✓**        |                        |
+| Dev             | warning      | <span style="color:green">✔</span>       | <span style="color:green">✔</span>       |                        |
 |                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
+|                 | error        | <span style="color:green">✔</span>       |              | <span style="color:green">✔</span>                 |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
+|                 | notice       |             | <span style="color:green">✔</span>        |                        |
 +                 +--------------+-------------+--------------+------------------------+
-| Test            | warning      |             | **✓**        |                        |
+| Test            | warning      |             | <span style="color:green">✔</span>       |                        |
 |                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
+|                 | error        | <span style="color:green">✔</span>       |              |  <span style="color:green">✔</span>                 |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
+|                 | notice       |             | <span style="color:green">✔</span>        |                        |
 +                 +--------------+-------------+--------------+------------------------+
-| Live            | warning      |             | **✓**        |                        |
+| Live            | warning      |             | <span style="color:green">✔</span>       |                        |
 |                 +--------------+-------------+--------------+------------------------+
-|                 | error        |             |              |  **✓**                 |
+|                 | error        |             |              |  <span style="color:green">✔</span>                 |
 +-----------------+--------------+-------------+--------------+------------------------+
 
-To learn more about PHP error logs, see [Log Files on Pantheon](/logs).
+Refer to [Log Files on Pantheon](/logs) for more information.
 
 ## Performance Hits
 
@@ -53,7 +56,7 @@ If database logging is enabled, your site will be even slower, requiring a datab
 
 Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.
 
-See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
+Refer to [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## Unhandled Exceptions
 A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](https://secure.php.net/manual/en/language.exceptions.php).
@@ -108,4 +111,8 @@ To fix this error, look for the correct path to the file and update the require\
 
 ## Intermittent Notices
 
-If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/guides/php/deprecated-constructor-notices) for additional information. This is not common.
+Refer to [Debug Intermittent PHP 7 Notices](/guides/php/deprecated-constructor-notices) for additional information if you are encountering intermittent notices that are not behaving as described on this page. This is not common behavior and you should try to resolve this immediately.
+
+## More Resources
+
+- [PHP Slow Log](/guides/php/php-slow-log)

@@ -1,5 +1,3 @@
-<ReviewDate date="2022-04-06" />
-
 Click the links below to display complete PHP information for each version, including details of supported PHP extensions.
 
 | Version                                          | Available   | Recommended |

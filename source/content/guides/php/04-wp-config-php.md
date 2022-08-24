@@ -1,6 +1,6 @@
 ---
 title: PHP on Pantheon
-subtitle: Configuring wp-config.php
+subtitle: Configure Your wp-config.php File
 description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
 cms: "WordPress"
 categories: [develop]
@@ -12,13 +12,19 @@ permalink: docs/guides/php/wp-config-php
 anchorid: wp-config-php
 ---
 
-## Overview
+This section provides information on how to configure the `wp-config.php` file for a WordPress site.
 
-WordPress configuration is set in `wp-config.php`, located within your WordPress site root. When you install a WordPress site, Pantheon automatically includes this file for you with all you need to get started. 
+## WordPress Configuration
 
-Most users do not need to customize this file. However, you are welcome to customize `wp-config.php` with any customizations you may need for plugins, themes, and caching.
+WordPress configuration is set in `wp-config.php` in your WordPress site root. When you install a WordPress site, Pantheon automatically includes this file for you with all you need to get started. 
 
-Two additional config files are referenced in `wp-config.php`: an optional `wp-config-local.php` for local development settings, based on the example `wp-config-local-sample.php` found in your WordPress site root, and `wp-config-pantheon.php` for dynamically-supplied platform configuration settings (such as database credentials). 
+Most users do not need to customize this file. However, you are welcome to customize `wp-config.php` with any customizations you need for plugins, themes, and caching.
+
+Two additional config files are referenced in `wp-config.php`: 
+
+- `wp-config-local.php`: this is an optional file for local development settings, based on the example `wp-config-local-sample.php` found in your WordPress site root.
+
+- `wp-config-pantheon.php`: this is for dynamically-supplied platform configuration settings (such as database credentials). 
 
 <Alert title="Warning" type="danger">
 
@@ -40,15 +46,15 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 <Alert title="Note" type="info">
 
-`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
+`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. Refer to [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) for more information.
 
 </Alert>
 
 ## Pantheon Platform Settings in wp-config-pantheon.php
 
-In order to get the latest WordPress upstream updates while avoiding merge conflicts, Pantheon includes `wp-config-pantheon.php`.
+Pantheon includes `wp-config-pantheon.php` to get the latest WordPress upstream updates while avoiding merge conflicts. 
 
-If you don’t see `wp-config-pantheon.php` in your [WP code directory](/code#wordpress-code-structure), apply the latest upstream updates as shown in [WordPress and Drupal Core Updates](/core-updates).
+Apply the latest upstream updates as shown in [WordPress and Drupal Core Updates](/core-updates) if you don’t see `wp-config-pantheon.php` in your [WP code directory](/code#wordpress-code-structure). 
 
 Do not edit `wp-config-pantheon.php`. It includes database and environment configuration settings that the platform uses and that Pantheon maintains.
 
@@ -56,7 +62,7 @@ Do not edit `wp-config-pantheon.php`. It includes database and environment confi
 
 ### Write Logic Based on the Pantheon Server Environment
 
-Depending on your use case, there are two possibilities:
+There are two options for writing logic based on Pantheon server environment:
 
 - For web only actions, like [redirects](/domains#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
 
@@ -70,7 +76,7 @@ Depending on your use case, there are two possibilities:
  }
  ```
 
-- For actions that should take place on both web requests _and_ wp-cli commands (e.g. Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
+- For actions that should take place on both web requests _and_ wp-cli commands (for example, Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. It will contain the current Dev, Test, or Live:
 
  ```php:title=wp-config.php
  // Pantheon - all (web and CLI) operations.
@@ -168,3 +174,11 @@ ini_set('arg_separator.output', '&');
 ### Actions and Filters in `wp-config.php`
 
 Actions or filters that require CLI tools like WP-CLI may fail from `wp-config.php`, because the functions required are not yet accessible. To resolve, put these directives in an [MU Plugin](/mu-plugin).
+
+## More Resources
+
+- [WordPress PHP Requirements](https://wordpress.org/about/requirements/)
+
+- [Object Cache](/object-cache)
+
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)

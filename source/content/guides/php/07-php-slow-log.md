@@ -9,7 +9,10 @@ showtoc: true
 permalink: docs/guides/php/php-slow-log
 anchorid: php-slow-log
 ---
-One of the key ways to find issues on your website is to check your PHP logs. This article instructs you on how to use your PHP slow log and PHP FPM error logs to find performance issues and PHP errors on Pantheon sites.
+
+This section provides information on how to use the PHP Slow Log to improve your site's performance.
+
+A key ways to find issues on your website is to check your PHP logs. You can use your PHP Slow Log and PHP FPM error logs to find performance issues and PHP errors on Pantheon sites.
 
 ## Before You Begin
 
@@ -51,7 +54,7 @@ Make sure that you have:
 
 ## Analyze the PHP Slow Log
 
-1. Look for custom modules or theme files (`template.php` file, `*.tpl.php` files, etc.). This trace has both a custom Feature module (`/sites/all/modules/features/tdm_community.module, field_get_items()` function) and a `.tpl` file (`/sites/all/themes/themename/templates/page.tpl.php`, render() function).
+1. Search for custom modules or theme files (`template.php` file, `*.tpl.php` files, etc.). This trace has both a custom Feature module (`/sites/all/modules/features/tdm_community.module, field_get_items()` function) and a `.tpl` file (`/sites/all/themes/themename/templates/page.tpl.php`, render() function).
 
   The script filenames may have a different path such as `/srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php`.
 
@@ -80,7 +83,7 @@ Make sure that you have:
   [0x000000000327a240] render() /code/sites/all/themes/themename/templates/page.tpl.php:113
   ```
 
-1. Next, search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
+1. Search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
 
   ```php
   [08-Dec-2014 16:56:48]  [pool www] pid 3863
@@ -118,7 +121,7 @@ Make sure that you have:
   [0x00000000027b1040] menu_execute_active_handler() /code/index.php:21
   ```
 
-1. To get a count of how many times any given file is called in a PHP slow log, use a `grep` command. Examples:
+1. Use a `grep` command to get a count of how many times any given file is called in a PHP slow log.  Examples:
 
   ```bash{outputLines:2}
   grep -o 'stream_wrappers.inc' php-slow.log | wc -l
@@ -141,3 +144,9 @@ Make sure that you have:
   ```
 
 By using these methods and files to find your PHP errors and performance issues, you will be able to greatly improve the stability of your website.
+
+## More Resources
+
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+
+- [Object Cache](/object-cache)

@@ -1,6 +1,6 @@
 ---
 title: PHP on Pantheon
-subtitle: Configuring Settings.php
+subtitle: Configure Your Settings.php File
 description: Detailed information about configuring your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
 cms: "Drupal"
@@ -11,6 +11,8 @@ showtoc: true
 permalink: docs/guides/php/settings-php
 anchorid: settings-php
 ---
+
+This section provides information on how to configure the `settings.php` file for a Drupal site.
 
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
@@ -40,7 +42,7 @@ You should never put the database connection information for a Pantheon database
 
 </Alert>
 
-Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
+Use the Drupal 9 and Drupal 7 configuration snippets in the subsections below to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
 ### Drupal 9
 
@@ -56,18 +58,18 @@ Configure environment-specific settings within the `settings.local.php` file, wh
   }
 ```
 
-The `HASH_SALT` value should also be set within `settings.local.php`. See Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
+1. Set the `HASH_SALT` value within `settings.local.php`. Refer to the Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
 
-To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/terminus):
+  - Drupal 9 will not run locally without a hash salt. The hash salt you use does not have to be the same one set on the Pantheon platform. You can use any sufficiently long random string. Make sure to set one in `settings.local.php` :
+
+    ```php:title=settings.local.php
+    $settings['hash_salt'] = '$HASH_SALT';
+    ```
+
+1. Run the command below to use the Pantheon `HASH_SALT` in your local site:
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
-```
-
-Drupal 9 will not run locally without a hash salt, but it need not be the same one set on the Pantheon platform; any sufficiently long random string will do. Make sure to set one in `settings.local.php` :
-
-```php:title=settings.local.php
-$settings['hash_salt'] = '$HASH_SALT';
 ```
 
 #### Trusted Host Setting
@@ -76,7 +78,7 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 
 <Alert title="Note" type="info">
 
-Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 9 redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
+Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 9 redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) documentation, don't use this snippet as it conflicts with the other code.
 
 </Alert>
 
@@ -276,3 +278,10 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
+## More Resources
+
+- [Object Cache](/object-cache)
+
+- [PHP Slow Log](/guides/php/php-slow-log)
+
+- [PHP Errors](/guides/php/php-errors)

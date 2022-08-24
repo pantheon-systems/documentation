@@ -11,7 +11,9 @@ permalink: docs/guides/php/deprecated-constructor-notices
 anchorid: deprecated-constructor-notices
 ---
 
-PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/guides/php/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
+This section provides information on how to debug intermittent PHP 7 notices.
+
+PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/guides/php/php-errors); however, a PHP notice might occasionally be emitted directly into the web page content.
 
 An example notice might look like this:
 
@@ -29,11 +31,11 @@ This error is caused by a combination of two factors:
 - PHP notices generated during source code parsing
 - PHP opcache is in use
 
-To fix these errors, convert your class constructor to `__construct()`. See [deprecation notice for PHP-4-style constructors](https://secure.php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) for more information.
+Convert your class constructor to `__construct()` to fix these errors. Refer to [deprecation notice for PHP-4-style constructors](https://secure.php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) for more information.
 
 ## Finding PHP Files Containing Parse-Time Notices
 
-To make it easier to find and debug intermittent notices, **temporarily** disable the opcache in your settings.php file:
+**Temporarily** disable the opcache in your `settings.php` file to make it easier to find and debug intermittent notices:
 
 ```php
 if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != 'live'))
@@ -44,28 +46,32 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != '
 
 <Alert title="Warning" type="danger">
 
-Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
+Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon Live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in Dev and Multidev environments, be sure to re-enable it again once you are done debugging.
 
 </Alert>
 
-You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/local-development); then, run:
+You can also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). 
 
-```bash{outputLines: 2-7}
-php -l sites/all/modules/views/includes/handlers.inc
-PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753
+1. Create a local copy of your site as described in [Local Development](/local-development).
 
-Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753
+1. Run the command below:
 
-No syntax errors detected in sites/all/modules/views/includes/handlers.inc
-```
+    ```bash{outputLines: 2-7}
+    php -l sites/all/modules/views/includes/handlers.inc
+    PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753
 
-Replace the path to the file you would like to check. To check every .php, .inc and .module file in a Drupal site, run:
+    Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753
 
-```bash{promptUser: user}
-find -E . -iregex ".*\.(inc|php|module)$" -exec php -l {} \; | grep -v 'No syntax errors'
-```
+    No syntax errors detected in sites/all/modules/views/includes/handlers.inc
+    ```
 
-Adjust the regular expression as needed to scan other file extensions that may contain php code.
+1. Replace the path to the file you would like to check. To check every .php, .inc and .module file in a Drupal site, run:
+
+    ```bash{promptUser: user}
+    find -E . -iregex ".*\.(inc|php|module)$" -exec php -l {} \; | grep -v 'No syntax errors'
+    ```
+
+1. Adjust the regular expression as needed to scan other file extensions that may contain php code.
 
 ## Explanation
 
@@ -80,3 +86,9 @@ Opcache also influences when this error is displayed. Since opcache caches the c
 The deprecation notices used in the examples on this page appeared in an old version of the Drupal [views](https://www.drupal.org/project/views) module for Drupal 7.x. This was fixed in issue [#2579819](https://www.drupal.org/node/2579819), and included in the [7.x-3.12](https://www.drupal.org/project/views/releases/7.x-3.12) release.
 
 </Alert>
+
+## More Resources
+
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+
+- [PHP Slow Log](/guides/php/php-slow-log)
