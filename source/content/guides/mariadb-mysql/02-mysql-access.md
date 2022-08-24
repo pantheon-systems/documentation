@@ -41,7 +41,7 @@ The following required fields are provided:
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database name to use. This value will always be `pantheon` and cannot be altered.
 
-Each database server is in the cloud, which allows credentials to occasionally be updated and without notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
+Each database server is in the cloud, which allows credentials to occasionally be updated, without any notice. Normally, this is transparent to a site, as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
 There's a wide array of MySQL clients that you can use, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
