@@ -78,9 +78,9 @@ You can also find your site's machine name using the Terminus command `site:info
 
 </Accordion>
 
-### Automatic Site and Environment detection
+### Automatic Site and Environment Detection
 
-If a `<site>.<env>` parameter is not provided to a command that requests one, Terminus will automatically detect the site and environment to operate on from the local copy and current branch of the Pantheon site checked out at the current working directory.
+Terminus automatically detects the site and environment if a `<site>.<env>` parameter is not provided to a command that requests one. Terminus detects and operates from the local copy and current branch of the Pantheon site checked out at the current working directory. 
 
 ```bash
 git clone ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git mysite
