@@ -100,4 +100,4 @@ Before switching to annual billing, consider:
 ## More Resources
 
  - [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
- - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/plan-dashboard)
+ - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
