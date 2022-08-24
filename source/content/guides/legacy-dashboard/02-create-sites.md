@@ -7,9 +7,9 @@ tags: [site, dashboard]
 layout: guide
 showtoc: true
 reviewed: "2022-08-20"
-permalink: docs/guides/legacy-dashboard/create-site
-anchorid: create-site
-editpath: legacy-dashboard/02-create-site.md
+permalink: docs/guides/legacy-dashboard/create-sites
+anchorid: create-sites
+editpath: legacy-dashboard/02-create-sites.md
 ---
 
 The Pantheon Dashboard provides a quick "click to install" method of creating new sites. In less than five minutes, you'll have a new site up and running on the platform.
