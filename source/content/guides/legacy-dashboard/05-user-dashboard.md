@@ -52,7 +52,7 @@ To associate an image with your Pantheon account, you'll need to [create a Grava
 
 <Alert title="Note"  type="info" >
 
-For information on Site Dashboard, visit our [Site Dashboard](guides/quickstart/site-dashboard/) documentation.
+For information on Site Dashboard, visit our [Site Dashboard](/guides/quickstart/site-dashboard/) documentation.
 
 </Alert>
 
