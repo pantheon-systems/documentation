@@ -6,7 +6,7 @@ categories: [develop]
 tags: [agencies, collaborate, dashboard, organizations, teams]
 contributors: [michellecolon-pantheon]
 layout: guide
-showtoc: true
+showtoc: false
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard
 anchorid: legacy-dashboard
