@@ -1,11 +1,15 @@
 ---
-title: Configuring wp-config.php
+title: PHP on Pantheon
+subtitle: Configuring wp-config.php
 description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
 cms: "WordPress"
 categories: [develop]
 tags: [wp-config]
 contributors: [masonjames]
-reviewed: "2020-08-07"
+layout: guide
+showtoc: true
+permalink: docs/guides/php/wp-config-php
+anchorid: wp-config-php
 ---
 
 ## Overview
@@ -129,7 +133,7 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 ### How do I enable ionCube Decoder support?
 
-1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/php-versions). Please note later PHP versions do not currently support ionCube.
+1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/guides/php/php-versions). Please note later PHP versions do not currently support ionCube.
 
 1. Enable ionCube Decoder support site-wide by adding this line to `wp-config.php`:
 

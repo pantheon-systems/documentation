@@ -21,7 +21,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
     - You must use the [Build Tools 2.x release](https://github.com/pantheon-systems/terminus-build-tools-plugin/tree/2.x) if you are using **Terminus 2**.
 
-- [PHP version](/php-versions#verify-current-php-versions) 7.2 or greater
+- [PHP version](/guides/php/php-versions#verify-current-php-versions) 7.2 or greater
 
 ## Create Your Site
 

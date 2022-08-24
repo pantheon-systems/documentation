@@ -8,7 +8,7 @@ This article covers the most common causes for performance problems, demonstrate
 
 ## PHP Errors Slow Execution
 
-An often ignored cause of bad performance is [PHP errors within site code](/php-errors), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
+An often ignored cause of bad performance is [PHP errors within site code](/guides/php/php-errors), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
 
 Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
 
@@ -111,7 +111,7 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 - Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
 - Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
 - Enabling [Redis](/object-cache) could boost site performance by providing an in-memory backend caching
-- [Update PHP version](/php-versions)
+- [Update PHP version](/guides/php/php-versions)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 
 Please note that memory issues caused by custom code fall outside our [scope of support](/guides/support).

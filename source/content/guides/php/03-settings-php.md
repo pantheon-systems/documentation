@@ -1,11 +1,15 @@
 ---
-title: Configuring Settings.php
+title: PHP on Pantheon
+subtitle: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
 cms: "Drupal"
 categories: [develop]
 tags: [site, database]
-reviewed: "2020-10-21"
+layout: guide
+showtoc: true
+permalink: docs/guides/php/settings-php
+anchorid: settings-php
 ---
 
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
@@ -242,7 +246,7 @@ No; `settings.pantheon.php` is for Pantheon's use only and you should only modif
 
 ### How do I enable ionCube Decoder support?
 
-1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/php-versions). Please note later PHP versions do not currently support ionCube.
+1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/guides/php/php-versions). Please note later PHP versions do not currently support ionCube.
 
 1. Enable ionCube Decoder support site-wide by adding this line to `settings.php`:
 

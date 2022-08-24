@@ -332,7 +332,7 @@ You'll need the plugin if you are seeing errors like this:
 Warning: session_start(): user session functions not defined
 ```
 
-[More information on sessions](/wordpress-sessions).
+[More information on sessions](/guides/php/wordpress-sessions).
 
 ## PHP Short Tags
 

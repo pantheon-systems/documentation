@@ -42,7 +42,7 @@ Complete the following steps for the current site before beginning the migration
 
 1. Review Pantheon's [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) to see if any of your plugins or themes are listed.
 
-1. Make sure your code is compatible with the latest recommended version of PHP for WordPress, and [adjust PHP versions](/php-versions#configure-php-version) if needed.
+1. Make sure your code is compatible with the latest recommended version of PHP for WordPress, and [adjust PHP versions](/guides/php/php-versions#configure-php-version) if needed.
 
 1. Clear all caches.
 

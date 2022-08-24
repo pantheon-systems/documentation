@@ -1,10 +1,14 @@
 ---
-title: WordPress and PHP Sessions
+title:
+subtitle: WordPress and PHP Sessions
 description: Detailed information on the behaviors of WordPress and PHP sessions.
 cms: "WordPress"
 categories: [develop]
 tags: [code, users, cookies]
-reviewed: "2021-05-28"
+layout: guide
+showtoc: true
+permalink: docs/guides/php/wordpress-sessions
+anchorid: wordpress-sessions
 ---
 
 WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7). All "user state" is managed via cookies. This is a Core design decision.

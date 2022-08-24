@@ -22,7 +22,7 @@ Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libr
 
 ### MSSQL
 
-The MSSQL PHP library used to interface with Microsoft SQL Server databases is not supported on Pantheon for PHP versions below 7.2. See [Upgrade PHP Versions](/php-versions) to set your PHP version. Please note that Pantheon does not offer MSSQL databases, this library is only available for those connecting to external databases.
+The MSSQL PHP library used to interface with Microsoft SQL Server databases is not supported on Pantheon for PHP versions below 7.2. See [Upgrade PHP Versions](/guides/php/php-versions) to set your PHP version. Please note that Pantheon does not offer MSSQL databases, this library is only available for those connecting to external databases.
 
 ## Dynamic Outbound IPs
 

@@ -86,7 +86,7 @@
       - text: 'Domains and Redirects'
         url: '/domains/'
       - text: 'Configuring settings.php'
-        url: '/settings-php/'
+        url: '/guides/php/settings-php'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
       - text: 'Object Cache (formerly Redis) for Drupal or WordPress'

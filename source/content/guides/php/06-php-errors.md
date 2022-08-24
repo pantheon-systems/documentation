@@ -1,8 +1,13 @@
 ---
-title: PHP Errors and Exceptions
+title: PHP on Pantheon
+subtitle: PHP Errors and Exceptions
 description: Detailed information about basic PHP errors on your Pantheon Drupal or WordPress site.
 categories: [troubleshoot]
 tags: [code, site, webops]
+layout: guide
+showtoc: true
+permalink: docs/guides/php/php-errors
+anchorid: php-errors
 ---
 There are three basic kinds of PHP errors:
 
@@ -103,4 +108,4 @@ To fix this error, look for the correct path to the file and update the require\
 
 ## Intermittent Notices
 
-If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices) for additional information. This is not common.
+If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/guides/php/deprecated-constructor-notices) for additional information. This is not common.

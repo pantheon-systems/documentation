@@ -120,7 +120,7 @@ php_version: 8.0
 
 #### Considerations
 
-- [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
+- [Upgrading PHP Versions](/guides/php/php-versions) may require you to resolve compatibility issues with your site's codebase.
 - From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 - You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
@@ -296,4 +296,4 @@ Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](
 ## See Also
 
 * [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver)
-* [Upgrade PHP Versions](/php-versions)
+* [Upgrade PHP Versions](/guides/php/php-versions)

@@ -1,9 +1,14 @@
 ---
-title: Upgrade PHP Versions
+title: PHP on Pantheon
+subtitle: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [libraries, updates]
 categories: [platform]
-reviewed: "2021-07-28"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/php/php-versions
+anchorid: php-versions
 ---
 
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
@@ -85,11 +90,11 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 Your site dashboard will detect the changes when you upload a new or modified `pantheon.yml` file in SFTP mode.
 
-![The Site Dashboard sees changes to pantheon.yml](../images/dashboard/pantheon-yml-changes-sftp.png)
+![The Site Dashboard sees changes to pantheon.yml](../../../images/dashboard/pantheon-yml-changes-sftp.png)
 
 If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. The example below shows a failed attempt to set the PHP version to 12:
 
-![The Site Dashboard doesn't commit invalid changes](../images/dashboard/pantheon-yml-failure-sftp.png)
+![The Site Dashboard doesn't commit invalid changes](../../../images/dashboard/pantheon-yml-failure-sftp.png)
 
 </Tab>
 
@@ -149,8 +154,8 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 - [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 - [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
 - [Log Files on Pantheon](/logs)
-- [PHP Errors and Exceptions](/php-errors)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
 - [The pantheon.yml Configuration File](/pantheon-yml)
 - [Securely Working with phpinfo](/guides/secure-development/phpinfo)
 - [php.net - Backward Incompatible Changes](https://secure.php.net/manual/en/migration70.incompatible.php)
-- [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices)
+- [Debug Intermittent PHP 7 Notices](/guides/php/deprecated-constructor-notices)

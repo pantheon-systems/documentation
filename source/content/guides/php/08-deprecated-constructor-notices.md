@@ -1,12 +1,17 @@
 ---
-title: Debug Intermittent PHP 7 Notices
+title: PHP on Pantheon
+subtitle: Debug Intermittent PHP 7 Notices
 description: Debug and fix "Deprecated Constructor" notices in your Pantheon site.
 categories: [troubleshoot]
 tags: [code]
 contributors: [greg-1-anderson]
+layout: guide
+showtoc: true
+permalink: docs/guides/php/deprecated-constructor-notices
+anchorid: deprecated-constructor-notices
 ---
 
-PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
+PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/guides/php/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
 
 An example notice might look like this:
 
