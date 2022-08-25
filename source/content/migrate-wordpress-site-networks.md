@@ -16,7 +16,7 @@ Before you can migrate a WordPress Site Network, you must be a contract customer
 
 * [Download](https://git-scm.com/downloads) and install [Git](/guides/git/git-config)
 * [Rsync or SFTP Client](/rsync-and-sftp)
-* [MySQL Client](/mysql-access)
+* [MySQL Client](/guides/mariadb-mysql/mysql-access)
 
 ## Import the Codebase
 **Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.

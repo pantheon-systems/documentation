@@ -101,7 +101,7 @@ Multidev environments spin down after approximately 60 minutes of idle time. Ref
 
 ## Creating a Multidev Failed - Specified Key Was Too Long
 
-Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb).
+Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/guides/mariadb-mysql/myisam-to-innodb).
 
 ## More Resources
 

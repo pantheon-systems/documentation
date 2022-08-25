@@ -28,4 +28,4 @@ Review our [WordPress Known Issues](/wordpress-known-issues) doc to learn the re
 
 ## Troubleshoot MySQL with MySQL Slow Log
 
-Review our [MySQL Slow Log](/mysql-slow-log) doc to learn how to use a WordPress site's MySQL Slow Log to troubleshoot and identify serious performance issues in MySQL.
+Review our [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log) doc to learn how to use a WordPress site's MySQL Slow Log to troubleshoot and identify serious performance issues in MySQL.
