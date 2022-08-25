@@ -14,14 +14,15 @@ editpath: decoupled-sites/06-faq.md
 reviewed: "2022-08-11"
 ---
 
+
 ## Frequently Asked Questions
 
-### Can I use any CMS with Pantheon Decoupled?
+### Can I use any CMS with Pantheon architecture for Front-End Sites?
 
 WordPress and Drupal are currently the only CMSs supported on Pantheon Decoupled. 
 
 
-### What dependency versions are compatible with Pantheon Decoupled?
+### What dependency versions are compatible with Front-End Sites?
 
 Pantheon Front-End Sites currently support:
 
@@ -31,7 +32,7 @@ Pantheon Front-End Sites currently support:
 * WordPress 5.9
 
 
-### Is Decoupled Site Preview available for all instances on Pantheon Decoupled?
+### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
 Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
