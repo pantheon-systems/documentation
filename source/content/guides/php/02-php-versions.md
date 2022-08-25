@@ -62,9 +62,9 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 1. Select **SFTP** as your **Development Mode**.
 
-1. Use the credentials under **Connect with SFTP** to connect your preferred SFTP client to Pantheon.
+1. Use the credentials under **Connect with SFTP** to connect to your preferred SFTP client to Pantheon.
 
-1. Check the `/code` directory for the `pantheon.yml` file (or create one if it is not already present) and alter it to include the desired PHP version.
+1. Check the `/code` directory for the `pantheon.yml` file (or create one if it is not already present) and edit it to include the desired PHP version.
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -98,7 +98,7 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 <Tab title="Git Mode" id="git-steps">
 
-1. Navigate to the Site dashboard and click **Dev**.
+1. Navigate to the Site Dashboard and click **Dev**.
 
 1. Select **Git** as your **Development Mode**.
 
@@ -149,12 +149,12 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 
 ## More Resources
 
-- [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 - [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions)
+
 - [WordPress PHP Requirements](https://wordpress.org/about/requirements/)
+
 - [Log Files on Pantheon](/logs)
-- [PHP Errors and Exceptions](/guides/php/php-errors)
+
 - [The pantheon.yml Configuration File](/pantheon-yml)
-- [Securely Working with phpinfo](/guides/secure-development/phpinfo)
+
 - [php.net - Backward Incompatible Changes](https://secure.php.net/manual/en/migration70.incompatible.php)
-- [Debug Intermittent PHP 7 Notices](/guides/php/deprecated-constructor-notices)

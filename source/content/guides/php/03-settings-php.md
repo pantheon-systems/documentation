@@ -1,7 +1,7 @@
 ---
 title: PHP on Pantheon
 subtitle: Configure Your Settings.php File
-description: Detailed information about configuring your Drupal database settings.
+description: Configure your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
 cms: "Drupal"
 categories: [develop]
@@ -12,21 +12,21 @@ permalink: docs/guides/php/settings-php
 anchorid: settings-php
 ---
 
-This section provides information on how to configure the `settings.php` file for a Drupal site.
+This section provides information on how to configure the `settings.php` file for a Drupal site. Refer to [Configure Your wp-config.php File](/guides/php/wp-config-php) if you have a WordPress site.
 
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
 ## Drupal 9
 
-Drupal 9 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
+Drupal 9 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. Your site will stop working on Pantheon if the stock `settings.php` file is used in place of the bundled file. 
 
 ## Drupal 7 and Earlier
 
-For Drupal 7 and earlier, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
+Pantheon uses a variant of Pressflow Drupal for Drupal 7 and earlier versions. This  allows the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
 ## Pantheon Articles on settings.php
 
-The following articles include techniques and configurations for `settings.php` on Pantheon:
+Review the following articles for techniques and configurations for your `settings.php` on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) (including domain_access)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
@@ -38,7 +38,7 @@ The following articles include techniques and configurations for `settings.php` 
 
 <Alert title="Warning" type="danger">
 
-You should never put the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
+Never place the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
 
 </Alert>
 
@@ -46,21 +46,21 @@ Use the Drupal 9 and Drupal 7 configuration snippets in the subsections below to
 
 ### Drupal 9
 
-Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+1. Configure environment-specific settings within the `settings.local.php` file, which is ignored by Git in the Pantheon [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
-```php
-  /**
-   * If there is a local settings file, then include it
-   */
-  $local_settings = __DIR__ . "/settings.local.php";
-  if (file_exists($local_settings)) {
-    include $local_settings;
-  }
-```
+  ```php
+    /**
+     * If there is a local settings file, then include it
+     */
+    $local_settings = __DIR__ . "/settings.local.php";
+    if (file_exists($local_settings)) {
+      include $local_settings;
+    }
+  ```
 
 1. Set the `HASH_SALT` value within `settings.local.php`. Refer to the Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
 
-  - Drupal 9 will not run locally without a hash salt. The hash salt you use does not have to be the same one set on the Pantheon platform. You can use any sufficiently long random string. Make sure to set one in `settings.local.php` :
+    - Drupal 9 will not run locally without a hash salt. The hash salt you use does not have to be the same one set on the Pantheon platform. You can use any sufficiently long random string. Make sure to set one in `settings.local.php` :
 
     ```php:title=settings.local.php
     $settings['hash_salt'] = '$HASH_SALT';
@@ -74,13 +74,18 @@ terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 
 #### Trusted Host Setting
 
-A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
+You will see a warning within `/admin/reports/status` if the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. Use the configuration below if you would like to resolve the warning:
 
 <Alert title="Note" type="info">
 
-Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 9 redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) documentation, don't use this snippet as it conflicts with the other code.
+Don't use the code snippet if you're using the Drupal 9 redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) documentation as it conflicts with the other code.
 
 </Alert>
+
+1. Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, and adjust patterns as needed. 
+
+1. Escape any characters that need to be escaped in regular expressions, including dots (`.`). 
+
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -118,13 +123,13 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 
 ### Can I delete the default.settings.php file?
 
-Yes, but only if at least one other file (e.g. `settings.php`) is present within the `sites/default` directory. Otherwise, the existing symlink to `sites/default/files` will be invalid.
+Yes, but only if at least one other file (for example, `settings.php`) is present within the `sites/default` directory. Otherwise, the existing symlink to `sites/default/files` will be invalid.
 
 ### How can I write logic based on the Pantheon server environment?
 
 Depending on your use case, there are three possibilities:
 
-- For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). See our [redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
+- For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). Refer to our [Redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
   <Alert title="Note" type="info">
   
@@ -134,9 +139,9 @@ Depending on your use case, there are three possibilities:
 
 - For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Object Cache](/object-cache) guide for examples.
 
-- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or see our [Object Cache](/object-cache) guide for examples.
+- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or refer to our [Object Cache](/object-cache) guide for examples.
 
-As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472).
+As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. Refer to [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472) for more information.
 
 ```php:title=settings.php
 // All Pantheon Environments.
@@ -192,7 +197,7 @@ else if (PANTHEON_ENVIRONMENT == 'live') {
 
 If you do not have a `settings.php` file in your codebase, you'll see the following message on `/admin/reports/status`:
 
-Configuration file: Not protected. The file `sites/default/settings.php` is not protected from modifications and poses a security risk. You must change the file's permissions to be non-writable.
+> Configuration file: Not protected. The file `sites/default/settings.php` is not protected from modifications and poses a security risk. You must change the file's permissions to be non-writable.
 
 Technically, it's possible to have a functioning Drupal site without `settings.php` on Pantheon, but this breaks compatibility with many modules and tools. Therefore, it's strongly recommended to either copy the `default.settings.php` file to `settings.php` or create an empty `settings.php` file.
 
@@ -202,7 +207,7 @@ It depends on your site configuration. Stripping commented-out or non-functional
 
 ### Where do I specify database credentials?
 
-Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
+Pantheon automatically injects database credentials into the site environment. You will break the Pantheon workflow if you hard code database credentials.
 
 ### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
@@ -228,27 +233,27 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I find examples of Pantheon settings.php?
 
-You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
+You can view examples on the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
 ### Are table prefixes supported?
 
-Pantheon injects the database configuration dynamically during bootstrap. In the `PRESSFLOW_SETTINGS` variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
+Pantheon injects the database configuration dynamically during bootstrap. In the `PRESSFLOW_SETTINGS` variable, the appropriate database connection information is passed in based upon the environment (Dev,Test,Live).
 
 You can technically use database prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your database configuration settings.
 
 ### Why is the Status tab for my Drupal 7 site showing that my configuration file is not protected and that I need to create a settings.php file?
 
-Drupal 7 doesn't ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
+Drupal 7 doesn't ship with a `settings.php` in place. As the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. The `settings.php` area of the report should change to green after you have created a `settings.php` file.
 
 Drupal 7 sites that plan to use [Drush](/drush) should have a `settings.php` file.
 
 ### Can I edit settings.pantheon.php?
 
-No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
+No. `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file might change in future updates, and modifying it would cause conflicts.
 
 ### How do I enable ionCube Decoder support?
 
-1. If you are using a licensed plugin that requires ionCube Decoder support, first ensure you are running [PHP 7.1](/guides/php/php-versions). Please note later PHP versions do not currently support ionCube.
+1. Verify that you are running [PHP 7.1](/guides/php/php-versions) if you are using a licensed plugin that requires ionCube Decoder support. Please note that later PHP versions do not currently support ionCube.
 
 1. Enable ionCube Decoder support site-wide by adding this line to `settings.php`:
 
@@ -276,7 +281,7 @@ ini_set('arg_separator.output', '&');
 Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
 
-To resolve, add a default or empty `sites/default/settings.php` to your site's code.
+Add a default or empty `sites/default/settings.php` to your site's code to resolve this error.
 
 ## More Resources
 

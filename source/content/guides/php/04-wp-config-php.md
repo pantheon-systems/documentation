@@ -1,7 +1,7 @@
 ---
 title: PHP on Pantheon
 subtitle: Configure Your wp-config.php File
-description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
+description: Adjust and customize your WordPress configuration file on Pantheon.
 cms: "WordPress"
 categories: [develop]
 tags: [wp-config]
@@ -12,7 +12,7 @@ permalink: docs/guides/php/wp-config-php
 anchorid: wp-config-php
 ---
 
-This section provides information on how to configure the `wp-config.php` file for a WordPress site.
+This section provides information on how to configure the `wp-config.php` file for a WordPress site. Refer to [Configure Your Settings.php File](/guides/php/settings-php) if you have a Drupal site.
 
 ## WordPress Configuration
 

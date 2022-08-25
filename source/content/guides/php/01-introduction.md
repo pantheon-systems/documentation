@@ -32,3 +32,5 @@ Refer to [Version Updates](/terminus/updates#php-version-compatibility-matrix) f
 - [PHP Slow Log](/guides/php/php-slow-log)
 
 - [PHP Errors](/guides/php/php-errors)
+
+- [Securely Working with phpinfo](/guides/secure-development/phpinfo)
