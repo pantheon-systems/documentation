@@ -13,7 +13,7 @@ anchorid: wordpress-composer-managed
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-The WordPress Composer Managed upstream is available for Early Access participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. To learn how you can enroll in our Early Access program, visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K).
+The WordPress Composer Managed upstream is available for [Early Access](https://pantheon.io/docs/oss-support-levels#early-access) participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. To learn how you can enroll in our Early Access program, visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K).
 
 </Alert>
 
