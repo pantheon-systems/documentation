@@ -1,5 +1,5 @@
 ---
-title: WordPress Composer Managed on Pantheon
+title: WordPress with Composer on Pantheon
 subtitle: Introduction
 description: Learn more about using WordPress with Composer on Pantheon.
 categories: [develop]
