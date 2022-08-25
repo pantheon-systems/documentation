@@ -19,7 +19,7 @@ The WordPress Composer Managed upstream is available for Early Access participan
 
 This section provides information on how to use Bedrock with Integrated Composer on a WordPress site.
 
-WordPress does not natively support [Composer](https://getcomposer.org/), however, [Bedrock](https://roots.io/bedrock/) is a WordPress-specific framework for using Composer on WordPress sites. Bedrock also provides a custom [WordPress project structure](https://docs.roots.io/bedrock/master/folder-structure/) that helps simplify working on large projects with multiple plugins and custom code.
+WordPress does not natively support [Composer](https://getcomposer.org/), however, [Bedrock](https://roots.io/bedrock/) is a WordPress-specific framework for using Composer on WordPress sites.
 
 ## Requirements
 
@@ -57,7 +57,7 @@ You can learn more about WordPress configuration with Bedrock in the [Bedrock Co
 
 ### Understanding the WordPress codebase
 
-Bedrock installs WordPress as a required package so updates can be managed by Composer. As such, the contents of the `wp-content` directory have been moved outside the WordPress codebase so changes can be made safely to files within those directories without conflicts.
+Bedrock installs WordPress as a required package so updates can be managed by Composer. As such, the contents of the `wp-content` directory have been moved outside the WordPress codebase so changes can be made safely to files within those directories without conflicts. Learn more about [Bedrock's folder structure here](https://docs.roots.io/bedrock/master/folder-structure/).
 
 * Theme are installed into `web/app/themes/`.
 * Plugins are installed into `web/app/plugins`.
@@ -103,7 +103,7 @@ composer upstream-require wpackagist-plugin/advanced-custom-fields
 
 If you discover an issue with the WordPress Composer Managed upstream, create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address.
 
-If you wish to discuss the WordPress Composer Managed upstream with Pantheon, please use the [community slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) `#wordpress` channel.
+To discuss the WordPress Composer Managed upstream while in Early Access, visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K)
 
 ## See Also
 
