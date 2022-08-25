@@ -1,10 +1,19 @@
 ---
-title: MySQL Slow Log
-description: Use a Drupal or WordPress site's MySQL Slow Log to troubleshoot MySQL and identify serious performance issues.
+title: MariaDB and MySQL on Pantheon
+subtitle: MySQL Slow Log
+description: Use MySQL Slow Log to troubleshoot and identify serious performance issues.
 categories: [troubleshoot]
 tags: [cli, database]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/mariadb-mysql/mysql-slow-log
+anchorid: mysql-slow-log
 ---
-Analyzing the MySQL slow log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
+
+This section provides information on how to analyze your MySQL Slow Log to improve site performance.
+
+Analyzing the MySQL Slow Log is an important part of troubleshooting client issues before and after launch.
 
 ## Requirements
 
@@ -14,7 +23,40 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 ## Download the MySQL Slow Log via SFTP
 
-To download the environment's MySQL slow log, use the [method outlined here](/logs/#database-log-files).
+1. Access the Site Dashboard and navigate to the desired environment (Multidev, Dev, Test, or Live).
+
+1. Click **Connection Info** and copy the **SFTP Command Line** command.
+
+1. Edit and execute the command by replacing `appserver` with `dbserver`:
+
+ From:
+
+ ```bash{promptUser: user}
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
+ ```
+
+ To:
+
+ ```bash{promptUser: user}
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
+ ```
+
+1. Run the following SFTP command in your terminal:
+
+ ```none
+ get -r logs
+ ```
+
+You now have a local copy of the logs directory, which contains the following:
+
+```none
+├── logs
+    └──mysqld-slow-query.log
+    └──mysqld.log
+```
+
+
+Below is an example output.
 
 ```bash{outputLines: 2-11}
 sftp -o Port=2222 live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in
@@ -32,21 +74,21 @@ sftp> exit
 
 ## Analyze the MySQL Slow Log
 
-There are several different tools you can use to analyze a MySQL slow log:
+There are several different tools you can use to analyze a MySQL Slow Log:
 
 - [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html)
 
-  Recommended. Actively maintained and includes a number of database utilities, including a slow query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html). 
+  Recommended. This toolkit is actively maintained and includes a number of database utilities, including a Slow Query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html). 
 
 - [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/)
 
-  Not updated since 2007. Still useful, but this will throw warnings with newer versions of PHP.
+  This filter has not been updated since 2007. Although still useful, using this filter will throw warnings with newer versions of PHP.
 
-These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. 
+These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL Slow Log. Refer to each tool's documentation for more information. 
 
 ### Percona Toolkit's pt-query-digest
 
-In the example below, we generate a report using `pt-query-digest` from a MySQL slow log file. In this example, we have one query that meets the threshold for reporting as slow: a `SELECT COUNT` query on the node table that returns a total of results from a nested `SELECT` query on the node table. 
+The example commands below generate a report using `pt-query-digest` from a MySQL Slow Log file. In this example, one query meets the threshold for reporting as slow: a `SELECT COUNT` query on the node table that returns a total of results from a nested `SELECT` query on the node table. 
 
 ```bash{promptUser: user}
 pt-query-digest mysqld-slow-query.log
@@ -136,16 +178,17 @@ LEFT JOIN field_data_field_section_number field_data_field_section_number ON nod
 WHERE (( (field_data_field_parent_course.field_parent_course_target_id = '7996' ) )AND(( (node.status = '1') AND (node.type IN  ('section')) AND (field_data_field_term.field_term_tid IN  ('141', '131', '126', '96')) )))) subquery\G
 ```
 
-With this output, you can copy the offending query and run it through `EXPLAIN` on the MySQL server to find out why the query runs slowly. In this case, `EXPLAIN` shows that the table is missing an index, so adding an index could improve performance.
+You can use this output to copy the offending query and run it through `EXPLAIN` on the MySQL server to find out why the query runs slowly. In this case, `EXPLAIN` shows that the table is missing an index, so adding an index could improve performance.
 
 ### MySQL Slow Query Log Filter
-Here is an example usage of MySQL Slow Query Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
+
+Below is an example usage of MySQL Slow Query Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 
 ```php
 php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates mysqld-slow-query.log > site_name_slow_1s_noDupes.txt
 ```
 
-Here is the contents of `site_name_slow-1s_noDupes.txt`:
+Here are the contents of `site_name_slow-1s_noDupes.txt`:
 
 ```sql
 # Execution count: 11 times on 1970-01-01 01:00:00.  
@@ -163,9 +206,9 @@ Here is the contents of `site_name_slow-1s_noDupes.txt`:
 SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0; 
 ```
 
-This particular query is, at its worst, examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.
+This particular query is examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.
 
-## Look at the slow queries by hour
+## Look at Slow Queries by Hour
 
 Another method is to look at slow queries by the hour to see if there are spikes in slow queries that correspond to site traffic patterns:
 
@@ -181,9 +224,14 @@ grep Time mysqld-slow.log | cut -d: -f1,2 | sort | uniq -c
 76 # Time: 140708 16  
 ```
 
-This means there were 70 slow queries between 10 and 11AM (UTC). That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
+The output above shows that there were 70 slow queries between 10 and 11AM (UTC). That is a roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
-For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic).
+Refer to [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic) for an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL Slow Logs.
 
-## See Also
-- [Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)
+## More Resources
+
+- [Log Files on Pantheon](/logs)
+
+- [Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)
+
+- [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

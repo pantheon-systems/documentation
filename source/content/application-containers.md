@@ -46,7 +46,7 @@ terminus env:wake <site>.<env>
   - Maximum max\_file\_uploads is 20. This cannot be changed.
   - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php).
   - Each PHP process can have either 256MB or 512MB of memory, [depending on the plan](/site-plans-faq/#plan-resources).
-- For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
+- For a comprehensive list of MySQL settings, [access your database](/guides/mariadb-mysql/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common sense libraries available globally.
 - Your containers can access an allowlisted set of [binary tools](/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.

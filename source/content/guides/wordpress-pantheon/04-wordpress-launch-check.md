@@ -102,7 +102,7 @@ Launch Check displays database stats, including:
 - Tables using InnoDB storage engine (suggests a query to run if not)
 
     InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
-    To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
+    To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb).
 
 - [Transients](https://developer.wordpress.org/apis/handbook/transients/) and expired transients which are cached data temporarily stored in the `wp_options` table. 
 

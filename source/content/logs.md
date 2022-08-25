@@ -290,7 +290,12 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 ## See Also
 
 - [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+<<<<<<< HEAD
 - [PHP Slow Log](/guides/php/php-slow-log)
 - [PHP Errors and Exceptions](/guides/php/php-errors)
+=======
+- [PHP Slow Log](/php-slow-log)
+- [PHP Errors and Exceptions](/php-errors)
+>>>>>>> da70a1892ccc606cd70fe687148cbff86a4a34af
 - [Bots and Indexing](/bots-and-indexing)
 - [New Relic&reg; Performance Monitoring](/guides/new-relic)
