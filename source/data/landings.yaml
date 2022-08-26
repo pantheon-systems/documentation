@@ -1089,7 +1089,7 @@
           url: '/guides/lockr'
         - text: 'Advanced Global CDN'
           url: '/guides/agcdn'
-title: 'Using WordPress with Pantheon'
+- title: 'Using WordPress with Pantheon'
   subtitle: ''
   path: 'develop-wordpress'
   video_id: 'ksg1XkH1da8'
