@@ -261,7 +261,7 @@ No. `settings.pantheon.php` is for Pantheon's use only and you should only modif
   ini_set('ioncube.loader.encoded_paths', '/');
   ```
 
-*(More information can be found in our [PHP 7.1 & ionCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
+More information can be found in our [PHP 7.1 & ionCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.
 
 ## Troubleshooting
 

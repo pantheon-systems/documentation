@@ -64,7 +64,7 @@ Do not edit `wp-config-pantheon.php`. It includes database and environment confi
 
 There are two options for writing logic based on Pantheon server environment:
 
-- For web only actions, like [redirects](/domains#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
+- Check if `$_ENV['PANTHEON_ENVIRONMENT']` exists for web only actions, like [redirects](/domains#primary-domain). If it exists, it will contain a string with the current environment (Dev, Test, or Live):
 
  ```php:title=wp-config.php
  // Pantheon - web only.
@@ -76,7 +76,7 @@ There are two options for writing logic based on Pantheon server environment:
  }
  ```
 
-- For actions that should take place on both web requests _and_ wp-cli commands (for example, Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. It will contain the current Dev, Test, or Live:
+- Use the constant `PANTHEON_ENVIRONMENT` for actions that should take place on both web requests _and_ wp-cli commands (for example, Redis cache configuration). It will contain the current Dev, Test, or Live:
 
  ```php:title=wp-config.php
  // Pantheon - all (web and CLI) operations.

@@ -11,7 +11,7 @@ permalink: docs/guides/php
 anchorid: php
 ---
 
-PHP is a scripting language that aids server-side web development. The PHP code in your Pantheon account is executed at runtime when it is requested from the web server the same way it is on other platforms.
+PHP is a scripting language that facilitates server-side web development. The PHP code in your Pantheon account is executed at runtime whenever a request is received from the web server the same way it is on other platforms.
 
 ## Supported PHP Versions
 

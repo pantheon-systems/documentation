@@ -25,7 +25,7 @@ Given the variety of implementations, this plugin will not solve all `$_SESSION`
 
 ## Troubleshooting Session Errors
 
-Prior to installing WordPress Native PHP Sessions, you might see the following error:
+Before installing WordPress Native PHP Sessions, you might see the following error:
 
 ```php
 Warning: session_start(): user session functions not defined
@@ -35,9 +35,9 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 
 ### Varnish or Caching Is Not Working When a Plugin or Theme That Uses `$_SESSIONS` Is Enabled
 
-Due to how caching and sessions work, sessions need to be uncached to work properly, and it is impossible use cached content when there are sessions in place. It would be best to use a cookie based solution to avoid a performance hit from uncached session pages.
+Due to how caching and sessions work, sessions must be uncached to work correctly, and it is impossible to use cached content when there are sessions in place. It is best to use a cookie-based solution to avoid a performance hit from uncached session pages.
 
-Symptoms of this issue shows when the header is inspected, you will see that the session cookie is always set on every page load:
+Evidence of this issue appear when the header is inspected. The session cookie is always set on every page load:
 
 ```http
 Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; HttpOnly
@@ -52,13 +52,13 @@ grep -rnw . -e 'session_start'
 
 Alternatively, you can inspect the headers using `curl -sI example.com` after each of the following steps, until you determine which component is breaking the cache:
 
-1. To check your theme, use your default theme (twentynineteen for example), and check for the cookie.
+1. Use your default theme (twentynineteen for example) and check for the cookie.
 
-1. To see if a plugin is breaking the cache, disable the plugins one by one. Do not forget to [clear the cache](/clear-caches) from the Pantheon dashboard every time that you disable a plugin. The first plugin disabled which makes the cache work again is most likely the culprit.
+1. Disable the plugins one by one to see if a plugin is breaking the cache. Do not forget to [clear the cache](/clear-caches) from the Pantheon dashboard every time that you disable a plugin. The first plugin disabled which makes the cache work again is most likely the culprit.
 
   Note: If you have a local copy of your site, you can search it for plugins that uses `session_start()` or `$_SESSIONS`, and start turning them off first.
 
-1. To check if a 3rd-party must-use plugin or drop-in plugin is breaking the cache, temporarily remove the 3rd-party must-use plugins and leave only the `Pantheon` and `WP Native PHP Sessions`. There should be no drop-ins in place.
+1. Remove (temporarily) the 3rd-party must-use plugins and leave only the `Pantheon` and `WP Native PHP Sessions` to check if a 3rd-party must-use plugin or drop-in plugin is breaking the cache. There should be no drop-ins in place.
 
 ### Install WordPress Native PHP Sessions Plugin
 
@@ -83,7 +83,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
  ```
  ([More options for this command](/terminus/commands/env-commit))
  
-1. If you are working on a Multidev, merge your changes into Dev:
+1. Merge your changes into Dev if you are working on a Multidev: 
 
  ```bash{promptUser: user}
  terminus multidev:merge-to-dev -- <site>.<multidev>
@@ -117,7 +117,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
  terminus wp <site>.live -- plugin activate wp-native-php-sessions
  ```
 
-Once enabled, your functionality will "just work". For more information, see [Fix WordPress PHP Session Problems on Pantheon with a Script](https://pantheon.io/blog/fix-wordpress-php-session-problems-pantheon-script).
+For more information, see [Fix WordPress PHP Session Problems on Pantheon with a Script](https://pantheon.io/blog/fix-wordpress-php-session-problems-pantheon-script).
 
 ## Sessions and Scalability
 
