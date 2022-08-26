@@ -135,11 +135,11 @@ Modify the `pantheon.yml` file until it is valid and commit the fix before attem
 
 ### Multidev PHP Configuration
 
-PHP version changes (and other configuration changes) are automatically detected when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes.
+PHP version changes (and other configuration changes) are automatically detected when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made.
 
 #### Change the PHP Version on an Existing Multidev
 
-Follow the steps to [Configure Your PHP Version](#configure-your-php-version). Your Multidev PHP version will automatically detect and apply the change made to the `pantheon.yml` file.
+Follow the steps to [Configure Your PHP Version](#configure-your-php-version). Your Multidev configuration will automatically detect and apply the PHP version change from the `pantheon.yml` file.
 
 #### Change the PHP Version on a New Multidev
 
