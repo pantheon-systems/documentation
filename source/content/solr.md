@@ -34,7 +34,7 @@ All plans except for a Basic plan can use Pantheon Search. Pantheon Search is av
 
 ## Using Pantheon Search with WordPress or Drupal
 
-For installation instructions and additional details, refer to[Enabling Solr for WordPress](/wordpress-solr) or [Enabling Solr with Drupal](/guides/solr-drupal).
+For installation instructions and additional details, refer to [Enabling Solr for WordPress](/wordpress-solr) or [Enabling Solr with Drupal](/guides/solr-drupal).
 
 
 ## Known Limitations of Pantheon's Search Service
