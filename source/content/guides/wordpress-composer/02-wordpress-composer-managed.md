@@ -23,7 +23,7 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 
 ## Requirements
 
-- [PHP version](/php-versions#verify-current-php-versions) 7.4 or greater
+- [PHP version](/guides/php/php-versions#verify-current-php-versions) 7.4 or greater
 
 - [Composer](https://getcomposer.org/)
 
