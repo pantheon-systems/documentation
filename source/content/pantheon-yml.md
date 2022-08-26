@@ -270,7 +270,7 @@ remote: Valid versions are: 1
 
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common reason for an invalid `pantheon.yml` file.
 
-### Why can’t I update the PHP Version on my Multidev?
+### Why can’t I update the PHP version on my Multidev?
 
 The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
 
