@@ -104,7 +104,7 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 1. Follow the steps in [Clone Your Site Codebase](/guides/git/git-config#clone-your-site-codebase) if you have not yet cloned the repository to your local computer.
 
-1. Navigate to your **pantheon.yml** file and edit the `php_version` with the version of PHP you are upgrading to. If the file does not yet exist, it should be created.
+1. Navigate to your `pantheon.yml` file and edit the `php_version` with the version of PHP you are upgrading to. If the file does not yet exist, it should be created.
 
    ```yaml:title=pantheon.yml
    api_version: 1
@@ -118,7 +118,7 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 1. Rebase any non-`master` branches to ensure they are on the same PHP version if there are any Multidev environments that also need the same change.
 
-If an invalid version is specified there will be an error when trying to push changes:
+You will see an error when trying to push changes if an invalid version is specified: 
 
    ```none
    remote: PANTHEON ERROR:
@@ -145,7 +145,7 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 ### Upgrading PHP Version May Require Upgrading Drush Versions
 
-If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`, for example, upgrading Drush should resolve the issue. For more information, refer to [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version).
+Upgrade your current version of Drush if you see errors on the Pantheon Dashboard when trying to auto-run `update.php`. Refer to [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version) for more information.
 
 ## More Resources
 
