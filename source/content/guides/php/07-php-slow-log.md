@@ -1,7 +1,7 @@
 ---
 title: PHP on Pantheon
 subtitle: PHP Slow Log
-description: Improve the stability of your Drupal or WordPress site using PHP Slow Log and PHP FPM Error Log to identify serious performance issues.
+description: Improve site stability using PHP Slow Log and PHP FPM Error Log to identify serious performance issues.
 categories: [performance]
 tags: [cli, logs, sftp]
 layout: guide
@@ -10,9 +10,9 @@ permalink: docs/guides/php/php-slow-log
 anchorid: php-slow-log
 ---
 
-This section provides information on how to use the PHP Slow Log to improve your site's performance.
+This section provides information on how to use the PHP Slow Log and the PHP FPM Error Log to improve your site's performance.
 
-A key ways to find issues on your website is to check your PHP logs. You can use your PHP Slow Log and PHP FPM error logs to find performance issues and PHP errors on Pantheon sites.
+A key way to find issues on your website is to check your PHP logs. You can use your PHP Slow Log and PHP FPM Error Log to find performance issues and PHP errors on Pantheon sites.
 
 ## Before You Begin
 
@@ -50,13 +50,13 @@ Make sure that you have:
   sftp> exit
   ```
 
-  **Note:** If there is no `php/` directory in `logs/`, the files will be directly within `logs`.
+  **Note:** If there is no `php/` directory in `logs/`, the files will be located directly within `logs`.
 
 ## Analyze the PHP Slow Log
 
 1. Search for custom modules or theme files (`template.php` file, `*.tpl.php` files, etc.). This trace has both a custom Feature module (`/sites/all/modules/features/tdm_community.module, field_get_items()` function) and a `.tpl` file (`/sites/all/themes/themename/templates/page.tpl.php`, render() function).
 
-  The script filenames may have a different path such as `/srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php`.
+  The script filenames might have a different path such as `/srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php`.
 
   ```php
   08-Dec-2014 19:04:01]  [pool www] pid 47289
@@ -121,7 +121,7 @@ Make sure that you have:
   [0x00000000027b1040] menu_execute_active_handler() /code/index.php:21
   ```
 
-1. Use a `grep` command to get a count of how many times any given file is called in a PHP slow log.  Examples:
+1. Use a `grep` command to get a count of how many times a given file is called in a PHP slow log.  Examples:
 
   ```bash{outputLines:2}
   grep -o 'stream_wrappers.inc' php-slow.log | wc -l
