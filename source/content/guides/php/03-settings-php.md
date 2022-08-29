@@ -1,6 +1,6 @@
 ---
 title: PHP on Pantheon
-subtitle: Configure Your Settings.php File
+subtitle: Configure Your Drupal Settings.php File
 description: Configure your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
 cms: "Drupal"
@@ -22,11 +22,11 @@ Drupal 9 sites on Pantheon run an unmodified version of core, bundled with a cus
 
 ## Drupal 7 and Earlier
 
-Pantheon uses a variant of Pressflow Drupal for Drupal 7 and earlier versions. This  allows the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
+Pantheon uses a variant of [Pressflow](https://www.pressflow.org/) Drupal for Drupal 7 and earlier versions. This  allows the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
 ## Pantheon Articles on settings.php
 
-Review the following articles for techniques and configurations for your `settings.php` on Pantheon:
+Review the following articles for techniques and configurations for your `settings.php` file on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) (including domain_access)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
@@ -38,7 +38,7 @@ Review the following articles for techniques and configurations for your `settin
 
 <Alert title="Warning" type="danger">
 
-Never place the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
+Never place the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. Make sure you are running Pressflow core if you experience connection errors. This is a requirement.
 
 </Alert>
 
@@ -68,9 +68,9 @@ Use the Drupal 9 and Drupal 7 configuration snippets in the subsections below to
 
 1. Run the command below to use the Pantheon `HASH_SALT` in your local site:
 
-```bash{promptUser: user}
-terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
-```
+    ```bash{promptUser: user}
+    terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
+    ```
 
 #### Trusted Host Setting
 
@@ -127,7 +127,7 @@ Yes, but only if at least one other file (for example, `settings.php`) is presen
 
 ### How can I write logic based on the Pantheon server environment?
 
-Depending on your use case, there are three possibilities:
+There are three possibilities depending on your use case: 
 
 - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). Refer to our [Redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
@@ -137,7 +137,7 @@ Depending on your use case, there are three possibilities:
   
   </Alert>
 
-- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Object Cache](/object-cache) guide for examples.
+- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. It will contain Dev, Test, or Live. Refer to the [Object Cache](/object-cache) guide for examples.
 
 - For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or refer to our [Object Cache](/object-cache) guide for examples.
 
@@ -211,7 +211,7 @@ Pantheon automatically injects database credentials into the site environment. Y
 
 ### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
-There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
+There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environment configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
 
 ```php:title=settings.php
 // All Pantheon Environments.
@@ -233,11 +233,11 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I find examples of Pantheon settings.php?
 
-You can view examples on the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
+You can refer to examples on the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
 ### Are table prefixes supported?
 
-Pantheon injects the database configuration dynamically during bootstrap. In the `PRESSFLOW_SETTINGS` variable, the appropriate database connection information is passed in based upon the environment (Dev,Test,Live).
+Pantheon injects the database configuration dynamically during bootstrap. In the `PRESSFLOW_SETTINGS` variable, the appropriate database connection information is passed in based upon the environment (Dev,Test, or Live).
 
 You can technically use database prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your database configuration settings.
 
@@ -265,11 +265,11 @@ More information can be found in our [PHP 7.1 & ionCube Decoder Now Available fo
 
 ## Troubleshooting
 
-### Request to a Remote API Does Not Return Expected Response
+### Request to a remote API does tot return expected response
 
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
-If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.output value by adding the following line to `settings.php`:
+If the API expects `&` as an argument separator but receives `&amp;` (for example, when using `http_build_query`), you can override the default `arg_separator.output` value by adding the following line to `settings.php`:
 
 ```php:title=settings.php
 ini_set('arg_separator.output', '&');
@@ -277,11 +277,11 @@ ini_set('arg_separator.output', '&');
 
 ### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
 
+Add a default or empty `sites/default/settings.php` to your site's code to resolve the error below.
+
 ```none
 Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
-
-Add a default or empty `sites/default/settings.php` to your site's code to resolve this error.
 
 ## More Resources
 
