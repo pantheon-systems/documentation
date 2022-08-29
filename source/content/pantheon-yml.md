@@ -278,7 +278,7 @@ The PHP version changes automatically when you modify the `pantheon.yml` file of
 
 1. Modify your `pantheon.yml` file and re-commit to the Multidev.
 
-    - It does not matter what change you make to the file, any change, even a comment, will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+    - It does not matter what change you make to the file. Any change- even a comment- will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```none
 remote:
