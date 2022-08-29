@@ -21,7 +21,7 @@ editpath: multisite/02-considerations.md
 image: multisite
 ---
 
-Switching from a single-site to a WordPress Site Network requires migrating the code, database, and files of the single-site into a new Wordpress Site Network.
+Switching from a single-site to a WordPress Site Network requires migrating the code, database, and files of the single-site into a new WordPress Site Network.
 
 Before you start using WordPress Site Networks, keep these key details in mind:
 
