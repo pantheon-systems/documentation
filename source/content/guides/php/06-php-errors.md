@@ -12,15 +12,15 @@ anchorid: php-errors
 
 This section provides information on how to interpret and resolve PHP errors.
 
-There are three basic kinds of PHP errors:
+There are three basic types of PHP errors:
 
-- **Notice**: room for improvement; typically unset variables or missing array keys.
+- **Notice**: room for improvement. This is typically caused by unset variables or missing array keys.
 - **Warning**: errors will probably occur if not addressed.
-- **Error**: fatal, execution terminated. Often known as the "white screen of death".
+- **Error**: fatal, execution terminated. Often known as the "white screen of death."
 
 Refer to [Error Handling and Logging](https://secure.php.net/manual/en/book.errorfunc.php) for more information.
 
-Each of the PHP errors are handled differently depending on the site environment. On Dev and Test, they are shown directly to the user in the browser. On Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to `wp-content/debug.log`. PHP errors are also logged on the application container at `logs/php-error.log`.
+Each of the PHP errors are handled differently depending on the site environment. On Dev and Test, errors are shown directly to the user in the browser. On Live, PHP errors are not displayed to users, but are still logged. Notices and warnings are logged in the database logs if `db_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to `wp-content/debug.log`. PHP errors are also logged on the application container at `logs/php-error.log`.
 
 Here's a breakdown of what errors are shown and where:
 +-----------------+--------------+-------------+--------------+------------------------+
