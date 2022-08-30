@@ -82,7 +82,7 @@
       - text: 'Using the Pantheon Workflow'
         url: '/pantheon-workflow/'
       - text: 'Identify and Kill MySQL Queries'
-        url: '/kill-mysql-queries/'
+        url: '/guides/mariadb-mysql/kill-mysql-queries'
       - text: 'Domains and Redirects'
         url: '/domains/'
       - text: 'Configuring settings.php'

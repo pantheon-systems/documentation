@@ -75,4 +75,5 @@ An _A record_ is required to configure a subdomain (e.g., `www.example.com`).
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+
 * [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

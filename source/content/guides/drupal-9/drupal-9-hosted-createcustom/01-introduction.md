@@ -10,7 +10,7 @@ layout: guide
 permalink: docs/guides/drupal-9-hosted-createcustom
 anchorid: drupal-9-v8
 editpath: drupal-9/drupal-9-hosted-createcustom/01-introduction.md
-reviewed: "2021-03-31"
+reviewed: "2022-08-18"
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
@@ -19,10 +19,8 @@ This guide will show you how to migrate a site that meets the following criteria
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                   Pantheon                    |                                                                  Custom Upstream                                                                   |                                                                                             --                                                                                             |
 
+During this process, you will work in a new branch to replace the entire file structure with the code from Pantheon's Integrated Composer upstream, and then re-add your contrib and custom code to the new codebase. Then, you will create Multidev environments on individual sites for testing and to apply any site-specific code customizations. 
+
+
 <Partial file="drupal-9/see-landing.md" />
 
-<Alert title="Note" type="info" >
-
-This upgrade will not maintain your site’s commit history.
-
-</Alert>

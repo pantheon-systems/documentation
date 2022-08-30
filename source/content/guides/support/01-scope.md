@@ -68,9 +68,11 @@ Pantheon provides updates to the Upstream for the site, which only affect core f
 
 We can offer Diamond Account customers advice on best practices and debugging assistance, but our support team does not change customer code.
 
-### Outdated Core
+### Outdated CMS Core
 
-Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/guides/custom-upstream/maintain-custom-upstream) by the upstream maintainer each time the project releases a new version.
+<Partial file="outdated-core.md" />
+
+For CMS specific information, see either [Supported Drupal Versions](/supported-drupal) or [Supported WordPress Versions](/supported-wp)
 
 ### Custom Upstreams
 
@@ -129,7 +131,7 @@ The Pantheon Professional Services (PS) team works closely with partners to prov
 - [Additional Domains](/domains)
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 - [Custom SSL Certificate](/custom-certificates)
-- [Decoupled CMS](/decoupled-sites)
+- [Decoupled CMS](/guides/decoupled-sites)
 - [Managed Updates](/guides/professional-services/managed-updates)
 - [Multizone Failover](/multizone-failover)
 - [Site Migrations](/guides/professional-services/website-migration-service)

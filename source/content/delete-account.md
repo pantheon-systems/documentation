@@ -12,7 +12,7 @@ The first thing to do is to backup and export your site(s). Yes, you are leaving
 
 If you need to make a backup of an existing environment, see [Backup Creations](/backups).
 
-For more information about exporting a backup of an environment, see [Restoring a Backup](/restore-environment-backup).
+For more information about exporting a backup of an environment, see [Restoring a Backup](/guides/environment-configuration/restore-environment-backup).
 
 ## 2. Delete Each of Your Sites
 
@@ -20,7 +20,7 @@ Once you have backed-up your data and are ready to delete your sites, see [Delet
 
 ## 3. Delete Your Credit Cards
 
-The next step is to delete the associated credit cards. For more information, see [Account Billing in the User Dashboard](/account-billing#delete-card).
+The next step is to delete the associated credit cards. For more information, see [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing#delete-card).
 
 ## 4. Delete Your Account
 
@@ -33,4 +33,4 @@ Your site may still be accessible for a temporary period of time because the pla
 
 ### Can I come back to the platform later?
 
-Of course. That's why the first step in this process is to backup and export your site. To restore your site from a backup, see [Restoring a Backup](/restore-environment-backup).
+Of course. That's why the first step in this process is to backup and export your site. To restore your site from a backup, see [Restoring a Backup](/guides/environment-configuration/restore-environment-backup).

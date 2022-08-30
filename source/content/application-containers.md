@@ -46,7 +46,7 @@ terminus env:wake <site>.<env>
   - Maximum max\_file\_uploads is 20. This cannot be changed.
   - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php).
   - Each PHP process can have either 256MB or 512MB of memory, [depending on the plan](/site-plans-faq/#plan-resources).
-- For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
+- For a comprehensive list of MySQL settings, [access your database](/guides/mariadb-mysql/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common sense libraries available globally.
 - Your containers can access an allowlisted set of [binary tools](/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
@@ -62,7 +62,7 @@ While these are related topics, they need to be evaluated separately for your pr
 
 Typically, the best practice is to optimize for performance first and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
-Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic&reg; Performance Monitoring](/new-relic) to give you insights about your site's performance.
+Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic&reg; Performance Monitoring](/guides/new-relic) to give you insights about your site's performance.
 
 ## Multiple Application Containers
 

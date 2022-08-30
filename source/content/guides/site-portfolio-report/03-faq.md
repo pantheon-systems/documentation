@@ -57,7 +57,7 @@ Yes. Any team member with Admin privileges within the Organization can download 
 
 ## Can I Change Who Receives the Site Portfolio Report?
 
-Yes. The Site Portfolio Report is emailed to a team member designated to handle the billing of the account. The current Site Owner must [transfer ownership directly](/site-billing#transfer-ownership-and-billing-for-this-site) if another teammate needs to assume site and billing ownership. Only Admin-level users can access the link to the Site Portfolio Report.
+Yes. The Site Portfolio Report is emailed to a team member designated to handle the billing of the account. The current Site Owner must [transfer ownership directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site) if another teammate needs to assume site and billing ownership. Only Admin-level users can access the link to the Site Portfolio Report.
 
 ## Can my invoice be blank at any given time frame?
 

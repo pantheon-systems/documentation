@@ -96,11 +96,11 @@ The following example shows how to hard-code your WordPress debug configuration 
 
 ### How can I read the Pantheon environment configuration, like database credentials?
 
-See [Reading the Pantheon Environment Configuration](/read-environment-config).
+See [Reading the Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config).
 
 ### How do I perform redirection?
 
-See [Configure Redirects](/redirects).
+See [Configure Redirects](/guides/redirect).
 
 ### How do I change the default debug.log location?
 

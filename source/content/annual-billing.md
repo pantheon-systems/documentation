@@ -8,7 +8,7 @@ searchboost: 70
 
 Pantheon now offers annual billing plans for all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost.
 
-For standard billing information, see [Billing in the Site Dashboard](/site-billing)
+For standard billing information, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 
 ## Annual Billing Savings
 
@@ -68,7 +68,7 @@ Before switching to annual billing, consider:
  - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
  - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
  - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
-   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/add-client-site).
+   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/guides/legacy-dashboard/add-client-site).
 
 
 ## Switch to Annual Billing
@@ -97,7 +97,7 @@ Before switching to annual billing, consider:
 
     ![Site Plan Flag](../images/dashboard/plan-updated-flag.png)
 
-## See Also
+## More Resources
 
- - [Billing in the Site Dashboard](/site-billing)
- - [Manage Plans in the Site Dashboard](/site-plan)
+ - [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
+ - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)

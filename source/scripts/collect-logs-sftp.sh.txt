@@ -34,7 +34,7 @@ if [ $AGGREGATE_NGINX == true ]; then
 echo 'AGGREGATE_NGINX set to $AGGREGATE_NGINX. Starting the process of combining nginx-access logs...'
 mkdir aggregate-logs
 
-for d in $(ls -d app*/logs/nginx); do
+for d in $(ls -d app*/nginx); do
     for f in $(ls -f "$d"); do
     if [[ $f == "nginx-access.log" ]]; then
         cat "$d/$f" >> aggregate-logs/nginx-access.log

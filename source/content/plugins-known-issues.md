@@ -174,7 +174,7 @@ failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize
 ```
 
 **Solution:** Uncheck **Enable 404 fallbacks** in the Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
-The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/advanced-redirects#redirect-files) section of [Advanced Redirects and Restrictions](/advanced-redirects).
+The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/guides/redirect/advanced#redirect-files) section of [Advanced Redirects and Restrictions](/guides/redirect/advanced).
 
 ___
 
@@ -421,7 +421,7 @@ ___
 
 **Issue:** The [FacetWP](https://facetwp.com) plugin [conflicts with New Relic](https://facetwp.com/new-relic-compatibility/).
 
-**Solution:** [Disable New Relic](/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
+**Solution:** [Disable New Relic](/guides/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
 
 ___
 
@@ -592,7 +592,7 @@ ___
 
 <ReviewDate date="2019-05-08" />
 
-**Issue:** The [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/) plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
+**Issue:** The [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/) plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/guides/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
 
 ___
 
@@ -662,8 +662,8 @@ ___
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
-- [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic Pro](/guides/new-relic/debug-mysql-new-relic)
 
 ___
 
@@ -683,7 +683,7 @@ ___
 
 **Issue 1:** When using the [Redirection](https://wordpress.org/plugins/redirection/) plugin, customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
-**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
+**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/guides/redirect) for more information.
 
 **Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
 
@@ -748,7 +748,7 @@ ___
 
 **Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
 
-**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
+**Solution:** Consider using [New Relic](/guides/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
 ___
 
@@ -989,10 +989,10 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Change to the `code` directory:
+1. Change to the `my-site` directory:
 
    ```bash{promptUser: user}
-   cd code/
+   cd /my-site
    ```
    
 1. Create the following symlinks:
@@ -1347,7 +1347,7 @@ ___
 
 <ReviewDate date="2021-02-23" />
 
-**Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
+**Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/guides/legacy-dashboard/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
 
 **Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
 

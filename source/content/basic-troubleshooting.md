@@ -154,5 +154,5 @@ $config['system.logging']['error_level'] = 'verbose';
 - [Errors and Server Responses](/errors-and-server-responses)
 - [PHP Errors and Exceptions](/php-errors)
 - [Database Connection Errors](/database-connection-errors)
-- [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

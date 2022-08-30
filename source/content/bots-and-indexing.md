@@ -41,7 +41,7 @@ unix: - - [26/Jul/2013:15:26:37 +0000] "GET /index.php?q=gush/content/name-pimp-
 
 ## Indexing Your Pantheon Site
 
-It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
+While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work in Live environments of a paid site with a custom domain. It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```none:title=robots.txt
 # Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
@@ -63,7 +63,7 @@ Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP heade
 
 ### Indexing Before You Launch
 
-The `pantheonsite.io` domains are intended for development use and cannot be used for production. While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
+The `pantheonsite.io` domains are intended for development use and cannot be used for production. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
 
 To support pre-launch SEO and site search testing, we allow the following bots access to platform domains:
 
@@ -169,7 +169,7 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Configure Redirects](/redirects).
+For more examples of redirecting via PHP, see [Configure Redirects](/guides/redirect).
 
 ### Incorrect robots.txt Output in WordPress
 

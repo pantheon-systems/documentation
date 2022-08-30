@@ -77,4 +77,5 @@ If you receive an error message that says `The specified record already exists`,
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+
 * [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

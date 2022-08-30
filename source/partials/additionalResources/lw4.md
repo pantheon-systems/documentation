@@ -22,11 +22,10 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)
 - Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
-- Doc: [New Relic&reg; Performance Monitoring](/new-relic)
-- Blog post: [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
+- Doc: [New Relic&reg; Performance Monitoring](/guides/new-relic)
 - Blog post: [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 - Blog post: [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-- Doc: [Uptime monitoring with New Relic Synthetics](/new-relic#configure-ping-monitors-for-availability)
+- Doc: [Uptime monitoring with New Relic Synthetics](/guides/new-relic)
 
 ### Keep Learning After Today
 

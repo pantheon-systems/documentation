@@ -72,5 +72,5 @@ Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/t
 ## See Also
 
 - [Traffic Limits and Overages](/traffic-limits)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
 - [Site Plans FAQs](/site-plans-faq)

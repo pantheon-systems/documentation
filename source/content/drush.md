@@ -210,7 +210,7 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ### Reading the Pantheon Environment from Drush
 
-Since Drush does not run using the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, refer to our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-_server).
+Since Drush does not run using the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, refer to our documentation on [using the `$_SERVER` superglobal in custom code](/guides/environment-configuration/read-environment-config/#using-_server).
 
 ### Terminus Drush Silent Failure
 

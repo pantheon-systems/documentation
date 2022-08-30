@@ -64,9 +64,9 @@ The permission to manage billing and plans is granted only to the role of **Site
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
-To retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+To retain Preferred Pricing an updated [invitation to pay](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
 
 The new Site Plan will be billed immediately.
 
@@ -76,7 +76,7 @@ The new Site Plan will be billed immediately.
 
 For a fast, smooth relaunch, consider having two browser tabs open, one with the old Site Dashboard, and one with the new.
 
-1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/site-plan/#purchase-a-new-plan).
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan#purchase-a-new-plan).
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
@@ -116,9 +116,9 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
 
-1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/site-plan/#cancel-current-plan).
+1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
 
-1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
+1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
 
 ## Frequently Asked Questions
 
@@ -151,5 +151,5 @@ As soon as you complete step 3, visitors to your domain will see the new site. U
 ## See Also
 
 - [Launch Essentials](/guides/launch)
-- [Manage Plans in the Site Dashboard](/site-plan)
-- [Billing in the Site Dashboard](/site-billing)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)

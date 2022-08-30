@@ -20,7 +20,7 @@ This technique configures an SSH client to forward a local port to a port on Pan
 
 There are currently two services on Pantheon that support SSH tunneling:
 
-- [MySQL database](/mysql-access) (dbserver)
+- [MySQL database](/guides/mariadb-mysql/mysql-access) (dbserver)
 
 - [Redis cache](/object-cache)
 
@@ -177,7 +177,7 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 
 ## Troubleshooting
 
-To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/mysql-access/#troubleshooting-mysql-connections).
+To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections).
 
 If port 2222 is blocked on your network you will see an error similar to the following:
 
@@ -190,7 +190,7 @@ Review [Port 2222 Blocked Workaround](/port-2222) for more information.
 
 ## More Resources
 
-- [MySQL database](/mysql-access) (dbserver)
+- [MySQL database](/guides/mariadb-mysql/mysql-access) (dbserver)
 
 - [Redis cache](/object-cache)
 

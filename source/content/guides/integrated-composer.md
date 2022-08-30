@@ -21,6 +21,18 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 - To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
+<Alert title="Note"  type="info" >
+
+  
+`drupal-composer-managed` is the recommended Composer-based Drupal 9 upstream. The Composer-based Drupal 9 upstreams below have been deprecated.
+
+- `drupal-project`
+- `drupal-recommended`
+
+You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) if you want to convert your site from one of the deprecated upstreams to the supported `drupal-composer-managed` upstream.
+
+</Alert>
+
 ### WordPress with Integrated Composer
 
 1. [Fork the Pantheon-maintained repository](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
@@ -52,13 +64,37 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 1. Commit `composer.json` and `composer.lock` and push.
 
-   - Pantheon will run Composer, generate build artifacts, and deploy it to your Dev or Multidev environment.
+   - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. You can now deploy the changes from the updated Dev environment to the Test and Live environments.
 
-### Add a Package from a Private Repository
+1. Complete the steps to [commit Dev changes to Test and Live](/pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) through your Pantheon dashboard or with [Terminus env:deploy](/terminus/commands/env-deploy).
+
+## Remove Individual Site Dependencies
+
+You can remove site dependencies if they are no longer needed. You should use caution when removing individual site dependencies. You can cause problems with your site if you decide you no longer need a module but leave it installed, and then remove site dependencies.
+
+1. Clone the database from Live to all other environments before continuing.
+
+1. Ensure that all modules in the package have been uninstalled. You can uninstall modules in the Drupal admin dashboard, or from the command line with Terminus:
+
+    ```bash
+    terminus drush site.live -- pm:uninstall module1 module2
+   ```
+
+1. Remove the dependency locally:
+
+   ```bash{promptUser: user}
+    composer remove drupal/pkg-name
+   ```
+
+1. Commit `composer.json` and `composer.lock` and push.
+
+   - Pantheon will run Composer, generate build artifacts, etc.
+
+## Add a Package from a Private Repository
 
 The following steps outline a method for adding a package from a private GitHub repository. For additional information on handling private packages, refer to the official [Composer documentation](https://getcomposer.org/doc/articles/handling-private-packages.md).
 
-For this procedure a GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. To limit that scope of the GitHub token access, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages and ensure your site repository code is not published publicly. 
+For this procedure, a GitHub token will be added to your code repository. It allows anyone with the token to read and write to any private repositories associated with the issuing account. To limit the scope of the GitHub token access, you can create a new GitHub user and give that user permission to only the private repositories needed for your Composer packages and ensure your site repository code is not published publicly. 
 
 1. Go to GitHub's [Personal Access Tokens](https://github.com/settings/tokens) page and generate a new token. Ensure the `repo` scope is selected.
 
@@ -88,23 +124,9 @@ For this procedure a GitHub token will be added to your code repository. It allo
    git push
    ```
 
-### Remove Individual Site Dependencies
-
-You can remove site dependencies if they are no longer needed.
-
-1. Remove the dependency locally:
-
-   ```bash{promptUser: user}
-    composer remove drupal/pkg-name
-   ```
-
-1. Commit `composer.json` and `composer.lock` and push.
-
-   - Pantheon will run Composer, generate build artifacts, etc.
-
 ## Apply One-click Updates
 
-1. Navigate to **Code** in the Dev tab of the site's Dashboard.
+1. Navigate to **Code** in the **Dev** tab of the site's Dashboard.
 
 1. Click **Check Now**.
 
@@ -205,7 +227,7 @@ To resolve this error:
 
 If you encounter an error during a code sync or if the site is missing files that should be added by Integrated Composer, the Build Log may contain information that can help you troubleshoot:
 
-1. Navigate to the **Code** in the **Dev** tab of your Site Dashboard.
+1. Navigate to **Code** in the **Dev** tab of your Site Dashboard.
 
 1. In the **Commit Log** section, find the most recent commit and click **View Log** to view the Composer command that was run and the output that was given by that command.
 
@@ -219,7 +241,7 @@ To resolve, examine the error in the log. It may be a syntax or parse error of t
 
 You must manually allow any plugin that acts on the code base of your site in your  `composer.json` file. This is a Composer 2.2 requirement introduced on July 1, 2022 that provides an additional layer of security. Sites that were working previously will have builds that fail because of this new requirement. Failed builds can arise as a broken environment or as unreflected code changes after a commit.
 
-Read more about this security requirement on [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
+Read more about this security requirement in [Composer's Documentation](https://getcomposer.org/doc/06-config.md#allow-plugins)
 
 You might see one of the following issues:
 
@@ -342,7 +364,7 @@ See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstr
 
 </TabList>
 
-See the section [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
+See [Add a Dependency to an Individual Site](#add-a-dependency-to-an-individual-site) above to add module/plugin or theme as a dependency to your site.  
 
 ### Changes Lost During Upstream Updates
 
@@ -352,7 +374,7 @@ To resolve, there are two potential solutions:
 
 - If you have a copy of the `composer.json` from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
-- Remove the upstream updates by [undoing the commits](/guides/git/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
+- Remove the upstream updates by [undoing the commits](/guides/git/undo-commits#revert-a-prior-commit-on-pantheon-that-has-been-deployed) or [restoring from a backup](/guides/environment-configuration/restore-environment-backup) made before the updates were merged. Then do the merge manually as described in [Upstream Updates Cannot Be Applied](#upstream-updates-cannot-be-applied).
 
 ### Issues using `wikimedia/composer-merge-plugin`
 

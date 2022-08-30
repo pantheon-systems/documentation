@@ -42,7 +42,7 @@ Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-c
 1. Private Key
 
 Allow two business days for your Account Team to load the certificate. 
-Note: The key file upload tool currently only accepts 2048-bit RSA keys. 
+Note: The key file upload tool currently only accepts 2048-bit RSA keys. AGCDN custom certificates (and private keys) must be in `.PEM` format.
 
 </Tab>
 

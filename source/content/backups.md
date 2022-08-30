@@ -118,7 +118,7 @@ Links to backups are signed URLs directly from Google Cloud Storage and will exp
 
 ## Restore From an Existing Backup
 
-Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/restore-environment-backup).
+Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/guides/environment-configuration/restore-environment-backup).
 
 ## About Your Code Archives
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
@@ -142,7 +142,7 @@ Backups are currently stored offsite for redundancy on Google Cloud Storage inst
 
 ### How do I restore from my site from a full environment backup?
 
-In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/restore-environment-backup).
+In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/guides/environment-configuration/restore-environment-backup).
 
 ### How long does a backup take?
 
@@ -150,7 +150,7 @@ This depends on how much content you have. When you are doing a full environment
 
 ### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/site-plan) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan) for details about site plans on Pantheon.
 
 ### What time zone is the backup time shown in?
 

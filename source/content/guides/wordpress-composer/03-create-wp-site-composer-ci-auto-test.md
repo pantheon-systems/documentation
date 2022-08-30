@@ -30,7 +30,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
     - The Terminus Build Tools plugin will scaffold the new project, including:
 
        - A Git repository
-       - A free [Pantheon sandbox](/create-sites#sandbox-sites) site
+       - A free [Pantheon sandbox](/guides/legacy-dashboard/create-sites#sandbox-sites) site
        - [Continuous Integration](https://pantheon.io/integrations/continuous-integration) configuration
        - Credential set up
 
@@ -223,6 +223,6 @@ Do NOT push/pull code between Lando and Pantheon directly. All code should be pu
 
 </Alert>
 
-## See Also
+## More Resources
 
 - [Install and Configure Lando for WordPress](/guides/lando-wordpress)

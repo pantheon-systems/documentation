@@ -78,6 +78,18 @@ You can also find your site's machine name using the Terminus command `site:info
 
 </Accordion>
 
+### Automatic Site and Environment Detection
+
+Terminus automatically detects the site and environment if a `<site>.<env>` parameter is not provided to a command that requests one. Terminus detects and operates from the local copy and current branch of the Pantheon site checked out at the current working directory. 
+
+```bash
+git clone ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git mysite
+cd mysite
+terminus env:info
+```
+
+The example above is equivalent to `terminus env:info mysite.dev`.
+
 ### Drush and WP-CLI
 
 Pantheon supports running [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.

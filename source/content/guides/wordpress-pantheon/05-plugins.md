@@ -58,7 +58,7 @@ The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/def
 
 ![Pantheon HUD](../../../images/pantheon-hud.png)
 
-For installation details, see [Configuring Environment Indicators](/environment-indicator).
+For installation details, see [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator).
 
 ## [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)
 

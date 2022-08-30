@@ -11,7 +11,7 @@ Pantheon's [WebOps](https://pantheon.io/webops) Dashboard combines metrics and d
 
 ## How to Access the WebOps Dashboard
 
-From the [User](https://dashboard.pantheon.io) or Org Dashboard, any Site that is not [Sandbox](/create-sites#sandbox-sites) or [Frozen](/platform-considerations#inactive-site-freezing) has a **Track WebOps** button:
+From the [User](https://dashboard.pantheon.io) or Org Dashboard, any Site that is not [Sandbox](/guides/legacy-dashboard/create-sites#sandbox-sites) or [Frozen](/platform-considerations#inactive-site-freezing) has a **Track WebOps** button:
 
 ![Screenshot of a User Dashboard with a Site showing the Track WebOps button](../images/dashboard/user-dash-track-webops.png)
 
