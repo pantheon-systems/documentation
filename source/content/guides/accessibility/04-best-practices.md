@@ -21,11 +21,11 @@ This section provides an overview of accessibility best practices.
 
 - **Data tables** are still appropriate for presenting information in two dimensions.
 
-See [Deque University's Tables](https://dequeuniversity.com/checklists/web/tables) page for more information.
+Refer to [Deque University's Tables](https://dequeuniversity.com/checklists/web/tables) page for more information.
 
 ## Links
 
-Don’t use the `title` attribute in links, as it is not read aloud by screen readers. Instead, make the anchor text relevant and descriptive (for example, don’t use “click here”).  See this article on [writing hyperlinks](https://www.nngroup.com/articles/writing-links/) from Nielsen Norman Group for more information.
+Don’t use the `title` attribute in links, as it is not read aloud by screen readers. Instead, make the anchor text relevant and descriptive (for example, don’t use “click here”). Refer to this article on [writing hyperlinks](https://www.nngroup.com/articles/writing-links/) from Nielsen Norman Group for more information.
 
 ## HTML
 
@@ -41,13 +41,13 @@ Use native HTML elements such as `<button>` (rather than `<div role="button">`) 
 
 ### Alternative Text Descriptions
 
-The `alt` attribute describes the appearance or function of an image, and is presented as alternate text for an image if the image cannot be displayed.  The [Alt text decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) helps determine when you should use alternative text.
+The `alt` attribute describes the appearance or function of an image, and is presented as alternate text for an image if the image cannot be displayed. The [Alt text decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) helps determine when you should use alternative text.
 
 - Non-decorative images: use `alt="description of the image"` attributes for all non-decorative images. 
 
 - Decorative images: Include an empty `alt=""` attribute. Or, you can use `aria-hidden="true"`. For example: `<img src='/img/mybackgroundimage.png' alt="" aria-hidden="true" />`
 
-See [Alt Text](https://moz.com/learn/seo/alt-text) from Moz for more information.
+Refer to [Alt Text](https://moz.com/learn/seo/alt-text) from Moz for more information.
 
 ### Video Subtitles, Captions, and Transcripts
 
@@ -85,7 +85,7 @@ The [US Web Design System (USWDS)](https://designsystem.digital.gov/) guidelines
 
 - Color contrast helps colorblindness and color perception.
 
-- Avoiding pure black text on white helps dyslexia, Irlen Syndrome, light sensitivity, and autism.
+- Avoiding pure black text on white helps those with dyslexia, Irlen Syndrome, light sensitivity, and autism.
 
 - The best combination is the max color contrast of white/light text on black/dark background, which seems to visually work well for all.
 
@@ -95,5 +95,4 @@ Even with the best of intentions, choices in words may exclude visitors. Terms a
 
 When creating content, review it for examples of language that may exclude your visitors by testing, using inclusive language linting and readability scoring tools, and then copy editing to include alternatives.
 
-See the [Resources](/guides/accessibility/resources#inclusive-language) page in this guide to help you write using inclusive language.
-
+Refer to the [Resources](/guides/accessibility/resources#inclusive-language) page in this guide to help you write using inclusive language.
