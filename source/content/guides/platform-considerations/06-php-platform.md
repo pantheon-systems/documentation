@@ -12,9 +12,6 @@ anchorid: php-platform
 ---
 
 
-
-
-
 ## General PHP Framework Support
 
 Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or WordPress and no others. Although PHP will run, we can not assist you in getting the non-approved frameworks running in any way.
@@ -41,7 +38,7 @@ You'll need the plugin if you are seeing errors like this:
 Warning: session_start(): user session functions not defined
 ```
 
-[More information on sessions](/wordpress-sessions).
+[More information on sessions](/guides/php/wordpress-sessions).
 
 ## PHP Short Tags
 
