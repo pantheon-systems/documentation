@@ -11,7 +11,7 @@
     type: 'Reference'
     title: 'Pantheon Overview'
     subtitle: 'An overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
-    url: 'overview'
+    url: '/overview'
   topics-groups:
     - title: 'Create a New Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
@@ -475,7 +475,7 @@
     type: 'Reference'
     title: 'Pantheon Overview'
     subtitle: 'An overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
-    url: 'overview'
+    url: '/overview'
   topics-groups:
     - title: 'Platform Services & Resources'
       subtitle: 'Learn about the services and resources provided to your website.'
