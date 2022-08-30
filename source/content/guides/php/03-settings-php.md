@@ -265,7 +265,7 @@ More information can be found in our [PHP 7.1 & ionCube Decoder Now Available fo
 
 ## Troubleshooting
 
-### Request to a remote API does tot return expected response
+### Request to a remote API does not return expected response
 
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 

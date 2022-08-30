@@ -13,7 +13,7 @@ anchorid: deprecated-constructor-notices
 
 This section provides information on how to debug intermittent PHP 7 notices.
 
-PHP notices are usually handled automatically by the Pantheon platform as described on the page [PHP Errors and Exceptions](/guides/php/php-errors). However, a PHP notice might occasionally be emitted directly into the web page content.
+PHP notices are usually handled automatically by the Pantheon platform as described in [PHP Errors and Exceptions](/guides/php/php-errors). However, a PHP notice might occasionally be emitted directly into the web page content.
 
 An example notice might look like this:
 
@@ -46,7 +46,7 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != '
 
 <Alert title="Warning" type="danger">
 
-Disabling OPcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon Live environments, so there is no motivation to disable OPcache in production anyway. Make sure to re-enable it OPcache after you are done debugging if you disable it in Dev and Multidev environments.
+Disabling OPcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon Live environments, so there is no need to disable OPcache in production. Make sure to re-enable OPcache after you are done debugging if you disable it in Dev and Multidev environments.
 
 </Alert>
 
@@ -77,7 +77,7 @@ You can also search for deprecated constructors using the PHP linter on the comm
 
 [Deprecation notices for deprecated constructors](https://secure.php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) are emitted if a class contains a method with the same name as the class name. This was the recommended way to declare class constructors in PHP 4, but it was not until PHP 7 that this form actually started producing a notice. At this time, the PHP-4-style constructor is the only deprecation notice that is reported during source code parsing. In theory, this structure should only be encountered in very old code; in practice, though, some projects may have continued using the deprecated form, so it may be encountered from time to time.
 
-OPcache is always enabled on Pantheon. When opcache is in use, PHP will print any notice emitted during source code processing directly to the standard output, ignoring any error handler that may be set. These notices may still be disabled by setting `error_reporting` to ignore E_DEPRECATED; however, Drupal always enables E_DEPRECATED in `error_reporting` early in its bootstrap process, so these notices will be printed if `display_errors` is set to `on`.
+OPcache is always enabled on Pantheon. When OPcache is in use, PHP will print any notice emitted during source code processing directly to the standard output, ignoring any error handler that may be set. These notices may still be disabled by setting `error_reporting` to ignore E_DEPRECATED; however, Drupal always enables E_DEPRECATED in `error_reporting` early in its bootstrap process, so these notices will be printed if `display_errors` is set to `on`.
 
 OPcache also influences when this error is displayed. Since OPcache caches the compiled form (opcodes) of the PHP that is being executed, the deprecation notices will not be printed when the PHP opcodes are fetched from the OPcache. This is what leads to the intermittent nature of this problem.
 

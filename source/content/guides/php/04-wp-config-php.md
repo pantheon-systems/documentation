@@ -110,7 +110,7 @@ Refer to [Reading the Pantheon Environment Configuration](/guides/environment-co
 
 ### How do I perform redirection?
 
-Refer [Configure Redirects](/guides/redirect).
+Refer to [Configure Redirects](/guides/redirect).
 
 ### How do I change the default debug.log location?
 

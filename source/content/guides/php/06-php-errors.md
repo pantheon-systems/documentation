@@ -56,19 +56,19 @@ If database logging is enabled, your site will be even slower, requiring a datab
 
 Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.
 
-Refer to [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
+Refer to [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## Unhandled Exceptions
 A PHP exception is a mechanism for defining error conditions and how to handle them. Refer to [PHP documentation on Exceptions](https://secure.php.net/manual/en/language.exceptions.php) for more information.
 
-PHP Exceptions are errors, and depending on the severity and can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
+PHP Exceptions are errors, and depending on the severity can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Undefined Function Error
 Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <Popover title="Bootstrap" content="Loading sequence for an application, or the process of loading necessary functionality." /> the site.
 
-However, when a PHP file is requested directly (for example, `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own and any function included but not defined by the file will cause a `Call to undefined function` fatal error.
+However, when a PHP file is requested directly (for example, `https://example.com/path/to/phpfile.php`), the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own and any function included but not defined by the file will cause a `Call to undefined function` fatal error.
 
-For example, in the following error PHP reports the `phpfile.php` file at line `xx` for calling `some_function()`, which has not yet been defined: `Call to undefined function  [some_function()] in [path/to/phpfile.php:xx]`
+For example, the following error PHP reports the `phpfile.php` file at line `xx` for calling `some_function()`, which has not yet been defined: `Call to undefined function  [some_function()] in [path/to/phpfile.php:xx]`
 
 ### Troubleshooting Undefined Function Errors
 
@@ -78,7 +78,7 @@ Use the following debugging techniques to investigate undefined function error m
 - Check the reported PHP file at full bootstrap. Rather than accessing the reported PHP file directly (for example, `https://example.com/path/to/phpfile.php`), browse to a page that includes the file (for example, `https://example.com/some-page/`) to see if the same error occurs with the site fully bootstrapped.
 - Review [`nginx-access.log`](/logs) for requests to the reported PHP file.
 
-If you see direct requests to PHP files causing fatal undefined function errors (often caused by bot traffic), use the `pantheon.yml` configuration file to set protected web paths. Refer to [Pantheon YAML Configuration Files](/pantheon-yml/#protected-web-paths) for more information. This stops the file from being web accessible while keeping the file available to PHP during bootstrap. When accessed directly, protected paths and files return a 403 Access Denied server response.
+If you see direct requests to PHP files causing fatal undefined function errors (often caused by bot traffic), use the `pantheon.yml` configuration file to set protected web paths. Refer to [Pantheon YAML Configuration Files](/pantheon-yml/#protected-web-paths) for more information. This stops the file from being web accessible, while keeping the file available to PHP during bootstrap. When accessed directly, protected paths and files return a 403 Access Denied server response.
 
 We also recommend submitting a sitemap and instructing bots to only crawl designated paths set in `robots.txt`. Refer to [Bots and Indexing on Pantheon](/bots-and-indexing) for more information.
 
@@ -100,7 +100,7 @@ No one is going to twist your arm about addressing these notices, but Pantheon b
 
 ## Fatal Error: require\_once(): Failed Opening Required
 
-The `require\_once()` function simply checks to see if a file has been included already, if it has not, then it will be included when checked.
+The `require\_once()` function simply checks to see if a file has been included already. If it has not, then it will be included when checked.
 
 When this error surfaces, it simply means that the file in question is not where it should be. For example, the error will look something like this:
 

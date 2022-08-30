@@ -110,7 +110,6 @@ Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-nat
  ```
  ([More options for this command](/terminus/commands/env-deploy))
 
-
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```bash{promptUser: user}
@@ -133,7 +132,7 @@ curl -Is https://www.getpantheon.com | grep PHPSESS|wc -l
 
 You should substitute your site URL in the example, and the desired output is "0" (zero).
 
-If your site is overly aggressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
+If your site is overaggressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
 
 ## More Resources
 

@@ -83,7 +83,7 @@ Make sure that you have:
   [0x000000000327a240] render() /code/sites/all/themes/themename/templates/page.tpl.php:113
   ```
 
-1. Search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
+1. Search for contributed modules or plug-ins that may be detrimental to the site. `stream_wrappers.inc` is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
 
   ```php
   [08-Dec-2014 16:56:48]  [pool www] pid 3863
