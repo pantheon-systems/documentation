@@ -17,7 +17,7 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
  1. Each trainer should [create a Pantheon account](https://pantheon.io/register) for themselves.
 
- 2. Test that Pantheon is suitable for your training topic. Please read our [Platform Considerations](/platform-considerations) to ensure that your curriculum will work with our [opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software) decisions. For instance, Pantheon does not support Drupal multisite and Node.js is not available on our containers.
+ 2. Test that Pantheon is suitable for your training topic. Please read our [Platform Considerations](/guides/platform-considerations) to ensure that your curriculum will work with our [opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software) decisions. For instance, Pantheon does not support Drupal multisite and Node.js is not available on our containers.
 
  3. [Please contact us](https://pantheon.io/trainers) and let us know you want to use the platform as a trainer. This will ensure you have full access to all the available tools as they are developed and maintain access to enough free sandboxes for your students. We can also help guide you through the processes to ensure you have the best experience and find success.
 

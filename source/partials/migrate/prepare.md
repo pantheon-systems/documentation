@@ -1,6 +1,6 @@
 Complete the following tasks on the source site to ensure a successful migration. 
 
-1. Read [Platform Considerations](/platform-considerations).
+1. Read [Platform Considerations](/guides/platform-considerations).
 
 1. Upgrade to the latest version of your CMS core.
 

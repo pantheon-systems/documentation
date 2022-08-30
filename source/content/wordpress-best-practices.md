@@ -158,7 +158,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 ## Security Headers
 
-Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
+Pantheon's Nginx configuration [cannot be modified](/guides/platform-considerations/platform-site-info#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
 
 There are plugins for WordPress that do not require `.htaccess` to set security headers, but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 

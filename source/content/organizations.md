@@ -41,7 +41,7 @@ The Sites tab shows all sites your organization has access to. You can quickly t
 
 Agency organizations will show "Site Owners" instead of "Users in Charge"
 
-A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/platform-considerations/#inactive-site-freezing).
+A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/guides/platform-considerations/platform-site-info#inactive-site-freezing).
 
 For more details on the Sites tab, refer to
 [Managing Sites and Teams with the Pantheon Organization Dashboard](/guides/legacy-dashboard/org-dashboard).
