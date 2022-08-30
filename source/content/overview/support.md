@@ -11,7 +11,7 @@ Pantheon offers multiple options to help you in building the best sites possible
 
 <ProductGroup>
 
-  <Product title={"Documentation"} link={"/"}>
+  <Product title={"Documentation"} link={"/docs/"}>
 
   You're already here! Browse and search our documentation site for the most current information to manage your site.
 
