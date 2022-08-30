@@ -31,7 +31,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 - Read [Platform Considerations](/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/php-versions/#configure-php-version).
+- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/guides/php/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/guides/php/php-versions#configure-php-version).
 - Clear all caches
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
@@ -429,6 +429,10 @@ ff = only
 
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
-## See Also
+## More Resources
 
-Check our standard migration procedure for related [Frequently Asked Questions](/guides/guided/faq) and [Troubleshooting](/guides/guided/troubleshooting) tips.
+- [Frequently Asked Questions](/guides/guided/faq)
+
+- [Troubleshooting](/guides/guided/troubleshooting) tips
+
+- [Importing Drush Site Archives with Terminus](/drush-import)

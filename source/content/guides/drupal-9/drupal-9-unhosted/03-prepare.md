@@ -28,7 +28,7 @@ It's important to prepare your site before you begin the migration process. Comp
    export DESTINATION=/absolute/path/to/codebase/cloned/from/pantheon
    ```
 
-1. Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+1. Ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
 1. Set the **Dev environment** site mode to **Git** to perform Git operations.
 

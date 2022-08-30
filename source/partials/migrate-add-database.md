@@ -60,7 +60,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Over 500MBs" id="500mbsplus">
 
-  The following instructions allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+  The following instructions allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access).
 
    1. Navigate to the Pantheon Site Dashboard.
    
@@ -86,7 +86,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
       ```
 
-     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections).
 
     The `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment after you run the command.
 

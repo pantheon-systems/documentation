@@ -13,7 +13,7 @@ If your Drupal site sends outbound emails, you don't want to accidentally spam y
 
 If you don't manually change the settings stored in the database, you are at risk of accidentally spamming users during debugging or quality assurance testing.
 
-Reroute Email is easy to setup and the settings persist, even when moving the database between environments. You can install the reroute email and enable it in all environments, and configure it via the [`settings.php`](/settings-php) with [environmental variables](/read-environment-config) to ensure you don't spam users during debugging or testing.
+Reroute Email is easy to setup and the settings persist, even when moving the database between environments. You can install the reroute email and enable it in all environments, and configure it via the [`settings.php`](/guides/php/settings-php) with [environmental variables](/guides/environment-configuration/read-environment-config) to ensure you don't spam users during debugging or testing.
 
 You’ll be able to funnel all development and testing emails to a single inbox and will not have to log in to several email accounts to test your business expectations.
 

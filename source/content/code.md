@@ -115,7 +115,7 @@ The Test and Live environments do not have write access to code outside of the d
 
 ## Develop
 
-Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
+Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/guides/environment-configuration/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
 
 ### .gitignore
 
@@ -123,7 +123,7 @@ Pantheon provides default `.gitignore` files in the base of each site's code rep
 
 ## Optimize Performance
 
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/php-slow-log).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/guides/php/php-slow-log).
 
 Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not negatively impact performance. 
 

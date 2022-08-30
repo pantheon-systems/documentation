@@ -13,7 +13,7 @@ editpath: migrate/wpengine/07-troubleshooting.md
 reviewed: "2021-06-15"
 ---
 
-<Partial file="migrate/troubleshooting.md" />
+<Partial file="migrate/troubleshooting-migrate-general.md" />
 
 ### Migration Fails
 

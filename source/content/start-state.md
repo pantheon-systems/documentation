@@ -6,7 +6,7 @@ tags: [upstreams, site]
 reviewed: "2021-04-23"
 ---
 
-Select the site's framework during the [site creation process](/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, and Drupal 7.
+Select the site's framework during the [site creation process](/guides/legacy-dashboard/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, and Drupal 7.
 
 <Alert title="Note"  type="info" >
 

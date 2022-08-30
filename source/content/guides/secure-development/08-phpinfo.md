@@ -15,9 +15,9 @@ reviewed: "2022-07-21"
 
 This section provides information on steps you can take to obscure your [phpinfo](https://secure.php.net/manual/en/function.phpinfo.php) online.
 
-Pantheon provisions isolated Linux containers with an optimized PHP stack. The `php.ini` is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/php-versions).
+Pantheon provisions isolated Linux containers with an optimized PHP stack. The `php.ini` is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/guides/php/php-versions).
 
-You can use `phpinfo` to see a comprehensive list of what's installed with the version of PHP in use by a particular environment. We also have [example PHP info](/php-versions/#available-php-versions) for each version of PHP on the platform.
+You can use `phpinfo` to see a comprehensive list of what's installed with the version of PHP in use by a particular environment. We also have [example PHP info](/guides/php/php-versions/#available-php-versions) for each version of PHP on the platform.
 
 ## Important Security Notes
 
@@ -59,8 +59,8 @@ terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"
 
 ## More Resources
 
-- [Upgrade PHP Versions](/php-versions)
+- [Upgrade PHP Versions](/guides/php/php-versions)
 
-- [PHP Errors and Exceptions](/php-errors)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
 
-- [Configuring Settings.php](/settings-php)
+- [Configuring Settings.php](/guides/php/settings-php)

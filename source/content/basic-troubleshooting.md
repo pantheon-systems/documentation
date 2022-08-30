@@ -34,7 +34,7 @@ PHP errors coming from Drupal or WordPress code tend to not be specific to Panth
 
 Odds are, someone else has run into the same problem and reported it in forums on [wordpress.org](https://wordpress.org/support/forums/) or the issue queues on [Drupal.org](https://www.drupal.org/project/issues), and it’s possible that someone has posted a solution or workaround.
 
-To learn more about PHP errors, see our [PHP Errors and Exceptions](/php-errors) documentation.
+To learn more about PHP errors, see our [PHP Errors and Exceptions](/guides/php/php-errors) documentation.
 
 ### Update the problem theme, module, or plugin
 
@@ -86,7 +86,7 @@ If Pantheon is experiencing a platform issue that impacts sites, we post updates
 
 ### HTTPS Issues
 
-When resolving issues with Pantheon's [HTTPS](/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
+When resolving issues with Pantheon's [HTTPS](/guides/global-cdn/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
 
 ### Code Changes
 
@@ -108,7 +108,7 @@ For conflicts introduced by other code merges (like from Multidev environments),
 
 ## White Screen of Death (WSOD)
 
-The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/php-errors) for more information on the type of errors you may find.
+The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/guides/php/php-errors) for more information on the type of errors you may find.
 
 ## WordPress
 
@@ -152,7 +152,7 @@ $config['system.logging']['error_level'] = 'verbose';
 ## Additional Resources
 
 - [Errors and Server Responses](/errors-and-server-responses)
-- [PHP Errors and Exceptions](/php-errors)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
 - [Database Connection Errors](/database-connection-errors)
-- [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

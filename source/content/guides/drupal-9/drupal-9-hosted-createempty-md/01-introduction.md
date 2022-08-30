@@ -61,4 +61,4 @@ Confirm that your site meets the following requirements before you continue:
 
 - You have not set up Continuous Integration or you no longer need it.
 
-- The trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+- The trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.

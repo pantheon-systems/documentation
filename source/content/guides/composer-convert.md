@@ -7,10 +7,12 @@ cms: "Drupal"
 categories: [develop]
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
-reviewed: "2021-10-23"
+reviewed: "2022-08-18"
 ---
 
 In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
+
+During this process, you will create a new branch based on the Git history of the new upstream.  You'll then re-add the contrib and custom code for your site to the new branch, and test it on a Multidev environment.  When everything is working correctly in the Multidev environment, you'll deploy the changes to the Dev environment by replacing your site's master branch with the new branch you've created.  Finally, after testing and confirming everything looks good, you'll use Terminus to switch the site over to the new upstream.
 
 <Partial file="drupal-9/see-landing.md" />
 
@@ -36,7 +38,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep 
 
 - This guide is written for users with access to Pantheon's [Multidev](/guides/multidev) feature. Pantheon support is not available to users who avoid the Multidev steps.
 
-- The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+- The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
 <Alert title="Note" type="info" >
   
@@ -58,7 +60,7 @@ The steps in this process migrate a site, so the new site will no longer maintai
 
 ### Troubleshooting: Provided host name not valid
 
-If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
 ## Change Upstreams
 

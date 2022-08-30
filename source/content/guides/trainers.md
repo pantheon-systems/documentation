@@ -41,7 +41,7 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
 If you need to create many sites before a training, [contact us](https://pantheon.io/trainers) and we can assist with this process.
 
-Otherwise, please ask each student to [create their own Pantheon account](https://pantheon.io/register) and then create a new sandbox site.  Once created, students can add your organization as a [Supporting Organization](/organization-dashboard) which will give you access to the site.
+Otherwise, please ask each student to [create their own Pantheon account](https://pantheon.io/register) and then create a new sandbox site.  Once created, students can add your organization as a [Supporting Organization](/guides/legacy-dashboard/org-dashboard) which will give you access to the site.
 
 ## Communicating with Students
 

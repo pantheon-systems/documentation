@@ -16,7 +16,7 @@ Pantheon provides support for performance and optimization features to help keep
 
 ## New Relic
 
-Using [New Relic](/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping the Pantheon support team visualize corresponding performance and symptoms.
+Using [New Relic](/guides/new-relic) makes it easy for you to monitor your site's performance and speeds up the support process by helping the Pantheon support team visualize corresponding performance and symptoms.
 
 ## Quicksilver
 
@@ -32,7 +32,7 @@ This section provides optional steps to improve your site's speed.
 
 1. Update your PHP version
 
-    - Keep your [PHP version](/php-versions#all-php-versions) up-to-date to reduce CPU load.
+    - Keep your [PHP version](/guides/php/php-versions#all-php-versions) up-to-date to reduce CPU load.
 
 1. Use persistent Object Cache
 

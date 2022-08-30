@@ -6,7 +6,7 @@ tags: [workflow]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable [WebOps](https://en.wikipedia.org/wiki/Web_operations) platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/global-cdn-caching), Pantheon Search (Solr) and Git—common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
+Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guides/global-cdn/global-cdn-caching), Pantheon Search (Solr) and Git—common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
 
 ## Get to Know Pantheon
 
@@ -14,12 +14,12 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/globa
 - [Using the Pantheon Workflow](/pantheon-workflow)
 - [All About Application Containers](/application-containers)
 - [Platform Considerations](/platform-considerations)
-- [HTTPS on Pantheon's Global CDN](/https)
+- [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
 
 ## Build
 - [Migrate Sites to Pantheon](/guides/guided/
 - [rsync and SFTP](/rsync-and-sftp)
-- [Configuring settings.php](/settings-php) or [Configuring wp-config.php](/wp-config-php)
+- [Configuring settings.php](/guides/php/settings-php) or [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Drupal Drush Command-Line Utility](/drush)
 - [Cron for WordPress](/wordpress-cron) or [Cron for Drupal](/drupal-cron)
 
@@ -28,16 +28,16 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/globa
 
 ## Run
 - [Optimization for Pantheon and the Cloud](/cloud-optimization)
-- [New Relic&reg; Performance Monitoring](/new-relic)
+- [New Relic&reg; Performance Monitoring](/guides/new-relic)
 - [Applying Upstream Updates](/core-updates)
-- [Global CDN Caching for High Performance](/global-cdn-caching)
+- [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/sso)
 - [Backup Creation](/backups)
 
 ## Debug
-- [PHP Errors and Exceptions](/php-errors)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
 - [Errors and Server Responses](/errors-and-server-responses)
 
 ## Support

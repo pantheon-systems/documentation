@@ -16,10 +16,10 @@ You can create a new Site from the new Dashboard homepage by clicking **+ Create
 
   </Alert>
 
-1. Optionally, if you have access to [organizations](/organization-dashboard/#new-sites), choose an organization to affiliate the site with.
+1. Optionally, if you have access to [organizations](/guides/legacy-dashboard/org-dashboard/#new-sites), choose an organization to affiliate the site with.
 
 1. Choose a [Region](/regions) for the Site.
 
 1. Click **Continue** and wait while the platform provisions the site with the start state you selected > Click **Visit your Pantheon Site Dashboard** once complete.
 
-For more information on Site creation, refer to the [Creating Sites](/create-sites) documentation. 
+For more information on Site creation, refer to the [Creating Sites](/guides/legacy-dashboard/create-sites) documentation. 

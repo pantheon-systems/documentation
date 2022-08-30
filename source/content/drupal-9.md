@@ -46,7 +46,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal 9 Site with Integrated Composer
 
-[Create a new Drupal 9 site from the Dashboard](/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
+[Create a new Drupal 9 site from the Dashboard](/guides/legacy-dashboard/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
 
 ## Upgrade or Migrate to Drupal 9
 
@@ -66,7 +66,7 @@ You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Dr
 
 You can also read more about the installation process on [Drupal.org](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
 
-We recommend monitoring your site's traffic using [Metrics in the Site Dashboard](/metrics) to check for increased traffic after installing Gutenberg.
+We recommend monitoring your site's traffic using [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics) to check for increased traffic after installing Gutenberg.
 
 ## Troubleshooting and Support
 

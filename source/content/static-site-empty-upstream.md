@@ -23,7 +23,7 @@ Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-too
 
 <Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" />
 
-There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
+There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/terminus).
 
 - Via the Pantheon Dashboard:
 
@@ -87,7 +87,7 @@ Yes, compiled static sites that don't require a Drupal or WordPress CMS backend 
 
 Some customers utilize a two-site approach on Pantheon where one site is the CMS backend (headless WordPress or Drupal), and the other site is the decoupled frontend (Frontity, Gatsby, [etc.](https://jamstack.org/generators/)). Of course, you will likely have different deployment workflows for updating each site, and you would need to determine the best workflow for you and your team.
 
-For other Decoupled configurations, please refer to our [Decoupled Sites](/decoupled-sites) documentation.
+For other Decoupled configurations, please refer to our [Decoupled Sites](/guides/decoupled-sites) documentation.
 
 ## More on How Pantheon Uses Upstreams
 

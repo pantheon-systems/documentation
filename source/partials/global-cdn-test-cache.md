@@ -29,11 +29,11 @@
 
   Note the result for `age` or `max-age`.
 
-1. Navigate to the site's Dev environment and set the site to Maintenance Mode.
+1. Navigate to the site's **Dev** environment and set the site to **Maintenance Mode**.
 
-1. Clear the cache from either the Advanced Page Cache module or from the Dashboard.
+1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
 
-1. In a terminal, cURL the site headers filtered for stale cache:
+1. cURL the site headers filtered for stale cache in a terminal:
 
   ```bash{promptUser: user}
   curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
@@ -47,9 +47,9 @@
 
 1. Navigate to the page using [Firefox](https://developer.mozilla.org/en-US/docs/Tools) or [Chrome](https://developer.chrome.com/docs/devtools/), and in the browser's developer tools open the **Network** tab.
 
-  Find the response headers for the page or asset.
+1. Find the response headers for the page or asset.
 
-1. Go to the site's Dev environment and set the site to Maintenance Mode.
+1. Go to the site's **Dev** environment and set the site to **Maintenance Mode**.
 
 1. Clear the cache from either the Advanced Page Cache module or [from the Dashboard](/clear-caches#pantheon-dashboard).
 

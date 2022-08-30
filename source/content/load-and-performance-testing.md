@@ -28,13 +28,13 @@ The scope of performance tests should be limited to the application itself on a 
 
 <Partial file="load-testing.md" />
 
-If your site is already live, then you should run load tests on the Test environment. For Live environments with multiple application containers, keep in mind that the Test environment has two application containers. Run a proportionate amount of traffic based on the number of Live environment app containers you have. If you have four app containers in Live, then test with half of your anticipated peak traffic. You can see the number of app containers using [Pantheon's free New Relic&reg; Performance Monitoring offering](/new-relic).
+If your site is already live, then you should run load tests on the Test environment. For Live environments with multiple application containers, keep in mind that the Test environment has two application containers. Run a proportionate amount of traffic based on the number of Live environment app containers you have. If you have four app containers in Live, then test with half of your anticipated peak traffic. You can see the number of app containers using [Pantheon's free New Relic&reg; Performance Monitoring offering](/guides/new-relic).
 
 ## Preparing for Tests
 
 The procedure for executing a load test and a performance test are similar:
 
-1. Enable [New Relic&reg; Performance Monitoring](/new-relic) within the Site Dashboard on Pantheon to ensure you have clear reporting to monitor response times.
+1. Enable [New Relic&reg; Performance Monitoring](/guides/new-relic) within the Site Dashboard on Pantheon to ensure you have clear reporting to monitor response times.
 
    - Set your [apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score) threshold according to your business rules (.5 is the default). Be careful not to set this too high, otherwise you will not get as many transaction traces in New Relic.
    - If you have particular transactions that you want to ensure are traced, set them up as [key transactions](https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events).

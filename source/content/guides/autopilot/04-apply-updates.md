@@ -10,7 +10,6 @@ showtoc: true
 anchorid: apply-updates
 permalink: docs/guides/autopilot/apply-updates/
 editpath: autopilot/04-apply-updates.md
-reviewed: "2021-08-09"
 ---
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it tries to apply updates.
@@ -19,14 +18,56 @@ Autopilot can manage updates for any site that can [apply updates via the Site D
 
 ## Apply Available Updates
 
-From the **Autopilot Status** screen, click **Queue Updates**.
+1. Navigate to the **Autopilot Status** screen, then click **Queue Updates**.
 
-You can also apply updates from the site list on the **<i className="fa fa-robot"></i> Autopilot** page. From the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> dropdown next to each site name, click **Start Applying Updates**.
+    - You can also apply updates from the site list on the **<i className="fa fa-robot"></i> Autopilot** page. Navigate to the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu next to each site name, then click **Start Applying Updates**.
 
-The platform adds the request to a queue, and will apply updates and deploy them to the chosen environments as quickly as possible, depending on current platform load.
+    - The platform adds the request to a queue, and will apply updates and deploy them to the chosen environments as quickly as possible, depending on current platform load.
 
-Track the update status from the site's Autopilot **Activity** page.
+1. Track the update status from the site's Autopilot **Activity** page.
+
+### Autopilot and Drupal
+
+Drupal base directories must exist for an Autopilot action (including updates) to succeed. You can [add a `.gitkeep` file](#autopilot-updates-fail-on-drupal-sites-with-no-config-directory) to each basic directory to ensure they exist. Basic Drupal directories and their default values are:
+
+- `$settings['file_temp_path'] = 'sites/default/temp';`   
+
+- `$settings['file_public_path'] = 'sites/default/files';`
+
+- `$settings['file_private_path'] = 'sites/default/private';`
+
+- `$settings['config_sync_directory'] = 'sites/default/config';`
 
 ### Autopilot and Drupal 9 with Integrated Composer
 
-Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer).
+Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer/ic-upstreams).
+
+## Troubleshoot Autopilot Updates 
+
+### Autopilot updates fail on Drupal sites with no config directory
+
+Drupal sites must have all [basic directories](#autopilot-and-drupal) to deploy Autopilot updates successfully. Autopilot updates will fail, for example, if you have drops8 and no exported / config directory, or the directory is not set in the main `settings.php` file and version-managed. 
+
+You must add a directory to the repository with a single `.gitkeep` file stored inside to successfully apply Autopilot updates. This creates the directory for the filesystem to use for updates. 
+
+1. Run the command below to create the directory:
+
+    ```bash{promptUser: user}
+    git mkdir sites/default/config 
+    ```
+
+1. Run the command below to create the `.gitkeep` ﬁle:
+
+    ```bash{promptUser: user}
+    git touch sites/default/config/.gitkeep 
+    ```
+ 
+1. Run the `add` command to add `sites/default/config/.gitkeep` 
+
+1. Commit and push your changes.
+
+## More Resources
+
+- [Autopilot FAQ](/guides/autopilot/autopilot-faq/)
+
+- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)

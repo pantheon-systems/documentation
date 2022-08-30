@@ -52,7 +52,7 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 ### 503 Header Overflow
 "Header overflow." The new Pantheon Global Edge size limit for cookies, sent in the request `"Cookie: .."` header, is 10KB. If more than 10KB are sent, all cookies are dropped and the request is processed as if no cookies were sent. The header `"X-Cookies-Dropped: 1"` is added to truncated requests and responses. You can ignore this scenario in your PHP code or handle it by displaying a custom error page.
 
-This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For more information, refer to [Environment-Specific Configurations for Drupal 9](/environment-specific-config-d9/#troubleshoot-503-response-header-overflow).
+This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For more information, refer to [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9/#troubleshoot-503-response-header-overflow).
 
 Try reducing the number of set-cookie headers in the response, if you receive a 503 error and your cookie size is smaller than 10KB.
 
@@ -78,7 +78,7 @@ A common cause for this error is an [idle container](/application-containers#idl
  
  Once the nginx queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
 
-This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/site-plan).
+This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/guides/legacy-dashboard/site-plan).
 
 ### Pantheon 504 Gateway Timeout
 "The application did not respond in time." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was an application problem, resulting in php-fpm or MySQL timing out. See [Timeouts on Pantheon](/timeouts) for more information.
@@ -173,7 +173,7 @@ Even with logging disabled, these errors will still be written to the server PHP
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic&reg; Performance Monitoring](/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic&reg; Performance Monitoring](/guides/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 
 ### Upgrade Your Plan

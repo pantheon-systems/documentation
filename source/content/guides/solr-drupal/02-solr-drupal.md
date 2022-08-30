@@ -47,7 +47,7 @@ Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new
 
 ### Prepare the Local Environment
 
-Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer#pantheon-supports-composer-2) at a minimum.
+Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer/ic-support) at a minimum.
 
 * Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
@@ -128,7 +128,7 @@ To install and enable the Search API Pantheon Module, access to Solr 8 must be e
 
 ### Dependencies
 
-Composer automatically installs dependencies as part of the Search API Pantheon Module `pantheon-systems/search_api_pantheon:^8@beta`.
+Composer automatically installs dependencies as part of the Search API Pantheon Module `drupal/search_api_pantheon:^8`.
 
 The commands specified in the next section install the following dependencies:
 
@@ -153,14 +153,14 @@ To install the Search API Pantheon module, switch to your local machine.
 1. Add the Search API Pantheon module as a required dependency:
 
    ```shell{promptUser:user}
-   composer require pantheon-systems/search_api_pantheon:^8@beta --prefer-dist
+   composer require drupal/search_api_pantheon:^8 --prefer-dist
    ```
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
 
 #### Enable Pantheon Search
 
-You can enable the `search_api_pantheon:^8@beta` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush.
+You can enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush.
 
 Enter the following command, replacing `$ENV` with the environment:
 
@@ -249,3 +249,7 @@ This occurs because both repositories contain a package called `drupal/search_ap
     }
 }
 ```
+
+### Fatal error: Cannot redeclare config_get_config_directory()
+
+This error occurs after installing `search_api_pantheon` for Drupal 8 using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.

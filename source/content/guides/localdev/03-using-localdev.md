@@ -118,7 +118,7 @@ Follow the steps below to initialize tools:
 
     - [phpMyAdmin](https://www.phpmyadmin.net/)
     - [MailHog](https://github.com/mailhog/MailHog)
-    - [CDN](/global-cdn) for emulation to test cookies
+    - [CDN](/guides/global-cdn) for emulation to test cookies
     - [Solr](/solr) or [Redis](/object-cache) for the local site
 
 ### Advanced

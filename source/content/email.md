@@ -1,15 +1,18 @@
 ---
-title: Email on Pantheon
-description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
+title: CMS Email Service on Pantheon
+description: Detailed information on configuring a third-party outgoing email service for your Pantheon Drupal or WordPress site.
 categories: [platform]
 tags: [email]
-reviewed: "2021-11-02"
+reviewed: "2022-08-03"
 ---
+
 ## Incoming Email
 
 Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](https://gsuite.google.com/index.html).
 
 ## Outgoing Email
+
+Drupal and WordPress both require a configured outgoing email service.
 
 For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use an SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
 
@@ -111,7 +114,7 @@ current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpasswo
 
 ### Can I use Pantheon's local MTA (postfix)?
 
-We strongly recommend that you do not use the local <abbr title="mail transfer agent">MTA</abbr> (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
+We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
 ### Can I access the mail logs for my site?
 
@@ -123,7 +126,7 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
 
 ### Are there SPF records for Pantheon's local MTA (postfix)?
 
-If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an <abbr title="sender policy framework">SPF</abbr> record, then you should include Pantheon's SPF record, as shown below:
+If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
 
 ```none
 v=spf1 include:spf.example.com include:spf.pantheon.io ~all

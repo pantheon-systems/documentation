@@ -264,20 +264,6 @@ Description of the new term.
 
 </Example>
 
-### Abbreviations
-
-<Example>
-
-The <abbr title="Abbreviation">abbr</abbr> tag is used to provide the full name of an abbreviated term on mouse hover.
-
-<hr className="source-code" /> <br/>
-
-```html
-The <abbr title="Abbreviation">abbr</abbr> tag is used to provide the full name of an abbreviated term on mouse hover.
-```
-
-</Example>
-
 ### Hyperlinks
 
 Do not specify a target tab or window for external, or any other links, leaving the viewer the option to open in a new tab.
@@ -918,6 +904,12 @@ ___
 Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
 
 Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
+
+<Alert title="Warning" type="danger" >
+
+Partial file names must not duplicate the names of files in the source/content directory.
+
+</Alert>
 
 Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
 

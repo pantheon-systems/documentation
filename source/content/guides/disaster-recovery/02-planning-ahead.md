@@ -17,7 +17,7 @@ editpath: disaster-recovery/02-planning-ahead.md
 Disasters are sometimes unavoidable, but steps can be taken to ensure that these incidents are not frequent, reversible, and not destructive.
 
 ## Monitor and Optimize Performance
-Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](https://pantheon.io/docs/new-relic)(APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](https://pantheon.io/docs/new-relic).
+Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](/guides/new-relic)(APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](/guides/new-relic).
 
 New Relic also provides a performance monitoring service that can send notification of downtime or degraded performance by email and other channels. Refer to the documentation on [New Relic Alerts](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/introduction-new-relic-alerts) for more information.
 
@@ -33,7 +33,7 @@ The Pantheon Global CDN delivers pages directly to users from the Varnish edge p
 
 *  Determine the extent to which your site usesis utilizing the edge cache by requesting a cache hit rate report from Support. This shows the cache hit rate for the full site on a daily basis.
 
-* Test the cacheability of individual pages by examining the page headers using CURL or developer tools. Refer to [Testing Global CDN Caching](https://pantheon.io/docs/test-global-cdn-caching) for more information. 
+* Test the cacheability of individual pages by examining the page headers using CURL or developer tools. Refer to [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching) for more information. 
 
 * Optimize your caching strategy by checking cookies, application configurations, and session management. Refer to our [Debug Caching Issues](https://pantheon.io/docs/debug-cache) documentation.
 

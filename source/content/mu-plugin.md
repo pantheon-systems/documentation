@@ -286,7 +286,7 @@ For more information, see [How do I disable the persistent object cache for a ba
 
 ### Redirects
 
-In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
+In addition to [PHP redirects](/guides/redirect), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
 // 301 Redirect from /old to /new
@@ -353,6 +353,6 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 
-- [Configuring wp-config.php](/wp-config-php)
-- [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+- [Configuring wp-config.php](/guides/php/wp-config-php)
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

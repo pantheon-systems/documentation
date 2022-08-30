@@ -7,7 +7,7 @@ tags: [cdn, cache]
 searchboost: 50
 ---
 
-Pantheon's [Global CDN](/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
+Pantheon's [Global CDN](/guides/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
 
 CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront, and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
 

@@ -226,7 +226,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
      composer require drupal/pkg-name --no-update
      ```
 
-       - Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream) for more information about adding dependencies.
+       - Note that the optional `--no-update` flag in this command should only be used in Upstreams (as we do here) to instruct Composer not to check for updates now. See [How to Add Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams) for more information about adding dependencies.
 
     1. Commit and push the changes:
 
@@ -444,7 +444,7 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 ## More Resources
 
-- [How to Add Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream)
+- [How to Add Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams)
 
 - [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
 

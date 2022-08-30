@@ -60,11 +60,11 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   #### [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
-  Automatically clear related pages from [Pantheon's Global CDN](/global-cdn) when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
+  Automatically clear related pages from [Pantheon's Global CDN](/guides/global-cdn) when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
 
   #### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
-  This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
+  This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions/#troubleshooting-session-errors).
 
   #### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)
 

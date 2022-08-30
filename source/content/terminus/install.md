@@ -30,7 +30,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 There are several ways to install Terminus, depending on your use case:
 
 - For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
-- If you are in Mac, you could [install using homebrew](#homebrew-installation).
+- If you are using a Mac, you can [install using homebrew](#homebrew-installation).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
 
 ### Standalone Terminus PHAR
@@ -43,12 +43,12 @@ The following commands will:
 - make the file executable,
 - add a symlink to your local `bin` directory for the Terminus executable.
 
-  ```bash{promptUser: user}
-mkdir -p ~/terminus && cd ~/terminus
-curl -L https://github.com/pantheon-systems/terminus/releases/download/3.0.6/terminus.phar --output terminus
-chmod +x terminus
-./terminus self:update
-sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+    ```bash{promptUser: user}
+  mkdir -p ~/terminus && cd ~/terminus
+  curl -L https://github.com/pantheon-systems/terminus/releases/download/3.0.7/terminus.phar --output terminus
+  chmod +x terminus
+  ./terminus self:update
+  sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
   ```
 
 ### Homebrew Installation
@@ -63,19 +63,21 @@ brew install pantheon-systems/external/terminus
 
 ### Machine Token
 
-Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens/).
+You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens/).
 
-First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
+1. Navigate to the **User Dashboard**, select **Account**, and then select  **Machine Tokens** to [create your machine token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
-Once the token has been created, use it to authenticate Terminus by running the following command:
+1. Use your machine token to authenticate into Terminus, replacing <email@example.com> and <machine_token>:
 
-```bash{promptUser: user}
-terminus auth:login --machine-token=‹machine-token›
-```
+  ```bash{promptUser: user}
+  terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
+  ```
 
-```bash{promptUser: user}
-terminus auth:login --email=dev@example.com
-```
+    - Machine tokens are keyed to the email address associated with your Pantheon user account. After a token has been used to authenticate Terminus, future sessions are authenticated with your email address:
+
+  ```bash{promptUser: user}
+  terminus auth:login --email <email@example.com>
+  ```
 
 ### SSH Authentication
 

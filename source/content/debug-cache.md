@@ -13,7 +13,7 @@ First, verify caching configuration to ensure anonymous caching is enabled. Then
 
 - To enable anonymous caching within Drupal, see [Drupal Performance and Caching Settings](/drupal-cache).
 - WordPress sites on Pantheon have anonymous caching enabled by default. See [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin) for details.
-- See [Testing Global CDN Caching](/test-global-cdn-caching) for steps to test.
+- See [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching) for steps to test.
 
 If you see `Age: 0` after multiple requests, your site is not caching properly.
 
@@ -80,7 +80,7 @@ Pantheon's platform will not cache a response that contains the `set-cookie` hea
 
 <Alert title="Note" type="info" >
 
-Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues and fixes from your browser. For instructions, see [Test Global CDN with Browser Headers](/test-global-cdn-caching#test-global-cdn-with-browser-headers). Curl does not handle cookie data in the same way that your browser does, and effectively misrepresents cookie and caching behavior as a result.
+Do not use curl to debug this scenario. Instead, investigate `set-cookie` issues and fixes from your browser. For instructions, see [Test Global CDN with Browser Headers](/guides/global-cdn/test-global-cdn-caching#test-global-cdn-with-browser-headers). Curl does not handle cookie data in the same way that your browser does, and effectively misrepresents cookie and caching behavior as a result.
 
 </Alert>
 
@@ -138,4 +138,4 @@ via: 1.1 varnish
 
 Once you've found the source of the session, you'll want to remove or deactivate whatever sets it. Storing data about an anonymous visitor can be handled more efficiently in the user's browser; a cache-varying cookie or utilizing [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) is likely a better choice.
 
-For more information, see [WordPress and PHP Sessions](/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).
+For more information, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).

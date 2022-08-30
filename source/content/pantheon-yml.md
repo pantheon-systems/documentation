@@ -120,7 +120,7 @@ php_version: 8.0
 
 #### Considerations
 
-- [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
+- [Upgrading PHP Versions](/guides/php/php-versions) may require you to resolve compatibility issues with your site's codebase.
 - From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 - You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
@@ -270,9 +270,15 @@ remote: Valid versions are: 1
 
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common reason for an invalid `pantheon.yml` file.
 
-### Deploying Configuration Changes to Multidev
+### Why can’t I update the PHP version on my Multidev?
 
-Changes made to `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. As a workaround, make some modification to `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
+
+1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
+
+1. Modify your `pantheon.yml` file and re-commit to the Multidev.
+
+    - It does not matter what change you make to the file. Any change- even a comment- will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```none
 remote:
@@ -287,9 +293,13 @@ remote:
 
 ### Deploying Hotfixes
 
-Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (for example add a code comment), then deploy up to production using the standard Pantheon workflow.
+Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). Git tags created manually and pushed on the platform do not invoke all the processes that an actual deployment does. Pantheon standard workflow is done via the dashboard deploy or `terminus env:deploy`. As a workaround for hotfixes:
+
+1. Modify your `pantheon.yml` file in a development environment (for example add a code comment).
+
+1. Deploy the changes to production using the dashboard deploy or `terminus env:deploy`.
 
 ## See Also
 
 * [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver)
-* [Upgrade PHP Versions](/php-versions)
+* [Upgrade PHP Versions](/guides/php/php-versions)

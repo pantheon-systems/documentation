@@ -11,16 +11,19 @@ Once enabled, SAML applies to an entire email domain and is not available on a p
 SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/organizations). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
 
 ## User Experience
-* User submits the Pantheon login form with their email address.
-* User is redirected to the configured IdP.
-* After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
+
+- User submits the Pantheon login form with their email address.
+
+- User is redirected to the configured IdP.
+
+- After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
 ## Terminus Authentication
 Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [machine tokens](/machine-tokens).
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/organization-dashboard). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
 
 ### External Members
 
@@ -48,6 +51,22 @@ You will need to enter the following:
     * Optional: The `user_id` attribute may need to be configured to be sent manually. If this value is not already present, it should be set to match the `email` attribute.
     * The SAML assertion, and the SAML response can be individually or simultaneously signed.
     * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
+
+
+### Azure IdP Configuration
+
+Azure configuration requires several modifications from the general instructions in the above section. 
+
+1. Complete the Pantheon-specific steps in Azure's documentation to [Configure Azure AD SSO](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/pantheon-tutorial#configure-azure-ad-sso).
+
+1. Confirm that you make all required edits to correctly map custom attributes, including:
+
+    - **Identifier text box:** `urn:auth0:pantheon:<orgname>-SSO`
+
+    - **Reply URL text box:** `https://pantheon.auth0.com/login/callback?connection=<orgname>-SSO`
+
+    - **Single sign-on URL:** `Leave Blank`
+
 
 ## Enable SAML on Pantheon
 

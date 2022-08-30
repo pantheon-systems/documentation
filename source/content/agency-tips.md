@@ -21,7 +21,7 @@ Partner Agencies are added to the [Agency Partner Directory](https://directory.p
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
 ## Extend Preferred Pricing to Your Clients
-[Qualified agencies](https://pantheon.io/plans/partner-program?docs) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
+[Qualified agencies](https://pantheon.io/plans/partner-program?docs) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
 
 ## Training Resources for New Team Members
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
@@ -32,7 +32,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - [Pantheon FAQs](/faq)
 - [Pricing comparison](https://pantheon.io/plans/pricing-comparison)
-- [Add a Client to Your Agency](/add-client-site) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
+- [Add a Client to Your Agency](/guides/legacy-dashboard/add-client-site) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
 
 ## Be a Community Member
 The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/) are great places to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
@@ -51,7 +51,7 @@ All plans except for the Basic plan can enable the Pantheon Object Cache. For in
 The following tools are specifically for WordPress.
 
 ### PHP Sessions
-In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/wordpress-sessions).
+In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions).
 
 ### WordPress Multisite
 Running a WordPress Site Network requires a special configuration that is only available to contract customers. These sites can only be created by Pantheon employees. For details, see [WordPress Site Networks](/guides/multisite).
@@ -77,9 +77,8 @@ Use the `pantheon.yml` file to set up platform hooks and advanced site configura
 
 ### New Relic APM Pro
 
-New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic&reg; Performance Monitoring](/new-relic). The following blog posts are also a great reference:
+New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic&reg; Performance Monitoring](/guides/new-relic). The following blog posts are also a great reference:
 
-- [Getting Started with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
