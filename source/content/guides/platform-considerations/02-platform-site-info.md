@@ -66,25 +66,29 @@ Ensure you encode URLs that use ampersands with `%26` instead of `&`.
 
 The Pantheon platform includes [Drupal Steward](https://www.drupal.org/drupal-security-team/steward), a platform-level mitigation of certain highly-critical vulnerabilities that are identified in Drupal core, as a feature for all Drupal sites on Pantheon. All Pantheon sites are protected by Drupal Steward.
 
-For more information about Drupal Steward, refer to the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq).
+Refer to the [Drupal Steward FAQ](https://www.drupal.org/drupal-security-team/steward/faq) for more information about Drupal Steward.
 
 ## .htaccess
 
 Pantheon sites use nginx to concurrently serve requests. The nginx web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
-For details, see [Configure Redirects](/guides/redirect/#php-vs-htaccess).
+Refer to [Configure Redirects](/guides/redirect/#php-vs-htaccess) for more information.
 
 If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers its [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) as a managed service. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ### Drupal False Positive
 
-Drupal 7 and 8 checks for arbitrary code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
+Drupal 7 and 8 checks for arbitrary code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, refer to [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
 ## Inactive Site Freezing
 
 Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
-You can easily reactivate a site by visiting your Pantheon User Dashboard, select the frozen site in the Dashboard, then click **Unfreeze site**. Within a few minutes, the site will be ready for development again.
+You can easily reactivate a site:
+
+1. Navigate to your Pantheon User Dashboard, and select the frozen site in the Dashboard. 
+
+1. Click **Unfreeze site**. The site will be ready for development again within a few minutes. 
 
 If you experience any issues, like missing static assets, a [backup](/guides/environment-configuration/restore-environment-backup#restore-an-environment-from-its-own-backup) of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
 
@@ -102,7 +106,7 @@ MariaDB 10.4 on Pantheon has `innodb_strict_mode` set to `ON`. This leads to `Ro
 ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.
 ```
 
-To avoid this error, modify your tables to use `row_format=DYNAMIC`.
+Modify your tables to use `row_format=DYNAMIC` to avoid this error. 
 
 <Accordion title="How to update all tables to row_format=DYNAMIC" id="row-size-too-large">
 
@@ -110,11 +114,11 @@ To avoid this error, modify your tables to use `row_format=DYNAMIC`.
 
 </Accordion>
 
-For more information on how to diagnose tables and troubleshoot potential issues, refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
+Refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/) for more information on how to diagnose tables and troubleshoot potential issues. 
 
 ## Modules and Plugins with Known Issues
 
-See [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for information about [Drupal modules](/modules-known-issues) and [WordPress plugins](/plugins-known-issues) that are not supported and/or require workarounds.
+Refer to [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for information about [Drupal modules](/modules-known-issues) and [WordPress plugins](/plugins-known-issues) that are not supported and/or require workarounds.
 
 ## Multisite
 
@@ -122,20 +126,17 @@ Pantheon supports designated use cases for [WordPress Site Networks](/guides/mul
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
-
-
 ## nginx.conf
 
 Pantheon does not currently support modifying the `nginx.conf` per site, as we run a highly tuned universal configuration file. All of the containers run a standard profile, and we have opted to keep this configuration to keep the `nginx.conf` lean.
 
-If your site uses `nginx.conf` rules for redirects, see [Configure Redirects](/guides/redirect/#php-vs-htaccess).
+Refer to [Configure Redirects](/guides/redirect/#php-vs-htaccess) if your site uses `nginx.conf` rules for redirects. 
 
-If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) as a managed service. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
+Pantheon offers [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) as a managed service if your site contains rules in `nginx.conf` that cannot be migrated to PHP. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced Global CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Node.js
 
-Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or WordPress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
-
+Node.js is not available in the platform. The node.js service must to be hosted on a different remote server outside of Pantheon if running node.js services is a hard requirement for your Drupal or WordPress application.
 
 ## One Application per Site
 
@@ -160,7 +161,13 @@ Pantheon does not currently support directly connecting to Oracle databases. Cus
 
 ## Pantheon URL Search Engine Indexing
 
-This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/wp-cli) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/) blog post to exchange the platform domains with your custom domain, and then [add a redirect to the primary domain](/guides/launch/redirects).
+This can occur if hardcoded links are found in the HTML source of your pages. 
+
+WordPress users can correct this by: 
+
+1. Run a [search and replace using WP-CLI](/wp-cli) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/) blog post to exchange the platform domains with your custom domain. 
+
+1. [Add a redirect to the primary domain](/guides/launch/redirects).
 
 ## Xdebug Support
 
@@ -171,3 +178,5 @@ Xdebug is not available on the platform. Local development tools such as [Lando]
 - [Frequently Asked Questions](/faq)
 
 - [Site Plans FAQs](/site-plans-faq)
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)

@@ -11,11 +11,11 @@ permalink: docs/guides/platform-considerations
 anchorid: platform-considerations
 ---
 
-This guide features common platform considerations, derived from Pantheon's distributed nature. We update the content here frequently to document improvements and limitations.
+This guide features common platform considerations specific to Pantheon's distributed nature. We update the content here frequently with platform improvements and limitations.
 
 ## Browser Support for Pantheon's Dashboard
 
-In an effort to maintain platform security measures and to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
+The Pantheon Dashboard supports the following browsers to maintain platform security measures and to focus internal development and engineering work: 
 
 +------------------------+--------+---------+-------+------+---------------------+
 |                        | Chrome | Firefox | Opera | Edge | Safari              |
@@ -23,7 +23,7 @@ In an effort to maintain platform security measures and to focus internal develo
 | **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
 +------------------------+---------------------------------+---------------------+
 
-To confirm which browser version you are using, visit <https://www.whatsmybrowser.org/>, and compare your browser's version with the latest available:
+Visit <https://www.whatsmybrowser.org/> to confirm which browser version you are using and compare your browser's version with the latest available:
 
   - [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.)
   - [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases)
