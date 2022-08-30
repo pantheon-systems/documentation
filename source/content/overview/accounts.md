@@ -7,13 +7,11 @@ contributors: [wordsmither]
 permalink: docs/overview/accounts
 ---
 
-Learn ways of setting up your teams, using your dashbaords, and how billing works.  By the end of this section, you should be able to comfortably develop an organization plan and administer your Pantheon platform. 
+Learn how to set up your teams, using your dashboards, and how billing works.  By the end of this section, you should be able to comfortably develop an organization plan and administer your Pantheon platform. 
 
 ## Organizations
 
 Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
-
-[SOME SORT OF VISUAL, LIKE https://docs.google.com/presentation/d/18g29_dTLfQeUTy84uG9Juso9TPFJYv2-HRbZD3h_Vjc/edit#slide=id.g5e25caeefc_0_97]
 
 From your Organization Dashboard you can manage your
 - Sites

@@ -7,7 +7,13 @@ contributors: [wordsmither]
 permalink: docs/overview/integrations
 ---
 
-Extend the capabilities of Pantheon with these integrations:
+Extend the capabilities of Pantheon with integrations.
+
+<Alert title="Note" type="info" >
+
+These are examples, not necessarily best practice.  Please refer to the [Scope of Support](/guides/support/) to determine if support is offered for a particular integration.
+
+</Alert>
 
 ## Site Management
 

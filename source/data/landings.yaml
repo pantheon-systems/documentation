@@ -8,10 +8,10 @@
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
   cta_alt:
-    type: 'Demo'
-    title: 'Pantheon Overview Demo'
-    subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
-    url: 'https://pantheon.io/demo?docs'
+    type: 'Reference'
+    title: 'Pantheon Overview'
+    subtitle: 'An overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
+    url: 'overview'
   topics-groups:
     - title: 'Create a New Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
@@ -472,10 +472,10 @@
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/guides/quickstart'
   cta_alt:
-    title: 'Glossary'
-    type: 'reference'
-    subtitle: 'Familiarize yourself with all the terms found in our docs.'
-    url: '/glossary'
+    type: 'Reference'
+    title: 'Pantheon Overview'
+    subtitle: 'An overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
+    url: 'overview'
   topics-groups:
     - title: 'Platform Services & Resources'
       subtitle: 'Learn about the services and resources provided to your website.'

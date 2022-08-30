@@ -7,9 +7,8 @@ contributors: [wordsmither]
 permalink: docs/overview/platform
 ---
 
-Unlike traditional hosting, Pantheon delivers truly elastic hosting through automation in software. Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
+Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
 
-[NEED VISUAL. SIMILAR TO https://pantheon.io/features/elastic-hosting?]
 
 ## Edge
 
@@ -32,9 +31,9 @@ Our Runtime Matrix executes the code for your website. Over a million Linux cont
 
 - [Valhalla](/files): Containers are seamlessly integrated with Valhalla, our distributed file system. Valhalla keeps your files in sync across all the containers running your site. 
 
-- [Git Version Control](https://pantheon.io/docs/guides/git): Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
+- [Git Version Control](/guides/guides/git): Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 
-- [New Relic](https://pantheon.io/docs/new-relic): New Relic® Performance Monitoring offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. 
+- [New Relic](/guides/new-relic): New Relic® Performance Monitoring offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. 
 
 Every environment for your site (Dev, Test, Live) runs on its own container. At the Performance Medium level and above, the Test and Live environments have multiple containers.
 
