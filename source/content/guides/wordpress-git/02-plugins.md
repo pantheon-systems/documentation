@@ -64,7 +64,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   #### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
-  This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
+  This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions/#troubleshooting-session-errors).
 
   #### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)
 

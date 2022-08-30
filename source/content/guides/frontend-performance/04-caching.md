@@ -254,7 +254,7 @@ Improve performance on longer trips to and from the browser for instances you wa
 
 ### Upgrade Your Site's PHP
 
-[Upgrade your site's PHP version](/php-versions) to improve the security, performance, and supportability of your site.
+[Upgrade your site's PHP version](/guides/php/php-versions) to improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 

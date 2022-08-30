@@ -14,7 +14,7 @@ anchorid: advanced
 
 Basic domain and HTTPS redirection can be handled by the [Primary Domain](/guides/redirect#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
 
-Redirect logic should be added to `wp-config.php` for [WordPress](/wp-config-php) sites, and `settings.php` for [Drupal](/settings-php) sites.
+Redirect logic should be added to `wp-config.php` for [WordPress](/guides/php/wp-config-php) sites, and `settings.php` for [Drupal](/guides/php/settings-php) sites.
 
 <Alert type="danger" title="Warning">
 

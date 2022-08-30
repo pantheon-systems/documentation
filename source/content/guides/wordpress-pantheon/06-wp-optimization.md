@@ -32,7 +32,7 @@ This section provides optional steps to improve your site's speed.
 
 1. Update your PHP version
 
-    - Keep your [PHP version](/php-versions#all-php-versions) up-to-date to reduce CPU load.
+    - Keep your [PHP version](/guides/php/php-versions#all-php-versions) up-to-date to reduce CPU load.
 
 1. Use persistent Object Cache
 

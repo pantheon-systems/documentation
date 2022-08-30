@@ -353,6 +353,6 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 
-- [Configuring wp-config.php](/wp-config-php)
+- [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

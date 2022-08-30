@@ -29,7 +29,7 @@ This will provision Apache Solr containers for every environment for your site. 
 
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
 
-This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-versions) for more information on switching PHP versions.
+This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guides/php/php-versions) for more information on switching PHP versions.
 
 ## Install and Configure Plugin
 

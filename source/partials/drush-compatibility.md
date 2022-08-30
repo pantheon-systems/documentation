@@ -30,4 +30,4 @@ When running Drush locally, we highly recommend running Drush version 8.3.2 or h
 
 *Drush 11 is not available through `pantheon.yml`. Drush 11 can only be used through a [site-local installation](#site-local-drush-usage).
 
-For more information, refer to our guide on [Upgrading PHP Versions](/php-versions).
+For more information, refer to our guide on [Upgrading PHP Versions](/guides/php/php-versions).

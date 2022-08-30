@@ -41,8 +41,8 @@ When using multiple snippets, be sure to step through the logic. This is particu
 
 ## More Resources
 
-- [Configuring Settings.php](/settings-php)
-- [Configuring wp-config.php](/wp-config-php)
+- [Configuring Settings.php](/guides/php/settings-php)
+- [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Platform and Custom Domains](/domains)
 - [Launch Essentials](/guides/launch)
 - [Relaunch Existing Pantheon Site](/relaunch)

@@ -807,7 +807,7 @@ ___
 
 **Issue:** Sites running PHP version 5.3 produce a WSOD after activating the [TubePress Pro](https://tubepress.com/).
 
-**Solution:** [Upgrade your site's PHP version](/php-versions) to 5.5, 5.6, or 7.0.
+**Solution:** [Upgrade your site's PHP version](/guides/php/php-versions) to 5.5, 5.6, or 7.0.
 
 ___
 

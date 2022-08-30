@@ -96,7 +96,7 @@ Now that the site is created, the next step is to run a Drush install command to
   
   If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
 
-  If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/settings-php) file.
+  If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/guides/php/settings-php) file.
 
 1. Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
 

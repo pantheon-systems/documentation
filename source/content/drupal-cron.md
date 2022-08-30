@@ -109,7 +109,7 @@ To disable triggering cron by page visits, adjust the value of **Run cron on vis
 The most common causes are:
 
 - Missing `sites/default/settings.php`
-- [PHP fatal errors](/php-errors)
+- [PHP fatal errors](/guides/php/php-errors)
 - [Invalid redirection logic in settings.php](/domains/#redirect-to-https-and-the-primary-domain)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
