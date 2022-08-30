@@ -32,9 +32,9 @@ For details, see [Use the Pantheon WebOps Workflow](/pantheon-workflow).
 
 Within this workflow, there are several ways you can manage and develop your sites.
 
-- Manage multiple sites with [Custom Upstreams](https://pantheon.io/docs/guides/custom-upstream).
+- Manage multiple sites with [Custom Upstreams](/guides/custom-upstream).
 - Create sites by using Pantheon Upstreams, importing existing sites, [plus other methods](/start-state).
-- Support large teams using [Multidev](/multidev).
+- Support large teams using [Multidev](/guides/multidev).
 - Migrate your site [from a competitor](/get-started).
 - [Use the command line](/terminus) to manage and create sites.
 - Develop using either [Git](/guides/git) or [SFTP](/sftp).

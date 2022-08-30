@@ -20,13 +20,13 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
 <ProductGroup>
 
-  <Product title={"Pingdom Uptime Check"} link={"/guides/pingdom-uptime-check"}>
+  <Product title={"Pingdom Uptime Check"} link={"/docs/guides/pingdom-uptime-check"}>
 
   [Pingdom](https://www.pingdom.com/) provides several different types of uptime and performance checks
 
   </Product>
 
-  <Product title={"Quicksilver"} link={"/quicksilver"}>
+  <Product title={"Quicksilver"} link={"/docs/quicksilver"}>
 
   Quicksilver can automate your Pantheon WebOps workflow.
 
@@ -38,31 +38,31 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
 <ProductGroup>
 
-  <Product title={"AWS S3 Setup for Drupal"} link={"/drupal-s3"}>
+  <Product title={"AWS S3 Setup for Drupal"} link={"/docs/drupal-s3"}>
 
   Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution
 
   </Product>
 
-  <Product title={"AWS S3 Setup for WordPress"} link={"/wordpress-s3"}>
+  <Product title={"AWS S3 Setup for WordPress"} link={"/docs/wordpress-s3"}>
 
   Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution
 
   </Product>
 
-  <Product title={"Drupal Commerce"} link={"/guides/drupal-9-commerce"}>
+  <Product title={"Drupal Commerce"} link={"/docs/guides/drupal-9-commerce"}>
 
   [Drupal Commerce](https://drupalcommerce.org/) is an e-commerce implementation designed specifically for Drupal
 
   </Product>
   
-  <Product title={"Opensolr"} link={"/opensolr"}>
+  <Product title={"Opensolr"} link={"/docs/opensolr"}>
 
-  [Opensolr](https://pantheon.io/docs/opensolr#:~:text=The-,Opensolr,-service%20offers%C2%A0a) offers automated provisioning for the most complex Failover Systems.
+  Opensolr offers automated provisioning for the most complex Failover Systems.
 
   </Product>
 
-  <Product title={"Sendgrid"} link={"/guides/sendgrid"}>
+  <Product title={"Sendgrid"} link={"/docs/guides/sendgrid"}>
 
   [Sendgrid](https://sendgrid.com/) provides reliable inbox delivery at scale.
 
@@ -74,19 +74,19 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
 <ProductGroup>
 
-  <Product title={"Asana"} link={"/guides/asana/"}>
+  <Product title={"Asana"} link={"/docs/guides/asana/"}>
 
   [Asana](https://asana.com/) manages team projects and individual tasks..
 
   </Product>
 
-  <Product title={"Pivotal Tracker"} link={"/guides/pivotal-tracker/"}>
+  <Product title={"Pivotal Tracker"} link={"/docs/guides/pivotal-tracker/"}>
 
   [Pivotal Tracker](https://www.pivotaltracker.com/) offers product planning and management. 
 
   </Product>
 
-  <Product title={"Trello"} link={"/guides/trello/"}>
+  <Product title={"Trello"} link={"/docs/guides/trello/"}>
 
   [Trello](https://trello.com/) helps teams to collaborate on projects in an agile framework.
 
@@ -99,43 +99,43 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
 <ProductGroup>
 
-  <Product title={"2FA"} link={"/guides/two-factor-authentication"}>
+  <Product title={"2FA"} link={"/docs/guides/two-factor-authentication"}>
 
   2FA requires your website users to provide a secondary form of authentication in addition to their standard username and password
 
   </Product>
 
-  <Product title={"Lockr"} link={"/guides/lockr/"}>
+  <Product title={"Lockr"} link={"/docs/guides/lockr/"}>
 
   [Lockr](https://lockr.io/) works with Pantheon's Secure Integration to provide an additional layer of security to your site.
 
   </Product>
 
-  <Product title={"LDAP"} link={"/ldap-and-ldaps"}>
+  <Product title={"LDAP"} link={"/docs/ldap-and-ldaps"}>
 
   LDAP provides access and maintenance of a distributed directory storing organized sets of records.
 
   </Product>
 
-  <Product title={"Machine Tokens"} link={"/machine-tokens"}>
+  <Product title={"Machine Tokens"} link={"/docs/machine-tokens"}>
 
   Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
 
   </Product>
 
-  <Product title={"Shibboleth SSO"} link={"/shibboleth-sso"}>
+  <Product title={"Shibboleth SSO"} link={"/docs/shibboleth-sso"}>
 
   Use SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
 
   </Product>
 
-  <Product title={"SSO"} link={"/sso-organizations"}>
+  <Product title={"SSO"} link={"/docs/sso-organizations"}>
 
   Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
   </Product>
 
-  <Product title={"WP SAML Auth"} link={"/guides/wordpress-google-sso"}>
+  <Product title={"WP SAML Auth"} link={"/docs/guides/wordpress-google-sso"}>
 
    [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) lets your users sign into WordPress using their Google Account.
 

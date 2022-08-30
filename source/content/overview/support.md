@@ -17,7 +17,7 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Pantheon Learning"} link={"/learn-pantheon"}>
+  <Product title={"Pantheon Learning"} link={"[/learn-pantheon](https://pantheon.io/learn-pantheon)"}>
 
   Speed up development with product trainings, resources, and guides.
 
@@ -29,13 +29,13 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Pantheon Community"} link={"/pantheon-community"}>
+  <Product title={"Pantheon Community"} link={"https://discuss.pantheon.io"}>
 
   Share best practices with other experienced and active users of Pantheon's platform.
 
   </Product>
 
-  <Product title={"Get Support"} link={"guides/support/"}>
+  <Product title={"Get Support"} link={"/guides/support/"}>
 
   Pantheon offers a range of support options that include the features required for mission critical sites.
 
