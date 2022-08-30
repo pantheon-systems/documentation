@@ -17,13 +17,13 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Pantheon Learning"} link={"[/learn-pantheon](https://pantheon.io/learn-pantheon)"}>
+  <Product title={"Pantheon Learning"} link={"https://pantheon.io/learn-pantheon"}>
 
   Speed up development with product trainings, resources, and guides.
 
   </Product>
 
-  <Product title={"Professional Services"} link={"guides/professional-services"}>
+  <Product title={"Professional Services"} link={"/docs/guides/professional-services"}>
 
   Customized solutions for the most complex technical challenges and ensure your success on Pantheon.
 
@@ -35,7 +35,7 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Get Support"} link={"/guides/support/"}>
+  <Product title={"Get Support"} link={"/docs/guides/support/"}>
 
   Pantheon offers a range of support options that include the features required for mission critical sites.
 

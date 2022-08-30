@@ -43,7 +43,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"CDN"} link={"/docs/global-cdn"}>
+  <Product title={"CDN"} link={"/docs/guides/agcdn"}>
 
   Pantheon's Global CDN is a core platform offering that provides improved performance and security for customer sites. 
 
@@ -91,7 +91,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"New Relic Performance Monitoring"} link={"/docs/new-relic"}>
+  <Product title={"New Relic Performance Monitoring"} link={"/docs/guides/new-relic"}>
 
   New Relic® Performance Monitoring provides a nearly real-time look into the performance of a web application.
 

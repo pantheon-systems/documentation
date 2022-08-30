@@ -99,7 +99,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
 <ProductGroup>
 
-  <Product title={"2FA"} link={"/docs/guides/two-factor-authentication"}>
+  <Product title={"2FA"} link={"/docs/guides/secure-development/two-factor-authentication"}>
 
   2FA requires your website users to provide a secondary form of authentication in addition to their standard username and password
 

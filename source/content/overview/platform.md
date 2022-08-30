@@ -31,7 +31,7 @@ Our Runtime Matrix executes the code for your website. Over a million Linux cont
 
 - [Valhalla](/files): Containers are seamlessly integrated with Valhalla, our distributed file system. Valhalla keeps your files in sync across all the containers running your site. 
 
-- [Git Version Control](/guides/guides/git): Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
+- [Git Version Control](/guides/git): Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 
 - [New Relic](/guides/new-relic): New Relic® Performance Monitoring offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. 
 
