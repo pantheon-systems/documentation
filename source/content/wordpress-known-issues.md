@@ -33,13 +33,13 @@ If you see this error:
 Warning: session_start(): user session functions not defined
 ```
 
-It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more about [WordPress and PHP Sessions](/wordpress-sessions).
+It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more about [WordPress and PHP Sessions](/guides/php/wordpress-sessions).
 
 ### PHP Version Compatibility
 
 WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issues with PHP 8.1 are deprecation notices. A deprecation notice is not an error, but an indicator of the compatibility work that is needed before PHP 9 is released and notices become fatal errors. The PHP code will continue to work with the deprecation notices. 
 
-For more information, refer to the [PHP Versions](/php-versions) documentation. 
+For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation. 
 
 ## Site Networks / Multisite
 

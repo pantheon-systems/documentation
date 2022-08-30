@@ -59,21 +59,21 @@ class Glossary extends React.Component {
     docsWithDFNs.edges.map(({ node }) => {
       //console.log("rawBody: ", node.rawBody) //For Debugging
       const isDfn = node.rawBody.match(
-        /\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/g
+        /\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/g
       )
       //console.log("isDfn", isDfn) //For Debugging
       if (isDfn && isDfn.length) {
         isDfn.forEach(def => {
           //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           allDfns.push({
-            title: def.match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[2],
+            title: def.match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[2],
             from: node.frontmatter.title,
             slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
             definition: def,
             letter: def
-              .match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[1][0]
+              .match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[1][0]
               .toUpperCase(),
-            id: def.match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[1],
+            id: def.match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[1],
           })
         })
       }

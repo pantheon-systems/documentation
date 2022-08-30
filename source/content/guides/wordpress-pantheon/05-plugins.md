@@ -62,7 +62,7 @@ For installation details, see [Configuring Environment Indicators](/guides/envir
 
 ## [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)
 
-[WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)resolves errors with code (themes, modules or plugins) that rely on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
+[WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)resolves errors with code (themes, modules or plugins) that rely on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions/#troubleshooting-session-errors).
 
 ### Troubleshooting WP Native PHP Sessions
 

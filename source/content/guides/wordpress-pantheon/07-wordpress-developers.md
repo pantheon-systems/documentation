@@ -52,7 +52,7 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 
 ## WordPress and PHP Sessions
 
-WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7) by design. Every "user state" is managed via cookies. However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the WordPress Native PHP Sessions plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin. Review our [WordPress and PHP Sessions](/wordpress-sessions) doc for more information about working with PHP Sessions in WordPress.
+WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7) by design. Every "user state" is managed via cookies. However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the WordPress Native PHP Sessions plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin. Review [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about working with PHP Sessions in WordPress.
 
 ## Configure PhpStorm to Create WordPress Plugins on Pantheon
 

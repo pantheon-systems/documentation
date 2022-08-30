@@ -175,7 +175,7 @@ Yes. For the Multidev to appear as a config option, you will need hook into the 
 
 ### What's not tracked?
 
-Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/wp-config-php/#frequently-asked-questions).
+Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/guides/php/wp-config-php/#frequently-asked-questions).
 
 ### Why aren't my site navigation menus tracked?
 

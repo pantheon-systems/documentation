@@ -123,7 +123,7 @@ Pantheon provides default `.gitignore` files in the base of each site's code rep
 
 ## Optimize Performance
 
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/php-slow-log).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/guides/php/php-slow-log).
 
 Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not negatively impact performance. 
 

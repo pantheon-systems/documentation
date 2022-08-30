@@ -41,7 +41,7 @@ The code you need to load this configuration and boot your app should already be
 
 <Alert title="Warning" type="danger">
 
-Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/settings-php) for details.
+Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/guides/php/settings-php) for details.
 
 </Alert>
 
@@ -85,7 +85,7 @@ Adding this snippet may cause the Status tab to show that Fast 404 pages are not
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-Refer to [configuring wp-config.php](/wp-config-php) for more information.
+Refer to [configuring wp-config.php](/guides/php/wp-config-php) for more information.
 
 ## Hard-coded Directory References and $_ENV\['HOME']
 

@@ -51,7 +51,7 @@ To find your site's upstream, click **Settings**, then **About Site**.
 
 ### PHP Version
 
-The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/php-versions).
+The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/guides/php/php-versions).
 
 ## Billing
 
@@ -111,7 +111,7 @@ Learn more about the [Pantheon Workflow](/pantheon-workflow).
 
 ### Errors
 
-All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/php-errors).
+All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/guides/php/php-errors).
 
 <Alert title="Note" type="info">
 
