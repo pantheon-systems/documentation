@@ -14,7 +14,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
-### 2022-08-16
+### 2022-08-30
 
 #### <a name="20220818" class="release-update"></a>Ensure REST API responses are not cached for authenticated users
 
