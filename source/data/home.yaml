@@ -43,7 +43,6 @@
       icon: 'icon-troubleshoot.svg'
       url: '/troubleshoot/'
       secondary: true
-  topics:
     - title: 'USING WORDPRESS?'
       summary: 'The information you need to use WordPress with Pantheon.'
       url: '/develop-wordpress'
