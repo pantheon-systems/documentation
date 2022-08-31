@@ -52,7 +52,7 @@
       url: '/develop-drupal'
       secondary: true
     - title: 'ACCESSIBILITY GUIDE'
-      summary: 'Extend your site's reach with accessibility planning, fixes and testing.''
+      summary: 'Extend your site's reach with accessibility planning, fixes and testing.'
       url: '/guides/accessibility'
       secondary: true
     - title: 'DISASTER RECOVERY PLAYBOOK'
