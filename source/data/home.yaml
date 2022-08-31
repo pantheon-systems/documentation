@@ -43,8 +43,16 @@
       icon: 'icon-troubleshoot.svg'
       url: '/troubleshoot/'
       secondary: true
-    - title: 'GUIDES'
-      summary: 'Need some help leveling up your dev skills? Try one of our guides.'
+    - title: 'USING WORDPRESS?'
+      summary: 'The information you need to use WordPress with Pantheon.'
+      url: '/develop-wordpress'
+      secondary: true
+    - title: 'USING DRUPAL?'
+      summary: 'The information you need to use Drupal with Pantheon.'
+      url: '/develop-drupal'
+      secondary: true
+    - title: 'ACCESSIBILITY GUIDE'
+      summary: 'Extend your site's reach with accessibility planning, fixes, and reporting.'
       url: '/guides/'
       secondary: true
     - title: 'DISASTER RECOVERY PLAYBOOK'
