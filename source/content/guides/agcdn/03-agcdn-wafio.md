@@ -53,7 +53,7 @@ The benefits of Rate Limiting include:
 
 <Alert title="Note"  type="info" >
 
-This feature is currently in Early Access. Reach out to your account manager for more information.
+This feature is currently in Early Access. Reach out to your account manager for more information. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 </Alert>
 

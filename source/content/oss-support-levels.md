@@ -21,8 +21,7 @@ A Limited Availability project allows Pantheon to closely monitor feature develo
 
 ## Early Access
 
-A product in Early Access denotes a new project or feature set that is in development and available for a limited audience. Some features are stable, but the product is only partially complete and development is still in progress. The source code is publicly available, but you will need an invitation to participate in the Early Access program and learn about any platform component changes. Support is provided and only available to customers officially enrolled in the Early Access program. For more information on support for Early Access projects, refer to our [documentation](/guides/support/early-access/)
-
+A product in Early Access denotes a new project or feature set that is in development and available for a limited audience. Some features are stable, but the product is only partially complete and development is still in progress. The source code is publicly available, but you will need an invitation to participate in the Early Access program and learn about any platform component changes. Support is provided and only available to customers officially enrolled in the Early Access program. For more information on support for Early Access projects, refer to our [documentation](/guides/support/early-access/). Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 ## Minimal Support
 
