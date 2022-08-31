@@ -53,7 +53,7 @@
       secondary: true
     - title: 'ACCESSIBILITY GUIDE'
       summary: 'Extend your site's reach with accessibility planning, fixes, and reporting.'
-      url: '/guides/'
+      url: '/guides/accessibility/'
       secondary: true
     - title: 'DISASTER RECOVERY PLAYBOOK'
       summary: 'Be ready to act if your site stops responding.'
