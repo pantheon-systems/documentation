@@ -14,11 +14,11 @@ anchorid: dependencies
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.
 
-## `require dev` and  `require`
+## Composer `require dev` and `require` Sections
 
-It's important to understand how `require dev` and  `require` are on used on the Pantheon platform.
+It's important to understand how `require dev` and `require` are used on the Pantheon platform.
 
-### `require dev` Section
+### Composer `require dev` Section
 
 You should use the `require-dev` section for dependencies that are not a part of the web application but are necessary to build or test your project. Some examples are `php_codesniffer` and `phpunit`. Dev dependencies are not be deployed to Pantheon.
 
@@ -26,9 +26,9 @@ Third party dependencies, such as modules / plugins and themes, are added to the
 
 Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
-### `require` Section
+### Composer `require` Section
 
-You should use the `require` section of `composer.json` file for dependencies your web project needs, even dependencies only used on non-Live environments. All dependencies in the `require` section are pushed to Pantheon. 
+You should use the `require` section of your `composer.json` file for dependencies your web project needs, even dependencies only used on non-Live environments. All dependencies in the `require` section are pushed to Pantheon. 
 
 You can use  `--no-dev` to avoid the presence of Dev dependencies in Live and Test environments.
 
