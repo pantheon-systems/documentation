@@ -51,6 +51,10 @@
       summary: 'The information you need to use Drupal with Pantheon.'
       url: '/develop-drupal'
       secondary: true
+    - title: 'ACCESSIBILITY GUIDE'
+      summary: 'Extend your site's reach with accessibility planning, fixes and testing.''
+      url: '/guides/accessibility'
+      secondary: true
     - title: 'DISASTER RECOVERY PLAYBOOK'
       summary: 'Be ready to act if your site stops responding.'
       url: '/guides/disaster-recovery/site-goes-down/'
