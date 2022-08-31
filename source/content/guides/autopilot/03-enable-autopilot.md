@@ -181,5 +181,11 @@ Configure Autopilot for each individual premium and paid plugins and modules. De
 
 ## More Resources
 
+- [Autopilot Pre-Configuration Checklist](/guides/autopilot/autopilot-preconfiguration/)
+
+- [Autopilot FAQs](/guides/autopilot/autopilot-faq)
+
 - [Autopilot for Custom Upstreams Guide](/guides/autopilot-custom-upstream)
+
+- [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
 

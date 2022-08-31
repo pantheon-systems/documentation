@@ -49,8 +49,9 @@ If an error is detected during an update attempt, the **Autopilot Status** shows
 
 When a failed test requires review, no new tests can be run on the site until the results have been approved or discarded through Autopilot.
 
-## FAQ
+## More Resources
 
-### Is there a limit to the number screenshots Autopilot will take?
+- [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
 
-Yes. Depending on your [Account](/guides/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+- [Autopilot FAQs](/guides/autopilot/autopilot-faq)
+

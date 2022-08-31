@@ -1,7 +1,7 @@
 ---
 title: Pantheon Autopilot
 subtitle: Troubleshoot Autopilot Error Messages
-description: "Diagnose and remedy some common Autopilot errors."
+description: Diagnose and remedy some common Autopilot errors.
 categories: [automate]
 tags: [autopilot, troubleshoot, webops]
 type: guide
@@ -353,3 +353,13 @@ Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currentl
 Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework, including WordPress Multisite Network is not supported.
 
 </Accordion>
+
+## More Resources
+
+- [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
+
+- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+
+- [Autopilot FAQs](/guides/autopilot/autopilot-faq)
+
+- [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
