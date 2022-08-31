@@ -21,7 +21,7 @@ A Custom Upstream is a repository restricted to members of an organization, cont
 
 *How does this support accessibility?* After you've built an accessible site, you can use it to create other sites.
 
-Refer to [Custom Upstreams](/custom-upstream) for details.
+Refer to [Custom Upstreams](/guides/custom-upstream) for details.
 
 ## Autopilot
 
