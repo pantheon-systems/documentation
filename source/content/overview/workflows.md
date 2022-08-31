@@ -26,7 +26,7 @@ In brief, the process is as follows:
 
 1. Deploy your code to the Live environment
 
-For details, see [Use the Pantheon WebOps Workflow](/pantheon-workflow).
+Refer to [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information.
 
 ## Workflow Options
 
@@ -39,4 +39,4 @@ Within this workflow, there are several ways you can manage and develop your sit
 - [Use the command line](/terminus) to manage and create sites.
 - Develop using either [Git](/guides/git) or [SFTP](/sftp).
 
-There are even more tools and options available to you.  See [Develop](/develop) for more information.
+There are even more tools and options available to you.  Refer to [Develop](/develop) for more information.
