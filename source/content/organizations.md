@@ -5,7 +5,7 @@ categories: [manage]
 tags: [organizations]
 ---
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev, and support to provide administrators with the tools needed to effectively manage a large number of sites.
+Pantheon <dfn id="org">Organizations</dfn> bring together users, sites, Custom Upstreams, Multidev, and support to provide administrators with the tools needed to effectively manage a large number of sites.
 
 ## Create an Organization
 
