@@ -12,7 +12,25 @@ permalink: docs/guides/integrated-composer/dependencies
 anchorid: dependencies
 ---
 
-This sections provides information on how to add or remove individual site dependencies.
+This sections provides information on dependency requirements and how to add or remove individual site dependencies.
+
+## `require dev` and  `require`
+
+It's important to understand how `require dev` and  `require` are on used on the Pantheon platform.
+
+### `require dev` Section
+
+You should use the `require-dev` section for dependencies that are not a part of the web application but are necessary to build or test your project. Some examples are `php_codesniffer` and `phpunit`. Dev dependencies are not be deployed to Pantheon.
+
+Third party dependencies, such as modules / plugins and themes, are added to the project via `composer.json`. The `composer.lock` file keeps track of the exact version of dependency. [Composer `installer-paths`](https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md#how-do-i-install-a-package-to-a-custom-path-for-my-framework-) are used to ensure the dependencies are downloaded into the appropriate directory.
+
+Non-WordPress dependencies are downloaded to the `/vendor` directory.
+
+### `require` Section
+
+You should use the `require` section of `composer.json` file for dependencies your web project needs, even dependencies only used on non-Live environments. All dependencies in the `require` section are pushed to Pantheon. 
+
+You can use  `--no-dev` to avoid the presence of Dev dependencies in Live and Test environments.
 
 ## Add a Dependency to an Individual Site
 
