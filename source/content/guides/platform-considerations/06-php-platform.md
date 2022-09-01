@@ -11,6 +11,7 @@ permalink: docs/guides/platform-considerations/php-platform
 anchorid: php-platform
 ---
 
+This section provides information on general PHP support on the Pantheon platform. Refer to the [PHP on Pantheon](/guides/php) guide for comprehensive PHP information.
 
 ## General PHP Framework Support
 
@@ -18,7 +19,7 @@ Pantheon does not currently support any PHP frameworks outside of Drupal and Wor
 
 ## PHP Configuration
 
-`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/guides/secure-development/phpinfo) for more information on PHP configuration.
+`php.ini` cannot be customized or overridden on the Platform. Refer to [Securely Working with phpinfo](/guides/secure-development/phpinfo) for more information on PHP configuration.
 
 ## PHP/Java Bridge
 
@@ -26,7 +27,7 @@ Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge
 
 ## PHP Maximum Execution Time Limit
 
-The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/timeouts) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
+The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/timeouts) documentation and it cannot be increased. If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
 
 ## PHP Sessions with WordPress
 
@@ -42,12 +43,11 @@ Warning: session_start(): user session functions not defined
 
 ## PHP Short Tags
 
-PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](https://secure.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
+PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](https://secure.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not using short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Your code will be more portable and re-distributable if you do not use short tags.
 
 ## Server Side Includes (SSI)
 
-Pantheon does not and will not support Server Side Includes. We recommend converting those to use PHP includes.
-
+Pantheon does not support Server Side Includes. We recommend converting those to use PHP includes.
 
 ## XML-RPC
 
@@ -60,3 +60,11 @@ For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-s
 ```bash{promptUser: user}
 MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`mytable` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
 ```
+
+## More Resources
+
+- [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql/mysql-access)
+
+- [PHP on Pantheon](/guides/php)
+
+- [WordPress and PHP Sessions](/guides/php/wordpress-sessions)
