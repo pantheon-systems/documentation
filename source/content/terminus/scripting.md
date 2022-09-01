@@ -109,7 +109,7 @@ while read -r PANTHEON_SITE_NAME; do
 	# Check if the site is frozen
 	IS_FROZEN="$(terminus site:info $PANTHEON_SITE_NAME --field=frozen)"
 	# If the site is frozen
-    if [[ "true" == "${IS_FROZEN}" ]]
+    if [[ "1" == "${IS_FROZEN}" ]]
     then
 		# The PHP version is unknown
 		PHP_VERSION='FROZEN'
