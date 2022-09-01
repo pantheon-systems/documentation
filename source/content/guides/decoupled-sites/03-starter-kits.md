@@ -24,27 +24,55 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
 ## Backend Installation and Configuration
 
+### Choosing an Approach
+
+* Use Build Tools:
+  * If testing is important to your team's workflow. With Build Tools you will not haveto manually push changes to your code repository.
+
+
+* Use Dashboard Upstream : 
+  *  If you perfer a more streamlined configuration. 
+
+
 <TabList>
 
 <Tab title="Drupal Backend" id="drupal-install" active={true}>
+
+#### Dashboard Upstream Install
+You can install the Drupal backend by using the Dashboartd Upstream
+
+Create from Decoupled Drupal Composer Managed upstream:
+
+Via the Pantheon Dashboard at this link:
+
+Decoupled Drupal Composer Managed
+Or Alternatively using Terminus:
+
+```
+  terminus site:create my-new-site "Describe Site" empty --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
+```
+  * Replace '{My Team Name}' with your team name - for example `My Agency`. This input can also be omitted.
+`c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
+
+
+#### Installing Using Build Tools
 
 - Run `terminus build:project:create`:
 
   ```
   terminus build:project:create \
-    --team='{My Team Name}' \
-    --template-repository="git@github.com:pantheon-systems/decoupled-drupal-recommended.git" pantheon-systems/decoupled-drupal-recommended \
-    --ci-template='git@github.com:pantheon-systems/advanced-ci-templates' \
-    --visibility private {PROJECT_NAME} \
-    --stability=dev \
-    --profile="pantheon_decoupled_profile"
+  --team='{My Team Name}' \
+  --template-repository="git@github.com:pantheon-upstreams/decoupled-drupal-composer-managed.git" pantheon-upstreams/decoupled-drupal-composer-managed \
+  --visibility private {PROJECT_NAME} \
+  --profile="pantheon_decoupled_profile" \
+  --stability=dev
   ```
 
   * Replace `{PROJECT_NAME}` with your project name, for example `decoupled-drupal`.
 
   * Replace `'{My Team Name}'` with your team name, for example `My Agency`. This can also be omitted.
 
-This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
+This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon, and a CircleCI project created for automated deployments.
 
  </Tab>
 
