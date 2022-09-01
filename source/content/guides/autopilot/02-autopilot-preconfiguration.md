@@ -84,6 +84,8 @@ Autopilot's visual regression tool takes before and after screenshots to check f
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
 
+- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)

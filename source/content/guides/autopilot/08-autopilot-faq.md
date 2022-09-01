@@ -75,6 +75,12 @@ Autopilot only checks for changes and updates to modules, themes, and core. You 
 
 - Other backend changes
 
+## Is there a limit to the number screenshots Autopilot will take?
+
+Yes. Depending on your [Account](/guides/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+
 ## More Resources
 
 - [Apply Autopilot Updates](/guides/autopilot/apply-updates)
+
+- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
