@@ -11,7 +11,7 @@ permalink: docs/guides/platform-considerations/terminus-platform
 anchorid: terminus-platform
 ---
 
-This section provides information on Terminus support on the Pantheon platform. Refer to the [Terminus Manual](terminus) for comprehensive Terminus information, or to [Supported Terminus Versions](/supported-terminus) for detailed Terminus version compatibility.
+This section provides information on Terminus support on the Pantheon platform. Refer to the [Terminus Manual](/terminus) for comprehensive Terminus information, or to [Supported Terminus Versions](/supported-terminus) for detailed Terminus version compatibility.
 
 ## Terminus Support
 
